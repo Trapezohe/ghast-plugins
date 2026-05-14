@@ -104,21 +104,16 @@ def main() -> int:
 
 def _was_anthropic_imported(plugin: dict) -> bool:
     """Identify entries we previously merged from Anthropic so the next
-    re-merge can drop and recompute them rather than accumulating duplicates."""
-    src = plugin.get("source")
-    if isinstance(src, dict):
-        url = src.get("url", "")
-        if url == ANTHROPIC_REPO_URL:
-            return True
-        # Third-party plugins we picked up from Anthropic's directory
-        # (e.g. 42crunch's own repo). Detect by checking whether the
-        # plugin entry has Anthropic-style "ref" / "sha" pins, which our
-        # 12 originals don't have.
-        if src.get("source") == "git-subdir" and "sha" in src:
-            return True
-        if src.get("source") == "url" and "sha" in src:
-            return True
-    return False
+    re-merge can drop and recompute them rather than accumulating duplicates.
+
+    Heuristic: an entry is Anthropic-imported iff its `source` is an
+    object (any kind) — every entry we publish ourselves uses the
+    plain-string `./plugins/foo` form for `source`. Anthropic's entries
+    use object forms (`git-subdir`, `url`, `github`, etc.). If they
+    introduce a new source kind in the future, this still catches it
+    without needing a schema update on our end.
+    """
+    return isinstance(plugin.get("source"), dict)
 
 
 if __name__ == "__main__":

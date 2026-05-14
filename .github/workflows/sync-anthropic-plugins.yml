@@ -1,0 +1,156 @@
+name: Sync Anthropic plugins
+
+# Pulls the latest curated plugin list from anthropics/claude-plugins-official
+# and merges it into our `.claude-plugin/marketplace.json`. Runs daily at
+# 02:00 UTC (10:00 Beijing) and on demand via the Actions tab.
+#
+# What it does on each run:
+#   1. Checks out this repo.
+#   2. Runs `scripts/merge-anthropic-plugins.py` — the same idempotent merge
+#      we run locally. It fetches Anthropic's current marketplace.json,
+#      drops every previously-imported Anthropic entry from our file,
+#      then re-adds the upstream set pinned to Anthropic's HEAD sha.
+#      Our 12 originals are always preserved.
+#   3. Validates the resulting marketplace.json (JSON syntax + plugin
+#      count sanity check) so we never push an obviously-broken file.
+#   4. If there are no changes, exits quietly.
+#   5. If there are changes, commits with a message recording the new
+#      Anthropic HEAD sha and pushes back to main.
+#
+# Safety:
+#   - The `[skip ci]` marker on the auto-commit prevents this workflow
+#     from re-triggering itself (would happen via `on: push` if we ever
+#     added that trigger).
+#   - `concurrency: cancel-in-progress: false` makes overlapping manual
+#     runs queue rather than race against each other.
+#   - Workflow only writes back if both the merge script succeeded
+#     and the post-merge validation passed.
+
+on:
+  schedule:
+    # daily at 02:00 UTC
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+    # manual button on the Actions tab
+    inputs:
+      dry_run:
+        description: "Skip the git push (just report what would change)"
+        required: false
+        default: "false"
+
+concurrency:
+  group: sync-anthropic-plugins
+  cancel-in-progress: false
+
+permissions:
+  # required so the default GITHUB_TOKEN can `git push` back to main
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          # Default fetch-depth=1 is fine for this workflow — we only
+          # need to commit on top of HEAD, not inspect history.
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run merge script
+        id: merge
+        run: |
+          python3 scripts/merge-anthropic-plugins.py
+
+      - name: Validate merged marketplace.json
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          path = ".claude-plugin/marketplace.json"
+          with open(path) as f:
+              data = json.load(f)
+          plugins = data.get("plugins")
+          assert isinstance(plugins, list), f"{path}: plugins is not a list"
+          assert len(plugins) >= 12, (
+              f"{path}: only {len(plugins)} plugins after merge — our 12 "
+              "originals should always be present, something is wrong"
+          )
+          # Every entry must at least have a name; that's the install handle.
+          missing_name = [i for i, p in enumerate(plugins) if not p.get("name")]
+          assert not missing_name, (
+              f"{path}: entries without `name` field at indices {missing_name}"
+          )
+          print(f"OK — {len(plugins)} plugins validated")
+          PY
+
+      - name: Detect changes
+        id: diff
+        run: |
+          if git diff --quiet -- .claude-plugin/marketplace.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — Anthropic's marketplace is in sync."
+            echo "## No changes" >> "$GITHUB_STEP_SUMMARY"
+            echo "Anthropic's marketplace already matches ours." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            {
+              echo "## Changes detected"
+              echo ""
+              echo '```'
+              git diff --stat -- .claude-plugin/marketplace.json
+              echo '```'
+              echo ""
+              echo "### Diff preview"
+              echo '```diff'
+              # Show only the first 200 lines so the summary stays readable.
+              git diff -- .claude-plugin/marketplace.json | head -n 200
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Commit and push
+        if: steps.diff.outputs.changed == 'true' && github.event.inputs.dry_run != 'true'
+        env:
+          # actions/checkout already configured `extraheader` with the
+          # workflow token, so a plain `git push` works.
+          GIT_AUTHOR_NAME: "ghast-plugins-sync-bot"
+          GIT_AUTHOR_EMAIL: "actions@github.com"
+          GIT_COMMITTER_NAME: "ghast-plugins-sync-bot"
+          GIT_COMMITTER_EMAIL: "actions@github.com"
+        run: |
+          # Pull Anthropic's current HEAD sha out of the merged file so we
+          # can record it in the commit message for traceability.
+          ANTHROPIC_SHA=$(python3 -c "
+          import json
+          with open('.claude-plugin/marketplace.json') as f:
+              d = json.load(f)
+          for p in d['plugins']:
+              src = p.get('source')
+              if isinstance(src, dict) and src.get('url') == \
+                 'https://github.com/anthropics/claude-plugins-official.git':
+                  print(src.get('sha', '')[:10])
+                  break
+          ")
+
+          git add .claude-plugin/marketplace.json
+          git commit -m "chore(marketplace): sync Anthropic plugins (anthropic@${ANTHROPIC_SHA})
+
+          Automated daily sync via .github/workflows/sync-anthropic-plugins.yml.
+          Picks up any new plugins anthropics/claude-plugins-official has
+          published since the last run. Our 12 originals are unchanged.
+
+          [skip ci]"
+          git push
+
+      - name: Dry-run summary
+        if: steps.diff.outputs.changed == 'true' && github.event.inputs.dry_run == 'true'
+        run: |
+          echo "Dry-run mode — changes detected but not committed."
+          echo "Re-run without the dry_run input to apply." \
+            >> "$GITHUB_STEP_SUMMARY"

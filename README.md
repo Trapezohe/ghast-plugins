@@ -1,5 +1,7 @@
 # Ghast Plugins & MCP Registry
 
+[![Sync Anthropic plugins](https://github.com/Trapezohe/ghast-plugins/actions/workflows/sync-anthropic-plugins.yml/badge.svg)](https://github.com/Trapezohe/ghast-plugins/actions/workflows/sync-anthropic-plugins.yml)
+
 Public plugin & MCP directory for the
 [Ghast desktop client](https://ghast.trapezohe.ai).
 
@@ -194,8 +196,27 @@ Ghast-originals:
 | `bilibili-search` | skill | Bilibili public web search + ranking |
 | `seo-meta` | skill | Meta / OG / Twitter / canonical extractor |
 
-To keep our marketplace fresh with Anthropic's catalog, periodically
-re-run the merge script (TBD) to pick up new plugins they curate.
+### Keeping the Anthropic mirror fresh
+
+The merge is automated via
+[`.github/workflows/sync-anthropic-plugins.yml`](.github/workflows/sync-anthropic-plugins.yml) —
+a GitHub Actions workflow that runs daily at 02:00 UTC, fetches
+Anthropic's current marketplace, re-runs the merge, and commits any
+diff back to `main` with a message recording Anthropic's HEAD sha.
+You can also trigger it manually from the Actions tab (with a
+`dry_run` toggle that reports the diff without pushing).
+
+The underlying merge logic lives in
+[`scripts/merge-anthropic-plugins.py`](scripts/merge-anthropic-plugins.py)
+and is idempotent — re-runs drop the prior Anthropic-imported set and
+recompute it, so duplicates never accumulate. Run it locally with:
+
+```bash
+python3 scripts/merge-anthropic-plugins.py
+```
+
+Our 12 Ghast-original entries are always preserved; name collisions
+keep our copy and skip the Anthropic version.
 
 ---
 
