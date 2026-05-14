@@ -160,10 +160,24 @@ session when the plugin is installed.
 
 ## Starter set
 
-The 12 starter plugins are inspired by
-[lobehub/lobe-chat-plugins](https://github.com/lobehub/lobe-chat-plugins),
-re-implemented as **Anthropic-format skill bundles**. None require an API
-key; all use builtin `WebFetch` / `Bash` for network access.
+The marketplace currently lists **184 plugins**:
+
+- **12 Ghast-original starters** (the table below) inspired by
+  [lobehub/lobe-chat-plugins](https://github.com/lobehub/lobe-chat-plugins)
+  and re-implemented as Anthropic-format skill bundles. None require an
+  API key; all use builtin `WebFetch` / `Bash` for network access.
+- **172 entries inherited from
+  [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)**.
+  Anthropic's directory is curated and includes both Anthropic-authored
+  internal plugins (agent-sdk-dev, code-review, frontend-design,
+  language-server plugins for ~10 languages, etc.) plus third-party
+  plugins from partners (Adobe, HashiCorp, 42Crunch, GitHub, GitLab,
+  Linear, Playwright, Firebase, etc.). Entries that originally used a
+  `./plugins/foo` relative path are rewritten as `git-subdir` pointing
+  at `anthropics/claude-plugins-official` — we don't fork their code,
+  we just surface their directory.
+
+Ghast-originals:
 
 | Plugin | Kind | What it does |
 | --- | --- | --- |
@@ -179,6 +193,9 @@ key; all use builtin `WebFetch` / `Bash` for network access.
 | `steam-search` | skill | Steam storesearch + appdetails |
 | `bilibili-search` | skill | Bilibili public web search + ranking |
 | `seo-meta` | skill | Meta / OG / Twitter / canonical extractor |
+
+To keep our marketplace fresh with Anthropic's catalog, periodically
+re-run the merge script (TBD) to pick up new plugins they curate.
 
 ---
 
