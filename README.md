@@ -1,48 +1,50 @@
-# Ghast Skills & MCP Store
+# Ghast Plugins & MCP Registry
 
-Public registry for [Ghast](https://ghast.trapezohe.ai) — discovers and installs **plugins**, **skills** (bundled inside plugins), and **MCP servers**.
+Public registry powering the **Plugins** and **MCP** marketplaces inside the
+[Ghast desktop client](https://ghast.trapezohe.ai).
 
-This repository hosts two registry files plus the actual plugin sources:
+This repo hosts two independent indexes plus the actual plugin sources.
 
 | File | Purpose | Consumed by |
 | --- | --- | --- |
-| `registry.json` | Plugin & skill index | Ghast Settings → Plugins / Skills marketplace |
-| `mcp-registry.json` | MCP server index | Ghast Settings → MCP marketplace |
-| `plugins/<id>/` | Plugin source (with optional `skills/` subdir) | Resolved via `registry.json[].path` |
+| `registry.json` | Plugin index | Ghast → Settings → Plugins |
+| `mcp-registry.json` | MCP server index | Ghast → Settings → MCP → Marketplace |
+| `plugins/<id>/` | Plugin source tree | Resolved via `registry.json[].path` |
 
-Skills are not a separate store category — they ship inside plugins under `plugins/<id>/skills/<skill-name>/SKILL.md` and are scanned automatically when the host plugin is installed.
+The Ghast client fetches these files directly from `raw.githubusercontent.com`
+on the `main` branch. There is no build step — push to `main` and the
+marketplace updates on the next refresh.
 
 ---
 
-## Repo layout
+## Layout
 
 ```
-skills_store/
+ghast-plugins/
 ├── README.md
-├── registry.json                  # plugin / skill registry
-├── mcp-registry.json              # MCP server registry
-├── plugins/
-│   └── <plugin-id>/
-│       ├── manifest.json          # required, validated by zod schema
-│       ├── main.js                # entry point referenced by manifest.main
-│       ├── icon.png               # optional
-│       ├── skills/                # optional; bundled skills
-│       │   └── <skill-name>/
-│       │       └── SKILL.md
-│       └── README.md
-└── .github/
-    └── workflows/                 # (optional) CI to validate registry & manifests
+├── registry.json                  # plugin index
+├── mcp-registry.json              # MCP server registry (self-contained)
+└── plugins/
+    └── <plugin-id>/
+        ├── manifest.json          # required, zod-validated by the client
+        ├── main.js                # entry point (whatever `manifest.main` points at)
+        ├── icon.png               # optional
+        └── README.md              # optional
 ```
 
 ---
 
 ## Adding a plugin
 
-### 1. Drop your plugin into `plugins/<plugin-id>/`
+### 1. Drop the plugin into `plugins/<plugin-id>/`
 
-Required: `manifest.json` and the file referenced by `manifest.main`.
+It must contain a `manifest.json` and the file referenced by `manifest.main`.
 
-### 2. `manifest.json` schema (zod-validated by Ghast)
+### 2. `manifest.json` schema
+
+Validated client-side with [zod](https://github.com/colinhacks/zod). See
+`src/main/plugins/plugin-manifest-schema.ts` in the Ghast repo for the
+authoritative definition.
 
 ```json
 {
@@ -56,8 +58,8 @@ Required: `manifest.json` and the file referenced by `manifest.main`.
   "type": "tool",
 
   "icon": "icon.png",
-  "homepage": "https://github.com/Trapezohe/skills_store",
-  "repository": "https://github.com/Trapezohe/skills_store",
+  "homepage": "https://github.com/Trapezohe/ghast-plugins",
+  "repository": "https://github.com/Trapezohe/ghast-plugins",
   "license": "MIT",
   "keywords": ["example"],
   "permissions": [],
@@ -83,19 +85,21 @@ Required: `manifest.json` and the file referenced by `manifest.main`.
 }
 ```
 
-**Required fields**: `id` · `name` · `version` · `description` · `author` · `main` · `engines.ghast` · `type`
+**Required**: `id` · `name` · `version` · `description` · `author` · `main` · `engines.ghast` · `type`
 
-**Field constraints**:
+**Constraints**:
 
 | Field | Constraint |
 | --- | --- |
-| `id` | matches `[@a-z0-9-_./]+`, must be globally unique |
+| `id` | matches `[@a-z0-9-_./]+`, globally unique |
 | `version` | semver `\d+\.\d+\.\d+` |
-| `author` | string, **or** `{ name, email?, url? }` |
-| `type` | one of `tool` · `ui` · `theme` · `provider` · `transform` · `integration` · `composite`, or array of those |
-| `engines.ghast` | semver range string, e.g. `^0.1.0` |
+| `author` | string **or** `{ name, email?, url? }` |
+| `type` | one of `tool` · `ui` · `theme` · `provider` · `transform` · `integration` · `composite`, or an array of those |
+| `engines.ghast` | semver range, e.g. `^0.1.0` |
 
-### 3. Add an entry to `registry.json`
+### 3. Add the registry entry
+
+Append to `registry.json`:
 
 ```json
 {
@@ -103,116 +107,169 @@ Required: `manifest.json` and the file referenced by `manifest.main`.
     {
       "id": "your-plugin-id",
       "version": "0.1.0",
-      "repository": "https://github.com/Trapezohe/skills_store",
+      "repository": "https://github.com/Trapezohe/ghast-plugins",
       "path": "plugins/your-plugin-id"
     }
   ]
 }
 ```
 
-The Ghast client composes `${repository}/tree/main/${path}` to fetch the plugin and runs version compares against the manifest's `version` field for update notifications.
+The client composes the manifest URL as
 
-### 4. (Optional) bundle skills
-
-Drop one or more skill directories under `plugins/<plugin-id>/skills/`. Each skill is a folder containing a `SKILL.md`:
-
-```markdown
----
-name: skill-name
-description: One-line description shown in the skill picker.
-type: feedback
----
-
-# Skill Name
-
-Body content (markdown). Becomes the system prompt injected when the
-skill is selected.
+```
+https://raw.githubusercontent.com/<owner>/<repo>/main/<path>/manifest.json
 ```
 
-Skills are auto-discovered when their host plugin is installed — they don't need a separate registry entry.
+and compares `manifest.version` against the installed version to trigger update
+notifications. **Bump both** `manifest.json:version` **and** `registry.json:plugins[].version`
+when releasing.
+
+Plugins can also live in a third-party repo — set `repository` to point there
+and `path` to the subdirectory inside it. They don't have to be hosted in this
+monorepo.
 
 ---
 
 ## Adding an MCP server
 
-Append to `mcp-registry.json`:
+Append to `mcp-registry.json` under `servers`. The registry is **self-contained**:
+the client reads the config directly from this file, so there's nothing to host
+elsewhere.
 
 ```json
 {
-  "id": "example-mcp",
-  "name": "Example MCP Server",
-  "description": "What this server does.",
+  "id": "example",
+  "name": "Example",
+  "description": {
+    "en": "What this server does.",
+    "zh-CN": "这个 server 是干什么的。"
+  },
   "author": "Your Name",
-  "url": "https://github.com/your/example-mcp-server",
+  "url": "https://github.com/your/example-mcp",
+  "license": "MIT",
   "category": "tools",
-  "tags": ["productivity"],
+  "tags": ["example"],
+  "featured": false,
+  "verified": false,
   "installations": [
     {
-      "name": "NPX",
-      "config": "{\n  \"command\": \"npx\",\n  \"args\": [\"-y\", \"@your/example-mcp\"],\n  \"env\": {\"API_KEY\": \"${API_KEY}\"}\n}",
-      "prerequisites": ["Node.js"],
+      "name": "npx",
+      "description": {
+        "en": "Run via npx.",
+        "zh-CN": "通过 npx 运行。"
+      },
+      "config": {
+        "command": "npx",
+        "args": ["-y", "@your/example-mcp"],
+        "env": { "API_KEY": "${API_KEY}" }
+      },
       "parameters": [
         {
-          "name": "API Key",
-          "key": "API_KEY",
+          "name": "API_KEY",
+          "description": { "en": "API key.", "zh-CN": "API 密钥。" },
           "placeholder": "your_api_key",
           "required": true
         }
       ],
+      "prerequisites": ["Node.js 18+"],
       "transports": ["stdio"]
     }
-  ]
+  ],
+  "detectionHints": ["@your/example-mcp"]
 }
 ```
 
-After adding, also bump `totalServers` and `generatedAt` at the top of `mcp-registry.json`.
+After adding, bump `generatedAt` at the top of `mcp-registry.json` to the
+current ISO timestamp.
 
-**Notes**:
+### Localisation
 
-- `installations[].config` is a **JSON-stringified** mcpServers entry — it is _not_ a nested object. Mind the escaping.
-- `transports` values: `stdio` · `sse` · `streamable-http`.
-- Parameter keys (e.g. `API_KEY`) are substituted into the config string at install time via `${KEY}` placeholders.
+`description`, `installations[].description`, `parameters[].description`, and
+`prerequisites[]` accept either a plain string (legacy, treated as `en`) or a
+BCP-47 keyed object (`en`, `zh-CN`, `zh-TW`, `ja`, `ko`, `fr`, …). The client
+falls back through: exact match → base language (`zh-TW` → `zh`) → `en` →
+first non-empty value.
+
+Prefer the object form for new entries. Aim to ship at least `en` and `zh-CN`.
+
+### `config` shape
+
+`config` is a **real JSON object**, not a stringified blob. It is the same
+shape the client persists in its mcpServers settings entry:
+
+- **stdio**: `{ "command", "args"?, "env"? }`
+- **http / sse**: `{ "url", "headers"? }`
+
+`${PARAM}` placeholders inside string values get substituted with what the user
+enters during install (parameter `name` field is the key).
+
+### `detectionHints`
+
+Substring matches checked against the user's installed Claude Desktop / Codex
+CLI / Cursor MCP configs (`command + args + url` haystack). If any hint hits,
+the marketplace card swaps its primary CTA from **Install** to
+**Import from <Client>**, which copies the config including tokens straight
+into Ghast — no re-typing.
+
+Hints should be the npm package name (or whatever identifying token shows up
+in the `args` array). Two hints per server is usually enough:
+
+```json
+"detectionHints": ["@modelcontextprotocol/server-filesystem", "mcp-server-filesystem"]
+```
+
+### `transports`
+
+Currently understood: `stdio` · `sse` · `streamable-http`.
 
 ---
 
 ## Validation
 
-Before pushing a plugin or MCP entry, validate locally:
+Before pushing:
 
 ```bash
 # JSON syntax
 python3 -m json.tool registry.json > /dev/null
 python3 -m json.tool mcp-registry.json > /dev/null
 python3 -m json.tool plugins/your-plugin-id/manifest.json > /dev/null
-
-# Manifest fields (full zod check happens on the Ghast client side)
-node -e 'JSON.parse(require("fs").readFileSync("plugins/your-plugin-id/manifest.json"))' \
-  && echo "manifest ok"
 ```
 
-CI workflows under `.github/workflows/` (to be added) will run the same checks on PRs.
+Full zod validation runs client-side when the marketplace fetches. Bad entries
+simply disappear from the listing with an error in the client console — they
+don't break the whole registry.
 
 ---
 
 ## Versioning
 
-- Bumping a plugin's `version` in both its `manifest.json` and the `registry.json` entry triggers an update notification in installed Ghast clients.
-- Use semver: bump patch for fixes, minor for additions, major for breaking changes.
-- Removing a plugin from `registry.json` does **not** uninstall it from existing clients — it just stops appearing in the marketplace.
+- Bumping a plugin's `version` (in both `manifest.json` and the `registry.json`
+  entry) triggers an update notification in installed clients.
+- Use semver: patch for fixes, minor for additions, major for breaking changes.
+- Removing a plugin from `registry.json` does **not** uninstall it from
+  existing clients — it just stops appearing in the marketplace.
+- MCP entries don't have versions; they're identified by `id`. Changing
+  `installations[].config` rolls out to all marketplace viewers on the next
+  refresh.
 
 ---
 
 ## Contributing
 
-1. Fork this repository.
-2. Add your plugin under `plugins/<id>/` with a valid `manifest.json`.
-3. Add the registry entry to `registry.json` (and `mcp-registry.json` if applicable).
-4. Open a PR. CI will validate; a maintainer will review.
+1. Fork.
+2. For a plugin: add a directory under `plugins/<id>/` with a valid manifest,
+   then add the index entry to `registry.json`.
+3. For an MCP server: add an entry under `mcp-registry.json:servers`.
+4. Open a PR. CI (forthcoming) will lint the JSON; a maintainer reviews.
 
-For substantial changes (new plugin types, schema updates, API contracts), open an issue first to discuss.
+Substantial changes — new plugin types, schema fields, registry-level shape —
+should start as an issue against the [Ghast client repo](https://github.com/Trapezohe/ghast_desktop)
+so the contract stays in sync with what the client actually parses.
 
 ---
 
 ## License
 
-This registry repository is published under the MIT License. Each plugin under `plugins/` may carry its own license declared in its `manifest.json` — installers are responsible for reading and complying.
+This registry repository is published under the MIT License. Each plugin under
+`plugins/` may declare its own license inside its `manifest.json`; users are
+responsible for reading and complying.

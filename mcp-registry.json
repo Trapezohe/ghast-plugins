@@ -1,6 +1,592 @@
 {
-  "version": "1.0.0",
-  "generatedAt": "2026-05-08T00:00:00Z",
-  "totalServers": 0,
-  "servers": []
+  "generatedAt": "2026-05-14T04:34:42.329Z",
+  "servers": [
+    {
+      "id": "filesystem",
+      "name": "Filesystem",
+      "description": {
+        "en": "Read and write the local filesystem via MCP. Lets the model directly operate on files inside a directory you authorise — read, write, rename, delete, create, list. Maintained by Anthropic.",
+        "zh-CN": "读写本地文件系统的 MCP server。让模型直接操作你授权的目录下的文件 —— 读、写、改名、删除、新建、列目录。Anthropic 官方维护。",
+        "zh-TW": "讀寫本地檔案系統的 MCP server。讓模型直接操作你授權的目錄下的檔案 —— 讀、寫、改名、刪除、新建、列目錄。Anthropic 官方維護。",
+        "ja": "ローカルファイルシステムを読み書きする MCP server。許可したディレクトリ配下のファイルをモデルが直接操作できます — 読み取り、書き込み、リネーム、削除、作成、一覧。Anthropic 公式メンテナンス。"
+      },
+      "author": "Anthropic",
+      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+      "license": "MIT",
+      "category": "files",
+      "tags": [
+        "filesystem",
+        "files",
+        "official",
+        "anthropic"
+      ],
+      "featured": true,
+      "verified": true,
+      "installations": [
+        {
+          "name": "npx",
+          "description": {
+            "en": "Run via npx — no local install needed; npx downloads on first run.",
+            "zh-CN": "通过 npx 运行,无需本地安装,首次运行时 npx 自动下载。",
+            "zh-TW": "透過 npx 執行,無需本地安裝,首次執行時 npx 自動下載。",
+            "ja": "npx 経由で実行 — ローカルインストール不要。初回実行時に npx が自動ダウンロード。"
+          },
+          "config": {
+            "command": "npx",
+            "args": [
+              "-y",
+              "@modelcontextprotocol/server-filesystem",
+              "${ALLOWED_PATH}"
+            ]
+          },
+          "parameters": [
+            {
+              "name": "ALLOWED_PATH",
+              "description": {
+                "en": "Root directory the server is allowed to access. Point at a specific workspace folder — don't give it your entire $HOME.",
+                "zh-CN": "允许 server 访问的根目录。建议指向一个明确的工作目录,不要给整个 $HOME。",
+                "zh-TW": "允許 server 存取的根目錄。建議指向明確的工作目錄,不要給整個 $HOME。",
+                "ja": "サーバーがアクセスできるルートディレクトリ。$HOME 全体を渡さず、明示的なワークスペースフォルダを指定してください。"
+              },
+              "placeholder": "/Users/yourname/Documents/ghast-workspace",
+              "required": true
+            }
+          ],
+          "prerequisites": [
+            "Node.js 18+"
+          ],
+          "transports": [
+            "stdio"
+          ]
+        }
+      ],
+      "detectionHints": [
+        "@modelcontextprotocol/server-filesystem",
+        "mcp-server-filesystem"
+      ]
+    },
+    {
+      "id": "fetch",
+      "name": "Fetch",
+      "description": {
+        "en": "Fetch any URL and convert the content to Markdown for the model. Lets Ghast 'just look at this page' inside the conversation without switching to a browser. Maintained by Anthropic.",
+        "zh-CN": "抓取任意 URL 的内容并转成 Markdown 喂给模型。让 Ghast 在对话里直接 “看一下这个网页”,无需切到浏览器。Anthropic 官方维护。",
+        "zh-TW": "抓取任意 URL 的內容並轉成 Markdown 餵給模型。讓 Ghast 在對話裡直接「看一下這個網頁」,無需切到瀏覽器。Anthropic 官方維護。",
+        "ja": "任意の URL を取得して Markdown に変換し、モデルに渡します。ブラウザに切り替えずに、Ghast がチャット内で「このページを見て」を実現。Anthropic 公式メンテナンス。"
+      },
+      "author": "Anthropic",
+      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+      "license": "MIT",
+      "category": "web",
+      "tags": [
+        "web",
+        "http",
+        "fetch",
+        "official",
+        "anthropic"
+      ],
+      "featured": true,
+      "verified": true,
+      "installations": [
+        {
+          "name": "uvx",
+          "description": {
+            "en": "Run via uvx — the Python package is downloaded on first run. Requires uv installed locally.",
+            "zh-CN": "通过 uvx 运行,首次运行时 uvx 自动下载 Python 包。要求本机已安装 uv。",
+            "zh-TW": "透過 uvx 執行,首次執行時 uvx 自動下載 Python 套件。需要本機已安裝 uv。",
+            "ja": "uvx 経由で実行 — 初回実行時に Python パッケージが自動ダウンロードされます。ローカルに uv のインストールが必要。"
+          },
+          "config": {
+            "command": "uvx",
+            "args": [
+              "mcp-server-fetch"
+            ]
+          },
+          "prerequisites": [
+            {
+              "en": "uv (https://docs.astral.sh/uv/) — `brew install uv` or see the official docs",
+              "zh-CN": "uv (https://docs.astral.sh/uv/) —— `brew install uv` 或参考官方文档",
+              "zh-TW": "uv (https://docs.astral.sh/uv/) —— `brew install uv` 或參考官方文件",
+              "ja": "uv (https://docs.astral.sh/uv/) — `brew install uv` または公式ドキュメント参照"
+            }
+          ],
+          "transports": [
+            "stdio"
+          ]
+        }
+      ],
+      "detectionHints": [
+        "mcp-server-fetch",
+        "@modelcontextprotocol/server-fetch"
+      ]
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "description": {
+        "en": "Full GitHub API access — repo browsing, issue / PR CRUD, code search, file read/write. Lets the model manage your repos directly. Maintained by Anthropic.",
+        "zh-CN": "完整的 GitHub API 接入 —— 仓库浏览、issue / PR 增删改、代码搜索、文件读写。让模型直接为你管理仓库。Anthropic 官方维护。",
+        "zh-TW": "完整的 GitHub API 接入 —— 倉庫瀏覽、issue / PR 增刪改、程式碼搜尋、檔案讀寫。讓模型直接為你管理倉庫。Anthropic 官方維護。",
+        "ja": "GitHub API への完全アクセス — リポジトリ閲覧、issue / PR の作成編集削除、コード検索、ファイル読み書き。モデルがリポジトリを直接管理。Anthropic 公式メンテナンス。"
+      },
+      "author": "Anthropic",
+      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
+      "license": "MIT",
+      "category": "dev",
+      "tags": [
+        "github",
+        "git",
+        "dev",
+        "official",
+        "anthropic"
+      ],
+      "featured": true,
+      "verified": true,
+      "installations": [
+        {
+          "name": "npx",
+          "description": {
+            "en": "Run via npx. Requires a GitHub Personal Access Token — create one at https://github.com/settings/tokens with repo / read:user / read:org scopes.",
+            "zh-CN": "通过 npx 运行。需要一个 GitHub Personal Access Token。在 https://github.com/settings/tokens 创建,勾选 repo / read:user / read:org 权限。",
+            "zh-TW": "透過 npx 執行。需要一個 GitHub Personal Access Token。在 https://github.com/settings/tokens 建立,勾選 repo / read:user / read:org 權限。",
+            "ja": "npx 経由で実行。GitHub Personal Access Token が必要 — https://github.com/settings/tokens で repo / read:user / read:org スコープで発行。"
+          },
+          "config": {
+            "command": "npx",
+            "args": [
+              "-y",
+              "@modelcontextprotocol/server-github"
+            ],
+            "env": {
+              "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+            }
+          },
+          "parameters": [
+            {
+              "name": "GITHUB_PERSONAL_ACCESS_TOKEN",
+              "description": {
+                "en": "GitHub Personal Access Token. Create one at GitHub Settings → Developer settings → Personal access tokens.",
+                "zh-CN": "GitHub PAT (Personal Access Token)。在 GitHub 设置 → Developer settings → Personal access tokens 创建。",
+                "zh-TW": "GitHub PAT (Personal Access Token)。在 GitHub 設定 → Developer settings → Personal access tokens 建立。",
+                "ja": "GitHub Personal Access Token。GitHub 設定 → Developer settings → Personal access tokens で発行。"
+              },
+              "placeholder": "ghp_xxxxxxxxxxxxxxxxxxxx",
+              "required": true
+            }
+          ],
+          "prerequisites": [
+            "Node.js 18+"
+          ],
+          "transports": [
+            "stdio"
+          ]
+        }
+      ],
+      "detectionHints": [
+        "@modelcontextprotocol/server-github",
+        "mcp-server-github"
+      ]
+    },
+    {
+      "id": "context7",
+      "name": "Context7",
+      "description": {
+        "en": "Query the latest official documentation for any open-source library — React, Next.js, Prisma, Tailwind, Django, Spring Boot, etc. Stops the model from answering you with stale APIs. By Upstash.",
+        "zh-CN": "查询任何开源库的最新官方文档 —— React、Next.js、Prisma、Tailwind、Django、Spring Boot 等。让模型不再用过期的 API 答你问题。Upstash 出品。",
+        "zh-TW": "查詢任何開源函式庫的最新官方文件 —— React、Next.js、Prisma、Tailwind、Django、Spring Boot 等。讓模型不再用過期的 API 回答問題。Upstash 出品。",
+        "ja": "React・Next.js・Prisma・Tailwind・Django・Spring Boot などあらゆる OSS ライブラリの最新公式ドキュメントを参照。古い API を使った回答を防げます。Upstash 製。"
+      },
+      "author": "Upstash",
+      "url": "https://github.com/upstash/context7",
+      "license": "MIT",
+      "category": "docs",
+      "tags": [
+        "docs",
+        "documentation",
+        "library",
+        "upstash",
+        "popular"
+      ],
+      "featured": true,
+      "verified": true,
+      "installations": [
+        {
+          "name": "npx",
+          "description": {
+            "en": "Run via npx. Free to use, no API key needed.",
+            "zh-CN": "通过 npx 运行。免费使用,不需要 API key。",
+            "zh-TW": "透過 npx 執行。免費使用,不需要 API key。",
+            "ja": "npx 経由で実行。無料で利用可能、API キー不要。"
+          },
+          "config": {
+            "command": "npx",
+            "args": [
+              "-y",
+              "@upstash/context7-mcp"
+            ]
+          },
+          "prerequisites": [
+            "Node.js 18+"
+          ],
+          "transports": [
+            "stdio"
+          ]
+        }
+      ],
+      "detectionHints": [
+        "@upstash/context7-mcp",
+        "context7-mcp"
+      ]
+    },
+    {
+      "id": "playwright",
+      "name": "Playwright",
+      "description": {
+        "en": "Drive a real Chromium browser via Playwright — navigate, click, fill forms, screenshot. A more reliable web-automation path than computer-use for sites that need it. Maintained by Microsoft.",
+        "zh-CN": "用 Playwright 在真实 Chromium 里跑浏览器操作 —— 导航、点击、填表、截图。比 computer-use 更稳的网页自动化方案。Microsoft 官方维护。",
+        "zh-TW": "用 Playwright 在真實 Chromium 跑瀏覽器操作 —— 導航、點擊、填表、截圖。比 computer-use 更穩的網頁自動化方案。Microsoft 官方維護。",
+        "ja": "Playwright で実 Chromium を操作 — ナビゲーション、クリック、フォーム入力、スクリーンショット。computer-use より安定した Web 自動化手段。Microsoft 公式メンテナンス。"
+      },
+      "author": "Microsoft",
+      "url": "https://github.com/microsoft/playwright-mcp",
+      "license": "Apache-2.0",
+      "category": "browser",
+      "tags": [
+        "browser",
+        "playwright",
+        "automation",
+        "microsoft"
+      ],
+      "featured": true,
+      "verified": true,
+      "installations": [
+        {
+          "name": "npx",
+          "description": {
+            "en": "Run via npx. First launch downloads Chromium (~150MB).",
+            "zh-CN": "通过 npx 运行。首次启动时 Playwright 会下载 Chromium (~150MB)。",
+            "zh-TW": "透過 npx 執行。首次啟動時 Playwright 會下載 Chromium (~150MB)。",
+            "ja": "npx 経由で実行。初回起動時に Chromium (~150MB) がダウンロードされます。"
+          },
+          "config": {
+            "command": "npx",
+            "args": [
+              "@playwright/mcp@latest"
+            ]
+          },
+          "prerequisites": [
+            "Node.js 18+"
+          ],
+          "transports": [
+            "stdio"
+          ]
+        }
+      ],
+      "detectionHints": [
+        "@playwright/mcp",
+        "playwright-mcp"
+      ]
+    },
+    {
+      "id": "memory",
+      "name": "Memory",
+      "description": {
+        "en": "Knowledge-graph-based long-term memory server — lets the model remember entities, relationships, and observations across conversations. Maintained by Anthropic.",
+        "zh-CN": "基于 knowledge graph 的长期记忆 server —— 让模型在对话间记住 entity、关系、观察。Anthropic 官方维护。",
+        "zh-TW": "基於 knowledge graph 的長期記憶 server —— 讓模型在對話間記住 entity、關係、觀察。Anthropic 官方維護。",
+        "ja": "ナレッジグラフベースの長期記憶サーバー — エンティティ、関係、観察を会話をまたいで保持。Anthropic 公式メンテナンス。"
+      },
+      "author": "Anthropic",
+      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+      "license": "MIT",
+      "category": "memory",
+      "tags": [
+        "memory",
+        "knowledge-graph",
+        "official",
+        "anthropic"
+      ],
+      "verified": true,
+      "installations": [
+        {
+          "name": "npx",
+          "config": {
+            "command": "npx",
+            "args": [
+              "-y",
+              "@modelcontextprotocol/server-memory"
+            ]
+          },
+          "prerequisites": [
+            "Node.js 18+"
+          ],
+          "transports": [
+            "stdio"
+          ]
+        }
+      ],
+      "detectionHints": [
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    {
+      "id": "sequential-thinking",
+      "name": "Sequential Thinking",
+      "description": {
+        "en": "Forces the model to break complex problems into explicit step-by-step reasoning. Notably improves answer quality on multi-step planning, debugging, and design decisions. Maintained by Anthropic.",
+        "zh-CN": "强制模型把复杂问题拆成显式步骤推理。在多步规划、调试、设计决策这类场景上能明显提高回答质量。Anthropic 官方维护。",
+        "zh-TW": "強制模型把複雜問題拆成顯式步驟推理。在多步規劃、除錯、設計決策這類場景上能明顯提高回答品質。Anthropic 官方維護。",
+        "ja": "複雑な問題を明示的なステップに分解させる思考補助。多段計画・デバッグ・設計判断などで回答品質が明確に向上します。Anthropic 公式メンテナンス。"
+      },
+      "author": "Anthropic",
+      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+      "license": "MIT",
+      "category": "thinking",
+      "tags": [
+        "thinking",
+        "reasoning",
+        "official",
+        "anthropic"
+      ],
+      "verified": true,
+      "installations": [
+        {
+          "name": "npx",
+          "config": {
+            "command": "npx",
+            "args": [
+              "-y",
+              "@modelcontextprotocol/server-sequential-thinking"
+            ]
+          },
+          "prerequisites": [
+            "Node.js 18+"
+          ],
+          "transports": [
+            "stdio"
+          ]
+        }
+      ],
+      "detectionHints": [
+        "@modelcontextprotocol/server-sequential-thinking",
+        "server-sequentialthinking"
+      ]
+    },
+    {
+      "id": "brave-search",
+      "name": "Brave Search",
+      "description": {
+        "en": "Web search via the Brave Search API — independent of Google. Free tier covers 2000 queries/month. Maintained by Anthropic.",
+        "zh-CN": "通过 Brave Search API 提供独立于 Google 的网络搜索能力。免费层每月 2000 次。Anthropic 官方维护。",
+        "zh-TW": "透過 Brave Search API 提供獨立於 Google 的網路搜尋能力。免費方案每月 2000 次。Anthropic 官方維護。",
+        "ja": "Brave Search API 経由の Web 検索 — Google 非依存。無料枠は月 2000 クエリ。Anthropic 公式メンテナンス。"
+      },
+      "author": "Anthropic",
+      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search",
+      "license": "MIT",
+      "category": "search",
+      "tags": [
+        "search",
+        "web",
+        "brave",
+        "official",
+        "anthropic"
+      ],
+      "verified": true,
+      "installations": [
+        {
+          "name": "npx",
+          "description": {
+            "en": "Run via npx. Requires a Brave Search API key — get one free at https://brave.com/search/api/.",
+            "zh-CN": "通过 npx 运行。需要 Brave Search API key。在 https://brave.com/search/api/ 注册免费拿到。",
+            "zh-TW": "透過 npx 執行。需要 Brave Search API key。在 https://brave.com/search/api/ 註冊免費取得。",
+            "ja": "npx 経由で実行。Brave Search API キーが必要 — https://brave.com/search/api/ で無料登録。"
+          },
+          "config": {
+            "command": "npx",
+            "args": [
+              "-y",
+              "@modelcontextprotocol/server-brave-search"
+            ],
+            "env": {
+              "BRAVE_API_KEY": "${BRAVE_API_KEY}"
+            }
+          },
+          "parameters": [
+            {
+              "name": "BRAVE_API_KEY",
+              "description": {
+                "en": "Brave Search API key. Get one at brave.com/search/api/.",
+                "zh-CN": "Brave Search API key。在 brave.com/search/api/ 注册后获得。",
+                "zh-TW": "Brave Search API key。在 brave.com/search/api/ 註冊後取得。",
+                "ja": "Brave Search API キー。brave.com/search/api/ で取得。"
+              },
+              "placeholder": "BSA...",
+              "required": true
+            }
+          ],
+          "prerequisites": [
+            "Node.js 18+"
+          ],
+          "transports": [
+            "stdio"
+          ]
+        }
+      ],
+      "detectionHints": [
+        "@modelcontextprotocol/server-brave-search"
+      ]
+    },
+    {
+      "id": "postgres",
+      "name": "PostgreSQL",
+      "description": {
+        "en": "Read-only PostgreSQL connection — inspect schemas, run SELECTs, see explain plans. Safe sandbox; can't modify data. Maintained by Anthropic.",
+        "zh-CN": "只读连接 PostgreSQL 数据库 —— 查 schema、跑 SELECT、看 explain。安全沙箱,不会改你的数据。Anthropic 官方维护。",
+        "zh-TW": "唯讀連線 PostgreSQL 資料庫 —— 查 schema、跑 SELECT、看 explain。安全沙箱,不會改你的資料。Anthropic 官方維護。",
+        "ja": "PostgreSQL への読み取り専用接続 — スキーマ確認、SELECT 実行、explain 確認。データを変更しない安全なサンドボックス。Anthropic 公式メンテナンス。"
+      },
+      "author": "Anthropic",
+      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres",
+      "license": "MIT",
+      "category": "database",
+      "tags": [
+        "database",
+        "postgres",
+        "sql",
+        "official",
+        "anthropic"
+      ],
+      "verified": true,
+      "installations": [
+        {
+          "name": "npx",
+          "description": {
+            "en": "Run via npx. Requires a PostgreSQL connection string. Server only runs SELECT — it cannot write.",
+            "zh-CN": "通过 npx 运行。需要 PostgreSQL 连接串。Server 只会执行 SELECT,不会写数据。",
+            "zh-TW": "透過 npx 執行。需要 PostgreSQL 連線字串。Server 只會執行 SELECT,不會寫資料。",
+            "ja": "npx 経由で実行。PostgreSQL 接続文字列が必要。サーバーは SELECT のみ実行、書き込み不可。"
+          },
+          "config": {
+            "command": "npx",
+            "args": [
+              "-y",
+              "@modelcontextprotocol/server-postgres",
+              "${POSTGRES_CONNECTION_STRING}"
+            ]
+          },
+          "parameters": [
+            {
+              "name": "POSTGRES_CONNECTION_STRING",
+              "description": {
+                "en": "PostgreSQL connection string, format: postgresql://user:password@host:port/database",
+                "zh-CN": "PostgreSQL 连接串,格式: postgresql://user:password@host:port/database",
+                "zh-TW": "PostgreSQL 連線字串,格式: postgresql://user:password@host:port/database",
+                "ja": "PostgreSQL 接続文字列。形式: postgresql://user:password@host:port/database"
+              },
+              "placeholder": "postgresql://localhost/mydb",
+              "required": true
+            }
+          ],
+          "prerequisites": [
+            "Node.js 18+",
+            {
+              "en": "A reachable PostgreSQL database",
+              "zh-CN": "可访问的 PostgreSQL 数据库",
+              "zh-TW": "可存取的 PostgreSQL 資料庫",
+              "ja": "到達可能な PostgreSQL データベース"
+            }
+          ],
+          "transports": [
+            "stdio"
+          ]
+        }
+      ],
+      "detectionHints": [
+        "@modelcontextprotocol/server-postgres"
+      ]
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "description": {
+        "en": "Lets the model send Slack messages, read channel history, and manage channels directly. Maintained by Anthropic.",
+        "zh-CN": "让模型直接发 Slack 消息、读频道历史、管理 channel。Anthropic 官方维护。",
+        "zh-TW": "讓模型直接發 Slack 訊息、讀頻道歷史、管理 channel。Anthropic 官方維護。",
+        "ja": "モデルが Slack メッセージの送信、チャンネル履歴の参照、チャンネル管理を直接実行。Anthropic 公式メンテナンス。"
+      },
+      "author": "Anthropic",
+      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/slack",
+      "license": "MIT",
+      "category": "communication",
+      "tags": [
+        "slack",
+        "messaging",
+        "official",
+        "anthropic"
+      ],
+      "verified": true,
+      "installations": [
+        {
+          "name": "npx",
+          "description": {
+            "en": "Run via npx. Requires a Slack Bot Token (xoxb-) and the workspace Team ID.",
+            "zh-CN": "通过 npx 运行。需要 Slack Bot Token (xoxb-) 和 Team ID。",
+            "zh-TW": "透過 npx 執行。需要 Slack Bot Token (xoxb-) 和 Team ID。",
+            "ja": "npx 経由で実行。Slack Bot Token (xoxb-) とワークスペース Team ID が必要。"
+          },
+          "config": {
+            "command": "npx",
+            "args": [
+              "-y",
+              "@modelcontextprotocol/server-slack"
+            ],
+            "env": {
+              "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}",
+              "SLACK_TEAM_ID": "${SLACK_TEAM_ID}"
+            }
+          },
+          "parameters": [
+            {
+              "name": "SLACK_BOT_TOKEN",
+              "description": {
+                "en": "Slack Bot User OAuth Token (xoxb-). Created when installing your Slack app at api.slack.com/apps.",
+                "zh-CN": "Slack Bot User OAuth Token (xoxb-)。在 api.slack.com/apps 创建 app 后获得。",
+                "zh-TW": "Slack Bot User OAuth Token (xoxb-)。在 api.slack.com/apps 建立 app 後取得。",
+                "ja": "Slack Bot User OAuth Token (xoxb-)。api.slack.com/apps で Slack アプリ作成時に取得。"
+              },
+              "placeholder": "xoxb-...",
+              "required": true
+            },
+            {
+              "name": "SLACK_TEAM_ID",
+              "description": {
+                "en": "Slack workspace ID (Txxxxxxxx). Available via the auth.test API.",
+                "zh-CN": "Slack workspace ID (Txxxxxxxx)。auth.test API 可拿到。",
+                "zh-TW": "Slack workspace ID (Txxxxxxxx)。auth.test API 可取得。",
+                "ja": "Slack ワークスペース ID (Txxxxxxxx)。auth.test API で取得可能。"
+              },
+              "placeholder": "T0123456789",
+              "required": true
+            }
+          ],
+          "prerequisites": [
+            "Node.js 18+",
+            {
+              "en": "An installed Slack app",
+              "zh-CN": "已安装的 Slack App",
+              "zh-TW": "已安裝的 Slack App",
+              "ja": "インストール済みの Slack アプリ"
+            }
+          ],
+          "transports": [
+            "stdio"
+          ]
+        }
+      ],
+      "detectionHints": [
+        "@modelcontextprotocol/server-slack"
+      ]
+    }
+  ]
 }
