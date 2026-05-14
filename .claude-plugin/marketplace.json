@@ -1,0 +1,107 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ghast-plugins",
+  "description": "Community plugin directory for Ghast — Anthropic-format plugins (commands, skills, agents, hooks, MCP servers) discoverable from Ghast → Settings → Plugins.",
+  "owner": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "plugins": [
+    {
+      "name": "current-datetime",
+      "description": "Slash command and skill that tells the model the wall-clock time in any IANA timezone — kills the 'I don't know what day it is' problem.",
+      "author": { "name": "Ghast AI" },
+      "category": "utility",
+      "source": "./plugins/current-datetime",
+      "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/current-datetime"
+    },
+    {
+      "name": "mermaid-mindmap",
+      "description": "Slash command that turns a topic or outline into a Mermaid mindmap code block the chat can render as a tree.",
+      "author": { "name": "Ghast AI" },
+      "category": "productivity",
+      "source": "./plugins/mermaid-mindmap",
+      "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/mermaid-mindmap"
+    },
+    {
+      "name": "website-fetcher",
+      "description": "Skill that teaches the model to fetch a URL and read its text content via the built-in WebFetch tool — 'just look at this page' without opening a browser.",
+      "author": { "name": "Ghast AI" },
+      "category": "web",
+      "source": "./plugins/website-fetcher",
+      "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/website-fetcher"
+    },
+    {
+      "name": "uptime-check",
+      "description": "Skill for probing whether a URL is reachable and how fast it responds, using the built-in WebFetch tool.",
+      "author": { "name": "Ghast AI" },
+      "category": "web",
+      "source": "./plugins/uptime-check",
+      "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/uptime-check"
+    },
+    {
+      "name": "realtime-weather",
+      "description": "Skill that pulls current weather and a 24h forecast for any place name via Open-Meteo — no API key, no signup.",
+      "author": { "name": "Ghast AI" },
+      "category": "information",
+      "source": "./plugins/realtime-weather",
+      "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/realtime-weather"
+    },
+    {
+      "name": "github-stats",
+      "description": "Skill for looking up public GitHub repo or user stats — stars, forks, issues, last commit — via the unauthenticated GitHub REST API.",
+      "author": { "name": "Ghast AI" },
+      "category": "development",
+      "source": "./plugins/github-stats",
+      "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/github-stats"
+    },
+    {
+      "name": "hacker-news",
+      "description": "Skill for reading Hacker News from chat — top / new / best stories plus thread fetches via the public Firebase API.",
+      "author": { "name": "Ghast AI" },
+      "category": "news",
+      "source": "./plugins/hacker-news",
+      "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/hacker-news"
+    },
+    {
+      "name": "defillama",
+      "description": "Skill for looking up DeFi protocol TVL, chain stats, and ranking via the free DeFi Llama API.",
+      "author": { "name": "Ghast AI" },
+      "category": "finance",
+      "source": "./plugins/defillama",
+      "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/defillama"
+    },
+    {
+      "name": "stock-quote",
+      "description": "Skill for fetching delayed stock quotes (price, change, volume) via Yahoo Finance's public chart endpoint. No API key required.",
+      "author": { "name": "Ghast AI" },
+      "category": "finance",
+      "source": "./plugins/stock-quote",
+      "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/stock-quote"
+    },
+    {
+      "name": "steam-search",
+      "description": "Skill for searching the Steam store and looking up game details (price, release date, genres, reviews) — uses Steam's public store endpoints.",
+      "author": { "name": "Ghast AI" },
+      "category": "gaming",
+      "source": "./plugins/steam-search",
+      "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/steam-search"
+    },
+    {
+      "name": "bilibili-search",
+      "description": "Skill for searching Bilibili videos and the daily ranking via the public web search endpoint — no login required.",
+      "author": { "name": "Ghast AI" },
+      "category": "media",
+      "source": "./plugins/bilibili-search",
+      "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/bilibili-search"
+    },
+    {
+      "name": "seo-meta",
+      "description": "Skill for pulling SEO tags from any URL — title, meta description, OG tags, canonical, H1s, robots — so the model can audit how a page presents itself.",
+      "author": { "name": "Ghast AI" },
+      "category": "web",
+      "source": "./plugins/seo-meta",
+      "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/seo-meta"
+    }
+  ]
+}

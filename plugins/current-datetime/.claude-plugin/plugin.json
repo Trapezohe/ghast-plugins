@@ -1,0 +1,8 @@
+{
+  "name": "current-datetime",
+  "description": "Slash command and skill that tells the model the current wall-clock time in any IANA timezone — kills the 'I don't know what day it is' problem.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  }
+}

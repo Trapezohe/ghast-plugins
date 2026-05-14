@@ -1,0 +1,8 @@
+{
+  "name": "uptime-check",
+  "description": "Skill for probing whether a URL is reachable and how fast it responds, using the built-in WebFetch tool with timing.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  }
+}

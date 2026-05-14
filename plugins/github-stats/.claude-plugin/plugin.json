@@ -1,0 +1,8 @@
+{
+  "name": "github-stats",
+  "description": "Skill for looking up public GitHub repo or user stats via the unauthenticated GitHub REST API (60 req/hr/IP).",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  }
+}

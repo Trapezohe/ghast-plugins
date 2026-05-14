@@ -1,293 +1,241 @@
 # Ghast Plugins & MCP Registry
 
-Public registry powering the **Plugins** and **MCP** marketplaces inside the
+Public plugin & MCP directory for the
 [Ghast desktop client](https://ghast.trapezohe.ai).
 
-This repo hosts two independent indexes plus the actual plugin sources.
+This repo follows the **Anthropic plugin format** used by
+[anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official),
+so plugins authored for Claude Code's plugin system can be hosted here (and
+vice versa). Ghast also exposes its own MCP server registry alongside.
 
 | File | Purpose | Consumed by |
 | --- | --- | --- |
-| `registry.json` | Plugin index | Ghast → Settings → Plugins |
-| `mcp-registry.json` | MCP server index | Ghast → Settings → MCP → Marketplace |
-| `plugins/<id>/` | Plugin source tree | Resolved via `registry.json[].path` |
+| `.claude-plugin/marketplace.json` | Plugin directory (Anthropic schema) | Ghast → Settings → Plugins |
+| `mcp-registry.json` | MCP server directory (self-contained) | Ghast → Settings → MCP → Marketplace |
+| `plugins/<name>/` | Plugin source trees | Resolved via marketplace `source` |
 
 The Ghast client fetches these files directly from `raw.githubusercontent.com`
-on the `main` branch. There is no build step — push to `main` and the
-marketplace updates on the next refresh.
+on the `main` branch. Push to `main` → marketplace updates on the next refresh.
 
 ---
 
-## Acknowledgements
+## Plugin directory: `.claude-plugin/marketplace.json`
 
-The starter plugin set was inspired by
-[lobehub/lobe-chat-plugins](https://github.com/lobehub/lobe-chat-plugins) —
-a community catalog of plugins for the [LobeChat](https://github.com/lobehub/lobe-chat)
-project. Lobe plugins are **remote OpenAPI services** that LobeChat calls over
-HTTP at runtime, whereas Ghast plugins are **local Node modules** loaded into
-the host process. The two models don't share code or a runtime contract, so
-the starter plugins in this repo were re-implemented from scratch using
-Ghast's plugin API — they take inspiration from a Lobe original (subject
-matter, scope, the name) but are not ports.
-
-Specifically, the following plugins reuse the *idea* of a Lobe upstream:
-
-| Ghast plugin | Inspired by Lobe plugin | Implementation note |
-| --- | --- | --- |
-| `current-datetime` | `current-datetime-assistant`, `clock-time` | Pure JS, no network |
-| `website-fetcher` | `web`, `website-crawler` | `fetch` + tiny HTML cleaner |
-| `realtime-weather` | `realtime-weather`, `WeatherGPT` | Uses Open-Meteo (no key) instead of an external service |
-| `github-stats` | `gitUserRepoStats` | Hits api.github.com directly |
-| `defillama` | `defillama` | Hits api.llama.fi directly |
-| `stock-quote` | `StockData`, `savvy_trader_ai` | Uses Yahoo Finance v8 chart |
-| `steam-search` | `steam`, `GameSight` | Uses Steam's public store endpoints |
-| `bilibili-search` | `bilibili` | Uses Bilibili's public web search endpoint |
-| `seo-meta` | `SEO`, `seo_assistant` | Regex-only, no JSDOM |
-| `mermaid-mindmap` | `moonlit-mind-map` | Outputs Mermaid `mindmap` syntax |
-| `uptime-check` | `uptime` | HEAD-then-GET probe |
-| `hacker-news` | _(not in Lobe — added for the starter set)_ | Uses HN's Firebase API |
-
-Plugins from Lobe that depend on a private API (Midjourney, MixerBox, paid
-search providers, etc.) were intentionally **not** ported — they require
-credentials the user would have to obtain anyway, and we don't want
-marketplace cards that look free but aren't.
-
----
-
-## Layout
-
-```
-ghast-plugins/
-├── README.md
-├── registry.json                  # plugin index
-├── mcp-registry.json              # MCP server registry (self-contained)
-└── plugins/
-    └── <plugin-id>/
-        ├── manifest.json          # required, zod-validated by the client
-        ├── main.mjs               # entry point referenced by manifest.main
-        ├── icon.png               # optional
-        └── README.md              # optional
-```
-
----
-
-## Adding a plugin
-
-### 1. Drop the plugin into `plugins/<plugin-id>/`
-
-It must contain a `manifest.json` and the file referenced by `manifest.main`.
-
-Use `main.mjs` (or any `.mjs` filename) for ES module syntax. If you prefer
-CommonJS, name it `main.cjs` or `main.js` with no `package.json` alongside.
-The loader uses Node's standard ESM/CJS detection.
-
-### 2. `manifest.json` schema
-
-Validated client-side with [zod](https://github.com/colinhacks/zod). See
-`src/main/plugins/plugin-manifest-schema.ts` in the Ghast repo for the
-authoritative definition.
+Schema declared by `$schema: "https://anthropic.com/claude-code/marketplace.schema.json"`.
 
 ```json
 {
-  "id": "your-plugin-id",
-  "name": "Your Plugin",
-  "version": "0.1.0",
-  "description": "What this plugin does in one line.",
-  "author": "Your Name",
-  "main": "main.mjs",
-  "engines": { "ghast": "^0.1.0" },
-  "type": "tool",
-
-  "icon": "🛠️",
-  "homepage": "https://github.com/Trapezohe/ghast-plugins",
-  "repository": "https://github.com/Trapezohe/ghast-plugins",
-  "license": "MIT",
-  "keywords": ["example"],
-  "permissions": ["tools:register"],
-  "activationEvents": ["onStartup"],
-
-  "contributes": {
-    "tools": [
-      {
-        "id": "your_tool",
-        "name": "Your tool's display name",
-        "description": "One-line summary for the UI."
-      }
-    ]
-  }
-}
-```
-
-**Required**: `id` · `name` · `version` · `description` · `author` · `main` · `engines.ghast` · `type`
-
-**Constraints**:
-
-| Field | Constraint |
-| --- | --- |
-| `id` | matches `[@a-z0-9-_./]+`, globally unique |
-| `version` | semver `\d+\.\d+\.\d+` |
-| `author` | string **or** `{ name, email?, url? }` |
-| `type` | one of `tool` · `ui` · `theme` · `provider` · `transform` · `integration` · `composite`, or an array of those |
-| `engines.ghast` | semver range, e.g. `^0.1.0` |
-| `permissions` | declare what the runtime expects. A plugin that registers tools needs `"tools:register"`. |
-
-### 3. Plugin entry point
-
-The `main` file must export an `activate(context)` function:
-
-```js
-// main.mjs
-export function activate(context) {
-  const handle = context.tools.register("hello", {
-    description: "Say hello.",
-    parameters: {
-      type: "object",
-      properties: { name: { type: "string" } },
-      required: ["name"],
-    },
-    execute: async ({ name }) => ({ message: `Hello, ${name}!` }),
-  });
-
-  // Optional: return a disposer so Ghast can cleanly unload the plugin.
-  return { dispose: () => handle.dispose() };
-}
-```
-
-The `context` argument exposes:
-
-- `context.tools.register(name, { description, parameters, execute })` — register a tool the LLM can call.
-- `context.commands.register(name, handler)` — register a UI command.
-- `context.events.on(eventName, handler)` — subscribe to host events.
-- `context.storage.local` / `context.storage.secrets` — per-plugin persistence.
-- `context.settings.get(key) / .update(key, value)` — read/write your plugin's settings.
-- `context.logger.info(...)` — write to Ghast's plugin log channel.
-
-See `src/main/plugins/plugin-activation-context-factory.ts` in the Ghast repo
-for the full surface.
-
-### 4. Add the registry entry
-
-Append to `registry.json`:
-
-```json
-{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ghast-plugins",
+  "description": "...",
+  "owner": { "name": "Ghast AI", "url": "https://ghast.trapezohe.ai" },
   "plugins": [
     {
-      "id": "your-plugin-id",
-      "version": "0.1.0",
-      "repository": "https://github.com/Trapezohe/ghast-plugins",
-      "path": "plugins/your-plugin-id"
+      "name": "<plugin-id>",
+      "description": "...",
+      "author": { "name": "...", "email": "..." },
+      "category": "utility | web | development | finance | gaming | media | news | information | productivity",
+      "source": "./plugins/<plugin-id>",
+      "homepage": "..."
     }
   ]
 }
 ```
 
-The client composes the manifest URL as
+`source` can be:
 
-```
-https://raw.githubusercontent.com/<owner>/<repo>/main/<path>/manifest.json
-```
-
-and compares `manifest.version` against the installed version to trigger update
-notifications. **Bump both** `manifest.json:version` **and** `registry.json:plugins[].version`
-when releasing.
-
-Plugins can also live in a third-party repo — set `repository` to point there
-and `path` to the subdirectory inside it. They don't have to be hosted in this
-monorepo.
+- **`"./plugins/<name>"`** — plugin lives inside this repo under the given path.
+- **`{ "source": "git-subdir", "url": "...", "path": "...", "ref": "main", "sha": "<commit>" }`** — plugin lives in another repo. The optional `sha` pins the install to a specific commit for reproducibility.
+- **`{ "source": "url", "url": "https://github.com/...", "sha": "..." }`** — whole repo is the plugin (no subdir).
 
 ---
 
-## Adding an MCP server
+## Plugin layout
 
-Append to `mcp-registry.json` under `servers`. The registry is **self-contained**:
-the client reads the config directly from this file, so there's nothing to host
-elsewhere.
+Each plugin lives at `plugins/<plugin-name>/` and follows the Anthropic
+convention. Anything beyond `plugin.json` is optional — pick only the
+contribution kinds your plugin actually provides.
+
+```
+plugins/<plugin-name>/
+├── .claude-plugin/
+│   └── plugin.json          # required — name / description / author
+├── commands/                # optional — slash commands
+│   └── <command>.md
+├── skills/                  # optional — model-invoked skills
+│   └── <skill>/SKILL.md
+├── agents/                  # optional — subagent definitions
+│   └── <agent>.md
+├── hooks/                   # optional — Claude lifecycle hooks
+├── .mcp.json                # optional — MCP server config to register
+├── README.md
+└── LICENSE
+```
+
+### `.claude-plugin/plugin.json`
+
+The only required file. Keep it minimal:
 
 ```json
 {
-  "id": "example",
-  "name": "Example",
-  "description": {
-    "en": "What this server does.",
-    "zh-CN": "这个 server 是干什么的。"
-  },
-  "author": "Your Name",
-  "url": "https://github.com/your/example-mcp",
-  "license": "MIT",
-  "category": "tools",
-  "tags": ["example"],
-  "featured": false,
-  "verified": false,
-  "installations": [
-    {
-      "name": "npx",
-      "description": {
-        "en": "Run via npx.",
-        "zh-CN": "通过 npx 运行。"
-      },
-      "config": {
-        "command": "npx",
-        "args": ["-y", "@your/example-mcp"],
-        "env": { "API_KEY": "${API_KEY}" }
-      },
-      "parameters": [
-        {
-          "name": "API_KEY",
-          "description": { "en": "API key.", "zh-CN": "API 密钥。" },
-          "placeholder": "your_api_key",
-          "required": true
-        }
-      ],
-      "prerequisites": ["Node.js 18+"],
-      "transports": ["stdio"]
-    }
-  ],
-  "detectionHints": ["@your/example-mcp"]
+  "name": "your-plugin",
+  "description": "One-line summary of what this plugin does.",
+  "author": {
+    "name": "Your Name",
+    "email": "you@example.com"
+  }
 }
 ```
 
-After adding, bump `generatedAt` at the top of `mcp-registry.json` to the
-current ISO timestamp.
+`name` must match both the directory name (`plugins/<name>/`) and the
+`name` field in `marketplace.json`.
 
-### Localisation
+### `commands/<command>.md`
 
-`description`, `installations[].description`, `parameters[].description`, and
-`prerequisites[]` accept either a plain string (legacy, treated as `en`) or a
-BCP-47 keyed object (`en`, `zh-CN`, `zh-TW`, `ja`, `ko`, `fr`, …). The client
-falls back through: exact match → base language (`zh-TW` → `zh`) → `en` →
-first non-empty value.
+User-invoked slash commands. Body becomes the prompt that runs when the
+user types `/<command>` in chat. Frontmatter:
 
-Prefer the object form for new entries. Aim to ship at least `en` and `zh-CN`.
+```markdown
+---
+description: One-liner shown in /help and the slash-command picker
+argument-hint: "<required-arg> [optional-arg]"
+allowed-tools: [Read, Bash, WebFetch]
+---
 
-### `config` shape
+# Command Title
 
-`config` is a **real JSON object**, not a stringified blob. It is the same
-shape the client persists in its mcpServers settings entry:
+The user invoked this with: $ARGUMENTS
 
-- **stdio**: `{ "command", "args"?, "env"? }`
-- **http / sse**: `{ "url", "headers"? }`
-
-`${PARAM}` placeholders inside string values get substituted with what the user
-enters during install (parameter `name` field is the key).
-
-### `detectionHints`
-
-Substring matches checked against the user's installed Claude Desktop / Codex
-CLI / Cursor MCP configs (`command + args + url` haystack). If any hint hits,
-the marketplace card swaps its primary CTA from **Install** to
-**Import from <Client>**, which copies the config including tokens straight
-into Ghast — no re-typing.
-
-Hints should be the npm package name (or whatever identifying token shows up
-in the `args` array). Two hints per server is usually enough:
-
-```json
-"detectionHints": ["@modelcontextprotocol/server-filesystem", "mcp-server-filesystem"]
+Instructions:
+...
 ```
 
-### `transports`
+`$ARGUMENTS` is substituted with whatever the user typed after the command
+name. `allowed-tools` pre-approves tools so the command runs without
+permission prompts. Optional `model: haiku | sonnet | opus` overrides the
+chat model for this invocation.
 
-Currently understood: `stdio` · `sse` · `streamable-http`.
+### `skills/<name>/SKILL.md`
+
+Model-invoked capabilities. The model autonomously decides when to inject a
+skill based on its `description` and the task context. Frontmatter:
+
+```markdown
+---
+name: skill-name
+description: When this skill should activate. Be specific — this is what the model reads to decide.
+version: 1.0.0
+allowed-tools: [WebFetch, Bash]
+---
+
+# Skill Title
+
+Body becomes the system-prompt fragment injected when the skill activates.
+Tell the model:
+- When this skill applies
+- What tools to use (and how)
+- How to format the output
+```
+
+### `.mcp.json`
+
+Standard MCP servers config — Claude Code / Ghast wire these into the
+session when the plugin is installed.
+
+```json
+{
+  "example-server": {
+    "type": "http",
+    "url": "https://mcp.example.com/api"
+  },
+  "another": {
+    "command": "npx",
+    "args": ["-y", "@example/mcp"],
+    "env": { "API_KEY": "${API_KEY}" }
+  }
+}
+```
+
+---
+
+## Starter set
+
+The 12 starter plugins are inspired by
+[lobehub/lobe-chat-plugins](https://github.com/lobehub/lobe-chat-plugins),
+re-implemented as **Anthropic-format skill bundles**. None require an API
+key; all use builtin `WebFetch` / `Bash` for network access.
+
+| Plugin | Kind | What it does |
+| --- | --- | --- |
+| `current-datetime` | command + skill | `/now [tz]` and a skill that tells the model the wall-clock time |
+| `mermaid-mindmap` | command | `/mindmap <topic>` outputs a Mermaid mindmap block |
+| `website-fetcher` | skill | Fetch a URL and read its readable text |
+| `uptime-check` | skill | HEAD/GET probe with latency |
+| `realtime-weather` | skill | Open-Meteo current weather + 24h forecast |
+| `github-stats` | skill | Public GitHub REST API repo / user lookups |
+| `hacker-news` | skill | HN Firebase API — top / new / best stories + threads |
+| `defillama` | skill | api.llama.fi — TVL, top protocols, chain breakdown |
+| `stock-quote` | skill | Yahoo Finance v8 chart — delayed quotes |
+| `steam-search` | skill | Steam storesearch + appdetails |
+| `bilibili-search` | skill | Bilibili public web search + ranking |
+| `seo-meta` | skill | Meta / OG / Twitter / canonical extractor |
+
+---
+
+## MCP server directory: `mcp-registry.json`
+
+Self-contained registry of MCP servers, distinct from plugins (an MCP
+server alone has no commands/skills/hooks). Shape:
+
+```json
+{
+  "generatedAt": "2026-05-14T...",
+  "servers": [
+    {
+      "id": "example",
+      "name": "Example",
+      "description": { "en": "...", "zh-CN": "..." },
+      "author": "...",
+      "url": "https://github.com/...",
+      "license": "MIT",
+      "category": "tools",
+      "tags": ["..."],
+      "featured": false,
+      "verified": false,
+      "installations": [
+        {
+          "name": "npx",
+          "description": { "en": "...", "zh-CN": "..." },
+          "config": {
+            "command": "npx",
+            "args": ["-y", "@your/example-mcp"],
+            "env": { "API_KEY": "${API_KEY}" }
+          },
+          "parameters": [
+            {
+              "name": "API_KEY",
+              "description": { "en": "...", "zh-CN": "..." },
+              "placeholder": "your_api_key",
+              "required": true
+            }
+          ],
+          "prerequisites": ["Node.js 18+"],
+          "transports": ["stdio"]
+        }
+      ],
+      "detectionHints": ["@your/example-mcp"]
+    }
+  ]
+}
+```
+
+Field semantics:
+
+- **`description`** etc. accept either a plain string or a BCP-47-keyed object (`{ en, zh-CN, zh-TW, ja, ... }`). Client falls back through exact → base lang → en → first non-empty.
+- **`config`** is a real JSON object (not a stringified blob), matching the shape Ghast persists in its mcpServers settings entry.
+- **`${PARAM}`** placeholders inside any string value get substituted with what the user enters during install (`parameters[].name` is the key).
+- **`transports`**: `stdio` · `sse` · `streamable-http`.
+- **`detectionHints`**: substrings checked against the user's Claude Desktop / Codex CLI / Cursor MCP configs (`command + args + url` haystack). If any hint hits, the marketplace card swaps **Install** → **Import from <client>** which copies the existing config (including tokens) straight into Ghast.
 
 ---
 
@@ -296,55 +244,39 @@ Currently understood: `stdio` · `sse` · `streamable-http`.
 Before pushing:
 
 ```bash
-# JSON syntax
-python3 -m json.tool registry.json > /dev/null
+python3 -m json.tool .claude-plugin/marketplace.json > /dev/null
 python3 -m json.tool mcp-registry.json > /dev/null
-python3 -m json.tool plugins/your-plugin-id/manifest.json > /dev/null
-
-# Plugin entry point syntax
-node --check plugins/your-plugin-id/main.mjs
+for f in plugins/*/.claude-plugin/plugin.json; do
+  python3 -m json.tool "$f" > /dev/null || echo "FAIL: $f"
+done
 ```
 
-Full zod validation runs client-side when the marketplace fetches. Bad entries
-simply disappear from the listing with an error in the client console — they
+Skill / command markdown frontmatter is validated client-side at install
+time. Bad entries are dropped from the listing with a console error — they
 don't break the whole registry.
-
----
-
-## Versioning
-
-- Bumping a plugin's `version` (in both `manifest.json` and the `registry.json`
-  entry) triggers an update notification in installed clients.
-- Use semver: patch for fixes, minor for additions, major for breaking changes.
-- Removing a plugin from `registry.json` does **not** uninstall it from
-  existing clients — it just stops appearing in the marketplace.
-- MCP entries don't have versions; they're identified by `id`. Changing
-  `installations[].config` rolls out to all marketplace viewers on the next
-  refresh.
 
 ---
 
 ## Contributing
 
 1. Fork.
-2. For a plugin: add a directory under `plugins/<id>/` with a valid manifest
-   and `main.mjs`, then add the index entry to `registry.json`.
+2. For a plugin: add a folder under `plugins/<name>/` with at minimum
+   `.claude-plugin/plugin.json` + one of `commands/` / `skills/` / `agents/` / `hooks/` / `.mcp.json`. Add the index entry to `.claude-plugin/marketplace.json`.
 3. For an MCP server: add an entry under `mcp-registry.json:servers`.
 4. Open a PR. CI (forthcoming) will lint the JSON; a maintainer reviews.
 
-Substantial changes — new plugin types, schema fields, registry-level shape —
-should start as an issue against the [Ghast client repo](https://github.com/Trapezohe/ghast_desktop)
-so the contract stays in sync with what the client actually parses.
+To request a third-party listing without forking, open an issue with the
+`registry-request` label (and `plugin` or `mcp` for the type).
 
 ---
 
 ## License
 
-This registry repository is published under the MIT License. Each plugin under
-`plugins/` may declare its own license inside its `manifest.json`; users are
-responsible for reading and complying.
+This registry repository is published under the MIT License. Each plugin
+under `plugins/` may declare its own license; see each plugin's
+`LICENSE` file for details.
 
-The starter plugins in this repo are MIT-licensed and were inspired by the
-MIT-licensed [lobehub/lobe-chat-plugins](https://github.com/lobehub/lobe-chat-plugins)
-catalog — re-implemented from scratch for Ghast's local plugin runtime as
-documented above.
+The starter plugin set was inspired by the MIT-licensed
+[lobehub/lobe-chat-plugins](https://github.com/lobehub/lobe-chat-plugins)
+catalog — content and intent rewritten as Anthropic-format skill bundles
+for the Ghast / Claude Code plugin runtime.

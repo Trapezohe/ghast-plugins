@@ -1,0 +1,8 @@
+{
+  "name": "defillama",
+  "description": "Skill for looking up DeFi protocol TVL, chain stats, and ranking via the free DeFi Llama API.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  }
+}

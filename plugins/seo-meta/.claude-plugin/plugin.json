@@ -1,0 +1,8 @@
+{
+  "name": "seo-meta",
+  "description": "Skill for pulling SEO tags from any URL — title, meta description, OG tags, canonical, H1s, robots — so the model can audit how a page presents itself to search engines and social scrapers.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "website-fetcher",
+  "description": "Skill that teaches the model to fetch a URL and read its text content via the built-in WebFetch tool — 'just look at this page' without opening a browser.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  }
+}

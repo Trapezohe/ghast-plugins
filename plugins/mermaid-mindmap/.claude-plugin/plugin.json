@@ -1,0 +1,8 @@
+{
+  "name": "mermaid-mindmap",
+  "description": "Slash command that turns a topic or outline into a Mermaid mindmap code block the chat can render as a tree.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  }
+}

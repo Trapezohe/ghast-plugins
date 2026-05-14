@@ -1,0 +1,8 @@
+{
+  "name": "bilibili-search",
+  "description": "Skill for searching Bilibili videos and the daily ranking via the public web search endpoint — no login required for top-level results.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  }
+}

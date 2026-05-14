@@ -1,0 +1,8 @@
+{
+  "name": "hacker-news",
+  "description": "Skill for reading Hacker News from chat — top / new / best stories plus thread fetches via the public Firebase API.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  }
+}

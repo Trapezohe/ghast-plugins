@@ -1,0 +1,8 @@
+{
+  "name": "stock-quote",
+  "description": "Skill for fetching delayed stock quotes (price, change, volume) via Yahoo Finance's public chart endpoint. No API key required.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  }
+}
