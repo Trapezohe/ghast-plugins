@@ -1,0 +1,26 @@
+{
+  "id": "seo-meta",
+  "name": "SEO Meta Analyzer",
+  "version": "0.1.0",
+  "description": "Pull the SEO-relevant tags from any URL — title, meta description, OG tags, canonical, H1s, robots — so the model can audit the page.",
+  "author": "Trapezohe",
+  "main": "main.mjs",
+  "icon": "🔍",
+  "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/seo-meta",
+  "repository": "https://github.com/Trapezohe/ghast-plugins",
+  "license": "MIT",
+  "keywords": ["seo", "meta", "audit", "openGraph"],
+  "engines": { "ghast": "^0.1.0" },
+  "type": "tool",
+  "permissions": ["tools:register"],
+  "activationEvents": ["onStartup"],
+  "contributes": {
+    "tools": [
+      {
+        "id": "analyze_seo",
+        "name": "Analyze a page's SEO tags",
+        "description": "Return title / description / OG / Twitter / canonical / H1s / robots for a URL."
+      }
+    ]
+  }
+}

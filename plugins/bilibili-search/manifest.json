@@ -1,0 +1,31 @@
+{
+  "id": "bilibili-search",
+  "name": "Bilibili Search",
+  "version": "0.1.0",
+  "description": "Search Bilibili videos and look up the daily ranking — public web search endpoint, no login required for top-level results.",
+  "author": "Trapezohe",
+  "main": "main.mjs",
+  "icon": "📺",
+  "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/bilibili-search",
+  "repository": "https://github.com/Trapezohe/ghast-plugins",
+  "license": "MIT",
+  "keywords": ["bilibili", "video", "search", "china"],
+  "engines": { "ghast": "^0.1.0" },
+  "type": "tool",
+  "permissions": ["tools:register"],
+  "activationEvents": ["onStartup"],
+  "contributes": {
+    "tools": [
+      {
+        "id": "search_videos",
+        "name": "Search Bilibili videos",
+        "description": "Search Bilibili by keyword and return matching videos."
+      },
+      {
+        "id": "list_trending",
+        "name": "List Bilibili trending videos",
+        "description": "Return the current daily ranking."
+      }
+    ]
+  }
+}

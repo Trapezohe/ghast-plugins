@@ -1,0 +1,26 @@
+{
+  "id": "website-fetcher",
+  "name": "Website Fetcher",
+  "version": "0.1.0",
+  "description": "Fetch a URL and return its readable text content so the model can 'look at' a page without a browser.",
+  "author": "Trapezohe",
+  "main": "main.mjs",
+  "icon": "🌐",
+  "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/website-fetcher",
+  "repository": "https://github.com/Trapezohe/ghast-plugins",
+  "license": "MIT",
+  "keywords": ["web", "fetch", "scraping", "browse"],
+  "engines": { "ghast": "^0.1.0" },
+  "type": "tool",
+  "permissions": ["tools:register"],
+  "activationEvents": ["onStartup"],
+  "contributes": {
+    "tools": [
+      {
+        "id": "fetch_url",
+        "name": "Fetch a URL",
+        "description": "Download an HTTP(S) page and return its title, meta description, and main text."
+      }
+    ]
+  }
+}

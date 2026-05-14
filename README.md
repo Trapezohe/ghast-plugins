@@ -17,6 +17,42 @@ marketplace updates on the next refresh.
 
 ---
 
+## Acknowledgements
+
+The starter plugin set was inspired by
+[lobehub/lobe-chat-plugins](https://github.com/lobehub/lobe-chat-plugins) —
+a community catalog of plugins for the [LobeChat](https://github.com/lobehub/lobe-chat)
+project. Lobe plugins are **remote OpenAPI services** that LobeChat calls over
+HTTP at runtime, whereas Ghast plugins are **local Node modules** loaded into
+the host process. The two models don't share code or a runtime contract, so
+the starter plugins in this repo were re-implemented from scratch using
+Ghast's plugin API — they take inspiration from a Lobe original (subject
+matter, scope, the name) but are not ports.
+
+Specifically, the following plugins reuse the *idea* of a Lobe upstream:
+
+| Ghast plugin | Inspired by Lobe plugin | Implementation note |
+| --- | --- | --- |
+| `current-datetime` | `current-datetime-assistant`, `clock-time` | Pure JS, no network |
+| `website-fetcher` | `web`, `website-crawler` | `fetch` + tiny HTML cleaner |
+| `realtime-weather` | `realtime-weather`, `WeatherGPT` | Uses Open-Meteo (no key) instead of an external service |
+| `github-stats` | `gitUserRepoStats` | Hits api.github.com directly |
+| `defillama` | `defillama` | Hits api.llama.fi directly |
+| `stock-quote` | `StockData`, `savvy_trader_ai` | Uses Yahoo Finance v8 chart |
+| `steam-search` | `steam`, `GameSight` | Uses Steam's public store endpoints |
+| `bilibili-search` | `bilibili` | Uses Bilibili's public web search endpoint |
+| `seo-meta` | `SEO`, `seo_assistant` | Regex-only, no JSDOM |
+| `mermaid-mindmap` | `moonlit-mind-map` | Outputs Mermaid `mindmap` syntax |
+| `uptime-check` | `uptime` | HEAD-then-GET probe |
+| `hacker-news` | _(not in Lobe — added for the starter set)_ | Uses HN's Firebase API |
+
+Plugins from Lobe that depend on a private API (Midjourney, MixerBox, paid
+search providers, etc.) were intentionally **not** ported — they require
+credentials the user would have to obtain anyway, and we don't want
+marketplace cards that look free but aren't.
+
+---
+
 ## Layout
 
 ```
@@ -27,7 +63,7 @@ ghast-plugins/
 └── plugins/
     └── <plugin-id>/
         ├── manifest.json          # required, zod-validated by the client
-        ├── main.js                # entry point (whatever `manifest.main` points at)
+        ├── main.mjs               # entry point referenced by manifest.main
         ├── icon.png               # optional
         └── README.md              # optional
 ```
@@ -39,6 +75,10 @@ ghast-plugins/
 ### 1. Drop the plugin into `plugins/<plugin-id>/`
 
 It must contain a `manifest.json` and the file referenced by `manifest.main`.
+
+Use `main.mjs` (or any `.mjs` filename) for ES module syntax. If you prefer
+CommonJS, name it `main.cjs` or `main.js` with no `package.json` alongside.
+The loader uses Node's standard ESM/CJS detection.
 
 ### 2. `manifest.json` schema
 
@@ -53,34 +93,26 @@ authoritative definition.
   "version": "0.1.0",
   "description": "What this plugin does in one line.",
   "author": "Your Name",
-  "main": "main.js",
+  "main": "main.mjs",
   "engines": { "ghast": "^0.1.0" },
   "type": "tool",
 
-  "icon": "icon.png",
+  "icon": "🛠️",
   "homepage": "https://github.com/Trapezohe/ghast-plugins",
   "repository": "https://github.com/Trapezohe/ghast-plugins",
   "license": "MIT",
   "keywords": ["example"],
-  "permissions": [],
+  "permissions": ["tools:register"],
   "activationEvents": ["onStartup"],
 
   "contributes": {
-    "tools": [],
-    "commands": [],
-    "themes": [],
-    "providers": [],
-    "keybindings": [],
-    "components": {
-      "sidebar": [],
-      "settingsPanels": [],
-      "toolbar": [],
-      "contextMenus": [],
-      "artifactRenderers": [],
-      "statusBar": []
-    },
-    "configuration": null,
-    "locales": []
+    "tools": [
+      {
+        "id": "your_tool",
+        "name": "Your tool's display name",
+        "description": "One-line summary for the UI."
+      }
+    ]
   }
 }
 ```
@@ -96,8 +128,43 @@ authoritative definition.
 | `author` | string **or** `{ name, email?, url? }` |
 | `type` | one of `tool` · `ui` · `theme` · `provider` · `transform` · `integration` · `composite`, or an array of those |
 | `engines.ghast` | semver range, e.g. `^0.1.0` |
+| `permissions` | declare what the runtime expects. A plugin that registers tools needs `"tools:register"`. |
 
-### 3. Add the registry entry
+### 3. Plugin entry point
+
+The `main` file must export an `activate(context)` function:
+
+```js
+// main.mjs
+export function activate(context) {
+  const handle = context.tools.register("hello", {
+    description: "Say hello.",
+    parameters: {
+      type: "object",
+      properties: { name: { type: "string" } },
+      required: ["name"],
+    },
+    execute: async ({ name }) => ({ message: `Hello, ${name}!` }),
+  });
+
+  // Optional: return a disposer so Ghast can cleanly unload the plugin.
+  return { dispose: () => handle.dispose() };
+}
+```
+
+The `context` argument exposes:
+
+- `context.tools.register(name, { description, parameters, execute })` — register a tool the LLM can call.
+- `context.commands.register(name, handler)` — register a UI command.
+- `context.events.on(eventName, handler)` — subscribe to host events.
+- `context.storage.local` / `context.storage.secrets` — per-plugin persistence.
+- `context.settings.get(key) / .update(key, value)` — read/write your plugin's settings.
+- `context.logger.info(...)` — write to Ghast's plugin log channel.
+
+See `src/main/plugins/plugin-activation-context-factory.ts` in the Ghast repo
+for the full surface.
+
+### 4. Add the registry entry
 
 Append to `registry.json`:
 
@@ -233,6 +300,9 @@ Before pushing:
 python3 -m json.tool registry.json > /dev/null
 python3 -m json.tool mcp-registry.json > /dev/null
 python3 -m json.tool plugins/your-plugin-id/manifest.json > /dev/null
+
+# Plugin entry point syntax
+node --check plugins/your-plugin-id/main.mjs
 ```
 
 Full zod validation runs client-side when the marketplace fetches. Bad entries
@@ -257,8 +327,8 @@ don't break the whole registry.
 ## Contributing
 
 1. Fork.
-2. For a plugin: add a directory under `plugins/<id>/` with a valid manifest,
-   then add the index entry to `registry.json`.
+2. For a plugin: add a directory under `plugins/<id>/` with a valid manifest
+   and `main.mjs`, then add the index entry to `registry.json`.
 3. For an MCP server: add an entry under `mcp-registry.json:servers`.
 4. Open a PR. CI (forthcoming) will lint the JSON; a maintainer reviews.
 
@@ -273,3 +343,8 @@ so the contract stays in sync with what the client actually parses.
 This registry repository is published under the MIT License. Each plugin under
 `plugins/` may declare its own license inside its `manifest.json`; users are
 responsible for reading and complying.
+
+The starter plugins in this repo are MIT-licensed and were inspired by the
+MIT-licensed [lobehub/lobe-chat-plugins](https://github.com/lobehub/lobe-chat-plugins)
+catalog — re-implemented from scratch for Ghast's local plugin runtime as
+documented above.

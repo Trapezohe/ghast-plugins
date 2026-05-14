@@ -1,3 +1,76 @@
 {
-  "plugins": []
+  "plugins": [
+    {
+      "id": "current-datetime",
+      "version": "0.1.0",
+      "repository": "https://github.com/Trapezohe/ghast-plugins",
+      "path": "plugins/current-datetime"
+    },
+    {
+      "id": "website-fetcher",
+      "version": "0.1.0",
+      "repository": "https://github.com/Trapezohe/ghast-plugins",
+      "path": "plugins/website-fetcher"
+    },
+    {
+      "id": "uptime-check",
+      "version": "0.1.0",
+      "repository": "https://github.com/Trapezohe/ghast-plugins",
+      "path": "plugins/uptime-check"
+    },
+    {
+      "id": "realtime-weather",
+      "version": "0.1.0",
+      "repository": "https://github.com/Trapezohe/ghast-plugins",
+      "path": "plugins/realtime-weather"
+    },
+    {
+      "id": "github-stats",
+      "version": "0.1.0",
+      "repository": "https://github.com/Trapezohe/ghast-plugins",
+      "path": "plugins/github-stats"
+    },
+    {
+      "id": "hacker-news",
+      "version": "0.1.0",
+      "repository": "https://github.com/Trapezohe/ghast-plugins",
+      "path": "plugins/hacker-news"
+    },
+    {
+      "id": "defillama",
+      "version": "0.1.0",
+      "repository": "https://github.com/Trapezohe/ghast-plugins",
+      "path": "plugins/defillama"
+    },
+    {
+      "id": "stock-quote",
+      "version": "0.1.0",
+      "repository": "https://github.com/Trapezohe/ghast-plugins",
+      "path": "plugins/stock-quote"
+    },
+    {
+      "id": "steam-search",
+      "version": "0.1.0",
+      "repository": "https://github.com/Trapezohe/ghast-plugins",
+      "path": "plugins/steam-search"
+    },
+    {
+      "id": "bilibili-search",
+      "version": "0.1.0",
+      "repository": "https://github.com/Trapezohe/ghast-plugins",
+      "path": "plugins/bilibili-search"
+    },
+    {
+      "id": "seo-meta",
+      "version": "0.1.0",
+      "repository": "https://github.com/Trapezohe/ghast-plugins",
+      "path": "plugins/seo-meta"
+    },
+    {
+      "id": "mermaid-mindmap",
+      "version": "0.1.0",
+      "repository": "https://github.com/Trapezohe/ghast-plugins",
+      "path": "plugins/mermaid-mindmap"
+    }
+  ]
 }

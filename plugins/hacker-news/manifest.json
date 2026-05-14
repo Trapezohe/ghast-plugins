@@ -1,0 +1,31 @@
+{
+  "id": "hacker-news",
+  "name": "Hacker News",
+  "version": "0.1.0",
+  "description": "Read Hacker News from chat — top / new / best stories plus full thread fetches via the public Firebase API. No auth required.",
+  "author": "Trapezohe",
+  "main": "main.mjs",
+  "icon": "🟧",
+  "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/hacker-news",
+  "repository": "https://github.com/Trapezohe/ghast-plugins",
+  "license": "MIT",
+  "keywords": ["hackernews", "news", "tech"],
+  "engines": { "ghast": "^0.1.0" },
+  "type": "tool",
+  "permissions": ["tools:register"],
+  "activationEvents": ["onStartup"],
+  "contributes": {
+    "tools": [
+      {
+        "id": "list_top_stories",
+        "name": "List top Hacker News stories",
+        "description": "Fetch the current Hacker News front page."
+      },
+      {
+        "id": "get_story",
+        "name": "Get a Hacker News story",
+        "description": "Fetch a single story by ID, including top-level comments."
+      }
+    ]
+  }
+}

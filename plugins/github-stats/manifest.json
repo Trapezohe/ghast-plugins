@@ -1,0 +1,31 @@
+{
+  "id": "github-stats",
+  "name": "GitHub Stats",
+  "version": "0.1.0",
+  "description": "Look up public stats for any GitHub repository or user — stars, forks, last commit, top languages. Uses unauthenticated REST (60 req/hr).",
+  "author": "Trapezohe",
+  "main": "main.mjs",
+  "icon": "🐙",
+  "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/github-stats",
+  "repository": "https://github.com/Trapezohe/ghast-plugins",
+  "license": "MIT",
+  "keywords": ["github", "repo", "stats", "developer"],
+  "engines": { "ghast": "^0.1.0" },
+  "type": "tool",
+  "permissions": ["tools:register"],
+  "activationEvents": ["onStartup"],
+  "contributes": {
+    "tools": [
+      {
+        "id": "get_repo",
+        "name": "Get GitHub repo stats",
+        "description": "Return stars, forks, issues, language, last push for a public repo."
+      },
+      {
+        "id": "get_user",
+        "name": "Get GitHub user profile",
+        "description": "Return public profile + follower / repo counts for a GitHub user."
+      }
+    ]
+  }
+}
