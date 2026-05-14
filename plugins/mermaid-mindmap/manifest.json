@@ -3,17 +3,28 @@
   "name": "Mermaid Mind Map",
   "version": "0.1.0",
   "description": "Turn an outline or topic into a Mermaid mindmap diagram the chat can render as a tree.",
-  "author": "Trapezohe",
+  "author": "Ghast AI",
   "main": "main.mjs",
   "icon": "🧠",
   "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/mermaid-mindmap",
   "repository": "https://github.com/Trapezohe/ghast-plugins",
   "license": "MIT",
-  "keywords": ["mindmap", "mermaid", "diagram", "outline"],
-  "engines": { "ghast": "^0.1.0" },
+  "keywords": [
+    "mindmap",
+    "mermaid",
+    "diagram",
+    "outline"
+  ],
+  "engines": {
+    "ghast": "^0.1.0"
+  },
   "type": "transform",
-  "permissions": ["tools:register"],
-  "activationEvents": ["onStartup"],
+  "permissions": [
+    "tools:register"
+  ],
+  "activationEvents": [
+    "onStartup"
+  ],
   "contributes": {
     "tools": [
       {

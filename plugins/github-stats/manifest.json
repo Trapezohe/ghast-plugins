@@ -3,17 +3,28 @@
   "name": "GitHub Stats",
   "version": "0.1.0",
   "description": "Look up public stats for any GitHub repository or user — stars, forks, last commit, top languages. Uses unauthenticated REST (60 req/hr).",
-  "author": "Trapezohe",
+  "author": "Ghast AI",
   "main": "main.mjs",
   "icon": "🐙",
   "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/github-stats",
   "repository": "https://github.com/Trapezohe/ghast-plugins",
   "license": "MIT",
-  "keywords": ["github", "repo", "stats", "developer"],
-  "engines": { "ghast": "^0.1.0" },
+  "keywords": [
+    "github",
+    "repo",
+    "stats",
+    "developer"
+  ],
+  "engines": {
+    "ghast": "^0.1.0"
+  },
   "type": "tool",
-  "permissions": ["tools:register"],
-  "activationEvents": ["onStartup"],
+  "permissions": [
+    "tools:register"
+  ],
+  "activationEvents": [
+    "onStartup"
+  ],
   "contributes": {
     "tools": [
       {

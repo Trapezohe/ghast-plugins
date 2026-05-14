@@ -3,17 +3,28 @@
   "name": "Current Date & Time",
   "version": "0.1.0",
   "description": "Tell the model what 'now' is in any IANA timezone — kills the 'I don't actually know today's date' problem.",
-  "author": "Trapezohe",
+  "author": "Ghast AI",
   "main": "main.mjs",
   "icon": "🕐",
   "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/current-datetime",
   "repository": "https://github.com/Trapezohe/ghast-plugins",
   "license": "MIT",
-  "keywords": ["datetime", "time", "clock", "utility"],
-  "engines": { "ghast": "^0.1.0" },
+  "keywords": [
+    "datetime",
+    "time",
+    "clock",
+    "utility"
+  ],
+  "engines": {
+    "ghast": "^0.1.0"
+  },
   "type": "tool",
-  "permissions": ["tools:register"],
-  "activationEvents": ["onStartup"],
+  "permissions": [
+    "tools:register"
+  ],
+  "activationEvents": [
+    "onStartup"
+  ],
   "contributes": {
     "tools": [
       {

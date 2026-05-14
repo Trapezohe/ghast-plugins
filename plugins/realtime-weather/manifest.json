@@ -3,17 +3,27 @@
   "name": "Realtime Weather",
   "version": "0.1.0",
   "description": "Current weather + a short forecast for any place name. Uses Open-Meteo — no API key, no signup.",
-  "author": "Trapezohe",
+  "author": "Ghast AI",
   "main": "main.mjs",
   "icon": "🌦️",
   "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/realtime-weather",
   "repository": "https://github.com/Trapezohe/ghast-plugins",
   "license": "MIT",
-  "keywords": ["weather", "forecast", "open-meteo"],
-  "engines": { "ghast": "^0.1.0" },
+  "keywords": [
+    "weather",
+    "forecast",
+    "open-meteo"
+  ],
+  "engines": {
+    "ghast": "^0.1.0"
+  },
   "type": "tool",
-  "permissions": ["tools:register"],
-  "activationEvents": ["onStartup"],
+  "permissions": [
+    "tools:register"
+  ],
+  "activationEvents": [
+    "onStartup"
+  ],
   "contributes": {
     "tools": [
       {

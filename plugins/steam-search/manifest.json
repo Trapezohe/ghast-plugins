@@ -3,17 +3,28 @@
   "name": "Steam Search",
   "version": "0.1.0",
   "description": "Search the Steam store and look up game details (price, release date, tags, reviews). Uses Steam's public store endpoints — no key required.",
-  "author": "Trapezohe",
+  "author": "Ghast AI",
   "main": "main.mjs",
   "icon": "🎮",
   "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/steam-search",
   "repository": "https://github.com/Trapezohe/ghast-plugins",
   "license": "MIT",
-  "keywords": ["steam", "games", "gaming", "search"],
-  "engines": { "ghast": "^0.1.0" },
+  "keywords": [
+    "steam",
+    "games",
+    "gaming",
+    "search"
+  ],
+  "engines": {
+    "ghast": "^0.1.0"
+  },
   "type": "tool",
-  "permissions": ["tools:register"],
-  "activationEvents": ["onStartup"],
+  "permissions": [
+    "tools:register"
+  ],
+  "activationEvents": [
+    "onStartup"
+  ],
   "contributes": {
     "tools": [
       {

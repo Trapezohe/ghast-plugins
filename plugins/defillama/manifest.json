@@ -3,17 +3,28 @@
   "name": "DeFi Llama",
   "version": "0.1.0",
   "description": "Look up TVL, protocol details, and chain stats from DeFi Llama's free public API.",
-  "author": "Trapezohe",
+  "author": "Ghast AI",
   "main": "main.mjs",
   "icon": "🦙",
   "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/defillama",
   "repository": "https://github.com/Trapezohe/ghast-plugins",
   "license": "MIT",
-  "keywords": ["defi", "crypto", "tvl", "defillama"],
-  "engines": { "ghast": "^0.1.0" },
+  "keywords": [
+    "defi",
+    "crypto",
+    "tvl",
+    "defillama"
+  ],
+  "engines": {
+    "ghast": "^0.1.0"
+  },
   "type": "tool",
-  "permissions": ["tools:register"],
-  "activationEvents": ["onStartup"],
+  "permissions": [
+    "tools:register"
+  ],
+  "activationEvents": [
+    "onStartup"
+  ],
   "contributes": {
     "tools": [
       {
