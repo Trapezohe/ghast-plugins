@@ -171,7 +171,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/agent-sdk-dev",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/plugins/agent-sdk-dev"
@@ -383,7 +383,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "external_plugins/asana",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/external_plugins/asana"
     },
@@ -913,7 +913,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/clangd-lsp",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "strict": false,
@@ -949,7 +949,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/claude-code-setup",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "productivity",
       "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup"
@@ -966,7 +966,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/claude-md-management",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "productivity",
       "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management"
@@ -983,7 +983,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/claude-security",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "security",
       "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-security"
@@ -1105,7 +1105,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/code-modernization",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-modernization"
@@ -1122,7 +1122,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/code-review",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "productivity",
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/plugins/code-review"
@@ -1139,7 +1139,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/code-simplifier",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "productivity",
       "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier"
@@ -1181,7 +1181,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/commit-commands",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "productivity",
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/plugins/commit-commands"
@@ -1209,7 +1209,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "external_plugins/context7",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/external_plugins/context7",
       "tags": [
@@ -1290,7 +1290,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/csharp-lsp",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "strict": false,
@@ -1316,7 +1316,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/cwc-makers",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "productivity",
       "homepage": "https://claude.com/cwc-makers"
@@ -1479,7 +1479,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/confident-ai/deepeval.git",
-        "sha": "0abedb84c7db59873125e3c8e66199fa874c4878"
+        "sha": "6b1ffe1e090b5559549c2bad8f46445208d8a8dc"
       },
       "homepage": "https://github.com/confident-ai/deepeval"
     },
@@ -1521,7 +1521,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "external_plugins/discord",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       }
     },
     {
@@ -1608,7 +1608,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/explanatory-output-style",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "learning",
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/plugins/explanatory-output-style"
@@ -1635,7 +1635,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "external_plugins/fakechat",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       }
     },
     {
@@ -1660,7 +1660,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/feature-dev",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/plugins/feature-dev"
@@ -1695,7 +1695,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "external_plugins/firebase",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/external_plugins/firebase"
     },
@@ -1750,7 +1750,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/frontend-design",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/plugins/frontend-design"
@@ -1779,7 +1779,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "external_plugins/github",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/external_plugins/github"
     },
@@ -1806,7 +1806,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "external_plugins/gitlab",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/external_plugins/gitlab"
     },
@@ -1823,7 +1823,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/gopls-lsp",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "strict": false,
@@ -1893,7 +1893,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "external_plugins/greptile",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/external_plugins/greptile"
     },
@@ -1939,7 +1939,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/hookify",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "productivity",
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/plugins/hookify"
@@ -1994,7 +1994,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/heygen-com/hyperframes.git",
-        "sha": "74fadf69c464c0e0658bd7a6b740986fc3aceba8"
+        "sha": "67ffafb11c18cd599b856c411c614cf329377d22"
       },
       "homepage": "https://hyperframes.heygen.com"
     },
@@ -2024,7 +2024,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "external_plugins/imessage",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       }
     },
     {
@@ -2051,7 +2051,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/jdtls-lsp",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "strict": false,
@@ -2077,7 +2077,7 @@
         "source": "github",
         "repo": "jfrog/claude-plugin",
         "commit": "259c8e718266c16e99b4f30ae9b1ed0f9f00d98d",
-        "sha": "8aa1671dfc29fa10041ff74a5afb419acde19645"
+        "sha": "fc235ef18207df0318799846a2cd36fe415b1492"
       },
       "homepage": "https://jfrog.com"
     },
@@ -2108,7 +2108,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/kotlin-lsp",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "strict": false,
@@ -2149,7 +2149,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "external_plugins/laravel-boost",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/external_plugins/laravel-boost"
     },
@@ -2185,7 +2185,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/learning-output-style",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "learning",
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/plugins/learning-output-style"
@@ -2212,7 +2212,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "external_plugins/linear",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/external_plugins/linear"
     },
@@ -2321,7 +2321,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/lua-lsp",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "strict": false,
@@ -2388,7 +2388,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/math-olympiad",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "math",
       "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/math-olympiad"
@@ -2435,7 +2435,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/mcp-server-dev",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/mcp-server-dev"
@@ -2452,7 +2452,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/mcp-tunnels",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/mcp-tunnels"
@@ -2825,7 +2825,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/php-lsp",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "strict": false,
@@ -2903,7 +2903,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/playground",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/playground"
@@ -2917,7 +2917,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "external_plugins/playwright",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/external_plugins/playwright"
     },
@@ -2933,7 +2933,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/plugin-dev",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/plugins/plugin-dev"
@@ -2982,7 +2982,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/pr-review-toolkit",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "productivity",
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/plugins/pr-review-toolkit"
@@ -3025,7 +3025,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/project-artifact",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "productivity",
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/plugins/project-artifact"
@@ -3056,7 +3056,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/pyright-lsp",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "strict": false,
@@ -3095,7 +3095,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/qodo-ai/qodo-skills.git",
-        "sha": "ad848afd32eff172ce9073d9b1b1efe462ea0af2"
+        "sha": "5c6306797ad2c9831546f9bbd6360d2515bf5c26"
       },
       "homepage": "https://github.com/qodo-ai/qodo-skills.git"
     },
@@ -3152,7 +3152,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/ralph-loop",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/plugins/ralph-loop"
@@ -3181,7 +3181,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/receipts",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "productivity",
       "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/receipts"
@@ -3208,7 +3208,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/Digital-Process-Tools/claude-remember.git",
-        "sha": "830c224c1e759cdf997e0842b714d6b6b36d76ef"
+        "sha": "a515f546af8a5d05b7284bbd321bcd989f092b9f"
       },
       "homepage": "https://github.com/Digital-Process-Tools/claude-remember"
     },
@@ -3293,7 +3293,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/ruby-lsp",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "strict": false,
@@ -3337,7 +3337,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/rust-analyzer-lsp",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "strict": false,
@@ -3472,7 +3472,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/security-guidance",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "security",
       "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance"
@@ -3525,7 +3525,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "external_plugins/serena",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/external_plugins/serena",
       "tags": [
@@ -3560,7 +3560,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/session-report",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "productivity",
       "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/session-report"
@@ -3607,7 +3607,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/skill-creator",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/skill-creator"
@@ -3792,7 +3792,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/swift-lsp",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "strict": false,
@@ -3842,7 +3842,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "external_plugins/telegram",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       }
     },
     {
@@ -3858,7 +3858,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "external_plugins/terraform",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/external_plugins/terraform"
     },
@@ -3903,7 +3903,7 @@
         "url": "https://github.com/anthropics/claude-plugins-official.git",
         "path": "plugins/typescript-lsp",
         "ref": "main",
-        "sha": "d620fb7d8349b66bbe281ea74cd346287abb6a48"
+        "sha": "909649d9b178d142201000c76715b5fc952818e3"
       },
       "category": "development",
       "strict": false,
@@ -4114,7 +4114,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/wix/skills.git",
-        "sha": "755d65e7616108cf481fc0b681adf270d453f9f4"
+        "sha": "078b84601a3d0cd493aa128c4066f12b4309fd89"
       },
       "homepage": "https://dev.wix.com/docs/wix-cli/guides/development/about-wix-skills"
     },
