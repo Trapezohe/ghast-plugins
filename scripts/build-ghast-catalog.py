@@ -31,6 +31,7 @@ def main() -> int:
             raise ValueError(
                 f"{plugin_dir}: OpenAI connector declarations are not portable"
             )
+        icon_path = validate_icon(plugin_dir, manifest)
         if manifest.get("repository") and not (plugin_dir / "LICENSE").exists():
             raise ValueError(f"{plugin_dir}: third-party plugins require LICENSE")
         validate_declared_path(plugin_dir, manifest, "skills", "skills")
@@ -44,6 +45,7 @@ def main() -> int:
             "name": manifest["name"],
             "description": manifest["description"],
             "author": manifest.get("author", ""),
+            "icon": manifest["icon"],
         }
         for field in ("version", "homepage", "repository", "upstreamRevision", "license"):
             if field in manifest:
@@ -68,6 +70,7 @@ def main() -> int:
                 "url": f"./packages/{zip_path.name}",
                 "sha256": sha256,
             },
+            "icon": f"./plugins/{manifest['name']}/{icon_path.relative_to(plugin_dir)}",
         }
         for field in ("category", "homepage", "repository", "license"):
             if field in manifest:
@@ -103,6 +106,20 @@ def validate_declared_path(
         raise ValueError(
             f"{plugin_dir}: manifest field {field!r} points to missing {relative_path}"
         )
+
+
+def validate_icon(plugin_dir: Path, manifest: dict) -> Path:
+    icon = manifest.get("icon")
+    if not isinstance(icon, str) or not icon.startswith("./assets/"):
+        raise ValueError(
+            f"{plugin_dir}: icon must be a relative path under ./assets/"
+        )
+    icon_path = plugin_dir / icon.removeprefix("./")
+    if not icon_path.is_file():
+        raise ValueError(f"{plugin_dir}: icon points to missing {icon}")
+    if icon_path.suffix.lower() not in {".png", ".svg", ".jpg", ".jpeg", ".webp"}:
+        raise ValueError(f"{plugin_dir}: unsupported icon type {icon_path.suffix}")
+    return icon_path
 
 
 def validate_skills(skills_dir: Path) -> None:

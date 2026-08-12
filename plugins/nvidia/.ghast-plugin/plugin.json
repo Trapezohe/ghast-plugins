@@ -17,5 +17,6 @@
   "licenseSource": {
     "repository": "https://github.com/NVIDIA/skills",
     "revision": "aa116673017bf75f9885edabab34d8ec883c0a3a"
-  }
+  },
+  "icon": "./assets/icon.png"
 }

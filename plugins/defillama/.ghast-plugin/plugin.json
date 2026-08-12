@@ -6,5 +6,6 @@
   "author": {
     "name": "Ghast AI",
     "url": "https://ghast.trapezohe.ai"
-  }
+  },
+  "icon": "./assets/icon.svg"
 }

@@ -14,5 +14,6 @@
   "upstreamPath": "plugins/render",
   "license": "MIT",
   "skills": "./skills/",
-  "canonicalRepository": "https://github.com/renderinc/render-codex-plugin"
+  "canonicalRepository": "https://github.com/renderinc/render-codex-plugin",
+  "icon": "./assets/icon.svg"
 }

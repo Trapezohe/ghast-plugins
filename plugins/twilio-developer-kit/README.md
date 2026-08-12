@@ -6,7 +6,7 @@ Twilio Skills provide procedural knowledge for AI coding agents — which APIs t
 
 This package contains the connector-free skill payload from `plugins/twilio-developer-kit` in `openai/plugins` at `11c74d6ba24d3a6d48f54a194cd00ef3beea18f9`.
 
-The Codex marketplace manifest, store artwork, and OpenAI-specific agent metadata are not included. The plugin does not contain an OpenAI `.app.json` connector declaration.
+The Codex marketplace manifest, screenshots, and OpenAI-specific agent metadata are not included. A single marketplace icon is retained by the Ghast icon sync step. The plugin does not contain an OpenAI `.app.json` connector declaration.
 
 Canonical project:
 

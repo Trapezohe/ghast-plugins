@@ -332,9 +332,10 @@ def readme_for(
         ),
         "",
         (
-            "The Codex marketplace manifest, store artwork, and OpenAI-specific "
-            "agent metadata are not included. The plugin does not contain an "
-            "OpenAI `.app.json` connector declaration."
+            "The Codex marketplace manifest, screenshots, and OpenAI-specific "
+            "agent metadata are not included. A single marketplace icon is "
+            "retained by the Ghast icon sync step. The plugin does not contain "
+            "an OpenAI `.app.json` connector declaration."
         ),
         "",
     ]

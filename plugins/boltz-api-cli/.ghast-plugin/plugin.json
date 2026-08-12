@@ -14,5 +14,6 @@
   "upstreamPath": "plugins/boltz-api-cli",
   "license": "MIT",
   "skills": "./skills/",
-  "canonicalRepository": "https://github.com/boltz-bio/boltz-api-skills"
+  "canonicalRepository": "https://github.com/boltz-bio/boltz-api-skills",
+  "icon": "./assets/icon.png"
 }

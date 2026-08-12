@@ -11,5 +11,6 @@
   "repository": "https://github.com/openai/plugins",
   "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
   "license": "Apache-2.0",
-  "skills": "./skills/"
+  "skills": "./skills/",
+  "icon": "./assets/icon.svg"
 }

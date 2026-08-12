@@ -17,5 +17,6 @@
   "licenseSource": {
     "repository": "https://github.com/twilio/ai",
     "revision": "d7b0f231468cd9a6a0bab9ebcde8c1a5c9220bba"
-  }
+  },
+  "icon": "./assets/icon.svg"
 }

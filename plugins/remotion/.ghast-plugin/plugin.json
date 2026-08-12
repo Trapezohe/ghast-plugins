@@ -11,5 +11,6 @@
   "repository": "https://github.com/remotion-dev/remotion/tree/main/packages/codex-plugin",
   "upstreamRevision": "a23672203e00db3d9ad905b2b2088bdc6aa2f2ac",
   "license": "MIT",
-  "skills": "./skills/"
+  "skills": "./skills/",
+  "icon": "./assets/icon.png"
 }

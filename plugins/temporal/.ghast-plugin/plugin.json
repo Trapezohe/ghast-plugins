@@ -11,5 +11,6 @@
   "repository": "https://github.com/temporalio/codex-temporal-plugin",
   "upstreamRevision": "a3fa2bdff73a93e60e1077c08bde2b682cd0f5ae",
   "license": "MIT",
-  "skills": "./skills/"
+  "skills": "./skills/",
+  "icon": "./assets/temporal-logo.svg"
 }

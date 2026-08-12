@@ -20,6 +20,7 @@ Every plugin uses Ghast's native declarative format:
 ```text
 plugins/<name>/
 ├── .ghast-plugin/plugin.json
+├── assets/icon.svg           # required; PNG/JPEG/WebP also supported
 ├── commands/                  # optional slash commands
 ├── skills/                    # optional model-invoked skills
 ├── .mcp.json                  # optional MCP servers
@@ -35,16 +36,19 @@ Minimal manifest:
   "version": "1.0.0",
   "description": "What the plugin adds.",
   "author": { "name": "Your Name" },
+  "icon": "./assets/icon.svg",
   "skills": "./skills/",
   "commands": "./commands/",
   "mcpServers": "./.mcp.json"
 }
 ```
 
-Only declare paths that exist. Ghast currently hosts skills, slash commands,
-and MCP servers. Open remote MCP plugins can use Ghast's OAuth flow; private
-connector IDs tied to another vendor's backend cannot be published as working
-Ghast plugins.
+Every plugin must declare one icon under `./assets/`; the catalog exposes that
+asset before installation and the package includes the same file. Only declare
+paths that exist. Ghast currently hosts skills, slash commands, and MCP
+servers. Open remote MCP plugins can use Ghast's OAuth flow; private connector
+IDs tied to another vendor's backend cannot be published as working Ghast
+plugins.
 
 ## Build the catalog
 
@@ -66,12 +70,27 @@ license files, strips Codex store metadata, and writes
 python3 scripts/import-openai-portable-plugins.py \
   --source ../openai-plugins \
   --external-root ../upstreams
+python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins
 python3 scripts/build-ghast-catalog.py
 ```
 
 Canonical checkouts used for external license files must be at the exact
 revisions declared by the importer. An unfamiliar connector-free plugin causes
 the import to fail until it has been reviewed and classified.
+
+## Import the Binance plugin
+
+The Binance importer pins the official Skills Hub revision and copies the four
+skill directories that contain standalone MIT license files. It also adds a
+Ghast financial-execution policy and changes the Onchain Pay helper so secrets
+come from environment variables instead of process arguments.
+
+```bash
+python3 scripts/import-binance-plugin.py \
+  --source ../upstreams/binance-skills-hub
+python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins
+python3 scripts/build-ghast-catalog.py
+```
 
 ## Porting an external plugin
 

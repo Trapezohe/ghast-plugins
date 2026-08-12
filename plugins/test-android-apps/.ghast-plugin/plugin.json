@@ -20,5 +20,6 @@
       "path": "skills/android-performance",
       "reason": "No redistributable license file was present in the source snapshot."
     }
-  ]
+  ],
+  "icon": "./assets/icon.svg"
 }

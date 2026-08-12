@@ -14,5 +14,6 @@
   "upstreamPath": "plugins/superpowers",
   "license": "MIT",
   "skills": "./skills/",
-  "canonicalRepository": "https://github.com/obra/superpowers"
+  "canonicalRepository": "https://github.com/obra/superpowers",
+  "icon": "./assets/icon.svg"
 }

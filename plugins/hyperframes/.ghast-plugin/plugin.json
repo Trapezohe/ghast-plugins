@@ -18,5 +18,6 @@
   "licenseSource": {
     "repository": "https://github.com/heygen-com/hyperframes",
     "revision": "9b0c5e85596efaf93823bf5f19b7f1d1216ca7d5"
-  }
+  },
+  "icon": "./assets/icon.png"
 }
