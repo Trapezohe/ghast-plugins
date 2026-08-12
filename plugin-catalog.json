@@ -242,20 +242,20 @@
           "name": "Remotion",
           "url": "https://remotion.dev"
         },
-        "version": "1.0.3-ghast.1",
+        "version": "4.0.509-ghast.1",
         "homepage": "https://remotion.dev",
-        "repository": "https://github.com/openai/plugins",
-        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "repository": "https://github.com/remotion-dev/remotion/tree/main/packages/codex-plugin",
+        "upstreamRevision": "a23672203e00db3d9ad905b2b2088bdc6aa2f2ac",
         "license": "MIT",
         "skills": "./skills/"
       },
       "package": {
         "url": "./packages/remotion.zip",
-        "sha256": "54e4ab4898220c032fbd48359b60b80ab78c12d8b9f032c6dfc916df3d010a87"
+        "sha256": "07cb44c4f77902427b6bf68ffd20fe49fa79d2a254d978232805de9aeb279281"
       },
       "category": "creativity",
       "homepage": "https://remotion.dev",
-      "repository": "https://github.com/openai/plugins",
+      "repository": "https://github.com/remotion-dev/remotion/tree/main/packages/codex-plugin",
       "license": "MIT"
     },
     {
