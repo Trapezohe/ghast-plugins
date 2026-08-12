@@ -1,0 +1,15 @@
+{
+  "name": "notion",
+  "version": "0.1.5-ghast.1",
+  "description": "Search, create, and update Notion content through Notion's official MCP server.",
+  "category": "productivity",
+  "author": {
+    "name": "Notion and OpenAI"
+  },
+  "homepage": "https://developers.notion.com/guides/mcp/overview",
+  "repository": "https://github.com/openai/plugins",
+  "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+  "license": "MIT",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

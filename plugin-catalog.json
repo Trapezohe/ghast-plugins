@@ -109,6 +109,33 @@
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/hacker-news"
     },
     {
+      "id": "linear",
+      "name": "linear",
+      "description": "Manage Linear issues, projects, and team workflows through Linear's official MCP server.",
+      "manifest": {
+        "name": "linear",
+        "description": "Manage Linear issues, projects, and team workflows through Linear's official MCP server.",
+        "author": {
+          "name": "OpenAI"
+        },
+        "version": "0.0.3-ghast.1",
+        "homepage": "https://linear.app/docs/mcp",
+        "repository": "https://github.com/openai/plugins",
+        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "license": "Apache-2.0",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/linear.zip",
+        "sha256": "d46df07425c57cddd2e8a201f18304e029657982cbb32d305b8e9c0d59bcef31"
+      },
+      "category": "productivity",
+      "homepage": "https://linear.app/docs/mcp",
+      "repository": "https://github.com/openai/plugins",
+      "license": "Apache-2.0"
+    },
+    {
       "id": "mermaid-mindmap",
       "name": "mermaid-mindmap",
       "description": "Slash command that turns a topic or outline into a Mermaid mindmap code block the chat can render as a tree.",
@@ -128,6 +155,33 @@
       },
       "category": "productivity",
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/mermaid-mindmap"
+    },
+    {
+      "id": "notion",
+      "name": "notion",
+      "description": "Search, create, and update Notion content through Notion's official MCP server.",
+      "manifest": {
+        "name": "notion",
+        "description": "Search, create, and update Notion content through Notion's official MCP server.",
+        "author": {
+          "name": "Notion and OpenAI"
+        },
+        "version": "0.1.5-ghast.1",
+        "homepage": "https://developers.notion.com/guides/mcp/overview",
+        "repository": "https://github.com/openai/plugins",
+        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/notion.zip",
+        "sha256": "7e71c2de7d6949e50ecd5cdc79142e65398d077d25f0e7d4d1adecf8653c2f5c"
+      },
+      "category": "productivity",
+      "homepage": "https://developers.notion.com/guides/mcp/overview",
+      "repository": "https://github.com/openai/plugins",
+      "license": "MIT"
     },
     {
       "id": "realtime-weather",

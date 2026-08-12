@@ -42,8 +42,9 @@ Minimal manifest:
 ```
 
 Only declare paths that exist. Ghast currently hosts skills, slash commands,
-and MCP servers. Connector apps need a Ghast connector implementation before
-they can be published.
+and MCP servers. Open remote MCP plugins can use Ghast's OAuth flow; private
+connector IDs tied to another vendor's backend cannot be published as working
+Ghast plugins.
 
 ## Build the catalog
 
