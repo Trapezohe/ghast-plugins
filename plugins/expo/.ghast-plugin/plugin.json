@@ -1,0 +1,15 @@
+{
+  "name": "expo",
+  "version": "1.0.2-ghast.1",
+  "description": "Build, deploy, upgrade, and debug Expo and React Native applications with Expo-authored workflows.",
+  "category": "development",
+  "author": {
+    "name": "Expo Team",
+    "url": "https://expo.dev"
+  },
+  "homepage": "https://docs.expo.dev/skills/",
+  "repository": "https://github.com/openai/plugins",
+  "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+  "license": "MIT",
+  "skills": "./skills/"
+}

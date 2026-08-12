@@ -67,6 +67,33 @@
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/defillama"
     },
     {
+      "id": "expo",
+      "name": "expo",
+      "description": "Build, deploy, upgrade, and debug Expo and React Native applications with Expo-authored workflows.",
+      "manifest": {
+        "name": "expo",
+        "description": "Build, deploy, upgrade, and debug Expo and React Native applications with Expo-authored workflows.",
+        "author": {
+          "name": "Expo Team",
+          "url": "https://expo.dev"
+        },
+        "version": "1.0.2-ghast.1",
+        "homepage": "https://docs.expo.dev/skills/",
+        "repository": "https://github.com/openai/plugins",
+        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "license": "MIT",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/expo.zip",
+        "sha256": "fa518be22192a126c14ba35305786c253c45649e5aede05eb55d6fc60a196d12"
+      },
+      "category": "development",
+      "homepage": "https://docs.expo.dev/skills/",
+      "repository": "https://github.com/openai/plugins",
+      "license": "MIT"
+    },
+    {
       "id": "github-stats",
       "name": "github-stats",
       "description": "Skill for looking up public GitHub repo or user stats via the unauthenticated GitHub REST API (60 req/hr/IP).",
@@ -203,6 +230,60 @@
       },
       "category": "information",
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/realtime-weather"
+    },
+    {
+      "id": "remotion",
+      "name": "remotion",
+      "description": "Create programmatic videos with Remotion, including animation, audio, captions, charts, transitions, and rendering workflows.",
+      "manifest": {
+        "name": "remotion",
+        "description": "Create programmatic videos with Remotion, including animation, audio, captions, charts, transitions, and rendering workflows.",
+        "author": {
+          "name": "Remotion",
+          "url": "https://remotion.dev"
+        },
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://remotion.dev",
+        "repository": "https://github.com/openai/plugins",
+        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "license": "MIT",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/remotion.zip",
+        "sha256": "54e4ab4898220c032fbd48359b60b80ab78c12d8b9f032c6dfc916df3d010a87"
+      },
+      "category": "creativity",
+      "homepage": "https://remotion.dev",
+      "repository": "https://github.com/openai/plugins",
+      "license": "MIT"
+    },
+    {
+      "id": "sentry",
+      "name": "sentry",
+      "description": "Inspect recent Sentry issues and events through a read-only, redacting API workflow.",
+      "manifest": {
+        "name": "sentry",
+        "description": "Inspect recent Sentry issues and events through a read-only, redacting API workflow.",
+        "author": {
+          "name": "OpenAI",
+          "url": "https://openai.com"
+        },
+        "version": "0.1.2-ghast.1",
+        "homepage": "https://sentry.io/",
+        "repository": "https://github.com/openai/plugins",
+        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "license": "Apache-2.0",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/sentry.zip",
+        "sha256": "3995622e2bc569fd93a1fe1b4d5a3dd636cdb3682e5189edd80e63c1799220f3"
+      },
+      "category": "development",
+      "homepage": "https://sentry.io/",
+      "repository": "https://github.com/openai/plugins",
+      "license": "Apache-2.0"
     },
     {
       "id": "seo-meta",

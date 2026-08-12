@@ -1,0 +1,15 @@
+{
+  "name": "remotion",
+  "version": "1.0.3-ghast.1",
+  "description": "Create programmatic videos with Remotion, including animation, audio, captions, charts, transitions, and rendering workflows.",
+  "category": "creativity",
+  "author": {
+    "name": "Remotion",
+    "url": "https://remotion.dev"
+  },
+  "homepage": "https://remotion.dev",
+  "repository": "https://github.com/openai/plugins",
+  "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+  "license": "MIT",
+  "skills": "./skills/"
+}
