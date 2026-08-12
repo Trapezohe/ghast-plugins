@@ -1,0 +1,22 @@
+{
+  "name": "hyperframes",
+  "version": "0.1.2-ghast.1",
+  "description": "Write HTML, render video. Compositions, GSAP animations, captions, voiceovers, audio-reactive visuals, and website-to-video capture for HyperFrames.",
+  "category": "creativity",
+  "author": {
+    "name": "HeyGen",
+    "email": "hyperframes@heygen.com",
+    "url": "https://hyperframes.heygen.com"
+  },
+  "homepage": "https://hyperframes.heygen.com",
+  "repository": "https://github.com/openai/plugins",
+  "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+  "upstreamPath": "plugins/hyperframes",
+  "license": "Apache-2.0",
+  "skills": "./skills/",
+  "canonicalRepository": "https://github.com/heygen-com/hyperframes",
+  "licenseSource": {
+    "repository": "https://github.com/heygen-com/hyperframes",
+    "revision": "9b0c5e85596efaf93823bf5f19b7f1d1216ca7d5"
+  }
+}

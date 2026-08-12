@@ -27,8 +27,19 @@ def main() -> int:
         manifest = json.loads(manifest_path.read_text())
         if manifest["name"] != plugin_dir.name:
             raise ValueError(f"{manifest_path}: name must match directory")
+        if (plugin_dir / ".app.json").exists():
+            raise ValueError(
+                f"{plugin_dir}: OpenAI connector declarations are not portable"
+            )
         if manifest.get("repository") and not (plugin_dir / "LICENSE").exists():
             raise ValueError(f"{plugin_dir}: third-party plugins require LICENSE")
+        validate_declared_path(plugin_dir, manifest, "skills", "skills")
+        validate_declared_path(plugin_dir, manifest, "commands", "commands")
+        validate_declared_path(plugin_dir, manifest, "mcpServers", ".mcp.json")
+        if (plugin_dir / "skills").exists():
+            validate_skills(plugin_dir / "skills")
+        if (plugin_dir / ".mcp.json").exists():
+            json.loads((plugin_dir / ".mcp.json").read_text())
         manifest_for_catalog = {
             "name": manifest["name"],
             "description": manifest["description"],
@@ -81,6 +92,26 @@ def main() -> int:
     )
     print(f"wrote {CATALOG_PATH} with {len(plugins)} plugins")
     return 0
+
+
+def validate_declared_path(
+    plugin_dir: Path, manifest: dict, field: str, relative_path: str
+) -> None:
+    exists = (plugin_dir / relative_path).exists()
+    declared = field in manifest
+    if declared and not exists:
+        raise ValueError(
+            f"{plugin_dir}: manifest field {field!r} points to missing {relative_path}"
+        )
+
+
+def validate_skills(skills_dir: Path) -> None:
+    skill_dirs = sorted(path for path in skills_dir.iterdir() if path.is_dir())
+    if not skill_dirs:
+        raise ValueError(f"{skills_dir}: skills directory is empty")
+    for skill_dir in skill_dirs:
+        if not (skill_dir / "SKILL.md").exists():
+            raise ValueError(f"{skill_dir}: missing SKILL.md")
 
 
 def write_plugin_zip(plugin_dir: Path, zip_path: Path) -> None:

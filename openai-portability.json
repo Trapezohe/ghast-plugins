@@ -1,0 +1,143 @@
+{
+  "source": "https://github.com/openai/plugins",
+  "sourceRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+  "selectionRule": "Plugin directory does not contain .app.json.",
+  "summary": {
+    "blocked": 13,
+    "existing": 5,
+    "partial": 1,
+    "ported": 7
+  },
+  "plugins": [
+    {
+      "name": "boltz-api-cli",
+      "status": "ported",
+      "reason": "Imported as a connector-free Ghast skill plugin."
+    },
+    {
+      "name": "build-ios-apps",
+      "status": "blocked",
+      "reason": "The source snapshot declares MIT but contains no license grant for the bundled skills."
+    },
+    {
+      "name": "build-macos-apps",
+      "status": "blocked",
+      "reason": "The source snapshot declares MIT but contains no license grant for the bundled skills."
+    },
+    {
+      "name": "build-web-apps",
+      "status": "blocked",
+      "reason": "The source snapshot declares MIT but contains no license grant for the bundled skills."
+    },
+    {
+      "name": "build-web-data-visualization",
+      "status": "blocked",
+      "reason": "The source snapshot declares MIT but contains no license grant for the bundled skills."
+    },
+    {
+      "name": "circleci",
+      "status": "blocked",
+      "reason": "Neither the marketplace snapshot nor the canonical repository contains a license file."
+    },
+    {
+      "name": "cloudflare",
+      "status": "existing",
+      "reason": "Ghast already ships a broader Cloudflare port with public MCP support."
+    },
+    {
+      "name": "coderabbit",
+      "status": "blocked",
+      "reason": "Neither the marketplace snapshot nor the referenced repository contains a license file."
+    },
+    {
+      "name": "expo",
+      "status": "existing",
+      "reason": "Ghast already ships the portable Expo skills."
+    },
+    {
+      "name": "game-studio",
+      "status": "blocked",
+      "reason": "The source snapshot declares MIT but contains no license grant for the bundled skills."
+    },
+    {
+      "name": "hyperframes",
+      "status": "ported",
+      "reason": "Imported as a connector-free Ghast skill plugin."
+    },
+    {
+      "name": "life-science-research",
+      "status": "blocked",
+      "reason": "The marketplace manifest marks this plugin Proprietary."
+    },
+    {
+      "name": "magicpath",
+      "status": "blocked",
+      "reason": "The marketplace manifest marks this plugin UNLICENSED."
+    },
+    {
+      "name": "mixpanel-headless",
+      "status": "ported",
+      "reason": "Imported as a connector-free Ghast skill plugin."
+    },
+    {
+      "name": "ngs-analysis",
+      "status": "blocked",
+      "reason": "The source snapshot declares MIT but contains no license grant for the bundled skills."
+    },
+    {
+      "name": "nvidia",
+      "status": "ported",
+      "reason": "Imported as a connector-free Ghast skill plugin."
+    },
+    {
+      "name": "openai-ads-conversions",
+      "status": "blocked",
+      "reason": "The marketplace manifest marks this plugin Proprietary."
+    },
+    {
+      "name": "plugin-eval",
+      "status": "blocked",
+      "reason": "The source snapshot declares MIT but contains no license grant for the bundled code and skills."
+    },
+    {
+      "name": "remotion",
+      "status": "existing",
+      "reason": "Ghast already ships a port pinned to the canonical Remotion repository."
+    },
+    {
+      "name": "render",
+      "status": "ported",
+      "reason": "Imported as a connector-free Ghast skill plugin."
+    },
+    {
+      "name": "sentry",
+      "status": "existing",
+      "reason": "Ghast already ships the licensed read-only Sentry skill."
+    },
+    {
+      "name": "superpowers",
+      "status": "ported",
+      "reason": "Imported as a connector-free Ghast skill plugin."
+    },
+    {
+      "name": "temporal",
+      "status": "existing",
+      "reason": "Ghast already ships a newer canonical Temporal port."
+    },
+    {
+      "name": "test-android-apps",
+      "status": "partial",
+      "reason": "Imported only the explicitly licensed skill subset."
+    },
+    {
+      "name": "twilio-developer-kit",
+      "status": "ported",
+      "reason": "Imported as a connector-free Ghast skill plugin."
+    },
+    {
+      "name": "zotero",
+      "status": "blocked",
+      "reason": "The source snapshot declares MIT but contains no license grant for the bundled skill."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "mixpanel-headless",
+  "version": "0.1.2-ghast.1",
+  "description": "Analyze Mixpanel data with the mixpanel_headless Python SDK and portable agent skills.",
+  "category": "data",
+  "author": {
+    "name": "Mixpanel",
+    "url": "https://mixpanel.com/home"
+  },
+  "homepage": "https://mixpanel.github.io/mixpanel-headless/",
+  "repository": "https://github.com/openai/plugins",
+  "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+  "upstreamPath": "plugins/mixpanel-headless",
+  "license": "MIT",
+  "skills": "./skills/",
+  "canonicalRepository": "https://github.com/mixpanel/mixpanel-headless"
+}

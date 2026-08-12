@@ -55,6 +55,24 @@ python3 scripts/build-ghast-catalog.py
 The script reads only `.ghast-plugin/plugin.json` sources, creates stable ZIPs,
 computes their SHA-256 digests, and rewrites `plugin-catalog.json`.
 
+## Import connector-free OpenAI plugins
+
+The audited importer handles the OpenAI marketplace snapshot pinned in the
+script. It imports only classified plugins without `.app.json`, requires real
+license files, strips Codex store metadata, and writes
+`openai-portability.json` with the complete decision record.
+
+```bash
+python3 scripts/import-openai-portable-plugins.py \
+  --source ../openai-plugins \
+  --external-root ../upstreams
+python3 scripts/build-ghast-catalog.py
+```
+
+Canonical checkouts used for external license files must be at the exact
+revisions declared by the importer. An unfamiliar connector-free plugin causes
+the import to fail until it has been reviewed and classified.
+
 ## Porting an external plugin
 
 External Codex, Claude, and Agent Plugin bundles are source material, not a

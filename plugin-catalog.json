@@ -24,6 +24,34 @@
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/bilibili-search"
     },
     {
+      "id": "boltz-api-cli",
+      "name": "boltz-api-cli",
+      "description": "Predict structures, screen molecules and proteins, and design binders.",
+      "manifest": {
+        "name": "boltz-api-cli",
+        "description": "Predict structures, screen molecules and proteins, and design binders.",
+        "author": {
+          "name": "Boltz",
+          "email": "support@boltz.bio",
+          "url": "https://boltz.bio"
+        },
+        "version": "0.1.1-ghast.1",
+        "homepage": "https://boltz.bio",
+        "repository": "https://github.com/openai/plugins",
+        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "license": "MIT",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/boltz-api-cli.zip",
+        "sha256": "72ae36a4d36e947f2bb8491ba9b6b2e66e7423a25551a4dfa1551c51fbb12590"
+      },
+      "category": "research",
+      "homepage": "https://boltz.bio",
+      "repository": "https://github.com/openai/plugins",
+      "license": "MIT"
+    },
+    {
       "id": "cloudflare",
       "name": "cloudflare",
       "description": "Build and operate on Cloudflare with portable skills, slash commands, and five official MCP servers.",
@@ -165,6 +193,34 @@
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/hacker-news"
     },
     {
+      "id": "hyperframes",
+      "name": "hyperframes",
+      "description": "Write HTML, render video. Compositions, GSAP animations, captions, voiceovers, audio-reactive visuals, and website-to-video capture for HyperFrames.",
+      "manifest": {
+        "name": "hyperframes",
+        "description": "Write HTML, render video. Compositions, GSAP animations, captions, voiceovers, audio-reactive visuals, and website-to-video capture for HyperFrames.",
+        "author": {
+          "name": "HeyGen",
+          "email": "hyperframes@heygen.com",
+          "url": "https://hyperframes.heygen.com"
+        },
+        "version": "0.1.2-ghast.1",
+        "homepage": "https://hyperframes.heygen.com",
+        "repository": "https://github.com/openai/plugins",
+        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "license": "Apache-2.0",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/hyperframes.zip",
+        "sha256": "e70ab7adfaaebf3fc754518e453e2f9ac71db8577ac90280ca0e478499f1be2d"
+      },
+      "category": "creativity",
+      "homepage": "https://hyperframes.heygen.com",
+      "repository": "https://github.com/openai/plugins",
+      "license": "Apache-2.0"
+    },
+    {
       "id": "linear",
       "name": "linear",
       "description": "Manage Linear issues, projects, and team workflows through Linear's official MCP server.",
@@ -213,6 +269,33 @@
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/mermaid-mindmap"
     },
     {
+      "id": "mixpanel-headless",
+      "name": "mixpanel-headless",
+      "description": "Analyze Mixpanel data with the mixpanel_headless Python SDK and portable agent skills.",
+      "manifest": {
+        "name": "mixpanel-headless",
+        "description": "Analyze Mixpanel data with the mixpanel_headless Python SDK and portable agent skills.",
+        "author": {
+          "name": "Mixpanel",
+          "url": "https://mixpanel.com/home"
+        },
+        "version": "0.1.2-ghast.1",
+        "homepage": "https://mixpanel.github.io/mixpanel-headless/",
+        "repository": "https://github.com/openai/plugins",
+        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "license": "MIT",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/mixpanel-headless.zip",
+        "sha256": "3003769a3bd93f0460b818851f871ee91d642bf111bebafa59daa0b8b7e02bfe"
+      },
+      "category": "data",
+      "homepage": "https://mixpanel.github.io/mixpanel-headless/",
+      "repository": "https://github.com/openai/plugins",
+      "license": "MIT"
+    },
+    {
       "id": "notion",
       "name": "notion",
       "description": "Search, create, and update Notion content through Notion's official MCP server.",
@@ -238,6 +321,33 @@
       "homepage": "https://developers.notion.com/guides/mcp/overview",
       "repository": "https://github.com/openai/plugins",
       "license": "MIT"
+    },
+    {
+      "id": "nvidia",
+      "name": "nvidia",
+      "description": "Use NVIDIA skills for GPU acceleration, CUDA, AI agents, inference, robotics, Omniverse, simulation, and physical AI workflows.",
+      "manifest": {
+        "name": "nvidia",
+        "description": "Use NVIDIA skills for GPU acceleration, CUDA, AI agents, inference, robotics, Omniverse, simulation, and physical AI workflows.",
+        "author": {
+          "name": "NVIDIA",
+          "url": "https://github.com/NVIDIA/skills"
+        },
+        "version": "1.0.2-ghast.1",
+        "homepage": "https://build.nvidia.com/skills/",
+        "repository": "https://github.com/openai/plugins",
+        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "license": "Apache-2.0 AND CC-BY-4.0",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/nvidia.zip",
+        "sha256": "8bb61022f885e37e4fd2d100d44c74fa042115f8f9a55a6930840f336cc6d72b"
+      },
+      "category": "development",
+      "homepage": "https://build.nvidia.com/skills/",
+      "repository": "https://github.com/openai/plugins",
+      "license": "Apache-2.0 AND CC-BY-4.0"
     },
     {
       "id": "realtime-weather",
@@ -285,6 +395,34 @@
       "category": "creativity",
       "homepage": "https://remotion.dev",
       "repository": "https://github.com/remotion-dev/remotion/tree/main/packages/codex-plugin",
+      "license": "MIT"
+    },
+    {
+      "id": "render",
+      "name": "render",
+      "description": "Skills for deploying, debugging, monitoring, and migrating apps on Render.",
+      "manifest": {
+        "name": "render",
+        "description": "Skills for deploying, debugging, monitoring, and migrating apps on Render.",
+        "author": {
+          "name": "Render",
+          "email": "support@render.com",
+          "url": "https://render.com"
+        },
+        "version": "0.1.3-ghast.1",
+        "homepage": "https://github.com/renderinc/render-codex-plugin",
+        "repository": "https://github.com/openai/plugins",
+        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "license": "MIT",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/render.zip",
+        "sha256": "cee297b9793b5e74200be73d2a9f6928576445fe0c1cb4bf9ed848947d3537b3"
+      },
+      "category": "development",
+      "homepage": "https://github.com/renderinc/render-codex-plugin",
+      "repository": "https://github.com/openai/plugins",
       "license": "MIT"
     },
     {
@@ -378,6 +516,34 @@
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/stock-quote"
     },
     {
+      "id": "superpowers",
+      "name": "superpowers",
+      "description": "An agentic skills framework & software development methodology that works: planning, TDD, debugging, and collaboration workflows.",
+      "manifest": {
+        "name": "superpowers",
+        "description": "An agentic skills framework & software development methodology that works: planning, TDD, debugging, and collaboration workflows.",
+        "author": {
+          "name": "Jesse Vincent",
+          "email": "jesse@fsck.com",
+          "url": "https://github.com/obra"
+        },
+        "version": "5.1.3-ghast.1",
+        "homepage": "https://github.com/obra/superpowers",
+        "repository": "https://github.com/openai/plugins",
+        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "license": "MIT",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/superpowers.zip",
+        "sha256": "bc4f58dab2daf899ad4f41abf3d56c0e7957518d46530a0491275ccbb999e6f0"
+      },
+      "category": "development",
+      "homepage": "https://github.com/obra/superpowers",
+      "repository": "https://github.com/openai/plugins",
+      "license": "MIT"
+    },
+    {
       "id": "temporal",
       "name": "temporal",
       "description": "Develop, debug, and manage Temporal applications, servers, CLI, and Cloud.",
@@ -402,6 +568,61 @@
       "category": "development",
       "homepage": "https://temporal.io/",
       "repository": "https://github.com/temporalio/codex-temporal-plugin",
+      "license": "MIT"
+    },
+    {
+      "id": "test-android-apps",
+      "name": "test-android-apps",
+      "description": "Test Android apps on a local emulator with reproducible UI inspection, screenshots, input actions, and log capture.",
+      "manifest": {
+        "name": "test-android-apps",
+        "description": "Test Android apps on a local emulator with reproducible UI inspection, screenshots, input actions, and log capture.",
+        "author": {
+          "name": "OpenAI",
+          "email": "support@openai.com",
+          "url": "https://openai.com/"
+        },
+        "version": "0.1.2-ghast.1",
+        "homepage": "https://openai.com/",
+        "repository": "https://github.com/openai/plugins",
+        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "license": "Apache-2.0",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/test-android-apps.zip",
+        "sha256": "4b5bdb6186e7a8013c2f457a9b7afc344418bb2b1f96f9e23dea5cfd1d297bd6"
+      },
+      "category": "development",
+      "homepage": "https://openai.com/",
+      "repository": "https://github.com/openai/plugins",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "twilio-developer-kit",
+      "name": "twilio-developer-kit",
+      "description": "Twilio skills for choosing and using APIs across Messaging, Voice, Verify, SendGrid, and more than 30 products.",
+      "manifest": {
+        "name": "twilio-developer-kit",
+        "description": "Twilio skills for choosing and using APIs across Messaging, Voice, Verify, SendGrid, and more than 30 products.",
+        "author": {
+          "name": "Twilio",
+          "url": "https://www.twilio.com"
+        },
+        "version": "0.2.2-ghast.1",
+        "homepage": "https://www.twilio.com/docs",
+        "repository": "https://github.com/openai/plugins",
+        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "license": "MIT",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/twilio-developer-kit.zip",
+        "sha256": "fd55e8cd07dffb5db7d2078cf2e7f22b9a95461d1e58fa38cf04b2bc4f7524c8"
+      },
+      "category": "development",
+      "homepage": "https://www.twilio.com/docs",
+      "repository": "https://github.com/openai/plugins",
       "license": "MIT"
     },
     {
