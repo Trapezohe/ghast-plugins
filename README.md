@@ -12,7 +12,9 @@ vice versa). Ghast also exposes its own MCP server registry alongside.
 
 | File | Purpose | Consumed by |
 | --- | --- | --- |
-| `.claude-plugin/marketplace.json` | Plugin directory (Anthropic schema) | Ghast → Settings → Plugins |
+| `plugin-catalog.json` | Downloadable Ghast-compatible plugin packages | Ghast → Settings → Skills → Plugins |
+| `packages/*.zip` | Versioned plugin packages referenced by `plugin-catalog.json` | Ghast plugin installer |
+| `.claude-plugin/marketplace.json` | Source plugin directory (Anthropic schema) | Mirror / package generation |
 | `mcp-registry.json` | MCP server directory (self-contained) | Ghast → Settings → MCP → Marketplace |
 | `plugins/<name>/` | Plugin source trees | Resolved via marketplace `source` |
 
@@ -22,6 +24,12 @@ on the `main` branch. Push to `main` → marketplace updates on the next refresh
 ---
 
 ## Plugin directory: `.claude-plugin/marketplace.json`
+
+Ghast's current in-app installer consumes `plugin-catalog.json`, which is
+generated from local `./plugins/<name>` entries and includes downloadable zip
+packages with SHA-256 checksums. `.claude-plugin/marketplace.json` remains the
+authoring and mirror format, including external Anthropic entries that are not
+packaged unless they have a local source tree in this repository.
 
 Schema declared by `$schema: "https://anthropic.com/claude-code/marketplace.schema.json"`.
 
@@ -162,13 +170,14 @@ session when the plugin is installed.
 
 ## Starter set
 
-The marketplace currently lists **184 plugins**:
+The marketplace currently lists **299 plugins**:
 
 - **12 Ghast-original starters** (the table below) inspired by
   [lobehub/lobe-chat-plugins](https://github.com/lobehub/lobe-chat-plugins)
   and re-implemented as Anthropic-format skill bundles. None require an
-  API key; all use builtin `WebFetch` / `Bash` for network access.
-- **172 entries inherited from
+  API key; all use builtin `WebFetch` / `Bash` for network access. These are
+  the entries packaged in `plugin-catalog.json`.
+- **287 entries inherited from
   [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)**.
   Anthropic's directory is curated and includes both Anthropic-authored
   internal plugins (agent-sdk-dev, code-review, frontend-design,
@@ -209,10 +218,13 @@ You can also trigger it manually from the Actions tab (with a
 The underlying merge logic lives in
 [`scripts/merge-anthropic-plugins.py`](scripts/merge-anthropic-plugins.py)
 and is idempotent — re-runs drop the prior Anthropic-imported set and
-recompute it, so duplicates never accumulate. Run it locally with:
+recompute it, so duplicates never accumulate. The downloadable Ghast catalog
+is rebuilt by [`scripts/build-ghast-catalog.py`](scripts/build-ghast-catalog.py)
+after each merge. Run both locally with:
 
 ```bash
 python3 scripts/merge-anthropic-plugins.py
+python3 scripts/build-ghast-catalog.py
 ```
 
 Our 12 Ghast-original entries are always preserved; name collisions

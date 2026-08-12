@@ -67,6 +67,7 @@ jobs:
         id: merge
         run: |
           python3 scripts/merge-anthropic-plugins.py
+          python3 scripts/build-ghast-catalog.py
 
       - name: Validate merged marketplace.json
         run: |
@@ -88,11 +89,27 @@ jobs:
           )
           print(f"OK — {len(plugins)} plugins validated")
           PY
+          python3 - <<'PY'
+          import json
+          path = "plugin-catalog.json"
+          with open(path) as f:
+              data = json.load(f)
+          plugins = data.get("plugins")
+          assert isinstance(plugins, list), f"{path}: plugins is not a list"
+          assert len(plugins) >= 12, f"{path}: expected at least 12 Ghast plugins"
+          missing = [
+              p.get("name", f"#{i}")
+              for i, p in enumerate(plugins)
+              if not p.get("package", {}).get("url") or not p.get("package", {}).get("sha256")
+          ]
+          assert not missing, f"{path}: entries missing package metadata: {missing}"
+          print(f"OK — {len(plugins)} downloadable Ghast plugins validated")
+          PY
 
       - name: Detect changes
         id: diff
         run: |
-          if git diff --quiet -- .claude-plugin/marketplace.json; then
+          if [ -z "$(git status --porcelain -- .claude-plugin/marketplace.json plugin-catalog.json packages)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No changes — Anthropic's marketplace is in sync."
             echo "## No changes" >> "$GITHUB_STEP_SUMMARY"
@@ -103,13 +120,14 @@ jobs:
               echo "## Changes detected"
               echo ""
               echo '```'
-              git diff --stat -- .claude-plugin/marketplace.json
+              git diff --stat -- .claude-plugin/marketplace.json plugin-catalog.json packages
+              git status --short -- packages
               echo '```'
               echo ""
               echo "### Diff preview"
               echo '```diff'
               # Show only the first 200 lines so the summary stays readable.
-              git diff -- .claude-plugin/marketplace.json | head -n 200
+              git diff -- .claude-plugin/marketplace.json plugin-catalog.json | head -n 200
               echo '```'
             } >> "$GITHUB_STEP_SUMMARY"
           fi
@@ -138,7 +156,7 @@ jobs:
                   break
           ")
 
-          git add .claude-plugin/marketplace.json
+          git add .claude-plugin/marketplace.json plugin-catalog.json packages
           git commit -m "chore(marketplace): sync Anthropic plugins (anthropic@${ANTHROPIC_SHA})
 
           Automated daily sync via .github/workflows/sync-anthropic-plugins.yml.
