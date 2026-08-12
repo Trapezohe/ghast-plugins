@@ -1,0 +1,10 @@
+{
+  "name": "realtime-weather",
+  "description": "Skill that pulls current weather and a 24h forecast for any place name via Open-Meteo — no API key, no signup.",
+  "category": "information",
+  "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/realtime-weather",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  }
+}

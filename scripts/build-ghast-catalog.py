@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build Ghast's downloadable plugin catalog from local plugin sources."""
+"""Build Ghast's downloadable plugin catalog from native plugin sources."""
 
 from __future__ import annotations
 
@@ -10,56 +10,62 @@ from pathlib import Path
 
 
 CATALOG_PATH = Path("plugin-catalog.json")
-MARKETPLACE_PATH = Path(".claude-plugin/marketplace.json")
 PACKAGE_DIR = Path("packages")
+PLUGIN_DIR = Path("plugins")
 
 
 def main() -> int:
-    marketplace = json.loads(MARKETPLACE_PATH.read_text())
     PACKAGE_DIR.mkdir(exist_ok=True)
 
     plugins = []
-    for entry in marketplace["plugins"]:
-        source = entry.get("source")
-        if not isinstance(source, str) or not source.startswith("./plugins/"):
-            continue
-        plugin_dir = Path(source)
-        if not plugin_dir.exists():
+    package_names = set()
+    for plugin_dir in sorted(PLUGIN_DIR.iterdir()):
+        manifest_path = plugin_dir / ".ghast-plugin/plugin.json"
+        if not plugin_dir.is_dir() or not manifest_path.exists():
             continue
 
-        manifest = json.loads((plugin_dir / ".claude-plugin/plugin.json").read_text())
+        manifest = json.loads(manifest_path.read_text())
+        if manifest["name"] != plugin_dir.name:
+            raise ValueError(f"{manifest_path}: name must match directory")
+        if manifest.get("repository") and not (plugin_dir / "LICENSE").exists():
+            raise ValueError(f"{plugin_dir}: third-party plugins require LICENSE")
         manifest_for_catalog = {
             "name": manifest["name"],
             "description": manifest["description"],
-            "author": manifest.get("author", entry.get("author", "")),
+            "author": manifest.get("author", ""),
         }
+        for field in ("version", "homepage", "repository", "upstreamRevision", "license"):
+            if field in manifest:
+                manifest_for_catalog[field] = manifest[field]
         if (plugin_dir / "skills").exists():
             manifest_for_catalog["skills"] = "./skills/"
         if (plugin_dir / "commands").exists():
             manifest_for_catalog["commands"] = "./commands/"
         if (plugin_dir / ".mcp.json").exists():
             manifest_for_catalog["mcpServers"] = "./.mcp.json"
-        if (plugin_dir / "hooks").exists():
-            manifest_for_catalog["hooks"] = "./hooks/"
-
         zip_path = PACKAGE_DIR / f"{manifest['name']}.zip"
         write_plugin_zip(plugin_dir, zip_path)
+        package_names.add(zip_path.name)
         sha256 = hashlib.sha256(zip_path.read_bytes()).hexdigest()
 
-        plugins.append(
-            {
-                "id": manifest["name"],
-                "name": manifest["name"],
-                "description": entry.get("description") or manifest["description"],
-                "category": entry.get("category"),
-                "homepage": entry.get("homepage"),
-                "manifest": manifest_for_catalog,
-                "package": {
-                    "url": f"./packages/{zip_path.name}",
-                    "sha256": sha256,
-                },
-            }
-        )
+        catalog_entry = {
+            "id": manifest["name"],
+            "name": manifest["name"],
+            "description": manifest["description"],
+            "manifest": manifest_for_catalog,
+            "package": {
+                "url": f"./packages/{zip_path.name}",
+                "sha256": sha256,
+            },
+        }
+        for field in ("category", "homepage", "repository", "license"):
+            if field in manifest:
+                catalog_entry[field] = manifest[field]
+        plugins.append(catalog_entry)
+
+    for package_path in PACKAGE_DIR.glob("*.zip"):
+        if package_path.name not in package_names:
+            package_path.unlink()
 
     CATALOG_PATH.write_text(
         json.dumps(
