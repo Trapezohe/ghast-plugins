@@ -24,6 +24,35 @@
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/bilibili-search"
     },
     {
+      "id": "cloudflare",
+      "name": "cloudflare",
+      "description": "Build and operate on Cloudflare with portable skills, slash commands, and five official MCP servers.",
+      "manifest": {
+        "name": "cloudflare",
+        "description": "Build and operate on Cloudflare with portable skills, slash commands, and five official MCP servers.",
+        "author": {
+          "name": "Cloudflare",
+          "url": "https://workers.cloudflare.com"
+        },
+        "version": "1.0.0-ghast.1",
+        "homepage": "https://github.com/cloudflare/skills",
+        "repository": "https://github.com/cloudflare/skills",
+        "upstreamRevision": "f96bff754e428838818017f75817f0f9428acd48",
+        "license": "Apache-2.0",
+        "skills": "./skills/",
+        "commands": "./commands/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/cloudflare.zip",
+        "sha256": "3d030d45ea2e7270bacdcbb748ffc8da2c476797d0b31adda2d98b5d5b02f9aa"
+      },
+      "category": "development",
+      "homepage": "https://github.com/cloudflare/skills",
+      "repository": "https://github.com/cloudflare/skills",
+      "license": "Apache-2.0"
+    },
+    {
       "id": "current-datetime",
       "name": "current-datetime",
       "description": "Slash command and skill that tells the model the current wall-clock time in any IANA timezone — kills the 'I don't know what day it is' problem.",

@@ -1,0 +1,17 @@
+{
+  "name": "cloudflare",
+  "version": "1.0.0-ghast.1",
+  "description": "Build and operate on Cloudflare with portable skills, slash commands, and five official MCP servers.",
+  "category": "development",
+  "author": {
+    "name": "Cloudflare",
+    "url": "https://workers.cloudflare.com"
+  },
+  "homepage": "https://github.com/cloudflare/skills",
+  "repository": "https://github.com/cloudflare/skills",
+  "upstreamRevision": "f96bff754e428838818017f75817f0f9428acd48",
+  "license": "Apache-2.0",
+  "skills": "./skills/",
+  "commands": "./commands/",
+  "mcpServers": "./.mcp.json"
+}
