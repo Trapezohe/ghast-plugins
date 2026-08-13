@@ -82,7 +82,7 @@ verification.
 | expo | Expo | skills, commands | MIT | official-source-verified | implemented-verified |
 | factset | FactSet | appConnector | MIT | official-source-research-required | not-implemented |
 | fal | Fal | appConnector | MIT | official-source-research-required | not-implemented |
-| figma | Figma | appConnector, mcpServers, skills, commands | LicenseRef-Figma-Developer-Terms | official-source-research-required | not-implemented |
+| figma | Figma | appConnector, mcpServers, skills, commands | LicenseRef-Figma-Developer-Terms | blocked-license | not-implemented |
 | finn | FINN GmbH | appConnector | MIT | official-source-research-required | not-implemented |
 | fireflies | Fireflies | appConnector | MIT | official-source-research-required | not-implemented |
 | fiscal-ai | Fiscal AI | appConnector | MIT | official-source-research-required | not-implemented |
@@ -97,7 +97,7 @@ verification.
 | highlevel | HighLevel | appConnector | MIT | official-source-research-required | not-implemented |
 | hostinger | Hostinger | appConnector | MIT | official-source-research-required | not-implemented |
 | hubspot | HubSpot | appConnector, skills | MIT | official-source-research-required | not-implemented |
-| hugging-face | Hugging Face | appConnector, skills | MIT | official-source-research-required | not-implemented |
+| hugging-face | Hugging Face | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | hyperframes | HeyGen | skills | Apache-2.0 | official-source-verified | implemented-verified |
 | intercom | Intercom | appConnector | MIT | official-source-research-required | not-implemented |
 | jam | Jam | appConnector | MIT | official-source-research-required | not-implemented |
@@ -117,8 +117,8 @@ verification.
 | motherduck | MotherDuck Corporation | appConnector | MIT | official-source-research-required | not-implemented |
 | mt-newswires | MT Newswires | appConnector | MIT | official-source-research-required | not-implemented |
 | myregistry-com | MyRegistry.com | appConnector | MIT | official-source-research-required | not-implemented |
-| neon-postgres | Neon | appConnector, skills | Apache-2.0 | official-source-research-required | not-implemented |
-| netlify | Netlify | appConnector, skills | MIT | official-source-research-required | not-implemented |
+| neon-postgres | Neon | appConnector, skills | Apache-2.0 | official-source-verified | implemented-verified |
+| netlify | Netlify | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | network-solutions | Network Solutions | appConnector | MIT | official-source-research-required | not-implemented |
 | nvidia | NVIDIA | skills | Apache-2.0 AND CC-BY-4.0 | official-source-verified | implemented-verified |
 | omni-analytics | Omni Analytics | appConnector | MIT | official-source-research-required | not-implemented |
@@ -128,7 +128,7 @@ verification.
 | picsart | Picsart | appConnector | MIT | official-source-research-required | not-implemented |
 | pitchbook | PitchBook | appConnector | MIT | official-source-research-required | not-implemented |
 | policynote | FiscalNote | appConnector | MIT | official-source-research-required | not-implemented |
-| posthog | PostHog | appConnector, skills | MIT | official-source-research-required | not-implemented |
+| posthog | PostHog | appConnector, skills | MIT | blocked-license | not-implemented |
 | pylon | Pylon Labs Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | quartr | Quartr | appConnector | MIT | official-source-research-required | not-implemented |
 | quickbooks | QuickBooks | appConnector | MIT | official-source-research-required | not-implemented |
@@ -154,7 +154,7 @@ verification.
 | skywatch | SkyWatch Space Applications Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | statsig | Statsig, LLC | appConnector | MIT | official-source-research-required | not-implemented |
 | streak | Rewardly, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
-| stripe | Stripe | appConnector, skills | MIT | official-source-research-required | not-implemented |
+| stripe | Stripe | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | supabase | Supabase | appConnector, skills | MIT | blocked-license | not-implemented |
 | superhuman | Superhuman | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | superpowers | Jesse Vincent | skills | MIT | official-source-verified | implemented-verified |

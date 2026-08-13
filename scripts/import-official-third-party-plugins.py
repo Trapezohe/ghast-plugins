@@ -165,6 +165,30 @@ PLUGINS = {
             ),
         ],
     },
+    "neon-postgres": {
+        "directory": "neon-agent-skills",
+        "revision": "af27b52659c3c5bbf05d6c626b166163eb351e19",
+        "repository": "https://github.com/neondatabase/agent-skills",
+        "plugin_root": ".",
+        "manifest": "plugin.json",
+        "license": "LICENSE",
+        "icon": "plugins/neon-postgres/assets/logo.svg",
+        "category": "development",
+        "mcp": "mcp.json",
+        "license_name": "Apache-2.0",
+        "description": (
+            "Manage Neon Lakebase Postgres projects, branches, schemas, SQL, "
+            "migrations, Auth, Object Storage, Functions, AI Gateway, and "
+            "database performance with official Neon skills and MCP."
+        ),
+        "compatibility_notes": [
+            (
+                "The Codex private app mapping is replaced by Neon's official "
+                "public Streamable HTTP MCP server with OAuth, API-key, "
+                "project-scoped, category-scoped, and read-only modes."
+            ),
+        ],
+    },
     "nvidia": {
         "directory": "nvidia-skills",
         "revision": "aa116673017bf75f9885edabab34d8ec883c0a3a",
@@ -213,6 +237,35 @@ PLUGINS = {
                 "The official generated skill build is reproduced without "
                 "Codex-only agent metadata and with preview guidance adapted "
                 "to Ghast's browser."
+            ),
+        ],
+    },
+    "netlify": {
+        "directory": "netlify-context",
+        "revision": "47848e2d6405291caeed0b23689878ec5253bb6f",
+        "repository": "https://github.com/netlify/context-and-tools",
+        "plugin_root": "agent-plugin",
+        "manifest": "plugin.json",
+        "license": "LICENSE",
+        "generated_icon": "./assets/icon.svg",
+        "category": "development",
+        "mcp": "mcp.json",
+        "license_name": "MIT",
+        "description": (
+            "Build, deploy, and operate Netlify projects with official skills "
+            "for Functions, Edge Functions, Blobs, Database, Identity, Image "
+            "CDN, Forms, configuration, caching, AI Gateway, and deployment, "
+            "plus the official Netlify MCP server."
+        ),
+        "compatibility_notes": [
+            (
+                "The Codex private app mapping is replaced by Netlify's "
+                "official hosted OAuth MCP server."
+            ),
+            (
+                "A generic deployment-service icon is used because the "
+                "portable official plugin source does not include a catalog "
+                "icon with explicit redistribution metadata."
             ),
         ],
     },
@@ -283,6 +336,38 @@ PLUGINS = {
             ),
         ],
     },
+    "stripe": {
+        "directory": "stripe-ai",
+        "revision": "1953b6cce7344d880a054c42b8dd21ca3e50ebd5",
+        "repository": "https://github.com/stripe/ai",
+        "plugin_root": "providers/codex/plugin",
+        "manifest": ".codex-plugin/plugin.json",
+        "license": "../../../LICENSE",
+        "icon": "assets/parallelogram.png",
+        "category": "finance",
+        "mcp_inline": {
+            "mcpServers": {
+                "stripe": {
+                    "type": "http",
+                    "url": "https://mcp.stripe.com",
+                },
+            },
+        },
+        "license_name": "MIT",
+        "description": (
+            "Build and operate Stripe payments, subscriptions, invoices, "
+            "Connect platforms, apps, and API integrations with all seven "
+            "official Stripe skills and Stripe's hosted OAuth MCP server."
+        ),
+        "compatibility_notes": [
+            (
+                "The official Stripe repository publishes the hosted MCP "
+                "endpoint in its README while its Codex package uses a "
+                "private app mapping; Ghast declares the same official "
+                "OAuth endpoint directly."
+            ),
+        ],
+    },
     "superhuman": {
         "directory": "superhuman-mcp-mail",
         "revision": "a83580e994604edca1cd5661a4a1865f3f39abc9",
@@ -340,6 +425,38 @@ PLUGINS = {
                 "A minimal Ghast-compatible frontmatter block is added to "
                 "twilio-agent-connect because that official skill is the "
                 "only source skill without one."
+            ),
+        ],
+    },
+    "hugging-face": {
+        "directory": "huggingface-skills",
+        "revision": "ec0108293521ef698e451ec044e8b4feba6b732b",
+        "repository": "https://github.com/huggingface/skills",
+        "plugin_root": ".",
+        "manifest": ".claude-plugin/plugin.json",
+        "license": "LICENSE",
+        "generated_icon": "./assets/icon.svg",
+        "category": "development",
+        "mcp": ".mcp.json",
+        "license_name": "Apache-2.0",
+        "additional_repository_skill_roots": [
+            "hf-mcp/skills",
+        ],
+        "description": (
+            "Explore and manage Hugging Face models, datasets, Spaces, jobs, "
+            "papers, evaluations, training, Gradio apps, local models, and "
+            "Hub workflows with the complete official skill catalog and "
+            "official Hugging Face MCP server."
+        ),
+        "compatibility_notes": [
+            (
+                "The Codex private app mapping is replaced by Hugging Face's "
+                "official public MCP endpoint with browser login or bearer "
+                "token authentication."
+            ),
+            (
+                "A generic machine-learning icon is used because the skills "
+                "repository does not publish a small catalog icon."
             ),
         ],
     },
@@ -523,6 +640,15 @@ def import_plugin(name: str, config: dict, source_root: Path) -> None:
                 shutil.copy2(command_source, commands_target / command_source.name)
         if config.get("mcp"):
             shutil.copy2(plugin_root / config["mcp"], staging / ".mcp.json")
+        elif config.get("mcp_inline"):
+            (staging / ".mcp.json").write_text(
+                json.dumps(
+                    config["mcp_inline"],
+                    indent=2,
+                    ensure_ascii=False,
+                )
+                + "\n"
+            )
         for directory in config.get("extra_directories", []):
             shutil.copytree(
                 plugin_root / directory,
@@ -570,7 +696,7 @@ def import_plugin(name: str, config: dict, source_root: Path) -> None:
         }
         if config.get("commands") or config.get("command_files"):
             manifest["commands"] = "./commands/"
-        if config.get("mcp"):
+        if config.get("mcp") or config.get("mcp_inline"):
             manifest["mcpServers"] = "./.mcp.json"
 
         manifest_dir = staging / ".ghast-plugin"

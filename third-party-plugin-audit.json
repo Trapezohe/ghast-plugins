@@ -16,13 +16,13 @@
     "excludedOpenAIAuthored": 31,
     "thirdPartyPlugins": 149,
     "auditStatus": {
-      "blocked-license": 7,
-      "official-source-research-required": 120,
-      "official-source-verified": 22
+      "blocked-license": 9,
+      "official-source-research-required": 114,
+      "official-source-verified": 26
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 22,
-      "not-implemented": 127
+      "implemented-verified": 26,
+      "not-implemented": 123
     }
   },
   "excludedOpenAIPlugins": [
@@ -2575,7 +2575,7 @@
     },
     {
       "id": "figma",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "blocked-license",
       "developer": {
         "manifestAuthor": {
           "name": "Figma",
@@ -2606,10 +2606,44 @@
       },
       "declaredLicense": "LicenseRef-Figma-Developer-Terms",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.figma.com"
+        "homepage": "https://www.figma.com",
+        "review": {
+          "verificationStatus": "blocked-license",
+          "officialDeveloper": "Figma",
+          "officialRepository": "https://github.com/figma/mcp-server-guide",
+          "officialRevision": "22b2c566d98880ebdb5a8e48eb2c66c596a6d990",
+          "license": "LicenseRef-Figma-Developer-Terms",
+          "licenseEvidence": [
+            "The pinned official repository contains no LICENSE, COPYING, or equivalent open-source license file.",
+            "Its README says use of the MCP server and related skills is governed by the Figma Developer Terms and describes the skills as a beta feature."
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the Figma GitHub organization.",
+            "It publishes the official Figma MCP endpoint, twelve bundled agent skills, client manifests, and Figma-authored setup guidance.",
+            "The twelve bundled official skill names match the current Codex plugin skill set."
+          ],
+          "codexCapabilities": [
+            "Read Figma design context and translate selected designs into application code",
+            "Create or modify Figma files, components, variables, libraries, diagrams, FigJam boards, Slides, motion, and Code Connect mappings"
+          ],
+          "ghastCapabilities": [
+            "No redistributed Figma skill or branded asset package is claimed until the Figma Developer Terms are confirmed to permit this form of redistribution and modification."
+          ],
+          "capabilityRelationship": "blocked-before-port",
+          "limitations": [
+            "The public endpoint at https://mcp.figma.com/mcp is reachable, but declaring the endpoint alone would omit the twelve official workflow skills that make up the current Codex plugin.",
+            "Repository ownership and public availability do not by themselves grant permission to redistribute Figma's skill text or brand assets."
+          ],
+          "verification": [
+            "Inspect the complete pinned repository and confirm no open-source license file exists",
+            "Compare the twelve official skills with the twelve Codex plugin skills",
+            "Probe https://mcp.figma.com/mcp and confirm the official server responds while rejecting an unsupported GET request",
+            "Do not create plugins/figma while redistribution permission remains unresolved"
+          ]
+        }
       },
       "ghast": {
         "implementationStatus": "not-implemented"
@@ -3179,7 +3213,7 @@
     },
     {
       "id": "hugging-face",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Hugging Face",
@@ -3208,13 +3242,52 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://huggingface.co"
+        "homepage": "https://huggingface.co",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Hugging Face",
+          "officialRepository": "https://github.com/huggingface/skills",
+          "officialRevision": "ec0108293521ef698e451ec044e8b4feba6b732b",
+          "license": "Apache-2.0",
+          "licenseEvidence": [
+            "LICENSE"
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the Hugging Face GitHub organization.",
+            "Its manifests and README identify it as Hugging Face's official multi-client skill distribution and declare the official Hugging Face MCP endpoint.",
+            "Ghast imports all twenty-five top-level skills plus the official hf-mcp skill from one pinned revision."
+          ],
+          "codexCapabilities": [
+            "Inspect and manage Hugging Face models, datasets, Spaces, jobs, papers, evaluations, training, Gradio applications, and Hub resources",
+            "Read and write authenticated Hugging Face resources through the connected app"
+          ],
+          "ghastCapabilities": [
+            "All twenty-six official Hugging Face skills, including the Hub CLI, datasets, Spaces, papers, evaluations, training, local models, Transformers.js, Gradio, ZeroGPU, SageMaker workflows, and MCP discovery",
+            "Authenticated Hub and configured Space operations through Hugging Face's official public MCP server"
+          ],
+          "capabilityRelationship": "superset-newer-official-suite",
+          "limitations": [
+            "Hugging Face accounts, browser login or bearer-token authentication, Hub permissions, cloud credentials, GPU quotas, and paid compute remain user-managed.",
+            "Publishing repositories, launching paid jobs, deploying endpoints, changing cloud IAM, and deleting or overwriting Hub resources require explicit confirmation.",
+            "A generic machine-learning icon is used because the skills repository does not publish a small catalog icon."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Compare all twenty-six Ghast skill trees and .mcp.json with the pinned official repository",
+            "Probe https://huggingface.co/mcp?login and confirm the official endpoint serves its MCP login surface",
+            "unzip -tqq packages/hugging-face.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.23-ghast.1",
+        "repository": "https://github.com/huggingface/skills",
+        "upstreamRevision": "ec0108293521ef698e451ec044e8b4feba6b732b",
+        "portStatus": "full"
       }
     },
     {
@@ -4064,7 +4137,7 @@
     },
     {
       "id": "neon-postgres",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Neon",
@@ -4093,18 +4166,58 @@
       },
       "declaredLicense": "Apache-2.0",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://neon.com/docs/ai/neon-mcp-server"
+        "homepage": "https://neon.com/docs/ai/neon-mcp-server",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Neon",
+          "officialRepository": "https://github.com/neondatabase/agent-skills",
+          "officialRevision": "af27b52659c3c5bbf05d6c626b166163eb351e19",
+          "license": "Apache-2.0",
+          "licenseEvidence": [
+            "LICENSE"
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the Neon GitHub organization.",
+            "Its root Agent Plugins v1 manifest, package metadata, README, and MCP declaration identify it as Neon's official portable skill package.",
+            "Ghast imports all eight canonical top-level skills, the official MCP declaration, and the licensed repository icon from one pinned revision."
+          ],
+          "codexCapabilities": [
+            "Create and manage Neon Serverless Postgres projects, branches, databases, schemas, queries, migrations, and connections",
+            "Use Neon guidance for connection methods, branching, autoscaling, authentication, and database egress optimization"
+          ],
+          "ghastCapabilities": [
+            "All eight current official Neon skills covering Lakebase Postgres, branching, egress optimization, Object Storage, Functions, AI Gateway, and claimable databases",
+            "Project, branch, schema, SQL, migration, Auth, logs, query-inspection, and documentation operations through Neon's official MCP server",
+            "Official OAuth, API-key, read-only, project-scoped, and tool-category-scoped MCP modes"
+          ],
+          "capabilityRelationship": "superset-newer-official-suite",
+          "limitations": [
+            "Neon accounts, OAuth or API-key authentication, organization and project permissions, IP allowlists, and paid services remain user-managed.",
+            "Neon warns that its MCP server is intended for local development and IDE integrations rather than production automation.",
+            "Database mutations, migrations, project or branch deletion, Auth provisioning, and connection-secret handling require explicit user review and confirmation."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Compare all eight Ghast skill trees, mcp.json, LICENSE, and icon with the pinned official repository",
+            "Probe https://mcp.neon.tech/mcp and confirm the official OAuth-protected endpoint returns an authorization-required response",
+            "unzip -tqq packages/neon-postgres.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.1.2-ghast.1",
+        "repository": "https://github.com/neondatabase/agent-skills",
+        "upstreamRevision": "af27b52659c3c5bbf05d6c626b166163eb351e19",
+        "portStatus": "full"
       }
     },
     {
       "id": "netlify",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Netlify",
@@ -4132,13 +4245,52 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.netlify.com"
+        "homepage": "https://www.netlify.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Netlify",
+          "officialRepository": "https://github.com/netlify/context-and-tools",
+          "officialRevision": "47848e2d6405291caeed0b23689878ec5253bb6f",
+          "license": "MIT",
+          "licenseEvidence": [
+            "agent-plugin/LICENSE"
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the Netlify GitHub organization.",
+            "Its Agent Plugins v1 package identifies itself as the portable official Netlify skills and MCP distribution.",
+            "Ghast imports the complete fifteen-skill agent-plugin package and its hosted MCP declaration from one pinned revision."
+          ],
+          "codexCapabilities": [
+            "Deploy projects and manage preview or production releases on Netlify",
+            "Inspect deployment state, sites, builds, logs, configuration, and connected Netlify resources"
+          ],
+          "ghastCapabilities": [
+            "All fifteen official Netlify skills for access control, agent runner, AI Gateway, Blobs, caching, configuration, Database, deploys, Edge Functions, Forms, frameworks, Functions, Identity, Image CDN, and MCP servers",
+            "Authenticated project, deploy, environment-variable, and platform operations through Netlify's official hosted OAuth MCP server"
+          ],
+          "capabilityRelationship": "superset-newer-official-suite",
+          "limitations": [
+            "Netlify accounts, OAuth authorization, team and site permissions, CLI authentication, build minutes, and paid services remain user-managed.",
+            "Production deploys, environment-variable changes, extension changes, access-control changes, and destructive site operations require explicit confirmation.",
+            "A generic deployment-service icon is used because the portable official package does not include a catalog icon with explicit redistribution metadata."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Compare all fifteen Ghast skill trees and .mcp.json with agent-plugin/ in the pinned official repository",
+            "Probe https://netlify-mcp.netlify.app/mcp and confirm the official OAuth-protected endpoint returns an authentication-required response",
+            "unzip -tqq packages/netlify.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.2.1-ghast.1",
+        "repository": "https://github.com/netlify/context-and-tools",
+        "upstreamRevision": "47848e2d6405291caeed0b23689878ec5253bb6f",
+        "portStatus": "full"
       }
     },
     {
@@ -4517,7 +4669,7 @@
     },
     {
       "id": "posthog",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "blocked-license",
       "developer": {
         "manifestAuthor": {
           "name": "PostHog",
@@ -4548,10 +4700,46 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://posthog.com/docs"
+        "homepage": "https://posthog.com/docs",
+        "review": {
+          "verificationStatus": "blocked-license",
+          "officialDeveloper": "PostHog",
+          "officialRepository": "https://github.com/PostHog/ai-plugin",
+          "officialRevision": "672b0076a11b4b4c4ef9d40dee832c10fefb244a",
+          "license": "UNVERIFIED-MIXED-SOURCE",
+          "licenseEvidence": [
+            "The official AI plugin manifest and README say MIT, but the pinned repository has no LICENSE, COPYING, or equivalent license text and GitHub reports no detected license.",
+            "Its sync workflow imports skills from a PostHog/posthog release and from PostHog/context-mill.",
+            "PostHog/posthog has an MIT-style root license for content outside designated exceptions, but PostHog/context-mill and its released skill archive publish no license file."
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the PostHog GitHub organization and describes itself as PostHog's official plugin for Codex and other AI clients.",
+            "Its official MCP declaration uses https://mcp.posthog.com/mcp and its current manifest exposes 137 synchronized skills.",
+            "The older developer-owned PostHog/mcp repository has an MIT license and documents the same hosted MCP endpoint, but it does not establish redistribution rights for the complete current skill bundle."
+          ],
+          "codexCapabilities": [
+            "Analyze PostHog product data, feature flags, experiments, errors, surveys, dashboards, logs, replays, warehouse data, and LLM analytics",
+            "Create and update PostHog flags, experiments, insights, dashboards, surveys, alerts, workflows, and other supported resources"
+          ],
+          "ghastCapabilities": [
+            "No complete redistributed PostHog skill package is claimed while one of the official synchronized source streams lacks verifiable redistribution terms."
+          ],
+          "capabilityRelationship": "blocked-before-full-port",
+          "limitations": [
+            "A Ghast package containing only the licensed older MCP transport would provide many operational tools but would not reproduce the complete current official plugin's 137-skill behavior.",
+            "The plugin cannot be represented as a complete official-source port until PostHog publishes a repository-level license covering the AI plugin or separately licenses every synchronized source archive."
+          ],
+          "verification": [
+            "Inspect the pinned PostHog/ai-plugin tree and GitHub license metadata and confirm no license file is present",
+            "Inspect .github/workflows/sync-skills.yml and verify the two upstream skill sources",
+            "Inspect the PostHog/posthog root license and the absence of a license in PostHog/context-mill",
+            "Probe https://mcp.posthog.com/mcp and confirm the official endpoint requires authentication",
+            "Do not create plugins/posthog as a complete port while the mixed-source license gap remains"
+          ]
+        }
       },
       "ghast": {
         "implementationStatus": "not-implemented"
@@ -5650,7 +5838,7 @@
     },
     {
       "id": "stripe",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Stripe",
@@ -5675,13 +5863,54 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://stripe.com"
+        "homepage": "https://stripe.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Stripe",
+          "officialRepository": "https://github.com/stripe/ai",
+          "officialRevision": "1953b6cce7344d880a054c42b8dd21ca3e50ebd5",
+          "license": "MIT",
+          "licenseEvidence": [
+            "LICENSE"
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the Stripe GitHub organization.",
+            "Its README presents the repository as Stripe's official AI integration source and documents both the official hosted MCP server and agent skills.",
+            "Its providers/codex/plugin package is a Stripe-authored Codex plugin source whose submission README names mcp.stripe.com as the tool source.",
+            "Ghast imports all seven official Codex skills and the licensed official icon from one pinned revision."
+          ],
+          "codexCapabilities": [
+            "Use Stripe payments and business tools through the connected app",
+            "Apply Stripe implementation best practices and upgrade Stripe API or SDK integrations"
+          ],
+          "ghastCapabilities": [
+            "All seven official Stripe skills for best practices, API and SDK upgrades, Stripe Apps, Connect recommendations, documentation, directory discovery, and project workflows",
+            "Authenticated Stripe account operations through Stripe's official hosted OAuth MCP server"
+          ],
+          "capabilityRelationship": "superset-newer-official-suite",
+          "limitations": [
+            "Stripe accounts, OAuth authorization, account permissions, API versions, test or live mode, and paid financial services remain user-managed.",
+            "Charges, refunds, transfers, payouts, subscriptions, invoices, customer changes, and other financial or state-changing operations require explicit confirmation and must respect test-versus-live mode.",
+            "Ghast declares mcp.stripe.com directly because the official Codex source stores a private app identifier rather than a portable MCP JSON file."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Compare all seven Ghast skill trees and icon with providers/codex/plugin in the pinned official repository",
+            "Compare the generated .mcp.json endpoint with the official repository README and Codex submission README",
+            "Probe https://mcp.stripe.com and confirm the official OAuth-protected endpoint returns Stripe's authorization-required response",
+            "unzip -tqq packages/stripe.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "5.3.1-ghast.1",
+        "repository": "https://github.com/stripe/ai",
+        "upstreamRevision": "1953b6cce7344d880a054c42b8dd21ca3e50ebd5",
+        "portStatus": "full"
       }
     },
     {

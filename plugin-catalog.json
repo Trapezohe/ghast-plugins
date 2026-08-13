@@ -360,6 +360,35 @@
       "license": "MIT"
     },
     {
+      "id": "hugging-face",
+      "name": "hugging-face",
+      "description": "Explore and manage Hugging Face models, datasets, Spaces, jobs, papers, evaluations, training, Gradio apps, local models, and Hub workflows with the complete official skill catalog and official Hugging Face MCP server.",
+      "manifest": {
+        "name": "hugging-face",
+        "description": "Explore and manage Hugging Face models, datasets, Spaces, jobs, papers, evaluations, training, Gradio apps, local models, and Hub workflows with the complete official skill catalog and official Hugging Face MCP server.",
+        "author": {
+          "name": "Hugging Face"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.23-ghast.1",
+        "homepage": "https://github.com/huggingface/skills",
+        "repository": "https://github.com/huggingface/skills",
+        "upstreamRevision": "ec0108293521ef698e451ec044e8b4feba6b732b",
+        "license": "Apache-2.0",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/hugging-face.zip",
+        "sha256": "4ff138a5ca59758f12dcc0f7246d9d8a2bc05c8b864427260344582ad86ab1dd"
+      },
+      "icon": "./plugins/hugging-face/assets/icon.svg",
+      "category": "development",
+      "homepage": "https://github.com/huggingface/skills",
+      "repository": "https://github.com/huggingface/skills",
+      "license": "Apache-2.0"
+    },
+    {
       "id": "hyperframes",
       "name": "hyperframes",
       "description": "Write HTML, render video. Compositions, Tailwind v4 styles, GSAP and runtime adapter animations, captions, voiceovers, audio-reactive visuals, and website capture for HyperFrames.",
@@ -470,6 +499,66 @@
       "category": "data",
       "homepage": "https://mixpanel.github.io/mixpanel-headless/",
       "repository": "https://github.com/mixpanel/mixpanel-headless",
+      "license": "MIT"
+    },
+    {
+      "id": "neon-postgres",
+      "name": "neon-postgres",
+      "description": "Manage Neon Lakebase Postgres projects, branches, schemas, SQL, migrations, Auth, Object Storage, Functions, AI Gateway, and database performance with official Neon skills and MCP.",
+      "manifest": {
+        "name": "neon-postgres",
+        "description": "Manage Neon Lakebase Postgres projects, branches, schemas, SQL, migrations, Auth, Object Storage, Functions, AI Gateway, and database performance with official Neon skills and MCP.",
+        "author": {
+          "name": "Neon",
+          "url": "https://neon.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.1.2-ghast.1",
+        "homepage": "https://neon.com",
+        "repository": "https://github.com/neondatabase/agent-skills",
+        "upstreamRevision": "af27b52659c3c5bbf05d6c626b166163eb351e19",
+        "license": "Apache-2.0",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/neon-postgres.zip",
+        "sha256": "04efcaa98090d192fb5f03dc7d1ac231f39ab9d733e93bdb2a38adc0bc092e13"
+      },
+      "icon": "./plugins/neon-postgres/assets/icon.svg",
+      "category": "development",
+      "homepage": "https://neon.com",
+      "repository": "https://github.com/neondatabase/agent-skills",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "netlify",
+      "name": "netlify",
+      "description": "Build, deploy, and operate Netlify projects with official skills for Functions, Edge Functions, Blobs, Database, Identity, Image CDN, Forms, configuration, caching, AI Gateway, and deployment, plus the official Netlify MCP server.",
+      "manifest": {
+        "name": "netlify",
+        "description": "Build, deploy, and operate Netlify projects with official skills for Functions, Edge Functions, Blobs, Database, Identity, Image CDN, Forms, configuration, caching, AI Gateway, and deployment, plus the official Netlify MCP server.",
+        "author": {
+          "name": "Netlify",
+          "url": "https://www.netlify.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.2.1-ghast.1",
+        "homepage": "https://docs.netlify.com",
+        "repository": "https://github.com/netlify/context-and-tools",
+        "upstreamRevision": "47848e2d6405291caeed0b23689878ec5253bb6f",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/netlify.zip",
+        "sha256": "bd4e2d79ce1078b31f3e3a64a5250954716d09c40b950d2bef2684781179eb40"
+      },
+      "icon": "./plugins/netlify/assets/icon.svg",
+      "category": "development",
+      "homepage": "https://docs.netlify.com",
+      "repository": "https://github.com/netlify/context-and-tools",
       "license": "MIT"
     },
     {
@@ -769,6 +858,36 @@
       "icon": "./plugins/stock-quote/assets/icon.svg",
       "category": "finance",
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/stock-quote"
+    },
+    {
+      "id": "stripe",
+      "name": "stripe",
+      "description": "Build and operate Stripe payments, subscriptions, invoices, Connect platforms, apps, and API integrations with all seven official Stripe skills and Stripe's hosted OAuth MCP server.",
+      "manifest": {
+        "name": "stripe",
+        "description": "Build and operate Stripe payments, subscriptions, invoices, Connect platforms, apps, and API integrations with all seven official Stripe skills and Stripe's hosted OAuth MCP server.",
+        "author": {
+          "name": "Stripe",
+          "url": "https://stripe.com"
+        },
+        "icon": "./assets/icon.png",
+        "version": "5.3.1-ghast.1",
+        "homepage": "https://stripe.com",
+        "repository": "https://github.com/stripe/ai",
+        "upstreamRevision": "1953b6cce7344d880a054c42b8dd21ca3e50ebd5",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/stripe.zip",
+        "sha256": "07da26a46f2aaeb9067dfe696fbaf94c6b487407546231e8897a0c281a8498ea"
+      },
+      "icon": "./plugins/stripe/assets/icon.png",
+      "category": "finance",
+      "homepage": "https://stripe.com",
+      "repository": "https://github.com/stripe/ai",
+      "license": "MIT"
     },
     {
       "id": "superhuman",

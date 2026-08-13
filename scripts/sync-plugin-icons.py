@@ -32,11 +32,13 @@ LOCAL_ICONS = {
     "expo": "assets/icon.png",
     "hyperframes": "assets/icon.png",
     "heygen": "assets/icon.png",
+    "neon-postgres": "assets/icon.svg",
     "nvidia": "assets/icon.png",
     "remotion": "assets/icon.png",
     "render": "assets/icon.svg",
     "replayio": "assets/icon.svg",
     "shopify": "assets/icon.svg",
+    "stripe": "assets/icon.png",
     "superhuman": "assets/icon.svg",
     "superpowers": "assets/icon.png",
     "temporal": "assets/icon.svg",
@@ -70,11 +72,22 @@ CUSTOM_ICONS = {
         "#F0652F",
         '<path d="M19 17l13 16 13-16M32 33v15"/>',
     ),
+    "hugging-face": (
+        "#F0B429",
+        '<circle cx="20" cy="24" r="6"/><circle cx="44" cy="24" r="6"/>'
+        '<circle cx="32" cy="43" r="6"/>'
+        '<path d="M25 27l4 10M39 27l-4 10M26 24h12"/>',
+    ),
     "mermaid-mindmap": (
         "#0F766E",
         '<circle cx="18" cy="32" r="6"/><circle cx="46" cy="18" r="6"/>'
         '<circle cx="46" cy="46" r="6"/>'
         '<path d="M24 30l16-9M24 34l16 9"/>',
+    ),
+    "netlify": (
+        "#0E7C7B",
+        '<path d="M12 43h40M18 43V27l14-10 14 10v16"/>'
+        '<path d="M27 43V32h10v11"/>',
     ),
     "realtime-weather": (
         "#1D82B6",
