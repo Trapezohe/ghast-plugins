@@ -1055,6 +1055,84 @@
         "unzip -tqq packages/common-room.zip"
       ]
     },
+    "cube": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Cube",
+      "officialRepository": null,
+      "officialRevision": "cube-docs-fd816d469e8d+tools-9fd46d5d21aa+oauth-f88522816f07+auth-8e4f1585bcd9",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/cube/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic governed-analytics icon.",
+        "Cube's deprecated cubedevinc/cube-mcp-server repository declares MIT only in package metadata and has no LICENSE, LICENSE.md, LICENSE.txt, COPYING, or NOTICE file at revision 81c55225caaa8ab814e050a5e48ddede3a535a27, so none of its source is redistributed.",
+        "The deprecated @cube-dev/mcp-server 1.3.0 npm tarball also declares MIT in package metadata but contains no license text. It is not bundled because it exposes only one chat tool and directs users to the remote MCP.",
+        "No Cube hosted MCP implementation, private Codex connector, OAuth credential, tenant data, semantic model, branded artwork, or marketplace icon is redistributed."
+      ],
+      "officialityEvidence": [
+        "Cube's official documentation identifies https://cubecloud.dev/mcp as its hosted HTTPS MCP endpoint and documents authorization-code OAuth with PKCE, the fixed cube-mcp-client client ID, and mcp-agent-access scope.",
+        "The official MCP guide has normalized visible-text SHA-256 fd816d469e8d330ee88a23d953dec174fd3df0d7732203c32ea071f6b235bec9 and publishes an exact 20-tool surface.",
+        "The ordered 20-tool inventory has canonical JSON SHA-256 9fd46d5d21aa9477690935b50be79bf893ec95aa55beb3bfccab2c2cd205185e.",
+        "The documented 12 read-oriented, four ordinary write, and four destructive tool inventories have canonical JSON SHA-256 values 09bc0fb14751bd24d59d7973e066698c184929be49c71fecf9b5fdd25b6a00c1, 04be8319b229ba71b35e7ffe1c9bbfd602e3a541a64626792db39b379ea444c0, and 5d1cce1b17be7bba683878f63906bb0e33ece8c955dfe3a486ce29f7f2961575.",
+        "The official tools cover deployments and agents, natural-language chat, result pagination, semantic-model search, Cube SQL queries, workbook and dashboard authoring, semantic-model source inspection and development, redacted environment inspection, branch diffs, and pre-aggregation status and builds.",
+        "Cube documents updateDashboard, publishDashboard, writeDataModelFile, and deleteDataModelFile as destructive operations that prompt for confirmation.",
+        "Cube documents Viewer or higher for MCP access, Explorer or higher for workbook and dashboard authoring, and semantic-model edit permission, normally Developer or Admin, for model and pre-aggregation tools. Every query continues to enforce role and row-level security.",
+        "The model-edit workflow writes only to a personal dev-<user>-<hash> branch, requires startDataModelEdit before writes, recompiles whole-file replacements, exposes diffs for review, and deliberately provides no commit tool so only a person can promote changes.",
+        "The pre-aggregation build tool runs asynchronously, can execute real warehouse queries and write through an external export bucket, and can consume warehouse resources and cost.",
+        "The protected-resource metadata identifies https://cubecloud.dev/mcp, mcp-agent-access scope, and bearer-header authentication; its canonical JSON SHA-256 is f88522816f071a795c6c20d756370fe9fd194a5d96bc9ae29f7b46c01efb6c4f.",
+        "The authorization-server metadata publishes authorization-code and refresh-token grants, dynamic registration, public clients, and PKCE S256; its canonical JSON SHA-256 is 8e4f1585bcd901bd05d2b98fe18700367212787cccd9f18b08a8f3235f48dcc0.",
+        "On August 13, 2026, the registration endpoint returned the fixed cube-mcp-client public client with no secret and a PKCE request reached Cube's official login page.",
+        "Missing and invalid Bearer initialize requests returned HTTP 401 with Cube's official protected-resource challenge and identical body SHA-256 b4f3b22267ec57be5480c46714960dc3eff6c506bcb684fd228befeabc5d68ff.",
+        "Cube's public cubedevinc/cube-mcp-server revision 81c55225caaa8ab814e050a5e48ddede3a535a27 has Git tree 6d63406872e6ba950f408b8f1b5b593d781f943c. Its README explicitly deprecates the one-tool local server in favor of the Cube Remote MCP Server.",
+        "The deprecated @cube-dev/mcp-server 1.3.0 npm tarball has SHA-256 fa68d51dbc52add4b32df9877473fe3b76aaf5678dc91f8603179b5b6634c1ad and contains only index.js, package.json, and README.md.",
+        "OpenAI's pinned Codex plugin snapshot identifies Cube as the developer and describes actual, budget, forecast, and variance queries, board-deck and financial-summary generation, transaction and dimension drill-down, and RBAC enforcement. The manifest and private connector hashes are fd027209ecf7982fdbc4366da2e241960a941a6623dfc950e157bff0470445ad and ec4554910f9ef937e4a5d027c40ff9c8e5a2401ada74027cb66597404b788a06.",
+        "No public repository containing the current 20-tool hosted Cube MCP implementation was identified, so Ghast integrates the verified official hosted service through an independently authored adapter."
+      ],
+      "codexCapabilities": [
+        "Query live Cube actuals, budgets, forecasts, variances, and related governed data",
+        "Compare Actuals versus Forecast for Revenue by entity",
+        "Generate board-deck content, variance analysis, and financial summaries using Cube data",
+        "Drill into transaction-level detail and dimensional breakdowns",
+        "Enforce Cube role-based permissions on every AI request"
+      ],
+      "ghastCapabilities": [
+        "The same official actual, budget, forecast, variance, financial-summary, transaction, dimension, and governed-access workflows through Cube's public hosted MCP",
+        "Natural-language Cube agent chat with generated SQL and paginated result retrieval plus direct semantic-model discovery and Cube SQL querying",
+        "Official workbook, report, dashboard-draft, and dashboard-publish workflows with full-layout replacement review and separate publication confirmation",
+        "Official semantic-model source listing, reading, personal development-branch creation, whole-file write or deletion, pending-change review, branch diff, and redacted environment inspection",
+        "Official pre-aggregation definition, partition, status, error, and on-demand build workflows with warehouse-cost disclosure and asynchronous polling",
+        "An independently authored workflow for financial-period reconciliation, source and SQL traceability, board-report caveats, privacy, RBAC, draft safety, model-diff review, human promotion, and explicit confirmation for every state-changing operation"
+      ],
+      "capabilityRelationship": "superset-official-hosted-mcp",
+      "limitations": [
+        "The current hosted MCP implementation is operated by Cube and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+        "A Cube Premium or Enterprise tenant, browser OAuth, Viewer or higher role, administrator-enabled MCP configuration, allowed deployments, enabled agents, and appropriate Explorer, Developer, or Admin permissions remain user-managed.",
+        "Official documentation, the 20-tool catalog, OAuth metadata, fixed public-client registration, PKCE login, deprecated public package, Codex capability evidence, and unauthenticated behavior were verified without a tenant. Authenticated tools/list, tenant data, queries, dashboards, model writes, and builds were not run.",
+        "The public cubedevinc/cube-mcp-server and @cube-dev/mcp-server package are deprecated and expose only chat. They are not the current hosted implementation and are not copied or represented as feature-equivalent.",
+        "The deprecated repository and npm package declare MIT in package metadata but do not include the full license text. Ghast does not rely on that incomplete distribution grant for any copied file.",
+        "Cube documents 12 read-oriented tools, four ordinary writes, and four destructive operations. Ghast requires exact-target review and explicit current-conversation confirmation for all eight state-changing tools, including writes Cube does not label destructive.",
+        "updateDashboard replaces the complete draft widget set and publishDashboard separately changes the live dashboard. Partial layouts, stale drafts, or ambiguous writes can remove or overwrite content.",
+        "writeDataModelFile replaces a whole YAML, JavaScript, or Python file and deleteDataModelFile removes it. Both require exact diffs, validation review, affected-model analysis, and a rollback plan.",
+        "MCP model writes stay on a personal development branch and are not production changes. Cube exposes no commit tool; human review and promotion through the Cube UI remain mandatory.",
+        "buildPreAggregation can run real warehouse queries, write to an external export bucket, consume warehouse resources, and incur cost. A queued build is not proof of completion.",
+        "Financial and operational data can be confidential, stale, incomplete, differently signed, differently scoped, multi-currency, or governed by fiscal calendars and eliminations. Material conclusions require reconciliation and human review.",
+        "Generated SQL, board explanations, variance causes, and model edits can be wrong. Cube outputs are decision support, not an audit opinion, accounting determination, or authorization to disclose transaction-level data.",
+        "A generic governed-analytics icon is used because no licensed Cube marketplace artwork is included in a public current hosted-MCP source repository."
+      ],
+      "verification": [
+        "Run the Cube evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
+        "Verify normalized official MCP documentation SHA-256 fd816d469e8d330ee88a23d953dec174fd3df0d7732203c32ea071f6b235bec9",
+        "Parse and confirm the exact ordered 20-tool inventory and canonical JSON SHA-256 9fd46d5d21aa9477690935b50be79bf893ec95aa55beb3bfccab2c2cd205185e",
+        "Confirm the exact 12 read, four ordinary write, and four destructive inventories and their pinned hashes, including all four destructive names documented by Cube",
+        "Verify canonical OAuth protected-resource and authorization-server hashes f88522816f071a795c6c20d756370fe9fd194a5d96bc9ae29f7b46c01efb6c4f and 8e4f1585bcd901bd05d2b98fe18700367212787cccd9f18b08a8f3235f48dcc0",
+        "Register the fixed localhost public client and confirm cube-mcp-client, no secret, authorization-code and refresh-token grants, mcp-agent-access scope, and PKCE authorization reaching Cube's official login page",
+        "Probe https://cubecloud.dev/mcp with missing and invalid Bearer initialize requests and confirm HTTP 401 plus body SHA-256 b4f3b22267ec57be5480c46714960dc3eff6c506bcb684fd228befeabc5d68ff",
+        "Verify deprecated source revision 81c55225caaa8ab814e050a5e48ddede3a535a27, Git tree 6d63406872e6ba950f408b8f1b5b593d781f943c, key file hashes, deprecation notice, one chat tool, and absence of license or notice files",
+        "Verify deprecated @cube-dev/mcp-server 1.3.0 tarball SHA-256 fa68d51dbc52add4b32df9877473fe3b76aaf5678dc91f8603179b5b6634c1ad and its exact three-file inventory without a license file",
+        "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Cube manifest and connector hashes and compare every Codex workflow with the official hosted MCP surface",
+        "Authorize a Cube tenant before testing authenticated schemas, data, dashboards, model edits, environment metadata, or pre-aggregation builds",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/cube.zip"
+      ]
+    },
     "coderabbit": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "CodeRabbit",

@@ -65,7 +65,7 @@ verification.
 | convex | Convex, Inc. | appConnector | UNLICENSED | blocked-license | not-implemented |
 | coupler-io | Coupler.io | appConnector | MIT | official-source-research-required | not-implemented |
 | coveo | Coveo | appConnector | MIT | official-source-research-required | not-implemented |
-| cube | Cube | appConnector | MIT | official-source-research-required | not-implemented |
+| cube | Cube | appConnector | MIT | official-source-verified | implemented-verified |
 | daloopa | Daloopa | appConnector, skills | Apache-2.0 | official-source-verified | implemented-verified |
 | datadog | Datadog | appConnector | Apache-2.0 | official-source-verified | implemented-verified |
 | datasite | Datasite | appConnector, skills | MIT | official-source-research-required | not-implemented |
