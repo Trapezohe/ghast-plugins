@@ -1487,6 +1487,57 @@
         "unzip -tqq packages/fal.zip"
       ]
     },
+    "jam": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Jam",
+      "officialRepository": null,
+      "officialRevision": "jam-docs-16753f7a8592+pat-ed4cde60e15d+oauth-675651395646",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/jam/LICENSE licenses only the independently authored Ghast adapter, safety guidance, documentation, and generic icon.",
+        "No Jam hosted MCP implementation, private Codex connector, OAuth credential, PAT, recording, workspace data, branded icon, or marketplace artwork is redistributed."
+      ],
+      "officialityEvidence": [
+        "Jam's official documentation identifies https://mcp.jam.dev/mcp as its hosted MCP server for Jam recordings, screenshots, video, user events, console logs, network requests, transcripts, metadata, organization, comments, folders, and recording links.",
+        "The official MCP and PAT guides have SHA-256 16753f7a8592c82f484aa98a4ffefef1f785511d49c195f2f89022f8a0b0d9fb and ed4cde60e15dc2cb5651dee2bbc82d892f62068821e8ef07a0d546666d335450.",
+        "The official guide publishes 30 tools with ordered-name canonical JSON SHA-256 f3534b1291c8ca0252a6899674281e53798c673cdee8a001276ef13f93534d7a.",
+        "Protected-resource and authorization-server metadata hashes are 675651395646d616e5b85b89ddff52cc4ae4e631f360f232883fbf564f294905 and 959ac141c62eb7a5fec54780b9e5a9966bb90c3468013f553cf1b0df5fdf28e2. They declare mcp:read and mcp:write, dynamic registration, authorization code, refresh tokens, public clients, and PKCE S256.",
+        "On August 13, 2026, missing and invalid credentials returned HTTP 401 with Jam's exact resource and scope challenge. A disposable localhost OAuth client registered with HTTP 201 and was deleted with HTTP 204.",
+        "OpenAI's pinned Codex plugin snapshot identifies Jam as the developer and asks what a bug report shows. Its manifest and private connector hashes are 22f50ad4311124c6fc23b4197169443345ffc94a211b19507e3b9234ef4787f9 and 7e91320fe2ffd4082106205c179769cf9405544de0f4842f30d5d64fa3b67e5f."
+      ],
+      "codexCapabilities": [
+        "Explain what a Jam bug report shows",
+        "Use screen recording context to understand a reported problem"
+      ],
+      "ghastCapabilities": [
+        "The same official bug-report explanation workflow with Jam details, screenshots, video frames, transcript, console logs, network requests, user events, and metadata",
+        "Jam search, member and folder discovery, Instant Replay-aware media handling, and cross-evidence root-cause or implementation planning",
+        "Explicitly confirmed comments, reactions, Jam renames and moves, folders, archives, comment deletion, recording-domain verification, and recording-link lifecycle management",
+        "Direct browser OAuth without an OpenAI private connector, plus an official expiring PAT fallback for headless clients"
+      ],
+      "capabilityRelationship": "official-hosted-superset",
+      "limitations": [
+        "The hosted MCP implementation is operated by Jam and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+        "A Jam account, selected workspace, existing permissions, recording access, plan features, OAuth authorization, and service availability remain user-managed.",
+        "OAuth advertises both mcp:read and mcp:write. Every comment, reaction, organization, archive, deletion, recording-link, or verification operation requires exact-target review and explicit confirmation.",
+        "Recordings can expose customer data, voices, screens, secrets, console output, network headers and payloads, user identifiers, feature flags, and internal URLs. Retrieval and disclosure must be minimized.",
+        "Some MCP tools use Google Gemini. Jam says it opts customer data out of training and takes de-identification steps; sensitive analysis still requires disclosure and authorization.",
+        "getScreenshot and analyzeVideo are unavailable for Instant Replay Jams. getFrames requires a compatible video hosted on Cloudflare Stream.",
+        "Official docs, OAuth metadata, dynamic registration, Codex evidence, and unauthenticated behavior were verified without a Jam account. Authenticated tools/list and real recording or workspace operations were not run.",
+        "A generic bug-recording icon is used because no licensed catalog artwork is included in a public official MCP source repository."
+      ],
+      "verification": [
+        "python3 scripts/import-official-hosted-plugins.py",
+        "Verify official Jam MCP and PAT documentation hashes 16753f7a8592c82f484aa98a4ffefef1f785511d49c195f2f89022f8a0b0d9fb and ed4cde60e15dc2cb5651dee2bbc82d892f62068821e8ef07a0d546666d335450",
+        "Confirm the exact ordered 30-tool inventory hash f3534b1291c8ca0252a6899674281e53798c673cdee8a001276ef13f93534d7a",
+        "Verify canonical OAuth metadata hashes 675651395646d616e5b85b89ddff52cc4ae4e631f360f232883fbf564f294905 and 959ac141c62eb7a5fec54780b9e5a9966bb90c3468013f553cf1b0df5fdf28e2",
+        "Probe missing and invalid credentials for HTTP 401 and register then delete a disposable localhost OAuth public client",
+        "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Jam manifest and connector hashes",
+        "Authorize a Jam workspace before testing authenticated tools/list or real recording operations",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/jam.zip"
+      ]
+    },
     "fireflies": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Fireflies",

@@ -179,6 +179,13 @@ CUSTOM_ICONS = {
         '<path d="M23 21h18M23 29h18M23 37h12"/>'
         '<path d="M36 45l6-6 5 5-6 6-7 2z"/>',
     ),
+    "jam": (
+        "#5F4A8B",
+        '<rect x="10" y="13" width="44" height="34" rx="4"/>'
+        '<path d="M10 23h44M17 18h2M24 18h2M31 18h2"/>'
+        '<path d="M20 52l7-5h18"/>'
+        '<path d="M20 31h14M20 38h9M39 30l8 5-8 5z"/>',
+    ),
     "defillama": (
         "#176B87",
         '<path d="M15 45V31h8v14M28 45V22h8v23M41 45V15h8v30"/>'

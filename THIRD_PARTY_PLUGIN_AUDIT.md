@@ -100,7 +100,7 @@ verification.
 | hugging-face | Hugging Face | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | hyperframes | HeyGen | skills | Apache-2.0 | official-source-verified | implemented-verified |
 | intercom | Intercom | appConnector | MIT | official-source-verified | implemented-verified |
-| jam | Jam | appConnector | MIT | official-source-research-required | not-implemented |
+| jam | Jam | appConnector | MIT | official-source-verified | implemented-verified |
 | keybid-puls | KeyBid | appConnector | MIT | official-source-research-required | not-implemented |
 | lovable | Lovable | appConnector | MIT | official-source-verified | implemented-verified |
 | lseg | LSEG | appConnector | MIT | official-source-research-required | not-implemented |
