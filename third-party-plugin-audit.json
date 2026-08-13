@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 8,
-      "official-source-research-required": 110,
-      "official-source-verified": 31
+      "official-source-research-required": 109,
+      "official-source-verified": 32
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 31,
-      "not-implemented": 118
+      "implemented-verified": 32,
+      "not-implemented": 117
     }
   },
   "excludedOpenAIPlugins": [
@@ -4189,7 +4189,7 @@
     },
     {
       "id": "motherduck",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "MotherDuck Corporation",
@@ -4214,13 +4214,53 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://motherduck.com/"
+        "homepage": "https://motherduck.com/",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "MotherDuck",
+          "officialRepository": "https://github.com/motherduckdb/mcp-server-motherduck",
+          "officialRevision": "b43ad1473fc5a3ca29317bf6df2db40a9a80eb90",
+          "license": "MIT",
+          "licenseEvidence": [
+            "LICENSE"
+          ],
+          "officialityEvidence": [
+            "The source repository is owned by MotherDuck's official motherduckdb GitHub organization and identifies itself as the MotherDuck and DuckDB MCP server.",
+            "The pinned repository README directs users who need the fully managed MotherDuck feature set to the official remote MCP documentation.",
+            "MotherDuck's official documentation declares https://api.motherduck.com/mcp as the remote MCP endpoint and explicitly lists database exploration and management, iterative analysis, and creation and management of Dives.",
+            "An unauthenticated MCP initialize request to the declared endpoint returns MotherDuck's OAuth or Bearer-token authentication challenge."
+          ],
+          "codexCapabilities": [
+            "Explore, validate, analyze, visualize, and manage MotherDuck warehouse data through natural language",
+            "Create, save, share, and keep live interactive Dives visualizations"
+          ],
+          "ghastCapabilities": [
+            "Authenticated MotherDuck data exploration, SQL analysis, database management, documentation lookup, and related warehouse workflows through the official hosted MCP server",
+            "Create and manage Dives and render supported Dive Viewer MCP App visualizations through the same official hosted service"
+          ],
+          "capabilityRelationship": "equivalent-official-hosted-mcp",
+          "limitations": [
+            "MotherDuck account creation, OAuth or token authorization, organization and database permissions, compute usage, paid plans, and service limits remain user-managed.",
+            "The hosted MCP implementation is operated by MotherDuck and governed by MotherDuck service terms; the MIT license applies to the pinned public local-server source and official icon used as provenance evidence, not to MotherDuck's hosted service."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Compare the generated .mcp.json endpoint with MotherDuck's official MCP documentation and the pinned repository README",
+            "Probe https://api.motherduck.com/mcp with GET and MCP initialize requests and confirm protocol-aware method and authentication responses",
+            "Confirm the official MCP documentation explicitly lists create and manage Dives and the Dive Viewer MCP App",
+            "unzip -tqq packages/motherduck.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.7-ghast.1",
+        "repository": "https://github.com/motherduckdb/mcp-server-motherduck",
+        "upstreamRevision": "b43ad1473fc5a3ca29317bf6df2db40a9a80eb90",
+        "portStatus": "full"
       }
     },
     {
@@ -5116,10 +5156,46 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://razorpay.com/"
+        "homepage": "https://razorpay.com/",
+        "review": {
+          "verificationStatus": "official-source-research-required",
+          "officialDeveloper": "Razorpay",
+          "officialRepository": "https://github.com/razorpay/razorpay-mcp-server",
+          "officialRevision": "7950d51d118ca164c32b7cf0cfaa14f34f24849f",
+          "license": "MIT",
+          "licenseEvidence": [
+            "LICENSE"
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the Razorpay GitHub organization, describes itself as Razorpay's official MCP server, and links to Razorpay's official MCP documentation.",
+            "The official source exposes READ_ONLY and --read-only configuration and separates read tools from write tools before registration.",
+            "Razorpay's official hosted endpoint at https://mcp.razorpay.com/mcp returns the documented API-key or OAuth authentication challenge, but the hosted service documentation includes write operations and does not establish a connector-equivalent read-only policy."
+          ],
+          "codexCapabilities": [
+            "Read payments, orders, refunds, settlements, QR codes, payment links, payouts, reconciliation, and saved customer payment methods",
+            "Guarantee read-only account access with no transaction execution"
+          ],
+          "ghastCapabilities": [
+            "The pinned official source can expose 26 strictly read-only tools for payments, orders, refunds, settlements, QR codes, payment links, payouts, reconciliation, stack detection, and checkout integration.",
+            "No Ghast plugin is published because the safe official read-only mode omits saved payment methods, while the older implementation that exposes them can create a customer."
+          ],
+          "capabilityRelationship": "official-source-found-capability-safety-gap",
+          "limitations": [
+            "At official release v1.2.1, --read-only still registers fetch_tokens; that tool creates or fetches a customer when called with a contact number, so the release does not satisfy the Codex promise that no transactions or mutations occur.",
+            "At pinned revision 7950d51d118ca164c32b7cf0cfaa14f34f24849f, Razorpay fixes this by classifying fetch_tokens as a write tool. Strict read-only mode then removes it, leaving no official read-only tool for the Codex capability of viewing saved customer payment methods.",
+            "Publishing the current strict mode as equivalent would hide a documented capability loss; publishing the older release would hide a real mutation path."
+          ],
+          "verification": [
+            "Build the pinned source with Go 1.24.2 or newer and run its toolset, Razorpay, and command test packages",
+            "Start the pinned server with dummy credentials and --read-only, call tools/list, and confirm 26 tools are returned, every tool has readOnlyHint=true and destructiveHint=false, and no known write tool is present",
+            "Download Razorpay's official v1.2.1 Darwin arm64 release, verify SHA-256 0658e565c732ea5f078dc9f17a9203cc03f44d5a6837713aaaf1da19528f54d2, run --read-only, and confirm fetch_tokens is still present",
+            "Compare v1.2.1 with the pinned revision and confirm fetch_tokens moved from AddReadTools to AddWriteTools",
+            "Do not create plugins/razorpay until Razorpay provides a strictly read-only saved-payment-method tool or an equivalent official configuration"
+          ]
+        }
       },
       "ghast": {
         "implementationStatus": "not-implemented"

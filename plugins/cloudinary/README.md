@@ -6,7 +6,7 @@ Upload, search, transform, analyze, organize, and automate Cloudinary media thro
 
 This package is generated directly from the developer-owned repository `https://github.com/cloudinary/mcp-servers` at `dca5790c0af2bcde291d732af05c47ad7f75d341`.
 
-Skills, references, scripts, commands, and public MCP declarations remain sourced from the pinned official repository. Unsupported client metadata is omitted.
+The public MCP declaration is generated from the developer's official documentation and pinned source evidence. No private connector mapping is copied.
 
 ## Ghast compatibility
 

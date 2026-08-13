@@ -34,6 +34,7 @@ LOCAL_ICONS = {
     "expo": "assets/icon.png",
     "hyperframes": "assets/icon.png",
     "heygen": "assets/icon.png",
+    "motherduck": "assets/icon.png",
     "neon-postgres": "assets/icon.svg",
     "nvidia": "assets/icon.png",
     "remotion": "assets/icon.png",

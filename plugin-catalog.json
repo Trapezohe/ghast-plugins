@@ -225,7 +225,7 @@
       },
       "package": {
         "url": "./packages/cloudinary.zip",
-        "sha256": "d628ab08837d87dacb2a8d3c54708e34159f0d9686445a19a09a8ec86a89bbbe"
+        "sha256": "a2d71cd692278b48e32797b2586697f9ad662e291de4791b9f5180accf081787"
       },
       "icon": "./plugins/cloudinary/assets/icon.svg",
       "category": "creativity",
@@ -617,6 +617,35 @@
       "category": "productivity",
       "homepage": "https://monday.com",
       "repository": "https://github.com/mondaycom/monday-claude-cowork-plugin",
+      "license": "MIT"
+    },
+    {
+      "id": "motherduck",
+      "name": "motherduck",
+      "description": "Explore, query, manage, analyze, and visualize MotherDuck data with the official hosted OAuth MCP server, including Dives.",
+      "manifest": {
+        "name": "motherduck",
+        "description": "Explore, query, manage, analyze, and visualize MotherDuck data with the official hosted OAuth MCP server, including Dives.",
+        "author": {
+          "name": "MotherDuck",
+          "url": "https://motherduck.com"
+        },
+        "icon": "./assets/icon.png",
+        "version": "1.0.7-ghast.1",
+        "homepage": "https://motherduck.com/docs/sql-reference/mcp/",
+        "repository": "https://github.com/motherduckdb/mcp-server-motherduck",
+        "upstreamRevision": "b43ad1473fc5a3ca29317bf6df2db40a9a80eb90",
+        "license": "MIT",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/motherduck.zip",
+        "sha256": "a2d4d221da0f1ea4e72c996c612f3e28b6d0e61e46e4ed5719a37e3a536efda2"
+      },
+      "icon": "./plugins/motherduck/assets/icon.png",
+      "category": "data",
+      "homepage": "https://motherduck.com/docs/sql-reference/mcp/",
+      "repository": "https://github.com/motherduckdb/mcp-server-motherduck",
       "license": "MIT"
     },
     {

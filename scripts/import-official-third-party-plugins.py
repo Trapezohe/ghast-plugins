@@ -336,6 +336,50 @@ PLUGINS = {
             ),
         ],
     },
+    "motherduck": {
+        "directory": "motherduck-mcp",
+        "revision": "b43ad1473fc5a3ca29317bf6df2db40a9a80eb90",
+        "repository": "https://github.com/motherduckdb/mcp-server-motherduck",
+        "plugin_root": ".",
+        "manifest_inline": {
+            "version": "1.0.7",
+            "description": "Official MotherDuck MCP server.",
+            "author": {
+                "name": "MotherDuck",
+                "url": "https://motherduck.com",
+            },
+            "homepage": "https://motherduck.com/docs/sql-reference/mcp/",
+        },
+        "license": "LICENSE",
+        "icon": "src/mcp_server_motherduck/assets/duck_feet_square.png",
+        "category": "data",
+        "no_skills": True,
+        "mcp_inline": {
+            "mcpServers": {
+                "motherduck": {
+                    "type": "http",
+                    "url": "https://api.motherduck.com/mcp",
+                },
+            },
+        },
+        "license_name": "MIT",
+        "description": (
+            "Explore, query, manage, analyze, and visualize MotherDuck data "
+            "with the official hosted OAuth MCP server, including Dives."
+        ),
+        "compatibility_notes": [
+            (
+                "Ghast uses MotherDuck's official hosted MCP endpoint rather "
+                "than the narrower local server so database management, "
+                "iterative analysis, and Dives remain available."
+            ),
+            (
+                "The hosted service is operated by MotherDuck and remains "
+                "subject to MotherDuck account permissions, service terms, "
+                "and plan limits; it is not redistributed by this package."
+            ),
+        ],
+    },
     "neon-postgres": {
         "directory": "neon-agent-skills",
         "revision": "af27b52659c3c5bbf05d6c626b166163eb351e19",
@@ -1444,6 +1488,17 @@ def render_readme(
                     "Ghast replaces only the marketplace manifest. Signed "
                     "skill directories and their developer metadata remain "
                     "byte-for-byte from the pinned official repository."
+                ),
+                "",
+            ]
+        )
+    elif config.get("no_skills"):
+        lines.extend(
+            [
+                (
+                    "The public MCP declaration is generated from the "
+                    "developer's official documentation and pinned source "
+                    "evidence. No private connector mapping is copied."
                 ),
                 "",
             ]
