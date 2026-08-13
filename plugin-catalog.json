@@ -2101,6 +2101,36 @@
       "license": "MIT"
     },
     {
+      "id": "picsart",
+      "name": "picsart",
+      "description": "Generate and edit images, video, audio, and motion graphics through Picsart's official skills, CLI workflows, and hosted MCP servers.",
+      "manifest": {
+        "name": "picsart",
+        "description": "Generate and edit images, video, audio, and motion graphics through Picsart's official skills, CLI workflows, and hosted MCP servers.",
+        "author": {
+          "name": "Picsart",
+          "url": "https://picsart.com"
+        },
+        "icon": "./assets/icon.png",
+        "version": "0.1.0-ghast.1",
+        "homepage": "https://picsart.com",
+        "repository": "https://github.com/PicsArt/gen-ai-skills",
+        "upstreamRevision": "b52ed0d07fa8f7e94b29f194ab3eea99bb95b650",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/picsart.zip",
+        "sha256": "6f99a8773d9474c7599c5b48f8d585260db062570e51a5605dcfdc7d88875165"
+      },
+      "icon": "./plugins/picsart/assets/icon.png",
+      "category": "creativity",
+      "homepage": "https://picsart.com",
+      "repository": "https://github.com/PicsArt/gen-ai-skills",
+      "license": "MIT"
+    },
+    {
       "id": "posthog",
       "name": "posthog",
       "description": "Analyze and manage PostHog analytics, flags, experiments, errors, replays, surveys, dashboards, SQL, AI observability, data pipelines, and product workflows through PostHog's official hosted MCP server.",

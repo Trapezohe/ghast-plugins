@@ -45,6 +45,7 @@ LOCAL_ICONS = {
     "motherduck": "assets/icon.png",
     "neon-postgres": "assets/icon.svg",
     "nvidia": "assets/icon.png",
+    "picsart": "assets/icon.png",
     "remotion": "assets/icon.png",
     "render": "assets/icon.svg",
     "replayio": "assets/icon.svg",

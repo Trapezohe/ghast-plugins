@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 50,
-      "official-source-verified": 94
+      "official-source-research-required": 49,
+      "official-source-verified": 95
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 94,
-      "not-implemented": 55
+      "implemented-verified": 95,
+      "not-implemented": 54
     }
   },
   "excludedOpenAIPlugins": [
@@ -7550,7 +7550,7 @@
     },
     {
       "id": "picsart",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Picsart",
@@ -7577,13 +7577,97 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://picsart.com"
+        "homepage": "https://picsart.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Picsart",
+          "officialRepository": "https://github.com/PicsArt/gen-ai-skills",
+          "officialRevision": "b52ed0d07fa8f7e94b29f194ab3eea99bb95b650",
+          "license": "MIT",
+          "licenseEvidence": [
+            "PicsArt/gen-ai-skills contains an MIT license with SHA-256 86eaafb76f5bc3b920c0e3761cd1e841b1880422fc11b3591bae449437d72cb4 covering the shared plugin files, skills, references, manifest, MCP declaration, and published icon.",
+            "PicsArt/gen-ai-cli contains a separate MIT license with SHA-256 4708aeedf17065979b8cd77d62d9b961e1f3c748f23cbf070d992d92a3d6690b covering the two imported CLI workflow skills. Ghast includes that license at LICENSES/picsart-gen-ai-cli.txt.",
+            "The @picsart/gen-ai 2.61.0 npm package declares MIT and points to PicsArt/gen-ai-cli; its source package.json at the matching v2.61.0 tag has SHA-256 904fd48355a4fdbd74bcb31441da3c6e5952c1f061fb5480c8fd44fd8cbc1a57.",
+            "The hosted MCP implementations, Picsart accounts and content, model-provider services, credentials, credits, trademarks, and service entitlements are not redistributed by Ghast."
+          ],
+          "officialityEvidence": [
+            "The primary repository is owned by the PicsArt GitHub organization. Its Codex manifest names Picsart as author, links picsart.com, declares the official repository, and publishes the current skill and icon paths.",
+            "The pinned gen-ai-skills revision b52ed0d07fa8f7e94b29f194ab3eea99bb95b650 was committed on August 11, 2026 by a picsart.com author. Its LICENSE, README, Codex manifest, MCP declaration, and icon SHA-256 values are 86eaafb76f5bc3b920c0e3761cd1e841b1880422fc11b3591bae449437d72cb4, 341234cf6a99e7ef63852bd53245c94854f504f9dc251523ff8c5167f018f4ff, ea3821fbed22ca085fb205558391b1f13d7244602ab520617e96056908d29867, ca0e7a5f804929247978af441a5f420569cc67c35970d388b553bc4b9f535c7f, and cd9ee32bee1b89388408a80be08fe5eff351e197d5dcb81377ba0484587348da.",
+            "The primary repository publishes 21 top-level official skills. Their complete 50-file path-and-content inventory SHA-256 is ee05191c9030ddf3d10c6717107c963fa10f99a49efcab7caf0631dfb1614058.",
+            "The secondary PicsArt/gen-ai-cli repository is also owned by PicsArt. Revision ce7b0490fc2da75a83c6b7b759fc3eb22d6e9143 is tag v2.61.0, was committed on August 11, 2026 by a picsart.com author, and matches the published @picsart/gen-ai 2.61.0 version.",
+            "Ghast imports only gen-ai-batch and gen-ai-workflows from the CLI repository. Their selected path-and-content inventory SHA-256 is 0de6faa1292188d04764211747bfc950840db3b50d7b9c1e90f95be2e7ca0edc.",
+            "The primary official .mcp.json declares https://api.picsart.com/gen-ai/mcp for account-based Gen-AI OAuth and https://mcp.picsart.io/v1 for the API-key Creative API surface.",
+            "On August 13, 2026, unauthenticated MCP initialize and tools/list succeeded against both official endpoints. Gen-AI exposed 37 tools with ordered-name SHA-256 509553d100714d98686384cc7bfbbef6cbe32991be3b86c770a909e711d32fb1; Creative API exposed 96 tools with ordered-name SHA-256 f402a7cead6a1e93fd0e1c5403f1bb75bbf35fc2f9177c01175763fd8e286294.",
+            "The 37-tool Gen-AI surface includes universal image, video, audio, and text generation; background removal and replacement; enhancement; vectorization; model catalog and parameter schemas; preflight; credits; jobs; Drive; Music Studio; and 24 media scene-graph and motion-graphics tools.",
+            "The 96-tool Creative API surface includes image, video, GenAI, Variable Data, specification discovery, and generic execute-request operations. Representative tools include image-remove-background, video-edit, genai-text2image, genai-text2video, genai-text2speech, and vd-export-variable-data-content.",
+            "An unauthenticated picsart_preflight call for flux-2-pro validated the payload and returned credits null without generating content or spending credits. Model-parameter and catalog calls also succeeded without a user token.",
+            "Picsart's pinned official MCP and CLI documentation lists 174 models from 32 providers. The current model-ID inventory SHA-256 is f356138de9194ef86a5d248c3eebb487bd6059234fc9783c45188d7de5ef6c6f.",
+            "The protected-resource metadata identifies the Gen-AI MCP resource, bearer-header authentication, openid, profile, and workflows.execute scopes, and https://auth.picsart.com/api as authorization server; canonical JSON SHA-256 is a115371edccb65e296636dbe3349ef0fef78637cb10eb2ae6fd449fe4cca64da.",
+            "The authorization-server metadata advertises authorization-code, refresh-token, device-code, and token-exchange grants, public clients, Dynamic Client Registration, and PKCE S256. Its canonical hash after sorting semantically unordered capability lists is 441ae697d508c64e9eb232b90c046d7963c769aa0df779ef206c5a7a04c0c854.",
+            "A disposable loopback public client registered with HTTP 201, token_endpoint_auth_method none, authorization-code and refresh-token grants, no usable client secret, and the expected scopes. Its PKCE authorization request returned HTTP 302 to accounts.picsart.com. No account login, token exchange, or generation occurred.",
+            "The official npm package ran in an isolated temporary HOME as @picsart/gen-ai/2.61.0 on Node 24.19.0. It correctly refused account-dependent model access without credentials and wrote only a temporary debug log that was deleted.",
+            "The pinned OpenAI Codex snapshot identifies Picsart as developer and exposes only a private app mapping. Its manifest and app mapping SHA-256 values are deaf55cf1729f252566a9f25add1d80e5db6aed2f68943912755a36d072ffa38 and 4da88621baa59ec7a633e3753e685b63c4a8b349bc2fd6cb0665f03a3d4d423a."
+          ],
+          "codexCapabilities": [
+            "Generate high-quality images, videos, and audio through one Picsart account and a private Codex app connector",
+            "Turn a product photo into a 10-second vertical Reels or TikTok video ad",
+            "Generate a cinematic 15-second product teaser from text",
+            "Generate five on-brand product shots and choose a suitable Instagram aspect ratio",
+            "Create instrumental music and other launch media from more than 140 advertised models"
+          ],
+          "ghastCapabilities": [
+            "All 21 current official Picsart shared skills for agency, developer, enterprise, marketing, product-photo, persona, explainer, local-file, API, and text-to-visual workflows",
+            "The official gen-ai CLI batch and end-to-end workflow skills from the matching v2.61.0 source release",
+            "Direct account-based browser OAuth to Picsart's 37-tool Gen-AI MCP with 174 documented image, video, audio, and text models, model discovery, parameter schemas, preflight, jobs, credits, Drive, Music Studio, and media compositing",
+            "Direct API-key access to Picsart's 96-tool Creative API MCP for image, video, GenAI, Variable Data, endpoint discovery, and advanced request execution",
+            "Product-photo-to-video, cinematic teaser, multi-shot brand asset, instrumental audio, background, enhancement, vectorization, batch, campaign-kit, localization, persona, and motion-graphics workflows that cover and broaden the Codex examples"
+          ],
+          "capabilityRelationship": "superset-newer-official-public-skills-cli-and-mcp-suite",
+          "limitations": [
+            "Picsart operates the hosted MCP services. Ghast redistributes only MIT-licensed plugin files, selected CLI skills, compatibility edits, licenses, and the published source icon.",
+            "A Picsart account, browser OAuth, API key for the Creative API MCP, credits, subscriptions, model-provider availability, content-policy compliance, commercial-use rights, rate limits, and network access remain user-managed.",
+            "Authenticated tools/list, credit balance, Drive contents, actual generation, editing, export, rendering, upload, and delete operations were not exercised because the user did not provide or authorize a Picsart account or API key.",
+            "The official documentation says catalog browsing does not require CLI sign-in, but the isolated @picsart/gen-ai 2.61.0 package returned authentication-required for gen-ai models. The hosted Gen-AI MCP catalog and parameter tools did work without sign-in. Ghast records this discrepancy instead of promising unauthenticated CLI catalog access.",
+            "The retired @picsart/gen-ai-mcp npm package referenced by older CLI skills is no longer present in the public npm registry. Ghast excludes that installation skill and uses the current official hosted Gen-AI MCP declaration.",
+            "Several nested references in the primary official skill repository used paths that resolved inside the wrong skill directory. Ghast changes only those four link groups, redirects the retired MCP installation reference to gen-ai-use installation guidance, and appends a clearly labeled safety boundary; packaged skills are therefore not byte-for-byte copies.",
+            "Some official workflow text contains approximate or example credit totals that can become stale. The live model schema, preflight result, credit balance, and current pricing are authoritative. Ghast requires an exact current quote or best available estimate and explicit confirmation before paid work.",
+            "Generation, editing, enhancement, vectorization, export, rendering, contact sheets, and batches spend credits or create external effects and are non-idempotent. Ambiguous failures must be read back before retry.",
+            "Local-file and data-URI uploads disclose user content to Picsart. Ghast requires exact-file review and confirmation and must never scan the user's filesystem for upload candidates.",
+            "Picsart Drive create, upload, move, update, soft-delete, and permanent-delete operations are durable writes. Permanent deletion requires fresh irreversible-action confirmation, and generation sets saveToDrive false unless the user requests storage.",
+            "The Creative API MCP accepts PICSART_API_KEY through the host environment. Keys, OAuth tokens, and ~/.gen-ai/credentials.json must never be printed, pasted into chat, committed, or packaged.",
+            "The official CLI requires Node.js 22 or later when installed from npm. Ghast does not bundle the CLI or its npm dependencies; CLI installation and updates remain user-managed.",
+            "The live model and tool catalogs change rapidly. The importer intentionally fails if the pinned source revisions, OAuth contract, tool counts, ordered tool-name hashes, or representative operations drift and requires a new audit.",
+            "The MIT source grant permits redistribution of the published icon file but does not imply Picsart endorsement, certification, or a general trademark license."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Verify PicsArt/gen-ai-skills revision b52ed0d07fa8f7e94b29f194ab3eea99bb95b650 and PicsArt/gen-ai-cli revision and tag v2.61.0 at ce7b0490fc2da75a83c6b7b759fc3eb22d6e9143.",
+            "Verify the primary repository evidence hashes and complete shared-skill inventory SHA-256 ee05191c9030ddf3d10c6717107c963fa10f99a49efcab7caf0631dfb1614058.",
+            "Verify the selected CLI skill inventory SHA-256 0de6faa1292188d04764211747bfc950840db3b50d7b9c1e90f95be2e7ca0edc and retain LICENSES/picsart-gen-ai-cli.txt.",
+            "Probe both official MCP endpoints with initialize and tools/list and verify 37 and 96 tools with ordered-name SHA-256 values 509553d100714d98686384cc7bfbbef6cbe32991be3b86c770a909e711d32fb1 and f402a7cead6a1e93fd0e1c5403f1bb75bbf35fc2f9177c01175763fd8e286294.",
+            "Call unauthenticated picsart_preflight with a non-executing flux-2-pro payload and confirm valid true and credits null; do not call picsart_generate.",
+            "Verify OAuth protected-resource hash a115371edccb65e296636dbe3349ef0fef78637cb10eb2ae6fd449fe4cca64da and normalized authorization-server hash 441ae697d508c64e9eb232b90c046d7963c769aa0df779ef206c5a7a04c0c854.",
+            "Register one disposable loopback public client and confirm HTTP 201, token_endpoint_auth_method none, authorization-code and refresh-token grants, and PKCE authorization redirect to accounts.picsart.com; do not retain the client or sign in.",
+            "Run @picsart/gen-ai@2.61.0 in an isolated temporary HOME and confirm the version string. Record that gen-ai models requires authentication in the clean environment.",
+            "Confirm plugins/picsart contains 23 skills, 23 Ghast Safety Boundary sections, no retired @picsart/gen-ai-mcp tool references, no broken relative Markdown targets, both official licenses, and the byte-identical official icon.",
+            "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+            "python3 scripts/build-ghast-catalog.py",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/picsart.zip",
+            "An authorized account holder should complete browser OAuth, authenticated tools/list, one free read-only catalog and parameter check, one explicitly confirmed low-cost image generation with saveToDrive false, and a separate API-key read-only Creative API discovery check before a stronger live account claim."
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "0.1.0-ghast.1",
+        "repository": "https://github.com/PicsArt/gen-ai-skills",
+        "upstreamRevision": "b52ed0d07fa8f7e94b29f194ab3eea99bb95b650",
+        "portStatus": "full"
       }
     },
     {

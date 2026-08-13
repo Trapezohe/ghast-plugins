@@ -125,7 +125,7 @@ verification.
 | otter-ai | Otter.ai | appConnector | MIT | official-source-verified | implemented-verified |
 | outreach | Outreach | appConnector | MIT | official-source-verified | implemented-verified |
 | particl-market-research | Particl | appConnector | MIT | official-source-research-required | not-implemented |
-| picsart | Picsart | appConnector | MIT | official-source-research-required | not-implemented |
+| picsart | Picsart | appConnector | MIT | official-source-verified | implemented-verified |
 | pitchbook | PitchBook | appConnector | MIT | official-source-research-required | not-implemented |
 | policynote | FiscalNote | appConnector | MIT | official-source-research-required | not-implemented |
 | posthog | PostHog | appConnector, skills | MIT | official-source-verified | implemented-verified |
