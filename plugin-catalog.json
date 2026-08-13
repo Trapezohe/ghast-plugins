@@ -614,6 +614,36 @@
       "license": "MIT"
     },
     {
+      "id": "cb-insights",
+      "name": "cb-insights",
+      "description": "Research private companies, markets, deals, competitors, predictive signals, market maps, and investment questions through CB Insights' official hosted MCP server.",
+      "manifest": {
+        "name": "cb-insights",
+        "description": "Research private companies, markets, deals, competitors, predictive signals, market maps, and investment questions through CB Insights' official hosted MCP server.",
+        "author": {
+          "name": "CB Insights",
+          "url": "https://www.cbinsights.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://www.cbinsights.com/october-2025-product-launch/",
+        "repository": "https://github.com/cbinsights/cbi-mcp-server",
+        "upstreamRevision": "cbi-mcp-97e8c8b7ecf4+chat-92d179a62a18+product-6ce534ffa0e9+oauth-7f4d1f126334+source-778e1acb6a74",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/cb-insights.zip",
+        "sha256": "da3d47ce56302c943bac5125b12c12384891777008c372559505908f513577e3"
+      },
+      "icon": "./plugins/cb-insights/assets/icon.svg",
+      "category": "finance",
+      "homepage": "https://www.cbinsights.com/october-2025-product-launch/",
+      "repository": "https://github.com/cbinsights/cbi-mcp-server",
+      "license": "MIT"
+    },
+    {
       "id": "circleback",
       "name": "circleback",
       "description": "Search authorized Circleback meetings, transcripts, action items, calendar events, emails, people, companies, tags, and support content through Circleback's official hosted MCP server.",

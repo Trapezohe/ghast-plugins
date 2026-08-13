@@ -833,6 +833,67 @@
         "unzip -tqq packages/catalyst-by-zoho.zip"
       ]
     },
+    "cb-insights": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "CB Insights",
+      "officialRepository": "https://github.com/cbinsights/cbi-mcp-server",
+      "officialRevision": "cbi-mcp-97e8c8b7ecf4+chat-92d179a62a18+product-6ce534ffa0e9+oauth-7f4d1f126334+source-778e1acb6a74",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/cb-insights/LICENSE licenses only the Ghast-authored MCP configuration, research-safety skill, documentation, catalog metadata, and generic market-research icon.",
+        "CB Insights' public cbi-mcp-server repository at 778e1acb6a749852a82b101b99a701d9c9c1ce68 contains no LICENSE, LICENSE.md, LICENSE.txt, COPYING, or NOTICE file, so its deprecated example source is not redistributed.",
+        "No hosted MCP implementation, private OpenAI app connector, proprietary CB Insights data, account credential, official logo, or marketplace artwork is redistributed."
+      ],
+      "officialityEvidence": [
+        "CB Insights' official developer portal identifies its MCP server as a Model Context Protocol integration with CB Insights APIs and links the cbinsights/cbi-mcp-server repository.",
+        "The official repository's signed January 16, 2026 revision deprecates the self-hosted pass-through example in favor of the fully supported https://mcp.cbinsights.com service for ChatGPT, Claude, Microsoft Copilot, and programmatic clients.",
+        "The official MCP documentation core has normalized visible-text SHA-256 97e8c8b7ecf4600250a857275fe09764c81b09d4a27b0584a4828db29f7da9fd. The current ChatCBI request and multi-turn contract has normalized visible-text SHA-256 92d179a62a18ead5f5c2482414c377c093162be4a85afff50a8b9bc8d17a4897.",
+        "The current ChatCBI documentation publishes standard and chunked endpoints, message and optional chatID inputs, Markdown output, multi-turn continuation, source links, related content, suggestions, and explicit error behavior. It warns that generative output can be wrong and that pertinent information must be verified.",
+        "CB Insights' official product integration statement has normalized visible-text SHA-256 6ce534ffa0e9e61e8c3d1f155be8eb70cbba588f592b19d73e50367b139a081f and identifies structured, double-verified predictive signals delivered through ChatGPT and other supported models as part of Data Solutions.",
+        "The protected-resource and authorization-server metadata canonical JSON SHA-256 values are 7f4d1f126334b7302fc61845eac5d7ec703f7ec940513d312e4123b445a7b5c7 and 665a68402114da758382adaf85c731ce32365df30584451b19c8045f1b64be75. They publish browser OAuth, dynamic registration, public clients, authorization-code and refresh-token grants, OpenID profile scopes, and PKCE S256.",
+        "On August 13, 2026, missing and invalid Bearer initialize requests returned HTTP 401 with identical body SHA-256 8599a03b4c1d788236014f851ec320b3ad4a589c59e8c1ea045dd4d052291cce and the official protected-resource challenge.",
+        "Initial protocol checks registered loopback public clients with HTTP 201, no client secret, authorization-code and refresh-token grants, and openid email profile scope. A PKCE authorization request reached CB Insights' official consent page without completing sign-in.",
+        "OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 identifies CB Insights as the developer and describes private-market research, company sourcing, market maps, investment memos, competitor monitoring, predictive intelligence, taxonomies, scores, signals, deals, and long-term technology research. Its manifest and private app hashes are 1436aaa6c194997d77ac4c5cbfafae0beca74f6738486c4096aca8c9cb1d4d8e and 1ef4516c1d07d8a03a6a72f55de5e455748759794df6cacc8ea35ee83dc62c73."
+      ],
+      "codexCapabilities": [
+        "Pull current private-market context from CB Insights",
+        "Source companies and acquisition, investment, or partnership targets",
+        "Build market maps, draft investment memos, and monitor competitors",
+        "Use CB Insights company profiles, deals, taxonomies, scores, signals, and technology research"
+      ],
+      "ghastCapabilities": [
+        "Connect directly to CB Insights' fully supported official hosted MCP service with browser OAuth, dynamic client registration, public clients, and PKCE S256",
+        "Run the same ChatCBI-style private-market questions and continue multi-turn research while preserving Markdown answers, source links, related content, and suggested follow-ups",
+        "Produce company shortlists, market maps, competitive comparisons, deal research, acquisition or partnership screens, and evidence-structured investment memos from the authenticated official service",
+        "Apply independently authored source verification, contrary-evidence, data-gap, prediction-labeling, sensitive-data, and high-impact-decision safeguards"
+      ],
+      "capabilityRelationship": "equivalent-official-hosted-mcp-with-authenticated-schema-gap",
+      "limitations": [
+        "The hosted MCP implementation is operated by CB Insights and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+        "A CB Insights account, browser OAuth authorization, organization permissions, eligible subscription, Data Solutions access, and applicable product entitlements remain user-managed.",
+        "The initial audit registered three disposable loopback public clients while verifying dynamic registration and PKCE consent. The server returned no registration management URI or registration access token, so those clients could not be deleted and the importer deliberately does not repeat registration.",
+        "Authenticated tools/list, ChatCBI responses, company profiles, deals, scores, signals, taxonomies, research, sources, and customer data were not accessed because no CB Insights account was supplied. Live authenticated schemas remain authoritative.",
+        "The official deprecated example exposes one read-only ChatCBI tool, but the fully supported hosted server's current authenticated catalog could not be enumerated without an account. The skill does not invent hosted tool names or parameters.",
+        "ChatCBI uses generative AI and can make mistakes. Material claims, predictive signals, scores, rankings, and decision recommendations require verification against returned sources and appropriate primary evidence.",
+        "Private-company data can be incomplete, delayed, estimated, contradictory, licensed, or unavailable by plan. Unknown fields must not be treated as adverse facts.",
+        "Predictive intelligence is not a guarantee of funding, revenue, acquisition, failure, or investment return and must not be represented as regulated financial advice.",
+        "CB Insights data and generated conclusions must not be used autonomously for lending, insurance, employment, or other high-impact eligibility decisions or to infer sensitive personal traits.",
+        "The deprecated official example source is not copied because the repository has no redistribution license at the pinned revision.",
+        "A generic market-research icon is used because official CB Insights artwork is not included in redistributable licensed material."
+      ],
+      "verification": [
+        "Run verify_cb_insights_evidence and import_cb_insights from scripts/import-official-hosted-plugins.py through Python runpy",
+        "Verify the official MCP documentation core, ChatCBI contract, and product-integration normalized visible-text hashes recorded in plugins/cb-insights/README.md",
+        "Verify canonical OAuth protected-resource and authorization-server hashes 7f4d1f126334b7302fc61845eac5d7ec703f7ec940513d312e4123b445a7b5c7 and 665a68402114da758382adaf85c731ce32365df30584451b19c8045f1b64be75",
+        "Only when dynamic-registration behavior requires re-audit, manually register one disposable loopback public client and confirm HTTP 201, no client secret, authorization-code and refresh-token grants, openid email profile scope, and PKCE authorization reaching the official consent page; do not repeat this during normal importer runs because the server exposes no client-deletion management endpoint",
+        "Probe https://mcp.cbinsights.com/ with missing and invalid Bearer initialize requests and confirm HTTP 401, identical body SHA-256 8599a03b4c1d788236014f851ec320b3ad4a589c59e8c1ea045dd4d052291cce, and the official protected-resource challenge",
+        "Verify cbinsights/cbi-mcp-server revision 778e1acb6a749852a82b101b99a701d9c9c1ce68, Git tree b84871473f621b21e60ce9eedb6a858219eb031a, signed cbinsights.com authorship, key file hashes, deprecation notice, read-only ChatCBI example, and absence of license or notice files",
+        "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 manifest and private app hashes and compare the complete Codex capability description with the official ChatCBI and product evidence",
+        "Authorize an eligible CB Insights account before testing authenticated tools, private-market data, sources, or ChatCBI responses",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/cb-insights.zip"
+      ]
+    },
     "circleci": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "CircleCI",

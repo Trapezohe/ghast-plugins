@@ -129,6 +129,15 @@ CUSTOM_ICONS = {
         '<path d="M30 31h15M30 39h11"/>'
         '<path d="M31 48l6-6 5 4 5-7"/>',
     ),
+    "cb-insights": (
+        "#245D70",
+        '<path d="M12 49h40"/>'
+        '<path d="M16 42V31h8v11M28 42V23h8v19M40 42V15h8v27"/>'
+        '<path d="M15 24l11-7 10 5 14-11"/>'
+        '<circle cx="26" cy="17" r="2" fill="white" stroke="none"/>'
+        '<circle cx="36" cy="22" r="2" fill="white" stroke="none"/>'
+        '<circle cx="50" cy="11" r="2" fill="white" stroke="none"/>',
+    ),
     "carta-crm": (
         "#2A6F62",
         '<rect x="11" y="13" width="42" height="38" rx="3"/>'
