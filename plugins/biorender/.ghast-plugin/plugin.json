@@ -1,0 +1,16 @@
+{
+  "name": "biorender",
+  "version": "1.0.2-ghast.1",
+  "description": "Search BioRender templates and accessible figures, preview results, and create editable scientific figure drafts through BioRender's official hosted MCP server.",
+  "category": "creativity",
+  "author": {
+    "name": "BioRender",
+    "url": "https://www.biorender.com"
+  },
+  "homepage": "https://help.biorender.com/hc/en-gb/articles/37237276158109-How-to-use-the-BioRender-MCP-connector",
+  "upstreamRevision": "biorender-help-fb87519f4022+auth-7e351acc74e9+anthropic-3da37488e11a",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

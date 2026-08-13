@@ -38,7 +38,7 @@ verification.
 | attio | Attio Ltd | appConnector | MIT | official-source-verified | implemented-verified |
 | base44 | base44 | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | binance | Binance | appConnector | MIT | official-source-verified | implemented-verified |
-| biorender | BioRender | appConnector | MIT | official-source-research-required | not-implemented |
+| biorender | BioRender | appConnector | MIT | official-source-verified | implemented-verified |
 | boltz-api-cli | Boltz | skills | MIT | official-source-verified | implemented-verified |
 | brand24 | Brand24 Global Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | brex | Brex Inc. | appConnector | MIT | official-source-research-required | not-implemented |

@@ -90,6 +90,14 @@ CUSTOM_ICONS = {
         '<path d="M14 47h38M18 41V27M29 41V18M40 41V31M51 41V12"/>'
         '<path d="M14 22l12-7 10 6 15-11"/>',
     ),
+    "biorender": (
+        "#2F747A",
+        '<path d="M13 14h27l9 9v27H13z"/>'
+        '<path d="M40 14v10h9M20 30h22M20 38h13"/>'
+        '<circle cx="42" cy="42" r="8"/>'
+        '<path d="M42 37v10M37 42h10"/>'
+        '<path d="M20 48l6-6 5 4 5-6"/>',
+    ),
     "calendly": (
         "#187B62",
         '<rect x="12" y="15" width="40" height="37" rx="4"/>'

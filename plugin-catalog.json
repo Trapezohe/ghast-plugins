@@ -381,6 +381,34 @@
       "license": "MIT"
     },
     {
+      "id": "biorender",
+      "name": "biorender",
+      "description": "Search BioRender templates and accessible figures, preview results, and create editable scientific figure drafts through BioRender's official hosted MCP server.",
+      "manifest": {
+        "name": "biorender",
+        "description": "Search BioRender templates and accessible figures, preview results, and create editable scientific figure drafts through BioRender's official hosted MCP server.",
+        "author": {
+          "name": "BioRender",
+          "url": "https://www.biorender.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.2-ghast.1",
+        "homepage": "https://help.biorender.com/hc/en-gb/articles/37237276158109-How-to-use-the-BioRender-MCP-connector",
+        "upstreamRevision": "biorender-help-fb87519f4022+auth-7e351acc74e9+anthropic-3da37488e11a",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/biorender.zip",
+        "sha256": "7da413e5f18567a9ac4b8887544de1db805f53aeb9cea736f65cb016694d36c5"
+      },
+      "icon": "./plugins/biorender/assets/icon.svg",
+      "category": "creativity",
+      "homepage": "https://help.biorender.com/hc/en-gb/articles/37237276158109-How-to-use-the-BioRender-MCP-connector",
+      "license": "MIT"
+    },
+    {
       "id": "boltz-api-cli",
       "name": "boltz-api-cli",
       "description": "Predict structures, screen molecules and proteins, and design binders.",

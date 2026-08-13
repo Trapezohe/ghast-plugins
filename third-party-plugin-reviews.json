@@ -76,7 +76,7 @@
         "A generic account-intelligence icon is used because no licensed catalog artwork is included in a public official MCP source repository."
       ],
       "verification": [
-        "python3 scripts/import-official-hosted-plugins.py",
+        "Run the BioRender evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
         "Verify canonical Actively MCP and API product evidence hashes 3c7c7f1750eebd00dac261f987ae394b931da7ccbf4b24bdc3d97fddf1adc95c and e090dc2a687e70ef0d829f2b8d4ab10b5845e4de926b59e8d632de329daf888d",
         "Verify canonical OAuth protected-resource and authorization-server metadata hashes 908b8114e7a62b7ce79e87afb6a6bcaa90077e19ed928b0496af017e28d1369c and 11a7486ac6ab10e707d1189cbaa61ca5c52a514cebfe1cc505971261ae96abd4",
         "Probe https://api.actively.ai/mcp with MCP initialize and confirm HTTP 401 plus the official Actively protected-resource challenge",
@@ -1004,6 +1004,62 @@
         "python3 scripts/build-ghast-catalog.py",
         "bash -n plugins/binance/skills/onchain-pay/scripts/sign_and_call.sh",
         "unzip -tqq packages/binance.zip"
+      ]
+    },
+    "biorender": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "BioRender",
+      "officialRepository": null,
+      "officialRevision": "biorender-help-fb87519f4022+auth-7e351acc74e9+anthropic-3da37488e11a",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/biorender/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic scientific-figure icon.",
+        "No BioRender hosted MCP implementation, private Codex connector, service source code, templates, scientific icons, user figures, credentials, branded artwork, or marketplace icon is redistributed."
+      ],
+      "officialityEvidence": [
+        "BioRender's official Help Center article, updated August 5, 2026, describes its MCP connector for public template search, personal and shared figure search, and AI-generated editable scientific figures.",
+        "The article links BioRender's Claude directory connector and ChatGPT plugin, requires BioRender sign-in and permission approval, and states that results and previews link back to BioRender.",
+        "Anthropic's official life-sciences client declaration at revision e96556b637b56d6cc3a5ad33987009be9e60aa5c names BioRender as author and declares https://mcp.services.biorender.com/mcp; the manifest SHA-256 is 3da37488e11aee541992c12743f3ea9cae99df7d56843427a86194e625881e74.",
+        "The live MCP endpoint is hosted on BioRender's biorender.com domain and returns a Bearer challenge pointing to BioRender's authorization-server metadata.",
+        "The authorization metadata has canonical JSON SHA-256 7e351acc74e9958aa68ce8ce61a815aaf5b93f7d37dbc4cd455ce2113cd74fe5 and declares BioRender authorization, token, and dynamic registration endpoints on the same domain.",
+        "On August 13, 2026, one loopback OAuth client registered with HTTP 201 using client_secret_post and PKCE S256; the authorization endpoint accepted its request and redirected into BioRender's session check."
+      ],
+      "codexCapabilities": [
+        "Search thousands of scientifically accurate BioRender templates and icons for protocols, pathways, molecular structures, and other scientific concepts through a private app connector",
+        "Find GLP-1 diagram templates and use BioRender content for presentations, manuscripts, grant proposals, posters, brainstorming, and team communication"
+      ],
+      "ghastCapabilities": [
+        "The same public BioRender template-search and preview workflow through BioRender's official hosted MCP server instead of the Codex-only private connector",
+        "Official personal and shared BioRender figure search with source labels, previews, and links back to the BioRender editor",
+        "Official AI scientific-figure generation from a text description and optional reference image or template, returning previews and a real editable BioRender figure link",
+        "A Ghast workflow skill that protects private science, distinguishes templates from user files, discloses AI-credit use and third-party assistant processing, preserves provenance, requires scientific review, and confirms any state-changing action"
+      ],
+      "capabilityRelationship": "superset-at-official-published-product-surface",
+      "limitations": [
+        "BioRender does not publish the hosted MCP server source, a complete tool inventory, tool schemas, or a BioRender-controlled source repository. The MIT license applies only to the Ghast-authored adapter.",
+        "An active BioRender account, browser OAuth, account and organization permissions, an eligible subscription, template entitlements, and available BioRender AI credits remain user-managed.",
+        "Authenticated tools/list, private or shared figure retrieval, and AI figure generation were not exercised because no user BioRender account, scientific content, or credits were used during the audit.",
+        "The one disposable DCR response returned a client secret but no registration_client_uri or registration_access_token, so the audit client could not be removed through RFC 7592 registration management. No secret was retained or committed.",
+        "The public OAuth metadata advertises only OpenID profile and offline-access scopes, not granular MCP read and write scopes. Existing BioRender ownership, sharing, plan, and server-side permissions are the effective authorization boundary.",
+        "Connector searches, selected files and templates, prompts, and generated figures are shared with the connected AI assistant under that assistant's terms and privacy practices.",
+        "Some templates require Premium access, and custom figure generation consumes BioRender AI credits. Access does not itself grant publication or export rights.",
+        "Generated figures and returned templates require scientific review. BioRender results do not independently validate labels, causal relationships, anatomy, molecular structures, directionality, scale, chronology, or claims.",
+        "Any live sharing, deletion, overwrite, export, publication, or other state-changing tool exposed to an authenticated account requires exact-target review and immediate explicit confirmation.",
+        "A generic scientific-figure icon is used because BioRender's catalog artwork and scientific asset library are not licensed for redistribution by this adapter."
+      ],
+      "verification": [
+        "python3 scripts/import-official-hosted-plugins.py",
+        "Verify BioRender Help Center article 37237276158109 has update timestamp 2026-08-05T17:54:58Z and exact body SHA-256 fb87519f40227b34b0a6743ec4dfc92f0e02581a4919adeba14e3029da4c7f2e",
+        "Verify the Anthropic BioRender client declaration at e96556b637b56d6cc3a5ad33987009be9e60aa5c has SHA-256 3da37488e11aee541992c12743f3ea9cae99df7d56843427a86194e625881e74 and declares https://mcp.services.biorender.com/mcp",
+        "Verify BioRender authorization-server metadata canonical JSON SHA-256 7e351acc74e9958aa68ce8ce61a815aaf5b93f7d37dbc4cd455ce2113cd74fe5",
+        "Probe https://mcp.services.biorender.com/mcp with MCP initialize and confirm HTTP 401 plus BioRender's authorization metadata challenge",
+        "Confirm one disposable loopback client registered with HTTP 201 using client_secret_post, authorization code, refresh token, and PKCE S256; do not repeat registration in the importer because no registration management URI was issued",
+        "Compare public template search, personal and shared file search, AI figure generation, previews, editable links, plan limits, AI credits, and privacy behavior with the Codex long description and GLP-1 default prompt",
+        "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/biorender.zip"
       ]
     },
     "boltz-api-cli": {
