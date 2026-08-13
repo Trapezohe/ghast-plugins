@@ -34,7 +34,7 @@ verification.
 | amplitude | Amplitude | appConnector | MIT | official-source-research-required | not-implemented |
 | apollo | Apollo | appConnector | MIT | official-source-research-required | not-implemented |
 | asana | Asana, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
-| atlassian-rovo | Atlassian | appConnector, skills | MIT | official-source-research-required | not-implemented |
+| atlassian-rovo | Atlassian | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | attio | Attio Ltd | appConnector | MIT | official-source-research-required | not-implemented |
 | base44 | base44 | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | binance | Binance | appConnector | MIT | official-source-verified | implemented-verified |
@@ -155,7 +155,7 @@ verification.
 | statsig | Statsig, LLC | appConnector | MIT | official-source-research-required | not-implemented |
 | streak | Rewardly, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | stripe | Stripe | appConnector, skills | MIT | official-source-verified | implemented-verified |
-| supabase | Supabase | appConnector, skills | MIT | blocked-license | not-implemented |
+| supabase | Supabase | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | superhuman | Superhuman | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | superpowers | Jesse Vincent | skills | MIT | official-source-verified | implemented-verified |
 | taxdown | TAXDOWN S.L. | appConnector | MIT | official-source-research-required | not-implemented |

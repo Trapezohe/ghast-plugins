@@ -26,6 +26,38 @@ PLUGINS = {
         "mcp": ".mcp.json",
         "license_name": "MIT",
     },
+    "atlassian-rovo": {
+        "directory": "atlassian-mcp",
+        "revision": "94a30436435fb526a29f820f5f46250870eb75a0",
+        "repository": "https://github.com/atlassian/atlassian-mcp-server",
+        "plugin_root": ".",
+        "manifest": ".claude-plugin/plugin.json",
+        "license": "LICENSE",
+        "icon": "assets/logo.svg",
+        "category": "productivity",
+        "mcp": ".mcp.json",
+        "license_name": "Apache-2.0",
+        "author": {
+            "name": "Atlassian",
+            "url": "https://www.atlassian.com",
+        },
+        "description": (
+            "Search and manage Jira, Confluence, Jira Service Management, "
+            "Bitbucket, Compass, and Teamwork Graph through Atlassian's "
+            "official Rovo MCP server and workflow skills."
+        ),
+        "compatibility_notes": [
+            (
+                "The Codex private app mapping is replaced by Atlassian's "
+                "official public Rovo MCP endpoint with OAuth 2.1 and "
+                "supported API-token authentication."
+            ),
+            (
+                "The pinned official suite adds a Jira sprint dashboard "
+                "skill beyond the five workflows in the Codex snapshot."
+            ),
+        ],
+    },
     "base44": {
         "directory": "base44-skills",
         "revision": "773a301cfb79112141add32d19c024f2bafc44ee",
@@ -365,6 +397,53 @@ PLUGINS = {
                 "endpoint in its README while its Codex package uses a "
                 "private app mapping; Ghast declares the same official "
                 "OAuth endpoint directly."
+            ),
+        ],
+    },
+    "supabase": {
+        "directory": "supabase-agent-skills",
+        "revision": "8331f910845103c08d51f6ca1d86ebb7d1f745e3",
+        "repository": "https://github.com/supabase/agent-skills",
+        "plugin_root": ".",
+        "manifest": "package.json",
+        "license": "LICENSE",
+        "generated_icon": "./assets/icon.svg",
+        "category": "development",
+        "mcp_inline": {
+            "mcpServers": {
+                "supabase": {
+                    "type": "http",
+                    "url": "https://mcp.supabase.com/mcp",
+                },
+            },
+        },
+        "license_name": "MIT",
+        "author": {
+            "name": "Supabase",
+            "url": "https://supabase.com",
+        },
+        "homepage": "https://supabase.com",
+        "description": (
+            "Develop and operate Supabase projects with the complete current "
+            "official Supabase and Postgres best-practice skills plus "
+            "Supabase's hosted OAuth MCP server."
+        ),
+        "compatibility_notes": [
+            (
+                "The Codex private app mapping is replaced by Supabase's "
+                "official hosted OAuth 2.1 MCP server."
+            ),
+            (
+                "Ghast declares the official unfiltered MCP endpoint so "
+                "project, database, debugging, development, functions, "
+                "branching, storage, and documentation tools remain "
+                "available; the skills repository's root .mcp.json is a "
+                "documentation-only example."
+            ),
+            (
+                "The developer-branded Codex marketplace SVG is retained as "
+                "catalog presentation metadata because the canonical skills "
+                "repository publishes only a wide social-preview image."
             ),
         ],
     },

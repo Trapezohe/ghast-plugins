@@ -16,13 +16,13 @@
     "excludedOpenAIAuthored": 31,
     "thirdPartyPlugins": 149,
     "auditStatus": {
-      "blocked-license": 9,
-      "official-source-research-required": 114,
-      "official-source-verified": 26
+      "blocked-license": 8,
+      "official-source-research-required": 113,
+      "official-source-verified": 28
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 26,
-      "not-implemented": 123
+      "implemented-verified": 28,
+      "not-implemented": 121
     }
   },
   "excludedOpenAIPlugins": [
@@ -403,7 +403,7 @@
     },
     {
       "id": "atlassian-rovo",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Atlassian",
@@ -431,13 +431,53 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.atlassian.com"
+        "homepage": "https://www.atlassian.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Atlassian",
+          "officialRepository": "https://github.com/atlassian/atlassian-mcp-server",
+          "officialRevision": "94a30436435fb526a29f820f5f46250870eb75a0",
+          "license": "Apache-2.0",
+          "licenseEvidence": [
+            "LICENSE"
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the Atlassian GitHub organization and its README identifies the hosted service as the official Atlassian Rovo MCP Server.",
+            "Its official Claude, Cursor, Gemini, and MCP Registry manifests all declare Atlassian's public MCP transport.",
+            "The five Codex workflow skill trees match the pinned developer repository exactly after excluding Codex-only openai.yaml metadata; the official repository adds one newer Jira sprint dashboard skill."
+          ],
+          "codexCapabilities": [
+            "Search, summarize, create, and update Jira and Confluence content through an Atlassian private app connector",
+            "Capture Jira tasks from meeting notes, generate status reports, search company knowledge, convert specifications to backlogs, and triage issues"
+          ],
+          "ghastCapabilities": [
+            "The same five official Jira and Confluence workflow skills plus Atlassian's newer read-only Jira sprint dashboard skill",
+            "Authenticated Jira, Confluence, Jira Service Management, Bitbucket, Compass, and Teamwork Graph operations through the official public Rovo MCP server"
+          ],
+          "capabilityRelationship": "superset-newer-official-suite",
+          "limitations": [
+            "An Atlassian Cloud site, OAuth 2.1 authorization or supported API-token setup, product permissions, and administrator policy remain user-managed.",
+            "Jira Service Management and Bitbucket tools require API-token authentication, while Compass requires OAuth 2.1.",
+            "Issue, page, sprint, or other state-changing operations require explicit user confirmation."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Compare the five shared skill trees byte-for-byte with the Codex snapshot after excluding Codex-only agent metadata, and confirm the sixth Jira dashboard skill comes from the pinned official repository",
+            "Run node scripts/validate-template.mjs in the pinned Atlassian repository",
+            "Probe https://mcp.atlassian.com/v1/mcp/authv2 and confirm the official endpoint returns an invalid-token authentication response",
+            "unzip -tqq packages/atlassian-rovo.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.0-ghast.1",
+        "repository": "https://github.com/atlassian/atlassian-mcp-server",
+        "upstreamRevision": "94a30436435fb526a29f820f5f46250870eb75a0",
+        "portStatus": "full"
       }
     },
     {
@@ -5915,7 +5955,7 @@
     },
     {
       "id": "supabase",
-      "auditStatus": "blocked-license",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Supabase",
@@ -5951,35 +5991,50 @@
         "candidateOfficialRepository": "https://github.com/supabase-community/supabase-plugin",
         "homepage": "https://supabase.com",
         "review": {
-          "verificationStatus": "blocked-license",
+          "verificationStatus": "official-source-verified",
           "officialDeveloper": "Supabase",
-          "officialRepository": "https://github.com/supabase-community/supabase-plugin",
-          "officialRevision": "aadcf51499969e5ed476dadd19fdf688bcc0b250",
-          "license": "UNVERIFIED",
+          "officialRepository": "https://github.com/supabase/agent-skills",
+          "officialRevision": "8331f910845103c08d51f6ca1d86ebb7d1f745e3",
+          "license": "MIT",
           "licenseEvidence": [
-            "The manifest declares MIT, but the pinned distribution repository contains no LICENSE, COPYING, NOTICE, or per-skill license file."
+            "LICENSE",
+            "package.json declares MIT"
           ],
           "officialityEvidence": [
-            "The repository is published under Supabase Community and identifies itself as the official multi-agent Supabase plugin distribution."
+            "The canonical skills repository is owned by the Supabase GitHub organization and its package identifies it as Official Supabase agent skills.",
+            "All 40 files in the two Codex skill trees correspond to the canonical repository: 36 are byte-identical and four are newer official skill or changelog revisions.",
+            "Supabase's separately licensed official MCP repository at revision 302d2ad7870352444ca0d71711622ab38a66e4ff publishes the hosted OAuth endpoint and project, database, debugging, development, functions, branching, storage, and documentation tool groups."
           ],
           "codexCapabilities": [
-            "Manage Supabase projects and apply Supabase and Postgres best practices"
+            "Manage Supabase projects, tables, configuration, and SQL through a private app connector",
+            "Apply official Supabase development and Postgres schema, query, performance, security, and RLS best practices"
           ],
           "ghastCapabilities": [
-            "No redistributed implementation is permitted from this distribution until its license scope is verifiable."
+            "The complete current official Supabase and Supabase Postgres best-practice skills, including newer debugging and declarative-schema guidance",
+            "Authenticated project, account, database, logs, Edge Functions, branching, storage, and documentation operations through Supabase's official hosted OAuth MCP server"
           ],
-          "capabilityRelationship": "blocked-before-port",
+          "capabilityRelationship": "superset-newer-official-suite",
           "limitations": [
-            "The skills are synchronized from supabase/agent-skills, so a future review may establish a separately licensed canonical source and unblock a clean import."
+            "A Supabase account, OAuth authorization, organization and project permissions, service limits, and paid platform features remain user-managed.",
+            "The unfiltered endpoint includes mutating tools; schema changes, migrations, function deployments, branch operations, and project lifecycle actions require explicit confirmation.",
+            "Users can narrow access with Supabase's official project_ref, read_only=true, and features query parameters."
           ],
           "verification": [
-            "Inspect every license-like file in the pinned distribution repository and confirm none is present",
-            "Do not create plugins/supabase from this repository until license scope is resolved"
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Compare both Ghast skill trees byte-for-byte with supabase/agent-skills at the pinned revision",
+            "Run the official seven-test skills installation suite with pnpm@10.33.0 and build both deterministic release archives",
+            "Compare the generated .mcp.json with the hosted endpoint documented by supabase/mcp at revision 302d2ad7870352444ca0d71711622ab38a66e4ff",
+            "Probe https://mcp.supabase.com/mcp and confirm the official endpoint returns an Unauthorized authentication response",
+            "unzip -tqq packages/supabase.zip"
           ]
         }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "0.1.8-ghast.1",
+        "repository": "https://github.com/supabase/agent-skills",
+        "upstreamRevision": "8331f910845103c08d51f6ca1d86ebb7d1f745e3",
+        "portStatus": "full"
       }
     },
     {

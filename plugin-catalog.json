@@ -33,6 +33,36 @@
       "license": "MIT"
     },
     {
+      "id": "atlassian-rovo",
+      "name": "atlassian-rovo",
+      "description": "Search and manage Jira, Confluence, Jira Service Management, Bitbucket, Compass, and Teamwork Graph through Atlassian's official Rovo MCP server and workflow skills.",
+      "manifest": {
+        "name": "atlassian-rovo",
+        "description": "Search and manage Jira, Confluence, Jira Service Management, Bitbucket, Compass, and Teamwork Graph through Atlassian's official Rovo MCP server and workflow skills.",
+        "author": {
+          "name": "Atlassian",
+          "url": "https://www.atlassian.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.0-ghast.1",
+        "homepage": "https://github.com/atlassian/atlassian-mcp-server",
+        "repository": "https://github.com/atlassian/atlassian-mcp-server",
+        "upstreamRevision": "94a30436435fb526a29f820f5f46250870eb75a0",
+        "license": "Apache-2.0",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/atlassian-rovo.zip",
+        "sha256": "845852bdc6a19411ce45650bc0f3ba5095d2f91aed1148ca2d24adac905c39a4"
+      },
+      "icon": "./plugins/atlassian-rovo/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://github.com/atlassian/atlassian-mcp-server",
+      "repository": "https://github.com/atlassian/atlassian-mcp-server",
+      "license": "Apache-2.0"
+    },
+    {
       "id": "base44",
       "name": "base44",
       "description": "Build and deploy Base44 full-stack apps with CLI project management and JavaScript/TypeScript SDK development skills",
@@ -887,6 +917,36 @@
       "category": "finance",
       "homepage": "https://stripe.com",
       "repository": "https://github.com/stripe/ai",
+      "license": "MIT"
+    },
+    {
+      "id": "supabase",
+      "name": "supabase",
+      "description": "Develop and operate Supabase projects with the complete current official Supabase and Postgres best-practice skills plus Supabase's hosted OAuth MCP server.",
+      "manifest": {
+        "name": "supabase",
+        "description": "Develop and operate Supabase projects with the complete current official Supabase and Postgres best-practice skills plus Supabase's hosted OAuth MCP server.",
+        "author": {
+          "name": "Supabase",
+          "url": "https://supabase.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "0.1.8-ghast.1",
+        "homepage": "https://supabase.com",
+        "repository": "https://github.com/supabase/agent-skills",
+        "upstreamRevision": "8331f910845103c08d51f6ca1d86ebb7d1f745e3",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/supabase.zip",
+        "sha256": "d6696ca50db22c233f13acbb19b51b22645a5911b2fde5c1006cbebf0b9bc524"
+      },
+      "icon": "./plugins/supabase/assets/icon.svg",
+      "category": "development",
+      "homepage": "https://supabase.com",
+      "repository": "https://github.com/supabase/agent-skills",
       "license": "MIT"
     },
     {

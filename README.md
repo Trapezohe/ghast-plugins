@@ -102,9 +102,9 @@ python3 scripts/build-ghast-catalog.py
 ```
 
 Every source checkout must match the exact revision pinned in the importer.
-The importer currently covers Boltz, Cloudflare, Expo, HyperFrames, Mixpanel
-Headless, NVIDIA, Remotion, Render, Superpowers, Temporal, and the Twilio
-Developer Kit.
+The generated plugin README and audit record preserve provenance, capability
+differences, transport substitutions, and any client-specific compatibility
+changes for each imported developer-owned source.
 
 ## Import the Binance plugin
 

@@ -20,12 +20,14 @@ OPENAI_ICONS = {
     "mixpanel-headless": "plugins/mixpanel-headless/assets/app-icon.png",
     "notion": "plugins/notion/assets/notion-small.svg",
     "sentry": "plugins/sentry/assets/sentry-small.svg",
+    "supabase": "plugins/supabase/assets/logo.svg",
     "test-android-apps": "plugins/test-android-apps/assets/test-android-apps-small.svg",
     "twilio-developer-kit": "plugins/twilio-developer-kit/assets/logo.svg",
 }
 
 LOCAL_ICONS = {
     "airtable": "assets/icon.svg",
+    "atlassian-rovo": "assets/icon.svg",
     "base44": "assets/icon.png",
     "boltz-api-cli": "assets/icon.png",
     "cloudflare": "assets/icon.svg",
