@@ -1315,6 +1315,46 @@
         "Do not create plugins/razorpay until Razorpay provides a strictly read-only saved-payment-method tool or an equivalent official configuration"
       ]
     },
+    "quicknode": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Quicknode",
+      "officialRepository": "https://github.com/quicknode/cli",
+      "officialRevision": "4265b0a97048d8e64dae0124013c66b8dd34533f",
+      "license": "MIT",
+      "licenseEvidence": [
+        "LICENSE"
+      ],
+      "officialityEvidence": [
+        "The source repository is owned by Quicknode's official GitHub organization and describes qn as the Quicknode CLI created for humans and agents.",
+        "The pinned source embeds a version-stamped qn agent context guide and enforces that command-surface changes update that guide in the same commit.",
+        "Official release v0.6.1 targets the pinned revision and publishes GitHub release metadata, platform binaries, and SHA-256 digests.",
+        "The official macOS arm64 v0.6.1 archive has SHA-256 51d096f798c128e96cb311328e3114894c43314ef15c914b3c6fc5708905570f and its qn agent context output matches the pinned guide with the version placeholder resolved."
+      ],
+      "codexCapabilities": [
+        "Create and manage Quicknode endpoints and inspect endpoint logs and account usage",
+        "Configure endpoint security controls and rate limits",
+        "Review Quicknode invoices and payments"
+      ],
+      "ghastCapabilities": [
+        "The same endpoint creation, management, logs, metrics, usage, security, rate-limit, invoice, and payment workflows through Quicknode's official qn CLI",
+        "Additional official CLI coverage for streams, webhooks, KV, SQL, teams, chains, endpoint tags and bulk operations, Tooling Access, and JSON-RPC"
+      ],
+      "capabilityRelationship": "superset-official-cli",
+      "limitations": [
+        "The official qn CLI must be installed separately, and Quicknode accounts, plans, API access, endpoint entitlements, usage charges, and permissions remain user-managed.",
+        "Authentication is completed by the user outside the conversation. The Ghast skill does not ask for, receive, store, or pass a Quicknode API key.",
+        "All state-changing infrastructure commands require explicit confirmation, current-state inspection, and result verification. Mutations are never blindly retried.",
+        "Wallet creation, credit purchases, payment-channel operations, and paid RPC modes require a separate explicit request and confirmation of amount, asset, and network; ambiguous paid-call failures are never retried.",
+        "A generic node-infrastructure icon is used because the official CLI repository does not publish a redistributable catalog icon."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Compare plugins/quicknode/skills/quicknode/SKILL.md with src/commands/agent/context.md at the pinned revision after the documented frontmatter, Ghast runtime rules, and v0.6.1 placeholder resolution",
+        "Download official release v0.6.1 for macOS arm64 and verify SHA-256 51d096f798c128e96cb311328e3114894c43314ef15c914b3c6fc5708905570f",
+        "Run qn --version, qn agent context, qn agent context -o json, and the endpoint, usage, billing, endpoint security, and endpoint rate-limit help trees",
+        "unzip -tqq packages/quicknode.zip"
+      ]
+    },
     "statsig": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Statsig",

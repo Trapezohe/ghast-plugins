@@ -496,6 +496,57 @@ PLUGINS = {
         "mcp": ".mcp.json",
         "license_name": "MIT",
     },
+    "quicknode": {
+        "directory": "quicknode-cli",
+        "revision": "4265b0a97048d8e64dae0124013c66b8dd34533f",
+        "repository": "https://github.com/quicknode/cli",
+        "plugin_root": ".",
+        "manifest_inline": {
+            "version": "0.6.1",
+            "description": "Official Quicknode CLI guide for AI agents.",
+            "author": {
+                "name": "Quicknode",
+                "url": "https://www.quicknode.com",
+            },
+            "homepage": "https://www.quicknode.com/docs",
+        },
+        "license": "LICENSE",
+        "generated_icon": "./assets/icon.svg",
+        "category": "development",
+        "root_skill_only": True,
+        "root_skill": {
+            "source": "src/commands/agent/context.md",
+            "name": "quicknode",
+            "description": (
+                "Manage Quicknode endpoints, logs, usage, security, rate "
+                "limits, billing, streams, webhooks, storage, teams, and RPC "
+                "through Quicknode's official qn CLI. Use when a user asks "
+                "to inspect or change Quicknode infrastructure."
+            ),
+        },
+        "license_name": "MIT",
+        "description": (
+            "Manage Quicknode endpoints, logs, usage, security, rate limits, "
+            "billing, streams, webhooks, storage, teams, and RPC through the "
+            "official qn CLI and its official agent guide."
+        ),
+        "compatibility_notes": [
+            (
+                "The Codex private app mapping is replaced by Quicknode's "
+                "official qn CLI, whose embedded agent guide covers the same "
+                "infrastructure workflows and additional official services."
+            ),
+            (
+                "The user authenticates qn outside the conversation; the "
+                "Ghast skill never asks for or handles a Quicknode API key."
+            ),
+            (
+                "A generic node-infrastructure icon is used because the "
+                "official CLI repository does not publish a redistributable "
+                "catalog icon."
+            ),
+        ],
+    },
     "replayio": {
         "directory": "replayio-plugins",
         "revision": "c6cd28ff3d47f4e8e8b23040c69925ec2a820695",
@@ -912,7 +963,14 @@ def import_plugin(name: str, config: dict, source_root: Path) -> None:
         staging = Path(temp)
         if not config.get("no_skills"):
             skills_target = staging / "skills"
-            if config.get("remotion_build"):
+            if config.get("root_skill_only"):
+                skills_target.mkdir()
+                copy_root_skill(
+                    repository,
+                    skills_target,
+                    config["root_skill"],
+                )
+            elif config.get("remotion_build"):
                 build_remotion_skills(repository, skills_target)
             else:
                 skills_root = (
@@ -1112,7 +1170,13 @@ def copy_root_skill(
     if target_skill.exists():
         raise ValueError(f"{target_skill}: duplicate imported root skill")
     target_skill.mkdir()
-    shutil.copy2(source, target_skill / "SKILL.md")
+    target_path = target_skill / "SKILL.md"
+    shutil.copy2(source, target_path)
+    ensure_skill_frontmatter(
+        target_path,
+        skill_name=root_skill["name"],
+        description=root_skill.get("description"),
+    )
 
 
 def ensure_skill_frontmatter(
@@ -1319,6 +1383,35 @@ See `../SKILL.md` for the Ghast MCP environment and API key guidance.
                 "from Codex": "from Ghast",
                 "This Codex package": "This Ghast package",
                 "When Codex lists this skill": "When Ghast lists this skill",
+            },
+        )
+    elif name == "quicknode":
+        quicknode_skill = staging / "skills/quicknode/SKILL.md"
+        rewrite_text(
+            quicknode_skill,
+            {
+                "# qn — usage guide for agents": """## Ghast runtime rules
+
+- Use the official `qn` executable. Check `qn --version` before account work.
+  If it is unavailable, ask the user to install it from Quicknode's official
+  release channels; on macOS the documented command is
+  `brew install quicknode/tap/qn`.
+- Authentication is user-managed. Never ask for, print, store, or pass a
+  Quicknode API key. Ask the user to run `qn auth login` themselves, then
+  verify only with `qn auth whoami`.
+- Before any create, update, pause, resume, archive, delete, security,
+  rate-limit, billing-affecting, wallet, or paid-RPC action, show the planned
+  command and obtain explicit confirmation. Inspect current state first and
+  verify the result afterward.
+- Never generate or fund a wallet, buy credits, open or top up a payment
+  channel, or use `--x402`, `--mpp`, `--x402-drawdown`, or `--mpp-session`
+  unless the user explicitly requests that exact paid workflow and confirms
+  the amount, asset, and network. Prefer test networks when available.
+- Run `qn agent context` after installation and prefer its version-matched
+  guide if it differs from this pinned reference.
+
+# qn — usage guide for agents""",
+                "qn v{{VERSION}}": "qn v0.6.1",
             },
         )
     elif name == "zoom":

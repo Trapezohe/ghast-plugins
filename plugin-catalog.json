@@ -767,6 +767,35 @@
       "license": "Apache-2.0 AND CC-BY-4.0"
     },
     {
+      "id": "quicknode",
+      "name": "quicknode",
+      "description": "Manage Quicknode endpoints, logs, usage, security, rate limits, billing, streams, webhooks, storage, teams, and RPC through the official qn CLI and its official agent guide.",
+      "manifest": {
+        "name": "quicknode",
+        "description": "Manage Quicknode endpoints, logs, usage, security, rate limits, billing, streams, webhooks, storage, teams, and RPC through the official qn CLI and its official agent guide.",
+        "author": {
+          "name": "Quicknode",
+          "url": "https://www.quicknode.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "0.6.1-ghast.1",
+        "homepage": "https://www.quicknode.com/docs",
+        "repository": "https://github.com/quicknode/cli",
+        "upstreamRevision": "4265b0a97048d8e64dae0124013c66b8dd34533f",
+        "license": "MIT",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/quicknode.zip",
+        "sha256": "75e3b7d51c9675930421d25fd601c886bd2c157856a4643c703f2893e063a5d3"
+      },
+      "icon": "./plugins/quicknode/assets/icon.svg",
+      "category": "development",
+      "homepage": "https://www.quicknode.com/docs",
+      "repository": "https://github.com/quicknode/cli",
+      "license": "MIT"
+    },
+    {
       "id": "realtime-weather",
       "name": "realtime-weather",
       "description": "Skill that pulls current weather and a 24h forecast for any place name via Open-Meteo — no API key, no signup.",

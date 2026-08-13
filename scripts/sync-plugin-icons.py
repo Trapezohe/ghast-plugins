@@ -104,6 +104,12 @@ CUSTOM_ICONS = {
         '<path d="M20 24h24M20 33h15M20 42h20"/>'
         '<path d="M42 31l4 4 7-8"/>',
     ),
+    "quicknode": (
+        "#2E6FCE",
+        '<circle cx="20" cy="20" r="6"/><circle cx="44" cy="20" r="6"/>'
+        '<circle cx="20" cy="44" r="6"/><circle cx="44" cy="44" r="6"/>'
+        '<path d="M26 20h12M20 26v12M44 26v12M26 44h12"/>',
+    ),
     "netlify": (
         "#0E7C7B",
         '<path d="M12 43h40M18 43V27l14-10 14 10v16"/>'

@@ -132,7 +132,7 @@ verification.
 | pylon | Pylon Labs Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | quartr | Quartr | appConnector | MIT | official-source-research-required | not-implemented |
 | quickbooks | QuickBooks | appConnector | MIT | official-source-research-required | not-implemented |
-| quicknode | Quicknode | appConnector | MIT | official-source-research-required | not-implemented |
+| quicknode | Quicknode | appConnector | MIT | official-source-verified | implemented-verified |
 | ranked-ai | Ranked AI, LLC | appConnector | MIT | official-source-research-required | not-implemented |
 | razorpay | Razorpay Software Private Limited | appConnector | MIT | official-source-research-required | not-implemented |
 | read-ai | Read AI, Inc | appConnector | MIT | official-source-research-required | not-implemented |
