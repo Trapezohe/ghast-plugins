@@ -16,8 +16,8 @@
     "excludedOpenAIAuthored": 31,
     "thirdPartyPlugins": 149,
     "auditStatus": {
-      "blocked-license": 8,
-      "official-source-research-required": 98,
+      "blocked-license": 9,
+      "official-source-research-required": 97,
       "official-source-verified": 43
     },
     "ghastImplementationStatus": {
@@ -1737,7 +1737,7 @@
     },
     {
       "id": "coderabbit",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "blocked-license",
       "developer": {
         "manifestAuthor": {
           "name": "CodeRabbit AI",
@@ -1771,16 +1771,20 @@
         "candidateOfficialRepository": "https://github.com/coderabbitai/codex-plugin",
         "homepage": "https://docs.coderabbit.ai/cli/overview",
         "review": {
-          "verificationStatus": "official-source-research-required",
+          "verificationStatus": "blocked-license",
           "officialDeveloper": "CodeRabbit",
           "officialRepository": "https://github.com/coderabbitai/codex-plugin",
           "officialRevision": "999871a3155da78f34e033aede62ab48bfba520e",
           "license": "UNVERIFIED",
           "licenseEvidence": [
-            "The pinned repository's root LICENSE names Render as copyright holder and no CodeRabbit-specific license accompanies plugins/coderabbit."
+            "The pinned repository contains no root LICENSE, COPYING, or NOTICE file and no license file under plugins/coderabbit.",
+            "GitHub's repository License API returns HTTP 404 at the pinned revision.",
+            "The CodeRabbit manifest's MIT declaration is metadata, not the missing license grant for the skill and artwork."
           ],
           "officialityEvidence": [
-            "The repository is owned by the CodeRabbit GitHub organization, but its current tree is a merge of the broader Codex plugin repository rather than a clean standalone CodeRabbit distribution."
+            "The repository is owned by the CodeRabbit GitHub organization and describes itself as the CodeRabbit plugin for Codex.",
+            "The pinned commit is cryptographically verified and authored with a coderabbit.ai email identity.",
+            "The current tree mirrors the broader Codex plugin catalog rather than publishing a clean standalone CodeRabbit source distribution."
           ],
           "codexCapabilities": [
             "Run CodeRabbit CLI review workflows against the current code changes"
@@ -1788,13 +1792,16 @@
           "ghastCapabilities": [
             "No implementation is claimed until CodeRabbit publishes a source tree and license whose scope clearly covers the CodeRabbit plugin."
           ],
-          "capabilityRelationship": "source-integrity-and-license-review-required",
+          "capabilityRelationship": "blocked-before-port",
           "limitations": [
-            "Copying plugins/coderabbit from the current repository would rely on mismatched license evidence and could accidentally import unrelated marketplace content."
+            "Official ownership is established, but redistribution is blocked until CodeRabbit publishes license text whose scope covers plugins/coderabbit.",
+            "Copying the current repository wholesale could also import unrelated marketplace content."
           ],
           "verification": [
-            "Inspect git history showing a merge from openai:main into the CodeRabbit repository",
-            "Confirm plugins/coderabbit has no standalone license and the root LICENSE says Copyright (c) 2026 Render"
+            "Inspect coderabbitai/codex-plugin at 999871a3155da78f34e033aede62ab48bfba520e and confirm there is no root license file or license file under plugins/coderabbit",
+            "Call GitHub's repository License API and confirm HTTP 404",
+            "Verify the pinned commit signature and coderabbit.ai author identity",
+            "Do not create plugins/coderabbit until a license covering the plugin is published"
           ]
         }
       },
