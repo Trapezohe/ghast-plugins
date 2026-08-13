@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 74,
-      "official-source-verified": 70
+      "official-source-research-required": 73,
+      "official-source-verified": 71
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 70,
-      "not-implemented": 79
+      "implemented-verified": 71,
+      "not-implemented": 78
     }
   },
   "excludedOpenAIPlugins": [
@@ -3196,7 +3196,7 @@
     },
     {
       "id": "docusign",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Docusign",
@@ -3223,13 +3223,83 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.docusign.com"
+        "homepage": "https://www.docusign.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Docusign",
+          "officialRepository": null,
+          "officialRevision": "docusign-docs-ee7baa0a1615+chatgpt-0c1925822c08+demo-f64203b8c7d1+prod-8d3bb21db1fb",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/docusign/LICENSE licenses only the Ghast-authored adapter configuration, localhost OAuth compatibility bridge, safety instructions, documentation, and generic icon.",
+            "No Docusign hosted MCP implementation, private Codex connector, OAuth credential, agreement data, signature, branded icon, or marketplace artwork is redistributed."
+          ],
+          "officialityEvidence": [
+            "Docusign's official Developer Center identifies https://mcp-d.docusign.com/mcp and https://mcp.docusign.com/mcp as its demo and production Streamable HTTP MCP servers.",
+            "The official MCP overview page-data response has SHA-256 ee7baa0a1615e41a3f4ea932883d527f0c9e1ab5e92699754f72a69c6593626f and documents Confidential Authorization Code Grant authentication, both environments, available tools, scopes, beta status, and human in-the-loop guidance.",
+            "Docusign's official OpenAI ChatGPT guide has SHA-256 0c1925822c08e4f1ba7d776a0bbc34db005f16ae036813eb802aa21ced92de1b and requires a user-created Integration Key, Client Secret, host callback URL, and explicit OAuth client settings.",
+            "The production server publishes 22 tools. Its exact ordered tool-name inventory has SHA-256 dc9de26eddd7ec862946fc7e6bd609b3f101734d70e2652f2000a3395d74c7ed and its complete normalized descriptions, schemas, titles, and annotations have SHA-256 8d3bb21db1fb1ef261bead46d4e59314fa7123dc7d732cb63cad98d587b64624.",
+            "The production annotations classify 14 tools as read-only and eight envelope, recipient, reminder, and workflow operations as state-changing and destructive.",
+            "The demo server publishes 35 tools. Its ordered inventory has SHA-256 16ad3b3322a9a8bcac402655d3dd10f1f7f666de88122d63290d9519d7068378 and its normalized schemas have SHA-256 f64203b8c7d1f0a213e5dfdaa51f4ffd83f9df7518344aa30223a0eaddea1764.",
+            "The demo protected-resource and authorization-server metadata canonical JSON hashes are bd92cd62509ac430ee0d81ac6cfccf633cca4452915dedd14a147a1e2855c1fa and 862196c4cd352e193efb8e950831ad8e564a81e4c5d511bcf55bc3312679b3a5. Production hashes are e0ae93ab64080e35b3dd782f2d58bb46df95406de516b75c3905a3bca099b6b4 and 2c653b9e53f11c8b02b77c1ed6a32e257a0a21ceed46c6b2a821b85902bbe750.",
+            "Both authorization servers declare authorization-code and refresh-token grants plus PKCE S256, and neither declares dynamic client registration.",
+            "On August 13, 2026, both MCP endpoints returned HTTP 401 with an invalid_token Bearer challenge for a three-part invalid bearer token, establishing a deterministic OAuth trigger for the localhost compatibility bridge.",
+            "OpenAI's pinned Codex plugin snapshot identifies Docusign as the developer and documents waiting-envelope action summaries, customer agreement status and recipients, key dates, renewal and obligation extraction, contract creation and sending, and automated workflows. The manifest and private connector declaration hashes are 970614d45e1ab15ada0759c9c181ded46e464b31d75618823ab8ee4787c4b335 and fa232507dc1352a5e86799616ad6896ad17bbeab485809cc3bd8c81c40359904.",
+            "No public repository containing the Docusign hosted MCP implementation was found, so Ghast integrates it only as an official hosted adapter."
+          ],
+          "codexCapabilities": [
+            "Find Docusign envelopes waiting on the user and summarize required action",
+            "Search customer agreements and report signing status, recipients, and key dates",
+            "Review completed envelopes and extract renewal or obligation dates",
+            "Create and send contracts through natural language",
+            "Automate agreement workflows"
+          ],
+          "ghastCapabilities": [
+            "The same waiting-envelope, recipient, signing-status, customer agreement, key-date, renewal, and obligation workflows through Docusign's official hosted MCP server",
+            "Official Agreement Manager filtering and detail retrieval for counterparties, agreement types, statuses, effective dates, expiration dates, renewal types, renewal notice dates, auto-renewal, clauses, parties, and values",
+            "Official eSignature account, envelope, template, user, and recipient reads",
+            "Explicitly confirmed envelope creation and sending from exact templates or remote document URLs, envelope updates, recipient changes, and reminder delivery",
+            "Official Workflow Builder listing, requirements, instance inspection, triggering, pausing, resuming, and cancellation with fresh-state checks and explicit confirmation",
+            "User-owned confidential OAuth apps for separate demo and production environments, with least-privilege scopes and local token handling"
+          ],
+          "capabilityRelationship": "equivalent-official-hosted-mcp",
+          "limitations": [
+            "The hosted MCP implementation is operated by Docusign and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+            "Docusign MCP is an open beta and some capabilities are limited availability. Tools, schemas, availability, and performance can change.",
+            "A Docusign account, user-created Integration Key and Client Secret, exact localhost callback registration, browser OAuth, account permissions, product entitlements, Agreement Manager data, Workflow Builder configuration, and service limits remain user-managed.",
+            "Demo and production require separate apps, accounts, data, credentials, OAuth sessions, and official endpoints. The plugin defaults to demo and never treats demo authorization as production access.",
+            "The adapter requests adm_store_unified_repo_read, aow_manage, and signature. It intentionally omits the demo-only manage_app_keys scope, so demo app-key management remains unavailable.",
+            "Without a bearer token, Docusign currently returns HTTP 403 RBAC access denied instead of an OAuth 401. The Ghast-authored localhost-only bridge supplies an invalid sentinel only for the initial request so pinned mcp-remote can start the official OAuth flow; real tokens are then forwarded unchanged.",
+            "Official documentation, both public tool catalogs and schemas, OAuth metadata, Codex capability evidence, bridge package integrity, and invalid-token behavior were verified without a Docusign account. Authenticated tools/list and real agreement, envelope, recipient, or workflow operations were not run.",
+            "Agreement text, signatures, parties, email addresses, extracted clauses, financial values, renewal dates, and workflow inputs can be confidential, personal, or regulated and must remain narrowly scoped.",
+            "Envelope creation, sending, reminders, recipient changes, voiding, purge operations, and workflow triggers can be non-idempotent or irreversible. Ambiguous writes require exact readback before any retry.",
+            "A generic agreement-signing icon is used because no licensed catalog artwork is included in a public official MCP source repository."
+          ],
+          "verification": [
+            "python3 scripts/import-official-hosted-plugins.py",
+            "Verify official Docusign overview and OpenAI ChatGPT page-data SHA-256 hashes ee7baa0a1615e41a3f4ea932883d527f0c9e1ab5e92699754f72a69c6593626f and 0c1925822c08e4f1ba7d776a0bbc34db005f16ae036813eb802aa21ced92de1b",
+            "Fetch both official /tools catalogs and confirm the exact ordered 35-tool demo and 22-tool production inventories plus normalized schema hashes f64203b8c7d1f0a213e5dfdaa51f4ffd83f9df7518344aa30223a0eaddea1764 and 8d3bb21db1fb1ef261bead46d4e59314fa7123dc7d732cb63cad98d587b64624",
+            "Confirm production annotations identify exactly 14 read-only and eight state-changing destructive tools",
+            "Verify canonical demo OAuth metadata hashes bd92cd62509ac430ee0d81ac6cfccf633cca4452915dedd14a147a1e2855c1fa and 862196c4cd352e193efb8e950831ad8e564a81e4c5d511bcf55bc3312679b3a5 and production hashes e0ae93ab64080e35b3dd782f2d58bb46df95406de516b75c3905a3bca099b6b4 and 2c653b9e53f11c8b02b77c1ed6a32e257a0a21ceed46c6b2a821b85902bbe750",
+            "Verify mcp-remote 0.1.38 package SHA-256 d8e7034ed4f1f1b5efd928b74e7165ab427f7b21ab86ce79bcb82a4d9560aa",
+            "Probe both official endpoints with an invalid three-part bearer token and confirm HTTP 401, invalid_token, and the exact official MCP realm",
+            "Run the generated localhost compatibility bridge with disposable invalid OAuth client metadata and confirm it discovers the official authorization server and reaches the browser authorization flow instead of failing on the bare-token HTTP 403",
+            "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Docusign manifest and connector hashes and compare every default workflow with the official Agreement Manager, eSignature, and Workflow Builder tools",
+            "Authorize a matching Docusign demo or production account before testing authenticated tools/list or real account operations",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/docusign.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": null,
+        "upstreamRevision": "docusign-docs-ee7baa0a1615+chatgpt-0c1925822c08+demo-f64203b8c7d1+prod-8d3bb21db1fb",
+        "portStatus": "full"
       }
     },
     {
@@ -6258,7 +6328,7 @@
           "verificationStatus": "official-source-verified",
           "officialDeveloper": "PostHog",
           "officialRepository": "https://github.com/PostHog/posthog",
-          "officialRevision": "eca44dbf35017b5a964224ac74f4a861815190d7",
+          "officialRevision": "be36eb32351fbf2435b69ea2dabb4d03a6149a07",
           "license": "MIT",
           "licenseEvidence": [
             "PostHog/posthog's root license applies the MIT Expat grant to content outside its listed ee and third-party exceptions; services/mcp is outside those exceptions.",
@@ -6278,7 +6348,7 @@
           ],
           "ghastCapabilities": [
             "Connect directly to PostHog's official Streamable HTTP MCP endpoint with OAuth, the documented plugin consumer marker, and token-efficient CLI mode",
-            "Discover, inspect, and call the live catalog of 844 documented source tool definitions spanning 58 labeled product categories",
+            "Discover, inspect, and call the live catalog of 847 documented source tool definitions spanning 58 labeled product categories",
             "Read and write analytics, SQL, flags, experiments, errors, replays, surveys, dashboards, AI observability, logs, pipelines, support, tasks, workflows, and newer PostHog products",
             "Use PostHog MCP resources and prompts and discover live schemas instead of relying on stale pre-trained tool shapes",
             "Restrict sessions to read-only tools, pin an organization or project, filter by feature category, or allowlist exact tool names",
@@ -6289,15 +6359,15 @@
             "A PostHog account, OAuth authorization or a personal API key created with the MCP Server preset, network access, project permissions, and applicable plan features remain user-managed.",
             "The server returns project data to the MCP client. Queries should be scoped to the intended organization, project, date range, and minimum necessary records.",
             "Some AI-powered tools require AI data processing to be enabled, have lower limits, and may incur PostHog AI spend. All calls remain subject to PostHog API limits.",
-            "The official tool page contains 844 unique tool names matching the pinned source schema, while its 58 displayed category counts sum to 837. Ghast records rather than conceals that documentation inconsistency.",
+            "The official tool page contains 847 unique tool names matching the pinned source schema, while its 58 displayed category counts sum to 840. Ghast records rather than conceals that documentation inconsistency.",
             "The current PostHog AI plugin has 137 synchronized static skills, but its repository and the context-mill source stream lack verifiable license files. Ghast does not redistribute those files and does not claim byte-for-byte parity with that guidance layer.",
             "Authenticated tool listing and project operations were not run because no PostHog account or project data was supplied.",
             "A generic analytics icon is used instead of unlicensed marketplace or AI-plugin artwork."
           ],
           "verification": [
             "python3 scripts/import-official-hosted-plugins.py",
-            "Verify PostHog/posthog at eca44dbf35017b5a964224ac74f4a861815190d7 and the pinned hashes for the root license, services/mcp README, package metadata, 844-definition source schema, and CLI command reference",
-            "Verify the official MCP overview, 844-name tool reference, and FAQ hashes and their CLI mode, read-only, project pinning, feature filtering, prompt, resource, privacy, and billing statements",
+            "Verify PostHog/posthog at be36eb32351fbf2435b69ea2dabb4d03a6149a07 and the pinned hashes for the root license, services/mcp README, package metadata, 847-definition source schema, and CLI command reference",
+            "Verify the official MCP overview, 847-name tool reference, and FAQ hashes and their CLI mode, read-only, project pinning, feature filtering, prompt, resource, privacy, and billing statements",
             "Verify the protected-resource canonical JSON SHA-256 9b7b445acd711f55e50db0deb96f341769cb3a073f7e466cc5efc38da3341283 and authorization-server hash 3b1f34cd44dadf05dd7cf4e9b24519410bc15ffa9353929b865f0f28451eebb7",
             "Probe https://mcp.posthog.com/mcp without credentials and confirm HTTP 401 plus the official protected-resource challenge",
             "Register a disposable 127.0.0.1 OAuth public client and confirm HTTP 201, authorization-code and refresh-token grants, token_endpoint_auth_method none, and the loopback callback",
@@ -6311,7 +6381,7 @@
         "implementationStatus": "implemented-verified",
         "version": "1.0.0-ghast.1",
         "repository": "https://github.com/PostHog/posthog",
-        "upstreamRevision": "eca44dbf35017b5a964224ac74f4a861815190d7",
+        "upstreamRevision": "be36eb32351fbf2435b69ea2dabb4d03a6149a07",
         "portStatus": "full"
       }
     },

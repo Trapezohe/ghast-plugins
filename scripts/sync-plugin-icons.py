@@ -139,6 +139,13 @@ CUSTOM_ICONS = {
         '<path d="M23 44h18M23 48h12"/>'
         '<circle cx="40" cy="48" r="1.5" fill="white" stroke="none"/>',
     ),
+    "docusign": (
+        "#B58A00",
+        '<path d="M17 11h25l8 8v34H17z"/>'
+        '<path d="M42 11v10h8M24 30h18M24 38h11"/>'
+        '<path d="M23 47c5-5 9-6 12-2 3 3 7 2 12-3"/>'
+        '<path d="M24 52h24"/>',
+    ),
     "fireflies": (
         "#B34F55",
         '<rect x="12" y="14" width="40" height="37" rx="4"/>'

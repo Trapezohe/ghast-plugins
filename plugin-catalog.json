@@ -782,6 +782,34 @@
       "license": "MIT"
     },
     {
+      "id": "docusign",
+      "name": "docusign",
+      "description": "Create, send, search, inspect, and automate Docusign agreements, envelopes, recipients, dates, obligations, and Workflow Builder processes through Docusign's official hosted MCP server.",
+      "manifest": {
+        "name": "docusign",
+        "description": "Create, send, search, inspect, and automate Docusign agreements, envelopes, recipients, dates, obligations, and Workflow Builder processes through Docusign's official hosted MCP server.",
+        "author": {
+          "name": "Docusign",
+          "url": "https://www.docusign.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://developers.docusign.com/platform/mcp-server/",
+        "upstreamRevision": "docusign-docs-ee7baa0a1615+chatgpt-0c1925822c08+demo-f64203b8c7d1+prod-8d3bb21db1fb",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/docusign.zip",
+        "sha256": "67210aa40f260994e83b74426abb0c56d76fc32cfbe1db55aa98e03c826b6bc6"
+      },
+      "icon": "./plugins/docusign/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://developers.docusign.com/platform/mcp-server/",
+      "license": "MIT"
+    },
+    {
       "id": "expo",
       "name": "expo",
       "description": "Official Expo skills for building, deploying, upgrading, and debugging Expo and React Native apps.",
@@ -1488,14 +1516,14 @@
         "version": "1.0.0-ghast.1",
         "homepage": "https://posthog.com/docs/model-context-protocol",
         "repository": "https://github.com/PostHog/posthog",
-        "upstreamRevision": "eca44dbf35017b5a964224ac74f4a861815190d7",
+        "upstreamRevision": "be36eb32351fbf2435b69ea2dabb4d03a6149a07",
         "license": "MIT",
         "skills": "./skills/",
         "mcpServers": "./.mcp.json"
       },
       "package": {
         "url": "./packages/posthog.zip",
-        "sha256": "ae312dd790072f37ab3a97ee52fa56a20ed4b15c9bcd7c388c990d4ff1e721d1"
+        "sha256": "153f1c88cb5500d76a0b9808ab3b6a652b87121e996fa1579304389e1efcf6c8"
       },
       "icon": "./plugins/posthog/assets/icon.svg",
       "category": "data",

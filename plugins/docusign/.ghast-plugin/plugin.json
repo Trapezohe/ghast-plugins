@@ -1,0 +1,16 @@
+{
+  "name": "docusign",
+  "version": "1.0.3-ghast.1",
+  "description": "Create, send, search, inspect, and automate Docusign agreements, envelopes, recipients, dates, obligations, and Workflow Builder processes through Docusign's official hosted MCP server.",
+  "category": "productivity",
+  "author": {
+    "name": "Docusign",
+    "url": "https://www.docusign.com"
+  },
+  "homepage": "https://developers.docusign.com/platform/mcp-server/",
+  "upstreamRevision": "docusign-docs-ee7baa0a1615+chatgpt-0c1925822c08+demo-f64203b8c7d1+prod-8d3bb21db1fb",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

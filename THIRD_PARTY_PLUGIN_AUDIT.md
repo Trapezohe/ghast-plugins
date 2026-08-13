@@ -74,7 +74,7 @@ verification.
 | digitalocean | DigitalOcean | appConnector, skills | none | official-source-verified | implemented-verified |
 | dnb-finance-analytics | Dun & Bradstreet | appConnector, skills | MIT | official-source-research-required | not-implemented |
 | docket | Docket AI | appConnector | MIT | official-source-research-required | not-implemented |
-| docusign | Docusign | appConnector | MIT | official-source-research-required | not-implemented |
+| docusign | Docusign | appConnector | MIT | official-source-verified | implemented-verified |
 | domotz-preview | Domotz | appConnector | MIT | official-source-research-required | not-implemented |
 | dovetail | Dovetail | appConnector | MIT | official-source-research-required | not-implemented |
 | dow-jones-factiva | Factiva, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
