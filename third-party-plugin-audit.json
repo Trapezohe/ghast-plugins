@@ -4972,10 +4972,54 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.usepylon.com/"
+        "homepage": "https://www.usepylon.com/",
+        "review": {
+          "verificationStatus": "official-source-research-required",
+          "officialDeveloper": "Pylon Labs",
+          "officialRepository": null,
+          "officialRevision": "pylon-mcp-doc-7e1bdd12b729+oauth-2c83dcf3cc83",
+          "license": "UNVERIFIED",
+          "licenseEvidence": [
+            "Pylon does not publish the source code or license for its hosted MCP implementation.",
+            "The official pylon-labs/docs repository at revision 8ae70414fd4b5c9e0775d1674fb95328ecb8a65c has no LICENSE file and does not contain the current hosted MCP documentation page.",
+            "The Codex manifest declares MIT, but that declaration does not establish redistribution rights for Pylon's privately hosted MCP implementation."
+          ],
+          "officialityEvidence": [
+            "Pylon's official documentation identifies https://mcp.usepylon.com as its stateless Streamable HTTP MCP server protected by AuthKit OAuth 2.0.",
+            "The official MCP documentation page was captured with SHA-256 7e1bdd12b7290c759f435ef335ec47bd861801ebb0cbd07e5cc734ab5f1176db.",
+            "Pylon's OAuth protected-resource metadata identifies the same MCP resource and https://o.auth.usepylon.com authorization server; its canonical JSON has SHA-256 2c83dcf3cc834b0e576e7fd5b33b9be26f91e3a1172be34c105ffb45e7f2beca.",
+            "Unauthenticated GET and MCP initialize requests return Pylon's OAuth bearer challenge.",
+            "The official documentation lists 11 tools for issues, accounts, contacts, users, and the authenticated user."
+          ],
+          "codexCapabilities": [
+            "Check the authenticated support agent's assigned queue",
+            "Research accounts, customers, issue history, and escalations",
+            "Mark an issue resolved and add an internal note"
+          ],
+          "ghastCapabilities": [
+            "Pylon's official hosted MCP server can search and read issues, messages, accounts, contacts, users, and the authenticated user.",
+            "The official update_issue tool can change issue state, assignee, team, account, requester, title, type, tags, visibility, and custom fields, including closing an issue.",
+            "No Ghast plugin is published because the official hosted MCP server cannot add the internal note or issue reply required by the Codex capability example."
+          ],
+          "capabilityRelationship": "official-hosted-mcp-found-capability-gap",
+          "limitations": [
+            "Pylon's current MCP tool set has no operation for adding an internal note or posting a customer-facing issue reply.",
+            "Pylon's separate REST API exposes POST /issues/{id}/note and POST /issues/{id}/reply, but wrapping those endpoints would create a Ghast-authored API integration rather than reproduce Pylon's official MCP plugin and would require separate API-token handling.",
+            "The hosted MCP implementation is not publicly source-available or licensed for redistribution.",
+            "Use requires a Pylon account with the MCP Access role, OAuth authorization, workspace permissions, and compliance with Pylon service rate limits."
+          ],
+          "verification": [
+            "Verify the official MCP documentation page SHA-256 is 7e1bdd12b7290c759f435ef335ec47bd861801ebb0cbd07e5cc734ab5f1176db",
+            "Verify the canonical OAuth protected-resource metadata SHA-256 is 2c83dcf3cc834b0e576e7fd5b33b9be26f91e3a1172be34c105ffb45e7f2beca",
+            "Probe https://mcp.usepylon.com with GET and MCP initialize and confirm OAuth bearer challenges identify Pylon's protected-resource metadata",
+            "Compare the 11 officially documented MCP tools with the Codex capability examples and confirm update_issue can close an issue but no MCP tool can add a note or reply",
+            "Confirm Pylon's official REST API documentation separately exposes POST /issues/{id}/note and POST /issues/{id}/reply",
+            "Do not create plugins/pylon until Pylon's official MCP server exposes the missing note or reply operation or the official Codex capability contract is narrowed"
+          ]
+        }
       },
       "ghast": {
         "implementationStatus": "not-implemented"
