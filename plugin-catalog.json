@@ -3,6 +3,34 @@
   "description": "Downloadable Ghast-compatible plugin packages.",
   "plugins": [
     {
+      "id": "actively",
+      "name": "actively",
+      "description": "Research and prioritize accounts using Actively's persistent Per-Account Agent intelligence, buying signals, prospect context, strategy, and next-best actions.",
+      "manifest": {
+        "name": "actively",
+        "description": "Research and prioritize accounts using Actively's persistent Per-Account Agent intelligence, buying signals, prospect context, strategy, and next-best actions.",
+        "author": {
+          "name": "Actively",
+          "url": "https://www.actively.ai"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://www.actively.ai/products/mcp-server",
+        "upstreamRevision": "actively-mcp-3c7c7f1750ee+api-e090dc2a687e+oauth-908b8114e7a6+auth-11a7486ac6ab",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/actively.zip",
+        "sha256": "13e13ea5cbf4fb53e5f64cdef794215bc8345c03dc92ad1a10bc444b6fc1b7de"
+      },
+      "icon": "./plugins/actively/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://www.actively.ai/products/mcp-server",
+      "license": "MIT"
+    },
+    {
       "id": "aiera",
       "name": "aiera",
       "description": "Search and analyze Aiera corporate events, transcripts, filings, company publications, equities, financials, broker research, Third Bridge content, and trusted web results through Aiera's official MCP server.",

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "actively": {
+      "type": "http",
+      "url": "https://api.actively.ai/mcp"
+    }
+  }
+}

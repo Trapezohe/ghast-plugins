@@ -53,6 +53,14 @@ LOCAL_ICONS = {
 }
 
 CUSTOM_ICONS = {
+    "actively": (
+        "#151515",
+        '<circle cx="23" cy="23" r="7"/>'
+        '<circle cx="43" cy="19" r="5"/>'
+        '<path d="M13 45c2-8 6-12 10-12s8 4 10 12"/>'
+        '<path d="M35 45c1-7 4-11 8-11s7 4 8 11"/>'
+        '<path d="M31 25l7-3M31 31l7 5"/>',
+    ),
     "amplitude": (
         "#005AF0",
         '<path d="M12 47h40M17 42V30h8v12M28 42V21h8v21M39 42V14h8v28"/>'

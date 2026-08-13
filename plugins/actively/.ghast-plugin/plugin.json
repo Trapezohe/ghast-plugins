@@ -1,0 +1,16 @@
+{
+  "name": "actively",
+  "version": "1.0.3-ghast.1",
+  "description": "Research and prioritize accounts using Actively's persistent Per-Account Agent intelligence, buying signals, prospect context, strategy, and next-best actions.",
+  "category": "productivity",
+  "author": {
+    "name": "Actively",
+    "url": "https://www.actively.ai"
+  },
+  "homepage": "https://www.actively.ai/products/mcp-server",
+  "upstreamRevision": "actively-mcp-3c7c7f1750ee+api-e090dc2a687e+oauth-908b8114e7a6+auth-11a7486ac6ab",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

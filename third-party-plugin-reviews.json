@@ -34,6 +34,57 @@
         "unzip -tqq packages/airtable.zip"
       ]
     },
+    "actively": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Actively",
+      "officialRepository": null,
+      "officialRevision": "actively-mcp-3c7c7f1750ee+api-e090dc2a687e+oauth-908b8114e7a6+auth-11a7486ac6ab",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/actively/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "No Actively hosted MCP implementation, private Codex connector, service source code, customer data, or marketplace artwork is redistributed."
+      ],
+      "officialityEvidence": [
+        "Actively's official MCP product page says Actively MCP connects its Per-Account Agents directly to ChatGPT, Cowork, Claude, and custom agents, providing each account's research, strategy, persistent memory, and reasoning.",
+        "Actively's official API product page describes direct access to per-account agent memory, decisions, strategy, continuously maintained GTM intelligence, and next-best actions for CRM views, Slack alerts, dashboards, and custom applications.",
+        "The live https://api.actively.ai/mcp endpoint returns an Actively Bearer challenge pointing to its official OAuth protected-resource metadata, which names the resource Actively Intelligence MCP.",
+        "The protected-resource and authorization-server metadata have canonical JSON SHA-256 hashes 908b8114e7a62b7ce79e87afb6a6bcaa90077e19ed928b0496af017e28d1369c and 11a7486ac6ab10e707d1189cbaa61ca5c52a514cebfe1cc505971261ae96abd4.",
+        "On August 13, 2026, the OAuth server advertised authorization-code, refresh-token, and device-code grants, PKCE S256, public clients, and dynamic registration; an arbitrary localhost callback registered successfully with HTTP 201.",
+        "The authorization flow created a valid session and presented Actively sign-in through email, Google, or Salesforce without relying on the Codex private app connector."
+      ],
+      "codexCapabilities": [
+        "Access always-on per-account agents that synthesize CRM data, call transcripts, emails, and external signals into account intelligence",
+        "Find high-fit accounts with recent buying signals and summarize next steps",
+        "Search contacts at a target account and retrieve relevant prospect context",
+        "Build and explain a prioritized prospect list for an ICP",
+        "Support meeting preparation, deal strategy, and territory prioritization"
+      ],
+      "ghastCapabilities": [
+        "Direct access to Actively's official hosted MCP service through standard Streamable HTTP and browser OAuth instead of the Codex-only app connector",
+        "The official published product surface for per-account research, strategy, persistent memory and reasoning, GTM intelligence, next-best actions, account context, and prioritization",
+        "A Ghast workflow skill that requires evidence-backed rankings, separates source facts from Actively and assistant inferences, protects CRM, email, call, and prospect data, and confirms any state-changing tools exposed to an authenticated workspace"
+      ],
+      "capabilityRelationship": "equivalent-at-official-published-product-surface",
+      "limitations": [
+        "Actively does not publish the hosted MCP server source, a public repository, a complete tool inventory, or tool schemas. The MIT license applies only to the Ghast-authored adapter.",
+        "An Actively account, browser OAuth, an eligible customer workspace provisioned for MCP, workspace permissions, connected data sources, and service limits remain user-managed. The public product page currently directs prospective customers to request a demo.",
+        "Authenticated tools/list and account-data operations were not exercised because no user Actively account was available. Exact tool names, schemas, write capabilities, and per-prompt equivalence remain dependent on the live workspace.",
+        "The OAuth metadata exposes only OpenID profile scopes rather than a documented MCP-specific scope list, so account permissions and server-side authorization must be treated as the effective access boundary.",
+        "CRM records, email and call context, transcripts, prospect details, and external signals can contain personal and commercially sensitive data. Retrieval and disclosure must remain narrowly scoped.",
+        "Rankings, fit assessments, buying signals, strategies, and next-best actions are recommendations that can be incomplete or stale; responses must preserve evidence dates and distinguish facts from inference.",
+        "Any authenticated write, outreach, sharing, task, note, or CRM mutation requires exact target review and explicit confirmation. Ambiguous writes must not be blindly retried.",
+        "A generic account-intelligence icon is used because no licensed catalog artwork is included in a public official MCP source repository."
+      ],
+      "verification": [
+        "python3 scripts/import-official-hosted-plugins.py",
+        "Verify canonical Actively MCP and API product evidence hashes 3c7c7f1750eebd00dac261f987ae394b931da7ccbf4b24bdc3d97fddf1adc95c and e090dc2a687e70ef0d829f2b8d4ab10b5845e4de926b59e8d632de329daf888d",
+        "Verify canonical OAuth protected-resource and authorization-server metadata hashes 908b8114e7a62b7ce79e87afb6a6bcaa90077e19ed928b0496af017e28d1369c and 11a7486ac6ab10e707d1189cbaa61ca5c52a514cebfe1cc505971261ae96abd4",
+        "Probe https://api.actively.ai/mcp with MCP initialize and confirm HTTP 401 plus the official Actively protected-resource challenge",
+        "Confirm dynamic public-client registration accepts a localhost callback and the authorization flow reaches Actively sign-in without retaining credentials",
+        "Compare the official MCP and API product statements with every Codex default prompt and long-description workflow",
+        "unzip -tqq packages/actively.zip"
+      ]
+    },
     "aiera": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Aiera, Inc.",
