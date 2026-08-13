@@ -232,6 +232,57 @@
         "Do not create plugins/brighthire while the license remains unresolved"
       ]
     },
+    "canva": {
+      "verificationStatus": "official-source-research-required",
+      "officialDeveloper": "Canva",
+      "officialRepository": null,
+      "officialRevision": "canva-docs-416ecdcb7a1f+tools-f6c0a71e800c+policy-8a377b1185da+oauth-0844c734bb78",
+      "license": "UNVERIFIED",
+      "licenseEvidence": [
+        "No Canva-hosted MCP implementation, private Codex connector, marketplace artwork, or Canva logo is proposed for redistribution.",
+        "The Codex manifest declares MIT, but that metadata is not treated as a license grant for Canva's private connector or assets.",
+        "A future Ghast-authored compatibility adapter can carry its own license only after Canva enables a usable OAuth redirect URI for Ghast."
+      ],
+      "officialityEvidence": [
+        "Canva's official developer documentation identifies https://mcp.canva.com/mcp as its remote MCP server for design generation, editing, discovery, assets, Brand Kits and templates, export, resizing, folders, and comments.",
+        "The official overview's canonical main-content SHA-256 was stable across three captures at 416ecdcb7a1f5d82f89107448fc5971e306a0e4addfab816613838a91f641287.",
+        "The official tools page documents 33 tools and per-tool plan and rate-limit information; its canonical main-content SHA-256 was stable across three captures at f6c0a71e800cf48e27380c273aef94f984366b28f8e1899004fe2999b170859b.",
+        "The official usage policy requires compatibility-only naming, per-user authentication, data minimization, no cross-user caching, no background enumeration by default, and no use of Canva data or outputs for external model training or evaluation; its canonical main-content SHA-256 was stable across three captures at 8a377b1185dae2544cf38cc020b986ac255b6c0edaa395385a168856d0295220.",
+        "Official workflow and tool documentation confirms candidate-based design generation, copy and resize operations, transactional text editing, exports, and a prominent direct edit link after design-touching operations.",
+        "The OAuth protected-resource metadata identifies the same MCP resource, 15 user scopes, and bearer-header authentication; its canonical JSON has SHA-256 0844c734bb78ff9ae8a1cdf85e40977266a9d5cb8813d27ce3015b58e6017bf5.",
+        "The authorization-server metadata declares authorization-code and refresh-token grants, dynamic client registration, public clients, and PKCE S256; its canonical JSON has SHA-256 cbafb118c03804250da244de3fc16573db29c09d6d97fbf44a296b01357b030c.",
+        "Disposable public-client registrations with localhost and 127.0.0.1 callback URIs returned HTTP 201, but Canva's official setup documentation separately requires third-party redirect URIs to be added to an allowlist through its waitlist review."
+      ],
+      "codexCapabilities": [
+        "Search, create, and edit Canva designs through a private app connector",
+        "Generate an editable branded presentation from source material and a selected Brand Kit",
+        "Copy and resize one design into Facebook, Instagram, and LinkedIn variants, export PNGs, and preserve the original",
+        "Copy a design, translate all text through a previewed editing transaction, preserve branding and layout, and commit only after approval"
+      ],
+      "ghastCapabilities": [
+        "No implementation is claimed while Ghast lacks a Canva-approved OAuth redirect URI.",
+        "The official MCP has the required generation, candidate selection, design copy, resizing, export, content reading, Brand Kit and template, and transactional editing primitives to reproduce the three Codex workflows after access is approved."
+      ],
+      "capabilityRelationship": "official-capability-verified-provider-access-gated",
+      "limitations": [
+        "Canva requires a third-party integration's redirect URI to be added to its OAuth allowlist through a waitlist review. Ghast has not received that approval, so a packaged endpoint declaration would not yet be a reliably usable plugin.",
+        "Successful dynamic client registration does not establish authorization eligibility and does not bypass Canva's documented redirect-URI allowlist.",
+        "The command-line authorization probe reached Canva's web authorization path but received an edge HTTP 403 page; no user authorization, token exchange, authenticated tool listing, or design operation was completed.",
+        "Canva lists popular clients such as Codex as already having access, but that access cannot be assumed to cover Ghast or a newly registered Ghast OAuth client.",
+        "Canva's overview says Brand Kits and brand templates require Enterprise, while the detailed tools table lists list-brand-kits, search-brand-templates, and create-design-from-brand-template as Pro and above. A future implementation must use the more conservative entitlement assumption until authenticated behavior is verified.",
+        "Resizing requires Canva Pro or above. Export quality and premium-element licensing also depend on the user's plan and design contents.",
+        "A public integration must satisfy Canva's branding, OAuth, scope, data-security, rate-limit, monitoring, and review-readiness requirements. It must use compatibility language and must not imply that Ghast is built, endorsed, or certified by Canva.",
+        "Canva content, prompts, outputs, Brand Kits, templates, and design structures must not be used for external model training, evaluation, bulk extraction, crawling, or cross-user caching."
+      ],
+      "verification": [
+        "Verify canonical main-content SHA-256 values for the official overview, tools page, and usage policy are 416ecdcb7a1f5d82f89107448fc5971e306a0e4addfab816613838a91f641287, f6c0a71e800cf48e27380c273aef94f984366b28f8e1899004fe2999b170859b, and 8a377b1185dae2544cf38cc020b986ac255b6c0edaa395385a168856d0295220.",
+        "Verify the design-edit handoff, generate-design, perform-editing-operations, export-design, get-design-content, create-design-from-candidate, start-editing-transaction, and commit-editing-transaction canonical hashes remain 9471cccd707737aab2d52426d026e75e25c3450955be0943176b9c1575004bc2, 1fb4e2be8e8db6277761981b897f5db06cd6ea905a94cca89d092afda7aa2713, 1d2de9bb903994b3bb04de230224cb845127c3a7fe03c3264bf1d854da247d2f, 4f70316cec7c1de9d44cd9c83f45b170ef8aa094d8161ca8278a7ed68e17f7a1, 6642f767405951d055a63de5dc13b156465c79cc100741655c6fffd69933c18b, c3231eeda4ec5315b5329bdcbb8e308dabed4eb6faebf1d61ba688347bd9b050, 1a67bad7261d1b1a9480e266029931b149f3be25bf9bf82eae28d1989d26ac3c, and 6b2c4478825decc333229f4730a5de87c0c37c34ecc32473cddd17325827f715.",
+        "Verify canonical OAuth protected-resource and authorization-server metadata SHA-256 values are 0844c734bb78ff9ae8a1cdf85e40977266a9d5cb8813d27ce3015b58e6017bf5 and cbafb118c03804250da244de3fc16573db29c09d6d97fbf44a296b01357b030c.",
+        "Register disposable public clients with localhost callbacks and confirm registration succeeds, while retaining the distinction between registration and Canva allowlist approval.",
+        "Obtain Canva approval for Ghast's production and local OAuth redirect URIs before creating plugins/canva or claiming authenticated usability.",
+        "After approval, complete authorization, token exchange, authenticated tools/list, one read-only design lookup, and non-destructive copies of the branded-presentation, social-resize, and translation workflows before marking the port verified."
+      ]
+    },
     "catalyst-by-zoho": {
       "verificationStatus": "official-source-research-required",
       "officialDeveloper": "Catalyst by Zoho",
