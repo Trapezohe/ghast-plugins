@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "catalyst-by-zoho": {
+      "command": "node",
+      "args": [
+        "-e",
+        "const { spawn } = require(\"node:child_process\");\n\nconst endpoints = {\n  us: \"https://catalyst.zohomcp.com/mcp/message\",\n  eu: \"https://catalyst.zohomcp.eu/mcp/message\",\n  in: \"https://catalyst.zohomcp.in/mcp/message\",\n  au: \"https://catalyst.zohomcp.com.au/mcp/message\",\n  ca: \"https://catalyst.zohomcp.ca/mcp/message\",\n  sa: \"https://catalyst.zohomcp.sa/mcp/message\",\n  jp: \"https://catalyst.zohomcp.jp/mcp/message\",\n  ae: \"https://catalyst.zohomcp.ae/mcp/message\",\n};\nconst region = (process.env.CATALYST_MCP_REGION || \"us\")\n  .trim()\n  .toLowerCase();\nif (!Object.prototype.hasOwnProperty.call(endpoints, region)) {\n  console.error(\n    \"CATALYST_MCP_REGION must be one of: us, eu, in, au, ca, sa, jp, ae.\",\n  );\n  process.exit(1);\n}\n\nconst executable = process.platform === \"win32\" ? \"npx.cmd\" : \"npx\";\nconst child = spawn(\n  executable,\n  [\n    \"--yes\",\n    \"mcp-remote@0.1.38\",\n    endpoints[region],\n    \"--transport\",\n    \"http-only\",\n  ],\n  { stdio: \"inherit\" },\n);\nchild.on(\"error\", (error) => {\n  console.error(`Unable to start Catalyst MCP bridge: ${error.message}`);\n  process.exit(1);\n});\nfor (const signal of [\"SIGINT\", \"SIGTERM\"]) {\n  process.on(signal, () => child.kill(signal));\n}\nchild.on(\"exit\", (code, signal) => {\n  if (signal) process.kill(process.pid, signal);\n  else process.exit(code === null ? 1 : code);\n});\n"
+      ]
+    }
+  }
+}

@@ -220,6 +220,90 @@ CARTA_CRM_AUTH_SERVER_URL = (
 CARTA_CRM_AUTH_SERVER_SHA256 = (
     "4e8413fc89566a41eeee23d6a492026a3455811b33b208313c97054663cd0bdd"
 )
+CATALYST_SOURCE_REVISION = "4cfbca7041b14ffa874488cd9b0ba88970cd168f"
+CATALYST_MCP_ENDPOINTS = {
+    "us": "https://catalyst.zohomcp.com/mcp/message",
+    "eu": "https://catalyst.zohomcp.eu/mcp/message",
+    "in": "https://catalyst.zohomcp.in/mcp/message",
+    "au": "https://catalyst.zohomcp.com.au/mcp/message",
+    "ca": "https://catalyst.zohomcp.ca/mcp/message",
+    "sa": "https://catalyst.zohomcp.sa/mcp/message",
+    "jp": "https://catalyst.zohomcp.jp/mcp/message",
+    "ae": "https://catalyst.zohomcp.ae/mcp/message",
+}
+CATALYST_PROTECTED_RESOURCE_SHA256 = {
+    "us": "4cd774417e04dc6d13835bc0789ea0862e0a2133e937afef2fe8485edd7b432a",
+    "eu": "315f31ac028dca92e0587b25b1653b19178ef4e0d5c07acc396011558ce8ede7",
+    "in": "6da9493d5450c0b2d87951621f0916bbef63ba9845c00f362d53051a726655ed",
+    "au": "52359fbc9c6c342261342f17df5b8096b61f3462721efb3527844cd9951986ac",
+    "ca": "35e2dfa03209804d35ccba905cdc2b87ed2592e64f9f9026bef40051a7263644",
+    "sa": "a9930708d6ce92ccbdb20237e6664b429ac04902e2bc657a60ecf0665a792a81",
+    "jp": "93989b923240629bac08619b65aa2f903e671eeec13bb968aa7f633b8fbe667b",
+    "ae": "0fc11b1b5a95e8c8f72d666760abde9538e752ac585ed4d6e473ea8d421fc416",
+}
+CATALYST_AUTH_SERVER_SHA256 = {
+    "us": "6720913af51346b1cbb84048f717b436bb03953bd9a81f4be947dfea16f6295c",
+    "eu": "3b4356937b931e299cfa66802fb5cc1c3e5e3b11195ea7f4d04686fed03b7a3b",
+    "in": "67448bab536c40049fe75ce2b67a786a209e3d49c5dafdafaf58cb30d2005c2f",
+    "au": "3f09415de9f9d2c26c6c4ded189db3cc479ba2c5f6086d3389fcee6bcabe2ed5",
+    "ca": "d21043f09996163a3c871f4f0c62c58faebed47733417de27fafa1787690ed7d",
+    "sa": "47b40c54070e2363103a0c4920631e83c52d5e7947dbb9a5d64c031bfe1e3f32",
+    "jp": "d287d2e68be9c77ce402f425eb60b658bac2dbd857707b21810526a619ac0320",
+    "ae": "4f91909ca2cef957e0d1add9437c09bf25d85c3fe3707d8d36f17ed964bf4701",
+}
+CATALYST_MCP_REMOTE_URL = (
+    "https://registry.npmjs.org/mcp-remote/-/mcp-remote-0.1.38.tgz"
+)
+CATALYST_MCP_REMOTE_SHA256 = (
+    "d8e7034ed4ddf1f1b5efd928b74e7165ab427f7b21ab86ce79bcb82a4d9560aa"
+)
+CATALYST_MCP_LAUNCHER = """\
+const { spawn } = require("node:child_process");
+
+const endpoints = {
+  us: "https://catalyst.zohomcp.com/mcp/message",
+  eu: "https://catalyst.zohomcp.eu/mcp/message",
+  in: "https://catalyst.zohomcp.in/mcp/message",
+  au: "https://catalyst.zohomcp.com.au/mcp/message",
+  ca: "https://catalyst.zohomcp.ca/mcp/message",
+  sa: "https://catalyst.zohomcp.sa/mcp/message",
+  jp: "https://catalyst.zohomcp.jp/mcp/message",
+  ae: "https://catalyst.zohomcp.ae/mcp/message",
+};
+const region = (process.env.CATALYST_MCP_REGION || "us")
+  .trim()
+  .toLowerCase();
+if (!Object.prototype.hasOwnProperty.call(endpoints, region)) {
+  console.error(
+    "CATALYST_MCP_REGION must be one of: us, eu, in, au, ca, sa, jp, ae.",
+  );
+  process.exit(1);
+}
+
+const executable = process.platform === "win32" ? "npx.cmd" : "npx";
+const child = spawn(
+  executable,
+  [
+    "--yes",
+    "mcp-remote@0.1.38",
+    endpoints[region],
+    "--transport",
+    "http-only",
+  ],
+  { stdio: "inherit" },
+);
+child.on("error", (error) => {
+  console.error(`Unable to start Catalyst MCP bridge: ${error.message}`);
+  process.exit(1);
+});
+for (const signal of ["SIGINT", "SIGTERM"]) {
+  process.on(signal, () => child.kill(signal));
+}
+child.on("exit", (code, signal) => {
+  if (signal) process.kill(process.pid, signal);
+  else process.exit(code === null ? 1 : code);
+});
+"""
 GLEAN_SOURCE_REVISION = "9e7bd95e8debca50088f4ac0262b68689d36d7df"
 GLEAN_REMOTE_SOURCE_REVISION = "8fc3156bc78b9f25503b03a029b15211cdd3a9ae"
 GLEAN_FAST_URI_VERSION = "3.1.5"
@@ -1546,6 +1630,66 @@ PLUGINS = {
                 "A generic CRM icon is used because Apache-2.0 does not grant "
                 "Carta trademark rights and no separate catalog-artwork "
                 "license was identified."
+            ),
+        ],
+    },
+    "catalyst-by-zoho": {
+        "directory": "catalyst-codex-plugin",
+        "revision": CATALYST_SOURCE_REVISION,
+        "repository": "https://github.com/catalystbyzoho/codex-plugin",
+        "plugin_root": "catalyst-by-zoho",
+        "manifest": ".codex-plugin/plugin.json",
+        "license": "../LICENSE",
+        "generated_icon": "./assets/icon.svg",
+        "category": "development",
+        "license_name": "MIT",
+        "mcp_inline": {
+            "mcpServers": {
+                "catalyst-by-zoho": {
+                    "command": "node",
+                    "args": ["-e", CATALYST_MCP_LAUNCHER],
+                },
+            },
+        },
+        "homepage": "https://catalyst.zoho.com/",
+        "description": (
+            "Build, deploy, and operate Catalyst by Zoho applications with "
+            "official service, SDK, CLI, architecture, pricing, and Zoho MCP "
+            "skills across eight supported data centers."
+        ),
+        "readme_provenance": (
+            "All 16 official skill trees and their 37 reference files come "
+            "from Catalyst by Zoho's pinned Codex plugin repository. Ghast "
+            "replaces the OpenAI private app mapping with Zoho's official "
+            "Global MCP endpoints, adapts only client-specific setup text, "
+            "and preserves the developer's safety and project pre-flight "
+            "rules. The hosted MCP service remains operated by Zoho."
+        ),
+        "compatibility_notes": [
+            (
+                "CATALYST_MCP_REGION selects us, eu, in, au, ca, sa, jp, or "
+                "ae from a strict allowlist; US is the default."
+            ),
+            (
+                "The bridge runs pinned mcp-remote@0.1.38 with HTTP-only "
+                "transport and uses Zoho's browser OAuth, public dynamic "
+                "client registration, refresh tokens, and PKCE S256."
+            ),
+            (
+                "Ghast does not support the source SessionStart hook. The "
+                "ported readiness guidance therefore reads .catalystrc and "
+                "catalyst.json explicitly before project mutations, while "
+                "CLI and runtime prerequisite checks run only when relevant."
+            ),
+            (
+                "The authenticated Global MCP surface is dynamic: four "
+                "ZohoMCP meta-tools enumerate and execute the available "
+                "CatalystbyZoho operations. Account, data-center, project, "
+                "service, and plan entitlements determine the live catalog."
+            ),
+            (
+                "A generic cloud-development icon is used so the package "
+                "does not imply trademark rights in Zoho's official logo."
             ),
         ],
     },
@@ -3284,6 +3428,9 @@ def main() -> int:
     verify_carta_crm_evidence(
         source_root / PLUGINS["carta-crm"]["directory"]
     )
+    verify_catalyst_evidence(
+        source_root / PLUGINS["catalyst-by-zoho"]["directory"]
+    )
     verify_circleci_evidence(source_root / PLUGINS["circleci"]["directory"])
     verify_coderabbit_evidence(
         source_root / PLUGINS["coderabbit"]["directory"]
@@ -4369,6 +4516,260 @@ Ghast does not run Carta's Claude hooks and does not inject
         (service_dir / "SKILL.md").write_text(
             render_carta_current_service_skill()
         )
+    elif name == "catalyst-by-zoho":
+        root_skill = staging / "skills/catalyst-by-zoho/SKILL.md"
+        basics_skill = staging / "skills/catalyst-basics/SKILL.md"
+        mcp_skill = staging / "skills/catalyst-zoho-mcp/SKILL.md"
+        preflight = (
+            staging
+            / "skills/catalyst-basics/references/preflight.md"
+        )
+        cli_reference = (
+            staging
+            / "skills/catalyst-basics/references/cli.md"
+        )
+        zoho_mcp = (
+            staging
+            / "skills/catalyst-zoho-mcp/references/zoho-mcp.md"
+        )
+        dc_switching = (
+            staging
+            / "skills/catalyst-zoho-mcp/references/dc-switching.md"
+        )
+        codex_setup = (
+            staging
+            / "skills/catalyst-basics/references/setup/codex.md"
+        )
+        setup_common = (
+            staging
+            / "skills/catalyst-basics/references/setup/setup-common.md"
+        )
+
+        root_text = root_skill.read_text()
+        root_text = root_text.replace(
+            (
+                "**Request approval for Catalyst CLI execution that escapes "
+                "the workspace.** For Catalyst CLI commands that need "
+                "network access or write home-directory/global CLI state — "
+                "including `catalyst login`, `catalyst init`, `catalyst "
+                "deploy`, dependency install/update flows, and `catalyst "
+                "config:set` — request escalated execution."
+            ),
+            (
+                "**Follow the host approval policy for Catalyst CLI "
+                "execution that escapes the workspace.** For Catalyst CLI "
+                "commands that need network access or write home-directory/"
+                "global CLI state — including `catalyst login`, `catalyst "
+                "init`, `catalyst deploy`, dependency install/update flows, "
+                "and `catalyst config:set` — obtain any approval required by "
+                "the host before running them."
+            ),
+        )
+        root_text = root_text.replace(
+            (
+                "**Codex approval:** Before running Catalyst CLI commands "
+                "that need network access or home-directory/global CLI "
+                "writes, request escalated execution."
+            ),
+            (
+                "**Host approval:** Before running Catalyst CLI commands "
+                "that need network access or home-directory/global CLI "
+                "writes, obtain any approval required by the host."
+            ),
+        )
+        root_text = root_text.replace(
+            (
+                "**Escalate Catalyst CLI commands that use network or global "
+                "config** — request approval"
+            ),
+            (
+                "**Apply the host approval policy to Catalyst CLI commands "
+                "that use network or global config** — obtain approval when "
+                "required"
+            ),
+        )
+        root_skill.write_text(
+            root_text.rstrip()
+            + "\n\n"
+            + render_catalyst_ghast_boundary().strip()
+            + "\n"
+        )
+
+        basics_text = basics_skill.read_text()
+        basics_text = basics_text.replace(
+            (
+                "**Request escalated execution for Catalyst CLI commands "
+                "that need network access or home-directory/global CLI "
+                "writes.**"
+            ),
+            (
+                "**Obtain any host-required approval for Catalyst CLI "
+                "commands that need network access or home-directory/global "
+                "CLI writes.**"
+            ),
+        )
+        basics_text = basics_text.replace(
+            (
+                "Guide them to the Codex connector/plugin setup first, or to "
+                "their host's MCP settings if they are using another "
+                "MCP-capable client"
+            ),
+            (
+                "Guide them to the bundled Ghast MCP bridge first, or to "
+                "their host's MCP settings if they are using another "
+                "MCP-capable client"
+            ),
+        )
+        basics_text = basics_text.replace(
+            (
+                "environment awareness, and how it pairs with the "
+                "SessionStart hook"
+            ),
+            (
+                "environment awareness, including Ghast's explicit "
+                "no-hook readiness flow"
+            ),
+        )
+        basics_text = basics_text.replace(
+            (
+                "Installing the Codex plugin and connecting Zoho MCP in "
+                "Codex"
+            ),
+            (
+                "Installing the Ghast plugin and connecting Zoho MCP in "
+                "Ghast"
+            ),
+        )
+        basics_skill.write_text(basics_text)
+
+        mcp_text = mcp_skill.read_text()
+        mcp_text = mcp_text.replace(
+            (
+                'Requires Codex with the Catalyst connector/plugin or '
+                'another MCP-capable AI host such as Claude Desktop, VS Code '
+                'with GitHub Copilot, or Cursor.'
+            ),
+            (
+                'Requires the Ghast Catalyst plugin or another MCP-capable '
+                'AI host such as Claude Desktop, VS Code with GitHub '
+                'Copilot, or Cursor.'
+            ),
+        )
+        mcp_text = mcp_text.replace(
+            (
+                "Add your DC-specific URL to Codex or your AI client config, "
+                "authorize once via browser, done."
+            ),
+            (
+                "Set `CATALYST_MCP_REGION` in Ghast or add your DC-specific "
+                "URL to another AI client, authorize once via browser, done."
+            ),
+        )
+        mcp_text = mcp_text.replace(
+            "Switching data centers on Codex or another MCP-capable client",
+            "Switching data centers on Ghast or another MCP-capable client",
+        )
+        mcp_skill.write_text(mcp_text)
+
+        preflight_text = replace_text_section(
+            preflight.read_text(),
+            "## How this pairs with the SessionStart context hook",
+            "## Why there is no separate AI-managed cache",
+            render_catalyst_ghast_preflight_section(),
+        )
+        preflight_text = preflight_text.replace(
+            (
+                "> **Codex execution approval:** `catalyst init` links the "
+                "workspace to a remote Catalyst project and"
+            ),
+            (
+                "> **Host execution approval:** `catalyst init` links the "
+                "workspace to a remote Catalyst project and"
+            ),
+        ).replace(
+            "Request escalated execution before running it",
+            "Obtain any approval required by the host before running it",
+        )
+        preflight.write_text(preflight_text)
+        cli_reference.write_text(
+            cli_reference.read_text().replace(
+                (
+                    "> **Codex execution approval:** Request escalated "
+                    "execution before running Catalyst CLI commands that "
+                    "require network access or write outside the workspace,"
+                ),
+                (
+                    "> **Host execution approval:** Obtain any approval "
+                    "required by the host before running Catalyst CLI "
+                    "commands that require network access or write outside "
+                    "the workspace,"
+                ),
+            )
+        )
+
+        zoho_mcp.write_text(
+            replace_text_section(
+                zoho_mcp.read_text(),
+                (
+                    "**Step 2 — Add your DC-specific URL to Codex or your "
+                    "AI client:**"
+                ),
+                "**Step 3 — Authorize:**",
+                render_catalyst_ghast_mcp_setup(),
+            )
+        )
+        dc_switching.write_text(
+            replace_text_section(
+                dc_switching.read_text(),
+                "## Codex",
+                "## Claude Code",
+                render_catalyst_ghast_dc_switching(),
+            )
+            .replace(
+                (
+                    "In Codex, reconnect the Catalyst connector and restart "
+                    "the task."
+                ),
+                (
+                    "In Ghast, set `CATALYST_MCP_REGION` and restart the "
+                    "plugin session."
+                ),
+            )
+            .replace(
+                (
+                    "In Codex, re-check the connector URL and reconnect the "
+                    "task."
+                ),
+                (
+                    "In Ghast, verify `CATALYST_MCP_REGION` and restart the "
+                    "plugin session."
+                ),
+            )
+        )
+        codex_setup.write_text(render_catalyst_ghast_setup_reference())
+        setup_common.write_text(
+            setup_common.read_text()
+            .replace(
+                "Shared across Codex and MCP-capable IDEs",
+                "Shared across Ghast and MCP-capable IDEs",
+            )
+            .replace(
+                (
+                    "Then add the URL to your client's MCP config or "
+                    "connector setup"
+                ),
+                (
+                    "Then use the bundled Ghast bridge or add the URL to "
+                    "another client's MCP config"
+                ),
+            )
+            .replace(
+                "`codex.md`, `claude-code.md`, `cursor.md`, or "
+                "`github-copilot.md`",
+                "`codex.md` (Ghast adaptation), `claude-code.md`, "
+                "`cursor.md`, or `github-copilot.md`",
+            )
+        )
     elif name == "circleci":
         append_text(
             staging / "skills/circleci/SKILL.md",
@@ -5194,6 +5595,159 @@ def replace_text_section(
             f"{start_marker!r}, {end_marker!r}"
         )
     return text[:start] + replacement.rstrip() + "\n\n" + text[end:]
+
+
+def render_catalyst_ghast_boundary() -> str:
+    return """## Ghast Compatibility And Safety
+
+This section is a Ghast-authored compatibility layer; the service guidance
+above remains Catalyst by Zoho's official source.
+
+- Ghast does not execute the source `SessionStart` hook. Before any
+  project-mutating task, explicitly read `.catalystrc` and `catalyst.json`,
+  reconcile the active org and project through MCP, and surface a Production
+  warning before continuing. Check the Catalyst CLI, Node, language runtimes,
+  or Docker only when the requested workflow needs them.
+- The bundled MCP bridge reads `CATALYST_MCP_REGION` from the host
+  environment. Supported values are `us`, `eu`, `in`, `au`, `ca`, `sa`, `jp`,
+  and `ae`; `us` is the default. Changing regions requires a plugin restart
+  and a fresh browser authorization for that data center.
+- Treat `ZohoMCP_listTools`, schema reads, project discovery, and resource
+  listing as read-only. Creates, updates, deletes, deployments, executions,
+  schedules, production operations, paid services, and externally visible
+  changes require an explicit user request and exact-target confirmation.
+- Never request or expose OAuth tokens, Catalyst credentials, connection
+  secrets, private data, or generated client registrations. Let the MCP bridge
+  and browser OAuth flow manage credentials outside the plugin package.
+- Do not blindly retry an ambiguous create, deploy, execute, schedule, or
+  delete failure. Read back the target state first because the first request
+  may already have completed.
+"""
+
+
+def render_catalyst_ghast_preflight_section() -> str:
+    return """## Ghast readiness without the SessionStart hook
+
+Ghast does not execute the source `hooks/catalyst-context.js` SessionStart
+hook. The readiness gate in this file remains authoritative and must perform
+the same context work explicitly:
+
+1. Read `.catalystrc` and `catalyst.json` before the first project-mutating
+   operation.
+2. Surface the active org, project, environment, and any Production warning.
+3. Reconcile the project once through `CatalystbyZoho_Get_Project_By_Id`.
+4. Check the Catalyst CLI and only the runtimes needed by the requested
+   component before running local serve, build, init, or deploy commands.
+
+The absence of the hook does not weaken the gate. It only removes automatic
+session-start injection and broad prerequisite scanning. Do not create a
+separate cache; `.catalystrc` remains the CLI-owned source of local context.
+"""
+
+
+def render_catalyst_ghast_mcp_setup() -> str:
+    return """**Step 2 — Select the data center in Ghast or another client:**
+
+For this Ghast package, set `CATALYST_MCP_REGION` in the host environment to
+one of `us`, `eu`, `in`, `au`, `ca`, `sa`, `jp`, or `ae`, then restart the
+plugin session. The default is `us`. The bundled bridge maps that value to the
+official `/mcp/message` endpoint and manages browser OAuth.
+
+For another MCP-capable client, replace `<dc-base-url>` with the matching base
+URL from the table above and append `/mcp/message`.
+
+**For Claude Desktop** — edit `claude_desktop_config.json`
+(macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`;
+Windows: `%APPDATA%\\Claude\\claude_desktop_config.json`):
+
+```json
+{
+  "mcpServers": {
+    "catalyst-by-zoho": {
+      "type": "streamable-http",
+      "url": "<dc-base-url>/mcp/message"
+    }
+  }
+}
+```
+
+**For Cursor** — create or edit `.cursor/mcp.json` in the project root:
+
+```json
+{
+  "mcpServers": {
+    "catalyst-by-zoho": {
+      "type": "streamable-http",
+      "url": "<dc-base-url>/mcp/message"
+    }
+  }
+}
+```
+
+**For GitHub Copilot (VS Code)** — create `.vscode/mcp.json`:
+
+```json
+{
+  "servers": {
+    "catalyst-by-zoho": {
+      "type": "http",
+      "url": "<dc-base-url>/mcp/message"
+    }
+  }
+}
+```
+
+Restart or reconnect the client after changing the region or URL.
+"""
+
+
+def render_catalyst_ghast_dc_switching() -> str:
+    return """## Ghast
+
+Set `CATALYST_MCP_REGION` in the Ghast host environment to the target code:
+`us`, `eu`, `in`, `au`, `ca`, `sa`, `jp`, or `ae`. Restart the plugin session
+so the pinned bridge starts against the new official endpoint.
+
+The selected data center has an independent OAuth issuer. Expect a new browser
+authorization flow after restart. Credentials and sessions for the old data
+center are not modified.
+
+---"""
+
+
+def render_catalyst_ghast_setup_reference() -> str:
+    return """# Using Catalyst Skills with Ghast
+
+This file is adapted by Ghast from Catalyst by Zoho's official Codex setup
+reference. Shared installation, data-center, and pre-flight guidance remains
+in `setup-common.md`.
+
+## Skill activation
+
+Install or enable the `catalyst-by-zoho` Ghast plugin, open the Catalyst
+project, and ask which Catalyst skills are available. The official index and
+focused service skills should be listed.
+
+## MCP setup
+
+The plugin already bundles the official Global MCP bridge. Set
+`CATALYST_MCP_REGION` in the host environment to `us`, `eu`, `in`, `au`, `ca`,
+`sa`, `jp`, or `ae`; `us` is the default. Restart the plugin session and
+complete the Zoho browser authorization.
+
+Confirm the connection by checking for `ZohoMCP_getSchema`,
+`ZohoMCP_executeTool`, `ZohoMCP_listTools`, and `ZohoMCP_getFeatures`. The
+`CatalystbyZoho_*` operations are values passed to `ZohoMCP_executeTool`, not
+separate visible tools.
+
+## Common errors
+
+| Error | Cause | Fix |
+|-------|-------|-----|
+| Catalyst skills not appearing | Plugin not installed or session predates installation | Install or update the plugin, then start a fresh session |
+| MCP tools not appearing | Browser authorization incomplete or bridge not restarted | Complete OAuth, verify `CATALYST_MCP_REGION`, and restart the plugin session |
+| Wrong organization or project | Region or local project context mismatch | Re-run the official pre-flight and reconcile `.catalystrc` with MCP |
+"""
 
 
 def render_carta_get_angles_delivery_section() -> str:
@@ -8440,6 +8994,246 @@ def verify_carta_crm_evidence(repository: Path) -> None:
         raise ValueError(
             "Carta CRM endpoint unexpectedly accepted no credentials"
         )
+
+
+def verify_catalyst_evidence(repository: Path) -> None:
+    if git_revision(repository) != CATALYST_SOURCE_REVISION:
+        raise ValueError("Catalyst Codex plugin checkout changed")
+    if normalized_git_remote(repository) != normalized_repository_url(
+        "https://github.com/catalystbyzoho/codex-plugin"
+    ):
+        raise ValueError("Catalyst Codex plugin repository origin changed")
+
+    expected_hashes = {
+        "LICENSE": (
+            "02e3768da70bd2f05868b18271d88110d18bf8ad8d76dfc08af048b42102fef8"
+        ),
+        "README.md": (
+            "5ef3e882a82bcb669616281445eac58d706b7b97a749deb0d4dd9299bd64df4c"
+        ),
+        ".agents/plugins/marketplace.json": (
+            "0ccc62c32acb41c519dd7727bcce948d756e3e95eb7e5df1a6f68a616c586412"
+        ),
+        "catalyst-by-zoho/.app.json": (
+            "70cc0f3b33cffc24def7f9096d5d776d4d985ebe1a123c5bbdc096a19e9ef2fe"
+        ),
+        "catalyst-by-zoho/.codex-plugin/plugin.json": (
+            "d0f014dd932e99a1867400d541f00176cbcb65b0e786eca7d538b954992c4f05"
+        ),
+        "catalyst-by-zoho/hooks/hooks.json": (
+            "bb843abbc53f8f521b898b7515a391b5e9e9fe552fd1fb2e6906175c23c9d24a"
+        ),
+        "catalyst-by-zoho/hooks/catalyst-context.js": (
+            "b54f638b1f8f7cbd36b1404ea49efe8e9f5594cf256224cbc55a62674a20668b"
+        ),
+        "catalyst-by-zoho/assets/catalyst_logo.svg": (
+            "9ed359cc22dcbe2aa51ccbbeed7bdfae690e5df23b29d177e95a58125b7e24f7"
+        ),
+    }
+    for relative, expected_hash in expected_hashes.items():
+        if (
+            sha256_bytes(
+                git_blob_bytes(repository, CATALYST_SOURCE_REVISION, relative)
+            )
+            != expected_hash
+        ):
+            raise ValueError(
+                f"Catalyst official source changed at {relative}"
+            )
+
+    manifest = json.loads(
+        git_blob_bytes(
+            repository,
+            CATALYST_SOURCE_REVISION,
+            "catalyst-by-zoho/.codex-plugin/plugin.json",
+        )
+    )
+    if (
+        manifest.get("name") != "catalyst-by-zoho"
+        or manifest.get("version") != "0.0.2"
+        or manifest.get("license") != "MIT"
+        or manifest.get("skills") != "./skills/"
+        or manifest.get("apps") != "./.app.json"
+        or manifest.get("hooks") != "./hooks/hooks.json"
+        or (manifest.get("author") or {}).get("name")
+        != "Catalyst by Zoho"
+        or (manifest.get("author") or {}).get("email")
+        != "support@zohocatalyst.com"
+        or (manifest.get("interface") or {}).get("developerName")
+        != "Catalyst by Zoho"
+    ):
+        raise ValueError("Catalyst official Codex manifest changed")
+
+    app = json.loads(
+        git_blob_bytes(
+            repository,
+            CATALYST_SOURCE_REVISION,
+            "catalyst-by-zoho/.app.json",
+        )
+    )
+    if app != {
+        "apps": {
+            "catalyst-by-zoho": {
+                "id": "asdk_app_6a16bcb9a37081919b0db1d81010fb2f"
+            }
+        }
+    }:
+        raise ValueError("Catalyst Codex private app binding changed")
+
+    skill_files = subprocess.run(
+        [
+            "git",
+            "ls-tree",
+            "-r",
+            "--name-only",
+            CATALYST_SOURCE_REVISION,
+            "catalyst-by-zoho/skills",
+        ],
+        cwd=repository,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.splitlines()
+    skill_names = sorted(
+        path.split("/")[-2]
+        for path in skill_files
+        if path.endswith("/SKILL.md")
+    )
+    if (
+        len(skill_names) != 16
+        or sha256_bytes("\n".join(skill_names).encode())
+        != "f64568d78a077b0a781c0d1304afd77c0f74f472a23fffdb08972e6e6b5ffa83"
+    ):
+        raise ValueError("Catalyst official skill names changed")
+    inventory_rows = [
+        (
+            path
+            + "\0"
+            + sha256_bytes(
+                git_blob_bytes(repository, CATALYST_SOURCE_REVISION, path)
+            )
+        )
+        for path in sorted(skill_files)
+    ]
+    if (
+        len(inventory_rows) != 53
+        or sha256_bytes("\n".join(inventory_rows).encode())
+        != "ad335513d5e4d74919c3fc5ff1c2e2c674a680195270a49f0933f23f90c19b3f"
+    ):
+        raise ValueError("Catalyst official skill inventory changed")
+
+    required_scopes = {
+        "ZohoCatalyst.fullaccess.ALL",
+        "ZohoCatalyst.functions.execute.CUSTOM",
+        "QuickML.projects.READ",
+        "ZohoMCP.tool.execute",
+    }
+    expected_scope_counts = {
+        "us": 27,
+        "eu": 25,
+        "in": 25,
+        "au": 25,
+        "ca": 23,
+        "sa": 25,
+        "jp": 25,
+        "ae": 25,
+    }
+    for region, endpoint in CATALYST_MCP_ENDPOINTS.items():
+        origin = endpoint.removesuffix("/mcp/message")
+        protected_url = origin + "/.well-known/oauth-protected-resource"
+        protected = json.loads(fetch_bytes(protected_url))
+        if (
+            canonical_json_sha256(protected)
+            != CATALYST_PROTECTED_RESOURCE_SHA256[region]
+            or protected.get("resource") != endpoint
+            or protected.get("authorization_servers") != [origin]
+            or len(protected.get("scopes_supported") or [])
+            != expected_scope_counts[region]
+            or not required_scopes.issubset(
+                protected.get("scopes_supported") or []
+            )
+        ):
+            raise ValueError(
+                f"Catalyst {region.upper()} protected-resource metadata changed"
+            )
+
+        auth_url = origin + "/.well-known/oauth-authorization-server"
+        auth = json.loads(fetch_bytes(auth_url))
+        if (
+            canonical_json_sha256(auth)
+            != CATALYST_AUTH_SERVER_SHA256[region]
+            or auth.get("issuer") != origin
+            or auth.get("grant_types_supported")
+            != ["authorization_code", "refresh_token"]
+            or auth.get("response_types_supported") != ["code"]
+            or auth.get("token_endpoint_auth_methods_supported")
+            != ["none", "client_secret_post"]
+            or auth.get("code_challenge_methods_supported") != ["S256"]
+            or auth.get("scopes_supported")
+            != protected.get("scopes_supported")
+            or not str(auth.get("authorization_endpoint", "")).startswith(
+                "https://mcp."
+            )
+            or not str(auth.get("token_endpoint", "")).startswith(
+                "https://mcp."
+            )
+            or not str(auth.get("registration_endpoint", "")).startswith(
+                "https://mcp."
+            )
+            or not str(auth.get("revocation_endpoint", "")).startswith(
+                "https://mcp."
+            )
+        ):
+            raise ValueError(
+                f"Catalyst {region.upper()} authorization metadata changed"
+            )
+
+        initialize = json.dumps(
+            {
+                "jsonrpc": "2.0",
+                "id": 1,
+                "method": "initialize",
+                "params": {
+                    "protocolVersion": "2025-06-18",
+                    "capabilities": {},
+                    "clientInfo": {
+                        "name": "ghast-catalyst-audit",
+                        "version": "1.0.0",
+                    },
+                },
+            }
+        ).encode()
+        request = urllib.request.Request(
+            endpoint,
+            data=initialize,
+            headers={
+                "User-Agent": "Mozilla/5.0",
+                "Content-Type": "application/json",
+                "Accept": "application/json, text/event-stream",
+            },
+            method="POST",
+        )
+        try:
+            urllib.request.urlopen(request, timeout=30)
+        except urllib.error.HTTPError as exc:
+            challenge = exc.headers.get("WWW-Authenticate", "")
+            body = exc.read().decode("utf-8", errors="replace").strip()
+            if (
+                exc.code != 401
+                or body != "Authentication required"
+                or protected_url not in challenge
+            ):
+                raise ValueError(
+                    f"Catalyst {region.upper()} endpoint behavior changed"
+                ) from exc
+        else:
+            raise ValueError(
+                f"Catalyst {region.upper()} endpoint accepted no credentials"
+            )
+
+    bridge = fetch_bytes(CATALYST_MCP_REMOTE_URL)
+    if sha256_bytes(bridge) != CATALYST_MCP_REMOTE_SHA256:
+        raise ValueError("Pinned Catalyst mcp-remote package changed")
 
 
 def verify_circleci_evidence(repository: Path) -> None:

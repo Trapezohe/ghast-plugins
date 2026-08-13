@@ -469,6 +469,37 @@
       "license": "Apache-2.0"
     },
     {
+      "id": "catalyst-by-zoho",
+      "name": "catalyst-by-zoho",
+      "description": "Build, deploy, and operate Catalyst by Zoho applications with official service, SDK, CLI, architecture, pricing, and Zoho MCP skills across eight supported data centers.",
+      "manifest": {
+        "name": "catalyst-by-zoho",
+        "description": "Build, deploy, and operate Catalyst by Zoho applications with official service, SDK, CLI, architecture, pricing, and Zoho MCP skills across eight supported data centers.",
+        "author": {
+          "name": "Catalyst by Zoho",
+          "email": "support@zohocatalyst.com",
+          "url": "https://catalyst.zoho.com/"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "0.0.2-ghast.1",
+        "homepage": "https://catalyst.zoho.com/",
+        "repository": "https://github.com/catalystbyzoho/codex-plugin",
+        "upstreamRevision": "4cfbca7041b14ffa874488cd9b0ba88970cd168f",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/catalyst-by-zoho.zip",
+        "sha256": "0776718c768a7f1c74909cdad00d427a9ae903614c704073f7f077984a24bd7d"
+      },
+      "icon": "./plugins/catalyst-by-zoho/assets/icon.svg",
+      "category": "development",
+      "homepage": "https://catalyst.zoho.com/",
+      "repository": "https://github.com/catalystbyzoho/codex-plugin",
+      "license": "MIT"
+    },
+    {
       "id": "circleci",
       "name": "circleci",
       "description": "Diagnose CircleCI runs, inspect logs, tests, and artifacts, rerun or cancel workflows, validate configuration, and manage CircleCI resources through CircleCI's official hosted MCP and full CLI MCP.",

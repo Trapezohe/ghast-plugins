@@ -776,30 +776,57 @@
       ]
     },
     "catalyst-by-zoho": {
-      "verificationStatus": "official-source-research-required",
+      "verificationStatus": "official-source-verified",
       "officialDeveloper": "Catalyst by Zoho",
-      "officialRepository": "https://github.com/catalystbyzoho",
-      "officialRevision": null,
-      "license": "UNVERIFIED",
+      "officialRepository": "https://github.com/catalystbyzoho/codex-plugin",
+      "officialRevision": "4cfbca7041b14ffa874488cd9b0ba88970cd168f",
+      "license": "MIT",
       "licenseEvidence": [
-        "The Codex manifest declares MIT but points to a GitHub organization page rather than a repository containing the plugin and license."
+        "Catalyst by Zoho's official codex-plugin repository contains an MIT License with SHA-256 02e3768da70bd2f05868b18271d88110d18bf8ad8d76dfc08af048b42102fef8 and copyright attribution to Catalyst by Zoho.",
+        "The MIT grant covers the published plugin manifest, marketplace metadata, hook source, skills, references, and artwork at the pinned revision. It does not license Zoho's closed hosted MCP implementation, accounts, customer data, service marks, or product names beyond customary attribution.",
+        "plugins/catalyst-by-zoho/LICENSE is copied from the pinned official repository. Ghast uses a generic cloud-development icon rather than redistributing Zoho's logo as catalog branding."
       ],
       "officialityEvidence": [
-        "The declared URL belongs to the Catalyst by Zoho organization, but it does not identify a specific source repository or revision."
+        "The source repository is owned by the catalystbyzoho GitHub organization and describes itself as the Catalyst by Zoho Codex plugin. Its README provides direct Codex marketplace installation instructions and identifies the official Catalyst connector, skills, SessionStart hook, and eight supported data centers.",
+        "The pinned revision 4cfbca7041b14ffa874488cd9b0ba88970cd168f was authored from a zohocorp.com identity. The official manifest names Catalyst by Zoho, support@zohocatalyst.com, https://catalyst.zoho.com/, MIT, the private Codex app binding, 16 skill trees, and the SessionStart hook.",
+        "The official LICENSE, README, marketplace manifest, plugin manifest, private app binding, hook declaration, hook implementation, and logo SHA-256 values are 02e3768da70bd2f05868b18271d88110d18bf8ad8d76dfc08af048b42102fef8, 5ef3e882a82bcb669616281445eac58d706b7b97a749deb0d4dd9299bd64df4c, 0ccc62c32acb41c519dd7727bcce948d756e3e95eb7e5df1a6f68a616c586412, d0f014dd932e99a1867400d541f00176cbcb65b0e786eca7d538b954992c4f05, 70cc0f3b33cffc24def7f9096d5d776d4d985ebe1a123c5bbdc096a19e9ef2fe, bb843abbc53f8f521b898b7515a391b5e9e9fe552fd1fb2e6906175c23c9d24a, b54f638b1f8f7cbd36b1404ea49efe8e9f5594cf256224cbc55a62674a20668b, and 9ed359cc22dcbe2aa51ccbbeed7bdfae690e5df23b29d177e95a58125b7e24f7.",
+        "The pinned official source contains exactly 16 skill entry points and 53 skill/reference files. The ordered skill-name SHA-256 is f64568d78a077b0a781c0d1304afd77c0f74f472a23fffdb08972e6e6b5ffa83 and the complete source skill inventory SHA-256 is ad335513d5e4d74919c3fc5ff1c2e2c674a680195270a49f0933f23f90c19b3f.",
+        "Catalyst by Zoho's separate official agent-skills repository corroborates the same developer-owned service, SDK, CLI, architecture, pricing, migration, and Zoho MCP skill family under Apache-2.0. Ghast uses the more specific MIT Codex repository as its source."
       ],
       "codexCapabilities": [
-        "MCP-backed Catalyst project setup, management, and operations"
+        "The OpenAI snapshot at revision 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 packages a private Catalyst app connector plus one consolidated Catalyst development skill with 28 reference files for services, SDKs, CLI, architecture, pricing, deployment, troubleshooting, migration guidance, and MCP tool routing.",
+        "The current developer-owned Codex repository packages 16 focused official skills covering Catalyst basics, Functions, AppSail, Slate, Data Store and ZCQL, Stratus, NoSQL, Cache, Authentication and Connections, Signals, SmartBrowz, Zia and QuickML, SDKs, pricing, and Zoho MCP infrastructure management.",
+        "The current official Codex source also supplies a SessionStart hook that reads .catalystrc, injects project and environment context, warns about Production and live resources, and checks the Catalyst CLI and relevant local runtimes."
       ],
       "ghastCapabilities": [
-        "No implementation is claimed until a specific official repository, revision, license, and runnable transport are found."
+        "All 16 focused official skill trees and 37 reference files are imported from the pinned Catalyst by Zoho Codex repository with only Ghast client, approval-policy, MCP setup, data-center switching, and no-hook readiness adaptations.",
+        "The OpenAI private app binding is replaced by Catalyst by Zoho's official Global MCP endpoint selected through CATALYST_MCP_REGION for US, EU, IN, AU, CA, SA, JP, or UAE.",
+        "Pinned mcp-remote@0.1.38 performs Streamable HTTP transport, OAuth metadata discovery, public dynamic client registration, browser authorization, refresh-token handling, and PKCE S256 without placing OAuth credentials in the plugin package.",
+        "The official ZohoMCP_getSchema, ZohoMCP_executeTool, ZohoMCP_listTools, and ZohoMCP_getFeatures meta-tools dynamically enumerate and execute the live CatalystbyZoho operation catalog for the authorized account and region.",
+        "Ghast's explicit readiness guidance preserves the official org, project, environment, Production, local-first, non-interactive CLI, and exact-target safety boundaries even though Ghast does not execute the source SessionStart hook."
       ],
-      "capabilityRelationship": "source-not-located",
+      "capabilityRelationship": "official-source-full-port-with-public-mcp-adapter",
       "limitations": [
-        "An organization landing page cannot be pinned, compared, licensed, or reproduced as a plugin source."
+        "Ghast does not execute the official SessionStart hook. Workspace context, Production warnings, and prerequisite checks occur explicitly when a Catalyst project workflow needs them rather than automatically at every session start.",
+        "The live CatalystbyZoho operation catalog was not enumerated through an authenticated tenant during this audit. Tool availability, project visibility, service support, plan limits, and permissions remain account- and data-center-dependent.",
+        "OAuth scope sets differ by data center: the audited US metadata declares 27 scopes, EU/IN/AU/SA/JP/UAE declare 25, and CA declares 23. Skills must continue to honor the official regional availability table and the live server schema.",
+        "On August 13, 2026, one disposable public OAuth client was registered to verify dynamic registration and authorization-page reachability. Zoho returned no registration management URI or registration access token, so the client could not be deleted. The importer never repeats registration.",
+        "The official source's Catalyst logo is not used as Ghast catalog branding because the MIT software license does not grant independent trademark rights.",
+        "Catalyst CLI installation, CLI login, browser OAuth, Catalyst accounts, projects, paid services, external runtimes, and production permissions remain user-managed."
       ],
       "verification": [
-        "git ls-remote https://github.com/catalystbyzoho fails because the URL is not a repository",
-        "Do not create plugins/catalyst-by-zoho from the Codex marketplace copy"
+        "PYTHONDONTWRITEBYTECODE=1 python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Verify catalystbyzoho/codex-plugin revision 4cfbca7041b14ffa874488cd9b0ba88970cd168f and the pinned LICENSE, README, marketplace, manifest, app, hook, and artwork hashes.",
+        "Verify exactly 16 source skills, 53 source skill/reference files, skill-name SHA-256 f64568d78a077b0a781c0d1304afd77c0f74f472a23fffdb08972e6e6b5ffa83, and source inventory SHA-256 ad335513d5e4d74919c3fc5ff1c2e2c674a680195270a49f0933f23f90c19b3f.",
+        "Verify protected-resource canonical JSON SHA-256 values 4cd774417e04dc6d13835bc0789ea0862e0a2133e937afef2fe8485edd7b432a, 315f31ac028dca92e0587b25b1653b19178ef4e0d5c07acc396011558ce8ede7, 6da9493d5450c0b2d87951621f0916bbef63ba9845c00f362d53051a726655ed, 52359fbc9c6c342261342f17df5b8096b61f3462721efb3527844cd9951986ac, 35e2dfa03209804d35ccba905cdc2b87ed2592e64f9f9026bef40051a7263644, a9930708d6ce92ccbdb20237e6664b429ac04902e2bc657a60ecf0665a792a81, 93989b923240629bac08619b65aa2f903e671eeec13bb968aa7f633b8fbe667b, and 0fc11b1b5a95e8c8f72d666760abde9538e752ac585ed4d6e473ea8d421fc416 for US, EU, IN, AU, CA, SA, JP, and UAE.",
+        "Verify authorization-server canonical JSON SHA-256 values 6720913af51346b1cbb84048f717b436bb03953bd9a81f4be947dfea16f6295c, 3b4356937b931e299cfa66802fb5cc1c3e5e3b11195ea7f4d04686fed03b7a3b, 67448bab536c40049fe75ce2b67a786a209e3d49c5dafdafaf58cb30d2005c2f, 3f09415de9f9d2c26c6c4ded189db3cc479ba2c5f6086d3389fcee6bcabe2ed5, d21043f09996163a3c871f4f0c62c58faebed47733417de27fafa1787690ed7d, 47b40c54070e2363103a0c4920631e83c52d5e7947dbb9a5d64c031bfe1e3f32, d287d2e68be9c77ce402f425eb60b658bac2dbd857707b21810526a619ac0320, and 4f91909ca2cef957e0d1add9437c09bf25d85c3fe3707d8d36f17ed964bf4701.",
+        "Probe MCP initialize without credentials in all eight regions and confirm HTTP 401, body Authentication required, and each region's exact protected-resource challenge.",
+        "Verify one manual public-client DCR response returned HTTP 200, client_id, token_endpoint_auth_method none, no client secret, and no registration management credentials; verify the PKCE authorization URL reached accounts.zoho.com without completing login.",
+        "Verify pinned mcp-remote@0.1.38 tarball SHA-256 d8e7034ed4ddf1f1b5efd928b74e7165ab427f7b21ab86ce79bcb82a4d9560aa.",
+        "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Catalyst manifest, private app, logo, consolidated skill, and OpenAI agent metadata hashes.",
+        "Authorize a Catalyst tenant in each required data center before testing authenticated tool discovery, project reconciliation, infrastructure reads, CLI-linked workflows, writes, deployments, or Production operations.",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/catalyst-by-zoho.zip"
       ]
     },
     "circleci": {

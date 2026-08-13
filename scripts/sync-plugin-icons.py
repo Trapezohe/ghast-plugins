@@ -104,6 +104,12 @@ CUSTOM_ICONS = {
         '<circle cx="18" cy="33" r="4"/>'
         '<path d="M14 45c1-5 3-8 6-8s5 3 6 8M32 31h14M32 39h11M32 47h8"/>',
     ),
+    "catalyst-by-zoho": (
+        "#236B78",
+        '<path d="M14 43h36a9 9 0 0 0 0-18 15 15 0 0 0-29-2A10 10 0 0 0 14 43z"/>'
+        '<path d="M22 49h20M27 43v6M37 43v6"/>'
+        '<path d="M25 31l5 5 10-11"/>',
+    ),
     "bilibili-search": (
         "#FB7299",
         '<rect x="13" y="18" width="38" height="29" rx="6"/>'
