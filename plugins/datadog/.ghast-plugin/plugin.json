@@ -1,0 +1,18 @@
+{
+  "name": "datadog",
+  "version": "0.7.14-ghast.1",
+  "description": "Investigate Datadog logs, metrics, traces, monitors, incidents, dashboards, services, and widgets through Datadog's official hosted MCP server and Datadog-derived setup workflows.",
+  "category": "development",
+  "author": {
+    "name": "Datadog, Inc.",
+    "url": "https://www.datadoghq.com"
+  },
+  "homepage": "https://docs.datadoghq.com/mcp_server/",
+  "repository": "https://github.com/datadog-labs/cursor-plugin",
+  "upstreamRevision": "71364156c14b27466f3d646c8924318154e2321a",
+  "upstreamPath": ".",
+  "license": "Apache-2.0",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

@@ -67,7 +67,7 @@ verification.
 | coveo | Coveo | appConnector | MIT | official-source-research-required | not-implemented |
 | cube | Cube | appConnector | MIT | official-source-research-required | not-implemented |
 | daloopa | Daloopa | appConnector, skills | Apache-2.0 | official-source-verified | implemented-verified |
-| datadog | Datadog | appConnector | Apache-2.0 | official-source-research-required | not-implemented |
+| datadog | Datadog | appConnector | Apache-2.0 | official-source-verified | implemented-verified |
 | datasite | Datasite | appConnector, skills | MIT | official-source-research-required | not-implemented |
 | deepnote | Deepnote | appConnector, skills | Apache-2.0 | official-source-research-required | not-implemented |
 | demandbase | Demandbase Inc | appConnector | MIT | official-source-research-required | not-implemented |

@@ -598,6 +598,57 @@
         "unzip -tqq packages/daloopa.zip"
       ]
     },
+    "datadog": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Datadog, Inc.",
+      "officialRepository": "https://github.com/datadog-labs/cursor-plugin",
+      "officialRevision": "71364156c14b27466f3d646c8924318154e2321a",
+      "license": "Apache-2.0",
+      "licenseEvidence": [
+        "LICENSE",
+        "NOTICE",
+        "The setup, configuration, and toolset workflows are adapted from Datadog's Apache-2.0 cursor-plugin repository, with the original LICENSE and NOTICE retained. Datadog's MIT-licensed mcp-server repository is supporting documentation only; the hosted MCP service itself is not redistributed."
+      ],
+      "officialityEvidence": [
+        "The pinned cursor-plugin repository is owned by the datadog-labs GitHub organization, names Datadog as the developer, and corresponds to release v0.7.14.",
+        "Datadog's official mcp-server repository at revision 2aeb344100dc995c5a4b2e282c47ba97a05ff0dd identifies the hosted service as Datadog's official MCP server.",
+        "Datadog's official overview, setup, and tools documentation identifies the regional /v1/mcp endpoints, documents Codex and OAuth setup, and currently enumerates 254 unique tools across 29 toolsets.",
+        "Three stable official Markdown captures have SHA-256 hashes 3bc38e4eefec91402bbf3c8e0843b5a2964656be5d8be270eca726e33ab203c5, fceecd5f72fec5a556c30d74c3cbff10291b6d4aaa92ff13123f70fb931c8ca2, and 17f27b220c6bb5937dfb2cf50011c9a2ca7cd49334c69b294b39ffa1b7f24082.",
+        "The protected-resource and authorization-server metadata have canonical JSON SHA-256 hashes bb16d1ba0afd6d1707088518e104fada90afb9ffea3a198ed90e745aee26c817 and d378164ed20dd4f30274385cb5cac4e49d41ffc0af692df907095fbeb074027a.",
+        "Unauthenticated endpoint probes return HTTP 401, dynamic client registration returns HTTP 201, and the authorization flow reaches Datadog's account login rather than a provider-wide access gate."
+      ],
+      "codexCapabilities": [
+        "Investigate Datadog logs, metrics, traces, services, incidents, dashboards, monitors, and related observability workflows through a private app connector",
+        "Find top service errors with links or widgets, list currently alerting monitors, and compare p99 latency for high-traffic services against a usual baseline",
+        "Use interactive and state-changing Datadog tools for agentic investigation and remediation"
+      ],
+      "ghastCapabilities": [
+        "The same investigation workflows through Datadog's official hosted regional MCP service, with core and widgets enabled by default",
+        "Datadog's official setup, configuration, and toolset-management guidance adapted for Ghast",
+        "Access to every documented Datadog toolset through DD_MCP_TOOLSETS, with explicit safety guidance for write, execution, deletion, retention, billing, and security actions"
+      ],
+      "capabilityRelationship": "superset-official-public-mcp",
+      "limitations": [
+        "Node.js, npm, and the pinned mcp-remote@0.1.38 bridge are required.",
+        "OAuth authorization or both DD_API_KEY and DD_APPLICATION_KEY are required; effective tools depend on user permissions, organization policy, products, entitlements, and plan.",
+        "US1 is the default. Users of US3, US5, EU1, AP1, AP2, or UK1 must set DD_MCP_DOMAIN. Datadog GovCloud is not supported by the public MCP service.",
+        "Only core and widgets are enabled by default to match the Codex investigation surface. Other toolsets, including high-impact write and execution tools, require an explicit DD_MCP_TOOLSETS selection.",
+        "Monitor mutations, workflow execution, remote actions, restricted shell or code execution, security changes, retention changes, deletions, and other high-impact writes require explicit user confirmation.",
+        "An organization can restrict OAuth callback URLs, and authenticated tool listing or operations were not exercised without a Datadog account.",
+        "Datadog documents fair-use limits of 50 calls per 10 seconds and 50,000 calls per month, and 120-day storage of remote MCP usage and context data.",
+        "The hosted service and its tool catalog can change independently of this pinned plugin source and documentation evidence.",
+        "A generic observability icon is used because the official Cursor plugin does not publish a catalog icon."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Compare the behavior of ddsetup, ddconfig, and ddtoolsets with the pinned official cursor-plugin workflows and review the documented Ghast-specific environment, lifecycle, and configuration adaptations",
+        "Verify the pinned official overview, setup, and tools Markdown hashes and recount 254 unique tools across 29 toolsets",
+        "Verify the protected-resource and OAuth authorization-server metadata hashes, PKCE S256, dynamic client registration, and login redirect",
+        "Probe all seven allowed regional endpoints and confirm authentication or protocol responses",
+        "Exercise launcher validation for domain allowlisting, toolset syntax, paired API credentials, and secret-free process arguments",
+        "unzip -tqq packages/datadog.zip"
+      ]
+    },
     "expo": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Expo",

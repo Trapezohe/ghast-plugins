@@ -85,6 +85,12 @@ CUSTOM_ICONS = {
         '<path d="M11 25h42M25 25v26M39 25v26"/>'
         '<path d="M16 19l3 3 6-7M30 19h5M44 19h4"/>',
     ),
+    "datadog": (
+        "#27676A",
+        '<rect x="11" y="13" width="42" height="38" rx="3"/>'
+        '<path d="M17 38h7l5-13 7 19 5-11h7"/>'
+        '<path d="M17 20h13M36 20h12"/>',
+    ),
     "defillama": (
         "#176B87",
         '<path d="M15 45V31h8v14M28 45V22h8v23M41 45V15h8v30"/>'
