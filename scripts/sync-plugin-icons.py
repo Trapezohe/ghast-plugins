@@ -170,6 +170,13 @@ CUSTOM_ICONS = {
         '<rect x="12" y="11" width="9" height="9" rx="1"/>'
         '<rect x="43" y="44" width="9" height="9" rx="1"/>',
     ),
+    "streak": (
+        "#D9583B",
+        '<path d="M14 17h36M14 32h36M14 47h36"/>'
+        '<circle cx="22" cy="17" r="5" fill="#D9583B"/>'
+        '<circle cx="39" cy="32" r="5" fill="#D9583B"/>'
+        '<circle cx="29" cy="47" r="5" fill="#D9583B"/>',
+    ),
     "steam-search": (
         "#1B4965",
         '<circle cx="22" cy="40" r="7"/><circle cx="44" cy="22" r="8"/>'

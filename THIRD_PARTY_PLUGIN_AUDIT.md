@@ -153,7 +153,7 @@ verification.
 | similarweb | Similarweb | appConnector | MIT | official-source-verified | implemented-verified |
 | skywatch | SkyWatch Space Applications Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | statsig | Statsig, LLC | appConnector | MIT | official-source-verified | implemented-verified |
-| streak | Rewardly, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
+| streak | Rewardly, Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | stripe | Stripe | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | supabase | Supabase | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | superhuman | Superhuman | appConnector, skills | MIT | official-source-verified | implemented-verified |

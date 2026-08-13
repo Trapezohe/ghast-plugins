@@ -1,0 +1,16 @@
+{
+  "name": "streak",
+  "version": "1.0.0-ghast.1",
+  "description": "Read, analyze, and update Streak CRM pipelines, boxes, deals, contacts, organizations, comments, tasks, and timelines through Streak's official hosted MCP server.",
+  "category": "productivity",
+  "author": {
+    "name": "Rewardly, Inc.",
+    "url": "https://www.streak.com"
+  },
+  "homepage": "https://www.streak.com/integrations/mcp",
+  "upstreamRevision": "streak-docs-87c17a922fb5+claude-f49193624657+oauth-493b0f31d7f3",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

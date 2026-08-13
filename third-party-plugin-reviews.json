@@ -1768,6 +1768,53 @@
         "unzip -tqq packages/statsig.zip"
       ]
     },
+    "streak": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Rewardly, Inc.",
+      "officialRepository": null,
+      "officialRevision": "streak-docs-87c17a922fb5+claude-f49193624657+oauth-493b0f31d7f3",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/streak/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "No Streak hosted MCP server source, private Codex connector, service source code, or marketplace artwork is redistributed."
+      ],
+      "officialityEvidence": [
+        "Streak's official MCP integration page identifies https://api.streak.com/mcp as its hosted server and documents searching boxes, pipelines, and contacts; reading box details and timelines; creating boxes, contacts, and organizations; updating fields and stages; adding comments; and attaching a Gmail email to a box timeline.",
+        "The official MCP integration page was captured three times with identical SHA-256 87c17a922fb538f958c36f4528f2ea8a23d221182eade3202d55700738dc11e6.",
+        "Streak's official Claude integration page additionally documents follow-up tasks, call or meeting timeline logs, deal reassignment, and user confirmation before actions; it has SHA-256 f49193624657662fa71218d4070e1cf16bcd103b67a91375b5d80db7a1a86c0a.",
+        "Streak's OAuth protected-resource metadata identifies the same MCP resource, bearer-header authentication, and https://api.streak.com/mcp as the authorization server; its canonical JSON has SHA-256 493b0f31d7f3620ba61363bf0108f84382bbd151611070a05875f7264f6cff67.",
+        "The official authorization-server metadata declares dynamic client registration, authorization-code and refresh-token grants, public clients, and PKCE S256; its canonical JSON has SHA-256 b6e067661810a32ab8d4704e08161a47c8fb344080baac1fcc0c8ab792672a4f.",
+        "An unauthenticated GET and MCP initialize request both return Streak's live Bearer challenge and link to the same OAuth protected-resource metadata."
+      ],
+      "codexCapabilities": [
+        "Show recent deals and use Streak CRM context for pipelines, contacts, notes, tasks, and workflows",
+        "Work with deal and customer records whose email activity is logged into Streak timelines"
+      ],
+      "ghastCapabilities": [
+        "The same official search, detail, timeline, pipeline filtering, contact, organization, and deal reporting through Streak's hosted MCP server",
+        "Additional official create and update workflows for boxes, fields, stages, comments, contacts, organizations, assignments, tasks, follow-ups, call or meeting logs, custom-column options, and selected Gmail timeline entries"
+      ],
+      "capabilityRelationship": "superset-official-hosted-mcp",
+      "limitations": [
+        "The hosted MCP implementation is operated by Streak and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+        "Streak's support documentation requires an eligible Pro, Pro+, or Enterprise account, existing Streak permissions, and access to the relevant workspace data.",
+        "Endpoint discovery and the complete OAuth protocol were verified without an account, but authenticated tool listing and CRM operations were not run.",
+        "The MCP provides CRM data and timeline context, not Gmail email bodies for analysis. It can attach a user-selected Gmail thread to a box timeline.",
+        "Creates, updates, stage moves, assignments, tasks, comments, logs, and timeline attachments require explicit confirmation. Stage or field changes may trigger workspace automations.",
+        "A generic CRM pipeline icon is used because no licensed catalog icon is included in a public official MCP source repository."
+      ],
+      "verification": [
+        "python3 scripts/import-official-hosted-plugins.py",
+        "Verify the official MCP integration page SHA-256 is 87c17a922fb538f958c36f4528f2ea8a23d221182eade3202d55700738dc11e6",
+        "Verify the official Claude integration page SHA-256 is f49193624657662fa71218d4070e1cf16bcd103b67a91375b5d80db7a1a86c0a",
+        "Verify canonical OAuth protected-resource metadata SHA-256 is 493b0f31d7f3620ba61363bf0108f84382bbd151611070a05875f7264f6cff67",
+        "Verify canonical OAuth authorization-server metadata SHA-256 is b6e067661810a32ab8d4704e08161a47c8fb344080baac1fcc0c8ab792672a4f",
+        "Probe https://api.streak.com/mcp with GET and MCP initialize and confirm the live Bearer authentication challenge",
+        "Compare the official read, analysis, record-update, task, assignment, timeline, and Gmail-thread workflows with the Codex description and recent-deals prompt",
+        "Authorize an eligible Streak account before testing authenticated tool schemas and CRM data operations",
+        "unzip -tqq packages/streak.zip"
+      ]
+    },
     "zoom": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Zoom",

@@ -1234,6 +1234,34 @@
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/stock-quote"
     },
     {
+      "id": "streak",
+      "name": "streak",
+      "description": "Read, analyze, and update Streak CRM pipelines, boxes, deals, contacts, organizations, comments, tasks, and timelines through Streak's official hosted MCP server.",
+      "manifest": {
+        "name": "streak",
+        "description": "Read, analyze, and update Streak CRM pipelines, boxes, deals, contacts, organizations, comments, tasks, and timelines through Streak's official hosted MCP server.",
+        "author": {
+          "name": "Rewardly, Inc.",
+          "url": "https://www.streak.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.0-ghast.1",
+        "homepage": "https://www.streak.com/integrations/mcp",
+        "upstreamRevision": "streak-docs-87c17a922fb5+claude-f49193624657+oauth-493b0f31d7f3",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/streak.zip",
+        "sha256": "ab8831ffd8951b599e5b09f1ee0e1c064039ea3c23d4bfdd980a09f987ce385b"
+      },
+      "icon": "./plugins/streak/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://www.streak.com/integrations/mcp",
+      "license": "MIT"
+    },
+    {
       "id": "stripe",
       "name": "stripe",
       "description": "Build and operate Stripe payments, subscriptions, invoices, Connect platforms, apps, and API integrations with all seven official Stripe skills and Stripe's hosted OAuth MCP server.",
