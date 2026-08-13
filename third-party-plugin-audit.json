@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 8,
-      "official-source-research-required": 100,
-      "official-source-verified": 41
+      "official-source-research-required": 99,
+      "official-source-verified": 42
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 41,
-      "not-implemented": 108
+      "implemented-verified": 42,
+      "not-implemented": 107
     }
   },
   "excludedOpenAIPlugins": [
@@ -362,7 +362,7 @@
     },
     {
       "id": "asana",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Asana, Inc.",
@@ -392,13 +392,72 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://asana.com"
+        "homepage": "https://asana.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Asana, Inc.",
+          "officialRepository": "https://github.com/Asana/cursor-marketplace-plugin",
+          "officialRevision": "caf02337846594b6af5221ea5165c1dd0d273d9b",
+          "license": "MIT",
+          "licenseEvidence": [
+            "LICENSE",
+            "The pinned Asana repository's MIT license covers its plugin manifest, three skills, behavioral rule, MCP declaration, and SVG logo."
+          ],
+          "officialityEvidence": [
+            "The source repository is owned by the official Asana GitHub organization, names Asana as author, and publishes Asana's Cursor plugin with MCP configuration, setup and usage skills, safety rules, and logo.",
+            "The pinned revision was authored with an asana.com identity and the repository is reported by GitHub as MIT-licensed.",
+            "Asana's official V2 MCP tools reference documents 18 read tools, six write tools, and three interactive tools for tasks, projects, portfolios, status, attachments, users, teams, AI Teammates, comments, batch updates, deletion, and previews; the page has SHA-256 64d25be8eff00131b92e24d02bfad8db653e061408a31f169547f33d231d5ec0.",
+            "Asana's official integration guide identifies https://mcp.asana.com/v2/mcp, pre-registered MCP OAuth apps, workspace-scoped authorization, PKCE, and the absence of dynamic client registration; the page has SHA-256 58090c76a3f1fa2047d2de5297845042b4eb372d613ab5cdc39943d9e6529a03.",
+            "Asana's official coding-client guide provides a Codex configuration using mcp-remote, a localhost:3334 callback, static OAuth client information read from a private file, and the V2 resource URI; the page has SHA-256 15c6d5297fbeaccf858858bd5249624bb4d1060d0595bc682b67b06834cbcf35.",
+            "The live OAuth protected-resource metadata identifies the V2 MCP resource, Asana authorization server, default scope, and bearer-header authentication; its canonical JSON has SHA-256 346303ad06f141cdbcb982e56d6b718d59f4d4590f185208c4a3920fb5d498c8.",
+            "The live Asana authorization-server metadata declares authorization-code and refresh-token grants and PKCE S256, with no dynamic registration endpoint; its canonical JSON has SHA-256 fc3164fa57de5e3b9a24826e88f2167cce73a04b5c6e622ea8d7bba154c696b5.",
+            "An unauthenticated request to the V2 MCP endpoint returns HTTP 401 with Asana's Bearer challenge and the same protected-resource metadata URL."
+          ],
+          "codexCapabilities": [
+            "Read and manage Asana tasks, subtasks, comments, due dates, and project details",
+            "Create projects and tasks, summarize work, understand priorities, prepare status updates, and show the authenticated user's work for today"
+          ],
+          "ghastCapabilities": [
+            "The same official task, subtask, comment, due-date, project, summary, priority, status, create-project, create-task, and personal-work workflows through Asana V2",
+            "Additional official read coverage for portfolios, attachments, users, teams, advanced search, status overviews, and AI Teammates",
+            "Additional official write coverage for up to 50-task creates and updates, project status updates, permanent task deletion, dependencies, memberships, followers, custom fields, assignment, completion, and parent relationships"
+          ],
+          "capabilityRelationship": "superset-official-public-mcp",
+          "limitations": [
+            "An Asana account and a pre-registered Asana MCP OAuth app are required. Dynamic client registration is not supported, so the user must create and manage a client ID and secret.",
+            "The Ghast bridge requires Node.js, npm, and pinned MIT-licensed mcp-remote 0.1.38. Asana documents mcp-remote for Codex but labels it experimental and not officially supported by Asana.",
+            "The user stores OAuth client credentials in a permission-restricted JSON file outside the plugin and exposes only its absolute path through ASANA_OAUTH_CLIENT_FILE. The launcher passes the path, not the secret, to mcp-remote.",
+            "OAuth sessions are workspace-scoped. Separate workspaces require separate authorization sessions, and enterprise app-management policy can block the client.",
+            "All available MCP tools are authorized together, but each call remains limited by the user's existing Asana permissions. Advanced search_tasks requires an eligible Premium workspace.",
+            "Interactive preview tools are limited to Claude and ChatGPT. Ghast uses conversational previews and explicit confirmation before standard write tools.",
+            "The V1 beta endpoint was retired on August 5, 2026. This plugin uses only the current V2 Streamable HTTP endpoint.",
+            "Endpoint, OAuth discovery, source import, and bridge validation were tested without an Asana account; authenticated tool listing and workspace operations were not run."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Compare the three imported skills, retained rule file, LICENSE, and SVG icon with Asana/cursor-marketplace-plugin at caf02337846594b6af5221ea5165c1dd0d273d9b, accounting only for documented Ghast setup and safety rewrites",
+            "Verify the official MCP tools reference SHA-256 is 64d25be8eff00131b92e24d02bfad8db653e061408a31f169547f33d231d5ec0",
+            "Verify the official integration guide SHA-256 is 58090c76a3f1fa2047d2de5297845042b4eb372d613ab5cdc39943d9e6529a03",
+            "Verify the official coding-client guide SHA-256 is 15c6d5297fbeaccf858858bd5249624bb4d1060d0595bc682b67b06834cbcf35",
+            "Verify canonical OAuth protected-resource metadata SHA-256 is 346303ad06f141cdbcb982e56d6b718d59f4d4590f185208c4a3920fb5d498c8",
+            "Verify canonical OAuth authorization-server metadata SHA-256 is fc3164fa57de5e3b9a24826e88f2167cce73a04b5c6e622ea8d7bba154c696b5",
+            "Verify the mcp-remote 0.1.38 npm tarball SHA-256 is d8e7034ed4ddf1f1b5efd928b74e7165ab427f7b21ab86ce79bcb82a4d9560aa and its license is MIT",
+            "Run the generated launcher with ASANA_OAUTH_CLIENT_FILE unset, relative, missing, invalid, over-permissive, and valid dummy files and confirm it fails safely without printing secret values",
+            "Probe https://mcp.asana.com/v2/mcp without authorization and confirm HTTP 401 plus the Asana Bearer challenge",
+            "Authorize a real Asana MCP app before testing authenticated tools/list and workspace operations",
+            "unzip -tqq packages/asana.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "0.1.0-ghast.1",
+        "repository": "https://github.com/Asana/cursor-marketplace-plugin",
+        "upstreamRevision": "caf02337846594b6af5221ea5165c1dd0d273d9b",
+        "portStatus": "full"
       }
     },
     {

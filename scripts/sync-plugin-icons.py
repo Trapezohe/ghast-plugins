@@ -27,6 +27,7 @@ OPENAI_ICONS = {
 
 LOCAL_ICONS = {
     "airtable": "assets/icon.svg",
+    "asana": "assets/icon.svg",
     "atlassian-rovo": "assets/icon.svg",
     "base44": "assets/icon.png",
     "boltz-api-cli": "assets/icon.png",

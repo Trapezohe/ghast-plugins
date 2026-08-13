@@ -4,15 +4,116 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import shutil
 import subprocess
 import tempfile
+import urllib.request
 from pathlib import Path
 
 
 PLUGIN_DIR = Path("plugins")
+ASANA_MCP_URL = "https://mcp.asana.com/v2/mcp"
+ASANA_MCP_RESOURCE = "https://mcp.asana.com/v2"
+ASANA_TOOLS_URL = "https://developers.asana.com/docs/mcp-tools-reference.md"
+ASANA_TOOLS_SHA256 = (
+    "64d25be8eff00131b92e24d02bfad8db653e061408a31f169547f33d231d5ec0"
+)
+ASANA_INTEGRATION_URL = (
+    "https://developers.asana.com/docs/integrating-with-asanas-mcp-server.md"
+)
+ASANA_INTEGRATION_SHA256 = (
+    "58090c76a3f1fa2047d2de5297845042b4eb372d613ab5cdc39943d9e6529a03"
+)
+ASANA_CLIENTS_URL = (
+    "https://developers.asana.com/docs/"
+    "connecting-mcp-clients-to-asanas-v2-server.md"
+)
+ASANA_CLIENTS_SHA256 = (
+    "15c6d5297fbeaccf858858bd5249624bb4d1060d0595bc682b67b06834cbcf35"
+)
+ASANA_OAUTH_METADATA_URL = (
+    "https://mcp.asana.com/.well-known/oauth-protected-resource/v2"
+)
+ASANA_OAUTH_METADATA_SHA256 = (
+    "346303ad06f141cdbcb982e56d6b718d59f4d4590f185208c4a3920fb5d498c8"
+)
+ASANA_AUTH_SERVER_URL = (
+    "https://app.asana.com/.well-known/oauth-authorization-server"
+)
+ASANA_AUTH_SERVER_SHA256 = (
+    "fc3164fa57de5e3b9a24826e88f2167cce73a04b5c6e622ea8d7bba154c696b5"
+)
+ASANA_MCP_REMOTE_URL = (
+    "https://registry.npmjs.org/mcp-remote/-/mcp-remote-0.1.38.tgz"
+)
+ASANA_MCP_REMOTE_SHA256 = (
+    "d8e7034ed4ddf1f1b5efd928b74e7165ab427f7b21ab86ce79bcb82a4d9560aa"
+)
+ASANA_MCP_LAUNCHER = """\
+const fs = require("node:fs");
+const path = require("node:path");
+const { spawn } = require("node:child_process");
+const clientFile = process.env.ASANA_OAUTH_CLIENT_FILE;
+if (!clientFile) {
+  console.error("Set ASANA_OAUTH_CLIENT_FILE to an absolute OAuth client JSON path.");
+  process.exit(1);
+}
+if (!path.isAbsolute(clientFile)) {
+  console.error("ASANA_OAUTH_CLIENT_FILE must be an absolute path.");
+  process.exit(1);
+}
+let clientInfo;
+let stat;
+try {
+  stat = fs.statSync(clientFile);
+  clientInfo = JSON.parse(fs.readFileSync(clientFile, "utf8"));
+} catch {
+  console.error("ASANA_OAUTH_CLIENT_FILE must point to readable valid JSON.");
+  process.exit(1);
+}
+if (
+  typeof clientInfo.client_id !== "string" ||
+  !clientInfo.client_id ||
+  typeof clientInfo.client_secret !== "string" ||
+  !clientInfo.client_secret
+) {
+  console.error("Asana OAuth JSON must contain client_id and client_secret.");
+  process.exit(1);
+}
+if (process.platform !== "win32" && (stat.mode & 0o077) !== 0) {
+  console.error("Protect the Asana OAuth JSON with chmod 600.");
+  process.exit(1);
+}
+const executable = process.platform === "win32" ? "npx.cmd" : "npx";
+const child = spawn(
+  executable,
+  [
+    "--yes",
+    "mcp-remote@0.1.38",
+    "https://mcp.asana.com/v2/mcp",
+    "3334",
+    "--static-oauth-client-info",
+    `@${clientFile}`,
+    "--resource",
+    "https://mcp.asana.com/v2",
+  ],
+  { stdio: "inherit" },
+);
+child.on("error", (error) => {
+  console.error(`Unable to start Asana MCP bridge: ${error.message}`);
+  process.exit(1);
+});
+for (const signal of ["SIGINT", "SIGTERM"]) {
+  process.on(signal, () => child.kill(signal));
+}
+child.on("exit", (code, signal) => {
+  if (signal) process.kill(process.pid, signal);
+  else process.exit(code === null ? 1 : code);
+});
+"""
 PLUGINS = {
     "airtable": {
         "directory": "airtable-skills",
@@ -25,6 +126,58 @@ PLUGINS = {
         "category": "productivity",
         "mcp": ".mcp.json",
         "license_name": "MIT",
+    },
+    "asana": {
+        "directory": "asana-cursor-marketplace-plugin",
+        "revision": "caf02337846594b6af5221ea5165c1dd0d273d9b",
+        "repository": "https://github.com/Asana/cursor-marketplace-plugin",
+        "plugin_root": ".",
+        "manifest": ".cursor-plugin/plugin.json",
+        "license": "LICENSE",
+        "icon": "assets/logo.svg",
+        "category": "productivity",
+        "extra_directories": ["rules"],
+        "mcp_inline": {
+            "mcpServers": {
+                "asana": {
+                    "command": "node",
+                    "args": ["-e", ASANA_MCP_LAUNCHER],
+                },
+            },
+        },
+        "license_name": "MIT",
+        "author": {
+            "name": "Asana, Inc.",
+            "url": "https://asana.com",
+        },
+        "homepage": "https://developers.asana.com/docs/using-asanas-mcp-server",
+        "description": (
+            "Read and manage Asana tasks, subtasks, comments, due dates, "
+            "projects, portfolios, status updates, teams, users, and "
+            "workspace priorities through Asana's official V2 MCP server."
+        ),
+        "compatibility_notes": [
+            (
+                "Ghast imports Asana's three official skills, MIT-licensed "
+                "logo, and behavioral rules from the pinned Asana repository."
+            ),
+            (
+                "Cursor-specific setup is rewritten for Asana's official "
+                "Codex V2 flow through pinned mcp-remote@0.1.38. The bridge "
+                "reads an absolute, permission-restricted OAuth JSON path "
+                "from ASANA_OAUTH_CLIENT_FILE, so the client secret is never "
+                "stored in the plugin or passed as a process argument."
+            ),
+            (
+                "Asana's official rules are retained and merged into the "
+                "active usage skill because Ghast does not execute Cursor "
+                "rule files directly."
+            ),
+            (
+                "Only https://mcp.asana.com/v2/mcp is used. The older V1 "
+                "beta endpoint was retired on August 5, 2026."
+            ),
+        ],
     },
     "atlassian-rovo": {
         "directory": "atlassian-mcp",
@@ -927,6 +1080,7 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     source_root = parse_args().source_root.resolve()
+    verify_asana_evidence()
     for name, config in PLUGINS.items():
         import_plugin(name, config, source_root)
     print(f"imported {len(PLUGINS)} plugins from official developer repositories")
@@ -1210,6 +1364,27 @@ def apply_ghast_compatibility(name: str, staging: Path) -> None:
                 )
             },
         )
+    elif name == "asana":
+        (staging / "skills/asana-setup/SKILL.md").write_text(
+            render_asana_setup_skill()
+        )
+        (staging / "skills/asana-mcp-troubleshooting/SKILL.md").write_text(
+            render_asana_troubleshooting_skill()
+        )
+        usage_skill = staging / "skills/asana-usage/SKILL.md"
+        rewrite_text(
+            usage_skill,
+            {
+                (
+                    "Best practices for using Asana MCP tools in Cursor."
+                ): "Best practices for using Asana MCP tools in Ghast.",
+            },
+        )
+        usage_skill.write_text(
+            usage_skill.read_text().rstrip()
+            + "\n\n"
+            + render_asana_usage_appendix()
+        )
     elif name == "mixpanel-headless":
         for markdown in (staging / "skills").rglob("*.md"):
             rewrite_text(
@@ -1437,6 +1612,320 @@ def rewrite_text(
             raise ValueError(f"{path}: expected compatibility marker is missing: {old}")
         text = text.replace(old, new)
     path.write_text(text)
+
+
+def render_asana_setup_skill() -> str:
+    return """---
+name: asana-setup
+description: Detect and configure Asana V2 MCP credentials for Ghast. Run before using Asana when the connection is not already active.
+---
+
+# Asana MCP Setup
+
+This plugin connects to Asana's official V2 MCP server through the Codex flow
+documented by Asana. V2 requires a pre-registered Asana MCP app and does not
+support dynamic client registration.
+
+## Security boundary
+
+- Never ask the user to paste a client ID, client secret, access token, or
+  refresh token into conversation.
+- Never print, log, or inspect credential values.
+- The plugin reads only `ASANA_OAUTH_CLIENT_FILE`, which must be an absolute
+  path to a user-managed JSON file outside the project and plugin.
+- The file must contain `client_id` and `client_secret` and should be readable
+  only by the current user.
+
+## Setup
+
+1. Ask the user to open Asana's developer console and create an **MCP app**.
+2. Configure the exact redirect URI:
+
+   `http://localhost:3334/oauth/callback`
+
+3. Configure the app for the intended workspace or for any workspace.
+4. Ask the user to create a private JSON file outside the repository:
+
+```json
+{
+  "client_id": "YOUR_CLIENT_ID",
+  "client_secret": "YOUR_CLIENT_SECRET"
+}
+```
+
+5. On macOS or Linux, ask the user to protect it with:
+
+```bash
+chmod 600 /absolute/path/to/asana-mcp-oauth.json
+```
+
+6. Ask the user to set the file path in the host environment:
+
+```bash
+export ASANA_OAUTH_CLIENT_FILE="/absolute/path/to/asana-mcp-oauth.json"
+```
+
+7. Reload the active Ghast profile after setting the variable.
+
+## Safe verification
+
+Check only whether the variable and file are present. Do not print the file:
+
+```bash
+test -n "$ASANA_OAUTH_CLIENT_FILE" &&
+test -f "$ASANA_OAUTH_CLIENT_FILE" &&
+echo "Asana OAuth client file is configured"
+```
+
+The plugin launcher validates that the path is absolute, the JSON has both
+required keys, and Unix permissions are restricted. It passes only the file
+path to pinned `mcp-remote@0.1.38`; the secret does not enter the process
+arguments.
+
+After the browser authorization succeeds, verify with `get_me` or
+`get_my_tasks`. Do not create or modify a record merely to test connectivity.
+"""
+
+
+def render_asana_troubleshooting_skill() -> str:
+    return """---
+name: asana-mcp-troubleshooting
+description: Diagnose Asana V2 MCP connection, OAuth app, credential-file, workspace, and tool availability failures in Ghast.
+---
+
+# Asana MCP Troubleshooting
+
+Work through these checks in order and stop at the first failure.
+
+## 1. Confirm the supported endpoint
+
+The plugin must use `https://mcp.asana.com/v2/mcp`. Do not fall back to the
+deprecated V1 beta endpoint; Asana retired it on August 5, 2026.
+
+An unauthenticated request should return HTTP 401 with an Asana Bearer
+challenge. A timeout or DNS failure indicates a local network problem.
+
+## 2. Confirm the credential file without exposing it
+
+Never run `cat`, `echo $ASANA_CLIENT_SECRET`, or any command that displays the
+JSON. Check only:
+
+```bash
+test -n "$ASANA_OAUTH_CLIENT_FILE" || echo "ASANA_OAUTH_CLIENT_FILE is unset"
+test -f "$ASANA_OAUTH_CLIENT_FILE" || echo "Asana OAuth client file is missing"
+```
+
+The path must be absolute. On macOS and Linux, repair overly broad permissions
+with `chmod 600 /absolute/path/to/asana-mcp-oauth.json`.
+
+If the launcher says required keys are missing, ask the user to correct the
+file themselves. Do not request its contents.
+
+## 3. Confirm the Asana MCP app
+
+- The app type must be **MCP app**, not a standard API app.
+- The redirect URI must exactly match
+  `http://localhost:3334/oauth/callback`.
+- The app must be distributed to the selected workspace or to any workspace.
+- The client ID and secret must belong to the same app.
+- If the secret was rotated, the private JSON file must be updated by the
+  user and the active profile reloaded.
+
+## 4. Confirm authorization and workspace scope
+
+The browser flow asks the user to select and authorize one workspace. Tokens
+are workspace-scoped. A different workspace requires a separate authorization
+session.
+
+Enterprise administrators can block the MCP app. Report the exact Asana
+policy or permission error and let the user request administrator approval.
+
+## 5. Confirm local prerequisites
+
+The compatibility bridge requires Node.js, npm, and pinned
+`mcp-remote@0.1.38`. Check `node --version` and `npm --version`; do not install
+or upgrade software without the user's approval.
+
+OAuth tokens are managed by `mcp-remote` under the user's local MCP auth
+storage. Do not read or display those files. Clear stored authorization only
+when the user explicitly asks to reconnect or switch accounts.
+
+## 6. Confirm tools
+
+After authorization, use `get_me` or `get_my_tasks` for a read-only test. If
+tools are missing, reload the active profile and inspect the concrete launcher
+error. Do not create, update, comment on, or delete Asana work as a connection
+test.
+"""
+
+
+def render_asana_usage_appendix() -> str:
+    return """## Ghast and Asana V2 rules
+
+- Never expose raw Asana GIDs in conversational responses when a human-readable
+  name is available.
+- Prefer the most specific tool. Use `search_objects` only to resolve unknown
+  identifiers, and use `get_my_tasks` for "what is on my plate" requests.
+- Read current state before changing tasks, dependencies, project membership,
+  followers, custom fields, completion, dates, assignees, or parent links.
+- Obtain explicit confirmation before every create, update, comment, project
+  status update, archive, or delete operation. Show the target names and exact
+  proposed values first.
+- `delete_task` is permanent and can also remove subtasks that are not members
+  of another project. Require a fresh, explicit confirmation immediately
+  before calling it.
+- For up to 50-task batch creates or updates, list every affected task and
+  field change before confirmation. Split vague "do everything" requests into
+  reviewable steps.
+- Use comments only for discussion or context, not for events Asana already
+  records automatically. Show the full proposed comment before posting it.
+- Interactive preview tools may be unavailable outside Claude and ChatGPT.
+  In Ghast, perform the equivalent preview in conversation and call standard
+  write tools only after confirmation.
+- Do not blindly retry a failed write. Read current state first to avoid
+  duplicate tasks, comments, projects, or status updates.
+- Advanced `search_tasks` requires an eligible Premium workspace. Fall back to
+  filtered `get_tasks` when the service reports that limitation.
+- Access is limited to the authorized user's existing permissions and the
+  workspace selected during OAuth. Never claim broader visibility.
+"""
+
+
+def fetch_bytes(url: str) -> bytes:
+    request = urllib.request.Request(
+        url,
+        headers={"User-Agent": "Mozilla/5.0"},
+    )
+    with urllib.request.urlopen(request, timeout=30) as response:
+        return response.read()
+
+
+def sha256_bytes(value: bytes) -> str:
+    return hashlib.sha256(value).hexdigest()
+
+
+def canonical_json_sha256(value: object) -> str:
+    encoded = json.dumps(
+        value,
+        sort_keys=True,
+        separators=(",", ":"),
+        ensure_ascii=False,
+    ).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
+
+
+def verify_asana_evidence() -> None:
+    tools_bytes = fetch_bytes(ASANA_TOOLS_URL)
+    if sha256_bytes(tools_bytes) != ASANA_TOOLS_SHA256:
+        raise ValueError(
+            "Asana MCP tools documentation changed; re-audit required"
+        )
+    tools = tools_bytes.decode("utf-8")
+    for marker in (
+        "The Asana V2 MCP server exposes a set of tools",
+        "Read tools",
+        "Write tools",
+        "Interactive tools",
+        "search_objects",
+        "get_task",
+        "get_tasks",
+        "get_my_tasks",
+        "search_tasks",
+        "get_project",
+        "get_projects",
+        "get_portfolio",
+        "get_portfolios",
+        "get_items_for_portfolio",
+        "get_status_overview",
+        "get_attachments",
+        "get_user",
+        "get_me",
+        "get_users",
+        "get_teams",
+        "get_agent",
+        "get_workspace_agents",
+        "create_tasks",
+        "create_project",
+        "update_tasks",
+        "delete_task",
+        "add_comment",
+        "create_project_status_update",
+        "create_task_preview",
+        "create_project_preview",
+        "search_tasks_preview",
+    ):
+        if marker not in tools:
+            raise ValueError(f"Asana MCP tools evidence is missing {marker!r}")
+
+    integration_bytes = fetch_bytes(ASANA_INTEGRATION_URL)
+    if sha256_bytes(integration_bytes) != ASANA_INTEGRATION_SHA256:
+        raise ValueError(
+            "Asana MCP integration documentation changed; re-audit required"
+        )
+    integration = integration_bytes.decode("utf-8")
+    for marker in (
+        ASANA_MCP_URL,
+        ASANA_MCP_RESOURCE,
+        "Wed 5 Aug 2026",
+        "Dynamic client registration is not supported",
+        "client id and client secret",
+    ):
+        if marker not in integration:
+            raise ValueError(
+                f"Asana MCP integration evidence is missing {marker!r}"
+            )
+
+    clients_bytes = fetch_bytes(ASANA_CLIENTS_URL)
+    if sha256_bytes(clients_bytes) != ASANA_CLIENTS_SHA256:
+        raise ValueError(
+            "Asana MCP client documentation changed; re-audit required"
+        )
+    clients = clients_bytes.decode("utf-8")
+    for marker in (
+        "## Codex",
+        "mcp-remote@latest",
+        "--static-oauth-client-info",
+        "http://localhost:3334/oauth/callback",
+        "The `@` prefix tells `mcp-remote` to read the client credentials",
+        "This keeps your client secret out of the process command line",
+    ):
+        if marker not in clients:
+            raise ValueError(
+                f"Asana Codex integration evidence is missing {marker!r}"
+            )
+
+    metadata = json.loads(fetch_bytes(ASANA_OAUTH_METADATA_URL))
+    if canonical_json_sha256(metadata) != ASANA_OAUTH_METADATA_SHA256:
+        raise ValueError(
+            "Asana OAuth protected-resource metadata changed; re-audit required"
+        )
+    if metadata.get("resource") != ASANA_MCP_URL:
+        raise ValueError("Asana OAuth resource URI changed")
+    if metadata.get("authorization_servers") != ["https://app.asana.com"]:
+        raise ValueError("Asana OAuth authorization server changed")
+    if metadata.get("bearer_methods_supported") != ["header"]:
+        raise ValueError("Asana OAuth bearer method changed")
+
+    auth_server = json.loads(fetch_bytes(ASANA_AUTH_SERVER_URL))
+    if canonical_json_sha256(auth_server) != ASANA_AUTH_SERVER_SHA256:
+        raise ValueError(
+            "Asana OAuth authorization metadata changed; re-audit required"
+        )
+    if auth_server.get("issuer") != "https://app.asana.com":
+        raise ValueError("Asana OAuth issuer changed")
+    grants = auth_server.get("grant_types_supported", [])
+    if "authorization_code" not in grants or "refresh_token" not in grants:
+        raise ValueError("Asana OAuth grant support changed")
+    if auth_server.get("code_challenge_methods_supported") != ["S256"]:
+        raise ValueError("Asana OAuth server no longer requires PKCE S256")
+    if "registration_endpoint" in auth_server:
+        raise ValueError("Asana unexpectedly enabled dynamic registration")
+
+    bridge = fetch_bytes(ASANA_MCP_REMOTE_URL)
+    if sha256_bytes(bridge) != ASANA_MCP_REMOTE_SHA256:
+        raise ValueError(
+            "Pinned mcp-remote package changed; re-audit required"
+        )
 
 
 def render_mixpanel_auth_command() -> str:

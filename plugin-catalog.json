@@ -33,6 +33,36 @@
       "license": "MIT"
     },
     {
+      "id": "asana",
+      "name": "asana",
+      "description": "Read and manage Asana tasks, subtasks, comments, due dates, projects, portfolios, status updates, teams, users, and workspace priorities through Asana's official V2 MCP server.",
+      "manifest": {
+        "name": "asana",
+        "description": "Read and manage Asana tasks, subtasks, comments, due dates, projects, portfolios, status updates, teams, users, and workspace priorities through Asana's official V2 MCP server.",
+        "author": {
+          "name": "Asana, Inc.",
+          "url": "https://asana.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "0.1.0-ghast.1",
+        "homepage": "https://developers.asana.com/docs/using-asanas-mcp-server",
+        "repository": "https://github.com/Asana/cursor-marketplace-plugin",
+        "upstreamRevision": "caf02337846594b6af5221ea5165c1dd0d273d9b",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/asana.zip",
+        "sha256": "02ed7481357beba7d6b7591db8cecfc9d686488434172e7b102432b6d4ecea33"
+      },
+      "icon": "./plugins/asana/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://developers.asana.com/docs/using-asanas-mcp-server",
+      "repository": "https://github.com/Asana/cursor-marketplace-plugin",
+      "license": "MIT"
+    },
+    {
       "id": "atlassian-rovo",
       "name": "atlassian-rovo",
       "description": "Search and manage Jira, Confluence, Jira Service Management, Bitbucket, Compass, and Teamwork Graph through Atlassian's official Rovo MCP server and workflow skills.",

@@ -33,7 +33,7 @@ verification.
 | alpaca | Alpaca | appConnector | MIT | official-source-research-required | not-implemented |
 | amplitude | Amplitude | appConnector | MIT | official-source-research-required | not-implemented |
 | apollo | Apollo | appConnector | MIT | official-source-research-required | not-implemented |
-| asana | Asana, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
+| asana | Asana, Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | atlassian-rovo | Atlassian | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | attio | Attio Ltd | appConnector | MIT | official-source-research-required | not-implemented |
 | base44 | base44 | appConnector, skills | MIT | official-source-verified | implemented-verified |
