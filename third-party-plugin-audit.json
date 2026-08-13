@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 9,
-      "official-source-research-required": 91,
-      "official-source-verified": 49
+      "official-source-research-required": 90,
+      "official-source-verified": 50
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 49,
-      "not-implemented": 100
+      "implemented-verified": 50,
+      "not-implemented": 99
     }
   },
   "excludedOpenAIPlugins": [
@@ -99,7 +99,7 @@
     },
     {
       "id": "aiera",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Aiera",
@@ -126,13 +126,70 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.aiera.com"
+        "homepage": "https://www.aiera.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Aiera, Inc.",
+          "officialRepository": "https://github.com/aiera-inc/aiera-mcp",
+          "officialRevision": "882acfc09c5e5c1eed82b6e2a64e8780503ec099",
+          "license": "MIT",
+          "licenseEvidence": [
+            "LICENSE",
+            "The MIT license is copyright 2025 Aiera, Inc. and covers the standalone MCP package, all 47 tool implementations, documentation, tests, and the official catalog icon copied by Ghast."
+          ],
+          "officialityEvidence": [
+            "The repository is owned by Aiera's official GitHub organization, links to aiera.com, names Aiera as the package author, and describes itself as the Aiera financial-data MCP package.",
+            "Pinned release v1.2.1 and commit 882acfc09c5e5c1eed82b6e2a64e8780503ec099 were published on August 8, 2026 as the latest non-prerelease release.",
+            "The official package exposes a standalone stdio MCP entry point named aiera-mcp, requires an Aiera API key, and defaults to https://graphql.aiera.com/api.",
+            "The pinned source registry contains 47 tools, all marked read_only=true and destructive=false, across events, filings, equities, company documents, Third Bridge, broker research, search, trusted web, templates, instructions, and entitlement discovery.",
+            "The official source's 431 unit tests passed on August 13, 2026, and a real MCP initialize plus tools/list session returned all 47 registered tools when run with the upstream uv.lock runtime versions.",
+            "The package declares mcp[cli]>=1.14.0 without an upper bound. A fresh installation currently resolves mcp 2.0.0 and crashes because the low-level Server no longer has list_tools or call_tool; the upstream uv.lock pins the compatible mcp 1.25.0 release."
+          ],
+          "codexCapabilities": [
+            "Access institutional financial data through a private Aiera app connector, including live corporate events, filings, company publications, broker research, and related data",
+            "Find the latest earnings call transcript for a company and summarize key themes",
+            "Search events for topic mentions across a sector and quarter",
+            "Compare management commentary from a company's last two calls"
+          ],
+          "ghastCapabilities": [
+            "The same earnings-call discovery, transcript retrieval, topic search, and management-commentary comparison through Aiera's official standalone MCP package",
+            "All 47 official v1.2.1 tools for events and conferences, SEC filings, equities, summaries, financial statements, ratios, KPIs and segments, indexes, watchlists, company publications, Third Bridge interviews, broker research, current ratings and targets, semantic search, trusted web search, templates, and entitlement discovery",
+            "A source-grounded workflow skill that enforces full-document retrieval before summarization, exact dates and identifiers, broker-research readership reporting, citation integrity, entitlement boundaries, and licensed-content limits"
+          ],
+          "capabilityRelationship": "superset-newer-official-standalone-mcp",
+          "limitations": [
+            "Node.js, Astral uv/uvx, an Aiera account, an API key stored in AIERA_API_KEY, product entitlements, licensed data access, and service limits remain user-managed.",
+            "Aiera labels the project experimental and subject to breaking changes. Ghast fixes v1.2.1 and its compatible direct runtime versions rather than following main or unconstrained dependencies.",
+            "The official installation command is currently broken by mcp 2.0.0. Ghast pins mcp 1.25.0, httpx 0.28.1, and pydantic-settings 2.12.0 and excludes packages newer than the August 8, 2026 release date.",
+            "Every official tool invocation schedules telemetry to Aiera's collect-mcp-log endpoint containing the tool name, arguments, response, error state, and duration. Users must not send unnecessary confidential, personal, or unrelated proprietary data.",
+            "The audited launcher permits only https://graphql.aiera.com/api. The upstream package supports custom AIERA_BASE_URL values, but Ghast disables that option to prevent API-key exfiltration to an unreviewed host.",
+            "All registry entries are marked read-only, but report_research_usage posts readership records for broker research that informed the answer.",
+            "The official README's statement that AVAILABLE_TOOLS contains 24 tools is stale; the v1.2.1 registry, exported list, and live tools/list contain 47.",
+            "Authenticated data calls were not exercised because no user Aiera API key was available. Actual tools and documents vary by account entitlement.",
+            "Transcripts, research, and Third Bridge content can be large and licensed. The plugin summarizes narrowly, quotes sparingly, preserves citations, and does not bypass access controls.",
+            "Aiera data and analyst opinions are not guaranteed current market data or personalized investment advice."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Verify the pinned license, icon, pyproject.toml, uv.lock, server, registry, and telemetry source hashes",
+            "Parse TOOL_REGISTRY and AVAILABLE_TOOLS and confirm the same 47 names, with every registry item read_only=true and destructive=false",
+            "Run UV_CACHE_DIR=/tmp/ghast-aiera-cache uv run --isolated --group dev pytest tests/unit -q in the pinned official checkout and confirm 431 tests pass",
+            "Run the pinned Git source through uvx with mcp 1.25.0, httpx 0.28.1, pydantic-settings 2.12.0, and the August 8, 2026 cutoff; initialize MCP and confirm tools/list returns 47 names",
+            "Run the unconstrained official Git installation and confirm its current mcp 2.0.0 resolution fails at Server.list_tools, documenting why the Ghast runtime pin is required",
+            "Verify the launcher rejects a missing AIERA_API_KEY and any nonofficial AIERA_BASE_URL without exposing the key",
+            "unzip -tqq packages/aiera.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.2.1-ghast.1",
+        "repository": "https://github.com/aiera-inc/aiera-mcp",
+        "upstreamRevision": "882acfc09c5e5c1eed82b6e2a64e8780503ec099",
+        "portStatus": "full"
       }
     },
     {

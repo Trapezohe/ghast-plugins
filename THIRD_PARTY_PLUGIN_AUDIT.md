@@ -27,7 +27,7 @@ verification.
 | Plugin | Developer | Codex transport | Declared license | Audit | Ghast |
 | --- | --- | --- | --- | --- | --- |
 | actively | Actively | appConnector | MIT | official-source-research-required | not-implemented |
-| aiera | Aiera | appConnector | MIT | official-source-research-required | not-implemented |
+| aiera | Aiera | appConnector | MIT | official-source-verified | implemented-verified |
 | airtable | Airtable | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | alation | Alation | appConnector | MIT | official-source-research-required | not-implemented |
 | alpaca | Alpaca | appConnector | MIT | official-source-research-required | not-implemented |
