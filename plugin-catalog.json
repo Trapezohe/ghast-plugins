@@ -1128,6 +1128,34 @@
       "license": "MIT"
     },
     {
+      "id": "fyxer",
+      "name": "fyxer",
+      "description": "Search authorized email and meeting context, retrieve summaries and transcripts, resolve contacts, and draft personalized email through Fyxer's official hosted MCP.",
+      "manifest": {
+        "name": "fyxer",
+        "description": "Search authorized email and meeting context, retrieve summaries and transcripts, resolve contacts, and draft personalized email through Fyxer's official hosted MCP.",
+        "author": {
+          "name": "Fyxer",
+          "url": "https://www.fyxer.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.2-ghast.1",
+        "homepage": "https://support.fyxer.com/article/fyxer-mcp",
+        "upstreamRevision": "fyxer-docs-524a8683cf7b+addons-d1b55e0ef54e+oauth-c0a99fecb69d+auth-fde6773cf908",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/fyxer.zip",
+        "sha256": "e057210d93f1d36af33bfdec6f2874760c0bb3ffc52297b3878d4bd6966860c0"
+      },
+      "icon": "./plugins/fyxer/assets/icon.svg",
+      "category": "communication",
+      "homepage": "https://support.fyxer.com/article/fyxer-mcp",
+      "license": "MIT"
+    },
+    {
       "id": "github-stats",
       "name": "github-stats",
       "description": "Skill for looking up public GitHub repo or user stats via the unauthenticated GitHub REST API (60 req/hr/IP).",

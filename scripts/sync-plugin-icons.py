@@ -213,6 +213,13 @@ CUSTOM_ICONS = {
         '<path d="M22 46V37M30 46V32M38 46V35M46 46V27"/>'
         '<path d="M20 50h28"/>',
     ),
+    "fyxer": (
+        "#2F6F73",
+        '<path d="M10 15h44v34H10z"/>'
+        '<path d="m11 17 21 17 21-17"/>'
+        '<path d="M18 43h20M18 37h14"/>'
+        '<path d="M43 35l8 5-8 5z"/>',
+    ),
     "lovable": (
         "#D84A2B",
         '<rect x="10" y="12" width="44" height="40" rx="4"/>'

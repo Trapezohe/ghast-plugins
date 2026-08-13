@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "fyxer": {
+      "type": "http",
+      "url": "https://app.fyxer.com/mcp"
+    }
+  }
+}

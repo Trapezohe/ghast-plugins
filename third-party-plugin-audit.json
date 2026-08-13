@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 61,
-      "official-source-verified": 83
+      "official-source-research-required": 60,
+      "official-source-verified": 84
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 83,
-      "not-implemented": 66
+      "implemented-verified": 84,
+      "not-implemented": 65
     }
   },
   "excludedOpenAIPlugins": [
@@ -4431,7 +4431,7 @@
     },
     {
       "id": "fyxer",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Fyxer",
@@ -4456,13 +4456,78 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.fyxer.com"
+        "homepage": "https://www.fyxer.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Fyxer",
+          "officialRepository": null,
+          "officialRevision": "fyxer-docs-524a8683cf7b+addons-d1b55e0ef54e+oauth-c0a99fecb69d+auth-fde6773cf908",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/fyxer/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation, and generic email-context icon.",
+            "No Fyxer hosted MCP implementation, private Codex connector, OAuth credential, email or meeting data, writing-style model, branded icon, or marketplace artwork is redistributed.",
+            "Fyxer does not publish a licensed source repository for the hosted MCP implementation. The Codex manifest's MIT field is not treated as a license grant for the service or private connector."
+          ],
+          "officialityEvidence": [
+            "Fyxer's official Help Center identifies https://app.fyxer.com/mcp as its public Streamable HTTP MCP endpoint for ChatGPT, Claude, Codex, and other compatible clients.",
+            "The normalized official MCP and add-ons pages are pinned at SHA-256 524a8683cf7b177c93966c82226574351dd4d6e998d74a333050fa50829fb928 and d1b55e0ef54e828f61c8811619b97a1c7898050230232c0dbe759d7f678ae8c0.",
+            "The official catalog documents search_context, search_meetings, get_meeting, get_transcript, draft_email, and resolve_person; its ordered-name SHA-256 is dc4f1638f900ca0062c48861b22e1ce0c05104d7d19fb477357c57d8b61c1054.",
+            "Fyxer states that all six tools are available through the MCP URL for Codex and other MCP clients, while the ChatGPT directory app has a narrower surface.",
+            "Fyxer explicitly states that draft_email writes a draft in chat and does not send email; the user must choose Open in Outlook or Gmail, review, edit, and send it.",
+            "Protected-resource and authorization-server metadata are pinned at canonical JSON SHA-256 c0a99fecb69d163d71ce9bde9b33ee2aa2fa90710ab25e180e391bddcbdd3036 and fde6773cf90838ed70eaf796663bdf7141be68e6691a592fa2ea8bace1d3c20a.",
+            "On August 13, 2026, a 127.0.0.1 loopback public client registered with HTTP 200 and no client secret, and its PKCE authorization request reached Fyxer's /auth/mcp login page.",
+            "On the same date, missing and invalid credentials returned HTTP 401 with Fyxer's exact protected-resource challenge."
+          ],
+          "codexCapabilities": [
+            "Write emails that sound like the authenticated user through a private app connector",
+            "Use past emails, calendar context, and meeting notes to create a personalized draft",
+            "Follow up with Sarah about a meeting from the prior week and return a polished email ready for review"
+          ],
+          "ghastCapabilities": [
+            "The same personalized follow-up draft workflow through Fyxer's official public MCP endpoint instead of an OpenAI private connector",
+            "Additional official search across email, meetings, and documents; meeting and recording discovery; full summaries and transcripts; and contact resolution",
+            "Browser OAuth with a verified local loopback public-client and PKCE path",
+            "A Ghast workflow that bounds private-data retrieval, resolves ambiguous people and meetings, preserves source provenance, and never claims a draft was saved or sent"
+          ],
+          "capabilityRelationship": "official-hosted-superset",
+          "limitations": [
+            "Fyxer operates the hosted MCP implementation and does not publish its source or license. The MIT license applies only to the Ghast-authored adapter.",
+            "A Fyxer account, connected Gmail or Outlook inbox, connected calendar, meeting access, OAuth authorization, permissions, rate limits, and network access remain user-managed.",
+            "Authenticated tools/list and private email, meeting, transcript, contact, or drafting operations were not run because no Fyxer account or user data was used during the audit.",
+            "The OAuth grant includes drafts.write together with broad read scopes for email, context, meetings, recordings, and contacts. Existing Fyxer and connected-account permissions are the effective access boundary.",
+            "Fyxer says Dynamic Client Registration is currently supported for ChatGPT and Claude and warns that other cloud-hosted products may require an approved callback URL. A local loopback client worked, but arbitrary hosted Ghast deployments are not proven approved.",
+            "Email bodies, documents, meetings, recordings, transcripts, speaker notes, contacts, addresses, and writing-style signals can contain highly sensitive personal and business data.",
+            "draft_email returns a draft in chat. Opening it in Outlook or Gmail and sending it are separate user-controlled actions; Ghast must not report those actions as completed.",
+            "Fyxer-generated notes, summaries, contact matches, writing-style adaptation, and speaker attribution can be incomplete and must remain distinguishable from source evidence.",
+            "Fyxer documents no data storage beyond the active MCP session, while Fyxer and connected email or calendar services retain data under their own policies.",
+            "A generic email-context icon is used because no licensed Fyxer catalog artwork is redistributed."
+          ],
+          "verification": [
+            "Run the Fyxer evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated Close evidence drift",
+            "Verify normalized official MCP and add-ons page hashes 524a8683cf7b177c93966c82226574351dd4d6e998d74a333050fa50829fb928 and d1b55e0ef54e828f61c8811619b97a1c7898050230232c0dbe759d7f678ae8c0",
+            "Confirm the exact six-tool order and SHA-256 dc4f1638f900ca0062c48861b22e1ce0c05104d7d19fb477357c57d8b61c1054 plus the documented no-send behavior",
+            "Verify canonical protected-resource and authorization-server metadata hashes c0a99fecb69d163d71ce9bde9b33ee2aa2fa90710ab25e180e391bddcbdd3036 and fde6773cf90838ed70eaf796663bdf7141be68e6691a592fa2ea8bace1d3c20a",
+            "Probe https://app.fyxer.com/mcp with MCP initialize and confirm HTTP 401 plus Fyxer's exact protected-resource challenge",
+            "Confirm one loopback public client registered without a secret and reached Fyxer's login page through PKCE; do not repeat registration in the importer",
+            "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Fyxer manifest and connector hashes and compare the follow-up workflow with all six official tools",
+            "Authorize a Fyxer account before testing authenticated schemas or private data",
+            "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+            "python3 scripts/build-ghast-catalog.py",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/fyxer.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.2-ghast.1",
+        "repository": null,
+        "upstreamRevision": "fyxer-docs-524a8683cf7b+addons-d1b55e0ef54e+oauth-c0a99fecb69d+auth-fde6773cf908",
+        "portStatus": "full"
       }
     },
     {
