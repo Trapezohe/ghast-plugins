@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 55,
-      "official-source-verified": 89
+      "official-source-research-required": 54,
+      "official-source-verified": 90
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 89,
-      "not-implemented": 60
+      "implemented-verified": 90,
+      "not-implemented": 59
     }
   },
   "excludedOpenAIPlugins": [
@@ -2868,7 +2868,7 @@
     },
     {
       "id": "common-room",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Common Room",
@@ -2893,13 +2893,87 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://commonroom.io"
+        "homepage": "https://commonroom.io",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Common Room",
+          "officialRepository": null,
+          "officialRevision": "common-room-docs-a9dbd0442b28+cli-0.1.2-9c87bd173b7e+oauth-325111f2b2c7+auth-83da7abc3978",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/common-room/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic buyer-intelligence icon.",
+            "Common Room's official @commonroomio/cli version 0.1.2 npm package is Apache-2.0 and includes its license, executable bundle, source map, README, and package metadata, but Ghast does not redistribute that package.",
+            "No Common Room hosted MCP implementation, private Codex or ChatGPT app connector, OAuth credential, workspace data, buyer intelligence, branded artwork, or marketplace icon is redistributed."
+          ],
+          "officialityEvidence": [
+            "Common Room's official documentation identifies https://mcp.commonroom.io/mcp as its hosted Streamable HTTP MCP server, describes it as usable by compatible AI clients, and states that it supports both reading and writing.",
+            "The official MCP guide has normalized visible-text SHA-256 a9dbd0442b288077fbae5767b87ade581ad2363a644396fef70aa1eb94822386 and documents account research, contact research, call preparation, prospecting, outreach composition, and record-writing workflows.",
+            "The official ordered five-tool inventory has canonical JSON SHA-256 0888ac7fa8689b7a34a52f612c1c3216b834010ca2bcb9c96a6b2df6521e1650. It contains commonroom_get_catalog, commonroom_list_objects, commonroom_create_object, commonroom_update_object, and commonroom_submit_feedback.",
+            "The official query documentation covers contacts, organizations, activities, segments, tags, property filters, cross-object filters, sorting, and cursor pagination.",
+            "The official write documentation covers contact and organization upserts, segment creation, activity and note creation, contact and organization updates by stable ID, and query-result feedback.",
+            "Common Room's official CLI guide and MCP and CLI product page have normalized visible-text SHA-256 values 24a4d07cce090b01a074e798430c0f5cbb0a8ed1860fca2547ae2bf1243937b0 and ccec7e950d83dc1136b9cc55b1bc1cd3ad28fe076fce546b719cd96beab75dea. The official documentation index has raw SHA-256 b868a1132bcd3a9a22636c2666525f0083b99ccaf0189906496657c0d4ddf706.",
+            "The official @commonroomio/cli version 0.1.2 tarball has SHA-256 9c87bd173b7e3f010cdca525ba8a252169ccc6c8e57304450d040a446328d30f, names Common Room as author, declares Apache-2.0, requires Node.js 22 or newer, and exposes the cr executable.",
+            "The CLI documents browser OAuth with PKCE, device flow, static COMMONROOM_API_TOKEN authentication, workspace switching, typed filters, JSON-first output, full CRUD helpers, upsert semantics, --dry-run for every mutation, cursor pagination, and machine-readable cr agent-context --json discovery.",
+            "The protected-resource metadata identifies https://mcp.commonroom.io/mcp, Common Room's authorization server, and openid, profile, email, and offline_access scopes; its canonical JSON SHA-256 is 325111f2b2c7c769c9da46fc5875c3195a26f441179cec04608434c573cd67b1.",
+            "The authorization-server metadata publishes authorization-code, refresh-token, device-code, dynamic registration, token revocation, token_endpoint_auth_method none, and PKCE S256 support; its canonical JSON SHA-256 is 83da7abc3978cc57c91955e109fb8aef0a2d917f6233fd5d53600776cbeeefe9.",
+            "On August 13, 2026, a disposable loopback OAuth client registered with HTTP 201 for authorization code and refresh tokens. The server returned a non-expiring client secret despite token_endpoint_auth_method none; it was not retained. A PKCE request reached Common Room's official login page. The normal importer does not repeat this side-effecting registration probe because no registration management URI was supplied.",
+            "Missing and invalid Bearer initialize requests returned HTTP 401 with Common Room's protected-resource challenge and distinct response body SHA-256 values 4d136b8c49694e6c4327d8e21059066a80b5f594f09974ae3621a9a41fdf5fbc and 7f7152cb721f5752ec4d0de38c63bd02e847d05a06cc8016dadd23322ed1ab18.",
+            "OpenAI's pinned Codex plugin snapshot identifies Common Room as the developer and describes account and contact research, buying signals, activity history, net-new company prospecting, segment and role filtering, lead scores, website visits, CRM fields, enrichment, and account-plan development. The manifest and private connector hashes are cb57b7d6dea3b776263a83d6e0c515e4a7a403d1944236badc2fa107cab86fcf and 6e12aa008c57415eb041f15b786399b18e7ce4b8ec756be01ac87c3064ffebbd.",
+            "No public source repository containing the hosted Common Room MCP implementation was identified, so Ghast integrates only the verified official hosted service and independently authored adapter."
+          ],
+          "codexCapabilities": [
+            "Research accounts and contacts and build an approach plan for a named account",
+            "Surface buying signals, activity history, CRM fields, scores, enrichment, and revenue context",
+            "Build net-new company lists by industry, company size, technology stack, or location",
+            "Filter and sort contacts by segment, role, lead score, or website visits",
+            "Find high-intent contacts and recent pricing-page visitors"
+          ],
+          "ghastCapabilities": [
+            "The same official account research, contact lookup, buyer-signal, activity-history, ICP prospecting, segment, role, score, website-visit, and account-plan workflows through Common Room's public hosted MCP",
+            "Official call-preparation and signal-grounded outreach-drafting workflows across product, community, website, intent, CRM, opportunity, enrichment, and external research context",
+            "Catalog-driven reads for contacts, organizations, activities, segments, tags, cross-object filters, sorting, and cursor pagination",
+            "Explicitly confirmed creation of contacts, organizations, segments, activities, and notes plus contact or organization updates and query-result feedback",
+            "An independently authored workflow for identity resolution, source and date handling, data minimization, responsible buyer-intelligence use, upsert review, and state-changing confirmation",
+            "Verified complementary access to Common Room's official Apache-2.0 CLI for automation, scheduled jobs, custom agents, JSON output, dry runs, workspace switching, and full CRUD when installed separately"
+          ],
+          "capabilityRelationship": "superset-official-hosted-mcp",
+          "limitations": [
+            "The hosted MCP implementation is operated by Common Room and is not redistributed. The MIT license applies only to the Ghast-authored adapter; the separately distributed official CLI is Apache-2.0.",
+            "A Common Room account, eligible workspace, browser OAuth, correct user and role, data integrations, Prospector access, plan, permissions, enrichment entitlements, and service limits remain user-managed.",
+            "Official documentation, the five-tool catalog, CLI package and license, OAuth metadata, dynamic registration, PKCE login, Codex capability evidence, and unauthenticated behavior were verified without an account. Authenticated tools/list, workspace data, prospecting, CRM reads, writes, feedback, and CLI authentication were not run.",
+            "The dynamic registration response returned a client secret even though token_endpoint_auth_method was none and supplied no registration management URI or registration access token. The disposable credential was not retained, the audit client could not be deleted through RFC 7592 management, and the normal importer intentionally does not repeat registration.",
+            "Contact and organization creation uses upsert semantics and can update an existing record matched by email, LinkedIn URL, domain, or Prospector ID. Every write requires exact match review and current-conversation confirmation.",
+            "Buyer intelligence can include personal data, website visits, product activity, community activity, social identifiers, CRM fields, scores, notes, activities, enrichment, and inferred or AI-generated research. Retrieval and disclosure must remain narrowly scoped.",
+            "Scores, segment membership, website visits, product usage, engagement, job changes, and other signals do not prove buying intent, authority, budget, suitability, consent, or willingness to engage.",
+            "Outreach composition does not authorize sending, enrollment, sequencing, audience sync, campaign creation, or external communication.",
+            "Contact and account data can be stale, duplicated, contradictory, permission-limited, licensed, inferred, or incomplete. Stable IDs, source fields, timestamps, pagination state, and unresolved conflicts must be preserved.",
+            "Buyer intelligence and contact rankings must not be used for employment, housing, lending, insurance, education admissions, or other high-impact eligibility decisions, and sensitive traits must not be inferred.",
+            "A generic buyer-intelligence icon is used because no licensed Common Room catalog artwork is included in a public official MCP source repository."
+          ],
+          "verification": [
+            "Run the Common Room evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
+            "Verify normalized official MCP guide, CLI guide, and product page hashes a9dbd0442b288077fbae5767b87ade581ad2363a644396fef70aa1eb94822386, 24a4d07cce090b01a074e798430c0f5cbb0a8ed1860fca2547ae2bf1243937b0, and ccec7e950d83dc1136b9cc55b1bc1cd3ad28fe076fce546b719cd96beab75dea",
+            "Parse and confirm the exact ordered five-tool inventory and canonical JSON hash 0888ac7fa8689b7a34a52f612c1c3216b834010ca2bcb9c96a6b2df6521e1650",
+            "Verify @commonroomio/cli version 0.1.2 tarball SHA-256 9c87bd173b7e3f010cdca525ba8a252169ccc6c8e57304450d040a446328d30f, all five packaged file hashes, Common Room authorship, Apache-2.0 license, cr entry point, and Node.js requirement",
+            "Verify canonical OAuth protected-resource and authorization-server hashes 325111f2b2c7c769c9da46fc5875c3195a26f441179cec04608434c573cd67b1 and 83da7abc3978cc57c91955e109fb8aef0a2d917f6233fd5d53600776cbeeefe9",
+            "Only during a deliberate provider re-audit, run probe_common_room_oauth_registration through Python runpy once and confirm HTTP 201, authorization-code and refresh-token grants, token_endpoint_auth_method none, no registration management URI, and PKCE authorization reaching Common Room's official login page without retaining the returned client secret",
+            "Probe https://mcp.commonroom.io/mcp with missing and invalid Bearer initialize requests and confirm HTTP 401 plus body SHA-256 values 4d136b8c49694e6c4327d8e21059066a80b5f594f09974ae3621a9a41fdf5fbc and 7f7152cb721f5752ec4d0de38c63bd02e847d05a06cc8016dadd23322ed1ab18",
+            "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Common Room manifest and connector hashes and compare every Codex workflow with the official hosted MCP surface",
+            "Authorize a Common Room account before testing authenticated schemas, workspace records, prospecting, CRM reads, writes, feedback, or CLI operations",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/common-room.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": null,
+        "upstreamRevision": "common-room-docs-a9dbd0442b28+cli-0.1.2-9c87bd173b7e+oauth-325111f2b2c7+auth-83da7abc3978",
+        "portStatus": "full"
       }
     },
     {

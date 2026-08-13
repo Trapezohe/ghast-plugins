@@ -179,6 +179,15 @@ CUSTOM_ICONS = {
         '<path d="M31 33h15M31 41h10"/>'
         '<path d="M16 34h4M16 42h4"/>',
     ),
+    "common-room": (
+        "#2A6D64",
+        '<circle cx="21" cy="22" r="6"/>'
+        '<circle cx="43" cy="19" r="5"/>'
+        '<path d="M12 45c2-9 5-14 9-14s8 5 10 14"/>'
+        '<path d="M35 43c1-7 4-11 8-11s7 4 9 11"/>'
+        '<path d="M27 23l11-3M28 30l9 6"/>'
+        '<path d="M13 52h38"/>',
+    ),
     "datadog": (
         "#27676A",
         '<rect x="11" y="13" width="42" height="38" rx="3"/>'

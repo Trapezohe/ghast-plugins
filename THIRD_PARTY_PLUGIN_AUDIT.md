@@ -60,7 +60,7 @@ verification.
 | cloudinary | Cloudinary | appConnector | MIT | official-source-verified | implemented-verified |
 | coderabbit | CodeRabbit | skills | MIT | official-source-verified | implemented-verified |
 | cogedim | ALTAREA PROMOTION MANAGEMENT | appConnector | MIT | official-source-research-required | not-implemented |
-| common-room | Common Room | appConnector | MIT | official-source-research-required | not-implemented |
+| common-room | Common Room | appConnector | MIT | official-source-verified | implemented-verified |
 | conductor | Conductor Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | convex | Convex, Inc. | appConnector | UNLICENSED | blocked-license | not-implemented |
 | coupler-io | Coupler.io | appConnector | MIT | official-source-research-required | not-implemented |

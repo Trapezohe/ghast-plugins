@@ -816,6 +816,34 @@
       "license": "MIT"
     },
     {
+      "id": "common-room",
+      "name": "common-room",
+      "description": "Research accounts and contacts, query buyer signals, build prospect lists, and safely write records through Common Room's official hosted MCP.",
+      "manifest": {
+        "name": "common-room",
+        "description": "Research accounts and contacts, query buyer signals, build prospect lists, and safely write records through Common Room's official hosted MCP.",
+        "author": {
+          "name": "Common Room",
+          "url": "https://www.commonroom.io"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://www.commonroom.io/docs/using-common-room/mcp-server/",
+        "upstreamRevision": "common-room-docs-a9dbd0442b28+cli-0.1.2-9c87bd173b7e+oauth-325111f2b2c7+auth-83da7abc3978",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/common-room.zip",
+        "sha256": "40d7eed2c539ce6c06c2722d85f4c9c19fe3cf05cb7148e725d96da2290e0de7"
+      },
+      "icon": "./plugins/common-room/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://www.commonroom.io/docs/using-common-room/mcp-server/",
+      "license": "MIT"
+    },
+    {
       "id": "current-datetime",
       "name": "current-datetime",
       "description": "Slash command and skill that tells the model the current wall-clock time in any IANA timezone — kills the 'I don't know what day it is' problem.",
