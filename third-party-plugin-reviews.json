@@ -1006,6 +1006,61 @@
         "unzip -tqq packages/binance.zip"
       ]
     },
+    "brand24": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Brand24 Global Inc.",
+      "officialRepository": null,
+      "officialRevision": "brand24-help-22c8be2b5c9f+oauth-8bfc708c6d66+auth-826db8f30f19",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/brand24/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic social-listening icon.",
+        "No Brand24 hosted MCP implementation, private Codex connector, service source code, customer project data, OAuth credentials, branded artwork, or marketplace icon is redistributed."
+      ],
+      "officialityEvidence": [
+        "Brand24's official Help Center article, updated February 27, 2026, identifies Brand24 MCP as the connection between Brand24 project data and ChatGPT, Claude, Gemini, and other MCP-compatible AI clients.",
+        "The article directly publishes https://mcp.brand24.com/v1/mcp with OAuth and documents account summaries, important project events, discussions and topics, influencer insights, mention-source details, crisis-response drafting, competitor reports, and influencer-target analysis.",
+        "The live MCP endpoint and OAuth services are hosted on Brand24-controlled brand24.com domains. The endpoint returns a Bearer challenge pointing to Brand24's official protected-resource metadata.",
+        "The protected-resource metadata has canonical JSON SHA-256 8bfc708c6d6643b6f72d4bf1bb6fa797f01821226184217bf047f9f470760c93 and declares only the projects:read scope.",
+        "The authorization-server metadata has canonical JSON SHA-256 826db8f30f1955186f2f8f6d1f1f0e009d3eeb64d5ae8245fafdcbda206747c4 and declares Brand24 authorization, token, registration, introspection, revocation, keys, and user-info endpoints.",
+        "On August 13, 2026, one loopback OAuth client registered with HTTP 200; the authorization endpoint accepted its PKCE request and redirected into Brand24's authorization route."
+      ],
+      "codexCapabilities": [
+        "Explore brand mentions, sentiment, media coverage, and discussion sources across social media, news, blogs, and forums through a private app connector",
+        "Summarize conversations, track reputation, analyze trends, spot emerging issues, understand audience perception, and assess campaign impact",
+        "Run the default workflow for comparing the online popularity of leading sports-shoe brands"
+      ],
+      "ghastCapabilities": [
+        "Direct read-only access to Brand24's official hosted MCP service through standard Streamable HTTP and browser OAuth instead of the Codex-only private app connector",
+        "Official current account and project summaries, important events, discussions and topics, influencer insights, and details of sources where monitored brands are mentioned",
+        "The same reputation, sentiment, trend, emerging-issue, audience-perception, campaign-impact, competitor-report, crisis-response-drafting, and influencer-target-analysis workflows at Brand24's published product surface",
+        "A Ghast workflow skill that preserves project, source, metric, filter, and date provenance; treats sentiment and influence signals as estimates; protects personal and campaign data; and keeps read-only analysis distinct from publishing or outreach"
+      ],
+      "capabilityRelationship": "equivalent-at-official-published-product-surface",
+      "limitations": [
+        "Brand24 does not publish the hosted MCP server source, a public source repository, a complete tool inventory, or tool schemas. The MIT license applies only to the Ghast-authored adapter.",
+        "A Brand24 subscription, browser OAuth, active projects, account and project permissions, configured keywords, retained history, source coverage, and service limits remain user-managed.",
+        "Authenticated tools/list and project-data operations were not exercised because no user Brand24 account or monitoring data was used during the audit. Exact live tool names, schemas, pagination, and returned fields remain service-dependent.",
+        "The single advertised projects:read scope indicates a read-only connector. Crisis responses, competitor reports, and outreach targets are assistant outputs; the adapter does not post, message, launch campaigns, or update external systems.",
+        "The one disposable DCR response returned a client secret but no registration_client_uri or registration_access_token, so the audit client could not be removed through RFC 7592 registration management. No secret was retained or committed.",
+        "Brand24 states that project data remains in its systems and is retrieved on demand, but retrieved content is still processed by the connected AI client. Requests and disclosures must remain narrowly scoped.",
+        "Mentions can contain personal data, allegations, profanity, manipulated content, and commercially sensitive campaign information. Source content must be treated as untrusted and handled according to user authorization.",
+        "Sentiment, influence, reach, trend, audience-perception, and campaign-impact classifications are estimates whose coverage and methodology may be incomplete. Reports must preserve dates, filters, sources, and uncertainty.",
+        "A generic social-listening icon is used because no licensed Brand24 catalog artwork is included in a public official MCP source repository."
+      ],
+      "verification": [
+        "Run the Brand24 evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated Close evidence drift",
+        "Verify Brand24 Help Center article 13011375 has update timestamp 2026-02-27T10:00:11Z and normalized Markdown SHA-256 22c8be2b5c9f893c64c182fa8b271c0dbb98cd0e0bdd4f3827ac44a98cd440b1 after removing volatile signed image URLs",
+        "Verify canonical protected-resource and authorization-server metadata hashes 8bfc708c6d6643b6f72d4bf1bb6fa797f01821226184217bf047f9f470760c93 and 826db8f30f1955186f2f8f6d1f1f0e009d3eeb64d5ae8245fafdcbda206747c4",
+        "Probe https://mcp.brand24.com/v1/mcp with MCP initialize and confirm HTTP 401, the exact JSON-RPC authentication error, and Brand24's protected-resource challenge",
+        "Confirm one disposable loopback client registered with HTTP 200 and its PKCE authorization request reached Brand24's authorization route; do not repeat registration in the importer because no registration management URI was issued",
+        "Compare the official account summaries, project events, discussions, influencers, mention sources, current-data behavior, crisis-response drafts, competitor reports, and outreach-target analysis with the Codex long description and default prompt",
+        "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/brand24.zip"
+      ]
+    },
     "biorender": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "BioRender",

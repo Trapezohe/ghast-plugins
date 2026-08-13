@@ -40,7 +40,7 @@ verification.
 | binance | Binance | appConnector | MIT | official-source-verified | implemented-verified |
 | biorender | BioRender | appConnector | MIT | official-source-verified | implemented-verified |
 | boltz-api-cli | Boltz | skills | MIT | official-source-verified | implemented-verified |
-| brand24 | Brand24 Global Inc. | appConnector | MIT | official-source-research-required | not-implemented |
+| brand24 | Brand24 Global Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | brex | Brex Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | brighthire | BrightHire | appConnector, skills | MIT | blocked-license | not-implemented |
 | calendly | Calendly | appConnector | MIT | official-source-verified | implemented-verified |

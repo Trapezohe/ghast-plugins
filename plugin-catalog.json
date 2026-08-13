@@ -439,6 +439,34 @@
       "license": "MIT"
     },
     {
+      "id": "brand24",
+      "name": "brand24",
+      "description": "Explore current Brand24 project summaries, important events, discussions, influencers, and mention sources through Brand24's official read-only hosted MCP server.",
+      "manifest": {
+        "name": "brand24",
+        "description": "Explore current Brand24 project summaries, important events, discussions, influencers, and mention sources through Brand24's official read-only hosted MCP server.",
+        "author": {
+          "name": "Brand24 Global Inc.",
+          "url": "https://brand24.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://help.brand24.com/en/articles/13011375-brand24-mcp",
+        "upstreamRevision": "brand24-help-22c8be2b5c9f+oauth-8bfc708c6d66+auth-826db8f30f19",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/brand24.zip",
+        "sha256": "1caf206a9fc008ea383a435e8a21cab9a3ecb7d9ddd4256508db8a056711cfce"
+      },
+      "icon": "./plugins/brand24/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://help.brand24.com/en/articles/13011375-brand24-mcp",
+      "license": "MIT"
+    },
+    {
       "id": "calendly",
       "name": "calendly",
       "description": "Inspect Calendly meetings and availability, manage event types and schedules, create booking links, book or cancel meetings, and administer invitations through Calendly's official hosted MCP server.",

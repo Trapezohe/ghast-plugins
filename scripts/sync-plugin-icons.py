@@ -90,6 +90,14 @@ CUSTOM_ICONS = {
         '<path d="M14 47h38M18 41V27M29 41V18M40 41V31M51 41V12"/>'
         '<path d="M14 22l12-7 10 6 15-11"/>',
     ),
+    "brand24": (
+        "#2F6F73",
+        '<path d="M11 15h42v27H31l-11 8v-8h-9z"/>'
+        '<path d="M18 35l7-7 6 5 10-12 7 6"/>'
+        '<circle cx="25" cy="28" r="2" fill="white" stroke="none"/>'
+        '<circle cx="31" cy="33" r="2" fill="white" stroke="none"/>'
+        '<circle cx="41" cy="21" r="2" fill="white" stroke="none"/>',
+    ),
     "biorender": (
         "#2F747A",
         '<path d="M13 14h27l9 9v27H13z"/>'
