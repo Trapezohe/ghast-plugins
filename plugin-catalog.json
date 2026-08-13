@@ -615,6 +615,36 @@
       "license": "MIT"
     },
     {
+      "id": "replayio",
+      "name": "replayio",
+      "description": "Record and inspect Replay browser runs, create verified MP4 evidence, debug uploaded recordings through Replay MCP, and run Replay QA project, bug, journey, and exploration workflows.",
+      "manifest": {
+        "name": "replayio",
+        "description": "Record and inspect Replay browser runs, create verified MP4 evidence, debug uploaded recordings through Replay MCP, and run Replay QA project, bug, journey, and exploration workflows.",
+        "author": {
+          "name": "Replay",
+          "url": "https://replay.io"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "0.1.1-ghast.1",
+        "homepage": "https://replay.io",
+        "repository": "https://github.com/replayio/plugins",
+        "upstreamRevision": "c6cd28ff3d47f4e8e8b23040c69925ec2a820695",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/replayio.zip",
+        "sha256": "f805359af7993e4c8f005d168b97a03599abc3cebaef0e8f86704de890232137"
+      },
+      "icon": "./plugins/replayio/assets/icon.svg",
+      "category": "development",
+      "homepage": "https://replay.io",
+      "repository": "https://github.com/replayio/plugins",
+      "license": "MIT"
+    },
+    {
       "id": "sentry",
       "name": "sentry",
       "description": "Inspect recent Sentry issues and events through a read-only, redacting API workflow.",
@@ -993,6 +1023,36 @@
       "category": "development",
       "homepage": "https://dev.wix.com/docs/api-reference/articles/ai-tools/about-wix-skills",
       "repository": "https://github.com/wix/skills",
+      "license": "MIT"
+    },
+    {
+      "id": "zoom",
+      "name": "zoom",
+      "description": "Build Zoom integrations and access meeting search, transcripts, recordings, assets, Team Chat, Canvas, Tasks, Whiteboard, and Revenue Accelerator through Zoom's official skills and MCP servers.",
+      "manifest": {
+        "name": "zoom",
+        "description": "Build Zoom integrations and access meeting search, transcripts, recordings, assets, Team Chat, Canvas, Tasks, Whiteboard, and Revenue Accelerator through Zoom's official skills and MCP servers.",
+        "author": {
+          "name": "Zoom",
+          "url": "https://github.com/zoom"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.0-ghast.1",
+        "homepage": "https://developers.zoom.us/",
+        "repository": "https://github.com/zoom/skills",
+        "upstreamRevision": "1858eadc17d9bd0d1279ce7f66304362a774e3b4",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/zoom.zip",
+        "sha256": "337b0286856e00a9461c11017bb3e404ab0ee920be30a08ec3b39a5f6f83c87b"
+      },
+      "icon": "./plugins/zoom/assets/icon.svg",
+      "category": "development",
+      "homepage": "https://developers.zoom.us/",
+      "repository": "https://github.com/zoom/skills",
       "license": "MIT"
     }
   ]

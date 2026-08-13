@@ -139,7 +139,7 @@ verification.
 | readwise | Readwise Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | remotion | Remotion | skills | MIT | official-source-verified | implemented-verified |
 | render | Render | skills | MIT | official-source-verified | implemented-verified |
-| replayio | Replay | appConnector, skills | MIT | declared-upstream-needs-verification | not-implemented |
+| replayio | Replay | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | replit | Replit | appConnector | MIT | official-source-research-required | not-implemented |
 | responsive | RFPIO Inc. (d/b/a Responsive) | appConnector | MIT | official-source-research-required | not-implemented |
 | rox | Rox Data Corp | appConnector | MIT | official-source-research-required | not-implemented |
@@ -173,7 +173,7 @@ verification.
 | wix | Wix | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | yepcode | YepCode S.L. | appConnector | MIT | official-source-research-required | not-implemented |
 | zoho | Zoho | appConnector | MIT | official-source-research-required | not-implemented |
-| zoom | Zoom | appConnector, skills, commands | MIT | declared-upstream-needs-verification | not-implemented |
+| zoom | Zoom | appConnector, skills, commands | MIT | official-source-verified | implemented-verified |
 | zoominfo | ZoomInfo | appConnector | MIT | official-source-research-required | not-implemented |
 
 The JSON report is the machine-readable source of truth. Human review

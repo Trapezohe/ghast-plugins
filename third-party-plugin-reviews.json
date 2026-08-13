@@ -578,6 +578,45 @@
         "unzip -tqq packages/render.zip"
       ]
     },
+    "replayio": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Replay",
+      "officialRepository": "https://github.com/replayio/plugins",
+      "officialRevision": "c6cd28ff3d47f4e8e8b23040c69925ec2a820695",
+      "license": "MIT",
+      "licenseEvidence": [
+        "codex/replayio/LICENSE",
+        "codex/replay-qa/LICENSE"
+      ],
+      "officialityEvidence": [
+        "The repository is owned by the Replay.io GitHub organization.",
+        "Its Codex manifests identify Replay as developer and publish separate official Replay.io Pro and Replay QA packages.",
+        "Ghast combines both official packages from one pinned revision and uses Replay's public MCP endpoint."
+      ],
+      "codexCapabilities": [
+        "Record Replay Chromium browser sessions, upload recordings, and inspect them through Replay MCP",
+        "Create Replay QA projects and analyze live application bugs"
+      ],
+      "ghastCapabilities": [
+        "The complete official Replay.io Pro recording skill, lifecycle scripts, MP4 transcoding, video stitching, and worker/critic proof-loop prompts",
+        "The complete official Replay QA project, status, bug, journey, test-run, exploration, and fix-verification skill and scripts",
+        "Uploaded-recording debugging through the official public Replay MCP server"
+      ],
+      "capabilityRelationship": "superset-with-explicit-lifecycle",
+      "limitations": [
+        "Ghast does not execute Codex PostToolUse or Stop hooks, so browser sessions must be opened and closed through the official lifecycle scripts explicitly.",
+        "Replay CLI, Replay Chromium, ffmpeg, jq, account access, API tokens, and hosted Replay services remain user-managed dependencies.",
+        "The current verification machine does not have Replay CLI, Replay Chromium, or ffmpeg installed; setup diagnostics and script syntax pass, while a full authenticated recording requires those external dependencies."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Compare both official skill trees and plugin-root scripts with the pinned repository, allowing only documented Ghast client wording and explicit-lifecycle substitutions",
+        "Run Node and Bash syntax checks across every bundled Replay script",
+        "Run skills/replayio/scripts/context.js and verify it reports missing external dependencies without crashing",
+        "Probe https://dispatch.replay.io/mcp and confirm the official endpoint returns an authentication challenge",
+        "unzip -tqq packages/replayio.zip"
+      ]
+    },
     "shopify": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Shopify",
@@ -834,6 +873,44 @@
         "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
         "Compare all eight top-level Ghast skill trees and .mcp.json byte-for-byte with the pinned official repository",
         "unzip -tqq packages/wix.zip"
+      ]
+    },
+    "zoom": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Zoom",
+      "officialRepository": "https://github.com/zoom/skills",
+      "officialRevision": "1858eadc17d9bd0d1279ce7f66304362a774e3b4",
+      "license": "MIT",
+      "licenseEvidence": [
+        "LICENSE"
+      ],
+      "officialityEvidence": [
+        "The source repository is owned by the Zoom GitHub organization and identifies itself as Zoom Developer Platform Skills.",
+        "The pinned source publishes seven official Zoom Streamable HTTP MCP declarations, including the Meetings server for meeting search, recordings, transcripts, summaries, and assets.",
+        "Zoom's separate official mcp-registry repository at revision 25347a5f3d2246fc443ddb19bbd1c10371a96872 independently publishes the same remote server endpoints and capability metadata.",
+        "Ghast imports the complete official portable skill tree and MCP declaration from one pinned Zoom revision."
+      ],
+      "codexCapabilities": [
+        "Search Zoom meetings and retrieve summaries, transcripts, recordings, and related meeting context",
+        "Plan, build, debug, and review Zoom API, SDK, webhook, WebSocket, bot, and automation integrations"
+      ],
+      "ghastCapabilities": [
+        "All 58 official Zoom Developer Platform skills, including REST, OAuth, webhooks, WebSockets, Meeting SDK, Video SDK, RTMS, AI Services, Phone, Team Chat, Contact Center, and Virtual Agent",
+        "Meeting search, transcripts, summaries, recordings, and assets through the official Zoom Meetings and unified Zoom MCP servers",
+        "Additional official MCP coverage for Team Chat, Canvas, Tasks, Whiteboard, and Revenue Accelerator"
+      ],
+      "capabilityRelationship": "superset-official-public-mcp",
+      "limitations": [
+        "Zoom Marketplace app creation, user OAuth tokens, granular scopes, account entitlements, AI meeting features, and paid services remain user-managed.",
+        "The older Codex private app mapping is not copied; Zoom's official public MCP endpoints provide the equivalent meeting-context transport.",
+        "A generic video-service icon is used because Zoom's official MCP registry says its logo is proprietary and grants no redistribution rights."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Compare all 58 Ghast SKILL.md files and seven .mcp.json entries with the pinned official Zoom skills repository",
+        "Verify zoom/mcp-registry meeting metadata at revision 25347a5f3d2246fc443ddb19bbd1c10371a96872 matches the imported Meetings MCP endpoint",
+        "Probe https://mcp.zoom.us/mcp/meeting/streamable and confirm the official endpoint returns Zoom's access-token-required response",
+        "unzip -tqq packages/zoom.zip"
       ]
     }
   }

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import shutil
 import subprocess
 import tempfile
@@ -227,6 +228,39 @@ PLUGINS = {
         "mcp": ".mcp.json",
         "license_name": "MIT",
     },
+    "replayio": {
+        "directory": "replayio-plugins",
+        "revision": "c6cd28ff3d47f4e8e8b23040c69925ec2a820695",
+        "repository": "https://github.com/replayio/plugins",
+        "plugin_root": "codex/replayio",
+        "manifest": ".codex-plugin/plugin.json",
+        "license": "LICENSE",
+        "icon": "assets/replayio.svg",
+        "category": "development",
+        "mcp": ".mcp.json",
+        "license_name": "MIT",
+        "extra_directories": ["scripts"],
+        "additional_repository_skill_roots": [
+            "codex/replay-qa/skills",
+        ],
+        "description": (
+            "Record and inspect Replay browser runs, create verified MP4 "
+            "evidence, debug uploaded recordings through Replay MCP, and run "
+            "Replay QA project, bug, journey, and exploration workflows."
+        ),
+        "compatibility_notes": [
+            (
+                "Ghast does not execute Codex PostToolUse or Stop hooks, so "
+                "browser recording and cleanup use the same official "
+                "browser-open.js and browser-close.js scripts explicitly."
+            ),
+            (
+                "The official Replay.io Pro and Replay QA packages are "
+                "combined so Ghast retains both recording/debugging and "
+                "hosted QA workflows."
+            ),
+        ],
+    },
     "shopify": {
         "directory": "shopify-ai-toolkit",
         "revision": "cc5af6505c27939222072449278f6356857cb064",
@@ -347,6 +381,45 @@ PLUGINS = {
         "mcp": ".mcp.json",
         "license_name": "MIT",
     },
+    "zoom": {
+        "directory": "zoom-skills",
+        "revision": "1858eadc17d9bd0d1279ce7f66304362a774e3b4",
+        "repository": "https://github.com/zoom/skills",
+        "plugin_root": ".",
+        "manifest": ".claude-plugin/plugin.json",
+        "license": "LICENSE",
+        "generated_icon": "./assets/icon.svg",
+        "category": "development",
+        "mcp": ".mcp.json",
+        "license_name": "MIT",
+        "skills_root": "skills",
+        "root_skill": {
+            "source": "skills/SKILL.md",
+            "name": "zoom-skills",
+        },
+        "description": (
+            "Build Zoom integrations and access meeting search, transcripts, "
+            "recordings, assets, Team Chat, Canvas, Tasks, Whiteboard, and "
+            "Revenue Accelerator through Zoom's official skills and MCP "
+            "servers."
+        ),
+        "author": {
+            "name": "Zoom",
+            "url": "https://github.com/zoom",
+        },
+        "homepage": "https://developers.zoom.us/",
+        "compatibility_notes": [
+            (
+                "The older Codex app mapping is replaced by Zoom's seven "
+                "official public Streamable HTTP MCP servers."
+            ),
+            (
+                "A generic video-service catalog icon is used because Zoom's "
+                "official MCP registry states that its logo is proprietary "
+                "and does not grant redistribution rights."
+            ),
+        ],
+    },
 }
 
 
@@ -414,6 +487,23 @@ def import_plugin(name: str, config: dict, source_root: Path) -> None:
                     "frontmatter_overrides", {}
                 ),
             )
+            for additional_root in config.get(
+                "additional_repository_skill_roots", []
+            ):
+                copy_skill_tree(
+                    repository / additional_root,
+                    skills_target,
+                    recursive=False,
+                    preserve_agent_metadata=False,
+                    frontmatter_overrides={},
+                    merge=True,
+                )
+            if config.get("root_skill"):
+                copy_root_skill(
+                    repository,
+                    skills_target,
+                    config["root_skill"],
+                )
 
         if config.get("commands"):
             shutil.copytree(
@@ -505,10 +595,11 @@ def copy_skill_tree(
     recursive: bool,
     preserve_agent_metadata: bool,
     frontmatter_overrides: dict[str, str],
+    merge: bool = False,
 ) -> None:
     if not source.is_dir():
         raise ValueError(f"{source}: skills directory is missing")
-    target.mkdir()
+    target.mkdir(exist_ok=merge)
     copied = 0
     source_skills = (
         sorted(path.parent for path in source.rglob("SKILL.md"))
@@ -522,6 +613,10 @@ def copy_skill_tree(
         if not (source_skill / "SKILL.md").is_file():
             continue
         target_skill = target / source_skill.name
+        if target_skill.exists():
+            raise ValueError(
+                f"{source_skill}: duplicate imported skill {target_skill.name}"
+            )
         shutil.copytree(
             source_skill,
             target_skill,
@@ -542,6 +637,19 @@ def copy_skill_tree(
         copied += 1
     if not copied:
         raise ValueError(f"{source}: no valid skills")
+
+
+def copy_root_skill(
+    repository: Path, target: Path, root_skill: dict
+) -> None:
+    source = repository / root_skill["source"]
+    if not source.is_file():
+        raise ValueError(f"{source}: root skill is missing")
+    target_skill = target / root_skill["name"]
+    if target_skill.exists():
+        raise ValueError(f"{target_skill}: duplicate imported root skill")
+    target_skill.mkdir()
+    shutil.copy2(source, target_skill / "SKILL.md")
 
 
 def ensure_skill_frontmatter(
@@ -617,6 +725,109 @@ def apply_ghast_compatibility(name: str, staging: Path) -> None:
                 {"$CLAUDE_PLUGIN_ROOT/scripts": "<SKILL_DIR>/scripts"},
                 require_all=False,
             )
+    elif name == "replayio":
+        replayio_skill = staging / "skills/replayio/SKILL.md"
+        rewrite_text(
+            replayio_skill,
+            {
+                (
+                    "The Codex `Stop` hook also runs close/upload cleanup as "
+                    "a safety net when a turn ends."
+                ): (
+                    "Ghast does not execute Codex hooks, so always run "
+                    "`browser-close.js` explicitly before reporting results."
+                ),
+                "When Codex lists this skill": "When Ghast lists this skill",
+                (
+                    "| `replayio_browser_lifecycle_hook.sh` | Codex post-tool "
+                    "hook that starts capture after raw `playwright-cli open` "
+                    "and cleans up after raw close commands. |"
+                ): (
+                    "| `replayio_browser_lifecycle_hook.sh` | Upstream Codex "
+                    "hook helper retained for source completeness; Ghast does "
+                    "not invoke it automatically. |"
+                ),
+                (
+                    "| `close_browsers_and_upload.sh` | Codex stop hook that "
+                    "closes lingering sessions and uploads pending Replay "
+                    "recordings. |"
+                ): (
+                    "| `close_browsers_and_upload.sh` | Manual fallback that "
+                    "closes lingering sessions and uploads pending Replay "
+                    "recordings. |"
+                ),
+                (
+                    "The Codex `Stop` hook still attempts pending Replay "
+                    "uploads as a safety net, but video capture is only "
+                    "automatic for lifecycle-script browser sessions."
+                ): (
+                    "Ghast has no automatic Stop hook; lifecycle-script "
+                    "browser sessions must be closed explicitly."
+                ),
+                (
+                    "If you forget, the Codex `Stop` hook attempts to stop "
+                    "capture, close lingering sessions, transcode video, and "
+                    "upload pending Replay recordings as a safety net."
+                ): (
+                    "Ghast has no automatic cleanup hook, so run "
+                    "`browser-close.js` or `close_browsers_and_upload.sh` "
+                    "before ending the task."
+                ),
+                (
+                    "Let the Codex `Stop` hook run cleanup only as a safety "
+                    "net, not as the main way to get artifact paths."
+                ): (
+                    "Run explicit cleanup and capture its artifact paths "
+                    "before reporting the result."
+                ),
+                (
+                    "In Codex memory-enabled hosts, write the note only "
+                    "through the allowed memory-update path; do not edit "
+                    "memory registry files directly."
+                ): (
+                    "Use only the host-supported memory mechanism; do not "
+                    "edit memory registry files directly."
+                ),
+                (
+                    "Codex connects to the Replay HTTP MCP server configured "
+                    "in `.mcp.json`; the connected Replay app id remains "
+                    "available in `.app.json` for app-level authentication "
+                    "and compatibility."
+                ): (
+                    "Ghast connects directly to the official Replay HTTP MCP "
+                    "server configured in `.mcp.json`."
+                ),
+            },
+        )
+        rewrite_text(
+            staging / "skills/replayio/references/workflows.md",
+            {
+                (
+                    "Use the Codex stop hook only as a cleanup safety net."
+                ): (
+                    "Run browser-close.js explicitly and use "
+                    "close_browsers_and_upload.sh only as a manual fallback."
+                ),
+            },
+        )
+        replay_qa_skill = staging / "skills/replay-qa/SKILL.md"
+        rewrite_text(
+            replay_qa_skill,
+            {
+                "from Codex": "from Ghast",
+                "This Codex package": "This Ghast package",
+                "When Codex lists this skill": "When Ghast lists this skill",
+            },
+        )
+    elif name == "zoom":
+        root_skill = staging / "skills/zoom-skills/SKILL.md"
+        text = root_skill.read_text()
+        text = re.sub(
+            r"\]\((?!https?://|#|/)([^)]+)\)",
+            r"](../\1)",
+            text,
+        )
+        root_skill.write_text(text)
 
 
 def rewrite_text(
