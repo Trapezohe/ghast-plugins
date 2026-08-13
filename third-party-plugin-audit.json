@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 6,
-      "official-source-research-required": 78,
-      "official-source-verified": 65
+      "official-source-research-required": 77,
+      "official-source-verified": 66
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 65,
-      "not-implemented": 84
+      "implemented-verified": 66,
+      "not-implemented": 83
     }
   },
   "excludedOpenAIPlugins": [
@@ -2052,7 +2052,7 @@
     },
     {
       "id": "close",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Close",
@@ -2079,13 +2079,77 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.close.com"
+        "homepage": "https://www.close.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Close",
+          "officialRepository": null,
+          "officialRevision": "close-docs-ad74a3ce8ca3+tools-37b3dda1465b+oauth-5f59d0eb26ef+auth-2c3287ebc60f",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/close/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+            "No Close hosted MCP implementation, private Codex connector, service source code, account data, API credentials, or marketplace artwork is redistributed."
+          ],
+          "officialityEvidence": [
+            "Close's official developer documentation identifies https://mcp.close.com/mcp as its remote Streamable HTTP MCP server with OAuth 2.0 Dynamic Client Registration and an API-key fallback.",
+            "Close's official integration page identifies the Close MCP integration as built by Close.",
+            "The official MCP guide has SHA-256 ad74a3ce8ca3af94bfd2011c6d19c74b1514b2c8c123457e04e6b0675ae3d3e1 and documents the mcp.read, mcp.write_safe, and mcp.write_destructive access layers.",
+            "The official tool catalog has SHA-256 37b3dda1465bddbb60caece971c0c405f9456cadaef5b4fa68428efc19a65a2b and publishes 107 tools: 57 read-only, 16 safe-write, and 34 destructive-write tools.",
+            "The ordered read, safe-write, destructive-write, and complete tool-name inventories have SHA-256 hashes 7496c2076efbdb2cd9f35341855b1e0ca2345bd0060a7630be14795a9d66cb0b, 67dd13b698f10bed28c55361d872ea60d7522bd0874f660f94430af755a6536f, f4e6ff7259dbfb8f0c906ba27038c13ec1f72b90fe42199a1daf10f1c4afc404, and 13b3c6707cd36be3089d78e426dd57e56e7c5bb0cefcae42b0281056774ee1c5.",
+            "The protected-resource metadata identifies Close's official MCP resource, bearer-header authentication, offline access, and all three MCP scopes; its canonical JSON SHA-256 is 5f59d0eb26ef33250e318f483a14288950ab8f62062fac36ece76e8de3a17402.",
+            "The authorization-server metadata declares authorization-code and refresh-token grants, dynamic client registration, public clients, and PKCE S256; its canonical JSON SHA-256 is 2c3287ebc60fbc38a8790eb8e22573a3798c1197bb15c9af9303e05fafca94d2.",
+            "On August 13, 2026, a disposable localhost public client registered with HTTP 201, received all documented scopes, and returned no client secret.",
+            "Unauthenticated GET and initialize requests returned HTTP 401 with Close's invalid-token response and the official protected-resource metadata challenge.",
+            "Close's verified GitHub organization controls close.com, but no public repository containing the Close CRM MCP implementation was found; the service is therefore integrated only as an official hosted adapter."
+          ],
+          "codexCapabilities": [
+            "Find opportunities with no recent activity and recommend next steps",
+            "Search leads from a company and summarize status, owner, and last touch",
+            "Create a pipeline review for deals closing this month",
+            "Create custom reports, research and create lead lists, summarize recent customer interactions, and create workflows"
+          ],
+          "ghastCapabilities": [
+            "The same stale-opportunity, company lead, pipeline review, custom report, lead-list, recent-interaction, and workflow workflows through Close's official hosted MCP server",
+            "Additional official read tools for fields, custom objects and activities, smart views, tasks, calls, notes, comments, forms, scheduling links, meeting transcripts, product knowledge, voice-agent reports, and reproducible aggregation",
+            "Additional official create tools for leads, contacts, addresses, opportunities, pipelines and statuses, tasks, notes, comments, custom records, draft emails, templates, and workflows",
+            "Explicitly confirmed official update and delete tools plus field enrichment, call tasks, voice-agent configuration, and scheduled voice-agent calls under Close's highest-risk scope",
+            "Standards-based OAuth through Dynamic Client Registration, authorization code, refresh tokens, public clients, and PKCE S256, with a documented host-managed API-key fallback"
+          ],
+          "capabilityRelationship": "superset-official-hosted-mcp",
+          "limitations": [
+            "The hosted MCP implementation is operated by Close and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+            "A Close account, browser OAuth or host-managed API key, the correct organization, account role, plan, permissions, feature access, and service limits remain user-managed.",
+            "Endpoint discovery, OAuth metadata, dynamic registration, unauthenticated protocol behavior, official documentation, and the complete published 107-tool catalog were verified without an account. Authenticated tools/list and real CRM operations were not run.",
+            "Close's mcp.write_safe scope contains creates, while mcp.write_destructive contains updates as well as deletes. Routine-looking updates therefore require the highest MCP scope and immediate explicit confirmation.",
+            "Creating or changing workflows can trigger later automated external actions. Exact triggers, filters, audience, steps, delays, senders, templates, stop conditions, and estimated record counts must be reviewed before confirmation.",
+            "Scheduling a voice-agent call is external communication and requires exact recipient, number, purpose, schedule, time zone, configuration, and consent review. Voice-agent updates require proposal review and a rollback plan.",
+            "Field enrichment can disclose CRM data to an enrichment provider or overwrite values. Bulk lead and contact creation requires bounded previews, source review, matching rules, and deduplication.",
+            "Ambiguous writes must not be blindly retried because they can duplicate CRM records, tasks, templates, drafts, workflows, call tasks, or external actions.",
+            "A generic CRM icon is used because no licensed catalog artwork is included in a public official MCP source repository."
+          ],
+          "verification": [
+            "python3 scripts/import-official-hosted-plugins.py",
+            "Verify official MCP guide SHA-256 is ad74a3ce8ca3af94bfd2011c6d19c74b1514b2c8c123457e04e6b0675ae3d3e1",
+            "Verify official tool-catalog SHA-256 is 37b3dda1465bddbb60caece971c0c405f9456cadaef5b4fa68428efc19a65a2b",
+            "Parse the official catalog and confirm the exact ordered 57 read-only, 16 safe-write, 34 destructive-write, and 107 complete tool inventories and their pinned hashes",
+            "Verify canonical OAuth protected-resource and authorization-server metadata hashes 5f59d0eb26ef33250e318f483a14288950ab8f62062fac36ece76e8de3a17402 and 2c3287ebc60fbc38a8790eb8e22573a3798c1197bb15c9af9303e05fafca94d2",
+            "Register a disposable localhost public OAuth client and confirm HTTP 201, no client secret, authorization-code and refresh-token grants, all three MCP scopes, offline access, and PKCE S256 discovery",
+            "Probe https://mcp.close.com/mcp with MCP initialize and confirm HTTP 401 plus Close's protected-resource challenge",
+            "Compare the official lead, opportunity, pipeline, activity, report, workflow, template, task, custom object, enrichment, and voice-agent tool families with every Codex description and default prompt",
+            "Authorize a Close account before testing authenticated tool schemas or real CRM operations",
+            "unzip -tqq packages/close.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": null,
+        "upstreamRevision": "close-docs-ad74a3ce8ca3+tools-37b3dda1465b+oauth-5f59d0eb26ef+auth-2c3287ebc60f",
+        "portStatus": "full"
       }
     },
     {

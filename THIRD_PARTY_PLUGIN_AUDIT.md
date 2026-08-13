@@ -55,7 +55,7 @@ verification.
 | circleci | CircleCI | skills | MIT | official-source-verified | implemented-verified |
 | clay | Clay | appConnector | MIT | official-source-research-required | not-implemented |
 | clickup | ClickUp | appConnector | MIT | official-source-verified | implemented-verified |
-| close | Close | appConnector | MIT | official-source-research-required | not-implemented |
+| close | Close | appConnector | MIT | official-source-verified | implemented-verified |
 | cloudflare | Cloudflare | mcpServers, skills, commands | MIT | official-source-verified | implemented-verified |
 | cloudinary | Cloudinary | appConnector | MIT | official-source-verified | implemented-verified |
 | coderabbit | CodeRabbit | skills | MIT | official-source-verified | implemented-verified |

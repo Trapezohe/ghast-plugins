@@ -497,6 +497,34 @@
       "license": "MIT"
     },
     {
+      "id": "close",
+      "name": "close",
+      "description": "Search, analyze, create, and explicitly update Close CRM leads, contacts, opportunities, activities, tasks, pipelines, workflows, templates, and voice agents through Close's official hosted MCP server.",
+      "manifest": {
+        "name": "close",
+        "description": "Search, analyze, create, and explicitly update Close CRM leads, contacts, opportunities, activities, tasks, pipelines, workflows, templates, and voice agents through Close's official hosted MCP server.",
+        "author": {
+          "name": "Close",
+          "url": "https://www.close.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://developer.close.com/mcp",
+        "upstreamRevision": "close-docs-ad74a3ce8ca3+tools-37b3dda1465b+oauth-5f59d0eb26ef+auth-2c3287ebc60f",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/close.zip",
+        "sha256": "31352407690ba5f9f5b8a0839fdb7a7375a5d293a9822fe86039480716bd00db"
+      },
+      "icon": "./plugins/close/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://developer.close.com/mcp",
+      "license": "MIT"
+    },
+    {
       "id": "cloudflare",
       "name": "cloudflare",
       "description": "Build and operate on Cloudflare with official skills, slash commands, and five official MCP servers.",

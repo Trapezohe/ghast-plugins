@@ -1,0 +1,16 @@
+{
+  "name": "close",
+  "version": "1.0.3-ghast.1",
+  "description": "Search, analyze, create, and explicitly update Close CRM leads, contacts, opportunities, activities, tasks, pipelines, workflows, templates, and voice agents through Close's official hosted MCP server.",
+  "category": "productivity",
+  "author": {
+    "name": "Close",
+    "url": "https://www.close.com"
+  },
+  "homepage": "https://developer.close.com/mcp",
+  "upstreamRevision": "close-docs-ad74a3ce8ca3+tools-37b3dda1465b+oauth-5f59d0eb26ef+auth-2c3287ebc60f",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
