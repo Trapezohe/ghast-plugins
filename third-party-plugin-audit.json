@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 52,
-      "official-source-verified": 92
+      "official-source-research-required": 51,
+      "official-source-verified": 93
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 92,
-      "not-implemented": 57
+      "implemented-verified": 93,
+      "not-implemented": 56
     }
   },
   "excludedOpenAIPlugins": [
@@ -7402,7 +7402,7 @@
     },
     {
       "id": "outreach",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Outreach",
@@ -7429,13 +7429,79 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.outreach.io"
+        "homepage": "https://www.outreach.io",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Outreach",
+          "officialRepository": null,
+          "officialRevision": "outreach-docs-fad773e5a468+tools-71d9d8bf5845+oauth-bd349848c7a7+auth-7815bab59627",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/outreach/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation, and generic revenue-workflow icon.",
+            "No Outreach hosted MCP implementation, private Codex connector, OAuth client credential, customer or conversation data, branded artwork, or marketplace icon is redistributed.",
+            "Outreach does not publish its hosted MCP server source or a redistribution license. The Codex manifest's MIT declaration is not treated as a license grant for the service or private connector."
+          ],
+          "officialityEvidence": [
+            "Outreach's official developer portal identifies https://api.outreach.io/mcp as its Streamable HTTP MCP server and explicitly states that v1-compatible clients including ChatGPT and custom MCP clients work with the service.",
+            "The official overview, authentication, tool catalog, usage, best-practices, support overview, and CLI configuration pages are pinned at normalized visible-text SHA-256 ddcf07a9cb4baef7c0337a0f0bf237809535ae017432f7a1028d687cf292cc14, 20538caa1c3b70647b4ddeee5eba8f288433b437b7ab73773cecc778961ba707, fad773e5a468697731a676743d55964df942ded00ebdccd6d35fc6fa37169221, 9e73047f86230c889213eec88f69bccac9f891708fcc7d7f3dd66e6737bcc3df, c2870b9eeee9d4fd4e0b1c3d1f50af701748656979f449479945c26b41f53406, f83338c8a6e6671106cef532b6165247f16ffa969897fe41ed0318d0f48e920d, and b4b690b5b41008f5ef57be26b910633e5c9c5efdb26ce9319d50a7518755c238.",
+            "The latest official tool catalog documents 41 tools: 27 read and discovery tools, 11 non-idempotent write tools, and three read-only schema tools. The ordered catalog SHA-256 is 71d9d8bf5845ee81cdf7a0ca3360f2c71cd6f149c9d821cb980d074df592346d and its normalized safety classification SHA-256 is 85f99674e518973f57bee95e2d199f9d7cff30f1f87c61f43bc503e7eb368bd9.",
+            "Protected-resource metadata identifies the official MCP resource, the prospects.all scope, bearer-header authentication, and https://api.outreach.io as the authorization server; its canonical JSON SHA-256 is bd349848c7a718d0ea132a97dcbfcea714ab1daef720b9ac87f5b03caf7bbea5.",
+            "Authorization-server metadata declares authorization-code and refresh-token grants, dynamic client registration, PKCE S256, and client_secret_post authentication; its canonical JSON SHA-256 is 7815bab596279d352d7496c86841b77def068210397640e1b99a61de8357dcf8.",
+            "On August 13, 2026, a disposable localhost client registered with HTTP 201, received a client ID and secret for the documented grants, and its PKCE authorization request reached Outreach's official web authorization page. The secret was not retained.",
+            "Missing and invalid Bearer MCP initialize requests return HTTP 401 with Outreach's exact protected-resource challenge and distinct stable error bodies.",
+            "OpenAI's pinned Codex plugin snapshot identifies Outreach as the developer and describes stalled-prospect review, sequence and engagement research, grounded follow-up drafting, cross-system insights, and advanced revenue tasks. Its manifest and connector hashes are 5f54abae9731343810887029f148558d3c11773017b0968d0fe814c4e3e86c9e and 822a991f658a116804df288fd777de8e820182aa14d194cfb15182e2bc87f184."
+          ],
+          "codexCapabilities": [
+            "Find stalled Outreach prospects and summarize the next best follow-up",
+            "Search Outreach sequences for an account and summarize recent engagement",
+            "Draft a concise follow-up grounded in recent prospect activity",
+            "Combine Outreach knowledge and actions with cross-system context to complete advanced revenue tasks"
+          ],
+          "ghastCapabilities": [
+            "The same prospect, sequence, engagement, and grounded follow-up workflows through Outreach's official public hosted MCP instead of the private Codex app connector",
+            "Read and discovery across accounts, prospects, opportunities, sequences, sequence states, tasks, emails, calendars, Kaia meetings, users, teams, organizations, stages, roles, priorities, themes, external IDs, and tenant-specific schemas",
+            "Additional official actions to create accounts, prospects, opportunities, and tasks; enroll or remove prospects; delete selected records; and ask account or opportunity questions that are retained in Outreach Q&A history",
+            "Direct browser OAuth with dynamic client registration, authorization code, refresh tokens, PKCE S256, Outreach RBAC enforcement, and activity attribution to the authenticated user"
+          ],
+          "capabilityRelationship": "superset-newer-official-hosted-mcp",
+          "limitations": [
+            "The hosted MCP implementation is operated by Outreach and is not publicly source-available or licensed for redistribution. The MIT license applies only to the Ghast-authored adapter.",
+            "An active licensed Outreach user, an enabled organization, the Amplify add-on with active credits, user RBAC permissions, service limits, and administrator create or delete settings remain user-managed.",
+            "Authenticated tools/list and real organization-data operations were not run because no user Outreach account or data was supplied. Tenant schemas, custom fields, permissions, and enabled actions remain authoritative.",
+            "Outreach documentation is changing quickly. The developer overview still says 32 tools while the newer tool catalog lists 41. A support article mentions sequence_create and sequence_delete, and a sample page mentions prepare_for_meeting, but those tools are absent from the pinned 41-tool catalog and are not promised.",
+            "The newer catalog says openWorldHint is false for every tool, while an older annotation page says every Outreach tool has openWorldHint true. The adapter conservatively treats all calls as external hosted-service operations.",
+            "The prospects.all scope name is broad. Effective access is further constrained by the authenticated user's Outreach RBAC profile, organization settings, active license, and record permissions.",
+            "Email bodies, Kaia recordings and transcripts, contact details, task text, and pipeline data can be sensitive. Retrieval must be bounded, disclosure minimized, and recording-consent or retention obligations respected.",
+            "All 11 write tools are non-idempotent. Record creation, task creation, Q&A history creation, sequence enrollment or removal, and deletes require exact target review and explicit confirmation. Ambiguous writes must be read back before retry.",
+            "Sequence enrollment can initiate outbound activity. Drafting or research does not authorize enrollment, sending, scheduling, task creation, or other external effects.",
+            "A generic revenue-workflow icon is used because no licensed Outreach catalog artwork is included in a public official MCP source repository."
+          ],
+          "verification": [
+            "Run the Outreach evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
+            "Verify all seven normalized official documentation hashes and confirm the latest catalog still contains exactly the pinned 41 tool names",
+            "Verify ordered tool inventory SHA-256 71d9d8bf5845ee81cdf7a0ca3360f2c71cd6f149c9d821cb980d074df592346d and normalized safety SHA-256 85f99674e518973f57bee95e2d199f9d7cff30f1f87c61f43bc503e7eb368bd9",
+            "Verify canonical protected-resource and authorization-server metadata SHA-256 values bd349848c7a718d0ea132a97dcbfcea714ab1daef720b9ac87f5b03caf7bbea5 and 7815bab596279d352d7496c86841b77def068210397640e1b99a61de8357dcf8",
+            "Probe https://api.outreach.io/mcp with missing and invalid Bearer initialize requests and confirm HTTP 401, the exact official challenge, and body SHA-256 values 86e0f2f1c60752c28de1e2c761991301a23f02efcef982213973d01b3637bfc9 and 5020d4621be8ed817535e7421502c14951f26cd40c0a55a28bbc91ad9beec6b3",
+            "Confirm one disposable loopback client registered with a client secret and its PKCE request reached web.outreach.io; do not repeat registration in the normal importer or retain its secret",
+            "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Outreach manifest and connector hashes and compare all three default prompts plus the long-description workflows with the official 41-tool surface",
+            "Authorize an eligible Outreach organization before testing authenticated schemas, data reads, Q&A history, record or task creation, sequence changes, or deletes",
+            "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+            "python3 scripts/build-ghast-catalog.py",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/outreach.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.2-ghast.1",
+        "repository": null,
+        "upstreamRevision": "outreach-docs-fad773e5a468+tools-71d9d8bf5845+oauth-bd349848c7a7+auth-7815bab59627",
+        "portStatus": "full"
       }
     },
     {

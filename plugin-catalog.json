@@ -2043,6 +2043,34 @@
       "license": "MIT"
     },
     {
+      "id": "outreach",
+      "name": "outreach",
+      "description": "Research prospects, accounts, opportunities, sequences, emails, meetings, and tasks, draft grounded follow-ups, and safely perform approved Outreach revenue actions.",
+      "manifest": {
+        "name": "outreach",
+        "description": "Research prospects, accounts, opportunities, sequences, emails, meetings, and tasks, draft grounded follow-ups, and safely perform approved Outreach revenue actions.",
+        "author": {
+          "name": "Outreach",
+          "url": "https://www.outreach.io"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.2-ghast.1",
+        "homepage": "https://developers.outreach.io/mcp-server",
+        "upstreamRevision": "outreach-docs-fad773e5a468+tools-71d9d8bf5845+oauth-bd349848c7a7+auth-7815bab59627",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/outreach.zip",
+        "sha256": "ef08a80f7bbc697b55c879738ffa2c978b71c89405f30c2da21415cbbecd0da3"
+      },
+      "icon": "./plugins/outreach/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://developers.outreach.io/mcp-server",
+      "license": "MIT"
+    },
+    {
       "id": "posthog",
       "name": "posthog",
       "description": "Analyze and manage PostHog analytics, flags, experiments, errors, replays, surveys, dashboards, SQL, AI observability, data pipelines, and product workflows through PostHog's official hosted MCP server.",

@@ -123,7 +123,7 @@ verification.
 | nvidia | NVIDIA | skills | Apache-2.0 AND CC-BY-4.0 | official-source-verified | implemented-verified |
 | omni-analytics | Omni Analytics | appConnector | MIT | official-source-verified | implemented-verified |
 | otter-ai | Otter.ai | appConnector | MIT | official-source-verified | implemented-verified |
-| outreach | Outreach | appConnector | MIT | official-source-research-required | not-implemented |
+| outreach | Outreach | appConnector | MIT | official-source-verified | implemented-verified |
 | particl-market-research | Particl | appConnector | MIT | official-source-research-required | not-implemented |
 | picsart | Picsart | appConnector | MIT | official-source-research-required | not-implemented |
 | pitchbook | PitchBook | appConnector | MIT | official-source-research-required | not-implemented |
