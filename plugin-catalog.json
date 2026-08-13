@@ -93,6 +93,34 @@
       "license": "Apache-2.0"
     },
     {
+      "id": "attio",
+      "name": "attio",
+      "description": "Search, read, create, and update Attio CRM records, lists, comments, notes, tasks, meetings, calls, emails, and reports through Attio's official hosted MCP server.",
+      "manifest": {
+        "name": "attio",
+        "description": "Search, read, create, and update Attio CRM records, lists, comments, notes, tasks, meetings, calls, emails, and reports through Attio's official hosted MCP server.",
+        "author": {
+          "name": "Attio Ltd",
+          "url": "https://attio.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.0-ghast.1",
+        "homepage": "https://docs.attio.com/mcp/overview.md",
+        "upstreamRevision": "attio-docs-2e2e355662dd+oauth-f4f72e868155+auth-0ea2dac5158a",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/attio.zip",
+        "sha256": "cfb48e72b749f49b28dd656ba259467fe59af14b79561a7e4257c4f618ec941f"
+      },
+      "icon": "./plugins/attio/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://docs.attio.com/mcp/overview.md",
+      "license": "MIT"
+    },
+    {
       "id": "base44",
       "name": "base44",
       "description": "Build and deploy Base44 full-stack apps with CLI project management and JavaScript/TypeScript SDK development skills",

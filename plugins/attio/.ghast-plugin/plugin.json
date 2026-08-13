@@ -1,0 +1,16 @@
+{
+  "name": "attio",
+  "version": "1.0.0-ghast.1",
+  "description": "Search, read, create, and update Attio CRM records, lists, comments, notes, tasks, meetings, calls, emails, and reports through Attio's official hosted MCP server.",
+  "category": "productivity",
+  "author": {
+    "name": "Attio Ltd",
+    "url": "https://attio.com"
+  },
+  "homepage": "https://docs.attio.com/mcp/overview.md",
+  "upstreamRevision": "attio-docs-2e2e355662dd+oauth-f4f72e868155+auth-0ea2dac5158a",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

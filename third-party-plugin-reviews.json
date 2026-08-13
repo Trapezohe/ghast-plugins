@@ -125,6 +125,53 @@
         "unzip -tqq packages/atlassian-rovo.zip"
       ]
     },
+    "attio": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Attio Ltd",
+      "officialRepository": null,
+      "officialRevision": "attio-docs-2e2e355662dd+oauth-f4f72e868155+auth-0ea2dac5158a",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/attio/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "No Attio hosted MCP server source, private Codex connector, service source code, data, or marketplace artwork is redistributed."
+      ],
+      "officialityEvidence": [
+        "Attio's official MCP documentation identifies https://mcp.attio.com/mcp as Attio's hosted server and documents OAuth authentication with no API keys, user-permission enforcement, auto-approved reads, confirmed writes, and 39 named tools.",
+        "The official MCP documentation was captured three times with identical SHA-256 2e2e355662ddd53bf33aa2a8ab89831690cd135cf60280486484f43bd2a53158.",
+        "Attio's OAuth protected-resource metadata identifies the same MCP resource, https://app.attio.com as its authorization server, bearer-header authentication, and mcp, offline_access, and openid scopes; its canonical JSON has SHA-256 f4f72e8681550a7212d184d58209cab18a235a85a224798b32f75921eb6c1cda.",
+        "The official authorization-server metadata declares dynamic client registration, authorization-code and refresh-token grants, public clients, and PKCE S256; its canonical JSON has SHA-256 0ea2dac5158a6b1790c6ee311c7fcb7cf76743527cf76b1d54287908bd801f0a.",
+        "An unauthenticated MCP initialize request returns HTTP 401 with Attio's Bearer challenge and the same protected-resource metadata URL.",
+        "No Attio-owned public MCP server repository was located. Community implementations, including kesslerio/attio-mcp-server, are not treated as official sources and are not copied."
+      ],
+      "codexCapabilities": [
+        "Search and filter contacts, companies, and deals; create and update people, companies, and deal records",
+        "Manage notes and tasks, navigate lists, prepare meetings, update deal stages, research prospects, and find the latest notes and next steps"
+      ],
+      "ghastCapabilities": [
+        "The same official record search, filtering, create, update, list, note, task, meeting-preparation, deal-stage, prospect-research, and next-step workflows through Attio's hosted MCP server",
+        "Additional official capabilities for record upsert and merge, comments and replies, list-entry updates, call recordings and transcripts, email search and full content, workspace members and teams, basic reporting, and plan-dependent read-only SQL"
+      ],
+      "capabilityRelationship": "superset-official-hosted-mcp",
+      "limitations": [
+        "The hosted MCP implementation is operated by Attio and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+        "An Attio account, OAuth authorization, workspace permissions, and any required billing-plan entitlements remain user-managed.",
+        "Endpoint discovery and the complete OAuth protocol were verified without an account, but authenticated tool listing and workspace operations were not run.",
+        "The read-only query-particle-sql tool is not available on every billing plan.",
+        "Attio applies per-workspace rate-limit tiers, including 100 read requests per second, 25 write requests per second, 5 merges per second, 300 searches per minute, and 2 semantic-search, reporting, or SQL requests per second.",
+        "Creates, upserts, updates, list mutations, comments, notes, tasks, merges, and deletions require explicit confirmation. Record merges and comment deletion require fresh confirmation.",
+        "A generic CRM data icon is used because no licensed catalog icon is included in a public official MCP source repository."
+      ],
+      "verification": [
+        "python3 scripts/import-official-hosted-plugins.py",
+        "Verify the official MCP documentation SHA-256 is 2e2e355662ddd53bf33aa2a8ab89831690cd135cf60280486484f43bd2a53158 and contains all 39 documented tool names",
+        "Verify canonical OAuth protected-resource metadata SHA-256 is f4f72e8681550a7212d184d58209cab18a235a85a224798b32f75921eb6c1cda",
+        "Verify canonical OAuth authorization-server metadata SHA-256 is 0ea2dac5158a6b1790c6ee311c7fcb7cf76743527cf76b1d54287908bd801f0a",
+        "Probe https://mcp.attio.com/mcp with MCP initialize and confirm HTTP 401 plus Attio's Bearer authentication challenge",
+        "Compare every official record, list, note, task, meeting, pipeline, and prospect workflow with the Codex long description and default prompt",
+        "Authorize an Attio account before testing authenticated tool schemas and workspace operations",
+        "unzip -tqq packages/attio.zip"
+      ]
+    },
     "base44": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Base44",

@@ -35,7 +35,7 @@ verification.
 | apollo | Apollo | appConnector | MIT | official-source-research-required | not-implemented |
 | asana | Asana, Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | atlassian-rovo | Atlassian | appConnector, skills | MIT | official-source-verified | implemented-verified |
-| attio | Attio Ltd | appConnector | MIT | official-source-research-required | not-implemented |
+| attio | Attio Ltd | appConnector | MIT | official-source-verified | implemented-verified |
 | base44 | base44 | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | binance | Binance | appConnector | MIT | official-source-verified | implemented-verified |
 | biorender | BioRender | appConnector | MIT | official-source-research-required | not-implemented |

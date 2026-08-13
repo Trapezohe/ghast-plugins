@@ -51,6 +51,13 @@ LOCAL_ICONS = {
 }
 
 CUSTOM_ICONS = {
+    "attio": (
+        "#C55A45",
+        '<rect x="12" y="13" width="40" height="38" rx="3"/>'
+        '<path d="M12 25h40M26 13v38"/>'
+        '<circle cx="19" cy="19" r="2" fill="white" stroke="none"/>'
+        '<path d="M32 32h13M32 40h9"/>',
+    ),
     "binance": (
         "#F0B90B",
         '<path d="M14 47h38M18 41V27M29 41V18M40 41V31M51 41V12"/>'
