@@ -139,6 +139,12 @@ CUSTOM_ICONS = {
         '<path d="M23 44h18M23 48h12"/>'
         '<circle cx="40" cy="48" r="1.5" fill="white" stroke="none"/>',
     ),
+    "fireflies": (
+        "#B34F55",
+        '<rect x="12" y="14" width="40" height="37" rx="4"/>'
+        '<path d="M12 25h40M22 10v9M42 10v9"/>'
+        '<path d="M19 38h5l3-8 5 15 5-11 3 6h5"/>',
+    ),
     "defillama": (
         "#176B87",
         '<path d="M15 45V31h8v14M28 45V22h8v23M41 45V15h8v30"/>'

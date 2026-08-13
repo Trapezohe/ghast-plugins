@@ -813,6 +813,34 @@
       "license": "MIT"
     },
     {
+      "id": "fireflies",
+      "name": "fireflies",
+      "description": "Search, summarize, analyze, organize, share, and create clips from meeting transcripts through Fireflies' official hosted MCP server.",
+      "manifest": {
+        "name": "fireflies",
+        "description": "Search, summarize, analyze, organize, share, and create clips from meeting transcripts through Fireflies' official hosted MCP server.",
+        "author": {
+          "name": "Fireflies",
+          "url": "https://fireflies.ai"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.2-ghast.1",
+        "homepage": "https://docs.fireflies.ai/getting-started/mcp-configuration",
+        "upstreamRevision": "fireflies-docs-5c8c1927db3b+tools-b2b5c5e4c79d+oauth-8f44680d0fcb+auth-97aa931cc88a",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/fireflies.zip",
+        "sha256": "f630d21b23d88d20af6745297bb199f6fdb48aa8053e75038b1692c8d143dc24"
+      },
+      "icon": "./plugins/fireflies/assets/icon.svg",
+      "category": "communication",
+      "homepage": "https://docs.fireflies.ai/getting-started/mcp-configuration",
+      "license": "MIT"
+    },
+    {
       "id": "github-stats",
       "name": "github-stats",
       "description": "Skill for looking up public GitHub repo or user stats via the unauthenticated GitHub REST API (60 req/hr/IP).",

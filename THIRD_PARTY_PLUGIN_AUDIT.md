@@ -84,7 +84,7 @@ verification.
 | fal | Fal | appConnector | MIT | official-source-research-required | not-implemented |
 | figma | Figma | appConnector, mcpServers, skills, commands | LicenseRef-Figma-Developer-Terms | blocked-license | not-implemented |
 | finn | FINN GmbH | appConnector | MIT | official-source-research-required | not-implemented |
-| fireflies | Fireflies | appConnector | MIT | official-source-research-required | not-implemented |
+| fireflies | Fireflies | appConnector | MIT | official-source-verified | implemented-verified |
 | fiscal-ai | Fiscal AI | appConnector | MIT | official-source-research-required | not-implemented |
 | fyxer | Fyxer | appConnector | MIT | official-source-research-required | not-implemented |
 | glean | Glean Technologies, Inc. | appConnector | MIT | official-source-verified | implemented-verified |

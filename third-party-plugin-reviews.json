@@ -1234,6 +1234,66 @@
         "unzip -tqq packages/expo.zip"
       ]
     },
+    "fireflies": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Fireflies",
+      "officialRepository": null,
+      "officialRevision": "fireflies-docs-5c8c1927db3b+tools-b2b5c5e4c79d+oauth-8f44680d0fcb+auth-97aa931cc88a",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/fireflies/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "No Fireflies hosted MCP implementation, private Codex connector, service source code, meeting data, API credentials, branded icon, or marketplace artwork is redistributed."
+      ],
+      "officialityEvidence": [
+        "Fireflies' official developer documentation identifies https://api.fireflies.ai/mcp as its remote MCP server and documents browser OAuth plus an optional API-key fallback through mcp-remote.",
+        "The official MCP configuration guide has SHA-256 5c8c1927db3bc8b612843c3734a987ae6db4c66bbab0ccb6596b5cfaa516f697.",
+        "The official tool reference has SHA-256 b2b5c5e4c79d7b1d5f6425748b8728bf61539de0e22e234b04a729844ce8baeb and publishes 19 tools for transcripts, summaries, active meetings, analytics, meeting management, channels, soundbites, users, teams, contacts, and automation logs.",
+        "The exact ordered 19-tool inventory has SHA-256 ab390890e91939cbbc164052e7b1c3851688fa7594249c0bba241cddefdb8ebd.",
+        "Fireflies' official 2.24.0 release note has SHA-256 a06b5fd65d7e5b8f1350ccfe58b11a4b53fa78dcb1c4ca7a0949d26a7f7ca3a1 and identifies 17 core tools plus two experimental tools and the addition of write operations.",
+        "The protected-resource metadata identifies Fireflies' official MCP resource and the profile and email scopes; its canonical JSON SHA-256 is 8f44680d0fcb4ec738c3e3b087b5f940e5ea6c1446799a8d3a2f444612422eea.",
+        "The authorization-server metadata declares authorization-code and refresh-token grants, dynamic client registration, public clients, and PKCE S256; its canonical JSON SHA-256 is 97aa931cc88ad684e8add800fef6a64b25f149e9880c850719995539e4076898.",
+        "On August 13, 2026, a disposable localhost public client registered with HTTP 201, received profile and email scopes, and returned no client secret.",
+        "An unauthenticated MCP initialize request returned HTTP 401 with Fireflies' missing-authorization response and official protected-resource challenge.",
+        "OpenAI's pinned Codex plugin snapshot identifies Fireflies as the developer and supplies the Acme conversation-history summary workflow. The manifest and connector declarations have SHA-256 hashes 765f18473886071d0476ddc053ea06143c7b215666fb4f40909974d8205ea2ed and 169eb09f6e2e3c6d6346a829f7672b2cb9e20cd7cabb0dc818274d0778b6af36.",
+        "No public repository containing the Fireflies hosted MCP implementation was found, so Ghast integrates it only as an official hosted adapter."
+      ],
+      "codexCapabilities": [
+        "Summarize an organization's conversation history from Fireflies meeting knowledge, including the default Acme workflow",
+        "Analyze sales, customer success, product, and recruiting conversations for insights, action items, sentiment, feature requests, pain points, and institutional context"
+      ],
+      "ghastCapabilities": [
+        "The same organization and contact conversation-history workflow through Fireflies' official hosted MCP server, with bounded participant and date filters and traceable meeting IDs",
+        "Official transcript search, transcript retrieval, per-meeting summaries, active-meeting lookup, and team conversation analytics",
+        "Official channel, soundbite, user, user-group, contact-history, and Enterprise automation-log reads",
+        "Explicitly confirmed official meeting sharing, access revocation, title updates, channel moves, and soundbite creation",
+        "Direct browser OAuth through dynamic client registration, authorization code, refresh tokens, public clients, and PKCE S256, with a documented host-managed API-key fallback"
+      ],
+      "capabilityRelationship": "superset-official-hosted-mcp",
+      "limitations": [
+        "The hosted MCP implementation is operated by Fireflies and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+        "A Fireflies account, browser OAuth or host-managed API key, account role, meeting ownership or access, team permissions, plan entitlements, feature flags, and service limits remain user-managed.",
+        "Documentation, the complete published 19-tool catalog, OAuth metadata, dynamic registration, Codex capability evidence, and unauthenticated protocol behavior were verified without an account. Authenticated tools/list and real meeting-data operations were not run.",
+        "fireflies_search and fireflies_fetch are experimental, progressively rolled out, and can be unavailable. The workflow must fall back to the core structured transcript and summary tools.",
+        "The OAuth metadata advertises only profile and email scopes rather than granular MCP read and write scopes. Account roles, ownership, permissions, and immediate explicit confirmation remain required for every mutation.",
+        "Meeting transcripts, summaries, participants, sentiment, audio and video clips, contact lists, analytics, user groups, and automation logs can contain personal and commercially sensitive data. Retrieval and disclosure must remain narrowly scoped.",
+        "Sharing a meeting can expose its transcript to as many as 100 email addresses for 7, 14, or 30 days. Exact recipients, expiry, meeting identity, data exposure, and owner or admin authority require confirmation.",
+        "Creating a soundbite can extract participant audio or video and produce a share URL. Exact boundaries, media type, privacy values, summary, consent, and authorization require confirmation.",
+        "Ambiguous writes must not be blindly retried because they can duplicate clips or repeat title, channel, sharing, or access changes.",
+        "A generic meeting-intelligence icon is used because no licensed catalog artwork is included in a public official MCP source repository."
+      ],
+      "verification": [
+        "python3 scripts/import-official-hosted-plugins.py",
+        "Verify official configuration, tool-reference, and release-note SHA-256 hashes 5c8c1927db3bc8b612843c3734a987ae6db4c66bbab0ccb6596b5cfaa516f697, b2b5c5e4c79d7b1d5f6425748b8728bf61539de0e22e234b04a729844ce8baeb, and a06b5fd65d7e5b8f1350ccfe58b11a4b53fa78dcb1c4ca7a0949d26a7f7ca3a1",
+        "Parse the official tool reference and confirm the exact ordered 19-tool inventory and SHA-256 ab390890e91939cbbc164052e7b1c3851688fa7594249c0bba241cddefdb8ebd",
+        "Verify canonical OAuth protected-resource and authorization-server metadata hashes 8f44680d0fcb4ec738c3e3b087b5f940e5ea6c1446799a8d3a2f444612422eea and 97aa931cc88ad684e8add800fef6a64b25f149e9880c850719995539e4076898",
+        "Register a disposable localhost public OAuth client and confirm HTTP 201, no client secret, authorization-code and refresh-token grants, profile and email scopes, and PKCE S256 discovery",
+        "Probe https://api.fireflies.ai/mcp with MCP initialize and confirm HTTP 401 plus Fireflies' protected-resource challenge",
+        "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Fireflies manifest and connector hashes and compare the Acme conversation-history workflow with the official transcript, contact, and summary tools",
+        "Authorize a Fireflies account before testing authenticated tool schemas or meeting-data operations",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/fireflies.zip"
+      ]
+    },
     "glean": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Glean",
