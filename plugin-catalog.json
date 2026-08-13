@@ -874,6 +874,34 @@
       "license": "MIT"
     },
     {
+      "id": "conductor",
+      "name": "conductor",
+      "description": "Analyze AI and traditional search visibility, citations, sentiment, rankings, competitors, and tracked configuration through Conductor's official read-only MCP server.",
+      "manifest": {
+        "name": "conductor",
+        "description": "Analyze AI and traditional search visibility, citations, sentiment, rankings, competitors, and tracked configuration through Conductor's official read-only MCP server.",
+        "author": {
+          "name": "Conductor Inc.",
+          "url": "https://www.conductor.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://www.conductor.com/docs/mcp/chatgpt-codex",
+        "upstreamRevision": "conductor-chatgpt-8f616240df58+data-159f29e8eeae+faq-0932a35ad457",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/conductor.zip",
+        "sha256": "d7adb144b388136fee8937f64d3b9866a24b52fc02f34dfe9049d99b5baae932"
+      },
+      "icon": "./plugins/conductor/assets/icon.svg",
+      "category": "web",
+      "homepage": "https://www.conductor.com/docs/mcp/chatgpt-codex",
+      "license": "MIT"
+    },
+    {
       "id": "cube",
       "name": "cube",
       "description": "Query governed Cube data, analyze financial performance, build dashboards, edit semantic models safely, and inspect pre-aggregations through Cube's official hosted MCP.",

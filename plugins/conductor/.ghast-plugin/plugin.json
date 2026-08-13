@@ -1,0 +1,16 @@
+{
+  "name": "conductor",
+  "version": "1.0.3-ghast.1",
+  "description": "Analyze AI and traditional search visibility, citations, sentiment, rankings, competitors, and tracked configuration through Conductor's official read-only MCP server.",
+  "category": "web",
+  "author": {
+    "name": "Conductor Inc.",
+    "url": "https://www.conductor.com"
+  },
+  "homepage": "https://www.conductor.com/docs/mcp/chatgpt-codex",
+  "upstreamRevision": "conductor-chatgpt-8f616240df58+data-159f29e8eeae+faq-0932a35ad457",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

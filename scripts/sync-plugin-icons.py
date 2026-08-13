@@ -197,6 +197,16 @@ CUSTOM_ICONS = {
         '<path d="M27 23l11-3M28 30l9 6"/>'
         '<path d="M13 52h38"/>',
     ),
+    "conductor": (
+        "#236B78",
+        '<path d="M11 49h42"/>'
+        '<path d="M14 41l10-11 8 6 9-14 9 7"/>'
+        '<circle cx="24" cy="30" r="2" fill="white" stroke="none"/>'
+        '<circle cx="32" cy="36" r="2" fill="white" stroke="none"/>'
+        '<circle cx="41" cy="22" r="2" fill="white" stroke="none"/>'
+        '<circle cx="50" cy="29" r="2" fill="white" stroke="none"/>'
+        '<path d="M14 17h19M14 23h12M43 14l8 8M51 14l-8 8"/>',
+    ),
     "cube": (
         "#315F78",
         '<path d="M13 20l19-9 19 9-19 10z"/>'

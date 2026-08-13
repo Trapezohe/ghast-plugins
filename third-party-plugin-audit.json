@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 49,
-      "official-source-verified": 95
+      "official-source-research-required": 48,
+      "official-source-verified": 96
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 95,
-      "not-implemented": 54
+      "implemented-verified": 96,
+      "not-implemented": 53
     }
   },
   "excludedOpenAIPlugins": [
@@ -2986,7 +2986,7 @@
     },
     {
       "id": "conductor",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "url": "https://www.conductor.com/",
@@ -3011,13 +3011,67 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.conductor.com/"
+        "homepage": "https://www.conductor.com/",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Conductor Inc.",
+          "officialRepository": null,
+          "officialRevision": "conductor-chatgpt-8f616240df58+data-159f29e8eeae+faq-0932a35ad457",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/conductor/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic search-intelligence icon.",
+            "Conductor does not publish the source or redistribution license for its hosted MCP implementation. Ghast does not copy that service, the private Codex connector, proprietary datasets, API tokens, trademarks, or marketplace artwork."
+          ],
+          "officialityEvidence": [
+            "Conductor's official ChatGPT and Codex setup guide identifies https://mcp-universal.conductor.com/mcp/v3 as its Streamable HTTP custom-connection endpoint and documents Bearer authentication with a user-created Conductor API token.",
+            "The official ChatGPT and Codex guide has SHA-256 8f616240df58c8ecf056b6cf2964fa11038899ffcb884a3d725eebfc95ee9003 and lists tracked_configs, ai_brand_insights, ai_citation_insights, keyword_insights, and ai_query_fan_out_insights.",
+            "Conductor's official data reference has SHA-256 159f29e8eeae40472324256dd1519b72f0350d5637396fc52a3511436be2fd4b and documents tracked configuration, AI brand visibility and sentiment, citations and source URLs, traditional rankings, seasonality, SERP result types, keyword detail, and competitive ranking data.",
+            "Conductor's official MCP FAQ has SHA-256 0932a35ad457658f7d53b9322939bab9e9dabc58df9d507072a37661914f258e and states that the service queries and analyzes data without writing back into Conductor.",
+            "The official documentation says custom connections receive the current MCP tool set directly, avoiding the review lag that can affect native marketplace connectors.",
+            "Missing and invalid Bearer initialize requests returned HTTP 401 from the official endpoint. The missing-token challenge was Bearer and the invalid-token challenge reported invalid_token; both response bodies were empty.",
+            "OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 identifies Conductor Inc. as developer and describes visibility, sentiment, rankings, share of voice, competitive benchmarking, citations, brand mentions, market share, historical trends, and quantitative marketing analytics. Its manifest and private connector hashes are db95e15bdc7f64abf91dfedf620b1eb65512b15be6c4930ab7cd433f44bcde1b and 0f8f01bdb50369cb55425105f255b59f9313c21ec6b50fefe451baf81840e0db."
+          ],
+          "codexCapabilities": [
+            "Retrieve proprietary brand visibility, sentiment, ranking, citation, brand-mention, market-share, and share-of-voice metrics",
+            "Compare traditional SEO results with AI-generated search performance across locations and languages",
+            "Identify competitors for a topic and support historical trend or quantitative marketing analysis"
+          ],
+          "ghastCapabilities": [
+            "The same official Conductor account configuration, AI brand visibility, sentiment, citation, source, ranking, seasonality, SERP, keyword, and competitive benchmarking workflows through its public custom MCP endpoint",
+            "The current five-tool surface, including AI query fan-out analysis and traditional keyword insights that can reach custom connections before marketplace review completes",
+            "A read-only workflow skill that preserves account, brand, competitor, locale, engine, group, date, and metric provenance while separating Conductor measurements from assistant interpretation"
+          ],
+          "capabilityRelationship": "superset-newer-official-hosted-mcp",
+          "limitations": [
+            "Conductor operates the hosted MCP implementation and does not publish its source. The MIT license applies only to the independently authored Ghast adapter.",
+            "A Conductor account, account membership, enabled MCP entitlement, user-created API token, subscribed datasets, retained history, plan features, and tool-call allocation remain user-managed.",
+            "Official documentation and unauthenticated endpoint behavior were verified without a Conductor account. Authenticated tools/list, customer configuration, proprietary metrics, and account data were not accessed.",
+            "Successful data retrievals consume the customer's allocated MCP tool calls. Conductor documents rate limits of 30 requests per hour per user and 120 requests per minute across the system.",
+            "Conductor says exact citation URLs for every prompt are not currently available. The adapter must not imply complete source coverage where the service does not return it.",
+            "Visibility, sentiment, authority, market-share, ranking, and competitor metrics can vary by market, locale, engine, tracked configuration, date, and methodology and do not establish causation.",
+            "A generic search-intelligence icon is used because no licensed Conductor catalog artwork is included in a public official MCP source repository."
+          ],
+          "verification": [
+            "Run verify_conductor_evidence and import_conductor from scripts/import-official-hosted-plugins.py through Python runpy",
+            "Verify official ChatGPT and Codex, data-reference, and FAQ SHA-256 values 8f616240df58c8ecf056b6cf2964fa11038899ffcb884a3d725eebfc95ee9003, 159f29e8eeae40472324256dd1519b72f0350d5637396fc52a3511436be2fd4b, and 0932a35ad457658f7d53b9322939bab9e9dabc58df9d507072a37661914f258e",
+            "Confirm the official guide lists the exact current five-tool surface and the custom MCP endpoint https://mcp-universal.conductor.com/mcp/v3 with Bearer API-token authentication",
+            "Probe missing and invalid Bearer initialize requests and confirm HTTP 401, the expected Bearer challenges, and empty response bodies",
+            "Verify OpenAI plugin snapshot manifest and connector hashes db95e15bdc7f64abf91dfedf620b1eb65512b15be6c4930ab7cd433f44bcde1b and 0f8f01bdb50369cb55425105f255b59f9313c21ec6b50fefe451baf81840e0db",
+            "Authorize a Conductor account before testing authenticated tool schemas, tracked configuration, proprietary metrics, allocations, or account access",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/conductor.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": null,
+        "upstreamRevision": "conductor-chatgpt-8f616240df58+data-159f29e8eeae+faq-0932a35ad457",
+        "portStatus": "full"
       }
     },
     {

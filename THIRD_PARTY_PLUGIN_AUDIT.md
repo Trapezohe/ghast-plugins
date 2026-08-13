@@ -61,7 +61,7 @@ verification.
 | coderabbit | CodeRabbit | skills | MIT | official-source-verified | implemented-verified |
 | cogedim | ALTAREA PROMOTION MANAGEMENT | appConnector | MIT | official-source-research-required | not-implemented |
 | common-room | Common Room | appConnector | MIT | official-source-verified | implemented-verified |
-| conductor | Conductor Inc. | appConnector | MIT | official-source-research-required | not-implemented |
+| conductor | Conductor Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | convex | Convex, Inc. | appConnector | UNLICENSED | blocked-license | not-implemented |
 | coupler-io | Coupler.io | appConnector | MIT | official-source-research-required | not-implemented |
 | coveo | Coveo | appConnector | MIT | official-source-research-required | not-implemented |

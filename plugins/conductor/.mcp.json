@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "conductor": {
+      "type": "http",
+      "url": "https://mcp-universal.conductor.com/mcp/v3"
+    }
+  }
+}
