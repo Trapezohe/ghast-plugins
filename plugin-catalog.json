@@ -1011,6 +1011,36 @@
       "license": "Apache-2.0"
     },
     {
+      "id": "intercom",
+      "name": "intercom",
+      "description": "Search and analyze Intercom conversations, contacts, companies, Help Center articles, and tickets through Intercom's official hosted MCP service and official CLI.",
+      "manifest": {
+        "name": "intercom",
+        "description": "Search and analyze Intercom conversations, contacts, companies, Help Center articles, and tickets through Intercom's official hosted MCP service and official CLI.",
+        "author": {
+          "name": "Intercom",
+          "url": "https://intercom.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "0.1.0-ghast.1",
+        "homepage": "https://developers.intercom.com",
+        "repository": "https://github.com/intercom/claude-plugin-external",
+        "upstreamRevision": "62773a7d4b8aac31545d6888fe6479be3bc53804",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/intercom.zip",
+        "sha256": "801ee34a134726be7c8262f1185d5fa49658513e3257b90b2d8813dcde9ef6dd"
+      },
+      "icon": "./plugins/intercom/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://developers.intercom.com",
+      "repository": "https://github.com/intercom/claude-plugin-external",
+      "license": "MIT"
+    },
+    {
       "id": "linear",
       "name": "linear",
       "description": "Manage Linear issues, projects, and team workflows through Linear's official MCP server.",

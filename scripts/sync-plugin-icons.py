@@ -154,6 +154,12 @@ CUSTOM_ICONS = {
         '<path d="M30 32h16M30 40h11"/>'
         '<path d="M15 33h5M15 40h5"/>',
     ),
+    "intercom": (
+        "#2375A8",
+        '<path d="M12 15h40v29H31l-11 8v-8h-8z"/>'
+        '<path d="M21 25v10M28 22v13M35 22v13M42 25v10"/>'
+        '<path d="M20 38c8 4 16 4 24 0"/>',
+    ),
     "hugging-face": (
         "#F0B429",
         '<circle cx="20" cy="24" r="6"/><circle cx="44" cy="24" r="6"/>'

@@ -1333,6 +1333,63 @@
         "unzip -tqq packages/hostinger.zip"
       ]
     },
+    "intercom": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Intercom",
+      "officialRepository": "https://github.com/intercom/claude-plugin-external",
+      "officialRevision": "62773a7d4b8aac31545d6888fe6479be3bc53804",
+      "license": "MIT",
+      "licenseEvidence": [
+        "The pinned official plugin repository grants the MIT license under Copyright (c) 2026 Intercom, Inc.",
+        "Intercom's pinned official OpenAPI repository separately grants MIT under Copyright (c) 2022 Intercom, Inc.; Ghast includes that notice for the adapted ticket API reference.",
+        "Ghast copies the two customer-analysis skills and plugin license, replaces the stale MCP reference and unsafe CLI setup instructions, and generates a ticket-read workflow and generic support icon.",
+        "No Intercom hosted-server code, CLI runtime, Codex private connector mapping, logo, or marketplace artwork is redistributed."
+      ],
+      "officialityEvidence": [
+        "The source plugin is owned by Intercom's official GitHub organization, identifies Intercom as its author, declares MIT, and connects to https://mcp.intercom.com/mcp.",
+        "Intercom's current developer documentation publishes separate US and EU hosted MCP endpoints and documents exactly 13 tools for conversations, contacts, companies, and Help Center articles.",
+        "Both regional authorization servers support authorization-code and refresh-token grants, public clients, dynamic registration, and PKCE; disposable localhost registrations returned HTTP 201 with no client secret.",
+        "Intercom publishes @intercom/cli through an Intercom maintainer and GitHub OIDC trusted publishing. Version 0.9.0 exposes a generic authenticated api command and reads credentials from INTERCOM_TOKEN or its own credential store.",
+        "Intercom's official Intercom-OpenAPI repository documents POST /tickets/search and GET /tickets/{ticket_id} in API version 2.16."
+      ],
+      "codexCapabilities": [
+        "Search and summarize Intercom customer conversations, including open billing conversations",
+        "Find contacts such as people from a requested email domain and retrieve recent conversation history",
+        "Fetch a conversation and draft next steps",
+        "Access Intercom tickets and related support workflows"
+      ],
+      "ghastCapabilities": [
+        "Connect directly to Intercom's official US or EU hosted OAuth MCP service",
+        "Use all 13 currently documented MCP tools for universal, conversation, and contact search; conversation, contact, and company retrieval; company listing; and Help Center article listing, search, retrieval, creation, and update",
+        "Use Intercom's official customer-360 and support-pattern analysis workflows with Ghast privacy and write-confirmation safeguards",
+        "Search and retrieve tickets read-only through the separately installed official @intercom/cli and the official POST /tickets/search and GET /tickets/{ticket_id} REST paths",
+        "Produce bounded ticket, contact, conversation, company, and article summaries while citing returned IDs and preserving pagination coverage"
+      ],
+      "capabilityRelationship": "equivalent-official-composite-mcp-cli",
+      "limitations": [
+        "The Codex snapshot publishes no private connector tool names or schemas. Equivalence is measured against its manifest description and default prompts, not unavailable private implementation details.",
+        "Intercom's hosted MCP currently has no ticket tools, so ticket equivalence uses Intercom's separate official CLI and REST API rather than one hosted connector.",
+        "The hosted MCP supports US and EU workspaces but not Australia. The CLI can route REST calls to US, EU, or Australia when configured for the user's region.",
+        "The current @intercom/cli 0.9.0 dependency graph resolves adm-zip 0.5.18 and npm reports two high-severity entries for GHSA-xcpc-8h2w-3j85, a crafted-ZIP memory-allocation denial of service. No compatible fix is available under the CLI's declared range, so Ghast does not bundle or silently install it and avoids ZIP-processing commands.",
+        "The CLI package metadata declares MIT and is officially published, but its referenced intercom/cli source repository was not publicly cloneable during this audit. Ghast therefore redistributes no CLI code.",
+        "The current hosted MCP includes create_article and update_article. Ghast treats them as writes and requires exact-target review and explicit confirmation; ticket workflows are read-only.",
+        "An Intercom workspace, suitable OAuth or API-token scopes, regional routing, Help Center permissions, API limits, plan entitlements, and customer-data authorization remain user-managed.",
+        "No authenticated customer, conversation, company, article, or ticket request was run because no user Intercom workspace credential was supplied.",
+        "A generic support-workflow icon is used because the MIT plugin repository publishes no catalog icon and the separate MCP repository does not license its logos."
+      ],
+      "verification": [
+        "Verify intercom/claude-plugin-external revision 62773a7d4b8aac31545d6888fe6479be3bc53804, manifest, MCP declaration, MIT license, README, and all relevant skill hashes",
+        "Verify the canonical current Intercom MCP documentation article SHA-256 c27c134a387605bd493e22b593ce66a76e645a3fa75dcfca3889bd8b59d51339 and all 13 documented tool names",
+        "Verify US authorization metadata SHA-256 70a058d80462771860c2166f30663e0d979ff6dde0e176d94c759e57054bcf23 and EU metadata SHA-256 e7e0083de2a4020e1d348da337148027f384d9f2929cccfe16d7d8f0e0e3b4a7",
+        "Register disposable localhost public OAuth clients in both regions and confirm HTTP 201 with no client secret",
+        "Probe both hosted MCP endpoints with unauthenticated GET and initialize requests and confirm HTTP 401 plus the exact Intercom OAuth challenge",
+        "Verify intercom/Intercom-OpenAPI revision 5662b2ec2ab3626b9e54ef5e89f7b7be4931391f, MIT license, API 2.16 SHA-256 57be9a3f321bfc3b67a073f5ed14d1920a9450f5eb11a43caed8dfcdda14a2dc, and the search and retrieve ticket operations",
+        "Verify @intercom/cli 0.9.0 npm OIDC publisher, maintainer, metadata, integrity, tarball SHA-256 3ebde4d9713baebffc57ab5fb3c28bb02cf8fb79333735a7e33ccdc439f98848, clean install, api help, environment-token support, keyring fallback, and generic endpoint construction",
+        "Run npm audit in a clean install and require the documented two high-severity GHSA-xcpc-8h2w-3j85 entries with no critical vulnerabilities",
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "unzip -tqq packages/intercom.zip"
+      ]
+    },
     "hubspot": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "HubSpot",
