@@ -76,7 +76,7 @@ verification.
 | docket | Docket AI | appConnector | MIT | official-source-research-required | not-implemented |
 | docusign | Docusign | appConnector | MIT | official-source-verified | implemented-verified |
 | domotz-preview | Domotz | appConnector | MIT | official-source-research-required | not-implemented |
-| dovetail | Dovetail | appConnector | MIT | official-source-research-required | not-implemented |
+| dovetail | Dovetail | appConnector | MIT | official-source-verified | implemented-verified |
 | dow-jones-factiva | Factiva, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | egnyte | Egnyte Inc | appConnector | MIT | official-source-research-required | not-implemented |
 | expo | Expo | skills, commands | MIT | official-source-verified | implemented-verified |

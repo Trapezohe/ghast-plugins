@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 72,
-      "official-source-verified": 72
+      "official-source-research-required": 71,
+      "official-source-verified": 73
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 72,
-      "not-implemented": 77
+      "implemented-verified": 73,
+      "not-implemented": 76
     }
   },
   "excludedOpenAIPlugins": [
@@ -3340,7 +3340,7 @@
     },
     {
       "id": "dovetail",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Dovetail",
@@ -3365,13 +3365,79 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://dovetail.com"
+        "homepage": "https://dovetail.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Dovetail",
+          "officialRepository": "https://github.com/dovetail/dovetail-mcp",
+          "officialRevision": "88a7389ccca718f9eff2f680ecb3f34713500866",
+          "license": "MIT",
+          "licenseEvidence": [
+            "dovetail/dovetail-mcp revision 88a7389ccca718f9eff2f680ecb3f34713500866 contains the MIT License with copyright 2025 Dovetail Research Pty. Ltd. and SHA-256 36c42b5cff178a4a48d525be64759577ede7b7ad9502ad5285103f3d9a50abd8.",
+            "The official README declares MIT licensing and the repository is owned by the Dovetail GitHub organization.",
+            "plugins/dovetail/LICENSE licenses only the independently authored Ghast adapter. No Dovetail hosted implementation, private connector, API token, workspace data, branded icon, or marketplace artwork is redistributed."
+          ],
+          "officialityEvidence": [
+            "Dovetail's official developer documentation identifies https://dovetail.com/api/mcp as its hosted Streamable HTTP MCP server and recommends it for compatible remote clients.",
+            "The official hosted MCP guide has SHA-256 03cb4a1b08e5fd3f5dab5be749f609800207577323b1d0d40280873b3b0b24e8 and publishes an exact ordered 40-tool inventory with canonical JSON SHA-256 124bd35e14d30bd540280db8c1cda89b3fe6503094a7b0f90fa60f2999c2ef39.",
+            "The official dovetail/dovetail-mcp repository calls itself the Dovetail MCP Server, connects to the Dovetail API, and is pinned at revision 88a7389ccca718f9eff2f680ecb3f34713500866.",
+            "The public self-hosted source exposes exactly eight read-only tools with canonical ordered-name hash c7090ab6dec4ffed6c0d1a5068b6a193a20a8d4eb580d2a5ac303346f505e754.",
+            "The official v0.3 release points to commit 12693784710f41aa74d806af5eeca34b1a7f6fa7. Its prebuilt index.js and source map have SHA-256 c987beead25788b0633068e0ff119b4f7400abe46e626af3c374da819fd9a458 and 85fd2fe964819e85aba61d653d1745faf0cca5c01942301c1bbf76ebcde385d3.",
+            "Dovetail's official API reference marks insights deprecated and directs new integrations to docs. The current hosted MCP catalog includes docs and the broader workspace model, while the public self-hosted source still uses insight endpoints.",
+            "The protected-resource and authorization-server metadata canonical JSON hashes are a08555b9f481613bc5e821cc36994f6fd064e7d55576702c2356f49412fac393 and 932023b5c8380a31395f75be234832dfaa878e586cbfb7bbe2b5c7f2533d4694.",
+            "The hosted endpoint accepts Bearer-header authentication. Missing and invalid api.* token initialize requests returned HTTP 401 with the official dovetail-mcp realm and protected-resource challenge on August 13, 2026.",
+            "OpenAI's pinned Codex plugin snapshot identifies Dovetail as the developer and describes project, note or data, doc, theme, customer-insight, friction-point, and renewal-context workflows. The manifest and private connector declaration hashes are 46d4e25ffeca5ebbe88481459f9fa67d705f20227a6c26734a87bf818da78610 and 672160c29c3dc8cacc667754727f2a59aa01984301117feefd4e657074a1fe82."
+          ],
+          "codexCapabilities": [
+            "Find relevant customer insights in Dovetail",
+            "Search the workspace for relevant projects, notes or research data, docs, and themes",
+            "Summarize top customer friction points affecting enterprise renewal conversations",
+            "Return evidence-backed customer research without leaving the conversation"
+          ],
+          "ghastCapabilities": [
+            "The same official workspace search, project, research-data, doc, theme, customer-evidence, friction-point, and renewal-context workflows",
+            "Official project templates, folder hierarchy, highlights, doc comments, channels, users, contacts, tags, custom fields, file metadata, and short-lived file download links",
+            "Explicitly confirmed creation of projects, folders, research data, transcript highlights, docs, comments, channel data, and tags",
+            "Direct Streamable HTTP access through Dovetail's official hosted endpoint using a user-owned API token stored in the Ghast vault",
+            "Evidence-preserving synthesis that separates raw statements, highlights, themes, Dovetail output, and assistant inference"
+          ],
+          "capabilityRelationship": "official-hosted-superset",
+          "limitations": [
+            "The hosted MCP implementation is operated by Dovetail and is not redistributed. The MIT license in the Ghast package applies only to the independently authored adapter.",
+            "A Dovetail account, user-generated API token, workspace access, project and channel permissions, plan features, service limits, and network connectivity remain user-managed.",
+            "Dovetail API tokens are opaque api.* values, expire after 30 days, and must be rotated or revoked by the user. The plugin references only the dovetail-api-token vault entry.",
+            "Dovetail's MCP guide says the hosted endpoint supports neither Dynamic Client Registration nor Client-Initiated Metadata Discovery and publishes no client ID or secret for third-party tools. Ghast therefore uses the officially documented custom Authorization-header path rather than generic OAuth registration.",
+            "The authorization host publishes a general OIDC registration endpoint, but Dovetail explicitly does not support that endpoint as MCP Dynamic Client Registration. The adapter does not attempt to register an OAuth client.",
+            "The public self-hosted repository is an older eight-tool read-only subset and still uses deprecated insight endpoints. It is verified as official source and license evidence but is not packaged as the current complete Codex-equivalent implementation.",
+            "Official docs, public source, release artifacts, OAuth metadata, Codex capability evidence, and unauthenticated protocol behavior were verified without a Dovetail account. Authenticated tools/list and real workspace operations were not run.",
+            "Transcripts, research data, comments, contacts, customer identities, files, highlights, themes, unpublished findings, and presigned download URLs can contain personal or commercially sensitive data and must remain narrowly scoped.",
+            "The eight create tools can produce durable workspace changes, notifications, new research inputs, or downstream channel effects. Every create requires exact-target review and explicit confirmation, and ambiguous writes require readback before retry.",
+            "A generic research-workspace icon is used because the public official source repository does not include redistributable catalog artwork."
+          ],
+          "verification": [
+            "python3 scripts/import-official-hosted-plugins.py",
+            "Verify Dovetail hosted, self-hosted, authorization, and deprecated-insights documentation SHA-256 hashes 03cb4a1b08e5fd3f5dab5be749f609800207577323b1d0d40280873b3b0b24e8, 7c8024e857d2a966e9f1a86926571a21e508d15537d1ba7a375fc25815370533, d3dadee1e7ec111357158fb4d43a7e27c2c37835d9611f31d3c6665d037a1ba6, and 5dc49a441b5ba4993deb6aaea346926fef577170ce71056e1b92a9e1395dc2c9",
+            "Confirm the exact ordered 40-tool hosted inventory and canonical JSON SHA-256 124bd35e14d30bd540280db8c1cda89b3fe6503094a7b0f90fa60f2999c2ef39",
+            "Verify dovetail/dovetail-mcp revision 88a7389ccca718f9eff2f680ecb3f34713500866, MIT license, README, package metadata, server source, retry helper, exact eight-tool inventory, and canonical tool-name hash c7090ab6dec4ffed6c0d1a5068b6a193a20a8d4eb580d2a5ac303346f505e754",
+            "Verify official v0.3 release commit 12693784710f41aa74d806af5eeca34b1a7f6fa7 and release asset hashes c987beead25788b0633068e0ff119b4f7400abe46e626af3c374da819fd9a458 and 85fd2fe964819e85aba61d653d1745faf0cca5c01942301c1bbf76ebcde385d3",
+            "Verify canonical protected-resource and authorization-server metadata hashes a08555b9f481613bc5e821cc36994f6fd064e7d55576702c2356f49412fac393 and 932023b5c8380a31395f75be234832dfaa878e586cbfb7bbe2b5c7f2533d4694",
+            "Probe https://dovetail.com/api/mcp with missing and invalid api.* credentials and confirm HTTP 401, the official dovetail-mcp realm, and the exact protected-resource metadata URL",
+            "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Dovetail manifest and connector hashes and compare its search and customer-insight workflows with the hosted 40-tool catalog",
+            "Authorize a Dovetail account and current API token before testing authenticated tools/list or real workspace reads and creates",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/dovetail.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": "https://github.com/dovetail/dovetail-mcp",
+        "upstreamRevision": "88a7389ccca718f9eff2f680ecb3f34713500866",
+        "portStatus": "full"
       }
     },
     {

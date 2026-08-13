@@ -146,6 +146,13 @@ CUSTOM_ICONS = {
         '<path d="M23 47c5-5 9-6 12-2 3 3 7 2 12-3"/>'
         '<path d="M24 52h24"/>',
     ),
+    "dovetail": (
+        "#26735B",
+        '<rect x="10" y="12" width="44" height="40" rx="4"/>'
+        '<path d="M10 23h44M22 12v40M35 23v29"/>'
+        '<path d="M15 18h2M27 18h2M41 18h8"/>'
+        '<path d="M27 31h4M27 38h4M40 31h9M40 38h7M40 45h5"/>',
+    ),
     "lovable": (
         "#D84A2B",
         '<rect x="10" y="12" width="44" height="40" rx="4"/>'
