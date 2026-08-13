@@ -1,0 +1,16 @@
+{
+  "name": "skywatch",
+  "version": "1.0.0-ghast.1",
+  "description": "Search orderable satellite imagery, compare scene pricing, and browse satellites and products through SkyWatch's official MCP.",
+  "category": "research",
+  "author": {
+    "name": "SkyWatch Space Applications Inc.",
+    "url": "https://skywatch.com"
+  },
+  "homepage": "https://docs.skywatch.com/docs/mcp/mcp-server/",
+  "upstreamRevision": "skywatch-docs-f4ed1fbadb7c+client-a16e47fecde3+tools-c6b9fe481f16",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

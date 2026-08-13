@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "skywatch": {
+      "type": "http",
+      "url": "https://api.skywatch.co/mcp"
+    }
+  }
+}

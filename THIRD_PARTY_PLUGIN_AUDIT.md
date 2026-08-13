@@ -151,7 +151,7 @@ verification.
 | shutterstock | Shutterstock | appConnector | MIT | official-source-research-required | not-implemented |
 | signnow | airSlate Inc | appConnector | MIT | official-source-research-required | not-implemented |
 | similarweb | Similarweb | appConnector | MIT | official-source-verified | implemented-verified |
-| skywatch | SkyWatch Space Applications Inc. | appConnector | MIT | official-source-research-required | not-implemented |
+| skywatch | SkyWatch Space Applications Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | statsig | Statsig, LLC | appConnector | MIT | official-source-verified | implemented-verified |
 | streak | Rewardly, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | stripe | Stripe | appConnector, skills | MIT | official-source-verified | implemented-verified |

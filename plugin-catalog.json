@@ -1130,6 +1130,34 @@
       "license": "MIT"
     },
     {
+      "id": "skywatch",
+      "name": "skywatch",
+      "description": "Search orderable satellite imagery, compare scene pricing, and browse satellites and products through SkyWatch's official MCP.",
+      "manifest": {
+        "name": "skywatch",
+        "description": "Search orderable satellite imagery, compare scene pricing, and browse satellites and products through SkyWatch's official MCP.",
+        "author": {
+          "name": "SkyWatch Space Applications Inc.",
+          "url": "https://skywatch.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.0-ghast.1",
+        "homepage": "https://docs.skywatch.com/docs/mcp/mcp-server/",
+        "upstreamRevision": "skywatch-docs-f4ed1fbadb7c+client-a16e47fecde3+tools-c6b9fe481f16",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/skywatch.zip",
+        "sha256": "36ff43d1b0338327d66912730315f27be9c34dcd3d5b6013ba93bd48fbb63964"
+      },
+      "icon": "./plugins/skywatch/assets/icon.svg",
+      "category": "research",
+      "homepage": "https://docs.skywatch.com/docs/mcp/mcp-server/",
+      "license": "MIT"
+    },
+    {
       "id": "statsig",
       "name": "statsig",
       "description": "Inspect and manage Statsig experiments, feature gates, dynamic configs, segments, metrics, results, audit logs, and dashboards through official skills and the official Statsig MCP server.",

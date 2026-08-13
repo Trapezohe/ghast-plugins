@@ -1677,6 +1677,56 @@
         "unzip -tqq packages/similarweb.zip"
       ]
     },
+    "skywatch": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "SkyWatch Space Applications Inc.",
+      "officialRepository": null,
+      "officialRevision": "skywatch-docs-f4ed1fbadb7c+client-a16e47fecde3+tools-c6b9fe481f16",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/skywatch/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "No SkyWatch hosted MCP server source, imagery catalog, private Codex connector, or marketplace artwork is redistributed."
+      ],
+      "officialityEvidence": [
+        "SkyWatch's official API documentation identifies https://api.skywatch.co/mcp as its hosted MCP server, states that it requires no API key, and documents guest authentication.",
+        "The official MCP documentation was captured three times with identical SHA-256 f4ed1fbadb7c6190d3fa399cd694f0d7456e7c653f33535c4933716fde023a05.",
+        "SkyWatch's official client-integration documentation provides direct HTTP configuration for the same endpoint across Claude, ChatGPT, Cursor, Gemini, Microsoft 365 Copilot, and local clients; it has SHA-256 a16e47fecde3dcb2e73ae339acdacc22695f0da76183ea8971546db70b837655.",
+        "Three live tools/list calls returned byte-identical responses containing search_archive_imagery, calculate_pricing, get_satellites, and get_offerings. The canonical JSON has SHA-256 c6b9fe481f168d9066778500895fa233161bfe94436dd2f88dc9234448ce6123.",
+        "Every live tool declares readOnlyHint true, destructiveHint false, and idempotentHint true.",
+        "A live initialize call returned skywatch-mcp-server version 1.0.0 with the documented MCP 2025-03-26 protocol, and the health endpoint reported a healthy production service.",
+        "A live archive search for the Golden Gate Bridge from July 13, 2026 through August 13, 2026 returned three orderable scenes with capture dates, providers, resolutions, cloud cover, prices, and SkyWatch Explore links. A separate pricing call returned a multi-provider archive estimate for the same area."
+      ],
+      "codexCapabilities": [
+        "Search archive satellite imagery from multiple providers by location and date",
+        "Filter imagery by resolution and cloud cover and compare pricing across providers",
+        "Browse available satellites and product offerings and receive direct SkyWatch Explore links for viewing and ordering"
+      ],
+      "ghastCapabilities": [
+        "The same official archive-imagery search by natural-language location, coordinates, bounding box, or GeoJSON with date, cloud-cover, coverage, resolution, data-type, provider, sorting, and result-limit controls",
+        "Official archive and tasking price estimates, satellite and sensor capability browsing, product-offering discovery, provider and pricing resources, and direct SkyWatch Explore links"
+      ],
+      "capabilityRelationship": "superset-official-hosted-mcp",
+      "limitations": [
+        "The hosted MCP implementation and imagery catalog are operated by SkyWatch and are not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+        "The MCP tools are read-only and do not purchase imagery, place tasking orders, reserve scenes, or charge a payment method. Explore links hand the user off to SkyWatch for those actions.",
+        "Scene inventory, previews, providers, pricing, minimum order areas, and Explore links can change after a search. Pricing results must be rechecked before purchase.",
+        "Natural-language locations are geocoded by the service. Ambiguous or sensitive locations should be resolved explicitly before searching.",
+        "The official documentation states a 25-second search timeout; broad areas or date ranges may need to be narrowed.",
+        "A generic satellite-search icon is used because no licensed catalog icon is included in a public official MCP source repository."
+      ],
+      "verification": [
+        "python3 scripts/import-official-hosted-plugins.py",
+        "Verify the official MCP documentation SHA-256 is f4ed1fbadb7c6190d3fa399cd694f0d7456e7c653f33535c4933716fde023a05",
+        "Verify the official client-integration documentation SHA-256 is a16e47fecde3dcb2e73ae339acdacc22695f0da76183ea8971546db70b837655",
+        "Call tools/list three times and verify the canonical JSON SHA-256 is c6b9fe481f168d9066778500895fa233161bfe94436dd2f88dc9234448ce6123",
+        "Confirm all four tools declare readOnlyHint true, destructiveHint false, and idempotentHint true",
+        "Call initialize and confirm server name skywatch-mcp-server, version 1.0.0, and MCP protocol 2025-03-26",
+        "Call search_archive_imagery for the Golden Gate Bridge from 2026-07-13 through 2026-08-13 and confirm scene metadata, pricing, and SkyWatch Explore links are returned",
+        "Call calculate_pricing for the same location and date range and confirm multiple provider estimates are returned",
+        "Compare every documented search, pricing, satellite, and offering capability with the Codex long description and default prompt",
+        "unzip -tqq packages/skywatch.zip"
+      ]
+    },
     "statsig": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Statsig",

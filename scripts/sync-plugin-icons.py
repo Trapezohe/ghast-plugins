@@ -161,6 +161,15 @@ CUSTOM_ICONS = {
         '<path d="M32 12c-7 7-10 14-10 20s3 13 10 20"/>'
         '<path d="M18 39l8-8 7 4 13-14"/>',
     ),
+    "skywatch": (
+        "#155E75",
+        '<circle cx="32" cy="32" r="8"/>'
+        '<path d="M11 40c8 8 23 9 34 2s14-20 8-29"/>'
+        '<path d="M53 13l-1 10-9-4"/>'
+        '<path d="M17 17l7 7M40 40l7 7"/>'
+        '<rect x="12" y="11" width="9" height="9" rx="1"/>'
+        '<rect x="43" y="44" width="9" height="9" rx="1"/>',
+    ),
     "steam-search": (
         "#1B4965",
         '<circle cx="22" cy="40" r="7"/><circle cx="44" cy="22" r="8"/>'
