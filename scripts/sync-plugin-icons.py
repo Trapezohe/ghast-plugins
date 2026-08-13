@@ -166,6 +166,15 @@ CUSTOM_ICONS = {
         '<path d="M32 18c6 5 9 10 9 14s-3 9-9 14"/>'
         '<path d="M32 18c-6 5-9 10-9 14s3 9 9 14"/>',
     ),
+    "coupler-io": (
+        "#256A72",
+        '<circle cx="16" cy="18" r="5"/>'
+        '<circle cx="16" cy="46" r="5"/>'
+        '<circle cx="48" cy="18" r="5"/>'
+        '<circle cx="48" cy="46" r="5"/>'
+        '<rect x="25" y="25" width="14" height="14" rx="2"/>'
+        '<path d="M20 20l7 7M44 20l-7 7M20 44l7-7M44 44l-7-7"/>',
+    ),
     "carta-crm": (
         "#2A6F62",
         '<rect x="11" y="13" width="42" height="38" rx="3"/>'

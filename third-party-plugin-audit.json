@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 44,
-      "official-source-verified": 100
+      "official-source-research-required": 43,
+      "official-source-verified": 101
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 100,
-      "not-implemented": 49
+      "implemented-verified": 101,
+      "not-implemented": 48
     }
   },
   "excludedOpenAIPlugins": [
@@ -3366,7 +3366,7 @@
     },
     {
       "id": "coupler-io",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "url": "https://www.coupler.io/",
@@ -3391,13 +3391,83 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.coupler.io/"
+        "homepage": "https://www.coupler.io/",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Coupler.io / Railsware Products Studio LLC",
+          "officialRepository": "https://github.com/railsware/coupler-io-mcp-server",
+          "officialRevision": "550ec75cb48bbbe0be286577b30c3a32f9bb0eea",
+          "license": "MIT",
+          "licenseEvidence": [
+            "The pinned railsware/coupler-io-mcp-server repository contains an MIT license with SHA-256 c24831ae3def972a1d64a00063fdc01a4891175f076e675cadfe1902d25f9d3d and copyright 2025 Railsware Products Studio LLC.",
+            "The MIT grant covers the official local server source, manifest, documentation, and source artwork. Ghast redistributes only the license and generated compatibility package; it connects to but does not redistribute Coupler.io's hosted MCP implementation.",
+            "A generic multi-source analytics icon is used instead of the source or OpenAI marketplace artwork, so the package does not imply Coupler.io endorsement or claim a trademark grant."
+          ],
+          "officialityEvidence": [
+            "The public source repository is owned by Railsware, identifies itself as Coupler.io MCP Server, links Coupler.io, and names Coupler.io in its manifest and documentation. Coupler.io's official website identifies Railsware Products Studio LLC as the service owner.",
+            "Pinned revision 550ec75cb48bbbe0be286577b30c3a32f9bb0eea has Git tree 7a266a016ae691e2f226927e6aad99fafb4b198f and package version 0.0.5. Its LICENSE, README, package.json, package-lock.json, manifest, source icon, server entry point, and get-data handler SHA-256 values are c24831ae3def972a1d64a00063fdc01a4891175f076e675cadfe1902d25f9d3d, e3db6069a134d13ef4835b6eb3af7c9636d5c907d667e3e765ba4f955a65f2df, 1fb3a5e99b687ef11b8e7321b4b6e00337c9740b5fc821a3ac8d1f99f9e7fe88, 4032fc1c6d6199f935fa44f929c05355c8ff9f6bdb080e281ad092796ae30955, 6e0bed9b33f26fc819b526a344d99a2d03de18e7dd9a1bf80223eb672d23d936, 2321ba637cf8ded443c6ef205a89a2d1fcba43f671aea9a02b3906591c9f00dd, 460d0c0fbd27c03c7606b828a25d8cae85efd4bee974cb0cd547e6c0e1de344a, and b21b5e6715860fdfc07ea142456118bfcf975379d0f2b3bbf99de22108c7d5c6.",
+            "The complete official src path-and-content inventory has SHA-256 cf4e3c22d8dbafdf225f37c32a609116c8cccfaf6f7269a44a0e91b1adc15d2c.",
+            "The local reference server publishes four read-only tools: get-data, get-schema, list-dataflows, and get-dataflow. Its get-data handler opens the SQLite database with readOnly true.",
+            "The same official README recommends Coupler.io's hosted remote MCP for the broader product experience and documents 22 tools: ten data and analysis operations, two server-delivered skill operations, and ten feature-flagged guided data-flow setup operations.",
+            "The hosted catalog includes dataset discovery and schema queries, read-only SQL analysis, flow and template discovery, server skills, flow refresh, dataset metadata updates, data-flow creation, source and destination configuration, integration discovery, and credential-name discovery.",
+            "The official documentation states that Coupler.io supports more than 400 source integrations and that its Analytical Engine executes and verifies queries before returning validated results.",
+            "The official protected-resource metadata at https://mcp.coupler.io/.well-known/oauth-protected-resource/mcp identifies https://mcp.coupler.io/mcp, bearer-header authentication, the mcp scope, and https://auth.coupler.io as the authorization server. Its canonical JSON SHA-256 is 773f8b6ca0ed08c5a1a9e595249e6451b2a37a06611a6e5b296a857bf37b2eb1.",
+            "The authorization-server metadata declares authorization code, Dynamic Client Registration, public clients, token_endpoint_auth_method none, and PKCE S256. Its canonical JSON SHA-256 is 75ae8fbb66a483982040e884317a17a2fb927cf84423e097795682e0a729222c.",
+            "On August 13, 2026, missing and invalid Bearer initialize requests returned HTTP 401 with body SHA-256 values 465e9eb7a90fc9584214063c8f49583df9bc7269887272bf862a7a3baa9bccfe and cb1e3fd659e7a0443766f4b408d3191d18d7a04880da2d726e9f29169f4eacfa.",
+            "OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 identifies Coupler.io as the developer and describes multi-channel marketing, finance, sales, ecommerce, and other business-data analysis. Its manifest, private app mapping, and icon SHA-256 values are aedc598e10169badb404fb9f4fe7cf681bea15d7201c04e3bdd5d1cc7cf36bd9, 42bee6c93678077420e1f7e3e06e2356463a5a6676a627179c46933fea8eaec8, and 22ba854af39a25a8e046e9ba347e8cc173b3956c162a1dbe5b5c08f0de281397."
+          ],
+          "codexCapabilities": [
+            "Analyze marketing, sales, finance, ecommerce, and other business data through a private Coupler.io app connector",
+            "Calculate customer acquisition cost, marketing ROI, campaign and pipeline performance, conversion, and revenue forecasts",
+            "Analyze profit, cash flow, and receivables",
+            "Report overall advertising spend, impressions, clicks, and cost per click"
+          ],
+          "ghastCapabilities": [
+            "The same cross-channel marketing, sales, finance, ecommerce, product, and other structured business-data analysis through Coupler.io's official hosted MCP and Analytical Engine",
+            "Dataset and data-flow discovery, schema and freshness inspection, read-only SQL aggregation, templates, and server-delivered analytical skills",
+            "Official guided setup and administration tools for flow creation, source and destination configuration, refreshes, dataset metadata, integrations, field options, and Coupler.io-managed credential names when enabled for the account",
+            "An independently authored workflow for metric reconciliation, currency and timezone handling, freshness and coverage reporting, bounded queries, privacy, responsible decision support, and explicit confirmation for every refresh or persistent change"
+          ],
+          "capabilityRelationship": "superset-current-official-hosted-mcp",
+          "limitations": [
+            "Coupler.io operates the hosted MCP implementation. Ghast redistributes only the official MIT license, an independently authored compatibility skill and manifest, MCP configuration, and a generic icon.",
+            "A Coupler.io account, browser OAuth, compatible AI destination, configured data flows and source credentials, user permissions, plan, usage allowance, feature flags, source coverage, and service availability remain user-managed.",
+            "Official source, documentation, local tests, tool catalogs, OAuth metadata, and unauthenticated endpoint behavior were verified without registering a client or signing in. Authenticated tools/list, customer datasets, credential listings, data-flow changes, and query results were not accessed.",
+            "The hosted README tool catalog is broader than the four-tool local reference implementation. Ghast uses the hosted endpoint and does not present the local server as a complete substitute.",
+            "The README's general security wording describes scoped read-only access, while the current hosted catalog also documents refresh, metadata-update, and data-flow creation operations. The authenticated live schema is authoritative, and Ghast requires exact-target review plus fresh confirmation for every state-changing operation.",
+            "run-dataflow can contact connected sources, consume quota, update shared data, and affect later analyses. Flow, source, destination, current freshness, expected scope, and reason must be confirmed before execution.",
+            "Creating or changing flows, sources, destinations, datasets, or schemas can expose data, use stored credentials, alter schedules, or overwrite shared configuration. Ambiguous results must be read back before retrying.",
+            "Credential discovery exposes only Coupler.io-managed credential identifiers; secret values must never be requested, displayed, logged, packaged, or pasted into chat.",
+            "The isolated source audit reported 31 dependency vulnerabilities from npm audit: 6 low, 2 moderate, 20 high, and 3 critical. These local-server dependencies are not included in or required by the hosted Ghast package, but the upstream self-hosted dependency tree should be reviewed before deployment.",
+            "Marketing attribution, CAC, ROI, ROAS, forecasts, pipeline probabilities, profit, cash flow, and receivables depend on source coverage, identity resolution, accounting policy, currency conversion, attribution windows, refresh timing, and field definitions. They do not establish causation, guarantee outcomes, or replace audit and professional review.",
+            "Customer, employee, invoice, transaction, campaign, opportunity, and product records can contain personal and confidential information. Retrieval and disclosure must remain narrowly scoped and high-impact eligibility decisions must not be automated from this data."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Verify official revision 550ec75cb48bbbe0be286577b30c3a32f9bb0eea, Git tree 7a266a016ae691e2f226927e6aad99fafb4b198f, package version 0.0.5, Railsware origin and authorship, MIT license hash, all pinned file hashes, and complete source-inventory hash.",
+            "Parse the official README and confirm the exact four local and 22 hosted tool inventories, including paired create and update source and destination operations.",
+            "Install source dependencies with an isolated npm cache, rebuild better-sqlite3, and run 25 tests, ESLint, and TypeScript compilation; separately record the npm audit dependency findings rather than treating successful tests as a vulnerability waiver.",
+            "Verify canonical protected-resource and authorization-server metadata SHA-256 values 773f8b6ca0ed08c5a1a9e595249e6451b2a37a06611a6e5b296a857bf37b2eb1 and 75ae8fbb66a483982040e884317a17a2fb927cf84423e097795682e0a729222c.",
+            "Probe https://mcp.coupler.io/mcp with missing and invalid Bearer initialize requests and confirm HTTP 401 plus body SHA-256 values 465e9eb7a90fc9584214063c8f49583df9bc7269887272bf862a7a3baa9bccfe and cb1e3fd659e7a0443766f4b408d3191d18d7a04880da2d726e9f29169f4eacfa.",
+            "Compare the OpenAI manifest, private app mapping, and icon hashes with the current official hosted capability surface and preserve the explicit account, destination, source-coverage, and write-confirmation boundaries.",
+            "Authorize an eligible Coupler.io account before testing authenticated tools/list, data-flow and dataset discovery, one bounded read-only query, credential-name discovery, refresh, or guided setup operations.",
+            "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+            "python3 scripts/build-ghast-catalog.py",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/coupler-io.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "0.0.5-ghast.1",
+        "repository": "https://github.com/railsware/coupler-io-mcp-server",
+        "upstreamRevision": "550ec75cb48bbbe0be286577b30c3a32f9bb0eea",
+        "portStatus": "full"
       }
     },
     {

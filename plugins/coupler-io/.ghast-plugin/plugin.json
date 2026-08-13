@@ -1,0 +1,18 @@
+{
+  "name": "coupler-io",
+  "version": "0.0.5-ghast.1",
+  "description": "Analyze marketing, sales, finance, ecommerce, product, and other business data from Coupler.io data flows through Coupler.io's official hosted OAuth MCP and Analytical Engine.",
+  "category": "data",
+  "author": {
+    "name": "Coupler.io",
+    "url": "https://www.coupler.io/"
+  },
+  "homepage": "https://www.coupler.io/ai-integrations",
+  "repository": "https://github.com/railsware/coupler-io-mcp-server",
+  "upstreamRevision": "550ec75cb48bbbe0be286577b30c3a32f9bb0eea",
+  "upstreamPath": ".",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

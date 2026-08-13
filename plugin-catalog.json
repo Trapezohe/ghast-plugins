@@ -1020,6 +1020,36 @@
       "license": "MIT"
     },
     {
+      "id": "coupler-io",
+      "name": "coupler-io",
+      "description": "Analyze marketing, sales, finance, ecommerce, product, and other business data from Coupler.io data flows through Coupler.io's official hosted OAuth MCP and Analytical Engine.",
+      "manifest": {
+        "name": "coupler-io",
+        "description": "Analyze marketing, sales, finance, ecommerce, product, and other business data from Coupler.io data flows through Coupler.io's official hosted OAuth MCP and Analytical Engine.",
+        "author": {
+          "name": "Coupler.io",
+          "url": "https://www.coupler.io/"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "0.0.5-ghast.1",
+        "homepage": "https://www.coupler.io/ai-integrations",
+        "repository": "https://github.com/railsware/coupler-io-mcp-server",
+        "upstreamRevision": "550ec75cb48bbbe0be286577b30c3a32f9bb0eea",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/coupler-io.zip",
+        "sha256": "0f545eef02a07e15681e78b856709a77a4623700ec8826a132878ea9cea711f6"
+      },
+      "icon": "./plugins/coupler-io/assets/icon.svg",
+      "category": "data",
+      "homepage": "https://www.coupler.io/ai-integrations",
+      "repository": "https://github.com/railsware/coupler-io-mcp-server",
+      "license": "MIT"
+    },
+    {
       "id": "cube",
       "name": "cube",
       "description": "Query governed Cube data, analyze financial performance, build dashboards, edit semantic models safely, and inspect pre-aggregations through Cube's official hosted MCP.",
