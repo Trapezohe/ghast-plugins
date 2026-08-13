@@ -2110,6 +2110,68 @@
         "Do not publish a plugin, icon, or package while the portability and license blockers remain"
       ]
     },
+    "demandbase": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Demandbase Inc",
+      "officialRepository": null,
+      "officialRevision": "demandbase-docs-f41df5ef1529+custom-5ae757d63c7b+oauth-4b6086018213+auth-974b2f8f4944",
+      "license": "MIT",
+      "licenseEvidence": [
+        "Demandbase does not publish source code or a redistribution license for its hosted MCP implementation.",
+        "The MIT license applies only to the independently authored Ghast configuration, workflow, documentation, metadata, and generic icon.",
+        "No Demandbase server source, official documentation text, private Codex connector, customer data, proprietary B2B intelligence, OAuth credential, trademark, branded artwork, or marketplace icon is redistributed."
+      ],
+      "officialityEvidence": [
+        "Demandbase's official MCP overview identifies its MCP product, supported assistants and custom clients, internal Demandbase data, global B2B intelligence, access controls, six public capabilities, account-level Intent, Buying Groups, net-new contacts, Account Brief, and credit model.",
+        "The official overview, custom-client guide, agent guidance, credit guide, VS Code guide, and llms.txt index have raw SHA-256 values f41df5ef1529fdba14b31291f4ec5451f9a2cad7e6cf061916d6a41131505b41, 5ae757d63c7bde59650bdd74968ebe5318c4b47ec7f51c3155663c264953b1c2, 2662115095c3fe8c09190e5884c1284626fb666054fd8fe6150287fe7ffdffee, f9bad376ffddb3cb4e5d6a67eafb4298ffd21b793a7e8f0107a734a1a0d63400, 1281d1b03daeb3883a7781340b92e6e44b43a153e0e6c43fa201f0ba18e01cf1, and b41aeedced01687c464c2bb9c72e3af0e6b275cae744def6eba7c041c0f769a2.",
+        "Demandbase's official VS Code guide and custom-client guide publish https://gateway.demandbase.com/mcp/servers/db-mcp as the Streamable HTTP server.",
+        "The documented ordered six-capability inventory has canonical JSON SHA-256 08e5b6428096ed366889f7c496108758b28fdf051d916636ac6e846c4811d8c1.",
+        "Protected-resource and authorization-server metadata have canonical JSON SHA-256 values 4b60860182132d35c24c8dc67e3bd8b4778cf03050f26d060f9e0088f27e7ef0 and 974b2f8f4944a95729ba1c680dc3580521a44d0265d75227a89caa4871d8c042. They publish openid, profile, email, and offline_access scopes, authorization code, Dynamic Client Registration, public clients, and PKCE S256.",
+        "Missing and invalid Bearer initialize requests return HTTP 401 with the official protected-resource challenge and body SHA-256 6ebd2775e150f6fb7b2a69d2690d75e1541eb2ec2309570b00dc9139c6ed0de5.",
+        "A manual August 13, 2026 registration audit returned the same public client ID for empty, loopback, and invalid-scheme payloads, with no client secret or registration-management credential. The authorization endpoint rejected the unallowlisted callback with HTTP 400, matching Demandbase's documented Support allowlist requirement.",
+        "OpenAI's pinned Codex snapshot identifies Demandbase Inc as the developer and describes the same first-party and third-party data surface. Its complete four-file inventory has SHA-256 f200fbb13caa948bfa9dc4ea673b7f1ba43651ef6f5d1e0a7c696db3f61c346a."
+      ],
+      "codexCapabilities": [
+        "Search companies by name, location, size, revenue, or industry",
+        "Discover decision-makers and influencers by role or job level",
+        "Retrieve company profiles with firmographics, technographics, corporate hierarchy, news, competitors, and leadership information",
+        "Access first-party Demandbase and CRM accounts, contacts, engagement, MQA-style qualification context, activity, and pipeline opportunities",
+        "List the top VP contacts at a target company"
+      ],
+      "ghastCapabilities": [
+        "The same first-party internal account and person research plus third-party global company and contact discovery through Demandbase's official hosted MCP",
+        "Additional official account-level Intent, Buying Group configuration and coverage, tenant reference data, net-new contact, and Account Brief workflows",
+        "A Ghast-authored workflow enforcing tool discovery, internal-versus-global scope selection, account-level Intent semantics, tenant-specific Buying Group resolution, privacy boundaries, and bounded credit use",
+        "Direct Streamable HTTP transport with Demandbase browser OAuth after organization enablement and Support allowlisting of Ghast's exact hosted HTTPS callback"
+      ],
+      "capabilityRelationship": "superset-official-hosted-mcp",
+      "limitations": [
+        "Demandbase must enable MCP for the organization. A valid Demandbase user, applicable licenses, CRM and tenant data, product configuration, and administrator permission set are required.",
+        "Administrators can grant Full Access, No Access, or Limited Access. Limited Access can expose Demandbase Data, Your Data, or both, so effective tools and fields can be narrower than the documented complete surface.",
+        "Installing the plugin is not sufficient for first-time OAuth. Demandbase requires a hosted HTTPS callback and manual Support allowlisting of the exact callback for the dynamically returned client ID.",
+        "The Dynamic Client Registration endpoint accepts redirect values that the authorization server later rejects. A registration HTTP 201 must not be treated as proof that OAuth is usable.",
+        "The manual registration response provided no RFC 7592 management URI or registration access token, so no registration deletion was available. No secret or reusable token was issued or retained.",
+        "Authenticated tools/list and real customer-data operations were not run because no Demandbase account or confidential data was supplied. The six official labels establish the public capability contract, while authenticated tools/list remains authoritative for current machine names and schemas.",
+        "Demandbase currently supports English. Translation can change company names, filters, role criteria, keyword semantics, or time windows and must be reviewed before credit-consuming calls.",
+        "MCP usage consumes one shared organization credit per returned record. Results default to five records per page and can request up to 100, so every list call must use a bounded limit and additional pages require deliberate approval.",
+        "Intent is account-level and must not be attributed to a person. Buying Group configuration and gaps are tenant-specific and must not be treated as universal facts or proof that no relevant person exists.",
+        "The documented surface is read-only. It does not create CRM tasks, update opportunities, send messages, import contacts, or change Buying Group membership.",
+        "Contact, CRM, engagement, web activity, opportunity, Intent, and Buying Group data can be sensitive and must be retrieved and disclosed only within the authenticated user's authorized business purpose.",
+        "A generic GTM-research icon is used because no licensed Demandbase catalog artwork is redistributed."
+      ],
+      "verification": [
+        "Run verify_demandbase_evidence and import_demandbase from scripts/import-official-hosted-plugins.py",
+        "Verify all six official documentation hashes, ordered public capability hash, OAuth metadata hashes, and unauthenticated MCP challenge",
+        "Verify the official custom-client guide still requires hosted HTTPS callbacks and Demandbase Support allowlisting by client ID",
+        "Confirm the known unallowlisted audit callback still fails before login; do not repeat side-effecting Dynamic Client Registration during normal imports",
+        "Compare every Codex 1P and 3P capability marker with the official internal account, internal person, global company, global contact, reference-data, and Account Brief surface",
+        "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/demandbase.zip"
+      ]
+    },
     "deepnote": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Deepnote",

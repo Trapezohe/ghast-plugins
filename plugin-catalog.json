@@ -1245,6 +1245,34 @@
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/defillama"
     },
     {
+      "id": "demandbase",
+      "name": "demandbase",
+      "description": "Research internal accounts and people, global companies and contacts, Intent, Buying Groups, opportunities, and meeting-ready account briefs through Demandbase's official hosted MCP.",
+      "manifest": {
+        "name": "demandbase",
+        "description": "Research internal accounts and people, global companies and contacts, Intent, Buying Groups, opportunities, and meeting-ready account briefs through Demandbase's official hosted MCP.",
+        "author": {
+          "name": "Demandbase Inc",
+          "url": "https://www.demandbase.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://developer.demandbase.com/docs/mcp",
+        "upstreamRevision": "demandbase-docs-f41df5ef1529+custom-5ae757d63c7b+oauth-4b6086018213+auth-974b2f8f4944",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/demandbase.zip",
+        "sha256": "0fbb12aef79b9a9a6a87ec068cd948873edd8dfed5ece8de1c3ad102664ac516"
+      },
+      "icon": "./plugins/demandbase/assets/icon.svg",
+      "category": "business",
+      "homepage": "https://developer.demandbase.com/docs/mcp",
+      "license": "MIT"
+    },
+    {
       "id": "digitalocean",
       "name": "digitalocean",
       "description": "Provision a DigitalOcean Droplet as a remote SSH workspace and inspect or explicitly manage Droplets, images, sizes, regions, account billing, actions, and SSH keys through DigitalOcean's official hosted MCP services.",

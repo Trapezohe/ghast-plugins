@@ -1,0 +1,16 @@
+{
+  "name": "demandbase",
+  "version": "1.0.3-ghast.1",
+  "description": "Research internal accounts and people, global companies and contacts, Intent, Buying Groups, opportunities, and meeting-ready account briefs through Demandbase's official hosted MCP.",
+  "category": "business",
+  "author": {
+    "name": "Demandbase Inc",
+    "url": "https://www.demandbase.com"
+  },
+  "homepage": "https://developer.demandbase.com/docs/mcp",
+  "upstreamRevision": "demandbase-docs-f41df5ef1529+custom-5ae757d63c7b+oauth-4b6086018213+auth-974b2f8f4944",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

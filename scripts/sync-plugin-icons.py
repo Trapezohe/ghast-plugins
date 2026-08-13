@@ -266,6 +266,15 @@ CUSTOM_ICONS = {
         '<path d="M13 20v23l19 10 19-10V20M32 30v23"/>'
         '<path d="M19 39l6-5 5 4 7-9 8 6"/>',
     ),
+    "demandbase": (
+        "#28656F",
+        '<circle cx="21" cy="22" r="6"/>'
+        '<path d="M11 45c2-9 6-14 10-14s8 5 10 14"/>'
+        '<circle cx="44" cy="19" r="5"/>'
+        '<path d="M36 39c1-7 4-11 8-11s7 4 9 11"/>'
+        '<path d="M27 23l11-3M29 31l8 5"/>'
+        '<path d="M12 52h40"/>',
+    ),
     "datadog": (
         "#27676A",
         '<rect x="11" y="13" width="42" height="38" rx="3"/>'
