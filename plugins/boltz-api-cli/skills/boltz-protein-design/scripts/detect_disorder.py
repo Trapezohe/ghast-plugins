@@ -19,7 +19,6 @@ Usage:
     python3 detect_disorder.py target.cif --chain A --min-loop 10
     python3 detect_disorder.py xtal.cif --chain A --mode bfactor --cutoff 60
 """
-
 import argparse
 import json
 import os
@@ -30,25 +29,16 @@ from _common import indexed_residues, internal_runs, load_chain, residue_bfactor
 
 
 def main():
-    ap = argparse.ArgumentParser(
-        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
-    )
+    ap = argparse.ArgumentParser(description=__doc__,
+                                 formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("cif")
     ap.add_argument("--chain", default="A")
     ap.add_argument("--mode", choices=["plddt", "bfactor"], default="plddt")
-    ap.add_argument(
-        "--cutoff",
-        type=float,
-        default=None,
-        help="pLDDT floor (plddt mode, default 70) or B-factor "
-        "ceiling (bfactor mode, default 60)",
-    )
-    ap.add_argument(
-        "--min-loop",
-        type=int,
-        default=10,
-        help="minimum internal run length to crop (default 10)",
-    )
+    ap.add_argument("--cutoff", type=float, default=None,
+                    help="pLDDT floor (plddt mode, default 70) or B-factor "
+                         "ceiling (bfactor mode, default 60)")
+    ap.add_argument("--min-loop", type=int, default=10,
+                    help="minimum internal run length to crop (default 10)")
     args = ap.parse_args()
 
     cutoff = args.cutoff
@@ -58,10 +48,8 @@ def main():
     _, _, poly = load_chain(args.cif, args.chain)
     pairs, used_label_seq = indexed_residues(poly)
     if not used_label_seq:
-        print(
-            "warning: chain lacks label_seq; indices use enumeration order",
-            file=sys.stderr,
-        )
+        print("warning: chain lacks label_seq; indices use enumeration order",
+              file=sys.stderr)
 
     all_indices = [idx for idx, _ in pairs]
     if args.mode == "plddt":
@@ -72,22 +60,17 @@ def main():
     runs = internal_runs(flagged, all_indices, args.min_loop)
     removed = set()
     for i, j in runs:
-        span = all_indices[i : j + 1]
+        span = all_indices[i:j + 1]
         removed.update(span)
-        print(
-            f"# internal disorder run: API {span[0]}..{span[-1]} "
-            f"({len(span)} residues)",
-            file=sys.stderr,
-        )
+        print(f"# internal disorder run: API {span[0]}..{span[-1]} "
+              f"({len(span)} residues)", file=sys.stderr)
     if not runs:
-        print(
-            f"# no internal disorder runs longer than {args.min_loop} residues "
-            f"(mode={args.mode}, cutoff={cutoff:g})",
-            file=sys.stderr,
-        )
+        print(f"# no internal disorder runs longer than {args.min_loop} residues "
+              f"(mode={args.mode}, cutoff={cutoff:g})", file=sys.stderr)
 
     keep = [idx for idx in all_indices if idx not in removed]
-    print(f"# kept {len(keep)} of {len(all_indices)} residues (removed {len(removed)})")
+    print(f"# kept {len(keep)} of {len(all_indices)} residues "
+          f"(removed {len(removed)})")
     print(json.dumps(keep))
 
 

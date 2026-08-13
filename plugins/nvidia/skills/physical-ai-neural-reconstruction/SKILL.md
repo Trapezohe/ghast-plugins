@@ -18,8 +18,6 @@ metadata:
     - physical-ai
     - nurec
     - neural-reconstruction
-    - router
-    - sensor-sim
   upstream:
     repo: https://github.com/NVIDIA/nurec-skills
     branch: main
@@ -28,19 +26,19 @@ metadata:
     index_skill: .agents/skills/SKILL.md
     index_skill_name: nurec-index
     sibling_skills:
-      physical-ai-datasets:
+      - name: physical-ai-datasets
         folder: physical-ai-datasets/
         upstream: https://huggingface.co/nvidia
-      ncore:
+      - name: ncore
         folder: ncore/
         upstream: https://github.com/NVIDIA/ncore
-      nre:
+      - name: nre
         folder: nre/
         upstream: nvcr.io/nvidia/nre/nre
-      asset-harvester:
+      - name: asset-harvester
         folder: asset-harvester/
         upstream: https://github.com/NVIDIA/asset-harvester
-      nurec-fixer:
+      - name: nurec-fixer
         folder: nurec-fixer/
         upstream: https://github.com/NVIDIA/harmonizer
         hf_model: https://huggingface.co/nvidia/DiffusionHarmonizer

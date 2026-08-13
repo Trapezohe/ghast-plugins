@@ -7,8 +7,6 @@ agent_next:
 freshness: 2026-05-20
 version: "0.1.0"
 ---
-<!-- SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved. -->
-<!-- SPDX-License-Identifier: Apache-2.0 -->
 
 # Compare Profiles Contract
 
@@ -18,13 +16,10 @@ workflow reference remains
 
 ## Required Inputs
 
-- A baseline `profile-stage` JSON capture.
-- An after/optimized `profile-stage` JSON capture.
-- Matching profile mode: quick vs quick or full vs full.
-- Same hardware and runtime for full-mode comparisons unless the user
-  explicitly accepts cross-runtime comparison.
-- The operation chain, restructure step, or validation-driven fix applied
-  between the two captures.
+See [compare-profiles/README.md § Required Inputs](compare-profiles/README.md#required-inputs)
+for the authoritative input list (paired baseline/after `profile-stage` JSON,
+matching mode, same hardware/runtime for full mode, and the change applied
+between captures).
 
 ## Verdict Thresholds
 
@@ -36,13 +31,15 @@ workflow reference remains
 Report absolute values and percentages together. A neutral result is not a
 failure; it means the measured scene did not materially change for that metric.
 
-## Structural-Only Verdict
+## Structural-Only Runs
 
-`verdict: structural-only` is allowed only when the run used quick structural
-signals and no meaningful before/after timing or frame metrics were captured.
-The report must say which runtime or access blocker prevented a stronger
-performance verdict and must recommend the next profile capture needed to
-graduate the verdict.
+When the run used quick structural signals and no meaningful before/after timing
+or frame metrics were captured, set `workflow_mode: structural_only` in the
+report — do **not** invent a verdict value. The `verdict` stays within its enum
+(`improved | neutral | regressed | mixed`); use `neutral` when no measured metric
+materially changed. The report's `notes` field must say which runtime or access
+blocker prevented a stronger performance verdict and must recommend the next
+profile capture needed to graduate it.
 
 ## Terminal Report Requirement
 
@@ -56,8 +53,6 @@ terminal optimization report.
 
 ## Regression Handling
 
-When a metric regresses by more than 5%, name the metric, quantify the change,
-and correlate it with what changed. File-size growth after Scene Optimizer
-operations may indicate USDC save behavior. Prim-count growth after instancing
-can be acceptable when instances compensate for added prototypes. Steady-state
-frame regressions are more serious than one-time startup regressions.
+See [compare-profiles/README.md § Regression handling](compare-profiles/README.md#regression-handling)
+for the authoritative regression-handling steps (name the metric and quantify the
+change, correlate with what changed, check known causes, and decide keep/revert/adjust).

@@ -28,7 +28,7 @@ fi
 
 # Install packages
 MIXPANEL_HEADLESS_PKG="mixpanel-headless"
-DEPS=(pandas numpy matplotlib seaborn 'networkx>=3.0' 'anytree>=2.8.0' scipy)
+DEPS=(pandas numpy matplotlib seaborn 'networkx>=3.0' 'anytree>=2.8.0' 'click>=8.1' scipy)
 
 # pyarrow is only needed on Python 3.11+ (for pandas 3.x Arrow-backed dtypes)
 if [ "$minor" -ge 11 ]; then
@@ -119,10 +119,10 @@ except Exception as e:
     print('  Run `mp login`, set env vars (service-account quad or OAuth triple), or run mp account add ...')
 "
 
-# Remote-session detection: check for bridge file
-if [ -d "/sessions" ] || [ -n "${CODEX_CLOUD:-}" ]; then
+# Cowork detection: check for bridge file
+if [ -d "/sessions" ] || [ -n "${CLAUDE_COWORK:-}" ]; then
   echo ""
-  echo "Remote environment detected."
+  echo "Cowork environment detected."
   BRIDGE_FOUND=""
   for f in "$HOME/.claude/mixpanel/auth.json"; do
     if [ -f "$f" ]; then
@@ -158,7 +158,7 @@ except Exception as e:
     echo "⚠ No auth bridge file found."
     echo "  On your HOST machine, run:"
     echo "    mp account export-bridge --to ~/.claude/mixpanel/auth.json"
-    echo "  Then start a new remote session."
+    echo "  Then start a new Cowork session."
   fi
 fi
 

@@ -1,16 +1,18 @@
 {
   "name": "remotion",
   "version": "4.0.509-ghast.1",
-  "description": "Create programmatic videos with Remotion, including animation, audio, captions, charts, transitions, and rendering workflows.",
+  "description": "Remotion video creation skills — best practices, animations, audio, captions, 3D, and more for building programmatic videos with React.",
   "category": "creativity",
   "author": {
     "name": "Remotion",
+    "email": "hi@remotion.dev",
     "url": "https://remotion.dev"
   },
   "homepage": "https://remotion.dev",
-  "repository": "https://github.com/remotion-dev/remotion/tree/main/packages/codex-plugin",
+  "repository": "https://github.com/remotion-dev/remotion",
   "upstreamRevision": "a23672203e00db3d9ad905b2b2088bdc6aa2f2ac",
+  "upstreamPath": "packages/codex-plugin",
   "license": "MIT",
-  "skills": "./skills/",
-  "icon": "./assets/icon.png"
+  "icon": "./assets/icon.png",
+  "skills": "./skills/"
 }

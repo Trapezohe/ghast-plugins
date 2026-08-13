@@ -1,18 +1,19 @@
 {
   "name": "mixpanel-headless",
-  "version": "0.1.2-ghast.1",
-  "description": "Analyze Mixpanel data with the mixpanel_headless Python SDK and portable agent skills.",
+  "version": "0.2.0-ghast.1",
+  "description": "Query and analyze Mixpanel data with Python. Provides the mixpanel_headless auth surface (Account → Project → Workspace hierarchy), API (5 query engines, discovery, entity CRUD), and Business Context read/write (the markdown documentation that grounds AI assistants, at org and project scopes), with a live documentation system (help.py) for method signatures, type lookup, fuzzy search, and hosted docs.",
   "category": "data",
   "author": {
-    "name": "Mixpanel",
-    "url": "https://mixpanel.com/home"
+    "name": "Jared McFarland",
+    "email": "jaredcolin@gmail.com",
+    "url": "https://github.com/jaredmcfarland"
   },
   "homepage": "https://mixpanel.github.io/mixpanel-headless/",
-  "repository": "https://github.com/openai/plugins",
-  "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
-  "upstreamPath": "plugins/mixpanel-headless",
+  "repository": "https://github.com/mixpanel/mixpanel-headless",
+  "upstreamRevision": "6c2c2f975d51628bdbc75802fb879d4f6cb66f69",
+  "upstreamPath": "mixpanel-plugin",
   "license": "MIT",
+  "icon": "./assets/icon.png",
   "skills": "./skills/",
-  "canonicalRepository": "https://github.com/mixpanel/mixpanel-headless",
-  "icon": "./assets/icon.png"
+  "commands": "./commands/"
 }

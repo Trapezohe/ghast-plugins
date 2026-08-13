@@ -7,8 +7,6 @@ agent_next:
 freshness: 2026-05-20
 version: "0.1.0"
 ---
-<!-- SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved. -->
-<!-- SPDX-License-Identifier: Apache-2.0 -->
 
 # Output Workspace Contract
 
@@ -36,7 +34,7 @@ artifacts under the skill repo or the shell working directory.
 ```
 
 `setup-preflight.json` is the canonical session-scoped runtime configuration.
-The setup, validation, Scene Optimizer, compare, and report references all read
+The setup, validation, Usd Optimize, compare, and report references all read
 this exact filename from this exact location.
 
 ## Runtime Gate
@@ -50,11 +48,11 @@ probe.
 
 ```text
 ─── Runtime context ───────────────────────────────────────────────────────
-Kit application:    {kit.chosen.application} {kit.chosen.version}
-  path:             {kit.chosen.path}
-  build:            {kit.chosen.build}
-Scene Optimizer:    {sceneOptimizer.extension} {sceneOptimizer.version}
-Asset Validator:    {assetValidator.package} {assetValidator.version} via {assetValidator.source}
+Kit application:    {runtime_context.kit.application} {runtime_context.kit.version}
+  path:             {runtime_context.kit.path}
+  build:            {runtime_context.kit.build}
+Usd Optimize:    {runtime_context.usdOptimize.extension} {runtime_context.usdOptimize.version}
+usd-validation-nvidia:    {runtime_context.assetValidator.package} {runtime_context.assetValidator.version} via {runtime_context.assetValidator.source}
 ───────────────────────────────────────────────────────────────────────────
 ```
 

@@ -1,6 +1,6 @@
 {
   "name": "render",
-  "version": "0.1.3-ghast.1",
+  "version": "0.2.0-ghast.1",
   "description": "Skills for deploying, debugging, monitoring, and migrating apps on Render.",
   "category": "development",
   "author": {
@@ -9,11 +9,11 @@
     "url": "https://render.com"
   },
   "homepage": "https://github.com/renderinc/render-codex-plugin",
-  "repository": "https://github.com/openai/plugins",
-  "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
-  "upstreamPath": "plugins/render",
+  "repository": "https://github.com/renderinc/render-codex-plugin",
+  "upstreamRevision": "14032768453fd21c57f7e3a9c0e7659a2c7dce9d",
+  "upstreamPath": ".",
   "license": "MIT",
+  "icon": "./assets/icon.svg",
   "skills": "./skills/",
-  "canonicalRepository": "https://github.com/renderinc/render-codex-plugin",
-  "icon": "./assets/icon.svg"
+  "mcpServers": "./.mcp.json"
 }

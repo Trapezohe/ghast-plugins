@@ -1,8 +1,9 @@
 ---
 name: twilio-verify-send-otp
 description: >
-  Send and verify one-time passcodes (OTPs) via Twilio Verify over SMS, RCS,
-  voice, email, or WhatsApp. Covers creating a Verify Service, sending tokens,
+  Send and verify one-time passcodes (OTPs) via Twilio Verify over SMS
+  (auto-upgraded to RCS where supported), voice, email, or WhatsApp. Covers
+  creating a Verify Service, sending tokens,
   checking submitted codes, automatic WhatsApp-to-SMS fallback, and service
   configuration. TOTP is supported via the Factors API (a separate family from
   channel-based OTP). Use this skill to add phone or email verification or
@@ -19,13 +20,13 @@ Use **Twilio Verify** to manage the full OTP lifecycle: code generation, deliver
 | Rate limiting | Built-in (per-phone, per-service) | Build yourself |
 | Fraud protection | Fraud Guard (geo-permissions, rate anomaly) | SMS Pumping Protection |
 | A2P registration | Exempt — no 10DLC needed | Required — must register campaign |
-| Multi-channel | One API, change `channel` param (SMS/Voice/Email/WhatsApp/RCS) | Separate integration per channel |
+| Multi-channel | One API, change `channel` param (SMS/Voice/Email/WhatsApp) | Separate integration per channel |
 | Cost | [Per confirmed verification + channel fee](https://www.twilio.com/en-us/verify/pricing) | Per-message pricing + build cost |
 | Delivery confirmation | Yes — via List Attempts or Events API | Yes (via StatusCallback) |
 
 **When Programmable Messaging is justified:** You need full control over message content, custom delivery logic, or SMS Pumping Protection features. For standard OTP/2FA flows, use Verify.
 
-Verify supports SMS, voice, email, WhatsApp, and RCS — only the `channel` parameter changes per delivery method. TOTP (authenticator apps) is supported via the Verify Factors API, a separate implementation from channel-based OTP.
+Verify supports SMS, voice, email, and WhatsApp — only the `channel` parameter changes per delivery method. RCS is not a `channel` value: Verify automatically upgrades an `sms` verification to RCS where the device supports it and falls back to SMS. TOTP (authenticator apps) is supported via the Verify Factors API, a separate implementation from channel-based OTP.
 
 ---
 
@@ -131,11 +132,10 @@ if (check.status === "approved") {
 
 | Channel | `channel` value | Notes |
 |---------|----------------|-------|
-| SMS | `sms` | Default, widest coverage |
-| Voice call | `voice` | Reads code aloud |
+| SMS | `sms` | Default, widest coverage. Auto-upgrades to RCS where supported (see below) |
+| Voice call | `call` | Reads code aloud |
 | Email | `email` | Use email address in `to` |
 | WhatsApp | `whatsapp` | Requires own WhatsApp sender (see below) |
-| RCS | `rcs` | Rich messaging, Android devices |
 
 > **TOTP (authenticator apps):** Supported via the Verify Factors API — a separate implementation from channel-based OTP. See [Verify TOTP docs](https://www.twilio.com/docs/verify/quickstarts/totp).
 
@@ -199,10 +199,7 @@ With fallback enabled, your UI can say "a verification code was sent" without sp
 ```python
 service = client.verify.v2.services.create(
     friendly_name="My App",
-    code_length=6,              # 4–10 digits (default: 6)
-    lookup_enabled=True,        # Validate number before sending
-    do_force_check_once=True,   # Code can only be checked once
-    ttl=600,                    # Code expiry in seconds (default: 600)
+    code_length=6              # 4–10 digits (default: 6)
 )
 ```
 
@@ -210,10 +207,7 @@ service = client.verify.v2.services.create(
 ```node
 const service = await client.verify.v2.services.create({
     friendlyName: "My App",
-    codeLength: 6,
-    lookupEnabled: true,
-    doForceCheckOnce: true,
-    ttl: 600,
+    codeLength: 6
 });
 ```
 
@@ -237,14 +231,14 @@ const service = await client.verify.v2.services.create({
 | Code | Meaning | Fix |
 |------|---------|-----|
 | 60200 | Invalid parameter | Check `to` format and `channel` value |
-| 60202 | Max send attempts reached | Wait before retrying |
-| 60203 | Max check attempts reached | Issue a new verification |
+| 60202 | Max check attempts reached | Issue a new verification |
+| 60203 | Max send attempts reached | Wait before retrying |
 | 60212 | Service not found | Verify `VERIFY_SERVICE_SID` is correct |
 | 60410 | Geo-permission not enabled | Enable country in Console |
 
 **Built-in protections (no custom code needed):**
 - Rate limiting: 5 verifications per phone per service per 10 minutes
-- Max check attempts: 5 per verification (6th attempt → error 60203)
+- Max check attempts: 5 per verification (6th attempt → error 60202)
 - Phone number validation: Verify checks line type before sending (if `lookup_enabled=True`)
 - Fraud Guard: geo-permissions, rate anomaly detection, SMS pumping protection
 
@@ -257,13 +251,13 @@ const service = await client.verify.v2.services.create({
 - **No built-in channel fallback** — Must implement retry logic manually (e.g., SMS → voice → email). Use `channel_configuration` for WhatsApp→SMS only.
 - **No webhook on verification completion** — Must poll `verification_checks`. Rate-limited: 60/min, 180/hr, 250/day.
 - **Cannot retrieve the actual code sent** — Code is never returned in any API response. By design.
-- **Cannot change channel mid-verification** — Starting on a new channel reuses the same Verification SID and token. Create a new verification instead.
-- **Cannot extend TTL on an existing verification** — Default 10 minutes. Customizable only at Service level, not per-verification.
+- **Sending on a new channel with the same `to` reuses the pending verification** — the same Verification SID and code are kept, just delivered over the new channel (e.g. switching `sms` → `call` for the same phone number). A different `to` (e.g. an email address) starts a separate verification. To force a fresh code on the same `to`, cancel the pending one first.
+- **Cannot extend TTL on an existing verification** — Default 10 minutes, and not a per-verification or Service create/update param. Contact Twilio Support to change the default on your Service (adjustable 2 min–24 hr).
 - **Verification SID deleted after approval** — Fetching an approved verification returns 404. Canceled verifications remain fetchable.
 - **`auto` channel not universally available** — Returns error 60200 on accounts without Fraud Guard enabled.
 - **Email channel requires Mailer configuration** — `channel: 'email'` without a configured Mailer returns error 60217.
 - **No real-time delivery push notification** — Delivery status is available via List Attempts or Events API (pull-based), not via a push webhook.
-- **FriendlyName rejects 5+ consecutive digits** — Service names containing 5+ digits trigger error 60200. Use words or fewer digits.
+- **FriendlyName rejects embedded digit strings** — avoid embedding 5 or more digits in a Service name; it can trigger error 60200. Use words.
 - **Wrong code does not throw an exception** — Check returns `status: "pending"`, not an error. You must check `status === "approved"` explicitly.
 - **Cannot re-check an approved verification** — Each verification is single-use. Once `approved`, subsequent checks return 404.
 - **Cannot send to arbitrary numbers on trial accounts** — Trial accounts have limited verification destinations

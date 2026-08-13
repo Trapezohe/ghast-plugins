@@ -14,8 +14,8 @@ The user invoked this command with: $ARGUMENTS
 
 When this command is invoked:
 
-1. Read the skill file at `skills/agents-sdk/SKILL.md` for core SDK guidance, APIs, and wrangler config
-2. Based on what the user wants to build, read the relevant references from `skills/agents-sdk/references/`:
+1. Read the skill file at `agents-sdk/SKILL.md` for core SDK guidance, APIs, and wrangler config
+2. Based on what the user wants to build, read the relevant references from `agents-sdk/references/`:
    - For chat/AI agents: `streaming-chat.md`, `client-sdk.md`
    - For state management: `state-scheduling.md`
    - For RPC methods: `callable.md`

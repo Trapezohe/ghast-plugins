@@ -2,14 +2,10 @@
 
 An agentic skills framework & software development methodology that works: planning, TDD, debugging, and collaboration workflows.
 
-## Ghast port
+## Official Ghast port
 
-This package contains the connector-free skill payload from `plugins/superpowers` in `openai/plugins` at `11c74d6ba24d3a6d48f54a194cd00ef3beea18f9`.
+This package is generated directly from the developer-owned repository `https://github.com/obra/superpowers` at `b36e0829c6d0140e93cfef2ca599b1b07d4a7797`.
 
-The Codex marketplace manifest, screenshots, and OpenAI-specific agent metadata are not included. A single marketplace icon is retained by the Ghast icon sync step. The plugin does not contain an OpenAI `.app.json` connector declaration.
+Skills, references, scripts, commands, and public MCP declarations remain sourced from the pinned official repository. Unsupported client metadata is omitted.
 
-Canonical project:
-
-- https://github.com/obra/superpowers
-
-Local CLIs, SDKs, API credentials, or paid services described by individual skills remain user-managed dependencies.
+External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

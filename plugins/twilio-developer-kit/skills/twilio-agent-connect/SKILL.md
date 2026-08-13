@@ -1,10 +1,7 @@
 ---
 name: twilio-agent-connect
-description: >
-  Use when building or integrating Twilio Agent Connect (TAC) to connect
-  third-party LLM agent runtimes with Twilio Voice, Messaging,
-  ConversationRelay, Conversation Memory, Conversation Orchestrator, or
-  Enterprise Knowledge.
+description: >-
+  Integrate agentic applications with Twilio Agent Connect across identity, memory, orchestration, Voice, SMS, RCS, WhatsApp, and Chat.
 ---
 
 # Twilio Agent Connect
@@ -65,14 +62,14 @@ TAC supports a simplified "ConversationRelay-only" mode for getting started with
 
 ```bash
 # Using uv (recommended)
-uv add git+https://github.com/twilio/twilio-agent-connect-python.git
+uv add twilio-agent-connect
 
 # With server support (includes FastAPI and uvicorn for TACFastAPIServer)
-uv add git+https://github.com/twilio/twilio-agent-connect-python.git --extra server
+uv add "twilio-agent-connect[server]"
 
 # Using pip
-pip install git+https://github.com/twilio/twilio-agent-connect-python.git
-pip install "git+https://github.com/twilio/twilio-agent-connect-python.git[server]"
+pip install twilio-agent-connect
+pip install "twilio-agent-connect[server]"
 ```
 
 ### TypeScript SDK
@@ -80,11 +77,7 @@ pip install "git+https://github.com/twilio/twilio-agent-connect-python.git[serve
 **Requirements**: Node.js 22.13+
 
 ```bash
-# Clone and build (not yet published to npm)
-git clone https://github.com/twilio/twilio-agent-connect-typescript.git
-cd twilio-agent-connect-typescript
-npm install
-npm run build
+npm install twilio-agent-connect
 ```
 
 ## Quick Start
@@ -430,8 +423,8 @@ const systemPrompt = SYSTEM_INSTRUCTIONS + `\n\n${memoryContext}`;
 
 ## Documentation Links
 
-- **Quickstart Guide**: https://www.twilio.com/docs/platform/tac/quickstart
-- **Overview Documentation**: https://www.twilio.com/docs/platform/tac/overview
+- **Quickstart Guide**: https://www.twilio.com/docs/conversations/agent-connect/quickstart
+- **Overview Documentation**: https://www.twilio.com/docs/conversations/agent-connect/overview
 - **Python SDK**: https://github.com/twilio/twilio-agent-connect-python
 - **TypeScript SDK**: https://github.com/twilio/twilio-agent-connect-typescript
 - **AWS Integration**: https://github.com/twilio/twilio-agent-connect-aws
@@ -439,19 +432,16 @@ const systemPrompt = SYSTEM_INSTRUCTIONS + `\n\n${memoryContext}`;
 
 ## Setup Wizard
 
-TAC includes a web-based setup wizard to automatically create required Twilio services:
+There are two ways to create the required Twilio services (Memory Store, Conversation Configuration, `.env` file):
+
+- **Manual**: Create resources in the [Twilio Console](https://console.twilio.com), following the [Quickstart Guide](https://www.twilio.com/docs/conversations/agent-connect/quickstart)
+- **Automated**: Run the local setup wizard (opens http://localhost:8080):
 
 ```bash
-# Python SDK
 git clone https://github.com/twilio/twilio-agent-connect-python.git
 cd twilio-agent-connect-python
-make setup  # Opens http://localhost:8080
+make setup
 ```
-
-The wizard creates:
-- Conversation Memory store
-- Conversation Configuration
-- Generates `.env` file with all required credentials
 
 ## Common Use Cases
 
@@ -459,7 +449,7 @@ The wizard creates:
 
 Build an AI-powered customer support agent with:
 - Multi-channel support (voice, SMS, WhatsApp)
-- Persistent customer memory and context
+- Persistent conversation memory and context
 - Knowledge base integration
 - Human handoff capability
 

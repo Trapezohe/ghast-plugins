@@ -2,14 +2,14 @@
 
 Twilio Skills provide procedural knowledge for AI coding agents — which APIs to use, in what order, and what to avoid. Covers Messaging, Voice, Verify, SendGrid, and 30+ products.
 
-## Ghast port
+## Official Ghast port
 
-This package contains the connector-free skill payload from `plugins/twilio-developer-kit` in `openai/plugins` at `11c74d6ba24d3a6d48f54a194cd00ef3beea18f9`.
+This package is generated directly from the developer-owned repository `https://github.com/twilio/ai` at `d7b0f231468cd9a6a0bab9ebcde8c1a5c9220bba`.
 
-The Codex marketplace manifest, screenshots, and OpenAI-specific agent metadata are not included. A single marketplace icon is retained by the Ghast icon sync step. The plugin does not contain an OpenAI `.app.json` connector declaration.
+Skills, references, scripts, commands, and public MCP declarations remain sourced from the pinned official repository. Unsupported client metadata is omitted.
 
-Canonical project:
+## Ghast compatibility
 
-- https://github.com/twilio/ai
+- A minimal Ghast-compatible frontmatter block is added to twilio-agent-connect because that official skill is the only source skill without one.
 
-Local CLIs, SDKs, API credentials, or paid services described by individual skills remain user-managed dependencies.
+External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

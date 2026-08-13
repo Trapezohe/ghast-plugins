@@ -14,25 +14,25 @@ EXPECTED_OPENAI_REVISION = "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9"
 PLUGIN_DIR = Path("plugins")
 
 OPENAI_ICONS = {
-    "boltz-api-cli": "plugins/boltz-api-cli/assets/app-icon.png",
-    "cloudflare": "plugins/cloudflare/assets/cloudflare-small.svg",
-    "expo": "plugins/expo/assets/expo.png",
     "github-stats": "plugins/github/assets/github-small.svg",
-    "hyperframes": "plugins/hyperframes/assets/icon.png",
     "linear": "plugins/linear/assets/linear-icon.svg",
     "mixpanel-headless": "plugins/mixpanel-headless/assets/app-icon.png",
     "notion": "plugins/notion/assets/notion-small.svg",
-    "nvidia": "plugins/nvidia/assets/nvidia.png",
-    "remotion": "plugins/remotion/assets/icon.png",
-    "render": "plugins/render/assets/logo.svg",
     "sentry": "plugins/sentry/assets/sentry-small.svg",
-    "superpowers": "plugins/superpowers/assets/superpowers-small.svg",
     "test-android-apps": "plugins/test-android-apps/assets/test-android-apps-small.svg",
     "twilio-developer-kit": "plugins/twilio-developer-kit/assets/logo.svg",
 }
 
 LOCAL_ICONS = {
-    "temporal": "assets/temporal-logo.svg",
+    "boltz-api-cli": "assets/icon.png",
+    "cloudflare": "assets/icon.svg",
+    "expo": "assets/icon.png",
+    "hyperframes": "assets/icon.png",
+    "nvidia": "assets/icon.png",
+    "remotion": "assets/icon.png",
+    "render": "assets/icon.svg",
+    "superpowers": "assets/icon.png",
+    "temporal": "assets/icon.svg",
 }
 
 CUSTOM_ICONS = {

@@ -89,7 +89,7 @@ Some products require explicit activation:
 |---------|--------------|
 | AI Assistants | [Console > Explore Products > AI Assistants](https://console.twilio.com/us1/develop/ai-assistants) > **Get started** |
 | Conversations | [Console > Conversations > Manage > Overview](https://console.twilio.com/us1/develop/conversations/manage/overview) > **Enable Conversations** |
-| Verify | [Console > Verify > Services](https://console.twilio.com/us1/verify/services) > **Create new** |
+| Verify | [Console > Verify > Services](https://1console.twilio.com/go?to=/account/__account__/us1/verify/services) > **Create new** |
 | WhatsApp (sandbox) | [Console > Messaging > Try it out > Send a WhatsApp message](https://console.twilio.com/us1/develop/sms/try-it-out/whatsapp-learn) |
 | ConversationRelay | [Console > Voice > ConversationRelay](https://console.twilio.com/us1/voice/conversation-relay) > complete onboarding form |
 

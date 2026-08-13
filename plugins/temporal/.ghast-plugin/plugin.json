@@ -1,7 +1,7 @@
 {
   "name": "temporal",
-  "version": "0.3.1",
-  "description": "Develop, debug, and manage Temporal applications, servers, CLI, and Cloud.",
+  "version": "0.3.1-ghast.1",
+  "description": "Comprehensive skill for the entire Temporal lifecycle — developing applications, using the Temporal CLI, running and managing Temporal Server, and working with Temporal Cloud.",
   "category": "development",
   "author": {
     "name": "Temporal",
@@ -10,7 +10,8 @@
   "homepage": "https://temporal.io/",
   "repository": "https://github.com/temporalio/codex-temporal-plugin",
   "upstreamRevision": "a3fa2bdff73a93e60e1077c08bde2b682cd0f5ae",
+  "upstreamPath": "plugins/temporal",
   "license": "MIT",
-  "skills": "./skills/",
-  "icon": "./assets/temporal-logo.svg"
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/"
 }

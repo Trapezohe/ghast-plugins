@@ -10,7 +10,6 @@ Usage:
     python3 analyze_results.py <run-dir>
     python3 analyze_results.py <run-dir> --json
 """
-
 import argparse
 import json
 import os
@@ -53,9 +52,8 @@ def summarize(bc):
 
 
 def main():
-    ap = argparse.ArgumentParser(
-        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
-    )
+    ap = argparse.ArgumentParser(description=__doc__,
+                                 formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("run_dir")
     ap.add_argument("--json", action="store_true", help="emit machine-readable JSON")
     args = ap.parse_args()
@@ -69,11 +67,8 @@ def main():
     print(f"designs:            {n}")
     print(f"max binding_conf:   {summary['max_bc']:.4f}   <-- config-selection metric")
     tenth = summary["bc_10th"]
-    print(
-        f"10th-highest bc:    {tenth:.4f}"
-        if tenth is not None
-        else "10th-highest bc:    n/a (<10 designs)"
-    )
+    print(f"10th-highest bc:    {tenth:.4f}" if tenth is not None
+          else "10th-highest bc:    n/a (<10 designs)")
     print(f"fraction bc > 0.01: {summary['frac_gt_0.01']:.3f}")
     print(f"fraction bc > 0.05: {summary['frac_gt_0.05']:.3f}")
 

@@ -1,7 +1,7 @@
 ---
-name: mixpanel-headless-setup
+name: mixpanel-headless:setup
 description: This skill installs mixpanel_headless, pandas, numpy, matplotlib, seaborn, networkx, anytree, scipy (and pyarrow on Python 3.11+), then verifies Mixpanel credentials. It should be invoked when setting up a new environment for Mixpanel data analysis, when dependencies are missing, or when configuring service account or OAuth credentials for the first time.
-disable-model-invocation: false
+disable-model-invocation: true
 allowed-tools: Bash
 ---
 
@@ -11,11 +11,8 @@ Install dependencies and verify credentials for CodeMode analytics.
 
 ## Run Setup
 
-Before running bundled scripts, set `SKILL_DIR` to the absolute path of this
-`skills/setup` directory.
-
 ```bash
-bash $SKILL_DIR/scripts/setup.sh
+bash <SKILL_DIR>/scripts/setup.sh
 ```
 
 This will:
@@ -29,7 +26,7 @@ This will:
 After installation, check the active session:
 
 ```bash
-python3 $SKILL_DIR/../mixpanelyst/scripts/auth_manager.py session
+mp session --format json
 ```
 
 Parse the JSON `state` field:
@@ -46,8 +43,8 @@ If no credentials are configured, guide the user to one of these methods:
 
 The frictionless one-shot path. Tell the user to run:
 
-```bash
-mp login
+```
+! mp login
 ```
 
 `mp login` runs the right auth flow for the environment, derives the
@@ -68,9 +65,9 @@ Useful flags: `--name NAME`, `--region us|eu|in`, `--project ID`,
 
 ### Alternative: Guided Setup (explicit account add)
 
-Use the `mixpanel-auth` skill's account-add workflow for a
-step-by-step walkthrough. The workflow never prompts for secrets in
-conversation — it instructs the user to run `mp account add ...`
+Tell the user to run `/mixpanel-headless:auth account add` for a
+step-by-step walkthrough. The slash command never prompts for secrets in
+conversation — it instructs the user to run `! mp account add ...`
 themselves so the secret is read with hidden input. Use this path when
 the user wants explicit control over the account name, region, and type
 at registration time.
@@ -102,30 +99,30 @@ This is the recommended mode for non-interactive contexts. The full
 service-account env-var set (`MP_USERNAME` + `MP_SECRET` + `MP_PROJECT_ID`
 + `MP_REGION`) takes precedence when both sets are complete.
 
-## Remote Environment
+## Cowork Environment
 
-If running inside a remote or sandboxed agent environment, credentials work differently:
+If running inside Claude Cowork (detected automatically), credentials work differently:
 
 - **OAuth login and interactive account setup are NOT available** (no browser, no host terminal access)
-- Credentials must be configured on the **host machine** before starting the remote session
+- Credentials must be configured on the **host machine** before starting a Cowork session
 
-### If No Credentials Found in the Remote Session
+### If No Credentials Found in Cowork
 
 Tell the user:
 
-> No Mixpanel credentials found in this remote session.
+> No Mixpanel credentials found in this Cowork session.
 >
-> On your **host machine** (outside the remote session), run:
+> On your **host machine** (outside Cowork), run:
 > ```
 > mp account export-bridge --to ~/.claude/mixpanel/auth.json
 > ```
 > This writes a v2 bridge file embedding your account record (and any
-> oauth_browser tokens) so the remote session can read your credentials
+> oauth_browser tokens) so the Cowork session can read your credentials
 > at startup.
 >
-> Then **start a new remote session** — credentials will be available automatically.
+> Then **start a new Cowork session** — credentials will be available automatically.
 
-Do NOT suggest the account-login or account-add interactive workflows — these won't work inside remote sessions without browser or terminal access.
+Do NOT suggest `/mixpanel-headless:auth account login`, `/mixpanel-headless:auth account add`, or interactive flows — these won't work inside Cowork.
 
 ### If Bridge File Found But Token Expired
 
@@ -138,26 +135,26 @@ token (no browser needed). If refresh fails:
 > mp login --name personal             # re-authenticate (or `mp account login personal`)
 > mp account export-bridge --to ~/.claude/mixpanel/auth.json
 > ```
-> Then start a new remote session.
+> Then start a new Cowork session.
 
 ## Verify Everything Works
 
 ```bash
-python3 $SKILL_DIR/../mixpanelyst/scripts/auth_manager.py account test
+mp account test
 ```
 
 The subcommand never raises — read `result.ok` to determine outcome.
 - `result.ok: true` → setup is complete; the user can ask analytics questions.
-- `result.ok: false` → suggest the `mixpanel-auth` account-test workflow for detailed diagnostics.
+- `result.ok: false` → suggest `/mixpanel-headless:auth account test` for detailed diagnostics.
 
 ## Post-Setup: Explore Your Data
 
 Once authenticated, these slash commands help orient the user:
 
-- `mixpanel-auth` project-list workflow — discover all accessible projects via `/me`
-- `mixpanel-auth` session workflow — see active account / project / workspace
-- `mixpanel-auth` project-use workflow — switch to a different project
-- `mixpanel-auth` target-add workflow — save a named cursor position
+- `/mixpanel-headless:auth project list` — discover all accessible projects via `/me`
+- `/mixpanel-headless:auth session` — see active account / project / workspace
+- `/mixpanel-headless:auth project use <id>` — switch to a different project
+- `/mixpanel-headless:auth target add NAME --account A --project P` — save a named cursor position
 
 The user can also construct a Workspace targeting a specific account / project /
 workspace directly:

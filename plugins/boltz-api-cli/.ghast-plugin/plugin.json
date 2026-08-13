@@ -1,6 +1,6 @@
 {
   "name": "boltz-api-cli",
-  "version": "0.1.1-ghast.1",
+  "version": "0.1.0-ghast.1",
   "description": "Predict structures, screen molecules and proteins, and design binders.",
   "category": "research",
   "author": {
@@ -9,11 +9,10 @@
     "url": "https://boltz.bio"
   },
   "homepage": "https://boltz.bio",
-  "repository": "https://github.com/openai/plugins",
-  "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+  "repository": "https://github.com/boltz-bio/boltz-api-skills",
+  "upstreamRevision": "70e480ebb14baecfc4456b49eb8b724611470b7c",
   "upstreamPath": "plugins/boltz-api-cli",
   "license": "MIT",
-  "skills": "./skills/",
-  "canonicalRepository": "https://github.com/boltz-bio/boltz-api-skills",
-  "icon": "./assets/icon.png"
+  "icon": "./assets/icon.png",
+  "skills": "./skills/"
 }

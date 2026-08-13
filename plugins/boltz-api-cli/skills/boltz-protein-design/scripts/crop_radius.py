@@ -12,7 +12,6 @@ separate configs: once with the site in `epitope_residues`, once without.
 Usage:
     python3 crop_radius.py target.cif --chain A --site 42,43,44 --radii 15,25,35
 """
-
 import argparse
 import json
 import os
@@ -48,30 +47,21 @@ def crop_within(pairs, site, radius):
 
 
 def main():
-    ap = argparse.ArgumentParser(
-        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
-    )
+    ap = argparse.ArgumentParser(description=__doc__,
+                                 formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("cif")
     ap.add_argument("--chain", default="A")
-    ap.add_argument(
-        "--site",
-        required=True,
-        help="comma-separated 0-based API indices of site residues",
-    )
-    ap.add_argument(
-        "--radii",
-        default="10,15,25,30,35",
-        help="comma-separated radii in angstrom (default 10,15,25,30,35)",
-    )
+    ap.add_argument("--site", required=True,
+                    help="comma-separated 0-based API indices of site residues")
+    ap.add_argument("--radii", default="10,15,25,30,35",
+                    help="comma-separated radii in angstrom (default 10,15,25,30,35)")
     args = ap.parse_args()
 
     _, _, poly = load_chain(args.cif, args.chain)
     pairs, used_label_seq = indexed_residues(poly)
     if not used_label_seq:
-        print(
-            "warning: chain lacks label_seq; indices use enumeration order",
-            file=sys.stderr,
-        )
+        print("warning: chain lacks label_seq; indices use enumeration order",
+              file=sys.stderr)
 
     site = set(parse_int_list(args.site))
     radii = sorted(parse_float_list(args.radii))

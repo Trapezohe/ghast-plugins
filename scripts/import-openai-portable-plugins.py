@@ -18,55 +18,6 @@ PLUGIN_DIR = Path("plugins")
 REPORT_PATH = Path("openai-portability.json")
 
 PORTS = {
-    "boltz-api-cli": {
-        "category": "research",
-        "license_files": [("plugin", "LICENSE", "LICENSE")],
-    },
-    "hyperframes": {
-        "category": "creativity",
-        "external_license": {
-            "directory": "hyperframes",
-            "repository": "https://github.com/heygen-com/hyperframes",
-            "revision": "9b0c5e85596efaf93823bf5f19b7f1d1216ca7d5",
-        },
-        "license_files": [("external", "hyperframes/LICENSE", "LICENSE")],
-    },
-    "mixpanel-headless": {
-        "category": "data",
-        "description": (
-            "Analyze Mixpanel data with the mixpanel_headless Python SDK and "
-            "portable agent skills."
-        ),
-        "license_files": [("plugin", "LICENSE", "LICENSE")],
-    },
-    "nvidia": {
-        "category": "development",
-        "description": (
-            "Use NVIDIA skills for GPU acceleration, CUDA, AI agents, "
-            "inference, robotics, Omniverse, simulation, and physical AI workflows."
-        ),
-        "external_license": {
-            "directory": "nvidia-skills",
-            "repository": "https://github.com/NVIDIA/skills",
-            "revision": "aa116673017bf75f9885edabab34d8ec883c0a3a",
-        },
-        "license_files": [
-            ("external", "nvidia-skills/LICENSE-APACHE", "LICENSE"),
-            (
-                "external",
-                "nvidia-skills/LICENSE-CC-BY-4.0",
-                "LICENSE-CC-BY-4.0",
-            ),
-        ],
-    },
-    "render": {
-        "category": "development",
-        "license_files": [("plugin", "LICENSE", "LICENSE")],
-    },
-    "superpowers": {
-        "category": "development",
-        "license_files": [("plugin", "LICENSE", "LICENSE")],
-    },
     "test-android-apps": {
         "category": "development",
         "description": (
@@ -89,27 +40,21 @@ PORTS = {
             }
         ],
     },
-    "twilio-developer-kit": {
-        "category": "development",
-        "description": (
-            "Twilio skills for choosing and using APIs across Messaging, Voice, "
-            "Verify, SendGrid, and more than 30 products."
-        ),
-        "external_license": {
-            "directory": "twilio-ai",
-            "repository": "https://github.com/twilio/ai",
-            "revision": "d7b0f231468cd9a6a0bab9ebcde8c1a5c9220bba",
-        },
-        "license_files": [("external", "twilio-ai/LICENSE", "LICENSE")],
-    },
 }
 
 EXISTING_PORTS = {
+    "boltz-api-cli": "Ghast regenerates Boltz directly from the pinned official Boltz repository.",
     "cloudflare": "Ghast already ships a broader Cloudflare port with public MCP support.",
     "expo": "Ghast already ships the portable Expo skills.",
+    "hyperframes": "Ghast regenerates HyperFrames directly from the pinned official HeyGen repository.",
+    "mixpanel-headless": "Ghast regenerates Mixpanel Headless directly from the pinned official repository.",
+    "nvidia": "Ghast regenerates the complete NVIDIA skill catalog directly from the pinned official repository.",
     "remotion": "Ghast already ships a port pinned to the canonical Remotion repository.",
+    "render": "Ghast regenerates Render directly from the pinned official Render repository.",
     "sentry": "Ghast already ships the licensed read-only Sentry skill.",
+    "superpowers": "Ghast regenerates Superpowers directly from its pinned canonical repository.",
     "temporal": "Ghast already ships a newer canonical Temporal port.",
+    "twilio-developer-kit": "Ghast regenerates the Twilio Developer Kit directly from the pinned official Twilio repository.",
 }
 
 BLOCKED_PORTS = {

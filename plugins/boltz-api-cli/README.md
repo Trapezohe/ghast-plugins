@@ -2,14 +2,10 @@
 
 Predict structures, screen molecules and proteins, and design binders.
 
-## Ghast port
+## Official Ghast port
 
-This package contains the connector-free skill payload from `plugins/boltz-api-cli` in `openai/plugins` at `11c74d6ba24d3a6d48f54a194cd00ef3beea18f9`.
+This package is generated directly from the developer-owned repository `https://github.com/boltz-bio/boltz-api-skills` at `70e480ebb14baecfc4456b49eb8b724611470b7c`.
 
-The Codex marketplace manifest, screenshots, and OpenAI-specific agent metadata are not included. A single marketplace icon is retained by the Ghast icon sync step. The plugin does not contain an OpenAI `.app.json` connector declaration.
+Skills, references, scripts, commands, and public MCP declarations remain sourced from the pinned official repository. Unsupported client metadata is omitted.
 
-Canonical project:
-
-- https://github.com/boltz-bio/boltz-api-skills
-
-Local CLIs, SDKs, API credentials, or paid services described by individual skills remain user-managed dependencies.
+External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

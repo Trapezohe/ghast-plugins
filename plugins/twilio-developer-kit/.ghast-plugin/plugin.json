@@ -1,22 +1,17 @@
 {
   "name": "twilio-developer-kit",
-  "version": "0.2.2-ghast.1",
-  "description": "Twilio skills for choosing and using APIs across Messaging, Voice, Verify, SendGrid, and more than 30 products.",
+  "version": "0.2.0-ghast.1",
+  "description": "Twilio Skills provide procedural knowledge for AI coding agents — which APIs to use, in what order, and what to avoid. Covers Messaging, Voice, Verify, SendGrid, and 30+ products.",
   "category": "development",
   "author": {
     "name": "Twilio",
     "url": "https://www.twilio.com"
   },
   "homepage": "https://www.twilio.com/docs",
-  "repository": "https://github.com/openai/plugins",
-  "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
-  "upstreamPath": "plugins/twilio-developer-kit",
+  "repository": "https://github.com/twilio/ai",
+  "upstreamRevision": "d7b0f231468cd9a6a0bab9ebcde8c1a5c9220bba",
+  "upstreamPath": ".",
   "license": "MIT",
-  "skills": "./skills/",
-  "canonicalRepository": "https://github.com/twilio/ai",
-  "licenseSource": {
-    "repository": "https://github.com/twilio/ai",
-    "revision": "d7b0f231468cd9a6a0bab9ebcde8c1a5c9220bba"
-  },
-  "icon": "./assets/icon.svg"
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/"
 }

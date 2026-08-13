@@ -4,15 +4,14 @@
   "selectionRule": "Plugin directory does not contain .app.json.",
   "summary": {
     "blocked": 13,
-    "existing": 5,
-    "partial": 1,
-    "ported": 7
+    "existing": 12,
+    "partial": 1
   },
   "plugins": [
     {
       "name": "boltz-api-cli",
-      "status": "ported",
-      "reason": "Imported as a connector-free Ghast skill plugin."
+      "status": "existing",
+      "reason": "Ghast regenerates Boltz directly from the pinned official Boltz repository."
     },
     {
       "name": "build-ios-apps",
@@ -61,8 +60,8 @@
     },
     {
       "name": "hyperframes",
-      "status": "ported",
-      "reason": "Imported as a connector-free Ghast skill plugin."
+      "status": "existing",
+      "reason": "Ghast regenerates HyperFrames directly from the pinned official HeyGen repository."
     },
     {
       "name": "life-science-research",
@@ -76,8 +75,8 @@
     },
     {
       "name": "mixpanel-headless",
-      "status": "ported",
-      "reason": "Imported as a connector-free Ghast skill plugin."
+      "status": "existing",
+      "reason": "Ghast regenerates Mixpanel Headless directly from the pinned official repository."
     },
     {
       "name": "ngs-analysis",
@@ -86,8 +85,8 @@
     },
     {
       "name": "nvidia",
-      "status": "ported",
-      "reason": "Imported as a connector-free Ghast skill plugin."
+      "status": "existing",
+      "reason": "Ghast regenerates the complete NVIDIA skill catalog directly from the pinned official repository."
     },
     {
       "name": "openai-ads-conversions",
@@ -106,8 +105,8 @@
     },
     {
       "name": "render",
-      "status": "ported",
-      "reason": "Imported as a connector-free Ghast skill plugin."
+      "status": "existing",
+      "reason": "Ghast regenerates Render directly from the pinned official Render repository."
     },
     {
       "name": "sentry",
@@ -116,8 +115,8 @@
     },
     {
       "name": "superpowers",
-      "status": "ported",
-      "reason": "Imported as a connector-free Ghast skill plugin."
+      "status": "existing",
+      "reason": "Ghast regenerates Superpowers directly from its pinned canonical repository."
     },
     {
       "name": "temporal",
@@ -131,8 +130,8 @@
     },
     {
       "name": "twilio-developer-kit",
-      "status": "ported",
-      "reason": "Imported as a connector-free Ghast skill plugin."
+      "status": "existing",
+      "reason": "Ghast regenerates the Twilio Developer Kit directly from the pinned official Twilio repository."
     },
     {
       "name": "zotero",

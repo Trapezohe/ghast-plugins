@@ -98,7 +98,7 @@ Trigger on any of these signals:
 - Identity resolution: Match incoming caller to Conversation Memory profile by phone number, email, or custom ID
 - Enrichment sources: Conversation Memory observations only, or also Segment traits via Bridge
 **GA constraint:** Flex integration is summary-only at GA. Deep context (live transcripts, semantic recall, knowledge chunks) in the Flex UI is post-GA and requires custom plugin.
-**Skills to install:** + `twilio-customer-memory`, `twilio-conversation-orchestrator`
+**Skills to install:** + `twilio-conversation-memory`, `twilio-conversation-orchestrator`
 
 ### Level 4: Route — Intelligence-Driven Routing
 **Developer says:** "I want AI signals to determine which agent gets the call — not just FIFO."
@@ -195,21 +195,21 @@ What does NOT work at GA:
 After qualifying the developer, recommend:
 
 ```
-Recommended Architecture: [Level 1-4 description]
+Recommended Architecture: [Brief plain-language description of the recommended approach — e.g., "AI-augmented voice agent with real-time transcription, sentiment analysis, and agent assist suggestions via Twilio Flex."]
 
-Product Skills to Install:
-- twilio-call-recordings (if Level 1+, recording needed)
-- twilio-conversation-intelligence (if Level 2+)
-- twilio-customer-memory (if Level 3+)
-- twilio-conversation-orchestrator (if Level 3+)
-- twilio-taskrouter-routing (if Level 4)
+Reference Skills:
+- twilio-call-recordings (if recording needed)
+- twilio-conversation-intelligence (if transcription and AI insights needed)
+- twilio-conversation-memory (if persistent customer context needed)
+- twilio-conversation-orchestrator (if multi-step orchestration needed)
+- twilio-taskrouter-routing (if intelligent routing needed)
 - twilio-voice-insights (for call quality diagnostics)
 - twilio-sendgrid-email-send (if post-call summary emails needed)
 
 Setup Skills:
-- twilio-account-setup
-- twilio-iam-auth-setup
-- twilio-webhook-architecture
+- twilio-account-setup — if developer needs help with credentials or account structure
+- twilio-iam-auth-setup — if developer asks about API key scoping or security
+- twilio-webhook-architecture — if developer needs help designing or securing webhook endpoints
 
 Guardrail Skills:
 - twilio-security-hardening (always)

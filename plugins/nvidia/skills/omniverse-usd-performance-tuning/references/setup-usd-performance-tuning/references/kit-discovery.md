@@ -1,6 +1,3 @@
-<!-- SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved. -->
-<!-- SPDX-License-Identifier: Apache-2.0 -->
-
 # Kit Discovery
 
 Use this reference for setup Step 1 and Step 1.5. The setup skill body owns
@@ -41,7 +38,7 @@ A venv Kit runtime qualifies when it has `pyvenv.cfg` plus
 `Scripts/python.exe` or `bin/python`.
 
 Do not pre-check `exts/`, `extscache/`, or extension folders. The Python probe
-in `runtime-probe.md` is the authoritative Scene Optimizer and Asset Validator
+in `runtime-probe.md` is the authoritative Usd Optimize and usd-validation-nvidia
 availability test.
 
 ## Auto-Enumeration
@@ -82,11 +79,17 @@ does not encode them. Sort candidates by semantic version descending.
 
 ## User Selection
 
-If one candidate exists, set `kit.chosen` to it and continue.
+The enumerated `kit.candidates[]` are the raw discovery source. The selected
+candidate becomes the canonical runtime: copy its `application`, `version`,
+`path`, and `build` into the `runtime_context.kit` object (the block the header
+prints and downstream skills consume). Do not keep a separate `kit.chosen`
+copy — `runtime_context.kit` is the single source of truth.
+
+If one candidate exists, write it to `runtime_context.kit` and continue.
 
 If multiple candidates exist, always ask. Pre-select the newest candidate, add
 `Use standalone libraries instead` as the final option, and record:
 
-- `kit.chosen_by: "user"` for interactive selection.
-- `kit.chosen_by: "unattended_default"` when no user input channel exists and
-  the newest candidate is automatically selected.
+- `runtime_context.kit.chosen_by: "user"` for interactive selection.
+- `runtime_context.kit.chosen_by: "unattended_default"` when no user input
+  channel exists and the newest candidate is automatically selected.

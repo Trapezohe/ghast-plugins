@@ -10,7 +10,6 @@ We read `label_seq` from the CIF (not author numbering) so outputs drop straight
 into the payload with no offset arithmetic. Do not reintroduce auth-number
 offsets.
 """
-
 import sys
 
 import gemmi

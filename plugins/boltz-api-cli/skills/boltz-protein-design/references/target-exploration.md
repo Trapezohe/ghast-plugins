@@ -26,19 +26,19 @@ what kind of binder you design.
 
 ## Mental model
 
-The exploration procedure is best thought of a set of **axes** that can be varied in the
-input configuration to the generation endpoint that modify the underlying models view of the target.
-Each axis changes which target residues the model sees and whether or not we condition on a specified binding site.
-This process should be conducted as an interactive discussion with the user, who may have their own domain knowledge or
-preferences about how to design binders against a target.
+The exploration procedure is best thought of a set of **axes** that can be varied in the 
+input configuration to the generation endpoint that modify the underlying models view of the target. 
+Each axis changes which target residues the model sees and whether or not we condition on a specified binding site. 
+This process should be conducted as an interactive discussion with the user, who may have their own domain knowledge or 
+preferences about how to design binders against a target. 
 
-Don't start by immediately using the full Cartesian *product* of the axes, as this will cause a combinatorial
-blowup of screening runs. For **categorial** axes, the entire axis should be explored
+Don't start by immediately using the full Cartesian *product* of the axes, as this will cause a combinatorial 
+blowup of screening runs. For **categorial** axes, the entire axis should be explored 
 in one set of exploration runs, for example, every domain should be designed against unless
-the user actively modifies this. For **multi-valued** axes like crop radius, only select a couple of values
-(not all five) to avoid combinatorial blowup, unless the user actively requests it. Before any exploration, the
-irrelevant residues at the termini should be trimmed. Scouting runs ask for 50 designs, and the
-best configuration is ultimately selected for the full size design run.
+the user actively modifies this. For **multi-valued** axes like crop radius, only select a couple of values 
+(not all five) to avoid combinatorial blowup, unless the user actively requests it. Before any exploration, the 
+irrelevant residues at the termini should be trimmed. Scouting runs ask for 50 designs, and the 
+best configuration is ultimately selected for the full size design run. 
 
 
 The axes:
@@ -60,8 +60,8 @@ spending on a large run.
 ## Bundled scripts and dependency probe
 
 The geometry/analysis scripts live in `scripts/` next to this skill and need
-Python 3.9 or newer with `gemmi` and `numpy`. **Probe the active interpreter
-first; only install if it fails** — many users already have a suitable env.
+`python3` with `gemmi` and `numpy`. **Probe the active interpreter first; only
+install if it fails** — many users already have a suitable env.
 
 ```bash
 # Probe (run from the skill directory; adjust the path to scripts/ as needed)
@@ -69,10 +69,7 @@ python3 -c "import gemmi, numpy" && echo DEPS_OK
 ```
 
 If that prints `DEPS_OK`, run the scripts with `python3` directly. If it errors,
-explain that the next command downloads and installs the exact `gemmi` and
-`numpy` versions pinned in `requirements.txt` from PyPI, then obtain the user's
-explicit approval before the network install. After approval, install them into
-a throwaway venv and use that interpreter:
+install the bundled requirements into a throwaway venv and use that interpreter:
 
 ```bash
 python3 -m venv /tmp/boltz-explore-venv
@@ -183,18 +180,12 @@ Run both — don't let the scan stand in for the per-domain comparison.
 2. After download, cluster the top designs' contact footprints into candidate
    sites:
    ```bash
-   python3 scripts/scan_sites.py <run-dir> --target-chain A --binder-chain B \
-     --top 20 --cutoff 6 --jaccard 0.25
+   python3 scripts/scan_sites.py <run-dir> --target-chain A --top 20 --cutoff 6 --jaccard 0.25
    ```
    It computes each top design's all-atom footprint on `--target-chain` (default
-   `A`) using only the generated binder chains selected by repeatable
-   `--binder-chain` flags, clusters footprints by single-linkage at Jaccard >
-   0.25, and prints a consensus site (0-based API indices) per cluster — the
-   residues contacted by ≥2 designs in the cluster. Read the generated binder
-   entity's `chain_ids` from a result record and pass each ID separately. If the
-   structure has exactly one non-target chain, the script can infer it when the
-   flag is omitted; it fails closed when multiple non-target chains are
-   ambiguous so native target chains are never silently treated as binder.
+   `A`; all other chains are treated as binder), greedily clusters footprints by
+   Jaccard > 0.25, and prints a consensus site (0-based API indices) per
+   cluster — the residues contacted by ≥2 designs in the cluster.
 3. For each discovered site, scout two configs **in parallel**: (a) site
    specified + target cropped to ~35 Å around it, and (b) the same crop
    **without** the site specified. Feed each consensus site back through

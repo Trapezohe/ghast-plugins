@@ -67,37 +67,37 @@
           "url": "https://boltz.bio"
         },
         "icon": "./assets/icon.png",
-        "version": "0.1.1-ghast.1",
+        "version": "0.1.0-ghast.1",
         "homepage": "https://boltz.bio",
-        "repository": "https://github.com/openai/plugins",
-        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "repository": "https://github.com/boltz-bio/boltz-api-skills",
+        "upstreamRevision": "70e480ebb14baecfc4456b49eb8b724611470b7c",
         "license": "MIT",
         "skills": "./skills/"
       },
       "package": {
         "url": "./packages/boltz-api-cli.zip",
-        "sha256": "d865cb09f75d9521fb665df2818860d28dda6cd5e42e1e905ed0fe7deca0ce9a"
+        "sha256": "0ba709d084579489dc58ac4d03ffe3feb5f7bf17154f94d6753c112cd99b6f59"
       },
       "icon": "./plugins/boltz-api-cli/assets/icon.png",
       "category": "research",
       "homepage": "https://boltz.bio",
-      "repository": "https://github.com/openai/plugins",
+      "repository": "https://github.com/boltz-bio/boltz-api-skills",
       "license": "MIT"
     },
     {
       "id": "cloudflare",
       "name": "cloudflare",
-      "description": "Build and operate on Cloudflare with portable skills, slash commands, and five official MCP servers.",
+      "description": "Build and operate on Cloudflare with official skills, slash commands, and five official MCP servers.",
       "manifest": {
         "name": "cloudflare",
-        "description": "Build and operate on Cloudflare with portable skills, slash commands, and five official MCP servers.",
+        "description": "Build and operate on Cloudflare with official skills, slash commands, and five official MCP servers.",
         "author": {
           "name": "Cloudflare",
           "url": "https://workers.cloudflare.com"
         },
         "icon": "./assets/icon.svg",
         "version": "1.0.0-ghast.1",
-        "homepage": "https://github.com/cloudflare/skills",
+        "homepage": "https://workers.cloudflare.com",
         "repository": "https://github.com/cloudflare/skills",
         "upstreamRevision": "f96bff754e428838818017f75817f0f9428acd48",
         "license": "Apache-2.0",
@@ -107,11 +107,11 @@
       },
       "package": {
         "url": "./packages/cloudflare.zip",
-        "sha256": "6b76d0aa5bb5ed1cb57267f217cc41b843754900588fe192c6b9f2f92d2e7cc1"
+        "sha256": "6691a005360fe90f6c6f112c46d0a73cf2b48e8fdb4964deefe8d31f525dfd63"
       },
       "icon": "./plugins/cloudflare/assets/icon.svg",
       "category": "development",
-      "homepage": "https://github.com/cloudflare/skills",
+      "homepage": "https://workers.cloudflare.com",
       "repository": "https://github.com/cloudflare/skills",
       "license": "Apache-2.0"
     },
@@ -165,30 +165,32 @@
     {
       "id": "expo",
       "name": "expo",
-      "description": "Build, deploy, upgrade, and debug Expo and React Native applications with Expo-authored workflows.",
+      "description": "Official Expo skills for building, deploying, upgrading, and debugging Expo and React Native apps.",
       "manifest": {
         "name": "expo",
-        "description": "Build, deploy, upgrade, and debug Expo and React Native applications with Expo-authored workflows.",
+        "description": "Official Expo skills for building, deploying, upgrading, and debugging Expo and React Native apps.",
         "author": {
           "name": "Expo Team",
+          "email": "support@expo.dev",
           "url": "https://expo.dev"
         },
         "icon": "./assets/icon.png",
-        "version": "1.0.2-ghast.1",
+        "version": "1.9.6-ghast.1",
         "homepage": "https://docs.expo.dev/skills/",
-        "repository": "https://github.com/openai/plugins",
-        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "repository": "https://github.com/expo/skills",
+        "upstreamRevision": "dcff9e7cd61f79ee821e18b5b215d5585eaac441",
         "license": "MIT",
-        "skills": "./skills/"
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
       },
       "package": {
         "url": "./packages/expo.zip",
-        "sha256": "08fe29d1d40410ba911dc46253a081690de9ea1d0986ab01229acdbfcce90647"
+        "sha256": "3a809d96d93bde30330ac9b81e4c02f97da44c51b0a4fde8d9917cfa8497a4f2"
       },
       "icon": "./plugins/expo/assets/icon.png",
       "category": "development",
       "homepage": "https://docs.expo.dev/skills/",
-      "repository": "https://github.com/openai/plugins",
+      "repository": "https://github.com/expo/skills",
       "license": "MIT"
     },
     {
@@ -240,31 +242,31 @@
     {
       "id": "hyperframes",
       "name": "hyperframes",
-      "description": "Write HTML, render video. Compositions, GSAP animations, captions, voiceovers, audio-reactive visuals, and website-to-video capture for HyperFrames.",
+      "description": "Write HTML, render video. Compositions, Tailwind v4 styles, GSAP and runtime adapter animations, captions, voiceovers, audio-reactive visuals, and website capture for HyperFrames.",
       "manifest": {
         "name": "hyperframes",
-        "description": "Write HTML, render video. Compositions, GSAP animations, captions, voiceovers, audio-reactive visuals, and website-to-video capture for HyperFrames.",
+        "description": "Write HTML, render video. Compositions, Tailwind v4 styles, GSAP and runtime adapter animations, captions, voiceovers, audio-reactive visuals, and website capture for HyperFrames.",
         "author": {
           "name": "HeyGen",
           "email": "hyperframes@heygen.com",
           "url": "https://hyperframes.heygen.com"
         },
         "icon": "./assets/icon.png",
-        "version": "0.1.2-ghast.1",
+        "version": "0.7.107-ghast.1",
         "homepage": "https://hyperframes.heygen.com",
-        "repository": "https://github.com/openai/plugins",
-        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "repository": "https://github.com/heygen-com/hyperframes",
+        "upstreamRevision": "9b0c5e85596efaf93823bf5f19b7f1d1216ca7d5",
         "license": "Apache-2.0",
         "skills": "./skills/"
       },
       "package": {
         "url": "./packages/hyperframes.zip",
-        "sha256": "7096f60e49dbead0f3d075ac2d78d6da2c0fe1b65e96d8b0918683c5961a851b"
+        "sha256": "e9950ab9dd1f702bdfa44f4b76cc5509b3914e8fada7c05775fa74a3c83a2e7b"
       },
       "icon": "./plugins/hyperframes/assets/icon.png",
       "category": "creativity",
       "homepage": "https://hyperframes.heygen.com",
-      "repository": "https://github.com/openai/plugins",
+      "repository": "https://github.com/heygen-com/hyperframes",
       "license": "Apache-2.0"
     },
     {
@@ -322,30 +324,32 @@
     {
       "id": "mixpanel-headless",
       "name": "mixpanel-headless",
-      "description": "Analyze Mixpanel data with the mixpanel_headless Python SDK and portable agent skills.",
+      "description": "Query and analyze Mixpanel data with Python. Provides the mixpanel_headless auth surface (Account → Project → Workspace hierarchy), API (5 query engines, discovery, entity CRUD), and Business Context read/write (the markdown documentation that grounds AI assistants, at org and project scopes), with a live documentation system (help.py) for method signatures, type lookup, fuzzy search, and hosted docs.",
       "manifest": {
         "name": "mixpanel-headless",
-        "description": "Analyze Mixpanel data with the mixpanel_headless Python SDK and portable agent skills.",
+        "description": "Query and analyze Mixpanel data with Python. Provides the mixpanel_headless auth surface (Account → Project → Workspace hierarchy), API (5 query engines, discovery, entity CRUD), and Business Context read/write (the markdown documentation that grounds AI assistants, at org and project scopes), with a live documentation system (help.py) for method signatures, type lookup, fuzzy search, and hosted docs.",
         "author": {
-          "name": "Mixpanel",
-          "url": "https://mixpanel.com/home"
+          "name": "Jared McFarland",
+          "email": "jaredcolin@gmail.com",
+          "url": "https://github.com/jaredmcfarland"
         },
         "icon": "./assets/icon.png",
-        "version": "0.1.2-ghast.1",
+        "version": "0.2.0-ghast.1",
         "homepage": "https://mixpanel.github.io/mixpanel-headless/",
-        "repository": "https://github.com/openai/plugins",
-        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "repository": "https://github.com/mixpanel/mixpanel-headless",
+        "upstreamRevision": "6c2c2f975d51628bdbc75802fb879d4f6cb66f69",
         "license": "MIT",
-        "skills": "./skills/"
+        "skills": "./skills/",
+        "commands": "./commands/"
       },
       "package": {
         "url": "./packages/mixpanel-headless.zip",
-        "sha256": "1c63f5d36c00f1ae316e91c902f9bf3275ed577f37b37d67c14c4bf07b5d081d"
+        "sha256": "1ff9250c05b9b4ebfdc8420c5ad198f433ff7a96ff926dad745b076e0c7afd9a"
       },
       "icon": "./plugins/mixpanel-headless/assets/icon.png",
       "category": "data",
       "homepage": "https://mixpanel.github.io/mixpanel-headless/",
-      "repository": "https://github.com/openai/plugins",
+      "repository": "https://github.com/mixpanel/mixpanel-headless",
       "license": "MIT"
     },
     {
@@ -380,30 +384,30 @@
     {
       "id": "nvidia",
       "name": "nvidia",
-      "description": "Use NVIDIA skills for GPU acceleration, CUDA, AI agents, inference, robotics, Omniverse, simulation, and physical AI workflows.",
+      "description": "Complete pinned catalog of NVIDIA-verified skills for GPU acceleration, CUDA, AI, data, training, inference, robotics, Physical AI, Omniverse, simulation, networking, and more.",
       "manifest": {
         "name": "nvidia",
-        "description": "Use NVIDIA skills for GPU acceleration, CUDA, AI agents, inference, robotics, Omniverse, simulation, and physical AI workflows.",
+        "description": "Complete pinned catalog of NVIDIA-verified skills for GPU acceleration, CUDA, AI, data, training, inference, robotics, Physical AI, Omniverse, simulation, networking, and more.",
         "author": {
           "name": "NVIDIA",
           "url": "https://github.com/NVIDIA/skills"
         },
         "icon": "./assets/icon.png",
-        "version": "1.0.2-ghast.1",
+        "version": "1.4.0-ghast.1",
         "homepage": "https://build.nvidia.com/skills/",
-        "repository": "https://github.com/openai/plugins",
-        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "repository": "https://github.com/NVIDIA/skills",
+        "upstreamRevision": "aa116673017bf75f9885edabab34d8ec883c0a3a",
         "license": "Apache-2.0 AND CC-BY-4.0",
         "skills": "./skills/"
       },
       "package": {
         "url": "./packages/nvidia.zip",
-        "sha256": "bc9c442fdccb6aa24611ece64f50601419ee4b0258f587c369904766cca75fe1"
+        "sha256": "492120b19c6953ec38cef4d8ce268bee6eab0494bfb1e23e5045c1dbb4bc929e"
       },
       "icon": "./plugins/nvidia/assets/icon.png",
       "category": "development",
       "homepage": "https://build.nvidia.com/skills/",
-      "repository": "https://github.com/openai/plugins",
+      "repository": "https://github.com/NVIDIA/skills",
       "license": "Apache-2.0 AND CC-BY-4.0"
     },
     {
@@ -432,30 +436,31 @@
     {
       "id": "remotion",
       "name": "remotion",
-      "description": "Create programmatic videos with Remotion, including animation, audio, captions, charts, transitions, and rendering workflows.",
+      "description": "Remotion video creation skills — best practices, animations, audio, captions, 3D, and more for building programmatic videos with React.",
       "manifest": {
         "name": "remotion",
-        "description": "Create programmatic videos with Remotion, including animation, audio, captions, charts, transitions, and rendering workflows.",
+        "description": "Remotion video creation skills — best practices, animations, audio, captions, 3D, and more for building programmatic videos with React.",
         "author": {
           "name": "Remotion",
+          "email": "hi@remotion.dev",
           "url": "https://remotion.dev"
         },
         "icon": "./assets/icon.png",
         "version": "4.0.509-ghast.1",
         "homepage": "https://remotion.dev",
-        "repository": "https://github.com/remotion-dev/remotion/tree/main/packages/codex-plugin",
+        "repository": "https://github.com/remotion-dev/remotion",
         "upstreamRevision": "a23672203e00db3d9ad905b2b2088bdc6aa2f2ac",
         "license": "MIT",
         "skills": "./skills/"
       },
       "package": {
         "url": "./packages/remotion.zip",
-        "sha256": "264d112674876cfa04bab46e236dd1779da4b14542eddb5f877f802cf45a35fb"
+        "sha256": "879e6abb324cb7bf3cf63a0f629caf34f5d0fc9f63bf8233c60ff5d0183d4e11"
       },
       "icon": "./plugins/remotion/assets/icon.png",
       "category": "creativity",
       "homepage": "https://remotion.dev",
-      "repository": "https://github.com/remotion-dev/remotion/tree/main/packages/codex-plugin",
+      "repository": "https://github.com/remotion-dev/remotion",
       "license": "MIT"
     },
     {
@@ -471,21 +476,22 @@
           "url": "https://render.com"
         },
         "icon": "./assets/icon.svg",
-        "version": "0.1.3-ghast.1",
+        "version": "0.2.0-ghast.1",
         "homepage": "https://github.com/renderinc/render-codex-plugin",
-        "repository": "https://github.com/openai/plugins",
-        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "repository": "https://github.com/renderinc/render-codex-plugin",
+        "upstreamRevision": "14032768453fd21c57f7e3a9c0e7659a2c7dce9d",
         "license": "MIT",
-        "skills": "./skills/"
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
       },
       "package": {
         "url": "./packages/render.zip",
-        "sha256": "54c180166902716ab5bc516ead27663f953e6d2512ab39c7796e603579ae1175"
+        "sha256": "8946af78c9dd64382af327d18c521fc4a5aec2518ad2aba0c06537a398d18ccd"
       },
       "icon": "./plugins/render/assets/icon.svg",
       "category": "development",
       "homepage": "https://github.com/renderinc/render-codex-plugin",
-      "repository": "https://github.com/openai/plugins",
+      "repository": "https://github.com/renderinc/render-codex-plugin",
       "license": "MIT"
     },
     {
@@ -598,37 +604,37 @@
           "email": "jesse@fsck.com",
           "url": "https://github.com/obra"
         },
-        "icon": "./assets/icon.svg",
-        "version": "5.1.3-ghast.1",
+        "icon": "./assets/icon.png",
+        "version": "6.3.0-ghast.1",
         "homepage": "https://github.com/obra/superpowers",
-        "repository": "https://github.com/openai/plugins",
-        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "repository": "https://github.com/obra/superpowers",
+        "upstreamRevision": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
         "license": "MIT",
         "skills": "./skills/"
       },
       "package": {
         "url": "./packages/superpowers.zip",
-        "sha256": "7e30d2e32e1eb2ffa7d5fae227dff10c98b79517318c5a52d6af2a4c8630d740"
+        "sha256": "f8229d9d40ca8322d4b3c419dea2cdb0f750a8e5319cddbae3c86023c8b774cf"
       },
-      "icon": "./plugins/superpowers/assets/icon.svg",
+      "icon": "./plugins/superpowers/assets/icon.png",
       "category": "development",
       "homepage": "https://github.com/obra/superpowers",
-      "repository": "https://github.com/openai/plugins",
+      "repository": "https://github.com/obra/superpowers",
       "license": "MIT"
     },
     {
       "id": "temporal",
       "name": "temporal",
-      "description": "Develop, debug, and manage Temporal applications, servers, CLI, and Cloud.",
+      "description": "Comprehensive skill for the entire Temporal lifecycle — developing applications, using the Temporal CLI, running and managing Temporal Server, and working with Temporal Cloud.",
       "manifest": {
         "name": "temporal",
-        "description": "Develop, debug, and manage Temporal applications, servers, CLI, and Cloud.",
+        "description": "Comprehensive skill for the entire Temporal lifecycle — developing applications, using the Temporal CLI, running and managing Temporal Server, and working with Temporal Cloud.",
         "author": {
           "name": "Temporal",
           "url": "https://temporal.io/"
         },
-        "icon": "./assets/temporal-logo.svg",
-        "version": "0.3.1",
+        "icon": "./assets/icon.svg",
+        "version": "0.3.1-ghast.1",
         "homepage": "https://temporal.io/",
         "repository": "https://github.com/temporalio/codex-temporal-plugin",
         "upstreamRevision": "a3fa2bdff73a93e60e1077c08bde2b682cd0f5ae",
@@ -637,9 +643,9 @@
       },
       "package": {
         "url": "./packages/temporal.zip",
-        "sha256": "b9449d714cca8ec19ecd1e2a46fa1a54041b8a1107db6615a28ec1e0610479b5"
+        "sha256": "f14b03ad8963d40e8346669c650fae57628508278b9cc8990801a63e6ac6cf8d"
       },
-      "icon": "./plugins/temporal/assets/temporal-logo.svg",
+      "icon": "./plugins/temporal/assets/icon.svg",
       "category": "development",
       "homepage": "https://temporal.io/",
       "repository": "https://github.com/temporalio/codex-temporal-plugin",
@@ -678,30 +684,30 @@
     {
       "id": "twilio-developer-kit",
       "name": "twilio-developer-kit",
-      "description": "Twilio skills for choosing and using APIs across Messaging, Voice, Verify, SendGrid, and more than 30 products.",
+      "description": "Twilio Skills provide procedural knowledge for AI coding agents — which APIs to use, in what order, and what to avoid. Covers Messaging, Voice, Verify, SendGrid, and 30+ products.",
       "manifest": {
         "name": "twilio-developer-kit",
-        "description": "Twilio skills for choosing and using APIs across Messaging, Voice, Verify, SendGrid, and more than 30 products.",
+        "description": "Twilio Skills provide procedural knowledge for AI coding agents — which APIs to use, in what order, and what to avoid. Covers Messaging, Voice, Verify, SendGrid, and 30+ products.",
         "author": {
           "name": "Twilio",
           "url": "https://www.twilio.com"
         },
         "icon": "./assets/icon.svg",
-        "version": "0.2.2-ghast.1",
+        "version": "0.2.0-ghast.1",
         "homepage": "https://www.twilio.com/docs",
-        "repository": "https://github.com/openai/plugins",
-        "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+        "repository": "https://github.com/twilio/ai",
+        "upstreamRevision": "d7b0f231468cd9a6a0bab9ebcde8c1a5c9220bba",
         "license": "MIT",
         "skills": "./skills/"
       },
       "package": {
         "url": "./packages/twilio-developer-kit.zip",
-        "sha256": "cb2dd4bc36f15a18976c04c4faf719c7ac59d68a9fa1c5e2095781daf1907521"
+        "sha256": "7ae5ba7c2f9b51a85d66d3f0b8907e7fef36cb35af38bdfcb6cf9c4eb9b70186"
       },
       "icon": "./plugins/twilio-developer-kit/assets/icon.svg",
       "category": "development",
       "homepage": "https://www.twilio.com/docs",
-      "repository": "https://github.com/openai/plugins",
+      "repository": "https://github.com/twilio/ai",
       "license": "MIT"
     },
     {

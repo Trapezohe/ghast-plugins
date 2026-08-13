@@ -1,17 +1,14 @@
-<!-- SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved. -->
-<!-- SPDX-License-Identifier: Apache-2.0 -->
-
 # Runtime context header
 
 > **Audience:** every agent that prompts the user inside the USD Performance Tuning workflow.
-> **Rule:** print one of the two formats below **before** asking the user anything that depends on the active Kit / Scene Optimizer / Asset Validator runtime — runtime choice at Phase 0, restructure decision at Phase 2e, destructive-op approval in `so-run-operations`, verdict in `compare-profiles`, and the runtime block in `optimization-report`. The user must always be able to see which Kit application and which package versions are about to act on their asset.
+> **Rule:** print one of the two formats below **before** asking the user anything that depends on the active Kit / Usd Optimize / usd-validation-nvidia runtime — runtime choice at Phase 0, restructure decision at Phase 2e, destructive-op approval in `usd-optimize-run-operations`, verdict in `compare-profiles`, and the runtime block in `optimization-report`. The user must always be able to see which Kit application and which package versions are about to act on their asset.
 
 ## Why this exists
 
 Three concrete pains have repeatedly surfaced when the runtime isn't visible:
 
 - A user authorizes a destructive operation without knowing which Kit version is about to mutate their stage — when something goes sideways later, reproduction is guesswork.
-- The agent recommends an SO operation that the user's installed runtime doesn't ship. The user only finds out when the op silently no-ops mid-chain.
+- The agent recommends an Usd Optimize operation that the user's installed runtime doesn't ship. The user only finds out when the op silently no-ops mid-chain.
 - Two team members run the same workflow against the same asset and get different validator counts because they're on different Kit / AV versions, and neither tracked which.
 
 Always-showing the runtime context puts that information where the decision happens.
@@ -62,9 +59,9 @@ asks the user for one before continuing. Do not pick a default.
 DTP session MUST run the session-start gate exactly once. The entry
 skill is whichever workflow skill the agent invokes first for the
 user's request — typically `omniverse-usd-performance-tuning`, but can be
-`so-run-operations`, `so-run-validators`, or `usd-validation-runner`
+`usd-optimize-run-operations`, `usd-optimize-run-validators`, or `usd-validation-runner`
 when the user invokes one of those directly. Downstream skills
-(`apply-restructure`, `so-interpret-validators`, `compare-profiles`,
+(`apply-restructure`, `usd-optimize-interpret-validators`, `compare-profiles`,
 `optimization-report`, etc.) inherit the gate's result via the
 preflight JSON and do not re-run it.
 
@@ -89,26 +86,25 @@ The gate's steps:
 
    ```
    ─── Runtime context ───────────────────────────────────────────────────────
-   Kit application:    {kit.chosen.application} {kit.chosen.version}
-     path:             {kit.chosen.path}
-     build:            {kit.chosen.build}
-   Scene Optimizer:    {sceneOptimizer.extension} {sceneOptimizer.version}
-   Asset Validator:    {assetValidator.package} {assetValidator.version} via {assetValidator.source}
+   Runtime:            standalone (Usd Optimize + usd-validation-nvidia)
+   Usd Optimize:    {runtime_context.usdOptimize.package} {runtime_context.usdOptimize.version}
+   usd-validation-nvidia:    {runtime_context.assetValidator.package} {runtime_context.assetValidator.version} via {runtime_context.assetValidator.source}
+   Kit profiling:      {runtime_context.kit.application} {runtime_context.kit.version} (opt-in render-profiling adjunct, or "none")
    ───────────────────────────────────────────────────────────────────────────
 
-   This runtime will be used for the work that follows. Continue, or change it?
+   Standalone is the runtime for all optimization + validation work. Continue?
 
-     > 1. Continue with this runtime
-       2. Change Kit installation (re-runs setup-usd-performance-tuning Step 1)
-       3. Switch to standalone (pip-installed libraries, no Kit)
-       4. Re-run the runtime probe (refresh versions, re-detect)
+     > 1. Continue
+       2. Re-run the runtime probe (refresh versions, re-detect)
+       3. Enable / set the opt-in Kit→omniperf render-profiling adjunct
    ```
 
 4. **Route the answer.**
    - Option 1 → proceed to the actual work; subsequent messages in the
      same session may use Format B and skip the prompt.
-   - Option 2 / 3 / 4 → invoke `setup-usd-performance-tuning` and
-     overwrite the preflight before continuing.
+   - Option 2 / 3 → invoke `setup-usd-performance-tuning` and overwrite the
+     preflight before continuing. Kit is only a profiling adjunct; it is never
+     selected as an alternate optimization runtime.
 
 The gate fires **once per session**. Subsequent skill invocations within
 the same conversation reuse the preflight (and the user's "continue"
@@ -128,17 +124,18 @@ run the gate instead.
 
 ## Source of truth
 
-Both formats below read from `<output_path>/setup-preflight.json` (canonical filename + location; see *Where artifacts live* above). The fields the header consumes are:
+Both formats below read from the **`runtime_context`** object in `<output_path>/setup-preflight.json` (canonical filename + location; see *Where artifacts live* above). `runtime_context` is the canonical block the probe writes and downstream skills consume; the header never reads the raw probe `kit` / `usdOptimize` / `assetValidator` source fields directly. The fields the header consumes are:
 
-- `kit.chosen.application` — friendly name (e.g. `USD Composer`, `Isaac Sim`, `Kit SDK`)
-- `kit.chosen.version` — release version (e.g. `110.1.0`)
-- `kit.chosen.path` — absolute install path
-- `kit.chosen.build` — full build identifier when present (e.g. `110.1.0+main.10181.f4b28ef2.gl.windows-x86_64.release`)
-- `sceneOptimizer.extension` — extension name (e.g. `omni.scene.optimizer.core`)
-- `sceneOptimizer.version` — extension version
-- `assetValidator.package` — package or extension name
-- `assetValidator.version` — version
-- `assetValidator.source` — `kit-extension` or `pip` (informs the user whether AV runs through Kit or as a standalone Python install)
+- `runtime_context.kit.application` — friendly name (e.g. `USD Composer`, `Isaac Sim`, `Kit SDK`)
+- `runtime_context.kit.version` — release version (e.g. `110.1.0`)
+- `runtime_context.kit.path` — absolute install path
+- `runtime_context.kit.build` — full build identifier when present (e.g. `110.1.0+main.10181.f4b28ef2.gl.windows-x86_64.release`)
+- `runtime_context.usdOptimize.extension` — extension name (e.g. `omni.scene.optimizer.core`)
+- `runtime_context.usdOptimize.version` — extension version
+- `runtime_context.assetValidator.package` — package or extension name
+- `runtime_context.assetValidator.version` — version
+- `runtime_context.assetValidator.source` — `pip` or `standalone` (the validator runs as the usd-validation-nvidia Python package; the Kit validator extension is not a supported path)
+- `runtime_context.cuda_available` — optional independent CUDA availability signal consumed by the Phase-4 batch scheduler; `false` blocks `gpu_bound` operations from silently falling back to slow CPU execution, `null` means unknown (the scheduler fails closed).
 
 If `<output_path>/setup-preflight.json` is unavailable when an agent reaches a prompt that requires the header, it must invoke `setup-usd-performance-tuning` first. The header must never be skipped or partially filled.
 
@@ -148,16 +145,16 @@ Use at every decision point where the user is authorizing something that mutates
 
 - `setup-usd-performance-tuning` runtime-choice prompt
 - `restructure-decision` Phase 2e prompt
-- `so-run-operations` destructive-op confirmation
+- `usd-optimize-run-operations` destructive-op confirmation
 - The first user-facing message in any session that starts mid-workflow
 
 ```
 ─── Runtime context ───────────────────────────────────────────────────────
-Kit application:    {kit.chosen.application} {kit.chosen.version}
-  path:             {kit.chosen.path}
-  build:            {kit.chosen.build}
-Scene Optimizer:    {sceneOptimizer.extension} {sceneOptimizer.version}
-Asset Validator:    {assetValidator.package} {assetValidator.version} via {assetValidator.source}
+Kit application:    {runtime_context.kit.application} {runtime_context.kit.version}
+  path:             {runtime_context.kit.path}
+  build:            {runtime_context.kit.build}
+Usd Optimize:    {runtime_context.usdOptimize.extension} {runtime_context.usdOptimize.version}
+usd-validation-nvidia:    {runtime_context.assetValidator.package} {runtime_context.assetValidator.version} via {runtime_context.assetValidator.source}
 ───────────────────────────────────────────────────────────────────────────
 ```
 
@@ -167,22 +164,31 @@ If the user has more than one Kit installed and the workflow has not yet committ
 
 Use for routine status messages, ack messages, and follow-up prompts in the same session where the user has already seen Format A.
 
+This file is the **single source of truth** for the Format B string. Any skill that prints it (`omniverse-usd-performance-tuning` initial ack, `compare-profiles` verdict header) must reproduce it character-for-character:
+
 ```
-[Kit: {kit.chosen.application} {kit.chosen.version}  |  SO: {sceneOptimizer.version}  |  AV: {assetValidator.version}]
+[Kit: {runtime_context.kit.application} {runtime_context.kit.version}  |  SO: {runtime_context.usdOptimize.version}  |  AV: {runtime_context.assetValidator.version}]
+```
+
+On a standalone-only runtime there is no `runtime_context.kit`; drop the Kit
+segment entirely:
+
+```text
+[SO: {runtime_context.usdOptimize.version}  |  AV: {runtime_context.assetValidator.version}]
 ```
 
 Required at:
 
 - `omniverse-usd-performance-tuning` initial acknowledgement
 - `compare-profiles` verdict header
-- Per-prototype progress lines in `so-run-operations` batch mode (Phase 4b)
+- Per-prototype progress lines in `usd-optimize-run-operations` batch mode (Phase 4b)
 
 ## When to refresh the block
 
 The runtime can change mid-session if the user installs a new Kit or switches Python environments. The agent must re-print Format A whenever:
 
 - `setup-usd-performance-tuning` is re-invoked
-- An install reference (`install-kit`, `install-so-via-kit`, `install-so-standalone`, `install-asset-validator-standalone`) reports a successful install
+- An install reference (`install-kit`, `install-usd-optimize-standalone`, `install-usd-optimize-standalone`, `install-usd-validation-nvidia-standalone`) reports a successful install
 - The agent explicitly requests a runtime switch from the user
 
 Otherwise the cached preflight is fresh enough for the duration of the workflow.
@@ -196,8 +202,8 @@ Otherwise the cached preflight is fresh enough for the duration of the workflow.
 Kit application:    USD Composer 110.1.0
   path:             D:\build\chk\usd_composer-fat\110.1.0+main.10181.f4b28ef2.gl.windows-x86_64.release\kit
   build:            110.1.0+main.10181.f4b28ef2.gl.windows-x86_64.release
-Scene Optimizer:    omni.scene.optimizer.core 110.0.4
-Asset Validator:    omniverse-asset-validator 1.x.y via kit-extension
+Usd Optimize:    omni.scene.optimizer.core 110.0.4
+usd-validation-nvidia:    usd-validation-nvidia 1.x.y via pip
 ───────────────────────────────────────────────────────────────────────────
 
 I will run usd-structure-assessment on /path/to/asset.usd. OK?
@@ -208,8 +214,8 @@ I will run usd-structure-assessment on /path/to/asset.usd. OK?
 ```
 ─── Runtime context ───────────────────────────────────────────────────────
 Kit application:    (not yet chosen — see Kit candidates below)
-Scene Optimizer:    (version determined by Kit choice)
-Asset Validator:    (version determined by Kit choice)
+Usd Optimize:    (version determined by Kit choice)
+usd-validation-nvidia:    (version determined by Kit choice)
 ───────────────────────────────────────────────────────────────────────────
 
 Multiple Kit installations were found. The newest one is pre-selected.
@@ -234,7 +240,7 @@ profile-stage: starting BASELINE capture in quick mode...
 - Do not print Format A more than once in the same session unless the runtime actually changed; users will start skimming it. Use Format B for everything after the first prompt.
 - Do not print just the version without the path. The path is what lets the user reproduce the run on another machine or check whether they're pointed at a build they don't expect.
 - Do not paraphrase the version. Print exactly what `<output_path>/setup-preflight.json` records. Paraphrasing creates ambiguity when someone later asks "which build?"
-- Do not skip the block in `so-run-operations` destructive-op confirmation. The user authorizing a destructive op must see the runtime explicitly at the moment of authorization, not earlier in the session.
+- Do not skip the block in `usd-optimize-run-operations` destructive-op confirmation. The user authorizing a destructive op must see the runtime explicitly at the moment of authorization, not earlier in the session.
 
 ## Cross-references
 

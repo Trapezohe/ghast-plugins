@@ -89,7 +89,7 @@ Walk the developer up this ladder based on their answers. Each level adds produc
 - Retention: What persists forever vs. what gets summarized over time?
 **Implementation:**
 - **With TAC SDK:** Automatic memory retrieval built-in (configure `MEMORY_STORE_ID` env var)
-- **Without TAC SDK:** Manual Conversation Memory API integration via `twilio-customer-memory` skill
+- **Without TAC SDK:** Manual Conversation Memory API integration via `twilio-conversation-memory` skill
 
 ### Level 3: + Real-Time Intelligence
 **Developer says:** "I want to detect sentiment, monitor compliance, or trigger actions mid-conversation."
@@ -267,7 +267,7 @@ What does NOT work at GA:
 - Direct HTTP calls to Conversation Memory, Conversation Orchestrator, Conversation Intelligence APIs
 - Required for advanced features not yet in SDK
 - More flexibility but more integration complexity
-- Use product-specific skills: `twilio-customer-memory`, `twilio-conversation-orchestrator`, `twilio-conversation-intelligence`
+- Use product-specific skills: `twilio-conversation-memory`, `twilio-conversation-orchestrator`, `twilio-conversation-intelligence`
 
 Always recommend `twilio-debugging-observability` guardrail skill alongside any Twilio Conversations implementation.
 
@@ -276,7 +276,7 @@ Always recommend `twilio-debugging-observability` guardrail skill alongside any 
 After qualifying the developer, recommend:
 
 ```
-Recommended Architecture: [Level 1-4 description]
+Recommended Architecture: [Brief plain-language description of the recommended approach — e.g., "AI voice agent using Agent Connect with long-term memory via Customer Memory API and Conversation Orchestrator for multi-step task handling."]
 
 Implementation Path:
 - **Fast path (recommended):** Use Twilio Agent Connect SDK → Install `twilio-agent-connect` skill
@@ -289,7 +289,7 @@ Implementation Path:
 
 Product Skills (for custom/advanced implementations):
 - twilio-voice-conversation-relay (voice AI - manual WebSocket server)
-- twilio-customer-memory (manual memory integration)
+- twilio-conversation-memory (manual memory integration)
 - twilio-conversation-intelligence (Conversation Intelligence webhook processing)
 - twilio-taskrouter-routing (human escalation routing)
 - twilio-conversation-orchestrator (conversation orchestration)
@@ -297,10 +297,10 @@ Product Skills (for custom/advanced implementations):
 - twilio-sendgrid-email-send (post-interaction email summaries)
 
 Setup Skills:
-- twilio-account-setup
-- twilio-iam-auth-setup
-- twilio-numbers-senders
-- twilio-webhook-architecture (especially for enterprise — tunnel alternatives)
+- twilio-account-setup — if developer needs help with credentials or account structure
+- twilio-iam-auth-setup — if developer asks about API key scoping or security
+- twilio-numbers-senders — number type selection affects throughput and compliance timelines; use when choosing between local, toll-free, or short code
+- twilio-webhook-architecture — if developer needs help designing or securing webhook endpoints (especially for enterprise — tunnel alternatives)
 
 Guardrail Skills:
 - twilio-security-hardening (always)

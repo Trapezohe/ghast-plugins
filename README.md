@@ -59,6 +59,16 @@ python3 scripts/build-ghast-catalog.py
 The script reads only `.ghast-plugin/plugin.json` sources, creates stable ZIPs,
 computes their SHA-256 digests, and rewrites `plugin-catalog.json`.
 
+## Validate the repository
+
+```bash
+python3 scripts/validate-ghast-repository.py
+```
+
+The validator checks plugin manifests, declared paths, icons, skill
+frontmatter, JSON, Python, JavaScript, shell scripts, package layout and
+SHA-256 hashes, audit summaries, and common embedded-secret patterns.
+
 ## Import connector-free OpenAI plugins
 
 The audited importer handles the OpenAI marketplace snapshot pinned in the
@@ -78,6 +88,24 @@ Canonical checkouts used for external license files must be at the exact
 revisions declared by the importer. An unfamiliar connector-free plugin causes
 the import to fail until it has been reviewed and classified.
 
+## Import audited official plugins
+
+Plugins with a public, developer-owned source repository are regenerated
+directly from that repository instead of treating the OpenAI marketplace copy
+as canonical.
+
+```bash
+python3 scripts/import-official-third-party-plugins.py \
+  --source-root ../upstreams
+python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins
+python3 scripts/build-ghast-catalog.py
+```
+
+Every source checkout must match the exact revision pinned in the importer.
+The importer currently covers Boltz, Cloudflare, Expo, HyperFrames, Mixpanel
+Headless, NVIDIA, Remotion, Render, Superpowers, Temporal, and the Twilio
+Developer Kit.
+
 ## Import the Binance plugin
 
 The Binance importer pins the official Skills Hub revision and copies the four
@@ -91,6 +119,23 @@ python3 scripts/import-binance-plugin.py \
 python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins
 python3 scripts/build-ghast-catalog.py
 ```
+
+## Audit third-party Codex plugins
+
+`third-party-plugin-audit.json` tracks every marketplace plugin whose declared
+developer is not OpenAI. A plugin is marked complete only after its official
+developer source, exact revision, license, Codex capability set, Ghast
+capability set, and runnable verification have been recorded in
+`third-party-plugin-reviews.json`.
+
+```bash
+python3 scripts/audit-third-party-plugins.py \
+  --source ../openai-plugins
+```
+
+The generated `THIRD_PARTY_PLUGIN_AUDIT.md` is the readable inventory. A
+developer name or an MIT string in the Codex manifest is not sufficient
+evidence that the connector implementation itself can be redistributed.
 
 ## Porting an external plugin
 

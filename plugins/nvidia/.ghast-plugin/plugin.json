@@ -1,22 +1,17 @@
 {
   "name": "nvidia",
-  "version": "1.0.2-ghast.1",
-  "description": "Use NVIDIA skills for GPU acceleration, CUDA, AI agents, inference, robotics, Omniverse, simulation, and physical AI workflows.",
+  "version": "1.4.0-ghast.1",
+  "description": "Complete pinned catalog of NVIDIA-verified skills for GPU acceleration, CUDA, AI, data, training, inference, robotics, Physical AI, Omniverse, simulation, networking, and more.",
   "category": "development",
   "author": {
     "name": "NVIDIA",
     "url": "https://github.com/NVIDIA/skills"
   },
   "homepage": "https://build.nvidia.com/skills/",
-  "repository": "https://github.com/openai/plugins",
-  "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
-  "upstreamPath": "plugins/nvidia",
+  "repository": "https://github.com/NVIDIA/skills",
+  "upstreamRevision": "aa116673017bf75f9885edabab34d8ec883c0a3a",
+  "upstreamPath": "plugins/nvidia-skills",
   "license": "Apache-2.0 AND CC-BY-4.0",
-  "skills": "./skills/",
-  "canonicalRepository": "https://github.com/NVIDIA/skills",
-  "licenseSource": {
-    "repository": "https://github.com/NVIDIA/skills",
-    "revision": "aa116673017bf75f9885edabab34d8ec883c0a3a"
-  },
-  "icon": "./assets/icon.png"
+  "icon": "./assets/icon.png",
+  "skills": "./skills/"
 }

@@ -1,0 +1,410 @@
+{
+  "schemaVersion": 1,
+  "plugins": {
+    "binance": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Binance",
+      "officialRepository": "https://github.com/binance/binance-skills-hub",
+      "officialRevision": "2863a186d2bbd8987fa4790d7b81a299a58364ce",
+      "license": "MIT",
+      "licenseEvidence": [
+        "skills/binance/binance/LICENSE.md",
+        "skills/binance/fiat/LICENSE.md",
+        "skills/binance/onchain-pay/LICENSE.md",
+        "skills/binance/p2p/LICENSE.md"
+      ],
+      "officialityEvidence": [
+        "The repository is owned by the Binance GitHub organization.",
+        "The Codex manifest identifies Binance as the plugin developer.",
+        "The imported skills and their standalone license files are pinned to one exact revision."
+      ],
+      "codexCapabilities": [
+        "Unauthenticated, read-only Spot, Futures, and Options market data",
+        "Current and historical prices, order books, trades, klines, and exchange metadata"
+      ],
+      "ghastCapabilities": [
+        "All Codex public market-data families through the official Binance CLI skill",
+        "Authenticated Spot, Futures, Options, Convert, Margin, Earn, Loans, Wallet, and sub-account workflows",
+        "Fiat, P2P, and Onchain Pay workflows from separately licensed official Binance skills"
+      ],
+      "capabilityRelationship": "superset-with-licensed-omissions",
+      "limitations": [
+        "Web3 Agentic Wallet, payment assistant, Square, and other source directories without standalone license files are not redistributed.",
+        "The plugin provides procedural skills and requires the official Binance CLI or documented APIs, user credentials, and account permissions for authenticated workflows."
+      ],
+      "verification": [
+        "python3 scripts/import-binance-plugin.py --source ../upstreams/binance-skills-hub",
+        "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+        "python3 scripts/build-ghast-catalog.py",
+        "bash -n plugins/binance/skills/onchain-pay/scripts/sign_and_call.sh",
+        "unzip -tqq packages/binance.zip"
+      ]
+    },
+    "boltz-api-cli": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Boltz",
+      "officialRepository": "https://github.com/boltz-bio/boltz-api-skills",
+      "officialRevision": "70e480ebb14baecfc4456b49eb8b724611470b7c",
+      "license": "MIT",
+      "licenseEvidence": [
+        "LICENSE"
+      ],
+      "officialityEvidence": [
+        "The repository is owned by the Boltz Bio GitHub organization.",
+        "The repository includes an official Codex plugin manifest naming Boltz as developer.",
+        "Ghast imports all eight CLI skills directly from the pinned official plugin directory."
+      ],
+      "codexCapabilities": [
+        "Biomolecular structure and binding prediction",
+        "Small-molecule and protein screening",
+        "Small-molecule, peptide, antibody, nanobody, and protein binder design"
+      ],
+      "ghastCapabilities": [
+        "The same eight official Boltz CLI workflow skills as the Codex plugin",
+        "Status checks and local Boltz CLI setup guidance"
+      ],
+      "capabilityRelationship": "equivalent",
+      "limitations": [
+        "Boltz CLI installation, API access, credentials, quotas, and paid services are not bundled."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Compare all eight Ghast SKILL.md files byte-for-byte with plugins/boltz-api-cli/skills in the pinned official repository",
+        "unzip -tqq packages/boltz-api-cli.zip"
+      ]
+    },
+    "cloudflare": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Cloudflare",
+      "officialRepository": "https://github.com/cloudflare/skills",
+      "officialRevision": "f96bff754e428838818017f75817f0f9428acd48",
+      "license": "Apache-2.0",
+      "licenseEvidence": [
+        "LICENSE"
+      ],
+      "officialityEvidence": [
+        "The repository is owned by the Cloudflare GitHub organization.",
+        "The repository README identifies the skills and MCP servers as Cloudflare-maintained.",
+        "Ghast imports all skills, commands, the logo, and the five public MCP declarations from one pinned revision."
+      ],
+      "codexCapabilities": [
+        "Workers, Durable Objects, Wrangler, Agents SDK, and web-performance guidance",
+        "Authenticated Cloudflare account operations through the official API MCP server"
+      ],
+      "ghastCapabilities": [
+        "All 13 current official Cloudflare skills",
+        "The two official slash commands",
+        "The official API, docs, bindings, builds, and observability MCP servers"
+      ],
+      "capabilityRelationship": "superset",
+      "limitations": [
+        "Authenticated MCP operations require the user's Cloudflare account and OAuth or supported token configuration.",
+        "State-changing Cloudflare operations remain subject to Ghast action confirmation."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Compare all 13 Ghast SKILL.md files and .mcp.json byte-for-byte with the pinned official repository",
+        "unzip -tqq packages/cloudflare.zip"
+      ]
+    },
+    "expo": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Expo",
+      "officialRepository": "https://github.com/expo/skills",
+      "officialRevision": "dcff9e7cd61f79ee821e18b5b215d5585eaac441",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/expo/LICENSE"
+      ],
+      "officialityEvidence": [
+        "The repository is owned by the Expo GitHub organization and labels itself as official Expo skills.",
+        "The repository includes the Codex plugin manifest and Expo MCP declaration.",
+        "Ghast imports every stable Expo plugin skill directly from the pinned official plugin directory."
+      ],
+      "codexCapabilities": [
+        "Expo and React Native UI, routing, data, native modules, upgrades, dev clients, and EAS deployment guidance",
+        "Codex-specific Run actions"
+      ],
+      "ghastCapabilities": [
+        "All 21 current official stable Expo skills for framework and EAS workflows",
+        "The public official Expo MCP server"
+      ],
+      "capabilityRelationship": "superset-with-client-specific-omission",
+      "limitations": [
+        "Codex app Run-button hooks and OpenAI agent metadata are not portable to Ghast.",
+        "The Claude-only telemetry script path is replaced with Ghast's host-resolved <SKILL_DIR> placeholder; the telemetry implementation itself remains Expo's official source.",
+        "EAS services, cloud simulators, store submission, and authenticated MCP operations require an Expo account and may require a paid plan."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Compare all 21 source skills and .mcp.json with plugins/expo in the pinned official repository, allowing only the documented telemetry path adaptation",
+        "unzip -tqq packages/expo.zip"
+      ]
+    },
+    "hyperframes": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "HeyGen",
+      "officialRepository": "https://github.com/heygen-com/hyperframes",
+      "officialRevision": "9b0c5e85596efaf93823bf5f19b7f1d1216ca7d5",
+      "license": "Apache-2.0",
+      "licenseEvidence": [
+        "LICENSE"
+      ],
+      "officialityEvidence": [
+        "The repository is owned by the HeyGen GitHub organization.",
+        "Its Codex manifest names HeyGen as the developer of HyperFrames.",
+        "Ghast imports every current skill and its supporting assets directly from the pinned official repository."
+      ],
+      "codexCapabilities": [
+        "HTML-to-video composition, GSAP animation, CLI operation, reusable registry assets, and website capture"
+      ],
+      "ghastCapabilities": [
+        "All 19 current official HyperFrames skills",
+        "HTML, Tailwind, GSAP, Anime.js, Lottie, Three.js, captions, voiceover, audio-reactive, product-video, and website-to-video workflows"
+      ],
+      "capabilityRelationship": "superset",
+      "limitations": [
+        "Rendering, transcription, text-to-speech, and hosted services require the relevant HyperFrames tools and account access."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Compare all 19 Ghast SKILL.md files byte-for-byte with the pinned official repository",
+        "unzip -tqq packages/hyperframes.zip"
+      ]
+    },
+    "mixpanel-headless": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Mixpanel",
+      "officialRepository": "https://github.com/mixpanel/mixpanel-headless",
+      "officialRevision": "6c2c2f975d51628bdbc75802fb879d4f6cb66f69",
+      "license": "MIT",
+      "licenseEvidence": [
+        "LICENSE"
+      ],
+      "officialityEvidence": [
+        "The repository is hosted by the Mixpanel GitHub organization.",
+        "The developer-maintained plugin, Python package, documentation, and authentication workflow live in the same repository.",
+        "Ghast imports the current plugin skills, auth command, and local documentation from the pinned repository."
+      ],
+      "codexCapabilities": [
+        "Mixpanel authentication and setup",
+        "Insights, funnels, retention, flows, users, and dashboard analysis"
+      ],
+      "ghastCapabilities": [
+        "The three current official analysis and setup skills plus the official auth command",
+        "Five query engines, discovery, entity CRUD, governance, dashboard operations, and Business Context read/write through mixpanel_headless"
+      ],
+      "capabilityRelationship": "superset",
+      "limitations": [
+        "The Python package, Mixpanel account, project permissions, and supported credentials remain user-managed.",
+        "Claude-only skill path variables are replaced with Ghast's host-resolved <SKILL_DIR> placeholder.",
+        "The Ghast auth slash command uses the same official mp CLI command surface instead of the upstream Claude plugin's plugin-root-dependent JSON wrapper.",
+        "The pinned official package imports click in its CLI but does not declare click as a direct dependency; the Ghast setup script explicitly installs click>=8.1 so mp works in a clean environment.",
+        "The marketplace icon is retained separately because the official source plugin does not publish an icon asset."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Compare all three source skills with the pinned official repository, allowing only the documented path substitutions and official-CLI setup substitutions",
+        "Verify commands/auth.md covers the official mp session, login, account, project, workspace, target, and bridge commands without a plugin-root variable",
+        "Install the pinned source into a clean environment, install click>=8.1 as the setup script does, and run mp session --format json plus the bundled help.py and auth_manager.py entry points",
+        "unzip -tqq packages/mixpanel-headless.zip"
+      ]
+    },
+    "nvidia": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "NVIDIA",
+      "officialRepository": "https://github.com/NVIDIA/skills",
+      "officialRevision": "aa116673017bf75f9885edabab34d8ec883c0a3a",
+      "license": "Apache-2.0 AND CC-BY-4.0",
+      "licenseEvidence": [
+        "LICENSE-APACHE",
+        "LICENSE-CC-BY-4.0"
+      ],
+      "officialityEvidence": [
+        "The repository is owned by NVIDIA and identifies the catalog as official NVIDIA-verified Agent Skills.",
+        "Every published skill carries a skill card, detached OMS signature, evaluation data, and benchmark report.",
+        "Ghast imports the complete pinned catalog without modifying its signed skill directories and includes the NVIDIA trust root."
+      ],
+      "codexCapabilities": [
+        "A curated set of NVIDIA workflows for AI-Q, cuOpt, Dynamo, NemoClaw, Omniverse, and Physical AI"
+      ],
+      "ghastCapabilities": [
+        "All 335 NVIDIA-verified skills present at the pinned revision",
+        "GPU acceleration, CUDA, data loading, training, inference, robotics, simulation, medical AI, networking, Jetson, DOCA, NeMo, and additional catalog domains"
+      ],
+      "capabilityRelationship": "superset",
+      "limitations": [
+        "The catalog is large because Ghast bundles the verified skills instead of relying on a Codex-targeted post-install command.",
+        "Individual workflows still require compatible NVIDIA hardware, SDKs, containers, services, credentials, and licenses.",
+        "One signed RTVI-CV helper uses a quoted heredoc form rejected by macOS Bash 3.2; the workflow executes it inside the NVIDIA container, and Ghast retains the exact official hash instead of invalidating the signature.",
+        "Skill signatures attest to the upstream files; Ghast's package digest separately protects the distributed bundle."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Compare all 335 Ghast SKILL.md files byte-for-byte with the pinned official catalog",
+        "Verify 335 skill.oms.sig files, 335 skill-card.md files, 335 evaluation sets, and nv-agent-root-cert.pem are present",
+        "Run repository shell validation; permit the documented macOS Bash 3.2 exception only when write_deployment_log.sh retains official SHA-256 c62d8335d30708e7a6d5f23b8bc66f8e693bb1d71bb16ba2fa6239b92f87e765",
+        "unzip -tqq packages/nvidia.zip"
+      ]
+    },
+    "remotion": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Remotion",
+      "officialRepository": "https://github.com/remotion-dev/remotion",
+      "officialRevision": "a23672203e00db3d9ad905b2b2088bdc6aa2f2ac",
+      "license": "MIT",
+      "licenseEvidence": [
+        "packages/codex-plugin/LICENSE"
+      ],
+      "officialityEvidence": [
+        "The repository is owned by the Remotion GitHub organization.",
+        "The monorepo includes the official Codex plugin manifest and deterministic plugin build script.",
+        "Ghast reproduces the official build from packages/skills/skills at the pinned revision."
+      ],
+      "codexCapabilities": [
+        "Programmatic React video creation covering animation, audio, captions, 3D, transitions, charts, and text effects"
+      ],
+      "ghastCapabilities": [
+        "Twelve official Remotion skills covering creation, markup, rendering, Studio, captions, maps, multimedia, SaaS, docs, upgrades, and best practices"
+      ],
+      "capabilityRelationship": "superset",
+      "limitations": [
+        "OpenAI-specific agent metadata is removed.",
+        "Codex-only Studio sandbox troubleshooting text is not included.",
+        "The official Codex preview wording is adapted to Ghast's available browser, while the underlying Remotion commands remain unchanged."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Compare Ghast output with the official packages/codex-plugin build, allowing only documented agent-metadata and preview-instruction adaptations",
+        "unzip -tqq packages/remotion.zip"
+      ]
+    },
+    "render": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Render",
+      "officialRepository": "https://github.com/renderinc/render-codex-plugin",
+      "officialRevision": "14032768453fd21c57f7e3a9c0e7659a2c7dce9d",
+      "license": "MIT",
+      "licenseEvidence": [
+        "LICENSE"
+      ],
+      "officialityEvidence": [
+        "The repository is owned by the Render GitHub organization.",
+        "It contains the official Codex plugin manifest, skills, logo, and Render MCP declaration.",
+        "Ghast imports the 21 skills and MCP declaration directly from the pinned official repository."
+      ],
+      "codexCapabilities": [
+        "Deploying, debugging, monitoring, scaling, and migrating Render services",
+        "Blueprints, databases, disks, domains, environment variables, networking, and workflows"
+      ],
+      "ghastCapabilities": [
+        "The same 21 official Render skills",
+        "The official Render remote MCP server for authenticated live operations"
+      ],
+      "capabilityRelationship": "superset",
+      "limitations": [
+        "The OpenAI app connector ID is not portable and is replaced by Render's public OAuth MCP endpoint.",
+        "Authenticated operations require the user's Render account and authorization."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Compare all 21 Ghast SKILL.md files and .mcp.json byte-for-byte with the pinned official repository",
+        "unzip -tqq packages/render.zip"
+      ]
+    },
+    "superpowers": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Jesse Vincent",
+      "officialRepository": "https://github.com/obra/superpowers",
+      "officialRevision": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+      "license": "MIT",
+      "licenseEvidence": [
+        "LICENSE"
+      ],
+      "officialityEvidence": [
+        "The repository is the canonical Superpowers project and contains its Codex plugin manifest.",
+        "The manifest and repository identify Jesse Vincent as the developer.",
+        "Ghast imports all current skills and the official application icon from the pinned canonical repository."
+      ],
+      "codexCapabilities": [
+        "Brainstorming, implementation planning, TDD, systematic debugging, parallel execution, code review, and branch completion"
+      ],
+      "ghastCapabilities": [
+        "The same 14 official development-methodology skills at version 6.3.0"
+      ],
+      "capabilityRelationship": "equivalent-newer-version",
+      "limitations": [
+        "Workflows that mention a particular agent client's subagent or worktree tools are applied through the equivalent capabilities available in Ghast."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Compare all 14 Ghast SKILL.md files byte-for-byte with the pinned canonical repository",
+        "unzip -tqq packages/superpowers.zip"
+      ]
+    },
+    "temporal": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Temporal",
+      "officialRepository": "https://github.com/temporalio/codex-temporal-plugin",
+      "officialRevision": "a3fa2bdff73a93e60e1077c08bde2b682cd0f5ae",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/temporal/LICENSE"
+      ],
+      "officialityEvidence": [
+        "The repository is owned by the Temporal GitHub organization.",
+        "Its README and manifest identify it as the Temporal plugin for OpenAI Codex.",
+        "Ghast imports both current skills and the Temporal logo directly from the pinned official plugin directory."
+      ],
+      "codexCapabilities": [
+        "Temporal application development across Python, TypeScript, Go, and Java",
+        "Temporal CLI, local server, self-hosted server, and Temporal Cloud guidance"
+      ],
+      "ghastCapabilities": [
+        "The same temporal-developer and temporal-cloud-setup official skills"
+      ],
+      "capabilityRelationship": "equivalent",
+      "limitations": [
+        "Temporal Cloud access, credentials, namespaces, and infrastructure are not bundled."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Compare both Ghast SKILL.md files byte-for-byte with the pinned official repository",
+        "unzip -tqq packages/temporal.zip"
+      ]
+    },
+    "twilio-developer-kit": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Twilio",
+      "officialRepository": "https://github.com/twilio/ai",
+      "officialRevision": "d7b0f231468cd9a6a0bab9ebcde8c1a5c9220bba",
+      "license": "MIT",
+      "licenseEvidence": [
+        "LICENSE"
+      ],
+      "officialityEvidence": [
+        "The repository is owned by the Twilio GitHub organization.",
+        "Its Codex manifest and repository documentation identify the skills as the Twilio Developer Kit.",
+        "Ghast recursively imports every current Twilio and SendGrid skill from the pinned official repository."
+      ],
+      "codexCapabilities": [
+        "Messaging, Voice, Verify, SendGrid, compliance, authentication, observability, and architecture guidance"
+      ],
+      "ghastCapabilities": [
+        "All 57 current official Twilio and SendGrid skills",
+        "Current conversation memory, messaging-to-Verify migration, and Studio Flows guidance in addition to the prior marketplace set"
+      ],
+      "capabilityRelationship": "superset",
+      "limitations": [
+        "Twilio and SendGrid accounts, credentials, phone numbers, senders, regulatory approvals, and paid usage are not bundled.",
+        "The official twilio-agent-connect file lacks Agent Skills frontmatter, so Ghast prepends only a name and trigger description while preserving its body verbatim.",
+        "The marketplace icon is retained separately because the official source repository does not publish a plugin icon asset."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Compare 56 Ghast SKILL.md files byte-for-byte with the pinned official repository and verify the twilio-agent-connect body is byte-identical after the documented frontmatter prefix",
+        "unzip -tqq packages/twilio-developer-kit.zip"
+      ]
+    }
+  }
+}

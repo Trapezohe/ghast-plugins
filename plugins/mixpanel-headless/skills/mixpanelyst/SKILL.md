@@ -1,14 +1,12 @@
 ---
 name: mixpanelyst
-description: This skill should be used when the user asks about Mixpanel product analytics, event data, funnel analysis, retention curves, cohort analysis, segmentation queries, user behavior, conversion rates, churn, DAU/MAU, ARPU, revenue metrics, feature adoption, A/B test results, user paths, flow analysis, or any request to query, explore, visualize, or analyze Mixpanel data using Python. Also use when the user asks to read, write, or manage Mixpanel "business context" — the markdown documentation that grounds AI assistants in an organization's structure and goals.
+description: This skill should be used when the user asks about Mixpanel product analytics, event data, funnel analysis, retention curves, cohort analysis, segmentation queries, user behavior, conversion rates, churn, DAU/MAU, ARPU, revenue metrics, feature adoption, A/B test results, user paths, flow analysis, session replay or session recordings (what a specific user did on screen, click-by-click — rage clicks, dead clicks, error sessions, action timelines), or any request to query, explore, visualize, or analyze Mixpanel data using Python. Also use when the user asks to read, write, or manage Mixpanel "business context" — the markdown documentation that grounds AI assistants in an organization's structure and goals.
 allowed-tools: Bash Read Write WebFetch
 ---
 
 # mixpanel_headless API Reference
 
 Analyze Mixpanel data by writing and executing Python code using the `mixpanel_headless` library and `pandas`.
-Before running bundled helper scripts, set `SKILL_DIR` to the absolute path of this
-`skills/mixpanelyst` directory.
 
 ```python
 import mixpanel_headless as mp
@@ -43,6 +41,13 @@ import mixpanel_headless as mp
 from mixpanel_headless import Filter, GroupBy, Metric
 ws = mp.Workspace()
 
+# 0. (Best first move) Map the WHOLE schema in one call — which properties are on
+#    which events, plus per-property coverage. Ground yourself here so you never
+#    filter or group by a property an event doesn't actually have.
+schema = ws.schema_graph(include_density=True)
+print(schema.properties_for_event("Login"))   # exact property names on this event
+print(schema.relationships_df.head())           # event | property | density_local
+
 # 1. Find real event names
 events = ws.events()
 top = ws.top_events(limit=10)
@@ -66,26 +71,26 @@ print("Platforms:", vals)
 
 ```bash
 # Look up a query method BEFORE writing the query
-python3 $SKILL_DIR/scripts/help.py Workspace.query
-python3 $SKILL_DIR/scripts/help.py Workspace.query_funnel
+python3 <SKILL_DIR>/scripts/help.py Workspace.query
+python3 <SKILL_DIR>/scripts/help.py Workspace.query_funnel
 
 # Look up types BEFORE constructing them
-python3 $SKILL_DIR/scripts/help.py Filter          # → classmethods: .equals(), .less_than(), etc.
-python3 $SKILL_DIR/scripts/help.py Metric          # → property=, NOT math_property=
-python3 $SKILL_DIR/scripts/help.py GroupBy          # → property, property_type only
-python3 $SKILL_DIR/scripts/help.py MathType         # → enum values
+python3 <SKILL_DIR>/scripts/help.py Filter          # → classmethods: .equals(), .less_than(), etc.
+python3 <SKILL_DIR>/scripts/help.py Metric          # → property=, NOT math_property=
+python3 <SKILL_DIR>/scripts/help.py GroupBy          # → property, property_type only
+python3 <SKILL_DIR>/scripts/help.py MathType         # → enum values
 
 # Look up result types to know what columns .df returns
-python3 $SKILL_DIR/scripts/help.py QueryResult
-python3 $SKILL_DIR/scripts/help.py FlowQueryResult
+python3 <SKILL_DIR>/scripts/help.py QueryResult
+python3 <SKILL_DIR>/scripts/help.py FlowQueryResult
 
 # Search when you're not sure of the exact name
-python3 $SKILL_DIR/scripts/help.py search cohort   # → CohortBreakdown, CohortMetric, CohortDefinition, ...
-python3 $SKILL_DIR/scripts/help.py search retention # → query_retention, RetentionEvent, RetentionMathType, ...
+python3 <SKILL_DIR>/scripts/help.py search cohort   # → CohortBreakdown, CohortMetric, CohortDefinition, ...
+python3 <SKILL_DIR>/scripts/help.py search retention # → query_retention, RetentionEvent, RetentionMathType, ...
 
 # List everything
-python3 $SKILL_DIR/scripts/help.py types            # all public types
-python3 $SKILL_DIR/scripts/help.py exceptions        # all exceptions
+python3 <SKILL_DIR>/scripts/help.py types            # all public types
+python3 <SKILL_DIR>/scripts/help.py exceptions        # all exceptions
 ```
 
 For tutorials and guides: `WebFetch(url="https://mixpanel.github.io/mixpanel-headless/llms.txt")`
@@ -117,6 +122,11 @@ def list_bookmarks(self, bookmark_type: BookmarkType | None = None) -> list[Book
 def lexicon_schemas(self, *, entity_type: EntityType | None = None) -> list[LexiconSchema]: ...
     # List Lexicon schemas (event/property definitions).
 
+def schema_graph(self, *, include_density: bool = False, include_user_properties: bool = True, force_refresh: bool = False) -> SchemaGraphResult: ...
+    # Whole-project Lexicon + event<->property graph in one call. SchemaGraphResult has
+    # .relationships_df (event|property|density_local), .properties_for_event(e),
+    # .events_for_property(p), .orphan_properties(), .to_graph() (networkx DiGraph).
+
 def clear_discovery_cache(self) -> None: ...
     # Clear cached discovery results.
 # User Guide: WebFetch(url="https://mixpanel.github.io/mixpanel-headless/guide/discovery/index.md")
@@ -128,22 +138,39 @@ When exploring an unfamiliar dataset or asked to "find insights," follow this sy
 
 ### Step 1: Orient — Map the Event Schema
 
+Start with `schema_graph()`. One call returns the whole event↔property map plus
+per-property coverage (`density_local`), so you learn which properties actually
+travel with which events — and how well-populated each is — before querying. This
+is the single most useful grounding step: it stops you filtering or grouping by a
+property an event doesn't carry.
+
 ```python
 import mixpanel_headless as mp
 ws = mp.Workspace()
 
-events = ws.events()
-top = ws.top_events(limit=15)
-print("Events:", events)
-print("Top events:", [(e.event, e.count) for e in top])
+schema = ws.schema_graph(include_density=True)
+print("events:", schema.meta["event_count"],
+      "| event properties:", schema.meta["event_property_count"])
 
-# Profile the top 3-5 events by volume
-for event in [e.event for e in top[:5]]:
-    props = ws.properties(event)
-    print(f"\n{event} ({len(props)} properties):")
-    for p in props[:15]:
-        vals = ws.property_values(p, event=event, limit=10)
-        print(f"  {p}: {vals}")
+# Headline view: one row per (event, property), with coverage.
+print(schema.relationships_df.head(20))   # event | property | density_local
+
+# Exact properties on each top event — use these names verbatim in queries.
+for event_name in list(schema.event_to_properties)[:5]:
+    print(f"\n{event_name}: {schema.properties_for_event(event_name)}")
+
+# Properties attached to no events — usually noise; skip them.
+print("\nOrphans:", schema.orphan_properties()[:20])
+
+top = ws.top_events(limit=15)
+print("\nTop by volume:", [(e.event, e.count) for e in top])
+```
+
+Then sample values for the properties you'll actually group or filter by:
+
+```python
+for p in schema.properties_for_event("Purchase")[:15]:
+    print(p, ws.property_values(p, event="Purchase", limit=10))
 ```
 
 ### Step 2: Classify Properties
@@ -358,7 +385,7 @@ def close(self) -> None: ...
 
 ### Insights Query
 
-Run `python3 $SKILL_DIR/scripts/help.py Workspace.query` for the full signature.
+Run `python3 <SKILL_DIR>/scripts/help.py Workspace.query` for the full signature.
 
 ```python
 def query(
@@ -391,7 +418,7 @@ def query(
 
 ### Funnel Query
 
-Run `python3 $SKILL_DIR/scripts/help.py Workspace.query_funnel` for the full signature.
+Run `python3 <SKILL_DIR>/scripts/help.py Workspace.query_funnel` for the full signature.
 
 ```python
 def query_funnel(
@@ -421,7 +448,7 @@ def query_funnel(
 
 ### Retention Query
 
-Run `python3 $SKILL_DIR/scripts/help.py Workspace.query_retention` for the full signature.
+Run `python3 <SKILL_DIR>/scripts/help.py Workspace.query_retention` for the full signature.
 
 ```python
 def query_retention(
@@ -450,7 +477,7 @@ def query_retention(
 
 ### Flow Query
 
-Run `python3 $SKILL_DIR/scripts/help.py Workspace.query_flow` for the full signature.
+Run `python3 <SKILL_DIR>/scripts/help.py Workspace.query_flow` for the full signature.
 
 ```python
 def query_flow(
@@ -478,7 +505,7 @@ def query_flow(
 
 ### User Profile Query
 
-Run `python3 $SKILL_DIR/scripts/help.py Workspace.query_user` for the full signature.
+Run `python3 <SKILL_DIR>/scripts/help.py Workspace.query_user` for the full signature.
 
 ```python
 def query_user(
@@ -851,7 +878,7 @@ def retention(self, *, born_event: str, return_event: str, from_date: str, to_da
 def event_counts(self, events: list[str], *, from_date: str, to_date: str, type: Literal['general', 'unique', 'average'] = 'general', unit: Literal['day', 'week', 'month'] = 'day') -> EventCountsResult: ...
 def property_counts(self, event: str, property_name: str, *, from_date: str, to_date: str, type: Literal['general', 'unique', 'average'] = 'general', unit: Literal['day', 'week', 'month'] = 'day', values: list[str] | None = None, limit: int | None = None) -> PropertyCountsResult: ...
 def frequency(self, *, from_date: str, to_date: str, unit: Literal['day', 'week', 'month'] = 'day', addiction_unit: Literal['hour', 'day'] = 'hour', event: str | None = None, where: str | None = None) -> FrequencyResult: ...
-def activity_feed(self, distinct_ids: list[str], *, from_date: str | None = None, to_date: str | None = None) -> ActivityFeedResult: ...
+def activity_feed(self, distinct_ids: list[str], *, from_date: str | None = None, to_date: str | None = None, limit: int | None = None, include_events: list[str] | None = None, exclude_events: list[str] | None = None, sentinel_event: dict[str, Any] | None = None, paging_window: int | None = None, search: str | None = None, search_properties: list[dict[str, Any]] | None = None, use_custom_events: bool = False) -> ActivityFeedResult: ...
 def query_saved_report(self, bookmark_id: int, *, bookmark_type: Literal['insights', 'funnels', 'retention', 'flows'] = 'insights', from_date: str | None = None, to_date: str | None = None) -> SavedReportResult: ...
 def query_saved_flows(self, bookmark_id: int) -> FlowsResult: ...
 def segmentation_numeric(self, event: str, *, from_date: str, to_date: str, on: str, unit: Literal['hour', 'day'] = 'day', where: str | None = None, type: Literal['general', 'unique', 'average'] = 'general') -> NumericBucketResult: ...
@@ -861,7 +888,7 @@ def segmentation_average(self, event: str, *, from_date: str, to_date: str, on: 
 
 ### Entity CRUD (App API)
 
-All entity methods require a workspace ID. Use `python3 $SKILL_DIR/scripts/help.py Workspace.<method>` for full signatures and parameter types.
+All entity methods require a workspace ID. Use `python3 <SKILL_DIR>/scripts/help.py Workspace.<method>` for full signatures and parameter types.
 User Guide: `WebFetch(url="https://mixpanel.github.io/mixpanel-headless/guide/entity-management/index.md")`
 
 #### Dashboard (→ `Dashboard`)
@@ -930,7 +957,7 @@ Read and write the markdown documentation that grounds AI assistants in your org
 
 Two scopes — `level="organization"` (shared across the whole org) and `level="project"` (per-project). 50,000-character cap enforced **client-side before any HTTP call** so oversize input fails fast. Org-level operations auto-resolve `organization_id` from the cached `/me` response; pass `organization_id=N` to override.
 
-Run `python3 $SKILL_DIR/scripts/help.py search business_context` to see all four methods, two types, and one exception.
+Run `python3 <SKILL_DIR>/scripts/help.py search business_context` to see all four methods, two types, and one exception.
 
 ```python
 from mixpanel_headless import BUSINESS_CONTEXT_MAX_CHARS  # 50_000
@@ -967,9 +994,44 @@ print(f"{project_ctx.character_count}/{BUSINESS_CONTEXT_MAX_CHARS} chars; "
 
 User Guide: `WebFetch(url="https://mixpanel.github.io/mixpanel-headless/guide/business-context/index.md")`
 
+## Session Replay
+
+Answers "what did this user actually *do*?" — the click-by-click story behind an analytics number. Fetches rrweb session recordings, runs a vendored analyzer, and projects sessions into DataFrames + an LLM-friendly action timeline.
+
+**When to reach for this:** the user names a specific `distinct_id` and asks what they did, wants clicks / rage-clicks / error sessions across a cohort of sessions, or wants to correlate a tracked event with on-screen behavior.
+
+```python
+import mixpanel_headless as mp
+ws = mp.Workspace()
+
+# Discover + fetch + Mixpanel-event join in one call → a ReplayBundle.
+# Each replay is byte-heavy, so limit defaults to 20 — raise it deliberately.
+bundle = ws.replays_for_user("user-42", from_date="2025-01-01", to_date="2025-01-31")
+
+bundle.sessions_df                     # one row per session: duration_s, n_clicks, n_errors, entry/exit_url
+bundle.replays[0].summary_markdown     # action timeline: "Clicked …", "Scrolled (×3)"
+bundle.top_clicks(10)                  # most-clicked elements (focus interactions excluded)
+bundle.rage_clicks()                   # rapid repeated clicks on one target
+bundle.error_sessions()                # a NEW bundle of only the replays with console errors
+```
+
+`ReplayBundle` projections: `sessions_df`, `actions_df` (includes a `description` column — the full phrase), `events_df` (raw rrweb), `mixpanel_df` (tracked events in the window), `elements_df` (per-element click counts, URL-normalized). Filters return new bundles: `.where(distinct_id=, contains_url=, has_event=, min_duration_s=)`, `.filter(predicate)`, `.find_pattern([...])`, `.head(n)`, `.sample(n, seed)`, `.compare(other)`.
+
+Single replay + raw stream for the rrweb JS player:
+
+```python
+replay = ws.fetch_replay("0190ebde-d50d-71b1-804c-ec1b4a533ef9")
+replay.to_rrweb_player_json()          # timestamp-sorted rrweb events
+```
+
+**Signed CDN URLs are bearer credentials** — `SignedReplay` masks them and the library never logs them. A `SESSION_RECORDING_SENSITIVE_DATA` 403 raises `SessionReplayAccessError`.
+
+Look up the surface: `help.py Workspace.replays_for_user`, `help.py ReplayBundle`, `help.py Replay`.
+User Guide: `WebFetch(url="https://mixpanel.github.io/mixpanel-headless/guide/session-replay/index.md")`
+
 ## Key Types
 
-Run `python3 $SKILL_DIR/scripts/help.py types` for the full list of all types. Use `help.py <TypeName>` for fields, constructors, and enum values.
+Run `python3 <SKILL_DIR>/scripts/help.py types` for the full list of all types. Use `help.py <TypeName>` for fields, constructors, and enum values.
 Full reference: `WebFetch(url="https://mixpanel.github.io/mixpanel-headless/api/types/index.md")`
 
 | Type | Purpose |
@@ -992,6 +1054,8 @@ Full reference: `WebFetch(url="https://mixpanel.github.io/mixpanel-headless/api/
 | `CohortCriteria` | Atomic condition for cohort membership |
 | `CustomPropertyRef` | Reference to a persisted custom property by ID |
 | `InlineCustomProperty` | Ephemeral computed property defined by formula |
+| `ReplayBundle` / `Replay` | Session replay — DataFrame projections + `summary_markdown` |
+| `ReplaySummary` | Lightweight replay discovery handle from `list_replays` |
 
 **Aggregation enums** (use `help.py <EnumName>` to see all values):
 

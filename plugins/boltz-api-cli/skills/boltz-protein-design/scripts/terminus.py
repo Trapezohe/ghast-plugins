@@ -11,7 +11,6 @@ the explicit index range.
 Usage:
     python3 terminus.py target.cif --chain A
 """
-
 import argparse
 import json
 import os
@@ -22,9 +21,8 @@ from _common import indexed_residues, load_chain  # noqa: E402
 
 
 def main():
-    ap = argparse.ArgumentParser(
-        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
-    )
+    ap = argparse.ArgumentParser(description=__doc__,
+                                 formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("cif")
     ap.add_argument("--chain", default="A")
     args = ap.parse_args()
@@ -32,11 +30,8 @@ def main():
     _, _, poly = load_chain(args.cif, args.chain)
     pairs, used_label_seq = indexed_residues(poly)
     if not used_label_seq:
-        print(
-            "warning: chain lacks label_seq; using enumeration order "
-            "(may misalign across unmodeled internal gaps)",
-            file=sys.stderr,
-        )
+        print("warning: chain lacks label_seq; using enumeration order "
+              "(may misalign across unmodeled internal gaps)", file=sys.stderr)
 
     keep = [idx for idx, _ in pairs]
     print(f"chain {args.chain}: {len(keep)} resolved residues")

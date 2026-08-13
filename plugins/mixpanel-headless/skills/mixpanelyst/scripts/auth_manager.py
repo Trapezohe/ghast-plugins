@@ -236,7 +236,7 @@ def cmd_target_add(args: argparse.Namespace) -> dict[str, Any]:
 
 
 def cmd_bridge_status(_args: argparse.Namespace) -> dict[str, Any]:
-    """Report bridge file presence plus parsed metadata."""
+    """Report Cowork bridge file presence + parsed metadata (per § 5)."""
     bridge = load_bridge()
     if bridge is None:
         return _ok(bridge=None)

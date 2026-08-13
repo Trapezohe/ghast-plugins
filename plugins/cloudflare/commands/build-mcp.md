@@ -14,9 +14,9 @@ The user invoked this command with: $ARGUMENTS
 
 When this command is invoked:
 
-1. Read the skill file at `skills/agents-sdk/SKILL.md` for core SDK guidance
-2. Read `skills/agents-sdk/references/mcp.md` for MCP client and server APIs, transports, and securing
-3. Read `skills/agents-sdk/references/configuration.md` for wrangler setup
+1. Read the skill file at `agents-sdk/SKILL.md` for core SDK guidance
+2. Read `agents-sdk/references/mcp.md` for MCP client and server APIs, transports, and securing
+3. Read `agents-sdk/references/configuration.md` for wrangler setup
 4. Fetch https://developers.cloudflare.com/agents/api-reference/mcp-agent-api/ for the latest McpAgent API
 5. For OAuth/security, fetch https://developers.cloudflare.com/agents/api-reference/securing-mcp-servers/
 
