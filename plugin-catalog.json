@@ -672,6 +672,66 @@
       "license": "MIT"
     },
     {
+      "id": "chronograph-gp",
+      "name": "chronograph-gp",
+      "description": "Analyze private-capital GP portfolios, operating performance, valuations, fund reviews, company reports, and TVPI attribution through Chronograph's official skills and hosted OAuth MCP.",
+      "manifest": {
+        "name": "chronograph-gp",
+        "description": "Analyze private-capital GP portfolios, operating performance, valuations, fund reviews, company reports, and TVPI attribution through Chronograph's official skills and hosted OAuth MCP.",
+        "author": {
+          "name": "Chronograph",
+          "url": "https://www.chronograph.pe/"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "0.2.3-ghast.1",
+        "homepage": "https://www.chronograph.pe/",
+        "repository": "https://github.com/chronograph-pe/chronograph-gp-claude-plugin",
+        "upstreamRevision": "88a4290f29009e1cfe4341e0b9518d23c537d853",
+        "license": "Apache-2.0",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/chronograph-gp.zip",
+        "sha256": "9434d4e3402a0553622a2c5332a0c5452c620cc48bea539a41d1bc75cb4cb95b"
+      },
+      "icon": "./plugins/chronograph-gp/assets/icon.svg",
+      "category": "finance",
+      "homepage": "https://www.chronograph.pe/",
+      "repository": "https://github.com/chronograph-pe/chronograph-gp-claude-plugin",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "chronograph-lp",
+      "name": "chronograph-lp",
+      "description": "Analyze private-capital LP portfolios with cashflow forecasts, commitment pacing, look-through exposure, and GP-meeting preparation through Chronograph's official skills and OAuth MCP.",
+      "manifest": {
+        "name": "chronograph-lp",
+        "description": "Analyze private-capital LP portfolios with cashflow forecasts, commitment pacing, look-through exposure, and GP-meeting preparation through Chronograph's official skills and OAuth MCP.",
+        "author": {
+          "name": "Chronograph",
+          "url": "https://www.chronograph.pe/"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "0.2.3-ghast.1",
+        "homepage": "https://www.chronograph.pe/",
+        "repository": "https://github.com/chronograph-pe/chronograph-lp-claude-plugin",
+        "upstreamRevision": "6c18b66e882c44db26d88afabc52853ba39dcd98",
+        "license": "Apache-2.0",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/chronograph-lp.zip",
+        "sha256": "7c52d52023ebbbd6a1c0b6ebaa8bc018973ab6dfe5d1b37f1a0ed94920dff9ae"
+      },
+      "icon": "./plugins/chronograph-lp/assets/icon.svg",
+      "category": "finance",
+      "homepage": "https://www.chronograph.pe/",
+      "repository": "https://github.com/chronograph-pe/chronograph-lp-claude-plugin",
+      "license": "Apache-2.0"
+    },
+    {
       "id": "circleback",
       "name": "circleback",
       "description": "Search authorized Circleback meetings, transcripts, action items, calendar events, emails, people, companies, tags, and support content through Circleback's official hosted MCP server.",

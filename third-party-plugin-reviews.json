@@ -951,6 +951,112 @@
         "unzip -tqq packages/channel99.zip"
       ]
     },
+    "chronograph-gp": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Chronograph",
+      "officialRepository": "https://github.com/chronograph-pe/chronograph-gp-claude-plugin",
+      "officialRevision": "88a4290f29009e1cfe4341e0b9518d23c537d853",
+      "license": "Apache-2.0",
+      "licenseEvidence": [
+        "Chronograph's pinned GP repository contains the Apache License 2.0 with SHA-256 c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c.",
+        "The license covers the published manifest, five skills, references, and analyst-agent text imported by Ghast. It does not transfer ownership of Chronograph's hosted MCP implementation, customer data, accounts, trademarks, or service terms.",
+        "Ghast uses a generic private-capital analytics icon and does not copy the OpenAI marketplace logo or imply Chronograph endorsement."
+      ],
+      "officialityEvidence": [
+        "The source repository is owned by the chronograph-pe GitHub organization, names Chronograph as author, links chronograph.pe, declares Apache-2.0, and identifies itself as the Chronograph GP plugin.",
+        "Pinned release 0.2.3 at 88a4290f29009e1cfe4341e0b9518d23c537d853 has Git tree ae6b0e6d45b8a0293c49ab17773966c27acf58c9 and was authored and committed on August 10, 2026 by chronograph-actions using anthropic@chronograph.pe.",
+        "The official repository publishes five GP skills: budget-versus-actuals variance, fund quarterly review packs, markup/markdown briefs, portfolio-company one-pagers, and TVPI attribution by company, plus a matching Chronograph GP analyst orchestrator.",
+        "The official README requires a Chronograph GP account and secure OAuth connection, states that skills do not fabricate figures, and requires source, currency, and as-of-date labeling.",
+        "Chronograph's official MCP service at https://ai.chronograph.pe/mcp publishes authorization metadata with canonical JSON SHA-256 fa60b66bdea943b01340ec978026a47094d827eeffea102909d002ca306736c8. It declares Chronograph login, authorization, token, registration, and revocation endpoints, authorization-code and refresh-token grants, public clients, and PKCE S256 support.",
+        "On August 13, 2026, missing and invalid Bearer initialize requests returned HTTP 401 with body SHA-256 values 2dff5f7489665b62bbd0be8ffd4a6931517cb4fec137bfb8d914d7949996cfc2 and ac9c6929e867798359cb9ef9e9fbd8ef194b4605483cc84cb8242b3a71f98212.",
+        "OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 identifies Chronograph as developer and contains one portfolio-company one-pager plus a private app connector. Its manifest, private app, and one-pager hashes are 5d1e3b881bac0a9469ddccc8c3390043e491b982665f84d5d2b3f2f99238841b, 75dd51b3eeb1dc67975eda35bba8ddda4d615b07b8438f4763253ee8aa35a118, and f74c70e0a33f3494271127de89166d1eb076a50bdea2c625076553c56d42c390."
+      ],
+      "codexCapabilities": [
+        "Summarize Chronograph GP fund returns",
+        "Find top and bottom portfolio investments",
+        "Show overdue GP reporting tasks",
+        "Generate a portfolio-company one-pager from Chronograph data or an uploaded model"
+      ],
+      "ghastCapabilities": [
+        "The five current Chronograph-authored GP workflows for company reporting, quarterly fund review, budget variance, valuation movement, and company-level TVPI attribution",
+        "A portable routing skill adapted from Chronograph's official GP analyst orchestrator",
+        "Direct browser OAuth access to Chronograph's official hosted MCP endpoint with GP-role enforcement",
+        "The older Codex one-pager capability plus four newer official GP analytical workflows, with source, currency, as-of, scenario, gross/net, confidentiality, and human-review safeguards"
+      ],
+      "capabilityRelationship": "superset-current-official-gp-suite",
+      "limitations": [
+        "Chronograph operates the hosted MCP implementation. Ghast redistributes only Apache-2.0 plugin source, compatibility edits, MCP configuration, and a generic icon.",
+        "A Chronograph GP account, browser authorization, customer portfolio data, role permissions, subscription, enabled MCP access, source coverage, and service limits remain user-managed.",
+        "Authenticated tools/list and private customer data were not accessed. Live tool names, schemas, annotations, permissions, and returned data are authoritative.",
+        "GP workflows require GP-level company financials and gross per-investment returns. An LP login must not be treated as equivalent or filled with LP net values.",
+        "The current official GP suite does not document an overdue-reporting-task workflow matching that Codex default prompt. Ghast does not invent a task-management tool; it supports the request only if the authenticated live server exposes relevant reporting-task data.",
+        "Forecasts, valuations, attribution, variance analysis, and draft reports are not investment, legal, tax, audit, valuation, or high-impact eligibility advice and require human review before external use.",
+        "No OAuth client was registered, no browser sign-in was completed, and no token or customer record was retained during this audit."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Verify official revision 88a4290f29009e1cfe4341e0b9518d23c537d853, Git tree ae6b0e6d45b8a0293c49ab17773966c27acf58c9, release authorship, Apache-2.0 license hash, manifest hash, README hash, five-skill inventory, references, and analyst-agent hash.",
+        "Verify Chronograph OAuth authorization metadata canonical JSON SHA-256 fa60b66bdea943b01340ec978026a47094d827eeffea102909d002ca306736c8.",
+        "Probe https://ai.chronograph.pe/mcp with missing and invalid Bearer initialize requests and confirm HTTP 401 plus body hashes 2dff5f7489665b62bbd0be8ffd4a6931517cb4fec137bfb8d914d7949996cfc2 and ac9c6929e867798359cb9ef9e9fbd8ef194b4605483cc84cb8242b3a71f98212.",
+        "Compare the pinned OpenAI manifest, private app, and one-pager hashes with the current official GP source and preserve the explicit GP-only data boundary.",
+        "Authorize an eligible Chronograph GP account before testing authenticated tools/list, fund returns, investments, company metrics, valuations, reports, or reporting tasks.",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/chronograph-gp.zip"
+      ]
+    },
+    "chronograph-lp": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Chronograph",
+      "officialRepository": "https://github.com/chronograph-pe/chronograph-lp-claude-plugin",
+      "officialRevision": "6c18b66e882c44db26d88afabc52853ba39dcd98",
+      "license": "Apache-2.0",
+      "licenseEvidence": [
+        "Chronograph's pinned LP repository contains the Apache License 2.0 with SHA-256 c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c.",
+        "The license covers the published manifest, four skills, references, and analyst-agent text imported by Ghast. It does not transfer ownership of Chronograph's hosted MCP implementation, customer data, accounts, trademarks, or service terms.",
+        "Ghast uses a generic private-capital analytics icon and does not copy the OpenAI marketplace logo or imply Chronograph endorsement."
+      ],
+      "officialityEvidence": [
+        "The source repository is owned by the chronograph-pe GitHub organization, names Chronograph as author, links chronograph.pe, declares Apache-2.0, and identifies itself as the Chronograph LP plugin.",
+        "Pinned release 0.2.3 at 6c18b66e882c44db26d88afabc52853ba39dcd98 has Git tree 35ba3af039da16751f98876ba106fcbef0e1d604 and was authored and committed on August 10, 2026 by chronograph-actions using anthropic@chronograph.pe.",
+        "The official repository publishes four LP skills: cashflow forecasting, commitment pacing, GP-meeting preparation, and look-through exposure scans, plus a matching Chronograph LP analyst orchestrator.",
+        "The official README requires a Chronograph LP account and secure OAuth connection, states that skills do not fabricate figures, and requires source, currency, and as-of-date labeling.",
+        "Chronograph's official MCP service at https://ai.chronograph.pe/mcp publishes authorization metadata with canonical JSON SHA-256 fa60b66bdea943b01340ec978026a47094d827eeffea102909d002ca306736c8. It declares Chronograph login, authorization, token, registration, and revocation endpoints, authorization-code and refresh-token grants, public clients, and PKCE S256 support.",
+        "On August 13, 2026, missing and invalid Bearer initialize requests returned HTTP 401 with body SHA-256 values 2dff5f7489665b62bbd0be8ffd4a6931517cb4fec137bfb8d914d7949996cfc2 and ac9c6929e867798359cb9ef9e9fbd8ef194b4605483cc84cb8242b3a71f98212.",
+        "OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 identifies Chronograph as developer and contains cashflow forecasting, GP-meeting prep, a portfolio-company one-pager, and a private app connector. Its manifest and private app hashes are ba11b3fd9a2142968f01172cc646c68326fc0f57429d30fe26b4b955dfb4fc5f and 9d9830956695d30725b59fa0d706402a50657ffa8b82d959278661af170d2664."
+      ],
+      "codexCapabilities": [
+        "Find LP portfolio updates and summarize performance changes",
+        "Pull quarterly fund metrics and highlight risks",
+        "Compare portfolio KPIs and flag outliers",
+        "Forecast cashflows, prepare for GP meetings, and generate a portfolio-company one-pager"
+      ],
+      "ghastCapabilities": [
+        "The four current Chronograph-authored LP workflows for cashflow forecasting, commitment pacing, look-through exposure, and GP-meeting preparation",
+        "A portable routing skill adapted from Chronograph's official LP analyst orchestrator",
+        "Direct browser OAuth access to Chronograph's official hosted MCP endpoint with LP-role and net-performance enforcement",
+        "Current official scenario, source, currency, as-of, confidentiality, concentration, and human-review safeguards"
+      ],
+      "capabilityRelationship": "current-official-lp-suite-with-explicit-gp-one-pager-boundary",
+      "limitations": [
+        "Chronograph operates the hosted MCP implementation. Ghast redistributes only Apache-2.0 plugin source, compatibility edits, MCP configuration, and a generic icon.",
+        "A Chronograph LP account, browser authorization, customer portfolio data, role permissions, subscription, enabled MCP access, source coverage, and service limits remain user-managed.",
+        "Authenticated tools/list and private customer data were not accessed. Live tool names, schemas, annotations, permissions, and returned data are authoritative.",
+        "The portfolio-company one-pager shipped in the older Codex LP snapshot is explicitly GP-side in Chronograph's current official split and requires GP-only company financials and gross per-investment returns. Ghast places it in chronograph-gp rather than falsely exposing it under LP permissions.",
+        "Cashflow forecasts and pacing plans are scenario estimates driven by disclosed assumptions, not Chronograph-reported future values or recommendations to commit.",
+        "LP analysis must label net performance and must not substitute GP gross values, mix currencies or periods, or infer manager explanations not supported by source documents.",
+        "No OAuth client was registered, no browser sign-in was completed, and no token or customer record was retained during this audit."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Verify official revision 6c18b66e882c44db26d88afabc52853ba39dcd98, Git tree 35ba3af039da16751f98876ba106fcbef0e1d604, release authorship, Apache-2.0 license hash, manifest hash, README hash, four-skill inventory, references, and analyst-agent hash.",
+        "Verify Chronograph OAuth authorization metadata canonical JSON SHA-256 fa60b66bdea943b01340ec978026a47094d827eeffea102909d002ca306736c8.",
+        "Probe https://ai.chronograph.pe/mcp with missing and invalid Bearer initialize requests and confirm HTTP 401 plus body hashes 2dff5f7489665b62bbd0be8ffd4a6931517cb4fec137bfb8d914d7949996cfc2 and ac9c6929e867798359cb9ef9e9fbd8ef194b4605483cc84cb8242b3a71f98212.",
+        "Compare the pinned OpenAI manifest, private app, three skill bodies, and unchanged shared references with the current official LP source and current GP-only one-pager boundary.",
+        "Authorize an eligible Chronograph LP account before testing authenticated tools/list, portfolios, commitments, performance, exposure, documents, or manager reporting.",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/chronograph-lp.zip"
+      ]
+    },
     "circleci": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "CircleCI",

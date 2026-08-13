@@ -149,6 +149,23 @@ CUSTOM_ICONS = {
         '<circle cx="33" cy="23" r="2" fill="white" stroke="none"/>'
         '<circle cx="49" cy="11" r="2" fill="white" stroke="none"/>',
     ),
+    "chronograph-gp": (
+        "#315D61",
+        '<path d="M12 49h40"/>'
+        '<path d="M17 43V30h8v13M29 43V22h8v21M41 43V14h8v29"/>'
+        '<path d="M15 24l11-8 10 5 14-11"/>'
+        '<circle cx="26" cy="16" r="2" fill="white" stroke="none"/>'
+        '<circle cx="36" cy="21" r="2" fill="white" stroke="none"/>'
+        '<circle cx="50" cy="10" r="2" fill="white" stroke="none"/>',
+    ),
+    "chronograph-lp": (
+        "#3C6675",
+        '<circle cx="32" cy="32" r="20"/>'
+        '<path d="M32 12v40M12 32h40"/>'
+        '<path d="M18 22c8 5 20 5 28 0M18 42c8-5 20-5 28 0"/>'
+        '<path d="M32 18c6 5 9 10 9 14s-3 9-9 14"/>'
+        '<path d="M32 18c-6 5-9 10-9 14s3 9 9 14"/>',
+    ),
     "carta-crm": (
         "#2A6F62",
         '<rect x="11" y="13" width="42" height="38" rx="3"/>'
