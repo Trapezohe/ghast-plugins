@@ -129,6 +129,53 @@ child.on("exit", (code, signal) => {
   else process.exit(code === null ? 1 : code);
 });
 """
+APOLLO_MCP_URL = "https://mcp.apollo.io/mcp"
+APOLLO_OAUTH_METADATA_URL = (
+    "https://mcp.apollo.io/.well-known/oauth-protected-resource"
+)
+APOLLO_OAUTH_METADATA_SHA256 = (
+    "cac13d7ffc73ccd0a7bf8969a1c4e81c6d0312cc434f8db06a04313b74ddcef0"
+)
+APOLLO_AUTH_SERVER_URL = (
+    "https://mcp.apollo.io/.well-known/oauth-authorization-server"
+)
+APOLLO_AUTH_SERVER_SHA256 = (
+    "9c7ead914bbe7d24371e6bec067125b895b58135cb83193af822137c9d86b9b5"
+)
+APOLLO_SKILL_NAMES = (
+    "analytics",
+    "enrich-lead",
+    "prospect",
+    "sequence-load",
+)
+APOLLO_TOOL_NAMES = (
+    "apollo_analytics_sync_report",
+    "apollo_contacts_create",
+    "apollo_email_accounts_index",
+    "apollo_emailer_campaigns_add_contact_ids",
+    "apollo_emailer_campaigns_remove_or_stop_contact_ids",
+    "apollo_emailer_campaigns_search",
+    "apollo_mixed_companies_search",
+    "apollo_mixed_people_api_search",
+    "apollo_organizations_bulk_enrich",
+    "apollo_organizations_enrich",
+    "apollo_people_bulk_match",
+    "apollo_people_match",
+)
+APOLLO_REQUIRED_SCOPES = {
+    "people_bulk_match",
+    "organizations_bulk_enrich",
+    "organizations_enrich",
+    "people_match",
+    "mixed_people_api_search",
+    "mixed_companies_search",
+    "contact_write",
+    "emailer_campaigns_search",
+    "emailer_campaigns_add_contact_ids",
+    "emailer_campaigns_remove_or_stop_contact_ids",
+    "report_sync",
+    "email_accounts_list",
+}
 ASANA_MCP_URL = "https://mcp.asana.com/v2/mcp"
 ASANA_MCP_RESOURCE = "https://mcp.asana.com/v2"
 ASANA_TOOLS_URL = "https://developers.asana.com/docs/mcp-tools-reference.md"
@@ -593,6 +640,60 @@ PLUGINS = {
             (
                 "A generic analytics icon is used because the official "
                 "marketplace repository does not publish a catalog icon."
+            ),
+        ],
+    },
+    "apollo": {
+        "directory": "apollo-mcp-plugin",
+        "revision": "2adde980e45f421b7e9383d92870455627936bce",
+        "repository": "https://github.com/apolloio/apollo-mcp-plugin",
+        "plugin_root": ".",
+        "manifest": ".claude-plugin/plugin.json",
+        "license": "LICENSE",
+        "generated_icon": "./assets/icon.svg",
+        "category": "productivity",
+        "mcp": ".mcp.json",
+        "license_name": "MIT",
+        "description": (
+            "Prospect for people and companies, enrich leads, load reviewed "
+            "contacts into outreach sequences, and query sales analytics "
+            "through Apollo.io's official skills and hosted MCP server."
+        ),
+        "readme_provenance": (
+            "All four workflow skills, the MCP declaration, and license come "
+            "from Apollo.io's pinned MIT repository. Ghast changes only the "
+            "Claude-specific MCP tool namespace and three explicit credit, "
+            "personal-data, and sequence-mutation safety boundaries. The "
+            "hosted MCP service remains operated by Apollo.io."
+        ),
+        "compatibility_notes": [
+            (
+                "The Codex private app mapping is replaced by Apollo.io's "
+                "official https://mcp.apollo.io/mcp Streamable HTTP service "
+                "with browser OAuth."
+            ),
+            (
+                "Twenty Claude-specific tool references are mechanically "
+                "rewritten from mcp__claude_ai_Apollo_MCP__* to Ghast's "
+                "mcp__apollo__* namespace; tool suffixes and arguments are "
+                "unchanged."
+            ),
+            (
+                "Ghast requires explicit confirmation before credit-consuming "
+                "enrichment, defaults personal-email revelation to false "
+                "unless the user explicitly requests it, and requires fresh "
+                "confirmation before removing or stopping sequence contacts."
+            ),
+            (
+                "The public OAuth metadata currently advertises 67 scopes. "
+                "The four packaged skills exercise 12 confirmed tools, while "
+                "the hosted service may expose additional tools subject to "
+                "Apollo permissions, credits, plan, and future service "
+                "changes."
+            ),
+            (
+                "A generic prospecting icon is used because the official "
+                "repository does not publish a redistributable catalog icon."
             ),
         ],
     },
@@ -1757,6 +1858,7 @@ def main() -> int:
     verify_amplitude_evidence(
         source_root / PLUGINS["amplitude"]["directory"]
     )
+    verify_apollo_evidence(source_root / PLUGINS["apollo"]["directory"])
     verify_asana_evidence()
     verify_datadog_evidence()
     verify_deepnote_evidence()
@@ -2046,6 +2148,85 @@ def apply_ghast_compatibility(name: str, staging: Path) -> None:
                 '"${CLAUDE_PLUGIN_ROOT}/skills/expo-skill-feedback/scripts/telemetry.cjs"': (
                     '"<SKILL_DIR>/scripts/telemetry.cjs"'
                 )
+            },
+        )
+    elif name == "apollo":
+        skill_paths = sorted((staging / "skills").glob("*/SKILL.md"))
+        source_prefix = "mcp__claude_ai_Apollo_MCP__"
+        if sum(path.read_text().count(source_prefix) for path in skill_paths) != 20:
+            raise ValueError(
+                "Apollo tool namespace reference count changed; "
+                "re-audit required"
+            )
+        for skill_path in skill_paths:
+            rewrite_text(
+                skill_path,
+                {source_prefix: "mcp__apollo__"},
+                require_all=False,
+            )
+        rewrite_text(
+            staging / "skills/enrich-lead/SKILL.md",
+            {
+                (
+                    "> **Credit warning**: Tell the user enrichment consumes "
+                    "1 Apollo credit before calling."
+                ): (
+                    "> **Credit confirmation**: Tell the user enrichment "
+                    "consumes 1 Apollo credit and wait for explicit "
+                    "confirmation before calling."
+                ),
+                (
+                    "- Set `reveal_personal_emails` to `true`"
+                ): (
+                    "- Set `reveal_personal_emails` to `false` by default. "
+                    "Use `true` only when the user explicitly requests "
+                    "personal email data, confirms that it is necessary, "
+                    "and the use complies with applicable policy and law."
+                ),
+            },
+        )
+        rewrite_text(
+            staging / "skills/prospect/SKILL.md",
+            {
+                (
+                    "> **Credit warning**: Tell the user exactly how many "
+                    "credits will be consumed before proceeding."
+                ): (
+                    "> **Credit confirmation**: Tell the user exactly how "
+                    "many credits will be consumed and wait for explicit "
+                    "confirmation before proceeding."
+                ),
+                (
+                    "- `reveal_personal_emails` set to `true`"
+                ): (
+                    "- `reveal_personal_emails` set to `false` by default. "
+                    "Use `true` only when the user explicitly requests "
+                    "personal email data, confirms that it is necessary, "
+                    "and the use complies with applicable policy and law."
+                ),
+            },
+        )
+        rewrite_text(
+            staging / "skills/sequence-load/SKILL.md",
+            {
+                (
+                    "   - `reveal_personal_emails` set to `true`"
+                ): (
+                    "   - `reveal_personal_emails` set to `false` unless "
+                    "the user explicitly requested and confirmed personal "
+                    "email retrieval before the approved enrichment step"
+                ),
+                (
+                    "3. **Remove a contact** — Use "
+                    "`mcp__apollo__"
+                    "apollo_emailer_campaigns_remove_or_stop_contact_ids` "
+                    "to remove specific contacts"
+                ): (
+                    "3. **Remove a contact** — Show the exact contacts and "
+                    "sequence, require fresh confirmation, then use "
+                    "`mcp__apollo__"
+                    "apollo_emailer_campaigns_remove_or_stop_contact_ids`"
+                ),
             },
         )
     elif name == "asana":
@@ -3063,6 +3244,182 @@ def verify_amplitude_evidence(repository: Path) -> None:
     if sha256_bytes(bridge) != AMPLITUDE_MCP_REMOTE_SHA256:
         raise ValueError(
             "Pinned mcp-remote package changed; re-audit required"
+        )
+
+
+def verify_apollo_evidence(repository: Path) -> None:
+    source_skills = tuple(
+        sorted(
+            path.parent.name
+            for path in (repository / "skills").glob("*/SKILL.md")
+        )
+    )
+    if source_skills != APOLLO_SKILL_NAMES:
+        raise ValueError(
+            "Apollo official skill inventory changed; re-audit required"
+        )
+
+    manifest = json.loads(
+        (repository / ".claude-plugin/plugin.json").read_text()
+    )
+    if (
+        manifest.get("name") != "apollo"
+        or manifest.get("version") != "0.1.1"
+        or manifest.get("license") != "MIT"
+        or (manifest.get("author") or {}).get("name") != "Apollo.io"
+    ):
+        raise ValueError(
+            "Apollo official plugin manifest changed; re-audit required"
+        )
+
+    source_mcp = json.loads((repository / ".mcp.json").read_text())
+    if source_mcp != {
+        "mcpServers": {
+            "apollo": {
+                "type": "http",
+                "url": APOLLO_MCP_URL,
+            },
+        },
+    }:
+        raise ValueError(
+            "Apollo official MCP declaration changed; re-audit required"
+        )
+
+    server = json.loads((repository / "server.json").read_text())
+    if (
+        server.get("name") != "io.github.apolloio/apollo-mcp"
+        or server.get("version") != "0.1.1"
+        or server.get("repository", {}).get("url")
+        != "https://github.com/apolloio/apollo-mcp-plugin.git"
+        or server.get("remotes")
+        != [{"type": "streamable-http", "url": APOLLO_MCP_URL}]
+    ):
+        raise ValueError(
+            "Apollo MCP Registry metadata changed; re-audit required"
+        )
+
+    source_text = "\n".join(
+        (repository / "skills" / name / "SKILL.md").read_text()
+        for name in APOLLO_SKILL_NAMES
+    )
+    source_tools = tuple(
+        sorted(
+            set(
+                re.findall(
+                    r"mcp__claude_ai_Apollo_MCP__([A-Za-z0-9_]+)",
+                    source_text,
+                )
+            )
+        )
+    )
+    if source_tools != APOLLO_TOOL_NAMES:
+        raise ValueError(
+            "Apollo skill tool inventory changed; re-audit required"
+        )
+    if source_text.count("mcp__claude_ai_Apollo_MCP__") != 20:
+        raise ValueError(
+            "Apollo Claude-specific tool references changed; "
+            "re-audit required"
+        )
+
+    readme = (repository / "README.md").read_text()
+    for marker in (
+        "The official Apollo.io Model Context Protocol server",
+        "Official, first-party server built and maintained by",
+        APOLLO_MCP_URL,
+        "The Apollo MCP server uses **Apollo.io OAuth**",
+        "Some actions (such as enrichment) consume Apollo credits",
+        "**Confirm recipients** before adding anyone to an outreach sequence",
+        "io.github.apolloio/apollo-mcp",
+    ):
+        if marker not in readme:
+            raise ValueError(
+                f"Apollo official documentation is missing {marker!r}"
+            )
+
+    metadata = json.loads(fetch_bytes(APOLLO_OAUTH_METADATA_URL))
+    if canonical_json_sha256(metadata) != APOLLO_OAUTH_METADATA_SHA256:
+        raise ValueError(
+            "Apollo OAuth protected-resource metadata changed; "
+            "re-audit required"
+        )
+    if metadata.get("resource") != APOLLO_MCP_URL:
+        raise ValueError("Apollo OAuth resource URI changed")
+    if metadata.get("authorization_servers") != ["https://mcp.apollo.io"]:
+        raise ValueError("Apollo OAuth authorization server changed")
+    if metadata.get("bearer_methods_supported") != ["header"]:
+        raise ValueError("Apollo OAuth bearer method changed")
+    scopes = set(metadata.get("scopes_supported", []))
+    if len(scopes) != 67 or not APOLLO_REQUIRED_SCOPES.issubset(scopes):
+        raise ValueError("Apollo OAuth protected scopes changed")
+
+    auth_server = json.loads(fetch_bytes(APOLLO_AUTH_SERVER_URL))
+    if canonical_json_sha256(auth_server) != APOLLO_AUTH_SERVER_SHA256:
+        raise ValueError(
+            "Apollo OAuth authorization metadata changed; re-audit required"
+        )
+    if auth_server.get("issuer") != "https://mcp.apollo.io":
+        raise ValueError("Apollo OAuth issuer changed")
+    if auth_server.get("registration_endpoint") != (
+        "https://mcp.apollo.io/api/v1/oauth/applications/"
+        "register_oauth_client"
+    ):
+        raise ValueError("Apollo OAuth registration endpoint changed")
+    grants = auth_server.get("grant_types_supported", [])
+    if "authorization_code" not in grants or "refresh_token" not in grants:
+        raise ValueError("Apollo OAuth grant support changed")
+    if auth_server.get("code_challenge_methods_supported") != ["S256"]:
+        raise ValueError("Apollo OAuth server no longer requires PKCE S256")
+    if "none" not in auth_server.get(
+        "token_endpoint_auth_methods_supported", []
+    ):
+        raise ValueError("Apollo OAuth public client support changed")
+    if auth_server.get("scopes_supported") != metadata.get(
+        "scopes_supported"
+    ):
+        raise ValueError("Apollo OAuth scope documents differ")
+
+    initialize = json.dumps(
+        {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "method": "initialize",
+            "params": {
+                "protocolVersion": "2025-06-18",
+                "capabilities": {},
+                "clientInfo": {
+                    "name": "ghast-apollo-audit",
+                    "version": "1.0.0",
+                },
+            },
+        }
+    ).encode("utf-8")
+    request = urllib.request.Request(
+        APOLLO_MCP_URL,
+        data=initialize,
+        headers={
+            "User-Agent": "Mozilla/5.0",
+            "Content-Type": "application/json",
+            "Accept": "application/json, text/event-stream",
+        },
+        method="POST",
+    )
+    try:
+        urllib.request.urlopen(request, timeout=30)
+    except urllib.error.HTTPError as exc:
+        body = exc.read()
+        challenge = exc.headers.get("WWW-Authenticate", "")
+        if (
+            exc.code != 401
+            or b"Missing or invalid Authorization header" not in body
+            or APOLLO_OAUTH_METADATA_URL not in challenge
+        ):
+            raise ValueError(
+                "Apollo MCP unauthenticated endpoint behavior changed"
+            ) from exc
+    else:
+        raise ValueError(
+            "Apollo MCP endpoint unexpectedly accepted no credentials"
         )
 
 

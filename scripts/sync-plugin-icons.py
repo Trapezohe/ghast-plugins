@@ -57,6 +57,12 @@ CUSTOM_ICONS = {
         '<path d="M12 47h40M17 42V30h8v12M28 42V21h8v21M39 42V14h8v28"/>'
         '<path d="M15 25l11-8 10 5 14-11"/>',
     ),
+    "apollo": (
+        "#657000",
+        '<circle cx="25" cy="25" r="10"/>'
+        '<circle cx="25" cy="25" r="3" fill="white" stroke="none"/>'
+        '<path d="M32 32l13 13M40 45h10M45 40v10"/>',
+    ),
     "attio": (
         "#C55A45",
         '<rect x="12" y="13" width="40" height="38" rx="3"/>'

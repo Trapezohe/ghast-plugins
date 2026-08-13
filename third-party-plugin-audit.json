@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 9,
-      "official-source-research-required": 92,
-      "official-source-verified": 48
+      "official-source-research-required": 91,
+      "official-source-verified": 49
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 48,
-      "not-implemented": 101
+      "implemented-verified": 49,
+      "not-implemented": 100
     }
   },
   "excludedOpenAIPlugins": [
@@ -376,7 +376,7 @@
     },
     {
       "id": "apollo",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Apollo",
@@ -403,13 +403,69 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.apollo.io"
+        "homepage": "https://www.apollo.io",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Apollo.io",
+          "officialRepository": "https://github.com/apolloio/apollo-mcp-plugin",
+          "officialRevision": "2adde980e45f421b7e9383d92870455627936bce",
+          "license": "MIT",
+          "licenseEvidence": [
+            "LICENSE",
+            "The MIT license is copyright 2025 Apollo.io and covers the four workflow skills, plugin manifests, MCP configuration, registry metadata, and documentation in the pinned repository."
+          ],
+          "officialityEvidence": [
+            "The repository is owned by Apollo.io's official GitHub organization, identifies the service as the official first-party Apollo.io MCP server, and names Apollo.io as the plugin author.",
+            "Pinned tag v0.1.1 publishes four workflow skills, the official https://mcp.apollo.io/mcp endpoint, and MCP Registry metadata under io.github.apolloio/apollo-mcp.",
+            "Apollo.io's repository documents the hosted Streamable HTTP service, browser OAuth, account-permission enforcement, credit-consuming enrichment, outbound sequence risks, privacy guidance, and 12 tools confirmed by the bundled skills.",
+            "The live protected-resource and authorization-server metadata have canonical JSON SHA-256 hashes cac13d7ffc73ccd0a7bf8969a1c4e81c6d0312cc434f8db06a04313b74ddcef0 and 9c7ead914bbe7d24371e6bec067125b895b58135cb83193af822137c9d86b9b5.",
+            "On August 13, 2026, the OAuth server advertised 67 scopes, authorization-code and refresh-token grants, PKCE S256, public clients, and dynamic registration. An arbitrary localhost callback registered successfully with HTTP 201.",
+            "An unauthenticated initialize request returned HTTP 401 with an Apollo.io Bearer challenge pointing to the official protected-resource metadata."
+          ],
+          "codexCapabilities": [
+            "Search and qualify Apollo accounts and contacts, enrich records, and summarize prospect context through a private app connector",
+            "Create lists, log notes, generate tasks, and draft or assemble outbound through sequences under workspace permissions",
+            "Find verified contacts for an ICP, research companies and decision makers, and build outreach lists using growth or hiring signals"
+          ],
+          "ghastCapabilities": [
+            "Four official Apollo.io workflows for ICP prospecting, lead enrichment, reviewed sequence enrollment, and sales analytics",
+            "Twelve repository-confirmed tools for people and company search, individual and bulk enrichment, contact creation, sequence search and enrollment or removal, sending-account discovery, and analytics",
+            "Direct access to Apollo.io's official hosted MCP service, whose OAuth metadata also advertises list, task, message, opportunity, account, custom-object, visitor-intelligence, usage, and other scope families"
+          ],
+          "capabilityRelationship": "equivalent-confirmed-core-with-expanded-official-scopes",
+          "limitations": [
+            "An Apollo.io account, browser OAuth, workspace permissions, product plan, connected sending account, and sufficient Apollo credits remain user-managed.",
+            "The four official skills confirm 12 tools. The live service advertises 67 OAuth scopes, but authenticated tools/list and the broader list, task, message, opportunity, account, and visitor workflows were not exercised without a user account.",
+            "Enrichment consumes Apollo credits and bulk cost scales with volume. Ghast requires explicit confirmation after showing the exact estimated count.",
+            "Personal email and phone data are sensitive. Ghast defaults reveal_personal_emails to false and enables it only after an explicit, necessary, policy-compliant request.",
+            "Adding contacts to a sequence can begin external outreach immediately depending on sequence settings. Exact recipients, sequence, sending account, volume, and credit cost require confirmation.",
+            "Removing or stopping contacts, contact creation, and other state changes require exact target resolution and fresh confirmation. Ambiguous failures must not be blindly retried.",
+            "Users remain responsible for applicable privacy, marketing, anti-spam, and data-protection law and for their organization's policies.",
+            "Twenty Claude-specific MCP namespace references are mechanically adapted to mcp__apollo__ without changing tool suffixes or arguments.",
+            "The hosted server is not redistributed and can evolve independently of the pinned MIT skill source.",
+            "A generic prospecting icon is used because the official repository does not publish a redistributable catalog icon."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Compare all four skill trees with tag v0.1.1, allowing only the 20 documented MCP namespace substitutions and the explicit credit, personal-data, and sequence-mutation safety changes",
+            "Confirm the official source references exactly 12 expected Apollo tools and its .mcp.json and server.json both declare https://mcp.apollo.io/mcp",
+            "Verify the protected-resource and authorization-server canonical JSON hashes, all 67 scopes, PKCE S256, public-client support, and dynamic registration metadata",
+            "Confirm a localhost OAuth callback registered with HTTP 201 on August 13, 2026 without persisting the issued public client identifier",
+            "Probe the hosted MCP endpoint without authorization and confirm HTTP 401 plus the Apollo.io protected-resource challenge",
+            "Run the generated Ghast skills through a namespace and safety diff against the pinned official source",
+            "unzip -tqq packages/apollo.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "0.1.1-ghast.1",
+        "repository": "https://github.com/apolloio/apollo-mcp-plugin",
+        "upstreamRevision": "2adde980e45f421b7e9383d92870455627936bce",
+        "portStatus": "full"
       }
     },
     {

@@ -64,6 +64,36 @@
       "license": "MIT"
     },
     {
+      "id": "apollo",
+      "name": "apollo",
+      "description": "Prospect for people and companies, enrich leads, load reviewed contacts into outreach sequences, and query sales analytics through Apollo.io's official skills and hosted MCP server.",
+      "manifest": {
+        "name": "apollo",
+        "description": "Prospect for people and companies, enrich leads, load reviewed contacts into outreach sequences, and query sales analytics through Apollo.io's official skills and hosted MCP server.",
+        "author": {
+          "name": "Apollo.io",
+          "url": "https://www.apollo.io/"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "0.1.1-ghast.1",
+        "homepage": "https://www.apollo.io/",
+        "repository": "https://github.com/apolloio/apollo-mcp-plugin",
+        "upstreamRevision": "2adde980e45f421b7e9383d92870455627936bce",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/apollo.zip",
+        "sha256": "7fc27e37c8448be76fd0f66660df370f325f6dcf63468ac3a70b5e1a2879a081"
+      },
+      "icon": "./plugins/apollo/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://www.apollo.io/",
+      "repository": "https://github.com/apolloio/apollo-mcp-plugin",
+      "license": "MIT"
+    },
+    {
       "id": "asana",
       "name": "asana",
       "description": "Read and manage Asana tasks, subtasks, comments, due dates, projects, portfolios, status updates, teams, users, and workspace priorities through Asana's official V2 MCP server.",
