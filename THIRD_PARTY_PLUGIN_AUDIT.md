@@ -69,7 +69,7 @@ verification.
 | daloopa | Daloopa | appConnector, skills | Apache-2.0 | official-source-verified | implemented-verified |
 | datadog | Datadog | appConnector | Apache-2.0 | official-source-verified | implemented-verified |
 | datasite | Datasite | appConnector, skills | MIT | official-source-research-required | not-implemented |
-| deepnote | Deepnote | appConnector, skills | Apache-2.0 | official-source-research-required | not-implemented |
+| deepnote | Deepnote | appConnector, skills | Apache-2.0 | official-source-verified | implemented-verified |
 | demandbase | Demandbase Inc | appConnector | MIT | official-source-research-required | not-implemented |
 | digitalocean | DigitalOcean | appConnector, skills | none | blocked-license | not-implemented |
 | dnb-finance-analytics | Dun & Bradstreet | appConnector, skills | MIT | official-source-research-required | not-implemented |

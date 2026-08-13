@@ -649,6 +649,56 @@
         "unzip -tqq packages/datadog.zip"
       ]
     },
+    "deepnote": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Deepnote",
+      "officialRepository": "https://github.com/deepnote/codex-plugin",
+      "officialRevision": "46088505120f7056ccf2fed2f0b1039bd732ad54",
+      "license": "Apache-2.0",
+      "licenseEvidence": [
+        "LICENSE",
+        "The five developer-authored skills and SVG icon are copied from the pinned Apache-2.0 repository. The Ghast MCP transport declaration and deepnote-current-service skill are clearly identified compatibility additions distributed with the same license."
+      ],
+      "officialityEvidence": [
+        "The repository is owned by Deepnote's verified GitHub organization, whose verified domain is deepnote.com, and its manifest names Deepnote as the developer.",
+        "The pinned main-branch revision publishes plugin version 0.1.2, five skills, an official hosted MCP declaration, and Deepnote's SVG icon.",
+        "On August 13, 2026, Deepnote's official MCP documentation identified https://deepnote.com/mcp, API-key and OAuth authentication, and 24 tools.",
+        "The 24 documented tools include every one of the 19 tools named by the Codex private connector skills plus duplicate_notebook, generate_project_url, create_integration, attach_integration, and detach_integration.",
+        "The protected-resource and authorization-server metadata have canonical JSON SHA-256 hashes 7f4889f8f9f0a7364b0f1e7ae85a76e6e24ff3c67c2cd2825c244e9b17f4520d and 6332391ad5cacbbf24d11b2c2e8d24e8f296e66a6589b650a2114048d92cc6c5.",
+        "An unauthenticated MCP initialize request returns HTTP 401 with the official protected-resource challenge. Dynamic registration advertises PKCE S256 and public clients, but an arbitrary localhost callback returns HTTP 400 invalid_redirect_uri because callbacks are allowlisted.",
+        "Ghast's official runtime documentation at revision 1ea5204e07c27f6db7489e147fefcf0364d06822 documents streamable-http transport and Authorization headers backed by $VAULT interpolation."
+      ],
+      "codexCapabilities": [
+        "Identify and summarize a Deepnote workspace, search projects, notebooks, blocks, and integrations, and generate workspace-aware links",
+        "Inspect notebook structure, inputs, outputs, runs, run history, integration usage, and cached table or column structure",
+        "Create projects, notebooks, and blocks; update or reorder existing blocks; run notebooks with inputs; and read Deepnote product documentation"
+      ],
+      "ghastCapabilities": [
+        "All 19 Codex private-connector tools through Deepnote's current official hosted MCP service",
+        "Five additional official tools for notebook duplication, canonical project or notebook URLs, and integration creation, attachment, and detachment",
+        "Five byte-identical official Deepnote workflow skills, the official SVG icon, and a Ghast-authored current-service safety layer",
+        "Ghast-native streamable HTTP transport with the Deepnote API key held in the encrypted Profile Vault"
+      ],
+      "capabilityRelationship": "superset-official-hosted-mcp",
+      "limitations": [
+        "A Deepnote account, workspace access, an API key stored as the active Profile Vault secret deepnote-api-key, and the required product plan and role permissions remain user-managed.",
+        "The developer repository's May 20, 2026 source snapshot documents an older 15-tool service surface. The separate Ghast current-service skill records the 24-tool surface in Deepnote's current official documentation without modifying or misattributing the five source skills.",
+        "Deepnote advertises OAuth, but arbitrary third-party localhost callbacks are rejected by its allowlist. This package deliberately uses the documented API-key path instead of claiming unverified Ghast OAuth compatibility.",
+        "Authenticated tools/list and live read or write operations were not exercised without a user Deepnote account; effective tools can vary by role, workspace, plan, and future service changes.",
+        "Project, notebook, block, run, and integration writes can be non-idempotent, costly, or affect external data and require explicit target resolution and confirmation.",
+        "Integration credentials must not be pasted into chat. Credential-bearing integration setup should use Deepnote's own secure UI or another approved secret-entry mechanism.",
+        "The Apache-2.0 license covers the published plugin source and Ghast additions, not Deepnote's closed hosted service, accounts, data, trademarks, or service terms."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Compare all five developer-authored Deepnote SKILL.md files, the SVG icon, and LICENSE byte-for-byte with revision 46088505120f7056ccf2fed2f0b1039bd732ad54",
+        "Parse Deepnote's official MCP documentation and confirm the exact ordered 24-tool inventory contains every Codex private-connector tool",
+        "Verify the protected-resource and authorization-server metadata hashes, PKCE S256 support, public-client metadata, and unauthenticated HTTP 401 challenge",
+        "Confirm arbitrary localhost dynamic registration returns invalid_redirect_uri and retain the API-key transport",
+        "Compare the generated streamable-http and $VAULT header configuration with Ghast_Doc revision 1ea5204e07c27f6db7489e147fefcf0364d06822",
+        "unzip -tqq packages/deepnote.zip"
+      ]
+    },
     "expo": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Expo",

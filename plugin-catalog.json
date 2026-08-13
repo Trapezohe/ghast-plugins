@@ -404,6 +404,36 @@
       "license": "Apache-2.0"
     },
     {
+      "id": "deepnote",
+      "name": "deepnote",
+      "description": "Search, inspect, create, edit, link, and run Deepnote projects and notebooks through Deepnote's official hosted MCP server.",
+      "manifest": {
+        "name": "deepnote",
+        "description": "Search, inspect, create, edit, link, and run Deepnote projects and notebooks through Deepnote's official hosted MCP server.",
+        "author": {
+          "name": "Deepnote",
+          "url": "https://deepnote.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "0.1.2-ghast.1",
+        "homepage": "https://deepnote.com/docs/deepnote-mcp",
+        "repository": "https://github.com/deepnote/codex-plugin",
+        "upstreamRevision": "46088505120f7056ccf2fed2f0b1039bd732ad54",
+        "license": "Apache-2.0",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/deepnote.zip",
+        "sha256": "942dd9bbb87eab8694ba192d64afbbec2d78df3e54cf9fb49b345f490df4d0e2"
+      },
+      "icon": "./plugins/deepnote/assets/icon.svg",
+      "category": "data",
+      "homepage": "https://deepnote.com/docs/deepnote-mcp",
+      "repository": "https://github.com/deepnote/codex-plugin",
+      "license": "Apache-2.0"
+    },
+    {
       "id": "defillama",
       "name": "defillama",
       "description": "Skill for looking up DeFi protocol TVL, chain stats, and ranking via the free DeFi Llama API.",

@@ -32,6 +32,7 @@ LOCAL_ICONS = {
     "base44": "assets/icon.png",
     "boltz-api-cli": "assets/icon.png",
     "cloudflare": "assets/icon.svg",
+    "deepnote": "assets/icon.svg",
     "expo": "assets/icon.png",
     "hyperframes": "assets/icon.png",
     "heygen": "assets/icon.png",

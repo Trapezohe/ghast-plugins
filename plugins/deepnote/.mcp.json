@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "deepnote": {
+      "url": "https://deepnote.com/mcp",
+      "transport": "streamable-http",
+      "headers": {
+        "Authorization": "Bearer $VAULT:deepnote-api-key"
+      }
+    }
+  }
+}
