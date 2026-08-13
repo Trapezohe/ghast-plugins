@@ -146,6 +146,12 @@ CUSTOM_ICONS = {
         '<path d="M23 47c5-5 9-6 12-2 3 3 7 2 12-3"/>'
         '<path d="M24 52h24"/>',
     ),
+    "lovable": (
+        "#D84A2B",
+        '<rect x="10" y="12" width="44" height="40" rx="4"/>'
+        '<path d="M10 22h44M18 17h.01M24 17h.01M30 17h.01"/>'
+        '<path d="m25 32-6 5 6 5M39 32l6 5-6 5M35 28l-6 18"/>',
+    ),
     "fireflies": (
         "#B34F55",
         '<rect x="12" y="14" width="40" height="37" rx="4"/>'

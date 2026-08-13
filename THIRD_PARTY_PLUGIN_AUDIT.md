@@ -102,7 +102,7 @@ verification.
 | intercom | Intercom | appConnector | MIT | official-source-verified | implemented-verified |
 | jam | Jam | appConnector | MIT | official-source-research-required | not-implemented |
 | keybid-puls | KeyBid | appConnector | MIT | official-source-research-required | not-implemented |
-| lovable | Lovable | appConnector | MIT | official-source-research-required | not-implemented |
+| lovable | Lovable | appConnector | MIT | official-source-verified | implemented-verified |
 | lseg | LSEG | appConnector | MIT | official-source-research-required | not-implemented |
 | magicpath | MagicPathAI | skills | UNLICENSED | blocked-license | not-implemented |
 | marcopolo | Immersa, Inc. | appConnector | MIT | official-source-research-required | not-implemented |

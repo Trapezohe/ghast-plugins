@@ -1266,6 +1266,64 @@
         "unzip -tqq packages/docusign.zip"
       ]
     },
+    "lovable": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Lovable",
+      "officialRepository": "https://github.com/lovablelabs/mcp",
+      "officialRevision": "0336e6db8026b0f02cb89d1451cc48ea3f469791",
+      "license": "Apache-2.0",
+      "licenseEvidence": [
+        "lovablelabs/mcp revision 0336e6db8026b0f02cb89d1451cc48ea3f469791 contains an Apache License 2.0 file with SHA-256 cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.",
+        "The official plugin manifest declares Apache-2.0.",
+        "The Ghast package contains the Apache-2.0 license and independently authored adapter metadata, safety guidance, and generic artwork. It does not redistribute Lovable's hosted MCP implementation or OpenAI marketplace artwork."
+      ],
+      "officialityEvidence": [
+        "Lovable's official documentation identifies https://mcp.lovable.dev as its hosted Streamable HTTP MCP server for building, inspecting, iterating, and deploying Lovable apps.",
+        "The official lovablelabs/mcp repository calls this the official Lovable MCP server, documents Codex CLI installation and login, publishes the same endpoint in its MCP registry entry, and is pinned at revision 0336e6db8026b0f02cb89d1451cc48ea3f469791.",
+        "The repository's README publishes OAuth client ID 6d465f583e1e4ce5801b1616f735670c for generic clients. A disposable runtime test used that public client to discover https://lovable.dev/oauth and reach the PKCE browser authorization wait state.",
+        "The official MCP documentation has SHA-256 8dbf8a5024503f837f99cc1c7870c740e0e5e0ff7449ed9b7d788af1449f7278 and lists 41 standard tools plus render_project_widget for MCP App hosts and import-claude-design-from-url for Claude clients.",
+        "The server-maintained public skill has SHA-256 1171007e1580a6526aa2e20d4faa6bbacf621761ad8c3dbe5c34ed7ec5c6c7c5, includes a Codex setup command, documents 33 unique client-relevant tool names, retry deduplication, and the recommended create, diff, iterate, and deploy workflow.",
+        "The protected-resource and authorization-server metadata canonical JSON hashes are 6208a9f26a9c3a2a1b42dafc6e5122772a165da5f022b93ef212c8877f4072d6 and 908c30410a805628c70620212c4510f819c8233db168f2a360cabb4f21233605. They declare bearer-header tokens, authorization code and refresh token grants, public clients, dynamic registration, and PKCE S256.",
+        "Unauthenticated and invalid-token MCP initialize requests return HTTP 401 with the official protected-resource challenge.",
+        "OpenAI's pinned Codex plugin snapshot identifies Lovable as the developer and describes full-stack app and website creation, backend, database and authentication setup, build status, URLs, screenshots, project discovery, recent-change review, ship-readiness review, and prompt drafting. The manifest and private connector declaration hashes are f225fca84157a60c7a411713fc5d438a33b1e0248dc158496aa208fe081881af and 52620409dae5cf6620bc78d13bf693e4b7e96e603b504fc6778624a239d26aa3."
+      ],
+      "codexCapabilities": [
+        "Find Lovable projects and summarize recent changes",
+        "Review a project and identify what is ready to ship",
+        "Draft a Lovable prompt to add authentication",
+        "Create full-stack applications and websites from prompts with backend, database, authentication, build status, URLs, and screenshots"
+      ],
+      "ghastCapabilities": [
+        "The same official project discovery, change review, ship-readiness, prompt drafting, full-stack build, backend, database, authentication, URL, screenshot, and deployment workflows",
+        "Official workspace, project, template, design-system, folder, remix, visibility, knowledge, workspace-skill, code-inspection, message-history, upload, connector, analytics, and cloud-database operations",
+        "Direct OAuth access through Lovable's official hosted MCP endpoint and documented public client ID without an OpenAI private connector",
+        "Explicit credit, code-change, deployment, visibility, knowledge replacement, connector removal, provisioning, and SQL safety gates"
+      ],
+      "capabilityRelationship": "official-runtime-superset-with-public-guidance",
+      "limitations": [
+        "The hosted MCP implementation remains operated by Lovable and is not present in the public integration repository. The repository contains manifests, commands, security policy, registry metadata, and setup documentation.",
+        "A Lovable account, browser OAuth, full-account authorization, workspace permissions, credits, plan features, Enterprise third-party MCP policy, SSO session lifetime, project access, and network connectivity remain user-managed.",
+        "The official docs list 41 standard tools, while the public skill lists 33 unique client-relevant names and includes render_project_widget. Ghast records these client and publication differences and requires live authenticated discovery before promising exact availability.",
+        "The endpoint root metadata says API-key or OAuth authentication, while the current official documentation says API keys are unavailable and OAuth is the only supported path. Ghast uses OAuth.",
+        "create_project and send_message consume Lovable credits and modify real projects. deploy_project publishes a live URL. query_database has full read, write, and schema permissions.",
+        "The OAuth connection has the user's full Lovable account access rather than project-only scope. Project code, databases, workspace knowledge, custom skills, connector data, analytics, and uploads can be sensitive.",
+        "Authenticated tools/list and real project operations were not run because no Lovable account was supplied.",
+        "A generic app-builder icon is used because the official integration repository does not contain redistributable catalog artwork."
+      ],
+      "verification": [
+        "python3 scripts/import-official-hosted-plugins.py",
+        "Verify lovablelabs/mcp revision 0336e6db8026b0f02cb89d1451cc48ea3f469791 and pinned hashes for LICENSE, README, SECURITY.md, .mcp.json, server.json, plugin and marketplace manifests, and the three official commands",
+        "Verify official documentation and public skill SHA-256 hashes 8dbf8a5024503f837f99cc1c7870c740e0e5e0ff7449ed9b7d788af1449f7278 and 1171007e1580a6526aa2e20d4faa6bbacf621761ad8c3dbe5c34ed7ec5c6c7c5",
+        "Confirm the ordered 41-name documentation inventory hash 73d262221b04500bf25592d167a5453cd65604ef9b49780efe2d266e5d18ecfc and ordered 33-name public-skill inventory hash 693b38042d0badeaae45b29197cddb5121006fb14f10e961a18b41f2a0183702",
+        "Verify canonical protected-resource and authorization-server metadata hashes 6208a9f26a9c3a2a1b42dafc6e5122772a165da5f022b93ef212c8877f4072d6 and 908c30410a805628c70620212c4510f819c8233db168f2a360cabb4f21233605",
+        "Probe https://mcp.lovable.dev with missing and invalid credentials and confirm HTTP 401 plus the official OAuth challenge",
+        "Start a disposable localhost OAuth flow with official public client ID 6d465f583e1e4ce5801b1616f735670c and confirm authorization-server discovery, PKCE S256, documented scopes, and browser authorization startup",
+        "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Lovable manifest and connector hashes and compare all default workflows with the official hosted tools",
+        "Authorize a Lovable account before testing authenticated tools/list, credits, projects, code, databases, connectors, analytics, or deploys",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/lovable.zip"
+      ]
+    },
     "expo": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Expo",
