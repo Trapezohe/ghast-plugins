@@ -315,6 +315,14 @@ CUSTOM_ICONS = {
         '<circle cx="35" cy="35" r="2" fill="white"/>'
         '<circle cx="48" cy="18" r="2" fill="white"/>',
     ),
+    "scite": (
+        "#28705D",
+        '<path d="M13 14h27l8 8v17"/>'
+        '<path d="M40 14v10h8M20 27h18M20 35h11M20 43h8"/>'
+        '<circle cx="41" cy="42" r="9"/>'
+        '<path d="M48 49l6 6"/>'
+        '<path d="M37 39l-2 3 2 3M45 39l2 3-2 3"/>',
+    ),
     "signnow": (
         "#176B5B",
         '<path d="M17 11h25l8 8v34H17z"/>'

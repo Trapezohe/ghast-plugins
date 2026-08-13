@@ -3276,6 +3276,77 @@
         "unzip -tqq packages/replit.zip"
       ]
     },
+    "scite": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Scite",
+      "officialRepository": "https://github.com/scitedotai/scite-mcp-skill",
+      "officialRevision": "9f3e3cd02c477e16c0a9b5c9114c9692d9a73317",
+      "license": "MIT",
+      "licenseEvidence": [
+        "The official scitedotai/scite-mcp-skill repository at revision 9f3e3cd02c477e16c0a9b5c9114c9692d9a73317 contains an MIT License with Copyright 2026 scite, Inc.; its LICENSE SHA-256 is a966b74650ff29ba15438f9382e2a1a0f9ef24761ec31fb851cc62dc30063780.",
+        "The official repository README and SKILL.md have SHA-256 values 087062c06fb7e6beb21e400ca3b10594eb945658e2a7d3eef07ba4e01b16cb69 and 8fe719117b30d6fac41cd6bc63a8ffbf7e995a413587acdb37d89768654e54fe.",
+        "plugins/scite/LICENSE licenses only the independently authored Ghast adapter, safety guidance, documentation, and generic icon. No Scite hosted implementation, private Codex connector, credential, corpus, collection, proprietary citation model, branded icon, or marketplace artwork is redistributed."
+      ],
+      "officialityEvidence": [
+        "Scite's official MCP documentation identifies https://api.scite.ai/mcp as its hosted server and states that the same Scite tools power its first-party ChatGPT plugin and Claude connector.",
+        "The official MCP overview, coding-agent, authentication, and Search guides have SHA-256 values c08e15802a061de741a8f297e87520bbd07b76c5dda69b27d93fe0f1fd694f45, cd0d02523607bef72859908f83854fc0a842635dcf3f878b61ba176c03711a32, b5954817ea50850f85e6ed9680fb51fec753b742c3ec1266279ece670b9bdf96, and 27a710ab2fe11904c1fbb64c71124b9d92a2f11cb08c59fc15b877b2a2341b1f.",
+        "The official scitedotai GitHub organization publishes the MIT scite-mcp-skill repository as a client skill for the Scite MCP server. Its pinned 2026 source documents the original search_literature workflow, Smart Citations, editorial notices, DOI verification, full-text excerpts, and non-fabrication requirements.",
+        "On August 13, 2026, the live /mcp/info endpoint identified scite-api-mcp 1.0.0, protocol 2025-06-18, and an exact ordered 25-tool inventory. Its canonical response SHA-256 is 7b9b7e9049bf324468c8c7b086322726ff36db9b7d33d5ffd5e05f596fc6dcf6.",
+        "The live ordered tool-name SHA-256 is 6c1d660c935a050ea8978174321ac4f007acedfdd94dbf500d3e83a406bd1b81 and the complete normalized descriptions, schemas, titles, and annotations SHA-256 is f59f02f87994d39dcae0bd63e8c000927f333888016663819c1f8e682140585e.",
+        "The live annotations classify 20 literature, patent, trial, grant, regulatory, adverse-event, drug, and collection retrieval tools as read-only. Five collection tools are state-changing; delete_collection and remove_dois_from_collection are destructive, and create_collection is non-idempotent.",
+        "The live server publishes four prompts for literature reviews, claim checking, systematic-review screening, and bibliography verification. Their ordered-name and complete normalized definition SHA-256 values are d51bc5f4ebdc3e769baeaec57b888d087bae0041dbe08806516941a33f563b86 and 46439a5bccc43ebb1c3f8d06c2244e4e93652815a216ff61474f6c79868b337c.",
+        "The protected-resource and authorization-server metadata canonical JSON SHA-256 values are 9ee615b8e06246903cc05bedec3606914c7206bdfc8738c41d2e21c4fde8e9d1 and 5b1fd2b681cb4b704008c8176fed5286891d927fe59ff6c06148a8ce48e4a76c. They declare mcp and offline_access scopes, authorization code, refresh tokens, public clients, Dynamic Client Registration, and PKCE S256.",
+        "On August 13, 2026, missing and invalid Bearer initialization both returned MCP success plus Scite's OAuth resource challenge. Unauthenticated tools/list and prompts/list exposed the complete live schemas, and a read-only DOI lookup returned the verified paper Array programming with NumPy for DOI 10.1038/s41586-020-2649-2.",
+        "The public /mcp/health response had canonical SHA-256 0863d9dc92b8b6d3bf3b30f7ae1e7238e717ceab943fbb81d18cb015b2781979 and still listed only search_literature, while /mcp/info and live tools/list exposed 25 tools. This server metadata drift is explicitly recorded.",
+        "OpenAI's pinned Codex plugin snapshot identifies Scite as the developer and describes real scientific sources, supporting, disputed, and contextualizing citations, citation-based ranking, and the recent adolescent screen-time research workflow. The manifest and private connector hashes are af412749987dfddc4bfbdc6371407a1e664a743ee4564ea6a1e95450308e281e and d477f52eef5ff66140e560cbfbdf7e0e70653521c6afe9e81340bb337c4831c5."
+      ],
+      "codexCapabilities": [
+        "Answer research questions with peer-reviewed scientific sources that users can verify",
+        "Show whether cited studies are supported, disputed, or contextualized by other researchers through Scite citation evidence",
+        "Prioritize trustworthy research through Scite's proprietary citation-based ranking",
+        "Find the latest research on a topic such as adolescent screen time"
+      ],
+      "ghastCapabilities": [
+        "The same official literature-search, DOI lookup, full-text excerpt, Smart Citation, citation-tally, editorial-notice, access-link, evidence synthesis, and reference-verification workflows",
+        "Current official patent, clinical-trial, research-grant, FDA 510(k), MHRA alert, MAUDE, FAERS, FDA label, Orange Book, and Drugs@FDA discovery and detail retrieval",
+        "Official Scite collection listing and retrieval plus explicitly confirmed creation, metadata or visibility updates, DOI replacement, DOI addition, DOI removal, and permanent deletion",
+        "Four official guided workflows for literature review, scientific claim checking, systematic-review screening, and bibliography verification",
+        "Direct provider-hosted OAuth without OpenAI's private connector, plus Scite's documented mcp-scoped API-key option for programmatic clients"
+      ],
+      "capabilityRelationship": "official-hosted-superset",
+      "limitations": [
+        "The hosted MCP implementation, corpus, citation classifier, ranking model, Evidence datasets, and account collections are operated by Scite and are not redistributed. The MIT licenses apply to the official public client skill and the separately authored Ghast adapter, not the hosted service.",
+        "A Scite account, premium subscription or mcp-scoped key, OAuth authorization, plan entitlements, Evidence scopes, collection permissions, quotas, service availability, and network connectivity remain user-managed.",
+        "Scite states that commercial or research use of Search beyond evaluation requires a separate license agreement and is not covered by individual plans. The plugin cannot grant or infer those rights.",
+        "Self-service keys can redact citation text. Every result must check snippetHidden; an empty snippet is not evidence that a citation relationship does not exist.",
+        "Smart Citation labels describe how a source is cited and are not independent proof of truth, causality, replication, consensus, or methodological quality. Supporting, contrasting, mentioning, and unclassified evidence must remain distinguishable.",
+        "The current live search_literature schema exposes date filters but no sort parameter. A request for the latest research requires an exact search date, bounded date filters, returned-date comparison, and a disclosure that relevance-ranked results may not be exhaustive.",
+        "Full-text excerpts depend on open-access availability and indexing. Abstracts, snippets, access links, citations, editorial notices, and regulator imports can be incomplete, delayed, redacted, corrected, or stale.",
+        "Patents, grants, clinical-trial registrations, 510(k) clearances, MHRA alerts, drug records, MAUDE reports, and FAERS reports have distinct evidentiary limits. In particular, spontaneous adverse-event report counts cannot establish causation or incidence.",
+        "Five collection tools can change durable account data or public visibility. Updating with a dois array replaces the full DOI list; removal affects saved-search exclusions; deletion is irreversible; creation is non-idempotent. Every write requires fresh state, exact diffs, and explicit confirmation.",
+        "The official source skill describes one tool, while the current hosted server exposes 25. The live authenticated schema is authoritative and future changes require re-audit.",
+        "The public health endpoint reports only the original literature tool and conflicts with the live catalog. Clients must not use that stale list as the complete capability surface.",
+        "Scite advertises Dynamic Client Registration, but a direct audit registration request was blocked by its CloudFront layer with HTTP 403. Browser OAuth and DCR were not independently completed in this environment.",
+        "Unauthenticated initialization, tools/list, prompts/list, and one read-only DOI lookup were verified. No Scite account, protected Evidence entitlement, private collection, collection write, API key, OAuth token, or commercial search workflow was accessed.",
+        "A generic research-evidence icon is used because no redistributable catalog artwork license was identified."
+      ],
+      "verification": [
+        "python3 scripts/import-official-hosted-plugins.py",
+        "Verify scitedotai/scite-mcp-skill revision 9f3e3cd02c477e16c0a9b5c9114c9692d9a73317 and source LICENSE, README, and SKILL.md SHA-256 values a966b74650ff29ba15438f9382e2a1a0f9ef24761ec31fb851cc62dc30063780, 087062c06fb7e6beb21e400ca3b10594eb945658e2a7d3eef07ba4e01b16cb69, and 8fe719117b30d6fac41cd6bc63a8ffbf7e995a413587acdb37d89768654e54fe",
+        "Verify official MCP overview, coding-agent, authentication, and Search documentation SHA-256 values c08e15802a061de741a8f297e87520bbd07b76c5dda69b27d93fe0f1fd694f45, cd0d02523607bef72859908f83854fc0a842635dcf3f878b61ba176c03711a32, b5954817ea50850f85e6ed9680fb51fec753b742c3ec1266279ece670b9bdf96, and 27a710ab2fe11904c1fbb64c71124b9d92a2f11cb08c59fc15b877b2a2341b1f",
+        "Verify /mcp/info canonical SHA-256 7b9b7e9049bf324468c8c7b086322726ff36db9b7d33d5ffd5e05f596fc6dcf6 and its exact 25-tool inventory",
+        "Initialize the official endpoint without credentials, verify canonical response SHA-256 8a55422a50534a71ad6b19b40af553ab182e1628b5472156ba05a3bfe5f0455a, and confirm the OAuth challenge and server identity",
+        "Call tools/list and verify ordered-name SHA-256 6c1d660c935a050ea8978174321ac4f007acedfdd94dbf500d3e83a406bd1b81, complete definition SHA-256 f59f02f87994d39dcae0bd63e8c000927f333888016663819c1f8e682140585e, 20 read-only tools, five writes, two destructive writes, and one non-idempotent creation tool",
+        "Call prompts/list and verify four prompt names with SHA-256 d51bc5f4ebdc3e769baeaec57b888d087bae0041dbe08806516941a33f563b86 and complete definition SHA-256 46439a5bccc43ebb1c3f8d06c2244e4e93652815a216ff61474f6c79868b337c",
+        "Run the bounded read-only DOI lookup for 10.1038/s41586-020-2649-2 and confirm the exact paper title Array programming with NumPy",
+        "Verify canonical protected-resource and authorization-server metadata SHA-256 values 9ee615b8e06246903cc05bedec3606914c7206bdfc8738c41d2e21c4fde8e9d1 and 5b1fd2b681cb4b704008c8176fed5286891d927fe59ff6c06148a8ce48e4a76c",
+        "Verify /mcp/health canonical SHA-256 0863d9dc92b8b6d3bf3b30f7ae1e7238e717ceab943fbb81d18cb015b2781979 and retain the documented one-tool-versus-25-tool metadata discrepancy",
+        "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Scite manifest and connector hashes and compare the recent-research workflow with the official literature and citation evidence tools",
+        "Authorize an eligible Scite account before testing private collections, protected Evidence datasets, unredacted citation snippets, or collection mutations",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/scite.zip"
+      ]
+    },
     "semrush": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Semrush",

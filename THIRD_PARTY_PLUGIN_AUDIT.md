@@ -144,7 +144,7 @@ verification.
 | responsive | RFPIO Inc. (d/b/a Responsive) | appConnector | MIT | official-source-research-required | not-implemented |
 | rox | Rox Data Corp | appConnector | MIT | official-source-research-required | not-implemented |
 | s-p | S&P Global | appConnector | MIT | official-source-research-required | not-implemented |
-| scite | Scite | appConnector | MIT | official-source-research-required | not-implemented |
+| scite | Scite | appConnector | MIT | official-source-verified | implemented-verified |
 | semrush | Semrush Holdings, Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | setu-bharat-connect-billpay | Setu | appConnector | MIT | official-source-research-required | not-implemented |
 | shopify | Shopify | appConnector, skills | MIT | official-source-verified | implemented-verified |
