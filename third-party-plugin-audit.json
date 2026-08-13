@@ -2331,7 +2331,7 @@
           "verificationStatus": "official-source-verified",
           "officialDeveloper": "Clay",
           "officialRepository": null,
-          "officialRevision": "clay-docs-52d04c63c45b+openapi-258cc399172d+oauth-f114e17a4bc5+source-4ab1ca54c908",
+          "officialRevision": "clay-product-99faa3c0f6c5+docs-52d04c63c45b+openapi-258cc399172d+oauth-f114e17a4bc5+source-4ab1ca54c908",
           "license": "MIT",
           "licenseEvidence": [
             "plugins/clay/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic prospect-research icon.",
@@ -2340,12 +2340,12 @@
           ],
           "officialityEvidence": [
             "Clay's official MCP product page says Clay brings first- and third-party data and Ops-managed workflows into AI tools so users can find contacts, retrieve emails and phone numbers, and push records to sequences with governance over compliance, spend, and CRM write-backs.",
-            "The official MCP product, connection, security, and troubleshooting pages have normalized visible-text SHA-256 values 6b44d0b089d69a8c3228afcec15b0eed7cf3be769f1906c696435b9c751eeef8, 52d04c63c45b9bbc09001cd99eb4a05cfd9a78b19ec076c1d95b12cafc9ee8e9, 28914f9149135b4a559230cd40cf90176097e4d6e12c26109a9076d6f8181ca2, and 7a968287f91c9c9a270f3a44fb544317e0780d3a1a0f8d38d56e7d10ef681ca9.",
+            "The official MCP product core, connection, security, and troubleshooting pages have normalized visible-text SHA-256 values 99faa3c0f6c5c87017292b8f92cb114c057a32cd858da0f863fe1c984c0418f5, 52d04c63c45b9bbc09001cd99eb4a05cfd9a78b19ec076c1d95b12cafc9ee8e9, 28914f9149135b4a559230cd40cf90176097e4d6e12c26109a9076d6f8181ca2, and 7a968287f91c9c9a270f3a44fb544317e0780d3a1a0f8d38d56e7d10ef681ca9. The product core excludes global navigation, promotional banners, customer stories, and the footer.",
             "Clay's official connection guide publishes https://api.clay.com/v3/mcp, its protected-resource and authorization metadata, Dynamic Client Registration, public PKCE clients, session IDs, and the complete production endpoint table.",
             "The protected-resource and authorization-server metadata canonical JSON hashes are f114e17a4bc5a52dec7580042a865cdab90c2b1bd60f2f14def6d3c86d532d45 and 09ef6e27492c1b3b1d34f0477b388095a39380ed1dda9bfcbbb7c0af1014fc8b. They publish mcp scope, authorization-code, refresh-token, and device-code grants, Dynamic Client Registration, public clients, and PKCE S256.",
-            "Clay's official developer documentation publishes local clay mcp support for Codex, Claude Code, and Cursor plus company and people searches, Clay-managed functions, enrichment, agent workflows, and a public OpenAPI.",
+            "Clay's current official developer-document index and Quickstart publish the agent plugin for Codex, Claude Code, and Cursor plus company and people searches, Clay-managed functions, enrichment, agent workflows, and a public OpenAPI. On August 13, 2026, the index no longer listed the former standalone local MCP guide and that guide returned HTTP 404.",
             "The public OpenAPI has raw and canonical SHA-256 values 258cc399172d40533db4d88844a80b86d804cc4b58f0224169fa2aa076827f0e and a95679fb7672d8d0fae3ad073f96378e273bc3532ea7fb4d416b2aa9ed4add3a. It contains five GET and eight POST operations for identity, routine execution and results, batch upload, search, references, and Enterprise table queries.",
-            "Clay's official Quickstart links clay-run/agent-plugins as the agent plugin for Codex, Claude Code, and Cursor. Revision 4ab1ca54c908e04b52123234405e1bb1aac4199a has Git tree 37f207938630ea88e7e3b45c78540bf665f02aab and contains 21 skills, a Codex Read/Write manifest, hooks, and a checksum-verifying wrapper for CLI v0.3.0.",
+            "Clay's official Quickstart links clay-run/agent-plugins as the agent plugin for Codex, Claude Code, and Cursor. The latest revision on August 13, 2026, 4ab1ca54c908e04b52123234405e1bb1aac4199a, has Git tree 37f207938630ea88e7e3b45c78540bf665f02aab and contains 21 skills, a Codex Read/Write manifest, mcp.codex.json invoking ./clay mcp, hooks, and a checksum-verifying wrapper for CLI v0.3.0. The repository description still identifies skills, MCP tools, and the Clay CLI, so the current repository and hosted MCP evidence remain stronger than the temporarily reduced developer-document index.",
             "The official CLI v0.3.0 Darwin arm64 binary downloaded through the pinned wrapper matched SHA-256 7155da2313a1fa1e65c6d862cfd2f3f25ee61f2c90e18318a8a076860f8ce265. Without a user session, clay mcp returned auth_required before exposing workspace-dependent tools.",
             "On August 13, 2026, missing and invalid Bearer initialize requests returned HTTP 401 with Clay's official protected-resource challenge and identical body SHA-256 7fe66b771b819e775f5b2e6afec58137720fd541f049f8569e10a75e3d0d0d2a.",
             "A disposable loopback public client registered with HTTP 201, no client secret, authorization-code and refresh-token grants, and mcp scope. A PKCE authorization request reached Clay's official browser authorization page.",
@@ -2379,8 +2379,8 @@
           ],
           "verification": [
             "Run the Clay evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
-            "Verify the four official MCP product, connection, security, and FAQ visible-text hashes recorded in plugins/clay/README.md",
-            "Verify the six official developer Markdown hashes, public OpenAPI raw and canonical hashes, and ordered 13-operation hash f5ef66a96b381f0e26e6ed99d846fa73e7b1ec6d62d41ad91b5e806d959838c2",
+            "Extract the official MCP product core from its Clay MCP heading through the final start-free callout and verify its normalized visible-text hash plus the connection, security, and FAQ hashes recorded in plugins/clay/README.md",
+            "Verify the official developer-document index and five Markdown hashes, confirm the former standalone local MCP guide returns HTTP 404, and verify the public OpenAPI raw and canonical hashes plus ordered 13-operation hash f5ef66a96b381f0e26e6ed99d846fa73e7b1ec6d62d41ad91b5e806d959838c2",
             "Verify canonical OAuth protected-resource and authorization-server hashes f114e17a4bc5a52dec7580042a865cdab90c2b1bd60f2f14def6d3c86d532d45 and 09ef6e27492c1b3b1d34f0477b388095a39380ed1dda9bfcbbb7c0af1014fc8b",
             "Register a disposable loopback public client and confirm HTTP 201, no client secret, authorization-code and refresh-token grants, mcp scope, and PKCE authorization reaching Clay's browser page",
             "Probe https://api.clay.com/v3/mcp with missing and invalid Bearer initialize requests and confirm HTTP 401 plus body SHA-256 7fe66b771b819e775f5b2e6afec58137720fd541f049f8569e10a75e3d0d0d2a",
@@ -2397,7 +2397,7 @@
         "implementationStatus": "implemented-verified",
         "version": "1.0.2-ghast.1",
         "repository": null,
-        "upstreamRevision": "clay-docs-52d04c63c45b+openapi-258cc399172d+oauth-f114e17a4bc5+source-4ab1ca54c908",
+        "upstreamRevision": "clay-product-99faa3c0f6c5+docs-52d04c63c45b+openapi-258cc399172d+oauth-f114e17a4bc5+source-4ab1ca54c908",
         "portStatus": "full"
       }
     },
@@ -2530,7 +2530,7 @@
           "verificationStatus": "official-source-verified",
           "officialDeveloper": "Close",
           "officialRepository": null,
-          "officialRevision": "close-docs-ad74a3ce8ca3+tools-37b3dda1465b+oauth-5f59d0eb26ef+auth-2c3287ebc60f",
+          "officialRevision": "close-docs-c700a654c0a0+tools-37b3dda1465b+oauth-5f59d0eb26ef+auth-2c3287ebc60f",
           "license": "MIT",
           "licenseEvidence": [
             "plugins/close/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
@@ -2539,7 +2539,7 @@
           "officialityEvidence": [
             "Close's official developer documentation identifies https://mcp.close.com/mcp as its remote Streamable HTTP MCP server with OAuth 2.0 Dynamic Client Registration and an API-key fallback.",
             "Close's official integration page identifies the Close MCP integration as built by Close.",
-            "The official MCP guide has SHA-256 ad74a3ce8ca3af94bfd2011c6d19c74b1514b2c8c123457e04e6b0675ae3d3e1 and documents the mcp.read, mcp.write_safe, and mcp.write_destructive access layers.",
+            "The official MCP guide has normalized SHA-256 c700a654c0a082defde8612fdf0b861cb208698a14ea934e2ba104629aa42565 after removing eight volatile signed screenshot URLs, and documents the mcp.read, mcp.write_safe, and mcp.write_destructive access layers.",
             "The official tool catalog has SHA-256 37b3dda1465bddbb60caece971c0c405f9456cadaef5b4fa68428efc19a65a2b and publishes 107 tools: 57 read-only, 16 safe-write, and 34 destructive-write tools.",
             "The ordered read, safe-write, destructive-write, and complete tool-name inventories have SHA-256 hashes 7496c2076efbdb2cd9f35341855b1e0ca2345bd0060a7630be14795a9d66cb0b, 67dd13b698f10bed28c55361d872ea60d7522bd0874f660f94430af755a6536f, f4e6ff7259dbfb8f0c906ba27038c13ec1f72b90fe42199a1daf10f1c4afc404, and 13b3c6707cd36be3089d78e426dd57e56e7c5bb0cefcae42b0281056774ee1c5.",
             "The protected-resource metadata identifies Close's official MCP resource, bearer-header authentication, offline access, and all three MCP scopes; its canonical JSON SHA-256 is 5f59d0eb26ef33250e318f483a14288950ab8f62062fac36ece76e8de3a17402.",
@@ -2575,7 +2575,7 @@
           ],
           "verification": [
             "python3 scripts/import-official-hosted-plugins.py",
-            "Verify official MCP guide SHA-256 is ad74a3ce8ca3af94bfd2011c6d19c74b1514b2c8c123457e04e6b0675ae3d3e1",
+            "Remove standalone Markdown screenshot lines from the official MCP guide and verify normalized SHA-256 c700a654c0a082defde8612fdf0b861cb208698a14ea934e2ba104629aa42565",
             "Verify official tool-catalog SHA-256 is 37b3dda1465bddbb60caece971c0c405f9456cadaef5b4fa68428efc19a65a2b",
             "Parse the official catalog and confirm the exact ordered 57 read-only, 16 safe-write, 34 destructive-write, and 107 complete tool inventories and their pinned hashes",
             "Verify canonical OAuth protected-resource and authorization-server metadata hashes 5f59d0eb26ef33250e318f483a14288950ab8f62062fac36ece76e8de3a17402 and 2c3287ebc60fbc38a8790eb8e22573a3798c1197bb15c9af9303e05fafca94d2",
@@ -2591,7 +2591,7 @@
         "implementationStatus": "implemented-verified",
         "version": "1.0.3-ghast.1",
         "repository": null,
-        "upstreamRevision": "close-docs-ad74a3ce8ca3+tools-37b3dda1465b+oauth-5f59d0eb26ef+auth-2c3287ebc60f",
+        "upstreamRevision": "close-docs-c700a654c0a0+tools-37b3dda1465b+oauth-5f59d0eb26ef+auth-2c3287ebc60f",
         "portStatus": "full"
       }
     },
@@ -7837,7 +7837,7 @@
           "verificationStatus": "official-source-verified",
           "officialDeveloper": "PostHog",
           "officialRepository": "https://github.com/PostHog/posthog",
-          "officialRevision": "be36eb32351fbf2435b69ea2dabb4d03a6149a07",
+          "officialRevision": "bbc6f4bf597f133e3ca435ed300835036a23a4a7",
           "license": "MIT",
           "licenseEvidence": [
             "PostHog/posthog's root license applies the MIT Expat grant to content outside its listed ee and third-party exceptions; services/mcp is outside those exceptions.",
@@ -7849,7 +7849,8 @@
             "PostHog's official MCP documentation names https://mcp.posthog.com/mcp, documents Codex setup, and links the server source in PostHog/posthog.",
             "The current services/mcp README calls itself the official PostHog MCP server and the @posthog/mcp package is authored by PostHog Inc.",
             "The archived PostHog/mcp repository explicitly points to services/mcp in the PostHog monorepo.",
-            "PostHog/ai-plugin configures the same hosted endpoint and the documented plugin consumer header."
+            "PostHog/ai-plugin configures the same hosted endpoint and the documented plugin consumer header.",
+            "On August 13, 2026, PostHog removed the read-only legacy tools session-recording-summaries-list, session-recording-summarize, and session-recording-summary-get. The current official tool page and source schema now match exactly at 844 unique tool names; no new tool names were added, destructive definitions remain 109, and read-only definitions are now 449."
           ],
           "codexCapabilities": [
             "Analyze PostHog product data, feature flags, experiments, errors, surveys, dashboards, logs, replays, warehouse data, and LLM analytics",
@@ -7857,7 +7858,7 @@
           ],
           "ghastCapabilities": [
             "Connect directly to PostHog's official Streamable HTTP MCP endpoint with OAuth, the documented plugin consumer marker, and token-efficient CLI mode",
-            "Discover, inspect, and call the live catalog of 847 documented source tool definitions spanning 58 labeled product categories",
+            "Discover, inspect, and call the live catalog of 844 documented source tool definitions spanning 58 labeled product categories",
             "Read and write analytics, SQL, flags, experiments, errors, replays, surveys, dashboards, AI observability, logs, pipelines, support, tasks, workflows, and newer PostHog products",
             "Use PostHog MCP resources and prompts and discover live schemas instead of relying on stale pre-trained tool shapes",
             "Restrict sessions to read-only tools, pin an organization or project, filter by feature category, or allowlist exact tool names",
@@ -7868,15 +7869,15 @@
             "A PostHog account, OAuth authorization or a personal API key created with the MCP Server preset, network access, project permissions, and applicable plan features remain user-managed.",
             "The server returns project data to the MCP client. Queries should be scoped to the intended organization, project, date range, and minimum necessary records.",
             "Some AI-powered tools require AI data processing to be enabled, have lower limits, and may incur PostHog AI spend. All calls remain subject to PostHog API limits.",
-            "The official tool page contains 847 unique tool names matching the pinned source schema, while its 58 displayed category counts sum to 840. Ghast records rather than conceals that documentation inconsistency.",
+            "The official tool page contains 844 unique tool names matching the pinned source schema, while its 58 displayed category counts sum to 837. Ghast records rather than conceals that documentation inconsistency.",
             "The current PostHog AI plugin has 137 synchronized static skills, but its repository and the context-mill source stream lack verifiable license files. Ghast does not redistribute those files and does not claim byte-for-byte parity with that guidance layer.",
             "Authenticated tool listing and project operations were not run because no PostHog account or project data was supplied.",
             "A generic analytics icon is used instead of unlicensed marketplace or AI-plugin artwork."
           ],
           "verification": [
             "python3 scripts/import-official-hosted-plugins.py",
-            "Verify PostHog/posthog at be36eb32351fbf2435b69ea2dabb4d03a6149a07 and the pinned hashes for the root license, services/mcp README, package metadata, 847-definition source schema, and CLI command reference",
-            "Verify the official MCP overview, 847-name tool reference, and FAQ hashes and their CLI mode, read-only, project pinning, feature filtering, prompt, resource, privacy, and billing statements",
+            "Verify PostHog/posthog at bbc6f4bf597f133e3ca435ed300835036a23a4a7 and the pinned hashes for the root license, services/mcp README, package metadata, 844-definition source schema, and CLI command reference",
+            "Verify the official MCP overview, 844-name tool reference, and FAQ hashes and their CLI mode, read-only, project pinning, feature filtering, prompt, resource, privacy, and billing statements",
             "Verify the protected-resource canonical JSON SHA-256 9b7b445acd711f55e50db0deb96f341769cb3a073f7e466cc5efc38da3341283 and authorization-server hash 3b1f34cd44dadf05dd7cf4e9b24519410bc15ffa9353929b865f0f28451eebb7",
             "Probe https://mcp.posthog.com/mcp without credentials and confirm HTTP 401 plus the official protected-resource challenge",
             "Register a disposable 127.0.0.1 OAuth public client and confirm HTTP 201, authorization-code and refresh-token grants, token_endpoint_auth_method none, and the loopback callback",
@@ -7890,7 +7891,7 @@
         "implementationStatus": "implemented-verified",
         "version": "1.0.0-ghast.1",
         "repository": "https://github.com/PostHog/posthog",
-        "upstreamRevision": "be36eb32351fbf2435b69ea2dabb4d03a6149a07",
+        "upstreamRevision": "bbc6f4bf597f133e3ca435ed300835036a23a4a7",
         "portStatus": "full"
       }
     },

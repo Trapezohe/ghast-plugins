@@ -13,9 +13,9 @@ PostHog MCP server source, PostHog data, marketplace artwork, or the current
 AI plugin's mixed-source static skill bundle.
 
 The adapter is pinned to PostHog's official MCP overview at SHA-256
-`dbbdc9b00c575addbd8bec5a54de69ee0ac70e2b3e44ec3558bc42f44ca48660`, tool reference at `abae7b98abaa8e530513ef2a829ad8b1cf9a6c1df3772fcb2cf6351a88f5f036`, and
+`dbbdc9b00c575addbd8bec5a54de69ee0ac70e2b3e44ec3558bc42f44ca48660`, tool reference at `eacebb2b96270f4065a0346dad04465143c721a3c724e11cdf4027afd14aa698`, and
 FAQ at `68a72a80b5726980e3b2c754079c76de0b5c20ecce83a01fb5ef33879cc67858`. It also verifies the official PostHog monorepo
-at `be36eb32351fbf2435b69ea2dabb4d03a6149a07`: the root MIT-style license, `@posthog/mcp`
+at `bbc6f4bf597f133e3ca435ed300835036a23a4a7`: the root MIT-style license, `@posthog/mcp`
 package metadata, service README, complete tool-definition schema, and
 generated CLI command reference.
 
@@ -29,15 +29,19 @@ The OAuth protected-resource metadata is pinned at canonical JSON SHA-256
   PostHog's documented `plugin` consumer marker, and pins the server's
   token-efficient CLI mode. OAuth uses authorization-code and refresh-token
   grants, public clients, and PKCE S256.
-- The source schema and official tool page currently contain 847 matching
+- The source schema and official tool page currently contain 844 matching
   unique tool names across analytics, flags, experiments, errors, replays,
   surveys, dashboards, SQL, AI observability, logs, pipelines, support,
   workflows, and newer PostHog products. The page's 58 category badges sum to
-  840, so Ghast records that official documentation inconsistency rather than
+  837, so Ghast records that official documentation inconsistency rather than
   silently choosing one count.
-- The pinned source marks 452 definitions read-only and 109 destructive.
-  PostHog also supports a read-only session mode, organization and project
-  pinning, feature-category filtering, and exact tool allowlists.
+- The pinned source marks 449 definitions read-only and 109 destructive.
+  PostHog removed three read-only legacy session-recording summary tools on
+  August 13, 2026: `session-recording-summaries-list`,
+  `session-recording-summarize`, and `session-recording-summary-get`. No
+  replacement tool names were added in that update. PostHog also supports a
+  read-only session mode, organization and project pinning, feature-category
+  filtering, and exact tool allowlists.
 - This operational surface is broader than the OpenAI marketplace snapshot's
   PostHog app description and preserves its read/write product workflows. The
   current server also exposes MCP resources and prompts.

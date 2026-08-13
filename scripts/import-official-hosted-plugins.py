@@ -834,8 +834,8 @@ CALENDLY_TOOLS = (
 CLOSE_DOCS_URL = "https://developer.close.com/mcp.md"
 CLOSE_TOOLS_URL = "https://developer.close.com/mcp/tools.md"
 CLOSE_MCP_URL = "https://mcp.close.com/mcp"
-CLOSE_DOCS_SHA256 = (
-    "ad74a3ce8ca3af94bfd2011c6d19c74b1514b2c8c123457e04e6b0675ae3d3e1"
+CLOSE_DOCS_NORMALIZED_SHA256 = (
+    "c700a654c0a082defde8612fdf0b861cb208698a14ea934e2ba104629aa42565"
 )
 CLOSE_TOOLS_SHA256 = (
     "37b3dda1465bddbb60caece971c0c405f9456cadaef5b4fa68428efc19a65a2b"
@@ -865,7 +865,7 @@ CLOSE_ALL_TOOLS_SHA256 = (
     "13b3c6707cd36be3089d78e426dd57e56e7c5bb0cefcae42b0281056774ee1c5"
 )
 CLOSE_EVIDENCE_REVISION = (
-    "close-docs-ad74a3ce8ca3+tools-37b3dda1465b"
+    "close-docs-c700a654c0a0+tools-37b3dda1465b"
     "+oauth-5f59d0eb26ef+auth-2c3287ebc60f"
 )
 FIREFLIES_DOCS_URL = (
@@ -2301,8 +2301,8 @@ HEBBIA_EVIDENCE_REVISION = (
 )
 CLAY_MCP_URL = "https://api.clay.com/v3/mcp"
 CLAY_PRODUCT_URL = "https://www.clay.com/mcp"
-CLAY_PRODUCT_VISIBLE_SHA256 = (
-    "6b44d0b089d69a8c3228afcec15b0eed7cf3be769f1906c696435b9c751eeef8"
+CLAY_PRODUCT_CORE_SHA256 = (
+    "99faa3c0f6c5c87017292b8f92cb114c057a32cd858da0f863fe1c984c0418f5"
 )
 CLAY_CONNECT_URL = "https://university.clay.com/docs/connect-to-clay-mcp"
 CLAY_CONNECT_VISIBLE_SHA256 = (
@@ -2319,11 +2319,11 @@ CLAY_FAQ_VISIBLE_SHA256 = (
     "7a968287f91c9c9a270f3a44fb544317e0780d3a1a0f8d38d56e7d10ef681ca9"
 )
 CLAY_DEVELOPER_DOC_HASHES = {
-    "https://developers.clay.com/concepts/mcp.md": (
-        "92ffe4f0b27efe3ac10d60adda38ba8ae21bf5972a369ed2b1dd0799951d54d1"
+    "https://developers.clay.com/llms.txt": (
+        "457e829816d1804cee755bdfe550a6cf330db40823d597e680aac41257f39c5f"
     ),
     "https://developers.clay.com/quickstart.md": (
-        "1b7d232f3a510bdbb1e059c573ba6caef41c75fb7ba547944a0951e4223de04c"
+        "38c1f1ce7051e94fe6651124a675ef454fdc70c089fe75786c9de765d12624f8"
     ),
     "https://developers.clay.com/searches.md": (
         "dae6fa947970ce97ca5e3507684a9360cc2a99eb1107f0ac543aa7b8183fe329"
@@ -2338,6 +2338,9 @@ CLAY_DEVELOPER_DOC_HASHES = {
         "58ce70933daee2689a7cf1e5bd73e2e54cd7ae5d153b3aae2dd758f3303678f6"
     ),
 }
+CLAY_PRIOR_LOCAL_MCP_DOC_URL = (
+    "https://developers.clay.com/concepts/mcp.md"
+)
 CLAY_OPENAPI_URL = "https://developers.clay.com/openapi.json"
 CLAY_OPENAPI_SHA256 = (
     "258cc399172d40533db4d88844a80b86d804cc4b58f0224169fa2aa076827f0e"
@@ -2406,7 +2409,7 @@ CLAY_OPENAI_HASHES = {
     ),
 }
 CLAY_EVIDENCE_REVISION = (
-    "clay-docs-52d04c63c45b+openapi-258cc399172d"
+    "clay-product-99faa3c0f6c5+docs-52d04c63c45b+openapi-258cc399172d"
     "+oauth-f114e17a4bc5+source-4ab1ca54c908"
 )
 COMMON_ROOM_MCP_URL = "https://mcp.commonroom.io/mcp"
@@ -3333,12 +3336,12 @@ POSTHOG_OVERVIEW_SHA256 = (
     "dbbdc9b00c575addbd8bec5a54de69ee0ac70e2b3e44ec3558bc42f44ca48660"
 )
 POSTHOG_TOOLS_SHA256 = (
-    "abae7b98abaa8e530513ef2a829ad8b1cf9a6c1df3772fcb2cf6351a88f5f036"
+    "eacebb2b96270f4065a0346dad04465143c721a3c724e11cdf4027afd14aa698"
 )
 POSTHOG_FAQ_SHA256 = (
     "68a72a80b5726980e3b2c754079c76de0b5c20ecce83a01fb5ef33879cc67858"
 )
-POSTHOG_SOURCE_REVISION = "be36eb32351fbf2435b69ea2dabb4d03a6149a07"
+POSTHOG_SOURCE_REVISION = "bbc6f4bf597f133e3ca435ed300835036a23a4a7"
 POSTHOG_SOURCE_BASE_URL = (
     "https://raw.githubusercontent.com/PostHog/posthog/"
     f"{POSTHOG_SOURCE_REVISION}"
@@ -3368,7 +3371,7 @@ POSTHOG_SOURCE_PACKAGE_SHA256 = (
     "3faf9db9442a0483a850570e04d8445742bd7844ebb3117b9d972d00be0d6a2c"
 )
 POSTHOG_SOURCE_TOOLS_SHA256 = (
-    "a7da890fedc0fb1b5b4f4822272fb5f0dbd68fdb8bc524684c1d6d40db5caf4c"
+    "1ad4e0896fd9da08c72df31417fd74fdfb81c03f9a1200ad7686aa903b4d19af"
 )
 POSTHOG_SOURCE_EXEC_SHA256 = (
     "33688f9abaa759e4fd7c11310c3afa0920213a0752bdaa7e6c503e581d898c1c"
@@ -3626,6 +3629,33 @@ def normalize_brand24_markdown(value: str) -> str:
 
 def normalize_circleback_markdown(value: str) -> str:
     return normalize_brand24_markdown(value)
+
+
+def normalize_close_markdown(value: str) -> str:
+    without_images = re.sub(
+        r"^!\[[^\]]*\]\([^\n]+\)\s*$",
+        "",
+        value,
+        flags=re.MULTILINE,
+    )
+    lines = [line.rstrip() for line in without_images.splitlines()]
+    return "\n".join(lines).strip() + "\n"
+
+
+def normalize_clay_product_text(value: str) -> str:
+    start_marker = (
+        "Clay MCP Give reps the best prospecting data in their AI tools "
+        "Bring data from 200+ providers"
+    )
+    end_marker = (
+        "Turn your growth ideas into reality today Start for free today. "
+        "No credit card required."
+    )
+    start = value.rfind(start_marker)
+    end = value.find(end_marker, start)
+    if start < 0 or end < 0:
+        raise ValueError("Clay MCP product page structure changed")
+    return value[start : end + len(end_marker)]
 
 
 def normalize_fiscal_docs_main(value: str) -> str:
@@ -4769,7 +4799,10 @@ def verify_calendly_evidence() -> None:
 
 def verify_close_evidence() -> None:
     docs = fetch_text(CLOSE_DOCS_URL)
-    if sha256_text(docs) != CLOSE_DOCS_SHA256:
+    if (
+        sha256_text(normalize_close_markdown(docs))
+        != CLOSE_DOCS_NORMALIZED_SHA256
+    ):
         raise ValueError(
             "Close MCP documentation changed; re-audit before regenerating"
         )
@@ -8165,7 +8198,8 @@ def verify_clay_evidence() -> None:
         CLAY_PRODUCT_URL,
         "Give reps the best prospecting data in their AI tools",
     )
-    if sha256_text(product) != CLAY_PRODUCT_VISIBLE_SHA256:
+    product_core = normalize_clay_product_text(product)
+    if sha256_text(product_core) != CLAY_PRODUCT_CORE_SHA256:
         raise ValueError("Clay MCP product page changed; re-audit required")
     for marker in (
         "Find contacts, get emails and phone numbers, and push to sequences",
@@ -8175,7 +8209,7 @@ def verify_clay_evidence() -> None:
         "200+ vendors",
         "Functions",
     ):
-        if marker not in product:
+        if marker not in product_core:
             raise ValueError(f"Clay MCP product page is missing {marker!r}")
 
     connect = fetch_visible_text(
@@ -8249,15 +8283,16 @@ def verify_clay_evidence() -> None:
             raise ValueError(f"Clay developer documentation changed: {url}")
         developer_docs[url] = body.decode("utf-8")
     for url, markers in {
-        "https://developers.clay.com/concepts/mcp.md": (
-            "`clay mcp`",
-            "long-running server over stdio",
-            "session from `clay login`",
-            "Workspace pinning",
+        "https://developers.clay.com/llms.txt": (
+            "# Clay docs",
+            "https://developers.clay.com/quickstart.md",
+            "https://developers.clay.com/searches.md",
+            "https://developers.clay.com/openapi.json",
         ),
         "https://developers.clay.com/quickstart.md": (
             "https://github.com/clay-run/agent-plugins",
-            "Clay's skills, MCP tools, and the `clay` CLI",
+            "Clay's skills and the `clay` CLI",
+            "coding-agent host with a shell",
             "Claude Code, Codex, or Cursor",
         ),
         "https://developers.clay.com/searches.md": (
@@ -8289,6 +8324,10 @@ def verify_clay_evidence() -> None:
                 raise ValueError(
                     f"Clay developer documentation {url} is missing {marker!r}"
                 )
+    require_http_not_found(
+        CLAY_PRIOR_LOCAL_MCP_DOC_URL,
+        "Clay prior standalone local MCP guide",
+    )
 
     openapi_bytes = fetch_bytes(CLAY_OPENAPI_URL)
     if sha256_bytes(openapi_bytes) != CLAY_OPENAPI_SHA256:
@@ -11503,7 +11542,7 @@ def verify_posthog_evidence() -> None:
             )
 
     tool_definitions = json.loads(source_bodies["tool definitions"])
-    if not isinstance(tool_definitions, dict) or len(tool_definitions) != 847:
+    if not isinstance(tool_definitions, dict) or len(tool_definitions) != 844:
         raise ValueError("PostHog MCP source tool inventory changed")
     if len(set(tool_definitions)) != len(tool_definitions):
         raise ValueError("PostHog MCP source contains duplicate tool names")
@@ -11520,7 +11559,7 @@ def verify_posthog_evidence() -> None:
         bool((tool.get("annotations") or {}).get("readOnlyHint"))
         for tool in tool_definitions.values()
     )
-    if destructive_count != 109 or read_only_count != 452:
+    if destructive_count != 109 or read_only_count != 449:
         raise ValueError("PostHog MCP tool safety annotations changed")
 
     category_counts = []
@@ -11535,7 +11574,7 @@ def verify_posthog_evidence() -> None:
         category_counts.append((line[2:name_end], int(line[count_start:count_end])))
     if len(category_counts) != 58 or sum(
         count for _, count in category_counts
-    ) != 840:
+    ) != 837:
         raise ValueError(
             "PostHog documented MCP category counts changed; re-audit required"
         )
@@ -18584,11 +18623,15 @@ instructions, documentation, and catalog metadata. It does not copy or
 redistribute Close's hosted MCP implementation, private Codex connector,
 service source code, account data, API credentials, or marketplace artwork.
 
-The adapter is pinned to Close's official MCP guide with SHA-256
-`{CLOSE_DOCS_SHA256}` and its official tool catalog with SHA-256
+The adapter is pinned to Close's official MCP guide with normalized
+SHA-256 `{CLOSE_DOCS_NORMALIZED_SHA256}` and its official tool catalog with SHA-256
 `{CLOSE_TOOLS_SHA256}`. The protected-resource metadata is pinned at
 canonical JSON SHA-256 `{CLOSE_OAUTH_METADATA_SHA256}`, and the
 authorization-server metadata at `{CLOSE_AUTH_SERVER_SHA256}`.
+
+Volatile signed screenshot URLs are removed before hashing the guide. The
+endpoint, authentication modes, scopes, setup instructions, FAQs, and tool
+catalog remain validated separately.
 
 The published tool order is also pinned independently: 57 `mcp.read` tools
 have SHA-256 `{CLOSE_READ_TOOLS_SHA256}`, 16 `mcp.write_safe` tools have
@@ -19584,16 +19627,20 @@ It does not redistribute Clay's hosted implementation, private Codex
 connector, OAuth credentials, customer data, official agent-plugin skills,
 hooks, CLI wrapper, binaries, branded artwork, or marketplace icon.
 
-Clay's official MCP product page, connection guide, security guide, and FAQ
-are pinned as normalized visible text with SHA-256
-`{CLAY_PRODUCT_VISIBLE_SHA256}`, `{CLAY_CONNECT_VISIBLE_SHA256}`,
+Clay's official MCP product-page core is pinned as normalized visible text
+with SHA-256 `{CLAY_PRODUCT_CORE_SHA256}`. Global navigation, promotional
+banners, customer stories, and the footer are excluded. The official
+connection guide, security guide, and FAQ remain pinned as normalized visible
+text with SHA-256 `{CLAY_CONNECT_VISIBLE_SHA256}`,
 `{CLAY_SECURITY_VISIBLE_SHA256}`, and `{CLAY_FAQ_VISIBLE_SHA256}`.
 
-Six official developer Markdown guides are pinned in
-`scripts/import-official-hosted-plugins.py`. Clay's public OpenAPI is pinned
-at raw and canonical SHA-256 `{CLAY_OPENAPI_SHA256}` and
-`{CLAY_OPENAPI_CANONICAL_SHA256}`. Its ordered 13-operation inventory is
-pinned at `{CLAY_OPENAPI_OPERATIONS_SHA256}`.
+Clay's official developer-document index plus five Markdown guides are pinned
+in `scripts/import-official-hosted-plugins.py`. The current index and
+Quickstart no longer publish the former standalone local MCP guide, while the
+latest official agent-plugin revision still configures `clay mcp`. Clay's
+public OpenAPI is pinned at raw and canonical SHA-256
+`{CLAY_OPENAPI_SHA256}` and `{CLAY_OPENAPI_CANONICAL_SHA256}`. Its ordered
+13-operation inventory is pinned at `{CLAY_OPENAPI_OPERATIONS_SHA256}`.
 
 The OAuth protected-resource and authorization-server metadata are pinned at
 canonical JSON SHA-256 `{CLAY_OAUTH_METADATA_SHA256}` and
@@ -20735,15 +20782,19 @@ The OAuth protected-resource metadata is pinned at canonical JSON SHA-256
   PostHog's documented `plugin` consumer marker, and pins the server's
   token-efficient CLI mode. OAuth uses authorization-code and refresh-token
   grants, public clients, and PKCE S256.
-- The source schema and official tool page currently contain 847 matching
+- The source schema and official tool page currently contain 844 matching
   unique tool names across analytics, flags, experiments, errors, replays,
   surveys, dashboards, SQL, AI observability, logs, pipelines, support,
   workflows, and newer PostHog products. The page's 58 category badges sum to
-  840, so Ghast records that official documentation inconsistency rather than
+  837, so Ghast records that official documentation inconsistency rather than
   silently choosing one count.
-- The pinned source marks 452 definitions read-only and 109 destructive.
-  PostHog also supports a read-only session mode, organization and project
-  pinning, feature-category filtering, and exact tool allowlists.
+- The pinned source marks 449 definitions read-only and 109 destructive.
+  PostHog removed three read-only legacy session-recording summary tools on
+  August 13, 2026: `session-recording-summaries-list`,
+  `session-recording-summarize`, and `session-recording-summary-get`. No
+  replacement tool names were added in that update. PostHog also supports a
+  read-only session mode, organization and project pinning, feature-category
+  filtering, and exact tool allowlists.
 - This operational surface is broader than the OpenAI marketplace snapshot's
   PostHog app description and preserves its read/write product workflows. The
   current server also exposes MCP resources and prompts.

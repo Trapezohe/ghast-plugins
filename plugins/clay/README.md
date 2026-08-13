@@ -11,16 +11,20 @@ It does not redistribute Clay's hosted implementation, private Codex
 connector, OAuth credentials, customer data, official agent-plugin skills,
 hooks, CLI wrapper, binaries, branded artwork, or marketplace icon.
 
-Clay's official MCP product page, connection guide, security guide, and FAQ
-are pinned as normalized visible text with SHA-256
-`6b44d0b089d69a8c3228afcec15b0eed7cf3be769f1906c696435b9c751eeef8`, `52d04c63c45b9bbc09001cd99eb4a05cfd9a78b19ec076c1d95b12cafc9ee8e9`,
+Clay's official MCP product-page core is pinned as normalized visible text
+with SHA-256 `99faa3c0f6c5c87017292b8f92cb114c057a32cd858da0f863fe1c984c0418f5`. Global navigation, promotional
+banners, customer stories, and the footer are excluded. The official
+connection guide, security guide, and FAQ remain pinned as normalized visible
+text with SHA-256 `52d04c63c45b9bbc09001cd99eb4a05cfd9a78b19ec076c1d95b12cafc9ee8e9`,
 `28914f9149135b4a559230cd40cf90176097e4d6e12c26109a9076d6f8181ca2`, and `7a968287f91c9c9a270f3a44fb544317e0780d3a1a0f8d38d56e7d10ef681ca9`.
 
-Six official developer Markdown guides are pinned in
-`scripts/import-official-hosted-plugins.py`. Clay's public OpenAPI is pinned
-at raw and canonical SHA-256 `258cc399172d40533db4d88844a80b86d804cc4b58f0224169fa2aa076827f0e` and
-`a95679fb7672d8d0fae3ad073f96378e273bc3532ea7fb4d416b2aa9ed4add3a`. Its ordered 13-operation inventory is
-pinned at `f5ef66a96b381f0e26e6ed99d846fa73e7b1ec6d62d41ad91b5e806d959838c2`.
+Clay's official developer-document index plus five Markdown guides are pinned
+in `scripts/import-official-hosted-plugins.py`. The current index and
+Quickstart no longer publish the former standalone local MCP guide, while the
+latest official agent-plugin revision still configures `clay mcp`. Clay's
+public OpenAPI is pinned at raw and canonical SHA-256
+`258cc399172d40533db4d88844a80b86d804cc4b58f0224169fa2aa076827f0e` and `a95679fb7672d8d0fae3ad073f96378e273bc3532ea7fb4d416b2aa9ed4add3a`. Its ordered
+13-operation inventory is pinned at `f5ef66a96b381f0e26e6ed99d846fa73e7b1ec6d62d41ad91b5e806d959838c2`.
 
 The OAuth protected-resource and authorization-server metadata are pinned at
 canonical JSON SHA-256 `f114e17a4bc5a52dec7580042a865cdab90c2b1bd60f2f14def6d3c86d532d45` and

@@ -685,14 +685,14 @@
         "icon": "./assets/icon.svg",
         "version": "1.0.2-ghast.1",
         "homepage": "https://www.clay.com/mcp",
-        "upstreamRevision": "clay-docs-52d04c63c45b+openapi-258cc399172d+oauth-f114e17a4bc5+source-4ab1ca54c908",
+        "upstreamRevision": "clay-product-99faa3c0f6c5+docs-52d04c63c45b+openapi-258cc399172d+oauth-f114e17a4bc5+source-4ab1ca54c908",
         "license": "MIT",
         "skills": "./skills/",
         "mcpServers": "./.mcp.json"
       },
       "package": {
         "url": "./packages/clay.zip",
-        "sha256": "34e1161de9906b77279cfeebedee68e5cfec7f04a9aa92f2af7c551f953cd9cc"
+        "sha256": "43c9f5f8c8a19a12e9a5cfbdedfa626a7e3443fa52186aefbf9a4293b6654c4a"
       },
       "icon": "./plugins/clay/assets/icon.svg",
       "category": "productivity",
@@ -741,14 +741,14 @@
         "icon": "./assets/icon.svg",
         "version": "1.0.3-ghast.1",
         "homepage": "https://developer.close.com/mcp",
-        "upstreamRevision": "close-docs-ad74a3ce8ca3+tools-37b3dda1465b+oauth-5f59d0eb26ef+auth-2c3287ebc60f",
+        "upstreamRevision": "close-docs-c700a654c0a0+tools-37b3dda1465b+oauth-5f59d0eb26ef+auth-2c3287ebc60f",
         "license": "MIT",
         "skills": "./skills/",
         "mcpServers": "./.mcp.json"
       },
       "package": {
         "url": "./packages/close.zip",
-        "sha256": "31352407690ba5f9f5b8a0839fdb7a7375a5d293a9822fe86039480716bd00db"
+        "sha256": "764f755a15f537c80e882fa152b66ae4a0d501c95d747d65e808f203510f885f"
       },
       "icon": "./plugins/close/assets/icon.svg",
       "category": "productivity",
@@ -2173,14 +2173,14 @@
         "version": "1.0.0-ghast.1",
         "homepage": "https://posthog.com/docs/model-context-protocol",
         "repository": "https://github.com/PostHog/posthog",
-        "upstreamRevision": "be36eb32351fbf2435b69ea2dabb4d03a6149a07",
+        "upstreamRevision": "bbc6f4bf597f133e3ca435ed300835036a23a4a7",
         "license": "MIT",
         "skills": "./skills/",
         "mcpServers": "./.mcp.json"
       },
       "package": {
         "url": "./packages/posthog.zip",
-        "sha256": "153f1c88cb5500d76a0b9808ab3b6a652b87121e996fa1579304389e1efcf6c8"
+        "sha256": "dc36238eb5ee8cc6cf259c81062bc944b8c21af0405452a0d597615d5e15aa37"
       },
       "icon": "./plugins/posthog/assets/icon.svg",
       "category": "data",

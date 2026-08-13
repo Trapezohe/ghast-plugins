@@ -11,11 +11,15 @@ instructions, documentation, and catalog metadata. It does not copy or
 redistribute Close's hosted MCP implementation, private Codex connector,
 service source code, account data, API credentials, or marketplace artwork.
 
-The adapter is pinned to Close's official MCP guide with SHA-256
-`ad74a3ce8ca3af94bfd2011c6d19c74b1514b2c8c123457e04e6b0675ae3d3e1` and its official tool catalog with SHA-256
+The adapter is pinned to Close's official MCP guide with normalized
+SHA-256 `c700a654c0a082defde8612fdf0b861cb208698a14ea934e2ba104629aa42565` and its official tool catalog with SHA-256
 `37b3dda1465bddbb60caece971c0c405f9456cadaef5b4fa68428efc19a65a2b`. The protected-resource metadata is pinned at
 canonical JSON SHA-256 `5f59d0eb26ef33250e318f483a14288950ab8f62062fac36ece76e8de3a17402`, and the
 authorization-server metadata at `2c3287ebc60fbc38a8790eb8e22573a3798c1197bb15c9af9303e05fafca94d2`.
+
+Volatile signed screenshot URLs are removed before hashing the guide. The
+endpoint, authentication modes, scopes, setup instructions, FAQs, and tool
+catalog remain validated separately.
 
 The published tool order is also pinned independently: 57 `mcp.read` tools
 have SHA-256 `7496c2076efbdb2cd9f35341855b1e0ca2345bd0060a7630be14795a9d66cb0b`, 16 `mcp.write_safe` tools have

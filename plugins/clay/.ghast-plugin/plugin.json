@@ -8,7 +8,7 @@
     "url": "https://www.clay.com"
   },
   "homepage": "https://www.clay.com/mcp",
-  "upstreamRevision": "clay-docs-52d04c63c45b+openapi-258cc399172d+oauth-f114e17a4bc5+source-4ab1ca54c908",
+  "upstreamRevision": "clay-product-99faa3c0f6c5+docs-52d04c63c45b+openapi-258cc399172d+oauth-f114e17a4bc5+source-4ab1ca54c908",
   "license": "MIT",
   "icon": "./assets/icon.svg",
   "skills": "./skills/",
