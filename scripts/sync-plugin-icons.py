@@ -119,6 +119,11 @@ CUSTOM_ICONS = {
         '<circle cx="46" cy="46" r="6"/>'
         '<path d="M24 30l16-9M24 34l16 9"/>',
     ),
+    "mixpanel": (
+        "#6F4BD8",
+        '<path d="M12 48h40M16 42V29h8v13M28 42V20h8v22M40 42V13h8v29"/>'
+        '<path d="M15 23l11-7 10 5 14-10"/>',
+    ),
     "monday-com": (
         "#4B57DB",
         '<rect x="13" y="14" width="38" height="36" rx="5"/>'

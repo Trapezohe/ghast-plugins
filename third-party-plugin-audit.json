@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 9,
-      "official-source-research-required": 94,
-      "official-source-verified": 46
+      "official-source-research-required": 93,
+      "official-source-verified": 47
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 46,
-      "not-implemented": 103
+      "implemented-verified": 47,
+      "not-implemented": 102
     }
   },
   "excludedOpenAIPlugins": [
@@ -4198,7 +4198,7 @@
     },
     {
       "id": "mixpanel",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Mixpanel",
@@ -4229,13 +4229,60 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://mixpanel.com/home"
+        "homepage": "https://mixpanel.com/home",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Mixpanel",
+          "officialRepository": "https://github.com/mixpanel/ai-plugins",
+          "officialRevision": "2bde5a300d40afbc934ae74f44444744b80c09b6",
+          "license": "Apache-2.0",
+          "licenseEvidence": [
+            "LICENSE",
+            "Every imported skill is contained in the Apache-2.0 repository."
+          ],
+          "officialityEvidence": [
+            "The source repository is owned by the official Mixpanel GitHub organization, identifies Mixpanel as the author, and publishes version 1.0.0 of the unified AI plugin.",
+            "The pinned source contains all 12 current Mixpanel skills and explicitly supports Mixpanel's hosted MCP server, mixpanel-headless, and custom engines.",
+            "Mixpanel's official MCP documentation publishes the three regional endpoints, OAuth discovery and dynamic registration, service-account authentication, Codex connection instructions, and the current 63-tool surface."
+          ],
+          "codexCapabilities": [
+            "Run segmentation, funnel, retention, and other product-analytics queries through the private Mixpanel app connector",
+            "Explore event taxonomy and properties, manage Lexicon metadata, and resolve data quality issues",
+            "Create dashboards for requested product metrics"
+          ],
+          "ghastCapabilities": [
+            "All 12 official Mixpanel AI skills for report analysis, dashboard creation and lifecycle management, deep research, MCP onboarding, experiments, feature flags, Lexicon, metric monitoring, AI readiness, and tracking implementation",
+            "All 63 currently documented official hosted MCP tools across analytics, dashboards, discovery, data management, custom properties, cohorts, lookup tables, metrics, session replay, experiments, and feature flags",
+            "Official browser OAuth through PKCE and dynamic client registration in US, EU, or India, plus Mixpanel's beta service-account authentication for non-interactive use"
+          ],
+          "capabilityRelationship": "superset-newer-official-hosted-mcp",
+          "limitations": [
+            "A Mixpanel account, organization-level MCP enablement where required, project permissions, Data Views, plan features, and service limits remain user-managed.",
+            "Mixpanel documents a 600-request-per-hour per-user limit and states that MCP is not currently covered for HIPAA/PHI use.",
+            "Experiments and Feature Flags are beta; Mixpanel states that audience targeting and cohort editing are not yet supported through MCP.",
+            "The official install skill, MCP setup reference, and ENGINE.md are adapted for Ghast; the other 11 skill trees and the headless setup reference remain byte-for-byte from the pinned source.",
+            "A generic analytics icon is used because the official AI plugin repository does not publish a catalog icon."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Compare the 11 non-install Ghast skill trees and skills/install/references/headless-setup.md byte-for-byte with the pinned official repository",
+            "Run the pinned official scripts/check-engine-markers.sh against the source and verify all 12 source skills pass",
+            "Verify official MCP documentation still enumerates exactly 63 expected tools and the US, EU, and India OAuth metadata advertises PKCE plus dynamic client registration",
+            "Probe the US MCP initialize endpoint without credentials and confirm its 401 challenge points to the official protected-resource metadata",
+            "Verify the generated Node launcher rejects unapproved regions and malformed service-account tokens without placing secrets in argv",
+            "unzip -tqq packages/mixpanel.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.0-ghast.1",
+        "repository": "https://github.com/mixpanel/ai-plugins",
+        "upstreamRevision": "2bde5a300d40afbc934ae74f44444744b80c09b6",
+        "portStatus": "full"
       }
     },
     {

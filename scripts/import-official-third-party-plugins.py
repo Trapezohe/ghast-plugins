@@ -263,6 +263,151 @@ DEEPNOTE_TOOL_NAMES = (
     "list_docs",
     "get_doc",
 )
+MIXPANEL_MCP_DOCS_URL = "https://docs.mixpanel.com/docs/mcp"
+MIXPANEL_MCP_URL = "https://mcp.mixpanel.com/mcp"
+MIXPANEL_OAUTH_METADATA_URL = (
+    "https://mcp.mixpanel.com/.well-known/oauth-protected-resource/mcp"
+)
+MIXPANEL_OAUTH_METADATA_SHA256 = (
+    "f2c8b2232fd4f6930c2e556ebd16c53aa0a2ea13c40d0bb422f5a5d5b16b9423"
+)
+MIXPANEL_AUTH_SERVER_URL = (
+    "https://mcp.mixpanel.com/.well-known/oauth-authorization-server/mcp"
+)
+MIXPANEL_AUTH_SERVER_SHA256 = (
+    "d2ec352defa18c3e91ccea44b1e5fdc56311c84c73a74e1d2ff5a82d33b42f09"
+)
+MIXPANEL_MCP_REMOTE_URL = (
+    "https://registry.npmjs.org/mcp-remote/-/mcp-remote-0.1.38.tgz"
+)
+MIXPANEL_MCP_REMOTE_SHA256 = (
+    "d8e7034ed4ddf1f1b5efd928b74e7165ab427f7b21ab86ce79bcb82a4d9560aa"
+)
+MIXPANEL_TOOL_NAMES = (
+    "Run-Query",
+    "Get-Query-Schema",
+    "Get-Report",
+    "Display-Query",
+    "Create-Dashboard",
+    "List-Dashboards",
+    "Get-Dashboard",
+    "Update-Dashboard",
+    "Duplicate-Dashboard",
+    "Delete-Dashboard",
+    "Get-Business-Context",
+    "Get-Projects",
+    "List-Organizations",
+    "Get-Events",
+    "List-Properties",
+    "Get-Property-Values",
+    "Search-Entities",
+    "Get-Issues",
+    "Get-Lexicon-URL",
+    "Edit-Event",
+    "Edit-Property",
+    "Bulk-Edit-Events",
+    "Bulk-Edit-Properties",
+    "Create-Tag",
+    "Rename-Tag",
+    "Delete-Tag",
+    "Dismiss-Issues",
+    "Update-Business-Context",
+    "Find-Duplicate-Groups",
+    "Dismiss-Duplicate-Group",
+    "Merge-Group",
+    "Create-Custom-Property",
+    "Get-Custom-Property",
+    "Update-Custom-Property",
+    "Create-Cohort",
+    "Get-Cohort",
+    "Update-Cohort",
+    "Delete-Cohort",
+    "List-Cohorts",
+    "Describe-Cohort-Schema",
+    "Create-Lookup-Table",
+    "Get-Lookup-Table",
+    "Update-Lookup-Table",
+    "Create-Metric",
+    "Get-Metric",
+    "List-Metrics",
+    "Update-Metric",
+    "Get-User-Replays-Data",
+    "List-Experiments",
+    "Get-Experiment",
+    "Create-Experiment",
+    "Update-Experiment",
+    "Get-Experiment-Setup-Guidance",
+    "Get-Experiment-Results-Interpretation-Guidance",
+    "Explain-Experiment-Health-Check",
+    "Run-Experiment-Pre-Launch-Checks",
+    "Search-Prior-Experiments",
+    "List-Feature-Flags",
+    "Get-Feature-Flag",
+    "Create-Feature-Flag",
+    "Update-Feature-Flag",
+    "Get-Feature-Flag-Setup-Guidance",
+    "Get-Feature-Flag-Lifecycle-Guidance",
+)
+MIXPANEL_MCP_LAUNCHER = """\
+const { spawn } = require("node:child_process");
+
+const endpoints = {
+  us: "https://mcp.mixpanel.com/mcp",
+  eu: "https://mcp-eu.mixpanel.com/mcp",
+  in: "https://mcp-in.mixpanel.com/mcp",
+};
+const region = (process.env.MIXPANEL_MCP_REGION || "us").trim().toLowerCase();
+if (!Object.prototype.hasOwnProperty.call(endpoints, region)) {
+  console.error("MIXPANEL_MCP_REGION must be one of: us, eu, in.");
+  process.exit(1);
+}
+
+const serviceAccountToken = (
+  process.env.MIXPANEL_MCP_SA_TOKEN || ""
+).trim();
+if (
+  serviceAccountToken &&
+  !/^[A-Za-z0-9+/]+={0,2}$/.test(serviceAccountToken)
+) {
+  console.error(
+    "MIXPANEL_MCP_SA_TOKEN must be the base64 encoding of username:secret.",
+  );
+  process.exit(1);
+}
+
+const args = [
+  "--yes",
+  "mcp-remote@0.1.38",
+  endpoints[region],
+];
+const childEnv = { ...process.env };
+if (serviceAccountToken) {
+  childEnv.MIXPANEL_MCP_AUTH_HEADER = `Bearer Basic ${serviceAccountToken}`;
+  args.push(
+    "--header",
+    "Authorization:${MIXPANEL_MCP_AUTH_HEADER}",
+  );
+} else {
+  delete childEnv.MIXPANEL_MCP_AUTH_HEADER;
+}
+
+const executable = process.platform === "win32" ? "npx.cmd" : "npx";
+const child = spawn(executable, args, {
+  stdio: "inherit",
+  env: childEnv,
+});
+child.on("error", (error) => {
+  console.error(`Unable to start Mixpanel MCP bridge: ${error.message}`);
+  process.exit(1);
+});
+for (const signal of ["SIGINT", "SIGTERM"]) {
+  process.on(signal, () => child.kill(signal));
+}
+child.on("exit", (code, signal) => {
+  if (signal) process.kill(process.pid, signal);
+  else process.exit(code === null ? 1 : code);
+});
+"""
 PLUGINS = {
     "airtable": {
         "directory": "airtable-skills",
@@ -738,6 +883,76 @@ PLUGINS = {
                 "The setup dependency list explicitly includes click>=8.1 "
                 "because the pinned official CLI imports click directly but "
                 "does not declare it as a direct package dependency."
+            ),
+        ],
+    },
+    "mixpanel": {
+        "directory": "mixpanel-ai-plugins",
+        "revision": "2bde5a300d40afbc934ae74f44444744b80c09b6",
+        "repository": "https://github.com/mixpanel/ai-plugins",
+        "plugin_root": "plugins/mixpanel",
+        "manifest": ".cursor-plugin/plugin.json",
+        "license": "../../LICENSE",
+        "generated_icon": "./assets/icon.svg",
+        "category": "data",
+        "license_name": "Apache-2.0",
+        "generated_commands": True,
+        "extra_repository_files": [
+            ("plugins/mixpanel/ENGINE.md", "ENGINE.md"),
+        ],
+        "mcp_inline": {
+            "mcpServers": {
+                "mixpanel": {
+                    "command": "node",
+                    "args": ["-e", MIXPANEL_MCP_LAUNCHER],
+                },
+            },
+        },
+        "author": {
+            "name": "Mixpanel",
+            "url": "https://mixpanel.com",
+        },
+        "homepage": MIXPANEL_MCP_DOCS_URL,
+        "description": (
+            "Analyze Mixpanel data and manage dashboards, Lexicon, data "
+            "quality, experiments, feature flags, metrics, cohorts, and "
+            "business context through Mixpanel's official skills and "
+            "hosted MCP server."
+        ),
+        "readme_provenance": (
+            "Eleven non-install skill trees and the install skill's "
+            "headless reference come from Mixpanel's pinned Apache-2.0 "
+            "repository. Ghast adapts only the client-specific install "
+            "skill, MCP setup reference, and engine guide, and adds a "
+            "small slash-command router. The official hosted MCP server "
+            "remains operated by Mixpanel."
+        ),
+        "compatibility_notes": [
+            (
+                "The Codex private app mapping is replaced by Mixpanel's "
+                "official US, EU, or India hosted MCP endpoint through "
+                "pinned mcp-remote@0.1.38 and dynamic OAuth registration."
+            ),
+            (
+                "MIXPANEL_MCP_REGION selects us, eu, or in from a strict "
+                "allowlist; US is the default."
+            ),
+            (
+                "OAuth is the default. For non-interactive use, "
+                "MIXPANEL_MCP_SA_TOKEN may contain only the base64 encoding "
+                "of the official service-account username:secret pair. "
+                "The bridge constructs the required header inside the "
+                "child process and never inserts the secret into argv."
+            ),
+            (
+                "Mixpanel's current official MCP documentation lists 63 "
+                "tools across analytics, dashboards, discovery, Lexicon, "
+                "data quality, custom properties, cohorts, lookup tables, "
+                "metrics, session replay, experiments, and feature flags."
+            ),
+            (
+                "A generic analytics icon is used because the official AI "
+                "plugin repository does not publish a catalog icon."
             ),
         ],
     },
@@ -1367,6 +1582,7 @@ def main() -> int:
     verify_asana_evidence()
     verify_datadog_evidence()
     verify_deepnote_evidence()
+    verify_mixpanel_evidence()
     for name, config in PLUGINS.items():
         import_plugin(name, config, source_root)
     print(f"imported {len(PLUGINS)} plugins from official developer repositories")
@@ -1488,8 +1704,6 @@ def import_plugin(name: str, config: dict, source_root: Path) -> None:
                 copy_function=shutil.copy2,
             )
 
-        apply_ghast_compatibility(name, staging)
-
         shutil.copy2(license_path, staging / "LICENSE")
         for source_name, target_name in config.get("additional_licenses", []):
             shutil.copy2(plugin_root / source_name, staging / target_name)
@@ -1497,6 +1711,8 @@ def import_plugin(name: str, config: dict, source_root: Path) -> None:
             "extra_repository_files", []
         ):
             shutil.copy2(repository / source_name, staging / target_name)
+
+        apply_ghast_compatibility(name, staging)
 
         if config.get("icon"):
             icon_source = plugin_root / config["icon"]
@@ -1527,7 +1743,11 @@ def import_plugin(name: str, config: dict, source_root: Path) -> None:
         }
         if not config.get("no_skills"):
             manifest["skills"] = "./skills/"
-        if config.get("commands") or config.get("command_files"):
+        if (
+            config.get("commands")
+            or config.get("command_files")
+            or config.get("generated_commands")
+        ):
             manifest["commands"] = "./commands/"
         if config.get("mcp") or config.get("mcp_inline"):
             manifest["mcpServers"] = "./.mcp.json"
@@ -1728,6 +1948,20 @@ def apply_ghast_compatibility(name: str, staging: Path) -> None:
         )
         (staging / "commands/auth.md").write_text(
             render_mixpanel_auth_command()
+        )
+    elif name == "mixpanel":
+        (staging / "ENGINE.md").write_text(render_mixpanel_engine_guide())
+        (staging / "skills/install/SKILL.md").write_text(
+            render_mixpanel_install_skill()
+        )
+        (
+            staging
+            / "skills/install/references/mcp-setup.md"
+        ).write_text(render_mixpanel_mcp_setup_reference())
+        commands = staging / "commands"
+        commands.mkdir()
+        (commands / "install.md").write_text(
+            render_mixpanel_install_command()
         )
     elif name == "shopify":
         for markdown in (staging / "skills").rglob("*.md"):
@@ -2829,6 +3063,390 @@ def verify_deepnote_evidence() -> None:
         raise ValueError(
             "Deepnote MCP endpoint unexpectedly accepted no credentials"
         )
+
+
+def verify_mixpanel_evidence() -> None:
+    docs = fetch_markdown(MIXPANEL_MCP_DOCS_URL).decode("utf-8")
+    for marker in (
+        "# Mixpanel MCP Server",
+        "## Available Tools",
+        "## MCP Server URLs",
+        "## Connecting with OAuth",
+        "## Connecting with Service Accounts",
+        "## Building Custom Integrations (OAuth)",
+        "Dynamic Client Registration",
+        "Authorization Code Flow with PKCE",
+        "A maximum of 600 MCP requests/hour per user",
+        MIXPANEL_MCP_URL,
+        "https://mcp-eu.mixpanel.com/mcp",
+        "https://mcp-in.mixpanel.com/mcp",
+        "Authorization: Bearer Basic <base64-encoded-credentials>",
+    ):
+        if marker not in docs:
+            raise ValueError(
+                f"Mixpanel MCP documentation is missing {marker!r}"
+            )
+
+    try:
+        tools_section = docs.split("## Available Tools", 1)[1].split(
+            "## MCP Server URLs", 1
+        )[0]
+    except IndexError as exc:
+        raise ValueError(
+            "Mixpanel MCP tool documentation structure changed"
+        ) from exc
+    tool_names = tuple(
+        re.findall(r"`([A-Z][A-Za-z0-9-]+)`", tools_section)
+    )
+    if tool_names != MIXPANEL_TOOL_NAMES:
+        raise ValueError(
+            "Mixpanel MCP documented tool surface changed; re-audit required"
+        )
+
+    metadata = json.loads(fetch_bytes(MIXPANEL_OAUTH_METADATA_URL))
+    if canonical_json_sha256(metadata) != MIXPANEL_OAUTH_METADATA_SHA256:
+        raise ValueError(
+            "Mixpanel OAuth protected-resource metadata changed; "
+            "re-audit required"
+        )
+    if metadata.get("resource") != MIXPANEL_MCP_URL:
+        raise ValueError("Mixpanel OAuth resource URI changed")
+    if metadata.get("authorization_servers") != [MIXPANEL_MCP_URL]:
+        raise ValueError("Mixpanel OAuth authorization server changed")
+    if metadata.get("bearer_methods_supported") != ["header"]:
+        raise ValueError("Mixpanel OAuth bearer method changed")
+
+    auth_server = json.loads(fetch_bytes(MIXPANEL_AUTH_SERVER_URL))
+    if canonical_json_sha256(auth_server) != MIXPANEL_AUTH_SERVER_SHA256:
+        raise ValueError(
+            "Mixpanel OAuth authorization metadata changed; "
+            "re-audit required"
+        )
+    if auth_server.get("issuer") != MIXPANEL_MCP_URL:
+        raise ValueError("Mixpanel OAuth issuer changed")
+    if auth_server.get("registration_endpoint") != (
+        "https://mixpanel.com/oauth/mcp/register/"
+    ):
+        raise ValueError("Mixpanel OAuth registration endpoint changed")
+    grants = auth_server.get("grant_types_supported", [])
+    if "authorization_code" not in grants or "refresh_token" not in grants:
+        raise ValueError("Mixpanel OAuth grant support changed")
+    if auth_server.get("code_challenge_methods_supported") != ["S256"]:
+        raise ValueError("Mixpanel OAuth server no longer requires PKCE S256")
+    if "none" not in auth_server.get(
+        "token_endpoint_auth_methods_supported", []
+    ):
+        raise ValueError("Mixpanel OAuth public client support changed")
+
+    for prefix, web_domain in (
+        ("mcp-eu", "eu.mixpanel.com"),
+        ("mcp-in", "in.mixpanel.com"),
+    ):
+        endpoint = f"https://{prefix}.mixpanel.com/mcp"
+        regional_metadata = json.loads(
+            fetch_bytes(
+                f"https://{prefix}.mixpanel.com/"
+                ".well-known/oauth-protected-resource/mcp"
+            )
+        )
+        if regional_metadata.get("resource") != endpoint:
+            raise ValueError(f"{prefix}: Mixpanel OAuth resource changed")
+        if regional_metadata.get("authorization_servers") != [endpoint]:
+            raise ValueError(
+                f"{prefix}: Mixpanel OAuth authorization server changed"
+            )
+        regional_auth = json.loads(
+            fetch_bytes(
+                f"https://{prefix}.mixpanel.com/"
+                ".well-known/oauth-authorization-server/mcp"
+            )
+        )
+        if regional_auth.get("issuer") != endpoint:
+            raise ValueError(f"{prefix}: Mixpanel OAuth issuer changed")
+        if regional_auth.get("registration_endpoint") != (
+            f"https://{web_domain}/oauth/mcp/register/"
+        ):
+            raise ValueError(
+                f"{prefix}: Mixpanel OAuth registration endpoint changed"
+            )
+
+    bridge = fetch_bytes(MIXPANEL_MCP_REMOTE_URL)
+    if sha256_bytes(bridge) != MIXPANEL_MCP_REMOTE_SHA256:
+        raise ValueError(
+            "Pinned mcp-remote package changed; re-audit required"
+        )
+
+    initialize = json.dumps(
+        {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "method": "initialize",
+            "params": {
+                "protocolVersion": "2025-06-18",
+                "capabilities": {},
+                "clientInfo": {
+                    "name": "ghast-mixpanel-audit",
+                    "version": "1.0.0",
+                },
+            },
+        }
+    ).encode("utf-8")
+    request = urllib.request.Request(
+        MIXPANEL_MCP_URL,
+        data=initialize,
+        headers={
+            "User-Agent": "Mozilla/5.0",
+            "Content-Type": "application/json",
+            "Accept": "application/json, text/event-stream",
+        },
+        method="POST",
+    )
+    try:
+        urllib.request.urlopen(request, timeout=30)
+    except urllib.error.HTTPError as exc:
+        body = exc.read()
+        challenge = exc.headers.get("WWW-Authenticate", "")
+        if (
+            exc.code != 401
+            or b"invalid_token" not in body
+            or MIXPANEL_OAUTH_METADATA_URL not in challenge
+        ):
+            raise ValueError(
+                "Mixpanel MCP unauthenticated endpoint behavior changed"
+            ) from exc
+    else:
+        raise ValueError(
+            "Mixpanel MCP endpoint unexpectedly accepted no credentials"
+        )
+
+
+def render_mixpanel_engine_guide() -> str:
+    return """# Mixpanel plugin - Ghast engine guide
+
+This plugin gives Ghast Mixpanel expertise for analytics, dashboards,
+experiments, feature flags, Lexicon, metrics, business context, and tracking
+implementation. Skills describe the desired Mixpanel action; an engine performs
+it.
+
+## Resolve an engine
+
+A project can use more than one engine. Resolve one engine for the current
+session, in this order:
+
+1. An engine explicitly named by the user or loaded project instructions is
+   mandatory. If it is unavailable, offer `/mixpanel:install` for that engine.
+2. If Mixpanel MCP tools are available, use the MCP server. This is the default.
+3. Otherwise offer `/mixpanel:install`. Never invent a direct HTTP API call.
+
+## Official hosted MCP
+
+The bundled `mixpanel` server launches pinned `mcp-remote@0.1.38` against one
+official regional endpoint:
+
+| `MIXPANEL_MCP_REGION` | Endpoint |
+| --- | --- |
+| `us` (default) | `https://mcp.mixpanel.com/mcp` |
+| `eu` | `https://mcp-eu.mixpanel.com/mcp` |
+| `in` | `https://mcp-in.mixpanel.com/mcp` |
+
+With `MIXPANEL_MCP_SA_TOKEN` unset, the bridge uses Mixpanel's browser OAuth
+flow with PKCE and dynamic client registration. For non-interactive use, the
+variable may contain the base64 encoding of an official service-account
+`username:secret` pair. Never request, print, log, or write the raw username,
+secret, encoded token, access token, or refresh token.
+
+Use the server tool whose description matches the requested action. For any
+write, deletion, merge, bulk edit, experiment or flag lifecycle change, show
+the exact proposed mutation and obtain explicit confirmation unless the
+calling official skill already has a stricter confirmation contract.
+
+Setup and verification live in
+[`skills/install/references/mcp-setup.md`](skills/install/references/mcp-setup.md).
+
+## mixpanel-headless SDK
+
+Use the SDK when the user or loaded instructions explicitly prefer it and
+`mp --version` succeeds. Read the installed package's
+`mixpanel_headless/CLAUDE.md`, `mp --help`, and method docstrings before making
+calls. Authentication is managed by `mp login`; verify with `mp account test`.
+The separate `mixpanel-headless` Ghast plugin provides its deeper official
+analysis workflows.
+
+## Custom integration
+
+If the user supplies an existing integration in the conversation or project
+instructions, follow that integration exactly. Do not probe for credentials or
+construct an undocumented transport.
+
+## Skill engine tags
+
+Every official `SKILL.md` declares `metadata.engine` as `required`, `optional`,
+or `none`. Required skills stop and offer `/mixpanel:install` if no engine is
+available. Optional skills use an engine when available and follow their
+documented fallback otherwise.
+"""
+
+
+def render_mixpanel_install_skill() -> str:
+    return """---
+name: install
+description: >
+  Set up Mixpanel for this project using Mixpanel's official hosted MCP
+  server, the official mixpanel-headless Python SDK, or an existing custom
+  integration. Use when the user asks to install, connect, configure, switch
+  region, change authentication, or repair Mixpanel. Interactive; do not
+  handle raw credentials in conversation.
+compatibility: "Works in Ghast projects and profiles. Configures an official Mixpanel engine."
+metadata:
+  engine: none
+---
+
+# Mixpanel Install
+
+> **No engine required** - this skill sets an engine up.
+
+Read [`../../ENGINE.md`](../../ENGINE.md) before starting. Engines can coexist;
+the user's explicit choice for this session wins.
+
+## Step 0 - Detect current state
+
+1. If Mixpanel MCP tools are already listed, report that the hosted MCP engine
+   is connected. If the endpoint is visible, identify US, EU, or India. Ask
+   whether to keep it, change region/authentication, or add another engine.
+2. Otherwise run `mp --version` once. If it succeeds, report that the headless
+   SDK is available and ask whether to connect MCP or keep using headless.
+3. If neither is available, continue to engine selection.
+
+## Step 1 - Select an engine
+
+Ask one concise question with these choices:
+
+1. **Official Mixpanel MCP** - recommended for interactive analytics and
+   product management; browser OAuth by default.
+2. **Official mixpanel-headless SDK** - recommended for scripts, CI, Python
+   analysis, and coding-agent workflows.
+3. **Existing custom integration** - use only instructions the user supplies.
+
+## Step 2a - Official MCP
+
+Read
+[`references/mcp-setup.md`](references/mcp-setup.md), then:
+
+1. Ask for region: US, EU, or India. If unsure, `eu.mixpanel.com` means EU,
+   `in.mixpanel.com` means India, and other Mixpanel URLs normally mean US.
+2. Ask whether the session is interactive OAuth or a non-interactive official
+   service account. Never ask for the credential itself.
+3. Tell the user the exact non-secret environment names and values to set:
+   `MIXPANEL_MCP_REGION=us|eu|in`; for service accounts only,
+   `MIXPANEL_MCP_SA_TOKEN` is the base64 encoding of `username:secret`.
+4. Have the user store secrets outside chat, reload the active Ghast profile,
+   and connect the bundled `mixpanel` MCP server. OAuth users complete the
+   browser flow opened by the bridge.
+5. Verify that tools are listed and call the project-listing tool. Do not
+   continue if authentication or project access fails.
+
+## Step 2b - mixpanel-headless
+
+Follow
+[`references/headless-setup.md`](references/headless-setup.md). Install the
+official package into the project's existing Python environment if needed,
+run `mp login`, and verify with `mp account test`. Never put credentials in a
+tracked file or command argument.
+
+## Step 2c - Custom integration
+
+Acknowledge the integration and follow only the context the user provides.
+Do not interrogate the environment or infer an undocumented API.
+
+## Step 3 - Confirm
+
+Re-run the chosen engine's verification and summarize:
+
+- engine and region;
+- authentication mode without credential values;
+- where the engine is configured;
+- whether project discovery succeeded.
+
+Then suggest a concrete next workflow such as `analyze-report`,
+`deep-research`, `create-dashboard`, or `tracking-implementation`.
+"""
+
+
+def render_mixpanel_mcp_setup_reference() -> str:
+    return """# Mixpanel MCP server setup for Ghast
+
+Official documentation: `https://docs.mixpanel.com/docs/mcp`.
+
+## Regional endpoints
+
+| Region | `MIXPANEL_MCP_REGION` | Official URL |
+| --- | --- | --- |
+| US | `us` | `https://mcp.mixpanel.com/mcp` |
+| EU | `eu` | `https://mcp-eu.mixpanel.com/mcp` |
+| India | `in` | `https://mcp-in.mixpanel.com/mcp` |
+
+The bundled launcher accepts only these three values and defaults to US.
+Set the region in the Ghast host environment before loading or reloading the
+profile that contains this plugin.
+
+## Interactive OAuth
+
+Leave `MIXPANEL_MCP_SA_TOKEN` unset. The bundled bridge uses
+`mcp-remote@0.1.38`, discovers Mixpanel's RFC 9728/RFC 8414 metadata,
+dynamically registers a public client, and completes Authorization Code +
+PKCE S256 in the browser. Tokens are managed by the bridge's local OAuth
+storage. Never inspect, print, or move those token files.
+
+## Service account
+
+Mixpanel's MCP service-account support is beta and intended for
+non-interactive agents. The user creates the account in Mixpanel and stores
+the base64 encoding of `username:secret` in `MIXPANEL_MCP_SA_TOKEN` outside
+the conversation. Do not accept the raw username, secret, or encoded token in
+chat and do not write it into the plugin.
+
+The launcher validates the token's base64 shape, constructs Mixpanel's
+required `Authorization: Bearer Basic <token>` value in child-process
+environment memory, and passes only an environment placeholder in argv.
+
+## Verify
+
+1. Reload the active Ghast profile and connect the `mixpanel` MCP server.
+2. Confirm the server lists tools.
+3. Call `Get-Projects` (the client may normalize its name) and confirm at
+   least the expected accessible project is visible.
+4. If projects are missing, verify the selected region before changing auth.
+
+The official documentation currently lists 63 tools. They cover analytics,
+dashboards, data discovery, Lexicon and data quality writes, custom
+properties, cohorts, lookup tables, metrics, session replay, experiments, and
+feature flags.
+
+## Safety and access
+
+- MCP must be enabled for the Mixpanel organization.
+- Existing Mixpanel roles, project permissions, and Data Views still apply.
+- Reads and writes are both available. Preview and explicitly confirm
+  destructive, bulk, merge, lifecycle, or high-impact changes.
+- Mixpanel states that MCP is not currently covered for HIPAA/PHI use.
+- The current documented limit is 600 MCP requests per hour per user.
+"""
+
+
+def render_mixpanel_install_command() -> str:
+    return """---
+name: mixpanel:install
+description: Configure or repair the official Mixpanel MCP, mixpanel-headless SDK, region, or authentication mode.
+argument-hint: [mcp|headless|custom] [us|eu|in] [oauth|service-account]
+---
+
+# Mixpanel Install
+
+Use the `install` skill from this plugin. Treat `$ARGUMENTS` only as the
+user's preferred engine, region, or authentication mode; still run every
+verification and credential-safety check in the skill. Never request or echo
+a Mixpanel secret or token.
+"""
 
 
 def render_mixpanel_auth_command() -> str:

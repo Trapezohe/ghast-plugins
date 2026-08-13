@@ -705,6 +705,37 @@
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/mermaid-mindmap"
     },
     {
+      "id": "mixpanel",
+      "name": "mixpanel",
+      "description": "Analyze Mixpanel data and manage dashboards, Lexicon, data quality, experiments, feature flags, metrics, cohorts, and business context through Mixpanel's official skills and hosted MCP server.",
+      "manifest": {
+        "name": "mixpanel",
+        "description": "Analyze Mixpanel data and manage dashboards, Lexicon, data quality, experiments, feature flags, metrics, cohorts, and business context through Mixpanel's official skills and hosted MCP server.",
+        "author": {
+          "name": "Mixpanel",
+          "url": "https://mixpanel.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.0-ghast.1",
+        "homepage": "https://docs.mixpanel.com/docs/mcp",
+        "repository": "https://github.com/mixpanel/ai-plugins",
+        "upstreamRevision": "2bde5a300d40afbc934ae74f44444744b80c09b6",
+        "license": "Apache-2.0",
+        "skills": "./skills/",
+        "commands": "./commands/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/mixpanel.zip",
+        "sha256": "eebbb8ca481df11076ec301ba850eead571e6a08de8b38773116cd3ab45d7443"
+      },
+      "icon": "./plugins/mixpanel/assets/icon.svg",
+      "category": "data",
+      "homepage": "https://docs.mixpanel.com/docs/mcp",
+      "repository": "https://github.com/mixpanel/ai-plugins",
+      "license": "Apache-2.0"
+    },
+    {
       "id": "mixpanel-headless",
       "name": "mixpanel-headless",
       "description": "Query and analyze Mixpanel data with Python. Provides the mixpanel_headless auth surface (Account → Project → Workspace hierarchy), API (5 query engines, discovery, entity CRUD), and Business Context read/write (the markdown documentation that grounds AI assistants, at org and project scopes), with a live documentation system (help.py) for method signatures, type lookup, fuzzy search, and hosted docs.",

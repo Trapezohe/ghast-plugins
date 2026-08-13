@@ -109,7 +109,7 @@ verification.
 | mem | Mem Labs, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | meticulate | Meticulate | appConnector | MIT | official-source-research-required | not-implemented |
 | midpage | Midpage | appConnector, skills | MIT | official-source-research-required | not-implemented |
-| mixpanel | Mixpanel | appConnector | MIT | official-source-research-required | not-implemented |
+| mixpanel | Mixpanel | appConnector | MIT | official-source-verified | implemented-verified |
 | mixpanel-headless | Mixpanel | skills | MIT | official-source-verified | implemented-verified |
 | monday-com | Monday.com | appConnector | MIT | official-source-verified | implemented-verified |
 | moody-s | Moody's | appConnector, skills | MIT | official-source-research-required | not-implemented |
