@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 6,
-      "official-source-research-required": 83,
-      "official-source-verified": 60
+      "official-source-research-required": 82,
+      "official-source-verified": 61
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 60,
-      "not-implemented": 89
+      "implemented-verified": 61,
+      "not-implemented": 88
     }
   },
   "excludedOpenAIPlugins": [
@@ -7142,7 +7142,7 @@
     },
     {
       "id": "signnow",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "airSlate Inc",
@@ -7167,13 +7167,83 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.signnow.com"
+        "homepage": "https://www.signnow.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "airSlate Inc",
+          "officialRepository": "https://github.com/signnow/sn-mcp-server",
+          "officialRevision": "80c7de587367d611fc5c689a625b5a34fc5cd35e",
+          "license": "MIT",
+          "licenseEvidence": [
+            "The pinned official repository contains LICENSE.md with the MIT license and Copyright (c) 2003-present SignNow; its SHA-256 is e9d433a6856c874b814aad7c54085f20597bdf8d2364c31644fb37e3960af633.",
+            "plugins/signnow/LICENSE separately licenses the Ghast-authored hosted-endpoint configuration, safety instructions, documentation, and generic icon.",
+            "Ghast does not redistribute the SignNow server source, private Codex connector, account data, signed documents, OAuth credentials, or marketplace artwork."
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the official signnow GitHub organization and describes itself as the official SignNow MCP server for AI agents.",
+            "GitHub identifies MIT as the repository license. The latest release on August 13, 2026 was v3.1.0, published July 27, 2026, and its lightweight tag resolves to commit 80c7de587367d611fc5c689a625b5a34fc5cd35e.",
+            "GitHub reports the pinned release commit signature as verified with reason valid.",
+            "The pinned LICENSE, README, pyproject.toml, uv.lock, server wiring, tool-registration index, v2 tool module, and v3 tool module are verified byte-for-byte by scripts/import-official-hosted-plugins.py.",
+            "The official README documents the pre-deployed Streamable HTTP endpoint https://mcp-server.signnow.com/mcp, local uvx and PyPI execution, and all 25 current tool names.",
+            "PyPI publishes signnow-mcp-server 3.1.0 for Python 3.10 or newer. The wheel SHA-256 is 8a5f6d72bf6fd5baa24abc158492b74d29f1085d1e9af0c7801ef28ac9ddd291 and the source distribution SHA-256 is 08a153cb23d271e01a7a68e070490c4402feca890b1e812ebc74b8b4a382792d.",
+            "The official protected-resource metadata identifies the hosted MCP resource, SignNow authorization server, wildcard and offline-access scopes, and bearer-header authentication; its canonical JSON SHA-256 is 84a8494032e9f8d8d540d7e33242bf13e96582a6820aeac4a4ab4fdd604a113c.",
+            "The authorization-server metadata declares dynamic client registration, authorization-code and refresh-token grants, public clients, and PKCE S256; its canonical JSON SHA-256 is 3e4b92f71627b72d1bfe11b09098c579f40030ce04dc261a0e270464f32251b2.",
+            "On August 13, 2026, a disposable localhost public client registered with HTTP 201, authorization-code and refresh-token grants, no client secret, and token_endpoint_auth_method none.",
+            "An unauthenticated initialize request returned HTTP 401, body Unauthorized, and the official protected-resource metadata challenge.",
+            "A pinned-source stdio probe negotiated MCP protocol 2025-06-18 and returned 25 tools. The sorted names have SHA-256 3cb78b951b857a3b39c38ffbf7ed5b0000a6973f827f8ed44d9de20dfd5199e2, and the canonical name plus annotation inventory has SHA-256 1fb65b7db7da4430fa74857439a35277e0e884576ad15ad04fa39a338e7134b3.",
+            "The complete official source test suite passed 919 tests with 1 skipped and 84.16 percent coverage. Ruff source checks, mypy strict mode across 50 source files, and both import-linter architecture contracts also passed."
+          ],
+          "codexCapabilities": [
+            "Send SignNow signature requests",
+            "Create documents from templates and prefill their fields",
+            "Track invite and signer status",
+            "List and manage templates",
+            "Retrieve download links for completed signed documents"
+          ],
+          "ghastCapabilities": [
+            "The same official template listing, document creation from templates, text-field prefill, signature invitation, status tracking, and signed-document download-link workflows through SignNow's hosted open-source MCP server",
+            "Additional official tools for direct upload, template creation, embedded signing, embedded sending, embedded editing, signing links, reminders, cancellation, pending-recipient replacement, document viewing, contact lookup, entity renaming, and SignNow's bundled skill library"
+          ],
+          "capabilityRelationship": "superset-official-hosted-open-source-mcp",
+          "limitations": [
+            "The adapter connects to SignNow's hosted deployment and does not bundle the official server. The adapter and upstream source have separate MIT licenses.",
+            "A SignNow account, browser OAuth, an eligible plan, document ownership, folder access, and the required account permissions remain user-managed.",
+            "The protected resource currently advertises wildcard * and offline_access scopes. No separately verified read-only OAuth scope is available, so every state-changing operation requires explicit confirmation.",
+            "Authenticated hosted tools/list and real document, invite, signing, upload, or download operations were not run because they require a SignNow account and user documents.",
+            "The hosted tool surface can evolve after the pinned v3.1.0 source. Clients must inspect the authenticated live tool list before promising exact availability.",
+            "The pinned source initialize response reports serverInfo.version 3.4.7, which is the installed FastMCP version rather than the SignNow v3.1.0 release. This is an upstream metadata defect and is not treated as a newer SignNow version.",
+            "All creates, sends, embedded-link creation, uploads, template creation, prefill changes, reminders, recipient replacements, cancellations, and renames require fresh server state and explicit target review. Ambiguous writes must not be blindly retried.",
+            "Document, signing, download, editor, invite, and sending links can grant access to sensitive material and must be disclosed only to the intended user.",
+            "The complete Ruff format check reports an upstream whitespace-only issue in tests/README.md; all source and Python test files pass Ruff formatting when that Markdown example is excluded.",
+            "A generic document-signing icon is used instead of SignNow marketplace artwork."
+          ],
+          "verification": [
+            "python3 scripts/import-official-hosted-plugins.py",
+            "Verify pinned official source hashes for LICENSE.md, README.md, pyproject.toml, uv.lock, src/sn_mcp_server/server.py, src/sn_mcp_server/tools/__init__.py, src/sn_mcp_server/tools/signnow.py, and src/sn_mcp_server/tools/signnow_v3.py",
+            "Verify GitHub latest release v3.1.0, tag target 80c7de587367d611fc5c689a625b5a34fc5cd35e, and valid verified commit signature",
+            "Verify PyPI signnow-mcp-server 3.1.0 wheel SHA-256 8a5f6d72bf6fd5baa24abc158492b74d29f1085d1e9af0c7801ef28ac9ddd291 and sdist SHA-256 08a153cb23d271e01a7a68e070490c4402feca890b1e812ebc74b8b4a382792d",
+            "Verify canonical OAuth protected-resource metadata SHA-256 84a8494032e9f8d8d540d7e33242bf13e96582a6820aeac4a4ab4fdd604a113c",
+            "Verify canonical OAuth authorization-server metadata SHA-256 3e4b92f71627b72d1bfe11b09098c579f40030ce04dc261a0e270464f32251b2",
+            "Register a disposable localhost public OAuth client and confirm HTTP 201, authorization-code and refresh-token grants, token_endpoint_auth_method none, and no client secret",
+            "Probe https://mcp-server.signnow.com/mcp with MCP initialize and confirm HTTP 401, body Unauthorized, and SignNow's protected-resource challenge",
+            "Run the pinned source with a non-secret placeholder SIGNNOW_ACCESS_TOKEN, negotiate MCP 2025-06-18, and confirm all 25 tools, sorted-name SHA-256 3cb78b951b857a3b39c38ffbf7ed5b0000a6973f827f8ed44d9de20dfd5199e2, and annotation-inventory SHA-256 1fb65b7db7da4430fa74857439a35277e0e884576ad15ad04fa39a338e7134b3",
+            "Run SIGNNOW_ACCESS_TOKEN=ghast-audit-placeholder-not-a-real-token python -m pytest -q --cov=src --cov-report=term --cov-fail-under=70 and confirm 919 passed, 1 skipped, and 84.16 percent coverage",
+            "Run ruff check src tests, ruff format --check src tests --exclude tests/README.md, mypy src, and lint-imports",
+            "Compare every Codex SignNow workflow with the 25 official tools and confirm the Ghast surface is a strict superset",
+            "Authorize a SignNow account before testing hosted authenticated schemas or real document workflows",
+            "unzip -tqq packages/signnow.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": "https://github.com/signnow/sn-mcp-server",
+        "upstreamRevision": "80c7de587367d611fc5c689a625b5a34fc5cd35e",
+        "portStatus": "full"
       }
     },
     {

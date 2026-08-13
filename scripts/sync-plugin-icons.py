@@ -218,6 +218,13 @@ CUSTOM_ICONS = {
         '<circle cx="35" cy="35" r="2" fill="white"/>'
         '<circle cx="48" cy="18" r="2" fill="white"/>',
     ),
+    "signnow": (
+        "#176B5B",
+        '<path d="M17 11h25l8 8v34H17z"/>'
+        '<path d="M42 11v10h8M24 31h18M24 39h10"/>'
+        '<path d="M26 50l16-16 6 6-16 16-8 2z"/>'
+        '<path d="M39 37l6 6"/>',
+    ),
     "similarweb": (
         "#F07028",
         '<circle cx="32" cy="32" r="20"/>'
