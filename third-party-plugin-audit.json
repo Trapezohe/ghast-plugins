@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 76,
-      "official-source-verified": 68
+      "official-source-research-required": 75,
+      "official-source-verified": 69
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 68,
-      "not-implemented": 81
+      "implemented-verified": 69,
+      "not-implemented": 80
     }
   },
   "excludedOpenAIPlugins": [
@@ -3953,7 +3953,7 @@
     },
     {
       "id": "granola",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Granola",
@@ -3978,13 +3978,77 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.granola.ai"
+        "homepage": "https://www.granola.ai",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Granola",
+          "officialRepository": null,
+          "officialRevision": "granola-docs-b091dacafcec+oauth-ffbe7699c7ae+auth-710cc56359dd",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/granola/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+            "No Granola hosted MCP implementation, private Codex connector, meeting data, OAuth credentials, branded icon, or marketplace artwork is redistributed."
+          ],
+          "officialityEvidence": [
+            "Granola's official documentation identifies https://mcp.granola.ai/mcp as its public Streamable HTTP MCP server and documents browser OAuth as the only supported MCP authentication method.",
+            "The official MCP documentation has SHA-256 b091dacafcec3672ae15a7b8e3ed6edfe82a8f887ebb1d1abe525292bb47b7d8 and publishes six tools for meeting queries, folders, meeting lists, note retrieval, transcripts, and connected account or workspace identity.",
+            "The exact ordered six-tool inventory has SHA-256 30b13518fdef35595ad1411cec22a13da9027599275702bb4f537114b25c717c.",
+            "The protected-resource metadata identifies https://mcp.granola.ai/mcp, bearer-header authentication, scope mcp, and https://mcp-auth.granola.ai; its canonical JSON SHA-256 is ffbe7699c7ae6cbfcbd3a9c0ddc89e081e1d48ec7b49ca93bb2608bbaa7b0adb.",
+            "The authorization-server metadata declares authorization-code and refresh-token grants, dynamic client registration, public clients, and PKCE S256; its canonical JSON SHA-256 is 710cc56359dd3b0725ff8a797a54de42c0cdf5e630d957ad16e8d7c117bed07c.",
+            "On August 13, 2026, a disposable localhost public client registered with HTTP 201 and returned no client secret.",
+            "An unauthenticated MCP initialize request returned HTTP 401 with Granola's official protected-resource challenge.",
+            "OpenAI's pinned Codex plugin snapshot identifies Granola as the developer and documents topic, person, company, and timeframe search with conversation citations and the Hearthbase deal-history workflow. The manifest and connector declarations have SHA-256 hashes b99d143f2706151f3bb50fead11b9fd7d2649a8e7ff0253e8727b7cb2fb88a61 and 9014ece665219ff874439e40c5c54d503bdde1946feb441d655a2584dea4fa90.",
+            "No public repository containing the Granola hosted MCP implementation was found, so Ghast integrates it only as an official hosted adapter."
+          ],
+          "codexCapabilities": [
+            "Search Granola meetings by topic, person, company, or timeframe and cite specific conversations",
+            "Pull customer feedback, stakeholder input, decisions, project background, requirements, and technical context into documents, presentations, reports, code, and strategic analysis",
+            "Summarize the history of a deal such as the default Hearthbase workflow"
+          ],
+          "ghastCapabilities": [
+            "The same meeting-history and deal-summary workflows through Granola's official hosted MCP server",
+            "Natural-language meeting-history queries with query_granola_meetings",
+            "Traceable folder and meeting discovery with IDs, titles, dates, attendees, and optional folder filtering",
+            "Retrieval of private and summarized meeting notes for exact meeting IDs",
+            "Paid-plan raw transcript retrieval for speaker-grounded detail and quotations",
+            "Connected account and active workspace verification through get_account_info",
+            "Direct browser OAuth through dynamic client registration, authorization code, refresh tokens, public clients, and PKCE S256"
+          ],
+          "capabilityRelationship": "equivalent-official-hosted-mcp",
+          "limitations": [
+            "The hosted MCP implementation is operated by Granola and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+            "A Granola account with existing meeting notes, browser OAuth, the correct active workspace, note access, workspace policy, plan entitlements, and service limits remain user-managed.",
+            "Basic accounts can access only personal notes from the last 30 days. Some folder, search, and transcript tools require a paid plan.",
+            "Business access can include personal and public notes. Enterprise administrators control member scopes, while Enterprise admins can access both personal and public notes.",
+            "Granola MCP follows the active workspace selected in the Granola app. It does not search every workspace at once.",
+            "Documentation, the complete published six-tool catalog, OAuth metadata, dynamic registration, Codex capability evidence, and unauthenticated protocol behavior were verified without an account. Authenticated tools/list and real meeting-data operations were not run.",
+            "Meeting notes, private notes, transcripts, attendee identities, customer statements, decisions, and action items can contain personal and commercially sensitive information. Retrieval and disclosure must remain narrowly scoped.",
+            "Granola documents rate limits averaging around 100 requests per minute across tools, varying by plan and tool.",
+            "A generic meeting-notes icon is used because no licensed catalog artwork is included in a public official MCP source repository."
+          ],
+          "verification": [
+            "python3 scripts/import-official-hosted-plugins.py",
+            "Verify official MCP documentation SHA-256 b091dacafcec3672ae15a7b8e3ed6edfe82a8f887ebb1d1abe525292bb47b7d8",
+            "Parse the official tool table and confirm the exact ordered six-tool inventory and SHA-256 30b13518fdef35595ad1411cec22a13da9027599275702bb4f537114b25c717c",
+            "Verify canonical OAuth protected-resource and authorization-server metadata hashes ffbe7699c7ae6cbfcbd3a9c0ddc89e081e1d48ec7b49ca93bb2608bbaa7b0adb and 710cc56359dd3b0725ff8a797a54de42c0cdf5e630d957ad16e8d7c117bed07c",
+            "Register a disposable localhost public OAuth client and confirm HTTP 201, no client secret, authorization-code and refresh-token grants, public-client authentication, and PKCE S256 discovery",
+            "Probe https://mcp.granola.ai/mcp with MCP initialize and confirm HTTP 401 plus Granola's protected-resource challenge",
+            "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Granola manifest and connector hashes and compare its meeting-search, citation, context, and Hearthbase deal-history workflows with all six official tools",
+            "Authorize a Granola account before testing authenticated tool schemas or meeting-data operations",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/granola.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": null,
+        "upstreamRevision": "granola-docs-b091dacafcec+oauth-ffbe7699c7ae+auth-710cc56359dd",
+        "portStatus": "full"
       }
     },
     {
@@ -6595,11 +6659,12 @@
           "officialRevision": "7950d51d118ca164c32b7cf0cfaa14f34f24849f",
           "license": "MIT",
           "licenseEvidence": [
-            "LICENSE"
+            "LICENSE at the pinned revision has SHA-256 2b51ab429d27ce74a8afc18a4b99beb8066b4c7e48e494ece56288ee5b9df140 and identifies the MIT License with Copyright (c) 2025 Razorpay"
           ],
           "officialityEvidence": [
             "The repository is owned by the Razorpay GitHub organization, describes itself as Razorpay's official MCP server, and links to Razorpay's official MCP documentation.",
             "The official source exposes READ_ONLY and --read-only configuration and separates read tools from write tools before registration.",
+            "The pinned Git tree SHA-256 is af57615758813da15195d82ffdc03534f5f6df157ce13bcc45f69c5c86caf8a6; README.md SHA-256 is bc50ceb1174e73105ffdec19c36b8bbf6a349901d9446ff703bc8cfc8cdd1968.",
             "Razorpay's official hosted endpoint at https://mcp.razorpay.com/mcp returns the documented API-key or OAuth authentication challenge, but the hosted service documentation includes write operations and does not establish a connector-equivalent read-only policy."
           ],
           "codexCapabilities": [
@@ -6607,20 +6672,28 @@
             "Guarantee read-only account access with no transaction execution"
           ],
           "ghastCapabilities": [
-            "The pinned official source can expose 26 strictly read-only tools for payments, orders, refunds, settlements, QR codes, payment links, payouts, reconciliation, stack detection, and checkout integration.",
+            "The pinned official source exposes 45 tools in total: 26 strictly read-only tools and 19 write-classified tools. The read-only inventory SHA-256 is aede8960dff943d99da4088c08feec279253f99d030943e0951e815886f24832; the write inventory SHA-256 is ab07bfdccc2f8fc8c49d56793b1432a1a0da9c267693b19a8cb54b45707ea741.",
+            "The official README marks 41 tools as remotely supported and four as local-only: create_refund, close_qr_code, create_instant_settlement, and create_registration_link.",
             "No Ghast plugin is published because the safe official read-only mode omits saved payment methods, while the older implementation that exposes them can create a customer."
           ],
           "capabilityRelationship": "official-source-found-capability-safety-gap",
           "limitations": [
             "At official release v1.2.1, --read-only still registers fetch_tokens; that tool creates or fetches a customer when called with a contact number, so the release does not satisfy the Codex promise that no transactions or mutations occur.",
             "At pinned revision 7950d51d118ca164c32b7cf0cfaa14f34f24849f, Razorpay fixes this by classifying fetch_tokens as a write tool. Strict read-only mode then removes it, leaving no official read-only tool for the Codex capability of viewing saved customer payment methods.",
-            "Publishing the current strict mode as equivalent would hide a documented capability loss; publishing the older release would hide a real mutation path."
+            "The current fetch_tokens implementation is read-only when customer_id is supplied, but its alternative contact parameter can POST a customer create-or-fetch request. The official server exposes these paths through one tool and provides no configuration that enforces the customer_id-only subset.",
+            "The official README has three stale tool names relative to the pinned runtime: create_payment_link_upi maps to payment_link_upi_create, send_payment_link maps to payment_link_notify, and fetch_payout_by_id maps to fetch_payout_with_id.",
+            "The hosted endpoint publishes OAuth protected-resource and authorization-server metadata and accepted confidential dynamic client registration during the audit, but a standard PKCE authorization launch returned HTTP 406. Browser OAuth and authenticated remote tools/list were therefore not verified.",
+            "Publishing the current strict mode as equivalent would hide a documented capability loss; publishing the older release or unrestricted hosted endpoint would hide a real mutation path."
           ],
           "verification": [
-            "Build the pinned source with Go 1.24.2 or newer and run its toolset, Razorpay, and command test packages",
+            "Verify go.mod SHA-256 fcfff81f6bb216f0191f5925aa0802f23985741051c6f9934deb3e4f4033cf7d and go.sum SHA-256 e53ccd749964dada4192a2c4d4039d97bb27acc5967da7e30ca8f92d155ac94b at the pinned revision",
+            "Using the verified official Go 1.24.2 toolchain, run go mod verify, go vet ./..., gofmt -l ., and go test -race -json ./...; the audit observed 947 passed test events and zero failed events across nine packages",
             "Start the pinned server with dummy credentials and --read-only, call tools/list, and confirm 26 tools are returned, every tool has readOnlyHint=true and destructiveHint=false, and no known write tool is present",
+            "Start the pinned server without --read-only, call tools/list, and confirm 45 tools are returned: the same 26 read-only tools plus 19 tools marked readOnlyHint=false and destructiveHint=true",
             "Download Razorpay's official v1.2.1 Darwin arm64 release, verify SHA-256 0658e565c732ea5f078dc9f17a9203cc03f44d5a6837713aaaf1da19528f54d2, run --read-only, and confirm fetch_tokens is still present",
             "Compare v1.2.1 with the pinned revision and confirm fetch_tokens moved from AddReadTools to AddWriteTools",
+            "Verify canonical protected-resource metadata SHA-256 4515899424db8954019cdc21dcd02aa27974b4f9ad1079fe98585954ed0725c0 and authorization-server metadata SHA-256 82e0fe16ba0e524c05483ba14746fc126efff29c6f09d5e25518234fe0be24f0",
+            "Probe the hosted endpoint without credentials and with invalid Basic credentials and confirm HTTP 401 responses; do not claim authenticated account behavior because no merchant credential was used",
             "Do not create plugins/razorpay until Razorpay provides a strictly read-only saved-payment-method tool or an equivalent official configuration"
           ]
         }

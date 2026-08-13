@@ -1,0 +1,16 @@
+{
+  "name": "granola",
+  "version": "1.0.3-ghast.1",
+  "description": "Search and analyze Granola meeting notes, transcripts, attendees, folders, decisions, and action items through Granola's official hosted MCP server.",
+  "category": "communication",
+  "author": {
+    "name": "Granola",
+    "url": "https://www.granola.ai"
+  },
+  "homepage": "https://docs.granola.ai/help-center/sharing/integrations/mcp",
+  "upstreamRevision": "granola-docs-b091dacafcec+oauth-ffbe7699c7ae+auth-710cc56359dd",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

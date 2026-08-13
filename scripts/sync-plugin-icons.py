@@ -145,6 +145,12 @@ CUSTOM_ICONS = {
         '<path d="M12 25h40M22 10v9M42 10v9"/>'
         '<path d="M19 38h5l3-8 5 15 5-11 3 6h5"/>',
     ),
+    "granola": (
+        "#5C6257",
+        '<path d="M16 12h32v40H16z"/>'
+        '<path d="M23 21h18M23 29h18M23 37h12"/>'
+        '<path d="M36 45l6-6 5 5-6 6-7 2z"/>',
+    ),
     "defillama": (
         "#176B87",
         '<path d="M15 45V31h8v14M28 45V22h8v23M41 45V15h8v30"/>'

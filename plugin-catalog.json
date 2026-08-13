@@ -895,6 +895,34 @@
       "license": "MIT"
     },
     {
+      "id": "granola",
+      "name": "granola",
+      "description": "Search and analyze Granola meeting notes, transcripts, attendees, folders, decisions, and action items through Granola's official hosted MCP server.",
+      "manifest": {
+        "name": "granola",
+        "description": "Search and analyze Granola meeting notes, transcripts, attendees, folders, decisions, and action items through Granola's official hosted MCP server.",
+        "author": {
+          "name": "Granola",
+          "url": "https://www.granola.ai"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://docs.granola.ai/help-center/sharing/integrations/mcp",
+        "upstreamRevision": "granola-docs-b091dacafcec+oauth-ffbe7699c7ae+auth-710cc56359dd",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/granola.zip",
+        "sha256": "507b81e2654fe5ab899dd1fcbdd8197daddaa46489d92d29b25fcb34fec6e0fa"
+      },
+      "icon": "./plugins/granola/assets/icon.svg",
+      "category": "communication",
+      "homepage": "https://docs.granola.ai/help-center/sharing/integrations/mcp",
+      "license": "MIT"
+    },
+    {
       "id": "hacker-news",
       "name": "hacker-news",
       "description": "Skill for reading Hacker News from chat — top / new / best stories plus thread fetches via the public Firebase API.",
