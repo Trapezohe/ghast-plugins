@@ -135,7 +135,7 @@ verification.
 | quicknode | Quicknode | appConnector | MIT | official-source-verified | implemented-verified |
 | ranked-ai | Ranked AI, LLC | appConnector | MIT | official-source-research-required | not-implemented |
 | razorpay | Razorpay Software Private Limited | appConnector | MIT | official-source-research-required | not-implemented |
-| read-ai | Read AI, Inc | appConnector | MIT | official-source-research-required | not-implemented |
+| read-ai | Read AI, Inc | appConnector | MIT | official-source-verified | implemented-verified |
 | readwise | Readwise Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | remotion | Remotion | skills | MIT | official-source-verified | implemented-verified |
 | render | Render | skills | MIT | official-source-verified | implemented-verified |

@@ -106,6 +106,23 @@ The generated plugin README and audit record preserve provenance, capability
 differences, transport substitutions, and any client-specific compatibility
 changes for each imported developer-owned source.
 
+## Import audited official hosted MCP adapters
+
+Some developers operate a public hosted MCP server without publishing its
+server source. The hosted adapter importer verifies pinned official
+documentation and OAuth metadata before generating only Ghast-authored
+configuration and safety instructions.
+
+```bash
+python3 scripts/import-official-hosted-plugins.py
+python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins
+python3 scripts/build-ghast-catalog.py
+```
+
+The adapter license applies only to Ghast-authored files. Hosted services,
+accounts, data, trademarks, permissions, and service terms remain controlled
+by their operators.
+
 ## Import the Binance plugin
 
 The Binance importer pins the official Skills Hub revision and copies the four

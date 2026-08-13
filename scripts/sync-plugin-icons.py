@@ -110,6 +110,12 @@ CUSTOM_ICONS = {
         '<circle cx="20" cy="44" r="6"/><circle cx="44" cy="44" r="6"/>'
         '<path d="M26 20h12M20 26v12M44 26v12M26 44h12"/>',
     ),
+    "read-ai": (
+        "#197A7A",
+        '<rect x="15" y="12" width="34" height="40" rx="5"/>'
+        '<path d="M23 23h18M23 31h12M23 39h16"/>'
+        '<path d="M42 36v8M38 40h8"/>',
+    ),
     "netlify": (
         "#0E7C7B",
         '<path d="M12 43h40M18 43V27l14-10 14 10v16"/>'

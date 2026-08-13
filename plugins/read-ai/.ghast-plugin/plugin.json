@@ -1,0 +1,16 @@
+{
+  "name": "read-ai",
+  "version": "1.0.0-ghast.1",
+  "description": "Browse Read AI meetings and retrieve summaries, chapters, action items, key questions, topics, transcripts, metrics, and recordings through Read AI's official hosted MCP server.",
+  "category": "productivity",
+  "author": {
+    "name": "Read AI, Inc",
+    "url": "https://read.ai"
+  },
+  "homepage": "https://support.read.ai/hc/en-us/articles/49381158409491-MCP-Server",
+  "upstreamRevision": "zendesk-49381158409491-2026-08-06T22:43:06Z-0b2e23cff48d",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

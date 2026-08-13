@@ -796,6 +796,34 @@
       "license": "MIT"
     },
     {
+      "id": "read-ai",
+      "name": "read-ai",
+      "description": "Browse Read AI meetings and retrieve summaries, chapters, action items, key questions, topics, transcripts, metrics, and recordings through Read AI's official hosted MCP server.",
+      "manifest": {
+        "name": "read-ai",
+        "description": "Browse Read AI meetings and retrieve summaries, chapters, action items, key questions, topics, transcripts, metrics, and recordings through Read AI's official hosted MCP server.",
+        "author": {
+          "name": "Read AI, Inc",
+          "url": "https://read.ai"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.0-ghast.1",
+        "homepage": "https://support.read.ai/hc/en-us/articles/49381158409491-MCP-Server",
+        "upstreamRevision": "zendesk-49381158409491-2026-08-06T22:43:06Z-0b2e23cff48d",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/read-ai.zip",
+        "sha256": "726293357c65fb8476963603afc37bb18504686eabf3cc937986eb9c916d9d86"
+      },
+      "icon": "./plugins/read-ai/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://support.read.ai/hc/en-us/articles/49381158409491-MCP-Server",
+      "license": "MIT"
+    },
+    {
       "id": "realtime-weather",
       "name": "realtime-weather",
       "description": "Skill that pulls current weather and a 24h forecast for any place name via Open-Meteo — no API key, no signup.",

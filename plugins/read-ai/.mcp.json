@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "read-ai": {
+      "type": "http",
+      "url": "https://api.read.ai/mcp"
+    }
+  }
+}

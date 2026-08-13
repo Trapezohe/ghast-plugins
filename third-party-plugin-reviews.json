@@ -1402,6 +1402,49 @@
         "Do not create plugins/quickbooks until Intuit publishes equivalent payroll and benchmark capabilities or narrows the official Codex capability contract"
       ]
     },
+    "read-ai": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Read AI",
+      "officialRepository": null,
+      "officialRevision": "zendesk-49381158409491-2026-08-06T22:43:06Z-0b2e23cff48d",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/read-ai/LICENSE licenses only the Ghast-authored adapter configuration and safety instructions",
+        "No Read AI server source or private connector implementation is redistributed"
+      ],
+      "officialityEvidence": [
+        "Read AI's official help-center article 49381158409491 identifies https://api.read.ai/mcp as its remote Streamable HTTP MCP server with OAuth 2.1.",
+        "The official article was pinned at updated_at 2026-08-06T22:43:06Z with body SHA-256 0b2e23cff48d4c0ab7ef3d52b630f83742bd9ec7bc08b62bc4cc9d9c47f492d9.",
+        "Read AI's official OAuth protected-resource metadata identifies the same MCP resource, the Read AI authorization server, and mcp:execute and meeting:read scopes.",
+        "An unauthenticated MCP initialize request returns Read AI's OAuth bearer challenge and protected-resource metadata URL."
+      ],
+      "codexCapabilities": [
+        "Browse and filter Read AI meetings by date range",
+        "Retrieve summaries, chapter breakdowns, topics, action items, key questions, metrics, and full speaker-attributed transcripts"
+      ],
+      "ghastCapabilities": [
+        "The same meeting list, date filtering, pagination, summary, chapter, topic, action-item, key-question, metric, transcript, participant, and recording-link access through Read AI's official hosted MCP server",
+        "Additional official tools for dispatching a Read AI agent to an explicitly identified meeting and sharing a meeting report with a specified recipient and access level"
+      ],
+      "capabilityRelationship": "superset-official-hosted-mcp",
+      "limitations": [
+        "The Read AI MCP server is an open beta operated by Read AI. The MIT license applies only to the Ghast-authored adapter and does not license or redistribute the hosted service.",
+        "Authentication uses a browser-based OAuth 2.1 flow. Access tokens are short-lived and rotating single-use refresh tokens can require reauthorization if the token chain breaks.",
+        "The API and MCP service enforce 100 requests per minute per user, and meeting access remains limited to reports the authenticated user can access.",
+        "Some Read AI web features, including Ask Read and Coaching, are not exposed through the public API or MCP server.",
+        "Dispatching a meeting agent and sharing a report are state-changing operations outside the Codex read capability set and require explicit confirmation.",
+        "A generic meeting-intelligence icon is used because no redistributable catalog icon is included in a licensed official source repository."
+      ],
+      "verification": [
+        "python3 scripts/import-official-hosted-plugins.py",
+        "Verify official help-center article 49381158409491 has updated_at 2026-08-06T22:43:06Z and body SHA-256 0b2e23cff48d4c0ab7ef3d52b630f83742bd9ec7bc08b62bc4cc9d9c47f492d9",
+        "Verify canonical OAuth protected-resource metadata SHA-256 e6ff640763dc8d8520bd204c605f91b24869d76476f1add83c15167eb61ff273",
+        "Compare plugins/read-ai/.mcp.json with the official documented server URI https://api.read.ai/mcp",
+        "Probe the endpoint with GET and MCP initialize and confirm method-aware and OAuth bearer responses",
+        "Confirm the official documentation lists meeting retrieval, meeting listing, meeting-agent dispatch, and report sharing",
+        "unzip -tqq packages/read-ai.zip"
+      ]
+    },
     "statsig": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Statsig",
