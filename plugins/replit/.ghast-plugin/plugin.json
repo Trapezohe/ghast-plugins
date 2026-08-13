@@ -1,0 +1,16 @@
+{
+  "name": "replit",
+  "version": "1.0.2-ghast.1",
+  "description": "Create, find, inspect, update, and publish Replit Apps through Replit's official hosted MCP server and Agent.",
+  "category": "developer-tools",
+  "author": {
+    "name": "Replit",
+    "url": "https://replit.com"
+  },
+  "homepage": "https://docs.replit.com/platforms/mcp-server",
+  "upstreamRevision": "replit-docs-8391016162ec+oauth-41b41e6b0d6d+native-6c682a9cf3ef",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

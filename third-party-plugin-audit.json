@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 6,
-      "official-source-research-required": 82,
-      "official-source-verified": 61
+      "official-source-research-required": 81,
+      "official-source-verified": 62
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 61,
-      "not-implemented": 88
+      "implemented-verified": 62,
+      "not-implemented": 87
     }
   },
   "excludedOpenAIPlugins": [
@@ -6713,7 +6713,7 @@
     },
     {
       "id": "replit",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Replit",
@@ -6740,13 +6740,80 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://replit.com"
+        "homepage": "https://replit.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Replit",
+          "officialRepository": null,
+          "officialRevision": "replit-docs-8391016162ec+oauth-41b41e6b0d6d+native-6c682a9cf3ef",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/replit/LICENSE licenses only the Ghast-authored endpoint configuration, safety instructions, documentation, and generic icon.",
+            "No Replit hosted MCP implementation, native connector code, Agent implementation, app source, account data, secrets, databases, OAuth credentials, or marketplace artwork is redistributed."
+          ],
+          "officialityEvidence": [
+            "Replit's official direct-client documentation identifies https://replit-mcp.com/server/mcp as its Streamable HTTP MCP endpoint with OAuth protected-resource discovery.",
+            "The official documentation explicitly gives Codex setup steps, says the endpoint works with any compatible MCP client, and instructs clients not to add a bearer token, custom headers, or a custom OAuth server.",
+            "The official Markdown documentation was captured three times with identical SHA-256 8391016162ecef084f30546fbb55f5e2f179f52f87fb7d67e192609df65b1ce4 and documents eight user-facing tools.",
+            "The protected-resource metadata identifies the same direct MCP endpoint, Replit OIDC authorization server, apps:read, apps:write, and offline_access scopes, and bearer-header authentication; its canonical JSON SHA-256 is 41b41e6b0d6d9a7f73fde4d2e772d649f82744bc2dd54d7d92f6935fac3b7996.",
+            "The order-normalized authorization-server metadata declares dynamic client registration, authorization-code and refresh-token grants, public clients, and PKCE S256; its canonical JSON SHA-256 is dfe20c56545aad3736e4e007ddfcd7551b7f4f445db73ff846fc70ac57b023e0.",
+            "On August 13, 2026, a disposable localhost client registered with HTTP 201, token_endpoint_auth_method none, subject_type public, authorization-code and refresh-token grants, and no client secret.",
+            "Unauthenticated GET and initialize requests to the direct endpoint returned HTTP 401, body {\"error\":\"unauthorized\"}, and the official protected-resource metadata challenge.",
+            "Replit's native ChatGPT/Codex endpoint negotiated MCP 2025-06-18 and reported replit-app-mcp-server with deployment version chatgpt-mcp-server@93c822676072697a521cffd1d6559e15a7587283.",
+            "The native endpoint exposed eight user-visible tools and three app-only embedded-widget tools. The eight user-visible names exactly match the direct-client documentation.",
+            "The native user-visible tool-name SHA-256 is a32202cfa25aba7164d82ea3234142f74f0c33eea3ab7bd8eebba6b946e5a9c9, annotation inventory SHA-256 is a335c94f380f000186605e9e16c7f0571eb6ca7e205718c377743cc725cdcb98, and complete schema inventory SHA-256 is 6c682a9cf3ef23d5b360432d9531f3d7986d01804d65ab252640e3da2d45075d.",
+            "The native server instructions have SHA-256 93868a13f251a22bf6315568a8f3e8807e07782c1b20f74aad2ca945355b91a8 and describe the same create or find, inspect or ask, update, repeat, publish, and publish-status workflow."
+          ],
+          "codexCapabilities": [
+            "Create a new Replit web app from a natural-language description without exposing code in chat",
+            "Find recent or named Replit projects and summarize activity",
+            "Inspect, explain, debug, and answer questions about an existing app without modifying it",
+            "Apply iterative natural-language changes to an existing app",
+            "Review publication or deployment state and publish or republish the app"
+          ],
+          "ghastCapabilities": [
+            "The same official create_app_from_prompt, search_apps, resolve_app_by_name, list_apps, ask_question, update_app_using_prompt, publish_app, and get_publish_status workflows through Replit's documented direct MCP endpoint",
+            "The same native connector boundaries for natural-language app building and inspection without returning raw code, file paths, configuration, or terminal commands in chat",
+            "Official support for React websites, native mobile apps, design prototypes, slides, animation, data visualization, 3D games, documents, spreadsheets, and private remixing of an existing editable app"
+          ],
+          "capabilityRelationship": "equivalent-official-hosted-mcp",
+          "limitations": [
+            "The hosted MCP implementation and Replit Agent are operated by Replit and are not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+            "A Replit account, browser OAuth, selected workspace, editable app access, plan capacity, Agent availability, hosting entitlement, and workspace policy remain user-managed.",
+            "The protected resource requests apps:read, apps:write, and offline_access. No separately verified read-only connection profile is available, so updates and publishing require explicit confirmation.",
+            "Authenticated direct-endpoint tool listing and real app listing, Agent questions, creation, updates, publishing, or status polling were not run because they require a Replit account.",
+            "The native endpoint's three app-only widget tools support embedded preview UI and are intentionally not part of the documented direct-client tool catalog. They are not user-callable app-management capabilities.",
+            "Remixing an existing app can copy secrets when the user can edit them and database contents when the user can view them. Connected integrations are not copied and must be reconnected.",
+            "The native update tool is marked destructive. Creation, updates, and publishing start asynchronous operations and must not be blindly retried or described as complete before current state confirms success.",
+            "A first publish uses private visibility for a workspace app and public visibility otherwise. Some app types require first publication through the Replit website.",
+            "Replit requires native-connector responses to avoid raw source code, file contents, file paths, configuration, and terminal commands; implementation inspection belongs in the Replit UI.",
+            "search_apps is experimental and can require fallback to exact-name resolution or recent-app listing.",
+            "App creation, Agent work, databases, storage, publishing, hosting, and custom domains can consume plan resources or incur usage charges.",
+            "A generic app-builder icon is used instead of Replit marketplace artwork."
+          ],
+          "verification": [
+            "python3 scripts/import-official-hosted-plugins.py",
+            "Verify official Markdown documentation SHA-256 8391016162ecef084f30546fbb55f5e2f179f52f87fb7d67e192609df65b1ce4 and all eight documented tool names",
+            "Verify canonical OAuth protected-resource metadata SHA-256 41b41e6b0d6d9a7f73fde4d2e772d649f82744bc2dd54d7d92f6935fac3b7996",
+            "Verify order-normalized OAuth authorization-server metadata SHA-256 dfe20c56545aad3736e4e007ddfcd7551b7f4f445db73ff846fc70ac57b023e0",
+            "Register a disposable localhost public OAuth client and confirm HTTP 201, authorization-code and refresh-token grants, subject_type public, token_endpoint_auth_method none, and no client secret",
+            "Probe https://replit-mcp.com/server/mcp with GET and MCP initialize and confirm HTTP 401 plus Replit's protected-resource challenge",
+            "Call initialize and tools/list on https://replit-mcp.com/chatgpt-app/mcp without credentials and confirm MCP 2025-06-18, eight user-visible tools, three app-only widget tools, user-visible name SHA-256 a32202cfa25aba7164d82ea3234142f74f0c33eea3ab7bd8eebba6b946e5a9c9, annotation SHA-256 a335c94f380f000186605e9e16c7f0571eb6ca7e205718c377743cc725cdcb98, and schema SHA-256 6c682a9cf3ef23d5b360432d9531f3d7986d01804d65ab252640e3da2d45075d",
+            "Compare every user-visible native tool with the official direct-client documentation and the Codex marketplace description and default prompts",
+            "Authorize a Replit account before testing direct authenticated schemas or real app workflows",
+            "unzip -tqq packages/replit.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.2-ghast.1",
+        "repository": null,
+        "upstreamRevision": "replit-docs-8391016162ec+oauth-41b41e6b0d6d+native-6c682a9cf3ef",
+        "portStatus": "full"
       }
     },
     {

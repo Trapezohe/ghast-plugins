@@ -1499,6 +1499,34 @@
       "license": "MIT"
     },
     {
+      "id": "replit",
+      "name": "replit",
+      "description": "Create, find, inspect, update, and publish Replit Apps through Replit's official hosted MCP server and Agent.",
+      "manifest": {
+        "name": "replit",
+        "description": "Create, find, inspect, update, and publish Replit Apps through Replit's official hosted MCP server and Agent.",
+        "author": {
+          "name": "Replit",
+          "url": "https://replit.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.2-ghast.1",
+        "homepage": "https://docs.replit.com/platforms/mcp-server",
+        "upstreamRevision": "replit-docs-8391016162ec+oauth-41b41e6b0d6d+native-6c682a9cf3ef",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/replit.zip",
+        "sha256": "07b7f210e491450f8f3745c57dc2172001d0ef91c8852ccf3d35a6a4d1b4004b"
+      },
+      "icon": "./plugins/replit/assets/icon.svg",
+      "category": "developer-tools",
+      "homepage": "https://docs.replit.com/platforms/mcp-server",
+      "license": "MIT"
+    },
+    {
       "id": "semrush",
       "name": "semrush",
       "description": "Retrieve read-only Semrush SEO, keyword, backlink, traffic, audience, market, paid search, shopping, site audit, position tracking, and project data through Semrush's official MCP server.",

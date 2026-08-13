@@ -185,6 +185,13 @@ CUSTOM_ICONS = {
         '<path d="M52 17c-7-3-14-2-20 3v31c6-5 13-6 20-3z"/>'
         '<path d="M20 28h7M20 36h7M37 28h7M37 36h7"/>',
     ),
+    "replit": (
+        "#C45134",
+        '<rect x="11" y="13" width="42" height="38" rx="4"/>'
+        '<path d="M11 24h42M19 18h1M27 18h1M35 18h1"/>'
+        '<path d="M22 34l6 6-6 6M34 46h9"/>'
+        '<path d="M45 29v8M41 33h8"/>',
+    ),
     "netlify": (
         "#0E7C7B",
         '<path d="M12 43h40M18 43V27l14-10 14 10v16"/>'

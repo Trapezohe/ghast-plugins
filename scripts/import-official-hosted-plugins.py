@@ -584,6 +584,56 @@ SIGNNOW_TOOLS = (
     "upload_document",
     "view_document",
 )
+REPLIT_DOCS_URL = "https://docs.replit.com/platforms/mcp-server"
+REPLIT_DOCS_MARKDOWN_URL = f"{REPLIT_DOCS_URL}.md"
+REPLIT_DOCS_SHA256 = (
+    "8391016162ecef084f30546fbb55f5e2f179f52f87fb7d67e192609df65b1ce4"
+)
+REPLIT_MCP_URL = "https://replit-mcp.com/server/mcp"
+REPLIT_NATIVE_MCP_URL = "https://replit-mcp.com/chatgpt-app/mcp"
+REPLIT_OAUTH_METADATA_URL = (
+    "https://replit-mcp.com/.well-known/oauth-protected-resource/server/mcp"
+)
+REPLIT_OAUTH_METADATA_SHA256 = (
+    "41b41e6b0d6d9a7f73fde4d2e772d649f82744bc2dd54d7d92f6935fac3b7996"
+)
+REPLIT_AUTH_SERVER_URL = (
+    "https://replit.com/.well-known/oauth-authorization-server/oidc"
+)
+REPLIT_AUTH_SERVER_SHA256 = (
+    "dfe20c56545aad3736e4e007ddfcd7551b7f4f445db73ff846fc70ac57b023e0"
+)
+REPLIT_NATIVE_INSTRUCTIONS_SHA256 = (
+    "93868a13f251a22bf6315568a8f3e8807e07782c1b20f74aad2ca945355b91a8"
+)
+REPLIT_NATIVE_TOOL_NAMES_SHA256 = (
+    "a32202cfa25aba7164d82ea3234142f74f0c33eea3ab7bd8eebba6b946e5a9c9"
+)
+REPLIT_NATIVE_ANNOTATIONS_SHA256 = (
+    "a335c94f380f000186605e9e16c7f0571eb6ca7e205718c377743cc725cdcb98"
+)
+REPLIT_NATIVE_SCHEMAS_SHA256 = (
+    "6c682a9cf3ef23d5b360432d9531f3d7986d01804d65ab252640e3da2d45075d"
+)
+REPLIT_EVIDENCE_REVISION = (
+    "replit-docs-8391016162ec+oauth-41b41e6b0d6d"
+    "+native-6c682a9cf3ef"
+)
+REPLIT_TOOLS = (
+    "ask_question",
+    "create_app_from_prompt",
+    "get_publish_status",
+    "list_apps",
+    "publish_app",
+    "resolve_app_by_name",
+    "search_apps",
+    "update_app_using_prompt",
+)
+REPLIT_INTERNAL_TOOLS = (
+    "replit_widget_get_auth_token",
+    "replit_widget_get_preview_url",
+    "replit_widget_start_app_preview",
+)
 POSTHOG_MCP_URL = "https://mcp.posthog.com/mcp"
 POSTHOG_HOMEPAGE = "https://posthog.com/docs/model-context-protocol"
 POSTHOG_OVERVIEW_URL = "https://posthog.com/docs/model-context-protocol.md"
@@ -690,6 +740,7 @@ def main() -> int:
     verify_actively_evidence()
     verify_calendly_evidence()
     verify_signnow_evidence()
+    verify_replit_evidence()
     verify_read_ai_evidence()
     verify_readwise_evidence()
     verify_quartr_evidence()
@@ -703,6 +754,7 @@ def main() -> int:
     import_actively()
     import_calendly()
     import_signnow()
+    import_replit()
     import_read_ai()
     import_readwise()
     import_quartr()
@@ -713,7 +765,7 @@ def main() -> int:
     import_clickup()
     import_posthog()
     import_streak()
-    print("imported 13 official hosted MCP adapters")
+    print("imported 14 official hosted MCP adapters")
     return 0
 
 
@@ -764,6 +816,27 @@ def post_json(url: str, payload: dict) -> dict:
     )
     with urllib.request.urlopen(request, timeout=30) as response:
         return json.loads(response.read())
+
+
+def post_mcp_sse(url: str, payload: dict) -> dict:
+    request = urllib.request.Request(
+        url,
+        data=json.dumps(payload, separators=(",", ":")).encode("utf-8"),
+        headers={
+            "User-Agent": "Mozilla/5.0",
+            "Content-Type": "application/json",
+            "Accept": "application/json, text/event-stream",
+        },
+        method="POST",
+    )
+    with urllib.request.urlopen(request, timeout=30) as response:
+        body = response.read().decode("utf-8")
+    for line in body.splitlines():
+        if line.startswith("data: "):
+            message = json.loads(line.removeprefix("data: "))
+            if isinstance(message, dict):
+                return message
+    raise ValueError(f"{url} did not return an MCP SSE data event")
 
 
 def fetch_text(url: str) -> str:
@@ -1309,6 +1382,278 @@ def verify_signnow_evidence() -> None:
     else:
         raise ValueError(
             "SignNow endpoint unexpectedly accepted no credentials"
+        )
+
+
+def verify_replit_evidence() -> None:
+    docs_bytes = fetch_bytes(REPLIT_DOCS_MARKDOWN_URL)
+    if sha256_bytes(docs_bytes) != REPLIT_DOCS_SHA256:
+        raise ValueError(
+            "Replit MCP documentation changed; re-audit before regenerating"
+        )
+    docs = docs_bytes.decode("utf-8")
+    for marker in (
+        "This page is the reference for direct MCP clients and their tools.",
+        REPLIT_MCP_URL,
+        "Streamable HTTP",
+        "OAuth using protected-resource discovery",
+        "Codex and Claude Code are examples.",
+        "Do not add a bearer token or custom headers.",
+        "create, find, inspect, update, and publish Replit projects",
+        "A create, update, or publish request is still running",
+    ):
+        if marker not in docs:
+            raise ValueError(f"Replit MCP documentation is missing {marker!r}")
+    for tool in REPLIT_TOOLS:
+        if f"`{tool}`" not in docs:
+            raise ValueError(
+                f"Replit MCP documentation is missing tool {tool!r}"
+            )
+
+    metadata = fetch_json(REPLIT_OAUTH_METADATA_URL)
+    if canonical_json_sha256(metadata) != REPLIT_OAUTH_METADATA_SHA256:
+        raise ValueError(
+            "Replit OAuth metadata changed; re-audit before regenerating"
+        )
+    if metadata.get("resource") != REPLIT_MCP_URL:
+        raise ValueError("Replit OAuth resource URI changed")
+    if metadata.get("authorization_servers") != ["https://replit.com/oidc"]:
+        raise ValueError("Replit OAuth authorization server changed")
+    if set(metadata.get("scopes_supported", [])) != {
+        "apps:read",
+        "apps:write",
+        "offline_access",
+    }:
+        raise ValueError("Replit OAuth scopes changed")
+    if metadata.get("bearer_methods_supported") != ["header"]:
+        raise ValueError("Replit OAuth bearer method changed")
+    if metadata.get("resource_name") != "Replit MCP Server":
+        raise ValueError("Replit OAuth resource name changed")
+
+    auth_server = fetch_json(REPLIT_AUTH_SERVER_URL)
+    if (
+        canonical_string_array_json_sha256(auth_server)
+        != REPLIT_AUTH_SERVER_SHA256
+    ):
+        raise ValueError(
+            "Replit OAuth authorization metadata changed; re-audit required"
+        )
+    if auth_server.get("issuer") != "https://replit.com/oidc":
+        raise ValueError("Replit OAuth issuer changed")
+    if auth_server.get("registration_endpoint") != (
+        "https://replit.com/oidc/reg"
+    ):
+        raise ValueError("Replit OAuth registration endpoint changed")
+    if set(auth_server.get("grant_types_supported", [])) != {
+        "authorization_code",
+        "refresh_token",
+    }:
+        raise ValueError("Replit OAuth grant support changed")
+    if auth_server.get("response_types_supported") != ["code"]:
+        raise ValueError("Replit OAuth response types changed")
+    if auth_server.get("code_challenge_methods_supported") != ["S256"]:
+        raise ValueError("Replit OAuth server no longer declares PKCE S256")
+    if "none" not in auth_server.get(
+        "token_endpoint_auth_methods_supported", []
+    ):
+        raise ValueError("Replit OAuth public client support changed")
+
+    registration = post_json(
+        "https://replit.com/oidc/reg",
+        {
+            "client_name": "ghast-replit-audit",
+            "redirect_uris": ["http://localhost:49152/callback"],
+            "grant_types": ["authorization_code", "refresh_token"],
+            "response_types": ["code"],
+            "token_endpoint_auth_method": "none",
+        },
+    )
+    if not isinstance(registration.get("client_id"), str):
+        raise ValueError("Replit dynamic client registration failed")
+    if registration.get("client_name") != "ghast-replit-audit":
+        raise ValueError("Replit DCR client name behavior changed")
+    if registration.get("redirect_uris") != [
+        "http://localhost:49152/callback"
+    ]:
+        raise ValueError("Replit DCR redirect URI behavior changed")
+    if set(registration.get("grant_types", [])) != {
+        "authorization_code",
+        "refresh_token",
+    }:
+        raise ValueError("Replit DCR grant assignment changed")
+    if registration.get("response_types") != ["code"]:
+        raise ValueError("Replit DCR response type changed")
+    if registration.get("token_endpoint_auth_method") != "none":
+        raise ValueError("Replit DCR no longer creates a public client")
+    if registration.get("subject_type") != "public":
+        raise ValueError("Replit DCR subject type changed")
+    if "client_secret" in registration:
+        raise ValueError("Replit DCR unexpectedly returned a client secret")
+
+    initialize_payload = {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "initialize",
+        "params": {
+            "protocolVersion": "2025-06-18",
+            "capabilities": {},
+            "clientInfo": {
+                "name": "ghast-replit-audit",
+                "version": "1.0.0",
+            },
+        },
+    }
+    initialize = post_mcp_sse(REPLIT_NATIVE_MCP_URL, initialize_payload)
+    initialize_result = initialize.get("result") or {}
+    server_info = initialize_result.get("serverInfo") or {}
+    instructions = initialize_result.get("instructions")
+    if initialize_result.get("protocolVersion") != "2025-06-18":
+        raise ValueError("Replit native MCP protocol version changed")
+    if server_info.get("name") != "replit-app-mcp-server":
+        raise ValueError("Replit native MCP server identity changed")
+    if not str(server_info.get("version", "")).startswith(
+        "chatgpt-mcp-server@"
+    ):
+        raise ValueError("Replit native MCP server version format changed")
+    if (
+        not isinstance(instructions, str)
+        or sha256_text(instructions) != REPLIT_NATIVE_INSTRUCTIONS_SHA256
+    ):
+        raise ValueError("Replit native MCP instructions changed")
+
+    tools_message = post_mcp_sse(
+        REPLIT_NATIVE_MCP_URL,
+        {
+            "jsonrpc": "2.0",
+            "id": 2,
+            "method": "tools/list",
+            "params": {},
+        },
+    )
+    tools = (tools_message.get("result") or {}).get("tools")
+    if not isinstance(tools, list):
+        raise ValueError("Replit native MCP tool list is missing")
+    public_tools = []
+    internal_tools = []
+    for tool in tools:
+        visibility = (
+            (((tool.get("_meta") or {}).get("ui") or {}).get("visibility"))
+            or []
+        )
+        if "app" in visibility:
+            internal_tools.append(tool)
+        else:
+            public_tools.append(tool)
+    public_tools.sort(key=lambda tool: tool["name"])
+    internal_tools.sort(key=lambda tool: tool["name"])
+    public_names = [tool["name"] for tool in public_tools]
+    internal_names = [tool["name"] for tool in internal_tools]
+    if public_names != sorted(REPLIT_TOOLS):
+        raise ValueError("Replit native user-visible tool inventory changed")
+    if internal_names != sorted(REPLIT_INTERNAL_TOOLS):
+        raise ValueError("Replit native app-only tool inventory changed")
+    if sha256_text("\n".join(public_names)) != (
+        REPLIT_NATIVE_TOOL_NAMES_SHA256
+    ):
+        raise ValueError("Replit native tool-name hash is inconsistent")
+
+    annotations = [
+        {
+            "name": tool["name"],
+            "annotations": tool.get("annotations", {}),
+        }
+        for tool in public_tools
+    ]
+    if canonical_json_sha256(annotations) != (
+        REPLIT_NATIVE_ANNOTATIONS_SHA256
+    ):
+        raise ValueError("Replit native tool annotations changed")
+    schemas = [
+        {
+            key: tool.get(key)
+            for key in (
+                "name",
+                "title",
+                "description",
+                "inputSchema",
+                "annotations",
+                "execution",
+                "outputSchema",
+            )
+        }
+        for tool in public_tools
+    ]
+    if canonical_json_sha256(schemas) != REPLIT_NATIVE_SCHEMAS_SHA256:
+        raise ValueError(
+            "Replit native user-visible tool schemas changed; re-audit required"
+        )
+
+    tools_by_name = {tool["name"]: tool for tool in public_tools}
+    if (
+        (tools_by_name["ask_question"].get("annotations") or {}).get(
+            "readOnlyHint"
+        )
+        is not True
+        or "without showing raw code, file paths, or terminal commands"
+        not in tools_by_name["ask_question"].get("description", "")
+    ):
+        raise ValueError("Replit ask_question safety contract changed")
+    if (
+        (tools_by_name["update_app_using_prompt"].get("annotations") or {}).get(
+            "destructiveHint"
+        )
+        is not True
+    ):
+        raise ValueError("Replit update safety annotation changed")
+    create_description = tools_by_name["create_app_from_prompt"].get(
+        "description", ""
+    )
+    create_schema = tools_by_name["create_app_from_prompt"].get(
+        "inputSchema", {}
+    )
+    source_description = (
+        ((create_schema.get("properties") or {}).get("sourceReplId") or {}).get(
+            "description", ""
+        )
+    )
+    if (
+        "must not include source code" not in create_description
+        or "secret values are copied" not in source_description
+        or "database contents are copied" not in source_description
+    ):
+        raise ValueError("Replit create/remix safety contract changed")
+    if "public visibility otherwise" not in tools_by_name[
+        "publish_app"
+    ].get("description", ""):
+        raise ValueError("Replit publish visibility contract changed")
+
+    initialize_bytes = json.dumps(initialize_payload).encode("utf-8")
+    request = urllib.request.Request(
+        REPLIT_MCP_URL,
+        data=initialize_bytes,
+        headers={
+            "User-Agent": "Mozilla/5.0",
+            "Content-Type": "application/json",
+            "Accept": "application/json, text/event-stream",
+        },
+        method="POST",
+    )
+    try:
+        urllib.request.urlopen(request, timeout=30)
+    except urllib.error.HTTPError as exc:
+        body = exc.read()
+        challenge = exc.headers.get("WWW-Authenticate", "")
+        if (
+            exc.code != 401
+            or body != b'{"error":"unauthorized"}'
+            or REPLIT_OAUTH_METADATA_URL not in challenge
+        ):
+            raise ValueError(
+                "Replit unauthenticated direct endpoint behavior changed"
+            ) from exc
+    else:
+        raise ValueError(
+            "Replit direct endpoint unexpectedly accepted no credentials"
         )
 
 
@@ -2424,6 +2769,62 @@ def import_signnow() -> None:
         staging.rename(target)
 
 
+def import_replit() -> None:
+    with tempfile.TemporaryDirectory(
+        prefix=".replit-", dir=PLUGIN_DIR
+    ) as temp:
+        staging = Path(temp)
+        manifest_dir = staging / ".ghast-plugin"
+        skill_dir = staging / "skills/replit"
+        manifest_dir.mkdir()
+        skill_dir.mkdir(parents=True)
+
+        manifest = {
+            "name": "replit",
+            "version": "1.0.2-ghast.1",
+            "description": (
+                "Create, find, inspect, update, and publish Replit Apps "
+                "through Replit's official hosted MCP server and Agent."
+            ),
+            "category": "developer-tools",
+            "author": {
+                "name": "Replit",
+                "url": "https://replit.com",
+            },
+            "homepage": REPLIT_DOCS_URL,
+            "upstreamRevision": REPLIT_EVIDENCE_REVISION,
+            "license": "MIT",
+            "icon": "./assets/icon.svg",
+            "skills": "./skills/",
+            "mcpServers": "./.mcp.json",
+        }
+        (manifest_dir / "plugin.json").write_text(
+            json.dumps(manifest, indent=2, ensure_ascii=False) + "\n"
+        )
+        (staging / ".mcp.json").write_text(
+            json.dumps(
+                {
+                    "mcpServers": {
+                        "replit": {
+                            "type": "http",
+                            "url": REPLIT_MCP_URL,
+                        }
+                    }
+                },
+                indent=2,
+            )
+            + "\n"
+        )
+        (skill_dir / "SKILL.md").write_text(render_replit_skill())
+        (staging / "LICENSE").write_text(render_adapter_license("Replit"))
+        (staging / "README.md").write_text(render_replit_readme())
+
+        target = PLUGIN_DIR / "replit"
+        if target.exists():
+            shutil.rmtree(target)
+        staging.rename(target)
+
+
 def import_read_ai() -> None:
     with tempfile.TemporaryDirectory(prefix=".read-ai-", dir=PLUGIN_DIR) as temp:
         staging = Path(temp)
@@ -3221,6 +3622,101 @@ and continue only when the requested effect is still absent.
   service can evolve after this adapter revision.
 - Report authentication, validation, stale-state, permission, plan, file-size,
   unsupported-invite, rate-limit, and service errors exactly as returned.
+"""
+
+
+def render_replit_skill() -> str:
+    return """---
+name: replit
+description: >-
+  Create, find, inspect, explain, update, publish, and check the publish
+  status of Replit Apps through Replit's official hosted MCP server.
+---
+
+# Replit
+
+Use the official Replit MCP server declared by this plugin.
+
+## App identity and privacy
+
+- Resolve an existing app through `search_apps`, `resolve_app_by_name`, or
+  `list_apps`; never guess a `replId`, derive one from a public URL, or act on
+  a similarly named app.
+- Only work with apps the authenticated user can edit. State when a result is
+  owned by a workspace, owned personally, or shared with the user if returned.
+- Treat app prompts, Agent answers, app names, attachments, database content,
+  secrets, integrations, preview URLs, deployment URLs, and workspace details
+  as sensitive.
+- Preserve Replit's native connector boundary: summarize behavior and status
+  in natural language. Do not expose raw source code, file contents, file
+  paths, configuration, secrets, or terminal commands in chat. Direct the
+  user to open the app in Replit when they need to inspect implementation.
+
+## Read and inspection workflows
+
+- Use `search_apps` for URL, keyword, or explicit date filtering. It is
+  experimental; if it fails or gives poor matches, fall back to exact-name
+  resolution and recent-app listing.
+- Use `ask_question` for explanation, debugging, architecture, routing,
+  behavior, or issue diagnosis without modifying the app. The question is
+  visible in the Replit app, so phrase it in the user's language and tone.
+- If Replit Agent reports `busy`, the question was not submitted. Wait before
+  retrying or tell the user to ask again later.
+- Use `get_publish_status` to distinguish never published, pending, live,
+  failed, and suspended states. A preview URL is not proof that the app is
+  publicly deployed.
+
+## Creation and remix confirmation
+
+Obtain explicit confirmation immediately before `create_app_from_prompt`.
+
+- Show the app name if supplied, complete natural-language description,
+  selected stack, quoted requirements, attachment summary, and whether the
+  app starts blank or as a private copy of another app.
+- Supported stacks include React website, mobile app, design, slides,
+  animation, data visualization, 3D game, document, and spreadsheet.
+- When `sourceReplId` is used, warn that secrets can be copied when the user
+  can edit them and database contents can be copied when the user can view
+  them. Connected integrations are not copied and must be reconnected.
+- App creation starts an asynchronous Replit Agent operation and may consume
+  plan capacity or credits. Do not claim the app is ready until Replit
+  provides a usable preview URL or completion state.
+
+## Updates and publishing
+
+Obtain explicit confirmation immediately before every update or publish.
+
+- For `update_app_using_prompt`, show the exact app, requested behavior
+  change, quoted requirements, and attachments. This tool is marked
+  destructive because Agent can modify the app broadly.
+- A request to inspect, explain, debug, review, or suggest is not permission
+  to update the app. Use `ask_question` for read-only diagnosis.
+- For `publish_app`, show the exact app, whether it has been published before,
+  the current status, and the expected visibility. First publication uses
+  private visibility for workspace apps and public visibility otherwise.
+- Some apps require their first publish to be completed on the Replit website.
+  Report that limitation exactly when returned.
+- Publishing is asynchronous. Poll `get_publish_status` about every 30 seconds
+  when practical. Never treat a scheduled or pending publish as live.
+- Do not blindly retry create, update, or publish operations. Re-read app or
+  publish state first to avoid duplicate apps, overlapping Agent turns, or
+  repeated deployments.
+
+## Service behavior
+
+- Authentication uses Replit OAuth Dynamic Client Registration,
+  authorization code, refresh tokens, and PKCE S256. Never ask for, display,
+  log, or store OAuth tokens or registration access tokens.
+- The protected resource currently requests `apps:read`, `apps:write`, and
+  `offline_access`; there is no separately verified read-only connection
+  profile for this adapter.
+- App creation, Agent execution, storage, databases, deployments, custom
+  domains, and hosting can depend on the user's Replit plan and workspace
+  policy and can incur usage charges.
+- The official direct MCP currently documents eight user-facing tools.
+  Inspect the authenticated live list before promising exact availability.
+- Report authentication, workspace, permission, plan, Agent-busy, validation,
+  build, publish, hosting, quota, and service errors exactly as returned.
 """
 
 
@@ -4078,6 +4574,80 @@ The MIT license in this package applies to the Ghast-authored adapter.
 SignNow's source repository has its own MIT license. SignNow accounts, plans,
 hosted service behavior, document data, permissions, trademarks, privacy
 policy, and terms remain controlled by airSlate Inc.
+"""
+
+
+def render_replit_readme() -> str:
+    return f"""# replit
+
+Create, find, inspect, explain, update, publish, and check the publish status
+of Replit Apps through Replit's official hosted MCP server.
+
+## Official hosted MCP adapter
+
+This package contains only Ghast-authored MCP configuration, safety
+instructions, documentation, and catalog metadata. It does not copy or
+redistribute Replit's hosted implementation, native connector, Agent code,
+app source, account data, secrets, databases, or marketplace artwork.
+
+The adapter is pinned to Replit's official direct-client documentation with
+SHA-256 `{REPLIT_DOCS_SHA256}`. Replit explicitly documents
+`{REPLIT_MCP_URL}` for Codex and other Streamable HTTP clients and says not to
+add a bearer token, custom headers, or a custom OAuth server.
+
+The OAuth protected-resource metadata is pinned at canonical JSON SHA-256
+`{REPLIT_OAUTH_METADATA_SHA256}` and the order-normalized authorization-server
+metadata at `{REPLIT_AUTH_SERVER_SHA256}`.
+
+## Native connector comparison
+
+- Replit's unauthenticated native ChatGPT/Codex endpoint negotiated MCP
+  `2025-06-18` and exposed eight user-visible tools plus three app-only widget
+  tools. The direct-client documentation lists the same eight user workflows.
+- The sorted user-visible names have SHA-256
+  `{REPLIT_NATIVE_TOOL_NAMES_SHA256}`, their annotations have canonical JSON
+  SHA-256 `{REPLIT_NATIVE_ANNOTATIONS_SHA256}`, and their complete name,
+  description, input, annotation, execution, and output-schema inventory has
+  SHA-256 `{REPLIT_NATIVE_SCHEMAS_SHA256}`.
+- The native server instructions have SHA-256
+  `{REPLIT_NATIVE_INSTRUCTIONS_SHA256}` and describe the same create or find,
+  inspect or ask, update, repeat, publish, and publish-status workflow.
+- The three app-only widget tools support Replit's embedded preview UI and are
+  intentionally absent from the public direct-client catalog. They are not
+  user-callable app-management capabilities.
+
+## Ghast compatibility
+
+- Ghast connects directly to `{REPLIT_MCP_URL}` using Streamable HTTP and
+  Replit OAuth. Dynamic registration returned a public client with
+  authorization-code and refresh-token grants and PKCE S256.
+- The eight tools create a new app from a natural-language prompt; search,
+  resolve, and list editable apps; ask Replit Agent read-only questions about
+  codebase behavior and debugging; apply natural-language changes; publish or
+  republish; and check publish status and public URL.
+- This directly matches the Codex connector's app creation, recent-project
+  discovery, app explanation, iterative development, publishing, and
+  deployment-status workflows. The native tool schemas themselves were used
+  for the comparison, not only the marketplace description.
+- Replit requires the chat response to avoid raw code, file contents, file
+  paths, configuration, and terminal commands. The included skill preserves
+  that boundary and directs implementation inspection to the Replit UI.
+- Remixing an existing app can copy secrets and database contents when the
+  user has the relevant access, but it does not copy connected integrations.
+  The skill requires a specific warning and confirmation before creation.
+- Updates are marked destructive. Creation, updates, and publishing start
+  asynchronous work and must not be blindly retried. Publishing may use
+  public visibility for personal apps, while workspace apps default private.
+- Endpoint discovery, OAuth metadata, DCR, direct-endpoint authentication
+  behavior, native initialization, native user-visible schemas, and public
+  documentation were verified without a Replit account. Authenticated app
+  listing, Agent execution, creation, update, and publishing were not run.
+- A generic app-builder icon is used instead of Replit marketplace artwork.
+
+The MIT license in this package applies only to the Ghast-authored adapter.
+Replit accounts, plans, Agent behavior, hosted services, app data, secrets,
+databases, deployments, usage charges, permissions, trademarks, privacy
+policy, and terms remain controlled by Replit.
 """
 
 
