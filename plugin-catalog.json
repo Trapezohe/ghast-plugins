@@ -205,6 +205,35 @@
       "license": "Apache-2.0"
     },
     {
+      "id": "cloudinary",
+      "name": "cloudinary",
+      "description": "Upload, search, transform, analyze, organize, and automate Cloudinary media through five official hosted MCP servers.",
+      "manifest": {
+        "name": "cloudinary",
+        "description": "Upload, search, transform, analyze, organize, and automate Cloudinary media through five official hosted MCP servers.",
+        "author": {
+          "name": "Cloudinary",
+          "url": "https://cloudinary.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.0-ghast.1",
+        "homepage": "https://cloudinary.com/documentation/cloudinary_llm_mcp",
+        "repository": "https://github.com/cloudinary/mcp-servers",
+        "upstreamRevision": "dca5790c0af2bcde291d732af05c47ad7f75d341",
+        "license": "MIT",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/cloudinary.zip",
+        "sha256": "d628ab08837d87dacb2a8d3c54708e34159f0d9686445a19a09a8ec86a89bbbe"
+      },
+      "icon": "./plugins/cloudinary/assets/icon.svg",
+      "category": "creativity",
+      "homepage": "https://cloudinary.com/documentation/cloudinary_llm_mcp",
+      "repository": "https://github.com/cloudinary/mcp-servers",
+      "license": "MIT"
+    },
+    {
       "id": "current-datetime",
       "name": "current-datetime",
       "description": "Slash command and skill that tells the model the current wall-clock time in any IANA timezone — kills the 'I don't know what day it is' problem.",

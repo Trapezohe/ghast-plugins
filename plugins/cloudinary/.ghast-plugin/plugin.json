@@ -1,0 +1,17 @@
+{
+  "name": "cloudinary",
+  "version": "1.0.0-ghast.1",
+  "description": "Upload, search, transform, analyze, organize, and automate Cloudinary media through five official hosted MCP servers.",
+  "category": "creativity",
+  "author": {
+    "name": "Cloudinary",
+    "url": "https://cloudinary.com"
+  },
+  "homepage": "https://cloudinary.com/documentation/cloudinary_llm_mcp",
+  "repository": "https://github.com/cloudinary/mcp-servers",
+  "upstreamRevision": "dca5790c0af2bcde291d732af05c47ad7f75d341",
+  "upstreamPath": ".",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "mcpServers": "./.mcp.json"
+}

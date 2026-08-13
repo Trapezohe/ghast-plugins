@@ -102,6 +102,65 @@ PLUGINS = {
         "mcp": ".mcp.json",
         "license_name": "Apache-2.0",
     },
+    "cloudinary": {
+        "directory": "cloudinary-mcp-servers",
+        "revision": "dca5790c0af2bcde291d732af05c47ad7f75d341",
+        "repository": "https://github.com/cloudinary/mcp-servers",
+        "plugin_root": ".",
+        "manifest_inline": {
+            "version": "1.0.0",
+            "description": "Official Cloudinary MCP server collection.",
+            "author": {
+                "name": "Cloudinary",
+                "url": "https://cloudinary.com",
+            },
+            "homepage": "https://cloudinary.com/documentation/cloudinary_llm_mcp",
+        },
+        "license": "LICENSE",
+        "generated_icon": "./assets/icon.svg",
+        "category": "creativity",
+        "no_skills": True,
+        "mcp_inline": {
+            "mcpServers": {
+                "cloudinary-asset-management": {
+                    "type": "http",
+                    "url": "https://asset-management.mcp.cloudinary.com/mcp",
+                },
+                "cloudinary-environment-config": {
+                    "type": "http",
+                    "url": "https://environment-config.mcp.cloudinary.com/mcp",
+                },
+                "cloudinary-structured-metadata": {
+                    "type": "http",
+                    "url": "https://structured-metadata.mcp.cloudinary.com/mcp",
+                },
+                "cloudinary-analysis": {
+                    "type": "http",
+                    "url": "https://analysis.mcp.cloudinary.com/mcp",
+                },
+                "cloudinary-mediaflows": {
+                    "type": "http",
+                    "url": "https://mediaflows.mcp.cloudinary.com/v2/mcp",
+                },
+            },
+        },
+        "license_name": "MIT",
+        "description": (
+            "Upload, search, transform, analyze, organize, and automate "
+            "Cloudinary media through five official hosted MCP servers."
+        ),
+        "compatibility_notes": [
+            (
+                "The Codex private app mapping is replaced by Cloudinary's "
+                "five official hosted MCP servers with OAuth2 or supported "
+                "API-key authentication."
+            ),
+            (
+                "A generic media-library icon is used because the official "
+                "MCP collection repository does not publish a catalog icon."
+            ),
+        ],
+    },
     "daloopa": {
         "directory": "daloopa-plugin-codex",
         "revision": "1f112599065abb7cac3489c30f9e4bb27c68ad8e",
@@ -746,43 +805,44 @@ def import_plugin(name: str, config: dict, source_root: Path) -> None:
 
     with tempfile.TemporaryDirectory(prefix=f".{name}-", dir=PLUGIN_DIR) as temp:
         staging = Path(temp)
-        skills_target = staging / "skills"
-        if config.get("remotion_build"):
-            build_remotion_skills(repository, skills_target)
-        else:
-            skills_root = (
-                repository / config["skills_root"]
-                if config.get("skills_from_repository_root")
-                else plugin_root / config.get("skills_root", "skills")
-            )
-            copy_skill_tree(
-                skills_root,
-                skills_target,
-                recursive=config.get("recursive_skills", False),
-                preserve_agent_metadata=config.get(
-                    "preserve_agent_metadata", False
-                ),
-                frontmatter_overrides=config.get(
-                    "frontmatter_overrides", {}
-                ),
-            )
-            for additional_root in config.get(
-                "additional_repository_skill_roots", []
-            ):
+        if not config.get("no_skills"):
+            skills_target = staging / "skills"
+            if config.get("remotion_build"):
+                build_remotion_skills(repository, skills_target)
+            else:
+                skills_root = (
+                    repository / config["skills_root"]
+                    if config.get("skills_from_repository_root")
+                    else plugin_root / config.get("skills_root", "skills")
+                )
                 copy_skill_tree(
-                    repository / additional_root,
+                    skills_root,
                     skills_target,
-                    recursive=False,
-                    preserve_agent_metadata=False,
-                    frontmatter_overrides={},
-                    merge=True,
+                    recursive=config.get("recursive_skills", False),
+                    preserve_agent_metadata=config.get(
+                        "preserve_agent_metadata", False
+                    ),
+                    frontmatter_overrides=config.get(
+                        "frontmatter_overrides", {}
+                    ),
                 )
-            if config.get("root_skill"):
-                copy_root_skill(
-                    repository,
-                    skills_target,
-                    config["root_skill"],
-                )
+                for additional_root in config.get(
+                    "additional_repository_skill_roots", []
+                ):
+                    copy_skill_tree(
+                        repository / additional_root,
+                        skills_target,
+                        recursive=False,
+                        preserve_agent_metadata=False,
+                        frontmatter_overrides={},
+                        merge=True,
+                    )
+                if config.get("root_skill"):
+                    copy_root_skill(
+                        repository,
+                        skills_target,
+                        config["root_skill"],
+                    )
 
         if config.get("commands"):
             shutil.copytree(
@@ -854,8 +914,9 @@ def import_plugin(name: str, config: dict, source_root: Path) -> None:
             "upstreamPath": config["plugin_root"],
             "license": config["license_name"],
             "icon": icon_manifest_path,
-            "skills": "./skills/",
         }
+        if not config.get("no_skills"):
+            manifest["skills"] = "./skills/"
         if config.get("commands") or config.get("command_files"):
             manifest["commands"] = "./commands/"
         if config.get("mcp") or config.get("mcp_inline"):

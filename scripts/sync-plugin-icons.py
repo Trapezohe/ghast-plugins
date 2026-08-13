@@ -65,6 +65,11 @@ CUSTOM_ICONS = {
         '<circle cx="32" cy="32" r="19"/>'
         '<path d="M32 20v13l9 6"/>',
     ),
+    "cloudinary": (
+        "#1976A3",
+        '<path d="M15 44h33a10 10 0 0 0 0-20 16 16 0 0 0-30-2A11 11 0 0 0 15 44z"/>'
+        '<circle cx="28" cy="32" r="4"/><path d="M36 26l9 12H27z"/>',
+    ),
     "defillama": (
         "#176B87",
         '<path d="M15 45V31h8v14M28 45V22h8v23M41 45V15h8v30"/>'

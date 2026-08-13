@@ -57,7 +57,7 @@ verification.
 | clickup | ClickUp | appConnector | MIT | official-source-research-required | not-implemented |
 | close | Close | appConnector | MIT | official-source-research-required | not-implemented |
 | cloudflare | Cloudflare | mcpServers, skills, commands | MIT | official-source-verified | implemented-verified |
-| cloudinary | Cloudinary | appConnector | MIT | official-source-research-required | not-implemented |
+| cloudinary | Cloudinary | appConnector | MIT | official-source-verified | implemented-verified |
 | coderabbit | CodeRabbit | skills | MIT | official-source-research-required | not-implemented |
 | cogedim | ALTAREA PROMOTION MANAGEMENT | appConnector | MIT | official-source-research-required | not-implemented |
 | common-room | Common Room | appConnector | MIT | official-source-research-required | not-implemented |

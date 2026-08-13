@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 8,
-      "official-source-research-required": 111,
-      "official-source-verified": 30
+      "official-source-research-required": 110,
+      "official-source-verified": 31
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 30,
-      "not-implemented": 119
+      "implemented-verified": 31,
+      "not-implemented": 118
     }
   },
   "excludedOpenAIPlugins": [
@@ -1552,7 +1552,7 @@
     },
     {
       "id": "cloudinary",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "url": "https://cloudinary.com/",
@@ -1577,13 +1577,52 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://cloudinary.com/"
+        "homepage": "https://cloudinary.com/",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Cloudinary",
+          "officialRepository": "https://github.com/cloudinary/mcp-servers",
+          "officialRevision": "dca5790c0af2bcde291d732af05c47ad7f75d341",
+          "license": "MIT",
+          "licenseEvidence": [
+            "LICENSE"
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the Cloudinary GitHub organization and identifies itself as the official Cloudinary MCP server collection.",
+            "Its pinned README documents the five Cloudinary-hosted remote endpoints, OAuth2 and API-key authentication, local npm packages, and Docker distributions.",
+            "The official server set covers the media-management capabilities described by the Codex connector without relying on its private app identifier."
+          ],
+          "codexCapabilities": [
+            "Upload, browse, search, organize, tag, transform, analyze, archive, restore, and monitor Cloudinary image and video assets through a private app connector",
+            "Manage media metadata, environment configuration, visual analysis, and automated media workflows"
+          ],
+          "ghastCapabilities": [
+            "Official Asset Management, Environment Config, Structured Metadata, Analysis, and MediaFlows hosted MCP servers",
+            "OAuth2 or supported Cloudinary credential authentication for upload, search, transformation, analysis, organization, configuration, metadata, and workflow operations"
+          ],
+          "capabilityRelationship": "equivalent-official-mcp-suite",
+          "limitations": [
+            "A Cloudinary account, OAuth authorization or supported API credentials, product entitlements, add-ons, rate limits, and paid transformation or analysis features remain user-managed.",
+            "Uploads, renames, deletes, metadata changes, presets, transformations, and MediaFlows mutations require explicit user confirmation.",
+            "A generic media-library icon is used because the official MCP collection repository does not publish a catalog icon."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Compare the generated five-server .mcp.json with the remote endpoint table and configuration examples in the pinned official README",
+            "Probe all five hosted endpoints and confirm they return authentication or protocol responses rather than DNS or routing failures",
+            "unzip -tqq packages/cloudinary.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.0-ghast.1",
+        "repository": "https://github.com/cloudinary/mcp-servers",
+        "upstreamRevision": "dca5790c0af2bcde291d732af05c47ad7f75d341",
+        "portStatus": "full"
       }
     },
     {
