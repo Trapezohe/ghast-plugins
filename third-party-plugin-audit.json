@@ -5048,10 +5048,57 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://quickbooks.intuit.com"
+        "homepage": "https://quickbooks.intuit.com",
+        "review": {
+          "verificationStatus": "official-source-research-required",
+          "officialDeveloper": "Intuit",
+          "officialRepository": "https://github.com/intuit/quickbooks-online-mcp-server",
+          "officialRevision": "c351dc011d9cb14b211857457085f7994d8b1e15",
+          "license": "Apache-2.0",
+          "licenseEvidence": [
+            "LICENSE",
+            "GitHub license API identifies the repository license as Apache-2.0"
+          ],
+          "officialityEvidence": [
+            "The repository is owned by Intuit's official GitHub organization and describes itself as the QuickBooks Online MCP Server.",
+            "The pinned main-branch commit is GitHub-verified and carries an Intuit-authored Apache-2.0 copyright notice.",
+            "The source uses Intuit OAuth and QuickBooks Online APIs and provides a local stdio MCP server with configurable write, update, and delete suppression.",
+            "A protocol-level tools/list request against the built pinned source returned 142 tools; enabling all three restriction flags returned 71 read-only tools."
+          ],
+          "codexCapabilities": [
+            "Analyze profitability, cash flow, accounts receivable and payable, and generate accounting reports",
+            "Manage invoices, estimates, payments, customers, products, payroll, and uploaded or pasted transactions",
+            "View peer loan benchmarks by industry and region"
+          ],
+          "ghastCapabilities": [
+            "The official source provides 71 read tools and 71 mutation tools across customers, invoices, estimates, payments, items, bills, vendors, employees, time activities, attachments, journal entries, banking records, taxes, and related QuickBooks Online entities.",
+            "The official source provides balance sheet, profit and loss, cash flow, trial balance, general ledger, customer sales and balance, aged receivables and payables, and vendor expense and balance reports.",
+            "No Ghast plugin is published because the official public source does not cover all capabilities promised by the Codex app and has no published runtime package."
+          ],
+          "capabilityRelationship": "official-source-found-capability-and-distribution-gap",
+          "limitations": [
+            "The public MCP source manages employee records and time activities but exposes no payroll, paycheck, pay-run, tax-filing, or payroll-payment operations.",
+            "The source exposes no industry, regional, peer, lending, or loan benchmark capability.",
+            "Attachment upload can add supported files to QuickBooks records, but it does not implement the Codex app's described workflow of uploading or pasting transactions for personalized analysis and import.",
+            "The README claims 145 tools, while protocol-level tools/list at the pinned revision returns 142. None of the returned tools has MCP read-only, destructive, or idempotency annotations.",
+            "The root LICENSE and GitHub metadata identify Apache-2.0, while package.json and the README badge and license section say MIT. Redistribution would use the actual Apache-2.0 license file and must disclose this upstream metadata inconsistency.",
+            "The package name declared in package.json is not published on npm. A cold npx launch from the pinned GitHub revision did not become protocol-ready within the MCP client's 60-second request timeout.",
+            "Users must create an Intuit developer app and complete OAuth. Sandbox supports a localhost callback, while initial production authorization requires a public HTTPS callback."
+          ],
+          "verification": [
+            "Install dependencies with an isolated npm cache and run npm run build",
+            "Run all 35 Jest suites and confirm 629 tests pass",
+            "Start dist/index.js with dummy credentials and call tools/list with all categories enabled; confirm 142 tools consisting of 25 create, 26 update, 20 delete, and 71 read tools",
+            "Set QUICKBOOKS_DISABLE_WRITE, QUICKBOOKS_DISABLE_UPDATE, and QUICKBOOKS_DISABLE_DELETE to true and confirm tools/list returns only the 71 read tools",
+            "Inspect every returned tool and confirm no MCP annotations are present",
+            "Search the pinned source for payroll and peer-loan benchmark operations and confirm neither capability is implemented",
+            "Query npm for @qboapi/qbo-mcp-server and confirm the declared package is not published",
+            "Do not create plugins/quickbooks until Intuit publishes equivalent payroll and benchmark capabilities or narrows the official Codex capability contract"
+          ]
+        }
       },
       "ghast": {
         "implementationStatus": "not-implemented"
