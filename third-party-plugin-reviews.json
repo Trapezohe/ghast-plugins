@@ -138,6 +138,53 @@
         "unzip -tqq packages/aiera.zip"
       ]
     },
+    "alation": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Alation AI",
+      "officialRepository": "https://github.com/Alation/alation-plugins",
+      "officialRevision": "b450039495787ecd6bc16176cca6df6c4a1336c3",
+      "license": "Apache-2.0",
+      "licenseEvidence": [
+        "LICENSE",
+        "The Apache-2.0 license covers the seven official Codex skills, pure-Python CLI, wrapper script, documentation, manifests, and Alation icon copied by Ghast."
+      ],
+      "officialityEvidence": [
+        "The source repository is owned by Alation's official GitHub organization, links to alation.com, and names Alation AI as the plugin author and developer.",
+        "Pinned tag v1.0.1-b450039 and commit b450039495787ecd6bc16176cca6df6c4a1336c3 publish an official Codex manifest, seven skills, a bundled CLI, and an Alation catalog icon.",
+        "The official explore skill covers catalog and data-product search, data-source and schema browsing, object descriptions, BI reports and semantic-layer data sources, upstream and downstream lineage, and links back to Alation.",
+        "The official CLI additionally supports data-product query and validation, agent chat and tool invocation, workflow and schedule management, agent, tool, model, and data-source configuration, data-product and marketplace curation, and metadata enrichment.",
+        "The pinned release asset alation.zip has SHA-256 3230ac1b5839728764ce983fee43328aa4c581f3f38df653944e9bb86e614ab6 and contains the same official plugin source."
+      ],
+      "codexCapabilities": [
+        "Search trusted enterprise data assets and summarize owners, definitions, semantic context, governance policy, and documentation",
+        "Find certified tables and explain lineage, quality, and caveats for an analysis",
+        "Review dataset documentation and prepare a query-ready data brief through the private Alation app connector"
+      ],
+      "ghastCapabilities": [
+        "The same official catalog, ownership, definitions, documentation, BI context, lineage, data-product, marketplace, and query-preparation workflows through Alation's developer-authored explore and ask skills",
+        "All seven official Alation skills for discovery, querying, agent and tool use, configuration, recurring workflow automation, data-product and marketplace curation, metadata enrichment, and authentication setup",
+        "The complete bundled Alation CLI surface for catalog search and filters, hierarchy browsing, BI lineage, data-product query, agent chat, tools, models, data sources, workflows, schedules, products, marketplaces, and enrichment"
+      ],
+      "capabilityRelationship": "superset-newer-official-codex-plugin",
+      "limitations": [
+        "Python 3.10 or newer, an accessible Alation instance, a registered OAuth client or supported legacy username and password, Alation permissions, applicable product features, and warehouse or tool access remain user-managed.",
+        "The pinned official plugin contains no .mcp.json. Ghast packages the official CLI and skills instead of inventing an unaudited MCP bridge; a tenant-hosted MCP connection, when desired, must be configured under the customer's Alation and OAuth-client policy.",
+        "Authenticated catalog, query, lineage, agent, workflow, and write operations were not exercised because no user Alation instance or credentials were available. Effective objects and permissions vary by tenant and role.",
+        "The CLI stores configuration in credentials.local and OAuth tokens in a local token cache. Secrets must use an approved secure entry path and must not be pasted into chat, committed, packaged, or exposed in logs.",
+        "Query execution, agent or tool invocation, external email, workflow execution, schedule changes, product or marketplace writes, metadata enrichment, model or connection changes, publish, unpublish, and delete operations can have persistent or external effects and require explicit confirmation.",
+        "Create, publish, execute, schedule, and bulk enrichment operations may be non-idempotent. Ambiguous failures must be inspected before retrying.",
+        "Disabling SSL verification weakens transport security and is allowed by the official setup flow only after explicit user approval."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Verify tag v1.0.1-b450039 resolves to b450039495787ecd6bc16176cca6df6c4a1336c3 and validate the pinned manifest, license, icon, README, wrapper, and key skill SHA-256 hashes",
+        "Confirm exactly seven official skill trees and 36 bundled Python CLI files are present and that no .mcp.json exists in the pinned source",
+        "Parse every bundled Python module and run scripts/run-cli --help with bytecode generation disabled",
+        "Run scripts/run-cli setup check in a temporary empty HOME and confirm it safely reports credentials and token absent with ready=false",
+        "Compare the imported skills with the pinned official source, allowing only the four documented Ghast safety appendices and exclusion of __pycache__ and .pyc files",
+        "unzip -tqq packages/alation.zip"
+      ]
+    },
     "amplitude": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Amplitude, Inc.",

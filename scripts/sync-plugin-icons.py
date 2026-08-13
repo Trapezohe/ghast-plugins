@@ -28,6 +28,7 @@ OPENAI_ICONS = {
 LOCAL_ICONS = {
     "aiera": "assets/icon.png",
     "airtable": "assets/icon.svg",
+    "alation": "assets/icon.png",
     "asana": "assets/icon.svg",
     "atlassian-rovo": "assets/icon.svg",
     "base44": "assets/icon.png",

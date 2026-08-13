@@ -1,0 +1,272 @@
+---
+name: explore
+description: "Use when the user wants to discover, find, or browse data assets in the Alation catalog, data products, or marketplaces. Triggers: search catalog, find tables, list data sources, browse schemas, show columns, what data do we have, what tables exist, explore database, describe table, what's in this data source, show me the schema, list schemas, list columns, what databases do we have, show table structure, describe this data source, find data products, list data products, what data products do we have, search products, show available products, what products are in the marketplace, browse marketplace, which product has sales data. Use this skill when the user wants to know what data exists, understand table/column structure, or find data products — not when they want actual query results or numbers. Not for answering data questions or running queries — use ask instead. Not for creating or managing data products — use curate instead."
+---
+
+# Explore
+
+Find and explain where data lives in Alation, using user language (not Alation jargon), and return navigable catalog results.
+
+## Behavior Contract
+
+- Be concise: default to short answers and focused result lists.
+- Use user terminology first, then map to Alation object types internally.
+- Ask at most one clarifying question when needed.
+- Do not run queries for totals/counts/trends in this skill.
+- Include catalog `url` for each recommended result.
+
+## Intent Mapping (Goal First)
+
+Translate user goals into catalog discovery actions:
+
+- "Where can I find X data?" -> keyword search, then refine by object type.
+- "What data sources do we have?" -> list data sources.
+- "What is inside source X?" -> browse source -> schemas -> tables -> columns.
+- "Show me schema/table structure" -> browse hierarchy for that object.
+- "Tell me about this table/column" -> describe specific object by ID.
+- "What data products do we have?" -> list data products.
+- "Which product has sales data?" -> search data products by keyword.
+- "What's in this data product?" -> get product details and schema.
+- "What marketplaces are available?" -> list marketplaces.
+- "What products are in marketplace X?" -> list or search products in a marketplace.
+- "What BI reports about X?" -> search with `--type bi_report`.
+- "What BI datasources/explores/datasets for X?" -> search with `--type bi_datasource`.
+- "What feeds this dashboard/report?" -> get report ID, then `bi report-sources --id ID`.
+- "What reports use this datasource/explore/dataset?" -> get datasource ID, then `bi source-reports --id ID`.
+- "Tell me about this BI report" -> `bi describe --type report --id ID`.
+- "Show me the semantic layer / views for this datasource" -> `bi describe --type datasource --id ID`.
+- "What metrics/measures are in this report/dashboard?" -> `bi report-sources --id ID` to find the datasource, then `bi describe --type datasource --id DATASOURCE_ID` to get the measures.
+- "Create a data product from this BI datasource/report" -> `bi product-spec --id DATASOURCE_ID` to generate the spec, then hand off to **curate** to create the product.
+
+If user says something broad like "show me sales data":
+
+1. Treat as discovery by default (explore).
+2. Search both catalog (`search "sales"`) and data products (`query search --query "sales"`).
+3. Present results grouped: data products first (queryable), then catalog matches (browse-only).
+4. If data products were found: "Want me to query one of these products for results?"
+5. If only catalog matches: "I found tables but no queryable data product. Want to explore these further, or create a data product from one?"
+
+## Internal Command Routing
+
+Use these commands to execute the workflow:
+
+| Goal                                          | CLI Command                                                                                |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Keyword discovery                             | `scripts/run-cli search "keyword" [--limit N] [--type T (repeatable)] [--starred] [--watching] [--recent] [--domain ID] [--filters JSON] [--ranges JSON]` |
+| Discover filterable fields                    | `scripts/run-cli search-fields "field name" [--limit N]`                                     |
+| Resolve filter values to IDs                  | `scripts/run-cli search-values --field FIELD_ID "value name" [--builtin] [--limit N]`        |
+| List data sources                             | `scripts/run-cli browse sources [--limit N] [--skip N]`                                      |
+| List schemas in source                        | `scripts/run-cli browse schemas --ds-id ID [--limit N] [--skip N]`                           |
+| List tables                                   | `scripts/run-cli browse tables --schema-id ID [--limit N] [--skip N]` or `--ds-id ID`        |
+| List columns                                  | `scripts/run-cli browse columns --table-id ID [--limit N] [--skip N]` or `--ds-id ID`        |
+| Describe object                               | `scripts/run-cli browse describe --type {datasource\|schema\|table\|column} --id ID`         |
+| Hierarchical tree                             | `scripts/run-cli browse tree --ds-id ID [--depth 1\|2\|3]`                                   |
+| List data products                            | `scripts/run-cli query list [--limit N] [--skip N]`                                          |
+| Search data products                          | `scripts/run-cli query search --query "keyword" [--marketplace EXTERNAL_MARKETPLACE_ID]`     |
+| Get product details/schema                    | `scripts/run-cli query get --product ID [--schema-only]`                                     |
+| List marketplaces                             | `scripts/run-cli marketplace list`                                                           |
+| Get marketplace details                       | `scripts/run-cli marketplace get --marketplace EXTERNAL_MARKETPLACE_ID`                      |
+| List products in marketplace                  | `scripts/run-cli marketplace products --marketplace EXTERNAL_MARKETPLACE_ID`                 |
+| Search products in marketplace                | `scripts/run-cli marketplace search --marketplace EXTERNAL_MARKETPLACE_ID --query "keyword"` |
+| Search BI reports                             | `scripts/run-cli search "keyword" --type bi_report`                                          |
+| Search BI datasources                         | `scripts/run-cli search "keyword" --type bi_datasource`                                      |
+| Report's upstream datasources                 | `scripts/run-cli bi report-sources --id REPORT_ID [--limit N]`                               |
+| Datasource's downstream reports               | `scripts/run-cli bi source-reports --id DATASOURCE_ID [--limit N]`                           |
+| BI report detail                              | `scripts/run-cli bi describe --type report --id ID`                                          |
+| BI datasource views                           | `scripts/run-cli bi describe --type datasource --id ID`                                      |
+| Generate data product spec from BI datasource | `scripts/run-cli bi product-spec --id DATASOURCE_ID`                                         |
+
+`search` type: Can be one of many options. The most common are "table", "column", "schema", "article", "glossary_term", "datasource", Use `--help` to see all the options.
+
+`browse tree` depth: 1 = schemas only, 2 = schemas + tables, 3 = schemas + tables + columns.
+Always pass `--depth 1` explicitly on unfamiliar sources — depth 3 on a large source can return hundreds of objects.
+
+## Filtering search results
+
+`search` mirrors the Alation UI's filters. Beyond `--type`, you can scope by
+data source, author, schema, custom fields, dates, and user state.
+
+**Built-in filters take numeric IDs, not names.** To filter by "data source =
+Snowflake Prod" you must first resolve the name to an ID:
+
+1. `search-fields "data source"` — find the filter field and check its
+   `is_builtin`. For built-in facets, the `filter_id` is the string key
+   (`ds` for data source, plus `author`, `schema_name`, `steward`). For
+   custom fields, the `filter_id` is the numeric `id` from the result.
+2. `search-values --field ds --builtin "Snowflake"` — resolve the name to a
+   numeric ID. Use `--builtin` whenever the field's `is_builtin` was true.
+3. `search "orders" --filters '[{"filter_id":"ds","filter_values":["14"]}]'` —
+   run the filtered search. `filter_values` must be the resolved IDs.
+
+Date ranges use `--ranges` with ISO dates:
+`--ranges '[{"field":"ts_updated","start":"2025-01-01","end":"2025-06-01"}]'`
+(`field` = `ts_updated`, `ts_created`, or a custom DATE field id).
+
+User-state toggles need no resolution: `--starred`, `--watching`, `--recent`.
+Scope to domains with `--domain ID` (repeatable).
+
+`search` returns `results` plus a `table_view_url` — a link into the Alation UI
+full-search view with the same filters applied. Offer it to the user as
+"view all results in Alation" when results are truncated or they want the UI.
+
+## Standard Workflow
+
+1. Interpret the user goal in plain language.
+2. Pick discovery path:
+   - Unknown location -> search first (catalog search for tables/columns, product search for data products).
+   - Known source/object -> browse hierarchy (for catalog) or get product details (for data products).
+   - Known marketplace -> list or search products in that marketplace.
+3. If required identifier is missing, list the parent level first (e.g., sources before schemas).
+4. Return top relevant results with name, description, and URL. Include IDs only when the
+   user will need to refer back to them. Translate Alation types into plain language
+   (e.g., "database" not "datasource").
+5. Offer one next step, then wait for confirmation.
+
+## Data Product Discovery
+
+Data products are queryable datasets published in Alation. They do not appear in catalog search results (`search` command), so use the dedicated product commands instead.
+
+### Finding a data product
+
+1. Start with `query search --query "keyword"` if the user describes what data they need.
+2. Fall back to `query list` if the search term is too vague or returns nothing.
+3. Use `query get --product ID --schema-only` to inspect tables and columns in a product.
+
+### Marketplace browsing
+
+Marketplaces are curated collections of data products. If the user mentions a marketplace or wants to browse published products:
+
+1. `marketplace list` to find available marketplaces.
+2. `marketplace products --marketplace EXTERNAL_MARKETPLACE_ID` or `marketplace search --marketplace EXTERNAL_MARKETPLACE_ID --query "keyword"` to browse within one.
+
+Always use the external marketplace ID to identify marketplaces.
+
+### BI Discovery
+
+BI objects represent dashboards, reports, and their semantic-layer datasources from tools like Tableau, Looker, and Power BI.
+
+**Terminology mapping:**
+
+- User says "dashboard", "workbook", "report", "sheet", "tile" -> Alation type `bi_report`
+- User says "explore", "dataset", "published datasource", "semantic layer" -> Alation type `bi_datasource`
+- **Ambiguity:** "datasource" alone could mean a regular Alation data source OR a BI datasource. If the conversation is about BI tools (Tableau, Looker, Power BI), treat it as `bi_datasource`. Otherwise, treat it as a regular data source or ask the user to clarify.
+- User says "folder", "project", "workspace", "site" -> Alation type `bi_folder`
+
+**Finding BI objects:**
+
+1. `search "keyword" --type bi_report` to find reports/dashboards.
+2. `search "keyword" --type bi_datasource` to find semantic-layer datasources.
+3. `bi describe --type report --id ID` for report metadata.
+4. `bi describe --type datasource --id ID` for semantic-layer views (joins, dimensions, measures).
+
+**Cross-navigation (the key BI workflow):**
+
+- "What data feeds this dashboard?" -> `bi report-sources --id REPORT_ID`
+- "Which dashboards use this explore/dataset?" -> `bi source-reports --id DATASOURCE_ID`
+
+Cross-navigation uses lineage, so it resolves transitive relationships automatically. A Looker Dashboard resolves through its Tiles to the underlying Explore. A Power BI Dashboard resolves through Tiles and Reports to the underlying Dataset.
+
+**Typical BI exploration flow:**
+
+1. User asks about BI data -> search with `--type bi_report` or `--type bi_datasource`.
+2. User picks a result -> detail with `bi describe`.
+3. User asks "what feeds this?" or "what uses this?" -> cross-navigate.
+4. If user wants to query the underlying data, hand off to **ask**.
+5. If user wants to create a data product from a BI datasource -> `bi product-spec --id DATASOURCE_ID`, then hand off to **curate**.
+
+**BI to data product flow:**
+
+1. Find the report: `search "keyword" --type bi_report`.
+2. Get its upstream datasource: `bi report-sources --id REPORT_ID`.
+3. Inspect metrics/measures: `bi describe --type datasource --id DATASOURCE_ID`.
+4. Generate a product spec: `bi product-spec --id DATASOURCE_ID`. Dialect is auto-detected.
+5. Present the spec to the user for review, then hand off to **curate** to create the product with `product create`.
+
+### Handoff to ask
+
+After the user identifies a data product, suggest querying it: "Want me to query this
+product for results?" Then hand off to the **ask** skill with the product ID.
+
+## Disambiguation
+
+When search or browse returns multiple plausible matches, present the options and let the user choose. Show each option with its name, which data source it belongs to, and a brief description if available. Don't silently pick one — the user knows their data better than you.
+
+Only skip this if the user already specified exactly what they want or there is a single obvious match.
+
+## Response Format
+
+Use this compact structure:
+
+- One-line outcome statement.
+- Up to 5 results (most relevant first), each with:
+  - name
+  - description (if available)
+  - URL
+- One optional next-step question.
+
+## Not This Skill
+
+Route away when the request is outside discovery:
+
+- User wants numbers/analysis/results from data -> use `ask` (provide the product ID).
+- User wants to create/manage data products, publish to marketplace -> use `curate`.
+- User wants to create/manage agents, tools, LLMs, or connections -> use `configure`.
+
+## Error and Fallback Handling
+
+- Authentication/setup errors:
+  - Suggest `scripts/run-cli setup check`.
+  - If still blocked, route to setup skill.
+- No search results:
+  - Retry with simpler keywords or synonyms.
+  - Remove strict type filter.
+  - Ask one clarifying question about business term/source system.
+- Too many results:
+  - Narrow by type (`table`/`column`) or source.
+  - Use pagination via `--limit` and `--skip`.
+- Missing IDs for browse commands:
+  - Retrieve parent objects first; do not guess IDs.
+
+## Common Mistakes
+
+**Mistake:** Using search when the user names a specific data source.
+Why it seems reasonable: search feels like a universal starting point.
+Instead: Find that source via `browse sources`, then drill in with `browse tree` or `browse schemas`.
+
+**Mistake:** Using `browse tree --depth 3` on a large or unfamiliar source.
+Why it seems reasonable: showing everything at once feels thorough.
+Instead: Start at `--depth 1`. Let the user tell you what to drill into.
+
+**Mistake:** Describing every table when the user just asked what's there.
+Why it seems reasonable: more detail seems more helpful.
+Instead: List table names first. Only describe a specific table when the user picks one.
+
+**Mistake:** Proceeding to another skill action without user confirmation.
+Why it seems reasonable: anticipating the next step feels efficient.
+Instead: Suggest one next step and wait. "Want me to query this data?" not "Let me query this for you."
+
+**Mistake:** Using catalog `search` to find data products.
+Why it seems reasonable: search feels like a universal starting point.
+Instead: Data products don't appear in catalog search. Use `query search` or `query list` for data products.
+
+**Mistake:** Using `product list` or `product get` for discovery.
+Why it seems reasonable: they sound like discovery commands.
+Instead: Those are management commands (raw spec JSON) used by the `curate` skill. For discovery, use `query list` and `query get` which return consumer-friendly views.
+
+**Mistake:** Using `search --type datasource` to find BI datasources.
+Why it seems reasonable: "datasource" and "bi_datasource" sound similar.
+Instead: `datasource` is for RDBMS data sources (Postgres, Snowflake). BI semantic layers (Looker Explores, Tableau Published Datasources, Power BI Datasets) use `--type bi_datasource`.
+
+**Mistake:** Using `browse` commands for BI objects.
+Why it seems reasonable: browse works for catalog objects, why not BI?
+Instead: BI has its own hierarchy. Use `bi` commands for detail and cross-navigation, `search` with BI type filters for discovery.
+
+## Red Flags
+
+- "Let me search for all tables" — search is keyword-based. To list tables, use browse.
+- "I'll check the data source API" — all commands go through the CLI, never raw APIs.
+- "I'll fetch all columns for this data source" — could be enormous. Drill down through schemas and tables first.
+- "Let me show you everything at depth 3" — start at depth 1; go deeper only as needed.
+- "Data products should show up in catalog search" — they don't. Use `query search` or `query list`.
+- "I'll use `--type datasource` to find the Tableau data source" — that finds RDBMS sources, not BI sources. Use `--type bi_datasource`.
+- "Let me browse BI reports" — browse is for catalog hierarchies. Use `search --type bi_report` for discovery.

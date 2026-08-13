@@ -29,7 +29,7 @@ verification.
 | actively | Actively | appConnector | MIT | official-source-verified | implemented-verified |
 | aiera | Aiera | appConnector | MIT | official-source-verified | implemented-verified |
 | airtable | Airtable | appConnector, skills | MIT | official-source-verified | implemented-verified |
-| alation | Alation | appConnector | MIT | official-source-research-required | not-implemented |
+| alation | Alation | appConnector | MIT | official-source-verified | implemented-verified |
 | alpaca | Alpaca | appConnector | MIT | official-source-research-required | not-implemented |
 | amplitude | Amplitude | appConnector | MIT | official-source-verified | implemented-verified |
 | apollo | Apollo | appConnector | MIT | official-source-verified | implemented-verified |

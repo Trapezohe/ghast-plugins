@@ -91,6 +91,36 @@
       "license": "MIT"
     },
     {
+      "id": "alation",
+      "name": "alation",
+      "description": "Search and browse trusted Alation catalog context, query data products, inspect BI lineage, configure agents and tools, automate workflows, and curate governed metadata through Alation's official Codex skills and CLI.",
+      "manifest": {
+        "name": "alation",
+        "description": "Search and browse trusted Alation catalog context, query data products, inspect BI lineage, configure agents and tools, automate workflows, and curate governed metadata through Alation's official Codex skills and CLI.",
+        "author": {
+          "name": "Alation AI",
+          "email": "alation-ai-squad@alation.com",
+          "url": "https://www.alation.com/"
+        },
+        "icon": "./assets/icon.png",
+        "version": "1.0.1-ghast.1",
+        "homepage": "https://github.com/Alation/alation-plugins",
+        "repository": "https://github.com/Alation/alation-plugins",
+        "upstreamRevision": "b450039495787ecd6bc16176cca6df6c4a1336c3",
+        "license": "Apache-2.0",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/alation.zip",
+        "sha256": "6619e6060606c34d1d5ac424f61999b8913f4f994b089630ca9eb89c358beaaa"
+      },
+      "icon": "./plugins/alation/assets/icon.png",
+      "category": "data",
+      "homepage": "https://github.com/Alation/alation-plugins",
+      "repository": "https://github.com/Alation/alation-plugins",
+      "license": "Apache-2.0"
+    },
+    {
       "id": "amplitude",
       "name": "amplitude",
       "description": "Analyze Amplitude charts, dashboards, experiments, session replays, feedback, accounts, reliability, AI agents, taxonomy, and instrumentation through Amplitude's official skills and hosted MCP server.",
