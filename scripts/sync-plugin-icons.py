@@ -79,6 +79,12 @@ CUSTOM_ICONS = {
         '<path d="M15 44h33a10 10 0 0 0 0-20 16 16 0 0 0-30-2A11 11 0 0 0 15 44z"/>'
         '<circle cx="28" cy="32" r="4"/><path d="M36 26l9 12H27z"/>',
     ),
+    "clickup": (
+        "#4D46C8",
+        '<rect x="11" y="13" width="42" height="38" rx="3"/>'
+        '<path d="M11 25h42M25 25v26M39 25v26"/>'
+        '<path d="M16 19l3 3 6-7M30 19h5M44 19h4"/>',
+    ),
     "defillama": (
         "#176B87",
         '<path d="M15 45V31h8v14M28 45V22h8v23M41 45V15h8v30"/>'

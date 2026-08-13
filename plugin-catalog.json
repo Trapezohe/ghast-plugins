@@ -232,6 +232,34 @@
       "license": "MIT"
     },
     {
+      "id": "clickup",
+      "name": "clickup",
+      "description": "Search and manage ClickUp tasks, lists, folders, documents, comments, chat, assignments, relationships, and time tracking through ClickUp's official hosted MCP server.",
+      "manifest": {
+        "name": "clickup",
+        "description": "Search and manage ClickUp tasks, lists, folders, documents, comments, chat, assignments, relationships, and time tracking through ClickUp's official hosted MCP server.",
+        "author": {
+          "name": "ClickUp",
+          "url": "https://clickup.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.0-ghast.1",
+        "homepage": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server.md",
+        "upstreamRevision": "clickup-tools-2d3fddb826de+overview-dff0d558c63b+setup-3d9416ff8959+oauth-19f2f7a0a70c",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/clickup.zip",
+        "sha256": "ca15d41fb820b09804c454b9a715d2d921d403925105195b9150e1cff2d8f7ad"
+      },
+      "icon": "./plugins/clickup/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server.md",
+      "license": "MIT"
+    },
+    {
       "id": "cloudflare",
       "name": "cloudflare",
       "description": "Build and operate on Cloudflare with official skills, slash commands, and five official MCP servers.",

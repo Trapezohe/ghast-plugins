@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 9,
-      "official-source-research-required": 97,
-      "official-source-verified": 43
+      "official-source-research-required": 96,
+      "official-source-verified": 44
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 43,
-      "not-implemented": 106
+      "implemented-verified": 44,
+      "not-implemented": 105
     }
   },
   "excludedOpenAIPlugins": [
@@ -1512,7 +1512,7 @@
     },
     {
       "id": "clickup",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "ClickUp"
@@ -1536,13 +1536,70 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://clickup.com"
+        "homepage": "https://clickup.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "ClickUp",
+          "officialRepository": null,
+          "officialRevision": "clickup-tools-2d3fddb826de+overview-dff0d558c63b+setup-3d9416ff8959+oauth-19f2f7a0a70c",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/clickup/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+            "No ClickUp hosted MCP server source, private Codex connector, Workspace data, service source code, or marketplace artwork is redistributed."
+          ],
+          "officialityEvidence": [
+            "ClickUp's official developer documentation identifies https://mcp.clickup.com/mcp as its public-beta hosted MCP server for tasks, Lists, Folders, Docs, comments, chat, reporting, and time tracking.",
+            "The official tool reference, updated 2026-03-19T23:41:01.000Z, lists 48 tool entries and was captured three times with identical SHA-256 2d3fddb826de9a8577e0fde3ff109952a5d4ee929066152e24ba1efd887c5937.",
+            "The official MCP overview, updated 2026-05-11T15:40:32.000Z, documents the endpoint, OAuth-only authentication, public-beta status, core workflows, and plan-dependent rate limits; it has SHA-256 dff0d558c63b4a0d30a239cb12eeeb5d17d5f0ce8cbf0a47cd1bf2bd32eda6bb.",
+            "The official setup guide, updated 2026-04-24T20:12:10.000Z, documents direct Streamable HTTP clients, DCR, and mcp-remote for other clients; it has SHA-256 3d9416ff8959bec9225469da49f43cfcbadf179542c2b5219bb90e5ea4aef354.",
+            "ClickUp's OAuth protected-resource metadata identifies the same MCP resource, ClickUp as owner, read and write scopes, and bearer-header authentication; its canonical JSON has SHA-256 19f2f7a0a70cc0d6197ac779d2eb4be43f0c8c303c229e5563e871f95222235b.",
+            "The official authorization-server metadata declares dynamic client registration, authorization-code grants, public clients, PKCE S256, and task, document, and chat capabilities; its canonical JSON has SHA-256 595d813bb7cb5ed08af4a0db8d2d34e0f0c2ca79388278c378c9876ffa94d3f7.",
+            "Unauthenticated requests return HTTP 401 with ClickUp's Bearer challenge. Dynamic registration accepted localhost and 127.0.0.1 callback URIs during protocol verification."
+          ],
+          "codexCapabilities": [
+            "Search deeply across ClickUp work and answer questions without leaving the conversation",
+            "Find, create, update, and manage work, including assessing whether a named sprint is at risk"
+          ],
+          "ghastCapabilities": [
+            "The same official Workspace search, task create and update, hierarchy navigation, reporting, and sprint-risk workflows through ClickUp's hosted MCP server",
+            "Additional official capabilities for bulk task operations, attachments, comments and replies, tags, task links and dependencies, List membership, timers and time entries, Lists and Folders, members and assignees, Chat, Docs and pages, and time-in-status reporting"
+          ],
+          "capabilityRelationship": "superset-official-hosted-mcp",
+          "limitations": [
+            "The hosted MCP implementation is operated by ClickUp and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+            "A ClickUp account, OAuth authorization, Workspace permissions, and any administrator or plan restrictions remain user-managed.",
+            "The service is in public beta. ClickUp maintains a vetted client list and can review redirect URIs, although dynamic registration accepted the tested local callbacks.",
+            "Endpoint discovery, OAuth metadata, unauthenticated challenge, and dynamic registration were verified without an account, but authenticated tool listing and Workspace operations were not run.",
+            "The official tool reference lists task deletion, while the newer overview FAQ says deletion tools have not been added. The Ghast skill does not promise deletion and requires fresh confirmation if the live server exposes it.",
+            "Without the Everything AI add-on, ClickUp documents rolling limits of 50 MCP calls per 24 hours on Free Forever and 300 per 24 hours on Unlimited and above. With the add-on, Public API plan limits apply.",
+            "Connected Search cannot search external connected apps through ClickUp MCP.",
+            "All creates, updates, bulk actions, attachments, comments, tags, links, dependencies, moves, time writes, hierarchy changes, chat messages, Docs, pages, and any live deletion require explicit confirmation.",
+            "A generic work-management icon is used because no licensed catalog icon is included in a public official MCP source repository."
+          ],
+          "verification": [
+            "python3 scripts/import-official-hosted-plugins.py",
+            "Verify the official tool reference SHA-256 is 2d3fddb826de9a8577e0fde3ff109952a5d4ee929066152e24ba1efd887c5937 and contains all 48 documented tool labels",
+            "Verify the official overview SHA-256 is dff0d558c63b4a0d30a239cb12eeeb5d17d5f0ce8cbf0a47cd1bf2bd32eda6bb",
+            "Verify the official setup guide SHA-256 is 3d9416ff8959bec9225469da49f43cfcbadf179542c2b5219bb90e5ea4aef354",
+            "Verify canonical OAuth protected-resource metadata SHA-256 is 19f2f7a0a70cc0d6197ac779d2eb4be43f0c8c303c229e5563e871f95222235b",
+            "Verify canonical OAuth authorization-server metadata SHA-256 is 595d813bb7cb5ed08af4a0db8d2d34e0f0c2ca79388278c378c9876ffa94d3f7",
+            "Register disposable OAuth clients with localhost and 127.0.0.1 callbacks and confirm ClickUp accepts public dynamic registration",
+            "Probe https://mcp.clickup.com/mcp without authorization and confirm HTTP 401 plus ClickUp's Bearer challenge",
+            "Compare Workspace search, create, update, manage-work, and sprint-risk capabilities with the Codex description and default prompt",
+            "Authorize a ClickUp account before testing authenticated tool schemas and Workspace operations",
+            "unzip -tqq packages/clickup.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.0-ghast.1",
+        "repository": null,
+        "upstreamRevision": "clickup-tools-2d3fddb826de+overview-dff0d558c63b+setup-3d9416ff8959+oauth-19f2f7a0a70c",
+        "portStatus": "full"
       }
     },
     {

@@ -54,7 +54,7 @@ verification.
 | circleback | Circleback AI, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | circleci | CircleCI | skills | MIT | blocked-license | not-implemented |
 | clay | Clay | appConnector | MIT | official-source-research-required | not-implemented |
-| clickup | ClickUp | appConnector | MIT | official-source-research-required | not-implemented |
+| clickup | ClickUp | appConnector | MIT | official-source-verified | implemented-verified |
 | close | Close | appConnector | MIT | official-source-research-required | not-implemented |
 | cloudflare | Cloudflare | mcpServers, skills, commands | MIT | official-source-verified | implemented-verified |
 | cloudinary | Cloudinary | appConnector | MIT | official-source-verified | implemented-verified |
