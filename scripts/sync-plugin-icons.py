@@ -150,6 +150,14 @@ CUSTOM_ICONS = {
         '<path d="M15 44h33a10 10 0 0 0 0-20 16 16 0 0 0-30-2A11 11 0 0 0 15 44z"/>'
         '<circle cx="28" cy="32" r="4"/><path d="M36 26l9 12H27z"/>',
     ),
+    "clay": (
+        "#087E8B",
+        '<path d="M10 13h44L39 31v14l-14 7V31z"/>'
+        '<circle cx="19" cy="20" r="3"/>'
+        '<circle cx="32" cy="20" r="3"/>'
+        '<circle cx="45" cy="20" r="3"/>'
+        '<path d="M19 24v3M32 24v3M45 24v3"/>',
+    ),
     "clickup": (
         "#4D46C8",
         '<rect x="11" y="13" width="42" height="38" rx="3"/>'

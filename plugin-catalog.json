@@ -642,6 +642,34 @@
       "license": "MIT"
     },
     {
+      "id": "clay",
+      "name": "clay",
+      "description": "Search companies and people, enrich prospect records, and run admin-approved GTM functions through Clay's official hosted MCP.",
+      "manifest": {
+        "name": "clay",
+        "description": "Search companies and people, enrich prospect records, and run admin-approved GTM functions through Clay's official hosted MCP.",
+        "author": {
+          "name": "Clay",
+          "url": "https://www.clay.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.2-ghast.1",
+        "homepage": "https://www.clay.com/mcp",
+        "upstreamRevision": "clay-docs-52d04c63c45b+openapi-258cc399172d+oauth-f114e17a4bc5+source-4ab1ca54c908",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/clay.zip",
+        "sha256": "34e1161de9906b77279cfeebedee68e5cfec7f04a9aa92f2af7c551f953cd9cc"
+      },
+      "icon": "./plugins/clay/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://www.clay.com/mcp",
+      "license": "MIT"
+    },
+    {
       "id": "clickup",
       "name": "clickup",
       "description": "Search and manage ClickUp tasks, lists, folders, documents, comments, chat, assignments, relationships, and time tracking through ClickUp's official hosted MCP server.",

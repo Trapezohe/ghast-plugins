@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 56,
-      "official-source-verified": 88
+      "official-source-research-required": 55,
+      "official-source-verified": 89
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 88,
-      "not-implemented": 61
+      "implemented-verified": 89,
+      "not-implemented": 60
     }
   },
   "excludedOpenAIPlugins": [
@@ -2288,7 +2288,7 @@
     },
     {
       "id": "clay",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Clay",
@@ -2315,13 +2315,82 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.clay.com"
+        "homepage": "https://www.clay.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Clay",
+          "officialRepository": null,
+          "officialRevision": "clay-docs-52d04c63c45b+openapi-258cc399172d+oauth-f114e17a4bc5+source-4ab1ca54c908",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/clay/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic prospect-research icon.",
+            "Clay's official clay-run/agent-plugins repository at 4ab1ca54c908e04b52123234405e1bb1aac4199a contains no LICENSE, LICENSE.md, LICENSE.txt, COPYING, or NOTICE file, so its 21 skills, hooks, CLI wrapper, and other files are not redistributed.",
+            "No Clay hosted MCP implementation, private OpenAI connector, OAuth credential, customer or prospect data, official agent-plugin file, CLI binary, branded artwork, or marketplace icon is redistributed."
+          ],
+          "officialityEvidence": [
+            "Clay's official MCP product page says Clay brings first- and third-party data and Ops-managed workflows into AI tools so users can find contacts, retrieve emails and phone numbers, and push records to sequences with governance over compliance, spend, and CRM write-backs.",
+            "The official MCP product, connection, security, and troubleshooting pages have normalized visible-text SHA-256 values 6b44d0b089d69a8c3228afcec15b0eed7cf3be769f1906c696435b9c751eeef8, 52d04c63c45b9bbc09001cd99eb4a05cfd9a78b19ec076c1d95b12cafc9ee8e9, 28914f9149135b4a559230cd40cf90176097e4d6e12c26109a9076d6f8181ca2, and 7a968287f91c9c9a270f3a44fb544317e0780d3a1a0f8d38d56e7d10ef681ca9.",
+            "Clay's official connection guide publishes https://api.clay.com/v3/mcp, its protected-resource and authorization metadata, Dynamic Client Registration, public PKCE clients, session IDs, and the complete production endpoint table.",
+            "The protected-resource and authorization-server metadata canonical JSON hashes are f114e17a4bc5a52dec7580042a865cdab90c2b1bd60f2f14def6d3c86d532d45 and 09ef6e27492c1b3b1d34f0477b388095a39380ed1dda9bfcbbb7c0af1014fc8b. They publish mcp scope, authorization-code, refresh-token, and device-code grants, Dynamic Client Registration, public clients, and PKCE S256.",
+            "Clay's official developer documentation publishes local clay mcp support for Codex, Claude Code, and Cursor plus company and people searches, Clay-managed functions, enrichment, agent workflows, and a public OpenAPI.",
+            "The public OpenAPI has raw and canonical SHA-256 values 258cc399172d40533db4d88844a80b86d804cc4b58f0224169fa2aa076827f0e and a95679fb7672d8d0fae3ad073f96378e273bc3532ea7fb4d416b2aa9ed4add3a. It contains five GET and eight POST operations for identity, routine execution and results, batch upload, search, references, and Enterprise table queries.",
+            "Clay's official Quickstart links clay-run/agent-plugins as the agent plugin for Codex, Claude Code, and Cursor. Revision 4ab1ca54c908e04b52123234405e1bb1aac4199a has Git tree 37f207938630ea88e7e3b45c78540bf665f02aab and contains 21 skills, a Codex Read/Write manifest, hooks, and a checksum-verifying wrapper for CLI v0.3.0.",
+            "The official CLI v0.3.0 Darwin arm64 binary downloaded through the pinned wrapper matched SHA-256 7155da2313a1fa1e65c6d862cfd2f3f25ee61f2c90e18318a8a076860f8ce265. Without a user session, clay mcp returned auth_required before exposing workspace-dependent tools.",
+            "On August 13, 2026, missing and invalid Bearer initialize requests returned HTTP 401 with Clay's official protected-resource challenge and identical body SHA-256 7fe66b771b819e775f5b2e6afec58137720fd541f049f8569e10a75e3d0d0d2a.",
+            "A disposable loopback public client registered with HTTP 201, no client secret, authorization-code and refresh-token grants, and mcp scope. A PKCE authorization request reached Clay's official browser authorization page.",
+            "OpenAI's pinned Codex plugin snapshot identifies Clay as the developer and describes ICP record search, lead enrichment with company, role, and outreach context, and prospect-list construction with useful signals. The manifest and private connector hashes are 0b281bf6056cd8f6c3bae73aa8ee1a3539a6372526e42ba789fdfd5cc3cf4110 and 543c74b37775ccc0feeb7e1e29f4a11aa32dce4caef7b01d8053ef72fad3864f."
+          ],
+          "codexCapabilities": [
+            "Find Clay records matching an ICP and summarize the strongest prospect accounts",
+            "Enrich leads with company, role, and outreach context",
+            "Build a prospecting list for a segment and identify useful signals"
+          ],
+          "ghastCapabilities": [
+            "The same official company and people search, ICP filtering, enrichment, prospect-list, signal, and source-attribution workflows through Clay's public hosted MCP",
+            "Administrator-enabled custom Functions and plan-dependent Audiences access with workspace, role, client, action, and credit controls",
+            "Official Clay-managed enrichment families for contact, company, firmographic, technology, hiring, funding, and news data plus reusable scoring, routing, and GTM workflows",
+            "An independently authored privacy, budget, compliance, deduplication, source-validation, CRM write-back, sequence, and outreach confirmation workflow"
+          ],
+          "capabilityRelationship": "superset-official-hosted-mcp",
+          "limitations": [
+            "The hosted MCP implementation is operated by Clay and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+            "A Clay account, eligible workspace and role, browser OAuth, administrator-enabled MCP client and Functions, Audiences configuration, plan, search allocation, action or credit budget, provider entitlements, and service limits remain user-managed.",
+            "The live MCP tool inventory is workspace-dependent because built-in tools, administrator-enabled Functions, and Audiences access vary. Authenticated schemas and annotations remain authoritative.",
+            "Official documentation, the public OpenAPI, OAuth metadata, dynamic public-client registration, CLI binary checksum, unlicensed source repository, Codex capability evidence, and unauthenticated behavior were verified without an account. Authenticated tools/list, workspace Functions, Audiences data, searches, paid enrichment, CRM writes, sequence pushes, and outreach were not run.",
+            "People and company search is documented as free, while live enrichment and Functions can consume credits or actions. Current returned costs, budgets, provider fallback order, and account balance remain authoritative.",
+            "Search allocation is plan-dependent and Clay returns HTTP 402 when a limit is exceeded. Searches must not be fragmented to evade workspace limits.",
+            "Contact and company data can be personal, licensed, stale, contradictory, inferred, or incorrect. Verification status and field-level source attribution must be preserved.",
+            "A verified email or phone number is not consent to contact. Suppression lists, do-not-contact status, lawful basis, regional marketing rules, provider terms, and internal policy remain mandatory.",
+            "Prospect data and ICP rankings must not be used for employment, housing, lending, insurance, education admissions, or other high-impact eligibility decisions, and sensitive traits must not be inferred.",
+            "Any CRM write-back, sequence push, enrollment, audience sync, campaign, message, overwrite, workflow run, or other state-changing capability requires exact target review and explicit current-conversation confirmation. Ambiguous writes must not be blindly retried.",
+            "Clay's official agent-plugin repository is not copied because it has no redistribution license at the pinned revision. The independently authored Ghast skill uses the same official hosted service without reproducing those 21 skill files.",
+            "A generic prospect-research icon is used because no licensed Clay catalog artwork is included in the redistributable material."
+          ],
+          "verification": [
+            "Run the Clay evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
+            "Verify the four official MCP product, connection, security, and FAQ visible-text hashes recorded in plugins/clay/README.md",
+            "Verify the six official developer Markdown hashes, public OpenAPI raw and canonical hashes, and ordered 13-operation hash f5ef66a96b381f0e26e6ed99d846fa73e7b1ec6d62d41ad91b5e806d959838c2",
+            "Verify canonical OAuth protected-resource and authorization-server hashes f114e17a4bc5a52dec7580042a865cdab90c2b1bd60f2f14def6d3c86d532d45 and 09ef6e27492c1b3b1d34f0477b388095a39380ed1dda9bfcbbb7c0af1014fc8b",
+            "Register a disposable loopback public client and confirm HTTP 201, no client secret, authorization-code and refresh-token grants, mcp scope, and PKCE authorization reaching Clay's browser page",
+            "Probe https://api.clay.com/v3/mcp with missing and invalid Bearer initialize requests and confirm HTTP 401 plus body SHA-256 7fe66b771b819e775f5b2e6afec58137720fd541f049f8569e10a75e3d0d0d2a",
+            "Verify clay-run/agent-plugins revision 4ab1ca54c908e04b52123234405e1bb1aac4199a, Git tree 37f207938630ea88e7e3b45c78540bf665f02aab, 21 skill paths, key file hashes, CLI v0.3.0 checksums, and absence of license or notice files",
+            "Run the official checksum-verifying wrapper with isolated CLAY_CONFIG_HOME and confirm the Darwin arm64 binary SHA-256 and unauthenticated auth_required behavior",
+            "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Clay manifest and connector hashes and compare all three default workflows with the official hosted product surface",
+            "Authorize a Clay account before testing authenticated tools, searches, enrichments, Functions, Audiences, budgets, CRM writes, sequences, or outreach",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/clay.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.2-ghast.1",
+        "repository": null,
+        "upstreamRevision": "clay-docs-52d04c63c45b+openapi-258cc399172d+oauth-f114e17a4bc5+source-4ab1ca54c908",
+        "portStatus": "full"
       }
     },
     {

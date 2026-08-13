@@ -1,0 +1,16 @@
+{
+  "name": "clay",
+  "version": "1.0.2-ghast.1",
+  "description": "Search companies and people, enrich prospect records, and run admin-approved GTM functions through Clay's official hosted MCP.",
+  "category": "productivity",
+  "author": {
+    "name": "Clay",
+    "url": "https://www.clay.com"
+  },
+  "homepage": "https://www.clay.com/mcp",
+  "upstreamRevision": "clay-docs-52d04c63c45b+openapi-258cc399172d+oauth-f114e17a4bc5+source-4ab1ca54c908",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

@@ -53,7 +53,7 @@ verification.
 | chronograph-lp | Chronograph | appConnector, skills | MIT | official-source-research-required | not-implemented |
 | circleback | Circleback AI, Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | circleci | CircleCI | skills | MIT | official-source-verified | implemented-verified |
-| clay | Clay | appConnector | MIT | official-source-research-required | not-implemented |
+| clay | Clay | appConnector | MIT | official-source-verified | implemented-verified |
 | clickup | ClickUp | appConnector | MIT | official-source-verified | implemented-verified |
 | close | Close | appConnector | MIT | official-source-verified | implemented-verified |
 | cloudflare | Cloudflare | mcpServers, skills, commands | MIT | official-source-verified | implemented-verified |
