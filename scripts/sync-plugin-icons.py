@@ -156,6 +156,13 @@ CUSTOM_ICONS = {
         '<path d="M11 25h42M25 25v26M39 25v26"/>'
         '<path d="M16 19l3 3 6-7M30 19h5M44 19h4"/>',
     ),
+    "circleback": (
+        "#2E6F76",
+        '<path d="M11 14h42v28H32l-11 8v-8H11z"/>'
+        '<path d="M19 23h20M19 31h14"/>'
+        '<circle cx="45" cy="38" r="9"/>'
+        '<path d="M45 33v6l4 3"/>',
+    ),
     "close": (
         "#2C6E63",
         '<rect x="11" y="13" width="42" height="38" rx="3"/>'

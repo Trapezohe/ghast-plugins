@@ -584,6 +584,34 @@
       "license": "MIT"
     },
     {
+      "id": "circleback",
+      "name": "circleback",
+      "description": "Search authorized Circleback meetings, transcripts, action items, calendar events, emails, people, companies, tags, and support content through Circleback's official hosted MCP server.",
+      "manifest": {
+        "name": "circleback",
+        "description": "Search authorized Circleback meetings, transcripts, action items, calendar events, emails, people, companies, tags, and support content through Circleback's official hosted MCP server.",
+        "author": {
+          "name": "Circleback AI, Inc.",
+          "url": "https://circleback.ai"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.2-ghast.1",
+        "homepage": "https://support.circleback.ai/en/articles/13249081-circleback-mcp",
+        "upstreamRevision": "circleback-help-95ffb254cd36+oauth-00a8e855d323+auth-1d48ae9d33e7+openclaw-a4637f051977+release-63146071c6c9",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/circleback.zip",
+        "sha256": "0eb9546b6113103c46971624a6d7466b77193c609d23862e456630e9b993711b"
+      },
+      "icon": "./plugins/circleback/assets/icon.svg",
+      "category": "communication",
+      "homepage": "https://support.circleback.ai/en/articles/13249081-circleback-mcp",
+      "license": "MIT"
+    },
+    {
       "id": "circleci",
       "name": "circleci",
       "description": "Diagnose CircleCI runs, inspect logs, tests, and artifacts, rerun or cancel workflows, validate configuration, and manage CircleCI resources through CircleCI's official hosted MCP and full CLI MCP.",

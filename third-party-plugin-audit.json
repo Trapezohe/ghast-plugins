@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 63,
-      "official-source-verified": 81
+      "official-source-research-required": 62,
+      "official-source-verified": 82
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 81,
-      "not-implemented": 68
+      "implemented-verified": 82,
+      "not-implemented": 67
     }
   },
   "excludedOpenAIPlugins": [
@@ -2099,7 +2099,7 @@
     },
     {
       "id": "circleback",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Circleback AI, Inc.",
@@ -2124,13 +2124,83 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://circleback.ai"
+        "homepage": "https://circleback.ai",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Circleback AI, Inc.",
+          "officialRepository": null,
+          "officialRevision": "circleback-help-95ffb254cd36+oauth-00a8e855d323+auth-1d48ae9d33e7+openclaw-a4637f051977+release-63146071c6c9",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/circleback/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic meeting-context icon.",
+            "No Circleback hosted MCP implementation, private Codex connector, public client rules or schemas, meeting or email data, recordings, credentials, branded artwork, or marketplace icon is redistributed.",
+            "Circleback's public Claude Code, Cursor, and OpenClaw client repositories had no license file at the audited revisions, so their content is used only as officiality and capability evidence and is not copied into this package."
+          ],
+          "officialityEvidence": [
+            "Circleback's official Help Center article, updated July 10, 2026, publishes https://circleback.ai/api/mcp as its centrally hosted authenticated remote MCP server for ChatGPT, Claude, Cursor, Codex, Raycast, and other compatible clients.",
+            "The article explicitly documents Streamable HTTP, OAuth with Dynamic Client Registration, the Codex installation command, and 11 tools for meetings, transcripts, action items, calendar events, email, profiles, companies, tags, and support articles.",
+            "Circleback's official Claude Code plugin at revision a610634c95ab310accf20a0cabdf0fa7ab784fa3 independently declares the same hosted endpoint and identifies Circleback as the author.",
+            "Circleback's official OpenClaw plugin at revision d2657b48614936554f41c99f1183fc67ed17867b contains the same 11 current tool names; its exact tools.json SHA-256 is a4637f0519777ee80ac3662bbbd7224bd36d8e16c19f6c36e8c6e1b2a616ec93.",
+            "Circleback's official May 31, 2026 release states that reading a meeting through MCP now includes a downloadable recording link; the canonical release-object SHA-256 is 63146071c6c9813bd6a9bf5463b570d376a8d2e3a3f7678eeef3fa5b47ed32e5.",
+            "The live endpoint and OAuth services are hosted on Circleback-controlled circleback.ai domains. The endpoint returns a Bearer challenge pointing to Circleback's official protected-resource metadata.",
+            "The protected-resource metadata has canonical JSON SHA-256 00a8e855d323feb76754d0c1bba1a10e5027a9b5e1cf62474ce9f87495c4851d and declares the broad user scope.",
+            "The authorization-server metadata has canonical JSON SHA-256 1d48ae9d33e75a07db7a1d34105d60eff60bbebd36ff8e09883d832667731c37 and declares authorization code, refresh tokens, Dynamic Client Registration, public clients, optional client_secret_post, and PKCE S256.",
+            "On August 13, 2026, one loopback public OAuth client registered with HTTP 201 without a client secret, and its PKCE authorization request reached Circleback's login page."
+          ],
+          "codexCapabilities": [
+            "Search and access in-person and online meetings recorded in Circleback through a private app connector",
+            "Retrieve meeting notes, action items, transcripts, people, companies, calendar events, and email",
+            "Use Circleback's AI-powered meeting notes, action items, automations, and search",
+            "Answer the default workflow asking whether the authenticated user has met anyone from Initech"
+          ],
+          "ghastCapabilities": [
+            "Direct access to Circleback's official hosted MCP service through standard Streamable HTTP and browser OAuth instead of the Codex-only private app connector",
+            "All 11 currently published official read-oriented tools for meeting search and details, transcript search and retrieval, action-item search, calendar and email search, people and company lookup, tags, and support documentation",
+            "The same recorded-meeting, notes, action-item, transcript, people, company, calendar, email, and Initech relationship-search workflows at Circleback's published product surface",
+            "Newer official capabilities beyond the Codex description, including tag search, Circleback support search, and downloadable recording links returned with meeting details",
+            "A Ghast workflow skill that narrows private-data retrieval, preserves meeting, date, timezone, speaker, timestamp, identity, filter, and pagination provenance, separates generated notes from source facts, protects recordings, and prevents read-only searches from being described as external changes"
+          ],
+          "capabilityRelationship": "superset-at-official-published-product-surface",
+          "limitations": [
+            "Circleback does not publish the hosted MCP server source. Its public client repositories had no license at the audited revisions, so no client rules, tool schemas, source files, or artwork are redistributed. The MIT license applies only to the Ghast-authored adapter.",
+            "An eligible Circleback plan, browser OAuth, connected calendars and email accounts, recorded meetings, workspace permissions, retention settings, and service limits remain user-managed.",
+            "Authenticated tools/list and private workspace operations were not exercised because no user Circleback account, meetings, transcripts, email, calendar, attendees, or recordings were used during the audit.",
+            "The published catalog currently lists 11 tools, but exact live schemas and returned fields remain service-dependent. The importer fails closed on documentation, tool order, official client declaration, OAuth metadata, or unauthenticated protocol drift.",
+            "The single OAuth user scope is broad rather than granular. Existing Circleback account, workspace, meeting, email, and calendar permissions are the effective authorization boundary.",
+            "The current official tool catalog is read-oriented. Calendar and email tools do not create or modify events, send messages, or update action-item status.",
+            "Meeting notes, insights, action items, summaries, and speaker attribution may be AI-generated or incomplete. They must be distinguished from transcript evidence and assistant inference.",
+            "Meetings, transcripts, email bodies, calendar descriptions, attendee addresses, meeting links, and interaction histories can contain highly sensitive personal and business data. Retrieval and disclosure must remain narrowly scoped.",
+            "Circleback can return downloadable recording links in meeting details. Recordings can expose voices and extensive private context and must be retrieved or shared only on an explicit authorized request.",
+            "The one disposable DCR response returned no registration_client_uri or registration_access_token, so the audit client could not be removed through RFC 7592 registration management.",
+            "A generic meeting-context icon is used because no licensed Circleback catalog artwork is redistributed."
+          ],
+          "verification": [
+            "Run the Circleback evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated Close evidence drift",
+            "Verify Circleback Help Center article 13249081 has update timestamp 2026-07-10T17:59:35Z and normalized Markdown SHA-256 95ffb254cd36f1a475a63e3a7626e1dd5c27a8e19714244a892cae1969b99bb1 after removing volatile signed image URLs",
+            "Verify the ordered 11-tool name SHA-256 f4db1318c4bf90e4aebd1145657d67714da96162ca010eef8e0af9b9a96979a9 and compare the same tool-name set with Circleback's official OpenClaw tools.json SHA-256 a4637f0519777ee80ac3662bbbd7224bd36d8e16c19f6c36e8c6e1b2a616ec93",
+            "Verify Circleback's May 31, 2026 recordings release has canonical release-object SHA-256 63146071c6c9813bd6a9bf5463b570d376a8d2e3a3f7678eeef3fa5b47ed32e5 and explicitly publishes downloadable recording links for MCP meeting reads",
+            "Verify Circleback's official Claude Code declaration at revision a610634c95ab310accf20a0cabdf0fa7ab784fa3 points to https://circleback.ai/api/mcp",
+            "Verify canonical protected-resource and authorization-server metadata hashes 00a8e855d323feb76754d0c1bba1a10e5027a9b5e1cf62474ce9f87495c4851d and 1d48ae9d33e75a07db7a1d34105d60eff60bbebd36ff8e09883d832667731c37",
+            "Probe https://circleback.ai/api/mcp with MCP initialize and confirm HTTP 401, the exact Request unauthenticated response, user scope, and protected-resource challenge",
+            "Confirm one disposable loopback public client registered with HTTP 201 without a client secret and its PKCE request reached Circleback login; do not repeat registration in the importer because no registration management URI was issued",
+            "Compare the 11 current tools, recording-link addition, read-only boundaries, and sensitive-data surface with the Codex long description and Initech default prompt",
+            "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+            "python3 scripts/build-ghast-catalog.py",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/circleback.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.2-ghast.1",
+        "repository": null,
+        "upstreamRevision": "circleback-help-95ffb254cd36+oauth-00a8e855d323+auth-1d48ae9d33e7+openclaw-a4637f051977+release-63146071c6c9",
+        "portStatus": "full"
       }
     },
     {
