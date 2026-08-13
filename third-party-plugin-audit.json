@@ -6643,10 +6643,64 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.moodys.com/web/en/us/genai/model-context-protocol.html"
+        "homepage": "https://www.moodys.com/web/en/us/genai/model-context-protocol.html",
+        "review": {
+          "verificationStatus": "official-source-research-required",
+          "officialDeveloper": "Moody's",
+          "officialRepository": null,
+          "officialRevision": "moodys-docs-df6d8a5d209c+oauth-e87ed46c0f7e+auth-2ffbbfe51f2b",
+          "license": "UNVERIFIED",
+          "licenseEvidence": [
+            "Moody's does not publish source code or redistribution terms for the hosted GenAI-Ready Data MCP implementation.",
+            "The Codex manifest declares MIT, but that declaration does not establish a license for Moody's privately hosted service, data, tool schemas, or artwork.",
+            "No Moody's source, Codex skill, connector implementation, data, or icon is redistributed because no capability-equivalent Ghast plugin is published."
+          ],
+          "officialityEvidence": [
+            "Moody's official Model Context Protocol page identifies https://api.moodys.com/genai-ready-data/m1/mcp as its Streamable HTTP endpoint and was captured with normalized visible-text SHA-256 df6d8a5d209c9f91e67e3f6e8d74a22477c3f2d6701f0ff6396eaa77de0b4240.",
+            "The official page explicitly publishes five tools: findEntity, searchEntityDocuments, getEntityRatings, getEntityRatingDrivers, and getEntityScorecard.",
+            "The exact OAuth protected-resource metadata URL advertised by the endpoint identifies the same resource, Moody's authorization server, and mcp, claudeai, openid, profile, email, and mdcapp scopes; its canonical JSON SHA-256 is e87ed46c0f7e1a77e85e42dad2ed98eaded6324edb96d7edc509800990b70161.",
+            "The issuer-relative authorization-server metadata publishes authorization-code and refresh-token grants, PKCE S256, public clients, and a dynamic registration endpoint; its canonical JSON SHA-256 is 2ffbbfe51f2bc649508cbac562398db828063512a2f88810282b387d904d6f67.",
+            "Unauthenticated and invalid-token MCP initialize requests return HTTP 401, JSON-RPC Unauthorized, and a Bearer challenge pointing to Moody's exact protected-resource metadata URL.",
+            "OpenAI's pinned Codex snapshot identifies Moody's as the developer. Its manifest and private app connector hashes are 74cd1f4221915deac8fbd0846d12f8c00103e2e04541d1a2a9512f1f29377f6a and 84bb800fe69c39219b0dc60939e9c5ba2748d3614f79631c0c89c9c894962798.",
+            "The nine Codex Moody's skill files have aggregate SHA-256 d502afc484cd2dc27304c759cf5a89ae7f9fc74d8f749ef9994a5f926ffda8b2 and reference 16 distinct Moody's tool names, whose sorted NUL-delimited catalog SHA-256 is b271930ef2105f269ad9744f68dc2c44870da4ab58845ec61733e1e3ab0899be."
+          ],
+          "codexCapabilities": [
+            "Resolve covered entities and retrieve company profiles and firmographics",
+            "Retrieve current ratings, outlooks, rating history, credit opinions, upgrade and downgrade drivers, scorecards, and probability-of-default data",
+            "Analyze ESG credit considerations, financial statements, indicators, ratios, ownership, subsidiaries, managers, directors, and key officers",
+            "Search Moody's research, company filings, earnings-call transcripts, and news",
+            "Identify peers and analyze sector outlook and country-risk context"
+          ],
+          "ghastCapabilities": [
+            "Moody's official public hosted MCP surface can resolve entities, search proprietary entity research documents, retrieve current entity ratings and outlooks, analyze upgrade and downgrade factors, and retrieve rating scorecards.",
+            "No Ghast plugin is published because the official public five-tool catalog does not establish the broader Codex capability contract."
+          ],
+          "capabilityRelationship": "official-hosted-mcp-found-capability-gap",
+          "limitations": [
+            "The official public catalog does not publish tools for peers, credit opinions, ESG, financials, probability of default, sector outlook, company filings, earnings calls, news, managers or directors, ownership, subsidiaries, or country-risk analysis.",
+            "The Codex skills reference 16 tool names: findEntity, getCreditOpinion, getEntityCreditOpinion, getEntityEsg, getEntityFinancials, getEntityManagersDirectors, getEntityPeers, getEntityProbabilityOfDefault, getEntityRatingDrivers, getEntityRatings, getEntityScorecard, getEntitySectorOutlook, searchCompanyFilings, searchEntityDocuments, searchEntityEarningsCall, and searchNews. Only five appear in Moody's public official tool catalog.",
+            "Tool availability may vary by Moody's subscription, but undocumented tenant-only tools cannot be treated as publicly reproducible official capabilities without authenticated schemas or official documentation.",
+            "Moody's official setup page says access, credentials, and an endpoint must be requested. An eligible account, subscription, entitlements, data licenses, user permissions, and service limits remain user-managed.",
+            "The authorization server advertises dynamic registration, but a disposable localhost public-client registration probe on August 13, 2026 was blocked by Moody's Cloudflare policy with HTTP 403 Error 1010. No self-service client registration or completed OAuth flow is claimed.",
+            "Authenticated tools/list and data operations were not run because no user Moody's account or entitlement was supplied.",
+            "The hosted implementation is not publicly source-available or licensed for redistribution, and Moody's research and data remain governed by Moody's contractual terms.",
+            "Do not create plugins/moody-s until Moody's publicly documents or an authorized account verifies an official portable surface that covers the Codex workflows."
+          ],
+          "verification": [
+            "Fetch Moody's official Model Context Protocol page and verify normalized visible-text SHA-256 df6d8a5d209c9f91e67e3f6e8d74a22477c3f2d6701f0ff6396eaa77de0b4240.",
+            "Parse the official page and confirm the complete published tool-name set is findEntity, searchEntityDocuments, getEntityRatings, getEntityRatingDrivers, and getEntityScorecard.",
+            "Verify canonical protected-resource and authorization-server metadata SHA-256 values e87ed46c0f7e1a77e85e42dad2ed98eaded6324edb96d7edc509800990b70161 and 2ffbbfe51f2bc649508cbac562398db828063512a2f88810282b387d904d6f67.",
+            "Probe https://api.moodys.com/genai-ready-data/m1/mcp with unauthenticated and invalid-token initialize requests and confirm HTTP 401 plus Moody's exact protected-resource challenge.",
+            "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 manifest and app hashes, all nine skill-file hashes, and the sorted 16-name referenced tool catalog.",
+            "Compare every Codex capability and default prompt with the five officially published tools and confirm that profile and ownership, credit opinion, financials and filings, earnings, peer, ESG, probability-of-default, management, news, and sector workflows are not proven.",
+            "Do not create plugins/moody-s until official documentation or authenticated schema evidence closes the capability gap.",
+            "python3 scripts/audit-third-party-plugins.py",
+            "python3 scripts/validate-ghast-repository.py"
+          ]
+        }
       },
       "ghast": {
         "implementationStatus": "not-implemented"
