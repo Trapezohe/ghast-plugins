@@ -1,0 +1,18 @@
+{
+  "name": "circleci",
+  "version": "1.0.47993-ghast.1",
+  "description": "Diagnose CircleCI runs, inspect logs, tests, and artifacts, rerun or cancel workflows, validate configuration, and manage CircleCI resources through CircleCI's official hosted MCP and full CLI MCP.",
+  "category": "development",
+  "author": {
+    "name": "Circle Internet Services, Inc.",
+    "url": "https://circleci.com"
+  },
+  "homepage": "https://circleci.com/docs/guides/toolkit/circleci-mcp-overview/",
+  "repository": "https://github.com/CircleCI-Public/circleci-cli",
+  "upstreamRevision": "1121fafe77b5b2bfa623dda1a244517ff604a823",
+  "upstreamPath": ".",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

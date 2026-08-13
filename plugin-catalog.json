@@ -411,6 +411,36 @@
       "license": "MIT"
     },
     {
+      "id": "circleci",
+      "name": "circleci",
+      "description": "Diagnose CircleCI runs, inspect logs, tests, and artifacts, rerun or cancel workflows, validate configuration, and manage CircleCI resources through CircleCI's official hosted MCP and full CLI MCP.",
+      "manifest": {
+        "name": "circleci",
+        "description": "Diagnose CircleCI runs, inspect logs, tests, and artifacts, rerun or cancel workflows, validate configuration, and manage CircleCI resources through CircleCI's official hosted MCP and full CLI MCP.",
+        "author": {
+          "name": "Circle Internet Services, Inc.",
+          "url": "https://circleci.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.47993-ghast.1",
+        "homepage": "https://circleci.com/docs/guides/toolkit/circleci-mcp-overview/",
+        "repository": "https://github.com/CircleCI-Public/circleci-cli",
+        "upstreamRevision": "1121fafe77b5b2bfa623dda1a244517ff604a823",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/circleci.zip",
+        "sha256": "781b6ded7c410ee78ec8a3aa77f034b00b359fc131604cf04c91d142ee6f0bce"
+      },
+      "icon": "./plugins/circleci/assets/icon.svg",
+      "category": "development",
+      "homepage": "https://circleci.com/docs/guides/toolkit/circleci-mcp-overview/",
+      "repository": "https://github.com/CircleCI-Public/circleci-cli",
+      "license": "MIT"
+    },
+    {
       "id": "clickup",
       "name": "clickup",
       "description": "Search and manage ClickUp tasks, lists, folders, documents, comments, chat, assignments, relationships, and time tracking through ClickUp's official hosted MCP server.",

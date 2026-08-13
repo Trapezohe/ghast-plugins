@@ -611,30 +611,41 @@
       ]
     },
     "circleci": {
-      "verificationStatus": "blocked-license",
+      "verificationStatus": "official-source-verified",
       "officialDeveloper": "CircleCI",
-      "officialRepository": "https://github.com/circleci-public/skills",
-      "officialRevision": "8a228d394f0f613401118bad7d8117064a611561",
-      "license": "UNVERIFIED",
+      "officialRepository": "https://github.com/CircleCI-Public/circleci-cli",
+      "officialRevision": "1121fafe77b5b2bfa623dda1a244517ff604a823",
+      "license": "MIT",
       "licenseEvidence": [
-        "The manifest declares MIT, but the pinned repository contains no LICENSE, COPYING, NOTICE, or per-skill license file."
+        "The pinned CircleCI CLI repository contains an MIT LICENSE granting redistribution and modification for the official CLI, built-in MCP implementation, agent skill, and repository artwork.",
+        "The separate CircleCI-Public/skills repository still contains no license text, so its six skill bodies are deliberately not copied."
       ],
       "officialityEvidence": [
-        "The repository is owned by CircleCI-Public and its manifest names CircleCI as developer."
+        "CircleCI-Public owns the repository, the README identifies circleci as CircleCI's official command-line tool, and CircleCI's current documentation directs users to the CLI MCP.",
+        "CircleCI operates the hosted MCP endpoint at https://mcp.circleci.com/v1/mcp and publishes its OAuth protected-resource metadata."
       ],
       "codexCapabilities": [
         "CircleCI build debugging, CLI workflows, configuration optimization, Chunk, onboarding, and smarter testing"
       ],
       "ghastCapabilities": [
-        "No redistributed implementation is permitted until CircleCI adds verifiable license text."
+        "Official hosted MCP for runs, workflows, jobs, logs, tests, artifacts, usage exports, reruns, and cancellation",
+        "Official CircleCI CLI MCP for the full CLI surface including config, projects, organizations, contexts, environment variables, orbs, policies, runners, signing, deploys, and DLC",
+        "MIT-licensed official CircleCI CLI agent skill plus Ghast routing, authentication, confirmation, idempotency, and untrusted-content safeguards"
       ],
-      "capabilityRelationship": "blocked-before-port",
+      "capabilityRelationship": "official-superset-with-licensed-substitution",
       "limitations": [
-        "The six official skills are technically portable but currently lack repository license evidence."
+        "The six texts in CircleCI-Public/skills are not redistributed until CircleCI publishes license text for that repository.",
+        "Hosted and CLI MCP are in preview and their tool inventories can change.",
+        "The CLI MCP requires the separately installed official circleci binary and an authenticated CircleCI session or CIRCLE_TOKEN.",
+        "Chunk-specific prose from the Codex plugin is not copied, but Chunk remains available through CircleCI's official product and CLI surfaces subject to account access."
       ],
       "verification": [
-        "Inspect every license-like file in the pinned repository and confirm none is present",
-        "Do not create plugins/circleci while the license remains unresolved"
+        "Pinned CircleCI CLI release v1.0.47993 resolves to 1121fafe77b5b2bfa623dda1a244517ff604a823 and its official darwin_arm64 archive matches checksum 30ebfcce203cbd6ae0fbac03faea687ec044c18536201e8fb25c0dae1f66056b",
+        "The official release binary reports circleci 1.0.47993 (1121fafe77b5) and `circleci mcp tools` exports 153 tools, 15 marked destructive",
+        "Unauthenticated initialize against https://mcp.circleci.com/v1/mcp returns HTTP 401 with the official OAuth protected-resource challenge",
+        "OAuth metadata identifies https://app.circleci.com, dynamic client registration, authorization code, and PKCE S256",
+        "The former @circleci/mcp-server-circleci package at 0.20.0 explicitly states that it is deprecated in favor of the hosted MCP and CLI MCP",
+        "The importer verifies that CircleCI-Public/skills still has six skills but no LICENSE, COPYING, NOTICE, or per-skill grant"
       ]
     },
     "clickup": {

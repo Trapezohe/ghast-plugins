@@ -52,7 +52,7 @@ verification.
 | chronograph-gp | Chronograph | appConnector, skills | MIT | official-source-research-required | not-implemented |
 | chronograph-lp | Chronograph | appConnector, skills | MIT | official-source-research-required | not-implemented |
 | circleback | Circleback AI, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
-| circleci | CircleCI | skills | MIT | blocked-license | not-implemented |
+| circleci | CircleCI | skills | MIT | official-source-verified | implemented-verified |
 | clay | Clay | appConnector | MIT | official-source-research-required | not-implemented |
 | clickup | ClickUp | appConnector | MIT | official-source-verified | implemented-verified |
 | close | Close | appConnector | MIT | official-source-research-required | not-implemented |

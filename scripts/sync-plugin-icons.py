@@ -34,6 +34,7 @@ LOCAL_ICONS = {
     "atlassian-rovo": "assets/icon.svg",
     "base44": "assets/icon.png",
     "boltz-api-cli": "assets/icon.png",
+    "circleci": "assets/icon.svg",
     "cloudflare": "assets/icon.svg",
     "deepnote": "assets/icon.svg",
     "expo": "assets/icon.png",

@@ -44,6 +44,7 @@ PORTS = {
 
 EXISTING_PORTS = {
     "boltz-api-cli": "Ghast regenerates Boltz directly from the pinned official Boltz repository.",
+    "circleci": "Ghast regenerates CircleCI from the MIT-licensed official CLI repository and current CircleCI-operated MCP services.",
     "cloudflare": "Ghast already ships a broader Cloudflare port with public MCP support.",
     "expo": "Ghast already ships the portable Expo skills.",
     "hyperframes": "Ghast regenerates HyperFrames directly from the pinned official HeyGen repository.",
@@ -62,7 +63,6 @@ BLOCKED_PORTS = {
     "build-macos-apps": "The source snapshot declares MIT but contains no license grant for the bundled skills.",
     "build-web-apps": "The source snapshot declares MIT but contains no license grant for the bundled skills.",
     "build-web-data-visualization": "The source snapshot declares MIT but contains no license grant for the bundled skills.",
-    "circleci": "Neither the marketplace snapshot nor the canonical repository contains a license file.",
     "coderabbit": "Neither the marketplace snapshot nor the referenced repository contains a license file.",
     "game-studio": "The source snapshot declares MIT but contains no license grant for the bundled skills.",
     "life-science-research": "The marketplace manifest marks this plugin Proprietary.",
