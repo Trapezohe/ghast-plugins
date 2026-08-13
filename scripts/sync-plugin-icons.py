@@ -110,6 +110,11 @@ CUSTOM_ICONS = {
         '<circle cx="20" cy="44" r="6"/><circle cx="44" cy="44" r="6"/>'
         '<path d="M26 20h12M20 26v12M44 26v12M26 44h12"/>',
     ),
+    "quartr": (
+        "#173F5F",
+        '<path d="M12 48h40M17 44V27h8v17M29 44V18h8v26M41 44V33h8v11"/>'
+        '<path d="M15 20l11-7 10 5 14-9"/>',
+    ),
     "read-ai": (
         "#197A7A",
         '<rect x="15" y="12" width="34" height="40" rx="5"/>'

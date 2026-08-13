@@ -1323,6 +1323,53 @@
         "Do not create plugins/pylon until Pylon's official MCP server exposes the missing note or reply operation or the official Codex capability contract is narrowed"
       ]
     },
+    "quartr": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Quartr",
+      "officialRepository": null,
+      "officialRevision": "quartr-docs-1d651d2a9ac8+oauth-a379a77612f2",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/quartr/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "No Quartr hosted MCP server source or private Codex connector implementation is redistributed."
+      ],
+      "officialityEvidence": [
+        "Quartr's official MCP documentation identifies https://mcp.quartr.com/mcp as its Streamable HTTP server, provides configuration for Codex and other MCP clients, and documents 43 tools.",
+        "The official MCP documentation was captured with SHA-256 1d651d2a9ac88fa63f904c244c87083c7cd6e17140751ed7a5d2abd48a257b6c.",
+        "Quartr's OAuth protected-resource metadata identifies the same MCP resource, https://mcp.quartr.com authorization server, and mcp:tools scope; its canonical JSON has SHA-256 a379a77612f2fa51d06c105bd11b0c34c83fdeb4b40667cb2792a1093598b7d8.",
+        "The official authorization-server metadata declares dynamic client registration, authorization-code and refresh-token grants, and PKCE S256; its canonical JSON has SHA-256 20a1464a05ed203ecad5e4aa5bce8fb9e85ea56ea4489294c1343e8fbe90ac3b.",
+        "An unauthenticated MCP initialize request returns Quartr's OAuth bearer challenge with the mcp:tools scope.",
+        "Quartr's official newsroom confirms that the company provides the financial IR data used by its Codex MCP integration."
+      ],
+      "codexCapabilities": [
+        "Research public companies across earnings calls, real-time and historical transcripts, filings, reports, slide presentations, and event summaries",
+        "Compare forward-looking statements and narratives across companies and reporting periods",
+        "Track KPI framing and recurring analyst-question themes"
+      ],
+      "ghastCapabilities": [
+        "The same company, event, transcript, filing, report, slide, summary, full-text search, peer-comparison, KPI, forward-looking-statement, and analyst-question research through Quartr's official hosted MCP server",
+        "Additional official tools for financial statements, conferences, watchlists, keyword alerts, folders, workspaces, saved search filters, and GICS classifications"
+      ],
+      "capabilityRelationship": "superset-official-hosted-mcp",
+      "limitations": [
+        "The hosted MCP implementation and Quartr data are operated by Quartr and are not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+        "MCP access requires an eligible Quartr Pro subscription; student plans are not eligible.",
+        "The MCP service is intended for individual subscriber research workflows. Product or team integrations should use the separately licensed Quartr Public API.",
+        "Requests are limited per tool and globally; the official documentation states 20 to 100 requests per minute by tool, 100 total per minute, 2,250 per hour, and 8,500 per day.",
+        "Watchlist, keyword, folder, workspace, and saved-filter changes require explicit confirmation, while deletes and workspace replacement are treated as destructive.",
+        "A generic financial-research icon is used because no licensed catalog icon is included in a public official source repository."
+      ],
+      "verification": [
+        "python3 scripts/import-official-hosted-plugins.py",
+        "Verify the official MCP documentation SHA-256 is 1d651d2a9ac88fa63f904c244c87083c7cd6e17140751ed7a5d2abd48a257b6c",
+        "Verify canonical OAuth protected-resource metadata SHA-256 is a379a77612f2fa51d06c105bd11b0c34c83fdeb4b40667cb2792a1093598b7d8",
+        "Verify canonical OAuth authorization-server metadata SHA-256 is 20a1464a05ed203ecad5e4aa5bce8fb9e85ea56ea4489294c1343e8fbe90ac3b",
+        "Extract the official documentation's lower-snake-case tool names and confirm all 43 are present in the pinned evidence and adapter safety coverage",
+        "Probe https://mcp.quartr.com/mcp with GET and MCP initialize and confirm method-aware and OAuth bearer responses",
+        "Compare the official company, event, document, transcript, financial, summary, and search tools with every Codex capability example",
+        "unzip -tqq packages/quartr.zip"
+      ]
+    },
     "razorpay": {
       "verificationStatus": "official-source-research-required",
       "officialDeveloper": "Razorpay",

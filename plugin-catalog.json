@@ -767,6 +767,34 @@
       "license": "Apache-2.0 AND CC-BY-4.0"
     },
     {
+      "id": "quartr",
+      "name": "quartr",
+      "description": "Research public companies with first-party earnings calls, transcripts, filings, reports, slides, events, summaries, and financial statements through Quartr's official MCP server.",
+      "manifest": {
+        "name": "quartr",
+        "description": "Research public companies with first-party earnings calls, transcripts, filings, reports, slides, events, summaries, and financial statements through Quartr's official MCP server.",
+        "author": {
+          "name": "Quartr",
+          "url": "https://quartr.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.0-ghast.1",
+        "homepage": "https://mcp.quartr.com/docs",
+        "upstreamRevision": "quartr-docs-1d651d2a9ac8+oauth-a379a77612f2",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/quartr.zip",
+        "sha256": "57d6e157943939251d7e96d6b8a8ef07f23cdac7279c848ae87171162d499052"
+      },
+      "icon": "./plugins/quartr/assets/icon.svg",
+      "category": "finance",
+      "homepage": "https://mcp.quartr.com/docs",
+      "license": "MIT"
+    },
+    {
       "id": "quicknode",
       "name": "quicknode",
       "description": "Manage Quicknode endpoints, logs, usage, security, rate limits, billing, streams, webhooks, storage, teams, and RPC through the official qn CLI and its official agent guide.",

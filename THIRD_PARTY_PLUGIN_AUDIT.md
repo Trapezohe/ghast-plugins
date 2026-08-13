@@ -130,7 +130,7 @@ verification.
 | policynote | FiscalNote | appConnector | MIT | official-source-research-required | not-implemented |
 | posthog | PostHog | appConnector, skills | MIT | blocked-license | not-implemented |
 | pylon | Pylon Labs Inc. | appConnector | MIT | official-source-research-required | not-implemented |
-| quartr | Quartr | appConnector | MIT | official-source-research-required | not-implemented |
+| quartr | Quartr | appConnector | MIT | official-source-verified | implemented-verified |
 | quickbooks | QuickBooks | appConnector | MIT | official-source-research-required | not-implemented |
 | quicknode | Quicknode | appConnector | MIT | official-source-verified | implemented-verified |
 | ranked-ai | Ranked AI, LLC | appConnector | MIT | official-source-research-required | not-implemented |
