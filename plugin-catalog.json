@@ -863,6 +863,36 @@
       "license": "MIT"
     },
     {
+      "id": "highlevel",
+      "name": "highlevel",
+      "description": "Inspect contacts, opportunities, pipelines, appointments, calendars, conversations, messages, and related CRM activity through HighLevel's official hosted MCP server.",
+      "manifest": {
+        "name": "highlevel",
+        "description": "Inspect contacts, opportunities, pipelines, appointments, calendars, conversations, messages, and related CRM activity through HighLevel's official hosted MCP server.",
+        "author": {
+          "name": "HighLevel",
+          "url": "https://www.gohighlevel.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.0-ghast.1",
+        "homepage": "https://marketplace.gohighlevel.com/docs/other/mcp/",
+        "repository": "https://github.com/GoHighLevel/highlevel-api-docs",
+        "upstreamRevision": "0af86a4cbd48c66a4071c7e509d1079f9f10ed17",
+        "license": "CC0-1.0",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/highlevel.zip",
+        "sha256": "0301aa300b055066153a1f8678c76e6082addc596618a0eeb00d207b5a174a27"
+      },
+      "icon": "./plugins/highlevel/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://marketplace.gohighlevel.com/docs/other/mcp/",
+      "repository": "https://github.com/GoHighLevel/highlevel-api-docs",
+      "license": "CC0-1.0"
+    },
+    {
       "id": "hostinger",
       "name": "hostinger",
       "description": "Create Hostinger Horizons websites from natural-language briefs and build, connect, deploy, verify, and operate websites, domains, DNS, VPS, ecommerce, WordPress, mail, campaigns, and billing through Hostinger's official MCP and Headless skill.",

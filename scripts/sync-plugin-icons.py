@@ -146,6 +146,14 @@ CUSTOM_ICONS = {
         '<path d="M32 10v12M26 16h12"/>'
         '<path d="M21 28h5M38 28h5"/>',
     ),
+    "highlevel": (
+        "#176B68",
+        '<rect x="11" y="13" width="42" height="38" rx="3"/>'
+        '<path d="M11 24h42M24 24v27"/>'
+        '<circle cx="18" cy="18" r="2" fill="white" stroke="none"/>'
+        '<path d="M30 32h16M30 40h11"/>'
+        '<path d="M15 33h5M15 40h5"/>',
+    ),
     "hugging-face": (
         "#F0B429",
         '<circle cx="20" cy="24" r="6"/><circle cx="44" cy="24" r="6"/>'

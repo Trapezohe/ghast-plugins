@@ -1228,6 +1228,58 @@
         "unzip -tqq packages/heygen.zip"
       ]
     },
+    "highlevel": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "HighLevel",
+      "officialRepository": "https://github.com/GoHighLevel/highlevel-api-docs",
+      "officialRevision": "0af86a4cbd48c66a4071c7e509d1079f9f10ed17",
+      "license": "CC0-1.0",
+      "licenseEvidence": [
+        "The pinned official API documentation repository contains the complete CC0 1.0 Universal legal text.",
+        "Ghast copies only that license and generates its own adapter metadata, safety workflow, and generic CRM icon.",
+        "No HighLevel hosted-server code, Codex private connector mapping, logo, or marketplace artwork is redistributed."
+      ],
+      "officialityEvidence": [
+        "The source repository is owned by HighLevel's official GoHighLevel GitHub organization and identifies itself as the official public repository for HighLevel API V2 documentation.",
+        "HighLevel's official developer documentation publishes https://services.leadconnectorhq.com/mcp/ as the original LeadConnector MCP endpoint for any HTTP-based MCP client.",
+        "The official documentation states that the client-neutral endpoint supports browser OAuth or a Private Integration Token and covers contacts, conversations, opportunities, calendars, payments, social planning, blogs, and email.",
+        "The protected-resource and authorization-server metadata publish 154 scopes, bearer-header authentication, authorization-code and refresh-token grants, public clients, dynamic registration, and PKCE S256.",
+        "Disposable localhost dynamic client registration returned HTTP 201 with a public client ID and no client secret.",
+        "Unauthenticated GET and MCP initialize requests both returned HTTP 401 with the official LeadConnector protected-resource challenge."
+      ],
+      "codexCapabilities": [
+        "Bring HighLevel contacts, opportunities, appointments, conversations, and related CRM records into the assistant",
+        "Turn returned records into summaries, next-step recommendations, and ready-to-use follow-up content",
+        "Analyze pipelines and qualify leads"
+      ],
+      "ghastCapabilities": [
+        "Connect directly to HighLevel's official client-neutral hosted MCP endpoint through browser OAuth",
+        "Read contacts, conversations, opportunities, pipelines, calendars, appointments, payments, social-planning, blog, and email data made available by the granted location and scopes",
+        "Produce CRM overviews, pipeline analysis, evidence-grounded lead qualification, customer-history summaries, appointment review, and follow-up drafts",
+        "Use officially exposed write operations only after exact-target review and explicit confirmation"
+      ],
+      "capabilityRelationship": "equivalent-official-hosted-mcp",
+      "limitations": [
+        "The Codex snapshot publishes no private connector tool names or schemas. Equivalence is measured against its manifest description and default prompt, not unavailable private implementation details.",
+        "HighLevel's original /mcp/ endpoint is narrower than the full per-client /mcp/{client}/v2 catalog, which is currently published for Anthropic clients. The client-neutral endpoint nevertheless covers every core CRM domain named by the Codex snapshot.",
+        "Ghast does not use /mcp/anthropic/v2, impersonate another client, or claim access to operations that HighLevel has not enabled for a client-neutral connection.",
+        "Each connection targets one authorized HighLevel sub-account. Tool availability depends on OAuth or PIT scopes, account role, location permissions, product entitlements, plan limits, and server-side policy.",
+        "The hosted MCP implementation is operated by HighLevel and is not redistributed. The CC0 license evidence covers the official documentation source copied into the provenance chain, not HighLevel service code or trademarks.",
+        "No authenticated CRM read, message send, appointment change, opportunity update, payment action, or other account mutation was run because no user HighLevel account was supplied.",
+        "A generic CRM icon is used because the official documentation license does not grant trademark rights."
+      ],
+      "verification": [
+        "Verify GoHighLevel/highlevel-api-docs revision 0af86a4cbd48c66a4071c7e509d1079f9f10ed17, repository ownership, README, and CC0-1.0 license hashes",
+        "Verify the canonical official MCP documentation article SHA-256 dc3f703d1846804392c62b39e6d07df8d49aebe0bf3f18b8b5024e51b0bdc979",
+        "Verify canonical protected-resource metadata SHA-256 7495c034df5fbce2a768052ba2efb51bd168e916d45c4542494af18e53f7c78d and authorization-server metadata SHA-256 fb42a0e9bd09b3edd37090c8b09c8396bd2440106244dfaf3562ad8c23d7cbb5",
+        "Confirm both metadata documents publish the same 154 scopes and include read and write scopes for contacts, opportunities, calendars, calendar events, conversations, and messages",
+        "Register a disposable localhost public OAuth client and confirm HTTP 201 with no client secret",
+        "Probe https://services.leadconnectorhq.com/mcp/ with GET and MCP initialize and confirm HTTP 401 plus the exact HighLevel protected-resource challenge",
+        "Compare the Codex manifest and default prompt with HighLevel's officially documented client-neutral contacts, conversations, opportunities, calendars, and appointment coverage",
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "unzip -tqq packages/highlevel.zip"
+      ]
+    },
     "hostinger": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Hostinger",

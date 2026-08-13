@@ -94,7 +94,7 @@ verification.
 | hebbia | Hebbia | appConnector | MIT | official-source-research-required | not-implemented |
 | heygen | HeyGen | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | hg-insights | HG Insights | appConnector | MIT | official-source-research-required | not-implemented |
-| highlevel | HighLevel | appConnector | MIT | official-source-research-required | not-implemented |
+| highlevel | HighLevel | appConnector | MIT | official-source-verified | implemented-verified |
 | hostinger | Hostinger | appConnector | MIT | official-source-verified | implemented-verified |
 | hubspot | HubSpot | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | hugging-face | Hugging Face | appConnector, skills | MIT | official-source-verified | implemented-verified |
