@@ -1,0 +1,16 @@
+{
+  "name": "happenstance",
+  "version": "1.0.3-ghast.1",
+  "description": "Search authorized professional networks, identify warm introduction paths, and research source-linked people profiles through Happenstance's official hosted MCP.",
+  "category": "productivity",
+  "author": {
+    "name": "Happenstance, Inc.",
+    "url": "https://happenstance.ai"
+  },
+  "homepage": "https://developer.happenstance.ai/mcp/connect",
+  "upstreamRevision": "happenstance-docs-0f732ef26d9f+openapi-9f4068c6a679+oauth-d467d4c35bed+auth-8fd1bb79c36c",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

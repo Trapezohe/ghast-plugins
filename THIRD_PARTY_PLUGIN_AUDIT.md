@@ -90,7 +90,7 @@ verification.
 | glean | Glean Technologies, Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | govtribe | Government Executive Media Group LLC | appConnector | MIT | official-source-verified | implemented-verified |
 | granola | Granola | appConnector | MIT | official-source-verified | implemented-verified |
-| happenstance | Happenstance, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
+| happenstance | Happenstance, Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | hebbia | Hebbia | appConnector | MIT | official-source-research-required | not-implemented |
 | heygen | HeyGen | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | hg-insights | HG Insights | appConnector | MIT | official-source-research-required | not-implemented |

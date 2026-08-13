@@ -1289,6 +1289,34 @@
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/hacker-news"
     },
     {
+      "id": "happenstance",
+      "name": "happenstance",
+      "description": "Search authorized professional networks, identify warm introduction paths, and research source-linked people profiles through Happenstance's official hosted MCP.",
+      "manifest": {
+        "name": "happenstance",
+        "description": "Search authorized professional networks, identify warm introduction paths, and research source-linked people profiles through Happenstance's official hosted MCP.",
+        "author": {
+          "name": "Happenstance, Inc.",
+          "url": "https://happenstance.ai"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://developer.happenstance.ai/mcp/connect",
+        "upstreamRevision": "happenstance-docs-0f732ef26d9f+openapi-9f4068c6a679+oauth-d467d4c35bed+auth-8fd1bb79c36c",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/happenstance.zip",
+        "sha256": "6e872f947b8ea0357858eaaf184a5603119035a849252a82c533719f62859f7a"
+      },
+      "icon": "./plugins/happenstance/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://developer.happenstance.ai/mcp/connect",
+      "license": "MIT"
+    },
+    {
       "id": "heygen",
       "name": "heygen",
       "description": "Create HeyGen avatar videos, personalized video messages, and translated / dubbed videos. Build a persistent digital identity from a photo, generate presenter-led videos with your digital twin, and localize existing videos into 175+ languages with voice cloning and lip-sync.",

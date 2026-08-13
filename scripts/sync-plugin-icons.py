@@ -254,6 +254,15 @@ CUSTOM_ICONS = {
         '<circle cx="45" cy="43" r="8" fill="#236A5A"/>'
         '<path d="M51 49l5 5"/>',
     ),
+    "happenstance": (
+        "#315F78",
+        '<circle cx="18" cy="20" r="6"/>'
+        '<circle cx="44" cy="17" r="5"/>'
+        '<circle cx="29" cy="43" r="7"/>'
+        '<path d="M23 23l15-4M21 25l5 12M41 22l-8 15"/>'
+        '<circle cx="46" cy="43" r="8" fill="#315F78"/>'
+        '<path d="M52 49l5 5"/>',
+    ),
     "jam": (
         "#5F4A8B",
         '<rect x="10" y="13" width="44" height="34" rx="4"/>'

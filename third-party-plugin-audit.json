@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 58,
-      "official-source-verified": 86
+      "official-source-research-required": 57,
+      "official-source-verified": 87
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 86,
-      "not-implemented": 63
+      "implemented-verified": 87,
+      "not-implemented": 62
     }
   },
   "excludedOpenAIPlugins": [
@@ -4827,7 +4827,7 @@
     },
     {
       "id": "happenstance",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Happenstance, Inc.",
@@ -4852,13 +4852,81 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://happenstance.ai"
+        "homepage": "https://happenstance.ai",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Happenstance, Inc.",
+          "officialRepository": null,
+          "officialRevision": "happenstance-docs-0f732ef26d9f+openapi-9f4068c6a679+oauth-d467d4c35bed+auth-8fd1bb79c36c",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/happenstance/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic network-research icon.",
+            "The official happenstance-ai/skills repository at fbd5cd8b5c8579526985f4cb1f434598b7cf1153 contains one SKILL.md and no LICENSE, LICENSE.md, LICENSE.txt, COPYING, or NOTICE file, so none of its skill text is redistributed.",
+            "No Happenstance hosted MCP implementation, private Codex connector, OAuth credential, professional-network data, source skill, branded artwork, or marketplace icon is redistributed."
+          ],
+          "officialityEvidence": [
+            "Happenstance's official developer documentation identifies https://happenstance.ai/mcp as its public MCP endpoint and publishes setup for ChatGPT, Claude, Claude Code, OpenClaw, and other compatible clients.",
+            "The official MCP guide has SHA-256 0f732ef26d9f6a652975342fbddd111c95ed72395b108ddbc1255295baea047c and lists ten tools for network search, asynchronous results, additional unique pages, person research, identity, groups, credits, and Stripe checkout-session creation.",
+            "The exact ordered ten-tool inventory has canonical JSON SHA-256 5eae9be37c524a0c9ba4b15d27d48d071e6faedfd3e60c587c956959b17b9165.",
+            "The official public OpenAPI document has raw and canonical SHA-256 hashes 9f4068c6a67944782be8fd0db24a2ebe295f2bf2c26a7d59373ffd89a1197786 and 14ef58db84ece81efba43cdb1996a369aed033abb279c68ab0ead9bc9ee75af4. It exposes six GET and three POST operations for search, find-more, research, results, current user, groups, and usage.",
+            "The protected-resource metadata identifies https://happenstance.ai/mcp, profile and email scopes, PKCE S256, and the Happenstance authorization server; its canonical JSON SHA-256 is d467d4c35bed259c96bbdafaf7b2553a56ea664f2ed712b38f2b4ab72b79779c.",
+            "The authorization-server metadata advertises authorization-code and refresh-token grants, dynamic registration, public clients, and PKCE S256; its canonical JSON SHA-256 is 8fd1bb79c36c58e58dcd01aaad2e81c17eef419d644c62be7cfde0c5fad7d76e.",
+            "On August 13, 2026, a loopback public client registered with HTTP 201 and no client secret, and a PKCE authorization request reached Happenstance's login page. The registration response supplied no management URI or registration access token.",
+            "Missing and invalid Bearer initialize requests returned HTTP 401 with Happenstance's official protected-resource challenge and body SHA-256 b5b8cdba3d63b5e7598ad5dfe2190d441d62bef6098f4bbbcf679c3f51608a12.",
+            "The happenstance-ai GitHub organization publishes an official single-file workflow skill at revision fbd5cd8b5c8579526985f4cb1f434598b7cf1153 with SHA-256 c0e6662048eafdd3e80c649d14ae14a499db4f71df78063fb1636a35e259dc56, but the repository has no redistribution license.",
+            "OpenAI's pinned Codex plugin snapshot identifies Happenstance, Inc. as the developer and describes natural-language network search, mutual connections, relationship-strength ranking, warm introduction paths, comprehensive profiles, and sales, recruiting, venture, and business-development workflows. The manifest and connector declarations have SHA-256 hashes cbb830dc74d38a664488d870bb7300e0cb70877b8a6a8def1ee6a4df85a3320a and 4d78800898373e3c0f843ae814eae249142cac6f462323e23d11fe72efdd6d78."
+          ],
+          "codexCapabilities": [
+            "Search the user's professional network with natural language to find relevant people",
+            "Surface mutual connections and rank warm introduction paths by relationship strength",
+            "Deep-research a person into a comprehensive profile with career history and expertise",
+            "Support sales, recruiting, venture capital, and business-development contact research"
+          ],
+          "ghastCapabilities": [
+            "The same official professional-network search, mutual-path, relationship-strength, and source-linked person-research workflows through Happenstance's public hosted MCP",
+            "Explicit source routing across selected Happenstance groups, direct connections, and friends' connections with group and user identity lookup",
+            "Asynchronous polling with stable search, page, and research IDs plus paid find-more pages that guarantee different people",
+            "Credit balance and usage inspection plus explicitly confirmed Stripe credit-checkout-session creation",
+            "An independently authored privacy, billing, evidence, and identity workflow that does not copy Happenstance's unlicensed official skill"
+          ],
+          "capabilityRelationship": "superset-official-hosted-mcp",
+          "limitations": [
+            "The hosted MCP implementation is operated by Happenstance and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+            "A Happenstance account, browser OAuth, connected data sources, group and connection access, available credits, account permissions, and service limits remain user-managed.",
+            "Happenstance documents a two-credit cost per initial or find-more search and one credit per completed person research. Current authenticated pricing, balance, usage, checkout options, currency, and billing behavior remain authoritative.",
+            "Search and research are asynchronous and billable. Ambiguous or slow operations must be polled by their returned IDs and must not be blindly resubmitted.",
+            "The checkout-session tool creates an external Stripe flow and is not proof of purchase. Exact account, credit amount, price when known, currency, and destination require explicit confirmation, and the user must complete checkout.",
+            "Documentation, the ten-tool catalog, REST OpenAPI, source-skill hash and missing license, OAuth metadata, public-client registration, Codex capability evidence, and unauthenticated protocol behavior were verified without an account. Authenticated tools/list, professional-network data, billable searches, research, and checkout creation were not run.",
+            "The official MCP catalog includes create-credits-checkout-session, while the public REST OpenAPI does not expose checkout-session creation at the audited revision. Live authenticated schemas remain authoritative.",
+            "Network search can expose names, employers, titles, social profiles, mutual paths, relationship strength, group membership, interests, and other personal data. Retrieval, ranking, and disclosure must remain narrowly scoped.",
+            "Relationship strength, network proximity, group membership, employment, hobbies, and social content do not prove endorsement, willingness to introduce, availability, intent, sensitive traits, or suitability.",
+            "Happenstance research is not a background check, reference, credential verification, legal compliance review, or authorization to contact anyone.",
+            "A generic network-research icon is used because no licensed Happenstance catalog artwork is included in the licensed material available for redistribution."
+          ],
+          "verification": [
+            "Run the Happenstance evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
+            "Verify official MCP guide, client guide, documentation index, and OpenAPI SHA-256 hashes recorded in plugins/happenstance/README.md",
+            "Parse and confirm the exact ordered ten-tool catalog and canonical JSON hash 5eae9be37c524a0c9ba4b15d27d48d071e6faedfd3e60c587c956959b17b9165",
+            "Parse the official OpenAPI and confirm six GET plus three POST operations and ordered-operation hash 1b5693090f68bceb63832077f70399f24248bac5ea4b39dd7613b00b67426ada",
+            "Verify official source revision fbd5cd8b5c8579526985f4cb1f434598b7cf1153, SKILL.md hash c0e6662048eafdd3e80c649d14ae14a499db4f71df78063fb1636a35e259dc56, and absence of license or notice files",
+            "Verify canonical OAuth protected-resource and authorization-server hashes d467d4c35bed259c96bbdafaf7b2553a56ea664f2ed712b38f2b4ab72b79779c and 8fd1bb79c36c58e58dcd01aaad2e81c17eef419d644c62be7cfde0c5fad7d76e",
+            "Probe https://happenstance.ai/mcp with missing and invalid Bearer initialize requests and confirm HTTP 401 plus the official resource-metadata challenge",
+            "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Happenstance manifest and connector hashes and compare every Codex workflow with the official hosted MCP surface",
+            "Authorize a Happenstance account before testing authenticated tool schemas, network data, billable searches, research, or checkout-session creation",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/happenstance.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": null,
+        "upstreamRevision": "happenstance-docs-0f732ef26d9f+openapi-9f4068c6a679+oauth-d467d4c35bed+auth-8fd1bb79c36c",
+        "portStatus": "full"
       }
     },
     {
