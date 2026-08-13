@@ -45,7 +45,7 @@ verification.
 | brighthire | BrightHire | appConnector, skills | MIT | blocked-license | not-implemented |
 | calendly | Calendly | appConnector | MIT | official-source-verified | implemented-verified |
 | canva | Canva | appConnector, skills | MIT | official-source-research-required | not-implemented |
-| carta-crm | Carta Inc. | appConnector | MIT | official-source-research-required | not-implemented |
+| carta-crm | Carta Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | catalyst-by-zoho | Catalyst by Zoho | appConnector, skills | MIT | official-source-research-required | not-implemented |
 | cb-insights | CB Insights | appConnector | MIT | official-source-research-required | not-implemented |
 | channel99 | Channel99 Inc.  | appConnector | MIT | official-source-research-required | not-implemented |

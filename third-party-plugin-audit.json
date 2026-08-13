@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 68,
-      "official-source-verified": 76
+      "official-source-research-required": 67,
+      "official-source-verified": 77
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 76,
-      "not-implemented": 73
+      "implemented-verified": 77,
+      "not-implemented": 72
     }
   },
   "excludedOpenAIPlugins": [
@@ -1562,7 +1562,7 @@
     },
     {
       "id": "carta-crm",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Carta Inc.",
@@ -1587,13 +1587,82 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://carta.com"
+        "homepage": "https://carta.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Carta",
+          "officialRepository": "https://github.com/carta/plugins",
+          "officialRevision": "daef48d9c7d110a1b3ea55d2b9bad3d19d079d75",
+          "license": "Apache-2.0",
+          "licenseEvidence": [
+            "Carta's official carta/plugins repository at the carta-crm/v1.5.3 tag contains an Apache License 2.0 file with SHA-256 3b328349592a8500db68543678a81dc8571ba0660d81ab5f293d7447849a02fb.",
+            "The Apache-2.0 grant covers the published Carta plugin manifests, 23 skill files, and three HTML templates. It does not license Carta's closed hosted MCP implementation, accounts, CRM data, service marks, or OpenAI marketplace artwork.",
+            "plugins/carta-crm/LICENSE is copied from the pinned official tag. Ghast uses a generic CRM icon rather than Carta or OpenAI artwork."
+          ],
+          "officialityEvidence": [
+            "The public repository is owned by Carta's GitHub organization and describes itself as the centralized repository for public-facing Carta plugins.",
+            "The root marketplace manifest names Carta Engineering as owner. The Carta CRM v1.5.3 manifest names Carta and crm@carta.com, points to https://github.com/carta/plugins, and describes the official Carta CRM MCP workflow.",
+            "The pinned carta-crm/v1.5.3 tag resolves to daef48d9c7d110a1b3ea55d2b9bad3d19d079d75. The official LICENSE, marketplace manifest, Carta CRM manifest, and CRM README SHA-256 values are 3b328349592a8500db68543678a81dc8571ba0660d81ab5f293d7447849a02fb, 53328d53295d0691a49035e035812b8469c7ef32e950bbf3ea51763920b100db, eab9a5559c4f853bb679454c5de25ff24c98c11c7901f7692f989a72686f3915, and 8c9bc9f91e6852dd7e31c3fe05b21d71b8c9910b4e23d51cdef5c9676c6afe51.",
+            "The official release contains exactly 23 skills and three HTML template assets. The skill-name SHA-256 is 004fc23a75aa5a264416340e61e79b48420a135c4fb3928920ea9c292f3929e3 and the complete path-and-content inventory SHA-256 is bb3781255c409ce1401395f8146459e6e3d4e12e049ebafc262cb184549fb586.",
+            "Carta's official CRM MCP documentation, updated August 7, 2026, identifies https://mcp.app.carta.com/mcp and has SHA-256 5bca9bc70116601c0ad403518c9d6d12f0ca72d614d5385ce73c13eb5546a295.",
+            "The current official documentation lists 143 unique direct tools. Their ordered-name SHA-256 is c374bd3d18d45f2bb01ac714fff91dcc619defa56182e16434dace956956f1bd.",
+            "The protected-resource and authorization-server metadata canonical JSON SHA-256 values are 1e3dfa35304c9275fc22df2cb619b7b7f468ca29f8da02a9e4dfb129d0c1cd35 and 4e8413fc89566a41eeee23d6a492026a3455811b33b208313c97054663cd0bdd. They declare Bearer-header authentication, eight Carta scopes, authorization code, refresh tokens, Dynamic Client Registration, confidential clients, and PKCE S256.",
+            "On August 13, 2026, MCP initialize with missing and invalid credentials returned HTTP 401, Carta's invalid_token response, and the exact protected-resource metadata challenge.",
+            "A disposable localhost OAuth client registered with HTTP 201 and returned authorization-code and refresh-token grants plus a client secret. Carta returned no registration management URI or registration access token, so automated client deletion was not available.",
+            "OpenAI's pinned Codex snapshot identifies Carta Inc. as developer and maps only a private app ID. Its manifest and connector declaration SHA-256 values are ea7f25859493a0200636e35b0d3a79cedf391d45c09b4d1597da781d738f6ae4 and 14a7e4cc6355a1f94cb03db01e554e848c9bceaadabf9bfcaef320acdb979de2."
+          ],
+          "codexCapabilities": [
+            "Find the latest relationship context in Carta CRM",
+            "Keep deals, companies, contacts, relationships, meeting notes, and key takeaways together",
+            "Track opportunities through stages and retrieve past context through OpenAI's private app connector"
+          ],
+          "ghastCapabilities": [
+            "The same official deal, company, contact, investor, fundraising, note, relationship-context, search, create, update, enrichment, analytics, meeting-preparation, and warm-introduction workflows",
+            "Carta's 23 official v1.5.3 skills and three HTML templates with Claude-only dispatch, path, hook, and telemetry assumptions adapted for Ghast",
+            "Current official standalone-note creation, update, deletion, linking, and unlinking rather than the two stale source workflows that edited deal comments",
+            "The broader current official 143-tool surface for tasks, themes, lists, folders, custom fields, interactions, email campaigns, reports and schedules, files, PDF and CSV generation, notifications, classifier settings, organization context, connected email, and support escalation",
+            "Direct provider-hosted browser OAuth through Carta's official MCP endpoint without OpenAI's private connector"
+          ],
+          "capabilityRelationship": "official-hosted-superset-with-source-skills-adapted",
+          "limitations": [
+            "Carta operates the hosted MCP implementation; it is not redistributed. A Carta CRM account, tenant access, browser OAuth, user permissions, plan features, connected mailboxes, quotas, and network connectivity remain user-managed.",
+            "Official source, current documentation, OAuth metadata, Dynamic Client Registration, and unauthenticated protocol behavior were verified without a Carta CRM account. Authenticated tools/list and real tenant reads or writes were not run.",
+            "Carta's v1.5.3 skills use Claude's crm_call_tool dispatcher and crm: names, while the current public service documentation lists direct tool names. Ghast performs a deterministic source adaptation and tells the agent to prefer the authenticated live schema.",
+            "The official add-note and update-note source files still say standalone note editing is unavailable and route through a deal comment. Current Carta documentation explicitly exposes create_note, update_note, delete_note, link_note, and unlink_note, so Ghast replaces only those two outdated workflows.",
+            "Carta's Claude hooks collect session context, model configuration, active skill data, prompt identifiers, permission mode, and plugin activity. Ghast does not execute those hooks or inject _instrumentation_v2 into tool arguments.",
+            "Dynamic registration issues a client secret even for the tested localhost flow. The Ghast host must store it securely and must never expose it in chat, logs, package files, or command-line arguments.",
+            "Carta's registration response supplied no management URI or registration access token. The single audit client could not be automatically deleted, and the importer deliberately does not register a new client on every verification run.",
+            "The source meeting-preparation and warm-introduction skills contain optional Claude Cowork artifact and Gmail-draft paths. Ghast replaces those names with host-capability guidance and disables the route map's in-panel tool bridge. HTML and PDF delivery remain available, while an email draft requires a separately authenticated host capability plus explicit recipient, subject, and body confirmation.",
+            "Enrichment and open-world people lookup can incur provider cost or disclose CRM data to an enrichment service. Use them only when explicitly requested and after reviewing scope and expected effect.",
+            "Creates, updates, merges, enrichment, links, unlinks, uploads, attachments, exports, schedules, campaigns, notification changes, classifier changes, support escalation, and deletes can produce durable or external effects. Every such action requires exact-target review and explicit confirmation.",
+            "The carta-crm-current-service skill is Ghast-authored compatibility and safety guidance, clearly labeled as such; it is not represented as a Carta-authored 24th source skill.",
+            "A generic CRM icon is used because the source license does not grant Carta trademark rights."
+          ],
+          "verification": [
+            "PYTHONDONTWRITEBYTECODE=1 python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Verify carta/plugins tag carta-crm/v1.5.3 resolves to daef48d9c7d110a1b3ea55d2b9bad3d19d079d75",
+            "Verify the official source hashes for LICENSE, marketplace manifest, Carta CRM manifest, README, hooks, and the two stale note skills",
+            "Verify exactly 23 source skills, three template assets, skill-name SHA-256 004fc23a75aa5a264416340e61e79b48420a135c4fb3928920ea9c292f3929e3, and complete inventory SHA-256 bb3781255c409ce1401395f8146459e6e3d4e12e049ebafc262cb184549fb586",
+            "Verify official CRM MCP documentation SHA-256 5bca9bc70116601c0ad403518c9d6d12f0ca72d614d5385ce73c13eb5546a295 and its exact 143-tool ordered-name SHA-256 c374bd3d18d45f2bb01ac714fff91dcc619defa56182e16434dace956956f1bd",
+            "Verify canonical OAuth metadata SHA-256 values 1e3dfa35304c9275fc22df2cb619b7b7f468ca29f8da02a9e4dfb129d0c1cd35 and 4e8413fc89566a41eeee23d6a492026a3455811b33b208313c97054663cd0bdd",
+            "Probe MCP initialize without credentials and confirm HTTP 401, invalid_token, and Carta's exact protected-resource challenge",
+            "Manually register at most one disposable localhost client when DCR behavior needs re-audit; do not repeat registration during normal importer runs because Carta exposes no client-deletion management endpoint",
+            "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Carta CRM manifest and private connector hashes",
+            "Authorize an eligible Carta CRM tenant before testing authenticated tools/list, account-specific instructions, connected email, enrichment, exports, or real CRM mutations",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/carta-crm.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.5.3-ghast.1",
+        "repository": "https://github.com/carta/plugins",
+        "upstreamRevision": "daef48d9c7d110a1b3ea55d2b9bad3d19d079d75",
+        "portStatus": "full"
       }
     },
     {

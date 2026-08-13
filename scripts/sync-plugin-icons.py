@@ -96,6 +96,14 @@ CUSTOM_ICONS = {
         '<path d="M12 26h40M22 10v10M42 10v10"/>'
         '<path d="M20 34h8M36 34h8M20 43h8M36 43h8"/>',
     ),
+    "carta-crm": (
+        "#2A6F62",
+        '<rect x="11" y="13" width="42" height="38" rx="3"/>'
+        '<path d="M11 24h42M25 24v27"/>'
+        '<circle cx="18" cy="19" r="2" fill="white" stroke="none"/>'
+        '<circle cx="18" cy="33" r="4"/>'
+        '<path d="M14 45c1-5 3-8 6-8s5 3 6 8M32 31h14M32 39h11M32 47h8"/>',
+    ),
     "bilibili-search": (
         "#FB7299",
         '<rect x="13" y="18" width="38" height="29" rx="6"/>'
