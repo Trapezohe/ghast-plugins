@@ -1420,6 +1420,73 @@
         "unzip -tqq packages/expo.zip"
       ]
     },
+    "fal": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Fal",
+      "officialRepository": null,
+      "officialRevision": "fal-docs-66aa306b5115+tools-a56c797a64ed+prompts-7da44a2905f0+oauth-672d054000bc",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/fal/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation, and generic icon.",
+        "No fal hosted MCP implementation, private Codex connector, API key, account data, generated media, branded icon, or marketplace artwork is redistributed.",
+        "The Codex manifest's MIT field is not treated as a license grant for fal's hosted service or private connector; the package's MIT license applies only to Ghast-authored files."
+      ],
+      "officialityEvidence": [
+        "fal's official documentation identifies https://mcp.fal.ai/mcp as its hosted Streamable HTTP MCP server for the full fal platform and documents API-key header authentication for third-party clients.",
+        "The official MCP guide has SHA-256 66aa306b5115499a0726440defcab7ae597a73142feef10fa42622decb5d0d7f and publishes 11 tools for model discovery, schemas, pricing, documentation, synchronous and asynchronous inference, job state and results, cancellation, file upload, and model recommendations.",
+        "The exact documented 11-tool order has canonical JSON SHA-256 96fa42823aea87bb940b54659ff8cf109faefd46f91af29ad4692c0576c96b49.",
+        "A live protocol probe returned server identity fal-ai 0.1.0, 11 complete tools, and 17 complete guided media prompts. The live tool-name and normalized schema hashes are 83622c10bdcd3b64d92b6008d4b53a2790d6c8d939d1253a44a1acc940ad8cbb and a56c797a64edfcbd70e03126674294ff1c68cc4d05268cccb4b7963e1b263239.",
+        "The 17 prompt-name and normalized prompt-definition hashes are 05e651f4dcb1b29c5f7e1079aac900b7045fd8e68636c341b5b3b38233a96820 and 7da44a2905f0863901d884b099999e9c88db56178185d15f3fd56a90c99725b7.",
+        "The live annotations classify seven discovery, schema, pricing, documentation, status, and result tools as read-only; run_model, submit_job, and upload_file as non-idempotent writes; and cancel_job as an idempotent destructive operation.",
+        "The live run_model and submit_job schemas expose store_payload and expiration_seconds privacy controls in addition to endpoint_id and model input.",
+        "Official authentication, pricing, retention, concurrency, and model-access-control guides are pinned at SHA-256 993de9e066c1edb2279be655bac60b775c859197ed9380268cddd28ab61762d9, 18405803581e2cf460e8f36336ee6966e78be9b506762363f26a60532c7e5b87, 77d6d254a08b1edf7eeda40abe558dcc1d552024e80240738eafcfc2fdd46a09, 0e641fdef47e433f8ade3d8ee5da83b9fc31d27861b43e50992342d449f0ed58, and c7d1510e67296ab6dc8c21a9d8d211e1e2218071f91fb9d99ed5d11be8510d3c.",
+        "The protected-resource and authorization-server metadata canonical JSON hashes are 672d054000bc3f7e331a767b308f6aac4ad25a3cd59f5ca55492c9497030e2e2 and ba82881a605265576b39aeed0bf6cc8eec8cd4a39a6be6828637fadf0080d667.",
+        "On August 13, 2026, missing and invalid Bearer initialize requests returned HTTP 401 with fal's protected-resource challenge. A non-billable placeholder Key header exposed protocol initialization, tools/list, and prompts/list without running a model.",
+        "OpenAI's pinned Codex plugin snapshot identifies Fal as the developer and describes image, video, audio, 3D, training, editing, recommendation, schema, pricing, asynchronous-job, file-upload, image-generation, editing, and upscaling workflows. The manifest and private connector declaration hashes are be43131c150f5c3b3eb068142322aaf34f94f37beb251f3429df873d8889bb8c and 65d72691bd36b2994ffbba9bc9da9475c1033153f53cf18a040e418c3d86dca3."
+      ],
+      "codexCapabilities": [
+        "Generate an image from a prompt and summarize the selected model settings",
+        "Find and recommend current fal models for image generation or editing",
+        "Run image editing or upscaling and summarize output parameters",
+        "Support image, video, audio, 3D, training, editing, pricing, schemas, asynchronous jobs, file uploads, and media generation"
+      ],
+      "ghastCapabilities": [
+        "The same official image generation, model recommendation, schema inspection, pricing, image editing, upscaling, and output-parameter workflows",
+        "Official video generation and editing, animation, audio and speech, transcription, 3D, product photography, restoration, vision analysis, batching, lip sync, faces, virtual try-on, and custom training workflows",
+        "Current model search across fal's live catalog and exact per-model input and output schemas",
+        "Synchronous execution plus explicit asynchronous submit, status, result, and cancellation control with request IDs and canonical URLs",
+        "User-approved remote or small base64 file upload to fal's CDN with payload-storage and generated-media expiration controls",
+        "API-scope key authentication through fal's official hosted MCP endpoint without an OpenAI private connector"
+      ],
+      "capabilityRelationship": "official-hosted-superset",
+      "limitations": [
+        "The hosted MCP implementation is operated by fal and has not been published in a public official licensed source repository. The MIT license applies only to the Ghast-authored adapter.",
+        "A fal account, API-scope key, personal or team budget, credits, model access, provider availability, content policy, model terms, queue capacity, concurrency limits, and network connectivity remain user-managed.",
+        "run_model and submit_job create billable non-idempotent jobs. A retry can create a second charge. Current schema, exact inputs, output quantities, pricing unit, estimate uncertainty, and explicit confirmation are required before every run.",
+        "fal bills according to model-specific output units. High resolution, duration, multiple outputs, video, 3D, and training can make a precise total impossible before completion.",
+        "Uploaded inputs and generated media are stored on fal's CDN and served as public URLs according to the official retention guide. Request JSON is stored for 30 days by default unless store_payload is disabled.",
+        "expiration_seconds can bound generated-media lifetime, but expiration permanently deletes files. Users must download outputs they need to retain.",
+        "Hosted MCP cannot read local file_path values. Small files can use base64; larger local files require a separately user-approved direct fal upload flow.",
+        "The setup guide says MCP OAuth is not yet supported even though the endpoint publishes protected-resource and general authorization-server metadata. Ghast uses the documented API-key path.",
+        "Model discovery can show models blocked by enterprise access controls. Discovery is not proof that the authenticated account can execute a model.",
+        "Face, voice, lip-sync, try-on, training, transcription, and other personal-media workflows require rights, participant authorization, privacy review, and clear generated-media labeling where authenticity could be misunderstood.",
+        "Official docs, live tool and prompt catalogs, Codex capability evidence, endpoint authentication behavior, and privacy controls were verified without a fal account. No model, upload, training, cancellation, account-data, or billed operation was run.",
+        "A generic generative-media icon is used because no licensed catalog artwork is included in a public official MCP source repository."
+      ],
+      "verification": [
+        "python3 scripts/import-official-hosted-plugins.py",
+        "Verify official MCP, authentication, pricing, retention, concurrency, and model-access-control documentation SHA-256 hashes 66aa306b5115499a0726440defcab7ae597a73142feef10fa42622decb5d0d7f, 993de9e066c1edb2279be655bac60b775c859197ed9380268cddd28ab61762d9, 18405803581e2cf460e8f36336ee6966e78be9b506762363f26a60532c7e5b87, 77d6d254a08b1edf7eeda40abe558dcc1d552024e80240738eafcfc2fdd46a09, 0e641fdef47e433f8ade3d8ee5da83b9fc31d27861b43e50992342d449f0ed58, and c7d1510e67296ab6dc8c21a9d8d211e1e2218071f91fb9d99ed5d11be8510d3c",
+        "Confirm the documented 11-tool order hash 96fa42823aea87bb940b54659ff8cf109faefd46f91af29ad4692c0576c96b49",
+        "Probe the live endpoint with a non-billable placeholder Key header and verify server fal-ai 0.1.0, ordered tool-name hash 83622c10bdcd3b64d92b6008d4b53a2790d6c8d939d1253a44a1acc940ad8cbb, complete normalized schema hash a56c797a64edfcbd70e03126674294ff1c68cc4d05268cccb4b7963e1b263239, and exact annotations",
+        "Verify the live 17-prompt ordered-name hash 05e651f4dcb1b29c5f7e1079aac900b7045fd8e68636c341b5b3b38233a96820 and complete normalized prompt-definition hash 7da44a2905f0863901d884b099999e9c88db56178185d15f3fd56a90c99725b7",
+        "Verify canonical protected-resource and authorization-server metadata hashes 672d054000bc3f7e331a767b308f6aac4ad25a3cd59f5ca55492c9497030e2e2 and ba82881a605265576b39aeed0bf6cc8eec8cd4a39a6be6828637fadf0080d667",
+        "Probe https://mcp.fal.ai/mcp with missing and invalid Bearer credentials and confirm HTTP 401 plus the exact official protected-resource metadata URL",
+        "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 fal manifest and connector hashes and compare every default workflow with the official tools and prompts",
+        "Authorize a fal API-scope key before testing authenticated model discovery, pricing, uploads, execution, job state, results, or cancellation",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/fal.zip"
+      ]
+    },
     "fireflies": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Fireflies",

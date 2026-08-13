@@ -1,0 +1,16 @@
+{
+  "name": "fal",
+  "version": "1.0.3-ghast.1",
+  "description": "Discover, price, run, upload for, monitor, and cancel image, video, audio, 3D, training, editing, and other generative-media workflows through fal's official hosted MCP server.",
+  "category": "creativity",
+  "author": {
+    "name": "Fal",
+    "url": "https://fal.ai"
+  },
+  "homepage": "https://fal.ai/docs/documentation/setting-up/mcp",
+  "upstreamRevision": "fal-docs-66aa306b5115+tools-a56c797a64ed+prompts-7da44a2905f0+oauth-672d054000bc",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

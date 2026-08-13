@@ -871,6 +871,34 @@
       "license": "MIT"
     },
     {
+      "id": "fal",
+      "name": "fal",
+      "description": "Discover, price, run, upload for, monitor, and cancel image, video, audio, 3D, training, editing, and other generative-media workflows through fal's official hosted MCP server.",
+      "manifest": {
+        "name": "fal",
+        "description": "Discover, price, run, upload for, monitor, and cancel image, video, audio, 3D, training, editing, and other generative-media workflows through fal's official hosted MCP server.",
+        "author": {
+          "name": "Fal",
+          "url": "https://fal.ai"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://fal.ai/docs/documentation/setting-up/mcp",
+        "upstreamRevision": "fal-docs-66aa306b5115+tools-a56c797a64ed+prompts-7da44a2905f0+oauth-672d054000bc",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/fal.zip",
+        "sha256": "65b63542a73646d50aa3914e6b8f998858f5ccdf61120426109b80c415778920"
+      },
+      "icon": "./plugins/fal/assets/icon.svg",
+      "category": "creativity",
+      "homepage": "https://fal.ai/docs/documentation/setting-up/mcp",
+      "license": "MIT"
+    },
+    {
       "id": "fireflies",
       "name": "fireflies",
       "description": "Search, summarize, analyze, organize, share, and create clips from meeting transcripts through Fireflies' official hosted MCP server.",

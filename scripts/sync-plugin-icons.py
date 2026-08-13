@@ -153,6 +153,14 @@ CUSTOM_ICONS = {
         '<path d="M15 18h2M27 18h2M41 18h8"/>'
         '<path d="M27 31h4M27 38h4M40 31h9M40 38h7M40 45h5"/>',
     ),
+    "fal": (
+        "#C3274A",
+        '<rect x="10" y="12" width="44" height="40" rx="4"/>'
+        '<path d="M10 23h44"/>'
+        '<path d="m16 45 9-10 7 7 6-6 10 9"/>'
+        '<circle cx="43" cy="31" r="3"/>'
+        '<path d="M18 18h16M42 17l7 4-7 4z"/>',
+    ),
     "lovable": (
         "#D84A2B",
         '<rect x="10" y="12" width="44" height="40" rx="4"/>'

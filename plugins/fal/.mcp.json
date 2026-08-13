@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "fal": {
+      "url": "https://mcp.fal.ai/mcp",
+      "transport": "streamable-http",
+      "headers": {
+        "Authorization": "Bearer $VAULT:fal-api-key"
+      }
+    }
+  }
+}

@@ -81,7 +81,7 @@ verification.
 | egnyte | Egnyte Inc | appConnector | MIT | official-source-research-required | not-implemented |
 | expo | Expo | skills, commands | MIT | official-source-verified | implemented-verified |
 | factset | FactSet | appConnector | MIT | official-source-research-required | not-implemented |
-| fal | Fal | appConnector | MIT | official-source-research-required | not-implemented |
+| fal | Fal | appConnector | MIT | official-source-verified | implemented-verified |
 | figma | Figma | appConnector, mcpServers, skills, commands | LicenseRef-Figma-Developer-Terms | blocked-license | not-implemented |
 | finn | FINN GmbH | appConnector | MIT | official-source-research-required | not-implemented |
 | fireflies | Fireflies | appConnector | MIT | official-source-verified | implemented-verified |
