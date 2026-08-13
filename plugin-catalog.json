@@ -1102,6 +1102,34 @@
       "license": "MIT"
     },
     {
+      "id": "similarweb",
+      "name": "similarweb",
+      "description": "Research website, search, audience, app, competitor, industry, and shopper intelligence through Similarweb's official MCP server.",
+      "manifest": {
+        "name": "similarweb",
+        "description": "Research website, search, audience, app, competitor, industry, and shopper intelligence through Similarweb's official MCP server.",
+        "author": {
+          "name": "Similarweb",
+          "url": "https://www.similarweb.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.0-ghast.1",
+        "homepage": "https://developers.similarweb.com/docs/similarweb-mcp.md",
+        "upstreamRevision": "similarweb-docs-b3970ea5dd33+claude-228a7abde362+oauth-4f4e48ae9c75",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/similarweb.zip",
+        "sha256": "48a1e5a4a8456c3532d354dd38c75ebe86435dbab28be80abc711344161e6e31"
+      },
+      "icon": "./plugins/similarweb/assets/icon.svg",
+      "category": "web",
+      "homepage": "https://developers.similarweb.com/docs/similarweb-mcp.md",
+      "license": "MIT"
+    },
+    {
       "id": "statsig",
       "name": "statsig",
       "description": "Inspect and manage Statsig experiments, feature gates, dynamic configs, segments, metrics, results, audit logs, and dashboards through official skills and the official Statsig MCP server.",

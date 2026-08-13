@@ -154,6 +154,13 @@ CUSTOM_ICONS = {
         '<circle cx="35" cy="35" r="2" fill="white"/>'
         '<circle cx="48" cy="18" r="2" fill="white"/>',
     ),
+    "similarweb": (
+        "#F07028",
+        '<circle cx="32" cy="32" r="20"/>'
+        '<path d="M12 32h40M32 12c7 7 10 14 10 20s-3 13-10 20"/>'
+        '<path d="M32 12c-7 7-10 14-10 20s3 13 10 20"/>'
+        '<path d="M18 39l8-8 7 4 13-14"/>',
+    ),
     "steam-search": (
         "#1B4965",
         '<circle cx="22" cy="40" r="7"/><circle cx="44" cy="22" r="8"/>'

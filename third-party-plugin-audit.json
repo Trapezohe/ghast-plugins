@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 8,
-      "official-source-research-required": 103,
-      "official-source-verified": 38
+      "official-source-research-required": 102,
+      "official-source-verified": 39
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 38,
-      "not-implemented": 111
+      "implemented-verified": 39,
+      "not-implemented": 110
     }
   },
   "excludedOpenAIPlugins": [
@@ -6263,7 +6263,7 @@
     },
     {
       "id": "similarweb",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Similarweb",
@@ -6290,13 +6290,64 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.similarweb.com"
+        "homepage": "https://www.similarweb.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Similarweb",
+          "officialRepository": null,
+          "officialRevision": "similarweb-docs-b3970ea5dd33+claude-228a7abde362+oauth-4f4e48ae9c75",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/similarweb/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+            "No Similarweb hosted MCP server source, proprietary dataset, private Codex connector, or marketplace artwork is redistributed."
+          ],
+          "officialityEvidence": [
+            "Similarweb's official developer documentation identifies https://mcp.similarweb.com as its hosted MCP server and documents web traffic, engagement, traffic sources, referrals, ranks, audience, geography, demographics, search, and app metrics.",
+            "The official MCP overview was captured three times with identical SHA-256 b3970ea5dd3348773500820d6d5d63d5b878d038155f02c68b276313242f4073.",
+            "Similarweb's current official Claude integration guide documents 75+ data endpoints spanning web analytics, competitive intelligence, audience demographics, app performance, keyword rankings, and Amazon shopper intelligence; the guide has SHA-256 228a7abde362e0a923a4ab299dbd688e994153ad02305668b64b1054bcc241ac.",
+            "Similarweb's OAuth protected-resource metadata identifies the same MCP resource, https://mcp-auth.similarweb.com authorization server, read scope, and bearer-header authentication; its canonical JSON has SHA-256 4f4e48ae9c754ff1c1a31371be71d27738437576e8d6a668cd7b627e360978a7.",
+            "The official authorization-server metadata declares dynamic client registration, authorization-code and refresh-token grants, public clients, and PKCE S256; its canonical JSON has SHA-256 537ef1981b3bb69036da41c59f4c9e1da74c84d652aa21e3e3bfaad7005db480.",
+            "An unauthenticated GET confirms the Similarweb MCP service is running, while an unauthenticated MCP initialize request returns an authentication challenge accepting either the api-key header or an OAuth Bearer token."
+          ],
+          "codexCapabilities": [
+            "Analyze website or app market intelligence, including competitor traffic and performance benchmarks",
+            "Compare traffic trends over time and identify acquisition channels and referring sites",
+            "Compare audience geography, demographics, and search keywords across domains"
+          ],
+          "ghastCapabilities": [
+            "The same website traffic, engagement, channel, referral, ranking, audience, demographic, geography, keyword, competitor, app, and industry research through Similarweb's official hosted MCP server",
+            "Additional official coverage for site structure, technologies, audience overlap, paid-search spend, app-store performance, and Amazon shopper intelligence where included in the user's subscription"
+          ],
+          "capabilityRelationship": "superset-official-hosted-mcp",
+          "limitations": [
+            "The hosted MCP implementation and Similarweb datasets are operated by Similarweb and are not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+            "Access requires a Similarweb subscription with API access, such as an API-only, Business, or Enterprise plan. Dataset, region, history, and endpoint access mirror the user's subscription.",
+            "MCP calls consume the same data credits as Similarweb REST API calls, and broader ranges, finer granularity, and larger metric sets can consume more credits.",
+            "Similarweb's public client setup guides primarily describe API-key authentication, while the live service also publishes standard OAuth metadata. Ghast uses the OAuth path and never stores an API key.",
+            "Similarweb measurements may be estimates, and AI-generated interpretations can be incomplete or inaccurate. The skill requires explicit scope and separates returned metrics from conclusions.",
+            "A generic market-analytics icon is used because no licensed catalog icon is included in a public official MCP source repository."
+          ],
+          "verification": [
+            "python3 scripts/import-official-hosted-plugins.py",
+            "Verify the official MCP overview SHA-256 is b3970ea5dd3348773500820d6d5d63d5b878d038155f02c68b276313242f4073",
+            "Verify the official Claude integration guide SHA-256 is 228a7abde362e0a923a4ab299dbd688e994153ad02305668b64b1054bcc241ac",
+            "Verify canonical OAuth protected-resource metadata SHA-256 is 4f4e48ae9c754ff1c1a31371be71d27738437576e8d6a668cd7b627e360978a7",
+            "Verify canonical OAuth authorization-server metadata SHA-256 is 537ef1981b3bb69036da41c59f4c9e1da74c84d652aa21e3e3bfaad7005db480",
+            "Probe https://mcp.similarweb.com with GET and MCP initialize and confirm the live service and dual API-key or Bearer authentication challenge",
+            "Compare the official web, search, audience, app, competitor, industry, and shopper datasets with every Codex default prompt and long-description capability",
+            "unzip -tqq packages/similarweb.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.0-ghast.1",
+        "repository": null,
+        "upstreamRevision": "similarweb-docs-b3970ea5dd33+claude-228a7abde362+oauth-4f4e48ae9c75",
+        "portStatus": "full"
       }
     },
     {

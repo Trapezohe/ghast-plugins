@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "similarweb": {
+      "type": "http",
+      "url": "https://mcp.similarweb.com"
+    }
+  }
+}
