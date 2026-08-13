@@ -3064,6 +3064,171 @@ CUBE_EVIDENCE_REVISION = (
     "cube-docs-fd816d469e8d+tools-9fd46d5d21aa"
     "+oauth-f88522816f07+auth-8e4f1585bcd9"
 )
+DATASITE_PRODUCT_URL = (
+    "https://www.datasite.com/en/resources/ai-at-datasite/datasite-mcp"
+)
+DATASITE_PRESS_URL = (
+    "https://www.datasite.com/en/company/news/"
+    "datasite-becomes-the-first-vdr-provider-to-connect-ai-assistants-"
+    "directly-to-live-deal-content-with-mcp-server-launch"
+)
+DATASITE_FAQ_URL = "https://www.datasite.com/en/landing/hubs/mcp-webinars"
+DATASITE_PRODUCT_SHA256 = (
+    "d35489cc228cf43fd855ecf2f1361e08e764a7eb148a42ca7be81a107357f542"
+)
+DATASITE_PRESS_SHA256 = (
+    "5692792cd0afaf53de0a62c7cdcd84c5b48992506786692276b6a4528bcfb81a"
+)
+DATASITE_FAQ_SHA256 = (
+    "05de0b8285a55cf964a8b82e17dbda59017a9e3172e4b6df7e41d548be154038"
+)
+DATASITE_SOURCE_REVISION = "27ac023c1ba595123cb515ff9643db45165ada9f"
+DATASITE_SOURCE_TREE = "24bfa6be6ed414aa940d125edb641589979c1901"
+DATASITE_SOURCE_BASE_URL = (
+    "https://raw.githubusercontent.com/DatasiteAI/mcp-skills/"
+    f"{DATASITE_SOURCE_REVISION}"
+)
+DATASITE_SOURCE_SKILLS = (
+    "bulk-qa-answers",
+    "document-quality-check",
+    "gap-analysis",
+    "irl-tracker",
+    "launch-readiness-orchestrator",
+    "risk-analysis-audit",
+    "smart-file-renaming",
+    "vdr-index-setup",
+)
+DATASITE_SOURCE_TOOL_REFERENCES = (
+    "createContent",
+    "getProjectOverview",
+    "listFolderContents",
+    "listSubscriptions",
+    "searchDocuments",
+    "setupProject",
+    "updateContent",
+)
+DATASITE_SOURCE_HASHES = {
+    "README.md": (
+        "e356b58505f801f249c379ab35d80c52814ae0b37879ada492b372637ec6ba6c"
+    ),
+    "skills/bulk-qa-answers/SKILL.md": (
+        "f4ee102f08eade13a77cc9de9eabb0fbd0382d2a8103b9046dd4d43a177a6e39"
+    ),
+    "skills/document-quality-check/SKILL.md": (
+        "9662b561da9d922b520817a0dfeb0b750efcfd0e68a7d32961865c7f88458dae"
+    ),
+    "skills/gap-analysis/SKILL.md": (
+        "bca02ee3d5d4860a60fa0720c998a2e3418837d3ab6d64f64e03563bcd063735"
+    ),
+    "skills/irl-tracker/SKILL.md": (
+        "1f2c862ddc7ab7069b14a64d109b39f76755faef0cd9617e14a9efe56ae5d774"
+    ),
+    "skills/launch-readiness-orchestrator/SKILL.md": (
+        "c4ec2634c8619de4cbffde692559828f79333e54eac2c1a6d72980036f08e8cb"
+    ),
+    "skills/risk-analysis-audit/SKILL.md": (
+        "15794cfa3df3d97bd36a77c25900602d6e34c3cd624829353c38f2b379c63a78"
+    ),
+    "skills/smart-file-renaming/SKILL.md": (
+        "5b029246fb1661210890bea241bb1da2be144c566dc12af7e15dfca862a7250b"
+    ),
+    "skills/vdr-index-setup/SKILL.md": (
+        "6914be2a87ea1698d4dac1c6a6cf267289313e5d4184200db2aee039a77f15b3"
+    ),
+}
+DATASITE_SOURCE_INVENTORY_SHA256 = (
+    "1bcde61fef7342b7df08376c1f0716a5c627000498611c74d5da0b5ac2b56255"
+)
+DATASITE_MCP_URL = "https://mcp.global.datasite.com/mcp"
+DATASITE_PROTECTED_RESOURCE_URL = (
+    "https://mcp.global.datasite.com/.well-known/oauth-protected-resource"
+)
+DATASITE_PROTECTED_RESOURCE_SHA256 = (
+    "4cb6bbccdf8fe5470e7bfff6aef61fb678908d5e26ac9e643915a71b6582e50a"
+)
+DATASITE_AUTH_SERVER_URL = (
+    "https://auth.datasite.com/.well-known/oauth-authorization-server"
+)
+DATASITE_AUTH_SERVER_SHA256 = (
+    "bbd60296055dd56e52a925cad2c98912d2d8841ca3ab14c3f02ef5615821f77f"
+)
+DATASITE_REGISTRATION_URL = "https://auth.datasite.com/as/clients.oauth2"
+DATASITE_MISSING_KEY_SHA256 = (
+    "17c60631f7fca9959a523d60e2902fdf30893b3a3f91d6077bdc00647a3c8132"
+)
+DATASITE_INVALID_KEY_SHA256 = (
+    "a7f4063922ebd5b8ab551dc17c6d620fc9585d26ec8234455368a9dc6961c79f"
+)
+DATASITE_OPENAI_REVISION = "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9"
+DATASITE_OPENAI_BASE_URL = (
+    "https://raw.githubusercontent.com/openai/plugins/"
+    f"{DATASITE_OPENAI_REVISION}/plugins/datasite"
+)
+DATASITE_OPENAI_HASHES = {
+    ".app.json": (
+        "fa165f1f4b6e3edba2e22ed5de762a3bdce2f0903a78c38e8950f0de978a9826"
+    ),
+    ".codex-plugin/plugin.json": (
+        "35295240f97d359d99eff71ac7809aa79f00cdf23912f0a694d54e84c600602c"
+    ),
+    "assets/app-icon.svg": (
+        "29ac70744dec7fe3c9dbc0a1812e1bfa684bb23a5f9aab1fdc425899129bfc75"
+    ),
+    "assets/logo.png": (
+        "1c788987ed8312c52a013746c417691bb8361539d9d90f71c4d65056cd7a1694"
+    ),
+    "skills/bulk-qa-answers/SKILL.md": (
+        "6d33caf0f7fbdaf31aafd83b1584f4fc706ab0cd2de6aa841a57a5656e164f1a"
+    ),
+    "skills/bulk-qa-answers/agents/openai.yaml": (
+        "f9ffd75139ffe77ba2a069e2406b3b4bb111e722e7bc7f1d61cb213805860aaa"
+    ),
+    "skills/document-quality-check/SKILL.md": (
+        "1a7acfc5e67a9f8bf185f20fa409415b8baa76c70226322d8979984634c911b1"
+    ),
+    "skills/document-quality-check/agents/openai.yaml": (
+        "9e4b137a6a9e72d982d1801715855d724d41eb8486f7ec0ea0c174d25bde116e"
+    ),
+    "skills/gap-analysis/SKILL.md": (
+        "e80a4d88ad0a4c6129f56a76a9c7aef1fc0e2c310e332c5ab9ca986808eed88f"
+    ),
+    "skills/gap-analysis/agents/openai.yaml": (
+        "977c067ac0c7b0e45b5a962a918193bdf3a3e3ff1c1a1c177ab5d53544b83e5b"
+    ),
+    "skills/irl-tracker/SKILL.md": (
+        "2c5eba70045321caf5e208b189edd64cbe6730e5db69ae41b131ff738299400a"
+    ),
+    "skills/irl-tracker/agents/openai.yaml": (
+        "ce80e4ff79b5e77ca9a960f76a5e94a1a5eb57df798d3c652ebb28808cb361e3"
+    ),
+    "skills/launch-readiness-orchestrator/SKILL.md": (
+        "9bfb06a1470c51640304f6db9717c004aa7bcfaee652e922283ad1f92a651549"
+    ),
+    "skills/launch-readiness-orchestrator/agents/openai.yaml": (
+        "dcddd3c28f17168cea516a75c0dc05bc3121fab147cea41602f314d0d11022aa"
+    ),
+    "skills/risk-analysis-audit/SKILL.md": (
+        "e6a64ba109e83bb3c997f1d7cab873d920ded2c9420e389daf7f0c766943c075"
+    ),
+    "skills/risk-analysis-audit/agents/openai.yaml": (
+        "93ebc8e57b79980a30646a350fd60610af55fb16c2833f021d89e4f46a567a09"
+    ),
+    "skills/smart-file-renaming/SKILL.md": (
+        "8178edb758ab24145763bd2e14c4693290559e7148789a0382a35b8c52e38244"
+    ),
+    "skills/smart-file-renaming/agents/openai.yaml": (
+        "dba60a5ce0c9705725650c0d222c8ba39543ee8e22629e40933ad1a9e85d39e2"
+    ),
+    "skills/vdr-index-setup/SKILL.md": (
+        "867c169e881ed856ad45b0a6be6ae03612878692199636273da413f1ba480699"
+    ),
+    "skills/vdr-index-setup/agents/openai.yaml": (
+        "8769daa62f9565c35852a94e130fbbadad4baccb7d6153d9753d9b475953208d"
+    ),
+}
+DATASITE_OPENAI_INVENTORY_SHA256 = (
+    "3ad7ae4281a9b5238e22cf391485233dcece3b0967bab5ede1c284ccf0280316"
+)
 THOUGHTSPOT_MCP_URL = (
     "https://agent.thoughtspot.app/mcp?api-version=2026-05-01"
 )
@@ -3869,6 +4034,7 @@ def main() -> int:
     verify_common_room_evidence()
     verify_coveo_evidence()
     verify_cube_evidence()
+    verify_datasite_evidence()
     verify_thoughtspot_evidence()
     verify_outreach_evidence()
     verify_jam_evidence()
@@ -4161,6 +4327,21 @@ def normalize_coveo_product(value: str) -> str:
     if start < 0 or end < 0:
         raise ValueError("Coveo MCP product page structure changed")
     return visible[start : end + len(end_marker)]
+
+
+def normalize_datasite_page(
+    value: str,
+    start_marker: str,
+    end_marker: str,
+) -> str:
+    parser = VisibleTextParser()
+    parser.feed(value)
+    visible = " ".join(unescape(" ".join(parser.parts)).split())
+    start = visible.rfind(start_marker)
+    end = visible.find(end_marker, start)
+    if start < 0 or end < 0:
+        raise ValueError("Datasite page structure changed; re-audit required")
+    return visible[start:end].strip()
 
 
 def fetch_visible_text(url: str, required_marker: str) -> str:
@@ -10005,6 +10186,333 @@ def verify_cube_evidence() -> None:
         if marker not in long_description:
             raise ValueError(
                 f"Cube Codex capability evidence is missing {marker!r}"
+            )
+
+
+def verify_datasite_evidence() -> None:
+    page_specs = (
+        (
+            DATASITE_PRODUCT_URL,
+            "The data room you trust + the AI you love",
+            "AI built for every stage of M&A",
+            DATASITE_PRODUCT_SHA256,
+            (
+                "ChatGPT",
+                "Microsoft Copilot",
+                "Claude",
+                "Blueflame",
+                "permissions",
+                "audit",
+            ),
+        ),
+        (
+            DATASITE_PRESS_URL,
+            (
+                "Datasite® Becomes the First VDR Provider to Connect AI "
+                "Assistants Directly to Live Deal Content with MCP Server Launch"
+            ),
+            "About Datasite",
+            DATASITE_PRESS_SHA256,
+            (
+                "April 28, 2026",
+                "live deal content",
+                "permissions",
+                "logging",
+                "audit logs",
+                "citations back to source files",
+            ),
+        ),
+        (
+            DATASITE_FAQ_URL,
+            "What can Datasite MCP do by itself",
+            "The future of deal work starts with a question",
+            DATASITE_FAQ_SHA256,
+            (
+                "Blueflame",
+                "search semantically",
+                "ask questions against deal documents",
+                "citations",
+                "confidence",
+                "authenticated user’s Datasite permissions",
+            ),
+        ),
+    )
+    for url, start_marker, end_marker, expected_hash, markers in page_specs:
+        normalized = normalize_datasite_page(
+            fetch_text(url),
+            start_marker,
+            end_marker,
+        )
+        if sha256_text(normalized) != expected_hash:
+            raise ValueError(f"Datasite official page changed: {url}")
+        for marker in markers:
+            if marker not in normalized:
+                raise ValueError(
+                    f"Datasite official page is missing {marker!r}: {url}"
+                )
+
+    commit = fetch_json(
+        "https://api.github.com/repos/DatasiteAI/mcp-skills/commits/"
+        f"{DATASITE_SOURCE_REVISION}"
+    )
+    commit_details = commit.get("commit", {})
+    if (
+        commit.get("sha") != DATASITE_SOURCE_REVISION
+        or commit_details.get("tree", {}).get("sha") != DATASITE_SOURCE_TREE
+        or commit_details.get("message")
+        != (
+            "Merge pull request #1 from korchard/MIVS-3013\n\n"
+            "MIVS-3013: update read me to be llm agnostic"
+        )
+        or commit_details.get("verification", {}).get("verified") is not True
+    ):
+        raise ValueError("Datasite official source revision changed")
+
+    source_tree = fetch_json(
+        "https://api.github.com/repos/DatasiteAI/mcp-skills/git/trees/"
+        f"{DATASITE_SOURCE_TREE}?recursive=1"
+    )
+    source_files = sorted(
+        item["path"]
+        for item in source_tree.get("tree", [])
+        if item.get("type") == "blob"
+    )
+    if source_files != sorted(DATASITE_SOURCE_HASHES):
+        raise ValueError("Datasite official source file inventory changed")
+
+    source_content = {}
+    for relative_path, expected_hash in DATASITE_SOURCE_HASHES.items():
+        content = fetch_bytes(f"{DATASITE_SOURCE_BASE_URL}/{relative_path}")
+        if sha256_bytes(content) != expected_hash:
+            raise ValueError(
+                f"Datasite official source changed: {relative_path}"
+            )
+        source_content[relative_path] = content
+    source_inventory = "".join(
+        f"{DATASITE_SOURCE_HASHES[path]}  {path}\n"
+        for path in sorted(DATASITE_SOURCE_HASHES)
+    )
+    if sha256_text(source_inventory) != DATASITE_SOURCE_INVENTORY_SHA256:
+        raise ValueError("Datasite source inventory hash is inconsistent")
+
+    for license_name in (
+        "LICENSE",
+        "LICENSE.md",
+        "LICENSE.txt",
+        "COPYING",
+        "NOTICE",
+    ):
+        require_http_not_found(
+            f"{DATASITE_SOURCE_BASE_URL}/{license_name}",
+            f"Datasite official source {license_name}",
+        )
+
+    readme = source_content["README.md"].decode("utf-8")
+    for marker in (
+        "Eight coordinated skills",
+        "Free (T1 Core)",
+        "Blueflame (T2+)",
+        "`searchDocuments` is the only permitted source of document content",
+        "Blueflame AI",
+        "Datasite MCP server installed and authenticated",
+    ):
+        if marker not in readme:
+            raise ValueError(
+                f"Datasite official source README is missing {marker!r}"
+            )
+
+    skill_paths = tuple(
+        f"skills/{name}/SKILL.md" for name in DATASITE_SOURCE_SKILLS
+    )
+    tool_references = sorted(
+        {
+            match
+            for path in skill_paths
+            for match in re.findall(
+                r"`([A-Za-z][A-Za-z0-9]+)`",
+                source_content[path].decode("utf-8"),
+            )
+            if match in DATASITE_SOURCE_TOOL_REFERENCES
+        }
+    )
+    if tool_references != sorted(DATASITE_SOURCE_TOOL_REFERENCES):
+        raise ValueError("Datasite official skill tool references changed")
+
+    openai_content = {}
+    for relative_path, expected_hash in DATASITE_OPENAI_HASHES.items():
+        content = fetch_bytes(f"{DATASITE_OPENAI_BASE_URL}/{relative_path}")
+        if sha256_bytes(content) != expected_hash:
+            raise ValueError(f"Datasite Codex evidence changed: {relative_path}")
+        openai_content[relative_path] = content
+    openai_inventory = "".join(
+        f"{DATASITE_OPENAI_HASHES[path]}  {path}\n"
+        for path in sorted(DATASITE_OPENAI_HASHES)
+    )
+    if sha256_text(openai_inventory) != DATASITE_OPENAI_INVENTORY_SHA256:
+        raise ValueError("Datasite Codex inventory hash is inconsistent")
+    for path in skill_paths:
+        if source_content[path] != openai_content[path] + b"\n":
+            raise ValueError(
+                f"Datasite official and Codex skill content diverged: {path}"
+            )
+
+    codex_manifest = json.loads(
+        openai_content[".codex-plugin/plugin.json"]
+    )
+    interface = codex_manifest.get("interface", {})
+    if (
+        codex_manifest.get("name") != "datasite"
+        or codex_manifest.get("version") != "1.0.3"
+        or codex_manifest.get("author", {}).get("name") != "Datasite"
+        or interface.get("developerName") != "Datasite"
+        or interface.get("defaultPrompt")
+        != [
+            (
+                "Search Datasite for documents related to customer contracts "
+                "and summarize key diligence issues."
+            ),
+            (
+                "Find recently uploaded files in this Datasite project and "
+                "flag missing diligence items."
+            ),
+            (
+                "Summarize open Q&A items assigned to me in Datasite with "
+                "owners and next steps."
+            ),
+        ]
+    ):
+        raise ValueError("Datasite Codex developer evidence changed")
+    long_description = interface.get("longDescription", "")
+    for marker in (
+        "Set up a deal room",
+        "Search documents semantically",
+        "Track buyer Q&A",
+        "Audit deal room readiness",
+        "Manage user access",
+    ):
+        if marker not in long_description:
+            raise ValueError(
+                f"Datasite Codex capability evidence is missing {marker!r}"
+            )
+
+    protected_resource = fetch_json(DATASITE_PROTECTED_RESOURCE_URL)
+    if (
+        canonical_json_sha256(protected_resource)
+        != DATASITE_PROTECTED_RESOURCE_SHA256
+        or protected_resource.get("resource") != DATASITE_MCP_URL
+        or protected_resource.get("authorization_servers")
+        != ["https://auth.datasite.com"]
+        or protected_resource.get("scopes_supported")
+        != ["openid", "profile"]
+    ):
+        raise ValueError(
+            "Datasite protected-resource metadata changed; re-audit required"
+        )
+    auth_server = fetch_json(DATASITE_AUTH_SERVER_URL)
+    if (
+        canonical_json_sha256(auth_server) != DATASITE_AUTH_SERVER_SHA256
+        or auth_server.get("issuer") != "https://auth.datasite.com"
+        or auth_server.get("authorization_endpoint")
+        != "https://auth.datasite.com/as/authorization.oauth2"
+        or auth_server.get("token_endpoint")
+        != "https://auth.datasite.com/as/token.oauth2"
+        or auth_server.get("registration_endpoint")
+        != DATASITE_REGISTRATION_URL
+        or "authorization_code"
+        not in auth_server.get("grant_types_supported", [])
+        or "refresh_token"
+        not in auth_server.get("grant_types_supported", [])
+        or "none"
+        not in auth_server.get("token_endpoint_auth_methods_supported", [])
+        or auth_server.get("code_challenge_methods_supported") != ["S256"]
+    ):
+        raise ValueError(
+            "Datasite authorization metadata changed; re-audit required"
+        )
+
+    registration_request = urllib.request.Request(
+        DATASITE_REGISTRATION_URL,
+        data=b"{}",
+        headers={
+            "User-Agent": "ghast-datasite-audit/1.0",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        },
+        method="POST",
+    )
+    try:
+        urllib.request.urlopen(registration_request, timeout=30)
+    except urllib.error.HTTPError as exc:
+        registration_body = exc.read()
+        if (
+            exc.code != 404
+            or b"Looks like something is not right" not in registration_body
+        ):
+            raise ValueError(
+                "Datasite dynamic client registration behavior changed"
+            ) from exc
+    else:
+        raise ValueError(
+            "Datasite dynamic client registration unexpectedly became usable; "
+            "re-audit portability"
+        )
+
+    initialize = json.dumps(
+        {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "method": "initialize",
+            "params": {
+                "protocolVersion": "2025-06-18",
+                "capabilities": {},
+                "clientInfo": {
+                    "name": "ghast-datasite-audit",
+                    "version": "1.0.0",
+                },
+            },
+        },
+        separators=(",", ":"),
+    ).encode("utf-8")
+    probes = (
+        ({}, DATASITE_MISSING_KEY_SHA256),
+        (
+            {"Authorization": "Bearer invalid-datasite-audit-token"},
+            DATASITE_MISSING_KEY_SHA256,
+        ),
+        (
+            {"X-API-Key": "invalid-datasite-audit-key"},
+            DATASITE_INVALID_KEY_SHA256,
+        ),
+    )
+    for extra_headers, expected_hash in probes:
+        headers = {
+            "User-Agent": "ghast-datasite-audit/1.0",
+            "Content-Type": "application/json",
+            "Accept": "application/json, text/event-stream",
+            **extra_headers,
+        }
+        request = urllib.request.Request(
+            DATASITE_MCP_URL,
+            data=initialize,
+            headers=headers,
+            method="POST",
+        )
+        try:
+            urllib.request.urlopen(request, timeout=30)
+        except urllib.error.HTTPError as exc:
+            body = json.loads(exc.read())
+            body.pop("meta", None)
+            if (
+                exc.code != 401
+                or exc.headers.get("WWW-Authenticate") != "Key"
+                or canonical_json_sha256(body) != expected_hash
+            ):
+                raise ValueError(
+                    "Datasite MCP gateway authentication behavior changed"
+                ) from exc
+        else:
+            raise ValueError(
+                "Datasite MCP unexpectedly accepted audit credentials"
             )
 
 

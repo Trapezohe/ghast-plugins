@@ -3899,10 +3899,67 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.datasite.com"
+        "homepage": "https://www.datasite.com",
+        "review": {
+          "verificationStatus": "official-source-research-required",
+          "officialDeveloper": "Datasite",
+          "officialRepository": "https://github.com/DatasiteAI/mcp-skills",
+          "officialRevision": "27ac023c1ba595123cb515ff9643db45165ada9f",
+          "license": "UNVERIFIED",
+          "licenseEvidence": [
+            "The pinned official repository has no LICENSE, LICENSE.md, LICENSE.txt, COPYING, or NOTICE file.",
+            "The Codex manifest declares MIT, but that declaration does not establish redistribution rights for the separately maintained DatasiteAI repository, Datasite's privately hosted MCP implementation, tool schemas, data, or artwork.",
+            "No official skill, connector implementation, icon, or Datasite content is redistributed because no capability-equivalent Ghast plugin is published."
+          ],
+          "officialityEvidence": [
+            "The source repository is owned by the DatasiteAI GitHub organization and describes itself as the agent-skills repository for Datasite MCP Server.",
+            "The pinned GitHub-verified revision has tree 24bfa6be6ed414aa940d125edb641589979c1901. Its nine-file inventory has SHA-256 1bcde61fef7342b7df08376c1f0716a5c627000498611c74d5da0b5ac2b56255.",
+            "All eight official Blueflame-authored SKILL.md files match the corresponding Codex files byte-for-byte except for one final newline, proving the workflow instructions are developer-authored rather than OpenAI-authored.",
+            "Datasite's official product, launch, and webinar FAQ pages were captured with normalized visible-text SHA-256 values d35489cc228cf43fd855ecf2f1361e08e764a7eb148a42ca7be81a107357f542, 5692792cd0afaf53de0a62c7cdcd84c5b48992506786692276b6a4528bcfb81a, and 05de0b8285a55cf964a8b82e17dbda59017a9e3172e4b6df7e41d548be154038.",
+            "The official pages identify Datasite MCP support for ChatGPT, Claude, Microsoft Copilot, and Blueflame AI, while preserving Datasite permissions, redactions, PII controls, and audit logs.",
+            "The official source skills reference getProjectOverview, listSubscriptions, setupProject, createContent, listFolderContents, searchDocuments, and updateContent. They identify searchDocuments as the only permitted source of document content and require Blueflame for semantic and content-level workflows.",
+            "The hosted resource metadata identifies https://mcp.global.datasite.com/mcp and https://auth.datasite.com with openid and profile scopes; its canonical JSON SHA-256 is 4cb6bbccdf8fe5470e7bfff6aef61fb678908d5e26ac9e643915a71b6582e50a.",
+            "The authorization-server metadata advertises authorization code, refresh tokens, PKCE S256, public clients, device authorization, and dynamic registration; its canonical JSON SHA-256 is bbd60296055dd56e52a925cad2c98912d2d8841ca3ab14c3f02ef5615821f77f.",
+            "OpenAI's pinned Codex snapshot identifies Datasite as the developer and contains the same eight workflows. Its complete 20-file inventory has SHA-256 3ad7ae4281a9b5238e22cf391485233dcece3b0967bab5ede1c284ccf0280316."
+          ],
+          "codexCapabilities": [
+            "Create deal rooms, establish a standard M&A folder index, and invite administrators",
+            "Search live virtual-data-room documents semantically for diligence, litigation, regulatory, contract, and other deal risks",
+            "Track open buyer Q&A and draft source-grounded responses with document support",
+            "Audit launch readiness for empty folders, missing documents, failed files, password protection, blank content, PII, redaction, broken references, and broader risk signals",
+            "Create roles, manage permissions, and prepare user invitations",
+            "Run official VDR index, smart rename, gap analysis, document quality, IRL tracking, risk audit, bulk Q&A, and launch-readiness workflows"
+          ],
+          "ghastCapabilities": [
+            "Datasite's official hosted MCP and eight official workflow skills establish a capability surface corresponding to the Codex plugin.",
+            "No Ghast plugin is published because Datasite has not documented a portable custom-client authentication path and the official skill repository has no verified redistribution license."
+          ],
+          "capabilityRelationship": "official-hosted-mcp-found-private-client-and-license-blockers",
+          "limitations": [
+            "The hosted MCP endpoint requires a gateway API key before OAuth. Missing credentials and an invalid Bearer token both return HTTP 401 with a Key challenge; an invalid X-API-Key returns a distinct HTTP 401 Unauthorized response.",
+            "The protected-resource response does not provide the gateway key or a Bearer resource_metadata challenge, so a normal Ghast Streamable HTTP client cannot begin the advertised OAuth flow.",
+            "The authorization metadata advertises https://auth.datasite.com/as/clients.oauth2 as a dynamic registration endpoint, but standard GET, OPTIONS, and POST registration requests return HTTP 404. No client was created during the audit.",
+            "Datasite's official setup instructions describe selecting Datasite inside supported assistants and entering Datasite credentials. They do not publish a custom-connector endpoint, gateway API-key issuance process, OAuth client ID, or redirect registration process for independent clients.",
+            "The likely marketplace-level gateway key and registered OAuth client configuration are private integration credentials. Ghast must not extract, reuse, impersonate, or redistribute them.",
+            "The official source repository has no verified redistribution license, so its eight skills cannot be copied into Ghast even though their Datasite authorship and correspondence with Codex are proven.",
+            "Authenticated tools/list was not run because no portable client authentication path or Datasite account was supplied. The seven tool names referenced by the skills are workflow evidence, not a claim that they are the complete authenticated catalog.",
+            "Blueflame semantic search and document-content workflows depend on project activation, agreement, subscription, entitlements, permissions, and service availability. Metadata-only fallbacks do not reproduce the full Codex capability.",
+            "M&A rooms contain highly confidential deal data. Source citations, confidence signals, Datasite permissions, redactions, PII controls, audit logs, human review, and explicit confirmation for project, folder, rename, access, role, or invitation changes remain mandatory.",
+            "Do not create plugins/datasite until Datasite publishes or supplies an authorized portable authentication path and either licenses the official skills for redistribution or Ghast independently authors non-copying workflow instructions."
+          ],
+          "verification": [
+            "Run verify_datasite_evidence from scripts/import-official-hosted-plugins.py",
+            "Verify the pinned DatasiteAI commit, Git tree, exact nine-file source inventory, all source hashes, and continued absence of redistribution-license files",
+            "Compare every official SKILL.md with the corresponding Codex snapshot file and confirm the only byte difference remains one final newline",
+            "Verify the three normalized official Datasite page hashes and the protected-resource and authorization-server metadata hashes",
+            "Probe dynamic client registration and confirm the advertised endpoint still returns HTTP 404 without creating a client",
+            "Probe the hosted MCP initialize path with missing, invalid Bearer, and invalid X-API-Key credentials and confirm the pinned gateway behavior",
+            "Do not publish a plugin, icon, or package while the portability and license blockers remain"
+          ]
+        }
       },
       "ghast": {
         "implementationStatus": "not-implemented"
