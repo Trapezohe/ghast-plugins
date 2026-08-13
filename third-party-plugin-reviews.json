@@ -894,6 +894,63 @@
         "unzip -tqq packages/cb-insights.zip"
       ]
     },
+    "channel99": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Channel99 Inc.",
+      "officialRepository": null,
+      "officialRevision": "channel99-faq-81edc9b0c206+mcp-4cd47d0e9970+release-a3f1d62a2d0e+schema-4acb7bcdb5b5+api-d35fdf232c66+oauth-01e50ee050ad",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/channel99/LICENSE licenses only the Ghast-authored MCP configuration, measurement and privacy skill, documentation, catalog metadata, and generic marketing analytics icon.",
+        "Channel99 does not publish a redistribution license for its hosted MCP implementation. Ghast does not copy that service, customer data, private Codex connector, application bundle, account credentials, official logo, or marketplace artwork.",
+        "The OpenAI snapshot's MIT declaration applies to the OpenAI repository package and does not establish a license for Channel99's hosted implementation or permit treating its private connector as portable source."
+      ],
+      "officialityEvidence": [
+        "Channel99's official support FAQ says the MCP connection uses a universal URL, OAuth 2.1, encryption in transit and at rest, database-per-customer segregation, domain-level data without contact information or emails, and read-only database permissions. Article 47105598392475 was updated May 27, 2026 and its body SHA-256 is 81edc9b0c2066c4f5b6c4d9bb2667af651d2b11e37692c20a7baffe72421a659.",
+        "Channel99's official MCP information article says its service unifies marketing performance, audience profiles, account identity, site activity, pixel data, vendor scores, benchmarks, CRM sources, ad-platform sources, IP and firmographic partners, and curated low-latency views. Article 46757387781275 was updated March 24, 2026 and its body SHA-256 is 4cd47d0e997021db3644ec05fefbd275e356cb9d9391301647470547b45e295e.",
+        "Channel99's January 2026 product release says its MCP server exposes a team knowledge repository plus a guarded SQL-backed data interface for evidence-linked analysis while preserving enterprise read-only controls. Article 48487117045019 was updated March 30, 2026 and its body SHA-256 is a3f1d62a2d0e9cf4853a1d271ac07c6c4cbab0e46642821e0a584f4f60d331bd.",
+        "The official Snowflake data-share article documents the MCP-equivalent Fact and Dimension schema, including Visit, Pageview, Impression, channel, vendor, company, audience, ad account, campaign group, campaign, ad group, ad, and ad-detail data. Article 35162878162331 was updated January 30, 2026 and its body SHA-256 is 4acb7bcdb5b5b85e0949d1204ba8ce0292fc0e108aa52fcbf051beddfe176088.",
+        "The official Reporting API guide corroborates the available reporting surface for web traffic, vendors, campaigns, audiences, companies, opportunities, pixel exposure, spend, impressions, clicks, visits, engagement, pipeline influence, closed-won influence, fit score, and grouping or filtering dimensions. Article 49766041989787 was updated July 22, 2026 and its body SHA-256 is d35fdf232c66160389cfd05c2a426d2eedc3dd8fafdf78e8ae58a1f8ab0b3da7.",
+        "The live official endpoint https://mcp.channel99.com/mcp publishes protected-resource and authorization-server metadata with canonical JSON SHA-256 values 01e50ee050ad504ca381c30fb182823ac2ea165481ed5ae6b30514eb46add444 and 2d4dd826e23de65743d61b6dd13256aead0819f212dc4108fa810ebeb6f8c77b. They declare Channel99's Stytch issuer, Channel99 browser authorization page, authorization-code and refresh-token grants, public clients, openid email profile scopes, Client ID Metadata Documents, and PKCE S256.",
+        "Channel99's authoritative Stytch metadata declares a public dynamic registration endpoint. After excluding volatile request_id and status_code fields, its canonical JSON SHA-256 is e3b99805cb989002ab42d2df994eb34f16e32ce699680264bd9fa88ce07297f5. No client was registered during this audit.",
+        "On August 13, 2026, missing and invalid Bearer initialize requests returned HTTP 401, the official protected-resource challenge, and body SHA-256 values 8f3246fc96d73ef6ff1c0eca047885cc1899e8541dc545f3eaa5003c848d52ba and 8e53751849c53ad38cad77ba0bd2cc3107ff150bb5e8d5f51a1b4f8674da40de.",
+        "OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 identifies Channel99 Inc. as the developer and describes unified B2B marketing data, attribution, account identification, campaign performance, spend efficiency, audience engagement, cross-channel attribution, budget reallocation, and pipeline efficiency. Its manifest and private app hashes are 826a697108aefd0200f82e6a9b6e19ff0630367bb142d956d4db79ac453171e8 and 86972fa7775d12f126bfdf1c7f869ef1695a26e1a3d6d82eeacd8337367cb6d6."
+      ],
+      "codexCapabilities": [
+        "Summarize Channel99 campaign performance from real-time unified B2B marketing data",
+        "Analyze spend efficiency, audience engagement, account identification, and cross-channel attribution",
+        "Identify high-value engagement and evaluate budget reallocation for pipeline efficiency"
+      ],
+      "ghastCapabilities": [
+        "Connect directly to Channel99's official hosted MCP service using browser OAuth 2.1, public-client authentication, Client ID Metadata Documents, and PKCE S256",
+        "Analyze the same official channel, vendor, campaign, audience, company-domain, visit, impression, pixel, spend, engagement, attribution, pipeline, closed-won, keyword, ad-group, fit-score, and knowledge-repository data available to the authorized Channel99 instance",
+        "Produce campaign summaries, aligned comparisons, account-engagement analysis, evidence-structured attribution reports, and budget recommendations while preserving filters, definitions, coverage, and uncertainty",
+        "Apply independently authored read-only, domain-level privacy, attribution-versus-causation, metric-alignment, source-coverage, and high-impact-decision safeguards"
+      ],
+      "capabilityRelationship": "equivalent-official-hosted-mcp-with-authenticated-schema-gap",
+      "limitations": [
+        "The hosted MCP implementation is operated by Channel99 and is not redistributed. The MIT license applies only to the independently authored Ghast adapter.",
+        "A Channel99 account, customer instance, browser OAuth authorization, role, plan, enabled MCP access, connected tags, pixels, ad platforms, CRM, intent providers, paid modules, retained history, and customer-specific permissions remain user-managed.",
+        "Official documentation, OAuth metadata, the live authentication boundary, and the OpenAI capability description were verified without a Channel99 account. Authenticated tools/list, customer knowledge, SQL-backed views, reports, campaign data, audience data, CRM data, and paid operations were not accessed.",
+        "The live tool catalog is authenticated and service-controlled. The adapter does not invent tool names, SQL, schemas, fields, or annotations; current server schemas remain authoritative.",
+        "The MCP FAQ and January release define the database interface as read-only. A broader product-information article mentions execution pathways that can launch campaign or CRM updates, but the adapter does not expose or promise those writes unless future live MCP schemas and official permission documentation explicitly establish them.",
+        "Attribution, pipeline influence, closed-won influence, fit scores, return on marketing spend, and engagement metrics depend on source coverage, identity resolution, configured audiences, CRM quality, lookback windows, attribution models, and Channel99 methodology and do not establish causation.",
+        "Channel99 documents domain-level MCP data without contact information, usernames, passwords, or emails. The integration must not be used to deanonymize visitors, infer sensitive traits, or make autonomous employment, housing, lending, insurance, education, or other high-impact eligibility decisions.",
+        "No OAuth client was registered, no browser authorization was completed, and no token or reusable credential was retained during the audit.",
+        "A generic marketing analytics icon is used because no licensed Channel99 catalog artwork is included in redistributable official source."
+      ],
+      "verification": [
+        "Run verify_channel99_evidence and import_channel99 from scripts/import-official-hosted-plugins.py through Python runpy",
+        "Verify all five official Channel99 support article IDs, update timestamps, body hashes, and capability or permission markers recorded in plugins/channel99/README.md",
+        "Verify canonical OAuth protected-resource and authorization-server hashes 01e50ee050ad504ca381c30fb182823ac2ea165481ed5ae6b30514eb46add444 and 2d4dd826e23de65743d61b6dd13256aead0819f212dc4108fa810ebeb6f8c77b",
+        "Verify the stable Stytch authorization metadata hash e3b99805cb989002ab42d2df994eb34f16e32ce699680264bd9fa88ce07297f5 after excluding volatile request_id and status_code fields; do not register a client during normal importer runs",
+        "Probe https://mcp.channel99.com/mcp with missing and invalid Bearer initialize requests and confirm HTTP 401, body hashes 8f3246fc96d73ef6ff1c0eca047885cc1899e8541dc545f3eaa5003c848d52ba and 8e53751849c53ad38cad77ba0bd2cc3107ff150bb5e8d5f51a1b4f8674da40de, and the official protected-resource challenge",
+        "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 manifest and private app hashes and compare all Codex capability claims with Channel99's official read-only MCP, schema, and reporting evidence",
+        "Authorize an eligible Channel99 account before testing authenticated tools, knowledge queries, marketing data, SQL-backed analysis, reports, or account-specific entitlements",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/channel99.zip"
+      ]
+    },
     "circleci": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "CircleCI",

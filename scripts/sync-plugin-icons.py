@@ -138,6 +138,17 @@ CUSTOM_ICONS = {
         '<circle cx="36" cy="22" r="2" fill="white" stroke="none"/>'
         '<circle cx="50" cy="11" r="2" fill="white" stroke="none"/>',
     ),
+    "channel99": (
+        "#287067",
+        '<path d="M11 49h42"/>'
+        '<rect x="14" y="35" width="8" height="10"/>'
+        '<rect x="28" y="27" width="8" height="18"/>'
+        '<rect x="42" y="18" width="8" height="27"/>'
+        '<path d="M14 27l10-7 9 3 16-12"/>'
+        '<circle cx="24" cy="20" r="2" fill="white" stroke="none"/>'
+        '<circle cx="33" cy="23" r="2" fill="white" stroke="none"/>'
+        '<circle cx="49" cy="11" r="2" fill="white" stroke="none"/>',
+    ),
     "carta-crm": (
         "#2A6F62",
         '<rect x="11" y="13" width="42" height="38" rx="3"/>'

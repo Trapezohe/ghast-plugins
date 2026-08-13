@@ -48,7 +48,7 @@ verification.
 | carta-crm | Carta Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | catalyst-by-zoho | Catalyst by Zoho | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | cb-insights | CB Insights | appConnector | MIT | official-source-verified | implemented-verified |
-| channel99 | Channel99 Inc.  | appConnector | MIT | official-source-research-required | not-implemented |
+| channel99 | Channel99 Inc.  | appConnector | MIT | official-source-verified | implemented-verified |
 | chronograph-gp | Chronograph | appConnector, skills | MIT | official-source-research-required | not-implemented |
 | chronograph-lp | Chronograph | appConnector, skills | MIT | official-source-research-required | not-implemented |
 | circleback | Circleback AI, Inc. | appConnector | MIT | official-source-verified | implemented-verified |

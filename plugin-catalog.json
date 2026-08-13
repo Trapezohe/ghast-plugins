@@ -644,6 +644,34 @@
       "license": "MIT"
     },
     {
+      "id": "channel99",
+      "name": "channel99",
+      "description": "Analyze read-only B2B marketing performance, channels, vendors, campaigns, audiences, account engagement, attribution, spend efficiency, and pipeline influence through Channel99's official hosted MCP server.",
+      "manifest": {
+        "name": "channel99",
+        "description": "Analyze read-only B2B marketing performance, channels, vendors, campaigns, audiences, account engagement, attribution, spend efficiency, and pipeline influence through Channel99's official hosted MCP server.",
+        "author": {
+          "name": "Channel99 Inc.",
+          "url": "https://www.channel99.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://www.channel99.com/articles/channel99-connects-marketing-intelligence-data-to-genai-platforms",
+        "upstreamRevision": "channel99-faq-81edc9b0c206+mcp-4cd47d0e9970+release-a3f1d62a2d0e+schema-4acb7bcdb5b5+api-d35fdf232c66+oauth-01e50ee050ad",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/channel99.zip",
+        "sha256": "594e5209f486b59d2a45f83a41e2a52fd6b8ee7f7e411c3b4df2509ad254760a"
+      },
+      "icon": "./plugins/channel99/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://www.channel99.com/articles/channel99-connects-marketing-intelligence-data-to-genai-platforms",
+      "license": "MIT"
+    },
+    {
       "id": "circleback",
       "name": "circleback",
       "description": "Search authorized Circleback meetings, transcripts, action items, calendar events, emails, people, companies, tags, and support content through Circleback's official hosted MCP server.",
