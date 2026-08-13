@@ -246,6 +246,14 @@ CUSTOM_ICONS = {
         '<path d="M23 21h18M23 29h18M23 37h12"/>'
         '<path d="M36 45l6-6 5 5-6 6-7 2z"/>',
     ),
+    "govtribe": (
+        "#236A5A",
+        '<path d="M12 24h40L32 11z"/>'
+        '<path d="M17 25v21M26 25v21M38 25v21M47 25v21"/>'
+        '<path d="M11 47h42M8 53h48"/>'
+        '<circle cx="45" cy="43" r="8" fill="#236A5A"/>'
+        '<path d="M51 49l5 5"/>',
+    ),
     "jam": (
         "#5F4A8B",
         '<rect x="10" y="13" width="44" height="34" rx="4"/>'

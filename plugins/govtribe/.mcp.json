@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "govtribe": {
+      "url": "https://govtribe.com/mcp",
+      "transport": "streamable-http",
+      "headers": {
+        "Authorization": "Bearer $VAULT:govtribe-mcp-api-key"
+      }
+    }
+  }
+}

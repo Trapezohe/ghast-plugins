@@ -88,7 +88,7 @@ verification.
 | fiscal-ai | Fiscal AI | appConnector | MIT | official-source-verified | implemented-verified |
 | fyxer | Fyxer | appConnector | MIT | official-source-verified | implemented-verified |
 | glean | Glean Technologies, Inc. | appConnector | MIT | official-source-verified | implemented-verified |
-| govtribe | Government Executive Media Group LLC | appConnector | MIT | official-source-research-required | not-implemented |
+| govtribe | Government Executive Media Group LLC | appConnector | MIT | official-source-verified | implemented-verified |
 | granola | Granola | appConnector | MIT | official-source-verified | implemented-verified |
 | happenstance | Happenstance, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | hebbia | Hebbia | appConnector | MIT | official-source-research-required | not-implemented |

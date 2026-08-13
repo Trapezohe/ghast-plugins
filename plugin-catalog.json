@@ -1210,6 +1210,34 @@
       "license": "MIT"
     },
     {
+      "id": "govtribe",
+      "name": "govtribe",
+      "description": "Research public-sector opportunities, awards, vendors, agencies, forecasts, pricing, files, news, and authorized workspace records through GovTribe's official hosted MCP.",
+      "manifest": {
+        "name": "govtribe",
+        "description": "Research public-sector opportunities, awards, vendors, agencies, forecasts, pricing, files, news, and authorized workspace records through GovTribe's official hosted MCP.",
+        "author": {
+          "name": "Government Executive Media Group LLC",
+          "url": "https://govtribe.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://govtribe.com/docs/govtribe-user-guide/govtribe-mcp",
+        "upstreamRevision": "govtribe-docs-e0cd276f0d5e+servers-6ea83b94854e+tools-80cebed0f455+annotations-eed9dde0f2ea",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/govtribe.zip",
+        "sha256": "cfa17d50d9473da2cce4b4a4b5b20efa36cb336307ae3c4bf0e61c22608bba86"
+      },
+      "icon": "./plugins/govtribe/assets/icon.svg",
+      "category": "research",
+      "homepage": "https://govtribe.com/docs/govtribe-user-guide/govtribe-mcp",
+      "license": "MIT"
+    },
+    {
       "id": "granola",
       "name": "granola",
       "description": "Search and analyze Granola meeting notes, transcripts, attendees, folders, decisions, and action items through Granola's official hosted MCP server.",

@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 59,
-      "official-source-verified": 85
+      "official-source-research-required": 58,
+      "official-source-verified": 86
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 85,
-      "not-implemented": 64
+      "implemented-verified": 86,
+      "not-implemented": 63
     }
   },
   "excludedOpenAIPlugins": [
@@ -4630,7 +4630,7 @@
     },
     {
       "id": "govtribe",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Government Executive Media Group LLC",
@@ -4655,13 +4655,74 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://govtribe.com/"
+        "homepage": "https://govtribe.com/",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Government Executive Media Group LLC",
+          "officialRepository": null,
+          "officialRevision": "govtribe-docs-e0cd276f0d5e+servers-6ea83b94854e+tools-80cebed0f455+annotations-eed9dde0f2ea",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/govtribe/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic government-procurement icon.",
+            "No GovTribe hosted MCP implementation, private Codex or ChatGPT app connector, API key, account data, proprietary dataset, branded artwork, or marketplace icon is redistributed."
+          ],
+          "officialityEvidence": [
+            "GovTribe's official documentation identifies https://govtribe.com/mcp as the standard public Streamable HTTP MCP endpoint and documents Authorization Bearer authentication with a user-created GovTribe MCP API key.",
+            "GovTribe's official Codex guide configures the same standard endpoint with GOVTRIBE_MCP_API_KEY and Codex's bearer-token environment-variable support.",
+            "The official server guide publishes the standard, compact, OpenAI compatibility, and 18 grouped server URLs for public search, pricing, grants, state and local records, vendors, contacts, files, news, workspace search and actions, teaming, automations, file retrieval, documentation, interactive apps, memory, and prior-conversation search.",
+            "The official tool index has raw SHA-256 80cebed0f45519e12e113404b0a76e8bb78f4b1318e9c413d74282e891453a5c and contains 102 catalog entries representing 101 unique tool names because Search_Service_Contract_Inventory appears in two categories.",
+            "The unique tool-name, complete tool-to-annotation, and ordered-entry hashes are a3a15c921e76186a7fcc3293dd7d55f644b88a4ca14505b381f8c0a39746d7a0, eed9dde0f2ea29625133259afc34efaa7a0fa9e4abe84dd54c9e93445fc42494, and 6cf75419d4b512d0d33285fb3daa75c96fdc4d7c24d9a6d1de1086f2c9bed299.",
+            "The 101 unique official tool pages annotate 59 tools as read-only and 42 as state-changing. The state-changing set includes 20 destructive idempotent, 16 destructive non-idempotent, two non-destructive idempotent, and four non-destructive non-idempotent tools.",
+            "On August 13, 2026, missing and invalid Bearer initialize requests to https://govtribe.com/mcp returned HTTP 401 with distinct official unauthenticated-token responses.",
+            "OpenAI's pinned Codex plugin snapshot identifies Government Executive Media Group LLC as the developer and describes opportunity discovery, vendor competition, teaming-partner research, agency spending patterns, market research, competitive analysis, and proposal preparation. The manifest and private connector declarations have SHA-256 hashes 9dbcf5f82dc1809712e93065e25a03791937405048633f3a1d233d10566b21ac and 36a2194cddfd2bcb398bc0470bd6a8109eedd78b9ac961eec1b3ddb62afa0e87.",
+            "No official public source repository containing the hosted GovTribe MCP implementation was identified, so Ghast integrates only the verified official hosted service and independently authored adapter."
+          ],
+          "codexCapabilities": [
+            "Search government contracts, awards, and vendors through the private GovTribe app connector",
+            "Find relevant opportunities across federal agencies and pull the relevant opportunity context",
+            "Analyze vendor competition, explore teaming partners, and track agency spending patterns",
+            "Support new-market research, competitive analysis, and proposal preparation"
+          ],
+          "ghastCapabilities": [
+            "The same GovTribe opportunity, award, vendor, agency, competition, teaming, spending-pattern, market-research, and proposal-context workflows through GovTribe's official standard MCP endpoint",
+            "Broader official public-data coverage for federal contracts, grants, state and local procurement, forecasts, IDVs, vehicles, sub-awards, transactions, categories, contacts, pricing and labor data, government files, and procurement news",
+            "Authorized workspace search and explicitly confirmed actions for pipelines, pursuits, stages, tags, tasks, saved searches, favorites, automations, teaming, messages, file and vector retrieval, interactive views, and durable memory",
+            "A source-grounded workflow skill that preserves record identifiers and dates, separates facts from inference, protects procurement and workspace data, discloses credit use, and confirms every state-changing operation"
+          ],
+          "capabilityRelationship": "superset-official-hosted-mcp",
+          "limitations": [
+            "The hosted MCP implementation is operated by Government Executive Media Group LLC and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+            "A GovTribe account with MCP access, enabled credits for credit-billed tools, a user-created MCP API key, an eligible subscription, account and workspace permissions, data entitlements, and service limits remain user-managed.",
+            "MCP API keys act as their creator, are shown once, and expire after one year. They must remain in the govtribe-mcp-api-key vault entry and be revoked if exposed.",
+            "Most GovTribe MCP operations consume credits separately from the subscription. Current per-action prices, prepaid balance, Pay-As-You-Go, auto-refill, alerts, exemptions, and billing preflight behavior remain controlled by GovTribe.",
+            "Documentation, the complete 101-tool safety inventory, Codex capability evidence, and missing or invalid credential behavior were verified without an account. Authenticated tools/list, credit consumption, public-data retrieval, workspace reads, and state-changing operations were not run.",
+            "The standard endpoint is broader than the curated OpenAI compatibility endpoint and includes 42 state-changing tools. Every create, update, delete, message, teaming, automation, memory, favorite, interaction-state, or file/vector action requires exact target review and explicit current-conversation confirmation.",
+            "Sixteen official tools are destructive and non-idempotent. Ambiguous results must be inspected through current state before any retry.",
+            "Government opportunity, award, spending, vendor, forecast, pricing, contact, file, and news data can be delayed, amended, duplicated, incomplete, licensed, or inconsistent. Important status, deadline, eligibility, set-aside, vehicle, and submission facts require source verification.",
+            "Workspace records, proposal files, comments, contacts, memories, prior conversations, and teaming messages can contain personal, proprietary, acquisition-sensitive, source-selection, CUI, or export-controlled information. Retrieval and disclosure must remain narrowly scoped.",
+            "A generic government-procurement icon is used because no licensed GovTribe catalog artwork is included in a public official MCP source repository."
+          ],
+          "verification": [
+            "Run the GovTribe evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
+            "Verify the seven official GovTribe documentation hashes recorded in plugins/govtribe/README.md",
+            "Parse all 102 official tool-index entries and 101 unique tool pages, then confirm the name and annotation hashes and the 59 read-only versus 42 state-changing split",
+            "Probe https://govtribe.com/mcp with missing and invalid Bearer initialize requests and confirm HTTP 401 plus body hashes 8031180d4d982a471ca97ef5a04e8d013d003c5c19e80d0a5f45401c4463ec27 and 7ed587acfc9f0672dd422796c1920383560f6b1aa80c81c1bdee551e59cf6cd4",
+            "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 GovTribe manifest and connector hashes and compare every published Codex workflow with the official standard MCP product surface",
+            "Authorize a GovTribe account and enable credits before testing authenticated tool schemas, data retrieval, billing, or workspace actions",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/govtribe.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": null,
+        "upstreamRevision": "govtribe-docs-e0cd276f0d5e+servers-6ea83b94854e+tools-80cebed0f455+annotations-eed9dde0f2ea",
+        "portStatus": "full"
       }
     },
     {
