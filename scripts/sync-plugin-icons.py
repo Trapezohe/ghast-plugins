@@ -98,6 +98,14 @@ CUSTOM_ICONS = {
         '<circle cx="31" cy="33" r="2" fill="white" stroke="none"/>'
         '<circle cx="41" cy="21" r="2" fill="white" stroke="none"/>',
     ),
+    "brex": (
+        "#356C68",
+        '<rect x="11" y="14" width="42" height="36" rx="3"/>'
+        '<path d="M11 25h42M18 20h12M39 20h7"/>'
+        '<path d="M18 33h12M18 41h8"/>'
+        '<circle cx="43" cy="38" r="7"/>'
+        '<path d="M43 33v10M38 38h10"/>',
+    ),
     "biorender": (
         "#2F747A",
         '<path d="M13 14h27l9 9v27H13z"/>'

@@ -467,6 +467,34 @@
       "license": "MIT"
     },
     {
+      "id": "brex",
+      "name": "brex",
+      "description": "Analyze Brex expenses, cards, limits, banking, bills, accounting, travel, and organization data, or safely update supported expense details through Brex's official hosted MCP server.",
+      "manifest": {
+        "name": "brex",
+        "description": "Analyze Brex expenses, cards, limits, banking, bills, accounting, travel, and organization data, or safely update supported expense details through Brex's official hosted MCP server.",
+        "author": {
+          "name": "Brex Inc.",
+          "url": "https://brex.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://developer.brex.com/docs/mcp",
+        "upstreamRevision": "brex-docs-0d1f82f38bb5+oauth-06b076acaeca+auth-6cf20c287281",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/brex.zip",
+        "sha256": "2d02b72ad0590ae57b9bd8ad58dfbdb483e35336d9d3bb342f34510a19643835"
+      },
+      "icon": "./plugins/brex/assets/icon.svg",
+      "category": "finance",
+      "homepage": "https://developer.brex.com/docs/mcp",
+      "license": "MIT"
+    },
+    {
       "id": "calendly",
       "name": "calendly",
       "description": "Inspect Calendly meetings and availability, manage event types and schedules, create booking links, book or cancel meetings, and administer invitations through Calendly's official hosted MCP server.",

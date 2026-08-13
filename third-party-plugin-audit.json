@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 64,
-      "official-source-verified": 80
+      "official-source-research-required": 63,
+      "official-source-verified": 81
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 80,
-      "not-implemented": 69
+      "implemented-verified": 81,
+      "not-implemented": 68
     }
   },
   "excludedOpenAIPlugins": [
@@ -1380,7 +1380,7 @@
     },
     {
       "id": "brex",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Brex Inc.",
@@ -1405,13 +1405,77 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://brex.com"
+        "homepage": "https://brex.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Brex Inc.",
+          "officialRepository": null,
+          "officialRevision": "brex-docs-0d1f82f38bb5+oauth-06b076acaeca+auth-6cf20c287281",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/brex/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic expense-control icon.",
+            "No Brex hosted MCP implementation, private Codex connector, service source code, financial or personal data, OAuth or API credentials, branded artwork, or marketplace icon is redistributed."
+          ],
+          "officialityEvidence": [
+            "Brex's official developer documentation publishes https://api.brex.com/mcp for ChatGPT, Codex, Claude, Cursor, and any MCP-compatible HTTP client.",
+            "Brex's April 2026 API changelog identifies the Brex MCP server as a Brex beta with OAuth and API-key authentication for expenses, users, cards, and related finance workflows.",
+            "The official MCP guide, last modified May 7, 2026, publishes an ordered 43-tool catalog with exact access requirements and states that existing Brex capabilities govern what each user can see and modify.",
+            "The live endpoint, protected-resource metadata, authorization metadata, registration endpoint, and login flow are hosted on Brex-controlled brex.com domains.",
+            "The protected-resource metadata has canonical JSON SHA-256 06b076acaecafd323510dffc6eec88d4615377444808bfa57a34e7828ab3a818 and advertises 19 scopes spanning identity, organization, cards, budgets, travel, expenses, banking, vendors, and accounting.",
+            "The authorization-server metadata has canonical JSON SHA-256 6cf20c287281acae2a8bad5ce78e5650ccc193f9040f2d43c2ba9a6a333f8299 and declares authorization code, refresh tokens, Dynamic Client Registration, public clients, and PKCE S256.",
+            "On August 13, 2026, one loopback public OAuth client registered with HTTP 201 without a client secret, and its PKCE authorization request reached Brex's login flow."
+          ],
+          "codexCapabilities": [
+            "Analyze company and employee spend, detect anomalies, and run custom finance queries and reports through a private app connector",
+            "Check personal spend capacity, policy questions, reimbursement status, and travel context",
+            "Apply role-aware visibility so employees see their own applicable data while administrators retain broader finance visibility",
+            "Calculate how much the authenticated user spent with Delta during the prior year"
+          ],
+          "ghastCapabilities": [
+            "Direct access to Brex's official hosted MCP service through standard Streamable HTTP and browser OAuth instead of the Codex-only private app connector",
+            "All 43 currently documented official tools for users and organization dimensions, reward points, expenses, analytics, receipts, attendees, spend limits, reimbursements, exports, merchants, cards, policy, business accounts, banking transactions, bills, vendors, accounting, GL accounts, travel, and feedback",
+            "The Codex spend, anomaly, policy, reimbursement, travel-context, reporting, and merchant-period analysis workflows with Brex's published role-aware access controls",
+            "A Ghast workflow skill that protects financial and personal data, preserves currency, entity, date, status, and filter provenance, prevents unsupported audit or settlement claims, and requires immediate exact-target confirmation for every mutation, export, URL fetch, or feedback submission"
+          ],
+          "capabilityRelationship": "equivalent-official-public-mcp-with-beta-boundaries",
+          "limitations": [
+            "Brex does not publish the hosted MCP server source or a public source repository. The MIT license applies only to the Ghast-authored adapter.",
+            "Brex MCP is currently beta. An account or card admin must accept the Developer API agreement and enable Brex in AI assistants before users can connect.",
+            "A Brex account, supported financial products, role capabilities, OAuth authorization or a narrowly scoped API token, connected ERP, travel access, data retention, and service limits remain user-managed.",
+            "Authenticated tools/list and financial-data operations were not exercised because no user Brex account, credentials, company data, or financial records were used during the audit.",
+            "The published catalog currently contains 43 tools, but Brex warns that beta tools may change. The importer fails closed on any documentation, tool-order, access-table, scope, or protocol drift.",
+            "Six published tools create state or external side effects: update_expense_memo, upload_card_expense_receipt_from_urls, replace_attendees_for_card_expense, assign_limit_for_card_expenses, start_expense_download, and submit_feedback. They require exact-target review and explicit confirmation.",
+            "Receipt upload asks Brex to fetch user-provided URLs. Signed URLs, private-network locations, credentials, unrelated files, and unauthorized receipts must not be sent.",
+            "Expense exports and returned download URLs can contain broad financial and personal data. Filters, format, scope, destination, and recipient must be confirmed before starting an export.",
+            "Brex explicitly states that approvals and card management are not yet available through MCP. Travel tools currently read trips, bookings, and group events rather than changing reservations.",
+            "The one disposable DCR response returned no registration_client_uri or registration_access_token, so the audit client could not be removed through RFC 7592 registration management.",
+            "A generic expense-control icon is used because no licensed Brex catalog artwork is included in a public official MCP source repository."
+          ],
+          "verification": [
+            "Run the Brex evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated Close evidence drift",
+            "Verify https://developer.brex.com/docs/mcp.md has exact SHA-256 0d1f82f38bb572f82c4a16d9c4ddd787333b3f466ddc485b5e6399903ec7adf9 and page metadata lastModified 2026-05-07T15:57:03.000Z",
+            "Verify the ordered 43-tool name SHA-256 b3ecc5bbc619380164541cf93f16678da4a9df256859c62f9b26d4a054958fef and complete name-description-access table SHA-256 ad0bf121e350bb47363ce6603e994c88cb1d0955d24fc363918d54fa2a3490a8",
+            "Verify canonical protected-resource and authorization-server metadata hashes 06b076acaecafd323510dffc6eec88d4615377444808bfa57a34e7828ab3a818 and 6cf20c287281acae2a8bad5ce78e5650ccc193f9040f2d43c2ba9a6a333f8299 plus the exact 19-scope order",
+            "Probe https://api.brex.com/mcp with MCP initialize and confirm HTTP 401, Brex's structured unauthorized response, authorization URI, and protected-resource challenge",
+            "Confirm one disposable loopback public client registered with HTTP 201 without a client secret and its PKCE request reached Brex login; do not repeat registration in the importer because no registration management URI was issued",
+            "Compare all 43 published tools, access rules, examples, role boundaries, unavailable approvals and card management, and the official support capability groups with the Codex long description and Delta default prompt",
+            "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+            "python3 scripts/build-ghast-catalog.py",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/brex.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": null,
+        "upstreamRevision": "brex-docs-0d1f82f38bb5+oauth-06b076acaeca+auth-6cf20c287281",
+        "portStatus": "full"
       }
     },
     {
