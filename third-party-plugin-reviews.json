@@ -34,6 +34,54 @@
         "unzip -tqq packages/airtable.zip"
       ]
     },
+    "amplitude": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Amplitude, Inc.",
+      "officialRepository": "https://github.com/amplitude/mcp-marketplace",
+      "officialRevision": "90c0a8e658db547ab63a2210e84be07c23ce4cd0",
+      "license": "MIT",
+      "licenseEvidence": [
+        "LICENSE",
+        "The repository-wide MIT license is copyright 2026 Amplitude, Inc. and covers the plugin manifests, MCP declaration, README, and all 36 published skill trees."
+      ],
+      "officialityEvidence": [
+        "The source repository is owned by Amplitude's official GitHub organization, calls the package the official Amplitude plugin, and publishes manifests for Codex, Claude, and Cursor.",
+        "The pinned August 6, 2026 revision publishes Amplitude plugin version 1.5.2, names Amplitude as author and developer, and declares https://mcp.amplitude.com/mcp as its hosted MCP server.",
+        "Amplitude's official MCP documentation and live OAuth discovery publish separate US and EU services, browser OAuth, read and write scopes, authorization-code and refresh-token grants, and PKCE S256.",
+        "The US protected-resource and authorization-server metadata have canonical JSON SHA-256 hashes c0049fbf72b1f6bdd880d8f50fe1b3ca318ff5511ac33a255c581adfe67d7c5a and d9bf23290fb5b04aa841f85bb3830fa3b7f2ce493730cabe72dd692b02db3857.",
+        "The EU protected-resource and authorization-server metadata have canonical JSON SHA-256 hashes 48901b3ca7ec5daf3df71505cc3a60bedb34e0ed76cae3e231e1bf152da70975 and dc8f567bed795912e20ab290e2d39ff1d0bb20f2d347e1cc2abae76d657e22f6.",
+        "On August 13, 2026, both registration endpoints accepted an arbitrary localhost callback as a public OAuth client, and both unauthenticated MCP endpoints returned HTTP 401 challenges pointing to their official protected-resource metadata."
+      ],
+      "codexCapabilities": [
+        "Access Amplitude product analytics and funnels through a private app connector",
+        "Show and explain signup funnel trends from Amplitude data"
+      ],
+      "ghastCapabilities": [
+        "The Codex funnel and product-analytics surface through Amplitude's official hosted MCP service",
+        "Thirty-two current official Amplitude skills covering chart and dashboard analysis or creation, experiments, feedback, B2B account health, daily and weekly briefs, opportunity discovery, session replay, user journeys, cohorts, reliability, AI-agent analytics, taxonomy, instrumentation, and analytics planning",
+        "Official browser OAuth through PKCE and dynamic client registration in either the US or EU region"
+      ],
+      "capabilityRelationship": "superset-newer-official-hosted-mcp",
+      "limitations": [
+        "Node.js, npm, pinned mcp-remote@0.1.38, an Amplitude account, OAuth approval, project access, and applicable product entitlements remain user-managed.",
+        "The official repository publishes 36 skills with private x-amp feature-gate metadata. Ghast does not evaluate those flags, so it packages the 32 current variants and excludes the four legacy analyze-chart, create-chart, analyze-experiment, and monitor-experiments directories to prevent duplicate routing.",
+        "The current consolidated chart and experiment skills, AI-agent analytics, Session Replay, Feedback, Guides and Surveys, Experiment, and context-management workflows depend on server-side tool availability, account role, plan, data, and feature flags.",
+        "The what-would-lenny-do skill requires a separately connected lennysdata MCP server and explicitly must not run when that dependency is absent.",
+        "Dashboard, chart, experiment, taxonomy, tracking-plan, event, property, context, and other write operations require exact target resolution, review, and confirmation before execution.",
+        "Authenticated tools/list and live account operations were not exercised without the user's Amplitude account. The hosted tool surface can change independently of the pinned skill source.",
+        "A generic analytics icon is used because the official marketplace repository does not publish a catalog icon."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Confirm the pinned official source contains exactly 36 skill trees and the expected x-amp feature-gate markers",
+        "Compare all 32 packaged skill trees byte-for-byte with revision 90c0a8e658db547ab63a2210e84be07c23ce4cd0 and confirm only the four documented legacy variants are absent",
+        "Verify the US and EU protected-resource and authorization-server canonical JSON hashes, PKCE S256, public-client support, read and write scopes, and dynamic registration",
+        "Probe both hosted MCP endpoints without authorization and confirm HTTP 401 challenges point to the corresponding official protected-resource metadata",
+        "Verify the mcp-remote 0.1.38 npm tarball SHA-256 is d8e7034ed4ddf1f1b5efd928b74e7165ab427f7b21ab86ce79bcb82a4d9560aa and its license is MIT",
+        "Run the generated launcher with the default, eu, and invalid AMPLITUDE_MCP_REGION values and confirm only the two official endpoints can be selected",
+        "unzip -tqq packages/amplitude.zip"
+      ]
+    },
     "asana": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Asana, Inc.",

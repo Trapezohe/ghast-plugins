@@ -31,7 +31,7 @@ verification.
 | airtable | Airtable | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | alation | Alation | appConnector | MIT | official-source-research-required | not-implemented |
 | alpaca | Alpaca | appConnector | MIT | official-source-research-required | not-implemented |
-| amplitude | Amplitude | appConnector | MIT | official-source-research-required | not-implemented |
+| amplitude | Amplitude | appConnector | MIT | official-source-verified | implemented-verified |
 | apollo | Apollo | appConnector | MIT | official-source-research-required | not-implemented |
 | asana | Asana, Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | atlassian-rovo | Atlassian | appConnector, skills | MIT | official-source-verified | implemented-verified |

@@ -52,6 +52,11 @@ LOCAL_ICONS = {
 }
 
 CUSTOM_ICONS = {
+    "amplitude": (
+        "#005AF0",
+        '<path d="M12 47h40M17 42V30h8v12M28 42V21h8v21M39 42V14h8v28"/>'
+        '<path d="M15 25l11-8 10 5 14-11"/>',
+    ),
     "attio": (
         "#C55A45",
         '<rect x="12" y="13" width="40" height="38" rx="3"/>'

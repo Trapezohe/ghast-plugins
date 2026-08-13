@@ -17,6 +17,118 @@ from pathlib import Path
 
 
 PLUGIN_DIR = Path("plugins")
+AMPLITUDE_MCP_DOCS_URL = "https://amplitude.com/docs/mcp"
+AMPLITUDE_MCP_ENDPOINTS = {
+    "us": "https://mcp.amplitude.com/mcp",
+    "eu": "https://mcp.eu.amplitude.com/mcp",
+}
+AMPLITUDE_OAUTH_METADATA = {
+    "us": (
+        "https://mcp.amplitude.com/.well-known/oauth-protected-resource",
+        "c0049fbf72b1f6bdd880d8f50fe1b3ca318ff5511ac33a255c581adfe67d7c5a",
+    ),
+    "eu": (
+        "https://mcp.eu.amplitude.com/.well-known/oauth-protected-resource",
+        "48901b3ca7ec5daf3df71505cc3a60bedb34e0ed76cae3e231e1bf152da70975",
+    ),
+}
+AMPLITUDE_AUTH_SERVER_METADATA = {
+    "us": (
+        "https://mcp.amplitude.com/.well-known/oauth-authorization-server",
+        "d9bf23290fb5b04aa841f85bb3830fa3b7f2ce493730cabe72dd692b02db3857",
+    ),
+    "eu": (
+        "https://mcp.eu.amplitude.com/.well-known/oauth-authorization-server",
+        "dc8f567bed795912e20ab290e2d39ff1d0bb20f2d347e1cc2abae76d657e22f6",
+    ),
+}
+AMPLITUDE_SOURCE_SKILLS = (
+    "add-analytics-instrumentation",
+    "analyze-account-health",
+    "analyze-ai-topics",
+    "analyze-chart",
+    "analyze-dashboard",
+    "analyze-experiment",
+    "analyze-experiment-consolidated",
+    "analyze-feedback",
+    "build-charts-with-typed-params",
+    "chart-link-analysis",
+    "compare-user-journeys",
+    "create-chart",
+    "create-dashboard",
+    "daily-brief",
+    "debug-replay",
+    "diagnose-errors",
+    "diff-intake",
+    "discover-analytics-patterns",
+    "discover-event-surfaces",
+    "discover-opportunities",
+    "instrument-events",
+    "investigate-ai-session",
+    "live-data-forensics",
+    "manage-amp-context",
+    "monitor-ai-quality",
+    "monitor-experiments",
+    "monitor-experiments-consolidated",
+    "monitor-reliability",
+    "replay-ux-audit",
+    "review-agent-insights",
+    "scheduled-report-refresh",
+    "taxonomy",
+    "use-amp-guides-surveys",
+    "user-cohort-forensics",
+    "weekly-brief",
+    "what-would-lenny-do",
+)
+AMPLITUDE_EXCLUDED_LEGACY_SKILLS = (
+    "analyze-chart",
+    "analyze-experiment",
+    "create-chart",
+    "monitor-experiments",
+)
+AMPLITUDE_MCP_REMOTE_URL = (
+    "https://registry.npmjs.org/mcp-remote/-/mcp-remote-0.1.38.tgz"
+)
+AMPLITUDE_MCP_REMOTE_SHA256 = (
+    "d8e7034ed4ddf1f1b5efd928b74e7165ab427f7b21ab86ce79bcb82a4d9560aa"
+)
+AMPLITUDE_MCP_LAUNCHER = """\
+const { spawn } = require("node:child_process");
+
+const endpoints = {
+  us: "https://mcp.amplitude.com/mcp",
+  eu: "https://mcp.eu.amplitude.com/mcp",
+};
+const region = (process.env.AMPLITUDE_MCP_REGION || "us")
+  .trim()
+  .toLowerCase();
+if (!Object.prototype.hasOwnProperty.call(endpoints, region)) {
+  console.error("AMPLITUDE_MCP_REGION must be one of: us, eu.");
+  process.exit(1);
+}
+
+const executable = process.platform === "win32" ? "npx.cmd" : "npx";
+const child = spawn(
+  executable,
+  [
+    "--yes",
+    "mcp-remote@0.1.38",
+    endpoints[region],
+  ],
+  { stdio: "inherit" },
+);
+child.on("error", (error) => {
+  console.error(`Unable to start Amplitude MCP bridge: ${error.message}`);
+  process.exit(1);
+});
+for (const signal of ["SIGINT", "SIGTERM"]) {
+  process.on(signal, () => child.kill(signal));
+}
+child.on("exit", (code, signal) => {
+  if (signal) process.kill(process.pid, signal);
+  else process.exit(code === null ? 1 : code);
+});
+"""
 ASANA_MCP_URL = "https://mcp.asana.com/v2/mcp"
 ASANA_MCP_RESOURCE = "https://mcp.asana.com/v2"
 ASANA_TOOLS_URL = "https://developers.asana.com/docs/mcp-tools-reference.md"
@@ -420,6 +532,69 @@ PLUGINS = {
         "category": "productivity",
         "mcp": ".mcp.json",
         "license_name": "MIT",
+    },
+    "amplitude": {
+        "directory": "amplitude-mcp-marketplace",
+        "revision": "90c0a8e658db547ab63a2210e84be07c23ce4cd0",
+        "repository": "https://github.com/amplitude/mcp-marketplace",
+        "plugin_root": "plugins/amplitude",
+        "manifest": ".codex-plugin/plugin.json",
+        "license": "../../LICENSE",
+        "generated_icon": "./assets/icon.svg",
+        "category": "data",
+        "license_name": "MIT",
+        "excluded_skills": list(AMPLITUDE_EXCLUDED_LEGACY_SKILLS),
+        "mcp_inline": {
+            "mcpServers": {
+                "amplitude": {
+                    "command": "node",
+                    "args": ["-e", AMPLITUDE_MCP_LAUNCHER],
+                },
+            },
+        },
+        "homepage": AMPLITUDE_MCP_DOCS_URL,
+        "description": (
+            "Analyze Amplitude charts, dashboards, experiments, session "
+            "replays, feedback, accounts, reliability, AI agents, taxonomy, "
+            "and instrumentation through Amplitude's official skills and "
+            "hosted MCP server."
+        ),
+        "readme_provenance": (
+            "All 32 packaged skill trees are copied byte-for-byte from "
+            "Amplitude's pinned MIT repository. Four feature-gated legacy "
+            "chart and experiment skill variants are omitted because "
+            "Ghast does not evaluate Amplitude's private feature-flag "
+            "frontmatter; their current consolidated replacements are "
+            "included. The hosted MCP service remains operated by Amplitude."
+        ),
+        "compatibility_notes": [
+            (
+                "The Codex private app mapping is replaced by Amplitude's "
+                "official US or EU hosted MCP endpoint through pinned "
+                "mcp-remote@0.1.38 and dynamic OAuth registration."
+            ),
+            (
+                "AMPLITUDE_MCP_REGION selects us or eu from a strict "
+                "allowlist; US is the default."
+            ),
+            (
+                "The source repository contains 36 skills. Ghast includes "
+                "the 32 current variants and excludes analyze-chart, "
+                "create-chart, analyze-experiment, and monitor-experiments "
+                "because Amplitude marks them for removal when its current "
+                "consolidated chart and experiment tools are enabled."
+            ),
+            (
+                "Some retained skills depend on account entitlements and "
+                "server-side feature flags. The what-would-lenny-do skill "
+                "also requires the separate lennysdata MCP server and "
+                "explicitly remains inactive when that server is absent."
+            ),
+            (
+                "A generic analytics icon is used because the official "
+                "marketplace repository does not publish a catalog icon."
+            ),
+        ],
     },
     "asana": {
         "directory": "asana-cursor-marketplace-plugin",
@@ -1579,6 +1754,9 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     source_root = parse_args().source_root.resolve()
+    verify_amplitude_evidence(
+        source_root / PLUGINS["amplitude"]["directory"]
+    )
     verify_asana_evidence()
     verify_datadog_evidence()
     verify_deepnote_evidence()
@@ -2704,6 +2882,188 @@ def canonical_json_sha256(value: object) -> str:
         ensure_ascii=False,
     ).encode("utf-8")
     return hashlib.sha256(encoded).hexdigest()
+
+
+def verify_amplitude_evidence(repository: Path) -> None:
+    plugin_root = repository / "plugins/amplitude"
+    source_skills = tuple(
+        sorted(
+            path.parent.name
+            for path in (plugin_root / "skills").glob("*/SKILL.md")
+        )
+    )
+    if source_skills != AMPLITUDE_SOURCE_SKILLS:
+        raise ValueError(
+            "Amplitude official skill inventory changed; re-audit required"
+        )
+
+    manifest = json.loads(
+        (plugin_root / ".codex-plugin/plugin.json").read_text()
+    )
+    if (
+        manifest.get("name") != "amplitude"
+        or manifest.get("version") != "1.5.2"
+        or manifest.get("license") != "MIT"
+        or (manifest.get("author") or {}).get("name") != "Amplitude"
+    ):
+        raise ValueError(
+            "Amplitude official plugin manifest changed; re-audit required"
+        )
+
+    source_mcp = json.loads((plugin_root / ".mcp.json").read_text())
+    if source_mcp != {
+        "mcpServers": {
+            "amplitude": {
+                "type": "http",
+                "url": AMPLITUDE_MCP_ENDPOINTS["us"],
+            },
+        },
+    }:
+        raise ValueError(
+            "Amplitude official MCP declaration changed; re-audit required"
+        )
+
+    required_frontmatter = {
+        "analyze-chart": (
+            "x-amp-exclude-when-flags: [mcp-consolidate-charts]"
+        ),
+        "create-chart": (
+            "x-amp-exclude-when-flags: [mcp-consolidate-charts]"
+        ),
+        "build-charts-with-typed-params": (
+            "x-amp-flags: [mcp-consolidate-charts]"
+        ),
+        "analyze-experiment": (
+            "x-amp-exclude-when-flags: "
+            "[mcp-consolidate-flags-experiments]"
+        ),
+        "monitor-experiments": (
+            "x-amp-exclude-when-flags: "
+            "[mcp-consolidate-flags-experiments]"
+        ),
+        "analyze-experiment-consolidated": (
+            "x-amp-flags: [mcp-consolidate-flags-experiments]"
+        ),
+        "monitor-experiments-consolidated": (
+            "x-amp-flags: [mcp-consolidate-flags-experiments]"
+        ),
+    }
+    for skill_name, marker in required_frontmatter.items():
+        skill_text = (
+            plugin_root / "skills" / skill_name / "SKILL.md"
+        ).read_text()
+        if marker not in skill_text.split("---", 2)[1]:
+            raise ValueError(
+                f"Amplitude feature gating changed for {skill_name}"
+            )
+
+    for region, endpoint in AMPLITUDE_MCP_ENDPOINTS.items():
+        host = endpoint.removesuffix("/mcp")
+        metadata_url, expected_metadata_hash = AMPLITUDE_OAUTH_METADATA[
+            region
+        ]
+        metadata = json.loads(fetch_bytes(metadata_url))
+        if canonical_json_sha256(metadata) != expected_metadata_hash:
+            raise ValueError(
+                f"Amplitude {region.upper()} protected-resource metadata "
+                "changed; re-audit required"
+            )
+        if metadata.get("resource") != host:
+            raise ValueError(
+                f"Amplitude {region.upper()} OAuth resource changed"
+            )
+        if metadata.get("authorization_servers") != [host]:
+            raise ValueError(
+                f"Amplitude {region.upper()} authorization server changed"
+            )
+        if metadata.get("scopes_supported") != ["mcp:read", "mcp:write"]:
+            raise ValueError(
+                f"Amplitude {region.upper()} protected scopes changed"
+            )
+
+        auth_url, expected_auth_hash = AMPLITUDE_AUTH_SERVER_METADATA[
+            region
+        ]
+        auth_server = json.loads(fetch_bytes(auth_url))
+        if canonical_json_sha256(auth_server) != expected_auth_hash:
+            raise ValueError(
+                f"Amplitude {region.upper()} authorization metadata "
+                "changed; re-audit required"
+            )
+        if auth_server.get("issuer") != host:
+            raise ValueError(
+                f"Amplitude {region.upper()} OAuth issuer changed"
+            )
+        if auth_server.get("registration_endpoint") != f"{host}/register":
+            raise ValueError(
+                f"Amplitude {region.upper()} registration endpoint changed"
+            )
+        if auth_server.get("code_challenge_methods_supported") != ["S256"]:
+            raise ValueError(
+                f"Amplitude {region.upper()} no longer requires PKCE S256"
+            )
+        if "none" not in auth_server.get(
+            "token_endpoint_auth_methods_supported", []
+        ):
+            raise ValueError(
+                f"Amplitude {region.upper()} public client support changed"
+            )
+        grants = auth_server.get("grant_types_supported", [])
+        if "authorization_code" not in grants or "refresh_token" not in grants:
+            raise ValueError(
+                f"Amplitude {region.upper()} OAuth grant support changed"
+            )
+
+        initialize = json.dumps(
+            {
+                "jsonrpc": "2.0",
+                "id": 1,
+                "method": "initialize",
+                "params": {
+                    "protocolVersion": "2025-06-18",
+                    "capabilities": {},
+                    "clientInfo": {
+                        "name": "ghast-amplitude-audit",
+                        "version": "1.0.0",
+                    },
+                },
+            }
+        ).encode("utf-8")
+        request = urllib.request.Request(
+            endpoint,
+            data=initialize,
+            headers={
+                "User-Agent": "Mozilla/5.0",
+                "Content-Type": "application/json",
+                "Accept": "application/json, text/event-stream",
+            },
+            method="POST",
+        )
+        try:
+            urllib.request.urlopen(request, timeout=30)
+        except urllib.error.HTTPError as exc:
+            body = exc.read()
+            challenge = exc.headers.get("WWW-Authenticate", "")
+            if (
+                exc.code != 401
+                or b"Missing authorization header" not in body
+                or metadata_url not in challenge
+            ):
+                raise ValueError(
+                    f"Amplitude {region.upper()} unauthenticated endpoint "
+                    "behavior changed"
+                ) from exc
+        else:
+            raise ValueError(
+                f"Amplitude {region.upper()} endpoint unexpectedly accepted "
+                "no credentials"
+            )
+
+    bridge = fetch_bytes(AMPLITUDE_MCP_REMOTE_URL)
+    if sha256_bytes(bridge) != AMPLITUDE_MCP_REMOTE_SHA256:
+        raise ValueError(
+            "Pinned mcp-remote package changed; re-audit required"
+        )
 
 
 def verify_asana_evidence() -> None:

@@ -33,6 +33,37 @@
       "license": "MIT"
     },
     {
+      "id": "amplitude",
+      "name": "amplitude",
+      "description": "Analyze Amplitude charts, dashboards, experiments, session replays, feedback, accounts, reliability, AI agents, taxonomy, and instrumentation through Amplitude's official skills and hosted MCP server.",
+      "manifest": {
+        "name": "amplitude",
+        "description": "Analyze Amplitude charts, dashboards, experiments, session replays, feedback, accounts, reliability, AI agents, taxonomy, and instrumentation through Amplitude's official skills and hosted MCP server.",
+        "author": {
+          "name": "Amplitude",
+          "email": "support@amplitude.com",
+          "url": "https://amplitude.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.5.2-ghast.1",
+        "homepage": "https://amplitude.com/docs/mcp",
+        "repository": "https://github.com/amplitude/mcp-marketplace",
+        "upstreamRevision": "90c0a8e658db547ab63a2210e84be07c23ce4cd0",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/amplitude.zip",
+        "sha256": "aea6a2d55875c0e75a5dc50dae0a880a3165444929e032173b2a24d85b392349"
+      },
+      "icon": "./plugins/amplitude/assets/icon.svg",
+      "category": "data",
+      "homepage": "https://amplitude.com/docs/mcp",
+      "repository": "https://github.com/amplitude/mcp-marketplace",
+      "license": "MIT"
+    },
+    {
       "id": "asana",
       "name": "asana",
       "description": "Read and manage Asana tasks, subtasks, comments, due dates, projects, portfolios, status updates, teams, users, and workspace priorities through Asana's official V2 MCP server.",
