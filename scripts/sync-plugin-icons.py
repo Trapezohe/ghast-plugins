@@ -469,6 +469,12 @@ CUSTOM_ICONS = {
         '<circle cx="39" cy="32" r="5" fill="#D9583B"/>'
         '<circle cx="29" cy="47" r="5" fill="#D9583B"/>',
     ),
+    "thoughtspot": (
+        "#245B62",
+        '<path d="M12 48h40M28 43V34M39 43V26M50 43V17"/>'
+        '<circle cx="18" cy="20" r="8"/>'
+        '<path d="M24 26l6 6"/>',
+    ),
     "steam-search": (
         "#1B4965",
         '<circle cx="22" cy="40" r="7"/><circle cx="44" cy="22" r="8"/>'

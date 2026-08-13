@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 53,
-      "official-source-verified": 91
+      "official-source-research-required": 52,
+      "official-source-verified": 92
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 91,
-      "not-implemented": 58
+      "implemented-verified": 92,
+      "not-implemented": 57
     }
   },
   "excludedOpenAIPlugins": [
@@ -9976,7 +9976,7 @@
     },
     {
       "id": "thoughtspot",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "ThoughtSpot",
@@ -10003,13 +10003,80 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.thoughtspot.com"
+        "homepage": "https://www.thoughtspot.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "ThoughtSpot",
+          "officialRepository": null,
+          "officialRevision": "thoughtspot-79e978603135+tools-5d067ec65a48+docs-19631cc2bc1a+auth-bd3db075f410",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/thoughtspot/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation, and generic icon.",
+            "The official thoughtspot/mcp-server repository uses the ThoughtSpot Development Tools End User License Agreement, whose restrictions prohibit redistribution and modification. No source file, official skill, logo, private connector, or marketplace artwork is copied into the Ghast package.",
+            "The pinned source LICENSE, README, package metadata, lockfile, version registry, tool definitions, and official skill are used only as hash-pinned audit evidence."
+          ],
+          "officialityEvidence": [
+            "ThoughtSpot's official developer documentation identifies https://agent.thoughtspot.app/mcp as its hosted Streamable HTTP MCP and documents date-based API versioning for stable integrations.",
+            "The official MCP overview and connection guide have normalized visible-text SHA-256 values 19631cc2bc1a489d579407235986299214fa94e98d2a28f19a6bac6281f5ae15 and 4ca5e2674b0492fddb8e62334d4daf17329b2c857518fafaa549c42dc53778b8.",
+            "The thoughtspot/mcp-server repository is owned by ThoughtSpot and pinned to revision 79e978603135fc079427db091c2b79bea34cbe68 with Git tree bbee5589fd152788377db9ee0910b4c7df8086e6.",
+            "The source version registry maps latest and 2026-05-01 to the Spotter 3 tool set. Its eight unique ordered tool names have SHA-256 5d067ec65a48ae86126cf9bfacb208c8033234fe4b61d412c2efbdcd6864aada.",
+            "The eight source tools cover content search, connectivity, conversational analysis sessions, streamed result polling, dashboard creation, Org listing, and durable Org switching. Their normalized read-only and destructive classification has SHA-256 7eec1b6ef4db5b41ee06f5e6945f13438e2552dc8882694dfc2cf9368d3577cd.",
+            "ThoughtSpot documents advanced analytics, forecasting, multi-step reasoning, automatic data-source selection, deep research, programmatic Liveboard creation, and enforcement of object, row-level, and column-level security.",
+            "The official authorization metadata has canonical JSON SHA-256 bd3db075f410942be77b1bd9923231ea9d5146f421eba5a03a8dec8d90c8e27c and advertises authorization code, refresh tokens, Dynamic Client Registration, public clients, and PKCE S256.",
+            "On August 13, 2026, a disposable loopback public client registered with HTTP 201 and no client secret, and its PKCE authorization request reached the ThoughtSpot Spotter instance authorization page.",
+            "Missing and invalid Bearer initialize requests to the pinned 2026-05-01 endpoint returned HTTP 401 with body SHA-256 values fde5a2f4681d6c07ac053684ff82e9c3a1b6d6141388f8551d551f27e3d3ad45 and db9fe3458a7a7b7f968eda46e4283a391a29eec5d070b593291b327caab742da.",
+            "OpenAI's pinned Codex snapshot identifies ThoughtSpot as the developer and describes trusted sales-performance, pipeline-health, revenue-segment, driver, and anomaly workflows. Its manifest and private connector hashes are f825a6bdb8bb264c70c1077a8182894569381e65ba85ae1ffe0a1bb2000a4bcd and 29b46b4671accb3b65c52eb8043252ee8c75615486a2db76fc13e6ff248dcfc5."
+          ],
+          "codexCapabilities": [
+            "Search ThoughtSpot for trusted sales-performance answers and summarize key drivers",
+            "Find dashboards related to pipeline health and explain material movement",
+            "Analyze revenue by segment and highlight anomalies worth investigating",
+            "Use governed business semantics and access controls so answers can be validated and acted on"
+          ],
+          "ghastCapabilities": [
+            "The same official governed sales, pipeline, revenue, driver, trend, and anomaly analysis through ThoughtSpot's public hosted MCP",
+            "Search across existing Answers, Liveboards, visualizations, and Worksheets with owner, verification, modification, tag, and link context",
+            "Spotter 3 conversational sessions with streamed progress, follow-up analysis, forecasting, multi-step reasoning, automatic source selection, and deep research",
+            "Explicitly confirmed dashboard creation from completed answers plus authorized Org discovery and durable Org switching",
+            "Direct provider-hosted OAuth without OpenAI's private app connector"
+          ],
+          "capabilityRelationship": "superset-official-hosted-mcp",
+          "limitations": [
+            "The official source repository is not open source and cannot be redistributed or modified under its ThoughtSpot EULA. The MIT license applies only to the independently authored Ghast adapter.",
+            "A ThoughtSpot account and eligible instance are required. Spotter 3 needs a sufficiently recent instance, and data, model, Org, object, row-level, column-level, download, and content-creation privileges remain authoritative.",
+            "The adapter pins api-version=2026-05-01. Later ThoughtSpot versions and beta tools are not claimed until separately audited.",
+            "Authenticated tools/list and real business-data operations were not run because no user ThoughtSpot account or data was supplied. The pinned source-defined surface, documentation, OAuth boundary, and unauthenticated protocol behavior were verified.",
+            "create_dashboard creates durable content and switch_org changes an active Org context shared across sessions. Both require exact target review and explicit current-conversation confirmation.",
+            "create_analysis_session and send_session_message create transient analytical state and can run data queries. The skill avoids duplicate sessions and preserves query, filter, and source context.",
+            "Forecasts, anomaly explanations, generated reasoning, and causal drivers can be incomplete or wrong and must remain distinguishable from returned facts and business definitions.",
+            "A clean lockfile install with scripts disabled passed 31 test files and 704 tests. npm audit reported 34 upstream advisories, including three critical advisories; Ghast packages none of those dependencies or server code.",
+            "A generic governed-analytics icon is used because the official source and brand assets are not licensed for redistribution in this package."
+          ],
+          "verification": [
+            "Run the ThoughtSpot evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
+            "Verify thoughtspot/mcp-server revision 79e978603135fc079427db091c2b79bea34cbe68, tree bbee5589fd152788377db9ee0910b4c7df8086e6, source hashes, package version 0.5.0, and ThoughtSpot EULA restrictions",
+            "Verify official overview and connection-guide visible-text hashes 19631cc2bc1a489d579407235986299214fa94e98d2a28f19a6bac6281f5ae15 and 4ca5e2674b0492fddb8e62334d4daf17329b2c857518fafaa549c42dc53778b8",
+            "Confirm the 2026-05-01 Spotter 3 version maps to eight tools with ordered-name SHA-256 5d067ec65a48ae86126cf9bfacb208c8033234fe4b61d412c2efbdcd6864aada and safety-classification SHA-256 7eec1b6ef4db5b41ee06f5e6945f13438e2552dc8882694dfc2cf9368d3577cd",
+            "Verify authorization-server metadata SHA-256 bd3db075f410942be77b1bd9923231ea9d5146f421eba5a03a8dec8d90c8e27c",
+            "Run probe_thoughtspot_oauth_registration explicitly when a new side-effecting DCR probe is intended; confirm HTTP 201, no client secret, authorization-code and refresh-token grants, and PKCE authorization reaching the official instance page",
+            "Probe https://agent.thoughtspot.app/mcp?api-version=2026-05-01 with missing and invalid Bearer initialize requests and confirm the two pinned HTTP 401 body hashes",
+            "Install the clean source with an isolated npm cache and scripts disabled, then run all 31 Vitest files containing 704 tests",
+            "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 ThoughtSpot manifest and connector hashes and compare every Codex prompt with the official Spotter 3 surface",
+            "Authorize an eligible ThoughtSpot account before testing authenticated schemas, business data, forecasts, dashboards, or Org changes",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/thoughtspot.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": null,
+        "upstreamRevision": "thoughtspot-79e978603135+tools-5d067ec65a48+docs-19631cc2bc1a+auth-bd3db075f410",
+        "portStatus": "full"
       }
     },
     {

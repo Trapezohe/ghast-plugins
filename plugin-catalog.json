@@ -2835,6 +2835,34 @@
       "license": "Apache-2.0"
     },
     {
+      "id": "thoughtspot",
+      "name": "thoughtspot",
+      "description": "Search governed ThoughtSpot content, run conversational analytics, explain business drivers, and safely save approved analyses as dashboards.",
+      "manifest": {
+        "name": "thoughtspot",
+        "description": "Search governed ThoughtSpot content, run conversational analytics, explain business drivers, and safely save approved analyses as dashboards.",
+        "author": {
+          "name": "ThoughtSpot",
+          "url": "https://www.thoughtspot.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://developers.thoughtspot.com/docs/mcp-integration",
+        "upstreamRevision": "thoughtspot-79e978603135+tools-5d067ec65a48+docs-19631cc2bc1a+auth-bd3db075f410",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/thoughtspot.zip",
+        "sha256": "a6e155d0dfeb31f861094a152526313a3632c8a99ebce583f5c5da1fd74199f2"
+      },
+      "icon": "./plugins/thoughtspot/assets/icon.svg",
+      "category": "data-analytics",
+      "homepage": "https://developers.thoughtspot.com/docs/mcp-integration",
+      "license": "MIT"
+    },
+    {
       "id": "twilio-developer-kit",
       "name": "twilio-developer-kit",
       "description": "Twilio Skills provide procedural knowledge for AI coding agents — which APIs to use, in what order, and what to avoid. Covers Messaging, Voice, Verify, SendGrid, and 30+ products.",

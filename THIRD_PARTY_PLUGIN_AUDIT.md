@@ -161,7 +161,7 @@ verification.
 | taxdown | TAXDOWN S.L. | appConnector | MIT | official-source-research-required | not-implemented |
 | temporal | Temporal | skills | MIT | official-source-verified | implemented-verified |
 | third-bridge | Third Bridge Group | appConnector | MIT | official-source-research-required | not-implemented |
-| thoughtspot | ThoughtSpot | appConnector | MIT | official-source-research-required | not-implemented |
+| thoughtspot | ThoughtSpot | appConnector | MIT | official-source-verified | implemented-verified |
 | tinman-ai | Better | appConnector | MIT | official-source-research-required | not-implemented |
 | twilio-developer-kit | Twilio | skills | MIT | official-source-verified | implemented-verified |
 | united-rentals | United Rentals | appConnector | MIT | official-source-research-required | not-implemented |
