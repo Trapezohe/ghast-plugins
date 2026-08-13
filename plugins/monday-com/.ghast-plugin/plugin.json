@@ -1,0 +1,18 @@
+{
+  "name": "monday-com",
+  "version": "0.1.0-ghast.1",
+  "description": "Manage monday.com boards, items, status reporting, docs, and WorkForms with five official workflow skills and monday.com's hosted OAuth MCP server.",
+  "category": "productivity",
+  "author": {
+    "name": "monday.com",
+    "url": "https://monday.com"
+  },
+  "homepage": "https://monday.com",
+  "repository": "https://github.com/mondaycom/monday-claude-cowork-plugin",
+  "upstreamRevision": "ce381e93a0a6c2ed3b9942ff1803b8078ba89389",
+  "upstreamPath": ".",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

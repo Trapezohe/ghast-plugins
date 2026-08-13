@@ -390,6 +390,35 @@
       "license": "MIT"
     },
     {
+      "id": "hubspot",
+      "name": "hubspot",
+      "description": "Operate HubSpot CRM records, pipelines, activities, workflows, reports, data quality, sales execution, support, retention, ownership, and quote-to-cash through all 15 official Agent CLI skills.",
+      "manifest": {
+        "name": "hubspot",
+        "description": "Operate HubSpot CRM records, pipelines, activities, workflows, reports, data quality, sales execution, support, retention, ownership, and quote-to-cash through all 15 official Agent CLI skills.",
+        "author": {
+          "name": "HubSpot",
+          "url": "https://www.hubspot.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "0.11.0-ghast.1",
+        "homepage": "https://developers.hubspot.com/docs/developer-tooling/local-development/agent-cli/guide",
+        "repository": "https://github.com/HubSpot/agent-cli-skills",
+        "upstreamRevision": "71f2bdefcc0247b1f378cb98186800dc57b6f6b1",
+        "license": "Apache-2.0",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/hubspot.zip",
+        "sha256": "7bf37606e4408c3b18285be01af711ef031f721ecd8d56a4de7c42c787ee5f4f"
+      },
+      "icon": "./plugins/hubspot/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://developers.hubspot.com/docs/developer-tooling/local-development/agent-cli/guide",
+      "repository": "https://github.com/HubSpot/agent-cli-skills",
+      "license": "Apache-2.0"
+    },
+    {
       "id": "hugging-face",
       "name": "hugging-face",
       "description": "Explore and manage Hugging Face models, datasets, Spaces, jobs, papers, evaluations, training, Gradio apps, local models, and Hub workflows with the complete official skill catalog and official Hugging Face MCP server.",
@@ -529,6 +558,36 @@
       "category": "data",
       "homepage": "https://mixpanel.github.io/mixpanel-headless/",
       "repository": "https://github.com/mixpanel/mixpanel-headless",
+      "license": "MIT"
+    },
+    {
+      "id": "monday-com",
+      "name": "monday-com",
+      "description": "Manage monday.com boards, items, status reporting, docs, and WorkForms with five official workflow skills and monday.com's hosted OAuth MCP server.",
+      "manifest": {
+        "name": "monday-com",
+        "description": "Manage monday.com boards, items, status reporting, docs, and WorkForms with five official workflow skills and monday.com's hosted OAuth MCP server.",
+        "author": {
+          "name": "monday.com",
+          "url": "https://monday.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "0.1.0-ghast.1",
+        "homepage": "https://monday.com",
+        "repository": "https://github.com/mondaycom/monday-claude-cowork-plugin",
+        "upstreamRevision": "ce381e93a0a6c2ed3b9942ff1803b8078ba89389",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/monday-com.zip",
+        "sha256": "c5659a31f8705a757434fb42ac37cbb2a2a451c82e6d5e5eff74208511d7c881"
+      },
+      "icon": "./plugins/monday-com/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://monday.com",
+      "repository": "https://github.com/mondaycom/monday-claude-cowork-plugin",
       "license": "MIT"
     },
     {

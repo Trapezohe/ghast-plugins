@@ -96,7 +96,7 @@ verification.
 | hg-insights | HG Insights | appConnector | MIT | official-source-research-required | not-implemented |
 | highlevel | HighLevel | appConnector | MIT | official-source-research-required | not-implemented |
 | hostinger | Hostinger | appConnector | MIT | official-source-research-required | not-implemented |
-| hubspot | HubSpot | appConnector, skills | MIT | official-source-research-required | not-implemented |
+| hubspot | HubSpot | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | hugging-face | Hugging Face | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | hyperframes | HeyGen | skills | Apache-2.0 | official-source-verified | implemented-verified |
 | intercom | Intercom | appConnector | MIT | official-source-research-required | not-implemented |
@@ -111,7 +111,7 @@ verification.
 | midpage | Midpage | appConnector, skills | MIT | official-source-research-required | not-implemented |
 | mixpanel | Mixpanel | appConnector | MIT | official-source-research-required | not-implemented |
 | mixpanel-headless | Mixpanel | skills | MIT | official-source-verified | implemented-verified |
-| monday-com | Monday.com | appConnector | MIT | official-source-research-required | not-implemented |
+| monday-com | Monday.com | appConnector | MIT | official-source-verified | implemented-verified |
 | moody-s | Moody's | appConnector, skills | MIT | official-source-research-required | not-implemented |
 | morningstar | Morningstar | appConnector, skills | MIT | blocked-license | not-implemented |
 | motherduck | MotherDuck Corporation | appConnector | MIT | official-source-research-required | not-implemented |

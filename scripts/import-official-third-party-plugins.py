@@ -168,6 +168,54 @@ PLUGINS = {
         "license_name": "MIT",
         "skills_root": ".",
     },
+    "hubspot": {
+        "directory": "hubspot-agent-cli-skills",
+        "revision": "71f2bdefcc0247b1f378cb98186800dc57b6f6b1",
+        "repository": "https://github.com/HubSpot/agent-cli-skills",
+        "plugin_root": ".",
+        "manifest_inline": {
+            "version": "0.11.0",
+            "description": (
+                "Operate HubSpot CRM data with HubSpot's official Agent CLI "
+                "skills."
+            ),
+            "author": {
+                "name": "HubSpot",
+                "url": "https://www.hubspot.com",
+            },
+            "homepage": "https://developers.hubspot.com/docs/developer-tooling/local-development/agent-cli/guide",
+        },
+        "license": "LICENSE",
+        "generated_icon": "./assets/icon.svg",
+        "category": "productivity",
+        "license_name": "Apache-2.0",
+        "skills_root": ".",
+        "description": (
+            "Operate HubSpot CRM records, pipelines, activities, workflows, "
+            "reports, data quality, sales execution, support, retention, "
+            "ownership, and quote-to-cash through all 15 official Agent CLI "
+            "skills."
+        ),
+        "compatibility_notes": [
+            (
+                "The Codex private app mapping is replaced by HubSpot's "
+                "official Agent CLI, which authenticates through browser "
+                "OAuth or a supported HUBSPOT_ACCESS_TOKEN service key."
+            ),
+            (
+                "The beta CLI binary is installed separately from HubSpot's "
+                "official distribution and is not redistributed in this "
+                "Apache-2.0 skills package; this port was verified against "
+                "hubspot 0.11.0."
+            ),
+            (
+                "A generic CRM icon is used because the licensed skills "
+                "repository does not publish a catalog icon and the CLI "
+                "public-home repository does not grant redistribution rights "
+                "for its social-preview asset."
+            ),
+        ],
+    },
     "mixpanel-headless": {
         "directory": "mixpanel-headless",
         "revision": "6c2c2f975d51628bdbc75802fb879d4f6cb66f69",
@@ -194,6 +242,38 @@ PLUGINS = {
                 "The setup dependency list explicitly includes click>=8.1 "
                 "because the pinned official CLI imports click directly but "
                 "does not declare it as a direct package dependency."
+            ),
+        ],
+    },
+    "monday-com": {
+        "directory": "monday-cowork-plugin",
+        "revision": "ce381e93a0a6c2ed3b9942ff1803b8078ba89389",
+        "repository": "https://github.com/mondaycom/monday-claude-cowork-plugin",
+        "plugin_root": ".",
+        "manifest": ".claude-plugin/plugin.json",
+        "license": "LICENSE",
+        "generated_icon": "./assets/icon.svg",
+        "category": "productivity",
+        "mcp": ".mcp.json",
+        "license_name": "MIT",
+        "description": (
+            "Manage monday.com boards, items, status reporting, docs, and "
+            "WorkForms with five official workflow skills and monday.com's "
+            "hosted OAuth MCP server."
+        ),
+        "compatibility_notes": [
+            (
+                "The Codex private app mapping is replaced by monday.com's "
+                "official hosted OAuth MCP endpoint."
+            ),
+            (
+                "The current official suite adds board setup, task "
+                "management, project status, monday docs, and WorkForms "
+                "guidance beyond the connector-only Codex snapshot."
+            ),
+            (
+                "A generic work-management icon is used because the portable "
+                "official plugin repository does not include a catalog icon."
             ),
         ],
     },
@@ -654,9 +734,12 @@ def import_plugin(name: str, config: dict, source_root: Path) -> None:
         )
 
     plugin_root = repository / config["plugin_root"]
-    source_manifest = json.loads(
-        (plugin_root / config["manifest"]).read_text()
-    )
+    if config.get("manifest"):
+        source_manifest = json.loads(
+            (plugin_root / config["manifest"]).read_text()
+        )
+    else:
+        source_manifest = config["manifest_inline"]
     license_path = plugin_root / config["license"]
     if not license_path.is_file():
         raise ValueError(f"{license_path}: license is missing")

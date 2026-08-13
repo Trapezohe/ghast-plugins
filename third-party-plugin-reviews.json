@@ -447,6 +447,43 @@
         "unzip -tqq packages/heygen.zip"
       ]
     },
+    "hubspot": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "HubSpot",
+      "officialRepository": "https://github.com/HubSpot/agent-cli-skills",
+      "officialRevision": "71f2bdefcc0247b1f378cb98186800dc57b6f6b1",
+      "license": "Apache-2.0",
+      "licenseEvidence": [
+        "LICENSE"
+      ],
+      "officialityEvidence": [
+        "The skills repository is owned by the HubSpot GitHub organization and identifies itself as the official skill library for HubSpot's Agent CLI.",
+        "HubSpot/agent-cli is the developer-owned public home for the beta CLI; tag v0.11.0 points to revision 0cba563cbf8d3efc5b3baade6d81869f95273948 and links the official installer, documentation, release history, and terms.",
+        "The 15-skill official suite functionally covers and expands the Codex plugin's general CRM, data-hygiene, customer-preparation, and pipeline-health workflows."
+      ],
+      "codexCapabilities": [
+        "Search, read, create, update, and associate HubSpot contacts, companies, deals, tickets, activities, and properties through a private app connector",
+        "Run CRM data-hygiene, customer-preparation, and pipeline-health workflows"
+      ],
+      "ghastCapabilities": [
+        "All 15 official HubSpot Agent CLI skills for lookup, bulk operations, communication history, data quality, custom objects, retention, enrichment, deal management, quote-to-cash, sales execution and reporting, ownership, ticket resolution, audience targeting, and workflow automation",
+        "Authenticated CRM read and write operations through HubSpot's official hubspot Agent CLI"
+      ],
+      "capabilityRelationship": "superset-official-cli-transport",
+      "limitations": [
+        "The HubSpot Agent CLI is a separately installed beta binary governed by HubSpot Developer and Developer Beta Terms; Ghast redistributes only the Apache-2.0 skill library.",
+        "HubSpot's download service currently exposes the binary through a latest path rather than a stable v0.11.0 path. This port was verified on August 13, 2026 against hubspot 0.11.0 build 682, commit 18f2fc2, SHA-256 a11a541ebf5205485df71114aef6622a490544a8725bac24a3d5547fd654958d.",
+        "A HubSpot account, browser OAuth or supported service key, portal permissions, API limits, and paid CRM features remain user-managed.",
+        "Writes, merges, deletes, schema changes, workflow changes, and bulk mutations require dry-run review and explicit confirmation."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Compare all 15 Ghast skill trees byte-for-byte with the pinned HubSpot repository",
+        "Install all 15 skills from the local pinned repository through the standard npx skills flow",
+        "Run HubSpot's official checksum-validating installer in an isolated temporary home and verify hubspot --version plus objects and workflows help output",
+        "unzip -tqq packages/hubspot.zip"
+      ]
+    },
     "mixpanel-headless": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Mixpanel",
@@ -483,6 +520,42 @@
         "Verify commands/auth.md covers the official mp session, login, account, project, workspace, target, and bridge commands without a plugin-root variable",
         "Install the pinned source into a clean environment, install click>=8.1 as the setup script does, and run mp session --format json plus the bundled help.py and auth_manager.py entry points",
         "unzip -tqq packages/mixpanel-headless.zip"
+      ]
+    },
+    "monday-com": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "monday.com",
+      "officialRepository": "https://github.com/mondaycom/monday-claude-cowork-plugin",
+      "officialRevision": "ce381e93a0a6c2ed3b9942ff1803b8078ba89389",
+      "license": "MIT",
+      "licenseEvidence": [
+        "LICENSE"
+      ],
+      "officialityEvidence": [
+        "The repository is owned by the monday.com GitHub organization and identifies itself as the official monday.com plugin for Claude Cowork.",
+        "Its plugin manifest, five skills, README, and .mcp.json all declare monday.com and the hosted OAuth endpoint.",
+        "All nine files in its five skill trees match the separately maintained mondaycom/skills repository at revision ee1f86171ba8c10879532d8334b2c19b61f1c372 byte-for-byte."
+      ],
+      "codexCapabilities": [
+        "Manage monday.com boards, items, dashboards, project status, and workflows through a private app connector"
+      ],
+      "ghastCapabilities": [
+        "The official task-management, project-status, board-setup, docs-collaboration, and WorkForms skills",
+        "Authenticated board, item, document, form, dashboard, workspace, and dynamic GraphQL operations through monday.com's official hosted OAuth MCP server"
+      ],
+      "capabilityRelationship": "superset-newer-official-suite",
+      "limitations": [
+        "A monday.com account, installation of the monday MCP app by an administrator, OAuth authorization, workspace permissions, plan-tier features, and service limits remain user-managed.",
+        "Board, item, document, form, automation, dashboard, and other state-changing operations require explicit user confirmation.",
+        "A generic work-management icon is used because the portable official plugin repository does not include a catalog icon."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Compare all five Ghast skill trees and .mcp.json byte-for-byte with the pinned official Cowork repository",
+        "Compare the nine skill-tree files with mondaycom/skills at revision ee1f86171ba8c10879532d8334b2c19b61f1c372",
+        "Install all five skills from the local pinned repository through the standard npx skills flow",
+        "Probe https://mcp.monday.com/mcp and confirm the official endpoint returns an invalid-token authentication response",
+        "unzip -tqq packages/monday-com.zip"
       ]
     },
     "morningstar": {

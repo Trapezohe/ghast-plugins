@@ -74,6 +74,12 @@ CUSTOM_ICONS = {
         "#F0652F",
         '<path d="M19 17l13 16 13-16M32 33v15"/>',
     ),
+    "hubspot": (
+        "#F05A3A",
+        '<circle cx="20" cy="20" r="6"/><circle cx="45" cy="16" r="5"/>'
+        '<circle cx="45" cy="45" r="7"/>'
+        '<path d="M25 22l14-4M24 25l15 15M45 21v17"/>',
+    ),
     "hugging-face": (
         "#F0B429",
         '<circle cx="20" cy="24" r="6"/><circle cx="44" cy="24" r="6"/>'
@@ -85,6 +91,12 @@ CUSTOM_ICONS = {
         '<circle cx="18" cy="32" r="6"/><circle cx="46" cy="18" r="6"/>'
         '<circle cx="46" cy="46" r="6"/>'
         '<path d="M24 30l16-9M24 34l16 9"/>',
+    ),
+    "monday-com": (
+        "#4B57DB",
+        '<rect x="13" y="14" width="38" height="36" rx="5"/>'
+        '<path d="M20 24h24M20 33h15M20 42h20"/>'
+        '<path d="M42 31l4 4 7-8"/>',
     ),
     "netlify": (
         "#0E7C7B",

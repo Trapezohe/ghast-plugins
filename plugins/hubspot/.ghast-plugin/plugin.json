@@ -1,0 +1,17 @@
+{
+  "name": "hubspot",
+  "version": "0.11.0-ghast.1",
+  "description": "Operate HubSpot CRM records, pipelines, activities, workflows, reports, data quality, sales execution, support, retention, ownership, and quote-to-cash through all 15 official Agent CLI skills.",
+  "category": "productivity",
+  "author": {
+    "name": "HubSpot",
+    "url": "https://www.hubspot.com"
+  },
+  "homepage": "https://developers.hubspot.com/docs/developer-tooling/local-development/agent-cli/guide",
+  "repository": "https://github.com/HubSpot/agent-cli-skills",
+  "upstreamRevision": "71f2bdefcc0247b1f378cb98186800dc57b6f6b1",
+  "upstreamPath": ".",
+  "license": "Apache-2.0",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/"
+}
