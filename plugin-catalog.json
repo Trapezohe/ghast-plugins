@@ -752,6 +752,36 @@
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/defillama"
     },
     {
+      "id": "digitalocean",
+      "name": "digitalocean",
+      "description": "Provision a DigitalOcean Droplet as a remote SSH workspace and inspect or explicitly manage Droplets, images, sizes, regions, account billing, actions, and SSH keys through DigitalOcean's official hosted MCP services.",
+      "manifest": {
+        "name": "digitalocean",
+        "description": "Provision a DigitalOcean Droplet as a remote SSH workspace and inspect or explicitly manage Droplets, images, sizes, regions, account billing, actions, and SSH keys through DigitalOcean's official hosted MCP services.",
+        "author": {
+          "name": "DigitalOcean",
+          "url": "https://www.digitalocean.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.68-ghast.1",
+        "homepage": "https://github.com/digitalocean-labs/mcp-digitalocean",
+        "repository": "https://github.com/digitalocean-labs/mcp-digitalocean",
+        "upstreamRevision": "acbe39190b822268192d02ffd77b50319bb3d071",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/digitalocean.zip",
+        "sha256": "0929df52443d2b85d79863feaca612f8e86c36bbafc5cc4fc6fdc6c14308ea88"
+      },
+      "icon": "./plugins/digitalocean/assets/icon.svg",
+      "category": "development",
+      "homepage": "https://github.com/digitalocean-labs/mcp-digitalocean",
+      "repository": "https://github.com/digitalocean-labs/mcp-digitalocean",
+      "license": "MIT"
+    },
+    {
       "id": "expo",
       "name": "expo",
       "description": "Official Expo skills for building, deploying, upgrading, and debugging Expo and React Native apps.",

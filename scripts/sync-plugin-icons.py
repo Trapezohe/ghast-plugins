@@ -132,6 +132,13 @@ CUSTOM_ICONS = {
         '<path d="M17 38h7l5-13 7 19 5-11h7"/>'
         '<path d="M17 20h13M36 20h12"/>',
     ),
+    "digitalocean": (
+        "#176B87",
+        '<path d="M15 42h34a9 9 0 0 0 0-18 15 15 0 0 0-29-2A10 10 0 0 0 15 42z"/>'
+        '<rect x="18" y="38" width="28" height="14" rx="2"/>'
+        '<path d="M23 44h18M23 48h12"/>'
+        '<circle cx="40" cy="48" r="1.5" fill="white" stroke="none"/>',
+    ),
     "defillama": (
         "#176B87",
         '<path d="M15 45V31h8v14M28 45V22h8v23M41 45V15h8v30"/>'

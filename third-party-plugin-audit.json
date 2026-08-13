@@ -16,13 +16,13 @@
     "excludedOpenAIAuthored": 31,
     "thirdPartyPlugins": 149,
     "auditStatus": {
-      "blocked-license": 6,
+      "blocked-license": 5,
       "official-source-research-required": 77,
-      "official-source-verified": 66
+      "official-source-verified": 67
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 66,
-      "not-implemented": 83
+      "implemented-verified": 67,
+      "not-implemented": 82
     }
   },
   "excludedOpenAIPlugins": [
@@ -3008,7 +3008,7 @@
     },
     {
       "id": "digitalocean",
-      "auditStatus": "blocked-license",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "DigitalOcean",
@@ -3036,13 +3036,80 @@
       },
       "declaredLicense": null,
       "officialSource": {
-        "status": "manifest-declared-candidate",
+        "status": "reviewed",
         "codexRepository": "https://github.com/digitalocean/CodexPlugin",
         "candidateOfficialRepository": "https://github.com/digitalocean/CodexPlugin",
-        "homepage": "https://www.digitalocean.com/"
+        "homepage": "https://www.digitalocean.com/",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "DigitalOcean",
+          "officialRepository": "https://github.com/digitalocean-labs/mcp-digitalocean",
+          "officialRevision": "acbe39190b822268192d02ffd77b50319bb3d071",
+          "license": "MIT",
+          "licenseEvidence": [
+            "The pinned digitalocean-labs/mcp-digitalocean LICENSE grants the MIT permission notice under Copyright 2025 DigitalOcean LLC.",
+            "The source package and @digitalocean/mcp 1.0.68 npm release both declare MIT and identify DigitalOcean as the author.",
+            "Ghast copies only the official MCP repository's MIT license. Its workflow, SSH helpers, documentation, manifest, and generic icon are independently authored.",
+            "DigitalOcean's separate digitalocean/CodexPlugin capability source contains no LICENSE, COPYING, or equivalent grant, so none of its code, skill text, template, helper scripts, logos, or marketplace artwork is copied."
+          ],
+          "officialityEvidence": [
+            "The official digitalocean-labs GitHub organization owns mcp-digitalocean, whose README describes it as the DigitalOcean MCP integration and publishes the accounts and droplets hosted endpoints.",
+            "The exact source revision publishes @digitalocean/mcp 1.0.68, and the matching npm release has gitHead acbe39190b822268192d02ffd77b50319bb3d071 and publisher api-engineering@digitalocean.com.",
+            "The pinned official source defines 11 account tools, 42 Droplet, image, and size tools, and the always-registered region-list common tool. The ordered account and Droplet inventories have SHA-256 hashes 928abe11d5c875270f13fd4903ce46f86f3d67b8dae6f07a855de705eade07bf and 3787313969e64d2ac6ea793704551ec0c0a8e9b7c7d38e33e9aa63e16642fbe0.",
+            "DigitalOcean's official safety tests assign read, create, update, delete, idempotency, destructiveness, and low, medium, or high risk metadata to every account and Droplet tool.",
+            "The accounts and droplets protected-resource documents identify DigitalOcean's cloud authorization server, bearer-header authentication, and canonical resource names; their canonical JSON SHA-256 hashes are 49fd2dfe0658252ff47825ef3cc279ab9f483504f108600233e9bde890a0bab9 and d20e864ecccd5c552aba30d78435e6157ee01e6c4a5bc9f8f32e5cce36928c6f.",
+            "DigitalOcean's authorization-server metadata supports authorization-code and refresh-token grants, public dynamic clients, and PKCE S256; its canonical JSON SHA-256 is 280906321175b2dd236743cac95a0704e62d3ba041622adf1f7f5cef6de91f12.",
+            "On August 13, 2026, a disposable localhost public client registered with HTTP 201 and no client secret, while unauthenticated GET and initialize probes to both hosted services returned HTTP 401 with the exact official read/write protected-resource challenge.",
+            "DigitalOcean's separate CodexPlugin revision 6be47f6207d3ff553a706c8e5483e6fa02793d94 identifies DigitalOcean as developer and documents the six app tools, SSH-key workflow, image ID 234061005, Droplet polling, SSH configuration, remote-workspace handoff, and cleanup used for capability comparison."
+          ],
+          "codexCapabilities": [
+            "Generate a local Ed25519 SSH key and upload its public key through key-create, with key-list fallback and key-delete cleanup",
+            "Let the user select a DigitalOcean region and Droplet size, then create a Droplet from DigitalOcean Codex Universal image ID 234061005",
+            "Poll the exact Droplet until it is active with a public IPv4 address",
+            "Configure local OpenSSH access and hand the alias to the desktop application's remote SSH workspace flow",
+            "Delete the billed Droplet and optionally remove the uploaded SSH key after explicit confirmation"
+          ],
+          "ghastCapabilities": [
+            "The complete Codex provisioning and cleanup workflow through DigitalOcean's official accounts and droplets hosted MCP services rather than the private Codex app mapping",
+            "Independent local Ed25519 key generation and idempotent marked OpenSSH configuration without copying the unlicensed CodexPlugin helpers or blindly trusting ssh-keyscan output",
+            "Live official region, size, price, availability, and image verification before a confirmed Droplet creation",
+            "All 54 unique official account, action, billing, invoice, SSH-key, region, Droplet, power, backup, snapshot, image, and size tools",
+            "Direct browser OAuth through DigitalOcean dynamic client registration, authorization code, refresh tokens, public clients, read/write scopes, and PKCE S256"
+          ],
+          "capabilityRelationship": "superset-official-mcp",
+          "limitations": [
+            "The Codex capability repository is public but unlicensed. It is used only as pinned factual evidence; its implementation and branded assets are not redistributed.",
+            "A funded DigitalOcean account, OAuth authorization, suitable account permissions, Droplet quota, regional capacity, product eligibility, and all compute, backup, snapshot, transfer, and storage charges remain user-managed.",
+            "The Codex Universal image ID 234061005 can become unavailable or region-restricted. The workflow requires image-get to return that exact image before creation and refuses an unconfirmed substitute.",
+            "Authenticated tools/list and real account, key, billing, image, or Droplet operations were not run because no user DigitalOcean account authorization was supplied.",
+            "The official hosted services expose coarse read and write OAuth scopes. Ghast applies the source annotations and requires exact-target confirmation for creates, rebuilds, restores, resets, power operations, resize, image changes, key deletion, and Droplet deletion.",
+            "Droplet creation and several action tools are non-idempotent. Interrupted or ambiguous writes must be resolved through exact readback before any retry.",
+            "The independent SSH helper uses StrictHostKeyChecking accept-new for first contact and never runs ssh-keyscan automatically. Environments requiring stronger host identity assurance must verify and pin the fingerprint through an independent trusted channel.",
+            "Adding the configured SSH alias to a desktop remote-workspace list remains a host UI action because the official MCP services manage DigitalOcean resources, not local desktop connection settings.",
+            "Go was not installed in the audit environment, so the official Go test suite was not rerun locally. The exact upstream revision's GitHub CI and release workflows succeeded on August 10, 2026, and the published npm launcher was executed far enough to confirm its exact version, service selection, and missing-token failure path.",
+            "A generic cloud-server icon is used because the licensed MCP source does not grant redistribution rights for DigitalOcean marketplace artwork."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Verify digitalocean-labs/mcp-digitalocean revision acbe39190b822268192d02ffd77b50319bb3d071, MIT license, README, npm package, account and Droplet registries, safety-annotation tests, and OAuth source hashes",
+            "Confirm the exact ordered 11 account and 42 Droplet, image, and size tool inventories plus the always-registered region-list tool",
+            "Verify @digitalocean/mcp 1.0.68 npm integrity sha512-jBnCSS22ZBCFoE6JtTpOvS4ZdUeUh/kerc1RurceDi+/GkOE81rp+wQFh5voyHxki43eUgyt4DrKTl2oPLKehA==, shasum b41d83a49fd444ada52e1c0472683b1888d251c1, official publisher, gitHead, and missing-token runtime behavior for accounts,droplets",
+            "Verify canonical protected-resource metadata hashes 49fd2dfe0658252ff47825ef3cc279ab9f483504f108600233e9bde890a0bab9 and d20e864ecccd5c552aba30d78435e6157ee01e6c4a5bc9f8f32e5cce36928c6f and authorization metadata hash 280906321175b2dd236743cac95a0704e62d3ba041622adf1f7f5cef6de91f12",
+            "Register a disposable localhost public OAuth client and confirm HTTP 201, no client secret, authorization-code and refresh-token grants, and PKCE S256 discovery",
+            "Probe both hosted MCP endpoints with unauthenticated GET and initialize requests and confirm HTTP 401, missing or invalid bearer token, and the exact read/write protected-resource challenge",
+            "Verify digitalocean/CodexPlugin revision 6be47f6207d3ff553a706c8e5483e6fa02793d94, confirm no license file exists, hash every workflow evidence file, and compare all six private app tools and provisioning stages without copying them",
+            "Run the independent SSH-key generator and SSH-config helper in temporary directories, confirm permissions and JSON output, confirm idempotent managed-block replacement, and confirm rejection of alias collisions, symlinked keys, and non-public addresses",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/digitalocean.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.68-ghast.1",
+        "repository": "https://github.com/digitalocean-labs/mcp-digitalocean",
+        "upstreamRevision": "acbe39190b822268192d02ffd77b50319bb3d071",
+        "portStatus": "full"
       }
     },
     {

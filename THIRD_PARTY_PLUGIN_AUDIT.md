@@ -71,7 +71,7 @@ verification.
 | datasite | Datasite | appConnector, skills | MIT | official-source-research-required | not-implemented |
 | deepnote | Deepnote | appConnector, skills | Apache-2.0 | official-source-verified | implemented-verified |
 | demandbase | Demandbase Inc | appConnector | MIT | official-source-research-required | not-implemented |
-| digitalocean | DigitalOcean | appConnector, skills | none | blocked-license | not-implemented |
+| digitalocean | DigitalOcean | appConnector, skills | none | official-source-verified | implemented-verified |
 | dnb-finance-analytics | Dun & Bradstreet | appConnector, skills | MIT | official-source-research-required | not-implemented |
 | docket | Docket AI | appConnector | MIT | official-source-research-required | not-implemented |
 | docusign | Docusign | appConnector | MIT | official-source-research-required | not-implemented |

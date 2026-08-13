@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "digitalocean-accounts": {
+      "type": "http",
+      "url": "https://accounts.mcp.digitalocean.com/mcp"
+    },
+    "digitalocean-droplets": {
+      "type": "http",
+      "url": "https://droplets.mcp.digitalocean.com/mcp"
+    }
+  }
+}

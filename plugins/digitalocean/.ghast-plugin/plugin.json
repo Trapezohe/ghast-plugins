@@ -1,0 +1,18 @@
+{
+  "name": "digitalocean",
+  "version": "1.0.68-ghast.1",
+  "description": "Provision a DigitalOcean Droplet as a remote SSH workspace and inspect or explicitly manage Droplets, images, sizes, regions, account billing, actions, and SSH keys through DigitalOcean's official hosted MCP services.",
+  "category": "development",
+  "author": {
+    "name": "DigitalOcean",
+    "url": "https://www.digitalocean.com"
+  },
+  "homepage": "https://github.com/digitalocean-labs/mcp-digitalocean",
+  "repository": "https://github.com/digitalocean-labs/mcp-digitalocean",
+  "upstreamRevision": "acbe39190b822268192d02ffd77b50319bb3d071",
+  "upstreamPath": ".",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
