@@ -44,7 +44,7 @@ verification.
 | brex | Brex Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | brighthire | BrightHire | appConnector, skills | MIT | blocked-license | not-implemented |
 | calendly | Calendly | appConnector | MIT | official-source-verified | implemented-verified |
-| canva | Canva | appConnector, skills | MIT | official-source-research-required | not-implemented |
+| canva | Canva | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | carta-crm | Carta Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | catalyst-by-zoho | Catalyst by Zoho | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | cb-insights | CB Insights | appConnector | MIT | official-source-research-required | not-implemented |

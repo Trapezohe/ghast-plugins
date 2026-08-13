@@ -523,6 +523,36 @@
       "license": "MIT"
     },
     {
+      "id": "canva",
+      "name": "canva",
+      "description": "Create, edit, review, resize, bulk-generate, and brand-check Canva designs through Canva's official skills and hosted MCP server.",
+      "manifest": {
+        "name": "canva",
+        "description": "Create, edit, review, resize, bulk-generate, and brand-check Canva designs through Canva's official skills and hosted MCP server.",
+        "author": {
+          "name": "Canva",
+          "url": "https://www.canva.com/"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.0-ghast.1",
+        "homepage": "https://www.canva.com/developers/",
+        "repository": "https://github.com/canva-sdks/canva-skills",
+        "upstreamRevision": "b56291ea0a36d0a941e1478b47959be5f1771dee",
+        "license": "Apache-2.0",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/canva.zip",
+        "sha256": "c112d895982103aa59e5324c5ad3dacf21594149aad88dd49d3ac1f25901ca17"
+      },
+      "icon": "./plugins/canva/assets/icon.svg",
+      "category": "creativity",
+      "homepage": "https://www.canva.com/developers/",
+      "repository": "https://github.com/canva-sdks/canva-skills",
+      "license": "Apache-2.0"
+    },
+    {
       "id": "carta-crm",
       "name": "carta-crm",
       "description": "Manage investors, companies, contacts, deals, notes, fundraisings, tasks, themes, reports, campaigns, files, and relationship context through Carta's official CRM skills and hosted MCP server.",

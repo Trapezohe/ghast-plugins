@@ -120,6 +120,14 @@ CUSTOM_ICONS = {
         '<path d="M12 26h40M22 10v10M42 10v10"/>'
         '<path d="M20 34h8M36 34h8M20 43h8M36 43h8"/>',
     ),
+    "canva": (
+        "#007C83",
+        '<rect x="11" y="12" width="42" height="40" rx="4"/>'
+        '<path d="M11 23h42M23 23v29"/>'
+        '<circle cx="17" cy="18" r="1.5" fill="white" stroke="none"/>'
+        '<path d="M30 31h15M30 39h11"/>'
+        '<path d="M31 48l6-6 5 4 5-7"/>',
+    ),
     "carta-crm": (
         "#2A6F62",
         '<rect x="11" y="13" width="42" height="38" rx="3"/>'

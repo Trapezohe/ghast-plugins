@@ -647,7 +647,7 @@
       ]
     },
     "canva": {
-      "verificationStatus": "official-source-research-required",
+      "verificationStatus": "official-source-verified",
       "officialDeveloper": "Canva",
       "officialRepository": "https://github.com/canva-sdks/canva-skills",
       "officialRevision": "b56291ea0a36d0a941e1478b47959be5f1771dee",
@@ -655,7 +655,7 @@
       "licenseEvidence": [
         "The pinned canva-sdks/canva-skills repository contains an Apache License 2.0 file with SHA-256 c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.",
         "The Apache-2.0 grant covers the published plugin manifests and skills, not Canva's closed hosted MCP implementation, accounts, content, trademarks, or marketplace artwork.",
-        "No Canva logo or OpenAI marketplace artwork is proposed for copying; a future Ghast package must use a generic compatibility icon unless Canva publishes separately licensed artwork."
+        "No Canva logo or OpenAI marketplace artwork is copied. plugins/canva uses a generic Ghast design-workspace icon because the audited main branch publishes no separately licensed catalog artwork."
       ],
       "officialityEvidence": [
         "The public repository is owned by the canva-sdks GitHub organization, describes itself as Canva Agent Skills, and names Canva as the author in its Codex plugin manifest.",
@@ -669,9 +669,11 @@
         "The official tools page documents 33 tools and per-tool plan and rate-limit information; its canonical main-content SHA-256 was stable across three captures at f6c0a71e800cf48e27380c273aef94f984366b28f8e1899004fe2999b170859b.",
         "The official usage policy requires compatibility-only naming, per-user authentication, data minimization, no cross-user caching, no background enumeration by default, and no use of Canva data or outputs for external model training or evaluation; its canonical main-content SHA-256 was stable across three captures at 8a377b1185dae2544cf38cc020b986ac255b6c0edaa395385a168856d0295220.",
         "Official workflow and tool documentation confirms candidate-based design generation, copy and resize operations, transactional text editing, exports, and a prominent direct edit link after design-touching operations.",
-        "The OAuth protected-resource metadata identifies the same MCP resource, 15 user scopes, and bearer-header authentication; its canonical JSON has SHA-256 0844c734bb78ff9ae8a1cdf85e40977266a9d5cb8813d27ce3015b58e6017bf5.",
+        "The OAuth protected-resource metadata identifies the same MCP resource, 16 user scopes, and bearer-header authentication; its canonical JSON has SHA-256 0844c734bb78ff9ae8a1cdf85e40977266a9d5cb8813d27ce3015b58e6017bf5.",
         "The authorization-server metadata declares authorization-code and refresh-token grants, dynamic client registration, public clients, and PKCE S256; its canonical JSON has SHA-256 cbafb118c03804250da244de3fc16573db29c09d6d97fbf44a296b01357b030c.",
-        "Disposable public-client registrations with localhost and 127.0.0.1 callback URIs returned HTTP 201, but Canva's official setup documentation separately requires third-party redirect URIs to be added to an allowlist through its waitlist review."
+        "Disposable public-client registrations with localhost and 127.0.0.1 callback URIs returned HTTP 201 with authorization-code and refresh-token grants, token_endpoint_auth_method none, and no client secret.",
+        "A fresh disposable public client's authorization request reached Canva's official Chinese login page in the in-app browser on August 13, 2026. Canva translated the dynamic client request into its own mcp.canva.com callback flow; no redirect-URI rejection or provider-approval gate appeared.",
+        "MCP initialize with no token returned HTTP 401, invalid_token, and the exact protected-resource metadata challenge. No Canva account login, token exchange, authenticated tools/list, or design operation was performed."
       ],
       "codexCapabilities": [
         "Search, create, and edit Canva designs through a private app connector",
@@ -680,34 +682,36 @@
         "Copy a design, translate all text through a previewed editing transaction, preserve branding and layout, and commit only after approval"
       ],
       "ghastCapabilities": [
-        "No implementation is claimed while Ghast lacks a Canva-approved OAuth redirect URI.",
-        "After provider access is approved, Ghast can import the six current Canva-authored active skills byte-for-byte and connect to the official https://mcp.canva.com/mcp endpoint.",
+        "The six current Canva-authored active skills imported from the pinned official repository: brand checking, bulk creation, safe editing, structured design feedback, feedback implementation, and multi-format social-media resizing.",
+        "Direct browser OAuth to Canva's official https://mcp.canva.com/mcp endpoint through Dynamic Client Registration, authorization code, refresh tokens, public clients, and PKCE S256.",
         "The official MCP documentation contains the generation, candidate selection, design copy, resizing, export, content reading, Brand Kit and template, and transactional editing primitives needed to reproduce the older Codex workflows, but Canva no longer registers its own branded-presentation and design-translation skills."
       ],
-      "capabilityRelationship": "official-source-verified-provider-access-and-workflow-parity-gated",
+      "capabilityRelationship": "current-official-suite-broadens-core-design-workflows-with-inactive-legacy-specializations",
       "limitations": [
-        "Canva requires a third-party integration's redirect URI to be added to its OAuth allowlist through a waitlist review. Ghast has not received that approval, so a packaged endpoint declaration would not yet be a reliably usable plugin.",
-        "Successful dynamic client registration does not establish authorization eligibility and does not bypass Canva's documented redirect-URI allowlist.",
-        "The command-line authorization probe reached Canva's web authorization path but received an edge HTTP 403 page; no user authorization, token exchange, authenticated tool listing, or design operation was completed.",
-        "Canva lists popular clients such as Codex as already having access, but that access cannot be assumed to cover Ghast or a newly registered Ghast OAuth client.",
-        "The current official Canva package does not activate branded-presentation or design-translation. Ghast must not silently reactivate those files or claim current official support without Canva's approval and authenticated schema verification.",
-        "The OpenAI Codex snapshot's three skills and Canva's current six active skills are overlapping but not identical capability sets. A complete parity claim requires authenticated verification of presentation generation, copy-and-translate, resizing, and export against the live MCP schemas.",
-        "Canva's overview says Brand Kits and brand templates require Enterprise, while the detailed tools table lists list-brand-kits, search-brand-templates, and create-design-from-brand-template as Pro and above. A future implementation must use the more conservative entitlement assumption until authenticated behavior is verified.",
+        "Canva operates the hosted MCP implementation; Ghast redistributes only Canva's Apache-2.0 plugin files and a generic compatibility icon. A Canva account, browser sign-in, user permissions, plan entitlements, quotas, content licenses, and network access remain user-managed.",
+        "Official source, OAuth metadata, Dynamic Client Registration, the real browser authorization entry point, and unauthenticated MCP behavior were verified without a Canva account. Authenticated tools/list and real design reads or writes were not run.",
+        "The current official Canva package does not activate branded-presentation, design-translation, classroom-helper, or presentation-time-fitting. Ghast excludes all four and does not present them as current Canva-supported workflows.",
+        "The OpenAI Codex snapshot's three skills and Canva's current six active skills overlap but are not identical. The live service documents the primitives for presentation generation and copy-and-translate, but Ghast does not claim that the inactive orchestration text remains an active official skill.",
+        "A command-line authorization probe received an edge HTTP 403 page, while the same standards-based flow reached Canva's official login page in a real browser. Ghast therefore requires browser-based OAuth and does not treat non-browser authorization scraping as a supported path.",
+        "Canva's overview says Brand Kits and brand templates require Enterprise, while the detailed tools table lists list-brand-kits, search-brand-templates, and create-design-from-brand-template as Pro and above. The Ghast package uses the more conservative entitlement assumption until authenticated behavior is verified.",
         "Resizing requires Canva Pro or above. Export quality and premium-element licensing also depend on the user's plan and design contents.",
         "A public integration must satisfy Canva's branding, OAuth, scope, data-security, rate-limit, monitoring, and review-readiness requirements. It must use compatibility language and must not imply that Ghast is built, endorsed, or certified by Canva.",
         "Canva content, prompts, outputs, Brand Kits, templates, and design structures must not be used for external model training, evaluation, bulk extraction, crawling, or cross-user caching."
       ],
       "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
         "Verify canva-sdks/canva-skills revision b56291ea0a36d0a941e1478b47959be5f1771dee remains the pinned source and its Apache-2.0 LICENSE SHA-256 remains c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.",
         "Verify the official root README, plugin README, Codex manifest, and MCP declaration SHA-256 values are 4bbeb131c0de496ba3ebff518619707cfe332d2864b7261a061ce7fdfe3d9ccf, 3fcc8a66e92ab7e31c9b0c928dee86601654cde43b769bf17b7be01a17f21a0d, 97fcf39202be76c58daf1e6b340fe5d571ac7e724cab74b1ef7d6a07e8565d0f, and 3714284bf5987457d5902125e681db814ad8b874cbadd20e6adfaae24746e635.",
         "Verify the six active and four inactive skill path-and-hash inventory SHA-256 values are 63d4f9c22f92c3a10e0746b61e57fd0e3e965c41525ce318d90e94bf3b0ff57a and 57346915075eec011c7cf0355024d83e38e394b5e910d161eb248c39999183a7.",
         "Verify canonical main-content SHA-256 values for the official overview, tools page, and usage policy are 416ecdcb7a1f5d82f89107448fc5971e306a0e4addfab816613838a91f641287, f6c0a71e800cf48e27380c273aef94f984366b28f8e1899004fe2999b170859b, and 8a377b1185dae2544cf38cc020b986ac255b6c0edaa395385a168856d0295220.",
         "Verify the design-edit handoff, generate-design, perform-editing-operations, export-design, get-design-content, create-design-from-candidate, start-editing-transaction, and commit-editing-transaction canonical hashes remain 9471cccd707737aab2d52426d026e75e25c3450955be0943176b9c1575004bc2, 1fb4e2be8e8db6277761981b897f5db06cd6ea905a94cca89d092afda7aa2713, 1d2de9bb903994b3bb04de230224cb845127c3a7fe03c3264bf1d854da247d2f, 4f70316cec7c1de9d44cd9c83f45b170ef8aa094d8161ca8278a7ed68e17f7a1, 6642f767405951d055a63de5dc13b156465c79cc100741655c6fffd69933c18b, c3231eeda4ec5315b5329bdcbb8e308dabed4eb6faebf1d61ba688347bd9b050, 1a67bad7261d1b1a9480e266029931b149f3be25bf9bf82eae28d1989d26ac3c, and 6b2c4478825decc333229f4730a5de87c0c37c34ecc32473cddd17325827f715.",
         "Verify canonical OAuth protected-resource and authorization-server metadata SHA-256 values are 0844c734bb78ff9ae8a1cdf85e40977266a9d5cb8813d27ce3015b58e6017bf5 and cbafb118c03804250da244de3fc16573db29c09d6d97fbf44a296b01357b030c.",
-        "Register disposable public clients with localhost callbacks and confirm registration succeeds, while retaining the distinction between registration and Canva allowlist approval.",
-        "Obtain Canva approval for Ghast's production and local OAuth redirect URIs before creating plugins/canva or claiming authenticated usability.",
-        "After approval, complete authorization, token exchange, authenticated tools/list, one read-only design lookup, and non-destructive copies of the branded-presentation, social-resize, and translation workflows before marking the port verified.",
-        "Import only Canva's current active skills by default; keep inactive skills excluded unless Canva reactivates them or separately approves a clearly labeled Ghast compatibility adaptation."
+        "Register a disposable localhost public client and confirm HTTP 201, no client secret, authorization-code and refresh-token grants, token_endpoint_auth_method none, and PKCE S256 discovery.",
+        "Open the disposable authorization request in a real browser and confirm it reaches Canva's official login page through Canva's own mcp.canva.com callback flow; do not sign in during the unauthenticated audit.",
+        "Probe https://mcp.canva.com/mcp with MCP initialize and confirm HTTP 401, invalid_token, and Canva's exact protected-resource challenge.",
+        "Confirm plugins/canva contains exactly the six active official skills and no inactive-skills directory, then compare every packaged SKILL.md byte-for-byte with the pinned source.",
+        "A Canva account holder should complete authorization, authenticated tools/list, one read-only design lookup, and non-destructive presentation-generation, social-resize, and copy-and-translate checks before making a stronger live workflow parity claim.",
+        "unzip -tqq packages/canva.zip"
       ]
     },
     "carta-crm": {

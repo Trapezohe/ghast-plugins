@@ -220,6 +220,54 @@ CARTA_CRM_AUTH_SERVER_URL = (
 CARTA_CRM_AUTH_SERVER_SHA256 = (
     "4e8413fc89566a41eeee23d6a492026a3455811b33b208313c97054663cd0bdd"
 )
+CANVA_SOURCE_REVISION = "b56291ea0a36d0a941e1478b47959be5f1771dee"
+CANVA_MCP_URL = "https://mcp.canva.com/mcp"
+CANVA_PROTECTED_RESOURCE_URL = (
+    "https://mcp.canva.com/.well-known/oauth-protected-resource/mcp"
+)
+CANVA_PROTECTED_RESOURCE_SHA256 = (
+    "0844c734bb78ff9ae8a1cdf85e40977266a9d5cb8813d27ce3015b58e6017bf5"
+)
+CANVA_AUTH_SERVER_URL = (
+    "https://mcp.canva.com/.well-known/oauth-authorization-server"
+)
+CANVA_AUTH_SERVER_SHA256 = (
+    "cbafb118c03804250da244de3fc16573db29c09d6d97fbf44a296b01357b030c"
+)
+CANVA_ACTIVE_SKILL_HASHES = {
+    "brand-check": (
+        "b292189744392db22b9e72481056a0db94781bd64892480abe2ce50c76efbb73"
+    ),
+    "bulk-create": (
+        "65deda62b60ce9e748c7a90b3e41e91dadc38f6deee3ba4aca799fd7502eb8b4"
+    ),
+    "edit-design": (
+        "842eeec8f89bfcfb3490ca92092f4ef441577ff7f9b7bae979aad99cc92ceaa8"
+    ),
+    "get-design-feedback": (
+        "e18303be61308ad6dc8e05c4735b7254873f42ab9c6bc6c37b9cec339119be7b"
+    ),
+    "implement-feedback": (
+        "cb0d8a7434e7abd7a129ef74aa526ea7f5c0c7ea89db17e3a0ebf27d6108aa36"
+    ),
+    "resize-for-social-media": (
+        "bb36807630daf3ba7c2a27e83de64b329e03ce68457da874c36c5022ceff7094"
+    ),
+}
+CANVA_INACTIVE_SKILL_HASHES = {
+    "branded-presentation": (
+        "cb941d4892cfeda9034f77cccaf1e1d8c45546bd3a41c5c85e72e37055150ca1"
+    ),
+    "classroom-helper": (
+        "d7f7aeedd72dc258c96c1f1d93e668ea19dc208e3cdda64e9ec7f2db93728f75"
+    ),
+    "design-translation": (
+        "c10b609033f5727c53d3c05dddd61c4e3d0de9a314b78420b2109dc6629192eb"
+    ),
+    "presentation-time-fitting": (
+        "37f13c6322be6062b3cd98934cffcfe65cff70e6698560b8a7243583ec7a454c"
+    ),
+}
 CATALYST_SOURCE_REVISION = "4cfbca7041b14ffa874488cd9b0ba88970cd168f"
 CATALYST_MCP_ENDPOINTS = {
     "us": "https://catalyst.zohomcp.com/mcp/message",
@@ -1568,6 +1616,62 @@ PLUGINS = {
         "icon": "assets/app-icon.png",
         "category": "research",
         "license_name": "MIT",
+    },
+    "canva": {
+        "directory": "canva-skills",
+        "revision": CANVA_SOURCE_REVISION,
+        "repository": "https://github.com/canva-sdks/canva-skills",
+        "plugin_root": "plugins/canva",
+        "manifest": ".codex-plugin/plugin.json",
+        "license": "../../LICENSE",
+        "generated_icon": "./assets/icon.svg",
+        "category": "creativity",
+        "mcp": ".mcp.json",
+        "license_name": "Apache-2.0",
+        "description": (
+            "Create, edit, review, resize, bulk-generate, and brand-check "
+            "Canva designs through Canva's official skills and hosted MCP "
+            "server."
+        ),
+        "readme_provenance": (
+            "All six packaged skills, the MCP declaration, manifest "
+            "metadata, and license come from Canva's pinned official "
+            "multi-host plugin repository. The four workflows under "
+            "inactive-skills are deliberately excluded because Canva says "
+            "supported hosts do not register them."
+        ),
+        "compatibility_notes": [
+            (
+                "The Codex private app connector is replaced by Canva's "
+                "official public Streamable HTTP endpoint with browser OAuth, "
+                "Dynamic Client Registration, refresh tokens, and PKCE S256."
+            ),
+            (
+                "A disposable localhost public client registered successfully "
+                "during the audit, and its authorization request reached "
+                "Canva's official login page in a real browser. No account "
+                "login, token exchange, or design operation was performed."
+            ),
+            (
+                "Canva's current active package supersedes the older Codex "
+                "snapshot: it adds brand checking, bulk creation, safe design "
+                "editing, structured review, and comment-driven feedback "
+                "implementation, while older branded-presentation and "
+                "translation skills are now inactive upstream."
+            ),
+            (
+                "Generation, Brand Kit, copy, resize, export, content-read, "
+                "and transactional editing primitives remain available in "
+                "the official hosted MCP. Ghast does not silently reactivate "
+                "Canva's inactive workflow files."
+            ),
+            (
+                "A generic design-workspace icon is used because the "
+                "Apache-2.0 source license does not grant Canva trademark "
+                "rights and the main branch publishes no separately licensed "
+                "catalog artwork."
+            ),
+        ],
     },
     "carta-crm": {
         "directory": "carta-plugins",
@@ -3425,6 +3529,9 @@ def main() -> int:
     )
     verify_apollo_evidence(source_root / PLUGINS["apollo"]["directory"])
     verify_asana_evidence()
+    verify_canva_evidence(
+        source_root / PLUGINS["canva"]["directory"]
+    )
     verify_carta_crm_evidence(
         source_root / PLUGINS["carta-crm"]["directory"]
     )
@@ -8761,6 +8868,195 @@ def verify_asana_evidence() -> None:
         raise ValueError(
             "Pinned mcp-remote package changed; re-audit required"
         )
+
+
+def verify_canva_evidence(repository: Path) -> None:
+    if git_revision(repository) != CANVA_SOURCE_REVISION:
+        raise ValueError("Canva skills checkout changed; re-audit required")
+    if normalized_git_remote(repository) != normalized_repository_url(
+        "https://github.com/canva-sdks/canva-skills"
+    ):
+        raise ValueError("Canva skills repository origin changed")
+
+    expected_hashes = {
+        "LICENSE": (
+            "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        ),
+        "README.md": (
+            "4bbeb131c0de496ba3ebff518619707cfe332d2864b7261a061ce7fdfe3d9ccf"
+        ),
+        "plugins/canva/README.md": (
+            "3fcc8a66e92ab7e31c9b0c928dee86601654cde43b769bf17b7be01a17f21a0d"
+        ),
+        "plugins/canva/.codex-plugin/plugin.json": (
+            "97fcf39202be76c58daf1e6b340fe5d571ac7e724cab74b1ef7d6a07e8565d0f"
+        ),
+        "plugins/canva/.mcp.json": (
+            "3714284bf5987457d5902125e681db814ad8b874cbadd20e6adfaae24746e635"
+        ),
+    }
+    for relative, expected_hash in expected_hashes.items():
+        path = repository / relative
+        if not path.is_file() or sha256_bytes(path.read_bytes()) != expected_hash:
+            raise ValueError(
+                f"Canva official source evidence changed at {relative}"
+            )
+
+    plugin_root = repository / "plugins/canva"
+    manifest = json.loads(
+        (plugin_root / ".codex-plugin/plugin.json").read_text()
+    )
+    if (
+        manifest.get("name") != "canva"
+        or manifest.get("version") != "1.0.0"
+        or manifest.get("repository")
+        != "https://github.com/canva-sdks/canva-skills"
+        or (manifest.get("author") or {}).get("name") != "Canva"
+        or manifest.get("skills") != "./skills/"
+        or manifest.get("mcpServers") != "./.mcp.json"
+    ):
+        raise ValueError("Canva official Codex manifest changed")
+
+    mcp = json.loads((plugin_root / ".mcp.json").read_text())
+    if mcp != {
+        "mcpServers": {
+            "canva": {
+                "type": "http",
+                "url": CANVA_MCP_URL,
+            },
+        },
+    }:
+        raise ValueError("Canva official MCP declaration changed")
+
+    for directory, expected in (
+        ("skills", CANVA_ACTIVE_SKILL_HASHES),
+        ("inactive-skills", CANVA_INACTIVE_SKILL_HASHES),
+    ):
+        root = plugin_root / directory
+        actual_names = sorted(
+            path.parent.name for path in root.glob("*/SKILL.md")
+        )
+        if actual_names != sorted(expected):
+            raise ValueError(
+                f"Canva {directory} inventory changed; re-audit required"
+            )
+        for skill_name, expected_hash in expected.items():
+            skill_path = root / skill_name / "SKILL.md"
+            if sha256_bytes(skill_path.read_bytes()) != expected_hash:
+                raise ValueError(
+                    f"Canva {directory}/{skill_name} changed; "
+                    "re-audit required"
+                )
+
+    root_readme = (repository / "README.md").read_text()
+    for marker in (
+        "Canva Agent Skills",
+        "### Codex",
+        "plugins/canva/",
+        "These are not registered by any plugin host",
+    ):
+        if marker not in root_readme:
+            raise ValueError(
+                f"Canva official repository documentation is missing {marker!r}"
+            )
+
+    protected = json.loads(fetch_bytes(CANVA_PROTECTED_RESOURCE_URL))
+    if canonical_json_sha256(protected) != CANVA_PROTECTED_RESOURCE_SHA256:
+        raise ValueError(
+            "Canva OAuth protected-resource metadata changed; "
+            "re-audit required"
+        )
+    expected_scopes = {
+        "profile:read",
+        "design:meta:read",
+        "design:content:write",
+        "design:content:read",
+        "folder:read",
+        "folder:write",
+        "brandtemplate:content:read",
+        "brandtemplate:meta:read",
+        "brandtemplate:content:write",
+        "comment:write",
+        "comment:read",
+        "asset:read",
+        "asset:write",
+        "brandkit:read",
+        "help:answers:read",
+        "help:answers:write",
+    }
+    if (
+        protected.get("resource") != CANVA_MCP_URL
+        or protected.get("authorization_servers") != ["https://mcp.canva.com"]
+        or protected.get("bearer_methods_supported") != ["header"]
+        or set(protected.get("scopes_supported", [])) != expected_scopes
+    ):
+        raise ValueError("Canva OAuth protected-resource contract changed")
+
+    auth_server = json.loads(fetch_bytes(CANVA_AUTH_SERVER_URL))
+    if canonical_json_sha256(auth_server) != CANVA_AUTH_SERVER_SHA256:
+        raise ValueError(
+            "Canva OAuth authorization-server metadata changed; "
+            "re-audit required"
+        )
+    if (
+        auth_server.get("issuer") != "https://mcp.canva.com"
+        or auth_server.get("registration_endpoint")
+        != "https://mcp.canva.com/register"
+        or "authorization_code"
+        not in auth_server.get("grant_types_supported", [])
+        or "refresh_token"
+        not in auth_server.get("grant_types_supported", [])
+        or "none"
+        not in auth_server.get(
+            "token_endpoint_auth_methods_supported", []
+        )
+        or "S256"
+        not in auth_server.get("code_challenge_methods_supported", [])
+    ):
+        raise ValueError("Canva OAuth authorization contract changed")
+
+    initialize = json.dumps(
+        {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "method": "initialize",
+            "params": {
+                "protocolVersion": "2025-06-18",
+                "capabilities": {},
+                "clientInfo": {
+                    "name": "ghast-canva-audit",
+                    "version": "1.0.0",
+                },
+            },
+        }
+    ).encode()
+    request = urllib.request.Request(
+        CANVA_MCP_URL,
+        data=initialize,
+        headers={
+            "User-Agent": "Mozilla/5.0",
+            "Content-Type": "application/json",
+            "Accept": "application/json, text/event-stream",
+        },
+        method="POST",
+    )
+    try:
+        urllib.request.urlopen(request, timeout=30)
+    except urllib.error.HTTPError as exc:
+        challenge = exc.headers.get("WWW-Authenticate", "")
+        body = json.loads(exc.read())
+        if (
+            exc.code != 401
+            or CANVA_PROTECTED_RESOURCE_URL not in challenge
+            or body.get("error") != "invalid_token"
+            or body.get("error_description")
+            != "Missing or invalid access token"
+        ):
+            raise ValueError(
+                "Canva unauthenticated MCP behavior changed"
+            ) from exc
+    else:
+        raise ValueError("Canva MCP accepted missing credentials")
 
 
 def verify_carta_crm_evidence(repository: Path) -> None:

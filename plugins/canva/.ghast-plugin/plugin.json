@@ -1,0 +1,18 @@
+{
+  "name": "canva",
+  "version": "1.0.0-ghast.1",
+  "description": "Create, edit, review, resize, bulk-generate, and brand-check Canva designs through Canva's official skills and hosted MCP server.",
+  "category": "creativity",
+  "author": {
+    "name": "Canva",
+    "url": "https://www.canva.com/"
+  },
+  "homepage": "https://www.canva.com/developers/",
+  "repository": "https://github.com/canva-sdks/canva-skills",
+  "upstreamRevision": "b56291ea0a36d0a941e1478b47959be5f1771dee",
+  "upstreamPath": "plugins/canva",
+  "license": "Apache-2.0",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
