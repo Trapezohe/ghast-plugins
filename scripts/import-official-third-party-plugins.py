@@ -7,12 +7,16 @@ import argparse
 import ast
 import hashlib
 import html
+import io
 import json
 import os
 import re
+import selectors
 import shutil
 import subprocess
+import tarfile
 import tempfile
+import time
 import tomllib
 import urllib.error
 import urllib.request
@@ -191,6 +195,76 @@ CODERABBIT_CODEX_DOCS_URL = (
 )
 CODERABBIT_INSTALLER_URL = "https://cli.coderabbit.ai/install.sh"
 CODERABBIT_VERSION_URL = "https://cli.coderabbit.ai/releases/latest/VERSION"
+GLEAN_SOURCE_REVISION = "9e7bd95e8debca50088f4ac0262b68689d36d7df"
+GLEAN_REMOTE_SOURCE_REVISION = "8fc3156bc78b9f25503b03a029b15211cdd3a9ae"
+GLEAN_FAST_URI_VERSION = "3.1.5"
+GLEAN_FAST_URI_RESOLVED = (
+    "https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.5.tgz"
+)
+GLEAN_FAST_URI_INTEGRITY = (
+    "sha512-gHwA1O9LDIcKunMKhObS/HimwtehO1nPUECKAu5TpKgaO19fcWEl4bli"
+    "We1jWxVFvIXztJjjQ4L8XQ1EU9f7Jw=="
+)
+GLEAN_PATCHED_BUNDLE_SHA256 = (
+    "6afcff65599f456e5455fa95fcea5154c2994c7a18455b88e0b4e70f3045c46e"
+)
+GLEAN_BUNDLED_DEPENDENCIES = {
+    "@modelcontextprotocol/sdk": (
+        "1.29.0",
+        "MIT",
+        "5e13dbbc1d120fc2a03cecde7c91424ae2d7de11b63d58ded2f4431e261ee50d",
+    ),
+    "ajv": (
+        "8.20.0",
+        "MIT",
+        "a05350a88e318e4f5f2c2a1ff1e2e88daa4dd38e6e78b71cccae422bdc762cc3",
+    ),
+    "ajv-formats": (
+        "3.0.1",
+        "MIT",
+        "9df3bb69929a3b650ed73b3bfa1756725aaff0ac296461605753547004eafeaf",
+    ),
+    "eventsource-parser": (
+        "3.1.0",
+        "MIT",
+        "835eb611a23301b27115ca1be9f754c876e643ceb7fe63049c6b50609a1cafeb",
+    ),
+    "fast-deep-equal": (
+        "3.1.3",
+        "MIT",
+        "7bf9b2de73a6b356761c948d0e9eeb4be6c1270bd04c79cd489c1e400ffdfc1a",
+    ),
+    "fast-uri": (
+        GLEAN_FAST_URI_VERSION,
+        "BSD-3-Clause",
+        "b010b0dfdfdb23d7396e03b82cd4621fc9bb8f95d6b0aea70b9c24e12074c786",
+    ),
+    "json-schema-traverse": (
+        "1.0.0",
+        "MIT",
+        "7bf9b2de73a6b356761c948d0e9eeb4be6c1270bd04c79cd489c1e400ffdfc1a",
+    ),
+    "pkce-challenge": (
+        "5.0.1",
+        "MIT",
+        "feb87a2e0c305de3464cc44077da5393c52d8ca6362d37427157d04ec6f4510d",
+    ),
+    "yaml": (
+        "2.9.0",
+        "ISC",
+        "5bba27375d93e9119f76c1015f7672cf9ad5f70952296e0842fb2243d6376869",
+    ),
+    "zod": (
+        "4.4.3",
+        "MIT",
+        "3f1189b28e3866e0d979968d466b78f813f76827cfdca1fbb124cc0a5c8841f8",
+    ),
+    "zod-to-json-schema": (
+        "3.25.2",
+        "ISC",
+        "80d3168ad2f70f6f5bb2ab22b23414707abf6f0a392034891481ae36a1a429d4",
+    ),
+}
 AMPLITUDE_SOURCE_SKILLS = (
     "add-analytics-instrumentation",
     "analyze-account-health",
@@ -1554,6 +1628,61 @@ PLUGINS = {
             ),
         ],
     },
+    "glean": {
+        "directory": "glean-agent-plugins",
+        "revision": GLEAN_SOURCE_REVISION,
+        "repository": "https://github.com/gleanwork/agent-plugins",
+        "plugin_root": "dist/codex/plugins/glean",
+        "license_name": "MIT",
+        "category": "productivity",
+        "build_glean": True,
+        "description": (
+            "Search enterprise documents, Slack, email, code, people, "
+            "meetings, memory, and organization-specific tools through "
+            "Glean's official Codex plugin and local MCP adapter."
+        ),
+        "readme_provenance": (
+            "All 20 packaged skills, the local OAuth MCP adapter, official "
+            "Glean icon, and MIT license are rebuilt from Glean's v3.3.0 "
+            "source-of-truth repository. Ghast changes no Glean business "
+            "logic or skill guidance. It rebuilds the bundle with "
+            "fast-uri 3.1.5 because Glean's release lock still selected "
+            "3.1.4, which is affected by CVE-2026-18446."
+        ),
+        "compatibility_notes": [
+            (
+                "The original OpenAI marketplace entry is a private app "
+                "connector. This port instead uses Glean's newer, public, "
+                "developer-authored Codex plugin, including its local setup "
+                "and OAuth adapter plus direct promotion of search, "
+                "read_document, employee_search, chat, memory, and "
+                "user_activity tools."
+            ),
+            (
+                "The local adapter discovers a Glean tenant from a work email "
+                "or accepts GLEAN_MCP_SERVER_URL, normalizes it to Glean's "
+                "gateway endpoint, stores credentials under the user's local "
+                "Glean data directory, and never packages account tokens."
+            ),
+            (
+                "The source release is rebuilt under Node 24. The only source "
+                "tree change is a structured npm override from fast-uri "
+                "3.1.4 to patched 3.1.5; all 195 upstream MCP tests, type "
+                "checking, three-target plugin validation, and a Ghast "
+                "protocol smoke test must pass."
+            ),
+            (
+                "Hono, ip-address, undici, js-yaml, and nanoid appear only in "
+                "the source dependency graph or build tooling and are absent "
+                "from the shipped single-file runtime bundle."
+            ),
+            (
+                "Actual tools and data depend on the user's Glean tenant, "
+                "administrator configuration, connectors, permissions, "
+                "agents, and MCP Gateway policy."
+            ),
+        ],
+    },
     "hyperframes": {
         "directory": "hyperframes",
         "revision": "9b0c5e85596efaf93823bf5f19b7f1d1216ca7d5",
@@ -2360,6 +2489,7 @@ def main() -> int:
     verify_coderabbit_evidence(
         source_root / PLUGINS["coderabbit"]["directory"]
     )
+    verify_glean_evidence(source_root / PLUGINS["glean"]["directory"])
     verify_datadog_evidence()
     verify_deepnote_evidence()
     verify_mixpanel_evidence()
@@ -2383,6 +2513,9 @@ def import_plugin(name: str, config: dict, source_root: Path) -> None:
         raise ValueError(
             f"{repository}: expected revision {config['revision']}, found {revision}"
         )
+    if config.get("build_glean"):
+        import_glean_plugin(name, config, repository)
+        return
 
     plugin_root = repository / config["plugin_root"]
     if config.get("manifest"):
@@ -2549,6 +2682,441 @@ def import_plugin(name: str, config: dict, source_root: Path) -> None:
         if target.exists():
             shutil.rmtree(target)
         staging.rename(target)
+
+
+def import_glean_plugin(name: str, config: dict, repository: Path) -> None:
+    node_version = subprocess.run(
+        ["node", "--version"],
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+    if not re.fullmatch(r"v24\.\d+\.\d+", node_version):
+        raise ValueError(
+            f"Glean's audited build requires Node 24, found {node_version}"
+        )
+
+    with tempfile.TemporaryDirectory(prefix=".glean-build-") as build_temp:
+        build_root = Path(build_temp)
+        archive_bytes = subprocess.run(
+            ["git", "archive", "--format=tar", GLEAN_SOURCE_REVISION],
+            cwd=repository,
+            check=True,
+            capture_output=True,
+        ).stdout
+        with tarfile.open(fileobj=io.BytesIO(archive_bytes), mode="r:") as archive:
+            archive.extractall(build_root)
+
+        apply_glean_dependency_patch(build_root)
+        build_env = os.environ.copy()
+        build_env["NPM_CONFIG_CACHE"] = str(build_root / ".npm-cache")
+        for command in (
+            ["npm", "ci"],
+            ["npm", "run", "typecheck:bundle"],
+            ["npm", "run", "test:bundle"],
+            ["npm", "run", "check:no-shell"],
+            ["npm", "test"],
+        ):
+            subprocess.run(
+                command,
+                cwd=build_root,
+                env=build_env,
+                check=True,
+            )
+
+        fast_uri_version = subprocess.run(
+            [
+                "node",
+                "-p",
+                "require('./node_modules/fast-uri/package.json').version",
+            ],
+            cwd=build_root,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.strip()
+        if fast_uri_version != GLEAN_FAST_URI_VERSION:
+            raise ValueError(
+                "Glean security rebuild resolved an unexpected fast-uri "
+                f"version: {fast_uri_version}"
+            )
+
+        source_plugin = build_root / config["plugin_root"]
+        verify_built_glean_plugin(source_plugin, build_root)
+        source_manifest = json.loads(
+            (source_plugin / ".codex-plugin/plugin.json").read_text()
+        )
+
+        with tempfile.TemporaryDirectory(
+            prefix=f".{name}-", dir=PLUGIN_DIR
+        ) as plugin_temp:
+            staging = Path(plugin_temp)
+            shutil.copytree(
+                source_plugin / "skills",
+                staging / "skills",
+                copy_function=shutil.copy2,
+            )
+            shutil.copytree(
+                source_plugin / "mcp",
+                staging / "mcp",
+                copy_function=shutil.copy2,
+            )
+            shutil.copy2(source_plugin / ".mcp.json", staging / ".mcp.json")
+            shutil.copy2(source_plugin / "LICENSE", staging / "LICENSE")
+            copy_glean_third_party_licenses(build_root, staging)
+            icon_target = staging / "assets/icon.png"
+            icon_target.parent.mkdir()
+            shutil.copy2(source_plugin / "assets/avatar.png", icon_target)
+
+            manifest = {
+                "name": name,
+                "version": f"{source_manifest['version']}-ghast.1",
+                "description": config["description"],
+                "category": config["category"],
+                "author": source_manifest["author"],
+                "homepage": source_manifest["homepage"],
+                "repository": config["repository"],
+                "upstreamRevision": GLEAN_SOURCE_REVISION,
+                "upstreamPath": config["plugin_root"],
+                "license": config["license_name"],
+                "icon": "./assets/icon.png",
+                "skills": "./skills/",
+                "mcpServers": "./.mcp.json",
+            }
+            manifest_dir = staging / ".ghast-plugin"
+            manifest_dir.mkdir()
+            (manifest_dir / "plugin.json").write_text(
+                json.dumps(manifest, indent=2, ensure_ascii=False) + "\n"
+            )
+            (staging / "README.md").write_text(
+                render_readme(name, source_manifest, manifest, config)
+            )
+            smoke_test_glean_plugin(staging)
+
+            target = PLUGIN_DIR / name
+            if target.exists():
+                shutil.rmtree(target)
+            staging.rename(target)
+
+
+def apply_glean_dependency_patch(build_root: Path) -> None:
+    package_path = build_root / "package.json"
+    package = json.loads(package_path.read_text())
+    expected_overrides = {
+        "hono": "^4.12.25",
+        "esbuild": "$esbuild",
+        "vite": "7.3.5",
+    }
+    if package.get("overrides") != expected_overrides:
+        raise ValueError(
+            "Glean npm overrides changed; re-audit the security rebuild"
+        )
+    package["overrides"]["fast-uri"] = f"^{GLEAN_FAST_URI_VERSION}"
+    package_path.write_text(json.dumps(package, indent=2) + "\n")
+
+    lock_path = build_root / "package-lock.json"
+    lock = json.loads(lock_path.read_text())
+    fast_uri = (lock.get("packages") or {}).get("node_modules/fast-uri")
+    if fast_uri != {
+        "version": "3.1.4",
+        "resolved": (
+            "https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.4.tgz"
+        ),
+        "integrity": (
+            "sha512-8JnbkQ4juDyvYs4mgFGQqg4yCYtFDtUtmp2QIQq11ZZe5CFQ5wcqm1"
+            "rqDgAh/QdMySuBnPzMUiJUNZG5N/AiQw=="
+        ),
+        "funding": [
+            {
+                "type": "github",
+                "url": "https://github.com/sponsors/fastify",
+            },
+            {
+                "type": "opencollective",
+                "url": "https://opencollective.com/fastify",
+            },
+        ],
+        "license": "BSD-3-Clause",
+    }:
+        raise ValueError(
+            "Glean's fast-uri lock entry changed; re-audit the security patch"
+        )
+    fast_uri.update(
+        {
+            "version": GLEAN_FAST_URI_VERSION,
+            "resolved": GLEAN_FAST_URI_RESOLVED,
+            "integrity": GLEAN_FAST_URI_INTEGRITY,
+        }
+    )
+    lock_path.write_text(json.dumps(lock, indent=2) + "\n")
+
+
+def verify_built_glean_plugin(plugin_root: Path, build_root: Path) -> None:
+    required_files = (
+        ".codex-plugin/plugin.json",
+        ".mcp.json",
+        "LICENSE",
+        "assets/avatar.png",
+        "mcp/dist/index.js",
+        "mcp/package.json",
+        "mcp/start.mjs",
+    )
+    for relative in required_files:
+        if not (plugin_root / relative).is_file():
+            raise ValueError(
+                f"Glean generated Codex plugin is missing {relative}"
+            )
+
+    manifest = json.loads(
+        (plugin_root / ".codex-plugin/plugin.json").read_text()
+    )
+    if (
+        manifest.get("name") != "glean"
+        or manifest.get("version") != "3.3.0"
+        or manifest.get("repository")
+        != "https://github.com/gleanwork/agent-plugins"
+        or manifest.get("license") != "MIT"
+        or manifest.get("skills") != "./skills/"
+        or manifest.get("mcpServers") != "./.mcp.json"
+        or (manifest.get("author") or {}).get("name") != "Glean"
+    ):
+        raise ValueError("Glean generated Codex manifest changed")
+
+    mcp_config = json.loads((plugin_root / ".mcp.json").read_text())
+    if mcp_config != {
+        "mcpServers": {
+            "glean_plugin": {
+                "command": "node",
+                "args": ["./mcp/start.mjs"],
+                "cwd": ".",
+                "env": {
+                    "ENABLE_HITL": "true",
+                    "HITL_TIMEOUT_MS": "300000",
+                },
+            }
+        }
+    }:
+        raise ValueError("Glean generated Codex MCP declaration changed")
+
+    skill_names = tuple(
+        sorted(
+            path.parent.name
+            for path in (plugin_root / "skills").glob("*/SKILL.md")
+        )
+    )
+    if skill_names != (
+        "catch-up",
+        "code-owners",
+        "codebase-context",
+        "connect-glean",
+        "find-examples",
+        "find-expert",
+        "glean_run",
+        "meeting-prep",
+        "onboarding",
+        "plan-prep",
+        "project-awareness",
+        "project-handoff",
+        "search",
+        "similar-code",
+        "skill-creation-guide",
+        "stakeholders",
+        "using-glean",
+        "using-glean-code",
+        "using-glean-productivity",
+        "verify-rfc",
+    ):
+        raise ValueError("Glean generated skill inventory changed")
+
+    bundle = (plugin_root / "mcp/dist/index.js").read_bytes()
+    if sha256_bytes(bundle) != GLEAN_PATCHED_BUNDLE_SHA256:
+        raise ValueError(
+            "Glean security-patched runtime bundle changed; re-audit required"
+        )
+    if b"node_modules/fast-uri/" not in bundle:
+        raise ValueError("Glean runtime no longer bundles fast-uri as expected")
+    for unshipped_dependency in (
+        b"node_modules/hono",
+        b"node_modules/ip-address",
+        b"node_modules/js-yaml",
+        b"node_modules/nanoid",
+        b"node_modules/undici",
+    ):
+        if unshipped_dependency in bundle:
+            raise ValueError(
+                "Glean runtime unexpectedly bundles "
+                f"{unshipped_dependency.decode()}"
+            )
+    bundled_packages = set()
+    for source_path in re.findall(
+        rb"// node_modules/([^\n]+)", bundle
+    ):
+        parts = source_path.decode().split("/")
+        bundled_packages.add(
+            "/".join(parts[:2]) if parts[0].startswith("@") else parts[0]
+        )
+    if bundled_packages != set(GLEAN_BUNDLED_DEPENDENCIES):
+        raise ValueError(
+            "Glean bundled dependency inventory changed: "
+            f"{sorted(bundled_packages)}"
+        )
+    verify_glean_third_party_licenses(build_root)
+
+
+def verify_glean_third_party_licenses(build_root: Path) -> None:
+    for package_name, (
+        expected_version,
+        expected_license,
+        expected_license_hash,
+    ) in GLEAN_BUNDLED_DEPENDENCIES.items():
+        package_root = build_root / "node_modules" / package_name
+        package = json.loads((package_root / "package.json").read_text())
+        if (
+            package.get("version") != expected_version
+            or package.get("license") != expected_license
+        ):
+            raise ValueError(
+                f"Glean bundled dependency changed: {package_name} "
+                f"{package.get('version')} {package.get('license')}"
+            )
+        license_path = package_root / "LICENSE"
+        if (
+            not license_path.is_file()
+            or sha256_bytes(license_path.read_bytes())
+            != expected_license_hash
+        ):
+            raise ValueError(
+                f"Glean bundled dependency license changed: {package_name}"
+            )
+
+
+def copy_glean_third_party_licenses(
+    build_root: Path, staging: Path
+) -> None:
+    verify_glean_third_party_licenses(build_root)
+    target = staging / "THIRD_PARTY_LICENSES"
+    target.mkdir()
+    index_lines = [
+        "# Bundled runtime licenses",
+        "",
+        (
+            "The Glean MCP adapter is distributed as a single JavaScript "
+            "bundle. These are the exact licenses for the npm packages whose "
+            "code is present in that bundle."
+        ),
+        "",
+        "| Package | Version | License |",
+        "| --- | --- | --- |",
+    ]
+    for package_name, (
+        expected_version,
+        expected_license,
+        _,
+    ) in GLEAN_BUNDLED_DEPENDENCIES.items():
+        safe_name = package_name.removeprefix("@").replace("/", "-")
+        shutil.copy2(
+            build_root / "node_modules" / package_name / "LICENSE",
+            target / f"{safe_name}.txt",
+        )
+        index_lines.append(
+            f"| `{package_name}` | `{expected_version}` | "
+            f"`{expected_license}` |"
+        )
+    (target / "README.md").write_text("\n".join(index_lines) + "\n")
+
+
+def smoke_test_glean_plugin(plugin_root: Path) -> None:
+    with tempfile.TemporaryDirectory(prefix=".glean-smoke-") as data_temp:
+        env = os.environ.copy()
+        env["CLAUDE_PLUGIN_DATA"] = data_temp
+        env["CODEX_THREAD_ID"] = "ghast-glean-audit"
+        process = subprocess.Popen(
+            ["node", "./mcp/start.mjs"],
+            cwd=plugin_root,
+            env=env,
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.DEVNULL,
+        )
+        responses: dict[int, dict] = {}
+        try:
+            requests = (
+                {
+                    "jsonrpc": "2.0",
+                    "id": 1,
+                    "method": "initialize",
+                    "params": {
+                        "protocolVersion": "2025-06-18",
+                        "capabilities": {},
+                        "clientInfo": {
+                            "name": "ghast-glean-audit",
+                            "version": "1",
+                        },
+                    },
+                },
+                {
+                    "jsonrpc": "2.0",
+                    "method": "notifications/initialized",
+                },
+                {
+                    "jsonrpc": "2.0",
+                    "id": 2,
+                    "method": "tools/list",
+                    "params": {},
+                },
+            )
+            assert process.stdin is not None
+            for request in requests:
+                process.stdin.write((json.dumps(request) + "\n").encode())
+            process.stdin.flush()
+
+            assert process.stdout is not None
+            selector = selectors.DefaultSelector()
+            selector.register(process.stdout, selectors.EVENT_READ)
+            buffered = b""
+            deadline = time.monotonic() + 15.0
+            while time.monotonic() < deadline and len(responses) < 2:
+                remaining = deadline - time.monotonic()
+                events = selector.select(timeout=min(1.0, remaining))
+                for key, _ in events:
+                    chunk = os.read(key.fileobj.fileno(), 65536)
+                    if not chunk:
+                        continue
+                    buffered += chunk
+                    while b"\n" in buffered:
+                        line, buffered = buffered.split(b"\n", 1)
+                        if not line:
+                            continue
+                        message = json.loads(line)
+                        if isinstance(message.get("id"), int):
+                            responses[message["id"]] = message
+                if process.poll() is not None and not events:
+                    break
+            selector.close()
+        finally:
+            process.terminate()
+            try:
+                process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                process.kill()
+                process.wait(timeout=5)
+
+    initialize = responses.get(1, {}).get("result") or {}
+    tools_result = responses.get(2, {}).get("result") or {}
+    if initialize.get("serverInfo") != {
+        "name": "glean",
+        "version": "3.3.0",
+    }:
+        raise ValueError("Glean MCP initialize smoke test failed")
+    tool_names = sorted(
+        tool.get("name")
+        for tool in tools_result.get("tools", [])
+        if isinstance(tool, dict)
+    )
+    if tool_names != ["find_skills_and_tools", "run_tool", "setup"]:
+        raise ValueError(
+            f"Glean MCP unconfigured tool surface changed: {tool_names}"
+        )
 
 
 def copy_skill_tree(
@@ -4027,28 +4595,52 @@ fallback result.
 
 
 def fetch_bytes(url: str) -> bytes:
-    request = urllib.request.Request(
-        url,
-        headers={"User-Agent": "Mozilla/5.0"},
+    return fetch_with_retries(
+        urllib.request.Request(
+            url,
+            headers={"User-Agent": "Mozilla/5.0"},
+        )
     )
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return response.read()
 
 
 def fetch_markdown(url: str) -> bytes:
-    request = urllib.request.Request(
-        url,
-        headers={
-            "User-Agent": "Mozilla/5.0",
-            "Accept": "text/markdown",
-        },
+    return fetch_with_retries(
+        urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": "Mozilla/5.0",
+                "Accept": "text/markdown",
+            },
+        )
     )
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return response.read()
+
+
+def fetch_with_retries(request: urllib.request.Request) -> bytes:
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                return response.read()
+        except urllib.error.HTTPError as exc:
+            if exc.code < 500 or attempt == 2:
+                raise
+        except urllib.error.URLError:
+            if attempt == 2:
+                raise
+        time.sleep(2**attempt)
+    raise AssertionError("unreachable")
 
 
 def sha256_bytes(value: bytes) -> str:
     return hashlib.sha256(value).hexdigest()
+
+
+def git_blob_bytes(repository: Path, revision: str, relative: str) -> bytes:
+    return subprocess.run(
+        ["git", "show", f"{revision}:{relative}"],
+        cwd=repository,
+        check=True,
+        capture_output=True,
+    ).stdout
 
 
 def canonical_json_sha256(value: object) -> str:
@@ -5766,6 +6358,258 @@ def verify_coderabbit_evidence(repository: Path) -> None:
                 f"CodeRabbit former Codex evidence changed at {relative}; "
                 "re-audit required"
             )
+
+
+def verify_glean_evidence(repository: Path) -> None:
+    if git_revision(repository) != GLEAN_SOURCE_REVISION:
+        raise ValueError("Glean source checkout changed; re-audit required")
+    if normalized_git_remote(repository) != normalized_repository_url(
+        "https://github.com/gleanwork/agent-plugins"
+    ):
+        raise ValueError("Glean source repository origin changed")
+    tag_revision = subprocess.run(
+        ["git", "rev-list", "-n", "1", "v3.3.0"],
+        cwd=repository,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+    if tag_revision != GLEAN_SOURCE_REVISION:
+        raise ValueError("Glean v3.3.0 tag no longer matches the pinned revision")
+
+    expected_hashes = {
+        "LICENSE": (
+            "68f2d4ac3b90d814ba002155cf29fdd64eaa132ad77f87df20623ec70eb3dbfa"
+        ),
+        "README.md": (
+            "55bd021142f254f991bbfb713e52b10c9509ea387143b707d1382c3edc056391"
+        ),
+        "package.json": (
+            "065b318bb6a73ec60621c3e50554073eb564c5154e2ec6214a418b8d38946d34"
+        ),
+        "package-lock.json": (
+            "20ed8990814351316362d578ce8c7a21d0efe1473af90e61ff69032fb7a0193f"
+        ),
+        "pluginpack.config.ts": (
+            "43933f6480102d1fad3dfd9c9a89c728e797d179f0711405fe5c9f84612323ba"
+        ),
+        "shared/glean/LICENSE": (
+            "6bb399e4e7ddff40bbb8a2dab2c87fc1fe2a70de2b289f2ce2e21c94bb1c1ca4"
+        ),
+        "shared/glean/mcp/build.mjs": (
+            "97b62ed722205c666e95049e046ead052c468794225517a4b998d8411354d581"
+        ),
+        "shared/glean/mcp/package.json": (
+            "46413e1a83d87d7f270efe94ac1515df12dd3528292e5ea23f95577757ed4039"
+        ),
+        "shared/glean/mcp/start.mjs": (
+            "c732302d4147f8263016f6c604c7219ef3f4f22177d9b86f1d5254f70a65d68c"
+        ),
+        "shared/glean/mcp/src/index.ts": (
+            "7c894ec5eaa2cddc55e7791f0f096c782cc8774fd57fb42d48100ee540b11ae3"
+        ),
+        "shared/glean/mcp/src/tools/remote-passthrough.ts": (
+            "752807fcbb93134863f08c8f03a201105ba7b56130f8292a58c1e65fca3f785f"
+        ),
+        "shared/glean/mcp/skills/glean_run/SKILL.md": (
+            "fc6a3562f8e10ad2f313a1151d770ea869978f0e69b39391b974d264d915ef57"
+        ),
+        "shared/glean/skills/connect-glean/SKILL.md": (
+            "9c1a99aa72d790a82b3f7eaadf56eaccfaf9da185bf23f1572b7c37d22ab6cd3"
+        ),
+        "shared/glean/skills/search/SKILL.md": (
+            "39330b52432108e08f86a7d5b224af33dc18ed42f0e761c7dde4bfd3e89ed693"
+        ),
+        "shared/glean/skills/using-glean/SKILL.md": (
+            "492e6ad00f0c18766ba9f37094ccf0813ad98bfed995d9b89e4285d5863849b0"
+        ),
+        "overrides/codex/glean/mcp/config.json": (
+            "e323d4d26252f3bcb459ca73905390f9d7e6e161f42ca18e1acc4607e2b0e9a6"
+        ),
+        "overrides/codex/glean/README.md": (
+            "53f868596be43d49512090fcb8188eae208f0e020d9920760811756dc715d352"
+        ),
+        "overrides/codex/glean/assets/avatar.png": (
+            "d6e9eb8a7085a020b40f94db89868f8e5b7ef1bed5c58e73dd3bc737fe9475b6"
+        ),
+    }
+    for relative, expected_hash in expected_hashes.items():
+        actual_hash = sha256_bytes(
+            git_blob_bytes(repository, GLEAN_SOURCE_REVISION, relative)
+        )
+        if actual_hash != expected_hash:
+            raise ValueError(
+                f"Glean official source evidence changed at {relative}; "
+                "re-audit required"
+            )
+
+    package = json.loads(
+        git_blob_bytes(
+            repository, GLEAN_SOURCE_REVISION, "package.json"
+        ).decode()
+    )
+    if (
+        package.get("name") != "@gleanwork/agent-plugins"
+        or package.get("version") != "3.3.0"
+        or package.get("license") != "MIT"
+        or (package.get("author") or {}).get("name") != "Glean"
+        or package.get("engines") != {"node": ">=24"}
+        or package.get("dependencies")
+        != {
+            "@modelcontextprotocol/sdk": "^1.12.1",
+            "yaml": "^2.7.0",
+        }
+    ):
+        raise ValueError("Glean official package metadata changed")
+
+    license_text = git_blob_bytes(
+        repository, GLEAN_SOURCE_REVISION, "LICENSE"
+    ).decode()
+    if (
+        "MIT License" not in license_text
+        or "Copyright (c) 2025 Glean" not in license_text
+    ):
+        raise ValueError("Glean MIT license evidence changed")
+
+    readme = git_blob_bytes(
+        repository, GLEAN_SOURCE_REVISION, "README.md"
+    ).decode()
+    for marker in (
+        "source-of-truth repository for Glean's official plugins",
+        "today **Claude\nCode**, **Cursor**, and **Codex**",
+        "shared/glean/mcp/",
+        "Skills use the open Agent Skills format",
+    ):
+        if marker not in readme:
+            raise ValueError(f"Glean source README is missing {marker!r}")
+
+    pluginpack = git_blob_bytes(
+        repository, GLEAN_SOURCE_REVISION, "pluginpack.config.ts"
+    ).decode()
+    for marker in (
+        'codex: {',
+        'source: "shared/glean"',
+        'overrides: "overrides/codex/glean"',
+        'capabilities: ["Read", "Search"]',
+        'authentication: "ON_INSTALL"',
+    ):
+        if marker not in pluginpack:
+            raise ValueError(f"Glean plugin build config is missing {marker!r}")
+
+    lock = json.loads(
+        git_blob_bytes(
+            repository, GLEAN_SOURCE_REVISION, "package-lock.json"
+        ).decode()
+    )
+    if (lock.get("packages") or {}).get("node_modules/fast-uri", {}).get(
+        "version"
+    ) != "3.1.4":
+        raise ValueError(
+            "Glean release no longer resolves vulnerable fast-uri 3.1.4; "
+            "remove or revise the Ghast security rebuild"
+        )
+
+    remote_passthrough = git_blob_bytes(
+        repository,
+        GLEAN_SOURCE_REVISION,
+        "shared/glean/mcp/src/tools/remote-passthrough.ts",
+    ).decode()
+    for tool_name in (
+        "search",
+        "read_document",
+        "chat",
+        "memory",
+        "memory_schema",
+        "user_activity",
+        "employee_search",
+    ):
+        if f'"{tool_name}"' not in remote_passthrough:
+            raise ValueError(
+                f"Glean promoted remote-tool allowlist is missing {tool_name}"
+            )
+
+    remote_repository = repository.parent / "glean-remote-mcp-server"
+    if normalized_git_remote(
+        remote_repository
+    ) != normalized_repository_url(
+        "https://github.com/gleanwork/remote-mcp-server"
+    ):
+        raise ValueError("Glean remote MCP repository origin changed")
+    if git_revision(remote_repository) != GLEAN_REMOTE_SOURCE_REVISION:
+        raise ValueError(
+            "Glean remote MCP checkout changed; re-audit required"
+        )
+    remote_tag = subprocess.run(
+        ["git", "rev-list", "-n", "1", "v1.2.1"],
+        cwd=remote_repository,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+    if remote_tag != GLEAN_REMOTE_SOURCE_REVISION:
+        raise ValueError(
+            "Glean remote MCP v1.2.1 tag no longer matches the pinned revision"
+        )
+
+    remote_hashes = {
+        "LICENSE": (
+            "8f766d4947a10ab2b087a77e506e09f2f6e8195cf8400db065b255c9c419d6a0"
+        ),
+        "README.md": (
+            "f797744ca405271ca1191dff0af6682bc59ee35dd6d68833e7ca51450e2bf382"
+        ),
+        "package.json": (
+            "c730fbee6a6c7366a40c85f6f6f45cfcbc685290ddc1cd4d49afad0480015434"
+        ),
+        "server.json": (
+            "cada9e2e89abb93ddf2d60dc9a68743ca4ad916daddec5f3bec98053638cf31b"
+        ),
+        "MCP_REGISTRY.md": (
+            "790de8c3793927e1a133afd5b458a4e3569f05bd75a8071353f795f9d7093541"
+        ),
+    }
+    for relative, expected_hash in remote_hashes.items():
+        path = remote_repository / relative
+        if not path.is_file() or sha256_bytes(path.read_bytes()) != expected_hash:
+            raise ValueError(
+                f"Glean remote MCP evidence changed at {relative}; "
+                "re-audit required"
+            )
+
+    remote_manifest = json.loads(
+        (remote_repository / "server.json").read_text()
+    )
+    if (
+        remote_manifest.get("name") != "com.glean/mcp"
+        or remote_manifest.get("version") != "1.2.1"
+        or (remote_manifest.get("repository") or {}).get("url")
+        != "https://github.com/gleanwork/remote-mcp-server"
+        or remote_manifest.get("remotes")
+        != [
+            {
+                "type": "streamable-http",
+                "url": "https://{baseUrl}/mcp/{server-name}",
+                "variables": {
+                    "baseUrl": {
+                        "description": (
+                            "The base URL of your Glean backend. This is the "
+                            "hostname used to access Glean APIs. It may follow "
+                            "the standard pattern (e.g., 'acme-be.glean.com') "
+                            "or be customized for your organization. Contact "
+                            "your Glean admin if unsure."
+                        ),
+                        "isRequired": True,
+                        "placeholder": "acme-be.glean.com",
+                    },
+                    "server-name": {
+                        "description": "The MCP server name",
+                        "isRequired": True,
+                    },
+                },
+            }
+        ]
+    ):
+        raise ValueError("Glean remote MCP registry metadata changed")
 
 
 def verify_datadog_evidence() -> None:

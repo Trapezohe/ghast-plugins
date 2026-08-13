@@ -1057,6 +1057,60 @@
         "unzip -tqq packages/expo.zip"
       ]
     },
+    "glean": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Glean",
+      "officialRepository": "https://github.com/gleanwork/agent-plugins",
+      "officialRevision": "9e7bd95e8debca50088f4ac0262b68689d36d7df",
+      "license": "MIT",
+      "licenseEvidence": [
+        "The Glean source-of-truth repository and shared/glean plugin tree each contain an MIT license covering the official skills, local MCP adapter source, launcher, plugin manifests, and Glean icon.",
+        "The separate gleanwork/remote-mcp-server registry repository is MIT licensed and identifies Glean Technologies Inc. as the copyright holder.",
+        "Ghast includes exact license files for all 11 npm packages whose code is present in the rebuilt single-file MCP runtime, including the BSD-3-Clause fast-uri 3.1.5 patch dependency."
+      ],
+      "officialityEvidence": [
+        "gleanwork/agent-plugins calls itself the source-of-truth repository for Glean's official plugins and builds native Claude Code, Cursor, and Codex distributions from one shared source.",
+        "Pinned release v3.3.0 and commit 9e7bd95e8debca50088f4ac0262b68689d36d7df publish Glean's official Codex target, 20 skills, icon, and a bundled local OAuth MCP adapter.",
+        "The Codex build configuration names Glean as developer, declares Read and Search capabilities, and marks authentication as required on install.",
+        "The official local adapter promotes search, read_document, employee_search, chat, memory, memory_schema, and user_activity as direct tools and exposes setup, find_skills_and_tools, and run_tool for tenant configuration and dynamic workflows.",
+        "gleanwork/remote-mcp-server v1.2.1 at 8fc3156bc78b9f25503b03a029b15211cdd3a9ae registers com.glean/mcp with a tenant-specific https://{baseUrl}/mcp/{server-name} Streamable HTTP template.",
+        "Glean's official MCP documentation lists Search, Chat, Read Document, Code Search, and People, supports Codex and other MCP hosts, and states that results remain permission-aware."
+      ],
+      "codexCapabilities": [
+        "Search enterprise documents, wikis, code repositories, messages, email, and other connected company data",
+        "Find employees and teams by name, role, organization, or expertise",
+        "Read specific documents by URL, inspect meetings and mail, and invoke organization-specific Glean agent workflows through the private app connector"
+      ],
+      "ghastCapabilities": [
+        "All Codex marketplace search, employee lookup, document retrieval, email, meeting, and organization-context workflows through Glean's newer public official Codex plugin",
+        "Twenty official workflow skills for enterprise search, code exploration, people and experts, meetings, onboarding, projects, personal productivity, result vetting, and skill authoring",
+        "Direct permission-aware search, read_document, employee_search, chat, memory, memory_schema, and user_activity tools from the user's Glean tenant",
+        "Dynamic discovery and execution of tenant skills and MCP Gateway tools through find_skills_and_tools and run_tool with human-in-the-loop enforcement enabled",
+        "First-party tenant discovery from a work email, manual GLEAN_MCP_SERVER_URL configuration, browser OAuth, local token persistence, and per-session tool-cache handling"
+      ],
+      "capabilityRelationship": "official-superset-newer-public-codex-plugin",
+      "limitations": [
+        "A Glean account, an administrator-enabled MCP server, a valid tenant, SSO or OAuth access, configured data connectors, and the user's existing permissions remain required.",
+        "The exact tool inventory is tenant-specific and can include Glean agents, custom tools, external MCP servers, and data-source tools. Ghast does not claim that every account exposes every documented tool.",
+        "The local adapter requires a supported Node.js runtime; Glean declares Node 22 through 25 for the packaged adapter, while the reproducible source build is audited under Node 24.",
+        "OAuth credentials, cached remote tools, logs, and discovered skill files are stored under the user's local Glean data directory. They are not packaged, but users remain responsible for local account and device security.",
+        "run_tool can reach tenant-configured write-capable systems. Human-in-the-loop mode is enabled, and persistent, destructive, external, costly, or security-sensitive actions still require explicit conversational confirmation and target review.",
+        "No authenticated tenant search or write was run because no user Glean account or company data was supplied. The unconfigured adapter was protocol-tested through initialize and tools/list.",
+        "Glean v3.3.0's lock file selects fast-uri 3.1.4, affected by CVE-2026-18446. Ghast performs a documented dependency-only rebuild with patched fast-uri 3.1.5; no Glean business logic or skill text is modified.",
+        "The source dependency graph still contains audit findings in packages that are not present in the shipped bundle. Ghast verifies that hono, ip-address, undici, js-yaml, and nanoid have zero bundled source entries."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Verify gleanwork/agent-plugins tag v3.3.0, commit 9e7bd95e8debca50088f4ac0262b68689d36d7df, root and plugin licenses, package metadata, pluginpack Codex target, local MCP source, selected skills, icon, and original package-lock hashes",
+        "Verify gleanwork/remote-mcp-server tag v1.2.1, commit 8fc3156bc78b9f25503b03a029b15211cdd3a9ae, MIT license, com.glean/mcp identity, and tenant-specific Streamable HTTP URL template",
+        "Export a clean Git archive, add only the fast-uri ^3.1.5 override and matching lock entry, install with an isolated npm cache, and confirm fast-uri resolves to 3.1.5",
+        "Run the upstream TypeScript type check, no-shell policy, all 195 MCP unit tests, builds for Claude, Cursor, and Codex, and all three pluginpack validators",
+        "Verify the patched single-file runtime SHA-256 is 6afcff65599f456e5455fa95fcea5154c2994c7a18455b88e0b4e70f3045c46e and its bundled dependency inventory is exactly the 11 packages recorded under THIRD_PARTY_LICENSES",
+        "Start the packaged local MCP adapter with isolated state, confirm serverInfo glean 3.3.0, and confirm the unconfigured tools/list surface is find_skills_and_tools, run_tool, and setup",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/glean.zip"
+      ]
+    },
     "hyperframes": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "HeyGen",

@@ -39,6 +39,7 @@ LOCAL_ICONS = {
     "coderabbit": "assets/icon.svg",
     "deepnote": "assets/icon.svg",
     "expo": "assets/icon.png",
+    "glean": "assets/icon.png",
     "hyperframes": "assets/icon.png",
     "heygen": "assets/icon.png",
     "motherduck": "assets/icon.png",

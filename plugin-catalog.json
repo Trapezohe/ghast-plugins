@@ -750,6 +750,37 @@
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/github-stats"
     },
     {
+      "id": "glean",
+      "name": "glean",
+      "description": "Search enterprise documents, Slack, email, code, people, meetings, memory, and organization-specific tools through Glean's official Codex plugin and local MCP adapter.",
+      "manifest": {
+        "name": "glean",
+        "description": "Search enterprise documents, Slack, email, code, people, meetings, memory, and organization-specific tools through Glean's official Codex plugin and local MCP adapter.",
+        "author": {
+          "name": "Glean",
+          "email": "steve.calvert@glean.com",
+          "url": "https://glean.com"
+        },
+        "icon": "./assets/icon.png",
+        "version": "3.3.0-ghast.1",
+        "homepage": "https://docs.glean.com/administration/platform/mcp/about",
+        "repository": "https://github.com/gleanwork/agent-plugins",
+        "upstreamRevision": "9e7bd95e8debca50088f4ac0262b68689d36d7df",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/glean.zip",
+        "sha256": "3dbb4aa7f3df668a248020df2abf9531caf61290e42ae625418f8e5b817eb33e"
+      },
+      "icon": "./plugins/glean/assets/icon.png",
+      "category": "productivity",
+      "homepage": "https://docs.glean.com/administration/platform/mcp/about",
+      "repository": "https://github.com/gleanwork/agent-plugins",
+      "license": "MIT"
+    },
+    {
       "id": "hacker-news",
       "name": "hacker-news",
       "description": "Skill for reading Hacker News from chat — top / new / best stories plus thread fetches via the public Firebase API.",

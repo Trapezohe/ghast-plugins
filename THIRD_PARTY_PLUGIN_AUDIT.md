@@ -87,7 +87,7 @@ verification.
 | fireflies | Fireflies | appConnector | MIT | official-source-research-required | not-implemented |
 | fiscal-ai | Fiscal AI | appConnector | MIT | official-source-research-required | not-implemented |
 | fyxer | Fyxer | appConnector | MIT | official-source-research-required | not-implemented |
-| glean | Glean Technologies, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
+| glean | Glean Technologies, Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | govtribe | Government Executive Media Group LLC | appConnector | MIT | official-source-research-required | not-implemented |
 | granola | Granola | appConnector | MIT | official-source-research-required | not-implemented |
 | happenstance | Happenstance, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
