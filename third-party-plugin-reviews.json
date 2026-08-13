@@ -1229,45 +1229,56 @@
       ]
     },
     "hostinger": {
-      "verificationStatus": "official-source-research-required",
+      "verificationStatus": "official-source-verified",
       "officialDeveloper": "Hostinger",
       "officialRepository": "https://github.com/hostinger/api-mcp-server",
       "officialRevision": "cc04bafbeae9362a35af1b6443d3c3833f9f30d5",
       "license": "MIT",
       "licenseEvidence": [
-        "The pinned official repository's LICENSE grants the MIT permission notice under Copyright 2025 Hostinger.",
-        "GitHub identifies the repository as MIT licensed.",
-        "No Hostinger or OpenAI marketplace artwork is copied because no Ghast plugin is published from this source."
+        "The pinned official repository's LICENSE grants the MIT permission notice under Copyright (c) Hostinger.",
+        "The package metadata and npm release both declare MIT and point to hostinger/api-mcp-server.",
+        "Ghast copies the repository's MIT-licensed Headless skill tree and license. It does not copy Hostinger or OpenAI marketplace artwork."
       ],
       "officialityEvidence": [
-        "The repository is owned by Hostinger's official GitHub organization and publishes Hostinger API MCP Server 1.34.0.",
-        "Its documented hosted endpoint is https://mcp.hostinger.com and its current source exposes 314 tools across hosting, billing, DNS, domains, ecommerce, Horizons, mail, Reach, VPS, WordPress, and agency-hosting groups.",
-        "The official authorization metadata supports authorization-code and refresh-token grants, public dynamic client registration, and PKCE S256. A disposable localhost public-client registration returned HTTP 200."
+        "The source is owned by Hostinger's official GitHub organization, is tagged v1.34.0 at the pinned revision, and publishes the matching hostinger-api-mcp 1.34.0 npm package.",
+        "The official README documents https://mcp.hostinger.com as Hostinger's hosted Streamable HTTP MCP endpoint and publishes the full 314-tool server plus 11 scoped binaries.",
+        "A clean source build reports serverInfo hostinger-api-mcp 1.34.0 with 314 tools and hostinger-horizons-mcp 1.34.0 with exactly horizons_createWebsiteV1 and horizons_getWebsiteV1.",
+        "The protected-resource metadata names https://mcp.hostinger.com, scope mcp:use, bearer-header authentication, and https://auth.hostinger.com. The authorization server supports authorization-code and refresh-token grants, public clients, dynamic registration, and PKCE S256.",
+        "The same pinned repository publishes the Hostinger Headless skill for create, connect, and iterate workflows across hosting, domains, ecommerce, WordPress, deployment, verification, and project-local site state."
       ],
       "codexCapabilities": [
-        "Create a brand-new web application from a natural-language description",
-        "Inspect and explain the current application's behavior and apply iterative natural-language changes to that same application"
+        "Build real websites and apps by describing the desired result in natural language",
+        "Turn an idea into a working Hostinger Horizons product and launch it when the user is satisfied",
+        "Check the relevant Hostinger site or account status"
       ],
       "ghastCapabilities": [
-        "The official MCP can create a Hostinger Horizons website and return its website ID and URL",
-        "The official MCP can retrieve a website edit URL and manage broader Hostinger infrastructure",
-        "No Ghast plugin is published because the official source cannot inspect an application's implementation or directly apply iterative application changes through MCP"
+        "Use Hostinger's official hosted OAuth MCP directly rather than the Codex-private app mapping",
+        "Create a Hostinger Horizons website from a detailed natural-language message and receive its website ID and URL",
+        "Retrieve the official Horizons edit URL for an existing website",
+        "Use Hostinger's official Headless skill to create, connect, or iterate on static and Node.js sites, optionally add ecommerce or WordPress content, deploy, verify, and retain non-secret project-local site identifiers",
+        "Inspect and manage Hostinger websites, hosting, domains, DNS, VPS, ecommerce, WordPress, mail, Reach, billing, and agency hosting through the broader 314-tool official surface"
       ],
-      "capabilityRelationship": "official-source-found-capability-gap",
+      "capabilityRelationship": "equivalent-plus-official-expanded-surface",
       "limitations": [
-        "Only two of the 314 official tools are Horizons-specific: horizons_createWebsiteV1 and horizons_getWebsiteV1.",
-        "The get-website tool explicitly directs editing to the Hostinger Horizons interface; it does not expose application structure, behavior inspection, source retrieval, or natural-language mutation operations.",
-        "The other 312 infrastructure tools do not substitute for the missing iterative app-building contract.",
-        "The source's tool definitions contain no MCP safety annotations.",
-        "No authenticated website creation or account operation was run because no user Hostinger account was supplied."
+        "The Codex snapshot publishes no private connector tool names or schemas. Equivalence is measured against its manifest description and default prompt, not against unavailable private implementation details.",
+        "Only two of the 314 official tools are Horizons-specific. horizons_getWebsiteV1 returns an edit link; changes to an opaque Horizons-generated application continue in the Horizons interface.",
+        "The Headless iterate workflow applies to a project managed through the official skill and its .hostinger/site.json state. It does not claim source-level access to every existing Horizons application.",
+        "The official tool definitions contain no MCP safety annotations, so Ghast treats potentially state-changing operations conservatively and requires explicit review and confirmation.",
+        "An eligible Hostinger account, browser OAuth or a user-managed API token, product entitlements, plans, permissions, quotas, and service charges remain user-managed.",
+        "No authenticated website creation, deployment, purchase, billing, email, store, WordPress, domain, DNS, or VPS mutation was run because no user Hostinger account was supplied.",
+        "A generic hosting-and-deployment icon is used because the official MIT repository does not publish licensed catalog artwork."
       ],
       "verification": [
         "Verify hostinger/api-mcp-server tag v1.34.0 and revision cc04bafbeae9362a35af1b6443d3c3833f9f30d5, MIT license, README, package, lockfile, server manifest, runtime, aggregate tool registry, and Horizons tool source hashes",
         "Install the clean pinned source, run TypeScript checking, and confirm npm audit reports zero vulnerabilities",
-        "Start the official local all-tool server and confirm serverInfo hostinger-api-mcp 1.34.0, 314 tools, zero annotations, and tool-name SHA-256 dadcf2a829af1330ad414e7bfb0942fb7f52f7828c067c376bd2b89b878f370f",
-        "Start the official local Horizons server and confirm serverInfo hostinger-horizons-mcp 1.34.0, exactly two tools, zero annotations, and tool-name SHA-256 aac210aad9e587525de0699d1d057bed1327c11e220ff770554c760596cd567f",
-        "Verify the hosted protected-resource and authorization-server metadata, register a disposable localhost OAuth client, and confirm the unauthenticated MCP endpoint returns HTTP 401 with a Bearer challenge",
-        "Do not create a Ghast plugin until Hostinger publishes official inspect, explain, and direct iterative application-editing operations or another redistributable official implementation"
+        "Start the official local all-tool server and confirm serverInfo hostinger-api-mcp 1.34.0, 314 tools, zero annotations, tool-name SHA-256 dadcf2a829af1330ad414e7bfb0942fb7f52f7828c067c376bd2b89b878f370f, and canonical schema inventory SHA-256 ec0ef7582f33fa34f798c7ef692a5bc65607b251ccecc158403ee24b51744439",
+        "Start the official local Horizons server and confirm serverInfo hostinger-horizons-mcp 1.34.0, exactly two tools, zero annotations, tool-name SHA-256 aac210aad9e587525de0699d1d057bed1327c11e220ff770554c760596cd567f, and canonical schema inventory SHA-256 228d0bc8f9dae89d5aae0b00affc03085a12010750f12376aa83ccdf37fcecef",
+        "Verify canonical protected-resource metadata SHA-256 9face591774b29e8874bb1560f4235f94456f0392f1eca84100076770a2d5963 and canonical authorization-server metadata SHA-256 99a65593407ba8377b13aa7a0d79b092bfed3b4a0d8ade53a335573aec360e34",
+        "Register a disposable localhost public OAuth client and confirm no client secret is issued",
+        "Probe https://mcp.hostinger.com with MCP initialize and confirm HTTP 401 plus the exact Hostinger protected-resource challenge",
+        "Compare the Codex manifest description and default prompt with the Horizons tool schemas, broader account-status tools, and the pinned official Headless create/connect/iterate workflow",
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "unzip -tqq packages/hostinger.zip"
       ]
     },
     "hubspot": {

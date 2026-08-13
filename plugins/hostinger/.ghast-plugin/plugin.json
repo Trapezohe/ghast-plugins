@@ -1,0 +1,18 @@
+{
+  "name": "hostinger",
+  "version": "1.34.0-ghast.1",
+  "description": "Create Hostinger Horizons websites from natural-language briefs and build, connect, deploy, verify, and operate websites, domains, DNS, VPS, ecommerce, WordPress, mail, campaigns, and billing through Hostinger's official MCP and Headless skill.",
+  "category": "development",
+  "author": {
+    "name": "Hostinger",
+    "url": "https://www.hostinger.com"
+  },
+  "homepage": "https://www.hostinger.com/connector",
+  "repository": "https://github.com/hostinger/api-mcp-server",
+  "upstreamRevision": "cc04bafbeae9362a35af1b6443d3c3833f9f30d5",
+  "upstreamPath": ".",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

@@ -139,6 +139,13 @@ CUSTOM_ICONS = {
         '<circle cx="45" cy="45" r="7"/>'
         '<path d="M25 22l14-4M24 25l15 15M45 21v17"/>',
     ),
+    "hostinger": (
+        "#5C4DB1",
+        '<path d="M13 47h38M17 47V25l15-10 15 10v22"/>'
+        '<path d="M24 47V34h16v13"/>'
+        '<path d="M32 10v12M26 16h12"/>'
+        '<path d="M21 28h5M38 28h5"/>',
+    ),
     "hugging-face": (
         "#F0B429",
         '<circle cx="20" cy="24" r="6"/><circle cx="44" cy="24" r="6"/>'

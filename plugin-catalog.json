@@ -863,6 +863,36 @@
       "license": "MIT"
     },
     {
+      "id": "hostinger",
+      "name": "hostinger",
+      "description": "Create Hostinger Horizons websites from natural-language briefs and build, connect, deploy, verify, and operate websites, domains, DNS, VPS, ecommerce, WordPress, mail, campaigns, and billing through Hostinger's official MCP and Headless skill.",
+      "manifest": {
+        "name": "hostinger",
+        "description": "Create Hostinger Horizons websites from natural-language briefs and build, connect, deploy, verify, and operate websites, domains, DNS, VPS, ecommerce, WordPress, mail, campaigns, and billing through Hostinger's official MCP and Headless skill.",
+        "author": {
+          "name": "Hostinger",
+          "url": "https://www.hostinger.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.34.0-ghast.1",
+        "homepage": "https://www.hostinger.com/connector",
+        "repository": "https://github.com/hostinger/api-mcp-server",
+        "upstreamRevision": "cc04bafbeae9362a35af1b6443d3c3833f9f30d5",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/hostinger.zip",
+        "sha256": "de4dea01db9bcd10067dbf7e3d68600750603f5f346c1fb71b8b408e644f82b6"
+      },
+      "icon": "./plugins/hostinger/assets/icon.svg",
+      "category": "development",
+      "homepage": "https://www.hostinger.com/connector",
+      "repository": "https://github.com/hostinger/api-mcp-server",
+      "license": "MIT"
+    },
+    {
       "id": "hubspot",
       "name": "hubspot",
       "description": "Operate HubSpot CRM records, pipelines, activities, workflows, reports, data quality, sales execution, support, retention, ownership, and quote-to-cash through all 15 official Agent CLI skills.",

@@ -95,7 +95,7 @@ verification.
 | heygen | HeyGen | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | hg-insights | HG Insights | appConnector | MIT | official-source-research-required | not-implemented |
 | highlevel | HighLevel | appConnector | MIT | official-source-research-required | not-implemented |
-| hostinger | Hostinger | appConnector | MIT | official-source-research-required | not-implemented |
+| hostinger | Hostinger | appConnector | MIT | official-source-verified | implemented-verified |
 | hubspot | HubSpot | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | hugging-face | Hugging Face | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | hyperframes | HeyGen | skills | Apache-2.0 | official-source-verified | implemented-verified |
