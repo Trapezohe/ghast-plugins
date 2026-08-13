@@ -1,0 +1,18 @@
+{
+  "name": "statsig",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect and manage Statsig experiments, feature gates, dynamic configs, segments, metrics, results, audit logs, and dashboards through official skills and the official Statsig MCP server.",
+  "category": "development",
+  "author": {
+    "name": "Statsig",
+    "url": "https://statsig.com"
+  },
+  "homepage": "https://docs.statsig.com/",
+  "repository": "https://github.com/statsig-io/agent-skills",
+  "upstreamRevision": "e720bbb3fc7bb4f5d50ad6175e050138ddb1a1c6",
+  "upstreamPath": ".",
+  "license": "ISC",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

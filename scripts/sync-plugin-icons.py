@@ -133,6 +133,12 @@ CUSTOM_ICONS = {
         '<path d="M18 42l10-11 8 6 14-18"/>'
         '<path d="M42 19h8v8"/>',
     ),
+    "statsig": (
+        "#B14AED",
+        '<path d="M14 48V18M14 18h24l-5 8 5 8H14"/>'
+        '<path d="M24 43l7-7 6 5 12-15"/>'
+        '<path d="M42 26h7v7"/>',
+    ),
     "uptime-check": (
         "#2E7D32",
         '<path d="M8 34h12l5-13 9 26 6-13h16"/>',

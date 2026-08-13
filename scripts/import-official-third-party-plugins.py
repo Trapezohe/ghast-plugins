@@ -583,6 +583,67 @@ PLUGINS = {
             ),
         ],
     },
+    "statsig": {
+        "directory": "statsig-agent-skills",
+        "revision": "e720bbb3fc7bb4f5d50ad6175e050138ddb1a1c6",
+        "repository": "https://github.com/statsig-io/agent-skills",
+        "plugin_root": ".",
+        "manifest_inline": {
+            "version": "1.0.0",
+            "description": "Official Statsig agent skills and MCP access.",
+            "author": {
+                "name": "Statsig",
+                "url": "https://statsig.com",
+            },
+            "homepage": "https://docs.statsig.com/",
+        },
+        "license": "LICENSE",
+        "generated_icon": "./assets/icon.svg",
+        "category": "development",
+        "skills_root": "skills",
+        "excluded_skills": ["statsig-create-cloud-metric"],
+        "mcp_inline": {
+            "mcpServers": {
+                "statsig": {
+                    "command": "npx",
+                    "args": [
+                        "--yes",
+                        "mcp-remote@0.1.38",
+                        "https://api.statsig.com/v1/mcp",
+                        "--header",
+                        "statsig-api-key: ${STATSIG_CONSOLE_API_KEY}",
+                    ],
+                },
+            },
+        },
+        "license_name": "ISC",
+        "description": (
+            "Inspect and manage Statsig experiments, feature gates, dynamic "
+            "configs, segments, metrics, results, audit logs, and dashboards "
+            "through official skills and the official Statsig MCP server."
+        ),
+        "compatibility_notes": [
+            (
+                "The Codex private app mapping is replaced by Statsig's "
+                "official Console-key MCP endpoint through pinned "
+                "mcp-remote@0.1.38."
+            ),
+            (
+                "The MCP bridge expands STATSIG_CONSOLE_API_KEY inside its "
+                "own process, so the secret is not written into the plugin."
+            ),
+            (
+                "The experimental statsig-create-cloud-metric skill is "
+                "excluded because its curl example expands an API key into "
+                "a process argument; core Codex capabilities remain covered "
+                "and the official dashboard skill is retained."
+            ),
+            (
+                "A generic experimentation icon is used because the official "
+                "skills repository does not publish a catalog icon."
+            ),
+        ],
+    },
     "supabase": {
         "directory": "supabase-agent-skills",
         "revision": "8331f910845103c08d51f6ca1d86ebb7d1f745e3",
@@ -870,6 +931,13 @@ def import_plugin(name: str, config: dict, source_root: Path) -> None:
                         "frontmatter_overrides", {}
                     ),
                 )
+                for excluded_skill in config.get("excluded_skills", []):
+                    excluded_path = skills_target / excluded_skill
+                    if not excluded_path.is_dir():
+                        raise ValueError(
+                            f"{excluded_path}: excluded skill is missing"
+                        )
+                    shutil.rmtree(excluded_path)
                 for additional_root in config.get(
                     "additional_repository_skill_roots", []
                 ):
@@ -1017,7 +1085,9 @@ def copy_skill_tree(
             ignore=(
                 None
                 if preserve_agent_metadata
-                else shutil.ignore_patterns("openai.yaml")
+                else shutil.ignore_patterns(
+                    "openai.yaml", "__pycache__", "*.pyc"
+                )
             ),
         )
         if not preserve_agent_metadata:
@@ -1118,6 +1188,45 @@ def apply_ghast_compatibility(name: str, staging: Path) -> None:
                 {"$CLAUDE_PLUGIN_ROOT/scripts": "<SKILL_DIR>/scripts"},
                 require_all=False,
             )
+    elif name == "statsig":
+        rewrite_text(
+            staging / "skills/statsig/SKILL.md",
+            {
+                """## Setup Statsig MCP
+Important: you must check to see if the Statsig MCP server is running. If not, tell the user how to configure Statsig:
+
+Add this to `~/.codex/config.toml` and replace the API key:
+
+```toml
+[mcp_servers.statsig]
+command = "npx"
+args = ["--yes", "mcp-remote", "https://api.statsig.com/v1/mcp", "--header", "statsig-api-key: console-YOUR-CONSOLE-API-KEY"]
+trust_level = "trusted"
+```
+
+Use a Statsig Console API key with the permissions you need (read-only for viewing, write for changes). Statsig API keys can be created under Settings -> Keys & Environments. Restart Codex after editing the config.
+""": """## Statsig MCP setup
+
+This plugin already declares the official Statsig MCP bridge. It reads
+`STATSIG_CONSOLE_API_KEY` from the host environment. Never ask for, print,
+log, or write the key. Use a Console API key with only the permissions needed
+for the requested read or write workflow. If the MCP is unavailable, ask the
+user to set the environment variable and reload the active Ghast profile.
+"""
+            },
+        )
+        rewrite_text(
+            staging / "skills/statsig/references/statsig-mcp.md",
+            {
+                """## Setup (Codex CLI / IDE extension)
+
+See `statsig-mcp/SKILL.md` for the Codex MCP config snippet and API key notes.
+""": """## Setup
+
+See `../SKILL.md` for the Ghast MCP environment and API key guidance.
+"""
+            },
+        )
     elif name == "replayio":
         replayio_skill = staging / "skills/replayio/SKILL.md"
         rewrite_text(

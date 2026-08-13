@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "statsig": {
+      "command": "npx",
+      "args": [
+        "--yes",
+        "mcp-remote@0.1.38",
+        "https://api.statsig.com/v1/mcp",
+        "--header",
+        "statsig-api-key: ${STATSIG_CONSOLE_API_KEY}"
+      ]
+    }
+  }
+}

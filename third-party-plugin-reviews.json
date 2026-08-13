@@ -1315,6 +1315,47 @@
         "Do not create plugins/razorpay until Razorpay provides a strictly read-only saved-payment-method tool or an equivalent official configuration"
       ]
     },
+    "statsig": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Statsig",
+      "officialRepository": "https://github.com/statsig-io/agent-skills",
+      "officialRevision": "e720bbb3fc7bb4f5d50ad6175e050138ddb1a1c6",
+      "license": "ISC",
+      "licenseEvidence": [
+        "LICENSE"
+      ],
+      "officialityEvidence": [
+        "The source repository is owned by the official statsig-io GitHub organization and describes itself as Statsig's public agent-skills repository.",
+        "The pinned Statsig skill declares https://api.statsig.com/v1/mcp, the statsig-api-key header, and both read and write workflows for experiments, gates, dynamic configs, segments, metrics, audit logs, and results.",
+        "The repository's latest pinned commit is verified and authored with a Statsig email identity.",
+        "An unauthenticated and an invalid-key MCP initialize request to the declared endpoint both return Statsig's explicit active-CONSOLE-key authentication response."
+      ],
+      "codexCapabilities": [
+        "Inspect Statsig experiments, feature gates, dynamic configs, metrics, results, definitions, targeting, allocations, and recent changes",
+        "Create experiments and configs, update experiment allocations, toggle gates, edit targeting rules, and modify dynamic config values subject to Statsig permissions"
+      ],
+      "ghastCapabilities": [
+        "The same official Statsig MCP read and write workflows for experiments, gates, dynamic configs, segments, metrics, param stores, audit logs, search, and results",
+        "The official Statsig dashboard skill for creating and reading dashboards and adding or replacing widgets through environment-backed helper scripts"
+      ],
+      "capabilityRelationship": "superset-official-public-mcp",
+      "limitations": [
+        "A Statsig Console API key, project access, environment and team permissions, and paid platform features remain user-managed.",
+        "The MCP bridge is pinned to the MIT-licensed mcp-remote 0.1.38 runtime recommended by Statsig's own skill; it expands STATSIG_CONSOLE_API_KEY from the host environment and the key is not stored in the package.",
+        "The experimental statsig-create-cloud-metric skill is intentionally excluded because its curl example expands an API key into a process argument. This does not remove any capability promised by the Codex plugin.",
+        "Create, rollout, toggle, targeting, allocation, dashboard, and other state-changing operations require explicit confirmation.",
+        "A generic experimentation icon is used because the official skills repository does not publish a catalog icon."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Compare both imported skill trees with the pinned official repository after the documented Ghast setup rewrite and exclusion of __pycache__, .pyc, and statsig-create-cloud-metric",
+        "Run npx skills add statsig-io/agent-skills --list and confirm all three official skills are discoverable",
+        "Run every retained dashboard helper with --help and representative --dry-run inputs",
+        "Inspect mcp-remote 0.1.38 and confirm custom header values replace ${STATSIG_CONSOLE_API_KEY} from process.env before connecting",
+        "Probe https://api.statsig.com/v1/mcp without a key and with an invalid key and confirm the active-CONSOLE-key authentication response",
+        "unzip -tqq packages/statsig.zip"
+      ]
+    },
     "zoom": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Zoom",
