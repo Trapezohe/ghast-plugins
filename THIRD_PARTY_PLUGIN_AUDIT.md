@@ -121,7 +121,7 @@ verification.
 | netlify | Netlify | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | network-solutions | Network Solutions | appConnector | MIT | official-source-research-required | not-implemented |
 | nvidia | NVIDIA | skills | Apache-2.0 AND CC-BY-4.0 | official-source-verified | implemented-verified |
-| omni-analytics | Omni Analytics | appConnector | MIT | official-source-research-required | not-implemented |
+| omni-analytics | Omni Analytics | appConnector | MIT | official-source-verified | implemented-verified |
 | otter-ai | Otter.ai | appConnector | MIT | official-source-verified | implemented-verified |
 | outreach | Outreach | appConnector | MIT | official-source-research-required | not-implemented |
 | particl-market-research | Particl | appConnector | MIT | official-source-research-required | not-implemented |

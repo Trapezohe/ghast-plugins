@@ -220,6 +220,14 @@ CUSTOM_ICONS = {
         '<path d="M18 43h20M18 37h14"/>'
         '<path d="M43 35l8 5-8 5z"/>',
     ),
+    "omni-analytics": (
+        "#3B6D62",
+        '<path d="M11 49h42"/>'
+        '<rect x="14" y="34" width="8" height="11"/>'
+        '<rect x="28" y="25" width="8" height="20"/>'
+        '<rect x="42" y="15" width="8" height="30"/>'
+        '<path d="M14 27l12-8 9 3 15-12"/>',
+    ),
     "lovable": (
         "#D84A2B",
         '<rect x="10" y="12" width="44" height="40" rx="4"/>'

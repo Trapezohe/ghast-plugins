@@ -1819,6 +1819,34 @@
       "license": "Apache-2.0 AND CC-BY-4.0"
     },
     {
+      "id": "omni-analytics",
+      "name": "omni-analytics",
+      "description": "Query governed Omni semantic models, run multi-step analysis, and search Omni documentation through Omni's official hosted MCP server.",
+      "manifest": {
+        "name": "omni-analytics",
+        "description": "Query governed Omni semantic models, run multi-step analysis, and search Omni documentation through Omni's official hosted MCP server.",
+        "author": {
+          "name": "Omni Analytics",
+          "url": "https://www.omni.co"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.4-ghast.1",
+        "homepage": "https://docs.omni.co/ai/mcp",
+        "upstreamRevision": "omni-docs-d22f4d9c42b1+tools-18dce31231e8+oauth-14b3543ee3f0+auth-c75b0e080de0",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/omni-analytics.zip",
+        "sha256": "106fed75a996e2cf4ec263ea2c3a46035b6ea2b01798d59ed522989d36922fb3"
+      },
+      "icon": "./plugins/omni-analytics/assets/icon.svg",
+      "category": "data",
+      "homepage": "https://docs.omni.co/ai/mcp",
+      "license": "MIT"
+    },
+    {
       "id": "otter-ai",
       "name": "otter-ai",
       "description": "Search Otter meeting history and retrieve full transcripts, summaries, action items, attendees, and meeting context through Otter.ai's official hosted MCP server.",

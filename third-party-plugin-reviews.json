@@ -3316,6 +3316,67 @@
         "unzip -tqq packages/motherduck.zip"
       ]
     },
+    "omni-analytics": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Omni Analytics",
+      "officialRepository": null,
+      "officialRevision": "omni-docs-d22f4d9c42b1+tools-18dce31231e8+oauth-14b3543ee3f0+auth-c75b0e080de0",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/omni-analytics/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation, and generic analytics icon.",
+        "No Omni hosted MCP implementation, private Codex connector, OAuth PAT, organization data, semantic model, branded icon, or marketplace artwork is redistributed.",
+        "Omni does not publish the hosted MCP implementation under an open-source license. The Codex manifest's MIT field is not treated as a license grant for the service or private connector."
+      ],
+      "officialityEvidence": [
+        "Omni's official MCP overview identifies its server as the supported route for natural-language querying, iterative multi-step analysis, flexible client integration, and dynamic model selection.",
+        "The official overview, tools, authentication, and Codex pages are pinned at normalized visible-text SHA-256 d22f4d9c42b15fa97eeaefe37dce4d31bbb52ce968c1c7dbcf47637abc0872fa, 18dce31231e8f0b1dd62c5b4e107d54b4803f99c74ad25ec024fd5e1ab28d5f8, 779b685508cd2f7c9b761f12f29a19f0008846a7be48e61c17aefd1321a24c0f, and 1974715a5941f16c8813bbe4f51dc60df89da88fb1d5e421dbc41b78f4b2a475.",
+        "Omni's official Codex guide publishes https://callbacks.omniapp.co/callback/mcp and states that browser OAuth automatically creates a PAT linked to the user's Omni account.",
+        "The official catalog documents pickModel, pickTopic, getData, askOmni, checkStatus, and searchOmniDocs; the ordered-name SHA-256 is 37c5604086f9169334cd49d7e055ec0efe9dfa1cf6f7f4107f785e2d29280c34.",
+        "The docs state that governed queries enforce row-level security and business logic and that organization administrators can enable or disable individual capabilities.",
+        "askOmni can submit multi-step jobs and create recurring routines delivered by email or Slack, while checkStatus polls long-running jobs.",
+        "Protected-resource and authorization-server metadata are pinned at canonical JSON SHA-256 14b3543ee3f07ac43c85f360aa9f88459d8fc90fce9bbb5fc158c1627d6a2037 and c75b0e080de0aa01d92f76bb50443d9d6b3879cfee1ee96c44c63ef1cc60b780.",
+        "On August 13, 2026, a loopback public OAuth client registered with HTTP 201 without a client secret. The authorization page returned a login-required response because the audit browser had no active Omni instance cookie, matching Omni's documented flow.",
+        "An unauthenticated initialize request returned HTTP 401 with the exact mcp:access protected-resource challenge."
+      ],
+      "codexCapabilities": [
+        "Query Omni through the same semantic model, permissions, and logic defined by the data team",
+        "Allow internal teams to ask data questions without logging into Omni directly while enforcing row-level security and business definitions",
+        "Show last year's orders grouped by status"
+      ],
+      "ghastCapabilities": [
+        "The same governed semantic-model query workflow through Omni's official public MCP instead of an OpenAI private connector",
+        "Model and topic discovery plus bounded single-shot queries through pickModel, pickTopic, and getData",
+        "Additional official multi-step agentic analysis with asynchronous status polling and Omni documentation search",
+        "A Ghast workflow that preserves model, topic, field, filter, timezone, currency, unit, row-security, business-definition, and query provenance and requires explicit confirmation before recurring email or Slack routines"
+      ],
+      "capabilityRelationship": "official-hosted-superset",
+      "limitations": [
+        "Omni operates the hosted MCP implementation and does not publish its source or license. The MIT license applies only to the Ghast-authored adapter.",
+        "An Omni account, selected instance, organization settings, MCP enablement, PAT enablement, browser login, model and topic permissions, row-level security, AI credits, and service limits remain user-managed.",
+        "Authenticated tools/list and organization-data queries were not run because no Omni account, semantic model, PAT, or private data was used during the audit.",
+        "OAuth uses the last Omni instance logged into in the browser. Users belonging to multiple organizations must verify the selected instance before authorizing.",
+        "Organization administrators can disable tools individually. If Omni Agent is disabled, tools other than pickModel can remain visible but return 403 Feature is not enabled.",
+        "askOmni can create recurring routines that deliver by email or Slack. Routine schedule, timezone, query, filters, recipients, permissions, and stop plan require immediate explicit confirmation.",
+        "Governed semantic models improve consistency but do not prove source completeness, data freshness, or correctness. Assistant calculations and interpretations must remain separate from returned facts.",
+        "The disposable DCR response returned no registration management URI or access token, so the audit client could not be deleted through RFC 7592 management.",
+        "A generic analytics icon is used because no licensed Omni catalog artwork is redistributed."
+      ],
+      "verification": [
+        "Run the Omni evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated Close evidence drift",
+        "Verify normalized official overview, tools, authentication, and Codex page hashes d22f4d9c42b15fa97eeaefe37dce4d31bbb52ce968c1c7dbcf47637abc0872fa, 18dce31231e8f0b1dd62c5b4e107d54b4803f99c74ad25ec024fd5e1ab28d5f8, 779b685508cd2f7c9b761f12f29a19f0008846a7be48e61c17aefd1321a24c0f, and 1974715a5941f16c8813bbe4f51dc60df89da88fb1d5e421dbc41b78f4b2a475",
+        "Confirm the exact six-tool inventory and SHA-256 37c5604086f9169334cd49d7e055ec0efe9dfa1cf6f7f4107f785e2d29280c34 plus getData, agentic-job, routine, status, and documentation-search behavior",
+        "Verify canonical protected-resource and authorization-server metadata hashes 14b3543ee3f07ac43c85f360aa9f88459d8fc90fce9bbb5fc158c1627d6a2037 and c75b0e080de0aa01d92f76bb50443d9d6b3879cfee1ee96c44c63ef1cc60b780",
+        "Probe https://callbacks.omniapp.co/callback/mcp with MCP initialize and confirm HTTP 401 plus Omni's exact mcp:access challenge",
+        "Confirm one loopback public client registered without a secret; do not repeat registration in the importer because no management credential was issued",
+        "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Omni manifest and connector hashes and compare the orders-by-status workflow with the six official tools",
+        "Authorize an Omni account before testing authenticated schemas, organization settings, queries, jobs, or routines",
+        "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/omni-analytics.zip"
+      ]
+    },
     "otter-ai": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Otter.ai",
