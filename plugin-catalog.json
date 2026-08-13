@@ -824,6 +824,34 @@
       "license": "MIT"
     },
     {
+      "id": "readwise",
+      "name": "readwise",
+      "description": "Search Readwise highlights and Reader documents, read saved content, and organize the user's reading library through Readwise's official hosted MCP server.",
+      "manifest": {
+        "name": "readwise",
+        "description": "Search Readwise highlights and Reader documents, read saved content, and organize the user's reading library through Readwise's official hosted MCP server.",
+        "author": {
+          "name": "Readwise Inc.",
+          "url": "https://readwise.io"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.0-ghast.1",
+        "homepage": "https://readwise.io/mcp",
+        "upstreamRevision": "readwise-skills-2d1ce9627c61-a72340a2f73f+oauth-b39687b19dac",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/readwise.zip",
+        "sha256": "3bc5d6117486c2f06a0ae0b75fb1a60843106cfe8002b1dca01aa806a857ad8c"
+      },
+      "icon": "./plugins/readwise/assets/icon.svg",
+      "category": "research",
+      "homepage": "https://readwise.io/mcp",
+      "license": "MIT"
+    },
+    {
       "id": "realtime-weather",
       "name": "realtime-weather",
       "description": "Skill that pulls current weather and a 24h forecast for any place name via Open-Meteo — no API key, no signup.",

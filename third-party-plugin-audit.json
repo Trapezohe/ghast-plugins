@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 8,
-      "official-source-research-required": 106,
-      "official-source-verified": 35
+      "official-source-research-required": 105,
+      "official-source-verified": 36
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 35,
-      "not-implemented": 114
+      "implemented-verified": 36,
+      "not-implemented": 113
     }
   },
   "excludedOpenAIPlugins": [
@@ -5421,7 +5421,7 @@
     },
     {
       "id": "readwise",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Readwise Inc.",
@@ -5446,13 +5446,62 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://readwise.io"
+        "homepage": "https://readwise.io",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Readwise",
+          "officialRepository": null,
+          "officialRevision": "readwise-skills-2d1ce9627c61-a72340a2f73f+oauth-b39687b19dac",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/readwise/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+            "The current official readwiseio/readwise-skills and readwiseio/readwise-cli repositories publish no LICENSE file, so their source and skill text are not redistributed.",
+            "The older readwiseio/readwise-mcp repository is MIT-licensed but officially deprecated in favor of the hosted server and is not bundled."
+          ],
+          "officialityEvidence": [
+            "Readwise's official MCP page identifies https://mcp2.readwise.io/mcp as the official remote server for Readwise and Reader and lists 22 tools.",
+            "The official readwiseio/readwise-skills repository identifies the same hosted MCP endpoint and documents the same 22-tool capability surface; its pinned MCP skill has SHA-256 a72340a2f73f9e10b81551b485be88de4322c22a92b105bf8878e94f63213994.",
+            "Readwise's OAuth protected-resource metadata identifies the same MCP resource, https://readwise.io/o/ authorization server, and openid, read, and write scopes; its canonical JSON has SHA-256 b39687b19dacfaed3e31764d4932b955d775069ddadcfd43c1bd22c225e47d6d.",
+            "Unauthenticated GET and MCP initialize requests return Readwise's OAuth bearer challenge and protected-resource metadata URL.",
+            "The official @readwise/cli package version 0.5.9 connects to the same hosted MCP service and independently exposes its discovered tools as CLI commands."
+          ],
+          "codexCapabilities": [
+            "Semantically search all Readwise highlights and content saved to the Reader library",
+            "Triage the Reader inbox, organize the library, catch up on feeds, and perform other Reader management workflows"
+          ],
+          "ghastCapabilities": [
+            "The same semantic highlight and Reader document search, document listing and retrieval, inbox and feed triage, location moves, tags, metadata edits, and library organization through Readwise's official hosted MCP server",
+            "Additional officially documented tools for creating, updating, tagging, and deleting highlights; creating Reader documents and highlights; exporting documents; checking export status; and retrieving the Readwise daily review"
+          ],
+          "capabilityRelationship": "superset-official-hosted-mcp",
+          "limitations": [
+            "The current hosted MCP implementation is operated by Readwise and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+            "The current official CLI and agent-skills repositories have no published license, so Ghast does not copy their source or workflow text and uses them only as pinned capability evidence.",
+            "Authentication uses Readwise OAuth with read and write scopes. Account access, Reader availability, subscriptions, library permissions, quotas, and service limits remain user-managed.",
+            "Creates, moves, bulk edits, tag changes, note changes, highlight changes, and deletes require explicit confirmation and current-state verification.",
+            "A generic reading-library icon is used because the current official repositories do not publish licensed catalog artwork."
+          ],
+          "verification": [
+            "python3 scripts/import-official-hosted-plugins.py",
+            "Verify the pinned official Readwise MCP skill SHA-256 is a72340a2f73f9e10b81551b485be88de4322c22a92b105bf8878e94f63213994",
+            "Verify canonical OAuth protected-resource metadata SHA-256 is b39687b19dacfaed3e31764d4932b955d775069ddadcfd43c1bd22c225e47d6d",
+            "Compare the 22 tool names on Readwise's official MCP page with the pinned official MCP skill and confirm the lists match",
+            "Probe https://mcp2.readwise.io/mcp with GET and MCP initialize and confirm OAuth bearer responses identify Readwise's protected-resource metadata",
+            "Install dependencies for readwiseio/readwise-cli at revision 414caabf2760cf0577774807f828e1a42d19d01c, run npm run build, and confirm all 15 tests pass",
+            "Run @readwise/cli 0.5.9 from npm with an isolated cache and confirm its version and unauthenticated help output",
+            "unzip -tqq packages/readwise.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.0-ghast.1",
+        "repository": null,
+        "upstreamRevision": "readwise-skills-2d1ce9627c61-a72340a2f73f+oauth-b39687b19dac",
+        "portStatus": "full"
       }
     },
     {
