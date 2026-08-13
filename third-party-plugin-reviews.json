@@ -1174,6 +1174,48 @@
         "unzip -tqq packages/heygen.zip"
       ]
     },
+    "hostinger": {
+      "verificationStatus": "official-source-research-required",
+      "officialDeveloper": "Hostinger",
+      "officialRepository": "https://github.com/hostinger/api-mcp-server",
+      "officialRevision": "cc04bafbeae9362a35af1b6443d3c3833f9f30d5",
+      "license": "MIT",
+      "licenseEvidence": [
+        "The pinned official repository's LICENSE grants the MIT permission notice under Copyright 2025 Hostinger.",
+        "GitHub identifies the repository as MIT licensed.",
+        "No Hostinger or OpenAI marketplace artwork is copied because no Ghast plugin is published from this source."
+      ],
+      "officialityEvidence": [
+        "The repository is owned by Hostinger's official GitHub organization and publishes Hostinger API MCP Server 1.34.0.",
+        "Its documented hosted endpoint is https://mcp.hostinger.com and its current source exposes 314 tools across hosting, billing, DNS, domains, ecommerce, Horizons, mail, Reach, VPS, WordPress, and agency-hosting groups.",
+        "The official authorization metadata supports authorization-code and refresh-token grants, public dynamic client registration, and PKCE S256. A disposable localhost public-client registration returned HTTP 200."
+      ],
+      "codexCapabilities": [
+        "Create a brand-new web application from a natural-language description",
+        "Inspect and explain the current application's behavior and apply iterative natural-language changes to that same application"
+      ],
+      "ghastCapabilities": [
+        "The official MCP can create a Hostinger Horizons website and return its website ID and URL",
+        "The official MCP can retrieve a website edit URL and manage broader Hostinger infrastructure",
+        "No Ghast plugin is published because the official source cannot inspect an application's implementation or directly apply iterative application changes through MCP"
+      ],
+      "capabilityRelationship": "official-source-found-capability-gap",
+      "limitations": [
+        "Only two of the 314 official tools are Horizons-specific: horizons_createWebsiteV1 and horizons_getWebsiteV1.",
+        "The get-website tool explicitly directs editing to the Hostinger Horizons interface; it does not expose application structure, behavior inspection, source retrieval, or natural-language mutation operations.",
+        "The other 312 infrastructure tools do not substitute for the missing iterative app-building contract.",
+        "The source's tool definitions contain no MCP safety annotations.",
+        "No authenticated website creation or account operation was run because no user Hostinger account was supplied."
+      ],
+      "verification": [
+        "Verify hostinger/api-mcp-server tag v1.34.0 and revision cc04bafbeae9362a35af1b6443d3c3833f9f30d5, MIT license, README, package, lockfile, server manifest, runtime, aggregate tool registry, and Horizons tool source hashes",
+        "Install the clean pinned source, run TypeScript checking, and confirm npm audit reports zero vulnerabilities",
+        "Start the official local all-tool server and confirm serverInfo hostinger-api-mcp 1.34.0, 314 tools, zero annotations, and tool-name SHA-256 dadcf2a829af1330ad414e7bfb0942fb7f52f7828c067c376bd2b89b878f370f",
+        "Start the official local Horizons server and confirm serverInfo hostinger-horizons-mcp 1.34.0, exactly two tools, zero annotations, and tool-name SHA-256 aac210aad9e587525de0699d1d057bed1327c11e220ff770554c760596cd567f",
+        "Verify the hosted protected-resource and authorization-server metadata, register a disposable localhost OAuth client, and confirm the unauthenticated MCP endpoint returns HTTP 401 with a Bearer challenge",
+        "Do not create a Ghast plugin until Hostinger publishes official inspect, explain, and direct iterative application-editing operations or another redistributable official implementation"
+      ]
+    },
     "hubspot": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "HubSpot",
@@ -1763,6 +1805,55 @@
         "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
         "Compare all eight top-level Ghast skill trees and .mcp.json byte-for-byte with the pinned official repository",
         "unzip -tqq packages/wix.zip"
+      ]
+    },
+    "yepcode": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "YepCode S.L.",
+      "officialRepository": "https://github.com/yepcode/mcp-server-js",
+      "officialRevision": "15cf0527dda6c818a1528ed4467389e0962a1eea",
+      "license": "MIT",
+      "licenseEvidence": [
+        "The pinned official repository's LICENSE grants the MIT permission notice under Copyright 2025 YepCode.",
+        "The repository package and @yepcode/mcp-server 1.6.0 npm release both declare MIT.",
+        "The official repository contains no catalog icon, so Ghast uses a generic Ghast-authored code-execution icon and copies no YepCode or OpenAI marketplace artwork."
+      ],
+      "officialityEvidence": [
+        "The repository is owned by YepCode's official GitHub organization and publishes @yepcode/mcp-server 1.6.0.",
+        "YepCode's official documentation identifies https://cloud.yepcode.io/mcp as the hosted endpoint for the same open-source MCP server and documents Bearer API Credential authentication.",
+        "The official configuration documentation supports selecting run_code, yc_api, and processes tagged mcp-tool through URL query parameters.",
+        "The pinned source exposes 33 fixed tools for code, processes, schedules, executions, variables, storage, and modules, plus account-defined process tools generated from JSON Schema."
+      ],
+      "codexCapabilities": [
+        "Build JavaScript or Python tools with JSON Schema inputs and dependencies",
+        "Execute code in an isolated environment with secure variables",
+        "Expose reusable processes as tools and run them on demand or on schedules",
+        "Inspect execution status, results, and logs for auditable automation"
+      ],
+      "ghastCapabilities": [
+        "The same official JavaScript and Python run_code capability through YepCode's hosted MCP",
+        "Official process and module creation, retrieval, update, deletion, synchronous and asynchronous execution, and JSON Schema-backed dynamic process tools",
+        "Official one-time and recurring schedules with pause, resume, update, and deletion operations",
+        "Official execution listing, status, logs, kill, and rerun operations plus team variables and object storage"
+      ],
+      "capabilityRelationship": "official-equivalent-hosted-open-source-mcp",
+      "limitations": [
+        "A YepCode account, API Credential, team permissions, plan capacity, runtime availability, network access, dependency availability, retention, concurrency, and service quotas remain user-managed.",
+        "No authenticated tool listing or execution was run because no user YepCode account or credential was supplied. The fixed source-defined surface was built and inspected locally without an account.",
+        "The number and behavior of dynamic mcp-tool process tools depend on the authenticated team's own processes and schemas.",
+        "The source publishes no MCP safety annotations. Ghast supplies explicit confirmation rules for arbitrary code, dynamic tools, execution, scheduling, storage, create, update, pause, resume, kill, rerun, and deletion operations.",
+        "The upstream package defines npm run lint as eslint . but does not declare eslint in dependencies or devDependencies; its current GitHub CI installs and builds without running lint. Ghast records this upstream defect and does not claim the lint command passed.",
+        "A clean source-tree npm audit reported ten advisories: two low, two moderate, six high, and zero critical. Ghast packages no YepCode Node runtime dependencies; remediation of the hosted and upstream runtime remains YepCode's responsibility.",
+        "Ghast intentionally omits yc_api_full because process and module version administration plus service-account management exceed the Codex plugin's described scope and enlarge credential and destructive-operation exposure."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Verify yepcode/mcp-server-js tag v1.6.0 and revision 15cf0527dda6c818a1528ed4467389e0962a1eea, MIT license, source files, package metadata, package lock, official documentation, and npm release hashes",
+        "Probe https://cloud.yepcode.io/mcp?tools=run_code,yc_api,mcp-tool without credentials and confirm HTTP 401 with JSON-RPC error code -32002 and message Invalid API token",
+        "Install the clean pinned source, run TypeScript checking and build, and inspect the built definitions without account credentials",
+        "Confirm 33 unique fixed tools, zero annotations, tool-name SHA-256 9d84e9d9e9fe4574506dbd7fc972bda38b28cdce7a00abb4c2e1056a3a47304e, and canonical inventory SHA-256 782cf0c13287ec40d3b7fe929abd09eff3f0531ae83dacf5de8c56820aaca530",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/yepcode.zip"
       ]
     },
     "figma": {

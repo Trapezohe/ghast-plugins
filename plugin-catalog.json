@@ -2084,6 +2084,36 @@
       "license": "MIT"
     },
     {
+      "id": "yepcode",
+      "name": "yepcode",
+      "description": "Build, expose, schedule, execute, and audit JavaScript or Python automation tools in YepCode's isolated environment through YepCode's official hosted MCP server.",
+      "manifest": {
+        "name": "yepcode",
+        "description": "Build, expose, schedule, execute, and audit JavaScript or Python automation tools in YepCode's isolated environment through YepCode's official hosted MCP server.",
+        "author": {
+          "name": "YepCode S.L.",
+          "url": "https://yepcode.io"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.6.0-ghast.1",
+        "homepage": "https://yepcode.io/docs/mcp-server/",
+        "repository": "https://github.com/yepcode/mcp-server-js",
+        "upstreamRevision": "15cf0527dda6c818a1528ed4467389e0962a1eea",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/yepcode.zip",
+        "sha256": "429b35882afaa77379cd03d0a3ea172b3279e2099ffd8cef888c4ff65ea3cdc2"
+      },
+      "icon": "./plugins/yepcode/assets/icon.svg",
+      "category": "development",
+      "homepage": "https://yepcode.io/docs/mcp-server/",
+      "repository": "https://github.com/yepcode/mcp-server-js",
+      "license": "MIT"
+    },
+    {
       "id": "zoom",
       "name": "zoom",
       "description": "Build Zoom integrations and access meeting search, transcripts, recordings, assets, Team Chat, Canvas, Tasks, Whiteboard, and Revenue Accelerator through Zoom's official skills and MCP servers.",

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "yepcode": {
+      "url": "https://cloud.yepcode.io/mcp?tools=run_code,yc_api,mcp-tool",
+      "transport": "streamable-http",
+      "headers": {
+        "Authorization": "Bearer $VAULT:yepcode-api-token"
+      }
+    }
+  }
+}

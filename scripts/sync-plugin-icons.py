@@ -261,6 +261,12 @@ CUSTOM_ICONS = {
         '<circle cx="32" cy="32" r="21"/>'
         '<path d="M11 32h42M32 11c7 7 10 14 10 21s-3 14-10 21M32 11c-7 7-10 14-10 21s3 14 10 21"/>',
     ),
+    "yepcode": (
+        "#087E8B",
+        '<path d="M22 20l-10 12 10 12M42 20l10 12-10 12"/>'
+        '<path d="M36 15l-8 34"/>'
+        '<circle cx="32" cy="32" r="3" fill="white" stroke="none"/>',
+    ),
     "zoom": (
         "#2D6CDF",
         '<rect x="12" y="20" width="28" height="25" rx="5"/>'
