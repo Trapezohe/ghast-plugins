@@ -175,6 +175,13 @@ CUSTOM_ICONS = {
         '<rect x="25" y="25" width="14" height="14" rx="2"/>'
         '<path d="M20 20l7 7M44 20l-7 7M20 44l7-7M44 44l-7-7"/>',
     ),
+    "coveo": (
+        "#276B73",
+        '<path d="M16 11h24l9 9v21H16z"/>'
+        '<path d="M40 11v10h9M23 28h18M23 35h12"/>'
+        '<circle cx="39" cy="43" r="8"/>'
+        '<path d="M45 49l7 7"/>',
+    ),
     "carta-crm": (
         "#2A6F62",
         '<rect x="11" y="13" width="42" height="38" rx="3"/>'

@@ -1399,6 +1399,73 @@
         "unzip -tqq packages/coupler-io.zip"
       ]
     },
+    "coveo": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Coveo",
+      "officialRepository": "https://github.com/coveo-labs/coveo-mcp-server",
+      "officialRevision": "d93b77ee3d1a53b8547adad431e8c6355bb85f23",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/coveo/LICENSE licenses only the Ghast-authored launcher, configuration, safety instructions, documentation, metadata, and generic document-search icon.",
+        "The pinned Coveo Labs repository declares MIT in pyproject.toml but contains no LICENSE, LICENSE.md, LICENSE.txt, COPYING, or NOTICE file, so Ghast does not copy or redistribute any upstream source file.",
+        "The launcher clones the exact official source revision at first run and verifies its Git origin, revision, and critical file hashes before running it. No Coveo hosted implementation, OAuth client credential, API key, indexed content, branded artwork, or marketplace icon is redistributed."
+      ],
+      "officialityEvidence": [
+        "The coveo-labs/coveo-mcp-server repository is owned by Coveo Labs, identifies itself as a Coveo MCP server, links Coveo, and has a pinned commit authored with a coveo.com identity.",
+        "Pinned revision d93b77ee3d1a53b8547adad431e8c6355bb85f23 has Git tree 2b9534586e817ff09189e40af245228ad957471b and complete audited source-inventory SHA-256 6483ccc364bae642147e46005ec100ea962e5abddcdd9c6f3a88b42befb9cbc9.",
+        "The official source exposes exactly search_coveo, passage_retrieval, and answer_question and accepts COVEO_API_KEY, COVEO_ORGANIZATION_ID, and optional COVEO_ANSWER_CONFIG_ID.",
+        "The official source README, pyproject.toml, uv.lock, server module, and API module have SHA-256 values 412e32d2546a2babf77911b16f308c20a0723b4fa32288f8d5bab0b85ee6c486, b1d697688a21ef4b1a766a20d1bda8e64e891c285a543d68ec1fef32dbe6ece6, b922891bd77e46661523574e909ba9cab8a2dc7d84d1dee49adb9d305e1e9212, 260c287bed109f482fac2dc8a4cc1308f1c125f111143aa3bd08edd83f711de1, and 4b99ce8b567cb1b29a9608facaa2a37e51b051a7d8ebbf6cd5ab564c7434361d.",
+        "Coveo's official product and documentation describe its hosted MCP and configurable Search, Fetch, Answer, and Passage Retrieval tools. Their pinned normalized SHA-256 values are 9b812db53c251698f2756836b0b7903ca21f5995626ee58a3855d1bc543ccaa2, 0c675ab69739498e93fc74114c95b4bd53633278b309dbd6b05ed8c8a3d9773a, 2329b6a90bf2f7c0b2a538406afc398c84f846366a9390252c737827b686c6d0, and b0e032be201c7fd5ff6e842608b53f343ab38158fe3d752c52b5dedd0ca7c365.",
+        "The hosted protected-resource metadata identifies https://platform.cloud.coveo.com/mcp, https://platform.cloud.coveo.com as authorization server, and full scope. Its canonical JSON SHA-256 is 2737b1fa85396573a760abb9daf892b8be9039bdab2b623be1c94be0b27d76d0.",
+        "The authorization-server metadata publishes authorization-code and refresh-token grants plus PKCE S256 but no dynamic registration endpoint. Its canonical JSON SHA-256 is fa329c67e2a41c2cb83bb64672e29cd5fa6300f1a66789d22574af0afecffe33.",
+        "Coveo documents product-specific pre-registered OAuth client identifiers for ChatGPT, Claude, and other clients. Ghast does not reuse or impersonate those client identifiers and instead runs Coveo's official API-key Labs implementation.",
+        "On August 13, 2026, missing, invalid query-token, and invalid Bearer initialization requests to https://mcp.cloud.coveo.com/mcp returned HTTP 401 without a reusable credential or account access.",
+        "OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 identifies Coveo as developer and describes enterprise-content search. Its app mapping, manifest, and icon SHA-256 values are 01d0a7824272cb2eb183514e229c3d0f968f3f14203070e1366c537c411fc25e, 7c08ccf607dd089720b52ef7c291f529cc97d5a8a89f05107bc8bc81c03e0a0f, and cf85688d7906335433654df6b58b2168fbda4224e681009338e9b84b614bbd76."
+      ],
+      "codexCapabilities": [
+        "Search authorized enterprise content through Coveo",
+        "Use Coveo to help answer a task from indexed organizational knowledge"
+      ],
+      "ghastCapabilities": [
+        "The same enterprise-content search capability through Coveo's pinned official Labs MCP implementation",
+        "Official passage retrieval for focused grounded excerpts with source provenance",
+        "Official Relevance Generative Answering when the organization supplies an eligible answer configuration",
+        "A fail-closed launcher that verifies the official Git origin, exact revision, critical hashes, and frozen dependency lock before execution",
+        "An independently authored workflow for least-privilege credentials, narrow retrieval, citation preservation, source verification, data minimization, prompt-injection resistance, and honest freshness and coverage reporting"
+      ],
+      "capabilityRelationship": "equivalent-search-with-official-passage-and-answer-extension",
+      "limitations": [
+        "Coveo labels the Labs source educational and exploratory and says it is not production-ready. Operators must assess reliability, security, monitoring, and support before production use.",
+        "The upstream repository contains no full license text despite declaring MIT in package metadata. Ghast does not redistribute its source; the local MIT license covers only the independently authored adapter files.",
+        "First run requires Git, Astral uv, network access to GitHub and Python package sources, writable cache space, and a supported Python environment. The exact source revision and dependency lock are downloaded into a local cache.",
+        "The pinned uv.lock uses Python 3.12.3 and MCP 1.5.0. A plain pip installation resolved MCP 2.0.0 and failed test collection because the legacy mcp.server.fastmcp module was absent, so the frozen lock is mandatory.",
+        "The source's pyproject.toml dependency range and frozen lock disagree on the selected MCP generation. Ghast represents only the exact locked revision that was tested, not future unpinned dependency combinations.",
+        "The source __main__ module writes status text to stdout before stdio begins. The launcher starts the official FastMCP object directly to keep the MCP protocol stream clean.",
+        "A user-managed least-privilege COVEO_API_KEY and exact COVEO_ORGANIZATION_ID are required. Answer generation additionally requires an eligible COVEO_ANSWER_CONFIG_ID; passage retrieval depends on the organization's Coveo Passage Retrieval configuration and indexed sources.",
+        "The current hosted MCP has a different configurable Search, Fetch, Answer, and Passage Retrieval surface. Ghast does not claim the three-tool Labs source is a byte-for-byte copy of the hosted connector; it covers the Codex plugin's documented enterprise-search capability with official additional retrieval and answer tools.",
+        "Coveo's hosted OAuth does not publish dynamic registration and documents fixed client IDs for named products. Ghast must not reuse ChatGPTGenericConnector, ChatGPTConnector, ClaudeConnector, or another product's identity.",
+        "Official source, documentation, OAuth metadata, unauthenticated endpoint behavior, frozen tests, and an unauthenticated stdio tool listing were verified. Real authenticated search, private source retrieval, passage retrieval, and answer generation were not run because no Coveo account or enterprise data was used.",
+        "Indexed enterprise content can be confidential, stale, incomplete, permission-limited, contradictory, or malicious. Retrieval and disclosure must remain narrowly scoped, citations must be preserved, and high-impact conclusions require source review.",
+        "A generic document-search icon is used because no licensed Coveo marketplace artwork is redistributed."
+      ],
+      "verification": [
+        "Run verify_coveo_evidence and import_coveo from scripts/import-official-hosted-plugins.py through Python runpy",
+        "Verify official revision d93b77ee3d1a53b8547adad431e8c6355bb85f23, Git tree 2b9534586e817ff09189e40af245228ad957471b, critical source hashes, complete inventory hash, Coveo Labs origin, exact three-tool surface, environment variables, and absence of a license or notice file",
+        "Create an isolated environment with Astral uv, run uv sync --frozen --all-extras, and confirm all 19 upstream tests pass",
+        "Initialize the official source through stdio and confirm tools/list returns exactly search_coveo, passage_retrieval, and answer_question without protocol-preface output",
+        "Verify normalized official product and documentation hashes 9b812db53c251698f2756836b0b7903ca21f5995626ee58a3855d1bc543ccaa2, 0c675ab69739498e93fc74114c95b4bd53633278b309dbd6b05ed8c8a3d9773a, 2329b6a90bf2f7c0b2a538406afc398c84f846366a9390252c737827b686c6d0, and b0e032be201c7fd5ff6e842608b53f343ab38158fe3d752c52b5dedd0ca7c365",
+        "Verify canonical hosted protected-resource and authorization-server hashes 2737b1fa85396573a760abb9daf892b8be9039bdab2b623be1c94be0b27d76d0 and fa329c67e2a41c2cb83bb64672e29cd5fa6300f1a66789d22574af0afecffe33, including the absence of dynamic registration and the documented fixed-client matrix",
+        "Probe https://mcp.cloud.coveo.com/mcp with missing, invalid query-token, and invalid Bearer initialize requests and confirm HTTP 401 without retaining credentials",
+        "Verify OpenAI plugin snapshot app mapping, manifest, and icon SHA-256 values 01d0a7824272cb2eb183514e229c3d0f968f3f14203070e1366c537c411fc25e, 7c08ccf607dd089720b52ef7c291f529cc97d5a8a89f05107bc8bc81c03e0a0f, and cf85688d7906335433654df6b58b2168fbda4224e681009338e9b84b614bbd76",
+        "Run the generated Ghast launcher with placeholder credentials in an isolated cache, initialize it over stdio, and confirm tools/list returns the exact three audited tools",
+        "Authorize a Coveo organization before testing real search results, source permissions, passage retrieval, answer configuration, query limits, or indexed enterprise content",
+        "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/coveo.zip"
+      ]
+    },
     "cube": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Cube",

@@ -1050,6 +1050,36 @@
       "license": "MIT"
     },
     {
+      "id": "coveo",
+      "name": "coveo",
+      "description": "Search authorized enterprise content, retrieve grounded passages, and generate source-linked answers through Coveo's pinned official Labs MCP implementation.",
+      "manifest": {
+        "name": "coveo",
+        "description": "Search authorized enterprise content, retrieve grounded passages, and generate source-linked answers through Coveo's pinned official Labs MCP implementation.",
+        "author": {
+          "name": "Coveo",
+          "url": "https://www.coveo.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "0.1.0-ghast.1",
+        "homepage": "https://www.coveo.com/en/developers/mcp-server",
+        "repository": "https://github.com/coveo-labs/coveo-mcp-server",
+        "upstreamRevision": "d93b77ee3d1a53b8547adad431e8c6355bb85f23",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/coveo.zip",
+        "sha256": "9644fd909f7f634cc57415b9c757b54ce2892d3ffb92d529e10d11bbd2fb5b7f"
+      },
+      "icon": "./plugins/coveo/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://www.coveo.com/en/developers/mcp-server",
+      "repository": "https://github.com/coveo-labs/coveo-mcp-server",
+      "license": "MIT"
+    },
+    {
       "id": "cube",
       "name": "cube",
       "description": "Query governed Cube data, analyze financial performance, build dashboards, edit semantic models safely, and inspect pre-aggregations through Cube's official hosted MCP.",
