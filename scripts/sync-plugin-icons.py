@@ -53,6 +53,7 @@ LOCAL_ICONS = {
     "superhuman": "assets/icon.svg",
     "superpowers": "assets/icon.png",
     "temporal": "assets/icon.svg",
+    "vantage": "assets/icon.svg",
     "vercel": "assets/icon.svg",
     "wix": "assets/icon.svg",
 }

@@ -165,7 +165,7 @@ verification.
 | tinman-ai | Better | appConnector | MIT | official-source-research-required | not-implemented |
 | twilio-developer-kit | Twilio | skills | MIT | official-source-verified | implemented-verified |
 | united-rentals | United Rentals | appConnector | MIT | official-source-research-required | not-implemented |
-| vantage | Vantage | appConnector | MIT | official-source-research-required | not-implemented |
+| vantage | Vantage | appConnector | MIT | official-source-verified | implemented-verified |
 | vercel | Vercel Labs | appConnector, skills, commands | Apache-2.0 | official-source-verified | implemented-verified |
 | waldo | Curiosities, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | weatherpromise | WeatherPromise, Inc. | appConnector | MIT | official-source-research-required | not-implemented |

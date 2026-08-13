@@ -2566,6 +2566,60 @@
         "unzip -tqq packages/streak.zip"
       ]
     },
+    "vantage": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Vantage",
+      "officialRepository": "https://github.com/vantage-sh/vantage-mcp-server",
+      "officialRevision": "74fd3ddccc5c2e735d68a364e3f28467c0ba2a60",
+      "license": "MIT",
+      "licenseEvidence": [
+        "The official repository's LICENSE.md grants the MIT permission notice under Copyright 2025 VNTG Inc.",
+        "GitHub's license API identifies the repository as MIT licensed.",
+        "The redistributed Vantage logo is public/vantage-logo.svg from the same pinned MIT repository; no OpenAI marketplace artwork is copied."
+      ],
+      "officialityEvidence": [
+        "The repository is owned by the official vantage-sh GitHub organization and describes itself as the Vantage MCP Server for cloud cost and usage data.",
+        "Vantage's official MCP documentation states that the Remote and Self-Hosted MCP modes use the same unified open-source codebase with feature parity.",
+        "The same official documentation lists ChatGPT through the official Vantage app and OpenAI Codex as supported MCP clients.",
+        "The provider-recommended remote endpoint is https://mcp.vantage.sh/mcp, while the pinned repository provides the matching local stdio implementation and publishes vantage-mcp-server 2.22.0 on npm.",
+        "The pinned verified commit exposes 122 protocol tools across 31 generated tool groups: 67 read-only, 55 write-capable, and 37 destructive.",
+        "The live authorization metadata supports dynamic client registration, authorization-code and refresh-token grants, public clients, and PKCE S256. A disposable localhost public client registration returned HTTP 201."
+      ],
+      "codexCapabilities": [
+        "Aggregate cloud infrastructure costs across providers into one centralized view",
+        "Analyze current cloud spend and use Vantage optimization, FinOps workflow, and cost-governance capabilities"
+      ],
+      "ghastCapabilities": [
+        "The same official multi-provider cost and usage analysis through Vantage's hosted MCP, including exact VQL queries, account and provider scoping, unit costs, forecasts, anomalies, business metrics, tags, and provider resources",
+        "Official optimization detail through recommendations, recommendation resources and views, financial commitment reports, scenario models, and report forecasts",
+        "Official FinOps governance through budgets, cost alerts and events, billing rules, cost reports, resource reports, network flow reports, dashboards, canvases, folders, report notifications, Virtual Tags, annotations, workspaces, users, teams, and audit logs",
+        "Direct provider-hosted OAuth with Vantage RBAC, plus the official API-token option for clients that cannot complete OAuth"
+      ],
+      "capabilityRelationship": "official-superset-same-open-source-mcp",
+      "limitations": [
+        "An active Vantage account, configured cost integrations, OAuth or a user-managed API token, Workspace access, RBAC permissions, and any plan-specific features remain required.",
+        "No authenticated cost query or mutation was run because no user Vantage account or cloud billing data was supplied. The official source was protocol-tested locally with a placeholder token through initialize and tools/list.",
+        "The hosted tool surface can advance after the pinned source revision. Ghast verifies the fixed 122-tool source surface and the live authentication boundary, but it does not claim every future hosted addition until re-audited.",
+        "Writes can alter organization-wide reports, budgets, alerts, dashboards, tags, allocations, notifications, folders, or Workspaces. The Ghast safety skill requires exact target review and explicit confirmation, with fresh confirmation for destructive actions.",
+        "Vantage documents account-wide API limits of 1,000 requests per hour and a stricter 5 requests per 5 seconds limit for Cost Report endpoints. Broad enumeration and unbounded retries are not appropriate.",
+        "Cost data can be delayed or incomplete and forecasts, anomalies, recommendations, allocations, and estimated savings are not provider invoices or guaranteed outcomes.",
+        "Vantage states that parent MSP accounts cannot query child MSP accounts through the MCP.",
+        "A source-tree npm audit reported advisories in development and hosted-runtime dependencies. Ghast packages none of those dependencies or server code; production dependency remediation remains Vantage's responsibility."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Verify vantage-sh/vantage-mcp-server commit 74fd3ddccc5c2e735d68a364e3f28467c0ba2a60, verified v2.22.0 ancestry, MIT license, README, package metadata, server version, tool index, and official Vantage logo hashes",
+        "Fetch https://docs.vantage.sh/vantage_mcp.md and verify SHA-256 e31d0216adc0096f0d42299e2a0b63636681e2aeb89cac0d7e198c5a3a9f669c plus the same-code feature-parity, official ChatGPT app, Codex, endpoint, and rate-limit statements",
+        "Verify the canonical OAuth authorization-server metadata SHA-256 is 00789e3fe9a96ac87ada60caf94dfae41c9f7c2e628117cc6f87a3594a7bcae4",
+        "Register a disposable localhost public OAuth client and confirm HTTP 201 with authorization-code, refresh-token, code response, and token_endpoint_auth_method none",
+        "Probe the remote MCP with an unauthenticated initialize request and confirm its live HTTP 401 invalid_token Bearer challenge",
+        "Install the clean pinned source with an isolated npm cache, run TypeScript checking, Biome over 332 files, and all 133 Vitest files containing 1066 tests",
+        "Start the clean source's stdio server with a placeholder token and confirm serverInfo Vantage Cloud Costs Helper 2.22.0 plus 122 tools, 67 read-only, 55 write-capable, and 37 destructive",
+        "Verify the canonical source tool-name SHA-256 is 21725df55ad3b8f4d433934f76048019ac9343049fcc08226387c9228fb44531 and the name-plus-annotation inventory SHA-256 is a0779f98399e573ef27fcc6f44bdb883638984d3c997f436a48a6d1328147490",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/vantage.zip"
+      ]
+    },
     "zoom": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Zoom",
