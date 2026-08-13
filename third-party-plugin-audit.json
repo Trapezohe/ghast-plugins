@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 75,
-      "official-source-verified": 69
+      "official-source-research-required": 74,
+      "official-source-verified": 70
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 69,
-      "not-implemented": 80
+      "implemented-verified": 70,
+      "not-implemented": 79
     }
   },
   "excludedOpenAIPlugins": [
@@ -5935,7 +5935,7 @@
     },
     {
       "id": "otter-ai",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Otter.ai",
@@ -5960,13 +5960,77 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://otter.ai"
+        "homepage": "https://otter.ai",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Otter.ai",
+          "officialRepository": null,
+          "officialRevision": "otter-zendesk-35287607569687-2026-08-12+oauth-1b480247ee26+auth-901170a75106",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/otter-ai/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+            "No Otter hosted MCP implementation, private Codex connector, meeting data, OAuth credentials, branded icon, or marketplace artwork is redistributed."
+          ],
+          "officialityEvidence": [
+            "Otter's official Help Center article identifies https://mcp.otter.ai/mcp as its public MCP server and documents connection from ChatGPT, Claude, Cursor, Perplexity, and other MCP clients.",
+            "Official article 35287607569687 was updated 2026-08-12T06:17:46Z. Its canonical article SHA-256 is 49d38efcc92e29f310b30f0dc7b3ae4335c17a13b7d60eff5ce2d7734d39e56e and body SHA-256 is abbb56e42c6c507338d7e03caedae09d0c62ce5589af7f3a075aec9c01beb535.",
+            "The official article documents three tools, Get user info, Search, and Fetch. Their normalized ordered inventory has SHA-256 d68e926a4dcdc7bcf9b30a0ef4b45116bafa70bfb76d8e970438e044454a1ccb.",
+            "The protected-resource metadata identifies Otter's official MCP resource, bearer-header authentication, scopes profile:read and conversations:read, and https://otter.ai/ as the authorization server; its canonical JSON SHA-256 is 1b480247ee26dee3a9d3ee0b5d80bb7abdc1e137830f36154449d4b04234e920.",
+            "The authorization-server metadata declares authorization-code and refresh-token grants, dynamic client registration, public clients, and PKCE S256; its canonical JSON SHA-256 is 901170a7510699249e6ce0fa12cb7211072205b9a4e996fa3313157d1778dd0e.",
+            "On August 13, 2026, a disposable localhost public client registered with HTTP 201, received the two read-only scopes, and returned no client secret.",
+            "Unauthenticated GET and MCP initialize requests returned HTTP 401 with Otter's official protected-resource challenge.",
+            "OpenAI's pinned Codex plugin snapshot identifies Otter.ai as the developer and documents recent-meeting listing, keyword, date, attendee, folder, and channel search, speaker-aware transcript retrieval, summaries, action items, meeting preparation, and personal or enterprise workspaces. The manifest and connector declarations have SHA-256 hashes feb85c79aec860a8f5edd60f249c52e9af088f0c84dcf01103705a8021a09e03 and d670c0a70ee7808145fc58db672a88c537a250fbdac3e95cd58b34a794ef5490.",
+            "No public repository containing the Otter hosted MCP implementation was found, so Ghast integrates it only as an official hosted adapter."
+          ],
+          "codexCapabilities": [
+            "List recent Otter meetings",
+            "Search meetings by keyword, date range, attendee, folder, or channel",
+            "Retrieve full transcripts with speaker attribution plus summaries, action items, and meeting metadata",
+            "Prepare for meetings, extract historical decisions, and synthesize insights across personal and enterprise meeting archives"
+          ],
+          "ghastCapabilities": [
+            "The same meeting-history workflows through Otter.ai's official hosted MCP server",
+            "Authenticated user identity through the official profile-read tool",
+            "Meeting search and overview across the user's captured and shared meetings",
+            "Full speech-transcript retrieval for exact meetings or accessible Otter conversation URLs",
+            "Cross-meeting analysis, content generation, decision and action-item extraction, meeting preparation, and historical-context retrieval grounded in official Search and Fetch results",
+            "Direct browser OAuth through dynamic client registration, authorization code, refresh tokens, public clients, and PKCE S256"
+          ],
+          "capabilityRelationship": "equivalent-official-hosted-mcp",
+          "limitations": [
+            "The hosted MCP implementation is operated by Otter and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+            "An Otter account, browser OAuth, captured or shared meetings, Workspace and Channel permissions, subscription entitlements, retention, and service limits remain user-managed.",
+            "The official article describes the tool display names rather than publishing authenticated MCP JSON schemas. Ghast normalizes them as get_user_info, search, and fetch, but the live authenticated tool list remains authoritative.",
+            "Documentation, the complete published three-tool catalog, OAuth metadata, dynamic registration, Codex capability evidence, and unauthenticated protocol behavior were verified without an account. Authenticated tools/list and real meeting-data operations were not run.",
+            "Otter publishes no API-key authentication method for MCP. Credentials must be obtained only through browser OAuth and retained by the host.",
+            "Fetch returns a full speech transcript and can expose sensitive participant statements. Search and retrieval must be bounded and disclosure minimized.",
+            "Meeting access follows existing Otter sharing and Workspace permissions. The plugin must not attempt to bypass access controls or infer permission to disclose content.",
+            "Recording consent, retention policy, Workspace governance, privacy requirements, and legal holds remain user and organization responsibilities.",
+            "A generic meeting-transcript icon is used because the downloadable official icon does not include a public redistribution license."
+          ],
+          "verification": [
+            "python3 scripts/import-official-hosted-plugins.py",
+            "Fetch official Help Center article 35287607569687 and verify updated_at 2026-08-12T06:17:46Z, canonical article SHA-256 49d38efcc92e29f310b30f0dc7b3ae4335c17a13b7d60eff5ce2d7734d39e56e, and body SHA-256 abbb56e42c6c507338d7e03caedae09d0c62ce5589af7f3a075aec9c01beb535",
+            "Parse the official tool table and confirm the normalized ordered three-tool inventory and SHA-256 d68e926a4dcdc7bcf9b30a0ef4b45116bafa70bfb76d8e970438e044454a1ccb",
+            "Verify canonical OAuth protected-resource and authorization-server metadata hashes 1b480247ee26dee3a9d3ee0b5d80bb7abdc1e137830f36154449d4b04234e920 and 901170a7510699249e6ce0fa12cb7211072205b9a4e996fa3313157d1778dd0e",
+            "Register a disposable localhost public OAuth client and confirm HTTP 201, no client secret, authorization-code and refresh-token grants, profile:read and conversations:read scopes, and PKCE S256 discovery",
+            "Probe https://mcp.otter.ai/mcp with GET and MCP initialize and confirm HTTP 401 plus Otter's protected-resource challenge",
+            "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Otter manifest and connector hashes and compare every described search, transcript, summary, action-item, metadata, preparation, and synthesis workflow with the official three-tool surface",
+            "Authorize an Otter account before testing authenticated tool schemas or meeting-data operations",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/otter-ai.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": null,
+        "upstreamRevision": "otter-zendesk-35287607569687-2026-08-12+oauth-1b480247ee26+auth-901170a75106",
+        "portStatus": "full"
       }
     },
     {

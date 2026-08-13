@@ -245,6 +245,13 @@ CUSTOM_ICONS = {
         '<path d="M12 43h40M18 43V27l14-10 14 10v16"/>'
         '<path d="M27 43V32h10v11"/>',
     ),
+    "otter-ai": (
+        "#2F6B73",
+        '<rect x="12" y="13" width="40" height="38" rx="4"/>'
+        '<path d="M12 24h40M20 18h1M28 18h1M36 18h1"/>'
+        '<path d="M19 38h5l3-8 5 15 5-11 3 6h5"/>'
+        '<path d="M20 48h24"/>',
+    ),
     "posthog": (
         "#D5A019",
         '<path d="M12 48h40M17 43V31h8v12M29 43V22h8v21M41 43V14h8v29"/>'
