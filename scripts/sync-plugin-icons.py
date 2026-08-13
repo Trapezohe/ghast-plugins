@@ -263,6 +263,15 @@ CUSTOM_ICONS = {
         '<circle cx="46" cy="43" r="8" fill="#315F78"/>'
         '<path d="M52 49l5 5"/>',
     ),
+    "hebbia": (
+        "#4657F5",
+        '<rect x="11" y="12" width="39" height="40" rx="3"/>'
+        '<path d="M11 23h39M24 23v29M37 23v22"/>'
+        '<path d="M16 18h12M31 18h13M16 30h3M29 30h3M42 30h3"/>'
+        '<path d="M16 38h3M29 38h3"/>'
+        '<circle cx="45" cy="45" r="8" fill="#4657F5"/>'
+        '<path d="M51 51l5 5"/>',
+    ),
     "jam": (
         "#5F4A8B",
         '<rect x="10" y="13" width="44" height="34" rx="4"/>'

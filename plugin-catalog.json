@@ -1317,6 +1317,34 @@
       "license": "MIT"
     },
     {
+      "id": "hebbia",
+      "name": "hebbia",
+      "description": "Search authorized institutional knowledge, analyze document sets with traceable evidence, and support financial research workflows through Hebbia's official hosted MCP.",
+      "manifest": {
+        "name": "hebbia",
+        "description": "Search authorized institutional knowledge, analyze document sets with traceable evidence, and support financial research workflows through Hebbia's official hosted MCP.",
+        "author": {
+          "name": "Hebbia",
+          "url": "https://www.hebbia.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://www.hebbia.com/product",
+        "upstreamRevision": "hebbia-product-7f99fc43f3f6+home-92b907df1539+oauth-78b5d22dd33e+auth-9b1ae93cc36d",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/hebbia.zip",
+        "sha256": "72a1e26032faeab7fad81d98d1e54b8c3e959167e1d83d36e3eb410bf5efa07b"
+      },
+      "icon": "./plugins/hebbia/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://www.hebbia.com/product",
+      "license": "MIT"
+    },
+    {
       "id": "heygen",
       "name": "heygen",
       "description": "Create HeyGen avatar videos, personalized video messages, and translated / dubbed videos. Build a persistent digital identity from a photo, generate presenter-led videos with your digital twin, and localize existing videos into 175+ languages with voice cloning and lip-sync.",

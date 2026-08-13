@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "hebbia": {
+      "type": "http",
+      "url": "https://api.hebbia.ai/mcp"
+    }
+  }
+}

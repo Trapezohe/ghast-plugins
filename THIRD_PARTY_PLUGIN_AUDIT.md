@@ -91,7 +91,7 @@ verification.
 | govtribe | Government Executive Media Group LLC | appConnector | MIT | official-source-verified | implemented-verified |
 | granola | Granola | appConnector | MIT | official-source-verified | implemented-verified |
 | happenstance | Happenstance, Inc. | appConnector | MIT | official-source-verified | implemented-verified |
-| hebbia | Hebbia | appConnector | MIT | official-source-research-required | not-implemented |
+| hebbia | Hebbia | appConnector | MIT | official-source-verified | implemented-verified |
 | heygen | HeyGen | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | hg-insights | HG Insights | appConnector | MIT | official-source-research-required | not-implemented |
 | highlevel | HighLevel | appConnector | MIT | official-source-verified | implemented-verified |

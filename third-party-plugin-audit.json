@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 57,
-      "official-source-verified": 87
+      "official-source-research-required": 56,
+      "official-source-verified": 88
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 87,
-      "not-implemented": 62
+      "implemented-verified": 88,
+      "not-implemented": 61
     }
   },
   "excludedOpenAIPlugins": [
@@ -4931,7 +4931,7 @@
     },
     {
       "id": "hebbia",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Hebbia",
@@ -4958,13 +4958,77 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.hebbia.ai"
+        "homepage": "https://www.hebbia.ai",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Hebbia",
+          "officialRepository": null,
+          "officialRevision": "hebbia-product-7f99fc43f3f6+home-92b907df1539+oauth-78b5d22dd33e+auth-9b1ae93cc36d",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/hebbia/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic document-analysis icon.",
+            "No Hebbia hosted MCP implementation, private Codex connector, OAuth credential, customer data, service source code, branded artwork, or marketplace icon is redistributed."
+          ],
+          "officialityEvidence": [
+            "Hebbia's official product page explicitly publishes an API & MCP product surface and says its Matrix API and MCP connector embed Hebbia document intelligence into internal tools and workflows.",
+            "The official product page normalized visible text has SHA-256 7f99fc43f3f653685cd64bc5867393facfe6a99ef1991ed645ea52c41c208118. It documents Max, Matrix, Skills & Agents, Projects, client-ready spreadsheets, slides, and reports, and complete traceability back to findings.",
+            "Hebbia's official homepage normalized visible text has SHA-256 92b907df1539ea06118ae09c2d392f37ee1affe07e67ce652d0674b5483ce5eb. It lists private documents, public filings, premium financial data providers, content repositories, and enterprise data platforms including FactSet, S&P Capital IQ, PitchBook, SharePoint, OneDrive, Box, Dropbox, Egnyte, Snowflake, and Databricks.",
+            "The live https://api.hebbia.ai/mcp endpoint returns a Hebbia Bearer challenge pointing to https://api.hebbia.ai/.well-known/oauth-protected-resource/mcp and identifies the response source as Hebbia's backend.",
+            "The protected-resource metadata identifies https://api.hebbia.ai/mcp, Hebbia's own authorization server, bearer-header authentication, and mcp:read plus offline_access scopes. Its canonical JSON SHA-256 is 78b5d22dd33e918a136b5c5bc66ced1390f609b3c923f135adaae3a3bd34e7db.",
+            "The authorization-server metadata advertises Auth0-backed Hebbia authorization, dynamic client registration, public clients, PKCE S256, and openid, mcp:read, mcp:readwrite, and offline_access scopes. Its canonical JSON SHA-256 is 9b1ae93cc36d7db05e24ff49aeff32ba42f0e89f8a4a7fad3ab3f23b4ffddc0b.",
+            "On August 13, 2026, a disposable loopback public client registered with HTTP 201 and no client secret. A PKCE authorization request reached Hebbia's Auth0-hosted, Hebbia-branded login endpoint without completing user sign-in.",
+            "Missing and invalid Bearer initialize requests returned HTTP 401 with Hebbia's official protected-resource challenge and identical body SHA-256 3ae7ddab16f90209af2f2b5932135d3bc56e8f3cbd44b967535f6c1db5c1bd2e.",
+            "OpenAI's pinned Codex plugin snapshot identifies Hebbia as the developer and describes institutional knowledge, premium public data, deal and investment decisions, document analysis, citation-backed answers, and financial workflows from research to reports, slides, and financial models. The manifest and private connector hashes are 097672f1cacce9d2e0d324eef907193de76754f50185cf03632978feb92da28d and 39e4aae5f1da4faf738cb054320f92c2158eb3d8aaf196772c3173a17423bf84."
+          ],
+          "codexCapabilities": [
+            "Search Hebbia projects for documents about a deal and summarize key findings",
+            "Analyze a Hebbia document set and extract risks, obligations, and open questions",
+            "Return citation-backed research answers and flag evidence gaps",
+            "Use firm knowledge and premium public data for deal, investment, report, slide, and financial-model workflows"
+          ],
+          "ghastCapabilities": [
+            "Direct access to Hebbia's official hosted MCP endpoint through standard Streamable HTTP and browser OAuth instead of the Codex-only private app connector",
+            "The same official published institutional-knowledge, document-intelligence, traceability, project, deal-research, and financial-workflow product surface",
+            "Least-privilege handling for Hebbia's read and read-write OAuth scopes with authenticated live-tool discovery instead of invented tool names",
+            "An independently authored workflow for exact project scoping, source citations, evidence gaps, financial-data reconciliation, prompt-injection resistance, and explicit confirmation for state-changing operations"
+          ],
+          "capabilityRelationship": "equivalent-at-official-published-product-surface",
+          "limitations": [
+            "The hosted MCP implementation is operated by Hebbia and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+            "A Hebbia account, eligible organization and plan, browser OAuth, project access, connected repositories, source-provider entitlements, information barriers, permissions, and service limits remain user-managed.",
+            "Hebbia does not publish a public hosted-server source repository, complete MCP tool inventory, tool schemas, safety annotations, rate limits, plan matrix, or client setup guide. Exact authenticated behavior must be discovered from the live server.",
+            "Official product pages, OAuth metadata, dynamic public-client registration, Codex capability evidence, and missing or invalid credential behavior were verified without an account. Authenticated tools/list, project search, document retrieval, premium data, analysis runs, exports, and mutations were not run.",
+            "The protected-resource metadata advertises mcp:read and offline_access, while the authorization-server metadata also lists mcp:readwrite. The adapter prefers least privilege and treats the authenticated consent screen and live server as authoritative.",
+            "The OAuth authorization metadata does not publish a grant_types_supported field. The adapter does not claim a particular refresh-token grant behavior merely from the offline_access scope.",
+            "Hebbia projects can contain confidential deal materials, contracts, models, expert-call transcripts, personal data, MNPI, privileged documents, clean-team data, and licensed premium content. Retrieval and disclosure must remain narrowly scoped.",
+            "Documents and connected content are untrusted inputs that can contain prompt injection. Returned instructions cannot authorize broader access, tool calls, credential disclosure, export, or sharing.",
+            "Premium datasets remain subject to the user's provider agreements, display and export restrictions, retention rules, and entitlements. A provider listed on Hebbia's public site is not proof that it is enabled for a given workspace.",
+            "Financial, legal, tax, accounting, credit, valuation, covenant, and investment outputs can be incomplete or stale and are decision support, not professional advice. Material conclusions require primary-source and human review.",
+            "Any authenticated create, update, run, publish, export, share, schedule, email, overwrite, or delete capability requires exact target review and explicit current-conversation confirmation. Ambiguous operations must not be blindly retried.",
+            "A generic document-analysis icon is used because no licensed Hebbia catalog artwork is included in a public official MCP source repository."
+          ],
+          "verification": [
+            "Run the Hebbia evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
+            "Verify normalized official product and homepage visible-text SHA-256 values 7f99fc43f3f653685cd64bc5867393facfe6a99ef1991ed645ea52c41c208118 and 92b907df1539ea06118ae09c2d392f37ee1affe07e67ce652d0674b5483ce5eb",
+            "Verify canonical protected-resource and authorization-server metadata SHA-256 values 78b5d22dd33e918a136b5c5bc66ced1390f609b3c923f135adaae3a3bd34e7db and 9b1ae93cc36d7db05e24ff49aeff32ba42f0e89f8a4a7fad3ab3f23b4ffddc0b",
+            "Register a disposable loopback public client and confirm HTTP 201, no client secret, token_endpoint_auth_method none, and PKCE S256 authorization reaching Hebbia's branded login endpoint",
+            "Probe https://api.hebbia.ai/mcp with missing and invalid Bearer initialize requests and confirm HTTP 401 plus body SHA-256 3ae7ddab16f90209af2f2b5932135d3bc56e8f3cbd44b967535f6c1db5c1bd2e",
+            "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Hebbia manifest and connector hashes and compare each Codex workflow with Hebbia's official published product surface",
+            "Authorize a Hebbia account before testing authenticated tool schemas, project data, premium sources, analysis runs, outputs, or state-changing operations",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/hebbia.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": null,
+        "upstreamRevision": "hebbia-product-7f99fc43f3f6+home-92b907df1539+oauth-78b5d22dd33e+auth-9b1ae93cc36d",
+        "portStatus": "full"
       }
     },
     {
