@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "fiscal": {
+      "url": "https://api.fiscal.ai/mcp",
+      "transport": "streamable-http",
+      "headers": {
+        "Authorization": "Bearer $VAULT:fiscal-api-key"
+      }
+    }
+  }
+}

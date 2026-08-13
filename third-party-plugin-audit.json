@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 62,
-      "official-source-verified": 82
+      "official-source-research-required": 61,
+      "official-source-verified": 83
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 82,
-      "not-implemented": 67
+      "implemented-verified": 83,
+      "not-implemented": 66
     }
   },
   "excludedOpenAIPlugins": [
@@ -4318,7 +4318,7 @@
     },
     {
       "id": "fiscal-ai",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Fiscal AI",
@@ -4345,13 +4345,88 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://fiscal.ai"
+        "homepage": "https://fiscal.ai",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Fiscal AI",
+          "officialRepository": null,
+          "officialRevision": "fiscal-docs-ed7d01d13419+tools-81b3f6f1dd2f+oauth-d3acf769990a+auth-4cedf324baa9+skills-25015c6addfb",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/fiscal-ai/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation, and generic financial-research icon.",
+            "No Fiscal.ai hosted MCP implementation, private Codex connector, API key, account data, official workflow bundle, source skill, branded icon, or marketplace artwork is redistributed.",
+            "Fiscal.ai's official client repository at revision 20b67b677a21723cb76f30202a2495f20b8f22af and its 35-file official version 5 workflow archive contain no LICENSE, COPYING, or NOTICE file. Their content is used only as officiality and capability evidence and is not copied into this package.",
+            "The Codex manifest's MIT field is not treated as a license grant for Fiscal.ai's hosted service, private connector, or official workflow content; the package's MIT license applies only to Ghast-authored files."
+          ],
+          "officialityEvidence": [
+            "Fiscal.ai's official MCP integration guide identifies https://api.fiscal.ai/mcp as its production Streamable HTTP endpoint and documents both browser OAuth and API-key Bearer authentication for compatible clients.",
+            "The guide's normalized main content is pinned at SHA-256 ed7d01d13419e9aa2aa6f8d674b82400e9aacf50d4664bf9d3b1f64435150418 and states that OAuth and API keys use the same account, plan limits, company coverage, and data entitlements.",
+            "Fiscal.ai's official documentation index is pinned at SHA-256 00315b347e49ef2d5373f0a7ee582d50686acf39f3ad9aacfa2da45571a0fad8 and enumerates company profiles, as-reported and standardized financials, ratios, adjusted metrics, segments and KPIs, ownership, prices, filings, filing pages, IR events and transcripts, news, and fund letters.",
+            "The official OpenAPI is pinned at raw and canonical SHA-256 aaf1105c93c6bdadb599eed30d38f3cf7d94ebc5940a56258bcfb64dc01bc912 and 1a8c0e6e1b77cf112c29e81cd49ee32057af085891c08e12076761167d62224f. It currently contains 49 GET operations and no state-changing HTTP operations.",
+            "Fiscal.ai's official MCP descriptor is pinned at raw and canonical SHA-256 8c53424110e002a0a0fbbe70741668d6aeae442a6ded7673361727760a6a4fd6 and 81b3f6f1dd2fac2a677e1ad87ed136b50ff0cfaf9327b201e98b3d9457c66e17.",
+            "The descriptor exposes api_docs and execute_code. Their ordered-name, name-description, and input-schema hashes are 7e1c1556c635358e29d25a6a29f3635480ad3549f245f9a279bffce4db163baf, 61e2e6aed93df38f4acee16d0fad76b94b7bf77ef34ce980a7e5d207b248b7a3, and 7aecaac4c90f91b846e5afef4ced770daf93b78f6cf5d121cab7d17d92f894b7.",
+            "execute_code is officially constrained to exact async JavaScript in a network-isolated 30-second sandbox with at most six concurrent helper calls, while api_docs provides current helper signatures and response guidance.",
+            "Protected-resource and authorization-server metadata are pinned at canonical JSON SHA-256 d3acf769990a6a15a4eeab9e21d0d0968af9ead6bd77b261d76fa50c5031d6ce and 4cedf324baa9e5aa99a25ee1e2d89be2ce8b64e541d8298ba55a9ff67585e810. They publish 11 data scopes, authorization code, refresh tokens, Dynamic Client Registration, public clients, and PKCE S256.",
+            "Fiscal.ai's official client repository is owned by the FinChat-Project-Atlas organization, identifies Fiscal.ai as author, and declares only the production Fiscal.ai MCP endpoint. Its MCP declaration and plugin manifest hashes are b53d80779ed31464e14874a04e073341c2a62e8ac19742b105bb70350add434a and 97c3db8ce8f8c318d88b25858371bf80922c30a7fe3961e2514d95f4e486561a.",
+            "Fiscal.ai publishes an official 35-file version 5 workflow bundle for financial models, valuation, screening, watchlists, ownership, earnings, credit, industry, and investment-research workflows. Its archive SHA-256 is 25015c6addfbb41ced0e678e191288aa6c838b4db5f0971aada7106430cf7a28.",
+            "On August 13, 2026, an unauthenticated initialize request returned HTTP 401 with Fiscal.ai's exact missing-token response and protected-resource challenge. One public OAuth client had also registered without a client secret and reached Fiscal.ai's consent page through PKCE."
+          ],
+          "codexCapabilities": [
+            "Search Fiscal AI for a company and summarize recent financials, filings, and key risks through a private app connector",
+            "Compare revenue growth, margins, and valuation for a peer set",
+            "Find ticker insights and highlight the most important takeaways",
+            "Use source-linked fundamental metrics, ratios, company-specific KPIs, revenue segments, adjusted metrics, and historical or current market quotes for grounded equity research"
+          ],
+          "ghastCapabilities": [
+            "Direct Streamable HTTP access to Fiscal.ai's official production MCP using a user-owned API key stored in the Ghast vault instead of an OpenAI private connector",
+            "The same company, recent-financials, filings, risk, peer-growth, margin, valuation, ticker-insight, KPI, segment, adjusted-metric, quote, and source-link workflows at Fiscal.ai's official product surface",
+            "Current api_docs-based helper discovery and execute_code retrieval across the 49-operation read-only API surface for profiles, financials, ratios, ownership, events, prices, filings, IR content, news, and fund letters",
+            "An independently authored Ghast workflow that preserves company, period, currency, unit, accounting basis, valuation timestamp, filing, page, and source provenance while separating reported, standardized, adjusted, calculated, assumed, and judgmental values"
+          ],
+          "capabilityRelationship": "equivalent-at-official-published-product-surface",
+          "limitations": [
+            "Fiscal.ai operates the hosted MCP implementation and does not publish it under an open-source license. The MIT license applies only to the Ghast-authored adapter.",
+            "Fiscal.ai's official client repository and workflow archive have no redistribution license, so the official skill text is not included. The Ghast skill is independently authored from public product and API behavior.",
+            "A Fiscal.ai account, API key, selected plan, company coverage, data entitlements, rate limits, network access, and applicable data-provider terms remain user-managed.",
+            "Tool visibility does not establish account entitlement. The authenticated response is authoritative for company, endpoint, document, transcript, news, ownership, and fund-letter access.",
+            "Authenticated tools/list and real company-data operations were not run because no Fiscal.ai account, API key, private entitlement, or research dataset was used during the audit.",
+            "The public OpenAPI currently contains only GET operations, but live MCP helpers can change independently. Any future state-changing helper requires exact-target review and explicit confirmation.",
+            "execute_code runs user-supplied retrieval logic in Fiscal.ai's network-isolated 30-second sandbox. Code must use documented helpers, stay within six concurrent calls, avoid unbounded loops, and emit compact results.",
+            "Source-linked data supports traceability but is not audit assurance. Company filings, normalized values, adjusted metrics, estimates, calculations, and assistant judgments must remain clearly distinguished.",
+            "Ticker ambiguity, share classes, exchange identity, fiscal periods, currencies, units, accounting definitions, split adjustments, valuation timestamps, restatements, and amended filings can materially change comparisons.",
+            "Filings, filing images, transcripts, news, and fund letters can be large or copyrighted. Retrieval must be narrow, quotation minimal, and attribution preserved.",
+            "Financial data and resulting analysis are not investment, legal, tax, or accounting advice and do not establish future performance.",
+            "The prior disposable DCR response included a registration management URI but no registration access token, so the audit client could not be safely deleted through RFC 7592 management.",
+            "A generic financial-research icon is used because no licensed Fiscal.ai catalog artwork is redistributed."
+          ],
+          "verification": [
+            "Run the Fiscal.ai evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated Close evidence drift",
+            "Verify the normalized official MCP guide SHA-256 ed7d01d13419e9aa2aa6f8d674b82400e9aacf50d4664bf9d3b1f64435150418 and documentation-index SHA-256 00315b347e49ef2d5373f0a7ee582d50686acf39f3ad9aacfa2da45571a0fad8",
+            "Verify the official OpenAPI raw and canonical SHA-256 values aaf1105c93c6bdadb599eed30d38f3cf7d94ebc5940a56258bcfb64dc01bc912 and 1a8c0e6e1b77cf112c29e81cd49ee32057af085891c08e12076761167d62224f and confirm exactly 49 GET operations with no state-changing method",
+            "Verify the official MCP descriptor raw and canonical hashes 8c53424110e002a0a0fbbe70741668d6aeae442a6ded7673361727760a6a4fd6 and 81b3f6f1dd2fac2a677e1ad87ed136b50ff0cfaf9327b201e98b3d9457c66e17 plus its two-tool names, descriptions, schemas, sandbox duration, network isolation, and six-call concurrency limit",
+            "Verify canonical protected-resource and authorization-server metadata hashes d3acf769990a6a15a4eeab9e21d0d0968af9ead6bd77b261d76fa50c5031d6ce and 4cedf324baa9e5aa99a25ee1e2d89be2ce8b64e541d8298ba55a9ff67585e810 plus the exact 11-scope order",
+            "Verify the official version 5 workflow metadata and 35-file archive SHA-256 25015c6addfbb41ced0e678e191288aa6c838b4db5f0971aada7106430cf7a28, confirm its main skill matches the official client repository, and confirm neither source contains a redistribution license",
+            "Verify official client revision 20b67b677a21723cb76f30202a2495f20b8f22af declares only https://api.fiscal.ai/mcp and compare its public capability description with the official API and Codex workflows",
+            "Probe https://api.fiscal.ai/mcp with MCP initialize and confirm HTTP 401, the exact missing-token response, and Fiscal.ai's protected-resource challenge",
+            "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Fiscal.ai manifest and connector hashes and compare every default prompt and long-description capability with the official service",
+            "Authorize a Fiscal.ai account and API key before testing authenticated tools/list, plan entitlements, or real company-data retrieval",
+            "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+            "python3 scripts/build-ghast-catalog.py",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/fiscal-ai.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": null,
+        "upstreamRevision": "fiscal-docs-ed7d01d13419+tools-81b3f6f1dd2f+oauth-d3acf769990a+auth-4cedf324baa9+skills-25015c6addfb",
+        "portStatus": "full"
       }
     },
     {

@@ -206,6 +206,13 @@ CUSTOM_ICONS = {
         '<circle cx="43" cy="31" r="3"/>'
         '<path d="M18 18h16M42 17l7 4-7 4z"/>',
     ),
+    "fiscal-ai": (
+        "#25706A",
+        '<path d="M14 11h27l9 9v33H14z"/>'
+        '<path d="M41 11v10h9M21 27h22"/>'
+        '<path d="M22 46V37M30 46V32M38 46V35M46 46V27"/>'
+        '<path d="M20 50h28"/>',
+    ),
     "lovable": (
         "#D84A2B",
         '<rect x="10" y="12" width="44" height="40" rx="4"/>'

@@ -1,0 +1,16 @@
+{
+  "name": "fiscal-ai",
+  "version": "1.0.3-ghast.1",
+  "description": "Research public companies with source-linked financials, filings, ratios, segments, KPIs, prices, ownership, news, events, and fund letters through Fiscal.ai's official hosted MCP server.",
+  "category": "finance",
+  "author": {
+    "name": "Fiscal AI",
+    "url": "https://fiscal.ai"
+  },
+  "homepage": "https://docs.fiscal.ai/docs/guides/mcp-integration",
+  "upstreamRevision": "fiscal-docs-ed7d01d13419+tools-81b3f6f1dd2f+oauth-d3acf769990a+auth-4cedf324baa9+skills-25015c6addfb",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

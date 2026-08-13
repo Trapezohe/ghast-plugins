@@ -1100,6 +1100,34 @@
       "license": "MIT"
     },
     {
+      "id": "fiscal-ai",
+      "name": "fiscal-ai",
+      "description": "Research public companies with source-linked financials, filings, ratios, segments, KPIs, prices, ownership, news, events, and fund letters through Fiscal.ai's official hosted MCP server.",
+      "manifest": {
+        "name": "fiscal-ai",
+        "description": "Research public companies with source-linked financials, filings, ratios, segments, KPIs, prices, ownership, news, events, and fund letters through Fiscal.ai's official hosted MCP server.",
+        "author": {
+          "name": "Fiscal AI",
+          "url": "https://fiscal.ai"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://docs.fiscal.ai/docs/guides/mcp-integration",
+        "upstreamRevision": "fiscal-docs-ed7d01d13419+tools-81b3f6f1dd2f+oauth-d3acf769990a+auth-4cedf324baa9+skills-25015c6addfb",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/fiscal-ai.zip",
+        "sha256": "ef9dcf23d8ac3d0201e71f7252d036c4f1b0e711a441fd2ba2ab0194ac262c00"
+      },
+      "icon": "./plugins/fiscal-ai/assets/icon.svg",
+      "category": "finance",
+      "homepage": "https://docs.fiscal.ai/docs/guides/mcp-integration",
+      "license": "MIT"
+    },
+    {
       "id": "github-stats",
       "name": "github-stats",
       "description": "Skill for looking up public GitHub repo or user stats via the unauthenticated GitHub REST API (60 req/hr/IP).",
