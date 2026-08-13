@@ -532,6 +532,60 @@
         "Do not create plugins/brighthire while the license remains unresolved"
       ]
     },
+    "calendly": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Calendly",
+      "officialRepository": null,
+      "officialRevision": "calendly-docs-9cc165e39526+tools-62c1741ac3df+oauth-379eb5537223+auth-512f41277070",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/calendly/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "No Calendly hosted MCP implementation, private Codex connector, service source code, account data, or marketplace artwork is redistributed."
+      ],
+      "officialityEvidence": [
+        "Calendly's official developer documentation identifies https://mcp.calendly.com as its fully hosted MCP server and says self-hosting or local deployment is not supported.",
+        "Normalized visible text from the official MCP overview was stable across repeated captures with SHA-256 9cc165e39526a0a4ee8d59e71ca88561b16b7f01b2599542afb2bc7d911af62f.",
+        "Calendly's official complete tool catalog documents 36 tools mapped to its public API v2; normalized visible text has SHA-256 62c1741ac3df3a3e5f216c5b9772c7bfe2a243869c2e398dcf62f9349215e773.",
+        "The order-normalized protected-resource metadata identifies the official MCP resource, read and write scheduling scopes, Calendly authorization server, and bearer-header authentication; its canonical JSON SHA-256 is 379eb5537223aadaaf138327e9bc293b71639d2a3c3ae3e8ebc4b26c23171f06.",
+        "The authorization-server metadata declares authorization code, public clients, dynamic registration, and PKCE S256; its canonical JSON SHA-256 is 512f41277070a17997c1df424133f687337437528bd9e090359a37b8bbb2c5ef.",
+        "On August 13, 2026, a disposable localhost public client registered with HTTP 201 and received both MCP scheduling scopes without a client secret.",
+        "An unauthenticated initialize request returned HTTP 401 with Calendly's invalid-token response and the official protected-resource metadata URL."
+      ],
+      "codexCapabilities": [
+        "Create and update Calendly event types",
+        "Generate scheduling links and adjust availability",
+        "Book or cancel meetings",
+        "Find upcoming meetings, check weekly availability, and summarize event and attendee details"
+      ],
+      "ghastCapabilities": [
+        "The same event-type creation and update, availability adjustment, scheduling-link generation, direct booking, cancellation, meeting listing, event detail, invitee detail, and busy-time workflows through Calendly's official hosted MCP server",
+        "Additional official tools for meeting locations, single-use customized shares, no-show state, routing forms and submissions, user and organization details, memberships, pending invitations, and organization invitation creation or revocation",
+        "Direct standards-based browser OAuth through Dynamic Client Registration, public clients, authorization code, and PKCE S256"
+      ],
+      "capabilityRelationship": "superset-official-hosted-mcp",
+      "limitations": [
+        "The hosted MCP implementation is operated by Calendly and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+        "A Calendly account, browser OAuth, connected calendars, the correct user or organization role, and existing Calendly permissions remain user-managed.",
+        "Calendly currently assigns both mcp:scheduling:read and mcp:scheduling:write to MCP clients; there is no separately verified read-only connection mode.",
+        "Direct booking requires an eligible paid Calendly plan. Routing-form tools require a Calendly Teams plan or higher, and other features can depend on plan or role.",
+        "Endpoint discovery, OAuth metadata, dynamic registration, unauthenticated protocol behavior, and the published 36-tool catalog were verified without an account. Authenticated tools/list and real scheduling operations were not run.",
+        "Bookings, cancellations, event-type changes, availability changes, scheduling-link or share creation, no-show changes, and organization invitation changes require exact target review and explicit confirmation.",
+        "Ambiguous state-changing failures must not be blindly retried because they can duplicate bookings, links, or invitations or overwrite availability.",
+        "A generic calendar icon is used because no licensed catalog artwork is included in a public official MCP source repository."
+      ],
+      "verification": [
+        "python3 scripts/import-official-hosted-plugins.py",
+        "Verify normalized visible official MCP overview SHA-256 is 9cc165e39526a0a4ee8d59e71ca88561b16b7f01b2599542afb2bc7d911af62f",
+        "Verify normalized visible official tool-catalog SHA-256 is 62c1741ac3df3a3e5f216c5b9772c7bfe2a243869c2e398dcf62f9349215e773 and contains all 36 expected tool names",
+        "Verify order-normalized OAuth protected-resource metadata SHA-256 is 379eb5537223aadaaf138327e9bc293b71639d2a3c3ae3e8ebc4b26c23171f06",
+        "Verify OAuth authorization-server metadata SHA-256 is 512f41277070a17997c1df424133f687337437528bd9e090359a37b8bbb2c5ef",
+        "Register a disposable localhost public OAuth client and confirm HTTP 201, no client secret, authorization-code and refresh-token grants, both MCP scheduling scopes, and PKCE S256 discovery",
+        "Probe https://mcp.calendly.com with MCP initialize and confirm HTTP 401 plus Calendly's protected-resource challenge",
+        "Compare all documented event-type, availability, booking, cancellation, link, event, invitee, user, and organization workflows with the Codex description and default prompts",
+        "Authorize a Calendly account before testing authenticated tool schemas and real scheduling operations",
+        "unzip -tqq packages/calendly.zip"
+      ]
+    },
     "canva": {
       "verificationStatus": "official-source-research-required",
       "officialDeveloper": "Canva",

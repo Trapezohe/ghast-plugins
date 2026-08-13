@@ -411,6 +411,34 @@
       "license": "MIT"
     },
     {
+      "id": "calendly",
+      "name": "calendly",
+      "description": "Inspect Calendly meetings and availability, manage event types and schedules, create booking links, book or cancel meetings, and administer invitations through Calendly's official hosted MCP server.",
+      "manifest": {
+        "name": "calendly",
+        "description": "Inspect Calendly meetings and availability, manage event types and schedules, create booking links, book or cancel meetings, and administer invitations through Calendly's official hosted MCP server.",
+        "author": {
+          "name": "Calendly",
+          "url": "https://calendly.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.2-ghast.1",
+        "homepage": "https://developer.calendly.com/calendly-mcp-server",
+        "upstreamRevision": "calendly-docs-9cc165e39526+tools-62c1741ac3df+oauth-379eb5537223+auth-512f41277070",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/calendly.zip",
+        "sha256": "76b16df18f0c99965d8d822402992be5552335ef2079f1dadc79373934334e3b"
+      },
+      "icon": "./plugins/calendly/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://developer.calendly.com/calendly-mcp-server",
+      "license": "MIT"
+    },
+    {
       "id": "circleci",
       "name": "circleci",
       "description": "Diagnose CircleCI runs, inspect logs, tests, and artifacts, rerun or cancel workflows, validate configuration, and manage CircleCI resources through CircleCI's official hosted MCP and full CLI MCP.",

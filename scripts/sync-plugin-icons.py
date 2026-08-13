@@ -90,6 +90,12 @@ CUSTOM_ICONS = {
         '<path d="M14 47h38M18 41V27M29 41V18M40 41V31M51 41V12"/>'
         '<path d="M14 22l12-7 10 6 15-11"/>',
     ),
+    "calendly": (
+        "#187B62",
+        '<rect x="12" y="15" width="40" height="37" rx="4"/>'
+        '<path d="M12 26h40M22 10v10M42 10v10"/>'
+        '<path d="M20 34h8M36 34h8M20 43h8M36 43h8"/>',
+    ),
     "bilibili-search": (
         "#FB7299",
         '<rect x="13" y="18" width="38" height="29" rx="6"/>'

@@ -43,7 +43,7 @@ verification.
 | brand24 | Brand24 Global Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | brex | Brex Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | brighthire | BrightHire | appConnector, skills | MIT | blocked-license | not-implemented |
-| calendly | Calendly | appConnector | MIT | official-source-research-required | not-implemented |
+| calendly | Calendly | appConnector | MIT | official-source-verified | implemented-verified |
 | canva | Canva | appConnector, skills | MIT | official-source-research-required | not-implemented |
 | carta-crm | Carta Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | catalyst-by-zoho | Catalyst by Zoho | appConnector, skills | MIT | official-source-research-required | not-implemented |

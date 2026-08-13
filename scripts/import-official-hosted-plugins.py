@@ -8,6 +8,8 @@ import json
 import shutil
 import tempfile
 import urllib.request
+from html import unescape
+from html.parser import HTMLParser
 from pathlib import Path
 
 
@@ -429,6 +431,69 @@ ACTIVELY_EVIDENCE_REVISION = (
     "actively-mcp-3c7c7f1750ee+api-e090dc2a687e"
     "+oauth-908b8114e7a6+auth-11a7486ac6ab"
 )
+CALENDLY_DOCS_URL = "https://developer.calendly.com/calendly-mcp-server"
+CALENDLY_TOOLS_URL = "https://developer.calendly.com/supported-tools"
+CALENDLY_MCP_URL = "https://mcp.calendly.com"
+CALENDLY_DOCS_VISIBLE_SHA256 = (
+    "9cc165e39526a0a4ee8d59e71ca88561b16b7f01b2599542afb2bc7d911af62f"
+)
+CALENDLY_TOOLS_VISIBLE_SHA256 = (
+    "62c1741ac3df3a3e5f216c5b9772c7bfe2a243869c2e398dcf62f9349215e773"
+)
+CALENDLY_OAUTH_METADATA_URL = (
+    "https://mcp.calendly.com/.well-known/oauth-protected-resource"
+)
+CALENDLY_OAUTH_METADATA_SHA256 = (
+    "379eb5537223aadaaf138327e9bc293b71639d2a3c3ae3e8ebc4b26c23171f06"
+)
+CALENDLY_AUTH_SERVER_URL = (
+    "https://calendly.com/.well-known/oauth-authorization-server"
+)
+CALENDLY_AUTH_SERVER_SHA256 = (
+    "512f41277070a17997c1df424133f687337437528bd9e090359a37b8bbb2c5ef"
+)
+CALENDLY_EVIDENCE_REVISION = (
+    "calendly-docs-9cc165e39526+tools-62c1741ac3df"
+    "+oauth-379eb5537223+auth-512f41277070"
+)
+CALENDLY_TOOLS = (
+    "event_types-create_event_type",
+    "event_types-update_event_type",
+    "event_types-list_event_types",
+    "event_types-get_event_type",
+    "event_types-list_event_type_available_times",
+    "event_types-list_event_type_availability_schedule",
+    "event_types-update_event_type_availability_schedule",
+    "locations-list_user_meeting_locations",
+    "meetings-list_events",
+    "meetings-get_event",
+    "meetings-cancel_event",
+    "meetings-create_invitee",
+    "meetings-list_event_invitees",
+    "meetings-get_event_invitee",
+    "scheduling_links-create_single_use_scheduling_link",
+    "shares-create_share",
+    "availability-list_user_availability_schedules",
+    "availability-get_user_availability_schedule",
+    "availability-list_user_busy_times",
+    "meetings-create_invitee_no_show",
+    "meetings-get_invitee_no_show",
+    "meetings-delete_invitee_no_show",
+    "routing_forms-list_routing_forms",
+    "routing_forms-get_routing_form",
+    "routing_forms-list_routing_form_submissions",
+    "routing_forms-get_routing_form_submission",
+    "users-get_current_user",
+    "users-get_user",
+    "organizations-get_organization",
+    "organizations-list_organization_memberships",
+    "organizations-get_organization_membership",
+    "organizations-list_organization_invitations",
+    "organizations-create_organization_invitation",
+    "organizations-revoke_organization_invitation",
+    "list_calendly_skills",
+    "load_calendly_skill",
+)
 POSTHOG_MCP_URL = "https://mcp.posthog.com/mcp"
 POSTHOG_HOMEPAGE = "https://posthog.com/docs/model-context-protocol"
 POSTHOG_OVERVIEW_URL = "https://posthog.com/docs/model-context-protocol.md"
@@ -533,6 +598,7 @@ POSTHOG_CONTEXT_MILL_PACKAGE_SHA256 = (
 
 def main() -> int:
     verify_actively_evidence()
+    verify_calendly_evidence()
     verify_read_ai_evidence()
     verify_readwise_evidence()
     verify_quartr_evidence()
@@ -544,6 +610,7 @@ def main() -> int:
     verify_posthog_evidence()
     verify_streak_evidence()
     import_actively()
+    import_calendly()
     import_read_ai()
     import_readwise()
     import_quartr()
@@ -554,8 +621,30 @@ def main() -> int:
     import_clickup()
     import_posthog()
     import_streak()
-    print("imported 11 official hosted MCP adapters")
+    print("imported 12 official hosted MCP adapters")
     return 0
+
+
+class VisibleTextParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.skip_depth = 0
+        self.parts: list[str] = []
+
+    def handle_starttag(
+        self, tag: str, attrs: list[tuple[str, str | None]]
+    ) -> None:
+        del attrs
+        if tag in {"script", "style", "noscript", "svg"}:
+            self.skip_depth += 1
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag in {"script", "style", "noscript", "svg"} and self.skip_depth:
+            self.skip_depth -= 1
+
+    def handle_data(self, data: str) -> None:
+        if not self.skip_depth:
+            self.parts.append(data)
 
 
 def fetch_bytes(url: str) -> bytes:
@@ -605,6 +694,27 @@ def canonical_json_sha256(value: object) -> str:
         ensure_ascii=False,
     ).encode("utf-8")
     return hashlib.sha256(encoded).hexdigest()
+
+
+def canonical_string_array_json_sha256(value: dict) -> str:
+    normalized = {
+        key: sorted(item) if (
+            isinstance(item, list)
+            and all(isinstance(member, str) for member in item)
+        ) else item
+        for key, item in value.items()
+    }
+    return canonical_json_sha256(normalized)
+
+
+def fetch_visible_text(url: str, required_marker: str) -> str:
+    for _ in range(5):
+        parser = VisibleTextParser()
+        parser.feed(fetch_text(url))
+        text = " ".join(unescape(" ".join(parser.parts)).split())
+        if required_marker in text:
+            return text
+    raise ValueError(f"{url} did not return the expected documentation page")
 
 
 def require_http_not_found(url: str, label: str) -> None:
@@ -745,6 +855,158 @@ def verify_actively_evidence() -> None:
     else:
         raise ValueError(
             "Actively endpoint unexpectedly accepted no credentials"
+        )
+
+
+def verify_calendly_evidence() -> None:
+    docs = fetch_visible_text(CALENDLY_DOCS_URL, "Calendly MCP Overview")
+    if sha256_text(docs) != CALENDLY_DOCS_VISIBLE_SHA256:
+        raise ValueError(
+            "Calendly MCP documentation changed; re-audit before regenerating"
+        )
+    for marker in (
+        "The server is fully hosted by Calendly",
+        CALENDLY_MCP_URL,
+        "Dynamic Client Registration",
+        "OAuth 2.1 Authorization Code + PKCE (S256)",
+        "Full coverage of Calendly's scheduling capabilities",
+        "List my event types.",
+        "Find open slots next week",
+        "Updates availability",
+        "Creates a scheduled event",
+        "Cancels a scheduled event",
+        "Creates a single-use link",
+    ):
+        if marker not in docs:
+            raise ValueError(
+                f"Calendly MCP documentation is missing {marker!r}"
+            )
+
+    tools = fetch_visible_text(CALENDLY_TOOLS_URL, "Supported MCP Tools")
+    if sha256_text(tools) != CALENDLY_TOOLS_VISIBLE_SHA256:
+        raise ValueError(
+            "Calendly MCP tool documentation changed; re-audit required"
+        )
+    for tool in CALENDLY_TOOLS:
+        if tool not in tools:
+            raise ValueError(
+                f"Calendly MCP tool documentation is missing {tool!r}"
+            )
+    for marker in (
+        "complete list of tools exposed by the Calendly MCP server",
+        "Requires a paid Calendly plan",
+        "Requires a Calendly Teams plan or higher",
+    ):
+        if marker not in tools:
+            raise ValueError(
+                f"Calendly MCP tool documentation is missing {marker!r}"
+            )
+
+    metadata = fetch_json(CALENDLY_OAUTH_METADATA_URL)
+    if (
+        canonical_string_array_json_sha256(metadata)
+        != CALENDLY_OAUTH_METADATA_SHA256
+    ):
+        raise ValueError(
+            "Calendly OAuth metadata changed; re-audit before regenerating"
+        )
+    if metadata.get("resource") != f"{CALENDLY_MCP_URL}/":
+        raise ValueError("Calendly OAuth resource URI changed")
+    if metadata.get("authorization_servers") != ["https://calendly.com/"]:
+        raise ValueError("Calendly OAuth authorization server changed")
+    if set(metadata.get("scopes_supported", [])) != {
+        "mcp:scheduling:read",
+        "mcp:scheduling:write",
+    }:
+        raise ValueError("Calendly OAuth scopes changed")
+    if metadata.get("bearer_methods_supported") != ["header"]:
+        raise ValueError("Calendly OAuth bearer method changed")
+
+    auth_server = fetch_json(CALENDLY_AUTH_SERVER_URL)
+    if canonical_json_sha256(auth_server) != CALENDLY_AUTH_SERVER_SHA256:
+        raise ValueError(
+            "Calendly OAuth authorization metadata changed; re-audit required"
+        )
+    if auth_server.get("issuer") != "https://calendly.com":
+        raise ValueError("Calendly OAuth issuer changed")
+    if auth_server.get("registration_endpoint") != (
+        "https://calendly.com/oauth/register"
+    ):
+        raise ValueError("Calendly OAuth registration endpoint changed")
+    if auth_server.get("response_types_supported") != ["code"]:
+        raise ValueError("Calendly OAuth response type support changed")
+    if auth_server.get("code_challenge_methods_supported") != ["S256"]:
+        raise ValueError("Calendly OAuth server no longer declares PKCE S256")
+    if auth_server.get("token_endpoint_auth_methods_supported") != ["none"]:
+        raise ValueError("Calendly OAuth public client support changed")
+
+    registration = post_json(
+        "https://calendly.com/oauth/register",
+        {
+            "client_name": "ghast-calendly-audit",
+            "redirect_uris": ["http://localhost:49152/callback"],
+            "grant_types": ["authorization_code", "refresh_token"],
+            "response_types": ["code"],
+            "token_endpoint_auth_method": "none",
+        },
+    )
+    if not isinstance(registration.get("client_id"), str):
+        raise ValueError("Calendly dynamic client registration failed")
+    if registration.get("redirect_uris") != [
+        "http://localhost:49152/callback"
+    ]:
+        raise ValueError("Calendly DCR redirect URI behavior changed")
+    if set(registration.get("scopes", [])) != {
+        "mcp:scheduling:read",
+        "mcp:scheduling:write",
+    }:
+        raise ValueError("Calendly DCR scope assignment changed")
+    if registration.get("token_endpoint_auth_method") != "none":
+        raise ValueError("Calendly DCR no longer creates a public client")
+    if "client_secret" in registration:
+        raise ValueError("Calendly DCR unexpectedly returned a client secret")
+
+    initialize = json.dumps(
+        {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "method": "initialize",
+            "params": {
+                "protocolVersion": "2025-06-18",
+                "capabilities": {},
+                "clientInfo": {
+                    "name": "ghast-calendly-audit",
+                    "version": "1.0.0",
+                },
+            },
+        }
+    ).encode("utf-8")
+    request = urllib.request.Request(
+        CALENDLY_MCP_URL,
+        data=initialize,
+        headers={
+            "User-Agent": "Mozilla/5.0",
+            "Content-Type": "application/json",
+            "Accept": "application/json, text/event-stream",
+        },
+        method="POST",
+    )
+    try:
+        urllib.request.urlopen(request, timeout=30)
+    except urllib.error.HTTPError as exc:
+        body = exc.read()
+        challenge = exc.headers.get("WWW-Authenticate", "")
+        if (
+            exc.code != 401
+            or b'"error": "invalid_token"' not in body
+            or CALENDLY_OAUTH_METADATA_URL not in challenge
+        ):
+            raise ValueError(
+                "Calendly unauthenticated endpoint behavior changed"
+            ) from exc
+    else:
+        raise ValueError(
+            "Calendly endpoint unexpectedly accepted no credentials"
         )
 
 
@@ -1743,6 +2005,64 @@ def import_actively() -> None:
         staging.rename(target)
 
 
+def import_calendly() -> None:
+    with tempfile.TemporaryDirectory(
+        prefix=".calendly-", dir=PLUGIN_DIR
+    ) as temp:
+        staging = Path(temp)
+        manifest_dir = staging / ".ghast-plugin"
+        skill_dir = staging / "skills/calendly"
+        manifest_dir.mkdir()
+        skill_dir.mkdir(parents=True)
+
+        manifest = {
+            "name": "calendly",
+            "version": "1.0.2-ghast.1",
+            "description": (
+                "Inspect Calendly meetings and availability, manage event "
+                "types and schedules, create booking links, book or cancel "
+                "meetings, and administer invitations through Calendly's "
+                "official hosted MCP server."
+            ),
+            "category": "productivity",
+            "author": {
+                "name": "Calendly",
+                "url": "https://calendly.com",
+            },
+            "homepage": CALENDLY_DOCS_URL,
+            "upstreamRevision": CALENDLY_EVIDENCE_REVISION,
+            "license": "MIT",
+            "icon": "./assets/icon.svg",
+            "skills": "./skills/",
+            "mcpServers": "./.mcp.json",
+        }
+        (manifest_dir / "plugin.json").write_text(
+            json.dumps(manifest, indent=2, ensure_ascii=False) + "\n"
+        )
+        (staging / ".mcp.json").write_text(
+            json.dumps(
+                {
+                    "mcpServers": {
+                        "calendly": {
+                            "type": "http",
+                            "url": CALENDLY_MCP_URL,
+                        }
+                    }
+                },
+                indent=2,
+            )
+            + "\n"
+        )
+        (skill_dir / "SKILL.md").write_text(render_calendly_skill())
+        (staging / "LICENSE").write_text(render_adapter_license("Calendly"))
+        (staging / "README.md").write_text(render_calendly_readme())
+
+        target = PLUGIN_DIR / "calendly"
+        if target.exists():
+            shutil.rmtree(target)
+        staging.rename(target)
+
+
 def import_read_ai() -> None:
     with tempfile.TemporaryDirectory(prefix=".read-ai-", dir=PLUGIN_DIR) as temp:
         staging = Path(temp)
@@ -2374,6 +2694,85 @@ is read-only.
   before promising a specific operation.
 - Report authentication, workspace, permission, provisioning, data freshness,
   validation, rate-limit, and service errors exactly as returned.
+"""
+
+
+def render_calendly_skill() -> str:
+    return """---
+name: calendly
+description: >-
+  Inspect Calendly meetings, invitees, event types, schedules, busy times,
+  routing forms, and organization context, or safely create and update
+  scheduling resources through Calendly's official hosted MCP server.
+---
+
+# Calendly
+
+Use the official Calendly MCP server declared by this plugin.
+
+## Time and identity
+
+- Resolve the authenticated Calendly user and organization before assuming
+  ownership, permissions, availability, or the correct event type.
+- State exact dates, local times, durations, and IANA time zones. Do not
+  silently convert relative phrases such as "next Thursday" or "this week".
+- Treat invitee names, email addresses, answers, meeting locations, routing
+  submissions, organization membership, and calendar availability as
+  sensitive. Retrieve and disclose only what the request requires.
+- Distinguish free time, event-type availability, and an actual confirmed
+  booking. A suggested slot is not reserved.
+
+## Read workflows
+
+- For upcoming or recent meetings, use an explicit time range and paginate
+  deliberately. Preserve cancellation state, attendee status, and returned
+  identifiers.
+- For availability, resolve the intended user, event type, duration, time
+  zone, and date range. Report plan, permission, or calendar-connection gaps.
+- For attendee summaries, separate Calendly fields from assistant inferences.
+  Do not invent company, role, relationship history, intent, or follow-up.
+- Routing forms and organization invitations may expose personal or
+  administrative data. Avoid broad exports and unnecessary contact details.
+
+## Changes and confirmation
+
+Obtain explicit confirmation immediately before any state-changing call.
+
+- Creating or updating an event type: show its owner, name, duration,
+  location, availability, and resulting public scheduling behavior.
+- Updating availability: show the exact schedule, days, time ranges, time
+  zone, overrides, and event types affected.
+- Booking: show the event type, host, invitee name and email, exact start and
+  end time, time zone, location, and any answers or tracking fields.
+- Canceling: show the exact scheduled event, host, invitees, start time, and
+  cancellation reason. Cancellation is destructive.
+- Creating a scheduling link or share: show the source event type,
+  customization, expiration or single-use behavior, and intended recipient.
+- Marking or clearing no-show status: show the exact invitee and event because
+  the change can affect reporting and follow-up.
+- Creating or revoking an organization invitation: show the organization,
+  email, role or access effect, and exact invitation.
+
+Never turn a request to inspect, summarize, draft, or suggest into an external
+change. Do not blindly retry an ambiguous write; read current state first to
+avoid duplicate bookings, links, invitations, or conflicting updates.
+
+## Service behavior
+
+- Authentication uses Calendly OAuth Dynamic Client Registration,
+  authorization code, and PKCE S256. Never ask for, display, log, or store
+  OAuth tokens.
+- Calendly currently assigns both `mcp:scheduling:read` and
+  `mcp:scheduling:write` to MCP clients. User confirmation remains mandatory
+  even when the account has permission to write.
+- Direct booking requires an eligible paid plan. Routing-form tools require a
+  Teams plan or higher. Other capabilities depend on the user's Calendly
+  plan, role, connected calendars, ownership, and organization permissions.
+- The public official catalog documents 36 tools. Inspect the authenticated
+  live tool list before promising a tool, because the hosted service can
+  evolve after this adapter's evidence revision.
+- Report authentication, validation, conflict, rate-limit, plan, permission,
+  and service errors exactly as returned.
 """
 
 
@@ -3109,6 +3508,62 @@ metadata is pinned at canonical JSON SHA-256
 The MIT license in this package applies only to the Ghast-authored adapter.
 Actively accounts, provisioning, hosted service behavior, customer data,
 permissions, trademarks, and terms remain controlled by Actively.
+"""
+
+
+def render_calendly_readme() -> str:
+    return f"""# calendly
+
+Inspect Calendly meetings, invitees, event types, schedules, busy times,
+routing forms, and organization context, or safely create and update
+scheduling resources through Calendly's official hosted MCP server.
+
+## Official hosted MCP adapter
+
+This package contains only Ghast-authored MCP configuration, safety
+instructions, documentation, and catalog metadata. It does not copy or
+redistribute Calendly's hosted MCP implementation, private Codex connector,
+service source code, account data, or marketplace artwork.
+
+The adapter is pinned to normalized visible text from Calendly's official MCP
+overview with SHA-256 `{CALENDLY_DOCS_VISIBLE_SHA256}` and its complete
+36-tool catalog with SHA-256 `{CALENDLY_TOOLS_VISIBLE_SHA256}`. The
+order-normalized OAuth protected-resource metadata is pinned at canonical JSON
+SHA-256 `{CALENDLY_OAUTH_METADATA_SHA256}`, and the authorization-server
+metadata at `{CALENDLY_AUTH_SERVER_SHA256}`.
+
+## Ghast compatibility
+
+- Ghast connects directly to `{CALENDLY_MCP_URL}` using Streamable HTTP and
+  Calendly OAuth. The service requires Dynamic Client Registration, a public
+  client, authorization code, and PKCE S256; a disposable localhost client
+  registration was verified with HTTP 201.
+- Calendly's official catalog exposes 36 tools for event types, event-type
+  and user availability, busy times, meeting locations, scheduled events,
+  invitees, booking, cancellation, no-show state, scheduling links, shares,
+  routing forms, users, organizations, memberships, invitations, and
+  server-provided skills.
+- This covers the Codex app's event-type creation and update, scheduling-link
+  generation, availability adjustment, meeting booking and cancellation,
+  upcoming-meeting review, attendee detail, and follow-up context.
+- The official hosted service is not open source and is not redistributed.
+  Endpoint discovery, OAuth metadata, unauthenticated protocol behavior, DCR,
+  and the published tool catalog were verified without a Calendly account.
+  Authenticated tools/list and account-data operations were not run.
+- Calendly currently assigns both read and write MCP scopes. The included
+  skill requires exact target review and explicit confirmation for every
+  booking, cancellation, schedule change, event-type change, no-show change,
+  scheduling-link creation, and organization invitation change.
+- Direct booking requires an eligible paid plan, and routing-form tools
+  require a Teams plan or higher. Other behavior remains subject to account
+  role, connected calendars, ownership, permissions, limits, and service
+  changes.
+- A generic calendar icon is used because no licensed catalog artwork is
+  included in a public official MCP source repository.
+
+The MIT license in this package applies only to the Ghast-authored adapter.
+Calendly accounts, subscriptions, hosted service behavior, scheduling data,
+permissions, trademarks, and terms remain controlled by Calendly.
 """
 
 
