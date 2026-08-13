@@ -29,6 +29,7 @@ LOCAL_ICONS = {
     "aiera": "assets/icon.png",
     "airtable": "assets/icon.svg",
     "alation": "assets/icon.png",
+    "alpaca": "assets/icon.svg",
     "asana": "assets/icon.svg",
     "atlassian-rovo": "assets/icon.svg",
     "base44": "assets/icon.png",

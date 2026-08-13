@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "alpaca-trading": {
+      "type": "http",
+      "url": "https://api.alpaca.markets/mcp",
+      "oauth": {
+        "client_id": "PCIEJZTPCQEBUBAINMQOGDHF7I"
+      }
+    },
+    "alpaca-trading-paper": {
+      "type": "http",
+      "url": "https://paper-api.alpaca.markets/mcp",
+      "oauth": {
+        "client_id": "PCIEJZTPCQEBUBAINMQOGDHF7I"
+      }
+    },
+    "alpaca-market-data": {
+      "type": "http",
+      "url": "https://data.alpaca.markets/mcp",
+      "oauth": {
+        "client_id": "PCIEJZTPCQEBUBAINMQOGDHF7I"
+      }
+    }
+  }
+}

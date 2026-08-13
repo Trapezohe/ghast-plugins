@@ -185,6 +185,55 @@
         "unzip -tqq packages/alation.zip"
       ]
     },
+    "alpaca": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Alpaca",
+      "officialRepository": "https://github.com/alpacahq/agentic",
+      "officialRevision": "a97b49ecdf47b6b46d8fc1027139c475296dc696",
+      "license": "MIT",
+      "licenseEvidence": [
+        "LICENSE",
+        "The MIT license is copyright 2025-2026 Alpaca and covers the official Codex, Claude, and Cursor MCP declarations, marketplace metadata, documentation, and SVG icon copied by Ghast."
+      ],
+      "officialityEvidence": [
+        "The source repository is owned by Alpaca's official GitHub organization and describes itself as the multi-platform plugin marketplace for Alpaca APIs.",
+        "The pinned official Codex plugin publishes three OAuth-protected MCP endpoints: live Trading API, paper Trading API, and Market Data API, all with Alpaca's public Codex client ID.",
+        "All three live endpoints publish RFC 9728 protected-resource metadata naming https://authx.alpaca.markets/v1 as their authorization server and return an Alpaca Bearer challenge to unauthenticated MCP initialize requests.",
+        "The authorization server publishes authorization-code and refresh-token grants, public clients through token_endpoint_auth_method none, and PKCE S256.",
+        "Alpaca's separate MIT-licensed alpaca-mcp-server repository at revision 803b07a31721033aa21110c31d14be25cb23882c publishes version 2.2.1 and 74 first-party tools, with server-side toolset filtering, paper mode by default, destructive order annotations, client-order idempotency guidance, and prompt-injection output envelopes.",
+        "On August 13, 2026, all 40 selected no-credential core tests passed in an isolated Python environment, covering source integrity, the 74-tool server construction, destructive order annotations, toolset filtering, prompt-injection envelopes, and trust-boundary middleware."
+      ],
+      "codexCapabilities": [
+        "Retrieve live or historical stock, options, and crypto market data, including bars, snapshots, quotes, trades, and option chains",
+        "Compare stock performance, inspect an option chain for a date, and find when a crypto price crossed a threshold through the private Alpaca app connector"
+      ],
+      "ghastCapabilities": [
+        "The same market-data workflows through Alpaca's official hosted Market Data MCP server, including stocks, options, crypto, snapshots, quotes, trades, bars, option chains, news, corporate actions, fixed-income quotes, and index values subject to the authenticated service",
+        "Separate official OAuth endpoints for simulated paper-account workflows and real-money live account, portfolio, order, position, account-configuration, locate, and watchlist workflows",
+        "A Ghast routing and safety skill that defaults research to market data, prevents silent paper/live switching, requires complete order review and fresh confirmation, uses client order IDs when supported, and treats ambiguous submissions as potentially executed"
+      ],
+      "capabilityRelationship": "superset-official-hosted-mcp",
+      "limitations": [
+        "An Alpaca account, browser OAuth, service availability, market-data subscriptions, feed entitlements, trading permissions, asset eligibility, buying power, options level, regulatory restrictions, and rate limits remain user-managed.",
+        "The hosted MCP implementation and complete authenticated tool inventory are not redistributed or fully enumerated without an Alpaca account. Effective tools and schemas can evolve independently of the pinned MIT plugin declaration.",
+        "The market-data endpoint may return delayed or plan-limited data. Every answer must preserve timestamps, intervals, feeds, currencies, and exact dates instead of presenting all results as real time.",
+        "Paper and live trading are distinct authorization contexts. The plugin defaults research to the market-data server and never infers an account type.",
+        "Every live trade, replace, cancel, position close, liquidation, exercise, do-not-exercise instruction, locate, account-setting change, or other state mutation requires an explicit live-account request plus fresh confirmation of the complete action.",
+        "Order submissions, closes, liquidations, and multi-leg strategies can be non-idempotent, queue while a market is closed, fill partially, or execute at an unexpected price. Ambiguous failures must be checked by client order ID and open orders before retrying.",
+        "Market and news data, assistant analysis, screeners, and historical performance are informational and are not personalized investment advice or guarantees of future performance.",
+        "Account and portfolio data are sensitive. OAuth tokens, API keys, secret keys, account numbers, and unnecessary full exports must not be requested, logged, committed, or disclosed."
+      ],
+      "verification": [
+        "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+        "Verify revision a97b49ecdf47b6b46d8fc1027139c475296dc696 and the pinned license, README, Codex plugin manifest, and official SVG icon SHA-256 hashes",
+        "Confirm the official manifest declares exactly the live Trading, paper Trading, and Market Data MCP endpoints with public Codex client ID PCIEJZTPCQEBUBAINMQOGDHF7I",
+        "Verify the three protected-resource metadata canonical JSON hashes and authorization-server canonical JSON hash recorded by the importer",
+        "Probe all three endpoints with unauthenticated MCP initialize and confirm HTTP 401 plus the endpoint-specific Alpaca Bearer resource-metadata challenge",
+        "Verify the official alpaca-mcp-server revision, package metadata, lock file, server, tool registry, toolsets, security middleware, order overrides, and construction-test SHA-256 evidence",
+        "Run the 40 no-credential integrity, server-construction, prompt-injection-envelope, and trust-boundary-middleware tests and confirm all pass",
+        "unzip -tqq packages/alpaca.zip"
+      ]
+    },
     "amplitude": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Amplitude, Inc.",

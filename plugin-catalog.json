@@ -121,6 +121,36 @@
       "license": "Apache-2.0"
     },
     {
+      "id": "alpaca",
+      "name": "alpaca",
+      "description": "Research stocks, options, crypto, fixed income, indices, news, and corporate actions through Alpaca's official market-data MCP, with separately authorized paper and live trading servers for account, order, position, portfolio, and watchlist workflows.",
+      "manifest": {
+        "name": "alpaca",
+        "description": "Research stocks, options, crypto, fixed income, indices, news, and corporate actions through Alpaca's official market-data MCP, with separately authorized paper and live trading servers for account, order, position, portfolio, and watchlist workflows.",
+        "author": {
+          "name": "Alpaca",
+          "email": "support@alpaca.markets"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "0.1.0-ghast.1",
+        "homepage": "https://github.com/alpacahq/agentic",
+        "repository": "https://github.com/alpacahq/agentic",
+        "upstreamRevision": "a97b49ecdf47b6b46d8fc1027139c475296dc696",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/alpaca.zip",
+        "sha256": "21d99a794daf8690e2492b419f5e771abf88d5c711fee61021cdd94bd59a6290"
+      },
+      "icon": "./plugins/alpaca/assets/icon.svg",
+      "category": "finance",
+      "homepage": "https://github.com/alpacahq/agentic",
+      "repository": "https://github.com/alpacahq/agentic",
+      "license": "MIT"
+    },
+    {
       "id": "amplitude",
       "name": "amplitude",
       "description": "Analyze Amplitude charts, dashboards, experiments, session replays, feedback, accounts, reliability, AI agents, taxonomy, and instrumentation through Amplitude's official skills and hosted MCP server.",

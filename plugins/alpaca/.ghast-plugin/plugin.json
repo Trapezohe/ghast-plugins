@@ -1,0 +1,18 @@
+{
+  "name": "alpaca",
+  "version": "0.1.0-ghast.1",
+  "description": "Research stocks, options, crypto, fixed income, indices, news, and corporate actions through Alpaca's official market-data MCP, with separately authorized paper and live trading servers for account, order, position, portfolio, and watchlist workflows.",
+  "category": "finance",
+  "author": {
+    "name": "Alpaca",
+    "email": "support@alpaca.markets"
+  },
+  "homepage": "https://github.com/alpacahq/agentic",
+  "repository": "https://github.com/alpacahq/agentic",
+  "upstreamRevision": "a97b49ecdf47b6b46d8fc1027139c475296dc696",
+  "upstreamPath": "plugins/alpaca-trading",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
