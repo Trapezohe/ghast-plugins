@@ -28,7 +28,7 @@ verification.
 | --- | --- | --- | --- | --- | --- |
 | actively | Actively | appConnector | MIT | official-source-research-required | not-implemented |
 | aiera | Aiera | appConnector | MIT | official-source-research-required | not-implemented |
-| airtable | Airtable | appConnector, skills | MIT | declared-upstream-needs-verification | not-implemented |
+| airtable | Airtable | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | alation | Alation | appConnector | MIT | official-source-research-required | not-implemented |
 | alpaca | Alpaca | appConnector | MIT | official-source-research-required | not-implemented |
 | amplitude | Amplitude | appConnector | MIT | official-source-research-required | not-implemented |
@@ -36,29 +36,29 @@ verification.
 | asana | Asana, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | atlassian-rovo | Atlassian | appConnector, skills | MIT | official-source-research-required | not-implemented |
 | attio | Attio Ltd | appConnector | MIT | official-source-research-required | not-implemented |
-| base44 | base44 | appConnector, skills | MIT | declared-upstream-needs-verification | not-implemented |
+| base44 | base44 | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | binance | Binance | appConnector | MIT | official-source-verified | implemented-verified |
 | biorender | BioRender | appConnector | MIT | official-source-research-required | not-implemented |
 | boltz-api-cli | Boltz | skills | MIT | official-source-verified | implemented-verified |
 | brand24 | Brand24 Global Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | brex | Brex Inc. | appConnector | MIT | official-source-research-required | not-implemented |
-| brighthire | BrightHire | appConnector, skills | MIT | declared-upstream-needs-verification | not-implemented |
+| brighthire | BrightHire | appConnector, skills | MIT | blocked-license | not-implemented |
 | calendly | Calendly | appConnector | MIT | official-source-research-required | not-implemented |
 | canva | Canva | appConnector, skills | MIT | official-source-research-required | not-implemented |
 | carta-crm | Carta Inc. | appConnector | MIT | official-source-research-required | not-implemented |
-| catalyst-by-zoho | Catalyst by Zoho | appConnector, skills | MIT | declared-upstream-needs-verification | not-implemented |
+| catalyst-by-zoho | Catalyst by Zoho | appConnector, skills | MIT | official-source-research-required | not-implemented |
 | cb-insights | CB Insights | appConnector | MIT | official-source-research-required | not-implemented |
 | channel99 | Channel99 Inc.  | appConnector | MIT | official-source-research-required | not-implemented |
 | chronograph-gp | Chronograph | appConnector, skills | MIT | official-source-research-required | not-implemented |
 | chronograph-lp | Chronograph | appConnector, skills | MIT | official-source-research-required | not-implemented |
 | circleback | Circleback AI, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
-| circleci | CircleCI | skills | MIT | declared-upstream-needs-verification | not-implemented |
+| circleci | CircleCI | skills | MIT | blocked-license | not-implemented |
 | clay | Clay | appConnector | MIT | official-source-research-required | not-implemented |
 | clickup | ClickUp | appConnector | MIT | official-source-research-required | not-implemented |
 | close | Close | appConnector | MIT | official-source-research-required | not-implemented |
 | cloudflare | Cloudflare | mcpServers, skills, commands | MIT | official-source-verified | implemented-verified |
 | cloudinary | Cloudinary | appConnector | MIT | official-source-research-required | not-implemented |
-| coderabbit | CodeRabbit | skills | MIT | declared-upstream-needs-verification | not-implemented |
+| coderabbit | CodeRabbit | skills | MIT | official-source-research-required | not-implemented |
 | cogedim | ALTAREA PROMOTION MANAGEMENT | appConnector | MIT | official-source-research-required | not-implemented |
 | common-room | Common Room | appConnector | MIT | official-source-research-required | not-implemented |
 | conductor | Conductor Inc. | appConnector | MIT | official-source-research-required | not-implemented |
@@ -66,7 +66,7 @@ verification.
 | coupler-io | Coupler.io | appConnector | MIT | official-source-research-required | not-implemented |
 | coveo | Coveo | appConnector | MIT | official-source-research-required | not-implemented |
 | cube | Cube | appConnector | MIT | official-source-research-required | not-implemented |
-| daloopa | Daloopa | appConnector, skills | Apache-2.0 | declared-upstream-needs-verification | not-implemented |
+| daloopa | Daloopa | appConnector, skills | Apache-2.0 | official-source-verified | implemented-verified |
 | datadog | Datadog | appConnector | Apache-2.0 | official-source-research-required | not-implemented |
 | datasite | Datasite | appConnector, skills | MIT | official-source-research-required | not-implemented |
 | deepnote | Deepnote | appConnector, skills | Apache-2.0 | official-source-research-required | not-implemented |
@@ -92,7 +92,7 @@ verification.
 | granola | Granola | appConnector | MIT | official-source-research-required | not-implemented |
 | happenstance | Happenstance, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | hebbia | Hebbia | appConnector | MIT | official-source-research-required | not-implemented |
-| heygen | HeyGen | appConnector, skills | MIT | declared-upstream-needs-verification | not-implemented |
+| heygen | HeyGen | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | hg-insights | HG Insights | appConnector | MIT | official-source-research-required | not-implemented |
 | highlevel | HighLevel | appConnector | MIT | official-source-research-required | not-implemented |
 | hostinger | Hostinger | appConnector | MIT | official-source-research-required | not-implemented |
@@ -113,7 +113,7 @@ verification.
 | mixpanel-headless | Mixpanel | skills | MIT | official-source-verified | implemented-verified |
 | monday-com | Monday.com | appConnector | MIT | official-source-research-required | not-implemented |
 | moody-s | Moody's | appConnector, skills | MIT | official-source-research-required | not-implemented |
-| morningstar | Morningstar | appConnector, skills | MIT | declared-upstream-needs-verification | not-implemented |
+| morningstar | Morningstar | appConnector, skills | MIT | blocked-license | not-implemented |
 | motherduck | MotherDuck Corporation | appConnector | MIT | official-source-research-required | not-implemented |
 | mt-newswires | MT Newswires | appConnector | MIT | official-source-research-required | not-implemented |
 | myregistry-com | MyRegistry.com | appConnector | MIT | official-source-research-required | not-implemented |
@@ -147,7 +147,7 @@ verification.
 | scite | Scite | appConnector | MIT | official-source-research-required | not-implemented |
 | semrush | Semrush Holdings, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | setu-bharat-connect-billpay | Setu | appConnector | MIT | official-source-research-required | not-implemented |
-| shopify | Shopify | appConnector, skills | MIT | declared-upstream-needs-verification | not-implemented |
+| shopify | Shopify | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | shutterstock | Shutterstock | appConnector | MIT | official-source-research-required | not-implemented |
 | signnow | airSlate Inc | appConnector | MIT | official-source-research-required | not-implemented |
 | similarweb | Similarweb | appConnector | MIT | official-source-research-required | not-implemented |
@@ -155,8 +155,8 @@ verification.
 | statsig | Statsig, LLC | appConnector | MIT | official-source-research-required | not-implemented |
 | streak | Rewardly, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | stripe | Stripe | appConnector, skills | MIT | official-source-research-required | not-implemented |
-| supabase | Supabase | appConnector, skills | MIT | declared-upstream-needs-verification | not-implemented |
-| superhuman | Superhuman | appConnector, skills | MIT | declared-upstream-needs-verification | not-implemented |
+| supabase | Supabase | appConnector, skills | MIT | blocked-license | not-implemented |
+| superhuman | Superhuman | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | superpowers | Jesse Vincent | skills | MIT | official-source-verified | implemented-verified |
 | taxdown | TAXDOWN S.L. | appConnector | MIT | official-source-research-required | not-implemented |
 | temporal | Temporal | skills | MIT | official-source-verified | implemented-verified |
@@ -166,11 +166,11 @@ verification.
 | twilio-developer-kit | Twilio | skills | MIT | official-source-verified | implemented-verified |
 | united-rentals | United Rentals | appConnector | MIT | official-source-research-required | not-implemented |
 | vantage | Vantage | appConnector | MIT | official-source-research-required | not-implemented |
-| vercel | Vercel Labs | appConnector, skills, commands | Apache-2.0 | declared-upstream-needs-verification | not-implemented |
+| vercel | Vercel Labs | appConnector, skills, commands | Apache-2.0 | official-source-verified | implemented-verified |
 | waldo | Curiosities, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | weatherpromise | WeatherPromise, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | windsor-ai | Windsor.ai | appConnector | MIT | official-source-research-required | not-implemented |
-| wix | Wix | appConnector, skills | MIT | declared-upstream-needs-verification | not-implemented |
+| wix | Wix | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | yepcode | YepCode S.L. | appConnector | MIT | official-source-research-required | not-implemented |
 | zoho | Zoho | appConnector | MIT | official-source-research-required | not-implemented |
 | zoom | Zoom | appConnector, skills, commands | MIT | declared-upstream-needs-verification | not-implemented |

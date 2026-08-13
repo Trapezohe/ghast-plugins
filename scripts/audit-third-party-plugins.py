@@ -241,7 +241,12 @@ def validate_review(name: str, review: dict) -> None:
     missing = sorted(required - set(review))
     if missing:
         raise ValueError(f"{name}: review is missing fields {missing}")
-    if review["verificationStatus"] != "official-source-verified":
+    supported_statuses = {
+        "blocked-license",
+        "official-source-research-required",
+        "official-source-verified",
+    }
+    if review["verificationStatus"] not in supported_statuses:
         raise ValueError(
             f"{name}: unsupported verification status "
             f"{review['verificationStatus']!r}"

@@ -3,6 +3,65 @@
   "description": "Downloadable Ghast-compatible plugin packages.",
   "plugins": [
     {
+      "id": "airtable",
+      "name": "airtable",
+      "description": "Airtable is the database and operations layer for your agents — whether running product, marketing, sales, ops, HR, or a custom business app. It combines structured data with multiplayer visual surfaces (grid, kanban, calendar, gallery, timeline) humans and agents share — plus sync integrations to Jira, Salesforce, Zendesk, Google Drive, and Databricks. Makes Codex fluent in Airtable: bases and schema, records, and collaboration UI. Bundles the official Airtable MCP server.",
+      "manifest": {
+        "name": "airtable",
+        "description": "Airtable is the database and operations layer for your agents — whether running product, marketing, sales, ops, HR, or a custom business app. It combines structured data with multiplayer visual surfaces (grid, kanban, calendar, gallery, timeline) humans and agents share — plus sync integrations to Jira, Salesforce, Zendesk, Google Drive, and Databricks. Makes Codex fluent in Airtable: bases and schema, records, and collaboration UI. Bundles the official Airtable MCP server.",
+        "author": {
+          "name": "Airtable",
+          "url": "https://www.airtable.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "0.1.0-ghast.1",
+        "homepage": "https://www.airtable.com",
+        "repository": "https://github.com/airtable/skills",
+        "upstreamRevision": "812ee67f1fd3d76fb45ff8df40afaa0448602ba8",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/airtable.zip",
+        "sha256": "cef8e90ae5dd4010249e9fefec6e78b80031b5c3a6d87298dbd8d3f65bb1ebd2"
+      },
+      "icon": "./plugins/airtable/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://www.airtable.com",
+      "repository": "https://github.com/airtable/skills",
+      "license": "MIT"
+    },
+    {
+      "id": "base44",
+      "name": "base44",
+      "description": "Build and deploy Base44 full-stack apps with CLI project management and JavaScript/TypeScript SDK development skills",
+      "manifest": {
+        "name": "base44",
+        "description": "Build and deploy Base44 full-stack apps with CLI project management and JavaScript/TypeScript SDK development skills",
+        "author": {
+          "name": "base44",
+          "url": "https://base44.com"
+        },
+        "icon": "./assets/icon.png",
+        "version": "1.0.0-beta.1-ghast.1",
+        "homepage": "https://docs.base44.com",
+        "repository": "https://github.com/base44/skills",
+        "upstreamRevision": "773a301cfb79112141add32d19c024f2bafc44ee",
+        "license": "MIT",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/base44.zip",
+        "sha256": "90a3d5044de747c56818cc0601784d530116f4a67d62f0b4c1a9486fa94926ff"
+      },
+      "icon": "./plugins/base44/assets/icon.png",
+      "category": "development",
+      "homepage": "https://docs.base44.com",
+      "repository": "https://github.com/base44/skills",
+      "license": "MIT"
+    },
+    {
       "id": "bilibili-search",
       "name": "bilibili-search",
       "description": "Skill for searching Bilibili videos and the daily ranking via the public web search endpoint — no login required for top-level results.",
@@ -140,6 +199,36 @@
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/current-datetime"
     },
     {
+      "id": "daloopa",
+      "name": "daloopa",
+      "description": "Financial analysis skills powered by Daloopa's institutional-grade data.",
+      "manifest": {
+        "name": "daloopa",
+        "description": "Financial analysis skills powered by Daloopa's institutional-grade data.",
+        "author": {
+          "name": "Daloopa",
+          "url": "https://daloopa.com"
+        },
+        "icon": "./assets/icon.png",
+        "version": "1.0.0-ghast.1",
+        "homepage": "https://daloopa.com",
+        "repository": "https://github.com/daloopa/daloopa-plugin-codex",
+        "upstreamRevision": "1f112599065abb7cac3489c30f9e4bb27c68ad8e",
+        "license": "Apache-2.0",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/daloopa.zip",
+        "sha256": "bb9a100c89b18046dad1d15bd410e38df0638a14b8354ecc79458706f6f04977"
+      },
+      "icon": "./plugins/daloopa/assets/icon.png",
+      "category": "finance",
+      "homepage": "https://daloopa.com",
+      "repository": "https://github.com/daloopa/daloopa-plugin-codex",
+      "license": "Apache-2.0"
+    },
+    {
       "id": "defillama",
       "name": "defillama",
       "description": "Skill for looking up DeFi protocol TVL, chain stats, and ranking via the free DeFi Llama API.",
@@ -238,6 +327,37 @@
       "icon": "./plugins/hacker-news/assets/icon.svg",
       "category": "news",
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/hacker-news"
+    },
+    {
+      "id": "heygen",
+      "name": "heygen",
+      "description": "Create HeyGen avatar videos, personalized video messages, and translated / dubbed videos. Build a persistent digital identity from a photo, generate presenter-led videos with your digital twin, and localize existing videos into 175+ languages with voice cloning and lip-sync.",
+      "manifest": {
+        "name": "heygen",
+        "description": "Create HeyGen avatar videos, personalized video messages, and translated / dubbed videos. Build a persistent digital identity from a photo, generate presenter-led videos with your digital twin, and localize existing videos into 175+ languages with voice cloning and lip-sync.",
+        "author": {
+          "name": "HeyGen",
+          "email": "developers@heygen.com",
+          "url": "https://heygen.com"
+        },
+        "icon": "./assets/icon.png",
+        "version": "1.3.2-ghast.1",
+        "homepage": "https://heygen.com",
+        "repository": "https://github.com/heygen-com/skills",
+        "upstreamRevision": "1bd5e4d33a028dfed3abf504c5e3dd644fb9ea8a",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/heygen.zip",
+        "sha256": "6462b1c8dd452c06062bdaacf534cc963468b159897cbb8eadb50cfa2b1c7fb9"
+      },
+      "icon": "./plugins/heygen/assets/icon.png",
+      "category": "creativity",
+      "homepage": "https://heygen.com",
+      "repository": "https://github.com/heygen-com/skills",
+      "license": "MIT"
     },
     {
       "id": "hyperframes",
@@ -547,6 +667,34 @@
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/seo-meta"
     },
     {
+      "id": "shopify",
+      "name": "shopify",
+      "description": "Shopify developer tools for OpenAI Codex — search Shopify docs, generate and validate GraphQL, Liquid, and UI extension code. Skill scripts send usage telemetry (queries, code, model/client identifiers) to shopify.dev by default; set OPT_OUT_INSTRUMENTATION=true to disable.",
+      "manifest": {
+        "name": "shopify",
+        "description": "Shopify developer tools for OpenAI Codex — search Shopify docs, generate and validate GraphQL, Liquid, and UI extension code. Skill scripts send usage telemetry (queries, code, model/client identifiers) to shopify.dev by default; set OPT_OUT_INSTRUMENTATION=true to disable.",
+        "author": {
+          "name": "Shopify"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.6.1-ghast.1",
+        "homepage": "https://shopify.dev/docs/apps/build/devmcp",
+        "repository": "https://github.com/Shopify/Shopify-AI-Toolkit",
+        "upstreamRevision": "cc5af6505c27939222072449278f6356857cb064",
+        "license": "MIT",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/shopify.zip",
+        "sha256": "8c2c4ef7e5d3d1f1df88db6a6245addc575750c44c9181f050ef9b145d3ad228"
+      },
+      "icon": "./plugins/shopify/assets/icon.svg",
+      "category": "development",
+      "homepage": "https://shopify.dev/docs/apps/build/devmcp",
+      "repository": "https://github.com/Shopify/Shopify-AI-Toolkit",
+      "license": "MIT"
+    },
+    {
       "id": "steam-search",
       "name": "steam-search",
       "description": "Skill for searching the Steam store and looking up game details (price, release date, genres, reviews) — uses Steam's public store endpoints, no key required.",
@@ -591,6 +739,36 @@
       "icon": "./plugins/stock-quote/assets/icon.svg",
       "category": "finance",
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/stock-quote"
+    },
+    {
+      "id": "superhuman",
+      "name": "superhuman",
+      "description": "Connect Codex to the official Superhuman Mail MCP server for email and calendar workflows.",
+      "manifest": {
+        "name": "superhuman",
+        "description": "Connect Codex to the official Superhuman Mail MCP server for email and calendar workflows.",
+        "author": {
+          "name": "Superhuman",
+          "url": "https://superhuman.com/"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "0.1.0-ghast.1",
+        "homepage": "https://help.superhuman.com/hc/en-us/articles/49810745762067-Superhuman-Mail-MCP-Server",
+        "repository": "https://github.com/superhuman/mcp-mail",
+        "upstreamRevision": "a83580e994604edca1cd5661a4a1865f3f39abc9",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/superhuman.zip",
+        "sha256": "68132d7ae47b30029bc7f5f7563ee1cb1c6c829d0849c28b053179f98f4249cc"
+      },
+      "icon": "./plugins/superhuman/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://help.superhuman.com/hc/en-us/articles/49810745762067-Superhuman-Mail-MCP-Server",
+      "repository": "https://github.com/superhuman/mcp-mail",
+      "license": "MIT"
     },
     {
       "id": "superpowers",
@@ -734,6 +912,37 @@
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/uptime-check"
     },
     {
+      "id": "vercel",
+      "name": "vercel",
+      "description": "Build and deploy web apps and agents",
+      "manifest": {
+        "name": "vercel",
+        "description": "Build and deploy web apps and agents",
+        "author": {
+          "name": "Vercel",
+          "url": "https://github.com/vercel"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "0.48.0-ghast.1",
+        "homepage": "https://github.com/vercel/vercel-plugin",
+        "repository": "https://github.com/vercel/vercel-plugin",
+        "upstreamRevision": "11c32588786a9d49791372657433b88d49561874",
+        "license": "Apache-2.0",
+        "skills": "./skills/",
+        "commands": "./commands/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/vercel.zip",
+        "sha256": "9591dd2bb87da17c782e119bc64b413045d2d3bc81a0bc01adcb9d08bb7c301d"
+      },
+      "icon": "./plugins/vercel/assets/icon.svg",
+      "category": "development",
+      "homepage": "https://github.com/vercel/vercel-plugin",
+      "repository": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0"
+    },
+    {
       "id": "website-fetcher",
       "name": "website-fetcher",
       "description": "Skill that teaches the model to fetch a URL and read its text content via the built-in WebFetch tool — 'just look at this page' without opening a browser.",
@@ -755,6 +964,36 @@
       "icon": "./plugins/website-fetcher/assets/icon.svg",
       "category": "web",
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/website-fetcher"
+    },
+    {
+      "id": "wix",
+      "name": "wix",
+      "description": "Build and deploy Wix apps and headless websites, and manage your Wix business. Includes CLI development skills, Wix Headless for any frontend framework, and Wix MCP server for eCommerce, CMS, dashboard extensions, and more.",
+      "manifest": {
+        "name": "wix",
+        "description": "Build and deploy Wix apps and headless websites, and manage your Wix business. Includes CLI development skills, Wix Headless for any frontend framework, and Wix MCP server for eCommerce, CMS, dashboard extensions, and more.",
+        "author": {
+          "name": "Wix",
+          "url": "https://dev.wix.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.16.0-ghast.1",
+        "homepage": "https://dev.wix.com/docs/api-reference/articles/ai-tools/about-wix-skills",
+        "repository": "https://github.com/wix/skills",
+        "upstreamRevision": "d9b73923907f91989335cf4f26dce52095faeea4",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/wix.zip",
+        "sha256": "66283b972bfded4c1fc1bc556954b075f03c94ce244f36ebbe96b788e1d46c17"
+      },
+      "icon": "./plugins/wix/assets/icon.svg",
+      "category": "development",
+      "homepage": "https://dev.wix.com/docs/api-reference/articles/ai-tools/about-wix-skills",
+      "repository": "https://github.com/wix/skills",
+      "license": "MIT"
     }
   ]
 }

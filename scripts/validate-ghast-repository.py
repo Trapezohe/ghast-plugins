@@ -229,7 +229,11 @@ def validate_audit(errors: list[str]) -> None:
         for row in rows
         if row["ghast"]["implementationStatus"] == "implemented-verified"
     }
-    reviewed = set((reviews.get("plugins") or {}).keys())
+    reviewed = {
+        name
+        for name, review in (reviews.get("plugins") or {}).items()
+        if review.get("verificationStatus") == "official-source-verified"
+    }
     if verified != reviewed:
         errors.append(
             f"{AUDIT_PATH}: implemented-verified IDs differ from reviews"

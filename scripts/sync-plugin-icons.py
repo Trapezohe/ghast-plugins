@@ -14,6 +14,7 @@ EXPECTED_OPENAI_REVISION = "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9"
 PLUGIN_DIR = Path("plugins")
 
 OPENAI_ICONS = {
+    "daloopa": "plugins/daloopa/assets/app-icon.png",
     "github-stats": "plugins/github/assets/github-small.svg",
     "linear": "plugins/linear/assets/linear-icon.svg",
     "mixpanel-headless": "plugins/mixpanel-headless/assets/app-icon.png",
@@ -24,15 +25,22 @@ OPENAI_ICONS = {
 }
 
 LOCAL_ICONS = {
+    "airtable": "assets/icon.svg",
+    "base44": "assets/icon.png",
     "boltz-api-cli": "assets/icon.png",
     "cloudflare": "assets/icon.svg",
     "expo": "assets/icon.png",
     "hyperframes": "assets/icon.png",
+    "heygen": "assets/icon.png",
     "nvidia": "assets/icon.png",
     "remotion": "assets/icon.png",
     "render": "assets/icon.svg",
+    "shopify": "assets/icon.svg",
+    "superhuman": "assets/icon.svg",
     "superpowers": "assets/icon.png",
     "temporal": "assets/icon.svg",
+    "vercel": "assets/icon.svg",
+    "wix": "assets/icon.svg",
 }
 
 CUSTOM_ICONS = {

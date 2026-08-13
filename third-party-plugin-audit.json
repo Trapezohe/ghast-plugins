@@ -16,14 +16,14 @@
     "excludedOpenAIAuthored": 31,
     "thirdPartyPlugins": 149,
     "auditStatus": {
-      "blocked-license": 3,
-      "declared-upstream-needs-verification": 16,
-      "official-source-research-required": 118,
-      "official-source-verified": 12
+      "blocked-license": 7,
+      "declared-upstream-needs-verification": 2,
+      "official-source-research-required": 120,
+      "official-source-verified": 20
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 12,
-      "not-implemented": 137
+      "implemented-verified": 20,
+      "not-implemented": 129
     }
   },
   "excludedOpenAIPlugins": [
@@ -138,7 +138,7 @@
     },
     {
       "id": "airtable",
-      "auditStatus": "declared-upstream-needs-verification",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Airtable",
@@ -168,13 +168,50 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "manifest-declared-candidate",
+        "status": "reviewed",
         "codexRepository": "https://github.com/airtable/skills",
         "candidateOfficialRepository": "https://github.com/airtable/skills",
-        "homepage": "https://www.airtable.com"
+        "homepage": "https://www.airtable.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Airtable",
+          "officialRepository": "https://github.com/airtable/skills",
+          "officialRevision": "812ee67f1fd3d76fb45ff8df40afaa0448602ba8",
+          "license": "MIT",
+          "licenseEvidence": [
+            "LICENSE.md"
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the Airtable GitHub organization and identifies itself as Airtable's canonical official agent-plugin repository.",
+            "Its Codex manifest names Airtable as developer and declares the official Airtable MCP endpoint.",
+            "Ghast imports the plugin directory from one pinned official revision."
+          ],
+          "codexCapabilities": [
+            "Create and manage Airtable bases, schema, records, and shared operational workflows",
+            "Read and write authenticated Airtable data through the Airtable app connector"
+          ],
+          "ghastCapabilities": [
+            "All eight current official Airtable workflow and CLI skills",
+            "Read and write authenticated Airtable data through the official public Airtable MCP server"
+          ],
+          "capabilityRelationship": "equivalent-official-mcp-transport",
+          "limitations": [
+            "Airtable account access, OAuth authorization, workspace permissions, and service limits remain user-managed.",
+            "State-changing base, schema, and record operations require explicit user confirmation."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Compare all eight Ghast skill directories and .mcp.json with plugins/airtable in the pinned official repository",
+            "unzip -tqq packages/airtable.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "0.1.0-ghast.1",
+        "repository": "https://github.com/airtable/skills",
+        "upstreamRevision": "812ee67f1fd3d76fb45ff8df40afaa0448602ba8",
+        "portStatus": "full"
       }
     },
     {
@@ -442,7 +479,7 @@
     },
     {
       "id": "base44",
-      "auditStatus": "declared-upstream-needs-verification",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "base44",
@@ -473,13 +510,50 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "manifest-declared-candidate",
+        "status": "reviewed",
         "codexRepository": "https://github.com/base44/skills",
         "candidateOfficialRepository": "https://github.com/base44/skills",
-        "homepage": "https://docs.base44.com"
+        "homepage": "https://docs.base44.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Base44",
+          "officialRepository": "https://github.com/base44/skills",
+          "officialRevision": "773a301cfb79112141add32d19c024f2bafc44ee",
+          "license": "MIT",
+          "licenseEvidence": [
+            "LICENSE"
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the Base44 GitHub organization.",
+            "Its Codex manifest and README identify the repository as Base44's maintained multi-agent skill distribution.",
+            "Ghast imports all five production skills directly from the pinned official repository."
+          ],
+          "codexCapabilities": [
+            "Create, configure, deploy, and troubleshoot Base44 applications",
+            "Develop against the Base44 SDK and cloud sandbox"
+          ],
+          "ghastCapabilities": [
+            "The same five official Base44 CLI, SDK, troubleshooting, remote-development, and sandbox skills",
+            "Authenticated operations through the official Base44 CLI and app-specific sandbox MCP endpoints"
+          ],
+          "capabilityRelationship": "equivalent-official-cli-and-dynamic-mcp",
+          "limitations": [
+            "Base44 accounts, CLI authentication, API keys, app IDs, and sandbox access are not bundled.",
+            "The sandbox MCP URL is app-specific and is therefore configured during the official Base44 remote-development flow rather than as a static package declaration."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Compare all five Ghast skill directories byte-for-byte with skills/ in the pinned official repository",
+            "unzip -tqq packages/base44.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.0-beta.1-ghast.1",
+        "repository": "https://github.com/base44/skills",
+        "upstreamRevision": "773a301cfb79112141add32d19c024f2bafc44ee",
+        "portStatus": "full"
       }
     },
     {
@@ -750,7 +824,7 @@
     },
     {
       "id": "brighthire",
-      "auditStatus": "declared-upstream-needs-verification",
+      "auditStatus": "blocked-license",
       "developer": {
         "manifestAuthor": {
           "name": "BrightHire",
@@ -781,10 +855,37 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "manifest-declared-candidate",
+        "status": "reviewed",
         "codexRepository": "https://github.com/brighthire/brighthire-codex-plugin",
         "candidateOfficialRepository": "https://github.com/brighthire/brighthire-codex-plugin",
-        "homepage": "https://www.brighthire.com"
+        "homepage": "https://www.brighthire.com",
+        "review": {
+          "verificationStatus": "blocked-license",
+          "officialDeveloper": "BrightHire",
+          "officialRepository": "https://github.com/brighthire/brighthire-codex-plugin",
+          "officialRevision": "d317197efb8c0bd8795199e77ff7a954eadf4eca",
+          "license": "UNVERIFIED",
+          "licenseEvidence": [
+            "The manifest declares MIT, but the pinned repository contains no LICENSE, COPYING, or equivalent license text."
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the BrightHire GitHub organization and its manifest names BrightHire as developer."
+          ],
+          "codexCapabilities": [
+            "Read interview, candidate, call, and hiring intelligence through BrightHire"
+          ],
+          "ghastCapabilities": [
+            "No redistributed implementation is permitted until BrightHire publishes verifiable license terms for the repository contents."
+          ],
+          "capabilityRelationship": "blocked-before-port",
+          "limitations": [
+            "The public MCP endpoint and OAuth flow appear portable, but repository ownership does not substitute for redistribution permission."
+          ],
+          "verification": [
+            "Inspect every license-like file in the pinned repository and confirm none is present",
+            "Do not create plugins/brighthire while the license remains unresolved"
+          ]
+        }
       },
       "ghast": {
         "implementationStatus": "not-implemented"
@@ -902,7 +1003,7 @@
     },
     {
       "id": "catalyst-by-zoho",
-      "auditStatus": "declared-upstream-needs-verification",
+      "auditStatus": "official-source-research-required",
       "developer": {
         "manifestAuthor": {
           "name": "Catalyst by Zoho",
@@ -934,10 +1035,37 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "manifest-declared-candidate",
+        "status": "reviewed",
         "codexRepository": "https://github.com/catalystbyzoho",
         "candidateOfficialRepository": "https://github.com/catalystbyzoho",
-        "homepage": "https://catalyst.zoho.com/"
+        "homepage": "https://catalyst.zoho.com/",
+        "review": {
+          "verificationStatus": "official-source-research-required",
+          "officialDeveloper": "Catalyst by Zoho",
+          "officialRepository": "https://github.com/catalystbyzoho",
+          "officialRevision": null,
+          "license": "UNVERIFIED",
+          "licenseEvidence": [
+            "The Codex manifest declares MIT but points to a GitHub organization page rather than a repository containing the plugin and license."
+          ],
+          "officialityEvidence": [
+            "The declared URL belongs to the Catalyst by Zoho organization, but it does not identify a specific source repository or revision."
+          ],
+          "codexCapabilities": [
+            "MCP-backed Catalyst project setup, management, and operations"
+          ],
+          "ghastCapabilities": [
+            "No implementation is claimed until a specific official repository, revision, license, and runnable transport are found."
+          ],
+          "capabilityRelationship": "source-not-located",
+          "limitations": [
+            "An organization landing page cannot be pinned, compared, licensed, or reproduced as a plugin source."
+          ],
+          "verification": [
+            "git ls-remote https://github.com/catalystbyzoho fails because the URL is not a repository",
+            "Do not create plugins/catalyst-by-zoho from the Codex marketplace copy"
+          ]
+        }
       },
       "ghast": {
         "implementationStatus": "not-implemented"
@@ -1129,7 +1257,7 @@
     },
     {
       "id": "circleci",
-      "auditStatus": "declared-upstream-needs-verification",
+      "auditStatus": "blocked-license",
       "developer": {
         "manifestAuthor": {
           "name": "CircleCI",
@@ -1159,10 +1287,37 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "manifest-declared-candidate",
+        "status": "reviewed",
         "codexRepository": "https://github.com/circleci-public/skills",
         "candidateOfficialRepository": "https://github.com/circleci-public/skills",
-        "homepage": "https://circleci.com"
+        "homepage": "https://circleci.com",
+        "review": {
+          "verificationStatus": "blocked-license",
+          "officialDeveloper": "CircleCI",
+          "officialRepository": "https://github.com/circleci-public/skills",
+          "officialRevision": "8a228d394f0f613401118bad7d8117064a611561",
+          "license": "UNVERIFIED",
+          "licenseEvidence": [
+            "The manifest declares MIT, but the pinned repository contains no LICENSE, COPYING, NOTICE, or per-skill license file."
+          ],
+          "officialityEvidence": [
+            "The repository is owned by CircleCI-Public and its manifest names CircleCI as developer."
+          ],
+          "codexCapabilities": [
+            "CircleCI build debugging, CLI workflows, configuration optimization, Chunk, onboarding, and smarter testing"
+          ],
+          "ghastCapabilities": [
+            "No redistributed implementation is permitted until CircleCI adds verifiable license text."
+          ],
+          "capabilityRelationship": "blocked-before-port",
+          "limitations": [
+            "The six official skills are technically portable but currently lack repository license evidence."
+          ],
+          "verification": [
+            "Inspect every license-like file in the pinned repository and confirm none is present",
+            "Do not create plugins/circleci while the license remains unresolved"
+          ]
+        }
       },
       "ghast": {
         "implementationStatus": "not-implemented"
@@ -1394,7 +1549,7 @@
     },
     {
       "id": "coderabbit",
-      "auditStatus": "declared-upstream-needs-verification",
+      "auditStatus": "official-source-research-required",
       "developer": {
         "manifestAuthor": {
           "name": "CodeRabbit AI",
@@ -1423,10 +1578,37 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "manifest-declared-candidate",
+        "status": "reviewed",
         "codexRepository": "https://github.com/coderabbitai/codex-plugin",
         "candidateOfficialRepository": "https://github.com/coderabbitai/codex-plugin",
-        "homepage": "https://docs.coderabbit.ai/cli/overview"
+        "homepage": "https://docs.coderabbit.ai/cli/overview",
+        "review": {
+          "verificationStatus": "official-source-research-required",
+          "officialDeveloper": "CodeRabbit",
+          "officialRepository": "https://github.com/coderabbitai/codex-plugin",
+          "officialRevision": "999871a3155da78f34e033aede62ab48bfba520e",
+          "license": "UNVERIFIED",
+          "licenseEvidence": [
+            "The pinned repository's root LICENSE names Render as copyright holder and no CodeRabbit-specific license accompanies plugins/coderabbit."
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the CodeRabbit GitHub organization, but its current tree is a merge of the broader Codex plugin repository rather than a clean standalone CodeRabbit distribution."
+          ],
+          "codexCapabilities": [
+            "Run CodeRabbit CLI review workflows against the current code changes"
+          ],
+          "ghastCapabilities": [
+            "No implementation is claimed until CodeRabbit publishes a source tree and license whose scope clearly covers the CodeRabbit plugin."
+          ],
+          "capabilityRelationship": "source-integrity-and-license-review-required",
+          "limitations": [
+            "Copying plugins/coderabbit from the current repository would rely on mismatched license evidence and could accidentally import unrelated marketplace content."
+          ],
+          "verification": [
+            "Inspect git history showing a merge from openai:main into the CodeRabbit repository",
+            "Confirm plugins/coderabbit has no standalone license and the root LICENSE says Copyright (c) 2026 Render"
+          ]
+        }
       },
       "ghast": {
         "implementationStatus": "not-implemented"
@@ -1700,7 +1882,7 @@
     },
     {
       "id": "daloopa",
-      "auditStatus": "declared-upstream-needs-verification",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Daloopa",
@@ -1731,13 +1913,50 @@
       },
       "declaredLicense": "Apache-2.0",
       "officialSource": {
-        "status": "manifest-declared-candidate",
+        "status": "reviewed",
         "codexRepository": "https://github.com/daloopa/daloopa-plugin-codex",
         "candidateOfficialRepository": "https://github.com/daloopa/daloopa-plugin-codex",
-        "homepage": "https://daloopa.com"
+        "homepage": "https://daloopa.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Daloopa",
+          "officialRepository": "https://github.com/daloopa/daloopa-plugin-codex",
+          "officialRevision": "1f112599065abb7cac3489c30f9e4bb27c68ad8e",
+          "license": "Apache-2.0",
+          "licenseEvidence": [
+            "LICENSE"
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the Daloopa GitHub organization.",
+            "Its README and Codex manifest identify it as Daloopa's official Codex and ChatGPT skill distribution.",
+            "Ghast imports all skills and both public MCP declarations from one pinned revision."
+          ],
+          "codexCapabilities": [
+            "Institutional financial-data research, earnings analysis, valuation, modeling, and banking-style deliverables",
+            "Authenticated Daloopa data access through the Codex app connector"
+          ],
+          "ghastCapabilities": [
+            "All 21 official Daloopa analyst workflow skills",
+            "Authenticated Daloopa data and documentation access through the two official public MCP endpoints"
+          ],
+          "capabilityRelationship": "equivalent-official-mcp-transport",
+          "limitations": [
+            "A Daloopa account, subscription, OAuth authorization, data entitlements, and spreadsheet or presentation tooling remain user-managed.",
+            "The official repository does not publish an icon, so the developer-branded Codex marketplace icon is retained only as catalog presentation metadata."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Compare all 21 Ghast skill directories and .mcp.json byte-for-byte with the pinned official repository",
+            "unzip -tqq packages/daloopa.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.0-ghast.1",
+        "repository": "https://github.com/daloopa/daloopa-plugin-codex",
+        "upstreamRevision": "1f112599065abb7cac3489c30f9e4bb27c68ad8e",
+        "portStatus": "full"
       }
     },
     {
@@ -2731,7 +2950,7 @@
     },
     {
       "id": "heygen",
-      "auditStatus": "declared-upstream-needs-verification",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "HeyGen",
@@ -2762,13 +2981,49 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "manifest-declared-candidate",
+        "status": "reviewed",
         "codexRepository": "https://github.com/heygen-com/skills",
         "candidateOfficialRepository": "https://github.com/heygen-com/skills",
-        "homepage": "https://heygen.com"
+        "homepage": "https://heygen.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "HeyGen",
+          "officialRepository": "https://github.com/heygen-com/skills",
+          "officialRevision": "1bd5e4d33a028dfed3abf504c5e3dd644fb9ea8a",
+          "license": "MIT",
+          "licenseEvidence": [
+            "LICENSE"
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the HeyGen GitHub organization.",
+            "Its README and Codex manifest identify the skills, CLI, and remote MCP server as official HeyGen surfaces.",
+            "Ghast imports all three user-facing skills, the public MCP declaration, and official icon from one pinned revision."
+          ],
+          "codexCapabilities": [
+            "Create persistent HeyGen avatars and presenter-led avatar videos"
+          ],
+          "ghastCapabilities": [
+            "Create persistent avatars and presenter-led videos through the official HeyGen CLI or MCP server",
+            "Translate and dub existing videos with voice cloning and lip sync through the additional official translation skill"
+          ],
+          "capabilityRelationship": "superset",
+          "limitations": [
+            "A HeyGen account, API key or OAuth session, plan credits, and paid API usage remain user-managed.",
+            "The CLI is installed separately from HeyGen's official distribution."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Compare the three Ghast skill directories and .mcp.json byte-for-byte with the pinned official repository",
+            "unzip -tqq packages/heygen.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.3.2-ghast.1",
+        "repository": "https://github.com/heygen-com/skills",
+        "upstreamRevision": "1bd5e4d33a028dfed3abf504c5e3dd644fb9ea8a",
+        "portStatus": "full"
       }
     },
     {
@@ -3633,7 +3888,7 @@
     },
     {
       "id": "morningstar",
-      "auditStatus": "declared-upstream-needs-verification",
+      "auditStatus": "blocked-license",
       "developer": {
         "manifestAuthor": {
           "name": "Morningstar",
@@ -3664,10 +3919,37 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "manifest-declared-candidate",
+        "status": "reviewed",
         "codexRepository": "https://github.com/Morningstar/morningstar-plugins",
         "candidateOfficialRepository": "https://github.com/Morningstar/morningstar-plugins",
-        "homepage": "https://www.morningstar.com"
+        "homepage": "https://www.morningstar.com",
+        "review": {
+          "verificationStatus": "blocked-license",
+          "officialDeveloper": "Morningstar",
+          "officialRepository": "https://github.com/Morningstar/morningstar-plugins",
+          "officialRevision": "4c62260714b73c1b62ad143393d4a24ac02a5c50",
+          "license": "UNVERIFIED",
+          "licenseEvidence": [
+            "The manifest declares MIT, but the pinned repository contains no LICENSE, COPYING, NOTICE, or per-plugin license file."
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the Morningstar GitHub organization and identifies itself as Morningstar's assistant-plugin collection."
+          ],
+          "codexCapabilities": [
+            "Screen, summarize, compare, and analyze funds and ETFs using Morningstar data"
+          ],
+          "ghastCapabilities": [
+            "No redistributed implementation is permitted until Morningstar publishes verifiable license terms."
+          ],
+          "capabilityRelationship": "blocked-before-port",
+          "limitations": [
+            "The public Morningstar MCP endpoint requires a Morningstar Direct subscription, but the immediate blocker is redistribution permission for the skills."
+          ],
+          "verification": [
+            "Inspect every license-like file in the pinned repository and confirm none is present",
+            "Do not create plugins/morningstar while the license remains unresolved"
+          ]
+        }
       },
       "ghast": {
         "implementationStatus": "not-implemented"
@@ -5026,7 +5308,7 @@
     },
     {
       "id": "shopify",
-      "auditStatus": "declared-upstream-needs-verification",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Shopify",
@@ -5056,13 +5338,52 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "manifest-declared-candidate",
+        "status": "reviewed",
         "codexRepository": "https://github.com/Shopify/Shopify-AI-Toolkit",
         "candidateOfficialRepository": "https://github.com/Shopify/Shopify-AI-Toolkit",
-        "homepage": "https://github.com/Shopify/Shopify-AI-Toolkit"
+        "homepage": "https://github.com/Shopify/Shopify-AI-Toolkit",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Shopify",
+          "officialRepository": "https://github.com/Shopify/Shopify-AI-Toolkit",
+          "officialRevision": "cc5af6505c27939222072449278f6356857cb064",
+          "license": "MIT",
+          "licenseEvidence": [
+            "LICENSE"
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the Shopify GitHub organization.",
+            "Its Codex manifest identifies Shopify as developer and packages the official Shopify developer skill suite.",
+            "Ghast imports all current user-facing skill directories, schemas, scripts, and the Shopify glyph from one pinned revision."
+          ],
+          "codexCapabilities": [
+            "Search Shopify documentation and generate or validate GraphQL, Liquid, Hydrogen, Functions, and UI-extension code",
+            "Guide Shopify CLI, app, storefront, partner, payments, and onboarding workflows"
+          ],
+          "ghastCapabilities": [
+            "All 21 current official Shopify developer skills with their bundled schemas, references, search scripts, and validators",
+            "The same Shopify CLI, GraphQL, Liquid, Hydrogen, Functions, Polaris, POS, Partner, Storefront, and UCP workflows"
+          ],
+          "capabilityRelationship": "equivalent-current-official-suite",
+          "limitations": [
+            "Shopify accounts, development stores, partner permissions, CLI authentication, and API credentials remain user-managed.",
+            "Official skill scripts send documented usage telemetry by default; set OPT_OUT_INSTRUMENTATION=true to disable it.",
+            "Skill-local telemetry hook paths are adapted from CLAUDE_PLUGIN_ROOT to Ghast's <SKILL_DIR> placeholder."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Compare all 21 source skill trees with the pinned official repository, allowing only the documented telemetry path substitution",
+            "Run representative Shopify search and validation scripts with OPT_OUT_INSTRUMENTATION=true",
+            "unzip -tqq packages/shopify.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.6.1-ghast.1",
+        "repository": "https://github.com/Shopify/Shopify-AI-Toolkit",
+        "upstreamRevision": "cc5af6505c27939222072449278f6356857cb064",
+        "portStatus": "full"
       }
     },
     {
@@ -5323,7 +5644,7 @@
     },
     {
       "id": "supabase",
-      "auditStatus": "declared-upstream-needs-verification",
+      "auditStatus": "blocked-license",
       "developer": {
         "manifestAuthor": {
           "name": "Supabase",
@@ -5354,10 +5675,37 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "manifest-declared-candidate",
+        "status": "reviewed",
         "codexRepository": "https://github.com/supabase-community/supabase-plugin",
         "candidateOfficialRepository": "https://github.com/supabase-community/supabase-plugin",
-        "homepage": "https://supabase.com"
+        "homepage": "https://supabase.com",
+        "review": {
+          "verificationStatus": "blocked-license",
+          "officialDeveloper": "Supabase",
+          "officialRepository": "https://github.com/supabase-community/supabase-plugin",
+          "officialRevision": "aadcf51499969e5ed476dadd19fdf688bcc0b250",
+          "license": "UNVERIFIED",
+          "licenseEvidence": [
+            "The manifest declares MIT, but the pinned distribution repository contains no LICENSE, COPYING, NOTICE, or per-skill license file."
+          ],
+          "officialityEvidence": [
+            "The repository is published under Supabase Community and identifies itself as the official multi-agent Supabase plugin distribution."
+          ],
+          "codexCapabilities": [
+            "Manage Supabase projects and apply Supabase and Postgres best practices"
+          ],
+          "ghastCapabilities": [
+            "No redistributed implementation is permitted from this distribution until its license scope is verifiable."
+          ],
+          "capabilityRelationship": "blocked-before-port",
+          "limitations": [
+            "The skills are synchronized from supabase/agent-skills, so a future review may establish a separately licensed canonical source and unblock a clean import."
+          ],
+          "verification": [
+            "Inspect every license-like file in the pinned distribution repository and confirm none is present",
+            "Do not create plugins/supabase from this repository until license scope is resolved"
+          ]
+        }
       },
       "ghast": {
         "implementationStatus": "not-implemented"
@@ -5365,7 +5713,7 @@
     },
     {
       "id": "superhuman",
-      "auditStatus": "declared-upstream-needs-verification",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Superhuman",
@@ -5396,13 +5744,50 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "manifest-declared-candidate",
+        "status": "reviewed",
         "codexRepository": "https://github.com/superhuman/mcp-mail",
         "candidateOfficialRepository": "https://github.com/superhuman/mcp-mail",
-        "homepage": "https://help.superhuman.com/hc/en-us/articles/49810745762067-Superhuman-Mail-MCP-Server"
+        "homepage": "https://help.superhuman.com/hc/en-us/articles/49810745762067-Superhuman-Mail-MCP-Server",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Superhuman",
+          "officialRepository": "https://github.com/superhuman/mcp-mail",
+          "officialRevision": "a83580e994604edca1cd5661a4a1865f3f39abc9",
+          "license": "MIT",
+          "licenseEvidence": [
+            "LICENSE"
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the Superhuman GitHub organization.",
+            "Its package, Codex manifest, and README identify the official Superhuman Mail MCP distribution.",
+            "Ghast imports all seven skills, the public MCP declaration, and official brand asset from one pinned revision."
+          ],
+          "codexCapabilities": [
+            "Search and triage email, draft and send messages, inspect read status, and schedule meetings",
+            "Run inbox, deal, briefing, wrap-up, and batch-drafting workflows"
+          ],
+          "ghastCapabilities": [
+            "The same seven official Superhuman Mail workflow skills",
+            "Authenticated email and calendar operations through the official public Superhuman Mail MCP server"
+          ],
+          "capabilityRelationship": "equivalent-official-mcp-transport",
+          "limitations": [
+            "A supported Superhuman, Gmail, or Outlook account and OAuth authorization are required.",
+            "Sending, forwarding, deleting, or scheduling actions require explicit user confirmation."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Compare all seven Ghast skill directories and .mcp.json byte-for-byte with the pinned official repository",
+            "unzip -tqq packages/superhuman.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "0.1.0-ghast.1",
+        "repository": "https://github.com/superhuman/mcp-mail",
+        "upstreamRevision": "a83580e994604edca1cd5661a4a1865f3f39abc9",
+        "portStatus": "full"
       }
     },
     {
@@ -5853,7 +6238,7 @@
     },
     {
       "id": "vercel",
-      "auditStatus": "declared-upstream-needs-verification",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Vercel Labs",
@@ -5883,13 +6268,52 @@
       },
       "declaredLicense": "Apache-2.0",
       "officialSource": {
-        "status": "manifest-declared-candidate",
+        "status": "reviewed",
         "codexRepository": "https://github.com/vercel/vercel-plugin",
         "candidateOfficialRepository": "https://github.com/vercel/vercel-plugin",
-        "homepage": "https://vercel.com/"
+        "homepage": "https://vercel.com/",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Vercel",
+          "officialRepository": "https://github.com/vercel/vercel-plugin",
+          "officialRevision": "11c32588786a9d49791372657433b88d49561874",
+          "license": "Apache-2.0",
+          "licenseEvidence": [
+            "LICENSE"
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the Vercel GitHub organization.",
+            "Its plugin manifest and package identify it as Vercel's official agent plugin.",
+            "Ghast imports all current top-level skills, the four declared user commands, the public MCP declaration, and official icon from one pinned revision."
+          ],
+          "codexCapabilities": [
+            "Build, review, configure, and deploy web applications and agents on Vercel",
+            "Use Vercel ecosystem guidance, commands, and connected account context"
+          ],
+          "ghastCapabilities": [
+            "All 33 current top-level official Vercel skills and their supporting references",
+            "The four official bootstrap, deploy, environment, and status commands",
+            "Read-only connected project, deployment, log, and documentation access through the official Vercel MCP server, with write workflows through the official Vercel CLI"
+          ],
+          "capabilityRelationship": "equivalent-newer-official-suite",
+          "limitations": [
+            "Vercel accounts, OAuth authorization, CLI authentication, project permissions, and paid services remain user-managed.",
+            "Claude-only hooks and specialist-agent declarations are omitted because Ghast does not execute those extension points.",
+            "The public Vercel MCP server is read-only at the pinned revision; deployment and configuration writes use the official Vercel CLI and require confirmation."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Compare all 33 top-level Ghast skill trees, four commands, and .mcp.json with the pinned official repository",
+            "unzip -tqq packages/vercel.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "0.48.0-ghast.1",
+        "repository": "https://github.com/vercel/vercel-plugin",
+        "upstreamRevision": "11c32588786a9d49791372657433b88d49561874",
+        "portStatus": "full"
       }
     },
     {
@@ -6002,7 +6426,7 @@
     },
     {
       "id": "wix",
-      "auditStatus": "declared-upstream-needs-verification",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Wix",
@@ -6033,13 +6457,51 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "manifest-declared-candidate",
+        "status": "reviewed",
         "codexRepository": "https://github.com/wix/skills",
         "candidateOfficialRepository": "https://github.com/wix/skills",
-        "homepage": "https://dev.wix.com/docs/api-reference/articles/ai-tools/about-wix-skills"
+        "homepage": "https://dev.wix.com/docs/api-reference/articles/ai-tools/about-wix-skills",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Wix",
+          "officialRepository": "https://github.com/wix/skills",
+          "officialRevision": "d9b73923907f91989335cf4f26dce52095faeea4",
+          "license": "MIT",
+          "licenseEvidence": [
+            "LICENSE"
+          ],
+          "officialityEvidence": [
+            "The repository is owned by the Wix GitHub organization.",
+            "Its README, package, and Codex manifest identify it as Wix's official agent-skill distribution.",
+            "Ghast imports every top-level user skill, nested replatforming resources, the public MCP declaration, and official icon from one pinned revision."
+          ],
+          "codexCapabilities": [
+            "Build and deploy Wix apps and headless sites",
+            "Manage Wix business data and services through CLI and connected tools"
+          ],
+          "ghastCapabilities": [
+            "All eight top-level official Wix skills plus the complete nested replatforming resource suite",
+            "Wix app, authentication, design-system, documentation, headless, management, migration, and vibe workflows",
+            "Authenticated Wix business operations through the official public Wix MCP server"
+          ],
+          "capabilityRelationship": "equivalent-newer-official-suite",
+          "limitations": [
+            "Wix accounts, OAuth authorization, CLI authentication, site permissions, and paid services remain user-managed.",
+            "Publishing, data mutation, and business-management operations require explicit user confirmation."
+          ],
+          "verification": [
+            "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
+            "Compare all eight top-level Ghast skill trees and .mcp.json byte-for-byte with the pinned official repository",
+            "unzip -tqq packages/wix.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.16.0-ghast.1",
+        "repository": "https://github.com/wix/skills",
+        "upstreamRevision": "d9b73923907f91989335cf4f26dce52095faeea4",
+        "portStatus": "full"
       }
     },
     {

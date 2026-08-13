@@ -13,6 +13,29 @@ from pathlib import Path
 
 PLUGIN_DIR = Path("plugins")
 PLUGINS = {
+    "airtable": {
+        "directory": "airtable-skills",
+        "revision": "812ee67f1fd3d76fb45ff8df40afaa0448602ba8",
+        "repository": "https://github.com/airtable/skills",
+        "plugin_root": "plugins/airtable",
+        "manifest": ".codex-plugin/plugin.json",
+        "license": "../../LICENSE.md",
+        "icon": "assets/icon.svg",
+        "category": "productivity",
+        "mcp": ".mcp.json",
+        "license_name": "MIT",
+    },
+    "base44": {
+        "directory": "base44-skills",
+        "revision": "773a301cfb79112141add32d19c024f2bafc44ee",
+        "repository": "https://github.com/base44/skills",
+        "plugin_root": ".",
+        "manifest": ".codex-plugin/plugin.json",
+        "license": "LICENSE",
+        "icon": "assets/base44-logo.png",
+        "category": "development",
+        "license_name": "MIT",
+    },
     "boltz-api-cli": {
         "directory": "boltz-api-skills",
         "revision": "70e480ebb14baecfc4456b49eb8b724611470b7c",
@@ -45,6 +68,25 @@ PLUGINS = {
         "commands": "commands",
         "mcp": ".mcp.json",
         "license_name": "Apache-2.0",
+    },
+    "daloopa": {
+        "directory": "daloopa-plugin-codex",
+        "revision": "1f112599065abb7cac3489c30f9e4bb27c68ad8e",
+        "repository": "https://github.com/daloopa/daloopa-plugin-codex",
+        "plugin_root": ".",
+        "manifest": ".codex-plugin/plugin.json",
+        "license": "LICENSE",
+        "generated_icon": "./assets/icon.png",
+        "category": "finance",
+        "mcp": ".mcp.json",
+        "license_name": "Apache-2.0",
+        "compatibility_notes": [
+            (
+                "The official source repository does not publish an icon, so "
+                "the developer-branded Codex marketplace icon is retained as "
+                "catalog presentation metadata."
+            ),
+        ],
     },
     "expo": {
         "directory": "expo-skills",
@@ -79,6 +121,19 @@ PLUGINS = {
         "icon": "assets/icon.png",
         "category": "creativity",
         "license_name": "Apache-2.0",
+    },
+    "heygen": {
+        "directory": "heygen-skills",
+        "revision": "1bd5e4d33a028dfed3abf504c5e3dd644fb9ea8a",
+        "repository": "https://github.com/heygen-com/skills",
+        "plugin_root": ".",
+        "manifest": ".codex-plugin/plugin.json",
+        "license": "LICENSE",
+        "icon": "assets/icon.png",
+        "category": "creativity",
+        "mcp": ".mcp.json",
+        "license_name": "MIT",
+        "skills_root": ".",
     },
     "mixpanel-headless": {
         "directory": "mixpanel-headless",
@@ -172,6 +227,40 @@ PLUGINS = {
         "mcp": ".mcp.json",
         "license_name": "MIT",
     },
+    "shopify": {
+        "directory": "shopify-ai-toolkit",
+        "revision": "cc5af6505c27939222072449278f6356857cb064",
+        "repository": "https://github.com/Shopify/Shopify-AI-Toolkit",
+        "plugin_root": ".",
+        "manifest": ".codex-plugin/plugin.json",
+        "license": "LICENSE",
+        "icon": "assets/shopify_glyph.svg",
+        "category": "development",
+        "license_name": "MIT",
+        "compatibility_notes": [
+            (
+                "Shopify's skill-local telemetry hook paths use Ghast's "
+                "host-resolved <SKILL_DIR> placeholder instead of the "
+                "Claude-only CLAUDE_PLUGIN_ROOT variable."
+            ),
+            (
+                "Official Shopify scripts send documented usage telemetry by "
+                "default; users can set OPT_OUT_INSTRUMENTATION=true."
+            ),
+        ],
+    },
+    "superhuman": {
+        "directory": "superhuman-mcp-mail",
+        "revision": "a83580e994604edca1cd5661a4a1865f3f39abc9",
+        "repository": "https://github.com/superhuman/mcp-mail",
+        "plugin_root": ".",
+        "manifest": ".codex-plugin/plugin.json",
+        "license": "LICENSE",
+        "icon": "assets/superhuman-mail-small.svg",
+        "category": "productivity",
+        "mcp": ".mcp.json",
+        "license_name": "MIT",
+    },
     "temporal": {
         "directory": "temporal-codex-plugin",
         "revision": "a3fa2bdff73a93e60e1077c08bde2b682cd0f5ae",
@@ -219,6 +308,44 @@ PLUGINS = {
                 "only source skill without one."
             ),
         ],
+    },
+    "vercel": {
+        "directory": "vercel-plugin",
+        "revision": "11c32588786a9d49791372657433b88d49561874",
+        "repository": "https://github.com/vercel/vercel-plugin",
+        "plugin_root": ".",
+        "manifest": ".claude-plugin/plugin.json",
+        "license": "LICENSE",
+        "icon": "assets/vercel.svg",
+        "category": "development",
+        "command_files": [
+            "commands/bootstrap.md",
+            "commands/deploy.md",
+            "commands/env.md",
+            "commands/status.md",
+        ],
+        "mcp": ".mcp.json",
+        "license_name": "Apache-2.0",
+        "compatibility_notes": [
+            (
+                "Vercel's Claude hooks and specialist-agent declarations are "
+                "not included because Ghast does not execute those client "
+                "extension points; all official skills, four user commands, "
+                "and the public Vercel MCP server are retained."
+            ),
+        ],
+    },
+    "wix": {
+        "directory": "wix-skills",
+        "revision": "d9b73923907f91989335cf4f26dce52095faeea4",
+        "repository": "https://github.com/wix/skills",
+        "plugin_root": ".",
+        "manifest": ".codex-plugin/plugin.json",
+        "license": "LICENSE",
+        "icon": "assets/logo.svg",
+        "category": "development",
+        "mcp": ".mcp.json",
+        "license_name": "MIT",
     },
 }
 
@@ -294,6 +421,16 @@ def import_plugin(name: str, config: dict, source_root: Path) -> None:
                 staging / "commands",
                 copy_function=shutil.copy2,
             )
+        elif config.get("command_files"):
+            commands_target = staging / "commands"
+            commands_target.mkdir()
+            for command_name in config["command_files"]:
+                command_source = plugin_root / command_name
+                if not command_source.is_file():
+                    raise ValueError(
+                        f"{command_source}: declared command is missing"
+                    )
+                shutil.copy2(command_source, commands_target / command_source.name)
         if config.get("mcp"):
             shutil.copy2(plugin_root / config["mcp"], staging / ".mcp.json")
         for directory in config.get("extra_directories", []):
@@ -341,7 +478,7 @@ def import_plugin(name: str, config: dict, source_root: Path) -> None:
             "icon": icon_manifest_path,
             "skills": "./skills/",
         }
-        if config.get("commands"):
+        if config.get("commands") or config.get("command_files"):
             manifest["commands"] = "./commands/"
         if config.get("mcp"):
             manifest["mcpServers"] = "./.mcp.json"
@@ -473,6 +610,13 @@ def apply_ghast_compatibility(name: str, staging: Path) -> None:
         (staging / "commands/auth.md").write_text(
             render_mixpanel_auth_command()
         )
+    elif name == "shopify":
+        for markdown in (staging / "skills").rglob("*.md"):
+            rewrite_text(
+                markdown,
+                {"$CLAUDE_PLUGIN_ROOT/scripts": "<SKILL_DIR>/scripts"},
+                require_all=False,
+            )
 
 
 def rewrite_text(
