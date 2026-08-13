@@ -182,6 +182,12 @@ CUSTOM_ICONS = {
         '<path d="M12 43h40M18 43V27l14-10 14 10v16"/>'
         '<path d="M27 43V32h10v11"/>',
     ),
+    "posthog": (
+        "#D5A019",
+        '<path d="M12 48h40M17 43V31h8v12M29 43V22h8v21M41 43V14h8v29"/>'
+        '<path d="M15 25l11-8 10 5 14-11"/>'
+        '<circle cx="50" cy="11" r="2" fill="white" stroke="none"/>',
+    ),
     "realtime-weather": (
         "#1D82B6",
         '<circle cx="25" cy="24" r="9"/>'

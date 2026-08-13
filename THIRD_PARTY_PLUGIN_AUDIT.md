@@ -128,7 +128,7 @@ verification.
 | picsart | Picsart | appConnector | MIT | official-source-research-required | not-implemented |
 | pitchbook | PitchBook | appConnector | MIT | official-source-research-required | not-implemented |
 | policynote | FiscalNote | appConnector | MIT | official-source-research-required | not-implemented |
-| posthog | PostHog | appConnector, skills | MIT | blocked-license | not-implemented |
+| posthog | PostHog | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | pylon | Pylon Labs Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | quartr | Quartr | appConnector | MIT | official-source-verified | implemented-verified |
 | quickbooks | QuickBooks | appConnector | MIT | official-source-research-required | not-implemented |

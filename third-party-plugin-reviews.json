@@ -1852,39 +1852,55 @@
       ]
     },
     "posthog": {
-      "verificationStatus": "blocked-license",
+      "verificationStatus": "official-source-verified",
       "officialDeveloper": "PostHog",
-      "officialRepository": "https://github.com/PostHog/ai-plugin",
-      "officialRevision": "672b0076a11b4b4c4ef9d40dee832c10fefb244a",
-      "license": "UNVERIFIED-MIXED-SOURCE",
+      "officialRepository": "https://github.com/PostHog/posthog",
+      "officialRevision": "eca44dbf35017b5a964224ac74f4a861815190d7",
+      "license": "MIT",
       "licenseEvidence": [
-        "The official AI plugin manifest and README say MIT, but the pinned repository has no LICENSE, COPYING, or equivalent license text and GitHub reports no detected license.",
-        "Its sync workflow imports skills from a PostHog/posthog release and from PostHog/context-mill.",
-        "PostHog/posthog has an MIT-style root license for content outside designated exceptions, but PostHog/context-mill and its released skill archive publish no license file."
+        "PostHog/posthog's root license applies the MIT Expat grant to content outside its listed ee and third-party exceptions; services/mcp is outside those exceptions.",
+        "services/mcp/package.json identifies @posthog/mcp, PostHog Inc., and MIT.",
+        "The Ghast package contains only an independently authored adapter under its own MIT license and does not redistribute the hosted service or MCP source.",
+        "The separate PostHog/ai-plugin repository and PostHog/context-mill skill stream still lack repository-level license files, so their synchronized static skills and artwork are not copied."
       ],
       "officialityEvidence": [
-        "The repository is owned by the PostHog GitHub organization and describes itself as PostHog's official plugin for Codex and other AI clients.",
-        "Its official MCP declaration uses https://mcp.posthog.com/mcp and its current manifest exposes 137 synchronized skills.",
-        "The older developer-owned PostHog/mcp repository has an MIT license and documents the same hosted MCP endpoint, but it does not establish redistribution rights for the complete current skill bundle."
+        "PostHog's official MCP documentation names https://mcp.posthog.com/mcp, documents Codex setup, and links the server source in PostHog/posthog.",
+        "The current services/mcp README calls itself the official PostHog MCP server and the @posthog/mcp package is authored by PostHog Inc.",
+        "The archived PostHog/mcp repository explicitly points to services/mcp in the PostHog monorepo.",
+        "PostHog/ai-plugin configures the same hosted endpoint and the documented plugin consumer header."
       ],
       "codexCapabilities": [
         "Analyze PostHog product data, feature flags, experiments, errors, surveys, dashboards, logs, replays, warehouse data, and LLM analytics",
         "Create and update PostHog flags, experiments, insights, dashboards, surveys, alerts, workflows, and other supported resources"
       ],
       "ghastCapabilities": [
-        "No complete redistributed PostHog skill package is claimed while one of the official synchronized source streams lacks verifiable redistribution terms."
+        "Connect directly to PostHog's official Streamable HTTP MCP endpoint with OAuth, the documented plugin consumer marker, and token-efficient CLI mode",
+        "Discover, inspect, and call the live catalog of 844 documented source tool definitions spanning 58 labeled product categories",
+        "Read and write analytics, SQL, flags, experiments, errors, replays, surveys, dashboards, AI observability, logs, pipelines, support, tasks, workflows, and newer PostHog products",
+        "Use PostHog MCP resources and prompts and discover live schemas instead of relying on stale pre-trained tool shapes",
+        "Restrict sessions to read-only tools, pin an organization or project, filter by feature category, or allowlist exact tool names",
+        "Require explicit conversational approval for every mutation and fresh confirmation for destructive or broad operations"
       ],
-      "capabilityRelationship": "blocked-before-full-port",
+      "capabilityRelationship": "official-runtime-superset-with-static-guidance-gap",
       "limitations": [
-        "A Ghast package containing only the licensed older MCP transport would provide many operational tools but would not reproduce the complete current official plugin's 137-skill behavior.",
-        "The plugin cannot be represented as a complete official-source port until PostHog publishes a repository-level license covering the AI plugin or separately licenses every synchronized source archive."
+        "A PostHog account, OAuth authorization or a personal API key created with the MCP Server preset, network access, project permissions, and applicable plan features remain user-managed.",
+        "The server returns project data to the MCP client. Queries should be scoped to the intended organization, project, date range, and minimum necessary records.",
+        "Some AI-powered tools require AI data processing to be enabled, have lower limits, and may incur PostHog AI spend. All calls remain subject to PostHog API limits.",
+        "The official tool page contains 844 unique tool names matching the pinned source schema, while its 58 displayed category counts sum to 837. Ghast records rather than conceals that documentation inconsistency.",
+        "The current PostHog AI plugin has 137 synchronized static skills, but its repository and the context-mill source stream lack verifiable license files. Ghast does not redistribute those files and does not claim byte-for-byte parity with that guidance layer.",
+        "Authenticated tool listing and project operations were not run because no PostHog account or project data was supplied.",
+        "A generic analytics icon is used instead of unlicensed marketplace or AI-plugin artwork."
       ],
       "verification": [
-        "Inspect the pinned PostHog/ai-plugin tree and GitHub license metadata and confirm no license file is present",
-        "Inspect .github/workflows/sync-skills.yml and verify the two upstream skill sources",
-        "Inspect the PostHog/posthog root license and the absence of a license in PostHog/context-mill",
-        "Probe https://mcp.posthog.com/mcp and confirm the official endpoint requires authentication",
-        "Do not create plugins/posthog as a complete port while the mixed-source license gap remains"
+        "python3 scripts/import-official-hosted-plugins.py",
+        "Verify PostHog/posthog at eca44dbf35017b5a964224ac74f4a861815190d7 and the pinned hashes for the root license, services/mcp README, package metadata, 844-definition source schema, and CLI command reference",
+        "Verify the official MCP overview, 844-name tool reference, and FAQ hashes and their CLI mode, read-only, project pinning, feature filtering, prompt, resource, privacy, and billing statements",
+        "Verify the protected-resource canonical JSON SHA-256 9b7b445acd711f55e50db0deb96f341769cb3a073f7e466cc5efc38da3341283 and authorization-server hash 3b1f34cd44dadf05dd7cf4e9b24519410bc15ffa9353929b865f0f28451eebb7",
+        "Probe https://mcp.posthog.com/mcp without credentials and confirm HTTP 401 plus the official protected-resource challenge",
+        "Register a disposable 127.0.0.1 OAuth public client and confirm HTTP 201, authorization-code and refresh-token grants, token_endpoint_auth_method none, and the loopback callback",
+        "Inspect PostHog/ai-plugin at 672b0076a11b4b4c4ef9d40dee832c10fefb244a, confirm its 137 synchronized skills and no repository license, and verify its workflow imports PostHog/posthog and PostHog/context-mill skill archives",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/posthog.zip"
       ]
     },
     "stripe": {

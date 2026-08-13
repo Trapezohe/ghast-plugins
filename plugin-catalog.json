@@ -1183,6 +1183,36 @@
       "license": "Apache-2.0 AND CC-BY-4.0"
     },
     {
+      "id": "posthog",
+      "name": "posthog",
+      "description": "Analyze and manage PostHog analytics, flags, experiments, errors, replays, surveys, dashboards, SQL, AI observability, data pipelines, and product workflows through PostHog's official hosted MCP server.",
+      "manifest": {
+        "name": "posthog",
+        "description": "Analyze and manage PostHog analytics, flags, experiments, errors, replays, surveys, dashboards, SQL, AI observability, data pipelines, and product workflows through PostHog's official hosted MCP server.",
+        "author": {
+          "name": "PostHog Inc.",
+          "url": "https://posthog.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.0-ghast.1",
+        "homepage": "https://posthog.com/docs/model-context-protocol",
+        "repository": "https://github.com/PostHog/posthog",
+        "upstreamRevision": "eca44dbf35017b5a964224ac74f4a861815190d7",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/posthog.zip",
+        "sha256": "ae312dd790072f37ab3a97ee52fa56a20ed4b15c9bcd7c388c990d4ff1e721d1"
+      },
+      "icon": "./plugins/posthog/assets/icon.svg",
+      "category": "data",
+      "homepage": "https://posthog.com/docs/model-context-protocol",
+      "repository": "https://github.com/PostHog/posthog",
+      "license": "MIT"
+    },
+    {
       "id": "quartr",
       "name": "quartr",
       "description": "Research public companies with first-party earnings calls, transcripts, filings, reports, slides, events, summaries, and financial statements through Quartr's official MCP server.",
