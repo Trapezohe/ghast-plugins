@@ -994,6 +994,34 @@
       "license": "MIT"
     },
     {
+      "id": "semrush",
+      "name": "semrush",
+      "description": "Retrieve read-only Semrush SEO, keyword, backlink, traffic, audience, market, paid search, shopping, site audit, position tracking, and project data through Semrush's official MCP server.",
+      "manifest": {
+        "name": "semrush",
+        "description": "Retrieve read-only Semrush SEO, keyword, backlink, traffic, audience, market, paid search, shopping, site audit, position tracking, and project data through Semrush's official MCP server.",
+        "author": {
+          "name": "Semrush Holdings, Inc.",
+          "url": "https://www.semrush.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.0-ghast.1",
+        "homepage": "https://developer.semrush.com/api/v4/introduction/semrush-mcp/",
+        "upstreamRevision": "semrush-docs-2508d6192982+oauth-5d0b459a41d7",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/semrush.zip",
+        "sha256": "557ba3d4eb1811f4c075c29a14f836e5cbf8e6b5559e0477abb2614cb855a093"
+      },
+      "icon": "./plugins/semrush/assets/icon.svg",
+      "category": "web",
+      "homepage": "https://developer.semrush.com/api/v4/introduction/semrush-mcp/",
+      "license": "MIT"
+    },
+    {
       "id": "sentry",
       "name": "sentry",
       "description": "Inspect recent Sentry issues and events through a read-only, redacting API workflow.",

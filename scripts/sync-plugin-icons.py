@@ -145,6 +145,15 @@ CUSTOM_ICONS = {
         '<circle cx="42" cy="40" r="8" fill="#2563EB"/>'
         '<path d="M48 46l5 5"/>',
     ),
+    "semrush": (
+        "#E85D3F",
+        '<path d="M12 48V18M12 48h40"/>'
+        '<path d="M18 40l9-10 8 5 13-17"/>'
+        '<circle cx="18" cy="40" r="2" fill="white"/>'
+        '<circle cx="27" cy="30" r="2" fill="white"/>'
+        '<circle cx="35" cy="35" r="2" fill="white"/>'
+        '<circle cx="48" cy="18" r="2" fill="white"/>',
+    ),
     "steam-search": (
         "#1B4965",
         '<circle cx="22" cy="40" r="7"/><circle cx="44" cy="22" r="8"/>'

@@ -1581,6 +1581,55 @@
         "unzip -tqq packages/readwise.zip"
       ]
     },
+    "semrush": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Semrush",
+      "officialRepository": null,
+      "officialRevision": "semrush-docs-2508d6192982+oauth-5d0b459a41d7",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/semrush/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "No Semrush hosted MCP server source, proprietary dataset, or private Codex connector implementation is redistributed."
+      ],
+      "officialityEvidence": [
+        "Semrush's official current developer documentation identifies https://mcp.semrush.com/v2/mcp as its Streamable HTTP endpoint, describes OAuth and API-key authentication, and lists 14 tool entry points.",
+        "The official developer documentation was captured three times with identical SHA-256 2508d6192982bd86eb524a5605e7367f6c9186e600e808d4d633d5627e5de25c.",
+        "Semrush's version-2 OAuth protected-resource metadata identifies the same MCP resource, https://oauth.semrush.com authorization server, and mcp.access scope; its canonical JSON has SHA-256 5d0b459a41d7ae3596cc2c72b480888d3dd7fa85a3fb32dd1282e89e2840f1be.",
+        "The official authorization-server metadata declares dynamic client registration, authorization-code and refresh-token grants, and PKCE S256; its canonical JSON has SHA-256 4e70ad04ad9ce53dcc59818a702f197d5c521c3b7e4f967111814e41b35871e3.",
+        "Unauthenticated GET and MCP initialize requests to the version-2 endpoint return Semrush's OAuth bearer challenge and version-2 protected-resource metadata URL.",
+        "Semrush's official knowledge base identifies the MCP connection as read-only and documents live SEO, keyword, backlink, traffic, audience, market, and competitive data."
+      ],
+      "codexCapabilities": [
+        "Retrieve structured domain analytics, keyword metrics, backlink profiles, traffic history and channel breakdowns",
+        "Analyze geographic and demographic audience distributions",
+        "Compare domains, competitors, industries, and markets using authoritative Semrush data"
+      ],
+      "ghastCapabilities": [
+        "The same domain, organic search, keyword, competitor, backlink, audience, traffic, paid search, shopping, position tracking, site audit, and project data through Semrush's official hosted MCP server",
+        "All available Trends and SEO API reports plus read-only Projects API v3 methods, selected through discovery tools, schema lookup, and report execution"
+      ],
+      "capabilityRelationship": "equivalent-official-hosted-mcp",
+      "limitations": [
+        "The hosted MCP implementation and Semrush datasets are operated by Semrush and are not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+        "The current developer documentation uses the version-2 endpoint. Older Semrush knowledge-base material still shows version 1, which remains online but advertises the version-1 OAuth resource and is not used by this adapter.",
+        "Available reports depend on the user's Semrush One, SEO Classic, Trends API, API-unit package, and Projects API entitlements.",
+        "Every report consumes API units based on report type and response size. Unit balances and subscription renewal remain user-managed.",
+        "The service is read-only: it cannot create projects, change campaigns or settings, or add tracked keywords.",
+        "Semrush API restrictions include account rate and concurrency limits and restrictions on long-term caching or redistribution of returned data.",
+        "A generic web-analytics icon is used because no licensed catalog icon is included in a public official MCP source repository."
+      ],
+      "verification": [
+        "python3 scripts/import-official-hosted-plugins.py",
+        "Verify the official current MCP documentation SHA-256 is 2508d6192982bd86eb524a5605e7367f6c9186e600e808d4d633d5627e5de25c",
+        "Verify canonical version-2 OAuth protected-resource metadata SHA-256 is 5d0b459a41d7ae3596cc2c72b480888d3dd7fa85a3fb32dd1282e89e2840f1be",
+        "Verify canonical OAuth authorization-server metadata SHA-256 is 4e70ad04ad9ce53dcc59818a702f197d5c521c3b7e4f967111814e41b35871e3",
+        "Confirm the official documentation lists 12 discovery tools plus get_report_schema and execute_report",
+        "Probe https://mcp.semrush.com/v2/mcp with GET and MCP initialize and confirm OAuth bearer responses identify the version-2 protected resource",
+        "Probe the older version-1 endpoint and confirm its bearer challenge still points to the version-1 protected resource, documenting why the adapter uses version 2",
+        "Compare the documented Trends, SEO, and read-only Projects coverage with every Codex capability statement",
+        "unzip -tqq packages/semrush.zip"
+      ]
+    },
     "statsig": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Statsig",
