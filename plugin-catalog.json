@@ -529,6 +529,36 @@
       "license": "MIT"
     },
     {
+      "id": "coderabbit",
+      "name": "coderabbit",
+      "description": "Review local code changes with CodeRabbit's official CLI and safely triage or apply unresolved CodeRabbit GitHub PR feedback through the official code-review and autofix skills.",
+      "manifest": {
+        "name": "coderabbit",
+        "description": "Review local code changes with CodeRabbit's official CLI and safely triage or apply unresolved CodeRabbit GitHub PR feedback through the official code-review and autofix skills.",
+        "author": {
+          "name": "CodeRabbit AI",
+          "email": "support@coderabbit.ai",
+          "url": "https://coderabbit.ai"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.1.1-ghast.1",
+        "homepage": "https://docs.coderabbit.ai/cli",
+        "repository": "https://github.com/coderabbitai/skills",
+        "upstreamRevision": "aa49953c4cb2590e35480637b1b6a29cf4187cfa",
+        "license": "MIT",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/coderabbit.zip",
+        "sha256": "1da638ac6de9ab50f9665872feee01612df83b55930fd8fbd30193b7e0e63ecb"
+      },
+      "icon": "./plugins/coderabbit/assets/icon.svg",
+      "category": "development",
+      "homepage": "https://docs.coderabbit.ai/cli",
+      "repository": "https://github.com/coderabbitai/skills",
+      "license": "MIT"
+    },
+    {
       "id": "current-datetime",
       "name": "current-datetime",
       "description": "Slash command and skill that tells the model the current wall-clock time in any IANA timezone — kills the 'I don't know what day it is' problem.",

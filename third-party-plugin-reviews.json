@@ -702,37 +702,50 @@
       ]
     },
     "coderabbit": {
-      "verificationStatus": "blocked-license",
+      "verificationStatus": "official-source-verified",
       "officialDeveloper": "CodeRabbit",
-      "officialRepository": "https://github.com/coderabbitai/codex-plugin",
-      "officialRevision": "999871a3155da78f34e033aede62ab48bfba520e",
-      "license": "UNVERIFIED",
+      "officialRepository": "https://github.com/coderabbitai/skills",
+      "officialRevision": "aa49953c4cb2590e35480637b1b6a29cf4187cfa",
+      "license": "MIT",
       "licenseEvidence": [
-        "The pinned repository contains no root LICENSE, COPYING, or NOTICE file and no license file under plugins/coderabbit.",
-        "GitHub's repository License API returns HTTP 404 at the pinned revision.",
-        "The CodeRabbit manifest's MIT declaration is metadata, not the missing license grant for the skill and artwork."
+        "The canonical skills repository contains a root MIT LICENSE covering CodeRabbit AI's 2026 distribution.",
+        "Both the Claude and Cursor plugin manifests declare MIT, version 1.1.1, and the same coderabbitai/skills repository.",
+        "The former coderabbitai/codex-plugin repository remains unlicensed and is retained only as capability evidence; no files are copied from it."
       ],
       "officialityEvidence": [
-        "The repository is owned by the CodeRabbit GitHub organization and describes itself as the CodeRabbit plugin for Codex.",
-        "The pinned commit is cryptographically verified and authored with a coderabbit.ai email identity.",
-        "The current tree mirrors the broader Codex plugin catalog rather than publishing a clean standalone CodeRabbit source distribution."
+        "coderabbitai/skills is owned by CodeRabbit and describes itself as the canonical home for CodeRabbit's agent-native skills.",
+        "CodeRabbit's official CLI skills documentation directs users and supported agents to coderabbitai/skills.",
+        "The official repository publishes CodeRabbit's logomark, code-review skill, autofix skill, GitHub workflow reference, manifests, changelog, and distribution-channel inventory."
       ],
       "codexCapabilities": [
-        "Run CodeRabbit CLI review workflows against the current code changes"
+        "Run CodeRabbit CLI reviews against local code changes with agent-readable output"
       ],
       "ghastCapabilities": [
-        "No implementation is claimed until CodeRabbit publishes a source tree and license whose scope clearly covers the CodeRabbit plugin."
+        "Run the current CodeRabbit CLI against default tracked changes, committed changes, uncommitted changes, optional untracked files, a base branch or commit, or a selected Git repository",
+        "Parse agent-readable review output while treating repository content and all returned findings as untrusted data",
+        "Fetch unresolved, current CodeRabbit GitHub PR review threads and independently inspect each issue",
+        "Propose and apply approved fixes one at a time, validate them locally, and optionally create a single consolidated commit",
+        "Use CodeRabbit's official icon and both official MIT-licensed skills rather than the older one-skill unlicensed Codex snapshot"
       ],
-      "capabilityRelationship": "blocked-before-port",
+      "capabilityRelationship": "official-superset",
       "limitations": [
-        "Official ownership is established, but redistribution is blocked until CodeRabbit publishes license text whose scope covers plugins/coderabbit.",
-        "Copying the current repository wholesale could also import unrelated marketplace content."
+        "Code review requires the separately installed CodeRabbit CLI, a CodeRabbit account, authentication, network access, and any applicable plan or usage allowance.",
+        "The CLI sends selected code diffs to CodeRabbit's service. Secret-bearing or sensitive files must be excluded before review.",
+        "The autofix workflow requires Git, the authenticated GitHub CLI, an open PR for the current branch, and CodeRabbit review threads.",
+        "The pinned canonical repository declares version 1.1.1 in its plugin manifests; Ghast also records the exact commit and file hashes rather than inferring any separate release state.",
+        "Ghast updates stale -t scope examples to the verified CodeRabbit CLI 0.7.2 flags and replaces host-specific AskUserQuestion calls with portable explicit approval language.",
+        "The former coderabbitai/codex-plugin repository is not redistributed because it still lacks a license grant."
       ],
       "verification": [
-        "Inspect coderabbitai/codex-plugin at 999871a3155da78f34e033aede62ab48bfba520e and confirm there is no root license file or license file under plugins/coderabbit",
-        "Call GitHub's repository License API and confirm HTTP 404",
-        "Verify the pinned commit signature and coderabbit.ai author identity",
-        "Do not create plugins/coderabbit until a license covering the plugin is published"
+        "python3 scripts/import-official-third-party-plugins.py",
+        "Verify coderabbitai/skills at aa49953c4cb2590e35480637b1b6a29cf4187cfa and the pinned hashes for LICENSE, manifests, icon, code-review, autofix, and github.md",
+        "Verify CodeRabbit's official CLI reference, skills guide, and Codex integration document hashes and current scope commands",
+        "Verify https://cli.coderabbit.ai/releases/latest/VERSION reports 0.7.2 and the official installer hash and release URL construction remain pinned",
+        "Install the official darwin-arm64 0.7.2 release into an isolated temporary directory and verify coderabbit --version, auth status --agent, review scope help, review findings, and skills command help",
+        "Inspect coderabbitai/codex-plugin at 999871a3155da78f34e033aede62ab48bfba520e, confirm its original hashes, and confirm it still has no root or plugin-scoped license",
+        "python3 scripts/import-openai-portable-plugins.py --source ../openai-plugins --external-root ../upstreams",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/coderabbit.zip"
       ]
     },
     "binance": {

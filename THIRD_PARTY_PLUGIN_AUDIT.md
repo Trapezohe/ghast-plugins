@@ -58,7 +58,7 @@ verification.
 | close | Close | appConnector | MIT | official-source-research-required | not-implemented |
 | cloudflare | Cloudflare | mcpServers, skills, commands | MIT | official-source-verified | implemented-verified |
 | cloudinary | Cloudinary | appConnector | MIT | official-source-verified | implemented-verified |
-| coderabbit | CodeRabbit | skills | MIT | blocked-license | not-implemented |
+| coderabbit | CodeRabbit | skills | MIT | official-source-verified | implemented-verified |
 | cogedim | ALTAREA PROMOTION MANAGEMENT | appConnector | MIT | official-source-research-required | not-implemented |
 | common-room | Common Room | appConnector | MIT | official-source-research-required | not-implemented |
 | conductor | Conductor Inc. | appConnector | MIT | official-source-research-required | not-implemented |

@@ -3,8 +3,8 @@
   "sourceRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
   "selectionRule": "Plugin directory does not contain .app.json.",
   "summary": {
-    "blocked": 13,
-    "existing": 12,
+    "blocked": 11,
+    "existing": 14,
     "partial": 1
   },
   "plugins": [
@@ -35,8 +35,8 @@
     },
     {
       "name": "circleci",
-      "status": "blocked",
-      "reason": "Neither the marketplace snapshot nor the canonical repository contains a license file."
+      "status": "existing",
+      "reason": "Ghast regenerates CircleCI from the MIT-licensed official CLI repository and current CircleCI-operated MCP services."
     },
     {
       "name": "cloudflare",
@@ -45,8 +45,8 @@
     },
     {
       "name": "coderabbit",
-      "status": "blocked",
-      "reason": "Neither the marketplace snapshot nor the referenced repository contains a license file."
+      "status": "existing",
+      "reason": "Ghast regenerates CodeRabbit from its current MIT-licensed official multi-agent skills repository."
     },
     {
       "name": "expo",

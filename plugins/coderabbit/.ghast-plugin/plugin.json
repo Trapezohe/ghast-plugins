@@ -1,0 +1,18 @@
+{
+  "name": "coderabbit",
+  "version": "1.1.1-ghast.1",
+  "description": "Review local code changes with CodeRabbit's official CLI and safely triage or apply unresolved CodeRabbit GitHub PR feedback through the official code-review and autofix skills.",
+  "category": "development",
+  "author": {
+    "name": "CodeRabbit AI",
+    "email": "support@coderabbit.ai",
+    "url": "https://coderabbit.ai"
+  },
+  "homepage": "https://docs.coderabbit.ai/cli",
+  "repository": "https://github.com/coderabbitai/skills",
+  "upstreamRevision": "aa49953c4cb2590e35480637b1b6a29cf4187cfa",
+  "upstreamPath": ".",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/"
+}
