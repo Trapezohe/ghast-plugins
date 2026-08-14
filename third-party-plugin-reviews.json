@@ -7807,6 +7807,66 @@
         "python3 scripts/validate-ghast-repository.py",
         "unzip -tqq packages/waldo.zip"
       ]
+    },
+    "taxdown": {
+      "verificationStatus": "official-source-research-required",
+      "officialDeveloper": "Tax Down S.L.",
+      "officialRepository": null,
+      "officialRevision": "taxdown-luz-a0e5964a0f97+terms-40e88ffabcb2+legal-75b1eca7e62b+security-b6799f80b96e+resource-452319f67349+oauth-1ac920a76fce+boundary-da7512f66622+redirect-03efda369924+openai-59177fde8963",
+      "license": "UNVERIFIED",
+      "licenseEvidence": [
+        "TaxDown publishes an official hosted MCP but does not publish its server implementation, tax knowledge system, tool schemas, official client source, or an open-source license for those materials.",
+        "TaxDown's current terms and legal notice reserve the platform, software, services, content, interfaces, marks, and related intellectual property; public or commercial copying, reproduction, transformation, or distribution requires prior written authorization.",
+        "The MIT declaration in OpenAI's three-file marketplace snapshot does not license TaxDown's hosted MCP, Luz tax assistant, customer tax data, private app connector, service content, trademarks, logo, or marketplace artwork.",
+        "No TaxDown code, tax corpus, schema, private credential, response, logo, icon, or service content is redistributed because no independently usable capability-equivalent Ghast plugin is published."
+      ],
+      "officialityEvidence": [
+        "TaxDown's official Luz page describes Spain's first free expert tax chat, instant answers, plain-language explanations, case-specific regulatory analysis, step-by-step guidance, and questions for individuals, investors, regional deductions, and self-employed users. Its pinned semantic core SHA-256 is a0e5964a0f9763985544e2327f74923fd032b9aed41cc4a95ec719d61211769f.",
+        "The official MCP is reachable at https://mcp.taxdown.es/mcp and its health endpoint returned HTTP 200. Anonymous initialization returns the standard protected resource challenge and canonical HTTP 401 response SHA-256 da7512f66622c27c985f2324a7041dabe34fe3ff552d378c570be9a32e05e102.",
+        "The official protected-resource metadata identifies https://mcp.taxdown.es, header bearer authentication, and openid, email, and profile scopes. Its canonical SHA-256 is 452319f67349a529f6a8592ceaf3ac56a7b7b9236519ccea1c643750e1a7eb08.",
+        "The authorization metadata publishes TaxDown authorization, token, revocation, userinfo, JWKS, and dynamic-registration endpoints, Cognito issuer, confidential client authentication, and PKCE S256. Its canonical SHA-256 is 1ac920a76fceb876b8f8b847c95678afdd2d971bc3c93d677ccf1b6579f699d5.",
+        "On August 14, 2026, disposable confidential registrations using TaxDown's own HTTPS callback and Claude's exact HTTPS callback returned HTTP 201. No returned client ID, secret, authorization code, token, login, or account data was retained.",
+        "The registration service's error text claims any http://localhost:*/callback or /oauth/callback is allowed, but actual localhost and 127.0.0.1 registrations return invalid_redirect_uri. Their canonical response SHA-256 values are 03efda369924d0c3b04ec07ec503ede501e728303f903fadfebb7e78c193e093 and d67bf7d9b70569f18ea370b3c4e0b4b924973e8337af2612d59a1545b9b7f1de.",
+        "TaxDown's general terms, updated February 10, 2026, describe tax return preparation, advisory services, explicit confirmation before filing, user-supplied information, API-assisted data access, and reserved platform rights. Their pinned core SHA-256 is 40e88ffabcb2c4fc761bcb5f990e84d006e58f7972c8e24ea8fc91bf92e3d51e.",
+        "TaxDown's legal notice identifies Tax Down S.L., NIF B-88287164, reserves platform and software rights, limits ordinary content use to a domestic scope, and prohibits unauthorized access, security bypass, copying, reproduction, transformation, and distribution. Its pinned core SHA-256 is 75b1eca7e62b09c0097ff8a72dd3024e6b4f431ac549df2f18ba42911d266a7e.",
+        "TaxDown's security page documents encryption, firewalls, AWS, Agencia Tributaria integration, account-session history, login notifications, and restrictions on selling, sharing, or using data outside tax-return purposes. Its pinned core SHA-256 is b6799f80b96e9e56bfd6928c5c0f748ba10321e211b662f2a5d79bb70758ea1d.",
+        "OpenAI's pinned snapshot identifies TAXDOWN S.L. as developer, maps private app ID asdk_app_6985e420a0c08191b0d2ef99895d2b53, and promises Spanish tax guidance for individuals and self-employed users covering deductions, IRPF, income tax, and obligations. Its complete inventory SHA-256 is 59177fde896373afe8082670626e41083847e0b763d3fa96ff2bdc0e569449d1."
+      ],
+      "codexCapabilities": [
+        "Answer Spanish tax questions for individuals and self-employed users",
+        "Explain deductions, IRPF, annual income tax, and tax obligations in clear language",
+        "Orient guidance to the user's facts and summarize relevant TaxDown status or guidance through OpenAI's private app mapping"
+      ],
+      "ghastCapabilities": [
+        "TaxDown's official hosted MCP and Luz product establish a developer-operated capability corresponding to the Codex app.",
+        "The official MCP publishes standard resource and authorization metadata, but its current dynamic-registration policy does not provide a working callback for an independent Ghast client.",
+        "No Ghast plugin is published until TaxDown accepts an independent client callback or supplies a supported registered client and documented onboarding path."
+      ],
+      "capabilityRelationship": "official-hosted-mcp-found-independent-client-oauth-callback-blocked",
+      "limitations": [
+        "The OpenAI app ID is a private marketplace mapping, not an MCP URL, OAuth client, client secret, access token, tool schema, or reusable Ghast authorization.",
+        "The MCP registration endpoint accepts only a narrow set of exact HTTPS callbacks observed during the audit. Localhost and 127.0.0.1 callbacks used by independent desktop or CLI clients are rejected despite the endpoint's contrary error text.",
+        "TaxDown's OAuth server requires confidential-client authentication. Ghast must not reuse Claude, OpenAI, TaxDown, or another client's callback, client ID, or client secret.",
+        "Authenticated tools/list and tax guidance were not exercised because no portable client registration and no user TaxDown account were supplied. Exact tool names, schemas, sources, personalization fields, entitlements, and limits remain server-controlled.",
+        "No public TaxDown MCP source repository, SDK, OpenAPI contract, generic API key flow, or independent-client setup guide was located. The public app and marketing site are not substitute automation interfaces.",
+        "Do not scrape, reverse engineer, replay, or wrap TaxDown's web application, account traffic, tax forms, internal APIs, or private marketplace integration to work around OAuth.",
+        "Tax records can contain DNI/NIF, income, investments, bank data, family details, addresses, properties, employment, benefits, filing history, and Agencia Tributaria access data. Any future connector requires strict authorization, minimization, confidentiality, retention, and audit controls.",
+        "Spanish tax law changes over time and depends on tax year, autonomous community, residence, facts, deadlines, and official interpretation. Generated guidance must be dated, sourced, verified, and reviewed by a qualified professional before filing or acting.",
+        "No icon or package is generated while authentication remains blocked. TaxDown and OpenAI marketplace artwork is not redistributed.",
+        "Do not create plugins/taxdown until TaxDown supplies a working independent callback or registered-client path, authenticated schemas establish capability coverage, and adapter and artwork rights are sufficient."
+      ],
+      "verification": [
+        "python3 scripts/audit-taxdown-plugin.py --openai-source ../openai-plugins",
+        "Verify the official Luz, terms, legal-notice, and security page cores with SHA-256 a0e5964a0f9763985544e2327f74923fd032b9aed41cc4a95ec719d61211769f, 40e88ffabcb2c4fc761bcb5f990e84d006e58f7972c8e24ea8fc91bf92e3d51e, 75b1eca7e62b09c0097ff8a72dd3024e6b4f431ac549df2f18ba42911d266a7e, and b6799f80b96e9e56bfd6928c5c0f748ba10321e211b662f2a5d79bb70758ea1d",
+        "Verify the MCP health route, protected-resource and authorization metadata hashes, Cognito issuer, endpoints, scopes, confidential clients, and PKCE S256",
+        "Probe anonymous MCP initialization and require HTTP 401, the official protected-resource challenge, and canonical body hash da7512f66622c27c985f2324a7041dabe34fe3ff552d378c570be9a32e05e102",
+        "Submit only non-creating localhost and 127.0.0.1 registration probes and require the pinned invalid_redirect_uri responses; do not repeatedly create supported client registrations",
+        "Treat the August 14, 2026 exact-HTTPS registration checks as manual evidence only; no returned client value was retained",
+        "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9, all three file hashes, complete inventory hash, developer identity, private app ID, prompt, and Spanish tax-guidance markers",
+        "Confirm plugins/taxdown and packages/taxdown.zip remain absent while independent client authentication, schema, license, and artwork blockers remain",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py"
+      ]
     }
   }
 }
