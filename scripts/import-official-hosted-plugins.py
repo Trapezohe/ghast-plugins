@@ -3639,6 +3639,52 @@ FINN_PRODUCT_API_URL = (
     "?view=available_cars&limit=1&offset=0"
     "&hide_related=true&pricing_type=downpayment"
 )
+FINN_REMARKETING_OPENAPI_URL = (
+    "https://docs.finn.com/_spec/api/remarketing/openapi.json"
+)
+FINN_REMARKETING_API_URL = (
+    "https://partners.finn.com/api/v1/cars?perPage=1"
+)
+FINN_REMARKETING_OPENAPI_SHA256 = (
+    "3c7c19c6a5b459c3194c1a9d8190e83418dc2e1a9c148b531f3db4a22766d3bb"
+)
+FINN_REMARKETING_PATHS_SHA256 = (
+    "7e36c0d52430888e91009b0f24d529234785a23c84bb98cd43b6ab8cc9e11a24"
+)
+FINN_REMARKETING_SECURITY_SHA256 = (
+    "cb33cd303e64658bcbfe09fca3d8a67dd0c0302b0de254ea075536d5e8003227"
+)
+FINN_REMARKETING_UNAUTHENTICATED_SHA256 = (
+    "470d94443e0ff9a9fc3167ffec7f686e7650797a9df7219be1fc4076e486ab1b"
+)
+FINN_DOCS_MCP_URL = "https://docs.finn.com/mcp"
+FINN_DOCS_MCP_PROTECTED_RESOURCE_URL = (
+    "https://docs.finn.com/.well-known/oauth-protected-resource/mcp"
+)
+FINN_DOCS_MCP_PROTECTED_RESOURCE_SHA256 = (
+    "50f8c51ff27e3490a35d79336b0a6e415cf082e7a3941f8c7141fbb5505c3856"
+)
+FINN_DOCS_MCP_AUTH_SERVER_URL = (
+    "https://docs.finn.com/.well-known/oauth-authorization-server"
+)
+FINN_DOCS_MCP_AUTH_SERVER_SHA256 = (
+    "7e0cce8156f8031994910ec03f3428a3b6d2c24d44c81160d0b8b3ca7f7a80b2"
+)
+FINN_DOCS_MCP_TOOL_NAMES_SHA256 = (
+    "2ed4736c2f866e802d08eff39ed38b2491a2202b92432563fef95b4ac144aaf1"
+)
+FINN_DOCS_MCP_TOOLS_SHA256 = (
+    "9d7e9ee4d27e146ae33673bfba774b1877ef0ab1beb95f70e396f54a62d9420d"
+)
+FINN_DOCS_MCP_LIST_APIS_SHA256 = (
+    "3b76f8e8752b6d2afa6833442d714f0fc9243fb722b2d741d7b82ba60e8263bb"
+)
+FINN_DOCS_MCP_ENDPOINTS_SHA256 = (
+    "1398acc3b39587becee1ae56e1ad8641ac33a1756350ec45687354c61489028a"
+)
+FINN_DOCS_MCP_SECURITY_SHA256 = (
+    "67c6a283904b534aab1dc4ab6de6cb0ba00b090d7bd405988007f9852ecf1ac3"
+)
 FINN_WEBSITE_API_URL = (
     "https://www.finn.com/api/cars"
     "?view=available_cars&limit=1&offset=0"
@@ -12728,6 +12774,203 @@ def verify_finn_evidence() -> None:
         },
     }:
         raise ValueError("FINN Product API security schemes changed")
+
+    remarketing_openapi = fetch_json(FINN_REMARKETING_OPENAPI_URL)
+    if (
+        canonical_json_sha256(remarketing_openapi)
+        != FINN_REMARKETING_OPENAPI_SHA256
+        or canonical_json_sha256(remarketing_openapi.get("paths"))
+        != FINN_REMARKETING_PATHS_SHA256
+        or canonical_json_sha256(
+            (remarketing_openapi.get("components") or {}).get(
+                "securitySchemes"
+            )
+        )
+        != FINN_REMARKETING_SECURITY_SHA256
+        or remarketing_openapi.get("openapi") != "3.0.0"
+        or remarketing_openapi.get("info", {}).get("title")
+        != "Fleet Remarketing External API"
+        or remarketing_openapi.get("info", {}).get("version") != "0.0.1"
+        or "interested external partners"
+        not in remarketing_openapi.get("info", {}).get("description", "")
+        or remarketing_openapi.get("info", {}).get("license") is not None
+        or remarketing_openapi.get("servers")
+        != [
+            {
+                "url": "https://partners.finn.com/api/v1",
+                "description": "Production environment",
+            }
+        ]
+        or set(remarketing_openapi.get("paths", {}))
+        != {"/cars", "/cars/{finnCarId}"}
+    ):
+        raise ValueError("FINN Fleet Remarketing API evidence changed")
+    remarketing_security = (
+        (remarketing_openapi.get("components") or {}).get(
+            "securitySchemes"
+        )
+        or {}
+    )
+    if (
+        remarketing_security.get("ApiKeyAuth", {}).get("name")
+        != "X-Api-Key"
+        or remarketing_security.get("BearerAuth", {}).get("scheme")
+        != "bearer"
+        or remarketing_openapi.get("security")
+        != [{"ApiKeyAuth": [], "BearerAuth": []}]
+        or (
+            remarketing_openapi.get("paths", {})
+            .get("/cars", {})
+            .get("get", {})
+            .get("operationId")
+        )
+        != "GetCarInventory"
+        or "remarketing"
+        not in (
+            remarketing_openapi.get("paths", {})
+            .get("/cars", {})
+            .get("get", {})
+            .get("description", "")
+        )
+        or (
+            remarketing_openapi.get("paths", {})
+            .get("/cars/{finnCarId}", {})
+            .get("get", {})
+            .get("operationId")
+        )
+        != "GetCarConfigurationByCarId"
+    ):
+        raise ValueError("FINN Fleet Remarketing API contract changed")
+
+    remarketing_request = urllib.request.Request(
+        FINN_REMARKETING_API_URL,
+        headers={
+            "User-Agent": "ghast-finn-audit/1.0",
+            "Accept": "application/json",
+        },
+    )
+    try:
+        urllib.request.urlopen(remarketing_request, timeout=30)
+    except urllib.error.HTTPError as exc:
+        if (
+            exc.code != 401
+            or sha256_bytes(exc.read())
+            != FINN_REMARKETING_UNAUTHENTICATED_SHA256
+        ):
+            raise ValueError(
+                "FINN Fleet Remarketing API authentication changed"
+            ) from exc
+    else:
+        raise ValueError(
+            "FINN Fleet Remarketing API unexpectedly accepted audit access"
+        )
+
+    docs_protected_resource = fetch_json(
+        FINN_DOCS_MCP_PROTECTED_RESOURCE_URL
+    )
+    docs_auth_server = fetch_json(FINN_DOCS_MCP_AUTH_SERVER_URL)
+    if (
+        canonical_json_sha256(docs_protected_resource)
+        != FINN_DOCS_MCP_PROTECTED_RESOURCE_SHA256
+        or docs_protected_resource.get("resource") != FINN_DOCS_MCP_URL
+        or docs_protected_resource.get("authorization_servers")
+        != ["https://docs.finn.com"]
+        or canonical_json_sha256(docs_auth_server)
+        != FINN_DOCS_MCP_AUTH_SERVER_SHA256
+        or docs_auth_server.get("issuer")
+        != "https://auth.cloud.redocly.com"
+        or docs_auth_server.get("registration_endpoint")
+        != "https://docs.finn.com/_mcp/register"
+        or docs_auth_server.get("code_challenge_methods_supported")
+        != ["S256"]
+        or "authorization_code"
+        not in docs_auth_server.get("grant_types_supported", [])
+        or "refresh_token"
+        not in docs_auth_server.get("grant_types_supported", [])
+    ):
+        raise ValueError("FINN documentation MCP OAuth evidence changed")
+
+    initialize = post_mcp_sse(
+        FINN_DOCS_MCP_URL,
+        {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "method": "initialize",
+            "params": {
+                "protocolVersion": "2025-06-18",
+                "capabilities": {},
+                "clientInfo": {
+                    "name": "ghast-finn-audit",
+                    "version": "1.0",
+                },
+            },
+        },
+    )
+    initialize_result = initialize.get("result", {})
+    if (
+        initialize_result.get("protocolVersion") != "2025-06-18"
+        or initialize_result.get("capabilities", {}).get("tools")
+        != {"listChanged": True}
+        or initialize_result.get("serverInfo", {}).get("name")
+        != "MCP server"
+    ):
+        raise ValueError("FINN documentation MCP initialize changed")
+
+    tools_response = post_mcp_sse(
+        FINN_DOCS_MCP_URL,
+        {
+            "jsonrpc": "2.0",
+            "id": 2,
+            "method": "tools/list",
+            "params": {},
+        },
+    )
+    docs_tools = tools_response.get("result", {}).get("tools", [])
+    docs_tool_names = [tool.get("name") for tool in docs_tools]
+    if (
+        canonical_json_sha256(docs_tool_names)
+        != FINN_DOCS_MCP_TOOL_NAMES_SHA256
+        or canonical_json_sha256(docs_tools)
+        != FINN_DOCS_MCP_TOOLS_SHA256
+    ):
+        raise ValueError("FINN documentation MCP tools changed")
+    for request_id, tool_name, arguments, expected_hash in (
+        (3, "list-apis", {}, FINN_DOCS_MCP_LIST_APIS_SHA256),
+        (
+            4,
+            "get-endpoints",
+            {"name": "Fleet Remarketing External API"},
+            FINN_DOCS_MCP_ENDPOINTS_SHA256,
+        ),
+        (
+            5,
+            "get-security-schemes",
+            {"name": "Fleet Remarketing External API"},
+            FINN_DOCS_MCP_SECURITY_SHA256,
+        ),
+    ):
+        response = post_mcp_sse(
+            FINN_DOCS_MCP_URL,
+            {
+                "jsonrpc": "2.0",
+                "id": request_id,
+                "method": "tools/call",
+                "params": {
+                    "name": tool_name,
+                    "arguments": arguments,
+                },
+            },
+        )
+        content = response.get("result", {}).get("content", [])
+        if (
+            len(content) != 1
+            or content[0].get("type") != "text"
+            or canonical_json_sha256(json.loads(content[0].get("text", "")))
+            != expected_hash
+        ):
+            raise ValueError(
+                f"FINN documentation MCP {tool_name} evidence changed"
+            )
 
     frontend = fetch_bytes(FINN_FRONTEND_CHUNK_URL)
     if sha256_bytes(frontend) != FINN_FRONTEND_CHUNK_SHA256:
