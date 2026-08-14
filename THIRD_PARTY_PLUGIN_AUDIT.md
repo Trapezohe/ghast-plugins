@@ -172,7 +172,7 @@ verification.
 | windsor-ai | Windsor.ai | appConnector | MIT | official-source-verified | implemented-verified |
 | wix | Wix | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | yepcode | YepCode S.L. | appConnector | MIT | official-source-verified | implemented-verified |
-| zoho | Zoho | appConnector | MIT | official-source-research-required | not-implemented |
+| zoho | Zoho | appConnector | MIT | official-source-verified | implemented-verified |
 | zoom | Zoom | appConnector, skills, commands | MIT | official-source-verified | implemented-verified |
 | zoominfo | ZoomInfo | appConnector | MIT | official-source-research-required | not-implemented |
 

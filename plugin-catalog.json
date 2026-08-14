@@ -3760,6 +3760,36 @@
       "license": "MIT"
     },
     {
+      "id": "zoho",
+      "name": "zoho",
+      "description": "Query, manage, customize, and automate Zoho CRM through Zoho's official hosted MCP and read org/user access through Zoho's official SDK.",
+      "manifest": {
+        "name": "zoho",
+        "description": "Query, manage, customize, and automate Zoho CRM through Zoho's official hosted MCP and read org/user access through Zoho's official SDK.",
+        "author": {
+          "name": "Zoho Corporation",
+          "url": "https://www.zoho.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+        "repository": "https://github.com/zoho/zohocrm-python-sdk-8.0",
+        "upstreamRevision": "sdk-7dbcafa4f794+docs-c1e19ceac01d+oauth-10de99e7-f719809e-2d55b0d9-52d561f5",
+        "license": "Apache-2.0",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/zoho.zip",
+        "sha256": "06691e823616cd0abdb92e4c1bc6b0b42739babad276614575792a252352dba2"
+      },
+      "icon": "./plugins/zoho/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+      "repository": "https://github.com/zoho/zohocrm-python-sdk-8.0",
+      "license": "Apache-2.0"
+    },
+    {
       "id": "zoom",
       "name": "zoom",
       "description": "Build Zoom integrations and access meeting search, transcripts, recordings, assets, Team Chat, Canvas, Tasks, Whiteboard, and Revenue Accelerator through Zoom's official skills and MCP servers.",

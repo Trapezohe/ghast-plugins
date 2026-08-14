@@ -1,0 +1,18 @@
+{
+  "name": "zoho",
+  "version": "1.0.3-ghast.1",
+  "description": "Query, manage, customize, and automate Zoho CRM through Zoho's official hosted MCP and read org/user access through Zoho's official SDK.",
+  "category": "productivity",
+  "author": {
+    "name": "Zoho Corporation",
+    "url": "https://www.zoho.com"
+  },
+  "homepage": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+  "repository": "https://github.com/zoho/zohocrm-python-sdk-8.0",
+  "upstreamRevision": "sdk-7dbcafa4f794+docs-c1e19ceac01d+oauth-10de99e7-f719809e-2d55b0d9-52d561f5",
+  "license": "Apache-2.0",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "portStatus": "equivalent-hybrid-official-mcp-sdk"
+}

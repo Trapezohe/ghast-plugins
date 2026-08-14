@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 3,
-      "official-source-research-required": 30,
-      "official-source-verified": 116
+      "official-source-research-required": 29,
+      "official-source-verified": 117
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 116,
-      "not-implemented": 33
+      "implemented-verified": 117,
+      "not-implemented": 32
     }
   },
   "excludedOpenAIPlugins": [
@@ -12633,7 +12633,7 @@
     },
     {
       "id": "zoho",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Zoho",
@@ -12660,13 +12660,85 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.zoho.com"
+        "homepage": "https://www.zoho.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Zoho Corporation",
+          "officialRepository": "https://github.com/zoho/zohocrm-python-sdk-8.0",
+          "officialRevision": "sdk-7dbcafa4f794+docs-c1e19ceac01d+oauth-10de99e7-f719809e-2d55b0d9-52d561f5",
+          "license": "Apache-2.0",
+          "licenseEvidence": [
+            "Zoho's official zohocrm-python-sdk-8.0 repository at revision 7dbcafa4f794a5c07b92cfcd6be6ca2d903e2296 contains the Apache License 2.0 with SHA-256 cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30. Its README attributes the SDK to ZOHO CORPORATION PRIVATE LIMITED.",
+            "The official setup.py identifies zohocrmsdk8_0 7.0.0, Zoho CRM API Team, the official GitHub repository, and Apache Software License. The official PyPI wheel has SHA-256 0a12dc153a7ac063fafed2834dc91e93d151bd0c58fc5f8003ebcad772b915a1 and contains the same Apache-2.0 license.",
+            "The plugin preserves the official SDK wheel and seven pure-Python dependency wheels byte-for-byte. Their embedded licenses are extracted into plugins/zoho/licenses: Requests Apache-2.0; urllib3, charset-normalizer, and six MIT; idna BSD-3-Clause; python-dateutil Apache-2.0 and BSD-3-Clause; certifi MPL-2.0.",
+            "The Ghast-authored manifest, remote MCP declaration, read-only SDK adapter, safety skill, documentation, notice, and generic icon are distributed under Apache-2.0. No Zoho hosted MCP implementation, private Codex connector, CRM data, OAuth credential, trademarked logo, or marketplace artwork is copied."
+          ],
+          "officialityEvidence": [
+            "Zoho's official CRM MCP overview has raw SHA-256 c1e19ceac01d59e7d12aea921cfcb61930f85f03a551df3ab35aa2c8c4287237 and states that Zoho provides four pre-built servers: Data Insights, Data Operations, Module Customization, and Workflow & Process Automation.",
+            "Zoho's official VS Code and Claude setup pages have raw SHA-256 fdda793cfdd72fb8a9ab394d8326914a53fe1f0801c71fb1ef91d45aabcbb82d and 86aca1f932b534099b0d478036d670a3f74f45c3e06b0bfd34b42ccbb7ce3b7e and publish the exact four Streamable HTTP endpoints packaged by Ghast.",
+            "The official overview documents read-only COQL, module and field discovery; record CRUD, bulk and related-record operations; custom modules, fields and layouts; and workflow rules, ordering, tasks, and configuration.",
+            "The four protected-resource documents identify their exact Zoho MCP resources and authorization servers. Their canonical JSON SHA-256 hashes are 10de99e7dcf5cf7ad9ab7d4514905b62d325b9b56b952bb00bb5b107cced710c, f719809e361bab2ec471a80cb9807b953673a8fd26de3d9afb57d510411795d9, 2d55b0d965be920995bfedef03d6ac93006cf9f0ecc8f20735db306fe0f3d718, and 52d561f557b1a217d9dc961e02d34bdeb0853c6e7c94a614b0b0390fa0e0e364.",
+            "The four authorization-server documents have canonical JSON SHA-256 hashes 170739f95d33e99f1923d74c4242c1d7d2207cee524830a7947a6ea0925870d6, 80e55fc821bd109d68918a8c763ceb9392797979e5c4790e84aafb8be5532806, 92a812daea9f702ae2abe2dcc65853e191892e426712b78662955790f0c5f6b4, and 2ebe0fa4398ad115a66d50285404fcc6ac58fcbec07c5ad2baeb4a4a306c9fbd. They publish dynamic registration, authorization-code and refresh-token grants, public clients, and PKCE S256.",
+            "The current scope inventories contain 22 Data Insights, 83 Data Operations, 12 Module Customization, and 7 Automation scopes. Their sorted scope-name SHA-256 hashes are 6b51404642fbda3e9af4aa1e9976bb727bf2d4b7d459884e5508cf994c4f3d1a, 592f169e8cb49cf52c27ea1d70720cbe88098cae04a9caf8e99a5084c19815de, b3a16fc663cb907e94d0d4db54ec5edaea72a90b9a6dffc5b9096b468dbbc1bd, and 1d881e90cda30a156f067af1fa811b892e10e76dbf57b973bcd49b1e04c33dcc.",
+            "On August 14, 2026, unauthenticated initialize calls to all four endpoints returned HTTP 401, the exact official protected-resource challenges, and body SHA-256 0fcfb12dfad07ba0b1ab80f7cd6c6c3c5aaea0804be09faee6ca0819e3769659.",
+            "On August 14, 2026, four disposable public loopback clients registered with HTTP 200, token endpoint authentication method none, and no client secret, then redirected through PKCE to Zoho's official https://mcp.zoho.in/baas/mcp/v1/login route. No login, code, token, account, record, user, or credential was retained.",
+            "The hosted MCP scope lists omit ZohoCRM.org.READ and ZohoCRM.users.READ. Zoho's official Users and Organization API v8 pages, raw SHA-256 7f4a7939702cefb97a875d32daf148754100cb89ad16a62d987dccba77a7be5a and 66d54af619ba140c199d9f7cc079fd306d72de49dff2639bc27c5c33f40a8f17, publish GET /users and GET /org with those read scopes.",
+            "Zoho's official SDK revision 7dbcafa4f794a5c07b92cfcd6be6ca2d903e2296 has Git tree b3b7f3ca3a1270d2458f3101164da08abd87b836 and 15,578 files. Its official samples and generated operations implement get_users, get_user, and get_organization.",
+            "OpenAI's pinned snapshot identifies Zoho as developer, maps the private app ID asdk_app_6a193ef5e804819197c25f88d92d6bf7, and asks for open-deal risk, account contacts and activities, and organization settings and user access."
+          ],
+          "codexCapabilities": [
+            "Search open deals closing in a requested quarter and summarize the highest-risk opportunities",
+            "Find contacts at an account and summarize recent activities",
+            "Retrieve organization settings and users for an access audit",
+            "Manage broader Zoho CRM sales workflows through a private app connector"
+          ],
+          "ghastCapabilities": [
+            "Use Zoho's official read-only Data Insights MCP for COQL, records, modules, fields, filtering, sorting, grouping, pagination, deal reviews, account contacts, and activity context",
+            "Use a bundled read-only adapter over Zoho's official v8 SDK for organization details, paginated user inventories, individual users, roles, profiles, reporting lines, status, confirmation state, locale, and access-audit context",
+            "Use Zoho's official Data Operations MCP for record create, read, update, delete, bulk, related-record, module, field, and COQL operations after exact confirmation",
+            "Use Zoho's official Module Customization and Automation MCP servers for modules, fields, layouts, workflow rules, ordering, workflow tasks, and workflow configuration after exact confirmation",
+            "Connect through four independent standards-based browser OAuth flows and use separately managed official SDK access or refresh-token credentials only for the missing organization and user read scopes"
+          ],
+          "capabilityRelationship": "equivalent-hybrid-official-mcp-sdk-plus-broader-official-crud-customization-automation",
+          "limitations": [
+            "Zoho operates the four hosted MCP implementations and does not publish their server source. Ghast redistributes only official licensed SDK wheels, dependency wheels, their license texts, and independently authored adapter files.",
+            "A Zoho CRM account, correct organization, data center, environment, OAuth authorization, CRM role, profile, permissions, edition, feature access, API credits, quotas, and service availability remain user-managed.",
+            "Authenticated MCP tools/list, CRM records, organization data, user data, writes, customization, and workflow operations were not executed because no Zoho CRM account or credential was supplied.",
+            "The four hosted MCP servers use separate OAuth issuers and clients. Authorizing Data Insights does not automatically authorize Data Operations, Module Customization, Automation, or the SDK supplement.",
+            "Data Operations currently requests 83 broad create, read, update, and delete scopes. Module Customization and Automation can change schemas and future business behavior. Ghast prefers Data Insights for reads and requires exact-target review plus CONFIRM ZOHO for every mutation.",
+            "The SDK supplement requires a separately created Zoho OAuth client or access token with ZohoCRM.org.READ and/or ZohoCRM.users.READ. It never creates a client, obtains a grant or refresh token, or stores refreshed tokens beyond process memory.",
+            "Zoho access and refresh tokens are data-center and environment specific. The adapter supports US, EU, IN, AU, JP, CA, CN, and SA production, sandbox, and developer environments and fails when configuration is missing or malformed.",
+            "The adapter intentionally omits signatures, phone numbers, mobile numbers, addresses, and other unrelated user fields from access-audit output, but names, emails, roles, profiles, reporting lines, and organization metadata remain sensitive.",
+            "MCP calls consume ordinary Zoho CRM API credits. Pagination, rate limits, permissions, stale fields, custom module schemas, workflow effects, and ambiguous writes must be handled from live responses.",
+            "The package includes certifi's MPL-2.0 certificate bundle and other dependencies under their own licenses. The extracted texts in plugins/zoho/licenses remain authoritative for those wheel contents.",
+            "A generic multi-color CRM grid icon is used because OpenAI's marketplace artwork and Zoho trademarks are not redistributed."
+          ],
+          "verification": [
+            "python3 scripts/import-zoho-plugin.py --sdk-source ../upstreams/zohocrm-python-sdk-8.0 --openai-source ../openai-plugins",
+            "Verify official SDK revision 7dbcafa4f794a5c07b92cfcd6be6ca2d903e2296, tree b3b7f3ca3a1270d2458f3101164da08abd87b836, clean worktree, 15,578 files, setup metadata, Apache-2.0 license, and pinned Users and Organization sample hashes",
+            "Verify all five official documentation raw hashes, all four exact hosted endpoints, all four OAuth protected-resource and authorization-server canonical hashes, and all four sorted scope inventories",
+            "Probe all four endpoints with MCP initialize and require HTTP 401, the exact protected-resource challenge, and body SHA-256 0fcfb12dfad07ba0b1ab80f7cd6c6c3c5aaea0804be09faee6ca0819e3769659",
+            "For a deliberate one-time OAuth portability audit, add --verify-registration; register four disposable public loopback clients and require HTTP 200, no client secret, PKCE S256, and redirect to Zoho's official MCP login route. Routine imports omit this flag.",
+            "Verify all eight bundled wheel SHA-256 hashes and byte-compare each extracted license text with its wheel member",
+            "python3 plugins/zoho/skills/zoho/scripts/zoho_crm_admin_read.py --self-test",
+            "Run the SDK helper without credentials and require a structured missing-credential failure without token files, network calls to CRM, or secret output",
+            "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 developer identity, private app ID, all three prompts, all three file hashes, and no redistribution of its app mapping or artwork",
+            "python3 scripts/build-ghast-catalog.py",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/zoho.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": "https://github.com/zoho/zohocrm-python-sdk-8.0",
+        "upstreamRevision": "sdk-7dbcafa4f794+docs-c1e19ceac01d+oauth-10de99e7-f719809e-2d55b0d9-52d561f5",
+        "portStatus": "equivalent-hybrid-official-mcp-sdk"
       }
     },
     {
