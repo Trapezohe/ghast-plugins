@@ -8917,10 +8917,62 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.networksolutions.com/"
+        "homepage": "https://www.networksolutions.com/",
+        "review": {
+          "verificationStatus": "official-source-research-required",
+          "officialDeveloper": "Network Solutions",
+          "officialRepository": null,
+          "officialRevision": "network-solutions-domain-advisor-2026-07-14+partner-faq-5ca154c5e092+partner-msa-b0efef9fb7dd+newfold-terms-ec51d68f8b08",
+          "license": "UNVERIFIED",
+          "licenseEvidence": [
+            "The MIT label in OpenAI's Codex manifest covers the three-file marketplace snapshot, not Network Solutions' private app connector, hosted service, XML Partner Protocol, technical documentation, domain-availability data, or trademarks.",
+            "Newfold's official Terms of Use PDF, last updated January 21, 2025 and verified by SHA-256 ec51d68f8b084012454e8222491ca4dbc19bc1f4faf735f4025e704f4a8d2cae, prohibits unauthorized bots or automated access, copying or derivative use of site content, redistribution, and reproduction of marks without prior written consent.",
+            "The official Network Solutions Partner Agreement PDF, verified by SHA-256 b0efef9fb7ddcf530b455cfef654de322a612b8f4f41068b026bf73d131a20b8, grants approved partners a non-transferable, non-sublicensable, revocable contract license; restricts lookup use to requested-domain availability for registration business; prohibits high-volume automated lookup and redistribution of gathered data; and treats the protocol, Interface Tools, and technical details as confidential.",
+            "No open-source license, public SDK license, public API schema, MCP implementation license, brand-asset license, or written adapter redistribution permission was located as of August 14, 2026."
+          ],
+          "officialityEvidence": [
+            "Network Solutions' official product-update page identifies Domain Advisor as a free public product released July 14, 2026. It accepts a business, brand, or goal description and returns AI-generated domain recommendations with current availability and pricing.",
+            "Network Solutions' official domain-search page describes cross-extension availability checks, AI suggestions, alternatives when a name is taken, and a path to registration. This matches the Codex experience at the retail product level.",
+            "The official Partner FAQ, with normalized visible-text SHA-256 5ca154c5e0921dae288b5520266fc03d8965d4c346e8fee9a225929b0d75d0e1, states that the Partner Protocol is an XML API and software development kit for language-agnostic, real-time domain registration, renewal, and management integrations.",
+            "The official Partner how-to index, with normalized visible-text SHA-256 fa530fa8f51c29677b65043dc6c8b9fb4c33fe43a37887c29ab49bf257d4f3da, exposes Partner Portal workflows for registration, bulk operations, lookup and update, renewal, transfers, billing, DNS, and deletion, but does not publish the XML transaction schemas needed to build an independent client.",
+            "The Partner Agreement says access to Interface Tools follows partner application and credit approval and classifies protocol technical details as confidential. The public wholesale materials describe a reseller program rather than an open developer API.",
+            "No developer-controlled public Network Solutions MCP server, source repository, installable domain-search SDK, OpenAPI document, public transaction schema, or standalone OAuth onboarding flow was located. Newfold's public GitHub organization does not contain a capability-equivalent Network Solutions domain-search client.",
+            "OpenAI's pinned snapshot identifies Network Solutions as developer, maps private app ID asdk_app_6944288d82108191a97261e0be991d3a, and contains only a manifest, private app mapping, and marketplace icon. Its complete path, content, and size inventory SHA-256 is 88321c5dc45611168f3fc90c6ffa314bf61894eaedb234ee19528984cd22aba7."
+          ],
+          "codexCapabilities": [
+            "Accept a plain-language business, project, brand, or domain idea",
+            "Check domain availability across relevant top-level-domain extensions",
+            "Suggest and refine brand-ready alternatives when requested names are unavailable",
+            "Surface options described as currently available and ready to register"
+          ],
+          "ghastCapabilities": [
+            "No Network Solutions plugin is published because neither the retail Domain Advisor nor the partner XML protocol currently provides a public, redistributable, independently authenticatable integration contract that Ghast can lawfully and reliably implement."
+          ],
+          "capabilityRelationship": "blocked-official-retail-product-and-confidential-partner-api",
+          "limitations": [
+            "The public Domain Advisor remains a human-facing retail service. Ghast must not scrape, automate, proxy, or imitate its private web requests under the published Newfold terms.",
+            "The XML Partner Protocol is official but requires an approved wholesale partner relationship, credit review, contract acceptance, credentials, and confidential documentation. A user's ordinary Network Solutions retail login is not sufficient.",
+            "The protocol agreement does not authorize Ghast to redistribute its schema, documentation, client implementation, lookup results, credentials, or Interface Tools, and it expressly limits domain lookup purpose and volume.",
+            "No authenticated Partner Protocol transaction was attempted because no approved partner account, public schema, or user credential was available. The private Codex app connector was not reverse engineered or reused.",
+            "A future implementation requires Network Solutions to provide a public or partner-approved distributable client contract, written authorization for the intended use, and separately managed partner credentials. It must initially expose only low-volume availability lookup unless registration, billing, renewal, transfer, DNS, and deletion operations receive separate legal and safety review.",
+            "Domain availability and quoted prices can change and do not reserve a name. Any future registration or account mutation must show the exact domain, term, price, renewal terms, contacts, and side effects and require explicit confirmation.",
+            "Suggested names can conflict with trademarks or regulated terms. A future workflow must distinguish availability from legal clearance and must not represent a suggestion as trademark-safe.",
+            "No icon is generated or copied while the plugin is blocked. OpenAI's marketplace artwork and Network Solutions marks are not redistribution evidence."
+          ],
+          "verification": [
+            "python3 scripts/audit-network-solutions-plugin.py --openai-source ../openai-plugins",
+            "Verify official Partner FAQ and how-to normalized-text hashes and the XML API, SDK, registration, lookup, bulk-operation, and deletion markers",
+            "Verify the official Partner Agreement and Newfold Terms PDF byte lengths, content types, and SHA-256 hashes",
+            "Manually re-read the current official Domain Advisor product update, domain-search page, Partner Agreement restrictions, and Newfold automated-access terms before changing this decision",
+            "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9, all three file hashes, complete inventory hash, developer identity, private app ID, and domain-discovery capability statements",
+            "Confirm plugins/network-solutions and packages/network-solutions.zip remain absent",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py"
+          ]
+        }
       },
       "ghast": {
         "implementationStatus": "not-implemented"
