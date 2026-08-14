@@ -7583,6 +7583,58 @@
         "python3 scripts/validate-ghast-repository.py",
         "unzip -tqq packages/s-p.zip"
       ]
+    },
+    "third-bridge": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Third Bridge Group",
+      "officialRepository": null,
+      "officialRevision": "third-bridge-product-bf1236211eda+perspective-1f9806d35d86+terms-e67b1be8a3b2+resource-b9f0d6089ef8+oauth-86f728864e88+boundary-9b099d6c7817",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/third-bridge/LICENSE licenses only the independently authored Ghast endpoint declaration, safety skill, metadata, documentation, and generic expert-research icon.",
+        "Third Bridge's official MCP terms keep all intellectual-property rights in Third Bridge Content with Third Bridge and prohibit bulk extraction. No hosted-server source, transcript, Content, private connector, credential, response, documentation text, logo, trademark, citation, or customer data is redistributed."
+      ],
+      "officialityEvidence": [
+        "Third Bridge's official MCP product page says the service connects LLM agents directly to its Library, ingests proprietary expert transcripts in real time, provides citation-backed retrieval, and uses standards-based MCP for ChatGPT and Claude. Its pinned semantic core SHA-256 is bf1236211eda2e3f2c070eb183442065022162d72c020fc3a2d1ffcfd0c2893e.",
+        "Third Bridge's official perspective says clients can connect their own internal AI models, describes LLM neutrality across ChatGPT, Claude, ModelML, and other applications, and identifies a Library of more than 100,000 expert interview transcripts. Its pinned core SHA-256 is 1f9806d35d86ed7f1a0ca01730be14ef72afdf635053b0de0aa1b933fdca8eee.",
+        "The official pilot terms require an existing company Content agreement, a commercial or enterprise LLM subscription that prohibits model training on inputs and outputs, and no bulk extraction. They describe a two-week pilot, retain Content IP with Third Bridge, disclaim LLM response accuracy and completeness, and permit suspension. The pinned core SHA-256 is e67b1be8a3b240aa35d670024d7c65fd8783ce5c4e3d3719b06defb6ab8aa432.",
+        "The live official MCP endpoint is https://ai.thirdbridge.com/mcp/sse. Canonical protected-resource and authorization-server metadata SHA-256 values are b9f0d6089ef82df918685f429e3b6cfba51381edd98d2b8ecc5258f18cdee20e and 86f728864e881d91188dab23e0071bce92d94c994a769437989845686383e11e.",
+        "The OAuth contract publishes browser authorization, refresh tokens, public clients, dynamic registration, and PKCE S256. On August 14, 2026, one disposable loopback client registered with HTTP 200 and authorization routed to https://sso-auth.thirdbridge.com/authorize. No returned client value, authorization code, token, login, or account data was retained.",
+        "Anonymous MCP initialization returned HTTP 401, the official protected-resource challenge, and canonical timestamp-free body SHA-256 9b099d6c78175c0e23613161d249540794ef9f6c60f2a6e2e97f0193f75d69bb.",
+        "OpenAI's pinned snapshot identifies Third Bridge Group as developer, maps private app ID asdk_app_6983505f8b9c8191a2e6f104325b1f20, and describes expert content, financial and business analysis, and competitive analysis. Its complete inventory SHA-256 is 7a61b43298763325b3cb153e436eb166102190162cecff4000c71fbef3d9c5c5."
+      ],
+      "codexCapabilities": [
+        "Query Third Bridge's expert-content Library for financial and business analysis",
+        "Incorporate industry-expert context and trusted insights into competitive analysis and research workflows",
+        "Retrieve and synthesize proprietary content securely through Third Bridge's managed MCP connector"
+      ],
+      "ghastCapabilities": [
+        "Connect directly to Third Bridge's official model-neutral hosted MCP using public browser OAuth instead of OpenAI's private app ID",
+        "Use the official published surface for real-time expert-transcript retrieval, synthesis, contextualization, citation-backed insight, and institutional research, subject to account entitlements",
+        "Apply eligibility, no-training, no-bulk-extraction, citation, quotation, transcript-context, confidentiality, retention, and no-unofficial-fallback safeguards"
+      ],
+      "capabilityRelationship": "equivalent-at-official-published-model-neutral-mcp-surface",
+      "limitations": [
+        "Third Bridge does not publish the hosted MCP implementation, an open-source service license, an authenticated tool inventory, or tool schemas. The MIT license applies only to the Ghast-authored adapter materials.",
+        "A company Third Bridge Content agreement, MCP pilot or production approval, SSO access, a qualifying commercial or enterprise LLM agreement, and account entitlements are required. The public terms describe a two-week pilot unless Third Bridge extends access.",
+        "Authenticated tools/list and transcript retrieval were not exercised because no user Third Bridge account was supplied. Exact tool names, schemas, filters, result limits, citation fields, and workspace coverage remain server-controlled.",
+        "The official endpoint path ends in /sse but accepts standard MCP POST initialization and advertises OAuth metadata. Host transport compatibility still depends on the installed MCP client.",
+        "Third Bridge Content must not be bulk extracted, mirrored, used for model training, or redistributed outside rights granted by the company Content agreement. Full transcripts and long passages are not reproduced by this plugin.",
+        "Expert interviews can be anecdotal, dated, incomplete, biased, or context-specific. Citation-backed results and generated synthesis still require verification and are not investment, legal, tax, accounting, compliance, or transaction advice.",
+        "A generic expert-research icon is used because Third Bridge and OpenAI marketplace artwork is not redistributed."
+      ],
+      "verification": [
+        "python3 scripts/import-third-bridge-plugin.py --openai-source ../openai-plugins",
+        "Verify the three official semantic page cores with SHA-256 bf1236211eda2e3f2c070eb183442065022162d72c020fc3a2d1ffcfd0c2893e, 1f9806d35d86ed7f1a0ca01730be14ef72afdf635053b0de0aa1b933fdca8eee, and e67b1be8a3b240aa35d670024d7c65fd8783ce5c4e3d3719b06defb6ab8aa432",
+        "Verify protected-resource and authorization-server canonical hashes, official endpoint, issuer, scopes, public-client support, dynamic registration, authorization-code and refresh-token grants, and PKCE S256",
+        "Probe MCP initialize without credentials and require HTTP 401, the official resource challenge, and canonical timestamp-free body hash 9b099d6c78175c0e23613161d249540794ef9f6c60f2a6e2e97f0193f75d69bb",
+        "For a deliberate one-time OAuth portability audit, add --verify-registration and require disposable loopback registration plus routing to Third Bridge SSO; retain no returned client value",
+        "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9, all three file hashes, inventory hash, developer identity, private app ID, and capability markers",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/third-bridge.zip"
+      ]
     }
   }
 }

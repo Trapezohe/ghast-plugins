@@ -3787,6 +3787,34 @@
       "license": "Apache-2.0"
     },
     {
+      "id": "third-bridge",
+      "name": "third-bridge",
+      "description": "Search and synthesize Third Bridge expert interview transcripts through Third Bridge's official hosted MCP.",
+      "manifest": {
+        "name": "third-bridge",
+        "description": "Search and synthesize Third Bridge expert interview transcripts through Third Bridge's official hosted MCP.",
+        "author": {
+          "name": "Third Bridge Group",
+          "url": "https://www.thirdbridge.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://www.thirdbridge.com/en-us/data-solutions/mcp",
+        "upstreamRevision": "third-bridge-product-bf1236211eda+perspective-1f9806d35d86+terms-e67b1be8a3b2+resource-b9f0d6089ef8+oauth-86f728864e88+boundary-9b099d6c7817",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/third-bridge.zip",
+        "sha256": "e58d796bd05642018d7459767a63b265222745423a472faa0ea8bfdf330d7faf"
+      },
+      "icon": "./plugins/third-bridge/assets/icon.svg",
+      "category": "finance",
+      "homepage": "https://www.thirdbridge.com/en-us/data-solutions/mcp",
+      "license": "MIT"
+    },
+    {
       "id": "thoughtspot",
       "name": "thoughtspot",
       "description": "Search governed ThoughtSpot content, run conversational analytics, explain business drivers, and safely save approved analyses as dashboards.",
