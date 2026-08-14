@@ -2708,6 +2708,34 @@
       "license": "MIT"
     },
     {
+      "id": "particl-market-research",
+      "name": "particl-market-research",
+      "description": "Research ecommerce companies, products, sales, marketing, events, pricing, and market trends through Particl's official hosted MCP.",
+      "manifest": {
+        "name": "particl-market-research",
+        "description": "Research ecommerce companies, products, sales, marketing, events, pricing, and market trends through Particl's official hosted MCP.",
+        "author": {
+          "name": "Particl, Inc. / Luz Data, Inc.",
+          "url": "https://www.particl.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://www.particl.com/docs/mcp",
+        "upstreamRevision": "particl-mcp-docs-056a86db22ab+resource-4e5cdc1335e1+oauth-3d14cf05fde7+oidc-contract-4d6a87df4a90+privacy-7e50e2501392",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/particl-market-research.zip",
+        "sha256": "213a0b50cd53d3ead81ec3eb1563c67a52af153d008375928b03dafabad76f22"
+      },
+      "icon": "./plugins/particl-market-research/assets/icon.svg",
+      "category": "data",
+      "homepage": "https://www.particl.com/docs/mcp",
+      "license": "MIT"
+    },
+    {
       "id": "picsart",
       "name": "picsart",
       "description": "Generate and edit images, video, audio, and motion graphics through Picsart's official skills, CLI workflows, and hosted MCP servers.",

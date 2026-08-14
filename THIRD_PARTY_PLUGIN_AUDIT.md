@@ -124,7 +124,7 @@ verification.
 | omni-analytics | Omni Analytics | appConnector | MIT | official-source-verified | implemented-verified |
 | otter-ai | Otter.ai | appConnector | MIT | official-source-verified | implemented-verified |
 | outreach | Outreach | appConnector | MIT | official-source-verified | implemented-verified |
-| particl-market-research | Particl | appConnector | MIT | official-source-research-required | not-implemented |
+| particl-market-research | Particl | appConnector | MIT | official-source-verified | implemented-verified |
 | picsart | Picsart | appConnector | MIT | official-source-verified | implemented-verified |
 | pitchbook | PitchBook | appConnector | MIT | official-source-research-required | not-implemented |
 | policynote | FiscalNote | appConnector | MIT | official-source-research-required | not-implemented |

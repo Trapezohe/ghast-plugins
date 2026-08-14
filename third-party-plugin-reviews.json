@@ -6894,6 +6894,67 @@
         "python3 scripts/validate-ghast-repository.py",
         "unzip -tqq packages/myregistry-com.zip"
       ]
+    },
+    "particl-market-research": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Particl, Inc. / Luz Data, Inc.",
+      "officialRepository": null,
+      "officialRevision": "particl-mcp-docs-056a86db22ab+resource-4e5cdc1335e1+oauth-3d14cf05fde7+oidc-contract-4d6a87df4a90+privacy-7e50e2501392",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/particl-market-research/LICENSE licenses only the Ghast-authored MCP declaration, workflow, metadata, documentation, and generic ecommerce-research icon.",
+        "No Particl hosted-server implementation, private Codex connector, credential, customer data, API response, developer documentation, web content, product image, marketing asset, logo, or trademark is redistributed.",
+        "Particl's Services Agreement grants the customer a limited, non-assignable, non-sublicensable, non-transferable API and data right for internal business purposes. The plugin does not grant service access, sublicense Particl data, or relax those terms."
+      ],
+      "officialityEvidence": [
+        "Particl's official MCP overview says its hosted server connects Particl retail intelligence to ChatGPT, Claude, Cursor, VS Code, and any MCP-enabled client.",
+        "The official quickstart publishes the exact endpoint https://mcp.particl.com/mcp and browser sign-in flow; the authentication page publishes dashboard API-key generation, Bearer header use, 100 requests per 60 seconds, and export-credit costs.",
+        "The official tools reference currently publishes 17 ordered tool names with SHA-256 f7d2a759ce3796c621687e20bb667ea570bc2e1042636fc1322170d5af96d78b covering company, product, sales, marketing, event, pricing, and market workflows.",
+        "The normalized official MCP overview, quickstart, authentication, tools, connector privacy, Services Agreement, and privacy-policy SHA-256 values are 087140070d1d694ab866b83d642ba0da752760d0ad17771f4ca5d5e49c1d6789, d851a7351c3764caab1bebd8e36a0ed6e8ede4014659fe6f8879b72f67f71a70, b89236b5337b5f0fe9ffe8d524db609c49459712be9252392e7299118cf5d0ce, 056a86db22ab6df8d328022812b1d529edd8f21415e917b420f9bbf51a731b9e, 8fd586ca5377d75fe18bfb277ffc0e27b254bcab5bcbcfb51774de6cfe2c4319, d1ceeb59a06af22f1eab72087446d68000ec8f0b4cf26f475df878e41ef0dfb3, and 7e50e2501392ae795d1db706f44073099d46a2e25cbb0dc91a47d71f9600344c.",
+        "On August 14, 2026, unauthenticated MCP initialization returned HTTP 401, body SHA-256 6b253a09b47fc4eafc3f2bc4509a3254319aee62feddb26fd03a23c9d3e89920, and the exact official protected-resource challenge.",
+        "The canonical protected-resource and OAuth authorization-server metadata SHA-256 values are 4e5cdc1335e101c19a5dba53bf85f3ebe9cd951f8e920437b177dfa7a4a6aedf, and 3d14cf05fde74b930ba9028e088c87cad7e21d6f42fb3acf77a57acb3d7d906e. The order-normalized OIDC portability-contract SHA-256 is 4d6a87df4a901f83f55f88735e8b91d4ac217cb779536b6ef70eaea47ef35577. Together they publish dynamic registration, public clients, authorization code and refresh token grants, and PKCE S256.",
+        "A disposable loopback public client registered with HTTP 201 and no client secret, then routed authorization to the official accounts.particl.com sign-in page. No login, code, token, account, or credential was retained.",
+        "OpenAI's pinned snapshot identifies Particl as developer, maps private app ID asdk_app_69a0ebc137fc8191a31ea04dadda2208, and describes company, product, variant, market, marketing, event, sales-timeseries, and product-mix capabilities. Its complete file inventory SHA-256 is f408b5c843a4864695264907f61d2814f399deee7b0e079ae00e61a6e81c5053."
+      ],
+      "codexCapabilities": [
+        "Discover companies and research company product catalogs",
+        "Inspect product details, variants, pricing, reviews, and product mix",
+        "Find market leaders and analyze market trends, pricing, and sales",
+        "Discover marketing assets and track retail launches, sales, restocks, discounts, and price changes",
+        "Retrieve sales timeseries and structured Particl market intelligence through an authenticated private app connector"
+      ],
+      "ghastCapabilities": [
+        "Use all 17 currently documented Particl tools through the official hosted MCP endpoint and standard browser OAuth",
+        "Resolve companies and taxonomies, inspect credit balance, company details, catalogs, products, variants, breakdowns, and sales timeseries",
+        "Retrieve marketing asset lists and details, marketing statistics, and company retail events",
+        "Analyze top products, top companies, category pricing, and aggregate market sales with explicit date and credit controls",
+        "Apply internal-use, source-quality, rate-limit, credit-confirmation, data-retention, and no-redistribution safeguards"
+      ],
+      "capabilityRelationship": "equivalent-official-mcp-transport",
+      "limitations": [
+        "Particl operates the hosted MCP server and does not publish its implementation source or an open-source service license. Ghast packages only an endpoint declaration and independent guidance.",
+        "A Particl account, business email, eligible plan, export credits, OAuth approval or dashboard API key, dataset access, historical window, tracked-company coverage, and service availability remain user-managed.",
+        "Authenticated tools/list and data calls were not executed because no Particl account or credential was supplied. The static official 17-tool reference, OAuth metadata, registration, sign-in routing, and unauthenticated boundary were verified.",
+        "Most tools consume export credits per row, call, or data point. Credit balance, estimated cost, pagination, dates, result limits, and stopping conditions must be checked before broad workflows.",
+        "Particl market data can be estimated, delayed, incomplete, or coverage-dependent. Market tools use a trailing 30-day window and default to an end date approximately two days before the call.",
+        "The connector documentation says whole conversations and generated answers are not logged, while the current privacy policy says tool parameters, outputs, usage records, tool-call logs, and HTTP logs are processed and some are retained indefinitely. The plugin uses the stricter privacy-policy boundary.",
+        "Particl terms limit API access and data to internal business use and prohibit redistribution, service-bureau use, scraping, circumvention, and competing-product reconstruction.",
+        "Marketing assets, product images, reviews, advertisements, emails, and third-party materials can have separate rights. The plugin does not authorize bulk reproduction or publication.",
+        "A generic ecommerce-research icon is used because Particl logos and OpenAI marketplace artwork are not redistributed."
+      ],
+      "verification": [
+        "python3 scripts/import-particl-plugin.py --openai-source ../openai-plugins",
+        "Verify all seven normalized official document hashes and their hosted-service, endpoint, client, authentication, tool-category, credit, privacy, internal-use, and retention markers",
+        "Extract the 17 ordered tool names from the official tool reference and require SHA-256 f7d2a759ce3796c621687e20bb667ea570bc2e1042636fc1322170d5af96d78b",
+        "Verify canonical protected-resource and authorization-server metadata hashes plus the order-normalized OIDC portability-contract hash, issuer, dynamic-registration endpoint, public clients, grants, and PKCE S256",
+        "Probe MCP initialize without credentials and require HTTP 401, the exact protected-resource challenge, and body hash 6b253a09b47fc4eafc3f2bc4509a3254319aee62feddb26fd03a23c9d3e89920",
+        "For a deliberate one-time OAuth portability audit, add --verify-registration and require a disposable loopback public client with no secret plus routing to Particl sign-in",
+        "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9, all four file hashes, complete inventory hash, Particl identity, private app ID, default prompt, and capability description",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/particl-market-research.zip"
+      ]
     }
   }
 }
