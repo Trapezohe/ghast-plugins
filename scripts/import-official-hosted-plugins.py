@@ -3229,6 +3229,131 @@ DATASITE_OPENAI_HASHES = {
 DATASITE_OPENAI_INVENTORY_SHA256 = (
     "3ad7ae4281a9b5238e22cf391485233dcece3b0967bab5ede1c284ccf0280316"
 )
+DNB_CONNECTORS_URL = (
+    "https://www.dnb.com/en-us/solutions/artificial-intelligence/connectors.html"
+)
+DNB_MCP_PRODUCT_URL = (
+    "https://www.dnb.com/en-us/solutions/artificial-intelligence/"
+    "connectors/dnb-mcp.html"
+)
+DNB_PRESS_RELEASE_URL = (
+    "https://www.dnb.com/content/dam/web/company/content/newsroom/"
+    "corporate/2026/2026-06-03.pdf"
+)
+DNB_TERMS_URL = "https://www.dnb.com/en-us/utilities/terms-service-phoenix.html"
+DNB_MICROSOFT_CONNECTOR_URL = (
+    "https://learn.microsoft.com/en-us/connectors/"
+    "dunandbradstreetmcps/?accept=text/markdown"
+)
+DNB_CONNECTORS_CORE_SHA256 = (
+    "eb141895b73ae74684227609fd0b82800310eca0bd5812c2b709b74e7a574ac0"
+)
+DNB_MCP_PRODUCT_CORE_SHA256 = (
+    "80a387a8ecd2426ba15e7c9f3af83a76d3bdb5477a0d856cb3239ebef35263be"
+)
+DNB_PRESS_RELEASE_SHA256 = (
+    "36ceb6558d649ab1dc8dd1b10a6367699f3a61560e78f36263fadba622294eca"
+)
+DNB_TERMS_CUSTOMER_DATA_SHA256 = (
+    "85c9475de1c0afa64e3f493960d7fa0ac70906989a42c4679baae311b8303fed"
+)
+DNB_MICROSOFT_CONNECTOR_CORE_SHA256 = (
+    "fe6cbfd0d86af05fa0b492429b268a395530b55927ccc4fc4a963f9db9c60977"
+)
+DNB_FINANCE_ANALYTICS_URL = "https://financeanalytics.dnb.com"
+DNB_UNPUBLISHED_CONFIG_URLS = (
+    f"{DNB_FINANCE_ANALYTICS_URL}/.well-known/oauth-protected-resource",
+    f"{DNB_FINANCE_ANALYTICS_URL}/.well-known/oauth-authorization-server",
+    f"{DNB_FINANCE_ANALYTICS_URL}/mcp",
+    f"{DNB_FINANCE_ANALYTICS_URL}/api/mcp",
+)
+DNB_OPENAI_REVISION = "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9"
+DNB_OPENAI_BASE_URL = (
+    "https://raw.githubusercontent.com/openai/plugins/"
+    f"{DNB_OPENAI_REVISION}/plugins/dnb-finance-analytics"
+)
+DNB_OPENAI_HASHES = {
+    ".app.json": (
+        "31cf4dca8dd662925cc1554ed3c55788b33fe0a01a3ff699adf00ce8a0d1a692"
+    ),
+    ".codex-plugin/plugin.json": (
+        "6c492a88f2e8f1d175d69ce5eb007104c3a51d7960f44e38e8061d00d3e38ba0"
+    ),
+    "assets/app-icon.png": (
+        "df2e7d0ca54f68d5bc16b81dce2fc2b915065774c3ed48937fbe420d756174e5"
+    ),
+    "skills/fa-jobs-to-be-done/SKILL.md": (
+        "92c69638e92479788548f5477d185b750f83b4f40d6a25d89c7533eefdd27dc8"
+    ),
+    "skills/fa-jobs-to-be-done/agents/openai.yaml": (
+        "ba7445749debd57fa2e9f667dce5ee3d558669eeba10956212b2a7ea0362400f"
+    ),
+    "skills/fa-jobs-to-be-done/assets/icon-large.png": (
+        "b62f349cd6ade21020f59a0188bd2bcdb66eed76b72b40c01f455aafb261a6a9"
+    ),
+    "skills/fa-jobs-to-be-done/assets/icon-small.png": (
+        "df2e7d0ca54f68d5bc16b81dce2fc2b915065774c3ed48937fbe420d756174e5"
+    ),
+    (
+        "skills/fa-jobs-to-be-done/fa-skills/references/"
+        "fa-alerts-monitoring.md"
+    ): (
+        "15c7aacb354156997a45bd3b6b7b9d2ac32b1badcbf69dc3076485a0999dfd38"
+    ),
+    (
+        "skills/fa-jobs-to-be-done/fa-skills/references/"
+        "fa-credit-decisioning.md"
+    ): (
+        "e40152296250b7c16244e704403d532da7a9d5283b816c9bf7965a905323593c"
+    ),
+    (
+        "skills/fa-jobs-to-be-done/fa-skills/references/"
+        "fa-credit-validation.md"
+    ): (
+        "6948ad67fefa12ce61db754813c5540115401e35123726fee57366afd86e4995"
+    ),
+    (
+        "skills/fa-jobs-to-be-done/fa-skills/references/"
+        "fa-onboarding-workflow.md"
+    ): (
+        "c858463080a26772c9ef2641d5ff344d564b320ca3bce22ebb38ccc30b075c7b"
+    ),
+    (
+        "skills/fa-jobs-to-be-done/fa-skills/references/"
+        "fa-plain-language.md"
+    ): (
+        "c858a0ddf4e23cb02a521c5572468966fe81bd87833545980d87968415064edc"
+    ),
+    (
+        "skills/fa-jobs-to-be-done/fa-skills/references/"
+        "fa-portfolio-management.md"
+    ): (
+        "c802c89558ab7a6014fdbd22c9cd84648174d6221fe0a7b8e503381d366843ee"
+    ),
+}
+DNB_OPENAI_INVENTORY_SHA256 = (
+    "1a923e4f5068c1e87315a6a937b80ea466d851ac3a73a88fa3e8f58a970bc819"
+)
+DNB_CODEX_TOOLS = (
+    "account_decisioning_tool",
+    "application_decisioning_tool",
+    "fa_search_tool",
+    "get_companies_and_accounts_count",
+    "get_company_ownership_tree",
+    "get_company_report",
+    "get_dashboard_overview",
+    "get_dashboard_status",
+    "get_live_report",
+    "get_portfolio_public_records",
+    "get_portfolio_status",
+    "get_risk_distribution",
+    "manage_folder",
+    "query_alerts",
+    "query_portfolio",
+)
+DNB_CODEX_TOOLS_SHA256 = (
+    "dfee2c8900a602bf3308e99b75c60beabb76e0349668d7f7f86bf45656b116c9"
+)
 DEMANDBASE_MCP_DOCS_URL = "https://developer.demandbase.com/docs/mcp.md"
 DEMANDBASE_CUSTOM_CLIENT_DOCS_URL = (
     "https://developer.demandbase.com/docs/custom-mcp-clients.md"
@@ -4128,6 +4253,7 @@ def main() -> int:
     verify_coveo_evidence()
     verify_cube_evidence()
     verify_datasite_evidence()
+    verify_dnb_finance_analytics_evidence()
     verify_demandbase_evidence()
     verify_thoughtspot_evidence()
     verify_outreach_evidence()
@@ -10609,6 +10735,219 @@ def verify_datasite_evidence() -> None:
             raise ValueError(
                 "Datasite MCP unexpectedly accepted audit credentials"
             )
+
+
+def verify_dnb_finance_analytics_evidence() -> None:
+    connectors_raw = fetch_text(DNB_CONNECTORS_URL)
+    connectors = fetch_visible_text(
+        DNB_CONNECTORS_URL,
+        "ChatGPT Connector for D&B Finance Analytics",
+    )
+    connectors_start = connectors.rfind("D&B Commercial Graph, Your LLM")
+    connectors_end = connectors.find(
+        "Put Agentic Workflows into Action Today",
+        connectors_start,
+    )
+    if connectors_start < 0 or connectors_end < 0:
+        raise ValueError("D&B AI connector page structure changed")
+    connectors_core = connectors[connectors_start:connectors_end].strip()
+    if sha256_text(connectors_core) != DNB_CONNECTORS_CORE_SHA256:
+        raise ValueError("D&B AI connector evidence changed")
+    for marker in (
+        "Connect your MCP-compatible runtime to the D&B Commercial Graph "
+        "with a single API key.",
+        "License select AI-Ready D&B Data Blocks",
+        "Partner MCP Connectors",
+        "ChatGPT Connector for D&B Finance Analytics",
+        "embedded AI decisioning layer",
+        "proprietary customer data and credit policies",
+        "Evaluate applications and set credit limits based on credit policies.",
+        "Review portfolios to uncover risk and opportunity.",
+        "Monitor changes in risk and prioritize follow-up actions.",
+        "Streamline credit workflows from assessment through ongoing "
+        "portfolio management.",
+        (
+            "https://chatgpt.com/apps/d-b-finance-analytics/"
+            "asdk_app_6a19c12f33e48191bbf02b9d58c49421"
+        ),
+    ):
+        if marker not in connectors_core and marker not in connectors_raw:
+            raise ValueError(
+                f"D&B AI connector evidence is missing {marker!r}"
+            )
+
+    product = fetch_visible_text(
+        DNB_MCP_PRODUCT_URL,
+        "Power Your AI Agents with Verified, Agent-Ready Business Data",
+    )
+    product_start = product.rfind(
+        "Power Your AI Agents with Verified, Agent-Ready Business Data"
+    )
+    product_end_marker = "Bring Trusted Data into Your AI"
+    product_end = product.find(product_end_marker, product_start)
+    if product_start < 0 or product_end < 0:
+        raise ValueError("D&B MCP product page structure changed")
+    product_core = product[
+        product_start : product_end + len(product_end_marker)
+    ].strip()
+    if sha256_text(product_core) != DNB_MCP_PRODUCT_CORE_SHA256:
+        raise ValueError("D&B MCP product evidence changed")
+    for marker in (
+        "D&B Commercial Graph through MCP Server",
+        "validated business identities",
+        "continuously updated commercial data",
+        "Assess and manage credit risk with confidence",
+    ):
+        if marker not in product_core:
+            raise ValueError(f"D&B MCP product evidence is missing {marker!r}")
+
+    press_release = fetch_bytes(DNB_PRESS_RELEASE_URL)
+    if sha256_bytes(press_release) != DNB_PRESS_RELEASE_SHA256:
+        raise ValueError("D&B OpenAI press release changed")
+
+    terms = fetch_visible_text(DNB_TERMS_URL, "D&B Finance Analytics")
+    terms_start = terms.find("12.2 To the extent")
+    terms_end = terms.find("13. Your Consent", terms_start)
+    if terms_start < 0 or terms_end < 0:
+        raise ValueError("D&B customer-data terms structure changed")
+    customer_data_terms = terms[terms_start:terms_end].strip()
+    if (
+        sha256_text(customer_data_terms)
+        != DNB_TERMS_CUSTOMER_DATA_SHA256
+        or "D&B Finance Analytics" not in customer_data_terms
+        or "you represent and warrant that you have all requisite rights"
+        not in customer_data_terms
+        or "grant D&B a license to store and use the Customer Data"
+        not in customer_data_terms
+    ):
+        raise ValueError("D&B Finance Analytics customer-data terms changed")
+
+    microsoft_docs = fetch_text(DNB_MICROSOFT_CONNECTOR_URL)
+    microsoft_start = microsoft_docs.find(
+        "# Dun and Bradstreet MCP Server (Preview)"
+    )
+    if microsoft_start < 0:
+        raise ValueError("Microsoft D&B connector documentation changed")
+    microsoft_core = (
+        "\n".join(
+            line.rstrip()
+            for line in microsoft_docs[microsoft_start:].splitlines()
+        ).strip()
+        + "\n"
+    )
+    if (
+        sha256_text(microsoft_core)
+        != DNB_MICROSOFT_CONNECTOR_CORE_SHA256
+    ):
+        raise ValueError("Microsoft D&B connector evidence changed")
+    for marker in (
+        "Dun & Bradstreet Data Blocks",
+        "Financial Strength Insights",
+        "Ownership Insights",
+        "Payment Insights",
+        "Entity Scoring & Matching",
+        "Dplus-API-Key",
+        "100 | 60 seconds",
+        "Operation ID:",
+        "InvokeServer",
+    ):
+        if marker not in microsoft_core:
+            raise ValueError(
+                f"Microsoft D&B connector evidence is missing {marker!r}"
+            )
+
+    for url in DNB_UNPUBLISHED_CONFIG_URLS:
+        require_http_not_found(
+            url,
+            f"D&B Finance Analytics public configuration path {url}",
+        )
+
+    codex_files = {}
+    for relative_path, expected_hash in DNB_OPENAI_HASHES.items():
+        content = fetch_bytes(f"{DNB_OPENAI_BASE_URL}/{relative_path}")
+        if sha256_bytes(content) != expected_hash:
+            raise ValueError(
+                f"D&B Finance Analytics Codex evidence changed: {relative_path}"
+            )
+        codex_files[relative_path] = content
+    inventory = "".join(
+        f"{DNB_OPENAI_HASHES[path]}  {path}\n"
+        for path in sorted(DNB_OPENAI_HASHES)
+    )
+    if sha256_text(inventory) != DNB_OPENAI_INVENTORY_SHA256:
+        raise ValueError(
+            "D&B Finance Analytics Codex inventory hash is inconsistent"
+        )
+
+    manifest = json.loads(codex_files[".codex-plugin/plugin.json"])
+    app = json.loads(codex_files[".app.json"])
+    interface = manifest.get("interface", {})
+    if (
+        manifest.get("name") != "dnb-finance-analytics"
+        or manifest.get("version") != "1.0.2"
+        or manifest.get("author", {}).get("name") != "Dun & Bradstreet"
+        or interface.get("developerName") != "Dun & Bradstreet"
+        or app.get("apps", {})
+        .get("dnb-finance-analytics", {})
+        .get("id")
+        != "asdk_app_6a19c12f33e48191bbf02b9d58c49421"
+    ):
+        raise ValueError("D&B Finance Analytics Codex developer evidence changed")
+    manifest_text = codex_files[".codex-plugin/plugin.json"].decode("utf-8")
+    for marker in (
+        "Portfolio search, filtering, aggregation, and sorting",
+        "Company search by name or D-U-N-S number",
+        "Detailed company credit-risk reports",
+        "Company ownership and linkage trees",
+        "Credit application decisioning",
+        "Portfolio folder creation, movement, and organization",
+        "proprietary customer data and credit policies",
+    ):
+        if marker not in manifest_text:
+            raise ValueError(
+                f"D&B Finance Analytics Codex evidence is missing {marker!r}"
+            )
+
+    markdown = "\n".join(
+        content.decode("utf-8")
+        for path, content in codex_files.items()
+        if path.endswith(".md")
+    )
+    referenced_tools = sorted(
+        tool for tool in DNB_CODEX_TOOLS if f"`{tool}`" in markdown
+    )
+    if (
+        referenced_tools != sorted(DNB_CODEX_TOOLS)
+        or sha256_text("\0".join(referenced_tools))
+        != DNB_CODEX_TOOLS_SHA256
+    ):
+        raise ValueError(
+            "D&B Finance Analytics Codex tool references changed"
+        )
+    normalized_markdown = " ".join(markdown.split())
+    for marker in (
+        "action `LIST`",
+        "action `COPY`",
+        "action `MOVE`",
+        "action `CREATE`",
+        "`read_status = unread`",
+        "`severity = high`",
+        "`continue_report_pull`",
+        "The partner bundle did not include dedicated persona files or an "
+        "aging-forecast workflow file.",
+        "Never make a binding credit approval or decline",
+    ):
+        if marker not in normalized_markdown:
+            raise ValueError(
+                f"D&B Finance Analytics workflow evidence is missing {marker!r}"
+            )
+
+    if (PLUGIN_DIR / "dnb-finance-analytics").exists():
+        raise ValueError(
+            "D&B Finance Analytics must remain unpublished while the official "
+            "portable endpoint, authenticated schemas, and redistribution "
+            "rights are unverified"
+        )
 
 
 def verify_demandbase_evidence() -> None:
