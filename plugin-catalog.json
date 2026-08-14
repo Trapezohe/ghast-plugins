@@ -3165,6 +3165,34 @@
       "license": "MIT"
     },
     {
+      "id": "responsive",
+      "name": "responsive",
+      "description": "Search governed Responsive proposal content, inspect projects and unanswered questions, and generate grounded draft responses through Responsive's official hosted MCP.",
+      "manifest": {
+        "name": "responsive",
+        "description": "Search governed Responsive proposal content, inspect projects and unanswered questions, and generate grounded draft responses through Responsive's official hosted MCP.",
+        "author": {
+          "name": "RFPIO Inc. (d/b/a Responsive)",
+          "url": "https://www.responsive.io"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://developer.responsive.io/docs/responsive-api/86b14fe0ae541-overview",
+        "upstreamRevision": "responsive-mcp-overview-dc0c9d286bf3+connect-eff6a43bb847+tools-973756d53113+auth-3c7db377bbdd+oauth-f3d4fd4917ff+boundary-e3b0c44298fc",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/responsive.zip",
+        "sha256": "b213b6323aa24a45eac1b39d70cde4b964876694b00c04a7dd2feb84988f0e47"
+      },
+      "icon": "./plugins/responsive/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://developer.responsive.io/docs/responsive-api/86b14fe0ae541-overview",
+      "license": "MIT"
+    },
+    {
       "id": "scite",
       "name": "scite",
       "description": "Search and verify scientific literature, patents, trials, grants, regulatory records, adverse-event reports, drugs, and research collections through Scite's official hosted MCP server.",

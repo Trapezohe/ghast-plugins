@@ -141,7 +141,7 @@ verification.
 | render | Render | skills | MIT | official-source-verified | implemented-verified |
 | replayio | Replay | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | replit | Replit | appConnector | MIT | official-source-verified | implemented-verified |
-| responsive | RFPIO Inc. (d/b/a Responsive) | appConnector | MIT | official-source-research-required | not-implemented |
+| responsive | RFPIO Inc. (d/b/a Responsive) | appConnector | MIT | official-source-verified | implemented-verified |
 | rox | Rox Data Corp | appConnector | MIT | official-source-research-required | not-implemented |
 | s-p | S&P Global | appConnector | MIT | official-source-research-required | not-implemented |
 | scite | Scite | appConnector | MIT | official-source-verified | implemented-verified |

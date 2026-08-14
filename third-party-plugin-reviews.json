@@ -7162,6 +7162,62 @@
         "python3 scripts/validate-ghast-repository.py",
         "unzip -tqq packages/ranked-ai.zip"
       ]
+    },
+    "responsive": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "RFPIO Inc. (d/b/a Responsive)",
+      "officialRepository": null,
+      "officialRevision": "responsive-mcp-overview-dc0c9d286bf3+connect-eff6a43bb847+tools-973756d53113+auth-3c7db377bbdd+oauth-f3d4fd4917ff+boundary-e3b0c44298fc",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/responsive/LICENSE licenses only the independently authored Ghast endpoint declaration, workflow guidance, metadata, documentation, and generic document icon.",
+        "No Responsive hosted-server source, private connector, credential, customer data, developer-document body, logo, trademark, or OpenAI marketplace artwork is redistributed."
+      ],
+      "officialityEvidence": [
+        "Responsive's official developer portal publishes https://app.rfpio.com/oa/v1/mcp as its US production Streamable HTTP MCP endpoint for ChatGPT, Claude, Cursor, VS Code, Databricks, Windsurf, and other compatible clients.",
+        "Five pinned official document-body SHA-256 values are dc0c9d286bf3d636ed0bc4127acf557882c9553c41228643024f1c14a5a8a1f5, eff6a43bb847433fa8a8eebbd3c8b7ea708fcd0f1886002034d10fe3e39d0ba1, 973756d53113d9e12fefebb8b08583db7b1ce063121cb77616a66d116756765e, 3c7db377bbdd6a33e0c1cf654a3d3d9eccd7fa295f7a66000db3cca1bb2557c9, and d637ccf7668314412b3ce7923ca9c46512fb3ab70292aff0252bc36dbad5f8cc.",
+        "The official tool reference lists nine ordered names with SHA-256 91db8fb3ce97c19dcab3178457724ced4bc4887e9e7f26f04e8f813aaac460f1 covering projects, unanswered questions, governed search and fetch, draft generation, and user context.",
+        "The live endpoint's protected-resource and authorization-server metadata have canonical JSON SHA-256 values 1a29dad515a905d807790563887527218c1d7ccb262be5693becc358dbcf63fb and f3d4fd4917fff8b3cb535e8ccfaea3c8f135b3c3f9d36d189b982697b2e4fe83. They publish Responsive's official resource, issuer, dynamic registration, authorization and token endpoints, authorization-code and refresh-token grants, and PKCE S256.",
+        "On August 14, 2026, anonymous MCP initialization returned HTTP 401, a Bearer challenge pointing to the official protected-resource metadata, and an empty body with SHA-256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.",
+        "Disposable loopback registration succeeded and authorization routed to app.rfpio.com/v2/login. Registration returned a client secret while omitting token_endpoint_auth_method, and the login redirect used an http URL on Responsive's HSTS-enabled official host; no client value, login, code, token, account, or credential was retained or packaged.",
+        "OpenAI's pinned snapshot identifies RFPIO Inc. (d/b/a Responsive) as developer, maps private app ID asdk_app_69457256862081919686f32b07ac4699, and describes Content Library search and response generation. Its complete inventory SHA-256 is e60e2d4dbccf6b990d1d1a23a4dd81e031749e70e5947894d07a452ad0c1e271."
+      ],
+      "codexCapabilities": [
+        "Search the organization's Responsive Content Library",
+        "Pull relevant proposal content from Responsive",
+        "Generate responses grounded in trusted Responsive information through a private app connector"
+      ],
+      "ghastCapabilities": [
+        "Connect directly to Responsive's official hosted Streamable HTTP MCP through browser OAuth",
+        "List projects, inspect project details and sections, retrieve questions, and identify unanswered work",
+        "Search governed Content Library material and fetch full source content with provenance and approval context",
+        "Generate grounded draft responses with explicit confirmation, read-back verification, and human-review safeguards",
+        "Resolve the active user and workspace while preserving Responsive permissions, moderation, and audit boundaries"
+      ],
+      "capabilityRelationship": "official-hosted-mcp-superset",
+      "limitations": [
+        "Responsive operates the hosted MCP and does not publish its server implementation or an open-source service license. Ghast packages only an endpoint declaration and independent guidance.",
+        "A Responsive account, eligible subscription, browser OAuth, workspace and project permissions, service availability, and usage limits remain user-managed.",
+        "Authenticated tools/list and customer-data calls were not executed because no Responsive account or credential was supplied.",
+        "The packaged URL is the published US endpoint. EU and India customers must substitute the regional endpoint confirmed by their Responsive administrator; the public page does not publish those exact regional URLs.",
+        "Dynamic registration returns a client secret while omitting token_endpoint_auth_method, despite a request for a public client. Compatibility depends on the host MCP client's OAuth handling.",
+        "The current authorization response redirects to an http URL on the official app.rfpio.com host. Responsive serves HSTS over the preceding HTTPS flow, but this transport inconsistency remains service-controlled.",
+        "The official security guide treats generate_draft_response as a state-changing tool. It requires explicit confirmation, post-call read-back, and human review before external use.",
+        "Library and project content can contain confidential customer material, personal data, stale answers, restricted drafts, and indirect prompt injection. Retrieval and disclosure must remain narrowly scoped.",
+        "A generic document icon is used because Responsive logos and OpenAI marketplace artwork are not redistributed."
+      ],
+      "verification": [
+        "python3 scripts/import-responsive-plugin.py --openai-source ../openai-plugins",
+        "Verify all five official Stoplight document hashes and the exact nine ordered tool names with SHA-256 91db8fb3ce97c19dcab3178457724ced4bc4887e9e7f26f04e8f813aaac460f1",
+        "Verify protected-resource and OAuth metadata hashes, issuer, dynamic registration endpoint, authorization-code and refresh-token grants, and PKCE S256",
+        "Probe MCP initialize without credentials and require HTTP 401, the official protected-resource challenge, and empty-body hash e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "For a deliberate one-time OAuth portability audit, add --verify-registration and require disposable loopback registration plus routing to the official Responsive login; do not retain returned client values",
+        "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9, all three file hashes, inventory hash, developer identity, private app ID, capability markers, and default prompt",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/responsive.zip"
+      ]
     }
   }
 }
