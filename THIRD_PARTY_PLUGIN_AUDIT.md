@@ -133,7 +133,7 @@ verification.
 | quartr | Quartr | appConnector | MIT | official-source-verified | implemented-verified |
 | quickbooks | QuickBooks | appConnector | MIT | official-source-research-required | not-implemented |
 | quicknode | Quicknode | appConnector | MIT | official-source-verified | implemented-verified |
-| ranked-ai | Ranked AI, LLC | appConnector | MIT | official-source-research-required | not-implemented |
+| ranked-ai | Ranked AI, LLC | appConnector | MIT | official-source-verified | implemented-verified |
 | razorpay | Razorpay Software Private Limited | appConnector | MIT | official-source-verified | implemented-verified |
 | read-ai | Read AI, Inc | appConnector | MIT | official-source-verified | implemented-verified |
 | readwise | Readwise Inc. | appConnector | MIT | official-source-verified | implemented-verified |

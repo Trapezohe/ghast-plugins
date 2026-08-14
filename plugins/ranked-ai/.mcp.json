@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ranked-ai": {
+      "type": "http",
+      "url": "https://app.ranked.ai/api/mcp/sse"
+    }
+  }
+}

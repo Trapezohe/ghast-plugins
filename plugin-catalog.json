@@ -2909,6 +2909,34 @@
       "license": "MIT"
     },
     {
+      "id": "ranked-ai",
+      "name": "ranked-ai",
+      "description": "Analyze and manage Ranked AI SEO projects, rankings, AI visibility, audits, backlinks, content, and reports through Ranked AI's official hosted MCP.",
+      "manifest": {
+        "name": "ranked-ai",
+        "description": "Analyze and manage Ranked AI SEO projects, rankings, AI visibility, audits, backlinks, content, and reports through Ranked AI's official hosted MCP.",
+        "author": {
+          "name": "Ranked AI, LLC",
+          "url": "https://www.ranked.ai"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://dev.ranked.ai/mcp/overview",
+        "upstreamRevision": "ranked-ai-mcp-overview-26942caa0c93+setup-a2d69edafb9a+tools-a8ef44ff1dea+oauth-703859fd6204+boundary-e40f29e81b3e",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/ranked-ai.zip",
+        "sha256": "d64ce73cd267034a678602b3b1c0686828966fcbb922282cedee6682a565acf3"
+      },
+      "icon": "./plugins/ranked-ai/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://dev.ranked.ai/mcp/overview",
+      "license": "MIT"
+    },
+    {
       "id": "razorpay",
       "name": "razorpay",
       "description": "Read Razorpay payments, orders, refunds, settlements, QR codes, payment links, payouts, reconciliation, and saved payment methods through Razorpay's official MCP source and SDK.",

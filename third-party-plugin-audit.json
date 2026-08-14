@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 3,
-      "official-source-research-required": 24,
-      "official-source-verified": 122
+      "official-source-research-required": 23,
+      "official-source-verified": 123
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 122,
-      "not-implemented": 27
+      "implemented-verified": 123,
+      "not-implemented": 26
     }
   },
   "excludedOpenAIPlugins": [
@@ -10310,7 +10310,7 @@
     },
     {
       "id": "ranked-ai",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Ranked AI, LLC",
@@ -10335,13 +10335,74 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.ranked.ai"
+        "homepage": "https://www.ranked.ai",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Ranked AI, LLC",
+          "officialRepository": null,
+          "officialRevision": "ranked-ai-mcp-overview-26942caa0c93+setup-a2d69edafb9a+tools-a8ef44ff1dea+oauth-703859fd6204+boundary-e40f29e81b3e",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/ranked-ai/LICENSE licenses only the independently authored Ghast endpoint declaration, workflow guidance, metadata, documentation, and generic SEO icon.",
+            "No Ranked AI hosted-server source, private connector, credential, customer data, API response, developer documentation, logo, or trademark is redistributed."
+          ],
+          "officialityEvidence": [
+            "Ranked AI's official developer site publishes its hosted MCP for ChatGPT, Claude, Cursor, and other MCP clients at https://app.ranked.ai/api/mcp/sse.",
+            "The official overview currently lists 17 ordered tool names with SHA-256 f75deaf43013ee203e1d2cabdc828d15bd4d7567058c9778a68528300d8e5c8c across project, keyword, AI visibility, audit, backlink, content, heatmap, sitemap-indexing, prompt, report, and audit-run workflows.",
+            "The official overview labels the inventory as 10 read and 8 write tools, while its table contains 9 read and 8 write names. The official changelog also claims 18 tools. Ghast records this discrepancy and verifies the 17 named tools.",
+            "The five pinned official Markdown document SHA-256 values are 26942caa0c93675f875c4745afc3f0303d06da28b85ae6f0a2907cfa4c171def, a2d69edafb9a27847e298612386793c051db8592ec0869faa81c014a5b530c14, a8ef44ff1dea0f437e5973d87a092cced4d4e16c7a08f8d025783c61a8bef1a7, c286c946fe4a5727df558d9208103866cb1b6c7fad2808ca7f27ba591d8f41c8, and 0639a91fdc33fe0c57f5854ea5f6b9a1d7a516b92c1748de01ceda4539e61342.",
+            "The canonical endpoint-discovery and OAuth metadata SHA-256 values are df3a81f7ed9b1deacab0fe1b3f834eda0e15640220aa2bc709fc408e5f9c7c25 and 703859fd6204c19ffe1e13cd5a370a3bc988598c15b6957fd954d935ed1fbeec. They publish the official endpoint, OAuth authorization and token URLs, dynamic registration, authorization-code and refresh-token grants, public-client authentication, and PKCE S256.",
+            "The official setup guide says the MCP has read and write access, while endpoint discovery advertises only read:projects and OAuth metadata lists only read-prefixed scopes. Authenticated write authorization was not tested.",
+            "On August 14, 2026, anonymous MCP initialization returned HTTP 401, the official OAuth challenge, and body SHA-256 e40f29e81b3e597bbb1422bf76b2145b3dac0378f410b0ca81941f80b406a6d5.",
+            "A one-time disposable loopback registration routed authorization to the official app.ranked.ai login page. The service returned a client secret even though token_endpoint_auth_method was none; no client value, login, code, token, account, or credential was retained or packaged.",
+            "OpenAI's pinned snapshot identifies Ranked AI, LLC as developer, maps private app ID asdk_app_694427dd7b9c8191a6392847528c42d2, and describes keyword, audit, backlink, report, and ranking workflows. Its complete inventory SHA-256 is 596028c65edc474fb4abb04ba4660dc22d1bc8ddfb66c63a19ffd82651fb8aea."
+          ],
+          "codexCapabilities": [
+            "Show rankings for a Ranked AI project",
+            "Manage traditional and AI-search keywords, audits, backlinks, reports, and related integrated-app data",
+            "Use a fully managed SEO and PPC service through a private app connector"
+          ],
+          "ghastCapabilities": [
+            "Connect to Ranked AI's official hosted MCP through browser OAuth",
+            "Read project metrics, keyword rankings, AI visibility, audit summaries and details, backlink summaries, content calendar, heatmaps, and sitemap indexing status",
+            "Add and remove tracked keywords, add AI visibility prompts, request content topics and revisions, approve content, generate reports, and run audits with explicit confirmation",
+            "Apply project-resolution, privacy, rate-limit, result-quality, write-confirmation, and no-blind-retry safeguards"
+          ],
+          "capabilityRelationship": "official-hosted-mcp-superset",
+          "limitations": [
+            "Ranked AI operates the hosted MCP and does not publish its server implementation or an open-source service license. Ghast packages only an endpoint declaration and independent guidance.",
+            "A Ranked AI account, subscription, project access, OAuth approval, service availability, data coverage, and usage limits remain user-managed.",
+            "Authenticated tools/list and customer-data calls were not executed because no Ranked AI account or credential was supplied.",
+            "The eight write tools are officially documented, but the published OAuth discovery contract exposes only read-prefixed scopes. Their account-level authorization remains unverified.",
+            "The official overview and changelog claim 18 tools, but the current overview table names only 17. The plugin treats the 17 names as verified and requires re-audit for an unfamiliar live tool.",
+            "The OAuth metadata advertises public clients, but disposable registration returned a client secret with token_endpoint_auth_method none. The plugin stores no static client credential and relies on the host OAuth flow.",
+            "Search rankings, AI visibility, backlink observations, audits, heatmaps, and indexing state can be delayed, incomplete, location-dependent, model-dependent, or otherwise inexact.",
+            "Ranked AI's terms restrict automated access not provided by the service and disclaim guarantees for rankings or business results. This plugin uses only the official MCP interface and grants no rights to scrape, redistribute, or recreate the platform.",
+            "A generic SEO icon is used because Ranked AI logos and OpenAI marketplace artwork are not redistributed."
+          ],
+          "verification": [
+            "python3 scripts/import-ranked-ai-plugin.py --openai-source ../openai-plugins",
+            "Verify all five official Markdown hashes and the exact 17 ordered tool names with SHA-256 f75deaf43013ee203e1d2cabdc828d15bd4d7567058c9778a68528300d8e5c8c",
+            "Verify endpoint and OAuth metadata hashes, issuer, dynamic registration, grants, public-client support, and PKCE S256",
+            "Probe MCP initialize without credentials and require HTTP 401, the official OAuth challenge, and body hash e40f29e81b3e597bbb1422bf76b2145b3dac0378f410b0ca81941f80b406a6d5",
+            "For a deliberate one-time OAuth portability audit, add --verify-registration and require a disposable loopback client plus routing to the official Ranked AI login page; do not retain the returned client values",
+            "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9, all four file hashes, inventory hash, developer identity, private app ID, default prompt, and capability markers",
+            "python3 scripts/build-ghast-catalog.py",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/ranked-ai.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": null,
+        "upstreamRevision": "ranked-ai-mcp-overview-26942caa0c93+setup-a2d69edafb9a+tools-a8ef44ff1dea+oauth-703859fd6204+boundary-e40f29e81b3e",
+        "portStatus": "full"
       }
     },
     {
