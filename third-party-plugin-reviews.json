@@ -5175,6 +5175,68 @@
         "unzip -tqq packages/motherduck.zip"
       ]
     },
+    "mt-newswires": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "MT Newswires",
+      "officialRepository": null,
+      "officialRevision": "mtnewswires-ai-d0dbbb14e493+vast-71195676026d+oauth-d7f7d5f2df32",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/mt-newswires/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation, and generic financial-news icon.",
+        "No MT Newswires article corpus, hosted MCP implementation, viaNexus service source, private Codex connector, OAuth credential, branded artwork, or marketplace icon is redistributed.",
+        "MT Newswires subscriptions and licensed content remain governed by MT Newswires and viaNexus service terms; the adapter's MIT license does not grant content redistribution, resale, trademark, or service rights."
+      ],
+      "officialityEvidence": [
+        "MT Newswires' official AI enablement and MCP subscription pages state that MT Newswires is available through MCP with native OpenAI and Anthropic integrations, real-time multi-asset news, structured machine-readable content, licensed access, and permission and entitlement enforcement. Their normalized visible-text SHA-256 values are d0dbbb14e493acbd13456817ea050397d4f5fc51c262c349908f09627a2a0f4e and 12d581b7b58c3192e1fd2f24f6e189af29c8a2e6c857fc1ca4866b469c90d0e6.",
+        "MT Newswires' official January 22, 2026 announcement says the company is leveraging viaNexus to distribute its content natively into agent-based workflows while preserving licensing, entitlement controls, and data integrity. The normalized visible text has SHA-256 a154b567803f30739d29e8ab44e07f45e56ccc43242f7fd3e999f67f42baf9c9.",
+        "viaNexus' current vAST documentation identifies https://vast.blueskyapi.com/mtnewswires/mcp as the dedicated MT Newswires news-only MCP endpoint, states that any MCP client can use it, documents OAuth sign-in, North America and Global real-time headlines, search and fetch tools, symbol search, and server-side EDGE:MT_NEWSWIRES* permissions. The normalized visible text has SHA-256 71195676026d8e301b6438bee8acf0cf7d8f18465b55a215898683370d500cf6.",
+        "The protected-resource metadata identifies the same endpoint, Bearer-header authentication, the user scope, and viaNexus' authorization server; canonical JSON SHA-256 is d7f7d5f2df32a3c5efc40e5cef86812d8e66b88d9e2bb511ee3dce66ebca5634.",
+        "The authorization-server metadata declares dynamic client registration, authorization-code and refresh-token grants, confidential clients using client_secret_post, and PKCE S256; canonical JSON SHA-256 is 52a9e2c6554a753736ae62dfa241debc0819438433cea11945a45f83c6319732.",
+        "On August 14, 2026, a disposable RFC 8252 loopback client registered with HTTP 201 without a software statement. No client identifier, client secret, authorization code, access token, refresh token, password, or user data was retained. The non-secret response-shape subset has canonical JSON SHA-256 0acd6c03d06cb2a08e8974db5bedab8b9c7e8679020316b1c03f845e0ae52c45.",
+        "On August 14, 2026, unauthenticated and deliberately invalid-token MCP initialize requests returned HTTP 401, canonical error-body SHA-256 89405d9b936fb8d340420c2f01809fb978745c3fc0c84206bdb8214e62b2778b, and the official protected-resource challenge.",
+        "Anthropic's Apache-2.0 financial-services repository at revision 38652224c10610fa52eee2acee3ac712dcff01f2 records the older https://vast-mcp.blueskyapi.com/mtnewswires endpoint. Its README, financial-analysis MCP file, and license hashes are 8b0fc62533e1f52e216476af38e10d1dabf1224abc3640388c25943eaf4ff609, a772aa4b50f7fc1130176c2368b9fd2a57aafbb82cca943b78f8181ebaa2bc43, and cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30. The old endpoint returned HTTP 404 with body SHA-256 0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5 on August 14, 2026, so it is retained only as stale provenance evidence.",
+        "OpenAI's pinned plugin snapshot identifies MT Newswires as developer, maps the private app ID asdk_app_69c539c0d1288191831e1d2dd9ea0b73, and documents real-time global ticker, sector, macroeconomic, central-bank, earnings, M&A, analyst-action, and market-moving news workflows."
+      ],
+      "codexCapabilities": [
+        "Retrieve the latest MT Newswires coverage for a ticker and analyze potential or observed price impact",
+        "Monitor energy and other sector developments across global equities",
+        "Track macroeconomic events and global central-bank signals in real time",
+        "Screen and summarize earnings, M&A, analyst-rating changes, and other market-moving headlines, including bounded recent intervals"
+      ],
+      "ghastCapabilities": [
+        "Connect directly to MT Newswires' officially authorized viaNexus news-only MCP endpoint through standard OAuth instead of OpenAI's private app mapping",
+        "Use the official search and fetch tools for licensed real-time North American and Global headlines, symbol searches, matching story retrieval, and entitlement-scoped financial-news research",
+        "Research ticker, sector, earnings, M&A, analyst, macroeconomic, central-bank, FX, commodity, and crypto news using filters exposed by the authenticated live schema",
+        "Preserve timestamps, source attribution, symbols, regions, article identifiers, licensed-content boundaries, and a strict distinction between reported facts, plausible impact analysis, and independently verified market-price movement"
+      ],
+      "capabilityRelationship": "equivalent-core-official-authorized-hosted-mcp",
+      "limitations": [
+        "MT Newswires and viaNexus operate the hosted implementation and licensed content service. The MIT license applies only to the Ghast-authored adapter.",
+        "Use requires a viaNexus account, OAuth authorization, an MT Newswires trial or subscription, dataset entitlements, and compliance with MT Newswires and viaNexus service and content terms.",
+        "The public documentation identifies search and fetch, symbol search, North America and Global headlines, and entitlement boundaries, but unauthenticated pages do not publish the complete live input and output schemas. Authenticated tools/list and story retrieval were not run because no user account was supplied.",
+        "Exact support for every topic taxonomy and relative-time filter must be determined from the authenticated live schemas. The skill requires bounded keyword or semantic search and an explicit limitation statement when an exact filter is unavailable.",
+        "The dedicated endpoint provides news, not independent exchange price data. It can support reasoned analysis of likely impact, but claims that a story actually moved a security require a separate market-data source and careful treatment of causality.",
+        "The old endpoint recorded by Anthropic is stale and must not be used. The current adapter endpoint is the dedicated route published by viaNexus.",
+        "The one-time dynamic registration returned a confidential client secret but no registration management URI or token, so the disposable client could not be deleted through RFC 7592. The importer does not create additional clients.",
+        "A generic financial-news icon is used because no licensed catalog artwork is included in a public official source repository."
+      ],
+      "verification": [
+        "Load scripts/import-official-hosted-plugins.py with importlib, run verify_mt_newswires_evidence(), then run import_mt_newswires(); both completed successfully on August 14, 2026",
+        "The full hosted importer currently stops earlier on unrelated HG Insights documentation drift at https://phoenix.hginsights.com/docs/mcp-tools/overview; do not treat that fail-closed result as an MT Newswires failure",
+        "Verify the official MT Newswires AI enablement, MCP subscriptions, and viaNexus partnership visible-text hashes d0dbbb14e493acbd13456817ea050397d4f5fc51c262c349908f09627a2a0f4e, 12d581b7b58c3192e1fd2f24f6e189af29c8a2e6c857fc1ca4866b469c90d0e6, and a154b567803f30739d29e8ab44e07f45e56ccc43242f7fd3e999f67f42baf9c9",
+        "Verify the viaNexus vAST visible-text hash 71195676026d8e301b6438bee8acf0cf7d8f18465b55a215898683370d500cf6 and the dedicated endpoint, search, fetch, symbol-search, headline, OAuth, and EDGE:MT_NEWSWIRES* markers",
+        "Verify canonical protected-resource and authorization-server metadata hashes d7f7d5f2df32a3c5efc40e5cef86812d8e66b88d9e2bb511ee3dce66ebca5634 and 52a9e2c6554a753736ae62dfa241debc0819438433cea11945a45f83c6319732",
+        "Probe https://vast.blueskyapi.com/mtnewswires/mcp with unauthenticated and invalid-token initialize requests and confirm HTTP 401, the exact protected-resource challenge, and error hash 89405d9b936fb8d340420c2f01809fb978745c3fc0c84206bdb8214e62b2778b",
+        "Confirm the stale Anthropic endpoint returns HTTP 404 with body hash 0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5 and is not used by plugins/mt-newswires/.mcp.json",
+        "Verify the pinned OpenAI manifest and app hashes, developer identity, private app ID, and every ticker, sector, macroeconomic, central-bank, earnings, M&A, analyst-action, and time-bounded capability claim",
+        "Authorize an entitled viaNexus account before testing authenticated tools/list, exact search fields, pagination, topic and time filters, story fields, or content retrieval",
+        "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/mt-newswires.zip"
+      ]
+    },
     "omni-analytics": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Omni Analytics",

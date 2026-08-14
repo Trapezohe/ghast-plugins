@@ -1,0 +1,16 @@
+{
+  "name": "mt-newswires",
+  "version": "1.0.0-ghast.1",
+  "description": "Search and retrieve licensed real-time North American and global financial news from MT Newswires through its officially authorized viaNexus MCP service.",
+  "category": "finance",
+  "author": {
+    "name": "MT Newswires",
+    "url": "https://www.mtnewswires.com"
+  },
+  "homepage": "https://www.mtnewswires.com/ai-enablement",
+  "upstreamRevision": "mtnewswires-ai-d0dbbb14e493+vast-71195676026d+oauth-d7f7d5f2df32",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

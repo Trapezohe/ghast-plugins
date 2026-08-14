@@ -61,6 +61,7 @@ LOCAL_ICONS = {
     "vantage": "assets/icon.svg",
     "vercel": "assets/icon.svg",
     "wix": "assets/icon.svg",
+    "zoho": "assets/icon.svg",
 }
 
 CUSTOM_ICONS = {
@@ -497,6 +498,12 @@ CUSTOM_ICONS = {
         '<rect x="13" y="14" width="38" height="36" rx="5"/>'
         '<path d="M20 24h24M20 33h15M20 42h20"/>'
         '<path d="M42 31l4 4 7-8"/>',
+    ),
+    "mt-newswires": (
+        "#245C63",
+        '<path d="M12 15h34v36H12zM46 23h6v28H46"/>'
+        '<path d="M19 23h20M19 31h8M19 43h20"/>'
+        '<path d="M30 34l4-5 4 8 5-6"/>',
     ),
     "quicknode": (
         "#2E6FCE",

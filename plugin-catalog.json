@@ -2451,6 +2451,34 @@
       "license": "MIT"
     },
     {
+      "id": "mt-newswires",
+      "name": "mt-newswires",
+      "description": "Search and retrieve licensed real-time North American and global financial news from MT Newswires through its officially authorized viaNexus MCP service.",
+      "manifest": {
+        "name": "mt-newswires",
+        "description": "Search and retrieve licensed real-time North American and global financial news from MT Newswires through its officially authorized viaNexus MCP service.",
+        "author": {
+          "name": "MT Newswires",
+          "url": "https://www.mtnewswires.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.0-ghast.1",
+        "homepage": "https://www.mtnewswires.com/ai-enablement",
+        "upstreamRevision": "mtnewswires-ai-d0dbbb14e493+vast-71195676026d+oauth-d7f7d5f2df32",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/mt-newswires.zip",
+        "sha256": "27121793ea7124375fb42f4b0a5472b7007cb64db35207d7e82584cdc726cca0"
+      },
+      "icon": "./plugins/mt-newswires/assets/icon.svg",
+      "category": "finance",
+      "homepage": "https://www.mtnewswires.com/ai-enablement",
+      "license": "MIT"
+    },
+    {
       "id": "neon-postgres",
       "name": "neon-postgres",
       "description": "Manage Neon Lakebase Postgres projects, branches, schemas, SQL, migrations, Auth, Object Storage, Functions, AI Gateway, and database performance with official Neon skills and MCP.",
