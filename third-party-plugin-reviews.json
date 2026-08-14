@@ -7469,6 +7469,65 @@
         "python3 scripts/validate-ghast-repository.py",
         "unzip -tqq packages/setu-bharat-connect-billpay.zip"
       ]
+    },
+    "rox": {
+      "verificationStatus": "official-source-research-required",
+      "officialDeveloper": "Rox Data Corp",
+      "officialRepository": null,
+      "officialRevision": "rox-docs-e637d993c6b7+full-13e7b7152de6+apps-b42f678f4d27+tether-edfdeb7591b4+terms-7332619a3045+github-738b402429a9+openai-49035b97364e",
+      "license": "UNVERIFIED",
+      "licenseEvidence": [
+        "Rox does not publish source code, an open-source license, a public endpoint declaration, tool schemas, OAuth client onboarding, or redistribution terms for the private MCP service used by its Codex app.",
+        "Rox's official service terms state that the hosted software is installed, accessed, and maintained only by or for Rox and that no license is granted to it. The verified restrictions section permits only internal use of supplied documentation and customer data and prohibits reverse engineering, source discovery, derivative works, copying or distribution, service-bureau use, publishing customer data without consent, and removing proprietary notices.",
+        "The MIT label in OpenAI's three-file marketplace snapshot does not license Rox's hosted service, backend, private connector, sales data, function schemas, documentation, trademarks, logo, or marketplace artwork.",
+        "No Rox source, connector implementation, customer data, tool schema, credential, logo, or OpenAI marketplace icon is redistributed because no independently usable capability-equivalent plugin is published."
+      ],
+      "officialityEvidence": [
+        "Rox publicly announced that its app and MCP server are available in Codex and ChatGPT for querying deals and customer interactions, confirming that an official hosted connector exists.",
+        "Rox's official Tether research article, published July 26, 2026, describes agents connected to product MCP servers, shared backend and user identity between MCP and web applications, OAuth authentication, headless-first tools, server-side handles, context synchronization, and channel-separated authority. Its normalized article core has SHA-256 edfdeb7591b4c27a38ad97de3084fac658911ae1544eb51773257138e5c154e9.",
+        "The Tether article is an architecture proposal illustrated through a generic prototype. It does not disclose the production Rox MCP URL, OAuth issuer or scopes, client registration policy, tool names, schemas, or account-onboarding contract.",
+        "Rox's official development documentation index contains 177 unique pages and has raw SHA-256 e637d993c6b7eb33b9f721b23d7baa5874bd8a52c696d64c21434eb266c40ed7. It exposes no MCP, Codex, ChatGPT, API-reference, developer-API, or /api/ path.",
+        "The complete official development documentation corpus has raw SHA-256 13e7b7152de687688fb21ce6968a21755ac49f408f8037501d09afa9a5dd18c4 and contains no Model Context Protocol or Codex documentation.",
+        "Rox's July 29, 2026 release notes describe its internal Apps area as purpose-built applications that run on data Rox already holds. They identify Adoption Metrics and explicitly state that Apps are read-only and do not write back to the CRM. The pinned section has SHA-256 b42f678f4d279416d00370d3d0cb9fbd4290789387d43a49145423899387f004.",
+        "The official Rox-AI GitHub organization identifies Rox and rox.com and currently exposes four repositories. Two are upstream forks and two distribute desktop-client updates; the canonical repository subset has SHA-256 738b402429a9247aa2373a79c7b00eb20139f554b2a10de558f24827baefb25d, and none publishes an MCP server or capability-equivalent API client.",
+        "OpenAI's pinned snapshot identifies Rox Data Corp as developer, maps private app ID asdk_app_6a1480a4a93c8191be8b8686d450db0a, and contains only a manifest, private app mapping, and marketplace icon. Its complete inventory SHA-256 is 49035b97364e7617ddb3ca1f8d675806645ed233bb01c545cb8f0464d4af733f."
+      ],
+      "codexCapabilities": [
+        "Access authenticated sales data from the user's Rox workspace",
+        "Analyze accounts, deals, contacts, notes, emails, meetings, documents, organization charts, and Slack activity",
+        "Discover the data functions available to the current workspace and permissions",
+        "Inspect each function's schema and workflow guidance",
+        "Invoke read-only functions to answer sales, account-intelligence, prioritization, buying-signal, and follow-up questions"
+      ],
+      "ghastCapabilities": [
+        "Rox's official publications establish that a private Rox MCP connector exists and that it uses Rox-hosted identity, data, and function infrastructure.",
+        "No Ghast plugin is published because Rox has not exposed a supported portable endpoint, independent OAuth onboarding, authenticated tool catalog, reproducible entitlement path, source license, adapter permission, or artwork rights."
+      ],
+      "capabilityRelationship": "official-private-mcp-found-portability-schema-license-and-artwork-blockers",
+      "limitations": [
+        "The OpenAI app ID is a private marketplace mapping, not an MCP URL, OAuth client, access token, tool schema, or reusable Ghast transport configuration.",
+        "The Tether article explains a general headless-plus-web architecture but does not identify the Rox production MCP service or authorize third-party implementation. Its generic prototype must not be mistaken for the Rox sales-workspace connector.",
+        "Rox's public development documentation covers its product and engineering concepts but currently publishes no developer API or MCP client setup. Undocumented application routes and private connector traffic are not probed, scraped, reverse engineered, or repackaged.",
+        "Authenticated tools/list and customer-data operations were not run because no public endpoint and no user Rox workspace or authorization were supplied.",
+        "A generic CRM, email, calendar, document, or Slack integration is not capability-equivalent. Rox combines workspace-specific normalized data, identity, permissions, account and deal models, proprietary functions, schemas, workflow guidance, and organization context.",
+        "The official terms reserve the hosted software and restrict reverse engineering, derivatives, distribution, third-party service use, and publication of customer data. They do not establish permission to reproduce the private connector or its schemas.",
+        "Rox workspace data can contain confidential customer communications, personal information, sales strategy, contracts, and indirect prompt injection. Any future connector must preserve Rox authorization, provenance, least-privilege retrieval, and narrow disclosure.",
+        "The current Codex description says function invocation is read-only. Any future live schema that introduces writes must receive separate side-effect, confirmation, authorization, retry, and audit review before exposure.",
+        "No icon is generated or copied while the plugin is blocked. OpenAI marketplace artwork and Rox marks are not redistribution evidence.",
+        "Do not create plugins/rox until Rox publishes or supplies a supported portable endpoint and OAuth path, authenticated schemas prove the complete Codex capability, ordinary eligible users can reproduce onboarding, and sufficient adapter and artwork rights are established."
+      ],
+      "verification": [
+        "python3 scripts/audit-rox-plugin.py --openai-source ../openai-plugins",
+        "Verify the raw hashes for Rox's 177-link llms.txt index and complete llms-full.txt corpus, and require the absence of a candidate MCP, Codex, ChatGPT, API-reference, developer-API, or /api/ documentation path",
+        "Verify the July 29, 2026 Apps release-note section hash and the purpose-built, Rox-held-data, Adoption Metrics, read-only, and no-CRM-writeback markers",
+        "Verify the normalized Rox Tether article core hash and its MCP, shared-backend identity, OAuth, headless-first, server-handle, context-sync, and channel-separated-authority markers",
+        "Verify the normalized official terms restrictions hash and the no-hosted-software-license, internal-use, reverse-engineering, derivative, distribution, service-bureau, customer-data-publication, and proprietary-notice restrictions",
+        "Verify the official Rox-AI GitHub identity and exact four-repository canonical inventory; any new MCP or API repository triggers a source and license re-audit",
+        "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9, all three file hashes, developer identity, private app ID, complete inventory hash, and authenticated read-only workspace capability markers",
+        "Confirm plugins/rox and packages/rox.zip remain absent while endpoint, authentication, schema, entitlement, license, and artwork blockers remain",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py"
+      ]
     }
   }
 }
