@@ -1,0 +1,17 @@
+{
+  "name": "shutterstock",
+  "version": "1.0.3-ghast.1",
+  "description": "Search Shutterstock's official image, video, music, and sound-effect libraries and compare watermarked previews without licensing or downloading assets.",
+  "category": "creative",
+  "author": {
+    "name": "Shutterstock",
+    "url": "https://www.shutterstock.com"
+  },
+  "homepage": "https://www.shutterstock.com/developers/documentation",
+  "repository": "https://github.com/shutterstock/shutterstock-cli",
+  "upstreamRevision": "4dc3ef8eeb3a27612f65dc4c5d03ee480c696abc",
+  "license": "MIT",
+  "portStatus": "full",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/"
+}

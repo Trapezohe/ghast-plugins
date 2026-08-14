@@ -148,7 +148,7 @@ verification.
 | semrush | Semrush Holdings, Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | setu-bharat-connect-billpay | Setu | appConnector | MIT | official-source-research-required | not-implemented |
 | shopify | Shopify | appConnector, skills | MIT | official-source-verified | implemented-verified |
-| shutterstock | Shutterstock | appConnector | MIT | official-source-research-required | not-implemented |
+| shutterstock | Shutterstock | appConnector | MIT | official-source-verified | implemented-verified |
 | signnow | airSlate Inc | appConnector | MIT | official-source-verified | implemented-verified |
 | similarweb | Similarweb | appConnector | MIT | official-source-verified | implemented-verified |
 | skywatch | SkyWatch Space Applications Inc. | appConnector | MIT | official-source-verified | implemented-verified |

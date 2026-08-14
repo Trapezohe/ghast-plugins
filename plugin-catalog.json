@@ -3331,6 +3331,35 @@
       "license": "MIT"
     },
     {
+      "id": "shutterstock",
+      "name": "shutterstock",
+      "description": "Search Shutterstock's official image, video, music, and sound-effect libraries and compare watermarked previews without licensing or downloading assets.",
+      "manifest": {
+        "name": "shutterstock",
+        "description": "Search Shutterstock's official image, video, music, and sound-effect libraries and compare watermarked previews without licensing or downloading assets.",
+        "author": {
+          "name": "Shutterstock",
+          "url": "https://www.shutterstock.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://www.shutterstock.com/developers/documentation",
+        "repository": "https://github.com/shutterstock/shutterstock-cli",
+        "upstreamRevision": "4dc3ef8eeb3a27612f65dc4c5d03ee480c696abc",
+        "license": "MIT",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/shutterstock.zip",
+        "sha256": "dc0d052d4b90c73b4d6fd86741e3565f6bb63fc737edaeebc75411009d065054"
+      },
+      "icon": "./plugins/shutterstock/assets/icon.svg",
+      "category": "creative",
+      "homepage": "https://www.shutterstock.com/developers/documentation",
+      "repository": "https://github.com/shutterstock/shutterstock-cli",
+      "license": "MIT"
+    },
+    {
       "id": "signnow",
       "name": "signnow",
       "description": "Create and send SignNow documents, templates, signing invites, reminders, embedded workflows, status checks, field updates, and signed-file links through SignNow's official hosted open-source MCP server.",

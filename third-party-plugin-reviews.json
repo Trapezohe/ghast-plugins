@@ -7218,6 +7218,62 @@
         "python3 scripts/validate-ghast-repository.py",
         "unzip -tqq packages/responsive.zip"
       ]
+    },
+    "shutterstock": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Shutterstock",
+      "officialRepository": "https://github.com/shutterstock/shutterstock-cli",
+      "officialRevision": "4dc3ef8eeb3a27612f65dc4c5d03ee480c696abc",
+      "license": "MIT",
+      "licenseEvidence": [
+        "Shutterstock's official shutterstock-cli repository contains an MIT license with SHA-256 a9d2d62d03c834775df0bef30fc1c8a968527d135e8746bdc257239cf77e7e3c.",
+        "plugins/shutterstock/UPSTREAM_LICENSE.md preserves the official CLI license; plugins/shutterstock/LICENSE covers only the independently authored Ghast adapter, guidance, metadata, documentation, and generic icon.",
+        "No Shutterstock CLI source, logo, marketplace artwork, API credential, preview, licensed asset, download, or customer data is redistributed."
+      ],
+      "officialityEvidence": [
+        "The repository is controlled by the official Shutterstock GitHub organization, identifies Shutterstock as author, and tags revision 4dc3ef8eeb3a27612f65dc4c5d03ee480c696abc as v1.5.2.",
+        "Pinned official CLI files map read searches to GET /v2/images/search, GET /v2/videos/search, GET /v2/audio/search, GET /v2/sfx/search, and POST /v2/bulk_search/images. Their SHA-256 values are recorded in scripts/import-shutterstock-plugin.py.",
+        "The current official API reference raw SHA-256 is 5e880849e9fd852add7d258c8d2cfe7ec0ff89db8071ec90a1b6afb67576bb02. It identifies API version 1.5.3, all five search surfaces, application credentials, and watermarked previews.",
+        "The API reference says search responses expose previews through the assets section: watermarked image previews, thumbnail and low-resolution watermarked video previews, and voice-over audio previews.",
+        "On August 14, 2026, anonymous calls to all five official search surfaces returned HTTP 401 and the same Invalid access token body with raw SHA-256 14bf52cb322de2bf9077b67ce6dd75abf1a39a16880a5796a7e4396033b95378 and canonical JSON SHA-256 0e9ddfb08cfd24eab86d96689543dd2ae331c5e71385b836a96b1a3b734886f1.",
+        "OpenAI's pinned snapshot identifies Shutterstock as developer, maps private app ID asdk_app_69b34589585c819183939cb03b6bd191, and explicitly limits the connector to search and watermarked preview selection. Its complete inventory SHA-256 is 376b9c4bda460dfc00cf67175b5f33d25a50d18302cdc2273c65ae1be473569d."
+      ],
+      "codexCapabilities": [
+        "Search stock images, videos, music, and sound effects by subject, style, mood, setting, and related filters",
+        "Run multiple grouped image searches",
+        "Return watermarked preview URLs and basic metadata for candidate selection",
+        "Exclude generation, editing, licensing, purchasing, and downloads"
+      ],
+      "ghastCapabilities": [
+        "Search the same four media types through Shutterstock's official public API using self-service application credentials",
+        "Run two to five grouped image searches through the official bulk search endpoint",
+        "Preserve complete official search payloads, including asset IDs, search IDs, descriptions, contributors, dimensions or duration, filters, and watermarked preview assets",
+        "Apply safe-search defaults, bounded result counts, credential protection, untrusted-metadata handling, and stock-media review guidance",
+        "Expose no licensing, purchase, download, collection mutation, editing, upload, or generation operation"
+      ],
+      "capabilityRelationship": "equivalent-official-api-read-only-search",
+      "limitations": [
+        "A Shutterstock account and API application are required. The user must supply their own OAuth token or consumer key and secret, and their API plan determines accessible libraries, previews, quotas, filters, and result coverage.",
+        "Authenticated searches were not executed because no Shutterstock credential was supplied. The adapter's request construction, credential selection, error handling, and output are tested locally, while the live unauthenticated boundary verifies all official endpoint paths.",
+        "The official API reference is version 1.5.3 while the latest official Python CLI release is 1.5.2. The 1.5.3 change concerns image license-history metadata and does not alter the packaged search endpoints.",
+        "The Ghast adapter is independently authored against the official API rather than copying the official CLI because the CLI requires requests, click, and pygments. The official CLI remains the pinned developer-controlled endpoint and authentication evidence.",
+        "Preview URLs are watermarked or otherwise limited samples. The plugin cannot remove watermarks, produce raw assets, confer a license, or determine whether a particular use is legally or commercially suitable.",
+        "Search rank, metadata, labels, release indicators, and content availability can change and are not guarantees. Human review is required for suitability, rights, releases, sensitive contexts, and final selection.",
+        "A generic stock-media icon is used because Shutterstock logos and OpenAI marketplace artwork are not redistributed."
+      ],
+      "verification": [
+        "python3 scripts/import-shutterstock-plugin.py --openai-source ../openai-plugins --upstream ../upstreams/shutterstock-cli",
+        "Verify official repository origin, revision 4dc3ef8eeb3a27612f65dc4c5d03ee480c696abc, v1.5.2 tag, MIT license, version, author, and all pinned file hashes",
+        "Verify the official CLI maps the five read-only search surfaces to their current Shutterstock API endpoints",
+        "Verify official API-reference hash 5e880849e9fd852add7d258c8d2cfe7ec0ff89db8071ec90a1b6afb67576bb02 and the version, endpoint, authentication, and watermarked-preview markers",
+        "Probe all five search endpoints without credentials and require HTTP 401 plus canonical error hash 0e9ddfb08cfd24eab86d96689543dd2ae331c5e71385b836a96b1a3b734886f1",
+        "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9, all four file hashes, inventory hash, developer identity, private app ID, and strict read-only capability markers",
+        "Run the bundled adapter self-test from the importer and verify single-search, bulk-search, Basic auth, Bearer auth, error redaction, query limits, and JSON output behavior",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/shutterstock.zip"
+      ]
     }
   }
 }
