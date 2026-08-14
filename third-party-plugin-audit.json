@@ -12992,10 +12992,67 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.unitedrentals.com"
+        "homepage": "https://www.unitedrentals.com",
+        "review": {
+          "verificationStatus": "official-source-research-required",
+          "officialDeveloper": "United Rentals, Inc.",
+          "officialRepository": null,
+          "officialRevision": "united-rentals-launch-169f00214fe8+chatgpt-2892cb1938cc+openai-89d78bbc9b7f",
+          "license": "UNVERIFIED",
+          "licenseEvidence": [
+            "United Rentals publishes the Equipment Agent as a company-operated website and ChatGPT service, but it does not publish the service implementation, recommendation model, fleet-knowledge corpus, tool schemas, portable endpoint, API client, SDK, or open-source license.",
+            "United Rentals' Website Terms of Use treat AI Models as part of the Site, reserve Site and Content rights, prohibit unauthorized copying, derivatives, reverse engineering, framing, systematic downloading, and automated retrieval, scraping, data mining, or navigation circumvention, and require express prior written consent for the restricted uses.",
+            "The MIT declaration in OpenAI's three-file marketplace snapshot does not license United Rentals' hosted Equipment Agent, internal services, fleet data, product content, recommendation logic, private app connector, trademarks, logo, or marketplace artwork.",
+            "No United Rentals code, data, schema, private endpoint, credential, logo, icon, or website content is redistributed because no authorized capability-equivalent Ghast plugin is published."
+          ],
+          "officialityEvidence": [
+            "United Rentals' official March 12, 2026 launch release identifies the Equipment Agent as its AI-powered equipment recommendation solution. The pinned normalized release core has SHA-256 169f00214fe8edfe239f7870b30d077012ba1290e17d74e712fa2bd2c23fe703.",
+            "The launch release says customers describe project requirements conversationally, receive tailored recommendations, compare equipment, inspect capacity, reach, terrain and accessory requirements, and continue to detailed United Rentals product pages.",
+            "United Rentals' official May 19, 2026 release says the same Equipment Agent became the first equipment-rental application in the ChatGPT store and incorporates United Rentals fleet knowledge, application expertise and operational insight. The pinned normalized release core has SHA-256 2892cb1938cc3cb4293c1a985177a6d0bffd4bd0417f786c3b332059cc4db2b1.",
+            "United Rentals' official Equipment Agent article directs users to the chat window on product and product-category pages and documents follow-up questions, side-by-side comparison, alternative suggestions, equipment constraints, accessories, and general equipment guidance.",
+            "United Rentals' official System Integration page describes a broad selection of APIs for customer procure-to-pay, ordering, purchase-order and bill-pay management, invoicing, ERP and punch-out workflows. It does not document Equipment Agent recommendations, product comparison, public schemas, self-service credentials, or an MCP endpoint.",
+            "No public United Rentals MCP endpoint, OAuth metadata, developer documentation, Equipment Agent API schema, self-service client onboarding, official reusable repository, or independently supported recommendation transport was located in the official product, digital-solutions, legal, investor, or public GitHub surfaces reviewed on August 14, 2026.",
+            "OpenAI's pinned snapshot identifies United Rentals as developer, maps private app ID asdk_app_69ba9e565bd48191b6ed6c024cda5f85, and promises project-driven equipment recommendations, specifications, inventory or availability support. Its complete three-file inventory SHA-256 is 89d78bbc9b7f482eef9d9f278822b15bbd4f8a00eefc2156ab51961b5d10ad55."
+          ],
+          "codexCapabilities": [
+            "Accept project details in natural language and ask follow-up questions about task, dimensions, reach, capacity, surface, terrain, access, power, transportation and accessories",
+            "Recommend relevant United Rentals equipment and alternatives using the developer's fleet knowledge, application expertise and operational insight",
+            "Compare equipment types or models and return selection-relevant specifications",
+            "Find relevant United Rentals inventory or availability and connect the planning workflow toward product detail and reservation"
+          ],
+          "ghastCapabilities": [
+            "The official website and ChatGPT releases establish that United Rentals operates the capability represented by the Codex private app.",
+            "The published customer-integration APIs may support contracted procurement, ordering, invoice and equipment-management workflows, but they are not documented as an Equipment Agent or recommendation interface and are not treated as equivalent.",
+            "No Ghast plugin is published because United Rentals has not exposed an authorized portable Equipment Agent endpoint, independent client authentication, stable third-party schemas, reproducible onboarding, or sufficient adapter and artwork rights."
+          ],
+          "capabilityRelationship": "official-private-equipment-agent-found-public-system-apis-non-equivalent-and-website-automation-prohibited",
+          "limitations": [
+            "The OpenAI app ID is a private marketplace mapping, not an MCP URL, API credential, OAuth client, tool schema, recommendation model, inventory feed, or reusable Ghast transport.",
+            "The public System Integration offering is an enterprise relationship for procure-to-pay and equipment-management integration. Its existence does not authorize a recommendation wrapper or establish that ordinary users can obtain credentials and schemas.",
+            "The website chat interface and product pages must not be scraped, browser-automated, reverse engineered, framed, systematically downloaded, or used as an undocumented backend without United Rentals' express prior written consent.",
+            "Authenticated tool listing, recommendations, product comparisons, inventory, availability and reservation workflows were not exercised because no supported independent endpoint or user integration contract was supplied.",
+            "A generic equipment catalog search over public pages would omit United Rentals' fleet knowledge, practical application expertise, follow-up logic, equipment constraints, alternatives, availability context and reservation integration and would not be capability-equivalent.",
+            "Equipment selection is safety-critical. United Rentals states that AI output can be inaccurate, incomplete or outdated and that users must independently verify appropriateness and accuracy. Qualified review, manuals, load charts, site conditions, regulations and trained operators remain authoritative.",
+            "Project descriptions, locations, timelines, account details and rental needs can be commercially sensitive. Any future official connector must preserve account authorization, minimize disclosure and separate recommendations from confirmed specifications and availability.",
+            "No icon or package is generated while the plugin remains blocked. OpenAI marketplace artwork and United Rentals marks are not redistribution evidence.",
+            "Do not create plugins/united-rentals until United Rentals publishes or directly supplies a supported portable endpoint or documented recommendation API, independent authentication and onboarding, stable schemas, capability evidence, and sufficient adapter and artwork rights."
+          ],
+          "verification": [
+            "python3 scripts/audit-united-rentals-plugin.py --openai-source ../openai-plugins",
+            "Verify the official March 12, 2026 Equipment Agent launch core hash and its project-requirement, recommendation, comparison, specification, fleet-expertise and unitedrentals.com availability markers",
+            "Verify the official May 19, 2026 ChatGPT launch core hash and its first-store-application, project-guidance, fleet-knowledge, application-expertise, operational-insight and specification-query markers",
+            "Manually verify the official Equipment Agent article, System Integration page and Website Terms of Use because the main unitedrentals.com site presents a Cloudflare challenge to this audit runner",
+            "Confirm the public System Integration page remains scoped to procurement, ordering, PO, bill-pay, invoicing, ERP, punch-out or equipment-management workflows rather than a documented Equipment Agent API",
+            "Search only public official developer and repository surfaces for a portable endpoint, OAuth metadata, schemas, SDK or source; do not probe private website traffic, credentials, customer data or undocumented routes",
+            "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9, all three file hashes, complete inventory hash, developer identity, private app ID, prompt and capability markers",
+            "Confirm plugins/united-rentals and packages/united-rentals.zip remain absent while endpoint, authentication, schema, entitlement, license and artwork blockers remain",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py"
+          ]
+        }
       },
       "ghast": {
         "implementationStatus": "not-implemented"
