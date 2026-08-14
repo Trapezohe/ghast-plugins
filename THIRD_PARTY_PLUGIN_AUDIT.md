@@ -93,7 +93,7 @@ verification.
 | happenstance | Happenstance, Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | hebbia | Hebbia | appConnector | MIT | official-source-verified | implemented-verified |
 | heygen | HeyGen | appConnector, skills | MIT | official-source-verified | implemented-verified |
-| hg-insights | HG Insights | appConnector | MIT | official-source-research-required | not-implemented |
+| hg-insights | HG Insights | appConnector | MIT | official-source-verified | implemented-verified |
 | highlevel | HighLevel | appConnector | MIT | official-source-verified | implemented-verified |
 | hostinger | Hostinger | appConnector | MIT | official-source-verified | implemented-verified |
 | hubspot | HubSpot | appConnector, skills | MIT | official-source-verified | implemented-verified |

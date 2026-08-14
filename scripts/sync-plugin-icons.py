@@ -39,7 +39,9 @@ LOCAL_ICONS = {
     "convex": "assets/icon.png",
     "coderabbit": "assets/icon.svg",
     "deepnote": "assets/icon.svg",
+    "egnyte": "assets/logo.svg",
     "expo": "assets/icon.png",
+    "factset": "assets/icon.svg",
     "glean": "assets/icon.png",
     "hyperframes": "assets/icon.png",
     "heygen": "assets/icon.png",
@@ -390,6 +392,15 @@ CUSTOM_ICONS = {
         '<path d="M23 23l15-4M21 25l5 12M41 22l-8 15"/>'
         '<circle cx="46" cy="43" r="8" fill="#315F78"/>'
         '<path d="M52 49l5 5"/>',
+    ),
+    "hg-insights": (
+        "#176B68",
+        '<path d="M11 49h42"/>'
+        '<rect x="14" y="35" width="7" height="10"/>'
+        '<rect x="27" y="28" width="7" height="17"/>'
+        '<rect x="40" y="19" width="7" height="26"/>'
+        '<path d="M14 28l13-8 9 4 14-12"/>'
+        '<circle cx="50" cy="12" r="3" fill="white" stroke="none"/>',
     ),
     "hebbia": (
         "#4657F5",

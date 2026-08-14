@@ -1899,6 +1899,34 @@
       "license": "MIT"
     },
     {
+      "id": "hg-insights",
+      "name": "hg-insights",
+      "description": "Research companies, markets, technology adoption, buying signals, spend, contracts, contacts, and GTM segments through HG Insights' official Phoenix MCP server.",
+      "manifest": {
+        "name": "hg-insights",
+        "description": "Research companies, markets, technology adoption, buying signals, spend, contracts, contacts, and GTM segments through HG Insights' official Phoenix MCP server.",
+        "author": {
+          "name": "HG Insights",
+          "url": "https://hginsights.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://phoenix.hginsights.com/docs/getting-started",
+        "upstreamRevision": "hg-phoenix-docs-c6ffc8835205+auth-57567aa2b2e3+oauth-8bce6138eff9",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/hg-insights.zip",
+        "sha256": "7fa1298947df6fa426bd30c5507ec4c2b2236d1a0e794a5804bc454e2fce323f"
+      },
+      "icon": "./plugins/hg-insights/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://phoenix.hginsights.com/docs/getting-started",
+      "license": "MIT"
+    },
+    {
       "id": "highlevel",
       "name": "highlevel",
       "description": "Inspect contacts, opportunities, pipelines, appointments, calendars, conversations, messages, and related CRM activity through HighLevel's official hosted MCP server.",

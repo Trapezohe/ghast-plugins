@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "hg-insights": {
+      "url": "https://phoenix.hginsights.com/api/mcp",
+      "transport": "streamable-http",
+      "headers": {
+        "Authorization": "Bearer $VAULT:hg-insights-api-key"
+      }
+    }
+  }
+}
