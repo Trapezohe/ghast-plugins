@@ -1,0 +1,18 @@
+{
+  "name": "factset",
+  "version": "1.0.2-ghast.1",
+  "description": "Research financial data, analytics, and licensed broker research through FactSet's official MCP and APIs.",
+  "category": "finance",
+  "author": {
+    "name": "FactSet Research Systems Inc.",
+    "url": "https://www.factset.com"
+  },
+  "homepage": "https://developer.factset.com/mcp",
+  "repository": "https://github.com/factset/enterprise-sdk",
+  "upstreamRevision": "mcp-248bd4b02bb4+sdk-36c67dfb8ff2+oauth-446c80d9c183+auth-b8e63e5e699e",
+  "license": "Apache-2.0",
+  "portStatus": "full",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

@@ -80,7 +80,7 @@ verification.
 | dow-jones-factiva | Factiva, Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | egnyte | Egnyte Inc | appConnector | MIT | official-source-verified | implemented-verified |
 | expo | Expo | skills, commands | MIT | official-source-verified | implemented-verified |
-| factset | FactSet | appConnector | MIT | official-source-research-required | not-implemented |
+| factset | FactSet | appConnector | MIT | official-source-verified | implemented-verified |
 | fal | Fal | appConnector | MIT | official-source-verified | implemented-verified |
 | figma | Figma | appConnector, mcpServers, skills, commands | LicenseRef-Figma-Developer-Terms | blocked-license | not-implemented |
 | finn | FINN GmbH | appConnector | MIT | official-source-research-required | not-implemented |

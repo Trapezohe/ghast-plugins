@@ -5866,6 +5866,68 @@
         "python3 scripts/validate-ghast-repository.py",
         "unzip -tqq packages/dow-jones-factiva.zip"
       ]
+    },
+    "factset": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "FactSet Research Systems Inc.",
+      "officialRepository": "https://github.com/factset/enterprise-sdk",
+      "officialRevision": "mcp-248bd4b02bb4+sdk-36c67dfb8ff2+oauth-446c80d9c183+auth-b8e63e5e699e",
+      "license": "Apache-2.0",
+      "licenseEvidence": [
+        "factset/enterprise-sdk LICENSE at revision 36c67dfb8ff2b9893d0f8822ecb5d62abd30dc3f has SHA-256 58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd and is Apache License 2.0.",
+        "InvestmentResearch.v1.yaml and SecurityExplanation.v1.json both declare Apache License 2.0 in their official OpenAPI metadata.",
+        "plugins/factset/LICENSE copies the official SDK license. The Ghast-authored adapter, workflow, documentation, and generic icon are distributed under the same license."
+      ],
+      "officialityEvidence": [
+        "FactSet's official developer portal publishes the hosted MCP endpoint https://mcp.factset.com/content/v1, owner content.api.mcp@factset.com, and a 20-tool financial-data catalog.",
+        "The MCP product JSON has canonical SHA-256 248bd4b02bb48df52db939ff4e0d8200bb62f0ca6ee654bc74d02d4ddf88967c; the ordered tool-name inventory has SHA-256 e11b82c355b2f2a94f0cd88c1397792c65d4dbfd6f2582661232cd64bc1cf6a6.",
+        "The official protected-resource metadata names https://mcp.factset.com/content/v1, authorization server https://auth.factset.com, and openid, mcp, and email scopes.",
+        "The official OIDC metadata publishes dynamic client registration, authorization-code and client-credentials grants, and PKCE S256. Its canonical SHA-256 is b8e63e5e699e31197a954e529437ffff13a2fa45b344939f71a27477bc66410b.",
+        "FactSet's official GitHub organization owns enterprise-sdk. The pinned repository publishes generated SDKs and OpenAPI specifications for FactSet APIs.",
+        "The official Investment Research API describes broker and publisher research delivered through FactSet Research Connect, including headlines, contributors, analysts, publication dates, action metadata, and document links.",
+        "The official Security Explanation 1.6 specification exposes an optional brokerResearchSummary with none, summary, or footnote modes and optional broker IDs.",
+        "On August 14, 2026, anonymous MCP initialization, Investment Research search, and Security Explanation creation each returned HTTP 401 with Authentication Failed.",
+        "A one-time disposable public loopback OAuth client registration returned HTTP 201 without a client secret. No token, account login, or credential was retained."
+      ],
+      "codexCapabilities": [
+        "Pull FactSet consensus estimates and recent price performance for a ticker.",
+        "Compare margins, revenue growth, and valuation multiples across a peer set.",
+        "Find recent broker research headlines for a company and summarize sentiment.",
+        "Connect broader financial data, analytics, and investment workflows through FactSet's private app connector."
+      ],
+      "ghastCapabilities": [
+        "Direct standard MCP access to FactSet's official 20-tool catalog for estimates, pricing, fundamentals, debt, ownership, events, transcripts, StreetAccount news, filings, screeners, entity data, funds, private markets, GeoRev, supply chain, RBICS, and fixed-income terms.",
+        "Official Investment Research API search and count workflows for broker research headlines, contributors, analysts, dates, categories, rating actions, target actions, weighting actions, and entitlement-aware document links.",
+        "Official Security Explanation asynchronous workflows with optional performance, source links, market context, internal rationale, and entitled broker research summaries.",
+        "A standard-library adapter supporting existing bearer tokens or FactSet username-serial/API-key authentication without persisting credentials or automatically downloading reports."
+      ],
+      "capabilityRelationship": "equivalent-official-mcp-plus-broker-research-api-adapter",
+      "limitations": [
+        "FactSet does not publish the hosted MCP server source. The MCP declaration connects to FactSet's service; Apache-2.0 covers the official SDK and Ghast-authored local materials, not the hosted implementation or data.",
+        "Authenticated tools/list and customer-data calls were not executed because no FactSet customer account, subscription, or dataset entitlement was supplied. Live schemas and workspace permissions remain authoritative.",
+        "MCP browser OAuth requires an eligible FactSet account and service provisioning. The authorization request could not be completed without a customer login.",
+        "Investment Research requires FactSet Research Connect and contributor entitlements. Document links are licensed and must not be automatically downloaded, persisted, quoted, indexed, or redistributed.",
+        "Security Explanation is asynchronous and broker summaries require a separate Broker Research entitlement. The adapter does not poll automatically or retry job creation.",
+        "StreetAccount News is not broker research. The public MCP unstructured-content tool covers news, transcripts, and filings; the separate official Investment Research and Security Explanation APIs close the Codex broker-research prompt gap.",
+        "FactSet estimates, prices, classifications, generated explanations, and research opinions can be stale, revised, conflicting, currency-dependent, or entitlement-limited. They are not investment advice.",
+        "People, insider, ownership, private-company, and research metadata can contain personal or commercially sensitive data and must remain scoped to the user's authorized purpose.",
+        "A generic financial-research icon is used because the private Codex marketplace artwork is not redistributed."
+      ],
+      "verification": [
+        "python3 scripts/import-factset-plugin.py --source-root ../upstreams/factset-enterprise-sdk --openai-source ../openai-plugins",
+        "Verify official SDK revision 36c67dfb8ff2b9893d0f8822ecb5d62abd30dc3f, tree 970e0ff5a53917234d0581783c04ac2fb8f18d60, clean worktree, Apache-2.0 license, README, and both pinned API specification hashes.",
+        "Verify FactSet's official MCP product JSON, owner, endpoint, all 20 ordered tool names, tool summaries, and current client documentation markers.",
+        "Verify protected-resource and OIDC metadata canonical hashes, authorization server, scopes, dynamic registration endpoint, grant types, and PKCE S256.",
+        "Probe anonymous MCP initialize, Investment Research search, and Security Explanation create; require HTTP 401 and exact Authentication Failed response.",
+        "Parse and normalize the official Investment Research sample through the generated adapter; verify metadata, action fields, entitlement link, and no document download.",
+        "Build a Security Explanation request locally and verify required dates, broker summary mode, broker IDs, and no network access during the test.",
+        "Verify generated adapter SHA-256 1640c4073152866e095891b510ae8077850c7277b4306fe678b416ab71c7f572 and Python syntax.",
+        "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 FactSet manifest, private app ID, default prompts, and both icon hashes without redistributing those files.",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/factset.zip"
+      ]
     }
   }
 }

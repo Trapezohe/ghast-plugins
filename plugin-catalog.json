@@ -1537,6 +1537,36 @@
       "license": "MIT"
     },
     {
+      "id": "factset",
+      "name": "factset",
+      "description": "Research financial data, analytics, and licensed broker research through FactSet's official MCP and APIs.",
+      "manifest": {
+        "name": "factset",
+        "description": "Research financial data, analytics, and licensed broker research through FactSet's official MCP and APIs.",
+        "author": {
+          "name": "FactSet Research Systems Inc.",
+          "url": "https://www.factset.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.2-ghast.1",
+        "homepage": "https://developer.factset.com/mcp",
+        "repository": "https://github.com/factset/enterprise-sdk",
+        "upstreamRevision": "mcp-248bd4b02bb4+sdk-36c67dfb8ff2+oauth-446c80d9c183+auth-b8e63e5e699e",
+        "license": "Apache-2.0",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/factset.zip",
+        "sha256": "b326b24eeafdf87bd100f38833201c288f0466a04d74907277fcf2694e50c71c"
+      },
+      "icon": "./plugins/factset/assets/icon.svg",
+      "category": "finance",
+      "homepage": "https://developer.factset.com/mcp",
+      "repository": "https://github.com/factset/enterprise-sdk",
+      "license": "Apache-2.0"
+    },
+    {
       "id": "fal",
       "name": "fal",
       "description": "Discover, price, run, upload for, monitor, and cancel image, video, audio, 3D, training, editing, and other generative-media workflows through fal's official hosted MCP server.",
