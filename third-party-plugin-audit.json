@@ -9672,10 +9672,71 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.pitchbook.com"
+        "homepage": "https://www.pitchbook.com",
+        "review": {
+          "verificationStatus": "official-source-research-required",
+          "officialDeveloper": "PitchBook Data, Inc.",
+          "officialRepository": null,
+          "officialRevision": "pitchbook-premium-mcp-resource-9577526c79db+oauth-93f1ae91995c+openai-342c03d3049a",
+          "license": "UNVERIFIED",
+          "licenseEvidence": [
+            "PitchBook publishes a hosted Premium Connector and a separately contracted Direct Data API, but it does not publish either service implementation under an open-source license.",
+            "PitchBook's Terms of Use reserve service, application, and content rights; limit ordinary use to the subscriber's internal business operations; restrict database-scale extraction; and impose attribution and audience limits on work product containing PitchBook data.",
+            "The Codex manifest's MIT declaration covers the OpenAI repository artifact. It does not license PitchBook's proprietary server, data, research, private OAuth clients, service credentials, logos, or marketplace artwork for redistribution.",
+            "No PitchBook code, data, tool schema, credential, icon, logo, or documentation is redistributed because no portable Ghast plugin is published."
+          ],
+          "officialityEvidence": [
+            "PitchBook's official Premium Connector product page says the connector provides companies, deals, investors, funds, and research inside ChatGPT, Claude, Microsoft 365 Copilot, Perplexity, and other approved enterprise AI partners.",
+            "PitchBook's official Getting Started guide says the Premium Connector is built on MCP server technology, managed in the cloud through partner sites, requires a seat-based, unlimited, or trial PitchBook license plus SSO, and is protected by application-level safeguards restricting access to approved AI platforms.",
+            "The same guide documents 150 tool calls per rolling hour and 300 tool calls per day, and identifies company research, deal sourcing, fundraising analysis, comparable-company benchmarking, and relationship mapping as supported workflows.",
+            "PitchBook's official ChatGPT and Claude guides require an administrator or organization owner to enable PitchBook from the corresponding connector directory before an entitled user authenticates with PitchBook SSO.",
+            "The official ChatGPT guide exposes action-control behavior for newly introduced data sets and names pitchbook_get_reports_analysis as a research-report tool.",
+            "PitchBook's official prompt library documents natural-language access to structured, data-backed private-market answers and prompts covering companies, deals, investors, funds, limited partners, professionals, financials, performance, commitments, market mapping, sourcing, diligence, fundraising, and benchmarking.",
+            "The official hosted endpoint https://premium.mcp.pitchbook.com/mcp publishes protected-resource and authorization-server metadata with canonical JSON SHA-256 values 9577526c79db48e014832b447c5f87290ce93890695f03a32410c63c5881d088 and 93f1ae91995c7653c84cc8d2156b86b75521f429863d14bf049d2f7cb54e57f8.",
+            "The metadata declares authorization-code and refresh-token grants, PKCE S256, confidential-client authentication, Client ID Metadata Documents, and openid, offline_access, and claudeai scopes.",
+            "On August 14, 2026, unauthenticated MCP initialization returned HTTP 401, the exact protected-resource metadata challenge, and body SHA-256 8599a03b4c1d788236014f851ec320b3ad4a589c59e8c1ea045dd4d052291cce.",
+            "On August 14, 2026, the advertised registration endpoint rejected a disposable loopback client with HTTP 400, error invalid_redirect_uri, and body SHA-256 e16b62c8e5621f34f7efc30c08633c3135dbcd266412162723a7ba659d2301db because the callback was not on PitchBook's whitelist. No client or secret was created.",
+            "PitchBook's official API pages describe Direct Data API as a RESTful, JSON, on-demand data product covering company, deal, investor, fund, person, limited-partner, and service-provider entity types under a standalone contract separate from the PitchBook Platform.",
+            "OpenAI's pinned snapshot identifies PitchBook as developer, maps private app ID asdk_app_693850f6312c8191be5a026bf3538e80, and describes structured private-capital data across companies, investors, funds, deals, limited partners, and people. Its complete three-file inventory SHA-256 is 342c03d3049a30e614cfc5851928921dcbe7147d482b09bdd49594f508ef948e."
+          ],
+          "codexCapabilities": [
+            "Retrieve structured data for companies, investors, funds, deals, limited partners, and people",
+            "Return firmographics, financing rounds, deal terms, ownership, financials, fund performance, LP commitments, investor portfolios, team details, and source metadata",
+            "Identify entities, summarize historical activity, answer factual private-market questions, and assemble normalized datasets for analysis"
+          ],
+          "ghastCapabilities": [
+            "The official hosted Premium MCP establishes a capability surface corresponding to the Codex connector for entitled users on approved AI partner platforms.",
+            "The separately licensed Direct Data API provides an official custom-integration path for contracted customers, but no public schema, credential grant, or self-service package was located that can be implemented and verified here.",
+            "No Ghast plugin is published because an ordinary loopback OAuth client is rejected by PitchBook's callback whitelist and the public documentation says partner connections are cloud-managed and platform-approved."
+          ],
+          "capabilityRelationship": "official-hosted-mcp-found-private-client-whitelist-and-data-license-blockers",
+          "limitations": [
+            "The OpenAI app ID is a marketplace mapping, not an MCP endpoint grant, OAuth client, access token, SSO assertion, API contract, or reusable Ghast configuration.",
+            "The hosted endpoint is reachable and standards-shaped, but its dynamic registration endpoint rejects an ordinary loopback callback and its token endpoint advertises only confidential-client authentication. Ghast must not reuse or impersonate ChatGPT, Claude, or another partner's approved client.",
+            "Client ID Metadata Document support does not override the callback whitelist or establish that an arbitrary Ghast client is approved by PitchBook.",
+            "PitchBook's official setup documentation describes partner-managed cloud connections and approved-platform safeguards rather than a user-supplied endpoint workflow for arbitrary MCP clients.",
+            "Authenticated tools/list and data calls were not run because no PitchBook entitlement, SSO account, approved client, or service credential was supplied. The audit does not claim an exact complete live tool inventory.",
+            "Premium Connector access requires an eligible PitchBook license and SSO and remains subject to organization-level connector enablement, data-set action controls, user permissions, hourly and daily tool limits, regions, product coverage, and service availability.",
+            "The Direct Data API is a separate paid offering requiring a standalone contract. Public marketing and help pages do not provide a complete OpenAPI schema, endpoint catalog, authentication grant, test tenant, or redistribution right sufficient for a verified adapter.",
+            "PitchBook data and research are proprietary, may include third-party supplier content, and are licensed for defined internal uses. Do not bulk extract, reconstruct the database, redistribute raw data, publish beyond contractual limits, or omit required PitchBook attribution.",
+            "Private-market data may be incomplete, estimated, delayed, or unavailable. It is informational and not investment, legal, tax, or other professional advice; high-impact decisions require source review and qualified human judgment.",
+            "Do not create plugins/pitchbook, an icon, or a package until PitchBook supplies an authorized portable client or documented custom-integration path and the user's contract permits the intended workflows."
+          ],
+          "verification": [
+            "python3 scripts/audit-pitchbook-plugin.py --openai-source ../openai-plugins",
+            "Verify canonical protected-resource and authorization-server metadata hashes, resource URL, scopes, confidential-client methods, authorization-code and refresh-token grants, Client ID Metadata Documents, and PKCE S256",
+            "Probe anonymous initialize and require HTTP 401, the exact protected-resource challenge, and body SHA-256 8599a03b4c1d788236014f851ec320b3ad4a589c59e8c1ea045dd4d052291cce",
+            "Submit only the fixed disposable loopback registration request and require HTTP 400 invalid_redirect_uri plus body SHA-256 e16b62c8e5621f34f7efc30c08633c3135dbcd266412162723a7ba659d2301db; never use an approved partner callback or retain credentials",
+            "Manually verify the official Premium Connector product, Getting Started, ChatGPT, Claude, prompt-library, Direct Data API, API help, and Terms of Use pages because PitchBook's Cloudflare policy blocks this audit runner from fetching those human-facing pages",
+            "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9, all three file hashes, complete inventory hash, developer identity, private app ID, default prompt, and capability markers",
+            "Confirm plugins/pitchbook and packages/pitchbook.zip remain absent",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py"
+          ]
+        }
       },
       "ghast": {
         "implementationStatus": "not-implemented"
