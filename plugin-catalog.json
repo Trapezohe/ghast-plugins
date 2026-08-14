@@ -3956,6 +3956,34 @@
       "license": "Apache-2.0"
     },
     {
+      "id": "waldo",
+      "name": "waldo",
+      "description": "Research brands, ads, audiences, trends, and workspaces through Waldo's official curated strategy MCP.",
+      "manifest": {
+        "name": "waldo",
+        "description": "Research brands, ads, audiences, trends, and workspaces through Waldo's official curated strategy MCP.",
+        "author": {
+          "name": "Curiosities, Inc. DBA Waldo",
+          "url": "https://www.waldo.fyi"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://agentic.waldo.fyi/docs/mcp",
+        "upstreamRevision": "waldo-docs-2467b590ff1b+developers-d93fe7dd2d4b+terms-685dde629e34+resource-d15bb784b8af+oauth-503cc02e147f+boundary-4ad7751110ef",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/waldo.zip",
+        "sha256": "a2c3963c7d536ca370ee3a112e5833459dbc3f62545a88742e0fb46c489fa9a1"
+      },
+      "icon": "./plugins/waldo/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://agentic.waldo.fyi/docs/mcp",
+      "license": "MIT"
+    },
+    {
       "id": "website-fetcher",
       "name": "website-fetcher",
       "description": "Skill that teaches the model to fetch a URL and read its text content via the built-in WebFetch tool — 'just look at this page' without opening a browser.",

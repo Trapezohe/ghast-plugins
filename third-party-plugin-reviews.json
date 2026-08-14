@@ -7752,6 +7752,61 @@
         "python3 scripts/validate-ghast-repository.py",
         "unzip -tqq packages/third-bridge.zip"
       ]
+    },
+    "waldo": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Curiosities, Inc. DBA Waldo",
+      "officialRepository": null,
+      "officialRevision": "waldo-docs-2467b590ff1b+developers-d93fe7dd2d4b+terms-685dde629e34+resource-d15bb784b8af+oauth-503cc02e147f+boundary-4ad7751110ef",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/waldo/LICENSE licenses only the independently authored Ghast endpoint declaration, brand-strategy skill, metadata, documentation, and generic signal-research icon.",
+        "Waldo's terms reserve the hosted service, software, data, Documentation, logos, trademarks, and other Waldo IP. No hosted server source, private connector, marketplace artwork, service data, response, credential, customer content, or official documentation text is redistributed."
+      ],
+      "officialityEvidence": [
+        "Waldo's official MCP documentation names https://mcp.waldo.fyi as its authenticated remote MCP, documents automatic OAuth or API-key authentication, and identifies https://mcp.waldo.fyi/strategy as a separate curated endpoint for ad, social, feed, and workspace strategy skills. Its pinned semantic core SHA-256 is 2467b590ff1b9da4fe5bb9190f9145d065ad5e4cf417809d56d60fba7eb3c865.",
+        "The same official documentation says the full MCP maps brand intelligence REST operations one-to-one, includes workspace and API-key management, exposes a full 80+ tool surface, and presents ChatGPT with a curated subset of about 20 tools. Ghast uses the official fixed strategy endpoint rather than guessing OpenAI's private app mapping.",
+        "Waldo's official developer page describes 200+ REST endpoints and a native MCP with the same authentication and response shapes, daily tracked brand/category/audience refresh, live discovery and enrichment, scoped keys, source layers, credit metering, and entity activation fees. Its pinned semantic core SHA-256 is d93fe7dd2d4b80b3e96083e6e730966351f81ebd12c02f23aa8d758172479ce7.",
+        "The current official terms identify Curiosities, Inc. DBA Waldo, grant authorized users limited revocable service access and an internal-use Documentation license, reserve Waldo IP, and prohibit scraping, resale, excessive automation, and unlicensed copying. Their pinned core SHA-256 is 685dde629e34f3406eb1cf84b465b3f21b8f3622c5c6ea7af527145fe57c3d88.",
+        "The live protected-resource metadata identifies https://mcp.waldo.fyi, Waldo's graphql authorization server, mcp:read and mcp:execute scopes, and bearer-header auth. Its canonical SHA-256 is d15bb784b8af736573dcd4a08ad34ca171b3dee9ef64b51fcf191925d429e458.",
+        "The live authorization metadata publishes authorization, token, revocation, and dynamic-registration endpoints, authorization code, public clients, and PKCE S256. Its canonical SHA-256 is 503cc02e147fb465066fbb639bdef73f307f1026fe900fc839e67d690e012ace.",
+        "On August 14, 2026, one disposable public loopback client registered with HTTP 201 using mcp:read and mcp:execute. No returned client value, authorization code, token, login, or account data was retained.",
+        "Anonymous initialization of the official strategy endpoint returned HTTP 401, the official protected-resource challenge, and canonical response SHA-256 4ad7751110ef938753219d1a729c5ae5e23575c35f61d73422675962198bd173.",
+        "OpenAI's pinned snapshot identifies Curiosities, Inc. as the developer, maps private app ID asdk_app_69a22803c8c481919da6f9b41bd93725, and describes Strategy Agent, ads, mentions, audience conversations, trends, and team brand spaces. Its complete inventory SHA-256 is 2dcf525895482aec2eabc23cd62ec4ec3940febe1b72f9358b1b3e445a1212da."
+      ],
+      "codexCapabilities": [
+        "Run Waldo's strategy agent for agencies and brands",
+        "Explore paid ads, brand mentions, audience conversations, trending topics, and other collected signals",
+        "Retrieve brand-intelligence data across the user's team brand spaces through OpenAI's private app mapping"
+      ],
+      "ghastCapabilities": [
+        "Connect directly to Waldo's official curated strategy MCP with the user's own OAuth authorization instead of OpenAI's private app ID",
+        "Use the official focused ad, social, feed, and workspace tool set that most closely matches the Codex Strategy Agent description",
+        "Apply source preservation, raw-versus-analysis separation, freshness, credit confirmation, workspace isolation, API-key safety, privacy, no-scraping, and no-bulk-redistribution guidance"
+      ],
+      "capabilityRelationship": "equivalent-at-official-curated-strategy-mcp-surface",
+      "limitations": [
+        "Waldo does not publish the hosted MCP implementation under an open-source license. The MIT license applies only to the Ghast-authored adapter materials.",
+        "A Waldo account, active subscription, Brand Intelligence access, workspace entitlements, enabled tools, and available credits are required. Some entities may require paid activation.",
+        "Authenticated tools/list and data retrieval were not exercised because no user Waldo account was supplied. Exact tool schemas and availability remain controlled by the service.",
+        "Waldo's documentation currently describes 80+ MCP tools while its developer marketing describes 200+ REST endpoints and MCP/API parity. The configured strategy endpoint is intentionally a smaller fixed subset and is not represented as the full surface.",
+        "The Codex default prompt 'Check the relevant mobile test coverage in Waldo' conflicts with the manifest's own strategy description and Waldo's official brand-intelligence product. It is treated as stale metadata, not a missing capability.",
+        "Tracked and live-discovery data have different freshness and cost characteristics. Source-linked results and generated analysis still require verification.",
+        "Waldo's terms prohibit scraping, resale, excessive automated access, circumvention, and unlicensed redistribution. This plugin does not provide unofficial or scraped fallbacks.",
+        "A generic signal-research icon is used because Waldo and OpenAI marketplace artwork is not redistributed."
+      ],
+      "verification": [
+        "python3 scripts/import-waldo-plugin.py --openai-source ../openai-plugins",
+        "Verify official MCP documentation, developer-page, and terms semantic cores with SHA-256 2467b590ff1b9da4fe5bb9190f9145d065ad5e4cf417809d56d60fba7eb3c865, d93fe7dd2d4b80b3e96083e6e730966351f81ebd12c02f23aa8d758172479ce7, and 685dde629e34f3406eb1cf84b465b3f21b8f3622c5c6ea7af527145fe57c3d88",
+        "Verify protected-resource and authorization-server canonical hashes, issuer, scopes, bearer auth, authorization-code grant, public-client support, revocation, dynamic registration, PKCE S256, and official service-documentation link",
+        "Probe https://mcp.waldo.fyi/strategy without credentials and require HTTP 401, the official resource challenge, and canonical body hash 4ad7751110ef938753219d1a729c5ae5e23575c35f61d73422675962198bd173",
+        "For a deliberate one-time OAuth portability check, add --verify-registration and require disposable public loopback registration; retain no returned client value",
+        "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9, all three file hashes, inventory hash, developer identity, private app ID, valid capability markers, and the stale default-prompt evidence",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/waldo.zip"
+      ]
     }
   }
 }
