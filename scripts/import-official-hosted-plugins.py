@@ -3835,6 +3835,20 @@ LSEG_AUTHORIZATION_METADATA_URL = (
     "https://login.ciam.refinitiv.com/"
     ".well-known/oauth-authorization-server"
 )
+LSEG_DEVELOPER_MCP_URL = (
+    "https://developers.lseg.com/en/api-catalog/"
+    "lseg-financial-analytics/lseg-financial-analytics-apis/mcp"
+)
+LSEG_DEVELOPER_MCP_EVIDENCE_SHA256 = (
+    "e591ae2054e19f2dee44735de9515a87bef6c20bc4d54e6a631d2c6a6d903978"
+)
+LSEG_ANTHROPIC_TUTORIAL_URL = (
+    "https://claude.com/resources/tutorials/"
+    "using-lseg-for-financial-market-data-analysis"
+)
+LSEG_ANTHROPIC_TUTORIAL_CORE_SHA256 = (
+    "2e8ccee3f01060908d1e00342868e82fad471231b85ea90d25bc401f6d34e3eb"
+)
 LSEG_PROTECTED_RESOURCE_SHA256 = (
     "1fd4a302b3891cdc3a84c64434a49b04f12f67248a8cfde341947a73afff559b"
 )
@@ -3843,6 +3857,9 @@ LSEG_AUTHORIZATION_METADATA_SHA256 = (
 )
 LSEG_AUTH_ERROR_SHA256 = (
     "2609c9b2e73d3e90d9900eb89f1f751136c2cf0a921989ed4ebe79108e0eaea6"
+)
+LSEG_REGISTRATION_NOT_FOUND_SHA256 = (
+    "5f742fb9d23e07601fe5121aab561891f6759cc30bfb2ac4265c7d7098849604"
 )
 LSEG_ANTHROPIC_REVISION = "bb4a2b3e53cf27f8900b33ed6a2d95ed32e57f1d"
 LSEG_ANTHROPIC_BASE_URL = (
@@ -13604,8 +13621,96 @@ def verify_lseg_evidence() -> None:
             "token_endpoint_auth_methods_supported",
             [],
         )
+        or auth_metadata.get("code_challenge_methods_supported") is not None
     ):
         raise ValueError("LSEG authorization metadata changed")
+
+    developer_mcp_page = fetch_text(LSEG_DEVELOPER_MCP_URL)
+    developer_mcp_markers = {
+        "canonical": (
+            '<link rel="canonical" href="'
+            f'{LSEG_DEVELOPER_MCP_URL}"/>'
+        ),
+        "createDate": '"createDate":"2025-12-03"',
+        "gate": "Please sign in to explore content on this page.",
+        "heading": '<h1 class="Typestack Typestack--h1">LSEG MCP</h1>',
+        "ogTitle": '<meta property="og:title" content="LSEG MCP"/>',
+        "publishDate": '"publishDate":"2025-12-03"',
+    }
+    for label, marker in developer_mcp_markers.items():
+        if marker not in developer_mcp_page:
+            raise ValueError(
+                f"LSEG developer MCP page is missing {label!r}"
+            )
+    developer_mcp_evidence = {
+        "canonical": LSEG_DEVELOPER_MCP_URL,
+        "createDate": "2025-12-03",
+        "gate": "Please sign in to explore content on this page.",
+        "heading": "LSEG MCP",
+        "ogTitle": "LSEG MCP",
+        "publishDate": "2025-12-03",
+    }
+    if (
+        canonical_json_sha256(developer_mcp_evidence)
+        != LSEG_DEVELOPER_MCP_EVIDENCE_SHA256
+    ):
+        raise ValueError("LSEG developer MCP evidence hash is inconsistent")
+
+    anthropic_tutorial = fetch_visible_text(
+        LSEG_ANTHROPIC_TUTORIAL_URL,
+        "The LSEG integration provides Claude with access",
+    )
+    tutorial_start = anthropic_tutorial.find(
+        "The LSEG integration provides Claude with access"
+    )
+    tutorial_end = anthropic_tutorial.find(
+        "Common Use Cases",
+        tutorial_start,
+    )
+    if tutorial_start < 0 or tutorial_end < tutorial_start:
+        raise ValueError("Anthropic LSEG tutorial structure changed")
+    tutorial_core = anthropic_tutorial[tutorial_start:tutorial_end].strip()
+    if sha256_text(tutorial_core) != LSEG_ANTHROPIC_TUTORIAL_CORE_SHA256:
+        raise ValueError("Anthropic LSEG connector guidance changed")
+    for marker in (
+        "The LSEG integration relies upon Claude’s ability to use remote "
+        "connectors.",
+        "You will need to contact LSEG to get access to the MCP server.",
+        "Admin settings > Connectors",
+        "Add custom connector",
+        LSEG_MCP_URL,
+    ):
+        if marker not in tutorial_core:
+            raise ValueError(
+                f"Anthropic LSEG connector guidance is missing {marker!r}"
+            )
+
+    registration_url = auth_metadata["registration_endpoint"]
+    registration_request = urllib.request.Request(
+        registration_url,
+        headers={
+            "User-Agent": "ghast-lseg-audit/1.0",
+            "Accept": "application/json",
+        },
+    )
+    try:
+        urllib.request.urlopen(registration_request, timeout=30)
+    except urllib.error.HTTPError as exc:
+        registration_body = exc.read()
+        if (
+            exc.code != 404
+            or sha256_bytes(registration_body)
+            != LSEG_REGISTRATION_NOT_FOUND_SHA256
+            or b"<title>Unexpected Error</title>" not in registration_body
+        ):
+            raise ValueError(
+                "LSEG OAuth registration endpoint behavior changed"
+            ) from exc
+    else:
+        raise ValueError(
+            "LSEG OAuth registration endpoint now supports public discovery; "
+            "re-audit client onboarding"
+        )
 
     initialize = json.dumps(
         {
