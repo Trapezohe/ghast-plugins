@@ -12878,10 +12878,70 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://better.com"
+        "homepage": "https://better.com",
+        "review": {
+          "verificationStatus": "official-source-research-required",
+          "officialDeveloper": "Better Home & Finance Holding Company / Better Mortgage Corporation",
+          "officialRepository": null,
+          "officialRevision": "tinman-page-f849dcb291b1+chatgpt-9b2aceeb4cc2+partner-737549e9d48f+terms-7ec6dfdb4928+auth-52bfe15d9f90+openai-8aea24a74e77",
+          "license": "UNVERIFIED",
+          "licenseEvidence": [
+            "Better describes Tinman as its proprietary AI platform and publishes neither the service implementation nor an open-source license for the underwriting engine, context graph, institutional guidelines, pricing data, partner APIs, private MCP connector, tool schemas or trained models.",
+            "Better's Website Terms of Use state that website content including software, icons, text, logos, expressions and ideas is protected, prohibit commercial use of the website or its content, and permit only a revocable personal-use print copy.",
+            "The MIT declaration in OpenAI's three-file marketplace snapshot does not license Better's hosted Tinman platform, institutional mortgage intelligence, private app connector, service APIs, customer data, trademarks, logo or marketplace artwork.",
+            "No Better code, API schema, underwriting rule, lender data, private endpoint, credential, logo, icon or website content is redistributed because no independently authorized capability-equivalent Ghast plugin is published."
+          ],
+          "officialityEvidence": [
+            "Better's official March 5, 2026 release says its engineering and AI teams built a custom Model Context Protocol connector in collaboration with OpenAI to expose Tinman directly through ChatGPT. The pinned normalized release core has SHA-256 9b2aceeb4cc27f6f3e4409f5ff279a9ffa591d94ae8b491f13d1384b19974cbe.",
+            "The release says loan-officer teams and banks use a ChatGPT Enterprise account, download the Tinman app, and connect their own guidelines, pricing and CRM. Tinman then combines loan facts, documents and actions, applies guidelines, and returns a granular decision-ready status.",
+            "The same release says the connector can fully underwrite application data and documents against the product set and buy boxes of more than 45 institutional mortgage investors, including conforming, government and major-bank programs.",
+            "Better's current Tinman page describes the app as available to banks, fintechs and loan-officer teams and provides a form to sign up to test Tinman in ChatGPT using full name, email, company, customer count and annual mortgage originations. The pinned visible core has SHA-256 f849dcb291b1ad64737169eada6b587b75496908484c6df2ff222444b67374e8.",
+            "Better's official Finance of America release calls Tinman proprietary and documents a negotiated partner implementation with plug-and-play origination, private-label delivery, HELOC and HELOAN pricing, processing, underwriting and closing. It also describes Tinman as a modular, API-accessible solution available to lenders and brokers. The pinned normalized release core has SHA-256 737549e9d48fe1bc7c6adaece94f6c687a6874a764922c3404bd94636a1eeb19.",
+            "The public Tinman and partner materials provide a test or sales intake path, not a developer contract: no MCP endpoint, protected-resource metadata, API base URL, OpenAPI document, tool schema, scope list, sandbox, credential flow, rate limit or self-service integration guide is published.",
+            "Better.com exposes generic OpenID authorization metadata with canonical SHA-256 52bfe15d9f9010147fcfab38a3ba6034ec885a5aeb5a40fea46dd67d20d2d69f for Better's customer identity system. It contains only openid, email, phone and profile scopes, identifies no MCP resource, and does not make the Tinman connector portable. Conventional public protected-resource and /mcp paths return HTTP 404.",
+            "OpenAI's pinned snapshot identifies Better as developer, maps private app ID asdk_app_695d4fa044b48191ac7a81f333111b29, and promises lender and investor eligibility, DTI restructuring, income calculations, qualification rationale and compliant real-time decisions. Its complete three-file inventory SHA-256 is 8aea24a74e771e39566f674df742d6987f66583c475e84d37ca7c86b85376152."
+          ],
+          "codexCapabilities": [
+            "Answer complex mortgage and home-equity eligibility questions for loan officers and underwriters using trusted credit-decision data and underwriting logic",
+            "Evaluate debt-to-income restructuring, income calculations and scenario changes",
+            "Compare a borrower scenario against a broad set of lender and institutional-investor guidelines and explain which investors qualify and why",
+            "Use connected loan facts, application documents, pricing, guidelines and CRM context to return decision-ready underwriting status and support loan processing and fulfillment"
+          ],
+          "ghastCapabilities": [
+            "The official releases establish that Better operates the private Tinman MCP and a partner-integrated API-accessible platform corresponding to the Codex capability.",
+            "The public Better identity metadata can authenticate Better web users but does not identify or authorize a Tinman MCP resource or API.",
+            "No Ghast plugin is published because Better has not supplied a supported independent MCP or API contract, client authorization, institutional onboarding, stable schemas, test environment or adapter and artwork rights."
+          ],
+          "capabilityRelationship": "official-private-chatgpt-mcp-and-partner-api-found-no-public-contract-auth-or-schema",
+          "limitations": [
+            "The OpenAI app ID is a private marketplace mapping, not a Tinman endpoint, OAuth client, partner credential, underwriting license, investor-rule corpus, tool schema or reusable Ghast transport.",
+            "The phrase API-accessible describes Tinman's institutional product, but the verified public route is partnership and sales onboarding. It does not establish anonymous, self-service or ordinary developer access.",
+            "The generic Better OpenID metadata is for Better identity and customer sessions. Do not register or reuse that client flow as a substitute for a documented Tinman resource grant.",
+            "Do not inspect, scrape, replay or wrap Better's web application, signup workflow, consumer loan portal, internal APIs, private ChatGPT traffic or partner integrations. Technical reachability is not an integration contract or permission.",
+            "No authenticated tool listing, borrower scenario, investor qualification, DTI calculation, income calculation, document processing, pricing result, approval, rate lock or loan mutation was tested because no authorized institutional Tinman account and contract were supplied.",
+            "Tinman processes Social Security numbers, credit history, income, assets, employment, applications, documents and other non-public financial information. Better's privacy policy identifies GLBA-regulated data and AI-powered communications; any future integration requires strict purpose limitation, access controls, retention, audit and disclosure handling.",
+            "Mortgage eligibility, pricing, approvals and underwriting are high-impact financial decisions subject to lending, fair-lending, licensing, investor, disclosure and recordkeeping requirements. A generic assistant or reconstructed rule set cannot be presented as Better's decision engine.",
+            "Outputs and investor guidelines can be incomplete, stale, jurisdiction-dependent or conditioned on facts not present in a prompt. Licensed professionals and the lender's authoritative systems must review every decision and adverse-action consequence.",
+            "No icon or package is generated while the plugin remains blocked. Better and Tinman marks and OpenAI marketplace artwork are not redistribution evidence.",
+            "Do not create plugins/tinman-ai until Better publishes or directly supplies a supported portable endpoint or documented API, independent client authorization, eligible institutional onboarding, stable schemas, compliance controls, and sufficient adapter and artwork rights."
+          ],
+          "verification": [
+            "python3 scripts/audit-tinman-ai-plugin.py --openai-source ../openai-plugins",
+            "Verify the official Tinman public-page core hash and its bank, fintech, loan-officer, ChatGPT test-signup and annual-origination markers",
+            "Verify the March 5, 2026 release core hash and its Better-built custom MCP, ChatGPT Enterprise, guideline, pricing, CRM, loan-file context, document, decision-tree and 45-investor markers",
+            "Verify the Finance of America partner-release core hash and its proprietary, partnership, plug-and-play, private-label, HELOC, HELOAN, processing, underwriting, closing and API-accessible markers",
+            "Verify the Better terms core hash and its protected-content, no-commercial-use, personal-use and accuracy limitations",
+            "Verify the generic Better authorization metadata hash, issuer, endpoints and four identity scopes; require absence of an MCP resource and HTTP 404 at the conventional public protected-resource and /mcp paths",
+            "Do not invoke dynamic client registration, consumer authentication, customer portals, private APIs, borrower data, credit reports, loan documents or underwriting operations during public portability audits",
+            "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9, all three file hashes, complete inventory hash, Better identity, private app ID, prompt and capability markers",
+            "Confirm plugins/tinman-ai and packages/tinman-ai.zip remain absent while endpoint, authorization, schema, institutional entitlement, license, compliance and artwork blockers remain",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py"
+          ]
+        }
       },
       "ghast": {
         "implementationStatus": "not-implemented"
