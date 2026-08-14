@@ -146,7 +146,7 @@ verification.
 | s-p | S&P Global | appConnector | MIT | official-source-research-required | not-implemented |
 | scite | Scite | appConnector | MIT | official-source-verified | implemented-verified |
 | semrush | Semrush Holdings, Inc. | appConnector | MIT | official-source-verified | implemented-verified |
-| setu-bharat-connect-billpay | Setu | appConnector | MIT | official-source-research-required | not-implemented |
+| setu-bharat-connect-billpay | Setu | appConnector | MIT | official-source-verified | implemented-verified |
 | shopify | Shopify | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | shutterstock | Shutterstock | appConnector | MIT | official-source-verified | implemented-verified |
 | signnow | airSlate Inc | appConnector | MIT | official-source-verified | implemented-verified |

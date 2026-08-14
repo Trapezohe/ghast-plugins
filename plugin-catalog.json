@@ -3303,6 +3303,34 @@
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/seo-meta"
     },
     {
+      "id": "setu-bharat-connect-billpay",
+      "name": "setu-bharat-connect-billpay",
+      "description": "Discover, fetch, pay, and track Bharat Connect bills through Setu's official hosted Bill Payments MCP.",
+      "manifest": {
+        "name": "setu-bharat-connect-billpay",
+        "description": "Discover, fetch, pay, and track Bharat Connect bills through Setu's official hosted Bill Payments MCP.",
+        "author": {
+          "name": "BrokenTusk Technologies Private Limited (Setu)",
+          "url": "https://setu.co"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.2-ghast.1",
+        "homepage": "https://docs.setu.co/payments/billpay/mcp/integration-guide",
+        "upstreamRevision": "setu-guide-ce32831c2bf8+tools-66104c600dec+terms-f28fd487c892+oauth-74076e6e445e+boundary-8707c5830974+openai-1efb564161ff",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/setu-bharat-connect-billpay.zip",
+        "sha256": "7ddb337429ec125d3e0962911d8630cdded505d77c21763a9918a11488bbf2e9"
+      },
+      "icon": "./plugins/setu-bharat-connect-billpay/assets/icon.svg",
+      "category": "finance",
+      "homepage": "https://docs.setu.co/payments/billpay/mcp/integration-guide",
+      "license": "MIT"
+    },
+    {
       "id": "shopify",
       "name": "shopify",
       "description": "Shopify developer tools for OpenAI Codex — search Shopify docs, generate and validate GraphQL, Liquid, and UI extension code. Skill scripts send usage telemetry (queries, code, model/client identifiers) to shopify.dev by default; set OPT_OUT_INSTRUMENTATION=true to disable.",

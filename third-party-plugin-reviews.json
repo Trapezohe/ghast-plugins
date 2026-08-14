@@ -7409,6 +7409,66 @@
         "python3 scripts/validate-ghast-repository.py",
         "unzip -tqq packages/zoominfo.zip"
       ]
+    },
+    "setu-bharat-connect-billpay": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "BrokenTusk Technologies Private Limited (Setu)",
+      "officialRepository": null,
+      "officialRevision": "setu-guide-ce32831c2bf8+tools-66104c600dec+terms-f28fd487c892+oauth-74076e6e445e+boundary-8707c5830974+openai-1efb564161ff",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/setu-bharat-connect-billpay/LICENSE licenses only the independently authored Ghast endpoint declaration, safety guidance, metadata, documentation, and generic bill icon.",
+        "No Setu hosted-server source, private connector, credential, account data, bill, receipt, payment detail, developer-document body, logo, trademark, or OpenAI marketplace artwork is redistributed."
+      ],
+      "officialityEvidence": [
+        "Setu's official BillPay integration guide publishes https://billpay-mcp.setu.co/mcp for ChatGPT, Claude, Perplexity, and compatible MCP clients, requires OAuth, and routes users through phone-number and OTP verification.",
+        "The normalized official integration-guide core has SHA-256 ce32831c2bf8206c5c0c7949756db079a5d2b597620b368894332c9815ccbc72.",
+        "Setu's official tool guide lists eight ordered capabilities with name-list SHA-256 2a34f74123684baedbe4534c40a78744530b55d0ded748461868505717b42e29 for billers, categories, saved bills, bill fetch, payment, payment status, receipts, and payment history.",
+        "The normalized tool-guide and transaction-terms cores have SHA-256 values 66104c600decb3e65a3c54edd6ed5b5767a31e437f907bb1e7afb743d99f6750 and f28fd487c892fb42a6b92d926171885be5816e5e2191e95858783bed68253569.",
+        "The live protected-resource, OAuth, and OpenID metadata have canonical JSON SHA-256 values f9c8106c33def23e89ed29f919199a8ba3257b131f1ce43306ba8006fba7ef26, 74076e6e445e3a36c2f7ea03444ac13c1b8ee7d8c6de713f39bfbfddfaa7f236, and 3fee18931dd87e27b45da434aba8230916b0651cfb0637e5e61ac70cd34a16eb. They identify Setu's official resource, issuer, authorization, token and registration endpoints, authorization-code flow, and PKCE S256.",
+        "On August 14, 2026, anonymous MCP initialization returned HTTP 401, a Bearer challenge pointing to Setu's protected-resource metadata, and body SHA-256 8707c5830974437d64aaec366dc694c3f690c96a6025f3d02d3adac93360ce15.",
+        "A disposable loopback OAuth registration returned HTTP 201 and Setu's authorization endpoint served its official phone and OTP page. No client value, phone number, OTP, code, token, account, bill, or payment data was retained or packaged.",
+        "OpenAI's pinned snapshot identifies Setu as developer, maps private app ID asdk_app_69a7c0a3929081918f9a90b98a73b64b, and describes biller discovery, bill fetch, payment, status, and expense-summary workflows. Its complete inventory SHA-256 is 1efb564161ffa1f3ba1a40948e63a71cff5f2b6511ed9e67a49e1225c89c9a67."
+      ],
+      "codexCapabilities": [
+        "Find the correct Bharat Connect biller from a conversational request",
+        "Fetch the exact current bill amount using customer details",
+        "Show pending bills, amounts, and bill-expense summaries",
+        "Guide and initiate a bill payment only after user confirmation",
+        "Check whether a payment succeeded and present payment details"
+      ],
+      "ghastCapabilities": [
+        "Connect directly to Setu's official hosted MCP through OAuth, mobile-number verification, and OTP",
+        "List supported billers and categories and retrieve saved bills",
+        "Fetch current bill amounts and required customer context",
+        "Initiate bill payment with exact-target, amount, fee, and payment-method confirmation safeguards",
+        "Check payment status, retrieve completed transaction receipts, and list payment history",
+        "Apply privacy, no-secret, no-blind-retry, status-qualification, and regulated-payment safety rules"
+      ],
+      "capabilityRelationship": "official-hosted-mcp-equivalent",
+      "limitations": [
+        "Setu operates the hosted MCP and does not publish its server implementation or an open-source service license. Ghast packages only an endpoint declaration and independent guidance.",
+        "Use requires a supported Indian mobile number, Setu OTP flow, eligible biller and account, available payment method, service availability, and acceptance of Setu's current terms.",
+        "Authenticated tools/list, bill, history, receipt, and payment calls were not executed because no Setu account, phone number, OTP, or payment authorization was supplied.",
+        "Dynamic registration returns a client secret while the discovery metadata does not advertise token endpoint authentication methods and the response omits token_endpoint_auth_method. Compatibility depends on the host MCP client's OAuth implementation.",
+        "Payments can fail, remain pending, settle asynchronously, or be credited later by the biller. A successful payment-network status does not by itself prove final biller credit.",
+        "Successful bill payments usually cannot be cancelled. Fees and taxes must be shown before confirmation, and failed debit refunds remain subject to regulated participant timelines.",
+        "Setu's AI terms require users to verify bill details, amounts, and payment confirmations and state that AI output is not financial, legal, or professional advice.",
+        "The adapter never collects UPI PINs, card PINs, CVVs, bank passwords, or OTPs in chat and never blindly retries a payment after an ambiguous result.",
+        "A generic bill icon is used because Setu logos and OpenAI marketplace artwork are not redistributed."
+      ],
+      "verification": [
+        "python3 scripts/import-setu-billpay-plugin.py --openai-source ../openai-plugins",
+        "Verify the official integration-guide, tool-guide, and terms core hashes and the exact eight ordered tool names with SHA-256 2a34f74123684baedbe4534c40a78744530b55d0ded748461868505717b42e29",
+        "Verify protected-resource, OAuth, and OpenID metadata hashes, issuer, endpoints, authorization-code flow, and PKCE S256",
+        "Probe MCP initialize without credentials and require HTTP 401, the official protected-resource challenge, and body hash 8707c5830974437d64aaec366dc694c3f690c96a6025f3d02d3adac93360ce15",
+        "For a deliberate one-time OAuth portability audit, add --verify-registration and require disposable registration plus Setu's official phone and OTP authorization page; do not retain returned client values",
+        "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9, all three file hashes, inventory hash, developer identity, private app ID, and capability markers",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/setu-bharat-connect-billpay.zip"
+      ]
     }
   }
 }
