@@ -36,6 +36,7 @@ LOCAL_ICONS = {
     "boltz-api-cli": "assets/icon.png",
     "circleci": "assets/icon.svg",
     "cloudflare": "assets/icon.svg",
+    "convex": "assets/icon.png",
     "coderabbit": "assets/icon.svg",
     "deepnote": "assets/icon.svg",
     "expo": "assets/icon.png",

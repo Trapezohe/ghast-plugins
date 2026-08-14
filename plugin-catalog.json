@@ -1048,6 +1048,36 @@
       "license": "MIT"
     },
     {
+      "id": "convex",
+      "name": "convex",
+      "description": "Build and inspect Convex backends with the official Convex CLI, project Agent Skills, and 12-tool MCP server.",
+      "manifest": {
+        "name": "convex",
+        "description": "Build and inspect Convex backends with the official Convex CLI, project Agent Skills, and 12-tool MCP server.",
+        "author": {
+          "name": "Convex, Inc.",
+          "url": "https://www.convex.dev"
+        },
+        "icon": "./assets/icon.png",
+        "version": "1.44.0-ghast.1",
+        "homepage": "https://docs.convex.dev/ai/using-codex",
+        "repository": "https://github.com/get-convex/convex-backend",
+        "upstreamRevision": "convex-npm-1.44.0-8bdb320a17ed+icon-7023eb599ffe+tools-5d3be1fb3d20",
+        "license": "Apache-2.0 AND MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/convex.zip",
+        "sha256": "57c258ee1eda1905d95a125bdbf8b7958a8636718c11662f1a61a44b7a92d695"
+      },
+      "icon": "./plugins/convex/assets/icon.png",
+      "category": "development",
+      "homepage": "https://docs.convex.dev/ai/using-codex",
+      "repository": "https://github.com/get-convex/convex-backend",
+      "license": "Apache-2.0 AND MIT"
+    },
+    {
       "id": "coupler-io",
       "name": "coupler-io",
       "description": "Analyze marketing, sales, finance, ecommerce, product, and other business data from Coupler.io data flows through Coupler.io's official hosted OAuth MCP and Analytical Engine.",

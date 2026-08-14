@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "convex": {
+      "command": "npx",
+      "args": [
+        "--yes",
+        "convex@1.44.0",
+        "mcp",
+        "start"
+      ]
+    }
+  }
+}

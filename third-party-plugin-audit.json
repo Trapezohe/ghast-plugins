@@ -16,13 +16,13 @@
     "excludedOpenAIAuthored": 31,
     "thirdPartyPlugins": 149,
     "auditStatus": {
-      "blocked-license": 5,
+      "blocked-license": 4,
       "official-source-research-required": 40,
-      "official-source-verified": 104
+      "official-source-verified": 105
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 104,
-      "not-implemented": 45
+      "implemented-verified": 105,
+      "not-implemented": 44
     }
   },
   "excludedOpenAIPlugins": [
@@ -3378,7 +3378,7 @@
     },
     {
       "id": "convex",
-      "auditStatus": "blocked-license",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Convex, Inc.",
@@ -3417,13 +3417,67 @@
       },
       "declaredLicense": "UNLICENSED",
       "officialSource": {
-        "status": "manifest-declared-candidate",
+        "status": "reviewed",
         "codexRepository": "https://github.com/get-convex/convex-codex-plugin",
         "candidateOfficialRepository": "https://github.com/get-convex/convex-codex-plugin",
-        "homepage": "https://chatgpt.com/apps/convex/asdk_app_6a0faef988b48191b843bac5cd170a9e"
+        "homepage": "https://chatgpt.com/apps/convex/asdk_app_6a0faef988b48191b843bac5cd170a9e",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Convex, Inc.",
+          "officialRepository": "https://github.com/get-convex/convex-backend",
+          "officialRevision": "convex-npm-1.44.0-8bdb320a17ed+icon-7023eb599ffe+tools-5d3be1fb3d20",
+          "license": "Apache-2.0 AND MIT",
+          "licenseEvidence": [
+            "The official convex@1.44.0 npm tarball contains a complete Apache-2.0 LICENSE with SHA-256 79aaec53ef1333544088fe80ecb8ec70f2b84f60c0c4157240df0911cf9696c and declares Apache-2.0 in package.json.",
+            "The official get-convex/convex-agent-plugins revision 7023eb599ffe326d3f451cdc27a2d88b70b7bb4d contains an MIT LICENSE covering the copied 64x64 catalog icon.",
+            "The current full get-convex/convex-codex-plugin and get-convex/agent-skills repositories publish no license file, so none of their skills, subagents, monitor source, or other files are redistributed."
+          ],
+          "officialityEvidence": [
+            "Convex's official Codex documentation says the built-in directory entry is a lighter ChatGPT-app connector and documents the full Convex workflow, CLI MCP, project Agent Skills, specialized subagents, and runtime error watcher.",
+            "The official Convex MCP documentation directs clients to npx -y convex@latest mcp start and documents the 12 tools plus default production restrictions.",
+            "The pinned official convex@1.44.0 package was published August 13, 2026 from get-convex/convex-backend, requires Node.js 18 or newer, exposes the convex CLI, and has tarball SHA-256 8bdb320a17ed370b9635611b4c8b951a6913c9a830e470a28934ffe0a5735493.",
+            "A real stdio session returned Convex MCP Server version 0.0.1 and exactly status, data, tables, functionSpec, run, envList, envGet, envSet, envRemove, runOneoffQuery, logs, and insights. The complete canonical schema SHA-256 is 5d3be1fb3d20a781021c53b808de2c5286f0dce8b478f77c45e0d2c75c82567d.",
+            "The official CLI provides ai-files install to write a managed AGENTS.md section and install current Convex-authored project Agent Skills into .agents/skills/ without Ghast redistributing the unlicensed skills repository.",
+            "The copied icon is from Convex's official MIT-licensed agent-plugin repository at tree 297523ec4cb6ebcc6253c1e2fe747b96a8840f57 and has SHA-256 cd6eaca42d7c12f8be21f07905dc7d042eef9b8342c61f8e0afd8db8f77ca261."
+          ],
+          "codexCapabilities": [
+            "Backend setup, database schema, reactive queries, mutations, server functions, auth-aware data access, realtime features, scheduled jobs, file storage, mobile and web backends, and scaling guidance through a private app connector"
+          ],
+          "ghastCapabilities": [
+            "The official Convex CLI and project guidance flow for creating or adding Convex, installing current Convex-authored Agent Skills, and implementing schema, queries, mutations, actions, auth, realtime, schedules, storage, components, and clients",
+            "All 12 official MCP tools for deployment discovery, tables and data, function metadata and execution, environment variables, sandboxed one-off queries, logs, and health insights",
+            "Default production protection with no production, PII, or production-write enabling flags in the packaged launcher",
+            "A Ghast safety workflow requiring deployment review and confirmation for mutations, actions, environment changes, and potentially external effects"
+          ],
+          "capabilityRelationship": "superset-official-cli-and-project-skills-runtime",
+          "limitations": [
+            "The Codex snapshot and current full Convex Codex marketplace repository are unlicensed. Ghast does not copy their private app mapping, skills, specialized subagents, monitor implementation, or artwork.",
+            "Current project Agent Skills are installed at runtime by Convex's official ai-files command and can change independently of this pinned adapter; resulting project diffs require review.",
+            "Node.js 18 or newer, npm 7 or newer, network access, a Convex project, login or a scoped deploy key, and deployment permissions remain user-managed.",
+            "The run tool can execute queries, mutations, or actions; envSet and envRemove change deployment configuration; envGet, envList, data, and logs can expose secrets or PII.",
+            "The launcher intentionally omits all production-enabling flags. Production access requires a separate explicit user decision and is not represented as a default plugin capability.",
+            "The MCP package calls Convex services and can mutate development deployments. Ambiguous writes must be read back before retrying."
+          ],
+          "verification": [
+            "python3 scripts/import-convex-plugin.py --icon-source ../upstreams/convex-agent-plugins",
+            "Verify official icon source revision 7023eb599ffe326d3f451cdc27a2d88b70b7bb4d and tree 297523ec4cb6ebcc6253c1e2fe747b96a8840f57",
+            "Download convex@1.44.0 and verify tarball, LICENSE, package.json, MCP source, tool registry, and ai-files source hashes",
+            "Initialize npx --yes convex@1.44.0 mcp start and confirm the exact 12-tool inventory and canonical schema SHA-256 5d3be1fb3d20a781021c53b808de2c5286f0dce8b478f77c45e0d2c75c82567d",
+            "Confirm the packaged MCP arguments contain no production-enabling flag",
+            "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+            "python3 scripts/build-ghast-catalog.py",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/convex.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.44.0-ghast.1",
+        "repository": "https://github.com/get-convex/convex-backend",
+        "upstreamRevision": "convex-npm-1.44.0-8bdb320a17ed+icon-7023eb599ffe+tools-5d3be1fb3d20",
+        "portStatus": "full"
       }
     },
     {

@@ -62,7 +62,7 @@ verification.
 | cogedim | ALTAREA PROMOTION MANAGEMENT | appConnector | MIT | official-source-verified | implemented-verified |
 | common-room | Common Room | appConnector | MIT | official-source-verified | implemented-verified |
 | conductor | Conductor Inc. | appConnector | MIT | official-source-verified | implemented-verified |
-| convex | Convex, Inc. | appConnector | UNLICENSED | blocked-license | not-implemented |
+| convex | Convex, Inc. | appConnector | UNLICENSED | official-source-verified | implemented-verified |
 | coupler-io | Coupler.io | appConnector | MIT | official-source-verified | implemented-verified |
 | coveo | Coveo | appConnector | MIT | official-source-verified | implemented-verified |
 | cube | Cube | appConnector | MIT | official-source-verified | implemented-verified |
