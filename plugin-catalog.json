@@ -2770,6 +2770,36 @@
       "license": "MIT"
     },
     {
+      "id": "razorpay",
+      "name": "razorpay",
+      "description": "Read Razorpay payments, orders, refunds, settlements, QR codes, payment links, payouts, reconciliation, and saved payment methods through Razorpay's official MCP source and SDK.",
+      "manifest": {
+        "name": "razorpay",
+        "description": "Read Razorpay payments, orders, refunds, settlements, QR codes, payment links, payouts, reconciliation, and saved payment methods through Razorpay's official MCP source and SDK.",
+        "author": {
+          "name": "Razorpay",
+          "url": "https://razorpay.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://github.com/razorpay/razorpay-mcp-server",
+        "repository": "https://github.com/razorpay/razorpay-mcp-server",
+        "upstreamRevision": "7950d51d118ca164c32b7cf0cfaa14f34f24849f",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/razorpay.zip",
+        "sha256": "17caa6e13b340ad482c77de0ce7237ccccefc8cca52fb7cba83aa8cd310be01e"
+      },
+      "icon": "./plugins/razorpay/assets/icon.svg",
+      "category": "finance",
+      "homepage": "https://github.com/razorpay/razorpay-mcp-server",
+      "repository": "https://github.com/razorpay/razorpay-mcp-server",
+      "license": "MIT"
+    },
+    {
       "id": "read-ai",
       "name": "read-ai",
       "description": "Browse Read AI meetings and retrieve summaries, chapters, action items, key questions, topics, transcripts, metrics, and recordings through Read AI's official hosted MCP server.",

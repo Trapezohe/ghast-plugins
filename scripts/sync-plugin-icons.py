@@ -509,6 +509,14 @@ CUSTOM_ICONS = {
         '<path d="M12 48h40M17 44V27h8v17M29 44V18h8v26M41 44V33h8v11"/>'
         '<path d="M15 20l11-7 10 5 14-9"/>',
     ),
+    "razorpay": (
+        "#236B78",
+        '<rect x="11" y="15" width="42" height="34" rx="3"/>'
+        '<path d="M11 25h42M18 20h12M38 20h8"/>'
+        '<path d="M18 34h15M18 42h10"/>'
+        '<circle cx="44" cy="39" r="7"/>'
+        '<path d="M41 36h6M41 39h6M44 36v7"/>',
+    ),
     "read-ai": (
         "#197A7A",
         '<rect x="15" y="12" width="34" height="40" rx="5"/>'

@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 3,
-      "official-source-research-required": 32,
-      "official-source-verified": 114
+      "official-source-research-required": 31,
+      "official-source-verified": 115
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 114,
-      "not-implemented": 35
+      "implemented-verified": 115,
+      "not-implemented": 34
     }
   },
   "excludedOpenAIPlugins": [
@@ -9874,7 +9874,7 @@
     },
     {
       "id": "razorpay",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Razorpay Software Private Limited",
@@ -9904,53 +9904,60 @@
         "candidateOfficialRepository": null,
         "homepage": "https://razorpay.com/",
         "review": {
-          "verificationStatus": "official-source-research-required",
+          "verificationStatus": "official-source-verified",
           "officialDeveloper": "Razorpay",
           "officialRepository": "https://github.com/razorpay/razorpay-mcp-server",
           "officialRevision": "7950d51d118ca164c32b7cf0cfaa14f34f24849f",
           "license": "MIT",
           "licenseEvidence": [
-            "LICENSE at the pinned revision has SHA-256 2b51ab429d27ce74a8afc18a4b99beb8066b4c7e48e494ece56288ee5b9df140 and identifies the MIT License with Copyright (c) 2025 Razorpay"
+            "The official LICENSE at the pinned revision has SHA-256 2b51ab429d27ce74a8afc18a4b99beb8066b4c7e48e494ece56288ee5b9df140 and identifies the MIT License with Copyright (c) 2025 Razorpay.",
+            "plugins/razorpay/UPSTREAM_LICENSE preserves Razorpay's MIT grant, while plugins/razorpay/LICENSE separately licenses the Ghast-authored adapter, launcher, tests, configuration, documentation, and generic icon."
           ],
           "officialityEvidence": [
             "The repository is owned by the Razorpay GitHub organization, describes itself as Razorpay's official MCP server, and links to Razorpay's official MCP documentation.",
-            "The official source exposes READ_ONLY and --read-only configuration and separates read tools from write tools before registration.",
-            "The pinned Git tree SHA-256 is af57615758813da15195d82ffdc03534f5f6df157ce13bcc45f69c5c86caf8a6; README.md SHA-256 is bc50ceb1174e73105ffdec19c36b8bbf6a349901d9446ff703bc8cfc8cdd1968.",
-            "Razorpay's official hosted endpoint at https://mcp.razorpay.com/mcp returns the documented API-key or OAuth authentication challenge, but the hosted service documentation includes write operations and does not establish a connector-equivalent read-only policy."
+            "The pinned Razorpay-authored commit has Git tree feeadae4514cce8fa67651eeae22ba94ffe28dfd. Its complete 94-file inventory has SHA-256 6e74ab32e2e2971fe314e3a19be0e03dc3140c7968cc88d4e02c80e1a0117669.",
+            "The official source exposes READ_ONLY and --read-only configuration and separates read tools from write tools before registration. At the pinned revision it deliberately classifies fetch_tokens as a write tool because one accepted parameter can create a customer.",
+            "Ghast depends on the exact official module pseudo-version v0.0.0-20260326095236-7950d51d118c with Go checksum h1:aLNYK0/tcXDx2vh8jT9n0tVfiiYvGS81tTv9Fa3Ufe0= and uses Razorpay's official razorpay-go v1.4.0 SDK.",
+            "The local MCP runtime exposes 24 tools directly from seven official strict-read-only data toolsets and one narrowly adapted saved-payment-method tool using the official SDK and the official customer-ID GET path."
           ],
           "codexCapabilities": [
             "Read payments, orders, refunds, settlements, QR codes, payment links, payouts, reconciliation, and saved customer payment methods",
             "Guarantee read-only account access with no transaction execution"
           ],
           "ghastCapabilities": [
-            "The pinned official source exposes 45 tools in total: 26 strictly read-only tools and 19 write-classified tools. The read-only inventory SHA-256 is aede8960dff943d99da4088c08feec279253f99d030943e0951e815886f24832; the write inventory SHA-256 is ab07bfdccc2f8fc8c49d56793b1432a1a0da9c267693b19a8cb54b45707ea741.",
-            "The official README marks 41 tools as remotely supported and four as local-only: create_refund, close_qr_code, create_instant_settlement, and create_registration_link.",
-            "No Ghast plugin is published because the safe official read-only mode omits saved payment methods, while the older implementation that exposes them can create a customer."
+            "Twenty-four unmodified official read tools cover payments, payment card details, orders, refunds, payment links, payouts, QR codes, settlements, instant settlements, and settlement reconciliation.",
+            "One Ghast-authored fetch_tokens adapter requires an existing customer_id, rejects contact and every unknown parameter, and performs only the same customer and token GET requests used by the official implementation's safe branch.",
+            "All 25 live tools report readOnlyHint=true and destructiveHint=false. The ordered tool-name SHA-256 is 5b2ed7545b884fee2e6437ef46edb5c7eafeb61025537645ce9c29f6632bf88e and the canonical schema SHA-256 is 0ff285ace0b554bbea32a7cd781b591b4fdf955e2169126590838083776d5cd1.",
+            "The launcher verifies source hashes, removes merchant credentials from the build environment, builds locked official dependencies in a private per-user cache, and passes credentials only to the local stdio runtime."
           ],
-          "capabilityRelationship": "official-source-found-capability-safety-gap",
+          "capabilityRelationship": "equivalent-official-source-readonly-adapter",
           "limitations": [
-            "At official release v1.2.1, --read-only still registers fetch_tokens; that tool creates or fetches a customer when called with a contact number, so the release does not satisfy the Codex promise that no transactions or mutations occur.",
-            "At pinned revision 7950d51d118ca164c32b7cf0cfaa14f34f24849f, Razorpay fixes this by classifying fetch_tokens as a write tool. Strict read-only mode then removes it, leaving no official read-only tool for the Codex capability of viewing saved customer payment methods.",
-            "The current fetch_tokens implementation is read-only when customer_id is supplied, but its alternative contact parameter can POST a customer create-or-fetch request. The official server exposes these paths through one tool and provides no configuration that enforces the customer_id-only subset.",
-            "The official README has three stale tool names relative to the pinned runtime: create_payment_link_upi maps to payment_link_upi_create, send_payment_link maps to payment_link_notify, and fetch_payout_by_id maps to fetch_payout_with_id.",
-            "The hosted endpoint publishes OAuth protected-resource and authorization-server metadata and accepted confidential dynamic client registration during the audit, but a standard PKCE authorization launch returned HTTP 406. Browser OAuth and authenticated remote tools/list were therefore not verified.",
-            "Publishing the current strict mode as equivalent would hide a documented capability loss; publishing the older release or unrestricted hosted endpoint would hide a real mutation path."
+            "The saved-payment-method wrapper is a small Ghast MIT adaptation, not an unchanged upstream Razorpay tool. Its implementation, tests, and modifications are explicitly identified in the package.",
+            "Ghast intentionally excludes the official checkout-integration code generators, registration links, and all 19 write-classified tools because they are outside the Codex payment-data scope or can change merchant state.",
+            "Node.js and Go are required locally. The first launch can download the official Go 1.24.2 toolchain and locked modules from the configured public Go infrastructure.",
+            "Razorpay merchant API keys must be configured outside chat. Account permissions, API availability, test or live mode, pagination, rate limits, and service behavior remain user-managed.",
+            "No authenticated merchant account or merchant data was used during verification. The audit proves tool registration, annotations, schemas, dependency integrity, and the GET-only saved-method implementation, not production account entitlements or response completeness.",
+            "Razorpay amounts can be expressed in the smallest currency unit, and settlement or reconciliation records can lag payment events. Material financial conclusions require dashboard or accounting-record confirmation.",
+            "A generic payment-ledger icon is used because the official source repository does not publish reusable catalog artwork; Codex marketplace artwork is not copied."
           ],
           "verification": [
-            "Verify go.mod SHA-256 fcfff81f6bb216f0191f5925aa0802f23985741051c6f9934deb3e4f4033cf7d and go.sum SHA-256 e53ccd749964dada4192a2c4d4039d97bb27acc5967da7e30ca8f92d155ac94b at the pinned revision",
-            "Using the verified official Go 1.24.2 toolchain, run go mod verify, go vet ./..., gofmt -l ., and go test -race -json ./...; the audit observed 947 passed test events and zero failed events across nine packages",
-            "Start the pinned server with dummy credentials and --read-only, call tools/list, and confirm 26 tools are returned, every tool has readOnlyHint=true and destructiveHint=false, and no known write tool is present",
-            "Start the pinned server without --read-only, call tools/list, and confirm 45 tools are returned: the same 26 read-only tools plus 19 tools marked readOnlyHint=false and destructiveHint=true",
-            "Download Razorpay's official v1.2.1 Darwin arm64 release, verify SHA-256 0658e565c732ea5f078dc9f17a9203cc03f44d5a6837713aaaf1da19528f54d2, run --read-only, and confirm fetch_tokens is still present",
-            "Compare v1.2.1 with the pinned revision and confirm fetch_tokens moved from AddReadTools to AddWriteTools",
-            "Verify canonical protected-resource metadata SHA-256 4515899424db8954019cdc21dcd02aa27974b4f9ad1079fe98585954ed0725c0 and authorization-server metadata SHA-256 82e0fe16ba0e524c05483ba14746fc126efff29c6f09d5e25518234fe0be24f0",
-            "Probe the hosted endpoint without credentials and with invalid Basic credentials and confirm HTTP 401 responses; do not claim authenticated account behavior because no merchant credential was used",
-            "Do not create plugins/razorpay until Razorpay provides a strictly read-only saved-payment-method tool or an equivalent official configuration"
+            "python3 scripts/audit-razorpay-plugin.py --source-root ../upstreams/razorpay-mcp-server --openai-source ../openai-plugins --go /absolute/path/to/go1.24.2/bin/go",
+            "Verify the official revision, Git tree, clean checkout, 94-file inventory, MIT license, go.mod, go.sum, tokens.go, tools.go, and OpenAI Razorpay snapshot hashes recorded by the audit script.",
+            "Run go mod verify, go vet ./..., gofmt -l ., and go test -race ./... against the packaged adapter with the verified Go 1.24.2 toolchain.",
+            "Build the adapter with -mod=readonly and -trimpath, complete MCP initialize and tools/list, and confirm exactly 25 expected tools with readOnlyHint=true and destructiveHint=false.",
+            "Confirm fetch_tokens has only required customer_id in its live schema and the unit tests reject contact, mixed contact and customer_id, an invalid customer ID, and empty arguments.",
+            "Run the Node launcher with an isolated cache, dummy credentials, and the verified Go binary; confirm first-build MCP initialize and tools/list succeed without credentials in the build environment.",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/razorpay.zip"
           ]
         }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": "https://github.com/razorpay/razorpay-mcp-server",
+        "upstreamRevision": "7950d51d118ca164c32b7cf0cfaa14f34f24849f",
+        "portStatus": "official-source-readonly-adapter"
       }
     },
     {
