@@ -1,0 +1,18 @@
+{
+  "name": "egnyte",
+  "version": "1.0.3-ghast.1",
+  "description": "Search, read, analyze, upload, share, and administer Egnyte content through Egnyte's official hosted MCP and agent CLI.",
+  "category": "productivity",
+  "author": {
+    "name": "Egnyte",
+    "url": "https://github.com/egnyte"
+  },
+  "homepage": "https://developers.egnyte.com",
+  "repository": "https://github.com/egnyte/egnyte-for-ai",
+  "upstreamRevision": "b2f1d26aa81a09cc729dc22040004c8064ec3495",
+  "license": "Apache-2.0",
+  "portStatus": "full",
+  "icon": "./assets/logo.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

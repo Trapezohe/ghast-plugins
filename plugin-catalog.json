@@ -1476,6 +1476,36 @@
       "license": "MIT"
     },
     {
+      "id": "egnyte",
+      "name": "egnyte",
+      "description": "Search, read, analyze, upload, share, and administer Egnyte content through Egnyte's official hosted MCP and agent CLI.",
+      "manifest": {
+        "name": "egnyte",
+        "description": "Search, read, analyze, upload, share, and administer Egnyte content through Egnyte's official hosted MCP and agent CLI.",
+        "author": {
+          "name": "Egnyte",
+          "url": "https://github.com/egnyte"
+        },
+        "icon": "./assets/logo.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://developers.egnyte.com",
+        "repository": "https://github.com/egnyte/egnyte-for-ai",
+        "upstreamRevision": "b2f1d26aa81a09cc729dc22040004c8064ec3495",
+        "license": "Apache-2.0",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/egnyte.zip",
+        "sha256": "1e810ec8e5e5295dd3e183d8e2addab57b6eec29aa0bc73d625821afbd4d63a4"
+      },
+      "icon": "./plugins/egnyte/assets/logo.svg",
+      "category": "productivity",
+      "homepage": "https://developers.egnyte.com",
+      "repository": "https://github.com/egnyte/egnyte-for-ai",
+      "license": "Apache-2.0"
+    },
+    {
       "id": "expo",
       "name": "expo",
       "description": "Official Expo skills for building, deploying, upgrading, and debugging Expo and React Native apps.",

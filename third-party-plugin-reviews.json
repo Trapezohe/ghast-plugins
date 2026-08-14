@@ -5733,6 +5733,79 @@
         "unzip -tqq packages/zoom.zip"
       ]
     },
+    "egnyte": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Egnyte",
+      "officialRepository": "https://github.com/egnyte/egnyte-for-ai",
+      "officialRevision": "b2f1d26aa81a09cc729dc22040004c8064ec3495",
+      "license": "Apache-2.0",
+      "licenseEvidence": [
+        "The official egnyte/egnyte-for-ai repository contains an Apache License 2.0 file with SHA-256 55d370687e0a424c9f304de6ae290d99aa6c16d612c549199ad4d17ca797f0de and Copyright 2025 Egnyte.",
+        "The license covers the official plugin manifests, MCP declaration, skill, nine reference documents, safety rules, and SVG logo copied and adapted by Ghast.",
+        "Egnyte's hosted MCP implementation, accounts, customer content, credentials, service behavior, terms, and trademarks are not redistributed."
+      ],
+      "officialityEvidence": [
+        "The source repository is owned by Egnyte's official GitHub organization, links to developers.egnyte.com, names Egnyte as author, and publishes installable plugin manifests for Codex, Cursor, and Claude Code.",
+        "The pinned egnyte/egnyte-for-ai revision b2f1d26aa81a09cc729dc22040004c8064ec3495 has tree 4951b8b36ef0012247c3a61059d247e028f045c5. Its LICENSE, README, MCP declaration, Codex manifest, official logo, safety rules, and top-level skill SHA-256 values are pinned by the importer.",
+        "The complete official skill tree contains one SKILL.md and nine reference documents. Its canonical path-and-content inventory SHA-256 is 899e4592a722efd176e864b4e8b80b4d27d302328de26b7332cfe1b4bc824291.",
+        "The official plugin declares https://mcp-server.egnyte.com/mcp as Egnyte's remote HTTP MCP and documents search, browsing, content retrieval, document Q&A and summaries, knowledge bases, uploads, links, comments, metadata, and collaboration workflows.",
+        "The official skill documentation names 21 MCP functions across filesystem browsing, search, fetch, document and domain-wide AI, knowledge bases, links, comments, metadata, projects, and uploads. Authenticated live schemas remain service-authoritative.",
+        "The live MCP endpoint returns HTTP 401 to anonymous initialize with a Bearer challenge pointing to Egnyte's official protected-resource metadata.",
+        "The protected-resource and authorization-server metadata have canonical JSON SHA-256 values 138f605b123ac6b6cfdca57cbb6b9dfad0aede4cc46610acfec54344a5115776 and fdb09e25d1caeab1655a9d920c257e4807bcdf851696d165d59f172dc5577f62.",
+        "The authorization server advertises authorization-code and refresh-token grants, confidential dynamic client registration, PKCE S256, revocation, introspection, DPoP algorithms, and the Egnyte domain picker.",
+        "On August 14, 2026, a disposable loopback client registered with HTTP 200 using client_secret_basic, and its PKCE authorization request reached domain-picker.egnyte.com. No secret was printed or retained and no account login or token exchange occurred.",
+        "Egnyte's official egnyte/agentic-cli repository is pinned to revision 5ce270db377c7989ce00553f46eb5062bdd69350 and tree dc0c6d8aac87ac72d52494669a97721357404e83. The package is @egnyte/agentic-cli 1.0.1, Apache-2.0, Node.js 14 or newer, and zero-runtime-dependency.",
+        "A real local `schema --list` invocation returned exactly 64 official CLI operations. The canonical schema SHA-256 is 02c674e8fcc464131c9e18679cb53e7a8a6e2dc206eed645883969f4b0b55508 and ordered operation-name SHA-256 is bebd34b338dfadaa6f1aa30bedf1b9beb1404ee342e36d8e231ac36586b546df.",
+        "The clean CLI test run completed 855 specs with 0 failures and 228 pending integration specs that require a live Egnyte tenant. npm reported one high-severity issue in the development dependency tree; the published CLI declares no runtime dependencies.",
+        "The pinned OpenAI Codex snapshot identifies Egnyte Inc as developer and exposes only a private app connector. Its manifest, app mapping, and marketplace logo SHA-256 values are 50e56fbde2ea6d305b2a7963cba9b926db7e72119b941a0dbddd64814d61b7f6, a0bac23e8ce0335335a55bf42ea338d84d8a03932282b0803fe03422fdc7d202, and 176a2ea7327ca23bea14c926c2379dfcaf7eb29411951e0360a397775cfcda31."
+      ],
+      "codexCapabilities": [
+        "Search across Egnyte folders through a private app connector",
+        "Retrieve relevant documents and files and extract key information",
+        "Answer questions and create summaries grounded in contracts, reports, and internal documents",
+        "Combine information from multiple files into stakeholder updates or draft content"
+      ],
+      "ghastCapabilities": [
+        "The same official hosted MCP workflows for folder browsing, search, file retrieval, grounded document Q&A, summaries, and multi-document synthesis",
+        "The current Egnyte-authored skill and nine detailed references for knowledge bases, uploads, share links, comments, metadata, collaboration, pagination, citations, authentication, and troubleshooting",
+        "The official 64-operation CLI for binary and chunked transfers, bulk actions, users, groups, permissions, events, notes, locks, trash, projects, profiles, schema discovery, and unsupported API fallback",
+        "Egnyte's official OAuth domain picker and hosted authorization flow instead of the Codex-only private app mapping",
+        "The official Egnyte SVG icon and Apache-2.0 source materials with narrow Ghast host compatibility adaptations"
+      ],
+      "capabilityRelationship": "superset-current-official-hosted-mcp-and-cli",
+      "limitations": [
+        "Egnyte operates the hosted MCP implementation. Ghast redistributes the licensed official plugin guidance and declaration, not the server source or authenticated tool schemas.",
+        "An Egnyte account, exact domain, browser OAuth, RBAC, content permissions, enabled AI features, knowledge bases, storage and collaboration entitlements, quotas, and network access remain user-managed.",
+        "Authenticated tools/list, real file search, content retrieval, document AI, knowledge-base queries, uploads, links, comments, metadata writes, and administrative operations were not exercised because no Egnyte tenant or credentials were supplied.",
+        "The official skill documents 21 named MCP functions, but exact live names, parameter schemas, and account-dependent availability can change. The authenticated server response is authoritative.",
+        "Ghast replaces Claude Desktop terminal-bridge installation, cross-client configuration mutation, and platform-specific command routing with host-neutral MCP and shell guidance. Three reference files, the top-level skill, and safety rules are semantically adapted; all Markdown is also normalized for trailing whitespace.",
+        "The optional CLI is not bundled. Node.js, npm access, installation approval, stored profiles or environment credentials, local filesystem access, and CLI updates remain user-managed.",
+        "The CLI's test dependency installation reported one high-severity npm audit issue. It is outside the zero-dependency runtime package, but upstream development dependencies should be reviewed before using the source test environment in a sensitive build system.",
+        "The remote OAuth server dynamically registers confidential clients and returns a client secret. Hosts must store it as a secret, never print or commit it, and use the advertised token authentication method.",
+        "MCP upload supports plain text only up to 8 MB. Binary and larger content requires the CLI and can disclose local files to Egnyte; exact source and destination require confirmation.",
+        "Search, document content, comments, metadata, users, groups, events, and AI answers can contain confidential, personal, regulated, copyrighted, or stale information. Retrieval and disclosure must remain narrowly scoped.",
+        "Metadata writes replace existing values; domain-wide AI can over-broaden scope; summaries may lack citations; and ambiguous retries can duplicate comments, links, uploads, or administrative changes.",
+        "Deletes, public or domain links, comments, uploads to shared folders, permissions, users, groups, locks, restores, projects, and direct API requests require exact-target review, dry-run where available, explicit confirmation, and read-after-write verification.",
+        "The official SVG is redistributed under the repository's Apache-2.0 license, but inclusion does not imply Egnyte endorsement or grant broader trademark rights."
+      ],
+      "verification": [
+        "python3 scripts/import-egnyte-plugin.py --source-root ../upstreams/egnyte-for-ai --cli-source ../upstreams/egnyte-agentic-cli --openai-source ../openai-plugins",
+        "Verify egnyte/egnyte-for-ai revision b2f1d26aa81a09cc729dc22040004c8064ec3495, tree 4951b8b36ef0012247c3a61059d247e028f045c5, Apache-2.0 license, pinned source hashes, and skill inventory SHA-256 899e4592a722efd176e864b4e8b80b4d27d302328de26b7332cfe1b4bc824291",
+        "Verify egnyte/agentic-cli revision 5ce270db377c7989ce00553f46eb5062bdd69350, tree dc0c6d8aac87ac72d52494669a97721357404e83, package identity, license, and pinned source hashes",
+        "Run `node src/index.js schema --list` in the CLI checkout and verify 64 operations, canonical schema SHA-256 02c674e8fcc464131c9e18679cb53e7a8a6e2dc206eed645883969f4b0b55508, and ordered-name SHA-256 bebd34b338dfadaa6f1aa30bedf1b9beb1404ee342e36d8e231ac36586b546df",
+        "Run `npm test` in the clean CLI checkout and confirm 855 specs, 0 failures, and 228 credential-dependent pending specs",
+        "Verify canonical OAuth protected-resource and authorization-server hashes 138f605b123ac6b6cfdca57cbb6b9dfad0aede4cc46610acfec54344a5115776 and fdb09e25d1caeab1655a9d920c257e4807bcdf851696d165d59f172dc5577f62",
+        "Probe https://mcp-server.egnyte.com/mcp with anonymous initialize and confirm HTTP 401, empty body, and the official protected-resource challenge",
+        "Register a disposable loopback confidential client and confirm HTTP 200, authorization-code and refresh-token grants, client_secret_basic, PKCE S256, and authorization entry at domain-picker.egnyte.com without retaining the secret or signing in",
+        "Verify the OpenAI snapshot manifest, private app mapping, and marketplace logo hashes without redistributing those files",
+        "Confirm six official reference files retain the same content aside from trailing-whitespace normalization and the official SVG icon remains byte-identical; review the semantic Ghast adaptations in SKILL.md, auth-and-setup.md, egnyte-cli.md, troubleshooting.md, and rules/egnyte.mdc",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/egnyte.zip",
+        "An authorized tenant user should complete browser OAuth, authenticated tools/list, one scoped folder listing, one search and cited document Q&A, and separately confirmed non-destructive upload or metadata dry-run before a stronger live workflow claim."
+      ]
+    },
     "dow-jones-factiva": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Factiva, Inc. / Dow Jones",
