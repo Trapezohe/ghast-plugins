@@ -129,7 +129,7 @@ verification.
 | pitchbook | PitchBook | appConnector | MIT | official-source-research-required | not-implemented |
 | policynote | FiscalNote | appConnector | MIT | official-source-verified | implemented-verified |
 | posthog | PostHog | appConnector, skills | MIT | official-source-verified | implemented-verified |
-| pylon | Pylon Labs Inc. | appConnector | MIT | official-source-research-required | not-implemented |
+| pylon | Pylon Labs Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | quartr | Quartr | appConnector | MIT | official-source-verified | implemented-verified |
 | quickbooks | QuickBooks | appConnector | MIT | official-source-research-required | not-implemented |
 | quicknode | Quicknode | appConnector | MIT | official-source-verified | implemented-verified |

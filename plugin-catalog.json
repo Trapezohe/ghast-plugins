@@ -2824,6 +2824,34 @@
       "license": "MIT"
     },
     {
+      "id": "pylon",
+      "name": "pylon",
+      "description": "Search and manage Pylon support issues, accounts, contacts, messages, and internal notes through official interfaces.",
+      "manifest": {
+        "name": "pylon",
+        "description": "Search and manage Pylon support issues, accounts, contacts, messages, and internal notes through official interfaces.",
+        "author": {
+          "name": "Pylon Labs, Inc.",
+          "url": "https://www.usepylon.com/"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp.md",
+        "upstreamRevision": "pylon-mcp-doc-7e1bdd12b729+messages-f084f9c0abb0+resource-2c83dcf3cc83+oauth-92cae1ab0e93+terms-2a942b005436",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/pylon.zip",
+        "sha256": "8219f9644bbaedb88195a4c59bcd8d350a4870da8bae0e76c88a7eada70d6d60"
+      },
+      "icon": "./plugins/pylon/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp.md",
+      "license": "MIT"
+    },
+    {
       "id": "quartr",
       "name": "quartr",
       "description": "Research public companies with first-party earnings calls, transcripts, filings, reports, slides, events, summaries, and financial statements through Quartr's official MCP server.",

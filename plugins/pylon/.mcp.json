@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "pylon": {
+      "type": "http",
+      "url": "https://mcp.usepylon.com/"
+    }
+  }
+}
