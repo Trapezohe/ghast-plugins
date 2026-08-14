@@ -5732,6 +5732,67 @@
         "Probe https://mcp.zoom.us/mcp/meeting/streamable and confirm the official endpoint returns Zoom's access-token-required response",
         "unzip -tqq packages/zoom.zip"
       ]
+    },
+    "dow-jones-factiva": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Factiva, Inc. / Dow Jones",
+      "officialRepository": "https://github.com/dowjones/factiva-retrievalapi-demo",
+      "officialRevision": "231615fb3369ccafd4afb6fea4d817080922e772+retrieval-28c28089596e+auth-80e5c6cd55d8+links-376678f49e7f",
+      "license": "MIT",
+      "licenseEvidence": [
+        "The official dowjones/factiva-retrievalapi-demo repository at 231615fb3369ccafd4afb6fea4d817080922e772 contains an MIT LICENSE under Copyright 2025 Dow Jones.",
+        "The plugin redistributes no Dow Jones demo notebook, sample article, private Codex connector, credential, token, official logo, or hosted implementation. Its MIT LICENSE covers only the Ghast-authored adapter and supporting files.",
+        "The packaged standard-library adapter has SHA-256 2d5e8610ed0f72d3fdaca9495753c9470883a0c901d9fece5e1a776de35ee117."
+      ],
+      "officialityEvidence": [
+        "Dow Jones's official developer platform documents Factiva Retrieval API 1.0 as a contextual news-search endpoint for metadata-rich licensed chunks, summarization, question answering, enterprise search, and RAG.",
+        "The documented endpoint is https://api.dowjones.com/content/gen-ai/retrieve with media type application/vnd.dowjones.genai-content.v_1.0, a maximum response limit of 100, required user_id and work_id metrics, date ranges, and Factiva taxonomy filters.",
+        "Dow Jones's current Direct URLs documentation publishes https://app.dowjones.com/factiva/article?id={article-id}; Factiva handles authentication and entitlements at the link.",
+        "Dow Jones's current authentication documentation specifies the two-step service-account exchange at https://accounts.dowjones.com/oauth2/v1/token used by the adapter without persisting or printing tokens.",
+        "The official Token Usage endpoint reports account GenAI token consumption by date and optional daily breakdown; the older Usage Metrics endpoint is now deprecated.",
+        "The official dowjones/factiva-retrievalapi-demo repository is pinned to revision 231615fb3369ccafd4afb6fea4d817080922e772 and tree fb75da2d4ecbc4297ecd81aabb88fac0b9d852e2. Its notebook, helper, request, chunk, article, environment, requirements, README, and LICENSE hashes are verified.",
+        "The official sample contains ten licensed search results with article IDs, source metadata, snippets, retrieval context, copyright, publication dates, and Dow Jones content links.",
+        "An anonymous Retrieval request on August 14, 2026 returned HTTP 403 with Dow Jones error code 1011001, confirming the documented authenticated service boundary.",
+        "OpenAI's pinned Codex snapshot identifies Factiva, Inc. as developer and describes global archive search, company, industry, and market research, licensed grounding, citations, and direct original-article links."
+      ],
+      "codexCapabilities": [
+        "Search Factiva's licensed global news archive, including premium Dow Jones sources, through a private app connector",
+        "Research companies, industries, and markets and ground answers in licensed content with citations and direct article links"
+      ],
+      "ghastCapabilities": [
+        "The same official contextual Factiva Retrieval API for company, industry, market, event, earnings, and news research",
+        "Transient licensed RAG context with headline, source, date, byline, copyright, language, accession number, and API link",
+        "Supported Language, Organization, NewsSubject, Industry, Source, and Region filters plus predefined or custom dates",
+        "Current secure Factiva article deep links for entitled users and nearby citation rules for every derived claim",
+        "Dow Jones two-step service-account authentication, required per-user and per-work metrics, and account Token Usage review"
+      ],
+      "capabilityRelationship": "equivalent-official-api-adapter-with-usage-review",
+      "limitations": [
+        "Dow Jones does not publish an official Factiva MCP server or CLI. The bundled standard-library command is a transparent Ghast-authored adapter over the official REST API, not a vendor-authored MCP implementation.",
+        "A project-scoped GenAI Machine Use subscription, Dow Jones service account, credentials, allowed integration, content rights, archive scope, output-distribution terms, and service limits remain customer-managed.",
+        "Authenticated Retrieval and token-usage calls were not executed because no Factiva customer credentials or licensed content were supplied. Official sample schemas, current docs, the unauthenticated boundary, and local adapter behavior were verified.",
+        "Retrieval responses currently exclude content older than January 1, 2025, even for Last2Years, Last5Years, or AllDates. This may be narrower than the archive exposed by the private Codex connector.",
+        "Retrieved chunks may not be displayed for human reading, persisted, cached, indexed, redistributed, or used for model training. Full-length synthetic articles are prohibited.",
+        "Direct Factiva links work only for authenticated, entitled recipients. Article Fetch is separately licensed for embedded full-text display and is intentionally not exposed as a default plugin workflow.",
+        "Each Retrieval request records user_id and a new work_id and consumes licensed tokens. The adapter performs no automatic retry to avoid duplicate retrieval or metering.",
+        "Token usage is aggregated twice daily and may include duplicate consumption before Dow Jones applies its 24-hour deduplication rule.",
+        "Factiva articles can contain copyrighted, personal, market-sensitive, translated, duplicated, stale, or conflicting material. Responses must preserve source attribution, dates, uncertainty, and user authorization.",
+        "A generic news-research icon is used because no official Factiva brand asset with clear redistribution permission is copied into this package."
+      ],
+      "verification": [
+        "python3 scripts/import-factiva-plugin.py --source-root ../upstreams/factiva-retrievalapi-demo --openai-source ../openai-plugins",
+        "Verify official revision 231615fb3369ccafd4afb6fea4d817080922e772, tree fb75da2d4ecbc4297ecd81aabb88fac0b9d852e2, MIT license, and all pinned source hashes",
+        "Verify raw official developer-document hashes for Retrieval overview, access requirements, usage guidelines, endpoint 1.0, article viewing, direct links, Article Fetch, Usage Metrics, Token Usage, and authentication",
+        "Probe unauthenticated Retrieval and confirm HTTP 403, error code 1011001, and title Authentication parameters missing",
+        "Parse the official ten-result chunks fixture through the packaged adapter and verify secure Factiva links, source metadata, licensed context, and metadata-only redaction",
+        "Run article-url locally and confirm the current https://app.dowjones.com/factiva/article?id= deep-link format",
+        "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Factiva manifest, app mapping, and icon hashes without redistributing those files",
+        "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/dow-jones-factiva.zip"
+      ]
     }
   }
 }

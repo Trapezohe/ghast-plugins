@@ -1,0 +1,17 @@
+{
+  "name": "dow-jones-factiva",
+  "version": "1.0.3-ghast.1",
+  "description": "Search licensed Factiva news for company, industry, market, and event research through Dow Jones's official Retrieval API.",
+  "category": "business",
+  "author": {
+    "name": "Factiva, Inc. / Dow Jones",
+    "url": "https://www.dowjones.com/business-intelligence/factiva/"
+  },
+  "homepage": "https://developer.dowjones.com/documents/factiva_integration-factiva_retrieval_api",
+  "repository": "https://github.com/dowjones/factiva-retrievalapi-demo",
+  "upstreamRevision": "231615fb3369ccafd4afb6fea4d817080922e772+retrieval-28c28089596e+auth-80e5c6cd55d8+links-376678f49e7f",
+  "license": "MIT",
+  "portStatus": "full",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/"
+}

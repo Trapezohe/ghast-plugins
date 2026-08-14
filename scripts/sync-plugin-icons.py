@@ -312,6 +312,13 @@ CUSTOM_ICONS = {
         '<circle cx="48" cy="48" r="5"/>'
         '<path d="M20 20l8 8M44 20l-8 8M20 45l8-9M44 45l-8-9"/>',
     ),
+    "dow-jones-factiva": (
+        "#2B6268",
+        '<path d="M14 12h27l9 9v31H14z"/>'
+        '<path d="M41 12v10h9M21 29h21M21 37h14M21 45h9"/>'
+        '<circle cx="44" cy="43" r="8"/>'
+        '<path d="M50 49l6 6"/>',
+    ),
     "dovetail": (
         "#26735B",
         '<rect x="10" y="12" width="44" height="40" rx="4"/>'
