@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "policynote": {
+      "command": "node",
+      "args": [
+        "./mcp/bridge.mjs"
+      ],
+      "cwd": "."
+    }
+  }
+}

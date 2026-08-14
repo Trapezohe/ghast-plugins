@@ -2766,6 +2766,34 @@
       "license": "MIT"
     },
     {
+      "id": "policynote",
+      "name": "policynote",
+      "description": "Research global legislation, regulation, officials, elections, transcripts, and policy activity through PolicyNote.",
+      "manifest": {
+        "name": "policynote",
+        "description": "Research global legislation, regulation, officials, elections, transcripts, and policy activity through PolicyNote.",
+        "author": {
+          "name": "FiscalNote, Inc.",
+          "url": "https://fiscalnote.com/products/policynote-api"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://data.policynote.com/docs",
+        "upstreamRevision": "policynote-openapi-4d5c3f24a751+tools-0e493cadeb9c+resource-623cd1868d2a+oauth-b4a930c792dc+terms-f2c8c8b7bafb",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/policynote.zip",
+        "sha256": "240260fe830efbf6b6e4c26e649e587db92464e9f14ee38f78f1a71af4f0795f"
+      },
+      "icon": "./plugins/policynote/assets/icon.svg",
+      "category": "data",
+      "homepage": "https://data.policynote.com/docs",
+      "license": "MIT"
+    },
+    {
       "id": "posthog",
       "name": "posthog",
       "description": "Analyze and manage PostHog analytics, flags, experiments, errors, replays, surveys, dashboards, SQL, AI observability, data pipelines, and product workflows through PostHog's official hosted MCP server.",

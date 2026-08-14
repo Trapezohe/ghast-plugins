@@ -7016,6 +7016,65 @@
         "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
         "python3 scripts/validate-ghast-repository.py"
       ]
+    },
+    "policynote": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "FiscalNote, Inc.",
+      "officialRepository": null,
+      "officialRevision": "policynote-openapi-4d5c3f24a751+tools-0e493cadeb9c+resource-623cd1868d2a+oauth-b4a930c792dc+terms-f2c8c8b7bafb",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/policynote/LICENSE licenses only the independently authored Ghast bridge, workflow, metadata, documentation, and generic policy-research icon.",
+        "No FiscalNote server implementation, private Codex connector, credential, API response, Provider Content, documentation, logo, or trademark is redistributed.",
+        "PolicyNote API Terms version 1.1 governs the official service and content separately, permits authorized internal business use, requires attribution for specified external disclosure, and prohibits circumvention, competitive replication, public content disclosure, and LLM training with Provider Content."
+      ],
+      "officialityEvidence": [
+        "FiscalNote's official PolicyNote API product page publishes an API and MCP server for AI agents and internal tools, with federal, state, municipal, international, and school-district coverage.",
+        "The official OpenAPI 3.1.0 document has canonical SHA-256 4d5c3f24a751a8ddf102a5f811633069a58227a6c94899ed44f202f51fe06c3c and exposes 41 operations with ordered operation SHA-256 6d3340f630f77e8ad7bcb4a3513664a49d1dd7e39faf81bdd2a29a44750d9c3e.",
+        "The MCP endpoint description publishes 33 unique read/query tools with ordered-name SHA-256 0e493cadeb9c616ae3ae9e176d95ed1fa1eb4999e73ee73bcdbc13e0116012b6 and says the remote endpoint supports tools/list and tools/call.",
+        "The official schema documents API-key exchange through https://data.policynote.com/v1/auth/token, bearer tokens with a default 30-minute lifetime, 60 requests per minute, and organization-specific monthly quotas.",
+        "Canonical protected-resource and authorization-server metadata SHA-256 values are 623cd1868d2a606e478492f1135d1a1dc5e25504943109fa710aff8e9f4d48b6 and b4a930c792dca30f06ae3f585c3c4cbba49a32b3fa4f0ce0b5069aea0cce41d1; they publish mcp:read, bearer-header transport, authorization-code and refresh-token grants, public clients, and PKCE S256.",
+        "On August 14, 2026, anonymous MCP initialization returned HTTP 401 with body SHA-256 a7b1417d2003e7cb841fe5b521f7091bab3728bf53e948f76d9f744f6db13c75 and the exact official protected-resource challenge. Missing and invalid API-key probes returned pinned body hashes d6a66b0ab2bc1566851cfeedbb11ea1b77fdc1a5f01baf1b800ec61e237c3795 and fe8424d65bafd40088e84b3ddb94737575439c405314fab62c74151e500ec706.",
+        "OpenAI's pinned snapshot identifies FiscalNote as developer, maps private app ID asdk_app_69a87595e18c81919121d76e18c959bd, and describes legislation, regulation, government activity, alerts, monitoring, dashboards, and internal research workflows. Its complete inventory SHA-256 is dc058af79b633fbc19899f49b09d5faf85e94780ab8d5ac2b993d8e585a92a52."
+      ],
+      "codexCapabilities": [
+        "Search structured legislation, regulatory actions, policy updates, and government activity across jurisdictions",
+        "Retrieve government sources and regulatory changes for policy research, dashboards, monitoring systems, and internal tools",
+        "Track public-policy activity, build alerts, and integrate government intelligence through a private app connector"
+      ],
+      "ghastCapabilities": [
+        "Use all 33 currently documented official PolicyNote MCP tools available to the user's API-key scopes",
+        "Search organization Issues, Projects, Actions, legislation, and regulation plus public legislation, events, votes, analytics, and active sessions",
+        "Research officials, political organizations, elections, districts, local-government documents, presidential transcripts, CQ transcripts, testimony, hearings, events, news, and full text",
+        "Exchange the user's official API key for short-lived bearer tokens without reusing the Codex private app or storing credentials",
+        "Apply jurisdiction, date, quota, privacy, attribution, legal-review, no-training, and no-redistribution safeguards"
+      ],
+      "capabilityRelationship": "equivalent-official-mcp-api-key-bridge",
+      "limitations": [
+        "FiscalNote operates the proprietary hosted API and MCP service and does not publish its implementation under an open-source license. Ghast packages only an independent standard-library bridge.",
+        "A PolicyNote account, API key, approved organization, subscription, dataset entitlements, scopes, monthly quota, rate limits, and service availability remain user-managed.",
+        "Authenticated tools/list and data calls were not executed because no PolicyNote account or key was supplied. The bridge passed mock transport, refresh, SSE, protocol, and secret-redaction tests plus the live invalid-key boundary.",
+        "Browser OAuth is officially documented, but dynamic client registration returned a generic network-layer 403 to this audit runner. The plugin therefore uses the independently documented API-key exchange path and does not claim browser-OAuth validation.",
+        "Tool availability depends on API-key scopes. When both appdata and legislation scopes exist, organization-filtered legislation tools take precedence.",
+        "VoterVoice address lookups can reveal location and representation and trial organizations share a five-requests-per-day cap.",
+        "Predictive legislation analytics are estimates, not legal outcomes. Policy and regulatory data can be incomplete, delayed, corrected, or jurisdiction-specific and requires primary-source and expert review for high-stakes decisions.",
+        "PolicyNote terms restrict Provider Content to authorized uses, require specified external attribution, prohibit public redistribution and competitive reconstruction, and prohibit using Provider Content to train an LLM.",
+        "A generic policy-document icon is used because FiscalNote logos and OpenAI marketplace artwork are not redistributed."
+      ],
+      "verification": [
+        "python3 scripts/import-policynote-plugin.py --openai-source ../openai-plugins",
+        "Verify the normalized official product, terms, and privacy hashes plus the public API-reference OpenAPI link",
+        "Verify canonical OpenAPI hash 4d5c3f24a751a8ddf102a5f811633069a58227a6c94899ed44f202f51fe06c3c, 41-operation hash 6d3340f630f77e8ad7bcb4a3513664a49d1dd7e39faf81bdd2a29a44750d9c3e, and 33-tool hash 0e493cadeb9c616ae3ae9e176d95ed1fa1eb4999e73ee73bcdbc13e0116012b6",
+        "Verify protected-resource and authorization metadata, scope, public-client grants, PKCE S256, and bearer-header transport",
+        "Probe anonymous MCP initialization, missing API key, and invalid API key and require the pinned status codes and body hashes",
+        "Verify the pinned OpenAI snapshot, all four files, complete inventory, FiscalNote identity, private app ID, prompt, and capability markers",
+        "Verify generated bridge SHA-256 54f167e50adeff5126885bda4cf3d6558f3caa0f57e193add8fe1ec171417a99 and run node plugins/policynote/mcp/bridge.mjs --self-test",
+        "Run the bridge with a fake POLICYNOTE_API_KEY and confirm the authentication error is sanitized and the key is absent",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/policynote.zip"
+      ]
     }
   }
 }
