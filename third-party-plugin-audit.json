@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 5,
-      "official-source-research-required": 41,
-      "official-source-verified": 103
+      "official-source-research-required": 40,
+      "official-source-verified": 104
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 103,
-      "not-implemented": 46
+      "implemented-verified": 104,
+      "not-implemented": 45
     }
   },
   "excludedOpenAIPlugins": [
@@ -3080,7 +3080,7 @@
     },
     {
       "id": "cogedim",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "ALTAREA PROMOTION MANAGEMENT",
@@ -3105,13 +3105,75 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.cogedim.com"
+        "homepage": "https://www.cogedim.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "ALTAREA PROMOTION MANAGEMENT",
+          "officialRepository": null,
+          "officialRevision": "cogedim-mcp-69802ca971dc+llms-3bd622452f97+init-ec7893b3a416+tools-6351b9900840",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/cogedim/LICENSE licenses only the Ghast-authored adapter configuration, workflow and safety instructions, documentation, metadata, and generic residential-search icon.",
+            "No Cogedim hosted MCP implementation, private Codex app mapping, property data, official documentation text, trademark, branded artwork, or marketplace icon is redistributed."
+          ],
+          "officialityEvidence": [
+            "The public https://www.cogedim.com/mcp endpoint is hosted on Cogedim's official domain and identifies itself as cogedim-mcp-server version 1.0.0 with POST /mcp JSON-RPC 2.0 Streamable HTTP transport.",
+            "The official MCP entry has canonical JSON SHA-256 69802ca971dc6ac35e8ede7caecb60d2cef04085d0c25c131b2f56d948677aad.",
+            "Cogedim's official llms.txt directly links the MCP endpoint and documents development search by location, budget, and rooms; detailed lots with prices and returns; full program descriptions, visuals, and offers; and buying or investment content. Its normalized API section has SHA-256 3bd622452f97c133d8220c81e12fa1aba3f118577f919cfdcd53775abc38eac0.",
+            "A live unauthenticated initialize session on August 14, 2026 returned protocol 2025-06-18, Cogedim MCP Server version 1.0.0, and workflow instructions; the canonical result SHA-256 is ec7893b3a416a1326bc00aabd0a5aab8930ad7f339f9a94227d14c984e1d4004.",
+            "The live server exposes exactly eight tools: search_programs, search_lots, get_program, search_content, get_content, render_search_programs, render_search_lots, and render_program. Their complete canonical schema SHA-256 is 6351b9900840a77a488e27c22f27295f5f51c3914d9b98aa02a122ed85417c5b.",
+            "All eight tools advertise readOnlyHint=true, destructiveHint=false, and openWorldHint=false.",
+            "A real unauthenticated Paris lot search with a maximum EUR 800,000 budget returned structured current properties with official Cogedim URLs, program identifiers and names, lot details, multiple price structures, delivery information, regulations, and stated returns.",
+            "OpenAI's pinned Codex plugin snapshot identifies ALTAREA PROMOTION MANAGEMENT as the developer and asks the private app connector to find relevant Cogedim properties from a brief. The manifest, app mapping, and two marketplace icons are hash-pinned only as capability and developer evidence.",
+            "No public source repository for the current hosted implementation was identified, so Ghast uses the directly accessible official hosted service instead of inventing or presenting a replacement as official."
+          ],
+          "codexCapabilities": [
+            "Find relevant Cogedim properties for a user's brief through the private Codex app connector",
+            "Guide a new-build property search from the user's needs through selection of a Cogedim home"
+          ],
+          "ghastCapabilities": [
+            "The same official property-brief workflow through Cogedim's public hosted MCP without the Codex-only private app mapping",
+            "Current lot search by location, budget, rooms, property type, and supported investment or regulatory scheme with exact prices, surfaces, delivery information, and official links",
+            "Development-level search and complete selected-program retrieval before recommendation",
+            "Official Cogedim buying and investment content discovery followed by full-page retrieval",
+            "Optional official Apps UI rendering for lot, development, and program results when supported by the host",
+            "An independently authored read-only workflow that preserves price type and retrieval time, discloses relaxed filters, flags duplicate or inconsistent lot records, separates facts from inference, and avoids financial, tax, or legal promises"
+          ],
+          "capabilityRelationship": "superset-official-hosted-mcp",
+          "limitations": [
+            "The hosted MCP implementation is operated by Cogedim and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+            "The endpoint was publicly accessible without authentication on August 14, 2026, but availability, transport behavior, schemas, and access policy can change.",
+            "Inventory, prices, discounts, promotions, projected returns, regulations, construction schedules, and delivery dates are mutable. Search results are evidence at retrieval time, not reservations or guarantees.",
+            "The three render tools may depend on a host capable of mounting the returned Apps UI. The five core search and retrieval tools provide the portable text and structured-data capability.",
+            "The live Paris sample returned repeated apparent lot identifiers with differing details. The included workflow deduplicates conservatively and surfaces conflicts instead of silently choosing one value.",
+            "Property descriptions, marketing claims, neighborhood judgments, eligibility statements, tax schemes, returns, and financing examples require current source review and may not apply to the user.",
+            "The plugin does not provide personalized financial, tax, legal, mortgage, insurance, or investment advice and cannot promise eligibility, financing, tax benefits, rental income, appreciation, completion, or delivery.",
+            "A generic residential-search icon is used because no licensed Cogedim catalog artwork is included in a public official MCP source repository."
+          ],
+          "verification": [
+            "Run verify_cogedim_evidence and import_cogedim from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
+            "Verify canonical official MCP entry SHA-256 69802ca971dc6ac35e8ede7caecb60d2cef04085d0c25c131b2f56d948677aad and normalized llms.txt API-section SHA-256 3bd622452f97c133d8220c81e12fa1aba3f118577f919cfdcd53775abc38eac0",
+            "Initialize https://www.cogedim.com/mcp without credentials and verify canonical result SHA-256 ec7893b3a416a1326bc00aabd0a5aab8930ad7f339f9a94227d14c984e1d4004",
+            "Confirm the exact ordered eight-tool inventory, canonical schema SHA-256 6351b9900840a77a488e27c22f27295f5f51c3914d9b98aa02a122ed85417c5b, and read-only, non-destructive annotations",
+            "Call search_lots for Paris with maximum budget EUR 800,000 and verify at least one structured result with an official Cogedim URL and program identity without pinning mutable listing values",
+            "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Cogedim manifest, private app mapping, and icon hashes without redistributing those files",
+            "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+            "python3 scripts/build-ghast-catalog.py",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/cogedim.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": null,
+        "upstreamRevision": "cogedim-mcp-69802ca971dc+llms-3bd622452f97+init-ec7893b3a416+tools-6351b9900840",
+        "portStatus": "full"
       }
     },
     {

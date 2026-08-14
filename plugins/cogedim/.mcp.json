@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "cogedim": {
+      "type": "http",
+      "url": "https://www.cogedim.com/mcp"
+    }
+  }
+}

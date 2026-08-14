@@ -59,7 +59,7 @@ verification.
 | cloudflare | Cloudflare | mcpServers, skills, commands | MIT | official-source-verified | implemented-verified |
 | cloudinary | Cloudinary | appConnector | MIT | official-source-verified | implemented-verified |
 | coderabbit | CodeRabbit | skills | MIT | official-source-verified | implemented-verified |
-| cogedim | ALTAREA PROMOTION MANAGEMENT | appConnector | MIT | official-source-research-required | not-implemented |
+| cogedim | ALTAREA PROMOTION MANAGEMENT | appConnector | MIT | official-source-verified | implemented-verified |
 | common-room | Common Room | appConnector | MIT | official-source-verified | implemented-verified |
 | conductor | Conductor Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | convex | Convex, Inc. | appConnector | UNLICENSED | blocked-license | not-implemented |

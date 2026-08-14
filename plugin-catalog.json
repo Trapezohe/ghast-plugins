@@ -964,6 +964,34 @@
       "license": "MIT"
     },
     {
+      "id": "cogedim",
+      "name": "cogedim",
+      "description": "Find current Cogedim new-build lots and developments by location, budget, rooms, property type, and investment scheme, and retrieve official buying guidance.",
+      "manifest": {
+        "name": "cogedim",
+        "description": "Find current Cogedim new-build lots and developments by location, budget, rooms, property type, and investment scheme, and retrieve official buying guidance.",
+        "author": {
+          "name": "ALTAREA PROMOTION MANAGEMENT",
+          "url": "https://www.cogedim.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://www.cogedim.com/mcp",
+        "upstreamRevision": "cogedim-mcp-69802ca971dc+llms-3bd622452f97+init-ec7893b3a416+tools-6351b9900840",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/cogedim.zip",
+        "sha256": "aa27baca5ff3456bd233e7d79cc42f58b56713c213dc54a305b45b18e79765f7"
+      },
+      "icon": "./plugins/cogedim/assets/icon.svg",
+      "category": "lifestyle",
+      "homepage": "https://www.cogedim.com/mcp",
+      "license": "MIT"
+    },
+    {
       "id": "common-room",
       "name": "common-room",
       "description": "Research accounts and contacts, query buyer signals, build prospect lists, and safely write records through Common Room's official hosted MCP.",

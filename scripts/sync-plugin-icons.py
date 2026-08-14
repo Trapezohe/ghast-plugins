@@ -182,6 +182,13 @@ CUSTOM_ICONS = {
         '<circle cx="39" cy="43" r="8"/>'
         '<path d="M45 49l7 7"/>',
     ),
+    "cogedim": (
+        "#2D6F68",
+        '<path d="M10 31L32 12l22 19"/>'
+        '<path d="M16 28v24h32V28M26 52V38h12v14"/>'
+        '<circle cx="46" cy="18" r="7"/>'
+        '<path d="M51 23l7 7"/>',
+    ),
     "carta-crm": (
         "#2A6F62",
         '<rect x="11" y="13" width="42" height="38" rx="3"/>'
