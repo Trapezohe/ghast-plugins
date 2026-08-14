@@ -4021,6 +4021,114 @@ LSEG_OPENAI_HASHES = {
 LSEG_OPENAI_INVENTORY_SHA256 = (
     "805352b4743200f7558a1857200585b1254fa85792f336bf3a70bb170e81a9fd"
 )
+MOODYS_MCP_DOC_URL = (
+    "https://www.moodys.com/web/en/us/genai/model-context-protocol.html"
+)
+MOODYS_LEARNING_HUB_URL = (
+    "https://www.moodys.com/web/en/us/capabilities/gen-ai/"
+    "genai-learning-hub.html"
+)
+MOODYS_MCP_URL = "https://api.moodys.com/genai-ready-data/m1/mcp"
+MOODYS_PROTECTED_RESOURCE_URL = (
+    "https://api.moodys.com/genai-ready-data/"
+    ".well-known/oauth-protected-resource/m1/mcp"
+)
+MOODYS_AUTHORIZATION_METADATA_URL = (
+    "https://api.moodys.com/genai-ready-data/"
+    ".well-known/oauth-authorization-server"
+)
+MOODYS_REGISTRATION_URL = (
+    "https://api.moodys.com/genai-ready-data/oauth/register"
+)
+MOODYS_MCP_DOC_VISIBLE_SHA256 = (
+    "df6d8a5d209c9f91e67e3f6e8d74a22477c3f2d6701f0ff6396eaa77de0b4240"
+)
+MOODYS_LEARNING_HUB_MCP_CORE_SHA256 = (
+    "fd7044b556e7a1fd3b639aa8e380526c7ccd75b4d6733f5799b837eb1881fc38"
+)
+MOODYS_PROTECTED_RESOURCE_SHA256 = (
+    "0bcb2831d2e60d664afb3e10c9e0d57f4676ad97690bcd03dc24a3452fef3c5f"
+)
+MOODYS_AUTHORIZATION_METADATA_SHA256 = (
+    "4743d0ca555f971d54266c0e5a909e47ef3a9238556f91989e2ae8953217abe9"
+)
+MOODYS_AUTH_ERROR_SHA256 = (
+    "af8314e804d75a0334f305c789ef6206a47824890d00cd63f9b83b3d6636ba03"
+)
+MOODYS_REGISTRATION_REJECTED_SHA256 = (
+    "3774e853cbf10ae5287f4b594af466aef56af9cbffc318423fc2922f51640dc2"
+)
+MOODYS_PUBLIC_TOOL_NAMES = (
+    "findEntity",
+    "searchEntityDocuments",
+    "getEntityRatings",
+    "getEntityRatingDrivers",
+    "getEntityScorecard",
+)
+MOODYS_OPENAI_REVISION = "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9"
+MOODYS_OPENAI_BASE_URL = (
+    "https://raw.githubusercontent.com/openai/plugins/"
+    f"{MOODYS_OPENAI_REVISION}/plugins/moody-s"
+)
+MOODYS_OPENAI_HASHES = {
+    ".app.json": (
+        "84bb800fe69c39219b0dc60939e9c5ba2748d3614f79631c0c89c9c894962798"
+    ),
+    ".codex-plugin/plugin.json": (
+        "74cd1f4221915deac8fbd0846d12f8c00103e2e04541d1a2a9512f1f29377f6a"
+    ),
+    "skills/moody-s-company-analysis/SKILL.md": (
+        "0a0daa3384f994cfaae67d0472f494666f6ccef9bd5c4a193984c3cfb2fc67f3"
+    ),
+    "skills/moody-s-earnings-brief/SKILL.md": (
+        "87447f5fa0193c6c0af9996ad0b32df28c4503ff82b73fd4c2706f17c941334f"
+    ),
+    "skills/moody-s-explore-mcp/SKILL.md": (
+        "71a38020cd5761e5079e801fbd84c372e0f8204a7e2fd1654fc2e2dca88c19d1"
+    ),
+    "skills/moody-s-issuer-brief/SKILL.md": (
+        "f8e3525fd02c52073a14fbc3d9d886920c8550abf73a27225ac1884677588541"
+    ),
+    "skills/moody-s-peer-analysis/SKILL.md": (
+        "f0291ec3cf465486582952b8be8747c1c406e9ebe95a89ac72288de18de6fb90"
+    ),
+    "skills/moody-s-rating-analysis/SKILL.md": (
+        "c24d7d0d892d2911fbc3ed4a82a8f3d89ffb9ffa9e3441fd5b8d7f3dc2ca2cda"
+    ),
+    "skills/moody-s-sector-brief/SKILL.md": (
+        "333ec2be9d3ec02200c1e55cfb44e25d179b8d291701cc4fdff69a5d0ba30938"
+    ),
+    "skills/shared/citations/SKILL.md": (
+        "ab040fe5f61189d817a6dc6832804bd55d23159a2621353586982513de09704b"
+    ),
+    "skills/shared/template/SKILL.md": (
+        "8d2f607f43372166111d06fb586abc0e51ba8209826fded0f654125c6eb8311c"
+    ),
+}
+MOODYS_OPENAI_SKILL_INVENTORY_SHA256 = (
+    "d390253bec8fc7eeb6fc4c6cbed7257909b52a6dab12879b98991fa2eabca4a4"
+)
+MOODYS_OPENAI_TOOL_NAMES = (
+    "findEntity",
+    "getCreditOpinion",
+    "getEntityCreditOpinion",
+    "getEntityEsg",
+    "getEntityFinancials",
+    "getEntityManagersDirectors",
+    "getEntityPeers",
+    "getEntityProbabilityOfDefault",
+    "getEntityRatingDrivers",
+    "getEntityRatings",
+    "getEntityScorecard",
+    "getEntitySectorOutlook",
+    "searchCompanyFilings",
+    "searchEntityDocuments",
+    "searchEntityEarningsCall",
+    "searchNews",
+)
+MOODYS_OPENAI_TOOL_NAMES_SHA256 = (
+    "b271930ef2105f269ad9744f68dc2c44870da4ab58845ec61733e1e3ab0899be"
+)
 MAGICPATH_CLI_VERSION = "2.6.1"
 MAGICPATH_NPM_METADATA_URL = (
     f"https://registry.npmjs.org/magicpath-ai/{MAGICPATH_CLI_VERSION}"
@@ -5216,6 +5324,7 @@ def main() -> int:
     verify_finn_evidence()
     verify_keybid_puls_evidence()
     verify_lseg_evidence()
+    verify_moodys_evidence()
     verify_magicpath_evidence()
     verify_hg_insights_evidence()
     verify_cogedim_evidence()
@@ -13836,6 +13945,306 @@ def verify_lseg_evidence() -> None:
             "LSEG must remain unpublished until LSEG documents a portable "
             "OAuth client or credential flow for independent MCP clients "
             "and authenticated capability verification succeeds"
+        )
+
+
+def verify_moodys_evidence() -> None:
+    mcp_documentation = fetch_visible_text(
+        MOODYS_MCP_DOC_URL,
+        "Available Tools",
+    )
+    if sha256_text(mcp_documentation) != MOODYS_MCP_DOC_VISIBLE_SHA256:
+        raise ValueError("Moody's MCP documentation changed")
+    tools_start = mcp_documentation.find("Available Tools")
+    tools_end = mcp_documentation.find("Authentication", tools_start)
+    if tools_start < 0 or tools_end < tools_start:
+        raise ValueError("Moody's MCP tool documentation structure changed")
+    documented_tools = tuple(
+        re.findall(
+            r"\b(?:find|search|get)[A-Z][A-Za-z]+\b",
+            mcp_documentation[tools_start:tools_end],
+        )
+    )
+    if documented_tools != MOODYS_PUBLIC_TOOL_NAMES:
+        raise ValueError("Moody's public MCP tool catalog changed")
+    for marker in (
+        "implements the MCP OAuth Specification",
+        "redirected to a Moody’s authentication page",
+        "Obtain Access — Request credentials and endpoint URL from Moody’s.",
+        "Add custom connector",
+        MOODYS_MCP_URL,
+        "verify if all tools are available and enabled",
+    ):
+        if marker not in mcp_documentation:
+            raise ValueError(
+                f"Moody's MCP documentation is missing {marker!r}"
+            )
+
+    learning_hub = fetch_visible_text(
+        MOODYS_LEARNING_HUB_URL,
+        "Moody’s MCP server connects AI directly",
+    )
+    learning_start = learning_hub.find(
+        "How Moody’s MCPs work Moody’s MCP server connects"
+    )
+    learning_end = learning_hub.find(
+        "04 What this means in practice",
+        learning_start,
+    )
+    if learning_start < 0 or learning_end < learning_start:
+        raise ValueError("Moody's learning-hub MCP section changed")
+    learning_core = learning_hub[learning_start:learning_end].strip()
+    if (
+        sha256_text(learning_core)
+        != MOODYS_LEARNING_HUB_MCP_CORE_SHA256
+    ):
+        raise ValueError("Moody's learning-hub MCP evidence changed")
+    for marker in (
+        "more than 630 million global public and private entities",
+        "firmographics, financials, and ownership structures",
+        "credit ratings and proprietary research",
+        "risk drivers and scorecards",
+        "macroeconomic context",
+        "Earnings Brief Peer Analysis Issuer Brief Rating Analysis "
+        "Sector Brief",
+        "secure, authenticated, and governed",
+    ):
+        if marker not in learning_core:
+            raise ValueError(
+                f"Moody's learning-hub MCP evidence is missing {marker!r}"
+            )
+
+    protected_resource = fetch_json(MOODYS_PROTECTED_RESOURCE_URL)
+    expected_protected_resource = {
+        "resource": MOODYS_MCP_URL,
+        "authorization_servers": [
+            "https://api.moodys.com/genai-ready-data"
+        ],
+        "scopes_supported": [
+            "mcp",
+            "claudeai",
+            "openid",
+            "profile",
+            "email",
+            "mdcapp",
+        ],
+    }
+    if (
+        protected_resource != expected_protected_resource
+        or canonical_json_sha256(protected_resource)
+        != MOODYS_PROTECTED_RESOURCE_SHA256
+    ):
+        raise ValueError("Moody's protected-resource metadata changed")
+
+    auth_metadata = fetch_json(MOODYS_AUTHORIZATION_METADATA_URL)
+    if (
+        canonical_json_sha256(auth_metadata)
+        != MOODYS_AUTHORIZATION_METADATA_SHA256
+        or auth_metadata.get("issuer")
+        != "https://api.moodys.com/genai-ready-data"
+        or auth_metadata.get("authorization_endpoint")
+        != "https://api.moodys.com/genai-ready-data/oauth/authorize"
+        or auth_metadata.get("token_endpoint")
+        != "https://api.moodys.com/genai-ready-data/oauth/token"
+        or auth_metadata.get("registration_endpoint")
+        != MOODYS_REGISTRATION_URL
+        or auth_metadata.get("grant_types_supported")
+        != ["authorization_code", "refresh_token"]
+        or auth_metadata.get("response_types_supported") != ["code"]
+        or auth_metadata.get("code_challenge_methods_supported")
+        != ["S256"]
+        or auth_metadata.get("token_endpoint_auth_methods_supported")
+        != ["none"]
+    ):
+        raise ValueError("Moody's authorization metadata changed")
+
+    registration_request = urllib.request.Request(
+        MOODYS_REGISTRATION_URL,
+        data=json.dumps(
+            {
+                "client_name": "Ghast Moody's portability audit",
+                "redirect_uris": [
+                    "http://127.0.0.1:43191/oauth/callback"
+                ],
+                "grant_types": [
+                    "authorization_code",
+                    "refresh_token",
+                ],
+                "response_types": ["code"],
+                "token_endpoint_auth_method": "none",
+            },
+            separators=(",", ":"),
+        ).encode("utf-8"),
+        headers={
+            "User-Agent": (
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                "AppleWebKit/537.36 Chrome/139.0.0.0 Safari/537.36"
+            ),
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+        },
+        method="POST",
+    )
+    try:
+        urllib.request.urlopen(registration_request, timeout=30)
+    except urllib.error.HTTPError as exc:
+        registration_error = json.loads(exc.read())
+        if (
+            exc.code != 400
+            or registration_error
+            != {
+                "error": "invalid_client_metadata",
+                "error_description": (
+                    "redirect_uris contains a URI that is not allowed"
+                ),
+            }
+            or canonical_json_sha256(registration_error)
+            != MOODYS_REGISTRATION_REJECTED_SHA256
+        ):
+            raise ValueError(
+                "Moody's OAuth registration boundary changed"
+            ) from exc
+    else:
+        raise ValueError(
+            "Moody's OAuth registration now accepts RFC 8252 loopback "
+            "clients; re-audit portability"
+        )
+
+    initialize = json.dumps(
+        {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "method": "initialize",
+            "params": {
+                "protocolVersion": "2025-11-25",
+                "capabilities": {},
+                "clientInfo": {
+                    "name": "ghast-moodys-audit",
+                    "version": "1.0.0",
+                },
+            },
+        },
+        separators=(",", ":"),
+    ).encode("utf-8")
+    for token in (None, "invalid-ghast-moodys-audit-token"):
+        headers = {
+            "User-Agent": "ghast-moodys-audit/1.0",
+            "Content-Type": "application/json",
+            "Accept": "application/json, text/event-stream",
+            "MCP-Protocol-Version": "2025-11-25",
+        }
+        if token:
+            headers["Authorization"] = f"Bearer {token}"
+        request = urllib.request.Request(
+            MOODYS_MCP_URL,
+            data=initialize,
+            headers=headers,
+            method="POST",
+        )
+        try:
+            urllib.request.urlopen(request, timeout=30)
+        except urllib.error.HTTPError as exc:
+            auth_error = json.loads(exc.read())
+            challenge = exc.headers.get("WWW-Authenticate", "")
+            if (
+                exc.code != 401
+                or auth_error
+                != {
+                    "jsonrpc": "2.0",
+                    "id": None,
+                    "error": {
+                        "code": -32001,
+                        "message": "Unauthorized",
+                    },
+                }
+                or canonical_json_sha256(auth_error)
+                != MOODYS_AUTH_ERROR_SHA256
+                or f'resource_metadata="{MOODYS_PROTECTED_RESOURCE_URL}"'
+                not in challenge
+            ):
+                raise ValueError(
+                    "Moody's MCP authentication behavior changed"
+                ) from exc
+        else:
+            raise ValueError(
+                "Moody's MCP unexpectedly accepted invalid credentials"
+            )
+
+    openai_files = {}
+    for relative_path, expected_hash in MOODYS_OPENAI_HASHES.items():
+        content = fetch_bytes(f"{MOODYS_OPENAI_BASE_URL}/{relative_path}")
+        if sha256_bytes(content) != expected_hash:
+            raise ValueError(
+                f"Moody's Codex evidence changed: {relative_path}"
+            )
+        openai_files[relative_path] = content
+    skill_inventory = "".join(
+        f"{MOODYS_OPENAI_HASHES[path]}  {path}\n"
+        for path in sorted(MOODYS_OPENAI_HASHES)
+        if path.endswith("/SKILL.md")
+    )
+    if (
+        sha256_text(skill_inventory)
+        != MOODYS_OPENAI_SKILL_INVENTORY_SHA256
+    ):
+        raise ValueError("Moody's Codex skill inventory is inconsistent")
+
+    manifest = json.loads(openai_files[".codex-plugin/plugin.json"])
+    app = json.loads(openai_files[".app.json"])
+    interface = manifest.get("interface", {})
+    if (
+        manifest.get("name") != "moody-s"
+        or manifest.get("version") != "1.0.2"
+        or manifest.get("author", {}).get("name") != "Moody's"
+        or interface.get("developerName") != "Moody's"
+        or app.get("apps", {}).get("moody-s", {}).get("id")
+        != "asdk_app_695ff9b981ec8191a843d4da6903e3d8"
+    ):
+        raise ValueError("Moody's Codex developer evidence changed")
+    skill_text = "\n".join(
+        openai_files[path].decode("utf-8")
+        for path in sorted(openai_files)
+        if path.endswith("/SKILL.md")
+    )
+    referenced_tools = tuple(
+        sorted(
+            set(
+                re.findall(
+                    r"\b(?:find|search|get)[A-Z][A-Za-z]+\b",
+                    skill_text,
+                )
+            )
+        )
+    )
+    if (
+        referenced_tools != MOODYS_OPENAI_TOOL_NAMES
+        or sha256_bytes("\0".join(referenced_tools).encode("utf-8") + b"\0")
+        != MOODYS_OPENAI_TOOL_NAMES_SHA256
+    ):
+        raise ValueError("Moody's Codex referenced tool catalog changed")
+    manifest_text = json.dumps(manifest, ensure_ascii=False).lower()
+    for marker in (
+        "ownership structures",
+        "financial statements",
+        "company filings",
+        "earnings-call transcripts",
+        "news monitoring",
+        "peer identification",
+        "sector outlook and country-risk context",
+        "managers, directors, and key officers",
+    ):
+        if marker not in manifest_text:
+            raise ValueError(
+                f"Moody's Codex capability evidence is missing {marker!r}"
+            )
+
+    if (PLUGIN_DIR / "moody-s").exists() or Path(
+        "packages/moody-s.zip"
+    ).exists():
+        raise ValueError(
+            "Moody's must remain unpublished until an independently "
+            "registered OAuth client and authenticated tool schemas verify "
+            "the complete Codex capability surface"
         )
 
 
