@@ -2479,6 +2479,33 @@
       "license": "MIT"
     },
     {
+      "id": "myregistry-com",
+      "name": "myregistry-com",
+      "description": "Find public wedding, baby, and gift-list registries through MyRegistry.com's official Registry API.",
+      "manifest": {
+        "name": "myregistry-com",
+        "description": "Find public wedding, baby, and gift-list registries through MyRegistry.com's official Registry API.",
+        "author": {
+          "name": "MyRegistry.com / MyRegistry LLC",
+          "url": "https://www.myregistry.com/"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://developers.myregistry.com/reference/new-endpoint",
+        "upstreamRevision": "myregistry-registry-api-0fbbe1a50b9a+docs-81d5402e985a+terms-a0a8295276ac",
+        "license": "MIT",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/myregistry-com.zip",
+        "sha256": "593af7e9aa50e7b4267a99957c9f133021aaf6ee57982035349063928e27bdc2"
+      },
+      "icon": "./plugins/myregistry-com/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://developers.myregistry.com/reference/new-endpoint",
+      "license": "MIT"
+    },
+    {
       "id": "neon-postgres",
       "name": "neon-postgres",
       "description": "Manage Neon Lakebase Postgres projects, branches, schemas, SQL, migrations, Auth, Object Storage, Functions, AI Gateway, and database performance with official Neon skills and MCP.",

@@ -6841,6 +6841,59 @@
         "python3 scripts/validate-ghast-repository.py",
         "unzip -tqq packages/zoho.zip"
       ]
+    },
+    "myregistry-com": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "MyRegistry.com / MyRegistry LLC",
+      "officialRepository": null,
+      "officialRevision": "myregistry-registry-api-0fbbe1a50b9a+docs-81d5402e985a+terms-a0a8295276ac",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/myregistry-com/LICENSE licenses only the independently authored Ghast adapter, workflow, metadata, documentation, and generic gift-search icon.",
+        "No MyRegistry source code, private Codex connector, developer credential, customer or registry data, API response, developer documentation, web content, logo, or trademark is redistributed.",
+        "MyRegistry API access remains governed by the key holder's Merchant Agreement and service terms. The plugin cannot grant API permission or sublicense the hosted service."
+      ],
+      "officialityEvidence": [
+        "MyRegistry's official developer site publishes a Registry API specifically for integrations that let consumers find registries.",
+        "The official GetRegistries2 OpenAPI page publishes the fixed api.myregistry.com endpoint, developerKey query authentication, required firstName and lastName, optional city, state, country, and registryType filters, and the returned registry identity, event date, location, and URL fields.",
+        "The official developer index, getting-started guide, Registry API overview, GetRegistries2 definition, and server-side partner guidance have raw SHA-256 values 4d7fc6fcb734b320b6e5dff234401d4c9e27193bf015d9ca2923d0f465b92e5c, 81d5402e985a93bae1f9caf4d33bb3094f5c2bc1b2687faeffdd254e41a7205c, 815e8bee26f4c8a4e8d25580f8ecb38363dec6a9360cf8e28da3cb89393a7f11, 0fbbe1a50b9a4381b970b0e7c73b8369174eb6836baada88f0d71970e4f54e68, and 541f8eaf4f1841a42a6bf70125bf233ebcccf0b9c2b1e1d622984f9460f83ccd.",
+        "On August 14, 2026, an unauthenticated GetRegistries2 request returned HTTP 417 and the exact JSON error Developer Key is not valid, confirming a live independent official API boundary.",
+        "OpenAI's pinned snapshot identifies MyRegistry.com as developer, maps private app ID asdk_app_69c1b82faf2c81919e80900a7443dcfd, and asks to find relevant registry details. Its complete file inventory SHA-256 is 8a2e60d12f51858ae1cf36bc855d51d77d2beb5aaef9fb828527bd2491f8acb0."
+      ],
+      "codexCapabilities": [
+        "Find relevant registry details in MyRegistry.com through a private app connector",
+        "Support universal wedding, baby, birthday, and celebration gift registry discovery"
+      ],
+      "ghastCapabilities": [
+        "Call MyRegistry.com's official GetRegistries2 API with a partner-issued developerKey from the local environment",
+        "Find public registries by required first and last name and narrow by city, state, country, or wedding, baby, or gift-list type",
+        "Return only the documented registrant, co-registrant, registry type, event date, location, and public registry URL fields",
+        "Apply local result limits, structured errors, secret protection, privacy guidance, and a strict no-scraping boundary"
+      ],
+      "capabilityRelationship": "equivalent-official-read-only-api-transport",
+      "limitations": [
+        "MyRegistry does not publish the hosted API implementation, an official MCP server, a reusable client repository, or a public open-source license for its service. Ghast supplies only a thin independently authored client.",
+        "A MyRegistry partner relationship, developerKey, Merchant Agreement, permitted business purpose, account eligibility, service availability, and limits remain user-managed. An ordinary consumer registry account may not provide API access.",
+        "Authenticated search was not exercised because no MyRegistry partner key was supplied. The adapter passed deterministic normalization tests, missing-secret tests, and the live invalid-key boundary probe.",
+        "The official endpoint does not document server-side pagination. The adapter's limit bounds displayed results but may not reduce the number returned by the service.",
+        "Registry lookup results can expose names, relationships, event types, dates, locations, and public links. They must not be bulk collected, profiled, used for outreach or high-impact decisions, or disclosed beyond the authorized gifting purpose.",
+        "The adapter does not open or scrape registry pages because MyRegistry's public terms prohibit automated access without express permission. Password-protected data is never bypassed.",
+        "Gift items, purchase state, shipping addresses, user accounts, registry creation, mutation, checkout, and Merchant API write operations are intentionally excluded.",
+        "The API requires developerKey in the HTTPS query string. Users must prevent proxy, debug, shell, and request logging from recording full URLs.",
+        "A generic gift-search icon is used because MyRegistry's logos and OpenAI marketplace artwork are not redistributed."
+      ],
+      "verification": [
+        "python3 scripts/import-myregistry-plugin.py --openai-source ../openai-plugins",
+        "Verify all five official developer-document hashes and their Registry API, OpenAPI, developerKey, partner, and server-side integration markers",
+        "Verify normalized MyRegistry terms and privacy hashes, Merchant Agreement boundary, automated-access restriction, effective dates, and registry personal-data statements",
+        "Probe GetRegistries2 without a key and require HTTP 417 plus the exact invalid developer key JSON error",
+        "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9, all four file hashes, complete inventory hash, developer identity, private app ID, default prompt, and universal-registry description",
+        "Verify generated adapter SHA-256 fc2d2b42924ac064ce6291e0a57fb7e20d302a2c0de1ead2ae5432a7f41b245e, run its self-test, and confirm missing or fake credentials are not printed",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/myregistry-com.zip"
+      ]
     }
   }
 }

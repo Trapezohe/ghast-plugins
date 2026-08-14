@@ -116,7 +116,7 @@ verification.
 | morningstar | Morningstar | appConnector, skills | MIT | blocked-license | not-implemented |
 | motherduck | MotherDuck Corporation | appConnector | MIT | official-source-verified | implemented-verified |
 | mt-newswires | MT Newswires | appConnector | MIT | official-source-verified | implemented-verified |
-| myregistry-com | MyRegistry.com | appConnector | MIT | official-source-research-required | not-implemented |
+| myregistry-com | MyRegistry.com | appConnector | MIT | official-source-verified | implemented-verified |
 | neon-postgres | Neon | appConnector, skills | Apache-2.0 | official-source-verified | implemented-verified |
 | netlify | Netlify | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | network-solutions | Network Solutions | appConnector | MIT | official-source-research-required | not-implemented |
