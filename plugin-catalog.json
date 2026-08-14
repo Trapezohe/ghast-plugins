@@ -2192,6 +2192,33 @@
       "license": "Apache-2.0"
     },
     {
+      "id": "magicpath",
+      "name": "magicpath",
+      "description": "Search, inspect, install, create, and edit MagicPath UI components and canvas projects through MagicPath's official pinned CLI.",
+      "manifest": {
+        "name": "magicpath",
+        "description": "Search, inspect, install, create, and edit MagicPath UI components and canvas projects through MagicPath's official pinned CLI.",
+        "author": {
+          "name": "MagicPath",
+          "url": "https://www.magicpath.ai"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.9-ghast.1",
+        "homepage": "https://www.magicpath.ai",
+        "upstreamRevision": "npm-magicpath-ai-2.6.1-a1fe8d745a10+skills-a1ced96ad9da",
+        "license": "MIT",
+        "skills": "./skills/"
+      },
+      "package": {
+        "url": "./packages/magicpath.zip",
+        "sha256": "fe9f2b25cb0e571d0304d081c9dc30be1d32b866fc4126dd7c3246ec4a168c11"
+      },
+      "icon": "./plugins/magicpath/assets/icon.svg",
+      "category": "development",
+      "homepage": "https://www.magicpath.ai",
+      "license": "MIT"
+    },
+    {
       "id": "mermaid-mindmap",
       "name": "mermaid-mindmap",
       "description": "Slash command that turns a topic or outline into a Mermaid mindmap code block the chat can render as a tree.",

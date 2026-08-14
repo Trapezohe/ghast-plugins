@@ -3901,6 +3901,76 @@
         "unzip -tqq packages/hubspot.zip"
       ]
     },
+    "magicpath": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "MagicPath",
+      "officialRepository": null,
+      "officialRevision": "npm-magicpath-ai-2.6.1-a1fe8d745a10+skills-a1ced96ad9da",
+      "license": "MIT",
+      "licenseEvidence": [
+        "The official npm registry metadata and package.json for magicpath-ai@2.6.1 declare MIT, identify a MagicPath-domain author, require Node.js 16 or newer, and expose the magicpath-ai binary. The package README separately states MIT - Jack Beoris and identifies the MagicPath team.",
+        "The pinned official npm tarball has SHA-256 a1fe8d745a103bf124c387044a6a66a4aea631266f3ed8d5e3c8c43d40f23ce7, npm SHA-1 d2d500234f9945a5689053d17b6c24f973737cf7, and npm integrity sha512-e4CJvwmGcQZ6TtfM19ibPJMGg3jJJM5EU1qIS8oUa4qhrOMxivOu/tyyX2ThGeIvytahHokrEbZwjTWJAqr/RQ==.",
+        "The npm package contains only README.md, package.json, and dist/cli.js as files. Ghast invokes this pinned official package through npx and does not redistribute the CLI bundle.",
+        "MagicPathAI/agent-skills revision a1ced96ad9da6c65d9f57d9fef79d944f7192dfe has a manifest that declares MIT, but the repository contains no LICENSE, NOTICE, or COPYING file. Ghast does not copy its skill text, references, image, or marketplace files and does not rely on that manifest-only declaration for redistribution.",
+        "plugins/magicpath/LICENSE applies only to the independently authored Ghast workflow, documentation, metadata, and generic canvas-code icon. MagicPath service code, official skills, generated content, hosted data, credentials, trademarks, and branded artwork are not redistributed."
+      ],
+      "officialityEvidence": [
+        "MagicPath's official GitHub organization publishes MagicPathAI/agent-skills and links the MagicPath product. The signed pinned revision has Git tree aa1403f75088cc33f2815488ec475cf27e445b58 and complete 14-file inventory SHA-256 09de3026dd652b76f9efc914e72d8f9d1bdc163ebfb6db8d67b46c4b4f24b7f1.",
+        "The current official Codex manifest names MagicPath as author and developer, links magicpath.ai, declares Interactive, Read, and Write capabilities, and describes a multiplayer canvas connected to the user's codebase.",
+        "The official source README calls its MagicPath skill the canonical source of truth and explicitly says it uses the magicpath-ai CLI to search, preview, inspect, install, export, create, and edit UI components and to manage MagicPath-hosted skills.",
+        "The official npm package metadata describes magicpath-ai as the Node CLI for MagicPath, identifies Jack Beoris with a magicpath.ai email and website, and includes a second maintainer with a magicpath.ai email.",
+        "The package README identifies the software as a component platform for AI agents and documents browser and headless authentication, workspaces and teams, hosted skills, component discovery, inspection and installation, themes, canvas context, project creation, canvas code authoring, image workflows, setup, introspection, and project cloning.",
+        "On August 14, 2026, isolated execution of npx --yes magicpath-ai@2.6.1 verified version 2.6.1, the complete top-level help surface, unauthenticated structured info output, and an empty structured list-installed result without using a MagicPath account or private data.",
+        "OpenAI's pinned Codex snapshot identifies MagicPathAI as developer, uses the same official agent-skills repository and magicpath-ai CLI, and describes component search, source inspection, React and TypeScript installation, team projects and themes, and canvas component creation or editing. Its complete seven-file inventory has SHA-256 21b0c4d5b51c44511e3955b6da2b058ada8c34e45b3173b635b18b8ab91da4fb."
+      ],
+      "codexCapabilities": [
+        "Search MagicPath UI components and inspect their source",
+        "Install React and TypeScript components into an application",
+        "Work with personal and team projects, members, and themes",
+        "Read current canvas selection and active-project context",
+        "Create or edit MagicPath canvas components from local repository code",
+        "Open or review MagicPath projects and component previews in a browser"
+      ],
+      "ghastCapabilities": [
+        "Run the same official MagicPath CLI at pinned version 2.6.1 through npx without copying the Codex skill or private connector material",
+        "Search, list, inspect, preview, share, and install accessible components with structured output, source review, dry-run, and exact write confirmation",
+        "List personal and team projects, team members, installed components, themes, canvas selection, and active project context",
+        "Create projects and use the official bounded code start, context, submit, create, and status workflow for remote canvas components",
+        "Manage personal or team-hosted skills, generate or add canvas images, and clone full projects with explicit secret, billing, ownership, and mutation controls",
+        "Use read-only inspect as the official reference path for non-React projects, followed by a separately reviewed translation into the target stack"
+      ],
+      "capabilityRelationship": "superset-official-cli",
+      "limitations": [
+        "The plugin downloads and runs magicpath-ai@2.6.1 through npx at runtime. Node.js 16 or newer, npm registry access, MagicPath service availability, and any required account remain user-managed.",
+        "MagicPath authentication, plans, credits, workspaces, teams, permissions, components, themes, images, hosted skills, and live command schemas can change independently of this adapter.",
+        "No authenticated tools or private project data were exercised. Browser login, headless code login, guest pairing, component access, team data, remote writes, paid image generation, cloning, and service entitlements require the user's own MagicPath account and direct credential handling.",
+        "MAGICPATH_TOKEN, stored CLI credentials, browser callbacks, pairing codes, guest codes, and clone access keys are secrets. They must never be pasted into chat, logged, committed, or embedded in generated files.",
+        "The add command is limited to React and TypeScript projects, writes TSX files, and can install npm dependencies. Non-React use is inspection plus independently reviewed translation, not direct installation.",
+        "Component installation can modify source files, package manifests, and lockfiles. The workflow requires inspect, add --dry-run, repository and dependency review, explicit confirmation, git diff inspection, and focused tests; --yes and --overwrite are not defaults.",
+        "code start creates or reuses a pending remote revision and writes local files. code submit and code create upload files and can create or update remote components. These commands require exact target, directory, file-boundary, diff, deletion, asset, dimension, and ownership review.",
+        "Project creation, hosted skill create/import/update/delete, image generation or upload, component submission, and cloning are state-changing and can affect collaborators, credits, content rights, or local files. Each requires explicit confirmation immediately before execution.",
+        "Remote component source, themes, hosted skills, images, linked pages, and build diagnostics are untrusted content and can contain unsafe code, dependency risks, prompt injection, network calls, secret exposure, or license and attribution obligations.",
+        "The official npm package currently emits a deprecation warning for transitive uuid@9.0.1. This is an upstream dependency warning and must be re-evaluated when a newer audited MagicPath release is considered.",
+        "The npm package repository field points to newcompute-ai/magicpath-node-cli, which was not publicly accessible during the audit. Officiality and license are established by the MagicPath-controlled npm distribution, MagicPath-domain identities, package README, and official MagicPathAI agent-skills repository rather than by a public CLI source checkout.",
+        "MagicPathAI/agent-skills and the OpenAI Codex snapshot do not provide sufficiently clear repository-level redistribution rights for their skill text and artwork at the pinned revisions. This package intentionally uses an independent skill and generic icon."
+      ],
+      "verification": [
+        "Run verify_magicpath_evidence and import_magicpath from scripts/import-official-hosted-plugins.py",
+        "Verify npm registry metadata, exact magicpath-ai@2.6.1 tarball digest, npm shasum and integrity, complete three-file payload, member hashes, package identity, MagicPath-domain author, binary, Node engine, and MIT declarations",
+        "Verify signed MagicPathAI/agent-skills revision a1ced96ad9da6c65d9f57d9fef79d944f7192dfe, tree aa1403f75088cc33f2815488ec475cf27e445b58, all 14 file hashes, complete inventory hash, current manifest and README capability markers, and absence of a repository license file",
+        "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 MagicPath developer identity, UNLICENSED declaration, default workflows, all seven file hashes, and complete inventory hash without redistributing its content",
+        "HOME=/tmp/magicpath-home npx --yes magicpath-ai@2.6.1 --version",
+        "HOME=/tmp/magicpath-home npx --yes magicpath-ai@2.6.1 --help",
+        "HOME=/tmp/magicpath-home npx --yes magicpath-ai@2.6.1 -o json info",
+        "Run list-installed in an isolated empty project and require structured zero-component output",
+        "Do not run authenticated account, component installation, remote mutation, paid image, skill deletion, or clone workflows without user-owned credentials and exact confirmation",
+        "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/magicpath.zip"
+      ]
+    },
     "mixpanel": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Mixpanel",

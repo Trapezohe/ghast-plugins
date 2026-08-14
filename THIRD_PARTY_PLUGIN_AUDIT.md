@@ -104,7 +104,7 @@ verification.
 | keybid-puls | KeyBid | appConnector | MIT | official-source-research-required | not-implemented |
 | lovable | Lovable | appConnector | MIT | official-source-verified | implemented-verified |
 | lseg | LSEG | appConnector | MIT | official-source-research-required | not-implemented |
-| magicpath | MagicPathAI | skills | UNLICENSED | blocked-license | not-implemented |
+| magicpath | MagicPathAI | skills | UNLICENSED | official-source-verified | implemented-verified |
 | marcopolo | Immersa, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | mem | Mem Labs, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | meticulate | Meticulate | appConnector | MIT | official-source-research-required | not-implemented |

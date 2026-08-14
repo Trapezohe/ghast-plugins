@@ -466,6 +466,12 @@ CUSTOM_ICONS = {
         '<circle cx="46" cy="46" r="6"/>'
         '<path d="M24 30l16-9M24 34l16 9"/>',
     ),
+    "magicpath": (
+        "#305D3A",
+        '<rect x="10" y="12" width="44" height="40" rx="4"/>'
+        '<path d="M10 22h44M18 17h2M26 17h2"/>'
+        '<path d="M25 31l-6 6 6 6M39 31l6 6-6 6M35 27l-6 20"/>',
+    ),
     "mixpanel": (
         "#6F4BD8",
         '<path d="M12 48h40M16 42V29h8v13M28 42V20h8v22M40 42V13h8v29"/>'
