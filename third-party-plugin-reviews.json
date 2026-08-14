@@ -2170,6 +2170,7 @@
       "licenseEvidence": [
         "The pinned official repository has no LICENSE, LICENSE.md, LICENSE.txt, COPYING, or NOTICE file.",
         "The Codex manifest declares MIT, but that declaration does not establish redistribution rights for the separately maintained DatasiteAI repository, Datasite's privately hosted MCP implementation, tool schemas, data, or artwork.",
+        "Datasite's API Program Terms retain ownership of Program Content, restrict copying and modification, and require a separate commercial agreement for commercial distribution to third parties. Those service terms are not an open-source license for the repository skills or hosted connector.",
         "No official skill, connector implementation, icon, or Datasite content is redistributed because no capability-equivalent Ghast plugin is published."
       ],
       "officialityEvidence": [
@@ -2181,6 +2182,10 @@
         "The official source skills reference getProjectOverview, listSubscriptions, setupProject, createContent, listFolderContents, searchDocuments, and updateContent. They identify searchDocuments as the only permitted source of document content and require Blueflame for semantic and content-level workflows.",
         "The hosted resource metadata identifies https://mcp.global.datasite.com/mcp and https://auth.datasite.com with openid and profile scopes; its canonical JSON SHA-256 is 4cb6bbccdf8fe5470e7bfff6aef61fb678908d5e26ac9e643915a71b6582e50a.",
         "The authorization-server metadata advertises authorization code, refresh tokens, PKCE S256, public clients, device authorization, and dynamic registration; its canonical JSON SHA-256 is bbd60296055dd56e52a925cad2c98912d2d8841ca3ab14c3f02ef5615821f77f.",
+        "Datasite's public MCP guide has SHA-256 2a5faea9753ee7b1eb14e067d6f12e39ae9d217cdf9366fdb314f077423e7202. It documents project, document, upload, invitation, Q&A, permission, and Blueflame search capabilities, but directs independent MCP integrations to contact developer@datasite.com.",
+        "Datasite's public Getting Started, Authorization, and App-management guides have SHA-256 values c238a60e81ea30ff498ee268997d2900ed5336c785dbaae19b99cde25f9027e4, 00cb59c4b7d8c26e53940b8dd4de281374f3ed459dbec184b8d6ad5aae712dff, and d1f5ac24076b11b9c58aa4a8e6e3a08e5b2d22ebc6d50e5d59e9c6ca1d4af745. They document a separate REST API program in which a logged-in developer creates an app, Client ID, Client Secret, and redirect URI for OAuth authorization-code and refresh-token flows.",
+        "The public GA REST catalog exposes eight OpenAPI 3.1 specifications at API version 2024-04-01: Memberships, Metadata, Projects, Q&A, Roles, Search, Subscriptions, and Uploads. Their 45 operations cover much of the administrative surface, while the Search API documents phrase, word, partial-word, include, exclude, and exact-phrase matching rather than Blueflame semantic search.",
+        "The eight canonical REST specification SHA-256 values are membership 3354162d735b7debd49155bddbec32400a6dda8f4ba5d8c4b4243a6370aebbc0, metadata 270ea3d4678d31f876d8aa1230358568560bb9a8240984d77b9a5c62863ba86f, project b81a2bfaf62b048dfa24b4ca2b0dd6383bd319670b9b5086a82f4a7ec27ca263, qanda 2a44e46b7d8b47e19f9600e329372ca104a61eb7a11f5a85af03f49249f7e947, roles 9a59ce31c09e498a9a95c93d6d5a5f0bb2f2c57d4a6312cebad028e24a0eccec, search b17156527ba2a01755ed31eaffec3d7afb6803a53fabcbe2354c2e820831aa26, subscription 945c10a196fefb880199cf37691924dfc08d0d2f8347799db98b03129c5f97f6, and upload 75ef9d22d2415e466cd8f270907cf6b931af6e0cac1647cf2714eb2c74fa18fb.",
         "OpenAI's pinned Codex snapshot identifies Datasite as the developer and contains the same eight workflows. Its complete 20-file inventory has SHA-256 3ad7ae4281a9b5238e22cf391485233dcece3b0967bab5ede1c284ccf0280316."
       ],
       "codexCapabilities": [
@@ -2193,26 +2198,32 @@
       ],
       "ghastCapabilities": [
         "Datasite's official hosted MCP and eight official workflow skills establish a capability surface corresponding to the Codex plugin.",
-        "No Ghast plugin is published because Datasite has not documented a portable custom-client authentication path and the official skill repository has no verified redistribution license."
+        "Datasite's official REST API program provides a separately authorized, partial integration path for project, subscription, metadata, upload, membership, role, Q&A, and keyword-search operations.",
+        "No Ghast plugin is published because the public REST surface does not reproduce Blueflame semantic and document-content workflows, the MCP integration still requires Datasite coordination, and the official skill repository has no verified redistribution license."
       ],
-      "capabilityRelationship": "official-hosted-mcp-found-private-client-and-license-blockers",
+      "capabilityRelationship": "official-hosted-mcp-private-client-public-rest-partial-license-blockers",
       "limitations": [
         "The hosted MCP endpoint requires a gateway API key before OAuth. Missing credentials and an invalid Bearer token both return HTTP 401 with a Key challenge; an invalid X-API-Key returns a distinct HTTP 401 Unauthorized response.",
         "The protected-resource response does not provide the gateway key or a Bearer resource_metadata challenge, so a normal Ghast Streamable HTTP client cannot begin the advertised OAuth flow.",
         "The authorization metadata advertises https://auth.datasite.com/as/clients.oauth2 as a dynamic registration endpoint, but standard GET, OPTIONS, and POST registration requests return HTTP 404. No client was created during the audit.",
-        "Datasite's official setup instructions describe selecting Datasite inside supported assistants and entering Datasite credentials. They do not publish a custom-connector endpoint, gateway API-key issuance process, OAuth client ID, or redirect registration process for independent clients.",
+        "Datasite's official MCP setup instructions describe selecting Datasite inside Claude, ChatGPT, or Copilot and entering Datasite credentials. The same guide says to contact developer@datasite.com when using the MCP server for an integration; it does not publish a self-service MCP gateway-key or OAuth-client issuance process.",
+        "Datasite's separate REST developer program is self-service after login and app creation, but its Client ID and Client Secret authorize the documented REST gateway. The public documentation does not state that these credentials can be substituted for the MCP gateway key or private marketplace client configuration.",
         "The likely marketplace-level gateway key and registered OAuth client configuration are private integration credentials. Ghast must not extract, reuse, impersonate, or redistribute them.",
         "The official source repository has no verified redistribution license, so its eight skills cannot be copied into Ghast even though their Datasite authorship and correspondence with Codex are proven.",
         "Authenticated tools/list was not run because no portable client authentication path or Datasite account was supplied. The seven tool names referenced by the skills are workflow evidence, not a claim that they are the complete authenticated catalog.",
-        "Blueflame semantic search and document-content workflows depend on project activation, agreement, subscription, entitlements, permissions, and service availability. Metadata-only fallbacks do not reproduce the full Codex capability.",
+        "The 45 public REST operations provide broad administration and keyword-search coverage, but no official Datasite SDK or CLI implementation was located. A Ghast-authored REST client would be an independent partial adapter, not the original official plugin implementation.",
+        "Blueflame semantic search and document-content workflows depend on project activation, agreement, subscription, entitlements, permissions, and service availability. The public REST Search API's phrase and partial-word matching and metadata-only fallbacks do not reproduce the full Codex capability.",
+        "Datasite's API Program Terms have normalized visible-text SHA-256 ecdd1a5c345b4730a724a8c31223681766ab51414d499e31d02bab000994b737 and impose ownership, copying, modification, competitive-use, and commercial-distribution restrictions that remain separate from any open-source license.",
         "M&A rooms contain highly confidential deal data. Source citations, confidence signals, Datasite permissions, redactions, PII controls, audit logs, human review, and explicit confirmation for project, folder, rename, access, role, or invitation changes remain mandatory.",
-        "Do not create plugins/datasite until Datasite publishes or supplies an authorized portable authentication path and either licenses the official skills for redistribution or Ghast independently authors non-copying workflow instructions."
+        "Do not create plugins/datasite as a capability-equivalent implementation until Datasite supplies an authorized portable MCP integration path and either licenses the official skills for redistribution or Ghast independently authors non-copying workflows. A future REST-only adapter must be labeled partial and separately reviewed against Datasite's program terms."
       ],
       "verification": [
         "Run verify_datasite_evidence from scripts/import-official-hosted-plugins.py",
         "Verify the pinned DatasiteAI commit, Git tree, exact nine-file source inventory, all source hashes, and continued absence of redistribution-license files",
         "Compare every official SKILL.md with the corresponding Codex snapshot file and confirm the only byte difference remains one final newline",
-        "Verify the three normalized official Datasite page hashes and the protected-resource and authorization-server metadata hashes",
+        "Verify the three normalized official product-page hashes, four developer-guide hashes, API Program Terms hash, and protected-resource and authorization-server metadata hashes",
+        "Verify all eight public OpenAPI specification hashes, API version 2024-04-01, Bearer security scheme, and the exact 45-operation inventory",
+        "Confirm that the public REST Search API remains keyword-oriented and that the official MCP guide still directs independent integrations to developer@datasite.com",
         "Probe dynamic client registration and confirm the advertised endpoint still returns HTTP 404 without creating a client",
         "Probe the hosted MCP initialize path with missing, invalid Bearer, and invalid X-API-Key credentials and confirm the pinned gateway behavior",
         "Do not publish a plugin, icon, or package while the portability and license blockers remain"

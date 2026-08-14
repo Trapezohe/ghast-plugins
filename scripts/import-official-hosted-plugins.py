@@ -3082,6 +3082,118 @@ DATASITE_PRESS_SHA256 = (
 DATASITE_FAQ_SHA256 = (
     "05de0b8285a55cf964a8b82e17dbda59017a9e3172e4b6df7e41d548be154038"
 )
+DATASITE_MCP_GUIDE_URL = (
+    "https://app.global.datasite.com/dev-portal/guides/mcp-server"
+)
+DATASITE_MCP_GUIDE_SHA256 = (
+    "2a5faea9753ee7b1eb14e067d6f12e39ae9d217cdf9366fdb314f077423e7202"
+)
+DATASITE_GETTING_STARTED_URL = (
+    "https://app.global.datasite.com/dev-portal/guides/getting-started"
+)
+DATASITE_GETTING_STARTED_SHA256 = (
+    "c238a60e81ea30ff498ee268997d2900ed5336c785dbaae19b99cde25f9027e4"
+)
+DATASITE_AUTHORIZATION_GUIDE_URL = (
+    "https://app.global.datasite.com/dev-portal/guides/authorization"
+)
+DATASITE_AUTHORIZATION_GUIDE_SHA256 = (
+    "00cb59c4b7d8c26e53940b8dd4de281374f3ed459dbec184b8d6ad5aae712dff"
+)
+DATASITE_APPS_GUIDE_URL = (
+    "https://app.global.datasite.com/dev-portal/guides/"
+    "creating-and-managing-apps"
+)
+DATASITE_APPS_GUIDE_SHA256 = (
+    "d1f5ac24076b11b9c58aa4a8e6e3a08e5b2d22ebc6d50e5d59e9c6ca1d4af745"
+)
+DATASITE_API_TERMS_URL = (
+    "https://www.datasite.com/en/legal/api-program-terms"
+)
+DATASITE_API_TERMS_SHA256 = (
+    "ecdd1a5c345b4730a724a8c31223681766ab51414d499e31d02bab000994b737"
+)
+DATASITE_API_SPECS = {
+    "membership": (
+        "3354162d735b7debd49155bddbec32400a6dda8f4ba5d8c4b4243a6370aebbc0",
+        (
+            "getAllMembershipsInProject",
+            "getAllMembershipsInSubscription",
+            "getMembershipInProject",
+            "getMembershipInSubscription",
+            "updateMembershipInProject",
+            "updateMembershipInSubscription",
+        ),
+    ),
+    "metadata": (
+        "270ea3d4678d31f876d8aa1230358568560bb9a8240984d77b9a5c62863ba86f",
+        (
+            "acceptDisclaimer",
+            "createFileroom",
+            "createMetadata",
+            "deleteMetadata",
+            "findMetadata",
+            "getAllFilerooms",
+            "getAllMetadata",
+            "getDisclaimer",
+            "getMetadata",
+            "getMetadataPermissionsUpdateStatus",
+            "getRolesByMetadataId",
+            "updateMetadata",
+            "updateMetadataPermissions",
+        ),
+    ),
+    "project": (
+        "b81a2bfaf62b048dfa24b4ca2b0dd6383bd319670b9b5086a82f4a7ec27ca263",
+        (
+            "acceptProjectDisclaimer",
+            "createProjectInSubscription",
+            "getAllProjects",
+            "getProject",
+            "getProjectDisclaimer",
+            "inviteUserToProject",
+        ),
+    ),
+    "qanda": (
+        "2a44e46b7d8b47e19f9600e329372ca104a61eb7a11f5a85af03f49249f7e947",
+        (
+            "createQuestion",
+            "createQuestionCategory",
+            "deleteQuestion",
+            "getAllQuestions",
+            "getQuestion",
+            "getQuestionCategories",
+            "getQuestionSummary",
+            "updateQuestion",
+        ),
+    ),
+    "roles": (
+        "9a59ce31c09e498a9a95c93d6d5a5f0bb2f2c57d4a6312cebad028e24a0eccec",
+        (
+            "createRole",
+            "deleteRole",
+            "getAllFeatureAccesses",
+            "getAllFeatureAccessesInRole",
+            "getAllRoles",
+            "getRole",
+            "grantFeatureAccess",
+            "revokeFeatureAccess",
+            "updateRole",
+        ),
+    ),
+    "search": (
+        "b17156527ba2a01755ed31eaffec3d7afb6803a53fabcbe2354c2e820831aa26",
+        ("searchDocuments",),
+    ),
+    "subscription": (
+        "945c10a196fefb880199cf37691924dfc08d0d2f8347799db98b03129c5f97f6",
+        ("getAllSubscriptions",),
+    ),
+    "upload": (
+        "75ef9d22d2415e466cd8f270907cf6b931af6e0cac1647cf2714eb2c74fa18fb",
+        ("uploadFile",),
+    ),
+}
 DATASITE_SOURCE_REVISION = "27ac023c1ba595123cb515ff9643db45165ada9f"
 DATASITE_SOURCE_TREE = "24bfa6be6ed414aa940d125edb641589979c1901"
 DATASITE_SOURCE_BASE_URL = (
@@ -5232,6 +5344,50 @@ def normalize_datasite_page(
     if start < 0 or end < 0:
         raise ValueError("Datasite page structure changed; re-audit required")
     return visible[start:end].strip()
+
+
+def extract_datasite_flight_strings(value: str) -> list[str]:
+    encoded_values = re.findall(
+        r'self\.__next_f\.push\(\[1,("(?:\\.|[^"\\])*")\]\)</script>',
+        value,
+    )
+    return [json.loads(encoded) for encoded in encoded_values]
+
+
+def extract_datasite_markdown(value: str, heading: str) -> str:
+    for flight_value in extract_datasite_flight_strings(value):
+        position = flight_value.find(heading)
+        if position >= 0:
+            return flight_value[position:]
+    raise ValueError(f"Datasite guide heading not found: {heading}")
+
+
+def find_datasite_spec(value: object) -> dict | None:
+    if isinstance(value, dict):
+        spec = value.get("spec")
+        if isinstance(spec, dict):
+            return spec
+        for child in value.values():
+            found = find_datasite_spec(child)
+            if found is not None:
+                return found
+    elif isinstance(value, list):
+        for child in value:
+            found = find_datasite_spec(child)
+            if found is not None:
+                return found
+    return None
+
+
+def extract_datasite_openapi_spec(value: str) -> dict:
+    for flight_value in extract_datasite_flight_strings(value):
+        if not flight_value.startswith("7:"):
+            continue
+        payload = json.loads(flight_value.split(":", 1)[1])
+        spec = find_datasite_spec(payload)
+        if spec is not None:
+            return spec
+    raise ValueError("Datasite OpenAPI specification not found")
 
 
 def normalize_docket_build_page(value: str) -> str:
@@ -11277,6 +11433,142 @@ def verify_datasite_evidence() -> None:
                 raise ValueError(
                     f"Datasite official page is missing {marker!r}: {url}"
                 )
+
+    guide_specs = (
+        (
+            DATASITE_MCP_GUIDE_URL,
+            "# MCP Server",
+            DATASITE_MCP_GUIDE_SHA256,
+            (
+                "browse document content",
+                "upload files",
+                "invite users",
+                "OAuth 2.0 with PKCE",
+                "no client secret is required",
+                "Sessions are valid for approximately 60 minutes",
+                "Searching a project requires Blueflame AI Premium Search",
+                "interested in using the MCP server for an integration",
+                "developer@datasite.com",
+            ),
+        ),
+        (
+            DATASITE_GETTING_STARTED_URL,
+            "# Getting started",
+            DATASITE_GETTING_STARTED_SHA256,
+            (
+                "set up an account for free",
+                "create at least one application",
+                "Client ID and Client Secret",
+                "My Apps",
+            ),
+        ),
+        (
+            DATASITE_AUTHORIZATION_GUIDE_URL,
+            "# Authorization Support",
+            DATASITE_AUTHORIZATION_GUIDE_SHA256,
+            (
+                "OAuth2.0 Authorization Code Flow",
+                "client_id",
+                "client_secret",
+                "refresh_token",
+                "https://auth.datasite.com/as/token.oauth2",
+            ),
+        ),
+        (
+            DATASITE_APPS_GUIDE_URL,
+            "# Creating and Managing your Apps",
+            DATASITE_APPS_GUIDE_SHA256,
+            (
+                "Client ID",
+                "Client Secret",
+                "Redirect URI",
+                "must be logged in",
+            ),
+        ),
+    )
+    for url, heading, expected_hash, markers in guide_specs:
+        markdown = extract_datasite_markdown(fetch_text(url), heading)
+        if sha256_text(markdown) != expected_hash:
+            raise ValueError(f"Datasite developer guide changed: {url}")
+        for marker in markers:
+            if marker not in markdown:
+                raise ValueError(
+                    f"Datasite developer guide is missing {marker!r}: {url}"
+                )
+
+    api_terms = normalize_datasite_page(
+        fetch_text(DATASITE_API_TERMS_URL),
+        "These MCP Server and API Program Terms",
+        "Entire Program Terms.",
+    )
+    if sha256_text(api_terms) != DATASITE_API_TERMS_SHA256:
+        raise ValueError("Datasite API program terms changed")
+    for marker in (
+        "Datasite MCP Server and API Program",
+        "commercially distribute your Application to third parties",
+        "applicable open-source license",
+        "copy, rent, lease, sub-license",
+        "replicate or compete with the Services",
+    ):
+        if marker not in api_terms:
+            raise ValueError(
+                f"Datasite API program terms are missing {marker!r}"
+            )
+
+    datasite_api_specs = {}
+    for spec_id, (expected_hash, expected_operations) in (
+        DATASITE_API_SPECS.items()
+    ):
+        url = (
+            "https://app.global.datasite.com/dev-portal/api-catalog/"
+            f"{spec_id}"
+        )
+        spec = extract_datasite_openapi_spec(fetch_text(url))
+        datasite_api_specs[spec_id] = spec
+        operations = sorted(
+            operation["operationId"]
+            for path_item in spec.get("paths", {}).values()
+            for operation in path_item.values()
+            if isinstance(operation, dict) and "operationId" in operation
+        )
+        security_scheme = (
+            spec.get("components", {})
+            .get("securitySchemes", {})
+            .get("AuthToken", {})
+        )
+        if (
+            canonical_json_sha256(spec) != expected_hash
+            or spec.get("id") != spec_id
+            or spec.get("openapi") != "3.1.0"
+            or spec.get("info", {}).get("version") != "2024-04-01"
+            or spec.get("servers")
+            != [
+                {
+                    "url": "https://api.americas.datasite.com",
+                    "description": "Datasite API Gateway - USA",
+                }
+            ]
+            or security_scheme.get("type") != "http"
+            or security_scheme.get("scheme") != "bearer"
+            or operations != sorted(expected_operations)
+        ):
+            raise ValueError(
+                f"Datasite {spec_id} OpenAPI evidence changed"
+            )
+    search_spec = datasite_api_specs["search"]
+    search_parameters = search_spec["paths"][
+        "/{contextType}/{contextId}/metadata:search"
+    ]["get"]["parameters"]
+    search_query = next(
+        parameter
+        for parameter in search_parameters
+        if parameter.get("name") == "query"
+    )
+    for marker in ("phrase, word or partial word", "exact phrase", "partial"):
+        if marker not in search_query.get("description", ""):
+            raise ValueError(
+                "Datasite public Search API semantics changed"
+            )
 
     commit = fetch_json(
         "https://api.github.com/repos/DatasiteAI/mcp-skills/commits/"
