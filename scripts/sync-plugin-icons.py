@@ -303,6 +303,15 @@ CUSTOM_ICONS = {
         '<path d="M23 47c5-5 9-6 12-2 3 3 7 2 12-3"/>'
         '<path d="M24 52h24"/>',
     ),
+    "domotz-preview": (
+        "#245F69",
+        '<circle cx="32" cy="32" r="6"/>'
+        '<circle cx="16" cy="17" r="5"/>'
+        '<circle cx="48" cy="17" r="5"/>'
+        '<circle cx="16" cy="48" r="5"/>'
+        '<circle cx="48" cy="48" r="5"/>'
+        '<path d="M20 20l8 8M44 20l-8 8M20 45l8-9M44 45l-8-9"/>',
+    ),
     "dovetail": (
         "#26735B",
         '<rect x="10" y="12" width="44" height="40" rx="4"/>'

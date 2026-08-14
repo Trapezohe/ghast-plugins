@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 4,
-      "official-source-research-required": 40,
-      "official-source-verified": 105
+      "official-source-research-required": 39,
+      "official-source-verified": 106
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 105,
-      "not-implemented": 44
+      "implemented-verified": 106,
+      "not-implemented": 43
     }
   },
   "excludedOpenAIPlugins": [
@@ -4691,7 +4691,7 @@
     },
     {
       "id": "domotz-preview",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Domotz",
@@ -4716,13 +4716,70 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.domotz.com"
+        "homepage": "https://www.domotz.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Domotz",
+          "officialRepository": null,
+          "officialRevision": "domotz-product-003fdd383c02+setup-323607fa9c60+oauth-95014110a362+auth-711fd29f57aa",
+          "license": "MIT",
+          "licenseEvidence": [
+            "plugins/domotz-preview/LICENSE covers only the Ghast-authored hosted-service configuration, workflow, documentation, metadata, and generic network-operations icon.",
+            "No Domotz hosted MCP implementation, private Codex app mapping, customer network data, credential, branded artwork, or marketplace icon is redistributed."
+          ],
+          "officialityEvidence": [
+            "Domotz's official setup guide publishes https://mcp.domotz.com/mcp as its remote HTTP MCP server and documents OAuth 2.0 dynamic discovery for custom MCP clients.",
+            "Domotz's May 20, 2026 launch article says the server is generally available rather than preview-only and exposes roughly 50 tools across Discover, Monitor, Manage, and Alert.",
+            "Domotz's official product page describes vendor-built monitoring, configuration, and remediation tools for inventory, metrics, topology, backups, profiles, sensors, scripts, credentials, alert rules, device restarts, outlet power cycles, managed state, and alert resolution.",
+            "The product page requires account opt-in for writes, per-action OAuth scope and client confirmation, existing Domotz RBAC, short-lived per-client tokens, and audit logging for successful, failed, and denied attempts.",
+            "July 2026 release notes document personal MCP API keys, a dedicated MCP Access RBAC permission, audit-log search through MCP, alert-rule updates, maintenance-window snoozing, and organization contact management.",
+            "The live endpoint returns a Bearer challenge to official protected-resource metadata. Canonical resource and authorization metadata SHA-256 values are 95014110a3627248d0924a73605dc09ea599fe482950abcd6c48652e58888a9d and 711fd29f57aaead116d6946e3c32e7c7c65d77f375b7291742fd8f9e553be943.",
+            "The authorization server advertises authorization code, refresh tokens, public clients, dynamic registration, and PKCE S256. On August 14, 2026, a temporary localhost public client registered with HTTP 201, no secret, and reached Domotz's official login page.",
+            "OpenAI's pinned Codex snapshot identifies Domotz as developer and describes device queries, alerts, metrics, configuration management, power control, and a network-state summary through the former preview app connector."
+          ],
+          "codexCapabilities": [
+            "Query devices, check alerts, inspect metrics, manage configurations, control power across sites, and summarize current network state through the private preview connector"
+          ],
+          "ghastCapabilities": [
+            "The same official device, alert, metric, configuration, power-control, multi-site, and network-state workflows through Domotz's generally available hosted MCP",
+            "The broader current official Discover, Monitor, Manage, and Alert surface of roughly 50 account-dependent tools",
+            "Standard browser OAuth through dynamic public-client registration, authorization code, refresh tokens, and PKCE S256, plus Domotz's separately documented personal MCP API-key option",
+            "A network-operations workflow that preserves tenant and target scope, protects credentials and configuration data, prefers non-disruptive diagnosis, and confirms every write or remote action"
+          ],
+          "capabilityRelationship": "superset-current-official-hosted-mcp",
+          "limitations": [
+            "Domotz operates the hosted implementation and does not publish its source or anonymous complete tool schemas. The MIT license applies only to the Ghast-authored adapter.",
+            "A Domotz account, active plan or trial, connected Collectors and devices, MCP Access RBAC permission, account write opt-in, OAuth or personal MCP API-key authorization, and applicable role permissions remain user-managed.",
+            "Authenticated tools/list and real customer network operations were not exercised because no Domotz account or network data was used. Exact live names and schemas depend on account, RBAC, enabled features, and service version.",
+            "The authorization metadata exposes only OpenID profile scopes while Domotz documents per-action capability consent; authenticated server-side RBAC and tool consent remain the effective authorization boundary.",
+            "Device restarts, outlet power cycles, script execution, credential changes, profile application, managed-state changes, alert mutations, contact changes, and bulk actions can interrupt services or alter network operations and require exact-target confirmation.",
+            "Inventory, topology, IP and MAC addresses, metrics, logs, alerts, configuration backups, credentials status, customer names, and audit records can contain sensitive operational or personal data.",
+            "A generic network-operations icon is used because no licensed Domotz catalog artwork is included in a public official MCP source repository."
+          ],
+          "verification": [
+            "python3 scripts/import-domotz-plugin.py",
+            "Verify normalized official product, setup, launch, and July 2026 release-note hashes and required capability, trust-model, and GA markers",
+            "Verify canonical OAuth protected-resource and authorization-server hashes 95014110a3627248d0924a73605dc09ea599fe482950abcd6c48652e58888a9d and 711fd29f57aaead116d6946e3c32e7c7c65d77f375b7291742fd8f9e553be943",
+            "Probe https://mcp.domotz.com/mcp with initialize and confirm HTTP 401, body SHA-256 af194b1e35b410cf08aee90b9a8db4a5053a632e2965eb43610bcdee01db063b, and the official resource challenge",
+            "Register a temporary localhost public client and confirm authorization code, refresh token, no-secret authentication, PKCE S256, and the Domotz login page without retaining credentials",
+            "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Domotz app, manifest, and icon hashes without redistributing those files",
+            "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+            "python3 scripts/build-ghast-catalog.py",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/domotz-preview.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": null,
+        "upstreamRevision": "domotz-product-003fdd383c02+setup-323607fa9c60+oauth-95014110a362+auth-711fd29f57aa",
+        "portStatus": "full"
       }
     },
     {

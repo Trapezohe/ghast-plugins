@@ -1389,6 +1389,34 @@
       "license": "MIT"
     },
     {
+      "id": "domotz-preview",
+      "name": "domotz-preview",
+      "description": "Discover, monitor, configure, and remediate Domotz-managed networks through Domotz's official hosted MCP.",
+      "manifest": {
+        "name": "domotz-preview",
+        "description": "Discover, monitor, configure, and remediate Domotz-managed networks through Domotz's official hosted MCP.",
+        "author": {
+          "name": "Domotz",
+          "url": "https://www.domotz.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://www.domotz.com/mcp-server.php",
+        "upstreamRevision": "domotz-product-003fdd383c02+setup-323607fa9c60+oauth-95014110a362+auth-711fd29f57aa",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/domotz-preview.zip",
+        "sha256": "959cfb38860e2d6461861462b9da24c90e58862a953882dc7e42462ab10dd809"
+      },
+      "icon": "./plugins/domotz-preview/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://www.domotz.com/mcp-server.php",
+      "license": "MIT"
+    },
+    {
       "id": "dovetail",
       "name": "dovetail",
       "description": "Search, inspect, synthesize, and explicitly create Dovetail projects, research data, highlights, docs, channels, themes, people, tags, fields, and files through Dovetail's official hosted MCP server.",
