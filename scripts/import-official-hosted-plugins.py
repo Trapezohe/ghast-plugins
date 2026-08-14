@@ -3354,6 +3354,59 @@ DNB_CODEX_TOOLS = (
 DNB_CODEX_TOOLS_SHA256 = (
     "dfee2c8900a602bf3308e99b75c60beabb76e0349668d7f7f86bf45656b116c9"
 )
+DOCKET_BUILD_URL = (
+    "https://www.docket.io/blog/"
+    "inside-the-build-creating-dockets-chatgpt-app-on-mcp"
+)
+DOCKET_LLMS_URL = "https://www.docket.io/llms.txt"
+DOCKET_TERMS_URL = "https://www.docket.io/terms-and-conditions"
+DOCKET_BUILD_CORE_SHA256 = (
+    "ac6f49ab5f6c1214fd7e63c20f3c3e73f93418c0229d7e00a0048ebfe4091c31"
+)
+DOCKET_LLMS_CAPABILITIES_SHA256 = (
+    "d02e62142b11c37374ce5a39025d19f16da77dc27ab5c37cb04cb89354538d2a"
+)
+DOCKET_TERMS_IP_SHA256 = (
+    "99909d93361b6b49f90fb9e87ab97e8e317c9b80d69f6469bcb47a4487b2d3d0"
+)
+DOCKET_UNPUBLISHED_CONFIG_URLS = (
+    "https://www.docket.io/.well-known/oauth-protected-resource",
+    "https://www.docket.io/.well-known/oauth-protected-resource/mcp",
+    "https://www.docket.io/.well-known/oauth-authorization-server",
+    "https://www.docket.io/mcp",
+    "https://www.docket.io/api/mcp",
+)
+DOCKET_CURATED_REVISION = "b27aaa69ab450163ccbcf6b469e6f103e6cfb7aa"
+DOCKET_CURATED_TREE = "db8b74ff8775bda737523e4b763407e8ee578aa2"
+DOCKET_CURATED_BASE_URL = (
+    "https://raw.githubusercontent.com/DocketAI/Docket-Curated/"
+    f"{DOCKET_CURATED_REVISION}"
+)
+DOCKET_CURATED_README_SHA256 = (
+    "710bfae75ac041d865fdbb81979b41e77a8dcfe3f7cc9b78c6484bb252771a1f"
+)
+DOCKET_OPENAI_REVISION = "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9"
+DOCKET_OPENAI_BASE_URL = (
+    "https://raw.githubusercontent.com/openai/plugins/"
+    f"{DOCKET_OPENAI_REVISION}/plugins/docket"
+)
+DOCKET_OPENAI_HASHES = {
+    ".app.json": (
+        "db2028171bdb6640d03e2dc55e20960205dca869fc1b67ae8242d1659a2c7c29"
+    ),
+    ".codex-plugin/plugin.json": (
+        "2732000728a9690d1e5db3c54bda94afb8641e025056186fc2aad91a8e7004cc"
+    ),
+    "assets/logo-dark.png": (
+        "c7f3be73b3b52ae1126f1a88483f2503c81782404b39895efcfabbed439475db"
+    ),
+    "assets/logo.png": (
+        "e908a3c2855d22363bcaec4016f770956a38ed26dec7c55a138fda99d25694b3"
+    ),
+}
+DOCKET_OPENAI_INVENTORY_SHA256 = (
+    "1e4f88f1f379e7518d505ed4c623a9deb12c20f5876fee1445e987873ba031af"
+)
 DEMANDBASE_MCP_DOCS_URL = "https://developer.demandbase.com/docs/mcp.md"
 DEMANDBASE_CUSTOM_CLIENT_DOCS_URL = (
     "https://developer.demandbase.com/docs/custom-mcp-clients.md"
@@ -4254,6 +4307,7 @@ def main() -> int:
     verify_cube_evidence()
     verify_datasite_evidence()
     verify_dnb_finance_analytics_evidence()
+    verify_docket_evidence()
     verify_demandbase_evidence()
     verify_thoughtspot_evidence()
     verify_outreach_evidence()
@@ -4563,6 +4617,46 @@ def normalize_datasite_page(
     if start < 0 or end < 0:
         raise ValueError("Datasite page structure changed; re-audit required")
     return visible[start:end].strip()
+
+
+def normalize_docket_build_page(value: str) -> str:
+    parser = VisibleTextParser()
+    parser.feed(value)
+    visible = " ".join(unescape(" ".join(parser.parts)).split())
+    start_marker = (
+        "Building for AI interfaces isn't an API problem..."
+        "It's a product design problem."
+    )
+    end_marker = "Build accordingly."
+    start = visible.find(start_marker)
+    end = visible.find(end_marker, start)
+    if start < 0 or end < 0:
+        raise ValueError("Docket ChatGPT MCP article structure changed")
+    return visible[start : end + len(end_marker)]
+
+
+def normalize_docket_llms_capabilities(value: str) -> str:
+    normalized = value.removeprefix("\ufeff").replace("\r\n", "\n")
+    start_marker = "7. Core Product Capabilities"
+    end_marker = "8. Key Differentiators"
+    start = normalized.find(start_marker)
+    end = normalized.find(end_marker, start)
+    if start < 0 or end < 0:
+        raise ValueError("Docket LLM reference structure changed")
+    return normalized[start:end].strip() + "\n"
+
+
+def normalize_docket_terms_ip(value: str) -> str:
+    parser = VisibleTextParser()
+    parser.feed(value)
+    visible = " ".join(unescape(" ".join(parser.parts)).split())
+    start_marker = "7. Intellectual Property"
+    end_marker = "8. Disclaimers"
+    start = visible.find(start_marker)
+    end = visible.find(end_marker, start)
+    if start < 0 or end < 0:
+        raise ValueError("Docket terms structure changed")
+    return visible[start : end + len(end_marker)]
 
 
 def fetch_visible_text(url: str, required_marker: str) -> str:
@@ -10947,6 +11041,187 @@ def verify_dnb_finance_analytics_evidence() -> None:
             "D&B Finance Analytics must remain unpublished while the official "
             "portable endpoint, authenticated schemas, and redistribution "
             "rights are unverified"
+        )
+
+
+def verify_docket_evidence() -> None:
+    build_core = normalize_docket_build_page(fetch_text(DOCKET_BUILD_URL))
+    if sha256_text(build_core) != DOCKET_BUILD_CORE_SHA256:
+        raise ValueError("Docket ChatGPT MCP article changed")
+    for marker in (
+        "shipping the Docket ChatGPT app",
+        "combining multiple internal calls (auth, search, fetch)",
+        "a dedicated URL shortener",
+        "We landed on WorkOS",
+        "Give your ChatGPT app its own dedicated MCP server",
+        "One MCP for your ChatGPT app, another for Claude",
+        "your core functionality as an internal library",
+        "read access to external systems",
+        "FastMCP is a great starting point",
+        "adding the verification token",
+    ):
+        if marker not in build_core:
+            raise ValueError(
+                f"Docket ChatGPT MCP article is missing {marker!r}"
+            )
+
+    capabilities = normalize_docket_llms_capabilities(
+        fetch_text(DOCKET_LLMS_URL)
+    )
+    if (
+        sha256_text(capabilities)
+        != DOCKET_LLMS_CAPABILITIES_SHA256
+    ):
+        raise ValueError("Docket product-capability evidence changed")
+    for marker in (
+        "Sales Knowledge Lake™",
+        "ingesting 100+ data sources",
+        "Agents answer only from approved material",
+        "auditability, versioning, and partitioned access",
+        "Slack, Microsoft Teams, Chrome extension, and web application",
+        "100+ native integrations",
+        "Docket targets 95%+ answer accuracy",
+        "Supports 40+ languages",
+        "real-time CRM and account data in under 150ms",
+        "SSO / SAML",
+        "Custom data residency",
+    ):
+        if marker not in capabilities:
+            raise ValueError(
+                f"Docket product evidence is missing {marker!r}"
+            )
+
+    terms_ip = normalize_docket_terms_ip(fetch_text(DOCKET_TERMS_URL))
+    if sha256_text(terms_ip) != DOCKET_TERMS_IP_SHA256:
+        raise ValueError("Docket intellectual-property terms changed")
+    for marker in (
+        "may not modify",
+        "reverse engineer",
+        "decompile",
+        "disassemble",
+        "create derivative works",
+        "trademarks or logos without our written permission",
+    ):
+        if marker not in terms_ip:
+            raise ValueError(f"Docket terms are missing {marker!r}")
+
+    for url in DOCKET_UNPUBLISHED_CONFIG_URLS:
+        require_http_not_found(
+            url,
+            f"Docket public configuration path {url}",
+        )
+
+    curated_commit = fetch_json(
+        "https://api.github.com/repos/DocketAI/Docket-Curated/commits/"
+        f"{DOCKET_CURATED_REVISION}"
+    )
+    commit_details = curated_commit.get("commit", {})
+    if (
+        curated_commit.get("sha") != DOCKET_CURATED_REVISION
+        or commit_details.get("tree", {}).get("sha") != DOCKET_CURATED_TREE
+        or commit_details.get("verification", {}).get("verified") is not True
+    ):
+        raise ValueError("Docket candidate engineering repository changed")
+    curated_tree = fetch_json(
+        "https://api.github.com/repos/DocketAI/Docket-Curated/git/trees/"
+        f"{DOCKET_CURATED_TREE}?recursive=1"
+    )
+    curated_paths = sorted(
+        item["path"]
+        for item in curated_tree.get("tree", [])
+        if item.get("type") == "blob"
+    )
+    curated_plugin_manifests = [
+        path
+        for path in curated_paths
+        if path.endswith("/.codex-plugin/plugin.json")
+    ]
+    curated_mcp_declarations = [
+        path for path in curated_paths if path.endswith("/.mcp.json")
+    ]
+    if (
+        curated_plugin_manifests
+        != ["plugins/claude-code/.codex-plugin/plugin.json"]
+        or curated_mcp_declarations
+    ):
+        raise ValueError(
+            "Docket candidate engineering plugin inventory changed"
+        )
+    curated_readme = fetch_bytes(
+        f"{DOCKET_CURATED_BASE_URL}/README.md"
+    )
+    if sha256_bytes(curated_readme) != DOCKET_CURATED_README_SHA256:
+        raise ValueError("Docket candidate engineering README changed")
+    curated_readme_text = curated_readme.decode("utf-8")
+    for marker in (
+        "`docket-curated` is Docket's private plugin marketplace",
+        "Codex CLI",
+        "Claude Code",
+        "`claude-code`",
+        "No Claude Code plugins yet",
+    ):
+        if marker not in curated_readme_text:
+            raise ValueError(
+                f"Docket candidate engineering README is missing {marker!r}"
+            )
+    for license_name in (
+        "LICENSE",
+        "LICENSE.md",
+        "LICENSE.txt",
+        "COPYING",
+        "NOTICE",
+    ):
+        require_http_not_found(
+            f"{DOCKET_CURATED_BASE_URL}/{license_name}",
+            f"Docket candidate engineering source {license_name}",
+        )
+
+    codex_files = {}
+    for relative_path, expected_hash in DOCKET_OPENAI_HASHES.items():
+        content = fetch_bytes(f"{DOCKET_OPENAI_BASE_URL}/{relative_path}")
+        if sha256_bytes(content) != expected_hash:
+            raise ValueError(f"Docket Codex evidence changed: {relative_path}")
+        codex_files[relative_path] = content
+    inventory = "".join(
+        f"{DOCKET_OPENAI_HASHES[path]}  {path}\n"
+        for path in sorted(DOCKET_OPENAI_HASHES)
+    )
+    if sha256_text(inventory) != DOCKET_OPENAI_INVENTORY_SHA256:
+        raise ValueError("Docket Codex inventory hash is inconsistent")
+
+    manifest = json.loads(codex_files[".codex-plugin/plugin.json"])
+    app = json.loads(codex_files[".app.json"])
+    interface = manifest.get("interface", {})
+    if (
+        manifest.get("name") != "docket"
+        or manifest.get("version") != "1.0.3"
+        or manifest.get("author", {}).get("name") != "Docket AI"
+        or interface.get("developerName") != "Docket AI"
+        or interface.get("defaultPrompt")
+        != ["Check docket how our partnership with commonwealth bank"]
+        or app.get("apps", {}).get("docket", {}).get("id")
+        != "asdk_app_695f5fdd510c8191b10eb0ff0a3369ef"
+    ):
+        raise ValueError("Docket Codex developer evidence changed")
+    long_description = interface.get("longDescription", "")
+    for marker in (
+        "product, competitive, technical, and customer questions",
+        "unified Sales Knowledge Lake™",
+        "verified company intel",
+        "handle objections confidently",
+        "uncover prospect details",
+        "craft personalised responses",
+    ):
+        if marker not in long_description:
+            raise ValueError(
+                f"Docket Codex capability evidence is missing {marker!r}"
+            )
+
+    if (PLUGIN_DIR / "docket").exists():
+        raise ValueError(
+            "Docket must remain unpublished while the dedicated MCP endpoint, "
+            "portable WorkOS client configuration, authenticated tool schemas, "
+            "and redistribution rights are unverified"
         )
 
 
