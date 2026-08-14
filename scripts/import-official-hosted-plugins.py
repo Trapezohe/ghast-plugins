@@ -4223,6 +4223,49 @@ MOODYS_OPENAI_TOOL_NAMES = (
 MOODYS_OPENAI_TOOL_NAMES_SHA256 = (
     "b271930ef2105f269ad9744f68dc2c44870da4ab58845ec61733e1e3ab0899be"
 )
+WEATHERPROMISE_HOME_URL = "https://www.weatherpromise.com/us"
+WEATHERPROMISE_TERMS_API_URL = (
+    "https://www.iubenda.com/api/terms-and-conditions/51249956"
+)
+WEATHERPROMISE_ROBOTS_URL = "https://www.weatherpromise.com/robots.txt"
+WEATHERPROMISE_SITEMAP_URL = "https://www.weatherpromise.com/sitemap.xml"
+WEATHERPROMISE_LLMS_URL = "https://www.weatherpromise.com/llms.txt"
+WEATHERPROMISE_GITHUB_USER_URL = (
+    "https://api.github.com/users/weatherpromise"
+)
+WEATHERPROMISE_HOME_CORE_SHA256 = (
+    "732f533950b3f76fa76790b1544dc499a3e8cba28a05d763399f85a711827a38"
+)
+WEATHERPROMISE_TERMS_CORE_SHA256 = (
+    "6b48d35b25ccf88a4ddb269498ee67bea1e1ed2ebc8c6908619ccde1972adf51"
+)
+WEATHERPROMISE_ROBOTS_SHA256 = (
+    "c732a34da6a487bb61dfd049c4eda8f5f8f5d8f2f28ec532e528cafbc41774a3"
+)
+WEATHERPROMISE_GITHUB_USER_SHA256 = (
+    "35fd65f8197f0f5c15ae1d4f0f1109d74970e6091112da391bceb521972eac03"
+)
+WEATHERPROMISE_OPENAI_REVISION = (
+    "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9"
+)
+WEATHERPROMISE_OPENAI_BASE_URL = (
+    "https://raw.githubusercontent.com/openai/plugins/"
+    f"{WEATHERPROMISE_OPENAI_REVISION}/plugins/weatherpromise"
+)
+WEATHERPROMISE_OPENAI_HASHES = {
+    ".app.json": (
+        "cf902d45c702ab9043c48ad13707263c9a2ef15df8122c33090752d954cee5d9"
+    ),
+    ".codex-plugin/plugin.json": (
+        "3edff32d65d25434f7ee4c3a685b8ccc619d7b70a7e246530bcdd199ce277a52"
+    ),
+    "assets/app-icon.png": (
+        "b65144e0e2a1c15a488df847c2eb1e971fa0e2d550b78c010c473a081449cbab"
+    ),
+}
+WEATHERPROMISE_OPENAI_INVENTORY_SHA256 = (
+    "15dbfcd9fb4a9223001b7dffe8ca143c3fe03b0df4929d3850a2511682c2afc4"
+)
 MAGICPATH_CLI_VERSION = "2.6.1"
 MAGICPATH_NPM_METADATA_URL = (
     f"https://registry.npmjs.org/magicpath-ai/{MAGICPATH_CLI_VERSION}"
@@ -5635,6 +5678,7 @@ def main() -> int:
     verify_keybid_puls_evidence()
     verify_lseg_evidence()
     verify_moodys_evidence()
+    verify_weatherpromise_evidence()
     verify_magicpath_evidence()
     verify_hg_insights_evidence()
     verify_cogedim_evidence()
@@ -6051,6 +6095,60 @@ def normalize_docket_demand_docs(value: str) -> str:
     if start < 0 or end < 0:
         raise ValueError("Docket Demand MCP documentation structure changed")
     return visible[start : end + len(end_marker)]
+
+
+def normalize_weatherpromise_home(value: str) -> str:
+    start_marker = "Weatherproof your vacation."
+    end_marker = (
+        "WeatherPromise is available through our travel partners. Just select "
+        "it at checkout for instant protection of your booking."
+    )
+    start = value.find(start_marker)
+    end = value.find(end_marker, start)
+    if start < 0 or end < 0:
+        raise ValueError("WeatherPromise product page structure changed")
+    return value[start : end + len(end_marker)]
+
+
+def normalize_weatherpromise_terms(value: str) -> str:
+    parser = VisibleTextParser()
+    parser.feed(value)
+    visible = " ".join(unescape(" ".join(parser.parts)).split())
+    first_start_marker = '"This Website" refers to'
+    first_end_marker = (
+        "the Owner bears no responsibility and shall not be held liable for "
+        "any damages or losses resulting from the User’s use of the API or "
+        "their use of any third-party products/services that access data "
+        "through the API."
+    )
+    second_start_marker = "Service reselling"
+    second_end_marker = (
+        "subject to the protection granted by applicable laws or "
+        "international treaties related to intellectual property."
+    )
+    first_start = visible.find(first_start_marker)
+    first_end = visible.find(first_end_marker, first_start)
+    second_start = visible.find(second_start_marker, first_end)
+    second_end = visible.find(second_end_marker, second_start)
+    if min(first_start, first_end, second_start, second_end) < 0:
+        raise ValueError("WeatherPromise terms structure changed")
+    return (
+        visible[first_start : first_end + len(first_end_marker)]
+        + "\n"
+        + visible[second_start : second_end + len(second_end_marker)]
+    )
+
+
+def normalize_weatherpromise_robots(value: str) -> str:
+    required = (
+        "User-agent: *",
+        "Disallow: /buy-weatherpromise/",
+        "Sitemap: https://www.weatherpromise.com/sitemap.xml",
+    )
+    lines = tuple(line.strip() for line in value.splitlines() if line.strip())
+    if lines != required:
+        raise ValueError("WeatherPromise robots policy changed")
+    return "\n".join(lines) + "\n"
 
 
 def extract_finn_openapi(value: str) -> dict:
@@ -14557,6 +14655,206 @@ def verify_moodys_evidence() -> None:
             "Moody's must remain unpublished until an independently "
             "registered OAuth client and authenticated tool schemas verify "
             "the complete Codex capability surface"
+        )
+
+
+def verify_weatherpromise_evidence() -> None:
+    home = fetch_visible_text(
+        WEATHERPROMISE_HOME_URL,
+        "Weatherproof your vacation.",
+    )
+    home_core = normalize_weatherpromise_home(home)
+    if sha256_text(home_core) != WEATHERPROMISE_HOME_CORE_SHA256:
+        raise ValueError("WeatherPromise product-capability evidence changed")
+    for marker in (
+        "instant payouts for bad weather",
+        "Add a WeatherPromise when booking.",
+        "personal dashboard",
+        "real-time weather conditions and guarantee details",
+        "Automatic payouts in 2 business days or less.",
+        "20 years of weather patterns",
+        "trusted sources like NASA, satellites, and radar",
+        "trigger early payouts",
+        "if it rains more than the amount specified in your offer",
+        "available through our travel partners",
+    ):
+        if marker not in home_core:
+            raise ValueError(
+                f"WeatherPromise product evidence is missing {marker!r}"
+            )
+
+    terms_document = fetch_json(WEATHERPROMISE_TERMS_API_URL)
+    if (
+        set(terms_document) != {"success", "content"}
+        or terms_document.get("success") is not True
+        or not isinstance(terms_document.get("content"), str)
+    ):
+        raise ValueError("WeatherPromise terms API response changed")
+    terms_core = normalize_weatherpromise_terms(terms_document["content"])
+    if sha256_text(terms_core) != WEATHERPROMISE_TERMS_CORE_SHA256:
+        raise ValueError("WeatherPromise API and licensing terms changed")
+    for marker in (
+        "the Application Program Interfaces (API)",
+        "source code, scripts, instruction sets or software",
+        "All rights reserved",
+        "may not copy, download, share",
+        "probing, scanning or testing the vulnerability",
+        "adopting any automated process to extract, harvest or scrape",
+        "Users may access their data relating to this Website via the "
+        "Application Program Interface (API).",
+        "use of the API through a third-party product/service",
+        "without the Owner’s express prior written permission",
+        "trademarks",
+        "logos",
+    ):
+        if marker not in terms_core:
+            raise ValueError(
+                f"WeatherPromise terms are missing {marker!r}"
+            )
+
+    robots = normalize_weatherpromise_robots(
+        fetch_text(WEATHERPROMISE_ROBOTS_URL)
+    )
+    if sha256_text(robots) != WEATHERPROMISE_ROBOTS_SHA256:
+        raise ValueError("WeatherPromise robots evidence changed")
+
+    sitemap = fetch_text(WEATHERPROMISE_SITEMAP_URL)
+    sitemap_urls = tuple(re.findall(r"<loc>([^<]+)</loc>", sitemap))
+    candidate_paths = (
+        "/api",
+        "/mcp",
+        "/developer",
+        "/developers",
+        "/docs",
+        "/chatgpt",
+        "/integration",
+    )
+    if (
+        len(sitemap_urls) < 80
+        or any(
+            not (
+                url.startswith("https://www.weatherpromise.com/")
+                or url
+                in {
+                    "https://purchase.weatherpromise.com/",
+                    "https://support.weatherpromise.com/",
+                }
+            )
+            for url in sitemap_urls
+        )
+        or any(
+            marker in url.lower()
+            for url in sitemap_urls
+            for marker in candidate_paths
+        )
+    ):
+        raise ValueError(
+            "WeatherPromise published a candidate developer or connector "
+            "path; re-audit portability"
+        )
+
+    llms_request = urllib.request.Request(
+        WEATHERPROMISE_LLMS_URL,
+        headers={"User-Agent": "Mozilla/5.0"},
+    )
+    try:
+        urllib.request.urlopen(llms_request, timeout=30)
+    except urllib.error.HTTPError as exc:
+        llms_body = exc.read()
+        if (
+            exc.code != 404
+            or b"404: This page could not be found." not in llms_body
+            or b'<meta name="robots" content="noindex"' not in llms_body
+        ):
+            raise ValueError(
+                "WeatherPromise LLM documentation boundary changed"
+            ) from exc
+    else:
+        raise ValueError(
+            "WeatherPromise published LLM documentation; re-audit required"
+        )
+
+    github_user = fetch_json(WEATHERPROMISE_GITHUB_USER_URL)
+    github_identity = {
+        key: github_user.get(key)
+        for key in (
+            "login",
+            "type",
+            "name",
+            "company",
+            "blog",
+            "public_repos",
+            "html_url",
+        )
+    }
+    if (
+        canonical_json_sha256(github_identity)
+        != WEATHERPROMISE_GITHUB_USER_SHA256
+        or github_identity.get("login") != "weatherpromise"
+        or github_identity.get("company") != "WeatherPromise Inc."
+        or github_identity.get("blog") != "https://weatherpromise.com"
+        or github_identity.get("public_repos") != 0
+    ):
+        raise ValueError("WeatherPromise GitHub source evidence changed")
+
+    openai_files = {}
+    for relative_path, expected_hash in WEATHERPROMISE_OPENAI_HASHES.items():
+        content = fetch_bytes(
+            f"{WEATHERPROMISE_OPENAI_BASE_URL}/{relative_path}"
+        )
+        if sha256_bytes(content) != expected_hash:
+            raise ValueError(
+                f"WeatherPromise Codex evidence changed: {relative_path}"
+            )
+        openai_files[relative_path] = content
+    inventory = "".join(
+        f"{WEATHERPROMISE_OPENAI_HASHES[path]}  {path}\n"
+        for path in sorted(WEATHERPROMISE_OPENAI_HASHES)
+    )
+    if sha256_text(inventory) != WEATHERPROMISE_OPENAI_INVENTORY_SHA256:
+        raise ValueError(
+            "WeatherPromise Codex inventory hash is inconsistent"
+        )
+
+    manifest = json.loads(openai_files[".codex-plugin/plugin.json"])
+    app = json.loads(openai_files[".app.json"])
+    interface = manifest.get("interface", {})
+    if (
+        manifest.get("name") != "weatherpromise"
+        or manifest.get("version") != "1.0.2"
+        or manifest.get("author", {}).get("name")
+        != "WeatherPromise, Inc."
+        or interface.get("developerName") != "WeatherPromise, Inc."
+        or interface.get("defaultPrompt")
+        != ["Summarize the weather outlook from WeatherPromise"]
+        or app.get("apps", {}).get("weatherpromise", {}).get("id")
+        != "asdk_app_69a97ec87f588191b8e25181d977dc24"
+    ):
+        raise ValueError("WeatherPromise Codex developer evidence changed")
+    long_description = interface.get("longDescription", "")
+    for marker in (
+        "destination, travel dates and trip cost",
+        "show you an offer, personalized to your trip",
+        "purchase the offer",
+        "personal dashboard",
+        "NASA and NOAA",
+        "payment is sent right away",
+        "full refund, automatically",
+    ):
+        if marker not in long_description:
+            raise ValueError(
+                f"WeatherPromise Codex capability evidence is missing {marker!r}"
+            )
+
+    if (
+        (PLUGIN_DIR / "weatherpromise").exists()
+        or Path("packages/weatherpromise.zip").exists()
+    ):
+        raise ValueError(
+            "WeatherPromise must remain unpublished until the developer "
+            "publishes or supplies an authorized portable endpoint, "
+            "authentication contract, tool schemas, and sufficient source or "
+            "adapter and artwork rights"
         )
 
 

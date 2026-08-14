@@ -4693,6 +4693,63 @@
         "unzip -tqq packages/vercel.zip"
       ]
     },
+    "weatherpromise": {
+      "verificationStatus": "official-source-research-required",
+      "officialDeveloper": "WeatherPromise, Inc.",
+      "officialRepository": null,
+      "officialRevision": "weatherpromise-home-732f533950b3+terms-6b48d35b25cc+robots-c732a34da6a4+github-35fd65f8197f+openai-15dbfcd9fb4a",
+      "license": "UNVERIFIED",
+      "licenseEvidence": [
+        "WeatherPromise does not publish source code, MCP or API schemas, a portable client configuration, or redistribution terms for the private service behind its Codex app.",
+        "WeatherPromise's official terms define its APIs, applications, source code, scripts, instruction sets, software, content, and documentation as part of the service; they reserve all content rights and prohibit copying, derivative works, scraping, service exploitation, and unlicensed trademark or logo use.",
+        "The Codex manifest declares MIT, but that declaration does not license WeatherPromise's separately hosted quote, purchase, dashboard, monitoring, payment, account, contract, or weather-data systems, or its marketplace artwork.",
+        "No WeatherPromise source, private connector, schema, icon, account data, offer, contract, payment detail, or weather feed is redistributed because no capability-equivalent Ghast plugin is published."
+      ],
+      "officialityEvidence": [
+        "WeatherPromise's official product page describes its weather guarantee, personalized offer, booking flow, personal dashboard, real-time monitoring, and automatic payout process. The normalized product core has SHA-256 732f533950b3f76fa76790b1544dc499a3e8cba28a05d763399f85a711827a38.",
+        "The official page says WeatherPromise analyzes 20 years of weather patterns, monitors 2.5 million global grid points and 350 million daily data points, uses sources such as NASA, satellites, and radar, and can trigger early or automatic payouts.",
+        "WeatherPromise's current official terms API returns the binding service terms. The normalized API, content-rights, acceptable-use, reselling, and intellectual-property core has SHA-256 6b48d35b25ccf88a4ddb269498ee67bea1e1ed2ebc8c6908619ccde1972adf51.",
+        "The terms permit users to access their own WeatherPromise data through an API and contemplate third-party products using that API, but they publish no endpoint, authentication contract, schema, developer onboarding, or general right to reproduce the service.",
+        "The official robots policy disallows /buy-weatherpromise/ and has normalized SHA-256 c732a34da6a487bb61dfd049c4eda8f5f8f5d8f2f28ec532e528cafbc41774a3. The current 86-URL sitemap exposes product, purchase, support, and legal pages but no API, MCP, developer, documentation, ChatGPT, or integration path; /llms.txt returns HTTP 404.",
+        "The GitHub account weatherpromise identifies WeatherPromise Inc., links to weatherpromise.com, and currently has zero public repositories. Its pinned identity subset has canonical JSON SHA-256 35fd65f8197f0f5c15ae1d4f0f1109d74970e6091112da391bceb521972eac03.",
+        "OpenAI's pinned Codex snapshot identifies WeatherPromise, Inc. as developer and maps the plugin to private app ID asdk_app_69a97ec87f588191b8e25181d977dc24. Its complete three-file inventory has SHA-256 15dbfcd9fb4a9223001b7dffe8ca143c3fe03b0df4929d3850a2511682c2afc4."
+      ],
+      "codexCapabilities": [
+        "Use destination, travel dates, and trip cost to obtain a personalized WeatherPromise offer",
+        "Purchase the offer and protect the trip under WeatherPromise's weather-guarantee contract",
+        "Open a personal dashboard and monitor the weather conditions and guarantee details for the protected trip",
+        "Use WeatherPromise's independent NASA, NOAA, satellite, radar, historical, real-time, and forecast data for the covered trip",
+        "Receive automatic notification and payment, including a full trip-cost refund when the contractual rain threshold is met"
+      ],
+      "ghastCapabilities": [
+        "WeatherPromise's official publications establish that the private WeatherPromise service and OpenAI app provide quote, purchase, dashboard, monitoring, and payout workflows.",
+        "No Ghast plugin is published because WeatherPromise has not published or supplied the authorized API or MCP endpoint, authentication contract, tool schemas, transaction semantics, or source and artwork rights needed for an independently usable equivalent."
+      ],
+      "capabilityRelationship": "official-private-app-found-portability-transaction-license-and-artwork-blockers",
+      "limitations": [
+        "The OpenAI app ID is a private marketplace mapping, not an API or MCP URL, OAuth client, access token, tool schema, or reusable Ghast transport configuration.",
+        "WeatherPromise's terms acknowledge an API for users to access their own data, including through third-party products, but no public endpoint, authentication method, scopes, schema, SDK, developer documentation, sandbox, rate limit, or onboarding process was found.",
+        "The public purchase and dashboard surfaces do not establish a supported automation contract. The official robots policy expressly disallows the purchase route, and the terms prohibit scraping and probing; Ghast does not inspect private connector traffic or automate undocumented purchase endpoints.",
+        "A generic weather forecast is not capability-equivalent. WeatherPromise combines destination- and date-specific underwriting, pricing, a paid guarantee contract, covered-trip monitoring, threshold evaluation, customer identity and payment handling, and automatic payouts.",
+        "Quote acceptance and purchase create financial and contractual obligations. Any future implementation must show the exact offer, coverage dates and location, rain threshold, price, payout, exclusions, governing terms, payment method, and obtain fresh explicit confirmation immediately before purchase.",
+        "Dashboard, weather-monitoring, trigger, notification, and payout status are user- and contract-specific. No account, trip, offer, contract, payment, personal data, or authenticated status was accessed during this audit.",
+        "WeatherPromise's underlying historical, satellite, radar, forecast, partner, and payout data sources are not redistributed or replaced with unrelated weather providers. NASA or NOAA references do not make WeatherPromise's underwriting or guarantee logic public.",
+        "The official terms reserve service content, source code, scripts, documentation, trademarks, images, and logos. No WeatherPromise icon is copied, and a generic icon would misleadingly suggest that a usable equivalent exists.",
+        "Do not create plugins/weatherpromise until WeatherPromise publishes or supplies an authorized portable interface and authentication path, authenticated schemas prove the complete quote-through-payout capability, and sufficient adapter and artwork rights are established."
+      ],
+      "verification": [
+        "Run verify_weatherpromise_evidence from scripts/import-official-hosted-plugins.py.",
+        "Fetch the official WeatherPromise product page and verify normalized capability-core SHA-256 732f533950b3f76fa76790b1544dc499a3e8cba28a05d763399f85a711827a38.",
+        "Verify the product page still documents booking, personalized guarantees, dashboards, real-time monitoring, historical and forecast inputs, contractual rain thresholds, and automatic payouts.",
+        "Fetch WeatherPromise's official Iubenda terms API and verify normalized API, rights, acceptable-use, reselling, and intellectual-property SHA-256 6b48d35b25ccf88a4ddb269498ee67bea1e1ed2ebc8c6908619ccde1972adf51.",
+        "Verify the official robots policy hash, the absence of a candidate API, MCP, developer, docs, ChatGPT, or integration URL in the current sitemap, and the HTTP 404 /llms.txt boundary without probing private services.",
+        "Verify the weatherpromise GitHub account identity and that it still publishes zero public repositories; any new repository triggers a source and license re-audit.",
+        "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9, all three file hashes, developer identity, private app ID, default prompt, complete inventory hash, and quote-through-payout capability markers.",
+        "Confirm plugins/weatherpromise and packages/weatherpromise.zip remain absent while endpoint, authentication, schema, transaction, license, and artwork blockers remain.",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py"
+      ]
+    },
     "windsor-ai": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Windsor.ai",
