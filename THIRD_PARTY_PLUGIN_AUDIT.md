@@ -108,7 +108,7 @@ verification.
 | marcopolo | Immersa, Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | mem | Mem Labs, Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | meticulate | Meticulate | appConnector | MIT | official-source-research-required | not-implemented |
-| midpage | Midpage | appConnector, skills | MIT | official-source-research-required | not-implemented |
+| midpage | Midpage | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | mixpanel | Mixpanel | appConnector | MIT | official-source-verified | implemented-verified |
 | mixpanel-headless | Mixpanel | skills | MIT | official-source-verified | implemented-verified |
 | monday-com | Monday.com | appConnector | MIT | official-source-verified | implemented-verified |

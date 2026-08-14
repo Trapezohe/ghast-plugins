@@ -480,6 +480,13 @@ CUSTOM_ICONS = {
         '<circle cx="42" cy="43" r="7"/>'
         '<path d="M47 48l5 5"/>',
     ),
+    "midpage": (
+        "#315B54",
+        '<path d="M11 24h42M16 24v23M26 24v23M38 24v23M48 24v23"/>'
+        '<path d="M9 49h46M13 20l19-10 19 10z"/>'
+        '<circle cx="43" cy="39" r="7"/>'
+        '<path d="M48 44l6 6"/>',
+    ),
     "mixpanel": (
         "#6F4BD8",
         '<path d="M12 48h40M16 42V29h8v13M28 42V20h8v22M40 42V13h8v29"/>'

@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 3,
-      "official-source-research-required": 33,
-      "official-source-verified": 113
+      "official-source-research-required": 32,
+      "official-source-verified": 114
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 113,
-      "not-implemented": 36
+      "implemented-verified": 114,
+      "not-implemented": 35
     }
   },
   "excludedOpenAIPlugins": [
@@ -7909,7 +7909,7 @@
     },
     {
       "id": "midpage",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Midpage",
@@ -7936,13 +7936,86 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.midpage.ai"
+        "homepage": "https://www.midpage.ai",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Midpage AI Inc.",
+          "officialRepository": "https://github.com/midpage-ai/litigation-skills",
+          "officialRevision": "plugin-a7900c82da0d+mcp-f4deb58545d8+oauth-6627f7d4fb4a",
+          "license": "MIT",
+          "licenseEvidence": [
+            "Midpage's official midpage-ai/litigation-skills repository contains the complete MIT license at revision a7900c82da0d76a7efdf0f771f2de55c0ae38357. The license file has SHA-256 c40880e6f234d1bd4ba291f08c08392b0b04afd9c0c341f3206ee8cef48bafe9.",
+            "The official repository's complete 30-file inventory has SHA-256 49d9129118ab412370413da64c92c1eba3f0d7acdb454745106486cfd9b594c2 and includes Codex and Claude manifests, MCP configuration, four litigation skills, four shared method guides per skill, the legal_docx.js Word renderer, README, and license.",
+            "Ghast copies the official license, upstream README, upstream MCP declaration, four skills, references, and Word renderer without changing their bytes. MODIFICATIONS.md records renamed files, the active v3 MCP declaration, generic icon, native manifest, README, and separately named safety skill.",
+            "The Ghast-authored manifest, v3 MCP configuration, README, MODIFICATIONS.md, generic icon, and midpage-safety skill are distributed under the same included MIT license.",
+            "The MIT license does not grant rights in Midpage accounts, hosted MCP or API implementations, legal data, docket files, customer materials, credentials, trademarks, or private Codex marketplace artwork."
+          ],
+          "officialityEvidence": [
+            "The official midpage-ai GitHub organization links to midpage.ai and publishes the public litigation-skills repository. GitHub identifies the repository as public, active, and MIT-licensed at revision a7900c82da0d76a7efdf0f771f2de55c0ae38357 with tree 11656b88d900c7c2a484946ab3de62cdb4ba8bb6.",
+            "The official repository describes itself as the Midpage litigation-skills distribution for Codex, built on Midpage MCP, and documents four deliverable workflows: draft-brief, draft-long-form-memo, litigation-update-post, and cite-check.",
+            "The repository's .mcp.json connects directly to https://app.midpage.ai/mcp. Current official documentation recommends the pinned v3 endpoint https://app.midpage.ai/mcp/v3 for a stable contract and retains the unversioned endpoint for automatic updates.",
+            "The current official MCP guide has raw SHA-256 f4deb58545d8357404ae43270718cb48cdc2d0e25db634bc4c250e085c2536b2 and documents seven tools: search, findInOpinion, analyzeOpinion, analyzeDocketReport, analyzeDocketFiling, searchLaws, and analyzeLaw.",
+            "The official v3 guide covers US federal and state case law, federal docket reports and filings, and statutes, regulations, constitutions, and agency guidance across federal, all 50 states, and DC. It marks docket and laws tools as preview contracts.",
+            "The official guide documents Bearer API keys and OAuth. After normalizing metadata arrays as unordered sets, protected-resource metadata has SHA-256 ca090f120f43bac0501e65a3aae92d5c5555fea895603031517cb6c9702424bb, while Clerk authorization and OpenID metadata have SHA-256 6627f7d4fb4aa8c26815e0b11d673c2d22d89c6cfa00069edabb3e3697a77e9b and f28e838f763c580a229cd388bee3f2aaa62397ce0376ea067c346e1ae5a144d0.",
+            "The OAuth metadata publishes dynamic client registration, authorization-code and refresh-token grants, public clients with token endpoint authentication method none, and PKCE S256.",
+            "On August 14, 2026, both missing and deliberately invalid Bearer authentication at the v3 endpoint returned HTTP 401, the official protected-resource challenge, and canonical error SHA-256 b5b8cdba3d63b5e7598ad5dfe2190d441d62bef6098f4bbbcf679c3f51608a12. No account, case, law, docket, filing, credential, or user data was accessed.",
+            "The four official source skills, references, and legal_docx.js renderer match the functional skill payload in OpenAI's pinned snapshot; OpenAI adds host-specific agents/openai.yaml files, and the official cite-check SKILL.md differs only by a trailing newline.",
+            "OpenAI's pinned snapshot identifies Midpage as developer, maps the plugin to private app ID asdk_app_699cc1a043688191a3ee44e6a2c2ebc1, and describes case research, opinion review, statutes and regulations, cited legal work product, and research-memo drafting."
+          ],
+          "codexCapabilities": [
+            "Search Midpage for cases relevant to a legal issue and summarize the strongest authorities",
+            "Review opinions and ground legal propositions in hyperlinked real sources",
+            "Find statutes and regulations and explain how they apply",
+            "Draft research memos with citations and open questions",
+            "Use the bundled skills to draft briefs and long-form memos, write litigation updates, and produce marked-up Word cite checks"
+          ],
+          "ghastCapabilities": [
+            "Connect directly to Midpage's official hosted MCP v3 with standard HTTP and either browser OAuth or a user-managed Bearer API key instead of the Codex-only private app mapping",
+            "Use search, findInOpinion, and analyzeOpinion for federal and state case discovery, verified passages, proposition analysis, treatment context, and linked primary-law review",
+            "Use preview analyzeDocketReport and analyzeDocketFiling tools for federal docket posture, relevant-entry discovery, filing analysis, passages, and downloadable official service URLs",
+            "Use preview searchLaws and analyzeLaw for current or historical statutes, regulations, constitutions, agency guidance, version chains, jurisdiction surveys, verified passages, and official-source links",
+            "Run the exact official MIT-licensed draft-brief, draft-long-form-memo, litigation-update-post, and cite-check workflows with their references and shared legal_docx.js Word renderer",
+            "Apply an independently authored safety layer for high-stakes legal review, current primary sources, citation scope and treatment, private matter data, docket files, generated Word documents, authentication, and preview-tool uncertainty"
+          ],
+          "capabilityRelationship": "superset-current-official-v3-mcp-plus-identical-official-skills",
+          "limitations": [
+            "Midpage's hosted MCP and data services are operated by Midpage and are not redistributed. The MIT package contains official workflow skills and Ghast adapter files, not the server implementation or legal database.",
+            "A Midpage account, subscription or trial, API-key eligibility, workspace or organization access, tool entitlements, usage allocation, historical-law access, source coverage, and service availability remain user-managed.",
+            "No authenticated tools/list response, legal search, opinion analysis, law result, docket report, filing, download, credential, or user data was tested because no Midpage account or API key was supplied.",
+            "The official repository uses the unversioned MCP URL, while Ghast deliberately pins the current documented v3 endpoint to stabilize the seven-tool contract. MODIFICATIONS.md preserves and explains the upstream declaration.",
+            "The docket and laws tools are preview contracts and may change. Clients must inspect the live authenticated schema and returned fields rather than relying on undocumented behavior.",
+            "Search highlights and law snippets are relevance context, not citable authority. Cases and laws must be resolved and analyzed, and doesNotAddress, scope, centrality, opinion section, treatment, jurisdiction, currency, and version must be checked before citation.",
+            "Midpage analysis, citator treatment, docket parsing, OCR, generated propositions, and source coverage can be incomplete, ambiguous, delayed, or wrong. They are not a substitute for qualified legal review or current primary-source verification.",
+            "Docket reports, filings, uploads, and generated work product can contain privileged, work-product, sealed, restricted, personal, medical, financial, criminal, immigration, trade-secret, or minor information. Retrieval and disclosure remain narrowly scoped.",
+            "The Word renderer requires Node 18+ and the external docx npm package. The upstream skills install docx without pinning a version; Ghast verifies syntax and a current isolated smoke build but does not vendor the dependency.",
+            "The official repository has no reusable icon. Ghast uses a generic courthouse-and-search icon and excludes OpenAI's private marketplace icon and Midpage logo."
+          ],
+          "verification": [
+            "python3 scripts/import-midpage-plugin.py --source-root ../upstreams/midpage-litigation-skills --openai-source ../openai-plugins",
+            "Verify clean official revision a7900c82da0d76a7efdf0f771f2de55c0ae38357, tree 11656b88d900c7c2a484946ab3de62cdb4ba8bb6, MIT license, all 30 source files, and complete inventory SHA-256 49d9129118ab412370413da64c92c1eba3f0d7acdb454745106486cfd9b594c2",
+            "Byte-compare packaged LICENSE, UPSTREAM_README.md, UPSTREAM_MCP.json, all four official skills, references, and legal_docx.js files against the official source checkout",
+            "Verify official MCP guide raw SHA-256 f4deb58545d8357404ae43270718cb48cdc2d0e25db634bc4c250e085c2536b2, pinned v3 endpoint, unversioned endpoint, API-key and OAuth instructions, seven ordered tool names, and preview warnings",
+            "Verify protected-resource, Clerk authorization, and OpenID normalized metadata hashes, resource scopes, DCR endpoint, authorization-code and refresh-token grants, public clients, and PKCE S256",
+            "Probe missing and invalid Bearer initialize requests at https://app.midpage.ai/mcp/v3 and require HTTP 401, the exact protected-resource challenge, and canonical error SHA-256 b5b8cdba3d63b5e7598ad5dfe2190d441d62bef6098f4bbbcf679c3f51608a12",
+            "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 developer identity, private app ID, prompts, complete 32-file inventory hash, and functional skill parity without redistributing OpenAI host YAML or private artwork",
+            "Run node --check on all four packaged legal_docx.js copies and create an isolated sample .docx using the docx npm dependency",
+            "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+            "python3 scripts/build-ghast-catalog.py",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/midpage.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "0.2.0-ghast.1",
+        "repository": "https://github.com/midpage-ai/litigation-skills",
+        "upstreamRevision": "plugin-a7900c82da0d+mcp-f4deb58545d8+oauth-6627f7d4fb4a",
+        "portStatus": "full"
       }
     },
     {

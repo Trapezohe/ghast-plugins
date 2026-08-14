@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "midpage": {
+      "type": "http",
+      "url": "https://app.midpage.ai/mcp/v3"
+    }
+  }
+}
