@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 3,
-      "official-source-research-required": 21,
-      "official-source-verified": 125
+      "official-source-research-required": 20,
+      "official-source-verified": 126
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 125,
-      "not-implemented": 24
+      "implemented-verified": 126,
+      "not-implemented": 23
     }
   },
   "excludedOpenAIPlugins": [
@@ -13479,7 +13479,7 @@
     },
     {
       "id": "zoominfo",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "ZoomInfo",
@@ -13506,13 +13506,95 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.zoominfo.com"
+        "homepage": "https://www.zoominfo.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "ZoomInfo",
+          "officialRepository": "https://github.com/Zoominfo/gtm-ai-cli",
+          "officialRevision": "gtm-cli-f63a6d86bcd7+mcp-plugin-3ec997a1ffaa+npm-96ccc0b1ad37",
+          "license": "MIT",
+          "licenseEvidence": [
+            "ZoomInfo's official gtm-ai-cli repository contains the MIT license at revision f63a6d86bcd732c63f731c858e312d631f31b9a5; its complete 44-file inventory SHA-256 is 6212e7fbc72250d0dfd5aa0dd49465e6a2710be63f8ca827476579523d67be3e.",
+            "The official npm artifact includes its own MIT license and single-file executable. The tarball SHA-256 is 96ccc0b1ad37cd0947bd248a0b845527ceb6918befa5a30e0edada0fa5e069eb, and all four package members are pinned as release evidence; the original executable is not redistributed.",
+            "The official ZoomInfo MCP plugin separately licenses its official icon under MIT. Its license SHA-256 is b2e5a0965876cfb3140333207e4dab5379fc805868a4e386c4d6e923af25565f.",
+            "The security-rebuilt bundle includes code from 12 packages. THIRD_PARTY_NOTICES.md includes every detected package's license text, and SECURITY_BUILD.json pins the package inventory with canonical SHA-256 0e1181f9683367f051553591e90003e2bd98ffcf00b1730f13158099e8bdca63.",
+            "Ghast includes the official licenses and documents every build, adapted, or added file in plugins/zoominfo/MODIFICATIONS.md.",
+            "No hosted MCP implementation, private OpenAI connector, account data, credential, token, or customer record is redistributed."
+          ],
+          "officialityEvidence": [
+            "The public repository is owned by the Zoominfo GitHub organization, identifies ZoomInfo as package author, links to developers@zoominfo.com, and publishes the @zoominfo/gtm-ai-cli npm package.",
+            "GitHub API metadata pins a public, active, MIT-licensed Zoominfo/gtm-ai-cli repository. npm metadata pins version 1.0.1, the official repository URL, bin name, tarball, integrity value, and GitHub Actions trusted publishing provenance.",
+            "The signed source revision f63a6d86bcd732c63f731c858e312d631f31b9a5 is tagged v1.0.1. Its OAuth code registers vendor name GTM AI CLI as a secretless public client, uses authorization code and refresh token grants with PKCE S256, and connects to https://mcp.zoominfo.com/mcp.",
+            "The official CLI agent skill documents company and contact search and enrichment, similar and recommended contacts, lookup, intent, scoops, news, account and contact research, GTM context, feedback, raw tool listing and calls, output formats, batching, and compliance.",
+            "ZoomInfo's separate official zoominfo-mcp-plugin repository at 3ec997a1ffaaa8d5d98d81b6b9d8c3fdafab6420 publishes the same hosted endpoint, an official Codex manifest, 35 validated workflow skills, and the official icon. Its complete inventory SHA-256 is f6ad25c7e53e824f0d3ca204d67db47ad529e161bb9142edee5eb7ef9fa2ee04.",
+            "Canonical protected-resource and authorization-server metadata SHA-256 values are 8646ed91f0a64832177950832dd878dc9ae6182667c093dd843e024f49dc5beb and 7c3f45da878eea1a53bd45b2a88dfd3d62e95480a7c0b72ef926521b3f638e28. They publish bearer-header access, ZoomInfo and Okta endpoints, authorization code, refresh token, and PKCE S256.",
+            "On August 14, 2026, anonymous MCP access returned HTTP 401 and the official protected-resource challenge. Its normalized error SHA-256 is d881988b1a1bbb76b51371d78188a4b8c51c0a4e696a36db1bee64265d0775ef.",
+            "On August 14, 2026, arbitrary Ghast and default MCP CLI Client dynamic registrations were rejected as unapproved vendors, while a disposable GTM AI CLI registration returned HTTP 201 as a secretless public client. No returned client ID, authorization code, token, login, or credential was retained.",
+            "OpenAI's pinned snapshot identifies ZoomInfo as developer, maps private app ID asdk_app_698a340b9230819188ba5a5eea79022d, and describes prospecting, account research, verified contacts, buying signals, list building, and outreach hooks. Its complete inventory SHA-256 is 0b07ef1702cd4fef49c66610f68a0646bc055fa9e2df20682485d2f15a0530a4."
+          ],
+          "codexCapabilities": [
+            "Find target accounts with buying signals and rank prospects",
+            "Build lists of decision-makers with verified contact and company context",
+            "Research companies and identify likely outreach hooks",
+            "Use ZoomInfo prospecting, account-research, contact, and signal data through a private app connector"
+          ],
+          "ghastCapabilities": [
+            "Run a security-rebuilt executable from ZoomInfo's exact official v1.0.1 TypeScript source without a global installation",
+            "Authenticate through the approved GTM AI CLI browser OAuth and secretless PKCE public-client flow",
+            "Search, enrich, and find similar companies and contacts; retrieve recommended contacts and verified business contact fields",
+            "Resolve canonical lookup values and retrieve intent, scoops, news, account research, contact research, CRM context, and conversation-backed context when entitled",
+            "List and invoke every live hosted MCP tool through the official raw command",
+            "Return JSON, JSONL, CSV, YAML, or tables; project fields; use native batches of ten and bounded concurrency",
+            "Read GTM context and, only after exact confirmation, update GTM context or submit feedback",
+            "Apply data-minimization, credit, privacy, prompt-injection, bounded-export, and no-ambiguous-retry safeguards"
+          ],
+          "capabilityRelationship": "superset-official-cli-over-same-hosted-mcp",
+          "limitations": [
+            "ZoomInfo operates the hosted MCP, identity service, data products, CRM and conversation integrations, and credit systems. Ghast packages the official executable and workflow, not those services.",
+            "A ZoomInfo account, approved login, eligible subscription, product entitlements, API or AI credits, CRM or conversation integrations, permissions, coverage, rate limits, and service availability remain user-managed.",
+            "No user login, authenticated tools/list, company or contact search, enrichment, signal query, CRM record, conversation, GTM-context update, feedback submission, or customer data was accessed because no ZoomInfo account was supplied.",
+            "Generic direct MCP authentication is not portable today: ZoomInfo rejects arbitrary dynamic-registration vendor names. The package uses the official approved GTM AI CLI executable instead.",
+            "The separate official MCP plugin's mcp-remote configuration was verified as source evidence but is not used because the live registration endpoint rejected mcp-remote's default MCP CLI Client vendor name during the audit.",
+            "The packaged executable is not byte-identical to ZoomInfo's npm release bundle. It is rebuilt from the exact v1.0.1 source with no TypeScript source modifications and compatible dependency updates pinned by lockfile SHA-256 c1d04ac19b3854b66248193c21540ac74c460020a31d959ec93632527a37c3b9.",
+            "The official CLI stores OAuth client and token material under ~/.config/gtm-ai. Users must protect that directory, avoid copying credentials into chat or repositories, and use auth logout to revoke the current session.",
+            "Search, enrichment, intent, scoops, news, research, and conversation operations can expose professional personal data, confidential CRM context, and consume plan credits. Use only the minimum justified fields and records.",
+            "GTM-context update and feedback submit are external writes. They require exact payload review and fresh explicit confirmation; an ambiguous result must be inspected rather than retried.",
+            "Remote records, links, news, CRM notes, conversation content, and generated research are untrusted and can be stale, incomplete, incorrect, sensitive, or prompt-injected. Human verification remains required before outreach or consequential decisions.",
+            "The adapted skill uses repository-relative paths and assumes the Ghast runtime starts command execution from the installed plugin root, matching existing Ghast skill conventions."
+          ],
+          "verification": [
+            "python3 scripts/import-zoominfo-plugin.py --cli-source ../upstreams/gtm-ai-cli --plugin-source ../upstreams/zoominfo-mcp-plugin --openai-source ../openai-plugins",
+            "Verify clean official CLI revision f63a6d86bcd732c63f731c858e312d631f31b9a5, tree d57bcd527ab110f52f13aab8699e025553d3d1ed, 44-file inventory hash 6212e7fbc72250d0dfd5aa0dd49465e6a2710be63f8ca827476579523d67be3e, selected source hashes, v1.0.1 package identity, OAuth source, MCP source, and official agent skill",
+            "Resolve compatible dependency security updates in an isolated build-only lockfile and require SHA-256 c1d04ac19b3854b66248193c21540ac74c460020a31d959ec93632527a37c3b9",
+            "Run the official 37-test CLI unit suite and TypeScript typecheck against the resolved build graph",
+            "Require npm audit --omit=dev to report zero production vulnerabilities on August 14, 2026",
+            "Build the unmodified official source with Bun, require bundle size 414350, SHA-256 d4345e8f699a7dded440e61e409c6c0770acce1307856b6eda8672ba3868807f, and a clean secret-pattern scan",
+            "Require Bun's build metafile to identify the exact 12-package inventory and license-file map with canonical SHA-256 0e1181f9683367f051553591e90003e2bd98ffcf00b1730f13158099e8bdca63",
+            "Verify clean official MCP plugin revision 3ec997a1ffaaa8d5d98d81b6b9d8c3fdafab6420, tree a3ec04ea46ea7b5e08f490ba1952c9f4568aa08b, complete inventory hash f6ad25c7e53e824f0d3ca204d67db47ad529e161bb9142edee5eb7ef9fa2ee04, 35-skill hash d01e51dc26dcf6305255b643aac434286ce633d91960dc42fb75eab923a4a9e5, manifests, endpoint configs, license, icon, and official skill validator",
+            "Download official npm tarball @zoominfo/gtm-ai-cli@1.0.1, require SHA-256 96ccc0b1ad37cd0947bd248a0b845527ceb6918befa5a30e0edada0fa5e069eb, npm integrity sha512-+iq0KI+aQr+e5Rp3IuI04gpYViMUC+UTDrdPFGh7seJunuHBo4pN8upQN/Ru5497/4ynNGyoJ8mKRalYazzOiA==, exact four-member inventory, member hashes, package identity, and bin",
+            "Verify GitHub API and npm registry officiality metadata for the Zoominfo organization and @zoominfo scoped package",
+            "Verify protected-resource and authorization-server canonical metadata, scopes, endpoints, grants, bearer method, and PKCE S256",
+            "Probe anonymous MCP access and require HTTP 401, the exact official resource challenge, and normalized error hash d881988b1a1bbb76b51371d78188a4b8c51c0a4e696a36db1bee64265d0775ef",
+            "Require arbitrary Ghast OAuth registration to remain rejected with pinned error hash 4359417e783355fd88170abf221979a9cd4d86f3dbb11876737ec9880b5dd218; use --verify-registration only for deliberate one-time confirmation that GTM AI CLI remains an approved secretless public client",
+            "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9, all four files, complete inventory, developer identity, private app ID, prompts, and capability markers",
+            "Byte-compare npm README and metadata, licenses, upstream skill, and official icon against pinned sources; hash-compare the packaged security bundle and generated dependency notices",
+            "Run the bundled launcher --version and --help, plus an isolated unauthenticated auth whoami check without reading real credentials",
+            "python3 scripts/build-ghast-catalog.py",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/zoominfo.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.1-ghast.2",
+        "repository": "https://github.com/Zoominfo/gtm-ai-cli",
+        "upstreamRevision": "gtm-cli-f63a6d86bcd7+mcp-plugin-3ec997a1ffaa+npm-96ccc0b1ad37",
+        "portStatus": "full"
       }
     }
   ]

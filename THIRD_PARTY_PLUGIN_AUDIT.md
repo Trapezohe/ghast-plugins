@@ -174,7 +174,7 @@ verification.
 | yepcode | YepCode S.L. | appConnector | MIT | official-source-verified | implemented-verified |
 | zoho | Zoho | appConnector | MIT | official-source-verified | implemented-verified |
 | zoom | Zoom | appConnector, skills, commands | MIT | official-source-verified | implemented-verified |
-| zoominfo | ZoomInfo | appConnector | MIT | official-source-research-required | not-implemented |
+| zoominfo | ZoomInfo | appConnector | MIT | official-source-verified | implemented-verified |
 
 The JSON report is the machine-readable source of truth. Human review
 evidence lives in `third-party-plugin-reviews.json` and must be updated

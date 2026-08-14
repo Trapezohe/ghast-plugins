@@ -1,0 +1,17 @@
+{
+  "name": "zoominfo",
+  "version": "1.0.1-ghast.2",
+  "description": "Search and enrich ZoomInfo companies and contacts, research accounts, surface intent, scoops, and news, and manage GTM context through ZoomInfo's official authenticated CLI.",
+  "category": "productivity",
+  "author": {
+    "name": "ZoomInfo",
+    "url": "https://www.zoominfo.com"
+  },
+  "homepage": "https://github.com/Zoominfo/gtm-ai-cli",
+  "repository": "https://github.com/Zoominfo/gtm-ai-cli",
+  "upstreamRevision": "gtm-cli-f63a6d86bcd7+mcp-plugin-3ec997a1ffaa+npm-96ccc0b1ad37",
+  "license": "MIT",
+  "portStatus": "full",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/"
+}
