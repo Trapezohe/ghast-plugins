@@ -3754,6 +3754,16 @@ KEYBID_LLMS_URL = "https://keybid.eu/llms.txt"
 KEYBID_ROBOTS_URL = "https://keybid.eu/robots.txt"
 KEYBID_API_LICENSE_URL = "https://keybid.eu/api-license"
 KEYBID_RO_API_LICENSE_URL = "https://keybid.ro/api-license"
+KEYBID_SPA_CONFIG_FALLBACK_URLS = (
+    "https://keybid.eu/.well-known/oauth-protected-resource",
+    "https://keybid.eu/.well-known/oauth-protected-resource/mcp",
+    "https://keybid.eu/.well-known/oauth-authorization-server",
+    "https://keybid.eu/mcp",
+)
+KEYBID_API_MCP_URL = "https://keybid.eu/api/mcp"
+KEYBID_API_MCP_NOT_FOUND_SHA256 = (
+    "548c0e9166c1a94dbffe9a5c01dcf559e5142a3f3d0360fa38720e06304d6d73"
+)
 KEYBID_WEB_APP_URL = (
     "https://keybid.eu/assets/web-app-o-s-nOQG.js"
 )
@@ -13224,6 +13234,45 @@ def verify_keybid_puls_evidence() -> None:
                 "KeyBid api-license route now differs from the SPA fallback; "
                 "re-audit licensing"
             )
+
+    for config_url in KEYBID_SPA_CONFIG_FALLBACK_URLS:
+        config_response = fetch_bytes(config_url)
+        if (
+            config_response != home
+            or sha256_bytes(config_response) != KEYBID_HOME_SHA256
+            or b"<title>KeyBid -" not in config_response
+        ):
+            raise ValueError(
+                "KeyBid conventional MCP or OAuth path now differs from the "
+                "SPA fallback; re-audit portability"
+            )
+
+    api_mcp_request = urllib.request.Request(
+        KEYBID_API_MCP_URL,
+        headers={
+            "User-Agent": "ghast-plugin-audit/1.0",
+            "Accept": "application/json",
+        },
+    )
+    try:
+        urllib.request.urlopen(api_mcp_request, timeout=30)
+    except urllib.error.HTTPError as exc:
+        api_mcp_body = exc.read()
+        if (
+            exc.code != 404
+            or sha256_bytes(api_mcp_body)
+            != KEYBID_API_MCP_NOT_FOUND_SHA256
+            or api_mcp_body
+            != b'{"message":"API route not found","path":"/mcp",'
+            b'"method":"GET"}'
+        ):
+            raise ValueError(
+                "KeyBid API MCP route behavior changed; re-audit portability"
+            ) from exc
+    else:
+        raise ValueError(
+            "KeyBid API MCP route now exists; re-audit portability"
+        )
 
     web_app = fetch_bytes(KEYBID_WEB_APP_URL)
     if sha256_bytes(web_app) != KEYBID_WEB_APP_SHA256:

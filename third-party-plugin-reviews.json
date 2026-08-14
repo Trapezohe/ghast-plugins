@@ -3066,7 +3066,7 @@
       "verificationStatus": "official-source-research-required",
       "officialDeveloper": "KeyBid",
       "officialRepository": null,
-      "officialRevision": "keybid-web-ca2cac78ec1f+market-4a53b74defb8+terms-58753c9550ea+robots-1b6d26ebfebf",
+      "officialRevision": "keybid-web-ca2cac78ec1f+market-4a53b74defb8+terms-58753c9550ea+robots-1b6d26ebfebf+mcp-fallback-77ed0e069154",
       "license": "UNVERIFIED",
       "licenseEvidence": [
         "KeyBid does not publish a software, MCP-client, API-client, data-use, or redistribution license for KeyBid Puls, its private ChatGPT MCP application, website API routes, algorithms, browser extensions, source code, schemas, logos, icons, reports, or marketplace artwork.",
@@ -3084,6 +3084,8 @@
         "KeyBid's market-intelligence frontend chunk has SHA-256 4a53b74defb8569c1f6e964af94e1c0515e4ac1dc175af2680a59dcec5f0af50. Its DataDownload JSON-LD points to /api/ai/market-data and the nonexistent api-license page; the normalized metadata has SHA-256 f902bc535e27fda10f21ab84cc06128bc412b2ae594ef8fe58ccdc16bcc0b514.",
         "The current website frontend references first-party routes for market location, countries, weather, pricing, zones, drivers, chat, gap analysis, PDF generation, report checkout, and listing-report generation. These are website implementation details, not a published third-party API contract or portable MCP configuration.",
         "On August 14, 2026, a bounded audit confirmed that selected website data routes were reachable while report generation required authentication, but no public MCP endpoint, OAuth metadata, API-key issuance flow, OpenAPI document, SDK, client library, stability policy, quota policy, or third-party onboarding procedure was published.",
+        "On August 14, 2026, the conventional public paths /mcp, /.well-known/oauth-protected-resource, /.well-known/oauth-protected-resource/mcp, and /.well-known/oauth-authorization-server each returned the ordinary KeyBid SPA homepage byte-for-byte with SHA-256 77ed0e0691546aebd7a64e5e15505b0e0ff311c506ab63851bfa8171a88b1336. Their HTTP 200 status is frontend fallback behavior, not MCP or OAuth metadata.",
+        "The corresponding first-party route /api/mcp returned HTTP 404 with the JSON body hash 548c0e9166c1a94dbffe9a5c01dcf559e5142a3f3d0360fa38720e06304d6d73 and message API route not found. This negative probe confirms that no portable endpoint is exposed at the conventional public location; it does not prove that KeyBid's private ChatGPT connector does not exist elsewhere.",
         "KeyBid's normalized robots policy has SHA-256 1b6d26ebfebfba90b4452afe5383c956004f6483ef4fb63684993b3358a47781. It allows the KeyBid Puls and llms.txt pages but explicitly disallows /api/ and private account, dashboard, payment, and test areas.",
         "The public GitHub user named KeyBid currently exposes only an empty verification repository and an unrelated Solana repository, neither with a license. The account does not publish a KeyBid Puls MCP server, API client, browser-extension source, ROI engine, or capability-equivalent implementation, and its profile does not independently establish an official link to keybid.eu.",
         "OpenAI's pinned Codex snapshot identifies KeyBid as developer, maps KeyBid Puls to private app ID asdk_app_694ec6acb5d481919aee2d0da18333b1, and describes listing-URL or screenshot analysis, revenue projections, reports, and an investment conclusion. Its complete four-file inventory has SHA-256 ab8ae404ac27af232d29a91fa2a4c6952dd6e77e4eb2de65155090dd4a1323ec."
@@ -3102,6 +3104,7 @@
       "limitations": [
         "The OpenAI private app ID is a marketplace mapping, not an MCP URL, OAuth client, access token, API key, source repository, or reusable transport configuration.",
         "The terms confirm that an official KeyBid MCP application exists inside ChatGPT, but do not publish its endpoint, protocol metadata, authentication method, tool schemas, client registration, account linking, quotas, or independent-client support.",
+        "HTTP 200 responses from KeyBid's conventional /mcp and OAuth discovery paths must not be treated as connector availability: the responses are byte-identical HTML SPA fallbacks rather than MCP transport responses or JSON metadata. The first-party /api/mcp route currently returns a structured 404.",
         "Website JavaScript route strings and technically reachable responses do not create a public API contract or permission to publish a third-party wrapper. The routes may change without notice and can include generated, licensed, personal, payment, or proprietary data.",
         "KeyBid's robots policy explicitly disallows /api/. Ghast must not crawl, index, mirror, cache, train on, periodically harvest, or package the website API as a substitute for an authorized integration.",
         "The api-license URL currently resolves to the ordinary SPA homepage and contains no license grant. The JSON-LD is therefore insufficient to authorize API access, data reuse, redistribution, derivative clients, or commercial use.",
@@ -3116,6 +3119,8 @@
         "Run verify_keybid_puls_evidence from scripts/import-official-hosted-plugins.py",
         "Verify the official homepage, KeyBid Puls SPA entry, llms.txt, web-app bundle, market-intelligence bundle, normalized terms, normalized GPT terms, DataDownload metadata, and robots-policy hashes",
         "Confirm the api-license route remains byte-identical to the ordinary SPA homepage and re-audit immediately if KeyBid publishes real license terms",
+        "Confirm the conventional /mcp and OAuth discovery paths remain byte-identical to the SPA homepage rather than valid connector metadata, and re-audit immediately if any path changes",
+        "Confirm /api/mcp remains HTTP 404 with response hash 548c0e9166c1a94dbffe9a5c01dcf559e5142a3f3d0360fa38720e06304d6d73; treat a changed or successful response as a portability re-audit trigger",
         "Confirm the official terms still describe the private ChatGPT MCP capability while reserving the source code, algorithms, design, trademark, and proprietary systems",
         "Confirm /api/ remains disallowed and do not perform recurring live probes against website-internal API routes",
         "Inspect the public KeyBid GitHub account only for a newly published MCP, API client, browser extension, ROI engine, or capability-equivalent licensed repository",
