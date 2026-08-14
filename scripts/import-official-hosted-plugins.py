@@ -3539,6 +3539,189 @@ KEYBID_OPENAI_HASHES = {
 KEYBID_OPENAI_INVENTORY_SHA256 = (
     "ab8ae404ac27af232d29a91fa2a4c6952dd6e77e4eb2de65155090dd4a1323ec"
 )
+LSEG_MCP_URL = "https://api.analytics.lseg.com/lfa/mcp"
+LSEG_CLAUDE_MCP_URL = "https://api.analytics.lseg.com/lfa/mcp/server-cl"
+LSEG_PROTECTED_RESOURCE_URL = (
+    "https://api.analytics.lseg.com/"
+    ".well-known/oauth-protected-resource/lfa/mcp"
+)
+LSEG_CLAUDE_PROTECTED_RESOURCE_URL = (
+    "https://api.analytics.lseg.com/"
+    ".well-known/oauth-protected-resource/lfa/mcp/server-cl"
+)
+LSEG_AUTHORIZATION_METADATA_URL = (
+    "https://login.ciam.refinitiv.com/"
+    ".well-known/oauth-authorization-server"
+)
+LSEG_PROTECTED_RESOURCE_SHA256 = (
+    "1fd4a302b3891cdc3a84c64434a49b04f12f67248a8cfde341947a73afff559b"
+)
+LSEG_AUTHORIZATION_METADATA_SHA256 = (
+    "844ae6de8cf0e8b6b0ac45451471ba50122534cc6c6c4f1f31eb86cba82d4f02"
+)
+LSEG_AUTH_ERROR_SHA256 = (
+    "2609c9b2e73d3e90d9900eb89f1f751136c2cf0a921989ed4ebe79108e0eaea6"
+)
+LSEG_ANTHROPIC_REVISION = "bb4a2b3e53cf27f8900b33ed6a2d95ed32e57f1d"
+LSEG_ANTHROPIC_BASE_URL = (
+    "https://raw.githubusercontent.com/anthropics/financial-services/"
+    f"{LSEG_ANTHROPIC_REVISION}"
+)
+LSEG_ANTHROPIC_PLUGIN_BASE_URL = (
+    f"{LSEG_ANTHROPIC_BASE_URL}/plugins/partner-built/lseg"
+)
+LSEG_ANTHROPIC_ROOT_README_SHA256 = (
+    "6623518a479e2d439e338374018173d775bc9fa88c9ce73b3de7af6b4e00eca3"
+)
+LSEG_ANTHROPIC_LICENSE_SHA256 = (
+    "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+)
+LSEG_ANTHROPIC_HASHES = {
+    ".claude-plugin/plugin.json": (
+        "09b5353fa83334d7012b6585be3ae977deb1d92e3cfbe966524c9b2f8ebb275c"
+    ),
+    ".mcp.json": (
+        "ad63c76065584be7c7aa5bf083d11695ed70115f74c61ca27b3a62d0792c1846"
+    ),
+    "CONNECTORS.md": (
+        "1062aa10157291956d88744bf41f5e2c1759779006300ae693eb858b2e6c927a"
+    ),
+    "README.md": (
+        "2d4840cdc03c2167fc2e0f30f7383bcf0214efa01ab637cb9434c2545e579456"
+    ),
+    "commands/analyze-bond-basis.md": (
+        "36886543620f11d9f91e3e0ec7f08cd8d2f3213f63e4af25532d185a3f961c15"
+    ),
+    "commands/analyze-bond-rv.md": (
+        "1145991229c0fd5cea6337a89d507bf82d96076674c5af9c4a6f1b6263cc4b54"
+    ),
+    "commands/analyze-fx-carry.md": (
+        "ab8f557c8c45b3926ae5bcd3e955ecc2de0392e8758d107c29a41d6a3e9f1e0e"
+    ),
+    "commands/analyze-option-vol.md": (
+        "de693c408f21b8104b28e2a419bba2008c4e67fc777a4c571d5ccaacf8bed312"
+    ),
+    "commands/analyze-swap-curve.md": (
+        "501be24ab6ced8d719a5498f8d18b353673bc3f3314b182d2d6bcb92aa6c482c"
+    ),
+    "commands/macro-rates.md": (
+        "5e0c91baa7bee64d4893e1e12494d16416891b770cd034911ce5a819dbe89ea2"
+    ),
+    "commands/research-equity.md": (
+        "e0a2db4e6c0942909d3aefe0ff2468bf57d088cb2b9e06bdd308bdad5ad90837"
+    ),
+    "commands/review-fi-portfolio.md": (
+        "3da6d5591ea559fc7370b15039ab03ed19313d4d32e0f713ffe638e16b623600"
+    ),
+    "skills/bond-futures-basis/SKILL.md": (
+        "685ac17d3cbf31078d59836e1685ce9211a1d3f514c3e310dff86d68a0a1027a"
+    ),
+    "skills/bond-relative-value/SKILL.md": (
+        "0b92ffc123750217f3c0e9ec14a7689b708569dc8a6a7825ff9e1e8b60b56db1"
+    ),
+    "skills/equity-research/SKILL.md": (
+        "cc28c8de14015906bef414c3e9f7e64e40bfcb9564a879dde79b697231237121"
+    ),
+    "skills/fixed-income-portfolio/SKILL.md": (
+        "a0e9cb9a7c5ad4564938c6e998ed9d357357ba51235bfb88906f6f99b4c23371"
+    ),
+    "skills/fx-carry-trade/SKILL.md": (
+        "ef999638f8a04b3bdba126a151e6767c37861c4797bac56b7df3884ac785cc4b"
+    ),
+    "skills/macro-rates-monitor/SKILL.md": (
+        "0f8df5324aa0698eb1aeb266ed6cec904745f332cce868ee068e1e1a806d70c2"
+    ),
+    "skills/option-vol-analysis/SKILL.md": (
+        "d4d5a4259077c94ea72cdbe75275dbc3bfe8afabf5f698323d1a0056ace8d3d4"
+    ),
+    "skills/swap-curve-strategy/SKILL.md": (
+        "7aa595a57090de79db65afda23361e102f082594391b814b1f8f75e9c21c3cd5"
+    ),
+}
+LSEG_ANTHROPIC_INVENTORY_SHA256 = (
+    "2fea00f9d45c843129a75312926fb5c72db5bd0944671ff5747f52cec9c33f2e"
+)
+LSEG_TOOL_NAMES = (
+    "bond_price",
+    "interest_rate_curve",
+    "bond_future_price",
+    "fx_spot_price",
+    "fx_forward_price",
+    "inflation_curve",
+    "credit_curve",
+    "fx_forward_curve",
+    "option_value",
+    "option_template_list",
+    "ir_swap",
+    "fx_vol_surface",
+    "equity_vol_surface",
+    "qa_ibes_consensus",
+    "qa_company_fundamentals",
+    "qa_historical_equity_price",
+    "qa_macroeconomic",
+    "tscc_historical_pricing_summaries",
+    "yieldbook_bond_reference",
+    "yieldbook_cashflow",
+    "yieldbook_scenario",
+    "fixed_income_risk_analytics",
+)
+LSEG_TOOL_NAMES_SHA256 = (
+    "80746573ef756dcfaae28c2619046c2f3c4e7a7a63429498d3d5f70b0e553765"
+)
+LSEG_OFFICIAL_REVISION = "44422c8ad8366d27d872363981b459912b0db2f4"
+LSEG_OFFICIAL_TREE = "a45316660f80ea649cec35f4ccc6bc6e4e7f5da0"
+LSEG_OFFICIAL_BASE_URL = (
+    "https://raw.githubusercontent.com/LSEG-API-Samples/"
+    f"lseg-claude-plugin/{LSEG_OFFICIAL_REVISION}"
+)
+LSEG_OFFICIAL_HASHES = {
+    ".claude-plugin/plugin.json": (
+        "09b5353fa83334d7012b6585be3ae977deb1d92e3cfbe966524c9b2f8ebb275c"
+    ),
+    ".mcp.json": (
+        "e78a979f325e2b508cceb727394c418a005be6206bd6e78273ef85a6877050be"
+    ),
+    "CONNECTORS.md": (
+        "1062aa10157291956d88744bf41f5e2c1759779006300ae693eb858b2e6c927a"
+    ),
+    "README.md": (
+        "2d4840cdc03c2167fc2e0f30f7383bcf0214efa01ab637cb9434c2545e579456"
+    ),
+}
+LSEG_GITHUB_ORG_URL = "https://api.github.com/orgs/LSEG-API-Samples"
+LSEG_GITHUB_ORG_SHA256 = (
+    "b33fda24dbff0df51ad16312fecec5b3e1325db10e0f84a6e6ca0d785d815d25"
+)
+LSEG_GITHUB_COMMIT_URL = (
+    "https://api.github.com/repos/LSEG-API-Samples/"
+    f"lseg-claude-plugin/commits/{LSEG_OFFICIAL_REVISION}"
+)
+LSEG_GITHUB_CONTENTS_URL = (
+    "https://api.github.com/repos/LSEG-API-Samples/"
+    f"lseg-claude-plugin/contents?ref={LSEG_OFFICIAL_REVISION}"
+)
+LSEG_OPENAI_REVISION = "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9"
+LSEG_OPENAI_BASE_URL = (
+    "https://raw.githubusercontent.com/openai/plugins/"
+    f"{LSEG_OPENAI_REVISION}/plugins/lseg"
+)
+LSEG_OPENAI_HASHES = {
+    ".app.json": (
+        "f98905116a2c94c191d7ada650085eaca502e2834ca2dfb318ae5d69af483148"
+    ),
+    ".codex-plugin/plugin.json": (
+        "51d1d3f243c254d574c1ed683c5a3e8ec494f037d06eafef0b7739560bab3cb4"
+    ),
+    "assets/app-icon.svg": (
+        "88d722e2988eb520c356a69cbdf7e0f4ea6f01fdadaa37a9707bd7b1f2996600"
+    ),
+    "assets/logo.png": (
+        "f3d76cb438df0b7079380f8be00d03484f48baa4c29d2b35dbbd44be2d03f899"
+    ),
+}
+LSEG_OPENAI_INVENTORY_SHA256 = (
+    "805352b4743200f7558a1857200585b1254fa85792f336bf3a70bb170e81a9fd"
+)
 HG_INSIGHTS_MCP_URL = "https://phoenix.hginsights.com/api/mcp"
 HG_INSIGHTS_OAUTH_MCP_URL = "https://phoenix.hginsights.com/api/ai/mcp"
 HG_INSIGHTS_GETTING_STARTED_URL = (
@@ -4611,6 +4794,7 @@ def main() -> int:
     verify_docket_evidence()
     verify_finn_evidence()
     verify_keybid_puls_evidence()
+    verify_lseg_evidence()
     verify_hg_insights_evidence()
     verify_cogedim_evidence()
     verify_demandbase_evidence()
@@ -12086,6 +12270,322 @@ def verify_keybid_puls_evidence() -> None:
             "KeyBid Puls must remain unpublished until KeyBid publishes an "
             "authorized portable MCP or API contract and grants sufficient "
             "third-party client, data-use, source, and artwork rights"
+        )
+
+
+def verify_lseg_evidence() -> None:
+    root_readme = fetch_bytes(f"{LSEG_ANTHROPIC_BASE_URL}/README.md")
+    if sha256_bytes(root_readme) != LSEG_ANTHROPIC_ROOT_README_SHA256:
+        raise ValueError("Anthropic financial-services LSEG index changed")
+    root_readme_text = root_readme.decode("utf-8")
+    for marker in (
+        "partner-built/",
+        "Partner-authored plugins (LSEG, S&P Global)",
+        "[lseg](./plugins/partner-built/lseg)",
+        LSEG_MCP_URL,
+    ):
+        if marker not in root_readme_text:
+            raise ValueError(
+                f"Anthropic LSEG source index is missing {marker!r}"
+            )
+
+    license_content = fetch_bytes(f"{LSEG_ANTHROPIC_BASE_URL}/LICENSE")
+    if (
+        sha256_bytes(license_content) != LSEG_ANTHROPIC_LICENSE_SHA256
+        or b"Apache License" not in license_content
+        or b"Version 2.0, January 2004" not in license_content
+    ):
+        raise ValueError("Anthropic financial-services license changed")
+
+    source_files = {}
+    for relative_path, expected_hash in LSEG_ANTHROPIC_HASHES.items():
+        content = fetch_bytes(
+            f"{LSEG_ANTHROPIC_PLUGIN_BASE_URL}/{relative_path}"
+        )
+        if sha256_bytes(content) != expected_hash:
+            raise ValueError(
+                f"Anthropic partner-built LSEG source changed: {relative_path}"
+            )
+        source_files[relative_path] = content
+    inventory = "".join(
+        f"{LSEG_ANTHROPIC_HASHES[path]}  {path}\n"
+        for path in sorted(LSEG_ANTHROPIC_HASHES)
+    )
+    if sha256_text(inventory) != LSEG_ANTHROPIC_INVENTORY_SHA256:
+        raise ValueError(
+            "Anthropic partner-built LSEG inventory hash is inconsistent"
+        )
+
+    plugin_manifest = json.loads(
+        source_files[".claude-plugin/plugin.json"]
+    )
+    source_mcp = json.loads(source_files[".mcp.json"])
+    if (
+        plugin_manifest.get("name") != "lseg"
+        or plugin_manifest.get("version") != "1.0.0"
+        or plugin_manifest.get("author", {}).get("name") != "LSEG"
+        or source_mcp
+        != {
+            "mcpServers": {
+                "lseg": {
+                    "type": "http",
+                    "url": LSEG_CLAUDE_MCP_URL,
+                }
+            }
+        }
+    ):
+        raise ValueError("Anthropic partner-built LSEG manifest changed")
+
+    connectors = source_files["CONNECTORS.md"].decode("utf-8")
+    tool_names = []
+    for name in re.findall(r"`([a-z][a-z0-9_]+)`", connectors):
+        if name not in tool_names and name not in {"list", "calculate"}:
+            tool_names.append(name)
+    if (
+        tuple(tool_names) != LSEG_TOOL_NAMES
+        or canonical_json_sha256(tool_names) != LSEG_TOOL_NAMES_SHA256
+    ):
+        raise ValueError("LSEG documented tool inventory changed")
+    for marker in (
+        "Bond Pricing",
+        "FX Pricing",
+        "Interest Rate Curves",
+        "Credit Curves",
+        "Options",
+        "Volatility Surfaces",
+        "Quantitative Analytics",
+        "Fixed Income Analytics (YieldBook)",
+    ):
+        if marker not in connectors:
+            raise ValueError(
+                f"LSEG connector reference is missing {marker!r}"
+            )
+
+    official_files = {}
+    for relative_path, expected_hash in LSEG_OFFICIAL_HASHES.items():
+        content = fetch_bytes(
+            f"{LSEG_OFFICIAL_BASE_URL}/{relative_path}"
+        )
+        if sha256_bytes(content) != expected_hash:
+            raise ValueError(
+                f"LSEG API Samples source changed: {relative_path}"
+            )
+        official_files[relative_path] = content
+    if (
+        official_files[".claude-plugin/plugin.json"]
+        != source_files[".claude-plugin/plugin.json"]
+        or official_files["CONNECTORS.md"] != source_files["CONNECTORS.md"]
+        or official_files["README.md"] != source_files["README.md"]
+    ):
+        raise ValueError(
+            "LSEG API Samples and licensed partner source diverged"
+        )
+    official_mcp = json.loads(official_files[".mcp.json"])
+    if official_mcp != {
+        "mcpServers": {
+            "lseg": {
+                "type": "http",
+                "url": LSEG_MCP_URL,
+            }
+        }
+    }:
+        raise ValueError("LSEG official MCP configuration changed")
+
+    org = fetch_json(LSEG_GITHUB_ORG_URL)
+    org_identity = {
+        key: org.get(key)
+        for key in ("login", "html_url", "name", "blog", "description")
+    }
+    if canonical_json_sha256(org_identity) != LSEG_GITHUB_ORG_SHA256:
+        raise ValueError("LSEG API Samples organization identity changed")
+    commit = fetch_json(LSEG_GITHUB_COMMIT_URL)
+    if (
+        commit.get("sha") != LSEG_OFFICIAL_REVISION
+        or (commit.get("commit") or {}).get("tree", {}).get("sha")
+        != LSEG_OFFICIAL_TREE
+        or (commit.get("commit") or {}).get("verification", {}).get(
+            "verified"
+        )
+        is not True
+    ):
+        raise ValueError("LSEG API Samples source revision changed")
+    contents = fetch_json(LSEG_GITHUB_CONTENTS_URL)
+    if any(
+        str(item.get("name", "")).lower().startswith(
+            ("license", "notice", "copying")
+        )
+        for item in contents
+    ):
+        raise ValueError(
+            "LSEG API Samples added license evidence; re-audit source choice"
+        )
+
+    protected_resource = fetch_json(LSEG_PROTECTED_RESOURCE_URL)
+    claude_protected_resource = fetch_json(
+        LSEG_CLAUDE_PROTECTED_RESOURCE_URL
+    )
+    expected_protected_resource = {
+        "resource": "https://api.analytics.lseg.com",
+        "authorization_servers": ["https://login.ciam.refinitiv.com"],
+    }
+    if (
+        protected_resource != expected_protected_resource
+        or claude_protected_resource != expected_protected_resource
+        or canonical_json_sha256(protected_resource)
+        != LSEG_PROTECTED_RESOURCE_SHA256
+        or canonical_json_sha256(claude_protected_resource)
+        != LSEG_PROTECTED_RESOURCE_SHA256
+    ):
+        raise ValueError("LSEG protected-resource metadata changed")
+
+    auth_metadata = fetch_json(LSEG_AUTHORIZATION_METADATA_URL)
+    if (
+        canonical_json_sha256(auth_metadata)
+        != LSEG_AUTHORIZATION_METADATA_SHA256
+        or auth_metadata.get("issuer")
+        != "https://login.ciam.refinitiv.com"
+        or auth_metadata.get("authorization_endpoint")
+        != "https://login.ciam.refinitiv.com/as/authorization.oauth2"
+        or auth_metadata.get("token_endpoint")
+        != "https://login.ciam.refinitiv.com/as/token.oauth2"
+        or auth_metadata.get("registration_endpoint")
+        != "https://login.ciam.refinitiv.com/as/clients.oauth2"
+        or "authorization_code"
+        not in auth_metadata.get("grant_types_supported", [])
+        or "refresh_token"
+        not in auth_metadata.get("grant_types_supported", [])
+        or "none"
+        not in auth_metadata.get(
+            "token_endpoint_auth_methods_supported",
+            [],
+        )
+    ):
+        raise ValueError("LSEG authorization metadata changed")
+
+    initialize = json.dumps(
+        {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "method": "initialize",
+            "params": {
+                "protocolVersion": "2025-11-25",
+                "capabilities": {},
+                "clientInfo": {
+                    "name": "ghast-lseg-audit",
+                    "version": "1.0.0",
+                },
+            },
+        },
+        separators=(",", ":"),
+    ).encode("utf-8")
+    for url, metadata_url in (
+        (LSEG_MCP_URL, LSEG_PROTECTED_RESOURCE_URL),
+        (LSEG_CLAUDE_MCP_URL, LSEG_CLAUDE_PROTECTED_RESOURCE_URL),
+    ):
+        for token in (None, "invalid-ghast-lseg-audit-token"):
+            headers = {
+                "User-Agent": "ghast-lseg-audit/1.0",
+                "Content-Type": "application/json",
+                "Accept": "application/json, text/event-stream",
+                "MCP-Protocol-Version": "2025-11-25",
+            }
+            if token:
+                headers["Authorization"] = f"Bearer {token}"
+            request = urllib.request.Request(
+                url,
+                data=initialize,
+                headers=headers,
+                method="POST",
+            )
+            try:
+                urllib.request.urlopen(request, timeout=30)
+            except urllib.error.HTTPError as exc:
+                body = json.loads(exc.read())
+                challenge = exc.headers.get("WWW-Authenticate", "")
+                if (
+                    exc.code != 401
+                    or canonical_json_sha256(body) != LSEG_AUTH_ERROR_SHA256
+                    or body
+                    != {
+                        "jsonrpc": "2.0",
+                        "error": {
+                            "code": -32000,
+                            "message": "Missing Bearer token",
+                        },
+                    }
+                    or f'resource_metadata="{metadata_url}"'
+                    not in challenge
+                ):
+                    raise ValueError(
+                        "LSEG MCP authentication behavior changed"
+                    ) from exc
+            else:
+                raise ValueError(
+                    "LSEG MCP unexpectedly accepted invalid credentials"
+                )
+
+    codex_files = {}
+    for relative_path, expected_hash in LSEG_OPENAI_HASHES.items():
+        content = fetch_bytes(f"{LSEG_OPENAI_BASE_URL}/{relative_path}")
+        if sha256_bytes(content) != expected_hash:
+            raise ValueError(
+                f"LSEG Codex evidence changed: {relative_path}"
+            )
+        codex_files[relative_path] = content
+    inventory = "".join(
+        f"{LSEG_OPENAI_HASHES[path]}  {path}\n"
+        for path in sorted(LSEG_OPENAI_HASHES)
+    )
+    if sha256_text(inventory) != LSEG_OPENAI_INVENTORY_SHA256:
+        raise ValueError("LSEG Codex inventory hash is inconsistent")
+
+    manifest = json.loads(codex_files[".codex-plugin/plugin.json"])
+    app = json.loads(codex_files[".app.json"])
+    interface = manifest.get("interface", {})
+    if (
+        manifest.get("name") != "lseg"
+        or manifest.get("version") != "1.0.2"
+        or manifest.get("author", {}).get("name") != "LSEG"
+        or interface.get("developerName") != "LSEG"
+        or interface.get("defaultPrompt")
+        != [
+            (
+                "Pull recent LSEG market data and company financials for "
+                "a ticker and summarize valuation drivers."
+            ),
+            (
+                "Find the latest news, filings, and events for a company "
+                "in LSEG and highlight material changes."
+            ),
+            (
+                "Compare key metrics for a company against its peer set "
+                "using LSEG data."
+            ),
+        ]
+        or app.get("apps", {}).get("lseg", {}).get("id")
+        != "asdk_app_698aec3092e48191a4484b43a3fc79b8"
+    ):
+        raise ValueError("LSEG Codex developer evidence changed")
+    long_description = interface.get("longDescription", "")
+    for marker in (
+        "real-time access",
+        "comprehensive financial market data ecosystem",
+        "across asset classes and domains",
+        "institutional-grade market data",
+        "analytics and valuation tools",
+        "complex calculations",
+        "financial instruments",
+    ):
+        if marker not in long_description:
+            raise ValueError(
+                f"LSEG Codex capability evidence is missing {marker!r}"
+            )
+
+    if (PLUGIN_DIR / "lseg").exists() or Path("packages/lseg.zip").exists():
+        raise ValueError(
+            "LSEG must remain unpublished until LSEG documents a portable "
+            "OAuth client or credential flow for independent MCP clients "
+            "and authenticated capability verification succeeds"
         )
 
 

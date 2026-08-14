@@ -3093,6 +3093,68 @@
         "python3 scripts/validate-ghast-repository.py"
       ]
     },
+    "lseg": {
+      "verificationStatus": "official-source-research-required",
+      "officialDeveloper": "LSEG",
+      "officialRepository": "https://github.com/anthropics/financial-services",
+      "officialRevision": "lseg-partner-bb4a2b3e53cf+official-44422c8ad836+oauth-1fd4a302b389",
+      "license": "Apache-2.0",
+      "licenseEvidence": [
+        "Anthropic's financial-services repository publishes the partner-built LSEG plugin under the repository-wide Apache-2.0 license. The pinned license has SHA-256 cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.",
+        "The licensed partner source contains eight commands, eight matching financial-analysis skills, the 22-tool connector reference, plugin manifest, README, and Claude-specific MCP configuration. Its complete 20-file inventory has SHA-256 2fea00f9d45c843129a75312926fb5c72db5bd0944671ff5747f52cec9c33f2e.",
+        "LSEG's own LSEG-API-Samples/lseg-claude-plugin repository publishes the same plugin manifest, README, connector reference, commands, and skills but does not contain a license or notice file. Ghast must use the Apache-2.0 partner copy as the redistributable source rather than infer rights from the unlicensed mirror.",
+        "The Apache-2.0 license covers the partner plugin source and documentation, not LSEG's hosted MCP implementation, CIAM service, proprietary market data, analytics engines, YieldBook, IBES, Reuters news, credentials, entitlements, trademarks, logos, or marketplace artwork.",
+        "No source is redistributed while the plugin remains unpublished. A future implementation may import the pinned Apache-2.0 workflow files and independently authored adapter only after the authentication and capability blockers are resolved."
+      ],
+      "officialityEvidence": [
+        "Anthropic's pinned repository README labels plugins/partner-built as partner-authored, names LSEG as a partner plugin, links LSEG, and identifies the official LSEG MCP endpoint. The pinned root README has SHA-256 6623518a479e2d439e338374018173d775bc9fa88c9ce73b3de7af6b4e00eca3.",
+        "The partner-built plugin manifest names LSEG as author and packages eight workflows for bond relative value, bond futures basis, FX carry, swap curves, option volatility, fixed-income portfolios, macro rates, and equity research.",
+        "The LSEG API Samples GitHub organization identifies itself as LSEG API Samples, links developers.lseg.com, and describes its repositories as LSEG/Refinitiv API articles, tutorials, and code samples. Its normalized identity has SHA-256 b33fda24dbff0df51ad16312fecec5b3e1325db10e0f84a6e6ca0d785d815d25.",
+        "LSEG's own repository pins signed revision 44422c8ad8366d27d872363981b459912b0db2f4 with tree a45316660f80ea649cec35f4ccc6bc6e4e7f5da0. Its manifest, README, and connector reference are byte-identical to the licensed partner copy; its MCP file identifies https://api.analytics.lseg.com/lfa/mcp.",
+        "The licensed partner copy uses the Claude-specific official endpoint https://api.analytics.lseg.com/lfa/mcp/server-cl. Both endpoints return HTTP 401 to missing or invalid Bearer initialize requests and advertise endpoint-specific RFC 9728 protected-resource metadata.",
+        "Both protected-resource documents identify https://api.analytics.lseg.com and LSEG's Refinitiv CIAM authorization server. Their canonical JSON SHA-256 is 1fd4a302b3891cdc3a84c64434a49b04f12f67248a8cfde341947a73afff559b.",
+        "The CIAM authorization metadata publishes authorization-code and refresh-token grants, token revocation, a registration endpoint, and public-client authentication. Its canonical JSON SHA-256 is 844ae6de8cf0e8b6b0ac45451471ba50122534cc6c6c4f1f31eb86cba82d4f02.",
+        "The partner connector reference documents 22 exact tool methods across bond and futures pricing, FX spot and forwards, interest-rate, credit, inflation and FX curves, swaps, options, volatility surfaces, IBES consensus, company fundamentals, historical prices, macroeconomics, time series, YieldBook reference and cashflows, scenarios, and fixed-income risk analytics. The ordered tool-name hash is 80746573ef756dcfaae28c2619046c2f3c4e7a7a63429498d3d5f70b0e553765.",
+        "LSEG's official product pages describe active MCP delivery to ChatGPT and Claude, licensed Workspace and Financial Analytics content, and access conditioned on LSEG MCP credentials plus relevant data entitlements.",
+        "OpenAI's pinned Codex snapshot identifies LSEG as developer, maps the connector to private app ID asdk_app_698aec3092e48191a4484b43a3fc79b8, and promises institutional-grade multi-asset market data, analytics, valuations, company financials, news, filings, events, and peer comparison. Its complete four-file inventory has SHA-256 805352b4743200f7558a1857200585b1254fa85792f336bf3a70bb170e81a9fd."
+      ],
+      "codexCapabilities": [
+        "Retrieve recent LSEG market data and company financials for a ticker and summarize valuation drivers",
+        "Find the latest company news, filings, and events and highlight material changes",
+        "Compare a company's key metrics against a peer set using LSEG data",
+        "Access institutional-grade multi-asset market data, analytics, valuation tools, calculations, and financial-instrument analysis through natural language"
+      ],
+      "ghastCapabilities": [
+        "The licensed partner source establishes eight official LSEG financial-analysis workflows and 22 documented MCP tool methods that cover bond, futures, FX, curves, swaps, options, volatility, equity fundamentals and estimates, macro, time-series, YieldBook, scenario, and risk analysis.",
+        "No Ghast plugin is published because LSEG has not documented a portable OAuth client registration or credential configuration for independent MCP clients, and authenticated tools/list has not verified the Codex news, filings, events, and peer-comparison surface."
+      ],
+      "capabilityRelationship": "official-hosted-mcp-and-licensed-partner-source-found-private-oauth-client-and-capability-blockers",
+      "limitations": [
+        "The OpenAI private app ID and Claude-specific /server-cl route are platform mappings, not reusable OAuth clients, access tokens, credentials, or generic Ghast transport grants.",
+        "Although CIAM metadata advertises a registration endpoint, a standards-shaped disposable public-client registration request returned HTTP 404 on August 14, 2026. The partner source publishes no client ID, client secret, callback requirements, token acquisition instructions, account-manager provisioning schema, or independent-client onboarding procedure.",
+        "LSEG's public guidance says users need LSEG MCP server access credentials and active data entitlements, but does not define the credential fields or show how a non-ChatGPT, non-Claude client obtains and refreshes MCP Bearer tokens.",
+        "A short-lived access token copied into a vault would not be a durable implementation. Ghast must not ask users to extract platform tokens, reuse ChatGPT or Claude credentials, automate password grants, or reverse engineer a pre-registered platform client.",
+        "The documented 22 methods do not include explicit news, filing, event, company-search, or peer-set discovery tools, while the Codex connector promises those workflows. LSEG's public product pages describe broader news coverage, but authenticated tools/list is required before claiming equivalence.",
+        "The LSEG-hosted server and licensed data remain governed by customer contracts, product subscriptions, data entitlements, display and redistribution controls, user permissions, geography, exchange rules, and service availability.",
+        "Market prices, curves, estimates, news, filings, risk analytics, scenarios, and valuation outputs are time-sensitive and can be delayed, modeled, licensed, incomplete, or revised. Results must preserve identifiers, currencies, units, timestamps, sources, assumptions, and entitlement boundaries.",
+        "Financial analysis, trade ideas, rich-cheap labels, forecasts, portfolio scenarios, and valuation conclusions are not guaranteed outcomes or personalized financial advice. High-impact investment decisions require qualified review and independent verification.",
+        "The official LSEG API Samples repository lacks a license; only the Apache-2.0 partner copy may be redistributed. LSEG logos, Codex artwork, and hosted service code remain excluded.",
+        "No icon or package is generated while authentication and capability equivalence remain unverified. A future package must include a generic finance icon unless licensed LSEG artwork is separately provided.",
+        "Do not create plugins/lseg until LSEG publishes or supplies a portable OAuth client flow for independent MCP clients, authenticated tools/list confirms usable entitlements and schemas, and the Codex news, filings, events, and peer workflows are either covered or explicitly scoped as a gap."
+      ],
+      "verification": [
+        "Run verify_lseg_evidence from scripts/import-official-hosted-plugins.py",
+        "Verify Anthropic partner-source revision bb4a2b3e53cf27f8900b33ed6a2d95ed32e57f1d, Apache-2.0 license hash, root partner attribution, all 20 plugin file hashes, and complete inventory hash",
+        "Verify LSEG API Samples revision 44422c8ad8366d27d872363981b459912b0db2f4, signed tree, organization identity, absence of a repository license, and byte identity of the manifest, README, and connector reference",
+        "Confirm the exact ordered 22-tool inventory and canonical JSON hash 80746573ef756dcfaae28c2619046c2f3c4e7a7a63429498d3d5f70b0e553765",
+        "Verify the base and Claude-specific official MCP URLs, both protected-resource documents, CIAM authorization metadata, and missing or invalid Bearer HTTP 401 behavior",
+        "Do not repeat client registration automatically; re-audit if LSEG documents public DCR, account-manager client provisioning, static OAuth client fields, or another independent-client authentication flow",
+        "Verify all four OpenAI snapshot files, LSEG developer identity, private app ID, default prompts, capability description, and complete inventory hash",
+        "Confirm plugins/lseg and packages/lseg.zip remain absent while authentication and capability blockers remain",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py"
+      ]
+    },
     "finn": {
       "verificationStatus": "official-source-research-required",
       "officialDeveloper": "FINN GmbH",
