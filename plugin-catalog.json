@@ -2219,6 +2219,36 @@
       "license": "MIT"
     },
     {
+      "id": "marcopolo",
+      "name": "marcopolo",
+      "description": "Work with governed company data in MarcoPolo's secure, persistent remote workspace using the official MCP server and Apache-2.0 workflow skills.",
+      "manifest": {
+        "name": "marcopolo",
+        "description": "Work with governed company data in MarcoPolo's secure, persistent remote workspace using the official MCP server and Apache-2.0 workflow skills.",
+        "author": {
+          "name": "Immersa, Inc.",
+          "url": "https://www.marcopolo.dev"
+        },
+        "icon": "./assets/icon.png",
+        "version": "3.3.1-ghast.1",
+        "homepage": "https://docs.marcopolo.dev/getting-started/codex-plugin",
+        "repository": "https://github.com/immersa-co/marcopolo-plugin",
+        "upstreamRevision": "plugin-113b842f35c8+oauth-b3f86c27fd39+docs-4f9e4cad2748",
+        "license": "Apache-2.0",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/marcopolo.zip",
+        "sha256": "f02ca692dd964de4e57f8834b3302be4420ead9d144951015c0fbacafdb7f336"
+      },
+      "icon": "./plugins/marcopolo/assets/icon.png",
+      "category": "data",
+      "homepage": "https://docs.marcopolo.dev/getting-started/codex-plugin",
+      "repository": "https://github.com/immersa-co/marcopolo-plugin",
+      "license": "Apache-2.0"
+    },
+    {
       "id": "mermaid-mindmap",
       "name": "mermaid-mindmap",
       "description": "Slash command that turns a topic or outline into a Mermaid mindmap code block the chat can render as a tree.",

@@ -45,6 +45,7 @@ LOCAL_ICONS = {
     "glean": "assets/icon.png",
     "hyperframes": "assets/icon.png",
     "heygen": "assets/icon.png",
+    "marcopolo": "assets/icon.png",
     "motherduck": "assets/icon.png",
     "neon-postgres": "assets/icon.svg",
     "nvidia": "assets/icon.png",

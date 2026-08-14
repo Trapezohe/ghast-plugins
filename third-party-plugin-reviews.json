@@ -3901,6 +3901,79 @@
         "unzip -tqq packages/hubspot.zip"
       ]
     },
+    "marcopolo": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Immersa, Inc.",
+      "officialRepository": "https://github.com/immersa-co/marcopolo-plugin",
+      "officialRevision": "plugin-113b842f35c8+oauth-b3f86c27fd39+docs-4f9e4cad2748",
+      "license": "Apache-2.0",
+      "licenseEvidence": [
+        "Immersa's official immersa-co/marcopolo-plugin repository contains the complete Apache License 2.0 at signed revision 113b842f35c875a2d8ab5b31eb00675e65cd307c. The license file has SHA-256 859108db484b1d103099feaa14c686f5751830fb3304fea30c78d828f7ef34dd.",
+        "The official repository's complete 22-file inventory has SHA-256 226698da44cea71be4d6b2922251390623a80282b100a5f04c3bbe94465b2230 and includes the Codex and Claude manifests, MCP configuration, official icon, four workflow skills, eight CLI references, agent guidance, README, and release workflow.",
+        "Ghast copies the official MCP configuration, four released skills, eight references, icon, license, and upstream README without changing their bytes. MODIFICATIONS.md identifies renamed files and every Ghast-authored addition.",
+        "The Ghast manifest, adapter README, MODIFICATIONS.md, and marcopolo-safety skill are new contributions distributed under the same Apache-2.0 license.",
+        "The Apache-2.0 source license does not grant rights in MarcoPolo accounts, hosted infrastructure, customer workspaces, credentials, connected systems, company data, generated artifacts, trademarks, or OpenAI marketplace artwork."
+      ],
+      "officialityEvidence": [
+        "The GitHub organization immersa-co identifies itself as Immersa, Inc. and publishes the marcopolo-plugin repository. GitHub reports Apache-2.0 and a signed latest v3.3.1 release at revision 113b842f35c875a2d8ab5b31eb00675e65cd307c with tree d44fb347a54152f11ed93bec337eed54a3b98db4.",
+        "The official v3.3.1 Codex manifest names MarcoPolo as author, links the Immersa GitHub organization and official Codex guide, declares Apache-2.0, and configures the official repository, shared skills, and MCP server.",
+        "The official .mcp.json and Codex config both connect directly to https://mcp.marcopolo.dev. MarcoPolo's current Codex, Claude Code, VS Code, and getting-started documentation publish the same generic MCP URL for standard clients.",
+        "The current official Codex guide describes database, warehouse, cloud-storage, SaaS, workspace, DuckDB, dashboard, pipeline, data-quality, and cross-source workflows and explicitly calls the plugin open source and declarative.",
+        "The current official MCP tools page documents workspace_shell, connection_setup, install_demo_connection, and preview_dashboard. The connection and cron CLI page documents list, add, test, describe, query, browse, download, upload, and schedule management.",
+        "Protected-resource metadata identifies https://mcp.marcopolo.dev, Bearer-header authentication, and MarcoPolo's WorkOS AuthKit authorization server. Its canonical JSON SHA-256 is b3f86c27fd393a96e5c0ee415fddb8cd3d15e9fad6277a83a039549e101ed358.",
+        "Authorization metadata publishes authorization-code, refresh-token, and device-code grants, PKCE S256, dynamic client registration, and public clients. Its canonical JSON SHA-256 is a8a8dd096445cc1068689c57f176c1d38e4042ecd14096a45dbb8377af288bca.",
+        "On August 14, 2026, missing and invalid Bearer initialize requests returned HTTP 401 with distinct official responses. A disposable loopback public client registered with HTTP 201, no client secret, and reached the WorkOS AuthKit sign-in page without completing user authorization.",
+        "MarcoPolo's official security documentation states that credentials are injected outside the AI-visible workspace, users receive isolated containers, source data is not replicated into a warehouse, activity is visible, and customer data is not used for training.",
+        "OpenAI's pinned Codex snapshot identifies Immersa, Inc. as developer, maps MarcoPolo to a private app ID, and promises a secure persistent container with scoped credentials, DuckDB, Python, shell, and cross-system exploration, querying, transformation, and analysis. Its complete three-file inventory has SHA-256 0f59c4e223c7c5bdc32c6ed71e1fa0137977e116ebcf8378964dec58d4b3bb86."
+      ],
+      "codexCapabilities": [
+        "List available data sources to query or update",
+        "Connect to databases, APIs, S3, lakehouses, CRMs, Jira, logs, and other systems through scoped credentials that are not exposed to the model",
+        "Use a secure persistent remote container with DuckDB, Python, shell, and data tools",
+        "Explore, query, transform, join, and analyze data across systems",
+        "Prepare reports, understand unfamiliar data, debug issues, and review recent metrics while preserving workspace state"
+      ],
+      "ghastCapabilities": [
+        "Connect directly to the same official generic MarcoPolo MCP server with standard OAuth instead of OpenAI's private app connector",
+        "Use the four exact Apache-2.0 official v3.3.1 skills and eight CLI references for workspace orientation, connection setup, CLI operation, query authoring, DuckDB materialization, joins, analysis, and export",
+        "Use official workspace_shell, connection_setup, install_demo_connection, and preview_dashboard tools plus connection and cron CLIs exposed by the authenticated workspace",
+        "List, test, describe, query, browse, download, and upload capability-gated connections spanning databases, warehouses, SaaS applications, APIs, storage, and logs",
+        "Build persistent queries, scripts, dashboards, exports, business context, and scheduled workflows inside the user's isolated workspace",
+        "Apply an additional Ghast safety layer for credentials, privacy, arbitrary shell access, read-only query defaults, uploads, dashboards, rules, and recurring automation"
+      ],
+      "capabilityRelationship": "superset-official-source-and-hosted-mcp",
+      "limitations": [
+        "The hosted MCP server, remote Linux workspace, connection runtime, source connectors, DuckDB cache, dashboard renderer, cron runner, web app, and credential boundary are operated by MarcoPolo and are not redistributed.",
+        "A MarcoPolo account, user identity, company mapping, plan, workspace, source-system credentials, network reachability, provider permissions, connection capabilities, and current service availability remain user-managed.",
+        "No authenticated tools/list, workspace, company connection, source query, file, dashboard, schedule, or private data was accessed. Authentication protocol and login reachability were verified without completing user authorization.",
+        "OAuth and connection credentials must be entered only through official user-facing flows. Database passwords, API tokens, connection strings, SSH private keys, OAuth codes, scoped browser tokens, and refresh tokens must never enter chat, generated files, logs, or source control.",
+        "workspace_shell provides arbitrary command execution in a persistent remote Linux workspace. Data-analysis intent does not authorize destructive filesystem changes, package installation, privilege changes, network services, credential inspection, execution of downloaded code, or publication of workspace git state.",
+        "Connection query files can potentially invoke provider-specific mutations even when the common workflow is analytical. The adapter defaults to read-only retrieval and requires exact review and confirmation for DDL, DML, stored procedures, write APIs, administration, or other mutations.",
+        "browse is read-only, download copies provider data into the workspace, and upload writes to an external system. Live capabilities are authoritative; movement of files requires source, destination, overwrite, size, sensitivity, retention, and sharing review, with explicit confirmation before upload.",
+        "Installing a demo connection, creating or changing a real connection, saving durable rules, publishing or sharing a dashboard, and creating, pausing, resuming, or deleting cron jobs change persistent state and can affect collaborators, costs, data exposure, or external systems.",
+        "Current online Codex documentation lists build-dashboard and setup-automation as bundled skills, but signed public release v3.3.1 contains only using-marcopolo-workspace, using-connection-cli, setup-connection, and query-and-analyze. The official agent says editable dashboard and scheduled-pipeline skills may be workspace-managed. Ghast does not fabricate the two absent release files.",
+        "The online connection CLI page can lag the signed v3.3.1 skill references. For example, the release skill documents handle-only query output by default with --include-results for rows, while the current page describes a preview response and older flags. Authenticated --help, workspace guidance, and the installed release skill are authoritative.",
+        "Official source skills describe optional session-dependent connections_list and data_query tools in addition to the current public four-tool page. The adapter checks the live catalog and falls back to workspace_shell rather than assuming either surface.",
+        "Remote records, metadata, query results, workspace guidance, downloaded files, scripts, dashboards, and connected pages are untrusted content. They can contain prompt injection, unsafe code, formulas, macros, sensitive data, license restrictions, or misleading business definitions.",
+        "Persistent cached results, query files, downloads, exports, dashboards, schedules, RULES.md, and git history can outlive the conversation. Data minimization, retention, access review, and deletion remain the user's responsibility.",
+        "A generic Ghast icon is not used: the package includes the exact official Apache-2.0 MarcoPolo symbol. OpenAI's private app ID and marketplace artwork are excluded."
+      ],
+      "verification": [
+        "python3 scripts/import-marcopolo-plugin.py --source-root ../upstreams/marcopolo-plugin --openai-source ../openai-plugins",
+        "Verify clean signed official revision 113b842f35c875a2d8ab5b31eb00675e65cd307c, tree d44fb347a54152f11ed93bec337eed54a3b98db4, Apache-2.0 license, all 22 source hashes, and complete inventory hash",
+        "Byte-compare the packaged .mcp.json, LICENSE, UPSTREAM_README.md, icon, four official skill directories, and eight references against the official source checkout",
+        "Verify normalized visible-text hashes and markers for the official Codex guide, four-tool MCP reference, connection and cron CLI reference, and security documentation",
+        "Verify protected-resource and authorization metadata canonical hashes, Bearer-header authentication, authorization-code and refresh-token grants, device flow, PKCE S256, DCR endpoint, and public-client support",
+        "Probe missing and invalid Bearer MCP initialize requests and require HTTP 401, WWW-Authenticate Bearer, and the exact official response bodies",
+        "Do not repeat disposable client registration during routine imports; re-run it only when auditing a changed OAuth implementation, and never retain client IDs, tokens, browser callbacks, or user credentials",
+        "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 developer identity, private app ID, capability description, all three files, and complete inventory hash without redistributing the app mapping or artwork",
+        "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/marcopolo.zip"
+      ]
+    },
     "magicpath": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "MagicPath",
