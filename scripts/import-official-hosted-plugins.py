@@ -4366,6 +4366,15 @@ HG_INSIGHTS_RESOURCES_DOCS_URL = (
 HG_INSIGHTS_SECURITY_DOCS_URL = (
     "https://phoenix.hginsights.com/docs/governance/security-guardrails"
 )
+HG_INSIGHTS_ADMIN_OVERVIEW_URL = (
+    "https://phoenix.hginsights.com/docs/admin/overview"
+)
+HG_INSIGHTS_ADMIN_USER_MANAGEMENT_URL = (
+    "https://phoenix.hginsights.com/docs/admin/user-management"
+)
+HG_INSIGHTS_ADMIN_INTEGRATIONS_URL = (
+    "https://phoenix.hginsights.com/docs/admin/integrations"
+)
 HG_INSIGHTS_OAUTH_METADATA_URL = (
     "https://phoenix.hginsights.com/.well-known/oauth-protected-resource"
 )
@@ -4382,7 +4391,7 @@ HG_INSIGHTS_OAUTH_DOCS_SHA256 = (
     "ebef11b2db8f3456ee7750a3486ecb869bdbb65fa5187abbc80d2a67b1487644"
 )
 HG_INSIGHTS_TOOLS_DOCS_SHA256 = (
-    "c6ffc8835205c221b3f229ba205f2f946042804b406feb01ee4e1440cdde463b"
+    "c5c35d6c92326e2fbb78a58ba2892d1478ac7fa9576dc700d252ff65f6b88701"
 )
 HG_INSIGHTS_PROMPTS_DOCS_SHA256 = (
     "14c9fca2cd9aa51a31a2364bd07e6d6478d381c5a4ab4d0e0d913bb2e1d2bb88"
@@ -4393,54 +4402,261 @@ HG_INSIGHTS_RESOURCES_DOCS_SHA256 = (
 HG_INSIGHTS_SECURITY_DOCS_SHA256 = (
     "60950ba964321a84fb6f13199f970ad5b1c475f25485b528370e8d42cc1533be"
 )
+HG_INSIGHTS_ADMIN_OVERVIEW_SHA256 = (
+    "17be9845965d0b639fbdfd4134c3617b8b9eddc5dbdcbf02161745e1e837b7d2"
+)
+HG_INSIGHTS_ADMIN_USER_MANAGEMENT_SHA256 = (
+    "7f84459912ef71ef761e84d4e3d0901612edb13711f6c3a6615fd271f7bf0666"
+)
+HG_INSIGHTS_ADMIN_INTEGRATIONS_SHA256 = (
+    "48ebbf6f4feac1d75b14d4ac740d346ebcdf351e858f2d01031ae7241dcc341b"
+)
 HG_INSIGHTS_OAUTH_METADATA_SHA256 = (
     "8bce6138eff9a6e27fef713ec8ab3e7633119427819e5d45bf0c185cd0fa0290"
 )
 HG_INSIGHTS_AUTH_SERVER_SHA256 = (
     "b8c5272ae66b4b5921abdd8e463bdb9eefb7b9aa3538c3b06fa4742892d72fb7"
 )
+HG_INSIGHTS_TOOL_PAGE_SLUGS = (
+    "phoenix-onboarding",
+    "company-contracts",
+    "company-gov-opportunities",
+    "company-gov-relationships",
+    "get-company-hierarchy",
+    "company-install-time-series",
+    "company-firmographic",
+    "company-operating-signals",
+    "company-ai-maturity",
+    "company-technographic",
+    "company-fai",
+    "company-intent",
+    "contact-enrich",
+    "company-search",
+    "contact-search",
+    "company-spend",
+    "get-product-information",
+    "company-cloud-spend",
+    "get-product-reviews",
+    "list-vendors",
+    "intent-category",
+    "list-intent-topics",
+    "product-search-and-enrich",
+    "web-search",
+    "phoenix-agents",
+    "search-federal-contracts",
+    "search-gov-opportunities",
+    "sec-filing-section",
+    "sec-full-text-search",
+    "hg-data-query",
+    "hg-catalog",
+    "search-industries-naics-sic",
+    "admin-invite-user",
+    "admin-remove-user",
+    "admin-get-consumption",
+    "admin-list-integrations",
+    "admin-list-users",
+    "admin-list-api-keys",
+    "admin-set-integration-credentials",
+    "admin-get-consumption-by-api-key",
+    "admin-remove-integration-credentials",
+    "get-product-category",
+    "get-product-attribute",
+)
+HG_INSIGHTS_TOOL_PAGE_SLUGS_SHA256 = (
+    "5b150bc78382d69062add4416ce00cc1335dfb2253be67c873b94fcdec13ee56"
+)
 HG_INSIGHTS_DOCUMENTED_TOOLS = (
-    "company_firmographic",
-    "hg_catalog",
-    "get_product_category",
-    "get_vendor_information",
-    "get_product_information",
-    "get_product_reviews",
     "phoenix_onboarding",
+    "company_contracts",
+    "company_gov_opportunities",
+    "company_gov_relationships",
+    "get_company_hierarchy",
+    "company_install_time_series",
+    "company_firmographic",
     "company_operating_signals",
     "company_ai_maturity",
     "company_technographic",
     "company_fai",
     "company_intent",
-    "company_spend",
-    "company_cloud_spend",
-    "company_install_time_series",
-    "company_contracts",
-    "hg_data_query",
-    "search_companies",
-    "web_search",
-    "get_product_attribute",
-    "list_intent_topics",
-    "contact_search",
     "contact_enrich",
+    "company_search",
+    "contact_search",
+    "company_spend",
+    "get_product_information",
+    "company_cloud_spend",
+    "get_product_reviews",
+    "list_vendors",
     "intent_category",
-    "search_federal_contracts",
-    "search_gov_opportunities",
-    "company_gov_opportunities",
-    "company_gov_relationships",
-    "sec_filing_section",
-    "sec_full_text_search",
+    "list_intent_topics",
+    "product_search_and_enrich",
+    "web_search",
     "phoenix_list_agents",
     "phoenix_invoke_agent",
     "phoenix_get_run_status",
+    "search_federal_contracts",
+    "search_gov_opportunities",
+    "sec_filing_section",
+    "sec_full_text_search",
+    "hg_data_query",
+    "hg_catalog",
+    "search_industries_naics_sic",
+    "admin_invite_user",
+    "admin_remove_user",
+    "admin_get_consumption",
+    "admin_list_integrations",
+    "admin_list_users",
+    "admin_list_api_keys",
+    "admin_set_integration_credentials",
+    "admin_get_consumption_by_api_key",
+    "admin_remove_integration_credentials",
+    "get_product_category",
+    "get_product_attribute",
 )
 HG_INSIGHTS_DOCUMENTED_TOOLS_SHA256 = (
-    "52b53bfbd2774c844a5dfa00a0cb2c96d4220c8d50e787ddb54654b65efa76ec"
+    "0ee3682befea4451f8679c960333ae3c0276a39a0c6b3ec3915a7105b08bf01b"
+)
+HG_INSIGHTS_ADMIN_READ_TOOLS = (
+    "admin_get_consumption",
+    "admin_list_integrations",
+    "admin_list_users",
+    "admin_list_api_keys",
+    "admin_get_consumption_by_api_key",
+)
+HG_INSIGHTS_ADMIN_READ_TOOLS_SHA256 = (
+    "704a94c52bf5981095fca2f946131d7145a238d13b31be3662d1944639f3e7a3"
+)
+HG_INSIGHTS_ADMIN_WRITE_TOOLS = (
+    "admin_invite_user",
+    "admin_remove_user",
+    "admin_set_integration_credentials",
+    "admin_remove_integration_credentials",
+)
+HG_INSIGHTS_ADMIN_WRITE_TOOLS_SHA256 = (
+    "45b5e5fd08df8e39d4d5e01e31190de8de3101c6ab077dde4ada61104a70f70e"
+)
+HG_INSIGHTS_ADMIN_DESTRUCTIVE_TOOLS = (
+    "admin_remove_user",
+    "admin_remove_integration_credentials",
+)
+HG_INSIGHTS_ADMIN_DESTRUCTIVE_TOOLS_SHA256 = (
+    "ae890475faa51b795e89a144bd91c460d28c398ddbbe8dbbd990351579e465ef"
+)
+HG_INSIGHTS_UPDATED_TOOL_PAGES = {
+    "company-search": (
+        "9870326eee228364d777343d032b4524a45b9085a305774bbdda4c10c26970d5",
+        ("Company Search", '"tool" : "company_search"'),
+    ),
+    "get-company-hierarchy": (
+        "d8752f4b417eaee234fdc234650a02fbf3228cc5d4b9fa1b0a24c895c842fa39",
+        (
+            "Tool key: get_company_hierarchy",
+            "0.1 credits per node returned",
+            "depth and mode are the primary levers",
+        ),
+    ),
+    "list-vendors": (
+        "3ea54c5d322f65d1155e5b5d60c2c695c1547c142db3faf30ba284ac764e9545",
+        ("List Vendors", '"tool" : "list_vendors"'),
+    ),
+    "product-search-and-enrich": (
+        "20b86cae58f51a79a2a0552e65b95c513b2f52e945dc496e9056edfe289f693e",
+        (
+            "product_search_and_enrich is a single MCP tool",
+            'action: "search"',
+            'action: "enrich"',
+            "1 credit per successfully matched",
+        ),
+    ),
+    "search-industries-naics-sic": (
+        "ed7c64e66618f63924289164dd045c7d004d543595030d45528eacedbb702cd7",
+        (
+            "search_industries_naics_sic resolves industry names",
+            "Free — this tool does not consume any credits",
+        ),
+    ),
+    "admin-invite-user": (
+        "501e4ea82ebd69edfffce1f8e9be4dd8d6da62fb7e7f82cfb405c8ec9e00db11",
+        (
+            "Requires admin-scoped API key",
+            "Tool key: admin_invite_user",
+            "recipient receives a SendGrid magic-link email",
+        ),
+    ),
+    "admin-remove-user": (
+        "9b03bcb9553a30f80234edae42d08ffc0993195eeb1b1d0a6e551cd6cac07a11",
+        (
+            "Requires admin-scoped API key",
+            "Destructive",
+            "Tool key: admin_remove_user",
+            "revokes all of their API keys and OAuth tokens",
+            "This cannot be undone",
+        ),
+    ),
+    "admin-get-consumption": (
+        "c35d8ac7268ea464f3163c26e550989b1a63fb6acb586d9b2ebb577623f2579f",
+        (
+            "Tool key: admin_get_consumption",
+            "Consumption data can be sensitive",
+        ),
+    ),
+    "admin-list-integrations": (
+        "f9227e7045dfb1ee6cc5c9f09e001103db755ec4b13b9c6517740a9a3eede934",
+        (
+            "Tool key: admin_list_integrations",
+            "credential values are never included in the response",
+        ),
+    ),
+    "admin-list-users": (
+        "87b5891333d7504fd66ad36c88d3d2d66829b07108ffa2afb3f2897ca4457feb",
+        (
+            "Tool key: admin_list_users",
+            "Enumerate every user in the calling org",
+            "all-time credit consumption",
+        ),
+    ),
+    "admin-list-api-keys": (
+        "7c797c69fb5db6cc0a3721b74f2e1760b2270de1e457a10bb8722060a75509dd",
+        (
+            "Tool key: admin_list_api_keys",
+            "The raw key is never returned",
+            "12-character key prefix",
+        ),
+    ),
+    "admin-set-integration-credentials": (
+        "b9f3be325e82c47a3f77c700237c5ed66c52ef2f7a8ea9a39ed6d88427f47dee",
+        (
+            "Tool key: admin_set_integration_credentials",
+            "Set or rotate the credential for an integration",
+            "Treated as a secret",
+            "never echoed in responses",
+            "redacted from telemetry",
+        ),
+    ),
+    "admin-get-consumption-by-api-key": (
+        "0bdd977b674f6f61c208adcee3575aef987084ed84e47a0425137711a517ada4",
+        (
+            "Tool key: admin_get_consumption_by_api_key",
+            "The primary use case is incident response",
+            "deleted: true",
+        ),
+    ),
+    "admin-remove-integration-credentials": (
+        "e2d1d8aade725083f00dc6986d938a01cf0616d33af48faf99bb8b21369968c0",
+        (
+            "Tool key: admin_remove_integration_credentials",
+            "Deactivate an integration by removing its credential",
+            "Idempotent",
+        ),
+    ),
+}
+HG_INSIGHTS_RESEARCH_TOOLS_SHA256 = (
+    "0fc4e056764897ca097a5b5bc02fffc2f3cbcf077652eb679a00d91ae0cd76da"
 )
 HG_INSIGHTS_EVIDENCE_REVISION = (
-    "hg-phoenix-docs-c6ffc8835205"
+    "hg-phoenix-docs-c5c35d6c9232"
     "+auth-57567aa2b2e3"
-    "+oauth-8bce6138eff9"
+    "+tools-0ee3682befea"
+    "+admin-17be9845965d"
 )
 HG_INSIGHTS_OPENAI_REVISION = "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9"
 HG_INSIGHTS_OPENAI_BASE_URL = (
@@ -14594,6 +14810,10 @@ def verify_hg_insights_evidence() -> None:
                 "Authorization: Bearer phx_your_api_key_here",
                 "provide access to the same MCP tools",
                 "Use Bearer token auth",
+                "Admin keys",
+                "privileged admin API key",
+                "invite users, configure integrations",
+                "forbidden_admin_scope",
             ),
         ),
         (
@@ -14625,6 +14845,11 @@ def verify_hg_insights_evidence() -> None:
                 "contact_enrich",
                 "hg_data_query",
                 "phoenix_invoke_agent",
+                "Data Coverage at a Glance",
+                "40M+ companies",
+                "1,000 tool calls per minute per API key",
+                "Company data: 1 hour cache",
+                "Search results: 15 minute cache",
             ),
         ),
         (
@@ -14664,6 +14889,49 @@ def verify_hg_insights_evidence() -> None:
                 "x-api-key",
             ),
         ),
+        (
+            HG_INSIGHTS_ADMIN_OVERVIEW_URL,
+            HG_INSIGHTS_ADMIN_OVERVIEW_SHA256,
+            (
+                "Admin operations: overview",
+                "User keys — the default",
+                "Admin keys — additionally authorized",
+                "invite/remove users, configure integrations",
+                "webapp_org_admin_audit_log",
+                "What admin keys cannot do",
+                "Mint other admin keys via the API",
+                "admin_set_integration_credentials",
+                "admin_remove_integration_credentials",
+            ),
+        ),
+        (
+            HG_INSIGHTS_ADMIN_USER_MANAGEMENT_URL,
+            HG_INSIGHTS_ADMIN_USER_MANAGEMENT_SHA256,
+            (
+                "User management",
+                "All operations require an admin-scoped API key",
+                "admin_invite_user",
+                "admin_remove_user",
+                "admin_list_users",
+                "admin_list_api_keys",
+                "revokes their access",
+                "500 requests per minute per API key",
+            ),
+        ),
+        (
+            HG_INSIGHTS_ADMIN_INTEGRATIONS_URL,
+            HG_INSIGHTS_ADMIN_INTEGRATIONS_SHA256,
+            (
+                "Integration configuration",
+                "All operations require an admin-scoped API key",
+                "Setting credentials activates the integration",
+                "Deleting credentials deactivates the integration immediately",
+                "credential values are never included",
+                "redacts it to the literal string '<redacted>'",
+                "admin_set_integration_credentials",
+                "admin_remove_integration_credentials",
+            ),
+        ),
     )
     for url, expected_hash, markers in documents:
         normalized = normalize_hg_insights_docs(fetch_text(url))
@@ -14677,17 +14945,38 @@ def verify_hg_insights_evidence() -> None:
                     f"HG Insights documentation {url} is missing {marker!r}"
                 )
     tools_html = fetch_text(HG_INSIGHTS_TOOLS_DOCS_URL)
-    documented_tools = []
-    for name in re.findall(
-        r"<code[^>]*>([a-z][a-z0-9_]+)</code>",
+    tool_page_slugs = []
+    for href in re.findall(
+        r'href="([^"]*?/docs/mcp-tools/[^"]+)"',
         tools_html,
     ):
-        name = unescape(name)
-        if (
-            name in HG_INSIGHTS_DOCUMENTED_TOOLS
-            and name not in documented_tools
-        ):
-            documented_tools.append(name)
+        href = unescape(href)
+        if href.startswith("https://") or "#" in href:
+            continue
+        slug = href.rsplit("/", 1)[-1]
+        if slug != "overview" and slug not in tool_page_slugs:
+            tool_page_slugs.append(slug)
+    if (
+        tuple(tool_page_slugs) != HG_INSIGHTS_TOOL_PAGE_SLUGS
+        or canonical_json_sha256(tool_page_slugs)
+        != HG_INSIGHTS_TOOL_PAGE_SLUGS_SHA256
+    ):
+        raise ValueError(
+            "HG Insights documented tool-page navigation changed"
+        )
+
+    documented_tools = []
+    for slug in tool_page_slugs:
+        if slug == "phoenix-agents":
+            documented_tools.extend(
+                (
+                    "phoenix_list_agents",
+                    "phoenix_invoke_agent",
+                    "phoenix_get_run_status",
+                )
+            )
+        else:
+            documented_tools.append(slug.replace("-", "_"))
     if (
         tuple(documented_tools) != HG_INSIGHTS_DOCUMENTED_TOOLS
         or canonical_json_sha256(documented_tools)
@@ -14696,6 +14985,62 @@ def verify_hg_insights_evidence() -> None:
         raise ValueError(
             "HG Insights documented tool-name inventory changed"
         )
+
+    research_tools = tuple(
+        name for name in documented_tools if not name.startswith("admin_")
+    )
+    if (
+        len(research_tools) != 36
+        or canonical_json_sha256(research_tools)
+        != HG_INSIGHTS_RESEARCH_TOOLS_SHA256
+    ):
+        raise ValueError(
+            "HG Insights research-tool inventory changed"
+        )
+    admin_tools = tuple(
+        name for name in documented_tools if name.startswith("admin_")
+    )
+    if (
+        admin_tools
+        != (
+            "admin_invite_user",
+            "admin_remove_user",
+            "admin_get_consumption",
+            "admin_list_integrations",
+            "admin_list_users",
+            "admin_list_api_keys",
+            "admin_set_integration_credentials",
+            "admin_get_consumption_by_api_key",
+            "admin_remove_integration_credentials",
+        )
+        or canonical_json_sha256(HG_INSIGHTS_ADMIN_READ_TOOLS)
+        != HG_INSIGHTS_ADMIN_READ_TOOLS_SHA256
+        or canonical_json_sha256(HG_INSIGHTS_ADMIN_WRITE_TOOLS)
+        != HG_INSIGHTS_ADMIN_WRITE_TOOLS_SHA256
+        or canonical_json_sha256(HG_INSIGHTS_ADMIN_DESTRUCTIVE_TOOLS)
+        != HG_INSIGHTS_ADMIN_DESTRUCTIVE_TOOLS_SHA256
+    ):
+        raise ValueError(
+            "HG Insights administrator-tool classification changed"
+        )
+
+    for slug, (expected_hash, markers) in (
+        HG_INSIGHTS_UPDATED_TOOL_PAGES.items()
+    ):
+        detail_url = (
+            "https://phoenix.hginsights.com/docs/mcp-tools/" + slug
+        )
+        detail = normalize_hg_insights_docs(fetch_text(detail_url))
+        if sha256_text(detail) != expected_hash:
+            raise ValueError(
+                f"HG Insights tool documentation changed: {detail_url}"
+            )
+        for marker in markers:
+            if marker not in detail:
+                raise ValueError(
+                    f"HG Insights tool documentation {detail_url} "
+                    f"is missing {marker!r}"
+                )
 
     metadata = fetch_json(HG_INSIGHTS_OAUTH_METADATA_URL)
     if (
@@ -20006,7 +20351,7 @@ def import_hg_insights() -> None:
         skill_dir.mkdir(parents=True)
         manifest = {
             "name": "hg-insights",
-            "version": "1.0.3-ghast.1",
+            "version": "1.0.3-ghast.2",
             "description": (
                 "Research companies, markets, technology adoption, buying "
                 "signals, spend, contracts, contacts, and GTM segments "
@@ -23671,8 +24016,9 @@ Use HG Insights' official Phoenix MCP server declared by this plugin.
 ## Account and permitted-use boundary
 
 - Authenticate with an API key created from the intended Phoenix
-  organization. The key is organization-scoped and can expose every MCP tool
-  and REST API enabled for that organization. Verify the organization,
+  organization. Use a user-scoped key for ordinary research. An admin-scoped
+  key additionally exposes privileged organization management tools and must
+  not be the default research credential. Verify the organization, key scope,
   workspace, plan, integrations, and user purpose before retrieving data.
 - HG Insights explicitly licenses MCP data for agentic workflows: answering a
   question, researching an account, or producing a deliverable. Do not use
@@ -23689,9 +24035,12 @@ Use HG Insights' official Phoenix MCP server declared by this plugin.
   canonical domain and confirm name, headquarters, geography, parent or
   subsidiary, and any returned HG identifier. Do not merge similarly named
   companies or silently substitute a parent for a subsidiary.
-- Use `search_companies` for discovery, then retrieve only the families needed
+- Use `company_search` for discovery, then retrieve only the families needed
   for the request. Avoid broad enrichment when firmographics alone answer the
   question.
+- Use `get_company_hierarchy` only when parent, subsidiary, or Group HQ
+  relationships matter. Set an explicit mode and depth because cost is
+  assessed per returned node and the service does not truncate broad trees.
 - Preserve retrieval dates, source dates, units, currencies, geography,
   category definitions, and confidence or coverage fields. Distinguish
   observed source data, HG-derived scores, partner signals, and assistant
@@ -23734,11 +24083,14 @@ Use HG Insights' official Phoenix MCP server declared by this plugin.
 
 ## Catalog, filings, government, and web evidence
 
-- Use `hg_catalog`, `get_product_category`, `get_vendor_information`,
-  `get_product_information`, `get_product_reviews`, and
-  `get_product_attribute` to interpret product and vendor taxonomy. Product
-  information and reviews can depend on configured partner integrations;
-  preserve provider attribution and do not imply universal availability.
+- Use `hg_catalog`, `get_product_category`, `list_vendors`,
+  `get_product_information`, `get_product_reviews`,
+  `product_search_and_enrich`, `get_product_attribute`, and
+  `search_industries_naics_sic` to interpret warehouse, product, vendor,
+  attribute, HG industry, NAICS, and SIC taxonomies. Product information and
+  reviews can depend on configured partner integrations; preserve provider
+  attribution and do not imply universal availability. Search before paid
+  product enrichment and confirm the selected product IDs.
 - Use `sec_filing_section` and `sec_full_text_search` for filing evidence.
   Cite the company, form, filing date, period, section, and source link. Read
   enough surrounding text to avoid quoting a hit out of context.
@@ -23773,18 +24125,44 @@ Use HG Insights' official Phoenix MCP server declared by this plugin.
 
 ## Writes and service behavior
 
-- The audited public overview is research-oriented, but an authenticated
-  organization can expose additional tools. Before any create, update,
-  delete, invite, credential, integration, API-key, sharing, export, or other
-  state-changing action, show the exact target and complete effect and obtain
-  explicit confirmation in the current conversation.
+- User-scoped keys do not expose administrator tools. Do not ask for or switch
+  to an admin-scoped key for a research request. When the user explicitly asks
+  for organization administration, verify that they intend the exact Phoenix
+  organization and understand that successful privileged reads and writes are
+  recorded in HG Insights' organization audit log.
+- `admin_get_consumption`, `admin_list_integrations`, `admin_list_users`,
+  `admin_list_api_keys`, and `admin_get_consumption_by_api_key` are sensitive
+  administrator reads. Minimize fields and time windows, do not enumerate the
+  whole organization when a narrower filter answers the request, and do not
+  expose user emails, key prefixes, usage, billing, or integration inventory
+  beyond the stated purpose.
+- Before `admin_invite_user`, show the exact email, display name, member or
+  admin role, organization, and fact that an invitation email will be sent.
+  Obtain explicit confirmation immediately before the call.
+- `admin_remove_user` is destructive and revokes the target's organization
+  memberships, API keys, and OAuth tokens. Require fresh explicit
+  confirmation naming the exact user ID, email, organization, and irreversible
+  effect. Never infer removal from a cleanup, offboarding review, or inactive
+  account report.
+- Do not collect or pass an integration credential through chat for
+  `admin_set_integration_credentials`. Direct secret activation or rotation to
+  the official Phoenix web application or an approved secret-management
+  workflow where the value does not enter the model context.
+- `admin_remove_integration_credentials` deactivates an integration by
+  deleting its stored credential. Show the integration key, affected tools,
+  current configuration metadata, organization, and outage impact, then
+  require fresh explicit confirmation immediately before the call.
 - Do not retry an ambiguous state-changing or credit-consuming operation.
   Inspect run status or current state first.
 - The official overview headline says 29 native tools plus two aggregated
-  tools, while the audited page contains 33 distinct documented tool
-  identifiers after excluding protocol and integration identifiers. Treat
-  the authenticated `tools/list` response as authoritative and report
+  tools, while the audited navigation resolves to 45 tool identifiers: 36
+  research tools and 9 admin-scoped tools. Treat the authenticated
+  `tools/list` response and key scope as authoritative and report
   documentation or entitlement differences instead of inventing tools.
+- The public overview documents 1,000 standard tool calls per minute per API
+  key, while the administrator guide documents 500 admin requests per minute.
+  Respect returned rate-limit and Retry-After headers; do not use concurrency
+  or retries to evade either limit.
 - Availability depends on the Phoenix organization, RGI Developers or RGI
   Agents account, plan, credits, integrations, source-provider licenses, and
   permissions. Report authentication, entitlement, integration, credit,
@@ -27781,10 +28159,17 @@ text at SHA-256 `{HG_INSIGHTS_GETTING_STARTED_SHA256}`,
 `{HG_INSIGHTS_RESOURCES_DOCS_SHA256}`, and
 `{HG_INSIGHTS_SECURITY_DOCS_SHA256}`.
 
+The official administrator overview, user-management, and integration-
+configuration pages are pinned at normalized visible-text SHA-256
+`{HG_INSIGHTS_ADMIN_OVERVIEW_SHA256}`,
+`{HG_INSIGHTS_ADMIN_USER_MANAGEMENT_SHA256}`, and
+`{HG_INSIGHTS_ADMIN_INTEGRATIONS_SHA256}`.
+
 Protected-resource and authorization-server metadata are pinned at canonical
 JSON SHA-256 `{HG_INSIGHTS_OAUTH_METADATA_SHA256}` and
-`{HG_INSIGHTS_AUTH_SERVER_SHA256}`. The ordered 33-name tool-identifier
-inventory extracted from the official overview is pinned at
+`{HG_INSIGHTS_AUTH_SERVER_SHA256}`. The ordered 43-page navigation and
+45-name tool inventory are pinned at canonical JSON SHA-256
+`{HG_INSIGHTS_TOOL_PAGE_SLUGS_SHA256}` and
 `{HG_INSIGHTS_DOCUMENTED_TOOLS_SHA256}`.
 
 Codex capability evidence is pinned to OpenAI plugin snapshot
@@ -27808,11 +28193,11 @@ artwork are verified as evidence but are not copied into this package.
   simpler official API-key route because Phoenix documents it for direct
   integrations controlled by the client owner.
 - The official product surface covers company identity and firmographics,
-  technographics and install history, operating and AI maturity signals,
-  functional adoption, buyer intent, IT and cloud spend, contracts, contacts,
-  product and vendor intelligence, SEC filings, federal contracts and
-  opportunities, governed warehouse queries, web research, and Phoenix agent
-  invocation.
+  corporate hierarchy, technographics and install history, operating and AI
+  maturity signals, functional adoption, buyer intent, IT and cloud spend,
+  contracts, contacts, product and vendor intelligence, industry taxonomy,
+  SEC filings, federal contracts and opportunities, governed warehouse
+  queries, web research, and Phoenix agent invocation.
 - This is a functional superset of the Codex description and all three
   default workflows: account prioritization using buyer intent, market sizing
   and GTM segmentation, and target-account enrichment with technographics,
@@ -27831,11 +28216,21 @@ artwork are verified as evidence but are not copied into this package.
   entitlements, and many data, query, reveal, web, and agent operations can
   consume credits. The skill minimizes retrieval, preserves source and model
   distinctions, and confirms broad or materially billable work.
-- The official tools overview headline says 29 native tools plus two
-  aggregated tools, but its current body contains 33 distinct tool
-  identifiers after excluding protocol and integration identifiers. The
-  adapter records this documentation inconsistency and treats authenticated
-  `tools/list` as authoritative.
+- The official tools overview headline still says 29 native tools plus two
+  aggregated tools, but its August 14, 2026 navigation resolves to 43 detail
+  pages and 45 tool identifiers: 36 research tools plus 9 tools visible only
+  to admin-scoped keys. The adapter records this documentation inconsistency
+  and treats authenticated `tools/list` and API-key scope as authoritative.
+- Current administrator tools can invite or remove users, inspect organization
+  users, API-key prefixes, integrations and consumption, and set, rotate, or
+  remove integration credentials. The skill defaults ordinary work to a
+  user-scoped key, protects sensitive administrator reads, requires explicit
+  confirmation for invitations and destructive operations, and prohibits
+  collecting integration secrets through chat.
+- The overview documents 1,000 standard tool calls per minute per API key.
+  The administrator guide separately documents 500 admin requests per minute.
+  Company data, product catalogs, and search results are documented as cached
+  for one hour, 24 hours, and 15 minutes respectively.
 - On August 14, 2026, missing and invalid API-key initialize requests to
   `{HG_INSIGHTS_MCP_URL}` returned HTTP 401 with distinct official Bearer
   challenges. Missing and invalid OAuth tokens at
@@ -27846,10 +28241,11 @@ artwork are verified as evidence but are not copied into this package.
   by the service edge. No client registration, user sign-in, token, reusable
   credential, authenticated tool list, account data, contact data, credits,
   query, or agent run was obtained or used.
-- No public source repository for the hosted Phoenix MCP implementation was
-  identified at the audited revision. The adapter relies only on
-  developer-owned documentation, live authentication boundaries, standard
-  metadata, and user-supplied service credentials.
+- The official documentation's edit links identify `HGData/hip-phoenix`, but
+  that implementation repository is not publicly accessible and no reusable
+  public license was available at the audited revision. The adapter relies
+  only on developer-owned documentation, live authentication boundaries,
+  standard metadata, and user-supplied service credentials.
 - A generic revenue-intelligence icon is used because no licensed HG Insights
   catalog artwork is redistributed.
 

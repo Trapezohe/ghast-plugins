@@ -13,8 +13,9 @@ Use HG Insights' official Phoenix MCP server declared by this plugin.
 ## Account and permitted-use boundary
 
 - Authenticate with an API key created from the intended Phoenix
-  organization. The key is organization-scoped and can expose every MCP tool
-  and REST API enabled for that organization. Verify the organization,
+  organization. Use a user-scoped key for ordinary research. An admin-scoped
+  key additionally exposes privileged organization management tools and must
+  not be the default research credential. Verify the organization, key scope,
   workspace, plan, integrations, and user purpose before retrieving data.
 - HG Insights explicitly licenses MCP data for agentic workflows: answering a
   question, researching an account, or producing a deliverable. Do not use
@@ -31,9 +32,12 @@ Use HG Insights' official Phoenix MCP server declared by this plugin.
   canonical domain and confirm name, headquarters, geography, parent or
   subsidiary, and any returned HG identifier. Do not merge similarly named
   companies or silently substitute a parent for a subsidiary.
-- Use `search_companies` for discovery, then retrieve only the families needed
+- Use `company_search` for discovery, then retrieve only the families needed
   for the request. Avoid broad enrichment when firmographics alone answer the
   question.
+- Use `get_company_hierarchy` only when parent, subsidiary, or Group HQ
+  relationships matter. Set an explicit mode and depth because cost is
+  assessed per returned node and the service does not truncate broad trees.
 - Preserve retrieval dates, source dates, units, currencies, geography,
   category definitions, and confidence or coverage fields. Distinguish
   observed source data, HG-derived scores, partner signals, and assistant
@@ -76,11 +80,14 @@ Use HG Insights' official Phoenix MCP server declared by this plugin.
 
 ## Catalog, filings, government, and web evidence
 
-- Use `hg_catalog`, `get_product_category`, `get_vendor_information`,
-  `get_product_information`, `get_product_reviews`, and
-  `get_product_attribute` to interpret product and vendor taxonomy. Product
-  information and reviews can depend on configured partner integrations;
-  preserve provider attribution and do not imply universal availability.
+- Use `hg_catalog`, `get_product_category`, `list_vendors`,
+  `get_product_information`, `get_product_reviews`,
+  `product_search_and_enrich`, `get_product_attribute`, and
+  `search_industries_naics_sic` to interpret warehouse, product, vendor,
+  attribute, HG industry, NAICS, and SIC taxonomies. Product information and
+  reviews can depend on configured partner integrations; preserve provider
+  attribution and do not imply universal availability. Search before paid
+  product enrichment and confirm the selected product IDs.
 - Use `sec_filing_section` and `sec_full_text_search` for filing evidence.
   Cite the company, form, filing date, period, section, and source link. Read
   enough surrounding text to avoid quoting a hit out of context.
@@ -115,18 +122,44 @@ Use HG Insights' official Phoenix MCP server declared by this plugin.
 
 ## Writes and service behavior
 
-- The audited public overview is research-oriented, but an authenticated
-  organization can expose additional tools. Before any create, update,
-  delete, invite, credential, integration, API-key, sharing, export, or other
-  state-changing action, show the exact target and complete effect and obtain
-  explicit confirmation in the current conversation.
+- User-scoped keys do not expose administrator tools. Do not ask for or switch
+  to an admin-scoped key for a research request. When the user explicitly asks
+  for organization administration, verify that they intend the exact Phoenix
+  organization and understand that successful privileged reads and writes are
+  recorded in HG Insights' organization audit log.
+- `admin_get_consumption`, `admin_list_integrations`, `admin_list_users`,
+  `admin_list_api_keys`, and `admin_get_consumption_by_api_key` are sensitive
+  administrator reads. Minimize fields and time windows, do not enumerate the
+  whole organization when a narrower filter answers the request, and do not
+  expose user emails, key prefixes, usage, billing, or integration inventory
+  beyond the stated purpose.
+- Before `admin_invite_user`, show the exact email, display name, member or
+  admin role, organization, and fact that an invitation email will be sent.
+  Obtain explicit confirmation immediately before the call.
+- `admin_remove_user` is destructive and revokes the target's organization
+  memberships, API keys, and OAuth tokens. Require fresh explicit
+  confirmation naming the exact user ID, email, organization, and irreversible
+  effect. Never infer removal from a cleanup, offboarding review, or inactive
+  account report.
+- Do not collect or pass an integration credential through chat for
+  `admin_set_integration_credentials`. Direct secret activation or rotation to
+  the official Phoenix web application or an approved secret-management
+  workflow where the value does not enter the model context.
+- `admin_remove_integration_credentials` deactivates an integration by
+  deleting its stored credential. Show the integration key, affected tools,
+  current configuration metadata, organization, and outage impact, then
+  require fresh explicit confirmation immediately before the call.
 - Do not retry an ambiguous state-changing or credit-consuming operation.
   Inspect run status or current state first.
 - The official overview headline says 29 native tools plus two aggregated
-  tools, while the audited page contains 33 distinct documented tool
-  identifiers after excluding protocol and integration identifiers. Treat
-  the authenticated `tools/list` response as authoritative and report
+  tools, while the audited navigation resolves to 45 tool identifiers: 36
+  research tools and 9 admin-scoped tools. Treat the authenticated
+  `tools/list` response and key scope as authoritative and report
   documentation or entitlement differences instead of inventing tools.
+- The public overview documents 1,000 standard tool calls per minute per API
+  key, while the administrator guide documents 500 admin requests per minute.
+  Respect returned rate-limit and Retry-After headers; do not use concurrency
+  or retries to evade either limit.
 - Availability depends on the Phoenix organization, RGI Developers or RGI
   Agents account, plan, credits, integrations, source-provider licenses, and
   permissions. Report authentication, entitlement, integration, credit,

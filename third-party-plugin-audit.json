@@ -6541,22 +6541,26 @@
           "verificationStatus": "official-source-verified",
           "officialDeveloper": "HG Insights",
           "officialRepository": null,
-          "officialRevision": "hg-phoenix-docs-c6ffc8835205+auth-57567aa2b2e3+oauth-8bce6138eff9",
+          "officialRevision": "hg-phoenix-docs-c5c35d6c9232+auth-57567aa2b2e3+tools-0ee3682befea+admin-17be9845965d",
           "license": "MIT",
           "licenseEvidence": [
             "plugins/hg-insights/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic revenue-intelligence icon.",
             "No HG Insights hosted Phoenix MCP implementation, private Codex connector, API key, OAuth credential, customer data, proprietary or partner dataset, branded artwork, or marketplace icon is redistributed.",
             "HG Insights' official MCP documentation explicitly permits data access for agentic workflows such as answering a question, researching an account, or producing a deliverable, while excluding system-of-record population and deterministic scheduled, per-record, or scripted batch processes.",
-            "The audited official GitHub organizations do not publish the hosted Phoenix MCP implementation under a reusable public license. Ghast therefore integrates the official service without representing the adapter as HG Insights server source."
+            "The official documentation's edit links identify HGData/hip-phoenix as the implementation repository, but that repository is not publicly accessible and no reusable public license was available at the audited revision. Ghast therefore integrates the official hosted service without representing this adapter as HG Insights server source."
           ],
           "officialityEvidence": [
             "HG Insights' official Phoenix documentation publishes a custom-client MCP URL, organization-scoped API-key onboarding, OAuth 2.1 integration, MCP tools, prompts, resources, and security guardrails.",
             "The official authentication guide publishes POST https://phoenix.hginsights.com/api/mcp with Authorization: Bearer <Phoenix API key>, states that it exposes the same MCP tools as the URL-path endpoint, and recommends the Bearer form when a gateway should not place secrets in URLs.",
             "The official OAuth protected-resource metadata identifies https://phoenix.hginsights.com, bearer-header authentication, the HG Insights authorization server, and mcp:read, mcp:tools, and offline_access scopes. Its canonical JSON SHA-256 is 8bce6138eff9a6e27fef713ec8ab3e7633119427819e5d45bf0c185cd0fa0290.",
             "The authorization-server metadata publishes authorization-code and refresh-token grants, PKCE S256, dynamic client registration, token revocation, and public or confidential client authentication. Its canonical JSON SHA-256 is b8c5272ae66b4b5921abdd8e463bdb9eefb7b9aa3538c3b06fa4742892d72fb7.",
-            "The official getting-started, authentication, OAuth, tools, prompts, resources, and security pages have normalized visible-text SHA-256 hashes b6e3666c469eb531839866f62f38c7372cb0099f0600d4e7402e03960a32ca01, 57567aa2b2e3ddb6ea6d318789a1f45b07c412626bae0647f7018e93cb018ece, ebef11b2db8f3456ee7750a3486ecb869bdbb65fa5187abbc80d2a67b1487644, c6ffc8835205c221b3f229ba205f2f946042804b406feb01ee4e1440cdde463b, 14c9fca2cd9aa51a31a2364bd07e6d6478d381c5a4ab4d0e0d913bb2e1d2bb88, 2141c28856bcd3dfa369ca90981753d90a6cf8ddbc7eb9d89deb6cad874735c1, and 60950ba964321a84fb6f13199f970ad5b1c475f25485b528370e8d42cc1533be.",
-            "The official tools overview covers company firmographics, technographics, install history, operating and AI maturity signals, functional adoption, intent, IT and cloud spend, contracts, contacts, product and vendor intelligence, SEC filings, federal procurement, governed warehouse queries, web search, and Phoenix agent runs.",
-            "The tools page headline says 29 native tools plus two aggregated tools, while its current body contains 33 distinct tool identifiers after protocol and integration identifiers are excluded. The ordered extracted inventory has canonical JSON SHA-256 52b53bfbd2774c844a5dfa00a0cb2c96d4220c8d50e787ddb54654b65efa76ec; authenticated tools/list remains authoritative.",
+            "The official getting-started, authentication, OAuth, tools, prompts, resources, and security pages have normalized visible-text SHA-256 hashes b6e3666c469eb531839866f62f38c7372cb0099f0600d4e7402e03960a32ca01, 57567aa2b2e3ddb6ea6d318789a1f45b07c412626bae0647f7018e93cb018ece, ebef11b2db8f3456ee7750a3486ecb869bdbb65fa5187abbc80d2a67b1487644, c5c35d6c92326e2fbb78a58ba2892d1478ac7fa9576dc700d252ff65f6b88701, 14c9fca2cd9aa51a31a2364bd07e6d6478d381c5a4ab4d0e0d913bb2e1d2bb88, 2141c28856bcd3dfa369ca90981753d90a6cf8ddbc7eb9d89deb6cad874735c1, and 60950ba964321a84fb6f13199f970ad5b1c475f25485b528370e8d42cc1533be.",
+            "The official administrator overview, user-management, and integration-configuration pages have normalized visible-text SHA-256 hashes 17be9845965d0b639fbdfd4134c3617b8b9eddc5dbdcbf02161745e1e837b7d2, 7f84459912ef71ef761e84d4e3d0901612edb13711f6c3a6615fd271f7bf0666, and 48ebbf6f4feac1d75b14d4ac740d346ebcdf351e858f2d01031ae7241dcc341b.",
+            "The official tools navigation contains 43 detail pages that resolve to 45 current tool identifiers: 36 research tools and 9 tools exposed only to admin-scoped keys. The ordered page and tool inventories have canonical JSON SHA-256 hashes 5b150bc78382d69062add4416ce00cc1335dfb2253be67c873b94fcdec13ee56 and 0ee3682befea4451f8679c960333ae3c0276a39a0c6b3ec3915a7105b08bf01b; authenticated tools/list and key scope remain authoritative.",
+            "The current official detail pages rename the former search_companies and get_vendor_information references to company_search and list_vendors, and add documented hierarchy, product search/enrichment, industry taxonomy, and administrator operations. Fourteen pinned detail pages and their safety or billing markers are enforced by the importer.",
+            "The 9 administrator tools divide into 5 sensitive reads and 4 state-changing operations, including 2 destructive removals. Their ordered classification hashes are 704a94c52bf5981095fca2f946131d7145a238d13b31be3662d1944639f3e7a3, 45b5e5fd08df8e39d4d5e01e31190de8de3101c6ab077dde4ada61104a70f70e, and ae890475faa51b795e89a144bd91c460d28c398ddbbe8dbbd990351579e465ef.",
+            "HG Insights documents user-scoped keys as the default and omits administrator tools from tools/list for those keys. Admin-scoped keys are organization-bound, retain privilege only while their creator remains an organization administrator, cannot mint other admin keys through the API, and record successful privileged operations in webapp_org_admin_audit_log.",
+            "The official overview documents 1,000 standard tool calls per minute per API key and caching of company data for one hour, product catalogs for 24 hours, and search results for 15 minutes. The administrator guide separately documents 500 administrator requests per minute per API key.",
             "On August 14, 2026, missing and invalid API-key initialize requests to https://phoenix.hginsights.com/api/mcp returned HTTP 401 with distinct official Bearer challenges. Missing and invalid OAuth tokens at https://phoenix.hginsights.com/api/ai/mcp also returned HTTP 401 and the official protected-resource challenge.",
             "The OAuth metadata advertises dynamic client registration, but a disposable audit registration request was rejected with HTTP 403 by the service edge. No client registration, user authorization, access token, reusable credential, or customer data was obtained.",
             "OpenAI's pinned Codex plugin snapshot identifies HG Insights as developer, maps the plugin to a private app connector, requires an RGI Developers or RGI Agents account, and describes company-by-name-or-domain prospect intelligence. Its complete four-file inventory has SHA-256 c0e819826a9d60e83ff36b1cf881cafc64288857e5d1b5e15d6a7fde08116aee."
@@ -6571,29 +6575,38 @@
             "The same official account-prioritization, market-sizing, GTM-segmentation, and target-enrichment workflows through HG Insights' public Phoenix MCP service",
             "Direct official API-key Bearer authentication through a Ghast vault entry instead of the OpenAI private app connector or a secret embedded in the URL",
             "Broader official coverage for operating and AI maturity signals, functional adoption, technology install history, cloud spend, product and vendor research, SEC filings, federal contracting, governed data queries, web research, and Phoenix agent execution",
+            "Current official hierarchy, product search and enrichment, HG-industry, NAICS, and SIC workflows with explicit cost and scope controls",
+            "Optional organization administration through admin-scoped keys, covering user invitations and removal, user and API-key inventory, usage inspection, integration inventory, and integration credential activation or removal",
             "Official prompt workflows for onboarding, account research, qualification, intent targeting, vendor-sprawl analysis, pre-call briefs, competitive analysis, TAM sizing, battlecards, ICP refinement, and market analysis",
-            "An independently authored workflow enforcing entity resolution, source and model distinctions, contact-PII minimization, credit and integration disclosure, bounded agent and query execution, and the official agentic-use-only licensing boundary"
+            "An independently authored workflow enforcing entity resolution, source and model distinctions, contact-PII minimization, credit and integration disclosure, bounded agent and query execution, the official agentic-use-only licensing boundary, administrator-read minimization, exact confirmation for organization changes, and exclusion of integration secrets from chat"
           ],
           "capabilityRelationship": "superset-official-hosted-mcp",
           "limitations": [
             "The hosted Phoenix MCP implementation is operated by HG Insights and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
             "An eligible RGI Developers or RGI Agents account, organization-scoped Phoenix API key, plan, credits, permissions, integrations, source-provider entitlements, and service availability remain user-managed.",
             "The API key provides organization-scoped access to enabled MCP tools and REST APIs. It must remain only in the hg-insights-api-key vault entry and should be rotated immediately if exposed.",
+            "Use a user-scoped key for ordinary research. An admin-scoped key exposes privileged organization data and operations and must not be requested or substituted merely to obtain more research tools.",
             "HG Insights permits MCP data for agentic workflows but does not license this surface for CRM, MDM, data-warehouse, or other system-of-record population, scheduled per-record work, or scripted batch processing. Those uses require the separately licensed HG Insights API or SaaS application.",
             "Many data retrieval, contact reveal, web search, governed query, and agent operations can consume credits. Exact prices, row charges, balances, stopping behavior, and account limits remain authoritative in the authenticated service.",
             "Contact tools can expose names, roles, employers, email addresses, phone numbers, and social profiles. Retrieval and disclosure must be necessary, narrowly scoped, and compliant with applicable privacy, consent, suppression, and outreach rules.",
             "Product reviews, contact data, intent, SEC, government, and warehouse capabilities can depend on separate partner or organization integrations. Tool visibility does not prove that every dataset is enabled.",
             "Spend, AI maturity, functional adoption, intent, relationship, and prioritization outputs can be modeled, inferred, delayed, or incomplete. Results must preserve dates, units, providers, confidence and coverage fields and distinguish source facts from HG and assistant inference.",
-            "The published 29-plus-two headline and 33 extracted identifiers are internally inconsistent. Exact authenticated tool names, schemas, annotations, entitlements, costs, and state-changing surfaces were not verified without a customer account.",
+            "The published 29-plus-two headline and the current 45 documented identifiers are internally inconsistent. Exact authenticated tool names, schemas, annotations, entitlements, costs, and account-specific visibility were not verified without a customer account.",
+            "Administrator reads can expose user email addresses, API-key prefixes, organization consumption, billing-relevant usage, and integration inventory. Retrieval and disclosure must be narrowly scoped and successful operations are audited by HG Insights.",
+            "Administrator invitations send email and may grant member or administrator access. User removal is irreversible and revokes organization memberships, API keys, and OAuth tokens; both require exact target and organization confirmation.",
+            "Integration credential activation or rotation writes a secret, while credential removal deactivates the integration. The adapter must not collect or pass an integration secret through chat and requires explicit confirmation before removal.",
+            "The documented standard and administrator rate limits are 1,000 and 500 requests per minute per API key. Company, product-catalog, and search data can remain cached for one hour, 24 hours, and 15 minutes respectively.",
             "Documentation, metadata, Codex evidence, and missing or invalid credential behavior were verified without an HG Insights account. Authenticated tools/list, company data, contacts, billable operations, queries, and agent runs were not executed.",
             "The public OAuth metadata advertises dynamic registration, but the audit environment received HTTP 403 from the registration endpoint. The vault-backed API-key route is the verified usable Ghast configuration.",
-            "A generic revenue-intelligence icon is used because no licensed HG Insights catalog artwork is included in a public official MCP source repository."
+            "A generic revenue-intelligence icon is used because the identified HGData/hip-phoenix repository is private and no licensed HG Insights catalog artwork is available for redistribution."
           ],
           "verification": [
             "Run the HG Insights evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
-            "Verify the seven normalized official documentation hashes and the canonical OAuth protected-resource and authorization-server hashes recorded in plugins/hg-insights/README.md",
-            "Extract and confirm the ordered 33-name documented tool-identifier inventory and canonical JSON hash 52b53bfbd2774c844a5dfa00a0cb2c96d4220c8d50e787ddb54654b65efa76ec",
+            "Verify the ten normalized official documentation hashes, fourteen pinned tool-detail hashes, and canonical OAuth protected-resource and authorization-server hashes recorded in plugins/hg-insights/README.md and the importer",
+            "Extract and confirm the ordered 43-page navigation and 45-name documented tool inventory with canonical JSON hashes 5b150bc78382d69062add4416ce00cc1335dfb2253be67c873b94fcdec13ee56 and 0ee3682befea4451f8679c960333ae3c0276a39a0c6b3ec3915a7105b08bf01b",
+            "Confirm the 36 research-tool hash 0fc4e056764897ca097a5b5bc02fffc2f3cbcf077652eb679a00d91ae0cd76da and the administrator read, write, and destructive classification hashes recorded by the importer",
             "Confirm that the tools documentation still permits agentic workflows and excludes system-of-record population and deterministic scheduled, per-record, or scripted batch processing",
+            "Confirm user-scoped keys remain the default, administrator tools remain scope-gated and audited, administrator keys cannot mint other administrator keys, and integration credential values remain secret and redacted",
             "Probe both official MCP endpoints with missing and invalid credentials and confirm HTTP 401 plus the expected API-key or OAuth Bearer challenge without storing credentials",
             "Verify OpenAI plugin snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 HG Insights developer identity, private app ID, default workflows, capability description, all four file hashes, and complete inventory hash",
             "Authorize an eligible Phoenix organization before testing authenticated tools/list, entitlements, credits, company data, contacts, governed queries, or agent runs",
@@ -6607,9 +6620,9 @@
       },
       "ghast": {
         "implementationStatus": "implemented-verified",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "repository": null,
-        "upstreamRevision": "hg-phoenix-docs-c6ffc8835205+auth-57567aa2b2e3+oauth-8bce6138eff9",
+        "upstreamRevision": "hg-phoenix-docs-c5c35d6c9232+auth-57567aa2b2e3+tools-0ee3682befea+admin-17be9845965d",
         "portStatus": "full"
       }
     },
@@ -8660,7 +8673,6 @@
           ],
           "verification": [
             "Load scripts/import-official-hosted-plugins.py with importlib, run verify_mt_newswires_evidence(), then run import_mt_newswires(); both completed successfully on August 14, 2026",
-            "The full hosted importer currently stops earlier on unrelated HG Insights documentation drift at https://phoenix.hginsights.com/docs/mcp-tools/overview; do not treat that fail-closed result as an MT Newswires failure",
             "Verify the official MT Newswires AI enablement, MCP subscriptions, and viaNexus partnership visible-text hashes d0dbbb14e493acbd13456817ea050397d4f5fc51c262c349908f09627a2a0f4e, 12d581b7b58c3192e1fd2f24f6e189af29c8a2e6c857fc1ca4866b469c90d0e6, and a154b567803f30739d29e8ab44e07f45e56ccc43242f7fd3e999f67f42baf9c9",
             "Verify the viaNexus vAST visible-text hash 71195676026d8e301b6438bee8acf0cf7d8f18465b55a215898683370d500cf6 and the dedicated endpoint, search, fetch, symbol-search, headline, OAuth, and EDGE:MT_NEWSWIRES* markers",
             "Verify canonical protected-resource and authorization-server metadata hashes d7f7d5f2df32a3c5efc40e5cef86812d8e66b88d9e2bb511ee3dce66ebca5634 and 52a9e2c6554a753736ae62dfa241debc0819438433cea11945a45f83c6319732",

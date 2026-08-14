@@ -1910,16 +1910,16 @@
           "url": "https://hginsights.com"
         },
         "icon": "./assets/icon.svg",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "homepage": "https://phoenix.hginsights.com/docs/getting-started",
-        "upstreamRevision": "hg-phoenix-docs-c6ffc8835205+auth-57567aa2b2e3+oauth-8bce6138eff9",
+        "upstreamRevision": "hg-phoenix-docs-c5c35d6c9232+auth-57567aa2b2e3+tools-0ee3682befea+admin-17be9845965d",
         "license": "MIT",
         "skills": "./skills/",
         "mcpServers": "./.mcp.json"
       },
       "package": {
         "url": "./packages/hg-insights.zip",
-        "sha256": "7fa1298947df6fa426bd30c5507ec4c2b2236d1a0e794a5804bc454e2fce323f"
+        "sha256": "ee6a39cafb8acdcf4ab6b37b1a4354fcf655cef0f10213554fb76e59b86fd417"
       },
       "icon": "./plugins/hg-insights/assets/icon.svg",
       "category": "productivity",
