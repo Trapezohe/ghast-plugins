@@ -5493,10 +5493,72 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.finn.com/de-DE"
+        "homepage": "https://www.finn.com/de-DE",
+        "review": {
+          "verificationStatus": "official-source-research-required",
+          "officialDeveloper": "FINN GmbH",
+          "officialRepository": null,
+          "officialRevision": "finn-openapi-e4574f2ce9ad+frontend-9cbb3c72e91a+terms-ad2eda6ad02d+robots-6ce2f8042bb4",
+          "license": "UNVERIFIED",
+          "licenseEvidence": [
+            "FINN publishes Product API documentation and operates the consumer catalog, but neither surface grants a software license, a third-party API-client license, or rights to redistribute FINN vehicle data, schemas, source code, logos, icons, or catalog content.",
+            "FINN's Terms of Use restrict the service to private purposes absent express permission and prohibit copying, modifying, republishing, downloading, distributing, reverse engineering, commercial exploitation, and access used to build a competing product or service.",
+            "The same terms identify websites, text, graphics, logos, icons, images, data compilations, layouts, code, and software as protected intellectual property and grant only a personal, noncommercial, nontransferable right needed for registration.",
+            "The Codex manifest declares MIT, but that declaration does not license FINN's separately operated Product API, website proxy, private app connector, live vehicle inventory, pricing, frontend source, trademarks, or artwork.",
+            "No FINN source, schema, data, connector implementation, frontend code, logo, icon, or marketplace artwork is redistributed because no authorized capability-equivalent Ghast plugin is published."
+          ],
+          "officialityEvidence": [
+            "FINN's official Product API documentation at docs.product-api.finn.com publishes OpenAPI 3.0.3 for Product API 1.0.0 and says it serves all car data consumed by the FINN UI. The canonical specification has SHA-256 e4574f2ce9ad88fcc1bb8af4173cee8b8edc1ad8fb1b133ac6279c788f548e43.",
+            "The official specification publishes GET /cars, GET /cars/{id}, and GET /filters/cars for vehicle listing, single-vehicle detail, and available catalog filters. Its canonical paths hash is 08fb63bfad0e1b6a0029095f5d3f355e71a9479fc7bdf4c5b7cf5f9f966f6323.",
+            "The specification defines x-finn-actor as the caller identifier and x-api-key as service-specific authentication. The canonical security-scheme hash is da40519d16460cde85a0e3d7c6e568f9acf8139cba9e2dd02dcc6b7785bad22f.",
+            "FINN's official subscribe frontend chunk has SHA-256 9cbb3c72e91aa7d81dd796bf8405d07ec63d5c918a81d82a740c7384e39224c6 and visibly calls /api/filters/cars and /api/cars/{vehicleId} with the public client label x-finn-actor: ua_frontend.",
+            "On August 14, 2026, FINN's direct production Product API returned HTTP 401 to a bounded request carrying the transparent actor ghast-plugin-audit but no service API key.",
+            "On August 14, 2026, the website catalog route returned HTTP 500 without x-finn-actor and HTTP 200 with x-finn-actor: ghast-plugin-audit. The successful bounded one-result response used Cache-Control: no-store and contained live vehicle identity, availability, price, fuel, body type, and product-path fields.",
+            "FINN's normalized conduct and intellectual-property terms sections have SHA-256 ad2eda6ad02d859f0e2b654ce03327f934c363300deedc10bc26ad9b789d5820 and f00be1c9f6351e95284e5f9e517413a44f96cfec854e3aa4fbe73f3b47f7fd5f.",
+            "FINN's robots policy allows the public site and product-detail pages but disallows /api. The normalized core policy has SHA-256 6ce2f8042bb49f5920428a772a59b26192e66f77574656f9688f1d0869c9900a.",
+            "The official finn-auto GitHub organization identifies itself as FINN GmbH and links to finn.com. Its public repositories do not currently publish a FINN vehicle-catalog MCP server, Product API client, or other capability-equivalent implementation.",
+            "OpenAI's pinned Codex snapshot identifies FINN GmbH as developer, maps the plugin to private app ID asdk_app_69a957610170819189c91507fa3ed4b7, and asks the connector to find relevant FINN vehicle options. Its complete four-file inventory has SHA-256 6caefb7315e86e5d4b782aa6bef5ae97a91f7fbbe3be429c55e2707be61bff4f."
+          ],
+          "codexCapabilities": [
+            "Find currently relevant FINN vehicle-subscription options from a natural-language request",
+            "Match vehicle choices to preferences such as brand, model, body type, fuel, price, availability, term, features, seats, doors, power, electric range, and related catalog filters",
+            "Present subscription context including a fixed monthly rate and included insurance, maintenance, registration, and delivery or pickup options described by FINN"
+          ],
+          "ghastCapabilities": [
+            "FINN's official Product API specification and live website catalog prove that a first-party read-only vehicle discovery surface exists and covers the Codex matching capability.",
+            "No Ghast plugin is published because FINN has not supplied a service API key or documented independent-client issuance path, and its current terms and robots policy do not establish sufficient permission for a public reusable wrapper around the website proxy or live catalog."
+          ],
+          "capabilityRelationship": "official-product-api-found-private-service-key-and-third-party-use-rights-blockers",
+          "limitations": [
+            "The OpenAI private app ID is a marketplace mapping, not a Product API key, endpoint grant, OAuth client, access token, or reusable Ghast transport configuration.",
+            "The documented production server requires x-api-key service authentication in addition to caller identification. FINN does not publish an API-key issuance, customer-authentication, OAuth, quota, support, or independent-client onboarding procedure for this catalog API.",
+            "x-finn-actor is a caller label, not a secret credential. The fact that the website proxy accepts an honest custom actor proves reachability, not authorization to publish a third-party client or redistribute FINN data.",
+            "The /api route is an internal website-facing proxy used by FINN's frontend, not a documented public third-party API contract. It can change or disappear without compatibility guarantees.",
+            "FINN's robots policy explicitly disallows /api. Ghast must not bulk crawl, index, cache, mirror, train on, or periodically harvest the website catalog through that route.",
+            "FINN's terms permit private use absent express authorization but prohibit the copying, republication, downloading, distribution, reverse engineering, economic exploitation, and competing-service uses relevant to a public reusable catalog wrapper.",
+            "The public Product API documentation does not include a license declaration. Public documentation and technically accessible responses do not by themselves grant source, schema, client, data, trademark, or artwork redistribution rights.",
+            "No public finn-auto repository contains a capability-equivalent official client or MCP implementation with a verified license. Unofficial wrappers must not be substituted or described as FINN-developed.",
+            "Live availability, monthly prices, downpayment prices, delivery dates, included services, vehicle details, inventory counts, and product URLs can change at any time. A future authorized client must avoid persistent caching and label retrieval time and market.",
+            "The verified Product API surface is read-only catalog discovery. It does not establish account, eligibility, checkout, reservation, payment, contract, cancellation, delivery, or support operations.",
+            "No icon or package is generated while the plugin remains blocked. FINN's logo and icon are protected by its terms, and a generic icon would misleadingly imply that an authorized usable implementation exists.",
+            "Do not create plugins/finn until FINN supplies or documents an authorized portable API credential or endpoint, grants sufficient third-party client and data-use rights, and the resulting implementation passes bounded live capability verification."
+          ],
+          "verification": [
+            "Run verify_finn_evidence from scripts/import-official-hosted-plugins.py",
+            "Extract the inline official OpenAPI state and verify canonical specification, path, and security-scheme hashes e4574f2ce9ad88fcc1bb8af4173cee8b8edc1ad8fb1b133ac6279c788f548e43, 08fb63bfad0e1b6a0029095f5d3f355e71a9479fc7bdf4c5b7cf5f9f966f6323, and da40519d16460cde85a0e3d7c6e568f9acf8139cba9e2dd02dcc6b7785bad22f",
+            "Verify the official frontend chunk hash and its public actor, filter-route, and vehicle-detail-route markers without copying the chunk into the repository",
+            "Verify normalized FINN conduct, intellectual-property, and robots policy hashes and confirm /api remains disallowed",
+            "Send only a bounded one-result request: confirm the direct Product API remains HTTP 401 without a service key, the website route requires an actor, and an honest audit actor returns a no-store response with the expected catalog shape",
+            "Verify the official finn-auto GitHub organization identity and re-audit immediately if it publishes an MCP, Product API, or capability-equivalent catalog client repository",
+            "Verify all four OpenAI snapshot files, FINN GmbH developer identity, private app ID, default prompt, capability description, and complete inventory hash",
+            "Confirm plugins/finn and packages/finn.zip remain absent while credential and permission blockers remain",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py"
+          ]
+        }
       },
       "ghast": {
         "implementationStatus": "not-implemented"

@@ -3407,6 +3407,75 @@ DOCKET_OPENAI_HASHES = {
 DOCKET_OPENAI_INVENTORY_SHA256 = (
     "1e4f88f1f379e7518d505ed4c623a9deb12c20f5876fee1445e987873ba031af"
 )
+FINN_PRODUCT_API_DOCS_URL = "https://docs.product-api.finn.com/"
+FINN_PRODUCT_API_URL = (
+    "https://product-api.finn.com/cars"
+    "?view=available_cars&limit=1&offset=0"
+    "&hide_related=true&pricing_type=downpayment"
+)
+FINN_WEBSITE_API_URL = (
+    "https://www.finn.com/api/cars"
+    "?view=available_cars&limit=1&offset=0"
+    "&hide_related=true&pricing_type=downpayment"
+)
+FINN_TERMS_URL = "https://www.finn.com/de-DE/terms-of-use"
+FINN_ROBOTS_URL = "https://www.finn.com/robots.txt"
+FINN_GITHUB_ORG_URL = "https://api.github.com/orgs/finn-auto"
+FINN_GITHUB_REPOS_URL = (
+    "https://api.github.com/orgs/finn-auto/repos"
+    "?per_page=100&type=public&sort=full_name"
+)
+FINN_FRONTEND_CHUNK_URL = (
+    "https://www.finn.com/_next/static/chunks/app/"
+    "%5Blang%5D/subscribe/%5B%5B...slug%5D%5D/"
+    "page-e7cdfae8e79a87fe.js"
+)
+FINN_OPENAPI_SHA256 = (
+    "e4574f2ce9ad88fcc1bb8af4173cee8b8edc1ad8fb1b133ac6279c788f548e43"
+)
+FINN_OPENAPI_PATHS_SHA256 = (
+    "08fb63bfad0e1b6a0029095f5d3f355e71a9479fc7bdf4c5b7cf5f9f966f6323"
+)
+FINN_OPENAPI_SECURITY_SHA256 = (
+    "da40519d16460cde85a0e3d7c6e568f9acf8139cba9e2dd02dcc6b7785bad22f"
+)
+FINN_TERMS_CONDUCT_SHA256 = (
+    "ad2eda6ad02d859f0e2b654ce03327f934c363300deedc10bc26ad9b789d5820"
+)
+FINN_TERMS_IP_SHA256 = (
+    "f00be1c9f6351e95284e5f9e517413a44f96cfec854e3aa4fbe73f3b47f7fd5f"
+)
+FINN_ROBOTS_CORE_SHA256 = (
+    "6ce2f8042bb49f5920428a772a59b26192e66f77574656f9688f1d0869c9900a"
+)
+FINN_FRONTEND_CHUNK_SHA256 = (
+    "9cbb3c72e91aa7d81dd796bf8405d07ec63d5c918a81d82a740c7384e39224c6"
+)
+FINN_GITHUB_ORG_SHA256 = (
+    "cb1c0e1f131f0c07640cd52e42c03884ec6b4673689d6cbb2d6197d05bfe1029"
+)
+FINN_OPENAI_REVISION = "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9"
+FINN_OPENAI_BASE_URL = (
+    "https://raw.githubusercontent.com/openai/plugins/"
+    f"{FINN_OPENAI_REVISION}/plugins/finn"
+)
+FINN_OPENAI_HASHES = {
+    ".app.json": (
+        "29bd169c4847571a29dd2b7d2eb0dba0f50e7b51a843afb8237946d2dddfd1b1"
+    ),
+    ".codex-plugin/plugin.json": (
+        "48e20fb7b7a12c7a716d33100461219e58abd8d51048377e4d0a109be1bcf182"
+    ),
+    "assets/logo-dark.png": (
+        "4fbe529c2baf8d5396a7190e9e492a737298f04df06ba61a1df331fcd117debd"
+    ),
+    "assets/logo.png": (
+        "200f4f4daa23349e4b210e6218f4d0341375ef10c37e281d6efe66119f2b6042"
+    ),
+}
+FINN_OPENAI_INVENTORY_SHA256 = (
+    "6caefb7315e86e5d4b782aa6bef5ae97a91f7fbbe3be429c55e2707be61bff4f"
+)
 COGEDIM_MCP_URL = "https://www.cogedim.com/mcp"
 COGEDIM_LLMS_URL = "https://www.cogedim.com/llms.txt"
 COGEDIM_MCP_ENTRY_SHA256 = (
@@ -4358,6 +4427,7 @@ def main() -> int:
     verify_datasite_evidence()
     verify_dnb_finance_analytics_evidence()
     verify_docket_evidence()
+    verify_finn_evidence()
     verify_cogedim_evidence()
     verify_demandbase_evidence()
     verify_thoughtspot_evidence()
@@ -4709,6 +4779,53 @@ def normalize_docket_terms_ip(value: str) -> str:
     if start < 0 or end < 0:
         raise ValueError("Docket terms structure changed")
     return visible[start : end + len(end_marker)]
+
+
+def extract_finn_openapi(value: str) -> dict:
+    marker = "const __redoc_state = "
+    start = value.find(marker)
+    if start < 0:
+        raise ValueError("FINN Product API documentation structure changed")
+    state, consumed = json.JSONDecoder().raw_decode(
+        value[start + len(marker) :]
+    )
+    trailer = value[start + len(marker) + consumed :]
+    if not trailer.lstrip().startswith(";"):
+        raise ValueError("FINN Product API state trailer changed")
+    spec = (state.get("spec") or {}).get("data")
+    if not isinstance(spec, dict):
+        raise ValueError("FINN Product API specification is missing")
+    return spec
+
+
+def normalize_finn_terms_section(
+    value: str,
+    start_marker: str,
+    end_marker: str,
+) -> str:
+    parser = VisibleTextParser()
+    parser.feed(value)
+    visible = " ".join(unescape(" ".join(parser.parts)).split())
+    start = visible.find(start_marker)
+    end = visible.find(end_marker, start)
+    if start < 0 or end < 0:
+        raise ValueError("FINN terms structure changed")
+    return visible[start:end].strip()
+
+
+def normalize_finn_robots(value: str) -> str:
+    required = (
+        "User-agent: *",
+        "Allow: /",
+        "Allow: /pdp/*",
+        "Disallow: /api",
+        "Sitemap: https://www.finn.com/sitemap.xml",
+    )
+    lines = {line.strip() for line in value.splitlines() if line.strip()}
+    missing = [line for line in required if line not in lines]
+    if missing:
+        raise ValueError(f"FINN robots policy is missing {missing!r}")
+    return "\n".join(required) + "\n"
 
 
 def fetch_visible_text(url: str, required_marker: str) -> str:
@@ -11274,6 +11391,279 @@ def verify_docket_evidence() -> None:
             "Docket must remain unpublished while the dedicated MCP endpoint, "
             "portable WorkOS client configuration, authenticated tool schemas, "
             "and redistribution rights are unverified"
+        )
+
+
+def verify_finn_evidence() -> None:
+    openapi = extract_finn_openapi(fetch_text(FINN_PRODUCT_API_DOCS_URL))
+    if (
+        canonical_json_sha256(openapi) != FINN_OPENAPI_SHA256
+        or canonical_json_sha256(openapi.get("paths"))
+        != FINN_OPENAPI_PATHS_SHA256
+        or canonical_json_sha256(
+            (openapi.get("components") or {}).get("securitySchemes")
+        )
+        != FINN_OPENAPI_SECURITY_SHA256
+        or openapi.get("openapi") != "3.0.3"
+        or openapi.get("info")
+        != {
+            "title": "Product API",
+            "description": "Serves all cars data consumed by our FINN UI",
+            "version": "1.0.0",
+        }
+        or openapi.get("servers")
+        != [
+            {
+                "url": "https://product-api.finn.com",
+                "description": "Production",
+            }
+        ]
+    ):
+        raise ValueError("FINN official Product API specification changed")
+    paths = openapi.get("paths") or {}
+    expected_operations = {
+        "/cars": "Gets list of cars",
+        "/cars/{id}": "Gets a single car",
+        "/filters/cars": "Gets filters for cars",
+    }
+    if set(paths) != set(expected_operations):
+        raise ValueError("FINN Product API path inventory changed")
+    for path, summary in expected_operations.items():
+        operation = (paths.get(path) or {}).get("get") or {}
+        if (
+            operation.get("summary") != summary
+            or operation.get("security") != [{"actor": []}]
+        ):
+            raise ValueError(f"FINN Product API operation changed: {path}")
+    security = (
+        (openapi.get("components") or {}).get("securitySchemes") or {}
+    )
+    if security != {
+        "apiKey": {
+            "type": "apiKey",
+            "name": "x-api-key",
+            "in": "header",
+            "description": (
+                "API key used for authenticating. "
+                "Each service uses a separate key"
+            ),
+        },
+        "actor": {
+            "type": "apiKey",
+            "name": "x-finn-actor",
+            "in": "header",
+            "description": "Identifies who has made the request",
+        },
+    }:
+        raise ValueError("FINN Product API security schemes changed")
+
+    frontend = fetch_bytes(FINN_FRONTEND_CHUNK_URL)
+    if sha256_bytes(frontend) != FINN_FRONTEND_CHUNK_SHA256:
+        raise ValueError("FINN public catalog frontend changed")
+    frontend_text = frontend.decode("utf-8")
+    for marker in (
+        '{"x-finn-actor":"ua_frontend"}',
+        "/api/filters/cars?",
+        "/api/cars/${e.vehicleId}?hide_related=true",
+    ):
+        if marker not in frontend_text:
+            raise ValueError(
+                f"FINN public catalog frontend is missing {marker!r}"
+            )
+
+    terms = fetch_text(FINN_TERMS_URL)
+    conduct = normalize_finn_terms_section(
+        terms,
+        "Verhaltensregeln",
+        "Intellectual Property Rights",
+    )
+    intellectual_property = normalize_finn_terms_section(
+        terms,
+        "Intellectual Property Rights",
+        "Haftungsbeschr\u00e4nkung",
+    )
+    if sha256_text(conduct) != FINN_TERMS_CONDUCT_SHA256:
+        raise ValueError("FINN conduct terms changed")
+    if sha256_text(intellectual_property) != FINN_TERMS_IP_SHA256:
+        raise ValueError("FINN intellectual-property terms changed")
+    for marker in (
+        "nur f\u00fcr private Zwecke",
+        "R\u00fcckw\u00e4rtskompilieren",
+        "Neuver\u00f6ffentlichen",
+        "herunterzuladen",
+        "zu verbreiten",
+        "mit unseren Services in Konkurrenz steht",
+    ):
+        if marker not in conduct:
+            raise ValueError(f"FINN conduct terms are missing {marker!r}")
+    for marker in (
+        "Logos",
+        "Icons",
+        "Datenzusammenstellungen",
+        "ausdr\u00fcckliche schriftliche Erlaubnis",
+        "nichtkommerzielles",
+        "pers\u00f6nliche Nutzung",
+        "nicht \u00fcbertragbares Recht",
+    ):
+        if marker not in intellectual_property:
+            raise ValueError(
+                f"FINN intellectual-property terms are missing {marker!r}"
+            )
+
+    robots = normalize_finn_robots(fetch_text(FINN_ROBOTS_URL))
+    if sha256_text(robots) != FINN_ROBOTS_CORE_SHA256:
+        raise ValueError("FINN robots policy changed")
+
+    direct_request = urllib.request.Request(
+        FINN_PRODUCT_API_URL,
+        headers={
+            "User-Agent": "ghast-plugin-audit/1.0",
+            "Accept": "application/json",
+            "x-finn-actor": "ghast-plugin-audit",
+        },
+    )
+    try:
+        urllib.request.urlopen(direct_request, timeout=30)
+    except urllib.error.HTTPError as exc:
+        direct_body = exc.read()
+        if (
+            exc.code != 401
+            or direct_body
+            != b'{"statusCode":401,"error":"Unauthorized",'
+            b'"message":"Unauthorized"}'
+        ):
+            raise ValueError(
+                "FINN direct Product API authentication changed"
+            ) from exc
+    else:
+        raise ValueError(
+            "FINN direct Product API became usable; re-audit credentials "
+            "and licensing"
+        )
+
+    missing_actor_request = urllib.request.Request(
+        FINN_WEBSITE_API_URL,
+        headers={
+            "User-Agent": "ghast-plugin-audit/1.0",
+            "Accept": "application/json",
+        },
+    )
+    try:
+        urllib.request.urlopen(missing_actor_request, timeout=30)
+    except urllib.error.HTTPError as exc:
+        missing_actor_body = exc.read()
+        if (
+            exc.code != 500
+            or missing_actor_body
+            != b'{"message":"api call failed",'
+            b'"error":"x-finn-actor header is required"}'
+        ):
+            raise ValueError(
+                "FINN website catalog actor boundary changed"
+            ) from exc
+    else:
+        raise ValueError("FINN website catalog no longer requires an actor")
+
+    website_request = urllib.request.Request(
+        FINN_WEBSITE_API_URL,
+        headers={
+            "User-Agent": "ghast-plugin-audit/1.0",
+            "Accept": "application/json",
+            "x-finn-actor": "ghast-plugin-audit",
+        },
+    )
+    with urllib.request.urlopen(website_request, timeout=30) as response:
+        website_body = json.loads(response.read())
+        if response.headers.get("Cache-Control") != "no-store":
+            raise ValueError("FINN website catalog cache policy changed")
+    results = website_body.get("results")
+    if (
+        set(website_body) != {"total_results", "results", "offset"}
+        or not isinstance(website_body.get("total_results"), int)
+        or website_body.get("total_results", 0) < 1
+        or not isinstance(results, list)
+        or len(results) != 1
+        or not {
+            "id",
+            "brand",
+            "model",
+            "config_id",
+            "available_from",
+            "available_terms",
+            "price",
+            "fuel",
+            "cartype",
+            "product_path",
+        }.issubset(results[0])
+    ):
+        raise ValueError("FINN website catalog response shape changed")
+
+    org = fetch_json(FINN_GITHUB_ORG_URL)
+    org_identity = {
+        key: org.get(key)
+        for key in ("login", "html_url", "blog", "name")
+    }
+    if canonical_json_sha256(org_identity) != FINN_GITHUB_ORG_SHA256:
+        raise ValueError("FINN official GitHub organization changed")
+    repositories = fetch_json(FINN_GITHUB_REPOS_URL)
+    for repository in repositories:
+        searchable = " ".join(
+            str(repository.get(field) or "")
+            for field in ("name", "description")
+        ).lower()
+        if "mcp" in searchable or "product api" in searchable:
+            raise ValueError(
+                "FINN published a candidate official connector repository; "
+                "re-audit required"
+            )
+
+    codex_files = {}
+    for relative_path, expected_hash in FINN_OPENAI_HASHES.items():
+        content = fetch_bytes(f"{FINN_OPENAI_BASE_URL}/{relative_path}")
+        if sha256_bytes(content) != expected_hash:
+            raise ValueError(f"FINN Codex evidence changed: {relative_path}")
+        codex_files[relative_path] = content
+    inventory = "".join(
+        f"{FINN_OPENAI_HASHES[path]}  {path}\n"
+        for path in sorted(FINN_OPENAI_HASHES)
+    )
+    if sha256_text(inventory) != FINN_OPENAI_INVENTORY_SHA256:
+        raise ValueError("FINN Codex inventory hash is inconsistent")
+
+    manifest = json.loads(codex_files[".codex-plugin/plugin.json"])
+    app = json.loads(codex_files[".app.json"])
+    interface = manifest.get("interface", {})
+    if (
+        manifest.get("name") != "finn"
+        or manifest.get("version") != "1.0.4"
+        or manifest.get("author", {}).get("name") != "FINN GmbH"
+        or interface.get("developerName") != "FINN GmbH"
+        or interface.get("defaultPrompt")
+        != ["Find relevant FINN vehicle options for this request"]
+        or app.get("apps", {}).get("finn", {}).get("id")
+        != "asdk_app_69a957610170819189c91507fa3ed4b7"
+    ):
+        raise ValueError("FINN Codex developer evidence changed")
+    long_description = interface.get("longDescription", "")
+    for marker in (
+        "car subscription",
+        "without long-term commitments",
+        "insurance",
+        "maintenance",
+        "registration",
+        "fixed monthly rate",
+        "delivered straight to your doorstep",
+    ):
+        if marker not in long_description:
+            raise ValueError(
+                f"FINN Codex capability evidence is missing {marker!r}"
+            )
+
+    if (PLUGIN_DIR / "finn").exists() or Path("packages/finn.zip").exists():
+        raise ValueError(
+            "FINN must remain unpublished until FINN supplies an authorized "
+            "portable API credential or endpoint and grants sufficient "
+            "third-party client and data-use rights"
         )
 
 
