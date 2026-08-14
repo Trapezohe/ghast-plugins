@@ -3570,6 +3570,31 @@ DOCKET_LLMS_CAPABILITIES_SHA256 = (
 DOCKET_TERMS_IP_SHA256 = (
     "99909d93361b6b49f90fb9e87ab97e8e317c9b80d69f6469bcb47a4487b2d3d0"
 )
+DOCKET_DEMAND_DOCS_URL = (
+    "https://help.docket.io/articles/"
+    "8225942528-connect-docket-demand-mcp"
+)
+DOCKET_DEMAND_DOCS_CORE_SHA256 = (
+    "36d62f109b9977f5f30f1076ccd1cd2a13d466f96d0972a33d651f142635c807"
+)
+DOCKET_DEMAND_MCP_URL = "https://demand-mcp.app.docketai.com/mcp"
+DOCKET_DEMAND_PROTECTED_RESOURCE_URL = (
+    "https://demand-mcp.app.docketai.com/"
+    ".well-known/oauth-protected-resource/mcp"
+)
+DOCKET_DEMAND_PROTECTED_RESOURCE_SHA256 = (
+    "613326ac89eb49e3d5feb5b737c525ec9c0f6319bdcaebdeec8cd5e59b7a944b"
+)
+DOCKET_DEMAND_AUTH_SERVER_URL = (
+    "https://demand-mcp.app.docketai.com/"
+    ".well-known/oauth-authorization-server"
+)
+DOCKET_DEMAND_AUTH_SERVER_SHA256 = (
+    "3d5e4cf71978adcfbd7714d11ed4a28655a5af302e8c9a86efea13a282978933"
+)
+DOCKET_DEMAND_UNAUTHENTICATED_SHA256 = (
+    "8599a03b4c1d788236014f851ec320b3ad4a589c59e8c1ea045dd4d052291cce"
+)
 DOCKET_UNPUBLISHED_CONFIG_URLS = (
     "https://www.docket.io/.well-known/oauth-protected-resource",
     "https://www.docket.io/.well-known/oauth-protected-resource/mcp",
@@ -5516,6 +5541,21 @@ def normalize_docket_terms_ip(value: str) -> str:
     end = visible.find(end_marker, start)
     if start < 0 or end < 0:
         raise ValueError("Docket terms structure changed")
+    return visible[start : end + len(end_marker)]
+
+
+def normalize_docket_demand_docs(value: str) -> str:
+    parser = VisibleTextParser()
+    parser.feed(value)
+    visible = " ".join(unescape(" ".join(parser.parts)).split())
+    start_marker = (
+        "Use Docket Demand MCP with any compatible AI client that supports MCP."
+    )
+    end_marker = "For more help, contact Docket Support"
+    start = visible.find(start_marker)
+    end = visible.find(end_marker, start)
+    if start < 0 or end < 0:
+        raise ValueError("Docket Demand MCP documentation structure changed")
     return visible[start : end + len(end_marker)]
 
 
@@ -12407,6 +12447,104 @@ def verify_docket_evidence() -> None:
     ):
         if marker not in terms_ip:
             raise ValueError(f"Docket terms are missing {marker!r}")
+
+    demand_docs = normalize_docket_demand_docs(
+        fetch_text(DOCKET_DEMAND_DOCS_URL)
+    )
+    if sha256_text(demand_docs) != DOCKET_DEMAND_DOCS_CORE_SHA256:
+        raise ValueError("Docket Demand MCP documentation changed")
+    for marker in (
+        "Docket Demand MCP only reads data",
+        "Docket Demand Capture Agents and their performance",
+        "Captured visitors and leads",
+        "Accounts that engaged with your Demand Capture Agents",
+        "Conversation summaries, qualification status, pain points, and next steps",
+        "Transcripts and recordings",
+        DOCKET_DEMAND_MCP_URL,
+        "Remote MCP or Streamable HTTP",
+        "Authentication: OAuth",
+    ):
+        if marker not in demand_docs:
+            raise ValueError(
+                f"Docket Demand MCP documentation is missing {marker!r}"
+            )
+
+    demand_protected_resource = fetch_json(
+        DOCKET_DEMAND_PROTECTED_RESOURCE_URL
+    )
+    demand_auth_server = fetch_json(DOCKET_DEMAND_AUTH_SERVER_URL)
+    if (
+        canonical_json_sha256(demand_protected_resource)
+        != DOCKET_DEMAND_PROTECTED_RESOURCE_SHA256
+        or demand_protected_resource.get("resource")
+        != DOCKET_DEMAND_MCP_URL
+        or demand_protected_resource.get("authorization_servers")
+        != ["https://angelic-precision-36.authkit.app/"]
+        or demand_protected_resource.get("bearer_methods_supported")
+        != ["header"]
+        or canonical_json_sha256(demand_auth_server)
+        != DOCKET_DEMAND_AUTH_SERVER_SHA256
+        or demand_auth_server.get("issuer")
+        != "https://angelic-precision-36.authkit.app"
+        or demand_auth_server.get("registration_endpoint")
+        != "https://angelic-precision-36.authkit.app/oauth2/register"
+        or demand_auth_server.get("code_challenge_methods_supported")
+        != ["S256"]
+        or "authorization_code"
+        not in demand_auth_server.get("grant_types_supported", [])
+        or "refresh_token"
+        not in demand_auth_server.get("grant_types_supported", [])
+        or "none"
+        not in demand_auth_server.get(
+            "token_endpoint_auth_methods_supported", []
+        )
+    ):
+        raise ValueError("Docket Demand MCP OAuth evidence changed")
+
+    initialize = json.dumps(
+        {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "method": "initialize",
+            "params": {
+                "protocolVersion": "2025-06-18",
+                "capabilities": {},
+                "clientInfo": {
+                    "name": "ghast-docket-audit",
+                    "version": "1.0",
+                },
+            },
+        },
+        separators=(",", ":"),
+    ).encode("utf-8")
+    request = urllib.request.Request(
+        DOCKET_DEMAND_MCP_URL,
+        data=initialize,
+        headers={
+            "User-Agent": "ghast-docket-audit/1.0",
+            "Content-Type": "application/json",
+            "Accept": "application/json, text/event-stream",
+        },
+        method="POST",
+    )
+    try:
+        urllib.request.urlopen(request, timeout=30)
+    except urllib.error.HTTPError as exc:
+        body = exc.read()
+        challenge = exc.headers.get("WWW-Authenticate", "")
+        if (
+            exc.code != 401
+            or sha256_bytes(body) != DOCKET_DEMAND_UNAUTHENTICATED_SHA256
+            or 'Bearer error="invalid_token"' not in challenge
+            or DOCKET_DEMAND_PROTECTED_RESOURCE_URL not in challenge
+        ):
+            raise ValueError(
+                "Docket Demand MCP authentication boundary changed"
+            ) from exc
+    else:
+        raise ValueError(
+            "Docket Demand MCP accepted an unauthenticated audit request"
+        )
 
     for url in DOCKET_UNPUBLISHED_CONFIG_URLS:
         require_http_not_found(
