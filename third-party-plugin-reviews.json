@@ -5684,7 +5684,7 @@
       "verificationStatus": "official-source-research-required",
       "officialDeveloper": "Intuit",
       "officialRepository": "https://github.com/intuit/quickbooks-online-mcp-server",
-      "officialRevision": "c351dc011d9cb14b211857457085f7994d8b1e15",
+      "officialRevision": "c351dc011d9cb14b211857457085f7994d8b1e15+announcement-88027a69cf9f",
       "license": "Apache-2.0",
       "licenseEvidence": [
         "LICENSE",
@@ -5692,9 +5692,13 @@
       ],
       "officialityEvidence": [
         "The repository is owned by Intuit's official GitHub organization and describes itself as the QuickBooks Online MCP Server.",
-        "The pinned main-branch commit is GitHub-verified and carries an Intuit-authored Apache-2.0 copyright notice.",
+        "The pinned main-branch commit c351dc011d9cb14b211857457085f7994d8b1e15 was GitHub-verified on August 10, 2026 and carries an Intuit-authored Apache-2.0 copyright notice.",
         "The source uses Intuit OAuth and QuickBooks Online APIs and provides a local stdio MCP server with configurable write, update, and delete suppression.",
-        "A protocol-level tools/list request against the built pinned source returned 142 tools; enabling all three restriction flags returned 71 read-only tools."
+        "A protocol-level tools/list request against the built pinned source returned 142 tools; enabling all three restriction flags returned 71 read-only tools.",
+        "Intuit's official July 28, 2026 announcement says the QuickBooks integrations in ChatGPT and Claude now include a full sales quote-to-cash workflow, deeper payroll queries for payroll roster, payslip history and payroll readiness, and QuickBooks Capital peer-loan benchmarking against top-performing similar businesses.",
+        "The normalized official announcement SHA-256 is 88027a69cf9fac2a50751886166e085fe380bdee87b7bb9288d1b137d2d4fa43. The page says those private integrations are available with no extra setup, which is a different distribution path from the developer-managed public MCP repository.",
+        "The public repository still has exactly 142 tool files with ordered filename SHA-256 d8ef6980d86880ed5f818ab301f928c2c57e9a4de56ad5664f1bf77c7eb68df0: 25 create, 26 update, 20 delete, and 71 read tools.",
+        "The public tool source contains no payroll, paycheck, payslip, payroll-readiness, QuickBooks Capital, peer-loan, or loan-benchmark operation. Its declared npm package @qboapi/qbo-mcp-server remains unpublished."
       ],
       "codexCapabilities": [
         "Analyze profitability, cash flow, accounts receivable and payable, and generate accounting reports",
@@ -5704,27 +5708,36 @@
       "ghastCapabilities": [
         "The official source provides 71 read tools and 71 mutation tools across customers, invoices, estimates, payments, items, bills, vendors, employees, time activities, attachments, journal entries, banking records, taxes, and related QuickBooks Online entities.",
         "The official source provides balance sheet, profit and loss, cash flow, trial balance, general ledger, customer sales and balance, aged receivables and payables, and vendor expense and balance reports.",
-        "No Ghast plugin is published because the official public source does not cover all capabilities promised by the Codex app and has no published runtime package."
+        "The private QuickBooks connectors for ChatGPT and Claude establish that Intuit implements the missing payroll and peer-loan benchmark workflows, but Intuit has not published those capabilities in the public MCP source or a portable hosted endpoint.",
+        "No Ghast plugin is published because publishing only the 142-tool public source would omit explicit Codex capabilities and falsely present partial coverage as equivalent."
       ],
-      "capabilityRelationship": "official-source-found-capability-and-distribution-gap",
+      "capabilityRelationship": "private-connector-superset-over-public-official-mcp",
       "limitations": [
-        "The public MCP source manages employee records and time activities but exposes no payroll, paycheck, pay-run, tax-filing, or payroll-payment operations.",
-        "The source exposes no industry, regional, peer, lending, or loan benchmark capability.",
+        "The public MCP source manages employee records and time activities but exposes no payroll roster, paycheck, payslip, payroll-readiness, pay-run, tax-filing, or payroll-payment operations.",
+        "The source exposes no QuickBooks Capital, industry, regional, peer, lending, or loan-benchmark capability.",
         "Attachment upload can add supported files to QuickBooks records, but it does not implement the Codex app's described workflow of uploading or pasting transactions for personalized analysis and import.",
         "The README claims 145 tools, while protocol-level tools/list at the pinned revision returns 142. None of the returned tools has MCP read-only, destructive, or idempotency annotations.",
         "The root LICENSE and GitHub metadata identify Apache-2.0, while package.json and the README badge and license section say MIT. Redistribution would use the actual Apache-2.0 license file and must disclose this upstream metadata inconsistency.",
         "The package name declared in package.json is not published on npm. A cold npx launch from the pinned GitHub revision did not become protocol-ready within the MCP client's 60-second request timeout.",
-        "Users must create an Intuit developer app and complete OAuth. Sandbox supports a localhost callback, while initial production authorization requires a public HTTPS callback."
+        "Users of the public source must create an Intuit developer app and complete OAuth. Sandbox supports a localhost callback, while initial production authorization requires a public HTTPS callback.",
+        "The private ChatGPT and Claude integrations cannot be repackaged from their marketplace app IDs: no reusable OAuth client, endpoint grant, source package, payroll schema, Capital benchmark schema, or service license is published.",
+        "No plugins/quickbooks directory, icon, or package should be created until Intuit publishes a portable implementation with the full contract or explicitly narrows the Codex app description."
       ],
       "verification": [
+        "python3 scripts/audit-quickbooks-plugin.py --openai-source ../openai-plugins --official-source ../upstreams/quickbooks-online-mcp-server",
+        "Optionally add --verify-announcement when Intuit's intermittently available news page is reachable and require normalized SHA-256 88027a69cf9fac2a50751886166e085fe380bdee87b7bb9288d1b137d2d4fa43 plus the July 28, 2026 quote-to-cash, payroll, and peer-loan markers",
+        "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9, all three QuickBooks file hashes, complete inventory SHA-256 7cc71442b598b2bb20b66c1dddbb2908ba54b645408e1782b4574199657c8c46, developer identity, private app ID, prompts, and capability markers",
+        "Verify Intuit source revision c351dc011d9cb14b211857457085f7994d8b1e15, tracked-path inventory SHA-256 6b2b9fc76d847923db904934264487a97df0779cd730a058adc6bb7dff74ee89, and pinned LICENSE, README, package.json, and package-lock.json hashes",
         "Install dependencies with an isolated npm cache and run npm run build",
         "Run all 35 Jest suites and confirm 629 tests pass",
         "Start dist/index.js with dummy credentials and call tools/list with all categories enabled; confirm 142 tools consisting of 25 create, 26 update, 20 delete, and 71 read tools",
         "Set QUICKBOOKS_DISABLE_WRITE, QUICKBOOKS_DISABLE_UPDATE, and QUICKBOOKS_DISABLE_DELETE to true and confirm tools/list returns only the 71 read tools",
         "Inspect every returned tool and confirm no MCP annotations are present",
-        "Search the pinned source for payroll and peer-loan benchmark operations and confirm neither capability is implemented",
-        "Query npm for @qboapi/qbo-mcp-server and confirm the declared package is not published",
-        "Do not create plugins/quickbooks until Intuit publishes equivalent payroll and benchmark capabilities or narrows the official Codex capability contract"
+        "Require 142 sorted tool filenames with SHA-256 d8ef6980d86880ed5f818ab301f928c2c57e9a4de56ad5664f1bf77c7eb68df0 and confirm no payroll or QuickBooks Capital benchmark operation exists",
+        "Query npm for @qboapi/qbo-mcp-server and require HTTP 404",
+        "Confirm plugins/quickbooks and packages/quickbooks.zip remain absent",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py"
       ]
     },
     "read-ai": {
