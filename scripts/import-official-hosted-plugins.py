@@ -3379,6 +3379,95 @@ DNB_UNPUBLISHED_CONFIG_URLS = (
     f"{DNB_FINANCE_ANALYTICS_URL}/mcp",
     f"{DNB_FINANCE_ANALYTICS_URL}/api/mcp",
 )
+DNB_DPLUS_SOURCE_REVISION = "e35685997d159cb187109f8ce04b3696b1050e4c"
+DNB_DPLUS_SOURCE_TREE = "00f7a745542a607e4dff376057e6ec3ca7708cee"
+DNB_DPLUS_SOURCE_BASE_URL = (
+    "https://raw.githubusercontent.com/dnb-public/"
+    f"dnb-dplus-plugin-cursor/{DNB_DPLUS_SOURCE_REVISION}"
+)
+DNB_DPLUS_SOURCE_HASHES = {
+    ".cursor-plugin/plugin.json": (
+        "17d2d887b8b89df16485a20af9f0a0d15baf55ffb217817a2f9c48dba666f3b3"
+    ),
+    "README.md": (
+        "8ab610bbca3362218c3ed745c1cf3625368ccedcc24a743a7847b887cbbc0b77"
+    ),
+    "assets/dnb-logo.Png": (
+        "f6d8002086a0940f35f31c8dab044093b184126f0c22ea7b5674378ee2f89abe"
+    ),
+    "mcp.json": (
+        "7578b7d2e45bd7830e8dd6798d94747b9cd4e66a940d69786d4da24ac545a1b8"
+    ),
+    "scripts/validate-template.mjs": (
+        "f737a38e1073b29391aa6d249a690841bf0c899fb026632b477f4ab3a46b683e"
+    ),
+}
+DNB_DPLUS_SOURCE_INVENTORY_SHA256 = (
+    "b07ab5435ada5467f9560a833589b8e82ec52debbccca1375cf0c50c4270ed8a"
+)
+DNB_DPLUS_MCP_URL = "https://plus.dnb.com/v2/mcp"
+DNB_DPLUS_PROTECTED_RESOURCE_URL = (
+    "https://plus.dnb.com/.well-known/oauth-protected-resource/v2/mcp"
+)
+DNB_DPLUS_PROTECTED_RESOURCE_SHA256 = (
+    "903b20658ce87a656aeaea103a9caf92732a2993fa2ee9e8e1e104d2bee447ef"
+)
+DNB_DPLUS_AUTH_SERVER_URL = (
+    "https://plus.dnb.com/.well-known/oauth-authorization-server/v2/mcp"
+)
+DNB_DPLUS_AUTH_SERVER_SHA256 = (
+    "fee4297a942d926f196a5ed3b0d2e24990fbc521fd496e644f0cb59114514fb9"
+)
+DNB_RISK_SOURCE_REVISION = "44b883d5c2a7b2258c7139dc8611d19f899974d2"
+DNB_RISK_SOURCE_TREE = "ca3cbe00f330137aa00e34755e64e262c572f361"
+DNB_RISK_SOURCE_BASE_URL = (
+    "https://raw.githubusercontent.com/dnb-public/"
+    f"dnb-risk-analytics-plugin-cursor/{DNB_RISK_SOURCE_REVISION}"
+)
+DNB_RISK_SOURCE_HASHES = {
+    ".cursor-plugin/plugin.json": (
+        "8dd54a63c63d4232fac0abc1fb825762d5923422908c746fbc3825f0248c97f7"
+    ),
+    "README.md": (
+        "1bb56fed381c8053e4948589a927398822130245f9d53c3b36102360b6c152f3"
+    ),
+    "assets/dnb-logo.Png": (
+        "f6d8002086a0940f35f31c8dab044093b184126f0c22ea7b5674378ee2f89abe"
+    ),
+    "mcp.json": (
+        "75cbf705cf9c811f6d52d4989ca6d17981980fcc2e93373c9a1988035b4bebe8"
+    ),
+    "scripts/validate-template.mjs": (
+        "f737a38e1073b29391aa6d249a690841bf0c899fb026632b477f4ab3a46b683e"
+    ),
+    "skills/complete-workflow/SKILL.md": (
+        "0f1626f2e62ff8fdcda80117e02b435d0a556b6c788c4f4b60d77683517ff27f"
+    ),
+    "skills/kyb-compliance-onboarding/SKILL.md": (
+        "f6c7b7250f779bab6fddc25da8dabc208bc4a8d80c4e63a28d117b976b03d941"
+    ),
+    "skills/screening-adjudication/SKILL.md": (
+        "e50744ef1c53325ebacf24ae04e1c23470bcd6b1b31e551eef3a56ca79cb95ad"
+    ),
+}
+DNB_RISK_SOURCE_INVENTORY_SHA256 = (
+    "b42fe77f197367e0bcf14b8f33b8893edfe933bc136594302bd537303a101e47"
+)
+DNB_RISK_MCP_URL = "https://agents.riskanalytics.dnb.com/mcp"
+DNB_RISK_PROTECTED_RESOURCE_URL = (
+    "https://agents.riskanalytics.dnb.com/"
+    ".well-known/oauth-protected-resource/mcp"
+)
+DNB_RISK_PROTECTED_RESOURCE_SHA256 = (
+    "a39192dde4b616b5f547d9cc56e0b38dce12a22ae620e6d7accf02d3ca252eda"
+)
+DNB_RISK_AUTH_SERVER_URL = (
+    "https://agents.riskanalytics.dnb.com/"
+    ".well-known/oauth-authorization-server"
+)
+DNB_RISK_AUTH_SERVER_SHA256 = (
+    "e04cecbfd9a18a495833f04568fa6c8e84eaba58db57a453ecd68cc1cf19361e"
+)
 DNB_OPENAI_REVISION = "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9"
 DNB_OPENAI_BASE_URL = (
     "https://raw.githubusercontent.com/openai/plugins/"
@@ -11953,6 +12042,216 @@ def verify_dnb_finance_analytics_evidence() -> None:
             raise ValueError(
                 f"Microsoft D&B connector evidence is missing {marker!r}"
             )
+
+    candidate_sources = (
+        (
+            "D&B Commercial Graph",
+            "dnb-dplus-plugin-cursor",
+            DNB_DPLUS_SOURCE_REVISION,
+            DNB_DPLUS_SOURCE_TREE,
+            DNB_DPLUS_SOURCE_BASE_URL,
+            DNB_DPLUS_SOURCE_HASHES,
+            DNB_DPLUS_SOURCE_INVENTORY_SHA256,
+        ),
+        (
+            "D&B Risk Analytics",
+            "dnb-risk-analytics-plugin-cursor",
+            DNB_RISK_SOURCE_REVISION,
+            DNB_RISK_SOURCE_TREE,
+            DNB_RISK_SOURCE_BASE_URL,
+            DNB_RISK_SOURCE_HASHES,
+            DNB_RISK_SOURCE_INVENTORY_SHA256,
+        ),
+    )
+    candidate_content = {}
+    for (
+        label,
+        repository,
+        revision,
+        tree_revision,
+        source_base_url,
+        source_hashes,
+        inventory_hash,
+    ) in candidate_sources:
+        commit = fetch_json(
+            f"https://api.github.com/repos/dnb-public/{repository}/commits/"
+            f"{revision}"
+        )
+        commit_details = commit.get("commit", {})
+        if (
+            commit.get("sha") != revision
+            or commit_details.get("tree", {}).get("sha") != tree_revision
+            or "Public Release" not in commit_details.get("message", "")
+        ):
+            raise ValueError(f"{label} candidate source revision changed")
+        tree = fetch_json(
+            f"https://api.github.com/repos/dnb-public/{repository}/git/trees/"
+            f"{tree_revision}?recursive=1"
+        )
+        paths = sorted(
+            item["path"]
+            for item in tree.get("tree", [])
+            if item.get("type") == "blob"
+        )
+        if paths != sorted(source_hashes):
+            raise ValueError(f"{label} candidate source inventory changed")
+        files = {}
+        for relative_path, expected_hash in source_hashes.items():
+            content = fetch_bytes(f"{source_base_url}/{relative_path}")
+            if sha256_bytes(content) != expected_hash:
+                raise ValueError(
+                    f"{label} candidate source changed: {relative_path}"
+                )
+            files[relative_path] = content
+        inventory = "".join(
+            f"{source_hashes[path]}  {path}\n"
+            for path in sorted(source_hashes)
+        )
+        if sha256_text(inventory) != inventory_hash:
+            raise ValueError(
+                f"{label} candidate source inventory hash is inconsistent"
+            )
+        for license_name in (
+            "LICENSE",
+            "LICENSE.md",
+            "LICENSE.txt",
+            "COPYING",
+            "NOTICE",
+        ):
+            require_http_not_found(
+                f"{source_base_url}/{license_name}",
+                f"{label} candidate source {license_name}",
+            )
+        candidate_content[repository] = files
+
+    dplus_files = candidate_content["dnb-dplus-plugin-cursor"]
+    dplus_manifest = json.loads(
+        dplus_files[".cursor-plugin/plugin.json"]
+    )
+    dplus_mcp = json.loads(dplus_files["mcp.json"])
+    dplus_readme = dplus_files["README.md"].decode("utf-8")
+    if (
+        dplus_manifest.get("name") != "dnb-commercial-graph"
+        or dplus_manifest.get("publisher") != "Dun & Bradstreet"
+        or dplus_manifest.get("repository")
+        != "https://github.com/dnb-public/dnb-dplus-plugin-cursor"
+        or dplus_mcp.get("mcpServers", {})
+        .get("dnb-dplus-mcp", {})
+        .get("url")
+        != DNB_DPLUS_MCP_URL
+    ):
+        raise ValueError("D&B Commercial Graph candidate identity changed")
+    for marker in (
+        "D&B Commercial Graph MCP Server",
+        "DNB_DIRECT_PLUS_MCP_CLIENT_ID",
+        "DNB_DIRECT_PLUS_MCP_CLIENT_SECRET",
+        "Financial Strength Insights",
+        "Third Party Risk Insights",
+        "Payment Insights",
+    ):
+        if marker not in dplus_readme and marker not in (
+            dplus_files["mcp.json"].decode("utf-8")
+        ):
+            raise ValueError(
+                f"D&B Commercial Graph candidate is missing {marker!r}"
+            )
+
+    risk_files = candidate_content["dnb-risk-analytics-plugin-cursor"]
+    risk_manifest = json.loads(risk_files[".cursor-plugin/plugin.json"])
+    risk_mcp = json.loads(risk_files["mcp.json"])
+    risk_manifest_text = risk_files[".cursor-plugin/plugin.json"].decode("utf-8")
+    risk_mcp_text = risk_files["mcp.json"].decode("utf-8")
+    risk_readme = risk_files["README.md"].decode("utf-8")
+    if (
+        risk_manifest.get("name") != "dnb-risk-analytics"
+        or risk_manifest.get("publisher") != "Dun & Bradstreet"
+        or risk_manifest.get("repository")
+        != "https://github.com/dnb-public/"
+        "dnb-risk-analytics-plugin-cursor"
+        or risk_mcp.get("mcpServers", {})
+        .get("dnb-risk-analytics", {})
+        .get("url")
+        != DNB_RISK_MCP_URL
+    ):
+        raise ValueError("D&B Risk Analytics candidate identity changed")
+    for marker in (
+        "D&B Risk Analytics portfolio",
+        "DNB_RA_MCP_CLIENT_ID",
+        "DNB_RA_MCP_CLIENT_SECRET",
+        "KYC/KYB",
+        "beneficial ownership",
+        "initiating screenings",
+        "mcp.write",
+        "mcp.read",
+    ):
+        if (
+            marker not in risk_readme
+            and marker not in risk_manifest_text
+            and marker not in risk_mcp_text
+        ):
+            raise ValueError(
+                f"D&B Risk Analytics candidate is missing {marker!r}"
+            )
+
+    dnb_public_repositories = fetch_json(
+        "https://api.github.com/orgs/dnb-public/repos?per_page=100"
+    )
+    repository_names = {
+        repository.get("name") for repository in dnb_public_repositories
+    }
+    if (
+        "dnb-dplus-plugin-cursor" not in repository_names
+        or "dnb-risk-analytics-plugin-cursor" not in repository_names
+        or any(
+            "finance-analytics" in (name or "").lower()
+            for name in repository_names
+        )
+    ):
+        raise ValueError(
+            "D&B public plugin repository inventory changed; re-audit "
+            "Finance Analytics"
+        )
+
+    dplus_protected_resource = fetch_json(
+        DNB_DPLUS_PROTECTED_RESOURCE_URL
+    )
+    dplus_auth_server = fetch_json(DNB_DPLUS_AUTH_SERVER_URL)
+    if (
+        canonical_json_sha256(dplus_protected_resource)
+        != DNB_DPLUS_PROTECTED_RESOURCE_SHA256
+        or dplus_protected_resource.get("resource") != DNB_DPLUS_MCP_URL
+        or dplus_protected_resource.get("authorization_servers")
+        != [DNB_DPLUS_MCP_URL]
+        or canonical_json_sha256(dplus_auth_server)
+        != DNB_DPLUS_AUTH_SERVER_SHA256
+        or dplus_auth_server.get("issuer") != DNB_DPLUS_MCP_URL
+        or dplus_auth_server.get("grant_types_supported")
+        != ["authorization_code", "refresh_token"]
+        or dplus_auth_server.get("token_endpoint_auth_methods_supported")
+        != ["client_secret_post"]
+    ):
+        raise ValueError("D&B Commercial Graph OAuth evidence changed")
+
+    risk_protected_resource = fetch_json(
+        DNB_RISK_PROTECTED_RESOURCE_URL
+    )
+    risk_auth_server = fetch_json(DNB_RISK_AUTH_SERVER_URL)
+    if (
+        canonical_json_sha256(risk_protected_resource)
+        != DNB_RISK_PROTECTED_RESOURCE_SHA256
+        or risk_protected_resource.get("resource") != DNB_RISK_MCP_URL
+        or risk_protected_resource.get("authorization_servers")
+        != ["https://agents.riskanalytics.dnb.com"]
+        or canonical_json_sha256(risk_auth_server)
+        != DNB_RISK_AUTH_SERVER_SHA256
+        or risk_auth_server.get("issuer")
+        != "https://agents.riskanalytics.dnb.com"
+        or "client_credentials"
+        not in risk_auth_server.get("grant_types_supported", [])
+        or "mcp.read" not in risk_auth_server.get("scopes_supported", [])
+        or "mcp.write" not in risk_auth_server.get("scopes_supported", [])
+    ):
+        raise ValueError("D&B Risk Analytics OAuth evidence changed")
 
     for url in DNB_UNPUBLISHED_CONFIG_URLS:
         require_http_not_found(

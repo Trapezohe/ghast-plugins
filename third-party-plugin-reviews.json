@@ -2408,11 +2408,12 @@
       "verificationStatus": "official-source-research-required",
       "officialDeveloper": "Dun & Bradstreet",
       "officialRepository": null,
-      "officialRevision": "dnb-connectors-eb141895b73a+mcp-80a387a8ecd2+press-36ceb6558d64+ms-fe6cbfd0d86a",
+      "officialRevision": "dnb-connectors-eb141895b73a+mcp-80a387a8ecd2+press-36ceb6558d64+ms-fe6cbfd0d86a+dplus-e35685997d15+risk-44b883d5c2a7",
       "license": "UNVERIFIED",
       "licenseEvidence": [
         "Dun & Bradstreet does not publish source code or redistribution terms for the hosted Finance Analytics MCP implementation, its tool schemas, decisioning engine, workflow configuration, customer data, or artwork.",
         "The Codex manifest declares MIT, but that declaration does not establish a license for Dun & Bradstreet's separately hosted service, proprietary data, private app connector, or partner-supplied workflow bundle.",
+        "The official D&B Commercial Graph and D&B Risk Analytics Cursor manifests also declare MIT, but both pinned repositories lack LICENSE, LICENSE.md, LICENSE.txt, COPYING, and NOTICE files. Those declarations do not license a separate Finance Analytics implementation or its data and workflows.",
         "No D&B source, Codex skill, connector implementation, data, icon, or marketplace artwork is redistributed because no capability-equivalent Ghast plugin is published."
       ],
       "officialityEvidence": [
@@ -2421,7 +2422,12 @@
         "Dun & Bradstreet's June 3, 2026 press release has raw SHA-256 36ceb6558d649ab1dc8dd1b10a6367699f3a61560e78f36263fadba622294eca and states that D&B customers can connect D&B-hosted MCP servers directly to ChatGPT and Codex. It separately identifies Finance Analytics MCP tools, real-time business insight, a rules-based engine, automated business credit decisions, and portfolio-wide risk management.",
         "D&B's official pages distinguish the generic D&B MCP Server from partner connectors. The generic server uses a single API key and licensed D&B Data Blocks, while the Finance Analytics partner connector adds customer portfolio data, credit policies, workflow actions, and decisioning.",
         "Microsoft's certified connector documentation identifies Dun & Bradstreet as publisher, requires a Dplus-API-Key, lists Financial Strength, Ownership, Payment, Entity Scoring and Matching, and other Data Blocks, and exposes one InvokeServer action. Its normalized Markdown core has SHA-256 fe6cbfd0d86af05fa0b492429b268a395530b55927ccc4fc4a963f9db9c60977.",
-        "The official Finance Analytics web entry redirects to Dun & Bradstreet's SAML sign-in. As of August 13, 2026, its conventional OAuth protected-resource, authorization-server, /mcp, and /api/mcp paths return HTTP 404; D&B's public access pages do not publish an independent Finance Analytics endpoint or custom-client configuration.",
+        "D&B's official dnb-public/dnb-dplus-plugin-cursor repository pins commit e35685997d159cb187109f8ce04b3696b1050e4c, tree 00f7a745542a607e4dff376057e6ec3ca7708cee, and five-file inventory SHA-256 b07ab5435ada5467f9560a833589b8e82ec52debbccca1375cf0c50c4270ed8a. It publishes https://plus.dnb.com/v2/mcp for the D&B Commercial Graph and requires customer Client ID and Client Secret environment variables.",
+        "The D&B Commercial Graph protected-resource and authorization metadata have canonical JSON SHA-256 values 903b20658ce87a656aeaea103a9caf92732a2993fa2ee9e8e1e104d2bee447ef and fee4297a942d926f196a5ed3b0d2e24990fbc521fd496e644f0cb59114514fb9. They advertise authorization-code and refresh-token grants with client_secret_post, but not the Finance Analytics portfolio or policy engine.",
+        "D&B's official dnb-public/dnb-risk-analytics-plugin-cursor repository pins commit 44b883d5c2a7b2258c7139dc8611d19f899974d2, tree ca3cbe00f330137aa00e34755e64e262c572f361, and eight-file inventory SHA-256 b42fe77f197367e0bcf14b8f33b8893edfe933bc136594302bd537303a101e47. It publishes https://agents.riskanalytics.dnb.com/mcp for KYC/KYB, screening, beneficial ownership, tags, users, and compliance workflows.",
+        "The D&B Risk Analytics protected-resource and authorization metadata have canonical JSON SHA-256 values a39192dde4b616b5f547d9cc56e0b38dce12a22ae620e6d7accf02d3ca252eda and e04cecbfd9a18a495833f04568fa6c8e84eaba58db57a453ecd68cc1cf19361e. They advertise mcp.read and mcp.write scopes and customer client credentials for a different D&B product.",
+        "As of August 14, 2026, D&B's public GitHub organization contains the Commercial Graph and Risk Analytics Cursor plugins but no Finance Analytics plugin repository. The two official neighboring implementations make the product boundary explicit rather than supplying a substitute.",
+        "The official Finance Analytics web entry redirects to Dun & Bradstreet's SAML sign-in. As of August 14, 2026, its conventional OAuth protected-resource, authorization-server, /mcp, and /api/mcp paths return HTTP 404; D&B's public access pages do not publish an independent Finance Analytics endpoint or custom-client configuration.",
         "OpenAI's pinned Codex snapshot identifies Dun & Bradstreet as the developer. Its complete 13-file inventory has SHA-256 1a923e4f5068c1e87315a6a937b80ea466d851ac3a73a88fa3e8f58a970bc819.",
         "The Codex workflow bundle references 15 Finance Analytics tools. Their sorted NUL-delimited catalog SHA-256 is dfee2c8900a602bf3308e99b75c60beabb76e0349668d7f7f86bf45656b116c9."
       ],
@@ -2435,13 +2441,14 @@
       ],
       "ghastCapabilities": [
         "Dun & Bradstreet's official hosted Finance Analytics MCP and partner connector establish that the Codex capability is developer-authored and D&B-operated.",
-        "The separately documented generic D&B MCP can provide licensed Commercial Graph Data Blocks, but public evidence does not establish access to the authenticated customer's Finance Analytics portfolio, credit policies, folders, alerts, dashboard state, purchased reports, or rules-based decisioning tools.",
+        "D&B now publishes official portable Cursor configurations for the Commercial Graph and Risk Analytics MCP servers. They can provide licensed Data Blocks or compliance workflows, but public evidence does not establish access to the authenticated customer's Finance Analytics portfolio, credit policies, folders, alerts, dashboard state, purchased reports, or rules-based credit decisioning tools.",
         "No Ghast plugin is published because D&B has not published or supplied a portable Finance Analytics endpoint, authentication contract, authenticated tool schemas, or redistribution rights sufficient to reproduce the Codex capability."
       ],
       "capabilityRelationship": "official-partner-hosted-mcp-found-private-endpoint-and-capability-blockers",
       "limitations": [
-        "Do not substitute the generic D&B MCP Server, Direct+, Direct 2.0, D&B Risk Analytics, a scraper, or an unofficial MCP wrapper for D&B Finance Analytics. Each has a different product contract and does not prove equivalent customer-portfolio and decisioning behavior.",
-        "The generic D&B MCP documentation establishes read-oriented D&B Data Blocks and one API-key-authenticated invocation surface, but it does not publish the 15 Finance Analytics tool names or schemas.",
+        "Do not substitute the official Commercial Graph MCP, official Risk Analytics MCP, Direct+, Direct 2.0, a scraper, or an unofficial MCP wrapper for D&B Finance Analytics. Each has a different product contract and does not prove equivalent customer-portfolio and credit-decisioning behavior.",
+        "The official Commercial Graph plugin publishes a portable endpoint and licensed Data Blocks, while the official Risk Analytics plugin publishes a portable endpoint and compliance workflows. Neither repository names the 15 Finance Analytics tools or documents Finance Analytics folders, alerts, customer exposure, dashboard state, purchased reports, or policy-based credit decisions.",
+        "Commercial Graph credentials and Risk Analytics credentials are product-specific customer secrets. Ghast must not assume they authorize Finance Analytics or relabel either official plugin under the dnb-finance-analytics slug.",
         "The Codex surface includes customer-specific data and state-changing folder operations. It also depends on purchased reports, configured alert profiles, tenant portfolio records, customer credit policies, and D&B's rules-based decisioning engine.",
         "The partner connector's app ID is an OpenAI marketplace mapping, not a reusable MCP endpoint or credential. Ghast must not extract, impersonate, or redistribute private marketplace authentication or connector configuration.",
         "The six Codex workflow references are publicly visible in the OpenAI repository and call themselves partner-supplied, but no separate D&B source repository or license was found. They are retained only as pinned capability evidence and are not copied.",
@@ -2454,6 +2461,8 @@
       "verification": [
         "Run verify_dnb_finance_analytics_evidence from scripts/import-official-hosted-plugins.py",
         "Verify the pinned normalized D&B AI Connectors and generic MCP product cores, the June 3, 2026 press-release bytes, the Finance Analytics customer-data terms, and the Microsoft certified connector Markdown",
+        "Verify the pinned Commercial Graph and Risk Analytics Cursor commits, trees, exact source inventories, file hashes, continued absence of repository license files, manifests, MCP endpoints, and OAuth metadata hashes",
+        "Confirm the dnb-public organization still has no Finance Analytics plugin repository and that neither neighboring official plugin publishes the 15-name Finance Analytics tool catalog",
         "Confirm the official pages continue to distinguish the generic API-key and Data Block MCP from the Finance Analytics partner connector's customer data, credit policies, workflow actions, and embedded decisioning",
         "Confirm the conventional Finance Analytics OAuth and MCP configuration paths remain unpublished; treat any newly published endpoint as a re-audit trigger rather than automatically importing it",
         "Verify all 13 OpenAI snapshot files, developer and app identity, complete inventory hash, all six workflow references, and the sorted 15-name tool catalog",
