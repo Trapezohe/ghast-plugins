@@ -17,12 +17,12 @@
     "thirdPartyPlugins": 149,
     "auditStatus": {
       "blocked-license": 3,
-      "official-source-research-required": 19,
-      "official-source-verified": 127
+      "official-source-research-required": 18,
+      "official-source-verified": 128
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 127,
-      "not-implemented": 22
+      "implemented-verified": 128,
+      "not-implemented": 21
     }
   },
   "excludedOpenAIPlugins": [
@@ -11202,7 +11202,7 @@
     },
     {
       "id": "s-p",
-      "auditStatus": "official-source-research-required",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "S&P Global",
@@ -11229,13 +11229,72 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://www.spglobal.com"
+        "homepage": "https://www.spglobal.com",
+        "review": {
+          "verificationStatus": "official-source-verified",
+          "officialDeveloper": "Kensho Technologies / S&P Global",
+          "officialRepository": "https://github.com/kensho-technologies/spglobal-agent-skills",
+          "officialRevision": "1d7d364a07d755d401b6f66d41affe71bc62a9b9",
+          "license": "Apache-2.0",
+          "licenseEvidence": [
+            "The official spglobal-agent-skills repository is Apache-2.0; its LICENSE SHA-256 is 6d52428205148726e444e00abc2138ca3f73a0e7f49202e400c5e8c14269e867.",
+            "The official kfinance v7.1.1 repository is also Apache-2.0; its LICENSE and NOTICE SHA-256 values are e2f96092d627477ab555bb35d20064f7ae71b7ef0356f2ae4e20bc46bfdeba4e and 9aea5a1994f8494c16a7849d77189e542a571fc6f9f2168c723aae54bc64b7d8.",
+            "The package preserves the official agent-skills license plus the kFinance license and notice. No S&P Global, Kensho, or OpenAI catalog artwork, credential, customer data, or hosted service source is redistributed."
+          ],
+          "officialityEvidence": [
+            "Kensho Technologies controls both official repositories. The spglobal-agent-skills README explicitly says the skills use open standards, support Codex, and declares the local Codex plugin path.",
+            "The official Codex manifest names Kensho Technologies as author, S&P Global as display name, Apache-2.0 as license, and the hosted MCP declaration at https://kfinance.kensho.com/integrations/mcp.",
+            "The complete official plugin inventory at revision 1d7d364a07d755d401b6f66d41affe71bc62a9b9 contains 15 files and has SHA-256 819f41f32ee547e8cfaf90aa1460c9c46b407231cf83cf97969513568c73c989.",
+            "The official kFinance v7.1.1 source registers 37 ordered tools. Their NUL-separated names have SHA-256 195de4e0878269b26cc651a429ae5a4f632b0d1b4fd4191089b4be9e0fb3f165.",
+            "On August 14, 2026, the hosted MCP rejected anonymous initialize with HTTP 401 and advertised its OAuth protected-resource metadata. Canonical protected-resource and authorization-server metadata SHA-256 values are 73105c7ca9306563c0f01f2fee1ae0e18a7b1fbdde38d8c6e68e905618cd277d and af83b2fbbb967416f1c57786becbacbc5eff7cdbec79824212c39adfdd8902cc.",
+            "OpenAI's pinned catalog snapshot identifies S&P Global as developer and maps private app ID asdk_app_6980f65d75b881918eaa6d65477d87c6. Its complete inventory SHA-256 is 8ba396743f52095358c9b296f3aeab174fee1e7ab58bdf389edd9e77cd696452."
+          ],
+          "codexCapabilities": [
+            "Query S&P Capital IQ financials, earnings transcripts, company information, financial statements, historical market data, and global securities through natural language",
+            "Pull company financials and ratings context and summarize risks",
+            "Compare revenue growth, margins, valuation multiples, and peers",
+            "Find recent S&P Global research or industry outlook context"
+          ],
+          "ghastCapabilities": [
+            "Connect directly to Kensho's official hosted kFinance MCP instead of OpenAI's private app mapping",
+            "Use the official 37-tool source surface for company data, relationships, financials, earnings and transcripts, prices, transactions, estimates, guidance, recommendations, and ratings, subject to live account entitlements",
+            "Use Kensho's official tear-sheet, funding-digest, and earnings-preview skills with minimal documented Ghast host compatibility notes",
+            "Use an additional Ghast-authored routing and financial-data safety skill without modifying or imitating S&P Global's data service"
+          ],
+          "capabilityRelationship": "equivalent-official-company-data-plus-conditional-research-workflow",
+          "limitations": [
+            "An eligible S&P Global LLM-ready API or Capital IQ subscription, browser OAuth, dataset entitlements, and service permissions are required. Trial and account provisioning remain user-managed.",
+            "Authenticated tools/list and financial-data calls were not run because no user S&P Global account was supplied. The 37-tool catalog is verified from official kFinance source; the hosted server filters tools by the authenticated user's permissions.",
+            "The official earnings-preview-beta skill requires both kFinance and a separate Kensho Grounding MCP search tool. The public official plugin declares no Grounding server, endpoint, or portable authentication setup, so that workflow must stop when the additional search tool is absent.",
+            "Broad industry research and recent-news retrieval are not treated as complete through deterministic kFinance alone. Company-specific key developments, transcripts, estimates, guidance, and ratings remain available when entitled.",
+            "The official funding-digest and tear-sheet skills refer to Anthropic-specific /mnt skill paths. Ghast appends narrowly scoped instructions to use the host's presentation and document tooling without changing the financial workflow or source requirements.",
+            "Financial data can differ by currency, units, fiscal period, dataset, timestamp, entitlement, and actual-versus-estimate status. Generated calculations and artifacts require human verification and are not investment, legal, tax, accounting, audit, or valuation advice.",
+            "A generic financial-data icon is used because the official public agent-skills repository contains no icon and S&P Global, Kensho, and OpenAI marketplace artwork is not redistributed."
+          ],
+          "verification": [
+            "python3 scripts/import-sp-global-plugin.py --openai-source ../openai-plugins --agent-skills-upstream ../upstreams/spglobal-agent-skills --kfinance-upstream ../upstreams/kfinance",
+            "Verify official agent-skills origin, revision 1d7d364a07d755d401b6f66d41affe71bc62a9b9, tree, Apache-2.0 license, manifest, MCP URL, file hashes, and 15-file inventory",
+            "Verify official kFinance origin, v7.1.1 tag and revision 6700379c4026d99f986ead9aff849fa6b5b99d66, tree, Apache-2.0 license and notice, local MCP implementation, and exact ordered 37-tool catalog",
+            "Probe the hosted MCP anonymous initialize boundary and require HTTP 401, the official protected-resource challenge, body hash 8599a03b4c1d788236014f851ec320b3ad4a589c59e8c1ea045dd4d052291cce, and pinned canonical OAuth metadata",
+            "For a deliberate one-time OAuth portability audit, add --verify-registration and require disposable public-client registration; do not retain the returned client ID",
+            "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9, all four file hashes, inventory hash, developer identity, private app ID, and capability markers",
+            "Compare the three packaged upstream skill trees with the pinned official repository, allowing only the recorded Ghast compatibility appendices",
+            "python3 scripts/build-ghast-catalog.py",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/s-p.zip"
+          ]
+        }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.3-ghast.1",
+        "repository": "https://github.com/kensho-technologies/spglobal-agent-skills",
+        "upstreamRevision": "1d7d364a07d755d401b6f66d41affe71bc62a9b9",
+        "portStatus": "partial"
       }
     },
     {

@@ -3193,6 +3193,36 @@
       "license": "MIT"
     },
     {
+      "id": "s-p",
+      "name": "s-p",
+      "description": "Query S&P Global company financial data through Kensho's official MCP and generate official tear sheets, funding digests, and conditional earnings previews.",
+      "manifest": {
+        "name": "s-p",
+        "description": "Query S&P Global company financial data through Kensho's official MCP and generate official tear sheets, funding digests, and conditional earnings previews.",
+        "author": {
+          "name": "Kensho Technologies / S&P Global",
+          "url": "https://www.kensho.com/"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://docs.kensho.com/agentskills",
+        "repository": "https://github.com/kensho-technologies/spglobal-agent-skills",
+        "upstreamRevision": "1d7d364a07d755d401b6f66d41affe71bc62a9b9",
+        "license": "Apache-2.0",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/s-p.zip",
+        "sha256": "1d4c9cb82c15036c722bcf881d64c8e1dcf8f43af76e2e67ae066d3662727b53"
+      },
+      "icon": "./plugins/s-p/assets/icon.svg",
+      "category": "finance",
+      "homepage": "https://docs.kensho.com/agentskills",
+      "repository": "https://github.com/kensho-technologies/spglobal-agent-skills",
+      "license": "Apache-2.0"
+    },
+    {
       "id": "scite",
       "name": "scite",
       "description": "Search and verify scientific literature, patents, trials, grants, regulatory records, adverse-event reports, drugs, and research collections through Scite's official hosted MCP server.",

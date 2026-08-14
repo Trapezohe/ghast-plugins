@@ -143,7 +143,7 @@ verification.
 | replit | Replit | appConnector | MIT | official-source-verified | implemented-verified |
 | responsive | RFPIO Inc. (d/b/a Responsive) | appConnector | MIT | official-source-verified | implemented-verified |
 | rox | Rox Data Corp | appConnector | MIT | official-source-research-required | not-implemented |
-| s-p | S&P Global | appConnector | MIT | official-source-research-required | not-implemented |
+| s-p | S&P Global | appConnector | MIT | official-source-verified | implemented-verified |
 | scite | Scite | appConnector | MIT | official-source-verified | implemented-verified |
 | semrush | Semrush Holdings, Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | setu-bharat-connect-billpay | Setu | appConnector | MIT | official-source-verified | implemented-verified |
