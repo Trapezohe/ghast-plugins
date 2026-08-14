@@ -3476,6 +3476,69 @@ FINN_OPENAI_HASHES = {
 FINN_OPENAI_INVENTORY_SHA256 = (
     "6caefb7315e86e5d4b782aa6bef5ae97a91f7fbbe3be429c55e2707be61bff4f"
 )
+KEYBID_HOME_URL = "https://keybid.eu/"
+KEYBID_PULS_URL = "https://keybid.eu/KeyBid-Puls"
+KEYBID_LLMS_URL = "https://keybid.eu/llms.txt"
+KEYBID_ROBOTS_URL = "https://keybid.eu/robots.txt"
+KEYBID_API_LICENSE_URL = "https://keybid.eu/api-license"
+KEYBID_RO_API_LICENSE_URL = "https://keybid.ro/api-license"
+KEYBID_WEB_APP_URL = (
+    "https://keybid.eu/assets/web-app-o-s-nOQG.js"
+)
+KEYBID_MARKET_INTELLIGENCE_URL = (
+    "https://keybid.eu/assets/market-intelligence-S6DXXFsL.js"
+)
+KEYBID_HOME_SHA256 = (
+    "77ed0e0691546aebd7a64e5e15505b0e0ff311c506ab63851bfa8171a88b1336"
+)
+KEYBID_LLMS_SHA256 = (
+    "7ee3a986d0080134d478088e051f4ca44819c91cee4b7b5d1d64ff271fe8a184"
+)
+KEYBID_ROBOTS_CORE_SHA256 = (
+    "1b6d26ebfebfba90b4452afe5383c956004f6483ef4fb63684993b3358a47781"
+)
+KEYBID_WEB_APP_SHA256 = (
+    "ca2cac78ec1f1fc386ef42c4dd7b19b2d2d0098533cfd7043dce96dac2f32388"
+)
+KEYBID_TERMS_CORE_SHA256 = (
+    "58753c9550ea273a3b2600b1c888545f99638cad41eca62b12d37a66abf31685"
+)
+KEYBID_GPT_TERMS_SHA256 = (
+    "e08be41d734722736deea4b13a6944dbfebb2da405337e6271052b103a38aee5"
+)
+KEYBID_MARKET_INTELLIGENCE_SHA256 = (
+    "4a53b74defb8569c1f6e964af94e1c0515e4ac1dc175af2680a59dcec5f0af50"
+)
+KEYBID_DATA_DOWNLOAD_SCHEMA_SHA256 = (
+    "f902bc535e27fda10f21ab84cc06128bc412b2ae594ef8fe58ccdc16bcc0b514"
+)
+KEYBID_GITHUB_USER_URL = "https://api.github.com/users/KeyBid"
+KEYBID_GITHUB_REPOS_URL = (
+    "https://api.github.com/users/KeyBid/repos"
+    "?per_page=100&type=public&sort=full_name"
+)
+KEYBID_OPENAI_REVISION = "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9"
+KEYBID_OPENAI_BASE_URL = (
+    "https://raw.githubusercontent.com/openai/plugins/"
+    f"{KEYBID_OPENAI_REVISION}/plugins/keybid-puls"
+)
+KEYBID_OPENAI_HASHES = {
+    ".app.json": (
+        "edcc4e320e072a71dd580678da8392d6493de3f42be4bb9c4cff8ab7c55e3244"
+    ),
+    ".codex-plugin/plugin.json": (
+        "9e7ec4430dd842f35fe6fa8e1922f5065f94a000658e1e938019ac7f71510171"
+    ),
+    "assets/logo-dark.png": (
+        "b7e6bde296f03ef738c9210cc1f5dc0bc165903c41492d6068d83ac3638fe4e5"
+    ),
+    "assets/logo.png": (
+        "b7e6bde296f03ef738c9210cc1f5dc0bc165903c41492d6068d83ac3638fe4e5"
+    ),
+}
+KEYBID_OPENAI_INVENTORY_SHA256 = (
+    "ab8ae404ac27af232d29a91fa2a4c6952dd6e77e4eb2de65155090dd4a1323ec"
+)
 HG_INSIGHTS_MCP_URL = "https://phoenix.hginsights.com/api/mcp"
 HG_INSIGHTS_OAUTH_MCP_URL = "https://phoenix.hginsights.com/api/ai/mcp"
 HG_INSIGHTS_GETTING_STARTED_URL = (
@@ -4547,6 +4610,7 @@ def main() -> int:
     verify_dnb_finance_analytics_evidence()
     verify_docket_evidence()
     verify_finn_evidence()
+    verify_keybid_puls_evidence()
     verify_hg_insights_evidence()
     verify_cogedim_evidence()
     verify_demandbase_evidence()
@@ -4947,6 +5011,44 @@ def normalize_finn_robots(value: str) -> str:
     if missing:
         raise ValueError(f"FINN robots policy is missing {missing!r}")
     return "\n".join(required) + "\n"
+
+
+def normalize_keybid_robots(value: str) -> str:
+    required = (
+        "User-agent: *",
+        "Allow: /",
+        "Allow: /KeyBid-Puls",
+        "Allow: /llms.txt",
+        "Disallow: /api/",
+        "Disallow: /admin/",
+        "Disallow: /dashboard/",
+        "Disallow: /profile/",
+        "Disallow: /settings/",
+        "Disallow: /unlock-manager/",
+        "Disallow: /payment/",
+        "Disallow: /test/",
+        "Sitemap: https://keybid.eu/sitemap.xml",
+        "Sitemap: https://keybid.eu/sitemap-index.xml",
+        "Sitemap: https://keybid.eu/sitemap-puls.xml",
+        "Sitemap: https://keybid.eu/sitemap-news.xml",
+    )
+    lines = {line.strip() for line in value.splitlines() if line.strip()}
+    missing = [line for line in required if line not in lines]
+    if missing:
+        raise ValueError(f"KeyBid robots policy is missing {missing!r}")
+    return "\n".join(required) + "\n"
+
+
+def extract_keybid_section(
+    value: str,
+    start_marker: str,
+    end_marker: str,
+) -> str:
+    start = value.find(start_marker)
+    end = value.find(end_marker, start)
+    if start < 0 or end < 0:
+        raise ValueError("KeyBid frontend evidence structure changed")
+    return value[start:end]
 
 
 def normalize_hg_insights_docs(value: str) -> str:
@@ -11797,6 +11899,193 @@ def verify_finn_evidence() -> None:
             "FINN must remain unpublished until FINN supplies an authorized "
             "portable API credential or endpoint and grants sufficient "
             "third-party client and data-use rights"
+        )
+
+
+def verify_keybid_puls_evidence() -> None:
+    home = fetch_bytes(KEYBID_HOME_URL)
+    if sha256_bytes(home) != KEYBID_HOME_SHA256:
+        raise ValueError("KeyBid homepage changed")
+    if fetch_bytes(KEYBID_PULS_URL) != home:
+        raise ValueError("KeyBid Puls SPA entry changed")
+
+    llms = fetch_bytes(KEYBID_LLMS_URL)
+    if sha256_bytes(llms) != KEYBID_LLMS_SHA256:
+        raise ValueError("KeyBid LLM reference changed")
+    llms_text = llms.decode("utf-8")
+    for marker in (
+        "KeyBid is a property management matching platform",
+        "Market Intelligence - Real-time pricing and analytics",
+        "Browser Extensions - ROI Calculator for property investment",
+        "Greece",
+        "Spain",
+        "Romania",
+    ):
+        if marker not in llms_text:
+            raise ValueError(
+                f"KeyBid LLM reference is missing {marker!r}"
+            )
+
+    robots = normalize_keybid_robots(fetch_text(KEYBID_ROBOTS_URL))
+    if sha256_text(robots) != KEYBID_ROBOTS_CORE_SHA256:
+        raise ValueError("KeyBid robots policy changed")
+
+    for api_license_url in (
+        KEYBID_API_LICENSE_URL,
+        KEYBID_RO_API_LICENSE_URL,
+    ):
+        api_license = fetch_bytes(api_license_url)
+        if (
+            api_license != home
+            or sha256_bytes(api_license) != KEYBID_HOME_SHA256
+            or b"<title>KeyBid -" not in api_license
+        ):
+            raise ValueError(
+                "KeyBid api-license route now differs from the SPA fallback; "
+                "re-audit licensing"
+            )
+
+    web_app = fetch_bytes(KEYBID_WEB_APP_URL)
+    if sha256_bytes(web_app) != KEYBID_WEB_APP_SHA256:
+        raise ValueError("KeyBid web application changed")
+    web_app_text = web_app.decode("utf-8")
+    terms = extract_keybid_section(
+        web_app_text,
+        '"4.1":{title:"4.1 Download and Installation"',
+        ',9:{title:"9. Limitation of Liability"',
+    )
+    if sha256_text(terms) != KEYBID_TERMS_CORE_SHA256:
+        raise ValueError("KeyBid licensing and intellectual-property terms changed")
+    for marker in (
+        "Limited, non-exclusive, non-transferable license for personal use",
+        "You may not copy, modify, distribute, or sell the application",
+        "public data and proprietary algorithms",
+        "DO NOT constitute financial, investment, or legal advice",
+        "publicly available data and may not reflect actual market conditions",
+        "exclusive property of SC Aqua Vista Rentals SRL",
+        "Any unauthorized use",
+    ):
+        if marker not in terms:
+            raise ValueError(f"KeyBid terms are missing {marker!r}")
+
+    gpt_terms = extract_keybid_section(
+        web_app_text,
+        '"5.6":{title:"5.6 KeyBid GPT and KeyBid GPT App (ChatGPT)"',
+        '}},6:{title:',
+    )
+    if sha256_text(gpt_terms) != KEYBID_GPT_TERMS_SHA256:
+        raise ValueError("KeyBid GPT terms changed")
+    for marker in (
+        "Official KeyBid application available in the ChatGPT App Store",
+        "using MCP (Model Context Protocol) for advanced functionality",
+        "Analysis for 56 countries and 191 cities globally",
+        (
+            "Property analysis, pricing recommendations, investment PDF "
+            "report generation, property previews"
+        ),
+        "Property listing URLs provided by user, email for report delivery",
+        "processed by OpenAI",
+    ):
+        if marker not in gpt_terms:
+            raise ValueError(f"KeyBid GPT terms are missing {marker!r}")
+
+    market = fetch_bytes(KEYBID_MARKET_INTELLIGENCE_URL)
+    if sha256_bytes(market) != KEYBID_MARKET_INTELLIGENCE_SHA256:
+        raise ValueError("KeyBid market-intelligence frontend changed")
+    market_text = market.decode("utf-8")
+    data_download = extract_keybid_section(
+        market_text,
+        'distribution:{"@type":"DataDownload"',
+        ',keywords:"pre\u021buri Airbnb Rom\u00e2nia',
+    )
+    if sha256_text(data_download) != KEYBID_DATA_DOWNLOAD_SCHEMA_SHA256:
+        raise ValueError("KeyBid DataDownload metadata changed")
+    for marker in (
+        'contentUrl:`${a}/api/ai/market-data`',
+        'license:"https://keybid.ro/api-license"',
+        "isAccessibleForFree:!0",
+    ):
+        if marker not in data_download:
+            raise ValueError(
+                f"KeyBid DataDownload metadata is missing {marker!r}"
+            )
+
+    github_user = fetch_json(KEYBID_GITHUB_USER_URL)
+    if (
+        github_user.get("login") != "KeyBid"
+        or github_user.get("type") != "User"
+    ):
+        raise ValueError("KeyBid GitHub account changed")
+    repositories = fetch_json(KEYBID_GITHUB_REPOS_URL)
+    for repository in repositories:
+        searchable = " ".join(
+            str(repository.get(field) or "")
+            for field in ("name", "description")
+        ).lower()
+        if any(
+            marker in searchable
+            for marker in ("mcp", "keybid puls", "roi calculator", "chatgpt")
+        ):
+            raise ValueError(
+                "KeyBid published a candidate official connector or client; "
+                "re-audit required"
+            )
+
+    codex_files = {}
+    for relative_path, expected_hash in KEYBID_OPENAI_HASHES.items():
+        content = fetch_bytes(f"{KEYBID_OPENAI_BASE_URL}/{relative_path}")
+        if sha256_bytes(content) != expected_hash:
+            raise ValueError(
+                f"KeyBid Codex evidence changed: {relative_path}"
+            )
+        codex_files[relative_path] = content
+    inventory = "".join(
+        f"{KEYBID_OPENAI_HASHES[path]}  {path}\n"
+        for path in sorted(KEYBID_OPENAI_HASHES)
+    )
+    if sha256_text(inventory) != KEYBID_OPENAI_INVENTORY_SHA256:
+        raise ValueError("KeyBid Codex inventory hash is inconsistent")
+
+    manifest = json.loads(codex_files[".codex-plugin/plugin.json"])
+    app = json.loads(codex_files[".app.json"])
+    interface = manifest.get("interface", {})
+    if (
+        manifest.get("name") != "keybid-puls"
+        or manifest.get("version") != "1.0.3"
+        or manifest.get("author", {}).get("name") != "KeyBid"
+        or interface.get("developerName") != "KeyBid"
+        or interface.get("defaultPrompt")
+        != ["Is this apartment worth buying for short-term"]
+        or app.get("apps", {}).get("keybid-puls", {}).get("id")
+        != "asdk_app_694ec6acb5d481919aee2d0da18333b1"
+    ):
+        raise ValueError("KeyBid Codex developer evidence changed")
+    long_description = interface.get("longDescription", "")
+    for marker in (
+        "Airbnb, Booking.com, and VRBO",
+        "idealista.com",
+        "imobiliare.ro",
+        "storia.ro",
+        "spitogatos.gr",
+        "upload screenshots",
+        "instant revenue projections",
+        "detailed reports",
+        "worth purchasing for short-term rentals",
+        "56 countries and over 191 cities",
+    ):
+        if marker not in long_description:
+            raise ValueError(
+                f"KeyBid Codex capability evidence is missing {marker!r}"
+            )
+
+    if (
+        (PLUGIN_DIR / "keybid-puls").exists()
+        or Path("packages/keybid-puls.zip").exists()
+    ):
+        raise ValueError(
+            "KeyBid Puls must remain unpublished until KeyBid publishes an "
+            "authorized portable MCP or API contract and grants sufficient "
+            "third-party client, data-use, source, and artwork rights"
         )
 
 

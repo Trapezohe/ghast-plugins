@@ -7207,10 +7207,73 @@
       },
       "declaredLicense": "MIT",
       "officialSource": {
-        "status": "unknown",
+        "status": "reviewed",
         "codexRepository": "https://github.com/openai/plugins",
         "candidateOfficialRepository": null,
-        "homepage": "https://keybid.eu"
+        "homepage": "https://keybid.eu",
+        "review": {
+          "verificationStatus": "official-source-research-required",
+          "officialDeveloper": "KeyBid",
+          "officialRepository": null,
+          "officialRevision": "keybid-web-ca2cac78ec1f+market-4a53b74defb8+terms-58753c9550ea+robots-1b6d26ebfebf",
+          "license": "UNVERIFIED",
+          "licenseEvidence": [
+            "KeyBid does not publish a software, MCP-client, API-client, data-use, or redistribution license for KeyBid Puls, its private ChatGPT MCP application, website API routes, algorithms, browser extensions, source code, schemas, logos, icons, reports, or marketplace artwork.",
+            "The market-intelligence frontend emits JSON-LD that labels https://keybid.ro/api-license as a license URL, but on August 14, 2026 both the .ro and .eu api-license paths returned the ordinary KeyBid SPA homepage rather than license terms. A structured-data pointer to a nonexistent license document is not permission to reuse the API or data.",
+            "KeyBid's English terms grant a limited, non-exclusive, non-transferable license for personal use of its mobile application and prohibit copying, modifying, distributing, or selling it.",
+            "The same terms identify the KeyBid trademark, logo, design, source code, algorithms, matching systems, and proprietary systems as protected property of SC Aqua Vista Rentals SRL and state that unauthorized use is infringement.",
+            "The Codex manifest declares MIT, but that declaration does not license KeyBid's separately operated private app connector, hosted MCP implementation, internal website API, proprietary algorithms, reports, browser extensions, service data, trademarks, or artwork.",
+            "No KeyBid code, website bundle, internal API response, schema, connector implementation, logo, icon, report, or marketplace asset is redistributed because no authorized capability-equivalent Ghast plugin is published."
+          ],
+          "officialityEvidence": [
+            "KeyBid's official llms.txt identifies KeyBid Puls as its real-time pricing and market-intelligence product and identifies its browser extensions as ROI calculators for property investment. The complete file has SHA-256 7ee3a986d0080134d478088e051f4ca44819c91cee4b7b5d1d64ff271fe8a184.",
+            "KeyBid's current official web application bundle has SHA-256 ca2cac78ec1f1fc386ef42c4dd7b19b2d2d0098533cfd7043dce96dac2f32388. Its normalized English licensing, KeyBid Puls, acceptable-use, and intellectual-property evidence has SHA-256 58753c9550ea273a3b2600b1c888545f99638cad41eca62b12d37a66abf31685.",
+            "KeyBid's official terms explicitly describe KeyBid GPT App as an official ChatGPT App Store application using MCP, with property analysis, pricing recommendations, investment PDF report generation, property previews, and coverage of 56 countries and 191 cities. The normalized GPT terms section has SHA-256 e08be41d734722736deea4b13a6944dbfebb2da405337e6271052b103a38aee5.",
+            "The official terms say KeyBid Puls analyses are based on public data and proprietary algorithms, are informational and illustrative rather than financial, investment, or legal advice, and may not reflect actual market conditions.",
+            "KeyBid's market-intelligence frontend chunk has SHA-256 4a53b74defb8569c1f6e964af94e1c0515e4ac1dc175af2680a59dcec5f0af50. Its DataDownload JSON-LD points to /api/ai/market-data and the nonexistent api-license page; the normalized metadata has SHA-256 f902bc535e27fda10f21ab84cc06128bc412b2ae594ef8fe58ccdc16bcc0b514.",
+            "The current website frontend references first-party routes for market location, countries, weather, pricing, zones, drivers, chat, gap analysis, PDF generation, report checkout, and listing-report generation. These are website implementation details, not a published third-party API contract or portable MCP configuration.",
+            "On August 14, 2026, a bounded audit confirmed that selected website data routes were reachable while report generation required authentication, but no public MCP endpoint, OAuth metadata, API-key issuance flow, OpenAPI document, SDK, client library, stability policy, quota policy, or third-party onboarding procedure was published.",
+            "KeyBid's normalized robots policy has SHA-256 1b6d26ebfebfba90b4452afe5383c956004f6483ef4fb63684993b3358a47781. It allows the KeyBid Puls and llms.txt pages but explicitly disallows /api/ and private account, dashboard, payment, and test areas.",
+            "The public GitHub user named KeyBid currently exposes only an empty verification repository and an unrelated Solana repository, neither with a license. The account does not publish a KeyBid Puls MCP server, API client, browser-extension source, ROI engine, or capability-equivalent implementation, and its profile does not independently establish an official link to keybid.eu.",
+            "OpenAI's pinned Codex snapshot identifies KeyBid as developer, maps KeyBid Puls to private app ID asdk_app_694ec6acb5d481919aee2d0da18333b1, and describes listing-URL or screenshot analysis, revenue projections, reports, and an investment conclusion. Its complete four-file inventory has SHA-256 ab8ae404ac27af232d29a91fa2a4c6952dd6e77e4eb2de65155090dd4a1323ec."
+          ],
+          "codexCapabilities": [
+            "Accept property URLs from Idealista, Imobiliare.ro, Storia, or Spitogatos and property screenshots from other listing sites",
+            "Analyze short-term-rental potential for Airbnb, Booking.com, and VRBO",
+            "Produce instant revenue projections, detailed reports, and a concise conclusion on whether a property is worth buying for short-term rental",
+            "Cover 56 countries and more than 191 cities in English, Romanian, Spanish, and Greek"
+          ],
+          "ghastCapabilities": [
+            "KeyBid's own product, terms, website frontend, and private ChatGPT MCP description prove that the developer operates the capability represented by the Codex plugin.",
+            "No Ghast plugin is published because KeyBid has not exposed an authorized portable MCP endpoint or documented third-party API contract, and has not granted the client, data-use, source, report, extension, trademark, or artwork rights needed for a reusable implementation."
+          ],
+          "capabilityRelationship": "official-private-chatgpt-mcp-found-portability-and-license-blockers",
+          "limitations": [
+            "The OpenAI private app ID is a marketplace mapping, not an MCP URL, OAuth client, access token, API key, source repository, or reusable transport configuration.",
+            "The terms confirm that an official KeyBid MCP application exists inside ChatGPT, but do not publish its endpoint, protocol metadata, authentication method, tool schemas, client registration, account linking, quotas, or independent-client support.",
+            "Website JavaScript route strings and technically reachable responses do not create a public API contract or permission to publish a third-party wrapper. The routes may change without notice and can include generated, licensed, personal, payment, or proprietary data.",
+            "KeyBid's robots policy explicitly disallows /api/. Ghast must not crawl, index, mirror, cache, train on, periodically harvest, or package the website API as a substitute for an authorized integration.",
+            "The api-license URL currently resolves to the ordinary SPA homepage and contains no license grant. The JSON-LD is therefore insufficient to authorize API access, data reuse, redistribution, derivative clients, or commercial use.",
+            "The terms limit application use, prohibit copying and distribution, and reserve source code, algorithms, design, brand assets, and proprietary systems. Reverse engineering the private connector, extension, or frontend to recreate the ROI engine would conflict with the project's official-source requirement.",
+            "The public website surfaces city and property-type market estimates, while the Codex plugin additionally promises arbitrary listing URLs, screenshots, a purchase conclusion, detailed reports, and multilingual global coverage. Public page access does not establish capability equivalence.",
+            "Pricing, occupancy, weather, events, revenue projections, confidence values, and investment conclusions can be dynamic, modeled, internally inconsistent, delayed, or incomplete. They must not be presented as guaranteed income or financial advice.",
+            "Listing URLs, screenshots, property details, email addresses, payment records, and generated reports may contain personal, licensed, or commercially sensitive data and require explicit purpose, minimization, consent, retention, and disclosure controls.",
+            "No icon or package is generated while the plugin remains blocked. Copying KeyBid's logo is unlicensed, while adding a generic icon would falsely imply that an authorized usable implementation exists.",
+            "Do not create plugins/keybid-puls until KeyBid publishes or directly supplies a portable official MCP or documented API, usable authentication and onboarding, sufficient third-party client and data-use rights, and a capability-equivalent implementation that passes bounded live verification."
+          ],
+          "verification": [
+            "Run verify_keybid_puls_evidence from scripts/import-official-hosted-plugins.py",
+            "Verify the official homepage, KeyBid Puls SPA entry, llms.txt, web-app bundle, market-intelligence bundle, normalized terms, normalized GPT terms, DataDownload metadata, and robots-policy hashes",
+            "Confirm the api-license route remains byte-identical to the ordinary SPA homepage and re-audit immediately if KeyBid publishes real license terms",
+            "Confirm the official terms still describe the private ChatGPT MCP capability while reserving the source code, algorithms, design, trademark, and proprietary systems",
+            "Confirm /api/ remains disallowed and do not perform recurring live probes against website-internal API routes",
+            "Inspect the public KeyBid GitHub account only for a newly published MCP, API client, browser extension, ROI engine, or capability-equivalent licensed repository",
+            "Verify all four OpenAI snapshot files, KeyBid developer identity, private app ID, default prompt, capability description, and complete inventory hash",
+            "Confirm plugins/keybid-puls and packages/keybid-puls.zip remain absent while portability and permission blockers remain",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py"
+          ]
+        }
       },
       "ghast": {
         "implementationStatus": "not-implemented"
