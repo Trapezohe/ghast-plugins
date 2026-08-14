@@ -2249,6 +2249,34 @@
       "license": "Apache-2.0"
     },
     {
+      "id": "mem",
+      "name": "mem",
+      "description": "Search and manage Mem notes, attachments, recordings, and collections through Mem Labs' official hosted MCP server.",
+      "manifest": {
+        "name": "mem",
+        "description": "Search and manage Mem notes, attachments, recordings, and collections through Mem Labs' official hosted MCP server.",
+        "author": {
+          "name": "Mem Labs, Inc.",
+          "url": "https://mem.ai"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.2-ghast.1",
+        "homepage": "https://docs.mem.ai/mcp/overview",
+        "upstreamRevision": "mem-docs-68ae96105315+oauth-d1a5188d322a+tools-092589b5e1c6+openapi-0626dda21186",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/mem.zip",
+        "sha256": "e3258c5b75380d0d863c03cffe54553f39aaf676ca8873604b0aae2b4e56580d"
+      },
+      "icon": "./plugins/mem/assets/icon.svg",
+      "category": "productivity",
+      "homepage": "https://docs.mem.ai/mcp/overview",
+      "license": "MIT"
+    },
+    {
       "id": "mermaid-mindmap",
       "name": "mermaid-mindmap",
       "description": "Slash command that turns a topic or outline into a Mermaid mindmap code block the chat can render as a tree.",

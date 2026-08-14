@@ -1,0 +1,16 @@
+{
+  "name": "mem",
+  "version": "1.0.2-ghast.1",
+  "description": "Search and manage Mem notes, attachments, recordings, and collections through Mem Labs' official hosted MCP server.",
+  "category": "productivity",
+  "author": {
+    "name": "Mem Labs, Inc.",
+    "url": "https://mem.ai"
+  },
+  "homepage": "https://docs.mem.ai/mcp/overview",
+  "upstreamRevision": "mem-docs-68ae96105315+oauth-d1a5188d322a+tools-092589b5e1c6+openapi-0626dda21186",
+  "license": "MIT",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

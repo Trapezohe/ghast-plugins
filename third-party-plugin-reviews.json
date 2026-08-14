@@ -6325,6 +6325,73 @@
         "python3 scripts/validate-ghast-repository.py",
         "unzip -tqq packages/factset.zip"
       ]
+    },
+    "mem": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Mem Labs, Inc.",
+      "officialRepository": null,
+      "officialRevision": "mem-docs-68ae96105315+oauth-d1a5188d322a+tools-092589b5e1c6+openapi-0626dda21186",
+      "license": "MIT",
+      "licenseEvidence": [
+        "plugins/mem/LICENSE licenses only the independently authored Ghast MCP configuration, safety instructions, documentation, catalog metadata, and generic notebook-search icon.",
+        "Mem Labs does not publish the hosted MCP server implementation in a reusable public source repository. Ghast does not copy the private Codex connector, app ID, hosted service code, user data, credentials, trademarks, branded artwork, or marketplace icon.",
+        "The MIT string in the Codex manifest is not treated as a license for Mem's private connector or service. The adapter's own MIT license is the only redistributed license claim."
+      ],
+      "officialityEvidence": [
+        "Mem Labs' official documentation identifies https://mcp.mem.ai/mcp as its hosted MCP server and publishes setup commands for Claude, ChatGPT, Claude Code CLI, Codex CLI, and Gemini CLI.",
+        "The official overview says Mem MCP provides OAuth access to read, create, search, organize, update, trash, and restore notes and collections.",
+        "The current official supported-tools page documents exactly 23 tools for notes, attachments, audio recordings, and collections. Its raw SHA-256 is 68ae9610531560adc9bfb157727125ce3f3fdd1357ef6fbbcecb2b22f45d288e.",
+        "The live public tools/list schema contains the same 23 ordered tools and has canonical JSON SHA-256 092589b5e1c61a46e228b09e4d2088c3105329af1d3edc5084c8678cb2d13f28.",
+        "Protected-resource metadata identifies https://mcp.mem.ai/mcp as Mem API, Bearer-header authentication, Mem's API authorization server, and content.read plus content.write scopes. Its canonical JSON SHA-256 is d1a5188d322aa3532cec4ea004d9f78ae1b58007ee3bd4d835b128124eb8c3f4.",
+        "Authorization metadata publishes authorization-code and refresh-token grants, dynamic client registration, public clients, and PKCE S256. Its canonical JSON SHA-256 is 059bdc244a84b7f1f6fbc0f0bfe2272a8029f436d9e342eea0a28b4c87eb65ee.",
+        "On August 14, 2026, missing authentication returned HTTP 401 and the official OAuth challenge. Public tool schemas were readable with an invalid token, but a random get_note call returned an authorization error and no data.",
+        "A one-time disposable loopback public client registered with HTTP 201, authorization-code and refresh-token grants, token_endpoint_auth_method none, and no client secret. No login, authorization code, token, credential, or user data was retained.",
+        "OpenAI's pinned Codex snapshot identifies Mem Labs, Inc. as developer, maps Mem to a private app ID, and describes notebook search, note capture, living-document editing, collection organization, meeting synthesis, research, PKM, and note-based task workflows."
+      ],
+      "codexCapabilities": [
+        "Search an authenticated Mem knowledge base for relevant notes and context",
+        "Capture ideas or save a conversation as a new note",
+        "Edit and update living documents",
+        "Organize notes and workspace knowledge",
+        "Synthesize meeting notes and action items",
+        "Support research, personal knowledge management, knowledge repositories, prioritization, content development, and note-based task workflows"
+      ],
+      "ghastCapabilities": [
+        "Connect directly to Mem Labs' official hosted MCP with standard Streamable HTTP and browser OAuth instead of the Codex-only private app mapping",
+        "Use all 23 official tools for note listing, relevance search, attachment-aware search, related-note discovery, full retrieval, creation, versioned full-body updates, timestamp correction, trash, and restore",
+        "Read structured PDF, image, audio, calendar, and email attachment content; ask one grounded attachment question; obtain temporary protected download URLs; and retrieve audio transcripts",
+        "List, search, create, read, update, and permanently delete collections and add, remove, or move note memberships",
+        "Apply an independently authored safety workflow for private knowledge, prompt injection, pagination, signed URLs, transcript identity, full-body replacement, exact versioning, reversible note trash, permanent collection deletion, and ambiguous-write recovery"
+      ],
+      "capabilityRelationship": "superset-official-hosted-mcp",
+      "limitations": [
+        "Mem's hosted MCP implementation is operated by Mem Labs and is not redistributed. The MIT license applies only to the Ghast-authored adapter.",
+        "A Mem account, browser OAuth, intended workspace selection, account plan, permissions, indexing state, quotas, retention, and service availability remain user-managed.",
+        "No authenticated note, attachment, recording, collection, search result, or user data was accessed. Data authorization was verified only with an invalid token and a random nonexistent note ID.",
+        "Tool definitions are publicly discoverable even with an invalid Bearer value, but actual data calls return an authorization error. The adapter does not treat public schemas as data access.",
+        "The official MCP exposes note-based task workflows but does not currently expose the broader task, project, calendar, session, event, or follow-up objects present in Mem's public REST OpenAPI. Ghast does not silently substitute REST API-key calls for the OAuth MCP.",
+        "update_note requires exact current version and complete markdown body replacement, not a partial patch. The adapter fetches current state and shows a diff before confirmation.",
+        "trash_note is reversible, while delete_collection permanently deletes the collection resource. Both require exact target review, with a separate confirmation for permanent deletion.",
+        "Notes, attachments, OCR, email and calendar content, recordings, transcripts, and collection metadata can contain personal, confidential, copyrighted, or prompt-injection content. Retrieval and disclosure remain narrowly scoped.",
+        "Temporary attachment download URLs are sensitive bearer-like links and must not be logged, published, committed, or retained beyond the requested operation.",
+        "Search results are bounded and paginated; search_notes uses a 100-result snapshot, list tools use cursors, and rate-limit responses must respect Retry-After.",
+        "A generic notebook-search icon is used because no licensed Mem catalog artwork is included in a public official source repository."
+      ],
+      "verification": [
+        "python3 scripts/import-mem-plugin.py --openai-source ../openai-plugins",
+        "Verify raw hashes for Mem's official overview, setup, 23-tool guide, security guide, llms.txt index, and OpenAPI document",
+        "Verify canonical OAuth protected-resource, authorization-server, and OpenID metadata hashes, content.read and content.write scopes, dynamic registration, public clients, authorization-code and refresh-token grants, and PKCE S256",
+        "Probe missing-auth initialize and require HTTP 401 plus the official resource-metadata challenge",
+        "List the public tool schemas with a deliberately invalid token and require the exact 23 ordered names and canonical schema hash 092589b5e1c61a46e228b09e4d2088c3105329af1d3edc5084c8678cb2d13f28",
+        "Call get_note with the invalid token and a random UUID and require the official authorization error without retrieving account data",
+        "Do not repeat disposable client registration during routine imports and never retain client IDs, tokens, browser callbacks, or user credentials",
+        "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 Mem developer identity, private app ID, capability description, all three file hashes, and no redistribution of its app mapping or artwork",
+        "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/mem.zip"
+      ]
     }
   }
 }

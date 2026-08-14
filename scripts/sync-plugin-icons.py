@@ -473,6 +473,13 @@ CUSTOM_ICONS = {
         '<path d="M10 22h44M18 17h2M26 17h2"/>'
         '<path d="M25 31l-6 6 6 6M39 31l6 6-6 6M35 27l-6 20"/>',
     ),
+    "mem": (
+        "#39736B",
+        '<path d="M15 13h27l8 8v31H15z"/>'
+        '<path d="M42 13v9h8M22 29h20M22 37h13"/>'
+        '<circle cx="42" cy="43" r="7"/>'
+        '<path d="M47 48l5 5"/>',
+    ),
     "mixpanel": (
         "#6F4BD8",
         '<path d="M12 48h40M16 42V29h8v13M28 42V20h8v22M40 42V13h8v29"/>'
