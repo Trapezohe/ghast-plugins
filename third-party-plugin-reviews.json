@@ -6392,6 +6392,61 @@
         "python3 scripts/validate-ghast-repository.py",
         "unzip -tqq packages/mem.zip"
       ]
+    },
+    "meticulate": {
+      "verificationStatus": "official-source-research-required",
+      "officialDeveloper": "Meticulate",
+      "officialRepository": null,
+      "officialRevision": "meticulate-openapi-3f1e739c5e0a+app-b00a3ac552b7+terms-15506cdecc56",
+      "license": "UNVERIFIED",
+      "licenseEvidence": [
+        "Meticulate does not publish a reusable MCP server, API client, SDK, connector source, tool schema package, or open-source license for its private Codex integration or hosted platform.",
+        "Meticulate's official terms grant customers only limited internal use and prohibit copying, modifying, creating derivative works, making the service or documentation available to third parties, reverse engineering, and competitive or benchmarking use.",
+        "The Codex manifest's MIT declaration does not license Meticulate's separately hosted service, internal Web API, private app connector, research data, CRM integrations, source code, schemas, trademarks, logos, or marketplace artwork.",
+        "No Meticulate code, schema, internal API wrapper, logo, icon, or marketplace asset is redistributed because no authorized capability-equivalent plugin is published."
+      ],
+      "officialityEvidence": [
+        "Meticulate's official site identifies the product as a B2B prospecting platform for custom company research, ICP screening, buying signals, outbound messaging, and Salesforce or HubSpot synchronization.",
+        "The official public ask-agent storefront describes company and people discovery, enrichment, signal-aware prioritization, sequence drafting, lifecycle controls, exclusions, and Nango-powered Salesforce and HubSpot sync, but routes deeper implementation questions to the Meticulate team.",
+        "The storefront GET/POST endpoint is a bounded product-information interface, not an authenticated company-research API and not a substitute for the Codex company search, SFDC account lookup, or lookalike tools.",
+        "Meticulate's public Web application uses https://brain.meticulate.ai with Clerk Bearer authorization. Its pinned application bundle has SHA-256 b00a3ac552b795d22c1f8cda0ad8134a8f407c7381b9242ec8666661d8692e49.",
+        "The live Web OpenAPI document has SHA-256 3f1e739c5e0a82d65640379388c82277991e73563a2a86f5ec14b3a53b5787b3 and describes 712 internal application paths, including company search and find-similar operations.",
+        "The only OpenAPI paths containing MCP are internal-dashboard endpoints for viewing MCP tool-call logs. The service publishes no /mcp path, protected-resource metadata, authorization-server metadata, dynamic client registration, public OAuth client, API-key onboarding, or independent-client instructions.",
+        "On August 14, 2026, https://brain.meticulate.ai/mcp and its conventional OAuth protected-resource path returned HTTP 404, while an internal application endpoint returned HTTP 401 without a user Bearer token.",
+        "OpenAI's pinned Codex snapshot identifies Meticulate as developer, maps the plugin to private app ID asdk_app_69f8fe2bcac08191b6025acec161ce1e, and promises ICP company search, SFDC account-ID lookup, firmographic summaries, lookalike discovery, and structured multi-account research."
+      ],
+      "codexCapabilities": [
+        "Search for companies matching an ICP and summarize the strongest fits",
+        "Look up a company by Salesforce account ID and retrieve a firmographic summary",
+        "Find companies similar to a seed company and explain the lookalike rationale",
+        "Upload or describe target-account lists and answer structured research questions across accounts"
+      ],
+      "ghastCapabilities": [
+        "Meticulate's official site, storefront, Web application, and OpenAPI establish that the developer operates company discovery, enrichment, targeting, and lookalike capabilities.",
+        "No Ghast plugin is published because Meticulate has not provided an authorized portable MCP/API contract, independent authentication and onboarding, stable third-party schemas, or sufficient client and redistribution rights."
+      ],
+      "capabilityRelationship": "official-private-codex-and-web-platform-found-portability-authentication-and-license-blockers",
+      "limitations": [
+        "The OpenAI app ID is a private marketplace mapping, not an MCP URL, OAuth client, API key, access token, source repository, or reusable Ghast transport.",
+        "The public OpenAPI describes the interactive Web application's internal backend and Clerk Bearer security. Technical visibility of internal routes is not a third-party API contract or permission to publish a wrapper.",
+        "The MCP-related internal-dashboard routes expose operational log views for authorized Meticulate staff; they do not provide an MCP transport or customer tool catalog.",
+        "Do not ask users to extract Clerk session tokens, reuse browser credentials, replay private app traffic, impersonate OpenAI's registered connector, or reverse engineer internal request schemas.",
+        "The public ask-agent storefront returns approved marketing knowledge and cannot search customer accounts, resolve SFDC IDs, retrieve firmographics, run lookalike models, or perform structured account research.",
+        "Meticulate's terms prohibit the copying, derivative implementation, reverse engineering, third-party service provision, and competitive analysis that an internal-API replica would require.",
+        "Company, person, signal, CRM, email, LinkedIn, phone, enrichment, and outreach data can be personal, licensed, commercially sensitive, stale, inferred, or subject to suppression and consent obligations.",
+        "No icon or package is generated while the plugin remains blocked. Copying Meticulate artwork is unlicensed, while a generic icon would misleadingly imply a usable authorized implementation.",
+        "Do not create plugins/meticulate until Meticulate publishes or directly supplies a portable official MCP or documented API, independent client authentication, appropriate account and quota onboarding, stable schemas, and sufficient rights for an independently authored adapter."
+      ],
+      "verification": [
+        "python3 scripts/audit-meticulate-plugin.py --openai-source ../openai-plugins",
+        "Verify the official homepage, product storefront, terms, public Web application bundle, and Web OpenAPI hashes",
+        "Confirm the 712-path OpenAPI still uses HTTPBearer, includes company-search and find-similar operations, and contains only the two internal-dashboard MCP log paths",
+        "Confirm conventional brain.meticulate.ai MCP and OAuth discovery paths remain unpublished and do not probe authenticated customer data",
+        "Verify all four OpenAI snapshot files, Meticulate developer identity, private app ID, default workflows, and complete capability description",
+        "Confirm plugins/meticulate and packages/meticulate.zip remain absent while portability, authentication, contract, and license blockers remain",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py"
+      ]
     }
   }
 }
