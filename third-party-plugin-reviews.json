@@ -4618,6 +4618,72 @@
         "unzip -tqq packages/vercel.zip"
       ]
     },
+    "windsor-ai": {
+      "verificationStatus": "official-source-verified",
+      "officialDeveloper": "Windsor.ai",
+      "officialRepository": "https://github.com/windsor-ai/windsor_mcp",
+      "officialRevision": "mcp-f1632eefcae4+plugin-d7ba1cb036c7+docs-d85a5536428d+oauth-1e68eaf1c788",
+      "license": "MIT",
+      "licenseEvidence": [
+        "The official windsor-ai/windsor_mcp discovery repository contains LICENSE.md with the MIT License, Copyright (c) 2021 Windsor.ai, at SHA-256 9fffefdf9a92023f27a4275919c4089f2d1a9ea76cea2abd12cdc235d919b764.",
+        "The official windsor-ai/claude-windsor-ai-plugin repository contains a separate MIT License, Copyright (c) 2026 Windsor.ai, at SHA-256 b2c0ab907ac36882d7a4f0276a59c1f1ff3f46470dc918a127d3ab765b2b019d.",
+        "Ghast preserves both official license texts, the three official commands, and named upstream evidence files. The Ghast manifest, active MCP configuration, current-contract safety skill, README, modifications record, and generic icon are distributed under the included MIT grant.",
+        "The licenses cover the public repository materials and Ghast adapter, not Windsor.ai's hosted implementation, user data, source-provider data, third-party APIs, credentials, service terms, or trademarks."
+      ],
+      "officialityEvidence": [
+        "The official Windsor.ai GitHub organization links to windsor.ai and describes the company as a connector platform for 350+ marketing, analytics, CRM, ecommerce, finance, and warehouse sources.",
+        "The windsor-ai/windsor_mcp repository identifies itself as Windsor.ai's hosted MCP discovery surface for Claude, ChatGPT, Cursor, and generic MCP clients. Revision f1632eefcae4c135fe4e6ec7f4454660f339eee0 has Git tree 987e5225d7e9e926f424720741e21fad1de207ae and complete two-file inventory SHA-256 632b8a4fb2beaca9ff687f8c5249c64517f22344a50fce062b9ee2b321334f5e.",
+        "The windsor-ai/claude-windsor-ai-plugin repository is an official Windsor.ai plugin source with an MIT manifest, direct https://mcp.windsor.ai endpoint, one business-data skill, one analyst agent, and three commands. Revision d7ba1cb036c7ca765536355fb85f13a3237ea3f9 has Git tree 70e7da9d91323959fa80d3cfbefa7954e5b05ce6 and complete eleven-file inventory SHA-256 6ef2409a9e3873773bae5f48dedc2bd7f84f44a25dd12ee3518a9b26e51ad6b0.",
+        "The official short and full machine-readable MCP references have raw SHA-256 bff03a161cf7f759567921b2acd0880b41b6151be72918d94aac6238721ad355 and d85a5536428d1ee1d19e5379615439daa70c8105a5c3967cc684e1a5278d31c3 and document 16 named tools.",
+        "The live official datasource endpoint returned 355 unique connector IDs on August 14, 2026 and has raw SHA-256 72f88fca95b998d05a09c31b26baf1b11368412b1a016311d46f88c1615748df.",
+        "Authorization and protected-resource metadata have canonical JSON SHA-256 1e68eaf1c7884377e67d572fd4160c2230bce87281d22f414194bac1e6e5920a and b0694274edfe10cf3cc78c45aaba7b3aa2043fc6ef623737621703ca919f3993. They publish Bearer-header authentication, authorization-code and refresh-token grants, confidential dynamic clients, and PKCE S256.",
+        "On August 14, 2026, missing and deliberately invalid authentication returned HTTP 401, the official protected-resource challenge, and canonical error SHA-256 cf655235e8eb46c361aae11edd3f7dc4c398affe17abd4bc5d2f6354fb1a4aa4.",
+        "A disposable confidential loopback client registered with HTTP 201 and reached Windsor.ai's official consent route without retaining the client ID, client secret, authorization code, token, or user data.",
+        "OpenAI's pinned snapshot identifies Windsor.ai as developer, maps the private ChatGPT app ID asdk_app_694a52cfaa3c819192bea84eaa254968, and describes natural-language querying across major advertising, analytics, CRM, ecommerce, marketing-automation, payment, and business platforms."
+      ],
+      "codexCapabilities": [
+        "Connect Windsor.ai business data sources to Codex and ask natural-language questions against connected accounts",
+        "Query advertising and social data from Google Ads, Meta Ads, Instagram, LinkedIn Ads, TikTok Ads, Amazon Ads, Microsoft Ads, and related sources",
+        "Query analytics and search data from GA4, Google Search Console, YouTube Analytics, Google Business Profile, and related sources",
+        "Query CRM, marketing automation, ecommerce, payment, and sales data from HubSpot, Salesforce, Shopify, Klaviyo, Stripe, GoHighLevel, and other connected systems",
+        "Pull attribution context across connected marketing and business sources"
+      ],
+      "ghastCapabilities": [
+        "Connect directly to Windsor.ai's official hosted MCP over Streamable HTTP with standard browser OAuth or an externally configured Windsor.ai Bearer API key instead of the Codex-only private app mapping",
+        "Use 16 current official tools for user and connector discovery, source authorization links, options and field metadata, flexible data queries, action discovery and execution, subscription and dashboard links, destination discovery, scheduled export creation, and support contact",
+        "Discover the current set of 355 official connector IDs spanning advertising, analytics, social, CRM, marketing automation, ecommerce, payments, databases, warehouses, HR, finance, productivity, and support systems",
+        "Use all three byte-identical official commands for campaign reporting, connected-source inventory, and TypeScript schema generation",
+        "Apply a current-contract safety workflow for account and field discovery, attribution and currency context, cross-source normalization, prompt injection, confidential data, action confirmation, recurring exports, subscription links, temporary login URLs, and ambiguous writes"
+      ],
+      "capabilityRelationship": "superset-newer-official-hosted-mcp-plus-official-commands",
+      "limitations": [
+        "Windsor.ai operates the hosted MCP implementation and does not publish its server source in these repositories. Ghast connects to the official service and redistributes only licensed public materials and independently authored adapter files.",
+        "A Windsor.ai account, OAuth or API-key authentication, connected source accounts, source-provider permissions, account plans, row limits, freshness, currencies, attribution behavior, and service availability remain user-managed.",
+        "The OAuth metadata advertises only create and delete scopes and dynamically registers confidential clients with a client secret. Those scope names do not establish a clear read-versus-write permission model; the authenticated account, connected-source permissions, server policy, and live tool catalog remain the effective boundary, and the MCP client must support confidential dynamic clients.",
+        "Authenticated tools/list, connector discovery, account rows, write-action schemas, destinations, subscription links, login links, and support calls were not exercised because no user Windsor.ai account was supplied. Public documentation and authentication boundaries, not private account behavior, were verified.",
+        "The current official service exposes write actions for advertising platforms, Instagram, Google Business Profile, Klaviyo, Amazon Seller Central, and other connectors. Ghast requires the live action schema, exact target and effect, and a fresh CONFIRM WINDSOR before execution.",
+        "create_destination_task creates recurring external state and can expose data to a warehouse, spreadsheet, database, or storage destination. It requires exact source, target, fields, credentials, schedule, and data-scope confirmation.",
+        "contact_windsor sends a message and context to Windsor.ai support. Subscription, dashboard, connection, setup, and auto-login URLs can be bearer-like and must be treated as confidential.",
+        "The official Claude skill at the pinned revision still documents four read tools, while the current hosted reference documents 16 tools. Ghast preserves that file as upstream evidence but activates a separately named current-contract safety skill instead of presenting stale instructions as live parity.",
+        "The official short and full references and datasource list are dynamic. The importer fails closed when their pinned hashes, count, tool names, OAuth metadata, or authentication behavior change and requires a fresh review.",
+        "A generic source-network icon is used because the licensed MCP and Claude repositories do not publish reusable catalog artwork. The unlicensed Cursor repository icon and OpenAI marketplace artwork are not copied."
+      ],
+      "verification": [
+        "python3 scripts/import-windsor-ai-plugin.py --mcp-source ../upstreams/windsor_mcp --plugin-source ../upstreams/claude-windsor-ai-plugin --openai-source ../openai-plugins",
+        "Verify both clean official revisions, Git trees, remotes, MIT licenses, complete inventories, all source-file hashes, Claude manifest, and official MCP declaration.",
+        "Verify raw hashes for the current official llms.txt, llms-full.txt, and datasource JSON; require all 16 documented tool names, 355 unique connector IDs, and representative advertising, CRM, ecommerce, payment, Zoho, and Zoom connectors.",
+        "Verify canonical authorization and protected-resource metadata hashes, Bearer-header authentication, confidential dynamic registration, authorization-code and refresh-token grants, and PKCE S256.",
+        "Probe missing and invalid Bearer initialize requests and require HTTP 401, the exact protected-resource challenge, and canonical error SHA-256 cf655235e8eb46c361aae11edd3f7dc4c398affe17abd4bc5d2f6354fb1a4aa4.",
+        "For a deliberate one-time OAuth portability audit, add --verify-registration; register one disposable loopback client in memory, require HTTP 201 and a client secret, launch PKCE authorization, and require a redirect to the official Windsor.ai consent route without retaining credentials. Routine imports omit this flag to avoid creating external state.",
+        "Byte-compare the packaged LICENSE, upstream evidence files, and all three commands with the pinned official sources; confirm the stale four-tool Claude skill is not active.",
+        "Verify OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 developer identity, private app ID, source examples, all four file hashes, and no redistribution of its mapping or artwork.",
+        "python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins",
+        "python3 scripts/build-ghast-catalog.py",
+        "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+        "python3 scripts/validate-ghast-repository.py",
+        "unzip -tqq packages/windsor-ai.zip"
+      ]
+    },
     "wix": {
       "verificationStatus": "official-source-verified",
       "officialDeveloper": "Wix",

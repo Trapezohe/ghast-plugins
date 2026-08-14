@@ -169,7 +169,7 @@ verification.
 | vercel | Vercel Labs | appConnector, skills, commands | Apache-2.0 | official-source-verified | implemented-verified |
 | waldo | Curiosities, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
 | weatherpromise | WeatherPromise, Inc. | appConnector | MIT | official-source-research-required | not-implemented |
-| windsor-ai | Windsor.ai | appConnector | MIT | official-source-research-required | not-implemented |
+| windsor-ai | Windsor.ai | appConnector | MIT | official-source-verified | implemented-verified |
 | wix | Wix | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | yepcode | YepCode S.L. | appConnector | MIT | official-source-verified | implemented-verified |
 | zoho | Zoho | appConnector | MIT | official-source-research-required | not-implemented |

@@ -649,6 +649,16 @@ CUSTOM_ICONS = {
         "#2E7D32",
         '<path d="M8 34h12l5-13 9 26 6-13h16"/>',
     ),
+    "windsor-ai": (
+        "#276B73",
+        '<circle cx="17" cy="18" r="5"/>'
+        '<circle cx="47" cy="18" r="5"/>'
+        '<circle cx="17" cy="46" r="5"/>'
+        '<circle cx="47" cy="46" r="5"/>'
+        '<rect x="25" y="25" width="14" height="14" rx="2"/>'
+        '<path d="M21 20l6 7M43 20l-6 7M21 44l6-7M43 44l-6-7"/>'
+        '<path d="M12 32h13M39 32h13"/>',
+    ),
     "website-fetcher": (
         "#5B5BD6",
         '<circle cx="32" cy="32" r="21"/>'

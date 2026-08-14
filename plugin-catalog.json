@@ -3669,6 +3669,37 @@
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/website-fetcher"
     },
     {
+      "id": "windsor-ai",
+      "name": "windsor-ai",
+      "description": "Query, analyze, connect, and carefully act on business data from Windsor.ai's official hosted MCP across 350+ sources.",
+      "manifest": {
+        "name": "windsor-ai",
+        "description": "Query, analyze, connect, and carefully act on business data from Windsor.ai's official hosted MCP across 350+ sources.",
+        "author": {
+          "name": "Windsor.ai",
+          "url": "https://windsor.ai"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.3-ghast.1",
+        "homepage": "https://mcp.windsor.ai/docs",
+        "repository": "https://github.com/windsor-ai/windsor_mcp",
+        "upstreamRevision": "mcp-f1632eefcae4+plugin-d7ba1cb036c7+docs-d85a5536428d+oauth-1e68eaf1c788",
+        "license": "MIT",
+        "skills": "./skills/",
+        "commands": "./commands/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/windsor-ai.zip",
+        "sha256": "0ad76f70828c3ce76372326a84c0beebf2fc0f71e1e15d33bc6128fbb800fe50"
+      },
+      "icon": "./plugins/windsor-ai/assets/icon.svg",
+      "category": "data",
+      "homepage": "https://mcp.windsor.ai/docs",
+      "repository": "https://github.com/windsor-ai/windsor_mcp",
+      "license": "MIT"
+    },
+    {
       "id": "wix",
       "name": "wix",
       "description": "Build and deploy Wix apps and headless websites, and manage your Wix business. Includes CLI development skills, Wix Headless for any frontend framework, and Wix MCP server for eCommerce, CMS, dashboard extensions, and more.",
