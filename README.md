@@ -154,6 +154,23 @@ python3 scripts/import-brighthire-plugin.py \
 For a deliberate one-time public OAuth registration test, add
 `--verify-registration`. The returned client value is not retained.
 
+## Import the Morningstar plugin
+
+The Morningstar importer verifies the official developer-owned plugin source,
+hosted MCP endpoint, OAuth metadata, anonymous authentication boundary, five
+official workflow categories, and the pinned OpenAI capability evidence. It
+generates independently authored adapter materials because the official source
+declares MIT in its manifest without including license text.
+
+```bash
+python3 scripts/import-morningstar-plugin.py \
+  --openai-source ../openai-plugins \
+  --official-source ../upstreams/morningstar-plugins
+```
+
+Add `--verify-registration` only for a deliberate one-time confidential OAuth
+client registration check. The returned client ID and secret are not retained.
+
 ## Audit third-party Codex plugins
 
 `third-party-plugin-audit.json` tracks every marketplace plugin whose declared

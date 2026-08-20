@@ -2452,6 +2452,36 @@
       "license": "MIT"
     },
     {
+      "id": "morningstar",
+      "name": "morningstar",
+      "description": "Screen, summarize, compare, and analyze funds through Morningstar's official MCP.",
+      "manifest": {
+        "name": "morningstar",
+        "description": "Screen, summarize, compare, and analyze funds through Morningstar's official MCP.",
+        "author": {
+          "name": "Morningstar",
+          "url": "https://www.morningstar.com"
+        },
+        "icon": "./assets/icon.svg",
+        "version": "1.0.1-ghast.1",
+        "homepage": "https://www.morningstar.com/business/products/mcp-server",
+        "repository": "https://github.com/Morningstar/morningstar-plugins",
+        "upstreamRevision": "morningstar-source-4c62260714b7+resource-12a3d16a5bad+oauth-84d49684fd46+boundary-8599a03b4c1d",
+        "license": "MIT",
+        "skills": "./skills/",
+        "mcpServers": "./.mcp.json"
+      },
+      "package": {
+        "url": "./packages/morningstar.zip",
+        "sha256": "df8fb407368d7dc5ec3f485372987cc8201906e4e7421cb457110ee8ea5910c9"
+      },
+      "icon": "./plugins/morningstar/assets/icon.svg",
+      "category": "research",
+      "homepage": "https://www.morningstar.com/business/products/mcp-server",
+      "repository": "https://github.com/Morningstar/morningstar-plugins",
+      "license": "MIT"
+    },
+    {
       "id": "motherduck",
       "name": "motherduck",
       "description": "Explore, query, manage, analyze, and visualize MotherDuck data with the official hosted OAuth MCP server, including Dives.",

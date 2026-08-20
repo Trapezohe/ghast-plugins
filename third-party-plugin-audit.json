@@ -16,13 +16,12 @@
     "excludedOpenAIAuthored": 31,
     "thirdPartyPlugins": 149,
     "auditStatus": {
-      "blocked-license": 1,
       "official-source-research-required": 17,
-      "official-source-verified": 131
+      "official-source-verified": 132
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 131,
-      "not-implemented": 18
+      "implemented-verified": 132,
+      "not-implemented": 17
     }
   },
   "excludedOpenAIPlugins": [
@@ -8491,7 +8490,7 @@
     },
     {
       "id": "morningstar",
-      "auditStatus": "blocked-license",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "Morningstar",
@@ -8527,35 +8526,67 @@
         "candidateOfficialRepository": "https://github.com/Morningstar/morningstar-plugins",
         "homepage": "https://www.morningstar.com",
         "review": {
-          "verificationStatus": "blocked-license",
+          "verificationStatus": "official-source-verified",
           "officialDeveloper": "Morningstar",
           "officialRepository": "https://github.com/Morningstar/morningstar-plugins",
-          "officialRevision": "4c62260714b73c1b62ad143393d4a24ac02a5c50",
-          "license": "UNVERIFIED",
+          "officialRevision": "morningstar-source-4c62260714b7+resource-12a3d16a5bad+oauth-84d49684fd46+boundary-8599a03b4c1d",
+          "license": "MIT",
           "licenseEvidence": [
-            "The manifest declares MIT, but the pinned repository contains no LICENSE, COPYING, NOTICE, or per-plugin license file."
+            "plugins/morningstar/LICENSE licenses only the independently authored Ghast endpoint declaration, skill, metadata, documentation, and generic fund-research icon.",
+            "The official repository declares MIT in its manifest but contains no license text, so none of its skills, workflows, scripts, templates, rating icons, artwork, manifests, or documentation is copied.",
+            "Morningstar's hosted service, methodologies, research, licensed data, reports, ratings, trademarks, credentials, customer content, and responses remain excluded."
           ],
           "officialityEvidence": [
-            "The repository is owned by the Morningstar GitHub organization and identifies itself as Morningstar's assistant-plugin collection."
+            "Morningstar's official GitHub organization publishes https://github.com/Morningstar/morningstar-plugins, identifies Morningstar as developer, and declares https://mcp.morningstar.com/mcp as its hosted MCP requiring Morningstar Direct.",
+            "Official revision 4c62260714b73c1b62ad143393d4a24ac02a5c50, tree f9eea6ebcab5647c51aae129589b507ba031e82f, 95 tracked files, and complete Git inventory SHA-256 6f62900d2c1264bdfebdbeb6559fa3313ca063c76720098ac9fa9f5d9243720b are pinned without redistributing source materials.",
+            "The official source contains five workflows: datapoint discovery, fund screening, fund summarization, two-fund comparison, and Morningstar Medalist rating analysis, and references official lookup, screener, data, analyst-research, and holdings tools.",
+            "Protected-resource metadata identifies https://mcp.morningstar.com/mcp, bearer-header auth, and the Morningstar authorization server; canonical SHA-256 12a3d16a5bada24f3b2bffb6a18bab5b467e61b07904bdbf2177522238d38885.",
+            "Authorization metadata publishes authorization, token, registration, authorization-code and refresh-token grants, confidential clients, and PKCE S256; canonical SHA-256 84d49684fd46d9af6cb47a820c166c1ab5b11435646060b8594fa873ec910322.",
+            "On August 20, 2026, one disposable confidential loopback client registered with HTTP 201. No returned client value, secret, authorization code, token, login, or account data was retained.",
+            "Anonymous MCP initialization returned HTTP 401 with Morningstar's protected-resource challenge and body SHA-256 8599a03b4c1d788236014f851ec320b3ad4a589c59e8c1ea045dd4d052291cce.",
+            "OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 contains 47 Morningstar files with inventory SHA-256 8d9d34f6cddf8cbc1c27a0a71de411ac525a0fd2558d5467728ab70a1b66e6f4 and documents screening, summaries, comparison, and private ChatGPT app access."
           ],
           "codexCapabilities": [
-            "Screen, summarize, compare, and analyze funds and ETFs using Morningstar data"
+            "Screen funds and ETFs with normalized Morningstar criteria and licensed data",
+            "Create single-fund summaries covering ratings, returns, risk, fees, holdings, research, and data-availability caveats",
+            "Compare supported funds side by side and generate structured reports through OpenAI's private app mapping"
           ],
           "ghastCapabilities": [
-            "No redistributed implementation is permitted until Morningstar publishes verifiable license terms."
+            "Connect directly to Morningstar's official hosted MCP through independent OAuth instead of OpenAI's private app ID",
+            "Screen, summarize, and compare funds and ETFs with source, date, currency, unit, peer-group, missing-data, and disclosure safeguards",
+            "Use the current official service's additional datapoint-discovery and Medalist-analysis workflows",
+            "Generate independently styled Markdown or self-contained HTML reports without copying Morningstar templates, scripts, icons, or brand assets"
           ],
-          "capabilityRelationship": "blocked-before-port",
+          "capabilityRelationship": "equivalent-and-expanded-through-official-public-mcp",
           "limitations": [
-            "The public Morningstar MCP endpoint requires a Morningstar Direct subscription, but the immediate blocker is redistribution permission for the skills."
+            "A Morningstar Direct subscription, MCP entitlement, user account, licensed datasets, permissions, and appropriate customer contract are required.",
+            "Authenticated tools/list and licensed data calls were not run because no user Morningstar account was supplied. Exact schemas, coverage, quotas, ratings, and disclosures remain service-controlled.",
+            "The official repository's manifest says MIT but the repository has no license text. The adapter copies none of those materials and does not claim they are MIT-redistributable.",
+            "Morningstar data, research, ratings, methodologies, disclosures, and reports are licensed and may not be bulk exported, mirrored, republished, cached, or reused outside the customer's rights.",
+            "Financial data can be delayed, incomplete, currency-sensitive, share-class-specific, and revised. Outputs are informational, not personalized investment advice or guaranteed performance.",
+            "A generic fund-research icon and independent report guidance replace Morningstar and OpenAI artwork and templates."
           ],
           "verification": [
-            "Inspect every license-like file in the pinned repository and confirm none is present",
-            "Do not create plugins/morningstar while the license remains unresolved"
+            "python3 scripts/import-morningstar-plugin.py --openai-source ../openai-plugins --official-source ../upstreams/morningstar-plugins",
+            "Verify official revision, tree, 95-file Git inventory, Morningstar identity, endpoint, Direct requirement, five-skill inventory, official tool markers, and continued absence of repository license text",
+            "Verify protected-resource and authorization metadata hashes, bearer auth, confidential dynamic clients, authorization-code and refresh-token grants, and PKCE S256",
+            "Probe anonymous MCP initialization and require HTTP 401, the Morningstar resource challenge, and pinned body hash",
+            "For a deliberate one-time OAuth portability check, add --verify-registration and require HTTP 201 registration with client ID and secret; retain neither",
+            "Verify OpenAI snapshot revision, 47-file content inventory, developer identity, private app mapping, three skills, and capability markers",
+            "Confirm the generated package contains only independently authored adapter materials and generic artwork",
+            "python3 scripts/build-ghast-catalog.py",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/morningstar.zip"
           ]
         }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "1.0.1-ghast.1",
+        "repository": "https://github.com/Morningstar/morningstar-plugins",
+        "upstreamRevision": "morningstar-source-4c62260714b7+resource-12a3d16a5bad+oauth-84d49684fd46+boundary-8599a03b4c1d",
+        "portStatus": "full"
       }
     },
     {

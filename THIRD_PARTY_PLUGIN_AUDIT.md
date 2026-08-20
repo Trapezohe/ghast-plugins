@@ -113,7 +113,7 @@ verification.
 | mixpanel-headless | Mixpanel | skills | MIT | official-source-verified | implemented-verified |
 | monday-com | Monday.com | appConnector | MIT | official-source-verified | implemented-verified |
 | moody-s | Moody's | appConnector, skills | MIT | official-source-research-required | not-implemented |
-| morningstar | Morningstar | appConnector, skills | MIT | blocked-license | not-implemented |
+| morningstar | Morningstar | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | motherduck | MotherDuck Corporation | appConnector | MIT | official-source-verified | implemented-verified |
 | mt-newswires | MT Newswires | appConnector | MIT | official-source-verified | implemented-verified |
 | myregistry-com | MyRegistry.com | appConnector | MIT | official-source-verified | implemented-verified |
