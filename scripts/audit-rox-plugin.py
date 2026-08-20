@@ -16,24 +16,24 @@ from pathlib import Path
 EXPECTED_OPENAI_REVISION = "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9"
 ROX_LLMS_URL = "https://docs.rox.com/development/llms.txt"
 ROX_LLMS_SHA256 = (
-    "e637d993c6b7eb33b9f721b23d7baa5874bd8a52c696d64c21434eb266c40ed7"
+    "f79878ebe137dca9dcc3c16e633fcbbdbafa6f838ea8ea74ff5a81e95ce9e5bc"
 )
 ROX_LLMS_FULL_URL = "https://docs.rox.com/development/llms-full.txt"
 ROX_LLMS_FULL_SHA256 = (
-    "13e7b7152de687688fb21ce6968a21755ac49f408f8037501d09afa9a5dd18c4"
+    "ef14971217979c91d77374a796086ab9894c9b0a8a0d8200d9d39fbb12eb741f"
 )
 ROX_RELEASE_NOTES_URL = (
     "https://docs.rox.com/development/about-rox/release-notes.md"
 )
 ROX_RELEASE_NOTES_SHA256 = (
-    "18f66bb20fcfb48d54513564adea75d6a6880ee89ac8d85d846dd236dd6f6c78"
+    "af27fa5014f2d73b0cd6b95618b20553ab0f21bd8a4349415b6a50e873d280ba"
 )
 ROX_APPS_SECTION_SHA256 = (
-    "b42f678f4d279416d00370d3d0cb9fbd4290789387d43a49145423899387f004"
+    "243986ca5c437152f35673bb30638ff0a8cf4b7e8eb2c0627b2aa37c03ed21e9"
 )
 ROX_TETHER_URL = "https://www.rox.com/articles/tether"
 ROX_TETHER_CORE_SHA256 = (
-    "edfdeb7591b4c27a38ad97de3084fac658911ae1544eb51773257138e5c154e9"
+    "390bcd80a721b4181ed9d5101d8d29cf8d2fa21ce9664665bd310ec1ad62d41e"
 )
 ROX_TERMS_URL = "https://www.rox.com/legal/terms-and-conditions"
 ROX_TERMS_RESTRICTIONS_SHA256 = (
@@ -130,7 +130,7 @@ def verify_documentation_boundary() -> None:
         raise ValueError("Rox llms.txt changed; re-audit required")
     llms = llms_raw.decode()
     links = re.findall(r"\[[^\]]*\]\((https?://[^)]+)\)", llms)
-    if len(links) != 177 or len(set(links)) != 177:
+    if len(links) != 186 or len(set(links)) != 186:
         raise ValueError("Rox documentation inventory changed; re-audit required")
     if any(
         marker in link.lower()
@@ -182,7 +182,11 @@ def verify_official_product_evidence() -> None:
             raise ValueError(f"Rox Apps evidence is missing {marker!r}")
 
     tether = normalize_html(fetch(ROX_TETHER_URL, "text/html"))
-    tether_core = section(tether, "Jul 26, 2026 Rox Tether:", " References")
+    tether_core = section(
+        tether,
+        "Jul 26, 2026 Jul 26, 2026 Taeuk",
+        " References",
+    )
     tether_core = f"{tether_core} References"
     if sha256(tether_core.encode()) != ROX_TETHER_CORE_SHA256:
         raise ValueError("Rox Tether architecture article changed")
