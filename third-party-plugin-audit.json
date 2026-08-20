@@ -16,13 +16,13 @@
     "excludedOpenAIAuthored": 31,
     "thirdPartyPlugins": 149,
     "auditStatus": {
-      "blocked-license": 3,
-      "official-source-research-required": 16,
-      "official-source-verified": 130
+      "blocked-license": 1,
+      "official-source-research-required": 17,
+      "official-source-verified": 131
     },
     "ghastImplementationStatus": {
-      "implemented-verified": 130,
-      "not-implemented": 19
+      "implemented-verified": 131,
+      "not-implemented": 18
     }
   },
   "excludedOpenAIPlugins": [
@@ -1480,7 +1480,7 @@
     },
     {
       "id": "brighthire",
-      "auditStatus": "blocked-license",
+      "auditStatus": "official-source-verified",
       "developer": {
         "manifestAuthor": {
           "name": "BrightHire",
@@ -1516,35 +1516,64 @@
         "candidateOfficialRepository": "https://github.com/brighthire/brighthire-codex-plugin",
         "homepage": "https://www.brighthire.com",
         "review": {
-          "verificationStatus": "blocked-license",
+          "verificationStatus": "official-source-verified",
           "officialDeveloper": "BrightHire",
           "officialRepository": "https://github.com/brighthire/brighthire-codex-plugin",
-          "officialRevision": "d317197efb8c0bd8795199e77ff7a954eadf4eca",
-          "license": "UNVERIFIED",
+          "officialRevision": "brighthire-source-d317197efb8c+resource-177dad1731d0+oauth-4ea2f28a5719+boundary-56beca58033e",
+          "license": "MIT",
           "licenseEvidence": [
-            "The manifest declares MIT, but the pinned repository contains no LICENSE, COPYING, or equivalent license text."
+            "plugins/brighthire/LICENSE licenses only the independently authored Ghast endpoint declaration, skill, metadata, documentation, and generic interview icon.",
+            "The official repository declares MIT in its manifest but contains no license text, so none of its prose, skills, artwork, manifests, or other files is copied into the Ghast package.",
+            "BrightHire's hosted service, official plugin materials, trademarks, recordings, transcripts, candidate information, customer data, credentials, and responses remain excluded."
           ],
           "officialityEvidence": [
-            "The repository is owned by the BrightHire GitHub organization and its manifest names BrightHire as developer."
+            "BrightHire's official GitHub organization publishes https://github.com/brighthire/brighthire-codex-plugin and identifies BrightHire as developer of the production MCP at https://app.brighthire.ai/mcp/v1/.",
+            "Official revision d317197efb8c0bd8795199e77ff7a954eadf4eca, tree 7e4ee82c5250b43e885569e346431efed50f8646, and complete Git inventory SHA-256 253931211114760a73249044af15120fc13b4a37c43d69515e60e85bb7fd9fd0 are pinned without redistributing repository files.",
+            "The protected-resource metadata identifies the BrightHire MCP, bearer-header auth, and mcp:read.all scope; canonical SHA-256 177dad1731d054fcc0f4b4cdc872ac3008cecf9fee39ceab94c0aaf395e5d323.",
+            "The authorization metadata publishes authorization, token, revocation, and registration endpoints, public clients, authorization-code and refresh-token grants, and PKCE S256; canonical SHA-256 4ea2f28a5719f510ed164e9220621917bbd7126e12a374f393bf569492b010ae.",
+            "On August 20, 2026, one disposable public loopback client registered with HTTP 201 and no client secret. No returned client value, authorization code, token, login, or account data was retained.",
+            "Anonymous MCP initialization returned HTTP 401 with BrightHire's resource challenge and body SHA-256 56beca58033e5ae5500fec62d655c7a43d4b65999ce0e3a9d69c2d467d93c1dc.",
+            "OpenAI snapshot 11c74d6ba24d3a6d48f54a194cd00ef3beea18f9 identifies BrightHire as developer and describes interactive read access to interview intelligence, calls, candidates, and hiring workflows; inventory SHA-256 b53da896a262975c6bd423113e03a14f4b6076cc573d69bca17371d2c6358873."
           ],
           "codexCapabilities": [
-            "Read interview, candidate, call, and hiring intelligence through BrightHire"
+            "Read BrightHire interviews, candidates, calls, roles, transcripts, scorecards, and organization-level hiring intelligence through OpenAI's private app mapping",
+            "Find recent interviews or related calls and summarize evidence for authorized hiring workflows"
           ],
           "ghastCapabilities": [
-            "No redistributed implementation is permitted until BrightHire publishes verifiable license terms for the repository contents."
+            "Connect directly to BrightHire's official hosted MCP through public OAuth instead of reusing OpenAI's private app ID",
+            "Retrieve and analyze the same documented read-only interview-intelligence entities under the user's BrightHire permissions",
+            "Apply independent privacy, provenance, prompt-injection, bias, protected-trait, comparison, and human-decision safeguards"
           ],
-          "capabilityRelationship": "blocked-before-port",
+          "capabilityRelationship": "equivalent-through-official-public-mcp",
           "limitations": [
-            "The public MCP endpoint and OAuth flow appear portable, but repository ownership does not substitute for redistribution permission."
+            "A BrightHire customer account, organization access, user permissions, and relevant product entitlements are required.",
+            "Authenticated tools/list and customer-data calls were not run because no user BrightHire account was supplied. Exact tool names and schemas remain service-controlled.",
+            "The official repository's manifest says MIT but the repository has no license text. This adapter copies none of those materials and does not claim they are MIT-redistributable.",
+            "Interview recordings, transcripts, notes, scorecards, candidate records, compensation, immigration information, and hiring decisions can be highly sensitive and legally regulated.",
+            "The audited scope is read-only. Any future write-capable tool requires a separate side-effect and authorization review before use.",
+            "A generic interview icon is used because BrightHire and OpenAI marketplace artwork is not redistributed."
           ],
           "verification": [
-            "Inspect every license-like file in the pinned repository and confirm none is present",
-            "Do not create plugins/brighthire while the license remains unresolved"
+            "python3 scripts/import-brighthire-plugin.py --openai-source ../openai-plugins --official-source ../upstreams/brighthire-codex-plugin",
+            "Verify the official revision, tree, complete Git inventory, developer identity, endpoint, OAuth description, capability markers, and continued absence of repository license text",
+            "Verify protected-resource and authorization metadata hashes, mcp:read.all, public-client support, PKCE S256, revocation, and dynamic registration",
+            "Probe anonymous MCP initialization and require HTTP 401, the BrightHire resource challenge, and pinned body hash",
+            "For a deliberate one-time OAuth portability check, add --verify-registration and require HTTP 201 public-client registration without a secret; retain no returned value",
+            "Verify all seven OpenAI snapshot files, hashes, inventory, developer identity, private app mapping, interactive read classification, and capability markers",
+            "Confirm the generated package contains only independently authored adapter materials and generic artwork",
+            "python3 scripts/build-ghast-catalog.py",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py",
+            "unzip -tqq packages/brighthire.zip"
           ]
         }
       },
       "ghast": {
-        "implementationStatus": "not-implemented"
+        "implementationStatus": "implemented-verified",
+        "version": "0.1.0-ghast.1",
+        "repository": "https://github.com/brighthire/brighthire-codex-plugin",
+        "upstreamRevision": "brighthire-source-d317197efb8c+resource-177dad1731d0+oauth-4ea2f28a5719+boundary-56beca58033e",
+        "portStatus": "full"
       }
     },
     {
@@ -5424,7 +5453,7 @@
     },
     {
       "id": "figma",
-      "auditStatus": "blocked-license",
+      "auditStatus": "official-source-research-required",
       "developer": {
         "manifestAuthor": {
           "name": "Figma",
@@ -5460,37 +5489,47 @@
         "candidateOfficialRepository": null,
         "homepage": "https://www.figma.com",
         "review": {
-          "verificationStatus": "blocked-license",
+          "verificationStatus": "official-source-research-required",
           "officialDeveloper": "Figma",
           "officialRepository": "https://github.com/figma/mcp-server-guide",
           "officialRevision": "72fcf1f4b170bcaa78fa8bef2f27cce15f4d58f4",
           "license": "LicenseRef-Figma-Developer-Terms",
           "licenseEvidence": [
             "The pinned August 14, 2026 official revision contains 123 files and no LICENSE, COPYING, NOTICE, or equivalent open-source license file.",
-            "Its README says use of the MCP server and related skills is governed by the Figma Developer Terms and describes the skills as a beta feature."
+            "Its README says use of the MCP server and related skills is governed by the Figma Developer Terms and describes the skills as a beta feature.",
+            "The May 5, 2026 Figma Developer Terms grant a limited license to use Developer Resources to develop, test, and support a Figma Integration, but reserve all rights not expressly granted and do not provide an open-source redistribution license for the twelve official skill texts or Figma artwork."
           ],
           "officialityEvidence": [
             "The repository is owned by the Figma GitHub organization.",
             "It publishes the official Figma MCP endpoint, twelve bundled agent skills at release 2.2.95, client manifests, and Figma-authored setup guidance.",
-            "The twelve bundled official skill names match the current Codex plugin skill set."
+            "The twelve bundled official skill names match the current Codex plugin skill set.",
+            "Figma's official tools documentation currently lists 24 remote MCP tools covering design context, screenshots, metadata, assets, Code Connect, files, diagrams, design generation, libraries, design-system search, motion, shaders, uploads, identity, and general canvas reads and writes."
           ],
           "codexCapabilities": [
             "Read Figma design context and translate selected designs into application code",
             "Create or modify Figma files, components, variables, libraries, diagrams, FigJam boards, Slides, motion, and Code Connect mappings"
           ],
           "ghastCapabilities": [
-            "No redistributed Figma skill or branded asset package is claimed until the Figma Developer Terms are confirmed to permit this form of redistribution and modification."
+            "No package is published yet. A future Ghast adapter can use the official hosted endpoint with independently authored workflows and generic artwork once Figma admits Ghast as an MCP client or supplies an authorized client registration."
           ],
-          "capabilityRelationship": "blocked-before-port",
+          "capabilityRelationship": "official-hosted-mcp-found-client-allowlist-and-material-redistribution-blockers",
           "limitations": [
-            "The public endpoint at https://mcp.figma.com/mcp is reachable, but declaring the endpoint alone would omit the twelve official workflow skills that make up the current Codex plugin.",
-            "Repository ownership and public availability do not by themselves grant permission to redistribute Figma's skill text or brand assets."
+            "The official endpoint at https://mcp.figma.com/mcp publishes protected-resource metadata for scope mcp:connect and an OAuth authorization server with PKCE S256 and a dynamic registration endpoint.",
+            "Figma's official documentation says only clients listed in the Figma MCP Catalog can connect and directs developers of new MCP clients to a waitlist. A single bounded standards-shaped registration request from the Ghast audit on August 20, 2026 returned HTTP 403 Forbidden.",
+            "Ghast must not impersonate Codex, Claude, Cursor, VS Code, Xcode, or another admitted client's OAuth identity, ask users to extract platform tokens, or embed credentials obtained for a different integration.",
+            "The Developer Terms permit development of an integration but do not provide an open-source license to copy, modify, or redistribute the twelve official skill texts or Figma brand assets. A future implementation must use independently authored workflow instructions and generic artwork.",
+            "Authenticated tools/list and write operations were not exercised because no authorized Ghast OAuth client or user test account was available. Published documentation establishes 24 tool names, but live schemas, plan entitlements, beta availability, and client-specific exclusions still require bounded authenticated verification.",
+            "Do not create plugins/figma until Figma admits Ghast or supplies an authorized independent-client flow and the resulting adapter demonstrates the Codex read, write, Code Connect, design-system, FigJam, Slides, motion, shader, and design-generation workflows without copying restricted materials."
           ],
           "verification": [
-            "Inspect the complete pinned repository and confirm no open-source license file exists",
-            "Compare the twelve official skills with the twelve Codex plugin skills",
-            "Probe https://mcp.figma.com/mcp and confirm the official server responds while rejecting an unsupported GET request",
-            "Do not create plugins/figma while redistribution permission remains unresolved"
+            "python3 scripts/audit-figma-plugin.py --openai-source ../openai-plugins --official-source ../upstreams/figma-mcp-guide",
+            "Verify official revision 72fcf1f4b170bcaa78fa8bef2f27cce15f4d58f4, tree 15eabd7564b5c30511c0e25281def746b0b172c8, complete Git inventory, twelve skills, and continued absence of an open-source license file",
+            "Verify the protected-resource and authorization-server metadata, mcp:connect scope, PKCE S256, authentication requirement, and official 24-tool documentation inventory",
+            "Verify Figma's current MCP Catalog restriction and new-client waitlist guidance; re-audit immediately if Figma documents generic independent-client registration or admits Ghast",
+            "Verify the May 5, 2026 Developer Terms integration license and reserved-rights boundary without copying official skill text or Figma artwork",
+            "Confirm plugins/figma and packages/figma.zip remain absent until client admission, authenticated capability verification, and independent workflow authorship are complete",
+            "python3 scripts/audit-third-party-plugins.py --source ../openai-plugins",
+            "python3 scripts/validate-ghast-repository.py"
           ]
         }
       },

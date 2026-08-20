@@ -137,6 +137,23 @@ python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins
 python3 scripts/build-ghast-catalog.py
 ```
 
+## Import the BrightHire plugin
+
+The BrightHire importer verifies the official developer-owned plugin source,
+public hosted MCP endpoint, OAuth metadata, anonymous authentication boundary,
+and the pinned OpenAI capability evidence. It generates only independently
+authored Ghast adapter files and generic artwork because the official source
+declares MIT in its manifest but does not contain an actual license text.
+
+```bash
+python3 scripts/import-brighthire-plugin.py \
+  --openai-source ../openai-plugins \
+  --official-source ../upstreams/brighthire-codex-plugin
+```
+
+For a deliberate one-time public OAuth registration test, add
+`--verify-registration`. The returned client value is not retained.
+
 ## Audit third-party Codex plugins
 
 `third-party-plugin-audit.json` tracks every marketplace plugin whose declared

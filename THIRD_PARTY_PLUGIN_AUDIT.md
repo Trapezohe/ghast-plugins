@@ -42,7 +42,7 @@ verification.
 | boltz-api-cli | Boltz | skills | MIT | official-source-verified | implemented-verified |
 | brand24 | Brand24 Global Inc. | appConnector | MIT | official-source-verified | implemented-verified |
 | brex | Brex Inc. | appConnector | MIT | official-source-verified | implemented-verified |
-| brighthire | BrightHire | appConnector, skills | MIT | blocked-license | not-implemented |
+| brighthire | BrightHire | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | calendly | Calendly | appConnector | MIT | official-source-verified | implemented-verified |
 | canva | Canva | appConnector, skills | MIT | official-source-verified | implemented-verified |
 | carta-crm | Carta Inc. | appConnector | MIT | official-source-verified | implemented-verified |
@@ -82,7 +82,7 @@ verification.
 | expo | Expo | skills, commands | MIT | official-source-verified | implemented-verified |
 | factset | FactSet | appConnector | MIT | official-source-verified | implemented-verified |
 | fal | Fal | appConnector | MIT | official-source-verified | implemented-verified |
-| figma | Figma | appConnector, mcpServers, skills, commands | LicenseRef-Figma-Developer-Terms | blocked-license | not-implemented |
+| figma | Figma | appConnector, mcpServers, skills, commands | LicenseRef-Figma-Developer-Terms | official-source-research-required | not-implemented |
 | finn | FINN GmbH | appConnector | MIT | official-source-research-required | not-implemented |
 | fireflies | Fireflies | appConnector | MIT | official-source-verified | implemented-verified |
 | fiscal-ai | Fiscal AI | appConnector | MIT | official-source-verified | implemented-verified |

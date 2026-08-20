@@ -1,0 +1,18 @@
+{
+  "name": "brighthire",
+  "version": "0.1.0-ghast.1",
+  "description": "Retrieve authorized interview intelligence through BrightHire's official read-only MCP.",
+  "category": "productivity",
+  "author": {
+    "name": "BrightHire",
+    "url": "https://www.brighthire.com"
+  },
+  "homepage": "https://github.com/brighthire/brighthire-codex-plugin",
+  "repository": "https://github.com/brighthire/brighthire-codex-plugin",
+  "upstreamRevision": "brighthire-source-d317197efb8c+resource-177dad1731d0+oauth-4ea2f28a5719+boundary-56beca58033e",
+  "license": "MIT",
+  "portStatus": "full",
+  "icon": "./assets/icon.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
