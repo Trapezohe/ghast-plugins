@@ -14389,6 +14389,18 @@ def verify_moodys_evidence() -> None:
             raise ValueError(
                 f"Moody's MCP documentation is missing {marker!r}"
             )
+    public_tool_descriptions = {
+        "findEntity": "Locates entities covered by Moody’s",
+        "searchEntityDocuments": "Searches Moody’s proprietary research library",
+        "getEntityRatings": "Retrieves the current credit rating and outlook",
+        "getEntityRatingDrivers": "Identifies the primary drivers behind an entity’s credit rating",
+        "getEntityScorecard": "Returns the Moody’s rating scorecard",
+    }
+    for tool_name, description in public_tool_descriptions.items():
+        if description not in mcp_documentation:
+            raise ValueError(
+                f"Moody's public description changed for {tool_name}"
+            )
 
     learning_hub = fetch_visible_text(
         MOODYS_LEARNING_HUB_URL,
