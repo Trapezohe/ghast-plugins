@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "daloopa": {
+      "type": "streamable-http",
+      "url": "https://mcp.daloopa.com/server/mcp"
+    },
+    "daloopa-docs": {
+      "type": "streamable-http",
+      "url": "https://docs.daloopa.com/mcp"
+    }
+  }
+}

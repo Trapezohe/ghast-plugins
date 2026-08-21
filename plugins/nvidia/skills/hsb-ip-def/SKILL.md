@@ -1,36 +1,23 @@
 ---
 name: hsb-ip-def
-author: "Holoscan Team <holoscan-team@nvidia.com>"
 description: Generate, validate, compare, or explain HSB HOLOLINK_def.svh macros. Do not use for FPGA_top.sv wrappers or packetizer-only derivation. Generation runs bundled Python scripts locally through shell commands and writes validated .svh output files after user-confirmed paths.
-version: "0.1.0"
-tags:
-  - holoscan
-  - hsb
-  - fpga
-  - systemverilog
-  - configuration
-permissions: [file_read, file_write, shell]
 license: Apache-2.0
 compatibility: Targets HSB IP rev 16'h2604; backward-compatible with 16'h2603 (the public release rev). Prefer live HSB IP source when available; warn on unknown revisions. Requires Python 3.9+ with PyYAML for the generator.
 metadata:
-  author: "Holoscan Team <holoscan-team@nvidia.com>"
+  author: Holoscan Team <holoscan-team@nvidia.com>
   team: holoscan
   domain: fpga
   vendor: nvidia
-  tags:
-    - holoscan
-    - hsb
-    - fpga
-    - systemverilog
-    - configuration
-  languages:
-    - systemverilog
-    - python
+  tags: '["holoscan","hsb","fpga","systemverilog","configuration"]'
+  languages: '["systemverilog","python"]'
   artifact: HOLOLINK_def.svh
-  hsb_ip_version: "16'h2604"
-  min_compat_rev: "16'h2603"
+  hsb_ip_version: 16'h2604
+  min_compat_rev: 16'h2603
+  legacy-author: Holoscan Team <holoscan-team@nvidia.com>
+  version: 0.1.0
+  legacy-tags: '["holoscan","hsb","fpga","systemverilog","configuration"]'
+  permissions: '["file_read","file_write","shell"]'
 ---
-
 # HSB IP Def Skill
 
 ## Purpose

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "zoho-crm-data-insights": {
+      "type": "streamable-http",
+      "url": "https://zoho-crm-data-insights-60065097786.zohomcp.in/mcp/d17dfe13292e0414a929516bb8f8e797/message"
+    },
+    "zoho-crm-data-operations": {
+      "type": "streamable-http",
+      "url": "https://zoho-crm-data-operations-60065097786.zohomcp.in/mcp/fe46ddbc48fec3713c8754cea8ec9ac5/message"
+    },
+    "zoho-crm-module-customization": {
+      "type": "streamable-http",
+      "url": "https://zoho-crm-module-customization-60065097786.zohomcp.in/mcp/8057776f5d548a33b892c533d4278d17/message"
+    },
+    "zoho-crm-automation": {
+      "type": "streamable-http",
+      "url": "https://zoho-crm-automation-60065097786.zohomcp.in/mcp/c139be028c224f75a9077e6473a62f3b/message"
+    }
+  }
+}

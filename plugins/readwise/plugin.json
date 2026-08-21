@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "readwise",
+  "version": "1.0.0-ghast.1",
+  "description": "Search Readwise highlights and Reader documents, read saved content, and organize the user's reading library through Readwise's official hosted MCP server.",
+  "author": {
+    "name": "Readwise Inc.",
+    "url": "https://readwise.io"
+  },
+  "homepage": "https://readwise.io/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "research",
+      "upstreamRevision": "readwise-skills-2d1ce9627c61-a72340a2f73f+oauth-b39687b19dac",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

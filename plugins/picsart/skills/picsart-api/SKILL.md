@@ -2,9 +2,11 @@
 name: picsart-api
 description: Generate and edit media via Picsart MCP API tools.
 license: MIT
-metadata: {"author": "Picsart", "version": "1.0.0", "hermes": {"category": "api", "tags": ["picsart", "mcp", "image-api", "video-api", "genai-api", "variable-data"]}}
+metadata:
+  author: Picsart
+  version: 1.0.0
+  hermes: '{"category":"api","tags":["picsart","mcp","image-api","video-api","genai-api","variable-data"]}'
 ---
-
 # Picsart API (MCP)
 
 The `picsart` MCP server at `https://mcp.picsart.io/v1` exposes four Picsart REST APIs as MCP tools. Each tool name equals the OpenAPI `operationId` verbatim — dashes preserved (e.g. `genai-text2image`, `image-remove-background`, `video-trim`, `vd-export-replay`).

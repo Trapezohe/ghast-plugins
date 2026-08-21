@@ -2,90 +2,15 @@
 name: vercel-cli
 description: Vercel CLI expert guidance. Use when deploying, managing environment variables, linking projects, viewing logs, querying metrics, managing domains, or interacting with the Vercel platform from the command line.
 metadata:
-  priority: 4
-  docs:
-    - "https://vercel.com/docs/cli"
-  sitemap: "https://vercel.com/sitemap/docs.xml"
-  pathPatterns:
-    - 'vercel.json'
-    - 'vercel.ts'
-    - '.vercel/**'
-    - '.vercelignore'
-    - 'now.json'
-  bashPatterns:
-    - '^\s*vercel(?:\s|$)'
-    - '^\s*vc(?:\s|$)'
-    - '\bnpx\s+vercel\b'
-    - '\bpnpm\s+dlx\s+vercel\b'
-    - '\bbunx\s+vercel\b'
-    - '\byarn\s+dlx\s+vercel\b'
-    - '\bnpx\s+@vercel/config\b'
-  promptSignals:
-    phrases:
-      - "check deployment"
-      - "check deploy"
-      - "deployment status"
-      - "deploy status"
-      - "vercel logs"
-      - "vercel metrics"
-      - "deployment logs"
-      - "deploy logs"
-      - "vercel inspect"
-      - "is it deployed"
-      - "deploy failing"
-      - "deploy failed"
-      - "deployment error"
-      - "check vercel"
-      - "vercel status"
-    allOf:
-      - [check, deployment]
-      - [check, deploy]
-      - [vercel, status]
-      - [vercel, logs]
-      - [vercel, metrics]
-      - [deploy, error]
-      - [deploy, failed]
-      - [deploy, stuck]
-    anyOf:
-      - "deployment"
-      - "deploy"
-      - "vercel"
-      - "production"
-    noneOf:
-      - "terraform"
-      - "aws deploy"
-      - "heroku"
-    minScore: 6
-retrieval:
-  aliases:
-    - vercel command line
-    - vc cli
-    - deploy command
-    - vercel terminal
-  intents:
-    - deploy from cli
-    - link project
-    - manage domains
-    - view logs from terminal
-  entities:
-    - vercel CLI
-    - vercel deploy
-    - vercel env
-    - vercel link
-    - vercel logs
-    - vercel metrics
-chainTo:
-  -
-    pattern: '"functions"\s*:\s*\{|"maxDuration"\s*:|"memory"\s*:'
-    targetSkill: vercel-functions
-    message: 'Functions configuration detected in vercel.json — loading Vercel Functions guidance for runtime options, streaming, and Fluid Compute.'
-    skipIfFileContains: '"crons"\s*:'
-  -
-    pattern: '"redirects"\s*:\s*\[|"rewrites"\s*:\s*\[|"headers"\s*:\s*\['
-    targetSkill: routing-middleware
-    message: 'Routing rules in vercel.json — loading Routing Middleware guidance for platform-level request interception patterns.'
+  priority: '4'
+  docs: '["https://vercel.com/docs/cli"]'
+  sitemap: https://vercel.com/sitemap/docs.xml
+  pathPatterns: '["vercel.json","vercel.ts",".vercel/**",".vercelignore","now.json"]'
+  bashPatterns: '["^\\s*vercel(?:\\s|$)","^\\s*vc(?:\\s|$)","\\bnpx\\s+vercel\\b","\\bpnpm\\s+dlx\\s+vercel\\b","\\bbunx\\s+vercel\\b","\\byarn\\s+dlx\\s+vercel\\b","\\bnpx\\s+@vercel/config\\b"]'
+  promptSignals: '{"allOf":[["check","deployment"],["check","deploy"],["vercel","status"],["vercel","logs"],["vercel","metrics"],["deploy","error"],["deploy","failed"],["deploy","stuck"]],"anyOf":["deployment","deploy","vercel","production"],"minScore":6,"noneOf":["terraform","aws deploy","heroku"],"phrases":["check deployment","check deploy","deployment status","deploy status","vercel logs","vercel metrics","deployment logs","deploy logs","vercel inspect","is it deployed","deploy failing","deploy failed","deployment error","check vercel","vercel status"]}'
+  retrieval: '{"aliases":["vercel command line","vc cli","deploy command","vercel terminal"],"entities":["vercel CLI","vercel deploy","vercel env","vercel link","vercel logs","vercel metrics"],"intents":["deploy from cli","link project","manage domains","view logs from terminal"]}'
+  chainTo: '[{"message":"Functions configuration detected in vercel.json — loading Vercel Functions guidance for runtime options, streaming, and Fluid Compute.","pattern":"\"functions\"\\s*:\\s*\\{|\"maxDuration\"\\s*:|\"memory\"\\s*:","skipIfFileContains":"\"crons\"\\s*:","targetSkill":"vercel-functions"},{"message":"Routing rules in vercel.json — loading Routing Middleware guidance for platform-level request interception patterns.","pattern":"\"redirects\"\\s*:\\s*\\[|\"rewrites\"\\s*:\\s*\\[|\"headers\"\\s*:\\s*\\[","targetSkill":"routing-middleware"}]'
 ---
-
 # Vercel CLI Skill
 
 The Vercel CLI (`vercel` or `vc`) deploys, manages, and develops projects on the Vercel platform from the command line. Use `vercel <command> -h` for full flag details on any command.

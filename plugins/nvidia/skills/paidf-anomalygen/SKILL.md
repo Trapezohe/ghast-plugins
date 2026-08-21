@@ -1,25 +1,14 @@
 ---
 name: paidf-anomalygen
+description: 'Full PAIDF AnomalyGen pipeline — fine-tune on a new anomaly dataset, generate synthetic anomaly images (SDG), evaluate quality (nn_score), and search per-sample (guidance, crop_ratio) parameters. Three modes: full (Phase 0→7: finetune then generate), finetune_only (Phase 0→1: train only), inference_only (Phase 0, 2→7: generate from an existing checkpoint). Use when the user asks to "fine-tune AnomalyGen", "generate anomaly images", "run PAIDF SDG", "evaluate SDG output quality", "run per-sample search", or run any part of the AnomalyGen pipeline, even if they only mention one phase.'
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit and a CUDA GPU. Pulls the `metropolis_sdg.paidf_anomalygen` image declared in `versions.yaml` at the skill bank root.
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["tao","data"]'
 allowed-tools: Read Bash
-description: >-
-  Full PAIDF AnomalyGen pipeline — fine-tune on a new anomaly dataset, generate
-  synthetic anomaly images (SDG), evaluate quality (nn_score), and search per-sample
-  (guidance, crop_ratio) parameters. Three modes: full (Phase 0→7: finetune then
-  generate), finetune_only (Phase 0→1: train only), inference_only (Phase 0, 2→7:
-  generate from an existing checkpoint). Use when the user asks to "fine-tune
-  AnomalyGen", "generate anomaly images", "run PAIDF SDG", "evaluate SDG output
-  quality", "run per-sample search", or run any part of the AnomalyGen pipeline,
-  even if they only mention one phase.
-tags:
-- tao
-- data
 ---
-
 # PAIDF AnomalyGen
 
 Multi-phase pipeline (0–7); the `mode` flag selects which phases run.

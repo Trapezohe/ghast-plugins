@@ -1,36 +1,22 @@
 ---
-name: "deepstream-profile-pipeline"
-description: "Profile a DeepStream pipeline with Nsight Systems and derive its configs from the measurement. Use when the user asks for an efficient, performant, or profiled pipeline — or to benchmark, tune, or measure FPS."
+name: deepstream-profile-pipeline
+description: Profile a DeepStream pipeline with Nsight Systems and derive its configs from the measurement. Use when the user asks for an efficient, performant, or profiled pipeline — or to benchmark, tune, or measure FPS.
+license: CC-BY-4.0 AND Apache-2.0
+compatibility: 'DeepStream SDK 9.0 on Ubuntu 22.04 or 24.04, run from the `nvcr.io/nvidia/deepstream:9.0-triton-multiarch` container (the dev image; the slimmer `samples-multiarch` variant strips the nsys NVTX injector and produces empty per-plugin NVTX traces — do not use it for profiling). Requires `nsys` (Nsight Systems 2024+) and `nvidia-smi` on PATH. No GUI dependency — the skill runs fully headless and uses only `nsys profile` + `nsys stats`.
+
+  '
 metadata:
-  author: "NVIDIA CORPORATION"
-  tags:
-    - deepstream
-    - profiling
-    - nsight-systems
-    - nvtx
-    - nvidia-smi
-    - benchmarking
-  languages:
-    - bash
-    - python
-    - yaml
+  author: NVIDIA CORPORATION
+  tags: '["deepstream","profiling","nsight-systems","nvtx","nvidia-smi","benchmarking"]'
+  languages: '["bash","python","yaml"]'
   domain: video-analytics
   team: deepstream-sdk
-owner: "NVIDIA CORPORATION"
-service: "deepstream"
-version: "0.1.0"
-reviewed: "2026-04-24"
-license: CC-BY-4.0 AND Apache-2.0
-compatibility: >
-  DeepStream SDK 9.0 on Ubuntu 22.04 or 24.04, run from the
-  `nvcr.io/nvidia/deepstream:9.0-triton-multiarch` container (the dev image; the slimmer
-  `samples-multiarch` variant strips the nsys NVTX injector and produces empty per-plugin
-  NVTX traces — do not use it for profiling). Requires `nsys` (Nsight Systems 2024+) and
-  `nvidia-smi` on PATH. No GUI dependency — the skill runs fully headless and uses only
-  `nsys profile` + `nsys stats`.
-data_classification: "internal"
+  owner: NVIDIA CORPORATION
+  service: deepstream
+  version: 0.1.0
+  reviewed: '2026-04-24'
+  data_classification: internal
 ---
-
 # DeepStream Profiling Skill
 
 Profile-driven pipeline creation. When the user indicates they want an efficient DeepStream

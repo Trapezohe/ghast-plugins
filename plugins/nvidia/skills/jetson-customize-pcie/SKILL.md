@@ -1,22 +1,14 @@
 ---
 name: jetson-customize-pcie
-description: >-
-  Per-controller PCIe enable / disable / lanes / link-speed for a
-  Jetson Thor or Orin custom carrier via ODMDATA + kernel-DT overlay.
-  Do NOT use for UPHY lane allocation or endpoint-mode bring-up.
-version: 0.0.1
-license: "Apache-2.0"
+description: Per-controller PCIe enable / disable / lanes / link-speed for a Jetson Thor or Orin custom carrier via ODMDATA + kernel-DT overlay. Do NOT use for UPHY lane allocation or endpoint-mode bring-up.
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
-  tags:
-    - bsp
-    - phase-2
-    - io
-    - pcie
+  author: Jetson Team
+  tags: '["bsp","phase-2","io","pcie"]'
   domain: meta
+  version: 0.0.1
 ---
-
 # Customize PCIe (per-controller status / lanes / speed)
 
 ## Overview

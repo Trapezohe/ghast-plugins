@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "biorender": {
-      "type": "http",
-      "url": "https://mcp.services.biorender.com/mcp"
-    }
-  }
-}

@@ -1,37 +1,21 @@
 ---
-name: "digital-health-clinical-asr-build"
-description: "Stage 2 of the Clinical ASR Flywheel. Use when curating clinical terms, tagging IPA, and synthesizing a NeMo manifest. NOT for scoring (use /digital-health-clinical-asr-eval)."
-version: "1.1.0"
-author: "Ben Randoing <brandoing@nvidia.com>"
-tags:
-  - clinical-asr
-  - dataset
-  - ipa
-  - magpie
-  - nemo-manifest
-  - flywheel
-tools:
-  - Read
-  - Write
-  - Bash
-  - Skill
+name: digital-health-clinical-asr-build
+description: Stage 2 of the Clinical ASR Flywheel. Use when curating clinical terms, tagging IPA, and synthesizing a NeMo manifest. NOT for scoring (use /digital-health-clinical-asr-eval).
 license: Apache-2.0
-compatibility: "NVIDIA_API_KEY (required) for hosted Magpie TTS via NVCF. DICTIONARY_API_KEY (optional) for Merriam-Webster Medical Dictionary lookup. Stage 1 (/digital-health-clinical-asr-setup) must have been completed first. All TTS, IPA, and synthesis recipes are inlined — no sibling agent skill required."
+compatibility: NVIDIA_API_KEY (required) for hosted Magpie TTS via NVCF. DICTIONARY_API_KEY (optional) for Merriam-Webster Medical Dictionary lookup. Stage 1 (/digital-health-clinical-asr-setup) must have been completed first. All TTS, IPA, and synthesis recipes are inlined — no sibling agent skill required.
 metadata:
-  author: "Ben Randoing <brandoing@nvidia.com>"
-  tags:
-    - clinical-asr
-    - flywheel
-    - dataset
-    - ipa
-    - magpie
+  author: Ben Randoing <brandoing@nvidia.com>
+  tags: '["clinical-asr","flywheel","dataset","ipa","magpie"]'
   team: healthcare-tme
   domain: ai-ml
-  stage: 2
+  stage: '2'
   previous_skill: digital-health-clinical-asr-setup
   next_skill: digital-health-clinical-asr-eval
+  version: 1.1.0
+  legacy-author: Ben Randoing <brandoing@nvidia.com>
+  legacy-tags: '["clinical-asr","dataset","ipa","magpie","nemo-manifest","flywheel"]'
+  tools: '["Read","Write","Bash","Skill"]'
 ---
-
 <!--
 SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
 SPDX-License-Identifier: Apache-2.0

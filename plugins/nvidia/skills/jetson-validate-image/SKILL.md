@@ -1,22 +1,14 @@
 ---
 name: jetson-validate-image
-description: >-
-  Use after jetson-flash-image to run static BSP checks, on-target
-  smoke/regression tests on a flashed DUT, or both. Not for build
-  or flash steps. Triggers: validate bsp, on-target validation.
-version: 0.0.1
-license: "Apache-2.0"
+description: 'Use after jetson-flash-image to run static BSP checks, on-target smoke/regression tests on a flashed DUT, or both. Not for build or flash steps. Triggers: validate bsp, on-target validation.'
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
-  tags:
-    - bsp
-    - validation
-    - test
-    - deploy
+  author: Jetson Team
+  tags: '["bsp","validation","test","deploy"]'
   domain: meta
+  version: 0.0.1
 ---
-
 # Validate BSP Image
 
 > **Status:** the DUT-access contract is stable; the rest of the

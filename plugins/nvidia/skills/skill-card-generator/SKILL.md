@@ -1,31 +1,14 @@
 ---
-name: "skill-card-generator"
-description: "Use only to generate or update a governance skill card for a specified existing agent skill directory. Do not use for explaining, listing, comparing, or discussing skill capabilities."
+name: skill-card-generator
+description: Use only to generate or update a governance skill card for a specified existing agent skill directory. Do not use for explaining, listing, comparing, or discussing skill capabilities.
 license: CC-BY-4.0 AND Apache-2.0
-compatibility: "Any agent that can run Python scripts and write files"
+compatibility: Any agent that can run Python scripts and write files
 metadata:
-  author: "Trustworthy AI Projects <trustworthyaiprojects@nvidia.com>"
-  tags:
-    - skill-card
-    - governance
-    - documentation
-    - trustworthy-ai
+  author: Trustworthy AI Projects <trustworthyaiprojects@nvidia.com>
+  tags: '["skill-card","governance","documentation","trustworthy-ai"]'
   domain: documentation
-permissions:
-  file_read:
-    - "target_skill_directory"
-    - "references/"
-    - "scripts/"
-  file_write:
-    - "target_skill_directory"
-    - "/tmp/"
-  shell:
-    allowed_scripts:
-      - "scripts/discover_assets.py"
-      - "scripts/render_card.py"
-      - "scripts/validate_submission.py"
+  permissions: '{"file_read":["target_skill_directory","references/","scripts/"],"file_write":["target_skill_directory","/tmp/"],"shell":{"allowed_scripts":["scripts/discover_assets.py","scripts/render_card.py","scripts/validate_submission.py"]}}'
 ---
-
 # Generate Skill Card
 
 **Skill directory to analyze**: $ARGUMENTS

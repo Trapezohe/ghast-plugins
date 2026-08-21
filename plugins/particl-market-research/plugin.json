@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "particl-market-research",
+  "version": "1.0.3-ghast.1",
+  "description": "Research ecommerce companies, products, sales, marketing, events, pricing, and market trends through Particl's official hosted MCP.",
+  "author": {
+    "name": "Particl, Inc. / Luz Data, Inc.",
+    "url": "https://www.particl.com"
+  },
+  "homepage": "https://www.particl.com/docs/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "data",
+      "upstreamRevision": "particl-mcp-docs-056a86db22ab+resource-4e5cdc1335e1+oauth-3d14cf05fde7+oidc-contract-4d6a87df4a90+privacy-7e50e2501392",
+      "portStatus": "full",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

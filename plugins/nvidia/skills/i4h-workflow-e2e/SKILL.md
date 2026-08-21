@@ -1,18 +1,12 @@
 ---
 name: i4h-workflow-e2e
-version: "0.6.0"
 description: Run the full end-to-end agentic pipeline (record → mimic → annotate → replay → convert → visualize → finetune → validate). Use when asked to run the whole pipeline or do an e2e, smoke, or demo run.
 license: Apache-2.0
 metadata:
-  author: "Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>"
-  tags:
-    - isaac-for-healthcare
-    - i4h
-    - agentic-workflow
-    - end-to-end
-    - pipeline
+  author: Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>
+  tags: '["isaac-for-healthcare","i4h","agentic-workflow","end-to-end","pipeline"]'
+  version: 0.6.0
 ---
-
 # i4h Workflow — End-to-End
 
 ## Purpose

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "mt-newswires": {
+      "type": "streamable-http",
+      "url": "https://vast.blueskyapi.com/mtnewswires/mcp"
+    }
+  }
+}

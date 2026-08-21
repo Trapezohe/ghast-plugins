@@ -1,22 +1,14 @@
 ---
 name: tao-finetune-clip
-description: CLIP vision-language model for image-text retrieval, zero-shot classification, embedding extraction, ONNX
-  export, and TensorRT deployment. Use when fine-tuning or training CLIP, running zero-shot classification, computing image
-  embeddings, or deploying CLIP to ONNX/TensorRT.
+description: CLIP vision-language model for image-text retrieval, zero-shot classification, embedding extraction, ONNX export, and TensorRT deployment. Use when fine-tuning or training CLIP, running zero-shot classification, computing image embeddings, or deploying CLIP to ONNX/TensorRT.
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["vision-language","classification","embedding","zero-shot","deployment"]'
 allowed-tools: Read Bash
-tags:
-- vision-language
-- classification
-- embedding
-- zero-shot
-- deployment
 ---
-
 # CLIP
 
 Contrastive Language-Image Pre-training model for zero-shot and fine-tuned image classification, image-text retrieval, and embedding extraction. Fine-tuning adapts CLIP's shared image-text embedding space to domain-specific image-caption data.

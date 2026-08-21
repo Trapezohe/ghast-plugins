@@ -1,25 +1,14 @@
 ---
 name: tao-run-inference-service
-description: >
-  Start, query, and stop a network-specific TAO inference microservice
-  ({network_arch}-inference-microservice) by delegating container execution to
-  the appropriate platform skill. Handles container image resolution,
-  job-payload JSON construction, and the service registry. Use when the user
-  wants to run inference on a TAO model checkpoint using a microservice
-  container, deploy a TAO inference endpoint, or stop a running inference
-  container.
+description: Start, query, and stop a network-specific TAO inference microservice ({network_arch}-inference-microservice) by delegating container execution to the appropriate platform skill. Handles container image resolution, job-payload JSON construction, and the service registry. Use when the user wants to run inference on a TAO model checkpoint using a microservice container, deploy a TAO inference endpoint, or stop a running inference container.
 license: Apache-2.0
 compatibility: The inference service has no cloud-storage dependency — model weights come from the HuggingFace Hub (HF_TOKEN env var for gated models) or a local container path. Platform prerequisites are checked by each platform skill.
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["inference","microservice","workflow"]'
 allowed-tools: Read Bash Write
-tags:
-- inference
-- microservice
-- workflow
 ---
-
 # TAO Inference Microservice
 
 ## Instructions

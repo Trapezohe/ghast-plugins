@@ -1,21 +1,14 @@
 ---
 name: jetson-set-target
-description: >-
-  Switch the active Jetson target-platform pointer to an existing
-  profile YAML. Use before customize/build/flash to change target; not
-  for authoring profiles — use jetson-init-target instead.
-version: 0.0.1
-license: "Apache-2.0"
+description: Switch the active Jetson target-platform pointer to an existing profile YAML. Use before customize/build/flash to change target; not for authoring profiles — use jetson-init-target instead.
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
-  tags:
-    - target-platform
-    - configuration
-    - meta
+  author: Jetson Team
+  tags: '["target-platform","configuration","meta"]'
   domain: meta
+  version: 0.0.1
 ---
-
 # Set Target Platform
 
 ## Overview

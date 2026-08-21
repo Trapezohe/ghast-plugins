@@ -1,10 +1,10 @@
 ---
 name: defillama
 description: Use this skill when the user asks about DeFi protocols, TVL (total value locked), chain-by-chain breakdowns, top DeFi protocols, or specific protocols like Aave, Uniswap, Lido, etc. Hits the free DeFi Llama public API (no key).
-version: 1.0.0
-allowed-tools: [WebFetch]
+metadata:
+  version: 1.0.0
+allowed-tools: WebFetch
 ---
-
 # DeFi Llama
 
 When the user asks about DeFi data — "what's the TVL of Aave", "show me the

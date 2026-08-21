@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "cb-insights": {
-      "type": "http",
-      "url": "https://mcp.cbinsights.com/"
-    }
-  }
-}

@@ -1,10 +1,10 @@
 ---
 name: steam-search
 description: Use this skill when the user asks to search Steam for games, look up a specific game's price/release-date/genres/reviews, or browse what's currently selling on Steam. Uses Steam's public store endpoints — no API key.
-version: 1.0.0
-allowed-tools: [WebFetch]
+metadata:
+  version: 1.0.0
+allowed-tools: WebFetch
 ---
-
 # Steam Store Search
 
 When the user wants to find a game on Steam ("is <game> on Steam", "how much

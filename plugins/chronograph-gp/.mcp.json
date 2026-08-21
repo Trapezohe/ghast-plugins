@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "chronograph-gp": {
-      "type": "http",
-      "url": "https://ai.chronograph.pe/mcp"
-    }
-  }
-}

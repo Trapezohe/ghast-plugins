@@ -1,10 +1,10 @@
 ---
 name: sequence-load
-description: "Find leads matching criteria and bulk-add them to an Apollo outreach sequence. Handles enrichment, contact creation, deduplication, and enrollment in one flow."
-user-invocable: true
-argument-hint: [targeting criteria + sequence name]
+description: Find leads matching criteria and bulk-add them to an Apollo outreach sequence. Handles enrichment, contact creation, deduplication, and enrollment in one flow.
+metadata:
+  user-invocable: 'true'
+  argument-hint: '["targeting criteria + sequence name"]'
 ---
-
 # Sequence Load
 
 Find, enrich, and load contacts into an outreach sequence — end to end. The user provides targeting criteria and a sequence name via "$ARGUMENTS".

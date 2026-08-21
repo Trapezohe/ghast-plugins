@@ -1,42 +1,16 @@
 ---
 name: physical-ai-infrastructure-setup-and-resilient-scaling
-description: >-
-  Use when the user wants to set up, scale, validate, or harden NVIDIA
-  physical AI infrastructure for synthetic data generation workflows across
-  local MicroK8s or Azure AKS, including Kubernetes clusters, inference endpoint
-  deployment, OSMO deployment, workload submission readiness, and infrastructure
-  failure recovery. Trigger keywords: physical ai infrastructure, resilient
-  scaling, SDG infrastructure, microk8s, azure aks, NVCF deployment,
-  NIM Operator, OSMO deploy, workflow scaling. Don't trigger for: OSMO log
-  summarization or workload-only operations unless infrastructure setup, scaling,
-  validation, or recovery is requested.
+description: 'Use when the user wants to set up, scale, validate, or harden NVIDIA physical AI infrastructure for synthetic data generation workflows across local MicroK8s or Azure AKS, including Kubernetes clusters, inference endpoint deployment, OSMO deployment, workload submission readiness, and infrastructure failure recovery. Trigger keywords: physical ai infrastructure, resilient scaling, SDG infrastructure, microk8s, azure aks, NVCF deployment, NIM Operator, OSMO deploy, workflow scaling. Don''t trigger for: OSMO log summarization or workload-only operations unless infrastructure setup, scaling, validation, or recovery is requested.'
 license: Apache-2.0
-version: "1.0.0"
-tools:
-  - Read
-  - Shell
-compatibility: >-
-  Requires the selected component prerequisites, usually kubectl plus either
-  MicroK8s or Azure CLI/Terraform, and OSMO or inference credentials for the
-  chosen target.
+compatibility: Requires the selected component prerequisites, usually kubectl plus either MicroK8s or Azure CLI/Terraform, and OSMO or inference credentials for the chosen target.
 metadata:
   author: NVIDIA Physical AI
-  tags:
-    - physical-ai
-    - infrastructure
-    - kubernetes
-    - azure
-    - microk8s
-    - osmo
-    - nim-operator
-    - scaling
+  tags: '["physical-ai","infrastructure","kubernetes","azure","microk8s","osmo","nim-operator","scaling"]'
   domain: ai-ml
-  languages:
-    - bash
-    - hcl
-    - yaml
+  languages: '["bash","hcl","yaml"]'
+  version: 1.0.0
+  tools: '["Read","Shell"]'
 ---
-
 # Physical AI Infrastructure Setup And Resilient Scaling
 
 Canonical skill for the Physical AI infrastructure stack. Use it to compose cluster,

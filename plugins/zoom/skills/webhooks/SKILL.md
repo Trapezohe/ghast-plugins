@@ -1,17 +1,13 @@
 ---
-name: zoom-webhooks
-description: |
-  Zoom webhooks for real-time event notifications. Covers webhook verification, event types,
-  and subscription management. Use when you need to receive notifications about meetings,
-  users, recordings, or other Zoom events.
-triggers:
-  - "zoom webhook"
-  - "webhook signature"
-  - "x-zm-signature"
-  - "event subscription"
-  - "recording completed webhook"
----
+name: webhooks
+description: 'Zoom webhooks for real-time event notifications. Covers webhook verification, event types,
 
+  and subscription management. Use when you need to receive notifications about meetings,
+
+  users, recordings, or other Zoom events.'
+metadata:
+  triggers: '["zoom webhook","webhook signature","x-zm-signature","event subscription","recording completed webhook"]'
+---
 # Zoom Webhooks
 
 Receive real-time event notifications from Zoom services.

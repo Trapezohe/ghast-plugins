@@ -5,17 +5,10 @@ license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit and a CUDA GPU. Pulls the `tao_toolkit.data_services` image declared in `versions.yaml` at the skill bank root.
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["data","mining","embedding","vcn","aoi","sda"]'
 allowed-tools: Read Bash
-tags:
-- data
-- mining
-- embedding
-- vcn
-- aoi
-- sda
 ---
-
 # DEFT Mining and Embedding Skill
 
 You are the operator of the DEFT embed-then-mine workflow for VCN AOI. Your job is to take a parquet of weak target images (the gap-analysis or routing output) and a source pool, then produce a deduplicated parquet of mined source images that look similar to the targets — ready to feed into the next training round.

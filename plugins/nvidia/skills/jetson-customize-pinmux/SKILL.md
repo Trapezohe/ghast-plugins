@@ -1,22 +1,14 @@
 ---
 name: jetson-customize-pinmux
-description: >-
-  Per-pin SFIO / direction / initial-state configurator for a Jetson
-  Orin or Thor custom carrier from the pinmux XLSM. Do NOT use for
-  kernel-DT overlay or ODMDATA edits.
-version: 0.0.1
-license: "Apache-2.0"
+description: Per-pin SFIO / direction / initial-state configurator for a Jetson Orin or Thor custom carrier from the pinmux XLSM. Do NOT use for kernel-DT overlay or ODMDATA edits.
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
-  tags:
-    - bsp
-    - phase-2
-    - io
-    - pinmux
+  author: Jetson Team
+  tags: '["bsp","phase-2","io","pinmux"]'
   domain: meta
+  version: 0.0.1
 ---
-
 # Customize pinmux (per-pin SFIO / direction / state)
 
 ## Overview

@@ -1,19 +1,14 @@
 ---
 name: tao-train-centerpose
-description: CenterPose for keypoint / pose estimation. Detects object centers and regresses keypoint locations for 6-DoF
-  object pose estimation. Use when training, evaluating, exporting, or running inference for a TAO CenterPose model. Trigger
-  phrases include "train CenterPose", "6-DoF object pose", "keypoint estimation", "object pose regression".
+description: CenterPose for keypoint / pose estimation. Detects object centers and regresses keypoint locations for 6-DoF object pose estimation. Use when training, evaluating, exporting, or running inference for a TAO CenterPose model. Trigger phrases include "train CenterPose", "6-DoF object pose", "keypoint estimation", "object pose regression".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["pose","estimation"]'
 allowed-tools: Read Bash
-tags:
-- pose
-- estimation
 ---
-
 # CenterPose
 
 CenterPose for keypoint / pose estimation. Detects object centers and regresses keypoint locations. Used for 6-DoF object pose estimation.

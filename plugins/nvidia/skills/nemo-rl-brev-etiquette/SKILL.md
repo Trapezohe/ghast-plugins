@@ -1,10 +1,10 @@
 ---
 name: nemo-rl-brev-etiquette
-license: Apache-2.0
 description: Brev instance operating guidance for NeMo-RL agents working in /home/ubuntu/RL with limited workspace disk, a larger /ephemeral volume, and optional /home/ubuntu/RL/.env secrets. Use when running nemo-rl-auto-research campaigns, experiments, training jobs, model or dataset downloads, shared cache-heavy commands, log-producing runs, checkpoint generation, W&B or Hugging Face authenticated workflows, or any workflow that may create large files on Brev.
-when_to_use: Running on a Brev instance; launching nemo-rl-auto-research campaigns or long jobs; managing large logs, checkpoints, caches, datasets, Ray temp files, W&B files, or Hugging Face auth on Brev.
+license: Apache-2.0
+metadata:
+  when_to_use: Running on a Brev instance; launching nemo-rl-auto-research campaigns or long jobs; managing large logs, checkpoints, caches, datasets, Ray temp files, W&B files, or Hugging Face auth on Brev.
 ---
-
 # Brev Etiquette
 
 Operate as though `/home/ubuntu/RL` is the source checkout and `/ephemeral` is the working storage for generated experiment state. Keep the repo small, reproducible, and easy to inspect. Move bulky run outputs to `/ephemeral` before launching anything expensive.

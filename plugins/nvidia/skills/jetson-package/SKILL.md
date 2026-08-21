@@ -1,15 +1,14 @@
 ---
 name: jetson-package
 description: Pick Jetson-compatible containers, vLLM runtime images, and Jetson AI Lab PyPI indexes; maps Orin SM 8.7 vs Thor SM 11.0 and JetPack-specific package choices.
-version: 0.0.1
-license: "Apache-2.0"
+license: Apache-2.0
 metadata:
-  author: "Jetson Team"
-  tags: [jetson, package, containers]
-  languages: [bash]
+  author: Jetson Team
+  tags: '["jetson","package","containers"]'
+  languages: '["bash"]'
   data-classification: public
+  version: 0.0.1
 ---
-
 # Jetson Package & Environment
 
 Agents often suggest `docker pull` images or `pip install` wheels that claim **aarch64** support but were never built for Jetson’s GPU **streaming multiprocessor (SM)** targets. On Jetson, **default to NVIDIA-curated artifacts** unless the user explicitly opts out.

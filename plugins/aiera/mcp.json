@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "aiera": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "-e",
+        "const os = require(\"node:os\");\nconst { spawn } = require(\"node:child_process\");\n\nconst apiKey = process.env.AIERA_API_KEY;\nif (\n  typeof apiKey !== \"string\" ||\n  !apiKey.trim() ||\n  /[\\0\\r\\n]/.test(apiKey)\n) {\n  console.error(\n    \"Set AIERA_API_KEY in the Ghast host environment before starting Aiera MCP.\",\n  );\n  process.exit(1);\n}\n\nconst officialBaseUrl = \"https://graphql.aiera.com/api\";\nconst configuredBaseUrl = (\n  process.env.AIERA_BASE_URL || officialBaseUrl\n).replace(/\\/+$/, \"\");\nif (configuredBaseUrl !== officialBaseUrl) {\n  console.error(\n    \"AIERA_BASE_URL must be https://graphql.aiera.com/api in this audited port.\",\n  );\n  process.exit(1);\n}\n\nconst childEnv = {\n  ...process.env,\n  AIERA_BASE_URL: officialBaseUrl,\n  LOG_LEVEL: process.env.LOG_LEVEL || \"WARNING\",\n};\nfor (const key of Object.keys(childEnv)) {\n  if (key.startsWith(\"UV_\")) delete childEnv[key];\n}\nchildEnv.UV_NO_PROGRESS = \"1\";\n\nconst executable = process.platform === \"win32\" ? \"uvx.exe\" : \"uvx\";\nconst args = [\n  \"--isolated\",\n  \"--no-config\",\n  \"--no-env-file\",\n  \"--no-progress\",\n  \"--default-index\",\n  \"https://pypi.org/simple\",\n  \"--exclude-newer\",\n  \"2026-08-08T23:59:59Z\",\n  \"--with\",\n  \"mcp[cli]==1.25.0\",\n  \"--with\",\n  \"httpx==0.28.1\",\n  \"--with\",\n  \"pydantic-settings==2.12.0\",\n  \"--from\",\n  \"git+https://github.com/aiera-inc/aiera-mcp.git@882acfc09c5e5c1eed82b6e2a64e8780503ec099\",\n  \"aiera-mcp\",\n];\nconst child = spawn(executable, args, {\n  stdio: \"inherit\",\n  cwd: os.tmpdir(),\n  env: childEnv,\n});\nchild.on(\"error\", (error) => {\n  console.error(\n    `Unable to start Aiera MCP. Install Astral uv and ensure uvx is on PATH: ${error.message}`,\n  );\n  process.exit(1);\n});\nfor (const signal of [\"SIGINT\", \"SIGTERM\"]) {\n  process.on(signal, () => child.kill(signal));\n}\nchild.on(\"exit\", (code, signal) => {\n  if (signal) process.kill(process.pid, signal);\n  else process.exit(code === null ? 1 : code);\n});\n"
+      ]
+    }
+  }
+}

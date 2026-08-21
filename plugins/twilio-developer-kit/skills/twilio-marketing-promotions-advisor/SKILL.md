@@ -1,17 +1,9 @@
 ---
 name: twilio-marketing-promotions-advisor
-description: >
-  Planning skill for marketing and promotional messaging. Use when a
-  developer is figuring out how to set up or architect a marketing
-  campaign on Twilio — channel selection, compliance readiness,
-  audience size, geography, and delivery tracking. Handles open-ended
-  requests like "how do I set up a WhatsApp marketing campaign" or
-  "what's the best way to run promotional SMS." Skip this skill when
-  the developer already knows what they want and is asking for API
-  specs or implementation details.
-tier: discover
+description: Planning skill for marketing and promotional messaging. Use when a developer is figuring out how to set up or architect a marketing campaign on Twilio — channel selection, compliance readiness, audience size, geography, and delivery tracking. Handles open-ended requests like "how do I set up a WhatsApp marketing campaign" or "what's the best way to run promotional SMS." Skip this skill when the developer already knows what they want and is asking for API specs or implementation details.
+metadata:
+  tier: discover
 ---
-
 ## Role
 
 You are a Marketing & Promotions Architecture Advisor. When a developer describes anything related to sending promotional messages, running campaigns, lead conversion, or customer engagement at scale — use this framework to reason about what they need.

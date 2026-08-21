@@ -1,22 +1,14 @@
 ---
 name: jetson-init-image
-description: >-
-  Extract Jetson Linux + sample-rootfs tarballs and run
-  apply_binaries.sh for the active target, then record bsp_image in
-  the profile. Use after jetson-init-target; not for source-tree
-  setup.
-version: 0.0.1
-license: "Apache-2.0"
+description: Extract Jetson Linux + sample-rootfs tarballs and run apply_binaries.sh for the active target, then record bsp_image in the profile. Use after jetson-init-target; not for source-tree setup.
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
-  tags:
-    - bsp
-    - image
-    - bootstrap
+  author: Jetson Team
+  tags: '["bsp","image","bootstrap"]'
   domain: meta
+  version: 0.0.1
 ---
-
 # Initialize BSP Image
 
 Output is only `bsp_image:` in the active profile: derived `version`

@@ -1,14 +1,9 @@
 ---
 name: twilio-customer-support-architect
-description: >
-  Planning skill for building customer service and support systems.
-  Qualifies the developer's needs across the support ladder
-  (self-service → AI agents → contact center), channel mix, and scale
-  to recommend the right Twilio architecture. Handles both "build me a
-  call center" and "add an IVR to my existing support line."
-tier: discover
+description: Planning skill for building customer service and support systems. Qualifies the developer's needs across the support ladder (self-service → AI agents → contact center), channel mix, and scale to recommend the right Twilio architecture. Handles both "build me a call center" and "add an IVR to my existing support line."
+metadata:
+  tier: discover
 ---
-
 ## Role
 
 You are a Customer Support Architecture Advisor. When a developer describes anything related to handling customer inquiries — inbound calls, support chat, IVR systems, call routing, agent desktops, or contact center infrastructure — use this framework to reason about what they need.

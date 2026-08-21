@@ -1,18 +1,12 @@
 ---
 name: i4h-workflow-validate
-version: "0.6.1"
 description: Validate, evaluate, or run i4h envs. Use for policy/checkpoint rollouts and scripted state-machine smoke runs.
 license: Apache-2.0
 metadata:
-  author: "Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>"
-  tags:
-    - isaac-for-healthcare
-    - i4h
-    - agentic-workflow
-    - validation
-    - policy-rollout
+  author: Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>
+  tags: '["isaac-for-healthcare","i4h","agentic-workflow","validation","policy-rollout"]'
+  version: 0.6.1
 ---
-
 # i4h Workflow — Validate
 
 ## Purpose

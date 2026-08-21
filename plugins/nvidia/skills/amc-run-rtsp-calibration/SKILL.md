@@ -1,16 +1,15 @@
 ---
-name: "amc-run-rtsp-calibration"
-description: "Calibrate a new dataset from live RTSP camera streams via the AutoMagicCalib REST API. Use when the user provides RTSP URLs or asks to calibrate live cameras; VIOS records clips, AMC ingests them, then runs calibration."
-owner: "NVIDIA CORPORATION"
-service: "auto-magic-calib"
-version: "1.0.0"
-reviewed: "2026-06-15"
-license: "Apache-2.0"
+name: amc-run-rtsp-calibration
+description: Calibrate a new dataset from live RTSP camera streams via the AutoMagicCalib REST API. Use when the user provides RTSP URLs or asks to calibrate live cameras; VIOS records clips, AMC ingests them, then runs calibration.
+license: Apache-2.0
 metadata:
-  author: "Shubham Agrawal <shuagrawal@nvidia.com>"
-  tags: [amc, calibration, rtsp, vios, rest-api, camera, python]
+  author: Shubham Agrawal <shuagrawal@nvidia.com>
+  tags: '["amc","calibration","rtsp","vios","rest-api","camera","python"]'
+  owner: NVIDIA CORPORATION
+  service: auto-magic-calib
+  version: 1.0.0
+  reviewed: '2026-06-15'
 ---
-
 # Skill: Calibrate from RTSP Streams
 
 ## When to Use This Skill

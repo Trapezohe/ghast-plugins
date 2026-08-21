@@ -1,17 +1,9 @@
 ---
-name: zoom-websockets
-description: |
-  Zoom WebSockets for real-time event notifications via persistent connection. Alternative to webhooks 
-  with lower latency, bidirectional communication, and enhanced security. Use when you need real-time 
-  event updates, are in security-sensitive industries, or want faster event delivery than webhooks.
-triggers:
-  - "zoom websockets"
-  - "websocket event subscription"
-  - "persistent zoom events"
-  - "low latency zoom events"
-  - "zoom websocket connection"
+name: websockets
+description: "Zoom WebSockets for real-time event notifications via persistent connection. Alternative to webhooks \nwith lower latency, bidirectional communication, and enhanced security. Use when you need real-time \nevent updates, are in security-sensitive industries, or want faster event delivery than webhooks."
+metadata:
+  triggers: '["zoom websockets","websocket event subscription","persistent zoom events","low latency zoom events","zoom websocket connection"]'
 ---
-
 # Zoom WebSockets
 
 Receive real-time event notifications from Zoom via persistent WebSocket connection.

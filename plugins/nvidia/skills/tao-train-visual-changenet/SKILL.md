@@ -1,25 +1,14 @@
 ---
 name: tao-train-visual-changenet
-description: Visual ChangeNet for binary image classification and segmentation in AOI defect detection. Use when training,
-  evaluating, exporting, or running inference for PCB defect detection or visual inspection, comparing image pairs for
-  PASS/NO_PASS classification, or producing change-segmentation masks. Trigger phrases include "train Visual ChangeNet",
-  "ChangeNet classify", "ChangeNet segment", "AOI defect detection", "PCB inspection model".
+description: Visual ChangeNet for binary image classification and segmentation in AOI defect detection. Use when training, evaluating, exporting, or running inference for PCB defect detection or visual inspection, comparing image pairs for PASS/NO_PASS classification, or producing change-segmentation masks. Trigger phrases include "train Visual ChangeNet", "ChangeNet classify", "ChangeNet segment", "AOI defect detection", "PCB inspection model".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["pcb","aoi","defect","classification","segmentation","siamese","visual-inspection"]'
 allowed-tools: Read Bash
-tags:
-- pcb
-- aoi
-- defect
-- classification
-- segmentation
-- siamese
-- visual-inspection
 ---
-
 # Visual ChangeNet
 
 Visual ChangeNet is a TAO Toolkit model for visual inspection and defect detection. It supports two tasks:

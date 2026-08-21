@@ -2,9 +2,11 @@
 name: prosumer-headshot-studio
 description: Selfie to four polished headshots for any use.
 license: MIT
-metadata: {"author": "Picsart", "version": "1.0.0", "hermes": {"category": "prosumer", "tags": ["picsart", "prosumer", "creator", "social"]}}
+metadata:
+  author: Picsart
+  version: 1.0.0
+  hermes: '{"category":"prosumer","tags":["picsart","prosumer","creator","social"]}'
 ---
-
 # Headshot studio
 
 Input: one casual phone selfie. Output: a set of professional-grade headshots at platform-correct ratios — LinkedIn polished, ID / passport, editorial / creator portrait, casual founder shot — with the same face across every variant. The bar is "plausibly a real photoshoot" not "obvious AI filter".

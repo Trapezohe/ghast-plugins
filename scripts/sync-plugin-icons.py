@@ -715,7 +715,7 @@ def main() -> int:
     plugin_dirs = {
         path.name: path
         for path in PLUGIN_DIR.iterdir()
-        if path.is_dir() and (path / ".ghast-plugin/plugin.json").is_file()
+        if path.is_dir() and (path / "plugin.json").is_file()
     }
     classified = set(OPENAI_ICONS) | set(LOCAL_ICONS) | set(CUSTOM_ICONS)
     if set(plugin_dirs) != classified:
@@ -743,9 +743,12 @@ def main() -> int:
             icon_path = assets_dir / "icon.svg"
             icon_path.write_text(render_svg(background, body))
 
-        manifest_path = plugin_dir / ".ghast-plugin/plugin.json"
+        manifest_path = plugin_dir / "plugin.json"
         manifest = json.loads(manifest_path.read_text())
-        manifest["icon"] = f"./{icon_path.relative_to(plugin_dir)}"
+        ghast = manifest.setdefault("extensions", {}).setdefault(
+            "ai.trapezohe.ghast", {}
+        )
+        ghast["icon"] = f"./{icon_path.relative_to(plugin_dir)}"
         manifest_path.write_text(
             json.dumps(manifest, indent=2, ensure_ascii=False) + "\n"
         )

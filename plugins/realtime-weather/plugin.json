@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "realtime-weather",
+  "description": "Skill that pulls current weather and a 24h forecast for any place name via Open-Meteo — no API key, no signup.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/realtime-weather",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "information",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

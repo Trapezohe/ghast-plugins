@@ -1,19 +1,13 @@
 ---
 name: holoscan-install-source
-version: "1.0.0"
-description: "Build Holoscan SDK from source via the in-tree ./run script. Use only when published packages don't meet the user's needs."
+description: Build Holoscan SDK from source via the in-tree ./run script. Use only when published packages don't meet the user's needs.
 license: Apache-2.0
 metadata:
-  author: "Holoscan Team <holoscan-team@nvidia.com>"
-  github-url: "https://github.com/nvidia-holoscan/holoscan-sdk"
-  tags:
-    - holoscan
-    - install
-    - source
-    - build
-    - cmake
+  author: Holoscan Team <holoscan-team@nvidia.com>
+  github-url: https://github.com/nvidia-holoscan/holoscan-sdk
+  tags: '["holoscan","install","source","build","cmake"]'
+  version: 1.0.0
 ---
-
 # Holoscan SDK — Build from Source
 
 ## Purpose

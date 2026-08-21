@@ -1,15 +1,12 @@
 ---
 name: nemo-automodel-recipe-development
 description: Create and modify NeMo AutoModel training and evaluation recipes, including YAML structure, builders, and execution flow.
-when_to_use: Creating or modifying training, SFT, or eval recipes, adding new YAML config fields, debugging recipe construction or trainer issues, or understanding the recipe execution flow.
 license: Apache-2.0
 metadata:
   author: NVIDIA
-  tags:
-    - nemo-automodel
-    - recipe-development
+  tags: '["nemo-automodel","recipe-development"]'
+  when_to_use: Creating or modifying training, SFT, or eval recipes, adding new YAML config fields, debugging recipe construction or trainer issues, or understanding the recipe execution flow.
 ---
-
 # NeMo AutoModel Recipe Development
 <!-- NVSkills signature refresh requested for AM-519. -->
 

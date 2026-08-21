@@ -1,19 +1,14 @@
 ---
 name: tao-train-mask2former
-description: Mask2Former for universal image segmentation (panoptic, instance, and semantic). Transformer-based with
-  masked attention for high-quality segmentation results. Use when training, evaluating, exporting, quantizing, or running
-  inference for a TAO Mask2Former model. Trigger phrases include "train Mask2Former", "universal segmentation",
-  "panoptic / instance / semantic segmentation", "masked-attention transformer segmenter".
+description: Mask2Former for universal image segmentation (panoptic, instance, and semantic). Transformer-based with masked attention for high-quality segmentation results. Use when training, evaluating, exporting, quantizing, or running inference for a TAO Mask2Former model. Trigger phrases include "train Mask2Former", "universal segmentation", "panoptic / instance / semantic segmentation", "masked-attention transformer segmenter".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["segmentation"]'
 allowed-tools: Read Bash
-tags:
-- segmentation
 ---
-
 # Mask2Former
 
 Mask2Former for universal image segmentation (panoptic, instance, and semantic). Transformer-based with masked attention for high-quality segmentation results.

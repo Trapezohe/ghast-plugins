@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "cloudinary-asset-management": {
+      "type": "streamable-http",
+      "url": "https://asset-management.mcp.cloudinary.com/mcp"
+    },
+    "cloudinary-environment-config": {
+      "type": "streamable-http",
+      "url": "https://environment-config.mcp.cloudinary.com/mcp"
+    },
+    "cloudinary-structured-metadata": {
+      "type": "streamable-http",
+      "url": "https://structured-metadata.mcp.cloudinary.com/mcp"
+    },
+    "cloudinary-analysis": {
+      "type": "streamable-http",
+      "url": "https://analysis.mcp.cloudinary.com/mcp"
+    },
+    "cloudinary-mediaflows": {
+      "type": "streamable-http",
+      "url": "https://mediaflows.mcp.cloudinary.com/v2/mcp"
+    }
+  }
+}

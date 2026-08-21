@@ -1,17 +1,14 @@
 ---
 name: jetson-flash-image
 description: Use to flash a promoted BSP image to a Jetson DUT in RCM mode via flash.sh or l4t_initrd_flash.sh. Do NOT use for BSP customization, image promotion, or carrier derivation.
-version: 0.0.1
-license: "Apache-2.0"
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
-  tags:
-    - bsp
-    - flash
+  author: Jetson Team
+  tags: '["bsp","flash"]'
   domain: meta
+  version: 0.0.1
 ---
-
 # Flash BSP Image
 
 ## Purpose

@@ -1,19 +1,11 @@
 ---
 name: enrich-company
-description: >
-  Researches a company by fetching its website and returning structured profile data.
-  Use this skill when the user says things like "enrich this company", "look up company info",
-  "research this company", "what does [domain] do", "get company details for [url]",
-  "find info on [company]", or "/enrich-company".
-  Input: target (domain name or website URL).
-  Output: structured JSON with name, industry, tags, description, and website.
-  Saves the result locally at ~/.carta-crm/enriched-companies/ for auditing.
-user-invocable: false
-version: 1.0.0
-model: haiku
+description: 'Researches a company by fetching its website and returning structured profile data. Use this skill when the user says things like "enrich this company", "look up company info", "research this company", "what does [domain] do", "get company details for [url]", "find info on [company]", or "/enrich-company". Input: target (domain name or website URL). Output: structured JSON with name, industry, tags, description, and website. Saves the result locally at ~/.carta-crm/enriched-companies/ for auditing.'
+metadata:
+  user-invocable: 'false'
+  version: 1.0.0
+  model: haiku
 ---
-
-
 ## Ghast MCP routing
 
 This port connects directly to Carta's hosted MCP server. Use the direct tool

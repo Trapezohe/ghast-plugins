@@ -2,9 +2,11 @@
 name: dev-app-assets
 description: Generate icons, empty states, onboarding for apps.
 license: MIT
-metadata: {"author": "Picsart", "version": "1.0.0", "hermes": {"category": "dev", "tags": ["picsart", "dev", "developer-tools", "automation"]}}
+metadata:
+  author: Picsart
+  version: 1.0.0
+  hermes: '{"category":"dev","tags":["picsart","dev","developer-tools","automation"]}'
 ---
-
 # App assets
 
 A one-shot pipeline that turns a single app idea into the full store-ready asset pack: app icon across every required size, splash screen, device-framed App Store / Play Store screenshots, and feature graphic. One visual language, one style reference, every platform.

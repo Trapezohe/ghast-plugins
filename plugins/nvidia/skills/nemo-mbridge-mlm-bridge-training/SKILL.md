@@ -2,9 +2,9 @@
 name: nemo-mbridge-mlm-bridge-training
 description: Run Megatron-LM (MLM) and Megatron Bridge training with mock or real data. Covers correlation testing, available recipes, and multi-GPU examples.
 license: Apache-2.0
-when_to_use: Running training, comparing MLM vs Bridge loss curves, translating MLM CLI args to Bridge config, or investigating why loss curves diverged after a commit; 'how do I run training', 'MLM vs Bridge', 'correlation test'.
+metadata:
+  when_to_use: Running training, comparing MLM vs Bridge loss curves, translating MLM CLI args to Bridge config, or investigating why loss curves diverged after a commit; 'how do I run training', 'MLM vs Bridge', 'correlation test'.
 ---
-
 # MLM vs Bridge Training
 
 For how they differ, the arg mapping tables, gotchas, and translation script, see:

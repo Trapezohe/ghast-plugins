@@ -1,19 +1,14 @@
 ---
 name: jetson-customize-uphy
 description: Configure Jetson UPHY lane allocation (uphy0/uphy1-config) on Orin/Thor custom carriers. Do NOT use for pinmux or PCIe-only edits.
-version: 0.0.2
-license: "Apache-2.0"
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
-  tags:
-    - bsp
-    - phase-2
-    - io
-    - uphy
+  author: Jetson Team
+  tags: '["bsp","phase-2","io","uphy"]'
   domain: meta
+  version: 0.0.2
 ---
-
 # Customize UPHY lane allocation
 
 ## Purpose

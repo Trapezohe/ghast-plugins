@@ -1,14 +1,9 @@
 ---
 name: chronograph-fund-quarterly-review-pack
-description: Generate a consolidated quarterly review pack for a single fund — a fund-level summary
-  plus a one-pager section for every portfolio company in the fund — using Chronograph data.
-when_to_use: 'Use when a GP wants a full quarterly review of one fund covering all of its portfolio
-  companies. Triggers: "build the Q[N] review pack for [fund]", "fund quarterly review", "one-pagers
-  for the whole fund", "portfolio review for [fund]", "deck covering every portco in the fund". For
-  a single company use chronograph-portfolio-company-one-pager; for LP-side analysis use the lp-
-  skills.'
+description: Generate a consolidated quarterly review pack for a single fund — a fund-level summary plus a one-pager section for every portfolio company in the fund — using Chronograph data.
+metadata:
+  when_to_use: 'Use when a GP wants a full quarterly review of one fund covering all of its portfolio companies. Triggers: "build the Q[N] review pack for [fund]", "fund quarterly review", "one-pagers for the whole fund", "portfolio review for [fund]", "deck covering every portco in the fund". For a single company use chronograph-portfolio-company-one-pager; for LP-side analysis use the lp- skills.'
 ---
-
 # Fund Quarterly Review Pack
 
 **Requirements:** A connected Chronograph MCP server as a GP client. This pack needs GP-level data (company financials and gross per-investment returns); if the connection is an LP client, stop and tell the user the pack requires GP access rather than producing an empty pack.

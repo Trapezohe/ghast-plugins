@@ -1,17 +1,10 @@
 ---
 name: search-deals
-description: >
-  Searches for and retrieves deal records from the Carta CRM.
-  Use this skill when the user says things like "find a deal", "search deals",
-  "look up a deal", "show me deals for [company]", "get deal by ID", "find deal in [stage]",
-  "list deals", "what deals do we have for [company]", or "/search-deals".
-  Returns deal details including ID, company, stage, pipeline, tags, and custom fields.
-  The deal ID returned can be used with the update-deal skill.
-version: 1.0.0
-model: haiku
+description: Searches for and retrieves deal records from the Carta CRM. Use this skill when the user says things like "find a deal", "search deals", "look up a deal", "show me deals for [company]", "get deal by ID", "find deal in [stage]", "list deals", "what deals do we have for [company]", or "/search-deals". Returns deal details including ID, company, stage, pipeline, tags, and custom fields. The deal ID returned can be used with the update-deal skill.
+metadata:
+  version: 1.0.0
+  model: haiku
 ---
-
-
 ## Ghast MCP routing
 
 This port connects directly to Carta's hosted MCP server. Use the direct tool

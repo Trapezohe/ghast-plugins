@@ -1,10 +1,10 @@
 ---
 name: bilibili-search
 description: Use this skill when the user asks to search Bilibili (B 站) for videos, look up trending Bilibili content, or find a specific Bilibili video by keyword. Uses Bilibili's public web search endpoint.
-version: 1.0.0
-allowed-tools: [WebFetch, Bash]
+metadata:
+  version: 1.0.0
+allowed-tools: WebFetch Bash
 ---
-
 # Bilibili Search
 
 When the user wants to search Bilibili — "搜一下 B 站的 <keyword>",

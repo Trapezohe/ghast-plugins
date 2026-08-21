@@ -1,30 +1,18 @@
 ---
 name: omniverse-realtime-viewer
-description: "Use as the top-level router for Omniverse Realtime Viewer USD app requests and focused viewer reference documents."
-version: "0.1.0"
+description: Use as the top-level router for Omniverse Realtime Viewer USD app requests and focused viewer reference documents.
 license: Apache-2.0
-tools:
-  - Read
-  - Shell
-  - Write
-compatibility: >
-  Orchestrator skill. Downstream focused references may require NVIDIA GPUs, ovrtx,
-  ovstream, ovui, OpenUSD, Python, Node/React, Tauri, Electron, C++, or cloud
-  GPU deployment access depending on the selected viewer path.
+compatibility: 'Orchestrator skill. Downstream focused references may require NVIDIA GPUs, ovrtx, ovstream, ovui, OpenUSD, Python, Node/React, Tauri, Electron, C++, or cloud GPU deployment access depending on the selected viewer path.
+
+  '
 metadata:
   author: NVIDIA Omniverse
-  tags:
-    - omniverse
-    - usd
-    - viewer
-    - workflow
+  tags: '["omniverse","usd","viewer","workflow"]'
   domain: ai-ml
-  languages:
-    - python
-    - typescript
-    - cpp
+  languages: '["python","typescript","cpp"]'
+  version: 0.1.0
+  tools: '["Read","Shell","Write"]'
 ---
-
 <!-- SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved. -->
 <!-- SPDX-License-Identifier: Apache-2.0 -->
 

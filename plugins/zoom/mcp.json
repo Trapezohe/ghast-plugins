@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "zoom-mcp": {
+      "type": "streamable-http",
+      "url": "https://mcp.zoom.us/mcp/zoom/streamable"
+    },
+    "zoom-whiteboard-mcp": {
+      "type": "streamable-http",
+      "url": "https://mcp.zoom.us/mcp/whiteboard/streamable"
+    },
+    "zoom-team-chat-mcp": {
+      "type": "streamable-http",
+      "url": "https://mcp.zoom.us/mcp/chat/streamable"
+    },
+    "zoom-canvas-mcp": {
+      "type": "streamable-http",
+      "url": "https://mcp.zoom.us/mcp/canvas/streamable"
+    },
+    "zoom-revenue-accelerator-mcp": {
+      "type": "streamable-http",
+      "url": "https://mcp.zoom.us/mcp/revenue_accelerator/streamable"
+    },
+    "zoom-meetings-mcp": {
+      "type": "streamable-http",
+      "url": "https://mcp.zoom.us/mcp/meeting/streamable"
+    },
+    "zoom-tasks-mcp": {
+      "type": "streamable-http",
+      "url": "https://mcp.zoom.us/mcp/tasks/streamable"
+    }
+  }
+}

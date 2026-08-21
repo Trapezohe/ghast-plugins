@@ -1,16 +1,9 @@
 ---
 name: sales-execution
 description: Log sales activities — calls, notes, meetings, tasks — against contacts and deals, with the mandatory create-then-associate step that makes them visible in the CRM.
-triggers:
-  - "log a call"
-  - "log a note"
-  - "log a meeting"
-  - "create task"
-  - "follow-up task"
-  - "log activity"
-  - "log engagement"
+metadata:
+  triggers: '["log a call","log a note","log a meeting","create task","follow-up task","log activity","log engagement"]'
 ---
-
 ## Resources
 
 | File | When to use |

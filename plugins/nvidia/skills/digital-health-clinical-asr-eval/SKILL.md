@@ -1,36 +1,21 @@
 ---
-name: "digital-health-clinical-asr-eval"
-description: "Stage 3 of Clinical ASR Flywheel. Score a NeMo manifest, produce the five-section KER leaderboard (by-ipa_source diagnostic). Not for ASR auth (/riva-asr)."
-version: "1.1.0"
-author: "Ben Randoing <brandoing@nvidia.com>"
-tags:
-  - clinical-asr
-  - eval
-  - ker
-  - leaderboard
-  - flywheel
-tools:
-  - Read
-  - Write
-  - Bash
-  - Skill
+name: digital-health-clinical-asr-eval
+description: Stage 3 of Clinical ASR Flywheel. Score a NeMo manifest, produce the five-section KER leaderboard (by-ipa_source diagnostic). Not for ASR auth (/riva-asr).
 license: Apache-2.0
-compatibility: "NVIDIA_API_KEY (required) for hosted ASR NIMs via NVCF. A NeMo-format manifest produced by /digital-health-clinical-asr-build (or an externally-provided manifest carrying the clinical-extension fields). All ASR call shapes and WER/CER/KER/SER scoring recipes are inlined — no sibling agent skill required."
+compatibility: NVIDIA_API_KEY (required) for hosted ASR NIMs via NVCF. A NeMo-format manifest produced by /digital-health-clinical-asr-build (or an externally-provided manifest carrying the clinical-extension fields). All ASR call shapes and WER/CER/KER/SER scoring recipes are inlined — no sibling agent skill required.
 metadata:
-  author: "Ben Randoing <brandoing@nvidia.com>"
-  tags:
-    - clinical-asr
-    - flywheel
-    - eval
-    - ker
-    - leaderboard
+  author: Ben Randoing <brandoing@nvidia.com>
+  tags: '["clinical-asr","flywheel","eval","ker","leaderboard"]'
   team: healthcare-tme
   domain: ai-ml
-  stage: 3
+  stage: '3'
   previous_skill: digital-health-clinical-asr-build
   next_skill: digital-health-clinical-asr-finetune
+  version: 1.1.0
+  legacy-author: Ben Randoing <brandoing@nvidia.com>
+  legacy-tags: '["clinical-asr","eval","ker","leaderboard","flywheel"]'
+  tools: '["Read","Write","Bash","Skill"]'
 ---
-
 <!--
 SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
 SPDX-License-Identifier: Apache-2.0

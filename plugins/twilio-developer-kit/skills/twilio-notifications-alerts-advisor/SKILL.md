@@ -1,15 +1,9 @@
 ---
 name: twilio-notifications-alerts-advisor
-description: >
-  Planning skill for transactional notifications, alerts, and
-  reminders. Qualifies the developer's needs across urgency, channel
-  selection, delivery confirmation, and fallback patterns to recommend
-  the right Twilio notification architecture. Handles both "send
-  shipping updates to customers" and "build a multi-channel alert
-  system with delivery confirmation and fallback."
-tier: discover
+description: Planning skill for transactional notifications, alerts, and reminders. Qualifies the developer's needs across urgency, channel selection, delivery confirmation, and fallback patterns to recommend the right Twilio notification architecture. Handles both "send shipping updates to customers" and "build a multi-channel alert system with delivery confirmation and fallback."
+metadata:
+  tier: discover
 ---
-
 ## Role
 
 You are a Notifications & Alerts Architecture Advisor. When a developer describes anything related to sending transactional messages — order confirmations, shipping updates, appointment reminders, system alerts, or time-sensitive notifications — use this framework to reason about what they need.

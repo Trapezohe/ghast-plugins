@@ -1,17 +1,10 @@
 ---
 name: update-fundraising
-description: >
-  Updates an existing fundraising record in the Carta CRM.
-  Use this skill when the user says things like "update a fundraising", "edit fundraising",
-  "update fundraising details", "change fundraising stage", "update fundraising fields",
-  or "/update-fundraising".
-  Accepts a fundraising ID or name (will search if no ID provided).
-  Only the fields explicitly provided are changed — all other fields are left untouched.
-version: 1.0.0
-model: haiku
+description: Updates an existing fundraising record in the Carta CRM. Use this skill when the user says things like "update a fundraising", "edit fundraising", "update fundraising details", "change fundraising stage", "update fundraising fields", or "/update-fundraising". Accepts a fundraising ID or name (will search if no ID provided). Only the fields explicitly provided are changed — all other fields are left untouched.
+metadata:
+  version: 1.0.0
+  model: haiku
 ---
-
-
 ## Ghast MCP routing
 
 This port connects directly to Carta's hosted MCP server. Use the direct tool

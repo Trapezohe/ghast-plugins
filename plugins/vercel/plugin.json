@@ -1,0 +1,27 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "vercel",
+  "version": "0.48.0-ghast.1",
+  "description": "Build and deploy web apps and agents",
+  "author": {
+    "name": "Vercel",
+    "url": "https://github.com/vercel"
+  },
+  "homepage": "https://github.com/vercel/vercel-plugin",
+  "repository": "https://github.com/vercel/vercel-plugin",
+  "license": "Apache-2.0",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "development",
+      "upstreamRevision": "11c32588786a9d49791372657433b88d49561874",
+      "upstreamPath": ".",
+      "icon": "./assets/icon.svg",
+      "commands": "./ai.trapezohe.ghast/commands/",
+      "mcpServerExtensions": {
+        "vercel": {
+          "note": "Official Vercel MCP server. Uses OAuth — on first connection the agent will be prompted to authorize via Vercel. Read-only in initial release: search docs, list projects/deployments, inspect logs."
+        }
+      }
+    }
+  }
+}

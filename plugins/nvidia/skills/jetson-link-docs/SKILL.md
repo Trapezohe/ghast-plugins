@@ -1,21 +1,14 @@
 ---
 name: jetson-link-docs
-description: >-
-  Bind pre-downloaded Jetson reference docs (developer guide, design
-  guide, pinmux, schematics) into the active profile documents
-  block. Use after staging docs on disk; not for downloading.
-version: 0.0.1
-license: "Apache-2.0"
+description: Bind pre-downloaded Jetson reference docs (developer guide, design guide, pinmux, schematics) into the active profile documents block. Use after staging docs on disk; not for downloading.
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
-  tags:
-    - target-platform
-    - documents
-    - setup
+  author: Jetson Team
+  tags: '["target-platform","documents","setup"]'
   domain: meta
+  version: 0.0.1
 ---
-
 # jetson-link-docs
 
 ## Overview

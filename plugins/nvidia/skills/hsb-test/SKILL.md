@@ -1,34 +1,19 @@
 ---
 name: hsb-test
 description: Execute QA test plans on Holoscan Sensor Bridge hardware. Reads a user-provided test document, filters tests by the user's setup, determines which tests can run automatically, executes them with pass/fail evaluation, and produces a structured test results report.
-author: "Holoscan Team <holoscan-team@nvidia.com>"
-license: "Apache-2.0"
-version: "1.0.0"
-tags:
-  - holoscan-sensor-bridge
-  - hsb
-  - testing
-tools:
-  - Read
-  - Write
-  - Edit
-  - Grep
-  - Glob
-  - Bash
-disable-model-invocation: true
-allowed-tools: Read,Write,Edit,MultiEdit,Grep,Glob,Bash
+license: Apache-2.0
 metadata:
-  author: "Holoscan Team <holoscan-team@nvidia.com>"
+  author: Holoscan Team <holoscan-team@nvidia.com>
   team: holoscan
-  tags:
-    - holoscan-sensor-bridge
-    - hsb
-    - testing
-  agents:
-    - claude-code
-    - codex
+  tags: '["holoscan-sensor-bridge","hsb","testing"]'
+  agents: '["claude-code","codex"]'
+  legacy-author: Holoscan Team <holoscan-team@nvidia.com>
+  version: 1.0.0
+  legacy-tags: '["holoscan-sensor-bridge","hsb","testing"]'
+  tools: '["Read","Write","Edit","Grep","Glob","Bash"]'
+  disable-model-invocation: 'true'
+allowed-tools: Read,Write,Edit,MultiEdit,Grep,Glob,Bash
 ---
-
 # HSB QA Test Runner
 
 Use this skill when the user wants to execute a QA test plan against an HSB board and devkit. The skill reads a test document (local file or web link), filters tests to those that can run automatically on the user's specific hardware setup, executes each test with pass/fail evaluation, and produces a comprehensive results report.

@@ -1,18 +1,17 @@
 ---
-name: "deepstream-run-mv3dt"
-description: "Run and operate the DeepStream Multi-View 3D Tracking reference app, also known as MV3DT. Use when the user asks to set up prerequisites, run shipped MV3DT samples, run Multi-View 3D Tracking on custom synchronized MP4 datasets, import camera calibration, delegate missing calibration to AutoMagicCalib, inspect OSD or BEV visualization, consume MV3DT Kafka metadata, or clean up MV3DT run state in the DeepStream MV3DT app directory."
-metadata:
-  author: "Shubham Agrawal <shuagrawal@nvidia.com>"
-  tags: [deepstream, mv3dt, tracking, multi-view, 3d, kafka]
-  languages: [bash, python]
-  domain: computer-vision
-owner: "NVIDIA CORPORATION"
-service: "deepstream-tracker-3d-multi-view"
-version: "1.0.0"
-reviewed: "2026-06-15"
+name: deepstream-run-mv3dt
+description: Run and operate the DeepStream Multi-View 3D Tracking reference app, also known as MV3DT. Use when the user asks to set up prerequisites, run shipped MV3DT samples, run Multi-View 3D Tracking on custom synchronized MP4 datasets, import camera calibration, delegate missing calibration to AutoMagicCalib, inspect OSD or BEV visualization, consume MV3DT Kafka metadata, or clean up MV3DT run state in the DeepStream MV3DT app directory.
 license: CC-BY-4.0 AND Apache-2.0
+metadata:
+  author: Shubham Agrawal <shuagrawal@nvidia.com>
+  tags: '["deepstream","mv3dt","tracking","multi-view","3d","kafka"]'
+  languages: '["bash","python"]'
+  domain: computer-vision
+  owner: NVIDIA CORPORATION
+  service: deepstream-tracker-3d-multi-view
+  version: 1.0.0
+  reviewed: '2026-06-15'
 ---
-
 # Skill: Run DeepStream MV3DT
 
 ## When to Use This Skill

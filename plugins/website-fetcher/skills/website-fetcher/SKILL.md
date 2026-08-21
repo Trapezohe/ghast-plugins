@@ -1,9 +1,9 @@
 ---
 name: website-fetcher
 description: Use this skill when the user shares a URL or asks the assistant to read, summarize, or extract content from a webpage. Walks the model through using the built-in WebFetch tool to retrieve the page and process it without opening a browser.
-version: 1.0.0
+metadata:
+  version: 1.0.0
 ---
-
 # Website Fetcher
 
 Whenever the user pastes a URL or asks "what does this page say" / "summarize

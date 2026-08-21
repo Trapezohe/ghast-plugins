@@ -1,20 +1,14 @@
 ---
 name: ucp
-description: "Use when the user wants to use the UCP CLI to find, compare, buy, or track products from online merchants, or to set up and troubleshoot the local UCP profile required for merchant-scoped operations. Covers global catalog search (\"find me X under $Y\"), named-merchant transactions (\"buy this from Z.com\"), order tracking, `ucp profile init`, `ucp doctor`, carts, checkout, orders, and UCP setup/help. Falls back to merchant-hosted handoff when direct in-protocol checkout isn't available."
+description: Use when the user wants to use the UCP CLI to find, compare, buy, or track products from online merchants, or to set up and troubleshoot the local UCP profile required for merchant-scoped operations. Covers global catalog search ("find me X under $Y"), named-merchant transactions ("buy this from Z.com"), order tracking, `ucp profile init`, `ucp doctor`, carts, checkout, orders, and UCP setup/help. Falls back to merchant-hosted handoff when direct in-protocol checkout isn't available.
 compatibility: Requires UCP CLI
-requires_bin: ucp
-command: ucp
 metadata:
   author: Shopify
-  version: "1.12.3"
-hooks:
-  PostToolUse:
-    - matcher: Skill
-      hooks:
-        - type: command
-          command: 'sh -c ''h="<SKILL_DIR>/scripts/track-telemetry.sh"; if [ -f "$h" ]; then exec bash "$h"; fi'''
+  version: 1.12.3
+  requires_bin: ucp
+  command: ucp
+  hooks: '{"PostToolUse":[{"hooks":[{"command":"sh -c ''h=\"<SKILL_DIR>/scripts/track-telemetry.sh\"; if [ -f \"$h\" ]; then exec bash \"$h\"; fi''","type":"command"}],"matcher":"Skill"}]}'
 ---
-
 ## Required Tool Calls (do not skip)
 
 You have a `bash` tool. Every response must use it:

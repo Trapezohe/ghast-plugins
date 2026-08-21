@@ -1,15 +1,9 @@
 ---
-name: zoom-cobrowse-sdk
-description: "Zoom Cobrowse SDK for web - JavaScript SDK for real-time collaborative browsing between agents and customers. Features include annotation tools, privacy masking, remote assist, and PIN-based session sharing."
-triggers:
-  - "cobrowse"
-  - "co-browse"
-  - "collaborative browsing"
-  - "agent assist"
-  - "customer support screen share"
-  - "zoom cobrowse"
+name: cobrowse-sdk
+description: Zoom Cobrowse SDK for web - JavaScript SDK for real-time collaborative browsing between agents and customers. Features include annotation tools, privacy masking, remote assist, and PIN-based session sharing.
+metadata:
+  triggers: '["cobrowse","co-browse","collaborative browsing","agent assist","customer support screen share","zoom cobrowse"]'
 ---
-
 # Zoom Cobrowse SDK - Web Development
 
 Expert guidance for implementing collaborative browsing with the Zoom Cobrowse SDK. This SDK enables support agents to view and interact with a customer's browser session in real-time, with privacy controls and annotation tools.

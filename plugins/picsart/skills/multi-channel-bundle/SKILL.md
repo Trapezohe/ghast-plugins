@@ -2,9 +2,11 @@
 name: multi-channel-bundle
 description: Ship a coordinated multi-format asset bundle for any push.
 license: MIT
-metadata: {"author": "Picsart", "version": "1.0.0", "hermes": {"category": "marketing", "tags": ["picsart", "campaigns", "launches", "social", "multi-format"]}}
+metadata:
+  author: Picsart
+  version: 1.0.0
+  hermes: '{"category":"marketing","tags":["picsart","campaigns","launches","social","multi-format"]}'
 ---
-
 # Multi-Channel Bundle
 
 Produce a coordinated set of assets — hero, social variants, OG image, reel, optionally audio — for a single push: a marketing campaign or a product launch. Replaces two near-identical skills (campaign-kit, launch-kit) with one entry point and two mode references that differ only in scale, naming, and channel mix.

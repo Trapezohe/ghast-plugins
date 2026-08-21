@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "third-bridge": {
-      "type": "http",
-      "url": "https://ai.thirdbridge.com/mcp/sse"
-    }
-  }
-}

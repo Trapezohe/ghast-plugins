@@ -1,17 +1,9 @@
 ---
 name: translator
-description: "Zoom AI Services Translator for synchronous text translation and asynchronous batch file translation. Use for plain-text translation, one-target-language jobs, S3 text archives, Build-platform JWT auth, and webhook-driven translation pipelines."
-triggers:
-  - "translator"
-  - "ai services translator"
-  - "zoom translator"
-  - "translate text"
-  - "batch translation"
-  - "fast mode translation"
-  - "text translation api"
-  - "build platform jwt"
+description: Zoom AI Services Translator for synchronous text translation and asynchronous batch file translation. Use for plain-text translation, one-target-language jobs, S3 text archives, Build-platform JWT auth, and webhook-driven translation pipelines.
+metadata:
+  triggers: '["translator","ai services translator","zoom translator","translate text","batch translation","fast mode translation","text translation api","build platform jwt"]'
 ---
-
 # Zoom AI Services Translator
 
 **Current API audit:** Official docs and OpenAPI were rechecked on 2026-07-10. The full fast,

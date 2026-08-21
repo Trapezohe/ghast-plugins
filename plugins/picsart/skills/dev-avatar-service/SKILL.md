@@ -2,9 +2,11 @@
 name: dev-avatar-service
 description: Deterministic default-avatar generator per user.
 license: MIT
-metadata: {"author": "Picsart", "version": "1.0.0", "hermes": {"category": "dev", "tags": ["picsart", "dev", "developer-tools", "automation"]}}
+metadata:
+  author: Picsart
+  version: 1.0.0
+  hermes: '{"category":"dev","tags":["picsart","dev","developer-tools","automation"]}'
 ---
-
 # Avatar service
 
 A service endpoint that returns a branded avatar for any user: photoreal, illustrated, or pixel, deterministic from a seed (user ID / email hash / initials). Built around a fallback hierarchy — real photo → upload → AI from initials → static default — with caching by seed so you pay once per user.

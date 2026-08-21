@@ -1,10 +1,10 @@
 ---
 name: expo-router
 description: Framework (OSS). Navigation and routing for Expo Router. Covers file-based routes, groups and dynamic routes, folder organization, Link with previews and context menus, native Stack, page titles, modals and form sheets, NativeTabs, headers and toolbars, and header search bars.
-version: 1.0.1
 license: MIT
+metadata:
+  version: 1.0.1
 ---
-
 # Expo Router Navigation
 
 Navigation and routing for Expo Router apps. For screen styling, colors, controls, animations, media, and visual effects, use the `expo-native-ui` skill.

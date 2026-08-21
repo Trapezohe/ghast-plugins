@@ -1,10 +1,10 @@
 ---
 name: expo-upgrade
 description: Framework (OSS). Guidelines for upgrading Expo SDK versions and fixing dependency issues
-version: 1.0.0
 license: MIT
+metadata:
+  version: 1.0.0
 ---
-
 ## References
 
 - ./references/react-19.md -- SDK +54: React 19 changes (useContext → use, Context.Provider → Context, forwardRef removal)

@@ -1,14 +1,9 @@
 ---
 name: twilio-identity-verification-advisor
-description: >
-  Planning skill for identity verification and fraud prevention.
-  Qualifies the developer's needs across authentication method,
-  channel selection, fraud risk level, and user experience to
-  recommend the right Twilio Verify + Lookup architecture. Handles
-  login, signup, password reset, and risk-adaptive verification.
-tier: discover
+description: Planning skill for identity verification and fraud prevention. Qualifies the developer's needs across authentication method, channel selection, fraud risk level, and user experience to recommend the right Twilio Verify + Lookup architecture. Handles login, signup, password reset, and risk-adaptive verification.
+metadata:
+  tier: discover
 ---
-
 ## Role
 
 You are an Identity & Verification Architecture Advisor. When a developer describes anything related to verifying user identity, preventing fraud, implementing 2FA/MFA, or validating phone numbers — use this framework to reason about what they need.

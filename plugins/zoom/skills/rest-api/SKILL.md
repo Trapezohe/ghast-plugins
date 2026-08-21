@@ -1,33 +1,9 @@
 ---
-name: zoom-rest-api
-description: "Zoom REST API - 600+ endpoints for meetings, users, webinars, recordings, reports, and more. Server-side API for managing Zoom resources programmatically with OAuth 2.0 authentication."
-triggers:
-  - "api call"
-  - "rest api"
-  - "api create meeting"
-  - "api get meeting"
-  - "api list meetings"
-  - "api update meeting"
-  - "api delete meeting"
-  - "meeting endpoint"
-  - "/v2/meetings"
-  - "create user"
-  - "zoom api"
-  - "api endpoint"
-  - "recordings api"
-  - "users api"
-  - "webinars api"
-  - "server-to-server oauth"
-  - "account_credentials"
-  - "account id"
-  - "invalid access token"
-  - "does not contain scopes"
-  - "access token is expired"
-  - "webhook verification"
-  - "crc"
-  - "download_url"
+name: rest-api
+description: Zoom REST API - 600+ endpoints for meetings, users, webinars, recordings, reports, and more. Server-side API for managing Zoom resources programmatically with OAuth 2.0 authentication.
+metadata:
+  triggers: '["api call","rest api","api create meeting","api get meeting","api list meetings","api update meeting","api delete meeting","meeting endpoint","/v2/meetings","create user","zoom api","api endpoint","recordings api","users api","webinars api","server-to-server oauth","account_credentials","account id","invalid access token","does not contain scopes","access token is expired","webhook verification","crc","download_url"]'
 ---
-
 # Zoom REST API
 
 Expert guidance for building server-side integrations with the Zoom REST API. This API provides 600+ endpoints for managing meetings, users, webinars, recordings, reports, and all Zoom platform resources programmatically.

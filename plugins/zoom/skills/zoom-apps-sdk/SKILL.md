@@ -1,30 +1,15 @@
 ---
 name: zoom-apps-sdk
-description: |
-  Zoom Apps SDK for building web apps that run inside the Zoom client. JavaScript SDK (@zoom/appssdk)
-  for in-meeting experiences, Layers API for immersive visuals, Collaborate Mode for shared state,
-  and In-Client OAuth for seamless authorization. Use when building apps that appear within Zoom
-  meetings, webinars, the main client, or Zoom Phone.
-triggers:
-  - "zoom app"
-  - "in-meeting app"
-  - "app inside zoom"
-  - "zoom client app"
-  - "layers api"
-  - "immersive mode"
-  - "camera mode"
-  - "collaborate mode"
-  - "appssdk"
-  - "in-client oauth"
-  - "zoom mail"
-  - "domain allowlist"
-  - "domain whitelist"
-  - "url whitelisting"
-  - "blank panel"
-  - "runningContext"
-  - "zoomSdk"
----
+description: 'Zoom Apps SDK for building web apps that run inside the Zoom client. JavaScript SDK (@zoom/appssdk)
 
+  for in-meeting experiences, Layers API for immersive visuals, Collaborate Mode for shared state,
+
+  and In-Client OAuth for seamless authorization. Use when building apps that appear within Zoom
+
+  meetings, webinars, the main client, or Zoom Phone.'
+metadata:
+  triggers: '["zoom app","in-meeting app","app inside zoom","zoom client app","layers api","immersive mode","camera mode","collaborate mode","appssdk","in-client oauth","zoom mail","domain allowlist","domain whitelist","url whitelisting","blank panel","runningContext","zoomSdk"]'
+---
 # Zoom Apps SDK
 
 Build web apps that run inside the Zoom client - meetings, webinars, main client, and Zoom Phone.

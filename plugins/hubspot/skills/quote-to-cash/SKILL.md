@@ -1,19 +1,9 @@
 ---
 name: quote-to-cash
 description: Build the product catalog, assemble quotes (line items + associations to deals), and track invoices and subscriptions through to revenue.
-triggers:
-  - "create product"
-  - "product catalog"
-  - "build a quote"
-  - "create quote"
-  - "line items"
-  - "associate line items"
-  - "outstanding invoices"
-  - "overdue invoices"
-  - "active subscriptions"
-  - "quote to cash"
+metadata:
+  triggers: '["create product","product catalog","build a quote","create quote","line items","associate line items","outstanding invoices","overdue invoices","active subscriptions","quote to cash"]'
 ---
-
 ## Resources
 
 | File | When to use |

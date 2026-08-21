@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "website-fetcher",
+  "description": "Skill that teaches the model to fetch a URL and read its text content via the built-in WebFetch tool — 'just look at this page' without opening a browser.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/website-fetcher",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "web",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "jam": {
-      "type": "http",
-      "url": "https://mcp.jam.dev/mcp"
-    }
-  }
-}

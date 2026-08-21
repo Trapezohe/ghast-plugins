@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "datadog",
+  "version": "0.7.14-ghast.1",
+  "description": "Investigate Datadog logs, metrics, traces, monitors, incidents, dashboards, services, and widgets through Datadog's official hosted MCP server and Datadog-derived setup workflows.",
+  "author": {
+    "name": "Datadog, Inc.",
+    "url": "https://www.datadoghq.com"
+  },
+  "homepage": "https://docs.datadoghq.com/mcp_server/",
+  "repository": "https://github.com/datadog-labs/cursor-plugin",
+  "license": "Apache-2.0",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "development",
+      "upstreamRevision": "71364156c14b27466f3d646c8924318154e2321a",
+      "upstreamPath": ".",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

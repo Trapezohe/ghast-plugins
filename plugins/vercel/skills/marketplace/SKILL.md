@@ -2,48 +2,14 @@
 name: marketplace
 description: Vercel Marketplace expert guidance — discovering, installing, and managing third-party integrations via the `vercel integration` CLI. Use when building any app that needs an external capability without a dedicated skill — commerce (stores, storefronts, selling products), payments (checkout, subscriptions, billing), observability/monitoring, messaging/email, search, or CMS — or when discovering, installing, or managing integrations.
 metadata:
-  priority: 3
-  docs:
-    - "https://vercel.com/docs/integrations"
-  sitemap: "https://vercel.com/sitemap/docs.xml"
-  pathPatterns:
-    - "integration.json"
-  bashPatterns:
-    - '\bvercel\s+integration\b'
-    - '\bvercel\s+integration\s+add\b'
-    - '\bvercel\s+integration\s+discover\b'
-retrieval:
-  aliases:
-    - vercel integrations
-    - marketplace
-    - third party services
-    - add ons
-  intents:
-    - install integration
-    - manage marketplace
-    - add third party service
-    - discover integrations
-  entities:
-    - Vercel Marketplace
-    - integration
-    - vercel integration
-    - unified billing
-chainTo:
-  -
-    pattern: 'NEON_|POSTGRES_|DATABASE_URL|@neondatabase|@vercel/postgres|@upstash/|@vercel/kv|@supabase/|@prisma/client|\bmongodb\b|mongoose|@libsql/|\bconvex\b|@vercel/blob'
-    targetSkill: vercel-storage
-    message: 'Database/storage integration detected — loading Storage guidance (Neon, Upstash, Supabase, Prisma, Mongo, …), connection pooling, and serverless patterns.'
-  -
-    pattern: 'CLERK_|@clerk/|clerkMiddleware|@auth0/|AUTH0_|@descope/|next-auth|@auth/|getServerSession'
-    targetSkill: auth
-    message: 'Auth provider detected — loading Auth guidance (Clerk, Auth0, Descope, Auth.js), middleware setup, and route protection.'
-  -
-    pattern: '@ai-sdk/|AI_GATEWAY|generateText|streamText|@openai/|@anthropic-ai/'
-    targetSkill: ai-sdk
-    message: 'AI usage detected — loading AI guidance for model routing through the AI Gateway, provider/model strings, and streaming.'
-
+  priority: '3'
+  docs: '["https://vercel.com/docs/integrations"]'
+  sitemap: https://vercel.com/sitemap/docs.xml
+  pathPatterns: '["integration.json"]'
+  bashPatterns: '["\\bvercel\\s+integration\\b","\\bvercel\\s+integration\\s+add\\b","\\bvercel\\s+integration\\s+discover\\b"]'
+  retrieval: '{"aliases":["vercel integrations","marketplace","third party services","add ons"],"entities":["Vercel Marketplace","integration","vercel integration","unified billing"],"intents":["install integration","manage marketplace","add third party service","discover integrations"]}'
+  chainTo: '[{"message":"Database/storage integration detected — loading Storage guidance (Neon, Upstash, Supabase, Prisma, Mongo, …), connection pooling, and serverless patterns.","pattern":"NEON_|POSTGRES_|DATABASE_URL|@neondatabase|@vercel/postgres|@upstash/|@vercel/kv|@supabase/|@prisma/client|\\bmongodb\\b|mongoose|@libsql/|\\bconvex\\b|@vercel/blob","targetSkill":"vercel-storage"},{"message":"Auth provider detected — loading Auth guidance (Clerk, Auth0, Descope, Auth.js), middleware setup, and route protection.","pattern":"CLERK_|@clerk/|clerkMiddleware|@auth0/|AUTH0_|@descope/|next-auth|@auth/|getServerSession","targetSkill":"auth"},{"message":"AI usage detected — loading AI guidance for model routing through the AI Gateway, provider/model strings, and streaming.","pattern":"@ai-sdk/|AI_GATEWAY|generateText|streamText|@openai/|@anthropic-ai/","targetSkill":"ai-sdk"}]'
 ---
-
 # Vercel Marketplace
 
 **Before you scaffold or write any file: discover and provision the integration first — installing is required, not optional.** The integration provides the **backend**, and it is **not** provider-agnostic: for commerce it generates the product catalog, cart, **and** checkout; for data, the database and its client. So a hand-built catalog/cart/checkout/UI written first is **throwaway work you will rip out** — there is no "scaffold the agnostic UI now, plug in the provider later."

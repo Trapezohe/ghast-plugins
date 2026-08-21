@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "supabase",
+  "version": "0.1.8-ghast.1",
+  "description": "Develop and operate Supabase projects with the complete current official Supabase and Postgres best-practice skills plus Supabase's hosted OAuth MCP server.",
+  "author": {
+    "name": "Supabase",
+    "url": "https://supabase.com"
+  },
+  "homepage": "https://supabase.com",
+  "repository": "https://github.com/supabase/agent-skills",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "development",
+      "upstreamRevision": "8331f910845103c08d51f6ca1d86ebb7d1f745e3",
+      "upstreamPath": ".",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

@@ -1,33 +1,15 @@
 ---
 name: zoom-mcp
-description: |
-  Official Zoom MCP Server guidance for AI-agent access to the unified Zoom MCP Server and
-  dedicated Meetings, Chat, Canvas, Tasks, Whiteboard, and Revenue Accelerator servers. Use
-  for Zoom-hosted MCP endpoints, tools/list, tools/call, OAuth scopes, or server selection.
-  Route product-specific work to the matching zoom-mcp child skill.
-triggers:
-  - "zoom mcp"
-  - "zoom mcp server"
-  - "zoom mcp tools"
-  - "zoom tools/list"
-  - "zoom tools/call"
-  - "ai companion transcript"
-  - "agentic retrieval"
-  - "zoom semantic meeting search"
-  - "zoom search meetings by content"
-  - "zoom meeting assets mcp"
-  - "zoom recording resource mcp"
-  - "zoom canvas mcp"
-  - "zoom canvas via mcp"
-  - "zoom docs via mcp"
-  - "zoom docs content via mcp"
-  - "zoom chat search mcp"
-  - "team chat mcp"
-  - "zoom team chat mcp"
-  - "zoom transcript via mcp"
-  - "meeting transcript via mcp"
----
+description: 'Official Zoom MCP Server guidance for AI-agent access to the unified Zoom MCP Server and
 
+  dedicated Meetings, Chat, Canvas, Tasks, Whiteboard, and Revenue Accelerator servers. Use
+
+  for Zoom-hosted MCP endpoints, tools/list, tools/call, OAuth scopes, or server selection.
+
+  Route product-specific work to the matching zoom-mcp child skill.'
+metadata:
+  triggers: '["zoom mcp","zoom mcp server","zoom mcp tools","zoom tools/list","zoom tools/call","ai companion transcript","agentic retrieval","zoom semantic meeting search","zoom search meetings by content","zoom meeting assets mcp","zoom recording resource mcp","zoom canvas mcp","zoom canvas via mcp","zoom docs via mcp","zoom docs content via mcp","zoom chat search mcp","team chat mcp","zoom team chat mcp","zoom transcript via mcp","meeting transcript via mcp"]'
+---
 # Zoom MCP Server
 
 Zoom hosts an MCP server at `mcp.zoom.us` for AI-agent access to:

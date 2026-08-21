@@ -1,20 +1,13 @@
 ---
 name: cuopt-multi-objective-exploration
-version: "26.10.00"
 description: Trace, complete, and interpret the Pareto frontier across competing objectives using repeated single-objective cuOpt solves (weighted-sum and ε-constraint).
 license: Apache-2.0
-origin: cuopt-skill-evolution
 metadata:
   author: NVIDIA cuOpt Team
-  tags:
-    - multi-objective
-    - pareto
-    - epsilon-constraint
-    - tradeoff
-    - workflow
+  tags: '["multi-objective","pareto","epsilon-constraint","tradeoff","workflow"]'
+  version: 26.10.00
+  origin: cuopt-skill-evolution
 ---
-
-
 # Multi-Objective Exploration
 
 

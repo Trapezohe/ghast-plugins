@@ -1,9 +1,9 @@
 ---
 name: gtm-ai-cli
 description: This skill should be used when searching for or enriching companies and contacts, surfacing buyer intent signals, fetching real-time business events (scoops) or company news, reading or updating GTM context (offerings, ICPs, personas, competitors), looking up reference values (industries, metros, intent topics, tech products), or doing any ZoomInfo / GTM data lookup from the terminal. Activates when the user asks to "find companies", "search contacts", "enrich a contact", "find lookalike companies", "research a company / person", "get intent signals", "find scoops", "fetch company news", "show our GTM context", "look up industry codes", or any task involving ZoomInfo data lookup from the terminal.
-version: 0.1.0
+metadata:
+  version: 0.1.0
 ---
-
 # GTM AI CLI Skill
 
 ## Ghast runtime

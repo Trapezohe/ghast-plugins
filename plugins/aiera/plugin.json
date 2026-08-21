@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "aiera",
+  "version": "1.2.1-ghast.1",
+  "description": "Search and analyze Aiera corporate events, transcripts, filings, company publications, equities, financials, broker research, Third Bridge content, and trusted web results through Aiera's official MCP server.",
+  "author": {
+    "name": "Aiera, Inc.",
+    "url": "https://www.aiera.com"
+  },
+  "homepage": "https://www.aiera.com",
+  "repository": "https://github.com/aiera-inc/aiera-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "data",
+      "upstreamRevision": "882acfc09c5e5c1eed82b6e2a64e8780503ec099",
+      "upstreamPath": ".",
+      "icon": "./assets/icon.png"
+    }
+  }
+}

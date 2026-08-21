@@ -1,10 +1,10 @@
 ---
 name: eas-observe
 description: EAS service (paid). Use for anything related to EAS Observe - adding `expo-observe` to an Expo project (AppMetricsRoot/ObserveRoot HOC, markInteractive, the useObserve hook, the Expo Router / React Navigation integrations for per-route metrics, and user-defined events via `Observe.logEvent`), querying via the EAS CLI (`eas observe:metrics-summary`, `observe:metrics`, `observe:routes`, `observe:events`, `observe:versions`), or interpreting the resulting metrics (cold/warm launch, TTR, TTI, navigation cold/warm TTR, update download, and the TTI frameRate params for triaging slow startups).
-version: 1.0.0
 license: MIT
+metadata:
+  version: 1.0.0
 ---
-
 # EAS Observe
 
 > **EAS service - costs apply.** EAS Observe is a paid Expo Application Services product with free-tier limits. Ingesting and querying production metrics counts against your plan's event/usage allowance. Review https://expo.dev/pricing before enabling it in production.

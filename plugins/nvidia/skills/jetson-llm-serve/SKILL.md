@@ -1,15 +1,14 @@
 ---
 name: jetson-llm-serve
 description: Stand up vLLM or SGLang serving on Jetson, using upstream vLLM on Thor and Orin JetPack 7.2+, and NVIDIA-AI-IOT vLLM on older Orin.
-version: 0.0.1
-license: "Apache-2.0"
+license: Apache-2.0
 metadata:
-  author: "Jetson Team"
-  tags: [jetson, llm, serving]
-  languages: [markdown]
+  author: Jetson Team
+  tags: '["jetson","llm","serving"]'
+  languages: '["markdown"]'
   data-classification: public
+  version: 0.0.1
 ---
-
 # Jetson LLM Serve
 
 Encodes the [Jetson AI Lab GenAI tutorial](https://www.jetson-ai-lab.com/tutorials/genai-on-jetson-llms-vlms/): on Orin JetPack 7.2 / L4T r39+, use upstream vLLM 0.20+ (`vllm/vllm-openai:latest`); on older Orin, pick the NVIDIA-AI-IOT prebuilt vLLM container; on Thor, use upstream vLLM 0.20+ or validated native vLLM 0.20+, and use NVIDIA SGLang 26.01 (`nvcr.io/nvidia/sglang:26.01-py3`, SGLang 0.5.5.post2) when SGLang is requested. Set MAXN, make Hugging Face credentials/cache available, and launch an OpenAI-compatible server. Works for both LLMs and VLMs.

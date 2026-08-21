@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "quartr",
+  "version": "1.0.0-ghast.1",
+  "description": "Research public companies with first-party earnings calls, transcripts, filings, reports, slides, events, summaries, and financial statements through Quartr's official MCP server.",
+  "author": {
+    "name": "Quartr",
+    "url": "https://quartr.com"
+  },
+  "homepage": "https://mcp.quartr.com/docs",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "finance",
+      "upstreamRevision": "quartr-docs-1d651d2a9ac8+oauth-a379a77612f2",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

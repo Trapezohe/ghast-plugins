@@ -1,16 +1,10 @@
 ---
 name: add-contact
-description: >
-  Adds one or more contact records to the Carta CRM via the Carta CRM MCP Server.
-  Use this skill when the user says things like "add a contact", "create a contact
-  record", "add contact to CRM", "save a contact", "upload contact to Carta CRM",
-  or "/add-contact". Collects contact information conversationally, then creates it
-  via the MCP server. Only name is required — all other fields are optional.
-version: 1.0.0
-model: haiku
+description: Adds one or more contact records to the Carta CRM via the Carta CRM MCP Server. Use this skill when the user says things like "add a contact", "create a contact record", "add contact to CRM", "save a contact", "upload contact to Carta CRM", or "/add-contact". Collects contact information conversationally, then creates it via the MCP server. Only name is required — all other fields are optional.
+metadata:
+  version: 1.0.0
+  model: haiku
 ---
-
-
 ## Ghast MCP routing
 
 This port connects directly to Carta's hosted MCP server. Use the direct tool

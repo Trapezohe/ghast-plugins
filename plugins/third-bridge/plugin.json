@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "third-bridge",
+  "version": "1.0.3-ghast.1",
+  "description": "Search and synthesize Third Bridge expert interview transcripts through Third Bridge's official hosted MCP.",
+  "author": {
+    "name": "Third Bridge Group",
+    "url": "https://www.thirdbridge.com"
+  },
+  "homepage": "https://www.thirdbridge.com/en-us/data-solutions/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "finance",
+      "upstreamRevision": "third-bridge-product-bf1236211eda+perspective-1f9806d35d86+terms-e67b1be8a3b2+resource-b9f0d6089ef8+oauth-86f728864e88+boundary-9b099d6c7817",
+      "portStatus": "full",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

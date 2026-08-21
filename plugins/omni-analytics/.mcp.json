@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "omni": {
-      "type": "http",
-      "url": "https://callbacks.omniapp.co/callback/mcp"
-    }
-  }
-}

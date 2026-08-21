@@ -1,18 +1,12 @@
 ---
 name: i4h-workflow-dataset-convert
-version: "0.6.0"
 description: Convert an agentic HDF5 recording into a LeRobot dataset (parquet, meta, videos). Use when asked to convert HDF5, prepare for training, or export to LeRobot; not for viewing — use [[i4h-lerobot-viz]].
 license: Apache-2.0
 metadata:
-  author: "Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>"
-  tags:
-    - isaac-for-healthcare
-    - i4h
-    - dataset
-    - lerobot
-    - conversion
+  author: Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>
+  tags: '["isaac-for-healthcare","i4h","dataset","lerobot","conversion"]'
+  version: 0.6.0
 ---
-
 # i4h Workflow — Convert Dataset
 
 ## Purpose

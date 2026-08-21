@@ -1,13 +1,9 @@
 ---
 name: chronograph-tvpi-attribution-by-company
-description: Decompose a fund's total value / TVPI into per-company contributions, split realized
-  vs. unrealized, and rank top contributors and detractors — using Chronograph investment metrics.
-when_to_use: "Use when explaining where a fund's value and performance come from. Triggers:
-  \"attribution by company\", \"which companies drive our TVPI/MOIC\", \"top contributors and
-  detractors\", \"realized vs unrealized by company\", \"where is the value concentrated\". For
-  period valuation moves use chronograph-markup-markdown-brief."
+description: Decompose a fund's total value / TVPI into per-company contributions, split realized vs. unrealized, and rank top contributors and detractors — using Chronograph investment metrics.
+metadata:
+  when_to_use: 'Use when explaining where a fund''s value and performance come from. Triggers: "attribution by company", "which companies drive our TVPI/MOIC", "top contributors and detractors", "realized vs unrealized by company", "where is the value concentrated". For period valuation moves use chronograph-markup-markdown-brief.'
 ---
-
 # TVPI Attribution by Company
 
 **Requirements:** A connected Chronograph MCP server as a GP client, with per-investment invested / realized / unrealized values.

@@ -1,21 +1,14 @@
 ---
 name: tao-train-mask-auto-encoder
-description: Masked Auto-Encoder (MAE) for self-supervised pretraining and fine-tuning. Masks random patches and reconstructs
-  them to learn visual representations; supports pretrain and finetune stages. Use when training, evaluating, exporting, or
-  running inference for a TAO MAE backbone. Trigger phrases include "pretrain MAE", "self-supervised vision pretraining",
-  "Masked Autoencoder", "Mask Auto-Encoder", "MAE fine-tune".
+description: Masked Auto-Encoder (MAE) for self-supervised pretraining and fine-tuning. Masks random patches and reconstructs them to learn visual representations; supports pretrain and finetune stages. Use when training, evaluating, exporting, or running inference for a TAO MAE backbone. Trigger phrases include "pretrain MAE", "self-supervised vision pretraining", "Masked Autoencoder", "Mask Auto-Encoder", "MAE fine-tune".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["self","supervised","learning"]'
 allowed-tools: Read Bash
-tags:
-- self
-- supervised
-- learning
 ---
-
 # MAE
 
 MAE (Masked Autoencoder) for self-supervised pretraining and fine-tuning. Masks random patches and reconstructs them to learn visual representations. Supports pretrain and finetune stages.

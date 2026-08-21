@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "mixpanel": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "-e",
+        "const { spawn } = require(\"node:child_process\");\n\nconst endpoints = {\n  us: \"https://mcp.mixpanel.com/mcp\",\n  eu: \"https://mcp-eu.mixpanel.com/mcp\",\n  in: \"https://mcp-in.mixpanel.com/mcp\",\n};\nconst region = (process.env.MIXPANEL_MCP_REGION || \"us\").trim().toLowerCase();\nif (!Object.prototype.hasOwnProperty.call(endpoints, region)) {\n  console.error(\"MIXPANEL_MCP_REGION must be one of: us, eu, in.\");\n  process.exit(1);\n}\n\nconst serviceAccountToken = (\n  process.env.MIXPANEL_MCP_SA_TOKEN || \"\"\n).trim();\nif (\n  serviceAccountToken &&\n  !/^[A-Za-z0-9+/]+={0,2}$/.test(serviceAccountToken)\n) {\n  console.error(\n    \"MIXPANEL_MCP_SA_TOKEN must be the base64 encoding of username:secret.\",\n  );\n  process.exit(1);\n}\n\nconst args = [\n  \"--yes\",\n  \"mcp-remote@0.1.38\",\n  endpoints[region],\n];\nconst childEnv = { ...process.env };\nif (serviceAccountToken) {\n  childEnv.MIXPANEL_MCP_AUTH_HEADER = `Bearer Basic ${serviceAccountToken}`;\n  args.push(\n    \"--header\",\n    \"Authorization:${MIXPANEL_MCP_AUTH_HEADER}\",\n  );\n} else {\n  delete childEnv.MIXPANEL_MCP_AUTH_HEADER;\n}\n\nconst executable = process.platform === \"win32\" ? \"npx.cmd\" : \"npx\";\nconst child = spawn(executable, args, {\n  stdio: \"inherit\",\n  env: childEnv,\n});\nchild.on(\"error\", (error) => {\n  console.error(`Unable to start Mixpanel MCP bridge: ${error.message}`);\n  process.exit(1);\n});\nfor (const signal of [\"SIGINT\", \"SIGTERM\"]) {\n  process.on(signal, () => child.kill(signal));\n}\nchild.on(\"exit\", (code, signal) => {\n  if (signal) process.kill(process.pid, signal);\n  else process.exit(code === null ? 1 : code);\n});\n"
+      ]
+    }
+  }
+}

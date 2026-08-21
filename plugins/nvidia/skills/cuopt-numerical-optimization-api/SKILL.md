@@ -1,22 +1,12 @@
 ---
 name: cuopt-numerical-optimization-api
-version: "26.10.00"
 description: LP, MILP, and QP (beta) with cuOpt — Python, C, and CLI. Use when the user is solving LP, MILP, or QP with any cuOpt interface.
 license: Apache-2.0
 metadata:
   author: NVIDIA cuOpt Team
-  tags:
-    - cuopt
-    - linear-programming
-    - milp
-    - qp
-    - python
-    - c-api
-    - cli
+  tags: '["cuopt","linear-programming","milp","qp","python","c-api","cli"]'
+  version: 26.10.00
 ---
-
-
-
 # cuOpt Numerical Optimization API
 
 Model and solve LP, MILP, and QP problems using NVIDIA cuOpt's GPU-accelerated solver.

@@ -1,17 +1,10 @@
 ---
 name: search-investors
-description: >
-  Searches for and retrieves investor records from the Carta CRM.
-  Use this skill when the user says things like "find an investor", "search investors",
-  "look up an investor", "show me investor details for [name]", "get investor by ID",
-  "list investors", "what investors do we have", or "/search-investors".
-  Returns investor details including ID, name, and custom fields.
-  The investor ID returned can be used with the update-investor skill.
-version: 1.0.0
-model: haiku
+description: Searches for and retrieves investor records from the Carta CRM. Use this skill when the user says things like "find an investor", "search investors", "look up an investor", "show me investor details for [name]", "get investor by ID", "list investors", "what investors do we have", or "/search-investors". Returns investor details including ID, name, and custom fields. The investor ID returned can be used with the update-investor skill.
+metadata:
+  version: 1.0.0
+  model: haiku
 ---
-
-
 ## Ghast MCP routing
 
 This port connects directly to Carta's hosted MCP server. Use the direct tool

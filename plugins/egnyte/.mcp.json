@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "egnyte": {
-      "type": "http",
-      "url": "https://mcp-server.egnyte.com/mcp"
-    }
-  }
-}

@@ -1,37 +1,21 @@
 ---
 name: rag-perf
-version: "2.6.0"
-description: >-
-  Performance benchmarking for a deployed NVIDIA RAG Blueprint server: profiling pass + aiperf
-  load test driven by a single YAML config. Not for accuracy / RAGAS scoring (use rag-eval) or
-  for deploying / repairing services (use rag-blueprint).
+description: 'Performance benchmarking for a deployed NVIDIA RAG Blueprint server: profiling pass + aiperf load test driven by a single YAML config. Not for accuracy / RAGAS scoring (use rag-eval) or for deploying / repairing services (use rag-blueprint).'
 license: Apache-2.0
 compatibility: Repository checkout with uv; Python 3.11+; run from repo root; uv sync --project scripts/rag-perf (perf deps live in scripts/rag-perf/pyproject.toml); reachable RAG server (default http://localhost:8081); for synthetic queries an OpenAI-compatible chat-completions endpoint is required (default http://localhost:8999/v1/chat/completions); aiperf load-test phase uses the bundled nvidia_rag endpoint plugin, registered automatically when rag-perf is installed editable.
 metadata:
-  tool-version: "0.1.0"
+  tool-version: 0.1.0
   author: NVIDIA RAG <foundational-rag-dev@exchange.nvidia.com>
-  github-url: "https://github.com/NVIDIA-AI-Blueprints/rag"
-  endpoint-openapi-schemas:
-    - docs/api_reference/openapi_schema_rag_server.json
+  github-url: https://github.com/NVIDIA-AI-Blueprints/rag
+  endpoint-openapi-schemas: '["docs/api_reference/openapi_schema_rag_server.json"]'
   argument-hint: rag-perf | aiperf | TTFT | latency | throughput | concurrency sweep | bottleneck | retrieval / reranker tuning | profile-only | synthetic queries | quick_profile.yaml | single_run.yaml | sweep.yaml | uv run --project scripts/rag-perf
-  tags:
-    - nvidia
-    - blueprint
-    - rag
-    - performance
-    - benchmarking
-    - aiperf
-    - nvidia-rag-blueprint
-  languages:
-    - python
-    - shell
-  frameworks:
-    - aiperf
-    - fastapi
+  tags: '["nvidia","blueprint","rag","performance","benchmarking","aiperf","nvidia-rag-blueprint"]'
+  languages: '["python","shell"]'
+  frameworks: '["aiperf","fastapi"]'
   domain: ai-ml
+  version: 2.6.0
 allowed-tools: Read Grep Glob Bash(ls *) Bash(python3 *) Bash(uv *) Bash(cat *) Bash(curl *) Write Edit
 ---
-
 # RAG-Perf — config-driven perf benchmark CLI
 
 ## Purpose

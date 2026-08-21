@@ -1,22 +1,12 @@
 ---
 name: earth2studio-install
-version: 0.16.0
+description: Guide installing Earth2Studio via uv or pip, selecting model extras, and configuring the environment. Do NOT use for writing inference code, choosing models, or PhysicsNeMo questions.
 license: Apache-2.0
 metadata:
   author: NVIDIA Earth-2 Team
-  tags:
-    - earth2studio
-    - earth2
-    - python
-    - install
-    - deployment
-    - environment
-description: >
-  Guide installing Earth2Studio via uv or pip, selecting model extras, and
-  configuring the environment. Do NOT use for writing inference code, choosing
-  models, or PhysicsNeMo questions.
+  tags: '["earth2studio","earth2","python","install","deployment","environment"]'
+  version: 0.16.0
 ---
-
 # Earth2Studio Installation Skill
 
 ## Never install packages automatically

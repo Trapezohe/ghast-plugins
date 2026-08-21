@@ -1,16 +1,10 @@
 ---
 name: add-investor
-description: >
-  Adds one or more investor records to the Carta CRM via the Carta CRM MCP Server.
-  Use this skill when the user says things like "add an investor", "/add-investor",
-  "add investor to Carta CRM", "create investor record", "add this VC fund to the CRM", or
-  "save investor data". Collects investor information conversationally, then creates
-  it via the MCP server.
-version: 1.0.0
-model: haiku
+description: Adds one or more investor records to the Carta CRM via the Carta CRM MCP Server. Use this skill when the user says things like "add an investor", "/add-investor", "add investor to Carta CRM", "create investor record", "add this VC fund to the CRM", or "save investor data". Collects investor information conversationally, then creates it via the MCP server.
+metadata:
+  version: 1.0.0
+  model: haiku
 ---
-
-
 ## Ghast MCP routing
 
 This port connects directly to Carta's hosted MCP server. Use the direct tool

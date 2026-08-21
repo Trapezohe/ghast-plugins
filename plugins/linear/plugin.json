@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "linear",
+  "version": "0.0.3-ghast.1",
+  "description": "Manage Linear issues, projects, and team workflows through Linear's official MCP server.",
+  "author": {
+    "name": "OpenAI"
+  },
+  "homepage": "https://linear.app/docs/mcp",
+  "repository": "https://github.com/openai/plugins",
+  "license": "Apache-2.0",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

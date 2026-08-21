@@ -1,33 +1,20 @@
 ---
-name: "digital-health-clinical-asr-setup"
-description: "Stage 1 of Clinical ASR Flywheel. Use when bootstrapping a cycle: NVCF+MW disclosure, NVIDIA_API_KEY check, deps install, TTS+ASR smoke test."
-version: "1.1.0"
-author: "Ben Randoing <brandoing@nvidia.com>"
-tags:
-  - clinical-asr
-  - setup
-  - flywheel
-  - bootstrap
-tools:
-  - Read
-  - Write
-  - Bash
-  - Skill
+name: digital-health-clinical-asr-setup
+description: 'Stage 1 of Clinical ASR Flywheel. Use when bootstrapping a cycle: NVCF+MW disclosure, NVIDIA_API_KEY check, deps install, TTS+ASR smoke test.'
 license: Apache-2.0
-compatibility: "NVIDIA_API_KEY (required) for hosted Magpie TTS + Parakeet/Nemotron ASR via NVCF. DICTIONARY_API_KEY (optional) for Merriam-Webster pronunciation lookup. NGC_API_KEY (optional) for Stage 4 fine-tune. Python 3.10+."
+compatibility: NVIDIA_API_KEY (required) for hosted Magpie TTS + Parakeet/Nemotron ASR via NVCF. DICTIONARY_API_KEY (optional) for Merriam-Webster pronunciation lookup. NGC_API_KEY (optional) for Stage 4 fine-tune. Python 3.10+.
 metadata:
-  author: "Ben Randoing <brandoing@nvidia.com>"
-  tags:
-    - clinical-asr
-    - flywheel
-    - setup
-    - bootstrap
+  author: Ben Randoing <brandoing@nvidia.com>
+  tags: '["clinical-asr","flywheel","setup","bootstrap"]'
   team: healthcare-tme
   domain: ai-ml
-  stage: 1
+  stage: '1'
   next_skill: digital-health-clinical-asr-build
+  version: 1.1.0
+  legacy-author: Ben Randoing <brandoing@nvidia.com>
+  legacy-tags: '["clinical-asr","setup","flywheel","bootstrap"]'
+  tools: '["Read","Write","Bash","Skill"]'
 ---
-
 <!--
 SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
 SPDX-License-Identifier: Apache-2.0

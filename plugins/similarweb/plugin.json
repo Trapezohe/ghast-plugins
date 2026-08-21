@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "similarweb",
+  "version": "1.0.0-ghast.1",
+  "description": "Research website, search, audience, app, competitor, industry, and shopper intelligence through Similarweb's official MCP server.",
+  "author": {
+    "name": "Similarweb",
+    "url": "https://www.similarweb.com"
+  },
+  "homepage": "https://developers.similarweb.com/docs/similarweb-mcp.md",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "web",
+      "upstreamRevision": "similarweb-docs-b3970ea5dd33+claude-228a7abde362+oauth-4f4e48ae9c75",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

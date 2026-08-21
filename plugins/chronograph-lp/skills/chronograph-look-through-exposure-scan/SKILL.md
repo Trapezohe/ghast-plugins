@@ -1,14 +1,9 @@
 ---
 name: chronograph-look-through-exposure-scan
-description: Aggregate an LP's look-through portfolio exposure across funds — by company, sector,
-  geography, vintage, strategy, and currency — and surface concentration, using the Chronograph
-  top-exposures tool.
-when_to_use: 'Use when an LP or fund-of-funds wants to understand its true underlying exposure
-  across managers. Triggers: "what do we actually own", "look-through exposure", "how concentrated
-  are we", "single-name exposure across funds", "sector/geography breakdown", "are we overexposed to
-  X". Not for single-fund or single-company reporting.'
+description: Aggregate an LP's look-through portfolio exposure across funds — by company, sector, geography, vintage, strategy, and currency — and surface concentration, using the Chronograph top-exposures tool.
+metadata:
+  when_to_use: 'Use when an LP or fund-of-funds wants to understand its true underlying exposure across managers. Triggers: "what do we actually own", "look-through exposure", "how concentrated are we", "single-name exposure across funds", "sector/geography breakdown", "are we overexposed to X". Not for single-fund or single-company reporting.'
 ---
-
 # Look-Through Exposure Scan
 
 **Requirements:** A connected Chronograph MCP server as an LP client.

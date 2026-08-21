@@ -1,16 +1,15 @@
 ---
-name: "amc-setup-calibration-stack"
-description: "Launch AutoMagicCalib microservice and web UI from NGC release images via Docker Compose. Use when user says 'deploy auto calibration', 'launch auto calibration', 'launch AMC', 'start MS+UI', or 'set up auto-magic-calib'. Requires NGC API key."
+name: amc-setup-calibration-stack
+description: Launch AutoMagicCalib microservice and web UI from NGC release images via Docker Compose. Use when user says 'deploy auto calibration', 'launch auto calibration', 'launch AMC', 'start MS+UI', or 'set up auto-magic-calib'. Requires NGC API key.
+license: Apache-2.0
 metadata:
-  author: "NVIDIA CORPORATION"
-  tags: [amc, deepstream, docker, calibration, setup, ngc]
-owner: "NVIDIA CORPORATION"
-service: "auto-magic-calib"
-version: "1.0.0"
-reviewed: "2026-04-28"
-license: "Apache-2.0"
+  author: NVIDIA CORPORATION
+  tags: '["amc","deepstream","docker","calibration","setup","ngc"]'
+  owner: NVIDIA CORPORATION
+  service: auto-magic-calib
+  version: 1.0.0
+  reviewed: '2026-04-28'
 ---
-
 # Skill: Launch AutoMagicCalib Release Containers
 
 Set up the AutoMagicCalib microservice and UI from release containers: resolve an AMC checkout, authenticate to NGC, optionally download VGGT, configure Docker Compose, launch services, and verify readiness.

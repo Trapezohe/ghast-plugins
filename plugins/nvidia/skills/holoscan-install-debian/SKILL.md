@@ -1,19 +1,13 @@
 ---
 name: holoscan-install-debian
-version: "1.0.0"
-description: "Install Holoscan SDK natively on Ubuntu via apt. Use for C++ installs on Ubuntu; pair with /holoscan-install-wheel for Python."
+description: Install Holoscan SDK natively on Ubuntu via apt. Use for C++ installs on Ubuntu; pair with /holoscan-install-wheel for Python.
 license: Apache-2.0
 metadata:
-  author: "Holoscan Team <holoscan-team@nvidia.com>"
-  github-url: "https://github.com/nvidia-holoscan/holoscan-sdk"
-  tags:
-    - holoscan
-    - install
-    - debian
-    - apt
-    - ubuntu
+  author: Holoscan Team <holoscan-team@nvidia.com>
+  github-url: https://github.com/nvidia-holoscan/holoscan-sdk
+  tags: '["holoscan","install","debian","apt","ubuntu"]'
+  version: 1.0.0
 ---
-
 # Holoscan Debian/apt Installation
 
 ## Purpose

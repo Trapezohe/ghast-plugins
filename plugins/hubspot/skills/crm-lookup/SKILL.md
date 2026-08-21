@@ -1,16 +1,9 @@
 ---
 name: crm-lookup
 description: Find a specific CRM record by ID, email, domain, or name fragment, and traverse associations for the full account picture.
-triggers:
-  - "find contact"
-  - "find contact by email"
-  - "find company by domain"
-  - "look up deal"
-  - "contacts at this company"
-  - "deals for this contact"
-  - "find record"
+metadata:
+  triggers: '["find contact","find contact by email","find company by domain","look up deal","contacts at this company","deals for this contact","find record"]'
 ---
-
 ## Source of truth
 
 `hubspot <command> --help` is authoritative. Read [`bulk-operations/SKILL.md`](../bulk-operations/SKILL.md) first — it owns JSONL piping, pagination, batch-get-via-stdin, and the safety flow for any write that comes after a lookup. This skill is read-only.

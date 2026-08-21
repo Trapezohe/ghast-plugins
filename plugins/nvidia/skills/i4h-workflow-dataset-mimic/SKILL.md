@@ -1,18 +1,12 @@
 ---
 name: i4h-workflow-dataset-mimic
-version: "0.6.0"
 description: Expand an HDF5 recording by cloning trajectories with action/state noise. Use when asked to mimic, expand, or augment a dataset; not for recording new demos (use [[i4h-workflow-dataset-teleop]]).
 license: Apache-2.0
 metadata:
-  author: "Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>"
-  tags:
-    - isaac-for-healthcare
-    - i4h
-    - dataset
-    - mimic
-    - augmentation
+  author: Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>
+  tags: '["isaac-for-healthcare","i4h","dataset","mimic","augmentation"]'
+  version: 0.6.0
 ---
-
 # i4h Workflow — Mimic Dataset
 
 ## Purpose

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "govtribe",
+  "version": "1.0.3-ghast.1",
+  "description": "Research public-sector opportunities, awards, vendors, agencies, forecasts, pricing, files, news, and authorized workspace records through GovTribe's official hosted MCP.",
+  "author": {
+    "name": "Government Executive Media Group LLC",
+    "url": "https://govtribe.com"
+  },
+  "homepage": "https://govtribe.com/docs/govtribe-user-guide/govtribe-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "research",
+      "upstreamRevision": "govtribe-docs-e0cd276f0d5e+servers-6ea83b94854e+tools-80cebed0f455+annotations-eed9dde0f2ea",
+      "icon": "./assets/icon.svg",
+      "mcpServerExtensions": {
+        "govtribe": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:govtribe-mcp-api-key"
+          }
+        }
+      }
+    }
+  }
+}

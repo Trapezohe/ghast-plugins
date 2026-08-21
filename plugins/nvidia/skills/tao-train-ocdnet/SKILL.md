@@ -1,20 +1,14 @@
 ---
 name: tao-train-ocdnet
-description: OCDNet for scene text detection. Detects arbitrary-oriented text regions in natural images using a
-  differentiable binarization approach. Use when training, evaluating, exporting, pruning, quantizing, retraining, or running
-  inference for a TAO OCDNet model. Trigger phrases include "train OCDNet", "scene text detection", "arbitrary-oriented text
-  boxes", "differentiable binarization detector".
+description: OCDNet for scene text detection. Detects arbitrary-oriented text regions in natural images using a differentiable binarization approach. Use when training, evaluating, exporting, pruning, quantizing, retraining, or running inference for a TAO OCDNet model. Trigger phrases include "train OCDNet", "scene text detection", "arbitrary-oriented text boxes", "differentiable binarization detector".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["text","detection"]'
 allowed-tools: Read Bash
-tags:
-- text
-- detection
 ---
-
 # OCDNet
 
 OCDNet for scene text detection. Detects arbitrary-oriented text regions in natural images using a differentiable binarization approach.

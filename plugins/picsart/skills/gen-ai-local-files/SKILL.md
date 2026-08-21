@@ -1,17 +1,14 @@
 ---
 name: gen-ai-local-files
 description: Turn a local file into a URL for Picsart MCP tools.
-version: 1.2.0
-author: Picsart
 license: MIT
-platforms: [macos, linux]
-allowed-tools: Read, Bash
 metadata:
-  hermes:
-    category: creative
-    tags: [picsart, cli, upload, local-files, mcp]
+  hermes: '{"category":"creative","tags":["picsart","cli","upload","local-files","mcp"]}'
+  version: 1.2.0
+  author: Picsart
+  platforms: '["macos","linux"]'
+allowed-tools: Read, Bash
 ---
-
 # Local Files → Hosted URL
 
 Picsart's MCP tools take **URLs**, not local paths. This skill is the bridge: it turns a file the user named on their own machine into a hosted URL you can hand to any Picsart MCP tool. It is not a Drive browser and not a directory scanner — it moves exactly the file the user pointed at.

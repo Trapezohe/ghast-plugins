@@ -1,20 +1,9 @@
 ---
 name: probe-sdk
-description: "Zoom Probe SDK for web diagnostics. Use to test media permissions, audio/video/screen-share diagnostics, network quality, compatibility reporting, and consented offline camera-dump evidence before users join meetings or sessions."
-triggers:
-  - "probe sdk"
-  - "zoom probe"
-  - "@zoom/probesdk"
-  - "media diagnostics"
-  - "network diagnostic"
-  - "preflight check"
-  - "diagnose audio video"
-  - "browser compatibility diagnostics"
-  - "diagnostic report"
-  - "camera dump"
-  - "screen share diagnostic"
+description: Zoom Probe SDK for web diagnostics. Use to test media permissions, audio/video/screen-share diagnostics, network quality, compatibility reporting, and consented offline camera-dump evidence before users join meetings or sessions.
+metadata:
+  triggers: '["probe sdk","zoom probe","@zoom/probesdk","media diagnostics","network diagnostic","preflight check","diagnose audio video","browser compatibility diagnostics","diagnostic report","camera dump","screen share diagnostic"]'
 ---
-
 # Zoom Probe SDK
 
 Implementation guidance for Zoom Probe SDK (web) to run preflight diagnostics on user devices and network before meeting/session workflows.

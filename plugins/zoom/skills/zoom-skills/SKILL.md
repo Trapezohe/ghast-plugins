@@ -1,17 +1,9 @@
 ---
 name: zoom-skills
-description: |
-  Zoom Developer Platform skills organized by product. Each folder contains product-specific 
-  documentation and use cases. The zoom-general folder contains generic, cross-product skills 
-  and references.
-triggers:
-  - "zoom skills"
-  - "zoom developer tools"
-  - "zoom developer platform skills"
-  - "zoom skill repository"
-  - "zoom skill routing"
+description: "Zoom Developer Platform skills organized by product. Each folder contains product-specific \ndocumentation and use cases. The zoom-general folder contains generic, cross-product skills \nand references."
+metadata:
+  triggers: '["zoom skills","zoom developer tools","zoom developer platform skills","zoom skill repository","zoom skill routing"]'
 ---
-
 # Zoom Developer Platform Skills
 
 This repository contains skills for building with Zoom SDKs, APIs, MCP servers, and integrations across web, mobile, desktop, and server environments.

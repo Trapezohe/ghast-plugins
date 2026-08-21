@@ -1,18 +1,12 @@
 ---
 name: i4h-catheter-navigation
-version: "0.7.0"
 description: Overview of `workflows/catheter_navigation/` (fluorosim DRR, XPBD physics, vasculature digital twin). Use when the user asks what the catheter navigation workflow is, what's supported, or where to start.
 license: Apache-2.0
 metadata:
-  author: "Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>"
-  tags:
-    - isaac-for-healthcare
-    - i4h
-    - catheter-navigation
-    - fluoroscopy
-    - overview
+  author: Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>
+  tags: '["isaac-for-healthcare","i4h","catheter-navigation","fluoroscopy","overview"]'
+  version: 0.7.0
 ---
-
 # i4h Catheter Navigation Workflow
 
 ## Purpose

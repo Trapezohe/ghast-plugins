@@ -1,32 +1,14 @@
 ---
 name: tao-generate-video-reasoning-annotations
-description: >-
-  Multi-step video annotation pipeline that turns raw videos into
-  Chain-of-Thought training data — multi-level captions, structured
-  descriptions, and QA pairs (MCQ, binary, open-ended) with reasoning
-  traces, via VLM/LLM distillation. Use when the user wants to "create
-  video training data", "generate video QA datasets", "build CoT
-  reasoning traces from videos", "auto-label videos", or run the
-  video_reasoning_annotation pipeline. Triggers include "video
-  annotation", "video CoT", "video QA", "chain-of-thought",
-  "video captioning pipeline", "video distillation".
+description: Multi-step video annotation pipeline that turns raw videos into Chain-of-Thought training data — multi-level captions, structured descriptions, and QA pairs (MCQ, binary, open-ended) with reasoning traces, via VLM/LLM distillation. Use when the user wants to "create video training data", "generate video QA datasets", "build CoT reasoning traces from videos", "auto-label videos", or run the video_reasoning_annotation pipeline. Triggers include "video annotation", "video CoT", "video QA", "chain-of-thought", "video captioning pipeline", "video distillation".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit + at least one VLM endpoint (Gemini API key or OpenAI-compatible).
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["video","annotation","chain-of-thought","captioning","qa-generation","vlm","llm","auto-label"]'
 allowed-tools: Read Bash Write
-tags:
-  - video
-  - annotation
-  - chain-of-thought
-  - captioning
-  - qa-generation
-  - vlm
-  - llm
-  - auto-label
 ---
-
 # Video Reasoning Annotation Pipeline
 
 Generate Chain-of-Thought training datasets from videos by producing multi-level captions, structured descriptions, and QA pairs (MCQ, binary, open-ended) with step-by-step reasoning traces. Domain-agnostic by default — customize prompts for any video domain.

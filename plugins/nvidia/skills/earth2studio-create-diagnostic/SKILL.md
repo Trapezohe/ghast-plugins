@@ -1,18 +1,13 @@
 ---
 name: earth2studio-create-diagnostic
-version: 0.16.0
+description: Create Earth2Studio diagnostic model wrappers for single-step data transformations, including simple derived diagnostics, packaged AutoModel diagnostics, and generative or diffusion diagnostics. Do NOT use for prognostic time-stepping models, data sources, or installation.
 license: Apache-2.0
 metadata:
   author: NVIDIA Earth-2 Team <agent-skills@nvidia.com>
-  tags: [earth2studio, diagnostic-model, python]
-description: >
-  Create Earth2Studio diagnostic model wrappers for single-step data
-  transformations, including simple derived diagnostics, packaged AutoModel
-  diagnostics, and generative or diffusion diagnostics. Do NOT use for
-  prognostic time-stepping models, data sources, or installation.
-argument-hint: URL or local path to reference inference script (optional)
+  tags: '["earth2studio","diagnostic-model","python"]'
+  version: 0.16.0
+  argument-hint: URL or local path to reference inference script (optional)
 ---
-
 ## Quick Start Checklist
 
 Do these steps in order. Do not skip ahead. Before editing, read this

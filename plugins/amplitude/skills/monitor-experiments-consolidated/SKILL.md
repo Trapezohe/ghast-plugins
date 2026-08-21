@@ -1,9 +1,9 @@
 ---
 name: monitor-experiments-consolidated
 description: Monitors all active and recently completed experiments across Amplitude projects, triages them by importance, then runs deep analysis and reporting on the most impactful ones. Use when the user asks to "check on experiments", "experiment status", "experiment review", "what experiments are running", or wants a periodic experiment health report.
-x-amp-flags: [mcp-consolidate-flags-experiments]
+metadata:
+  x-amp-flags: '["mcp-consolidate-flags-experiments"]'
 ---
-
 # Experiment Monitor & Report Generator
 
 Scan active and recently completed experiments, surface what needs attention, and report on the ones that matter.

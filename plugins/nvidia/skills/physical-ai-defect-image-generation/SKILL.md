@@ -1,31 +1,19 @@
 ---
 name: physical-ai-defect-image-generation
-description: >-
-  Use when the user wants to orchestrate defect image generation with NVIDIA Cosmos AnomalyGen (Cosmos-Predict2-derived) on OSMO for PCBA, metal surface, and glass inspection. The Day 0 path handles cold-start with USD-to-ROI, image-edit augmentation, and AnomalyGen to create initial PCBA datasets. The Day 1 path performs inference and labeling on real images. This skill helps with first-time asset setup, creation of finetuning checkpoints, and configuring deployment.
+description: 'Use when the user wants to orchestrate defect image generation with NVIDIA Cosmos AnomalyGen (Cosmos-Predict2-derived) on OSMO for PCBA, metal surface, and glass inspection. The Day 0 path handles cold-start with USD-to-ROI, image-edit augmentation, and AnomalyGen to create initial PCBA datasets. The Day 1 path performs inference and labeling on real images. This skill helps with first-time asset setup, creation of finetuning checkpoints, and configuring deployment.
 
-  Trigger keywords: defect image generation, dig workflow, dig pipeline, defect image detection workflow, aoi pipeline, aoi anomalygen, usd2roi anomalygen, day 0 pcba, day 1 pcba, day 1 real-photo alignment, day 1 manual roi, metal surface anomaly, glass defect, anomalygen finetune, setup_pcb, setup_metal, setup_glass, setup_pretrained, dig setup, dig datasets, dig pretrained checkpoint, dig image-edit endpoint, cosmos defect generation, cosmos-predict2 defect, cosmos-anomalygen, cosmos predict2 finetune.
-version: "1.0.1"
+  Trigger keywords: defect image generation, dig workflow, dig pipeline, defect image detection workflow, aoi pipeline, aoi anomalygen, usd2roi anomalygen, day 0 pcba, day 1 pcba, day 1 real-photo alignment, day 1 manual roi, metal surface anomaly, glass defect, anomalygen finetune, setup_pcb, setup_metal, setup_glass, setup_pretrained, dig setup, dig datasets, dig pretrained checkpoint, dig image-edit endpoint, cosmos defect generation, cosmos-predict2 defect, cosmos-anomalygen, cosmos predict2 finetune.'
 license: CC-BY-4.0 AND Apache-2.0
-tools:
-  - Read
-  - Shell
 metadata:
   owner: NVIDIA
   service: physical-ai-data-factory
   version: 1.0.1
-  reviewed: 2026-06-23
+  reviewed: '"2026-06-23"'
   author: NVIDIA
-  tags:
-    - physical-ai
-    - defect-image-generation
-    - aoi
-    - anomalygen
-    - usd2roi
-    - cosmos
-    - cosmos-predict2
-    - cosmos-anomalygen
+  tags: '["physical-ai","defect-image-generation","aoi","anomalygen","usd2roi","cosmos","cosmos-predict2","cosmos-anomalygen"]'
+  legacy-version: 1.0.1
+  tools: '["Read","Shell"]'
 ---
-
 # Physical AI Defect Image Generation
 
 

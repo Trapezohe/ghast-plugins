@@ -1,13 +1,13 @@
 ---
 name: deepstream-generate-pipeline
 description: Build DeepStream GStreamer pipelines interactively. Use when the user asks about pipelines for video/image inference, detection, tracking, or streaming — including natural phrases like 'pipeline to infer on image', 'run inference on video', 'detect objects in stream', 'save inference output', 'deepstream pipeline', 'gst-launch pipeline', 'process video with detection', 'build a pipeline', or any request involving GStreamer/DeepStream elements (nvinfer, nvstreammux, nvtracker, etc.).
-owner: NVIDIA CORPORATION
-service: deepstream
-version: 1.0.0
-reviewed: 2026-04-27
 license: CC-BY-4.0 AND Apache-2.0
+metadata:
+  owner: NVIDIA CORPORATION
+  service: deepstream
+  version: 1.0.0
+  reviewed: '"2026-04-27"'
 ---
-
 # DeepStream Pipeline Builder
 
 Generate ready-to-run `gst-launch-1.0` pipelines for NVIDIA DeepStream SDK by collecting pipeline requirements through an interactive questionnaire, then assembling the pipeline using a standalone BM25 retrieval backend with structural metadata boosting (similarity search over 270+ verified pipelines, zero external dependencies).

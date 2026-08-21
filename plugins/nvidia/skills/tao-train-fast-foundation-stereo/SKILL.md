@@ -1,23 +1,14 @@
 ---
 name: tao-train-fast-foundation-stereo
-description: Real-time stereo depth estimation using FastFoundationStereo (FFS), the distilled bp2 commercial variant of
-  FoundationStereo. Predicts disparity maps from stereo image pairs with ~10× lower latency than full FoundationStereo. Use
-  when training, evaluating, exporting, or running inference for a TAO FastFoundationStereo (FFS) model. Trigger phrases
-  include "train fast stereo", "real-time stereo disparity", "FastFoundationStereo", "distilled stereo depth".
+description: Real-time stereo depth estimation using FastFoundationStereo (FFS), the distilled bp2 commercial variant of FoundationStereo. Predicts disparity maps from stereo image pairs with ~10× lower latency than full FoundationStereo. Use when training, evaluating, exporting, or running inference for a TAO FastFoundationStereo (FFS) model. Trigger phrases include "train fast stereo", "real-time stereo disparity", "FastFoundationStereo", "distilled stereo depth".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["stereo","depth","estimation","realtime","distilled"]'
 allowed-tools: Read Bash
-tags:
-- stereo
-- depth
-- estimation
-- realtime
-- distilled
 ---
-
 # Depth Net Fast Stereo
 
 Real-time stereo depth estimation using **FastFoundationStereo (FFS)** — the bp2 commercial distilled variant of FoundationStereo. Predicts disparity maps from rectified stereo image pairs with per-layer pruned widths for real-time inference.

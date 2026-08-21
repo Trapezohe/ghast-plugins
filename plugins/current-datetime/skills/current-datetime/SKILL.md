@@ -1,9 +1,9 @@
 ---
 name: current-datetime
 description: Use this skill whenever the user asks "what time/day/date is it", references "now"/"today"/"this week"/"tomorrow" in a way that needs a real timestamp, or asks for the current time in a specific timezone. Provides the exact wall-clock time without guessing from training data.
-version: 1.0.0
+metadata:
+  version: 1.0.0
 ---
-
 # Current Date & Time
 
 When the user's request requires knowing the current real-world date or time

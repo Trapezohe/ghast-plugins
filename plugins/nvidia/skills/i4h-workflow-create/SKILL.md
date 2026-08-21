@@ -1,18 +1,12 @@
 ---
 name: i4h-workflow-create
-version: "0.7.0"
 description: Create a new agentic env by forking an existing env. Use for new env/task scaffolding, not scene edits or baking.
 license: Apache-2.0
 metadata:
-  author: "Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>"
-  tags:
-    - isaac-for-healthcare
-    - i4h
-    - agentic-workflow
-    - environment
-    - scaffolding
+  author: Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>
+  tags: '["isaac-for-healthcare","i4h","agentic-workflow","environment","scaffolding"]'
+  version: 0.7.0
 ---
-
 # i4h Workflow - Create Env
 
 ## Purpose

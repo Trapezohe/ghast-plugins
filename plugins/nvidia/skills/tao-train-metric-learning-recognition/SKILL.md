@@ -1,21 +1,14 @@
 ---
 name: tao-train-metric-learning-recognition
-description: Metric-learning recognition (ml-recog) for fine-grained visual recognition. Learns embeddings for
-  retrieval-based matching (e.g., retail product recognition) using triplet / contrastive losses. Use when training,
-  evaluating, exporting, or running inference for a TAO metric-learning recognition model. Trigger phrases include
-  "train metric learning", "ml-recog", "retrieval embeddings", "triplet loss recognition", "fine-grained matching".
+description: Metric-learning recognition (ml-recog) for fine-grained visual recognition. Learns embeddings for retrieval-based matching (e.g., retail product recognition) using triplet / contrastive losses. Use when training, evaluating, exporting, or running inference for a TAO metric-learning recognition model. Trigger phrases include "train metric learning", "ml-recog", "retrieval embeddings", "triplet loss recognition", "fine-grained matching".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["metric","learning","recognition"]'
 allowed-tools: Read Bash
-tags:
-- metric
-- learning
-- recognition
 ---
-
 # ML Recog
 
 Metric learning recognition for fine-grained visual recognition. Learns embeddings for retrieval-based matching (e.g., retail product recognition). Uses triplet/contrastive losses.

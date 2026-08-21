@@ -1,15 +1,10 @@
 ---
 name: add-company
-description: >
-  Adds one or more company records to the Carta CRM via the Carta CRM MCP Server.
-  Use this skill when the user says things like "add a company", "create company record",
-  "add company to CRM", "add company to Carta CRM", or "/add-company".
-  Collects company information conversationally, then creates it via the MCP server.
-version: 1.0.0
-model: haiku
+description: Adds one or more company records to the Carta CRM via the Carta CRM MCP Server. Use this skill when the user says things like "add a company", "create company record", "add company to CRM", "add company to Carta CRM", or "/add-company". Collects company information conversationally, then creates it via the MCP server.
+metadata:
+  version: 1.0.0
+  model: haiku
 ---
-
-
 ## Ghast MCP routing
 
 This port connects directly to Carta's hosted MCP server. Use the direct tool

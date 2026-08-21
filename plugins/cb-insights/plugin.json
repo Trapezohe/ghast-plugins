@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "cb-insights",
+  "version": "1.0.3-ghast.1",
+  "description": "Research private companies, markets, deals, competitors, predictive signals, market maps, and investment questions through CB Insights' official hosted MCP server.",
+  "author": {
+    "name": "CB Insights",
+    "url": "https://www.cbinsights.com"
+  },
+  "homepage": "https://www.cbinsights.com/october-2025-product-launch/",
+  "repository": "https://github.com/cbinsights/cbi-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "finance",
+      "upstreamRevision": "cbi-mcp-97e8c8b7ecf4+chat-92d179a62a18+product-6ce534ffa0e9+oauth-7f4d1f126334+source-778e1acb6a74",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

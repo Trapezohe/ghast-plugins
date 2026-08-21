@@ -1,8 +1,7 @@
 ---
-name: hostinger-headless
-description: "Build, connect, or iterate on a website hosted on Hostinger — provision hosting and a domain, optionally seed an ecommerce store with a real hosted checkout or a WordPress content backend (headless CMS/blog), build the frontend, deploy, and verify. Requires an authenticated Hostinger MCP session (see entry/skill.md). Triggers: build me a site on Hostinger, deploy this to Hostinger, connect this project to Hostinger, add a store to my Hostinger site, add a blog to my Hostinger site, update my Hostinger site."
+name: headless
+description: 'Build, connect, or iterate on a website hosted on Hostinger — provision hosting and a domain, optionally seed an ecommerce store with a real hosted checkout or a WordPress content backend (headless CMS/blog), build the frontend, deploy, and verify. Requires an authenticated Hostinger MCP session (see entry/skill.md). Triggers: build me a site on Hostinger, deploy this to Hostinger, connect this project to Hostinger, add a store to my Hostinger site, add a blog to my Hostinger site, update my Hostinger site.'
 ---
-
 # Hostinger Headless
 
 This skill turns a prompt into a live website on Hostinger. Its job is to own the full run: check the account, provision hosting and a domain, seed the backend (an ecommerce store when the intent calls for selling), build the frontend, deploy it, and verify the result.

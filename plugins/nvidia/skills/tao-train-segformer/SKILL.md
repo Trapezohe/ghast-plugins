@@ -1,19 +1,14 @@
 ---
 name: tao-train-segformer
-description: SegFormer for semantic segmentation. Lightweight transformer-based architecture with hierarchical feature
-  extraction, efficient for real-time segmentation tasks. Use when training, evaluating, exporting, quantizing, or running
-  inference for a TAO SegFormer model. Trigger phrases include "train SegFormer", "semantic segmentation", "lightweight
-  transformer segmenter", "real-time semantic segmentation".
+description: SegFormer for semantic segmentation. Lightweight transformer-based architecture with hierarchical feature extraction, efficient for real-time segmentation tasks. Use when training, evaluating, exporting, quantizing, or running inference for a TAO SegFormer model. Trigger phrases include "train SegFormer", "semantic segmentation", "lightweight transformer segmenter", "real-time semantic segmentation".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["segmentation"]'
 allowed-tools: Read Bash
-tags:
-- segmentation
 ---
-
 # SegFormer
 
 SegFormer for semantic segmentation. Lightweight transformer-based architecture with hierarchical feature extraction. Efficient for real-time segmentation tasks.

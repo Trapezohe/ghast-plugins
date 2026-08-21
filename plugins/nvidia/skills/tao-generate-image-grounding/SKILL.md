@@ -1,24 +1,14 @@
 ---
 name: tao-generate-image-grounding
-description: "Two-step image grounding pipeline: extracts referring expressions from (image, caption) pairs and grounds them
-  to pixel-space bounding boxes via a VLM. Use when the user wants to ground captions to bboxes, generate phrase-grounded
-  annotations, auto-label images for grounding, or run the image_grounding pipeline. Triggers include 'image grounding',
-  'phrase grounding', 'ground captions', 'auto-label image grounding', 'image_grounding'."
+description: 'Two-step image grounding pipeline: extracts referring expressions from (image, caption) pairs and grounds them to pixel-space bounding boxes via a VLM. Use when the user wants to ground captions to bboxes, generate phrase-grounded annotations, auto-label images for grounding, or run the image_grounding pipeline. Triggers include ''image grounding'', ''phrase grounding'', ''ground captions'', ''auto-label image grounding'', ''image_grounding''.'
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit + at least one VLM endpoint (Gemini API key or OpenAI-compatible).
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["image","grounding","bounding-boxes","auto-label","vlm","2d-grounding"]'
 allowed-tools: Read Bash Write
-tags:
-  - image
-  - grounding
-  - bounding-boxes
-  - auto-label
-  - vlm
-  - 2d-grounding
 ---
-
 # Image Grounding Pipeline
 
 Turn `(image, caption)` pairs into per-image grounded annotations: cleaned captions, referring expressions with character spans, and pixel-space bounding boxes for each expression. A single VLM (Gemini or any OpenAI-compatible endpoint) handles both steps.

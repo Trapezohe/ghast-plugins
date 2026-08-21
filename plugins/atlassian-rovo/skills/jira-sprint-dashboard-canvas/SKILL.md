@@ -1,15 +1,7 @@
 ---
-name: jira-sprint-dashboard
-description: >-
-  Create a visual Jira sprint dashboard from Jira project, space, sprint, board,
-  filter, JQL, work item keys, or Jira URL data. Use when the user asks for a
-  Jira sprint dashboard, standup dashboard, sprint review, delivery review,
-  engineering manager dashboard, WIP review, planning view, closeout view, or a
-  visual snapshot of Jira work that is more useful than a flat report. Use the
-  richest dashboard format supported by the current agent, such as Cursor
-  Canvas, an interactive artifact, HTML, or Markdown.
+name: jira-sprint-dashboard-canvas
+description: Create a visual Jira sprint dashboard from Jira project, space, sprint, board, filter, JQL, work item keys, or Jira URL data. Use when the user asks for a Jira sprint dashboard, standup dashboard, sprint review, delivery review, engineering manager dashboard, WIP review, planning view, closeout view, or a visual snapshot of Jira work that is more useful than a flat report. Use the richest dashboard format supported by the current agent, such as Cursor Canvas, an interactive artifact, HTML, or Markdown.
 ---
-
 # Jira Sprint Dashboard
 
 Build a focused dashboard that helps an engineering manager, tech lead, or

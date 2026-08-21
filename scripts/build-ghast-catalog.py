@@ -20,7 +20,7 @@ def main() -> int:
     plugins = []
     package_names = set()
     for plugin_dir in sorted(PLUGIN_DIR.iterdir()):
-        manifest_path = plugin_dir / ".ghast-plugin/plugin.json"
+        manifest_path = plugin_dir / "plugin.json"
         if not plugin_dir.is_dir() or not manifest_path.exists():
             continue
 
@@ -31,31 +31,15 @@ def main() -> int:
             raise ValueError(
                 f"{plugin_dir}: OpenAI connector declarations are not portable"
             )
-        icon_path = validate_icon(plugin_dir, manifest)
+        ghast = (manifest.get("extensions") or {}).get("ai.trapezohe.ghast", {})
+        icon_path = validate_icon(plugin_dir, ghast)
         if manifest.get("repository") and not (plugin_dir / "LICENSE").exists():
             raise ValueError(f"{plugin_dir}: third-party plugins require LICENSE")
-        validate_declared_path(plugin_dir, manifest, "skills", "skills")
-        validate_declared_path(plugin_dir, manifest, "commands", "commands")
-        validate_declared_path(plugin_dir, manifest, "mcpServers", ".mcp.json")
         if (plugin_dir / "skills").exists():
             validate_skills(plugin_dir / "skills")
-        if (plugin_dir / ".mcp.json").exists():
-            json.loads((plugin_dir / ".mcp.json").read_text())
-        manifest_for_catalog = {
-            "name": manifest["name"],
-            "description": manifest["description"],
-            "author": manifest.get("author", ""),
-            "icon": manifest["icon"],
-        }
-        for field in ("version", "homepage", "repository", "upstreamRevision", "license"):
-            if field in manifest:
-                manifest_for_catalog[field] = manifest[field]
-        if (plugin_dir / "skills").exists():
-            manifest_for_catalog["skills"] = "./skills/"
-        if (plugin_dir / "commands").exists():
-            manifest_for_catalog["commands"] = "./commands/"
-        if (plugin_dir / ".mcp.json").exists():
-            manifest_for_catalog["mcpServers"] = "./.mcp.json"
+        if (plugin_dir / "mcp.json").exists():
+            json.loads((plugin_dir / "mcp.json").read_text())
+        manifest_for_catalog = dict(manifest)
         zip_path = PACKAGE_DIR / f"{manifest['name']}.zip"
         write_plugin_zip(plugin_dir, zip_path)
         package_names.add(zip_path.name)
@@ -72,9 +56,11 @@ def main() -> int:
             },
             "icon": f"./plugins/{manifest['name']}/{icon_path.relative_to(plugin_dir)}",
         }
-        for field in ("category", "homepage", "repository", "license"):
+        for field in ("homepage", "repository", "license"):
             if field in manifest:
                 catalog_entry[field] = manifest[field]
+        if "category" in ghast:
+            catalog_entry["category"] = ghast["category"]
         plugins.append(catalog_entry)
 
     for package_path in PACKAGE_DIR.glob("*.zip"):

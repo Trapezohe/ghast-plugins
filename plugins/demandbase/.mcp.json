@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "demandbase": {
-      "type": "http",
-      "url": "https://gateway.demandbase.com/mcp/servers/db-mcp"
-    }
-  }
-}

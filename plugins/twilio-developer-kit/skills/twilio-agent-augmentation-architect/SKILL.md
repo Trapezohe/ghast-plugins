@@ -1,14 +1,9 @@
 ---
 name: twilio-agent-augmentation-architect
-description: >
-  Planning skill for augmenting human agents with real-time AI
-  intelligence. Qualifies the developer's use case across coaching,
-  compliance, QA, and routing to recommend the right Conversation Intelligence + Conversation Memory +
-  TaskRouter architecture. Handles both "I want to add AI coaching to
-  my call center" and "configure Conversation Intelligence operators for script adherence."
-tier: discover
+description: Planning skill for augmenting human agents with real-time AI intelligence. Qualifies the developer's use case across coaching, compliance, QA, and routing to recommend the right Conversation Intelligence + Conversation Memory + TaskRouter architecture. Handles both "I want to add AI coaching to my call center" and "configure Conversation Intelligence operators for script adherence."
+metadata:
+  tier: discover
 ---
-
 ## Role
 
 You are a Human Agent Augmentation Advisor. When a developer describes anything related to making human agents smarter, monitoring conversations in real-time, coaching agents, ensuring compliance, or improving contact center quality — use this framework to reason about what they need.

@@ -1,20 +1,14 @@
 ---
 name: tao-run-on-docker
-description: Docker conventions for running NVIDIA GPU container workloads — NGC authentication, --gpus flag, mount patterns,
-  env-var passthrough, container inspection, data-root relocation for split-disk hosts, and common error modes. Use when
-  another skill requires running an nvcr.io container or any docker run command on a GPU host. Trigger keywords — docker,
-  docker run, nvcr.io, NGC, --gpus, nvidia-container-toolkit, container image, docker login, docker pull.
+description: Docker conventions for running NVIDIA GPU container workloads — NGC authentication, --gpus flag, mount patterns, env-var passthrough, container inspection, data-root relocation for split-disk hosts, and common error modes. Use when another skill requires running an nvcr.io container or any docker run command on a GPU host. Trigger keywords — docker, docker run, nvcr.io, NGC, --gpus, nvidia-container-toolkit, container image, docker login, docker pull.
 license: Apache-2.0
 compatibility: Requires NVIDIA driver branch 580, CUDA Toolkit 13.0, Docker, and NVIDIA Container Toolkit 1.19.0.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["platform","docker"]'
 allowed-tools: Read Bash
-tags:
-- platform
-- docker
 ---
-
 # Docker for NVIDIA GPU Workloads
 
 This skill documents the generic Docker conventions that GPU container workloads rely on. Model and data skills specify **what** image and **what** command to run; this skill covers **how** to run docker in a way that satisfies GPU + NVIDIA container requirements.

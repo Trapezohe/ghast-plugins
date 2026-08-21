@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "spglobal": {
+      "type": "streamable-http",
+      "url": "https://kfinance.kensho.com/integrations/mcp"
+    }
+  }
+}

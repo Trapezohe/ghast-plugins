@@ -2,9 +2,11 @@
 name: enterprise-pinned-registry
 description: Pin exact model versions for reproducible output.
 license: MIT
-metadata: {"author": "Picsart", "version": "1.0.0", "hermes": {"category": "enterprise", "tags": ["picsart", "enterprise", "governance", "scale"]}}
+metadata:
+  author: Picsart
+  version: 1.0.0
+  hermes: '{"category":"enterprise","tags":["picsart","enterprise","governance","scale"]}'
 ---
-
 # Enterprise Pinned Registry
 
 A lockfile concept for AI generation. Model versions, prompts, brand tokens, and seeds are pinned to a manifest that regenerates the same campaign identically six months, a year, or three years later. Built for enterprises that need reproducibility for legal holds, brand-campaign continuity, regulatory defense, and year-over-year comparability.

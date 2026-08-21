@@ -1,9 +1,9 @@
 ---
 name: manage-amp-context
 description: Lists projects for an employee-accessible organization or writes organization/project AI context with `manage_amp_context`; use `get_amplitude_context` for reads.
-x-amp-flags: [mcp-consolidate-context]
+metadata:
+  x-amp-flags: '["mcp-consolidate-context"]'
 ---
-
 # Manage Amp Context
 
 ## Choose an action

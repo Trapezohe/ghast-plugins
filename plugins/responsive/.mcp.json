@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "responsive": {
-      "type": "http",
-      "url": "https://app.rfpio.com/oa/v1/mcp"
-    }
-  }
-}

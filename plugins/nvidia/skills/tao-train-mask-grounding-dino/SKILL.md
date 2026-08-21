@@ -1,19 +1,14 @@
 ---
 name: tao-train-mask-grounding-dino
-description: Mask Grounding DINO for grounded instance segmentation. Extends Grounding DINO with a mask-prediction head for
-  open-set segmentation guided by text prompts. Use when training, evaluating, exporting, quantizing, or running inference for
-  a TAO Mask-Grounding-DINO model. Trigger phrases include "train Mask Grounding DINO", "open-vocabulary segmentation",
-  "text-prompted instance segmentation", "grounded mask DETR".
+description: Mask Grounding DINO for grounded instance segmentation. Extends Grounding DINO with a mask-prediction head for open-set segmentation guided by text prompts. Use when training, evaluating, exporting, quantizing, or running inference for a TAO Mask-Grounding-DINO model. Trigger phrases include "train Mask Grounding DINO", "open-vocabulary segmentation", "text-prompted instance segmentation", "grounded mask DETR".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["segmentation"]'
 allowed-tools: Read Bash
-tags:
-- segmentation
 ---
-
 # Mask Grounding DINO
 
 Mask Grounding DINO for grounded instance segmentation. Extends Grounding DINO with mask prediction head for open-set segmentation guided by text prompts.

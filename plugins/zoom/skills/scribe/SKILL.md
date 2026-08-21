@@ -1,17 +1,9 @@
 ---
 name: scribe
-description: "Zoom AI Services Scribe for synchronous and batch transcription of uploaded or stored media. Use for Build-platform JWT auth, fast mode transcription, batch S3 jobs, webhook callbacks, and transcript-pipeline design."
-triggers:
-  - "scribe"
-  - "ai services scribe"
-  - "zoom scribe"
-  - "transcribe audio file"
-  - "transcribe video file"
-  - "batch transcription"
-  - "fast mode transcription"
-  - "build platform jwt"
+description: Zoom AI Services Scribe for synchronous and batch transcription of uploaded or stored media. Use for Build-platform JWT auth, fast mode transcription, batch S3 jobs, webhook callbacks, and transcript-pipeline design.
+metadata:
+  triggers: '["scribe","ai services scribe","zoom scribe","transcribe audio file","transcribe video file","batch transcription","fast mode transcription","build platform jwt"]'
 ---
-
 # Zoom AI Services Scribe
 
 **Current API audit:** Official docs and OpenAPI were rechecked on 2026-07-10. The May 18, 2026

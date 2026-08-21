@@ -269,15 +269,14 @@ def verify_plugin(plugin: Path, go: Path) -> None:
         if sha256((plugin / relative).read_bytes()) != expected:
             raise ValueError(f"Razorpay Ghast adapter changed at {relative}")
 
-    manifest = json.loads(
-        (plugin / ".ghast-plugin/plugin.json").read_text()
-    )
+    manifest = json.loads((plugin / "plugin.json").read_text())
+    ghast = manifest["extensions"]["ai.trapezohe.ghast"]
     if (
         manifest.get("name") != "razorpay"
         or manifest.get("repository") != OFFICIAL_REPOSITORY
-        or manifest.get("upstreamRevision") != OFFICIAL_REVISION
+        or ghast.get("upstreamRevision") != OFFICIAL_REVISION
         or manifest.get("license") != "MIT"
-        or manifest.get("portStatus")
+        or ghast.get("portStatus")
         != "official-source-readonly-adapter"
     ):
         raise ValueError("Razorpay Ghast manifest changed")

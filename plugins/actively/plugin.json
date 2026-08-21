@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "actively",
+  "version": "1.0.3-ghast.1",
+  "description": "Research and prioritize accounts using Actively's persistent Per-Account Agent intelligence, buying signals, prospect context, strategy, and next-best actions.",
+  "author": {
+    "name": "Actively",
+    "url": "https://www.actively.ai"
+  },
+  "homepage": "https://www.actively.ai/products/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "upstreamRevision": "actively-mcp-3c7c7f1750ee+api-e090dc2a687e+oauth-908b8114e7a6+auth-11a7486ac6ab",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

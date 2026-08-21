@@ -1,22 +1,9 @@
 ---
 name: deal-management
 description: Run the full deal lifecycle from CLI — discover pipelines/stages, qualify MQLs into deals with associations, advance/reassign in bulk, hunt stalled deals, and close.
-triggers:
-  - "create deal"
-  - "qualify lead"
-  - "MQL to SQL"
-  - "qualify MQL"
-  - "deal from contact"
-  - "advance deal"
-  - "move deal stage"
-  - "reassign deal"
-  - "stalled deals"
-  - "deals past close date"
-  - "accelerate pipeline"
-  - "close deal"
-  - "deal lifecycle"
+metadata:
+  triggers: '["create deal","qualify lead","MQL to SQL","qualify MQL","deal from contact","advance deal","move deal stage","reassign deal","stalled deals","deals past close date","accelerate pipeline","close deal","deal lifecycle"]'
 ---
-
 ## Resources
 
 | File | When to use |

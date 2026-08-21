@@ -1,19 +1,14 @@
 ---
 name: tao-train-mask-auto-label
-description: MAL (Mask Auto-Label) for weakly-supervised segmentation. Produces segmentation masks from minimal annotations
-  (point or box annotations) using a ViT-MAE backbone. Use when training, evaluating, or running inference for a TAO MAL
-  model. Trigger phrases include "train MAL", "Mask Auto-Label", "weakly-supervised segmentation", "box-prompted
-  segmentation", "minimal-annotation mask prediction".
+description: MAL (Mask Auto-Label) for weakly-supervised segmentation. Produces segmentation masks from minimal annotations (point or box annotations) using a ViT-MAE backbone. Use when training, evaluating, or running inference for a TAO MAL model. Trigger phrases include "train MAL", "Mask Auto-Label", "weakly-supervised segmentation", "box-prompted segmentation", "minimal-annotation mask prediction".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["segmentation"]'
 allowed-tools: Read Bash
-tags:
-- segmentation
 ---
-
 # MAL
 
 MAL (Mask Auto-Label) for weakly-supervised segmentation. Produces segmentation masks from minimal annotations (e.g., point or box annotations). Uses ViT-MAE backbone.

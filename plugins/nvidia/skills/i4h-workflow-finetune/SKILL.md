@@ -1,18 +1,12 @@
 ---
 name: i4h-workflow-finetune
-version: "0.6.0"
 description: Fine-tune a GR00T or openpi PI0 policy on a LeRobot dataset. Use when asked to finetune, train, or post-train a policy on demos; not for evaluating a checkpoint (use [[i4h-workflow-validate]]).
 license: Apache-2.0
 metadata:
-  author: "Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>"
-  tags:
-    - isaac-for-healthcare
-    - i4h
-    - agentic-workflow
-    - finetune
-    - training
+  author: Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>
+  tags: '["isaac-for-healthcare","i4h","agentic-workflow","finetune","training"]'
+  version: 0.6.0
 ---
-
 # i4h Workflow — Finetune
 
 ## Purpose

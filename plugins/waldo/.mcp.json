@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "waldo": {
-      "type": "http",
-      "url": "https://mcp.waldo.fyi/strategy"
-    }
-  }
-}

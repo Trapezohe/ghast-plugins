@@ -1,0 +1,29 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "render",
+  "version": "0.2.0-ghast.1",
+  "description": "Skills for deploying, debugging, monitoring, and migrating apps on Render.",
+  "author": {
+    "name": "Render",
+    "email": "support@render.com",
+    "url": "https://render.com"
+  },
+  "homepage": "https://github.com/renderinc/render-codex-plugin",
+  "repository": "https://github.com/renderinc/render-codex-plugin",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "development",
+      "upstreamRevision": "14032768453fd21c57f7e3a9c0e7659a2c7dce9d",
+      "upstreamPath": ".",
+      "icon": "./assets/icon.svg",
+      "mcpServerExtensions": {
+        "render": {
+          "oauth": {
+            "client_id": "codex"
+          }
+        }
+      }
+    }
+  }
+}

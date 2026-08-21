@@ -1,16 +1,9 @@
 ---
 name: custom-object-management
 description: Discover, create, update, and delete custom CRM object schemas. Use when defining a new object type, inspecting existing schemas, or removing one. Record CRUD on custom objects is identical to standard objects — see `bulk-operations`.
-triggers:
-  - "create custom object"
-  - "custom object schema"
-  - "define new object type"
-  - "list object schemas"
-  - "delete custom object"
-  - "update schema labels"
-  - "what custom objects exist"
+metadata:
+  triggers: '["create custom object","custom object schema","define new object type","list object schemas","delete custom object","update schema labels","what custom objects exist"]'
 ---
-
 ## Source of truth
 
 `hubspot schemas --help` is authoritative. Subcommands: `list`, `get`, `create`, `update` (metadata only), `delete` (destructive). Schema writes require a private app token with `crm.schemas.custom.write`. Read `bulk-operations/SKILL.md` first — every command here uses its JSONL conventions, and `schemas delete` uses its dry-run / digest / confirm flow.

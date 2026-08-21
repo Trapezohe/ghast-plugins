@@ -1,19 +1,9 @@
 ---
 name: sales-reporting
 description: Daily briefings, pipeline snapshots, and win/loss analysis from the terminal — closing-this-week, open pipeline by stage/owner, and closed-won vs closed-lost over a period.
-triggers:
-  - "daily briefing"
-  - "pipeline snapshot"
-  - "deals closing this week"
-  - "deals by owner"
-  - "win rate"
-  - "closed won"
-  - "closed lost"
-  - "win/loss analysis"
-  - "revenue by month"
-  - "pipeline by stage"
+metadata:
+  triggers: '["daily briefing","pipeline snapshot","deals closing this week","deals by owner","win rate","closed won","closed lost","win/loss analysis","revenue by month","pipeline by stage"]'
 ---
-
 ## Source of truth
 
 `hubspot <command> --help` is authoritative. Build on `bulk-operations/SKILL.md` — JSONL shape, batch-read rules, and pagination live there. Reshape patterns: `bulk-operations/resources/json-patterns.md`. `search`/`list` cap at 100 rows per call; a result of exactly 100 is almost always truncated — paginate via `bulk-operations/SKILL.md` before aggregating.

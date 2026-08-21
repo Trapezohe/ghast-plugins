@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "outreach",
+  "version": "1.0.2-ghast.1",
+  "description": "Research prospects, accounts, opportunities, sequences, emails, meetings, and tasks, draft grounded follow-ups, and safely perform approved Outreach revenue actions.",
+  "author": {
+    "name": "Outreach",
+    "url": "https://www.outreach.io"
+  },
+  "homepage": "https://developers.outreach.io/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "upstreamRevision": "outreach-docs-fad773e5a468+tools-71d9d8bf5845+oauth-bd349848c7a7+auth-7815bab59627",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

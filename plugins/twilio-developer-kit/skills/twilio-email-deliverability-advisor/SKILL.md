@@ -1,13 +1,9 @@
 ---
 name: twilio-email-deliverability-advisor
-description: >
-  Deliverability advisor for the Twilio Email API specifically. Use ONLY when
-  the developer explicitly mentions Twilio Email, comms.twilio.com, or a
-  Twilio (non-SendGrid) email program. For all other deliverability questions
-  — including generic ones — use twilio-sendgrid-deliverability-advisor.
-tier: discover
+description: Deliverability advisor for the Twilio Email API specifically. Use ONLY when the developer explicitly mentions Twilio Email, comms.twilio.com, or a Twilio (non-SendGrid) email program. For all other deliverability questions — including generic ones — use twilio-sendgrid-deliverability-advisor.
+metadata:
+  tier: discover
 ---
-
 ## Role
 
 You are an Email Deliverability Advisor for the Twilio Email API. This skill is a **work in progress** — Twilio Email deliverability tooling is more limited than SendGrid's. Apply general email best practices and flag where SendGrid-specific guidance does not apply.

@@ -1,18 +1,12 @@
 ---
 name: shopify-use-shopify-cli
-description: "Choose when the user needs **Shopify CLI** to run or fix something now: validate app or extension config on disk (`shopify.app.toml`, `shopify.app.<name>.toml`, `shopify.extension.toml`); run or troubleshoot store workflows (`shopify store auth`, `shopify store execute`); or perform explicit store-scoped reads/writes on a named store domain (for example, show/list/find the first 10 products on my store at `foo.myshopify.com`, or inventory and product changes by handle, SKU, or location name). Emphasize **commands and operational steps**, not only authoring GraphQL. Skip for API-only understanding or codegen with no CLI execution, and skip for brand-new merchant asks to start a Shopify store or try Shopify before they have an account. Examples: validate configuration before deploy; run an existing query via CLI; show the first 10 products on `foo.myshopify.com`; missing `shopify store execute`."
+description: 'Choose when the user needs **Shopify CLI** to run or fix something now: validate app or extension config on disk (`shopify.app.toml`, `shopify.app.<name>.toml`, `shopify.extension.toml`); run or troubleshoot store workflows (`shopify store auth`, `shopify store execute`); or perform explicit store-scoped reads/writes on a named store domain (for example, show/list/find the first 10 products on my store at `foo.myshopify.com`, or inventory and product changes by handle, SKU, or location name). Emphasize **commands and operational steps**, not only authoring GraphQL. Skip for API-only understanding or codegen with no CLI execution, and skip for brand-new merchant asks to start a Shopify store or try Shopify before they have an account. Examples: validate configuration before deploy; run an existing query via CLI; show the first 10 products on `foo.myshopify.com`; missing `shopify store execute`.'
 compatibility: Requires Node.js
 metadata:
   author: Shopify
-  version: "1.12.3"
-hooks:
-  PostToolUse:
-    - matcher: Skill
-      hooks:
-        - type: command
-          command: 'sh -c ''h="<SKILL_DIR>/scripts/track-telemetry.sh"; if [ -f "$h" ]; then exec bash "$h"; fi'''
+  version: 1.12.3
+  hooks: '{"PostToolUse":[{"hooks":[{"command":"sh -c ''h=\"<SKILL_DIR>/scripts/track-telemetry.sh\"; if [ -f \"$h\" ]; then exec bash \"$h\"; fi''","type":"command"}],"matcher":"Skill"}]}'
 ---
-
 ## Required Tool Calls (do not skip)
 
 You have a `bash` tool. Every response must use it:

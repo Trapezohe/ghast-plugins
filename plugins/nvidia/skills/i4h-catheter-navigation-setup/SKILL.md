@@ -1,18 +1,12 @@
 ---
 name: i4h-catheter-navigation-setup
-version: "0.7.0"
 description: Verify host/GPU requirements and PYTHONPATH for the catheter navigation workflow. Use when asked to set up, install, or bootstrap catheter_navigation, or when hitting import/GPU/slangpy errors.
 license: Apache-2.0
 metadata:
-  author: "Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>"
-  tags:
-    - isaac-for-healthcare
-    - i4h
-    - catheter-navigation
-    - setup
-    - installation
+  author: Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>
+  tags: '["isaac-for-healthcare","i4h","catheter-navigation","setup","installation"]'
+  version: 0.7.0
 ---
-
 # i4h Catheter Navigation - Setup
 
 ## Purpose

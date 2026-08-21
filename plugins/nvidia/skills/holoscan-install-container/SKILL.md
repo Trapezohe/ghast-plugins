@@ -1,19 +1,13 @@
 ---
 name: holoscan-install-container
-version: "1.0.0"
-description: "Install Holoscan SDK via the NGC Docker container. Use for container-based installs; not for native apt/pip/Conda installs."
+description: Install Holoscan SDK via the NGC Docker container. Use for container-based installs; not for native apt/pip/Conda installs.
 license: Apache-2.0
 metadata:
-  author: "Holoscan Team <holoscan-team@nvidia.com>"
-  github-url: "https://github.com/nvidia-holoscan/holoscan-sdk"
-  tags:
-    - holoscan
-    - install
-    - container
-    - docker
-    - ngc
+  author: Holoscan Team <holoscan-team@nvidia.com>
+  github-url: https://github.com/nvidia-holoscan/holoscan-sdk
+  tags: '["holoscan","install","container","docker","ngc"]'
+  version: 1.0.0
 ---
-
 # Holoscan NGC Container Installation
 
 ## Purpose

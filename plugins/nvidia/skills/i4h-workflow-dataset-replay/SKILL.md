@@ -1,18 +1,12 @@
 ---
 name: i4h-workflow-dataset-replay
-version: "0.6.0"
 description: Replay a recorded HDF5 episode inside Isaac Sim for visual verification. Use when the user asks to replay, play back, or step through an HDF5 recording.
 license: Apache-2.0
 metadata:
-  author: "Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>"
-  tags:
-    - isaac-for-healthcare
-    - i4h
-    - dataset
-    - replay
-    - hdf5
+  author: Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>
+  tags: '["isaac-for-healthcare","i4h","dataset","replay","hdf5"]'
+  version: 0.6.0
 ---
-
 # i4h Workflow — Replay Dataset
 
 ## Purpose

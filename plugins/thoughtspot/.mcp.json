@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "thoughtspot": {
-      "type": "http",
-      "url": "https://agent.thoughtspot.app/mcp?api-version=2026-05-01"
-    }
-  }
-}

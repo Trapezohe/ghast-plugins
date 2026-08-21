@@ -1,0 +1,27 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "heygen",
+  "version": "1.3.2-ghast.1",
+  "description": "Create HeyGen avatar videos, personalized video messages, and translated / dubbed videos. Build a persistent digital identity from a photo, generate presenter-led videos with your digital twin, and localize existing videos into 175+ languages with voice cloning and lip-sync.",
+  "author": {
+    "name": "HeyGen",
+    "email": "developers@heygen.com",
+    "url": "https://heygen.com"
+  },
+  "homepage": "https://heygen.com",
+  "repository": "https://github.com/heygen-com/skills",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "creativity",
+      "upstreamRevision": "1bd5e4d33a028dfed3abf504c5e3dd644fb9ea8a",
+      "upstreamPath": ".",
+      "icon": "./assets/icon.png",
+      "mcpServerExtensions": {
+        "heygen": {
+          "note": "Official HeyGen MCP server. OAuth on first connection — runs against the user's existing HeyGen plan credits. The heygen-avatar and heygen-video skills detect this MCP and use it instead of the HeyGen CLI when available."
+        }
+      }
+    }
+  }
+}

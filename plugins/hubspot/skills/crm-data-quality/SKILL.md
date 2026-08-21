@@ -1,17 +1,9 @@
 ---
 name: crm-data-quality
 description: Find incomplete records, normalize field values in bulk, dedupe with `hubspot objects merge`, and audit custom properties. Builds on `bulk-operations` for JSONL piping and dry-run/digest/confirm.
-triggers:
-  - "clean up contacts"
-  - "data quality"
-  - "deduplicate"
-  - "missing fields"
-  - "normalize data"
-  - "find incomplete records"
-  - "merge duplicates"
-  - "audit properties"
+metadata:
+  triggers: '["clean up contacts","data quality","deduplicate","missing fields","normalize data","find incomplete records","merge duplicates","audit properties"]'
 ---
-
 Read `bulk-operations/SKILL.md` first — JSONL piping, batch read, pagination, and dry-run/digest/confirm gating apply to every command below.
 
 ## Property discovery

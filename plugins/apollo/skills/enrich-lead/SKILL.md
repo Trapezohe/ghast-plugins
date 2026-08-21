@@ -1,10 +1,10 @@
 ---
 name: enrich-lead
-description: "Instant lead enrichment. Drop a name, company, LinkedIn URL, or email and get the full contact card with email, phone, title, company intel, and next actions."
-user-invocable: true
-argument-hint: [name, company, LinkedIn URL, or email]
+description: Instant lead enrichment. Drop a name, company, LinkedIn URL, or email and get the full contact card with email, phone, title, company intel, and next actions.
+metadata:
+  user-invocable: 'true'
+  argument-hint: '["name","company","LinkedIn URL","or email"]'
 ---
-
 # Enrich Lead
 
 Turn any identifier into a full contact dossier. The user provides identifying info via "$ARGUMENTS".

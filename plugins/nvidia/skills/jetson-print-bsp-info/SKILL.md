@@ -1,15 +1,14 @@
 ---
 name: jetson-print-bsp-info
 description: Use when you need to print Jetson BSP info (L4T version, board configs, rootfs state) from a Linux_for_Tegra root on the host PC. This is an example skill.
-version: 0.0.1
-license: "Apache-2.0"
+license: Apache-2.0
 metadata:
-  author: "Jetson Team"
-  tags: [jetson, bsp, info]
-  languages: [bash]
+  author: Jetson Team
+  tags: '["jetson","bsp","info"]'
+  languages: '["bash"]'
   data-classification: public
+  version: 0.0.1
 ---
-
 # jetson-print-bsp-info
 
 Prints a concise summary of a Jetson Linux_for_Tegra (BSP) tree on the host PC.

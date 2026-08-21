@@ -1,10 +1,10 @@
 ---
 name: analytics
-description: "Instant sales analytics. Ask any performance question — emails, calls, meetings, tasks, opportunities, sequences, conversation intelligence — and get formatted tables with real Apollo data."
-user-invocable: true
-argument-hint: [your analytics question]
+description: Instant sales analytics. Ask any performance question — emails, calls, meetings, tasks, opportunities, sequences, conversation intelligence — and get formatted tables with real Apollo data.
+metadata:
+  user-invocable: 'true'
+  argument-hint: '["your analytics question"]'
 ---
-
 # Analytics
 
 Answer any sales performance question using Apollo's analytics data. The user asks a question via "$ARGUMENTS".

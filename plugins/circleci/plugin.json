@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "circleci",
+  "version": "1.0.47993-ghast.1",
+  "description": "Diagnose CircleCI runs, inspect logs, tests, and artifacts, rerun or cancel workflows, validate configuration, and manage CircleCI resources through CircleCI's official hosted MCP and full CLI MCP.",
+  "author": {
+    "name": "Circle Internet Services, Inc.",
+    "url": "https://circleci.com"
+  },
+  "homepage": "https://circleci.com/docs/guides/toolkit/circleci-mcp-overview/",
+  "repository": "https://github.com/CircleCI-Public/circleci-cli",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "development",
+      "upstreamRevision": "1121fafe77b5b2bfa623dda1a244517ff604a823",
+      "upstreamPath": ".",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

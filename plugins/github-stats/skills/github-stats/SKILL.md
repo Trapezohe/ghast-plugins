@@ -1,10 +1,10 @@
 ---
 name: github-stats
 description: Use this skill when the user asks about a public GitHub repository's stars, forks, issues, language, last commit, or topics; or about a GitHub user/organization's profile, follower count, or public repos. Hits the anonymous GitHub REST API.
-version: 1.0.0
-allowed-tools: [WebFetch, Bash]
+metadata:
+  version: 1.0.0
+allowed-tools: WebFetch Bash
 ---
-
 # GitHub Stats
 
 When the user references a public GitHub repo (`owner/repo`) or user/org login

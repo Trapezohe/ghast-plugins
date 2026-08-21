@@ -1,22 +1,14 @@
 ---
 name: jetson-init-source
-description: >-
-  Set up the BSP source workspace: Linux_for_Tegra overlay tracker,
-  bsp_sources, Crosstool-NG toolchain. Use after jetson-init-image;
-  not for fetching inputs.
-version: 0.0.1
-license: "Apache-2.0"
+description: 'Set up the BSP source workspace: Linux_for_Tegra overlay tracker, bsp_sources, Crosstool-NG toolchain. Use after jetson-init-image; not for fetching inputs.'
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
-  tags:
-    - bsp
-    - workspace
-    - kernel
-    - bootstrap
+  author: Jetson Team
+  tags: '["bsp","workspace","kernel","bootstrap"]'
   domain: meta
+  version: 0.0.1
 ---
-
 # Initialize BSP Customization Workspace
 
 ## Overview

@@ -1,10 +1,7 @@
 ---
-name: replatform
-description: >-
-  Routes RePlatform source-to-Wix migrations to the next workflow step by inspecting
-  migration project artifacts. Use when starting, continuing, or recovering a migration run.
+name: wix-replatform
+description: Routes RePlatform source-to-Wix migrations to the next workflow step by inspecting migration project artifacts. Use when starting, continuing, or recovering a migration run.
 ---
-
 # replatform
 
 Guide the user or agent to the next migration step by inspecting the active migration

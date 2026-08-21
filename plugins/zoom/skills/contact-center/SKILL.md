@@ -1,19 +1,9 @@
 ---
 name: contact-center
-description: "Zoom Contact Center skill pack for Contact Center apps, web embeds, and native mobile SDK integrations. Use for lifecycle patterns, engagement context/state handling, campaigns, callbacks, and version-drift troubleshooting."
-triggers:
-  - "contact center sdk"
-  - "zoom contact center"
-  - "zcc"
-  - "engagement context"
-  - "engagement status"
-  - "campaign sdk"
-  - "scheduled callback"
-  - "getengagementcontext"
-  - "onengagementstatuschange"
-  - "zoom contact center app"
+description: Zoom Contact Center skill pack for Contact Center apps, web embeds, and native mobile SDK integrations. Use for lifecycle patterns, engagement context/state handling, campaigns, callbacks, and version-drift troubleshooting.
+metadata:
+  triggers: '["contact center sdk","zoom contact center","zcc","engagement context","engagement status","campaign sdk","scheduled callback","getengagementcontext","onengagementstatuschange","zoom contact center app"]'
 ---
-
 # Zoom Contact Center
 
 Implementation guidance for Zoom Contact Center across:

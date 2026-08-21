@@ -1,25 +1,14 @@
 ---
 name: jetson-customize-clocks
 description: Use to lock/cap Jetson CPU/GPU/EMC clocks, toggle EMC/CPU DVFS, or change cpufreq governors by editing BPMP DTB and nvpower.sh pre-flash. Do NOT use for live tuning or nvpmodel edits.
-version: 0.0.1
-license: "Apache-2.0"
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
-  tags:
-    - clocks
-    - cpu
-    - gpu
-    - emc
-    - dvfs
-    - bwmgr
-    - bpmp
-    - nvpower
-    - cpufreq
-    - devfreq
+  author: Jetson Team
+  tags: '["clocks","cpu","gpu","emc","dvfs","bwmgr","bpmp","nvpower","cpufreq","devfreq"]'
   domain: clocks
+  version: 0.0.1
 ---
-
 # Customize Clocks
 
 ## Purpose

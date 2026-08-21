@@ -1,22 +1,14 @@
 ---
 name: jetson-derive-carrier
-description: >-
-  Bootstrap a custom carrier board by forking carrier files and
-  scaffolding a DT overlay from the reference devkit. Use after
-  jetson-init-source; not for module-level or kernel-DTB changes.
-version: 0.0.1
-license: "Apache-2.0"
+description: Bootstrap a custom carrier board by forking carrier files and scaffolding a DT overlay from the reference devkit. Use after jetson-init-source; not for module-level or kernel-DTB changes.
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
-  tags:
-    - target-platform
-    - custom-carrier
-    - bring-up
-    - setup
+  author: Jetson Team
+  tags: '["target-platform","custom-carrier","bring-up","setup"]'
   domain: meta
+  version: 0.0.1
 ---
-
 # jetson-derive-carrier
 
 Customize first-run gate for any `customize-*` skill on a custom

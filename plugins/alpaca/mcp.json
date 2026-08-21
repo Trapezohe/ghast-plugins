@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "alpaca-trading": {
+      "type": "streamable-http",
+      "url": "https://api.alpaca.markets/mcp"
+    },
+    "alpaca-trading-paper": {
+      "type": "streamable-http",
+      "url": "https://paper-api.alpaca.markets/mcp"
+    },
+    "alpaca-market-data": {
+      "type": "streamable-http",
+      "url": "https://data.alpaca.markets/mcp"
+    }
+  }
+}

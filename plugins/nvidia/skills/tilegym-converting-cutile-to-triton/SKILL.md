@@ -1,24 +1,13 @@
 ---
 name: tilegym-converting-cutile-to-triton
-version: "1.0.0"
 description: Converts cuTile GPU kernels (@ct.kernel) to Triton (@triton.jit). Handles standard in-repo conversion, debugging (cudaErrorIllegalAddress, shape mismatch, numerical mismatch), and mapping cuTile idioms (ct.load/ct.store, ct.Constant, ct.launch) to Triton equivalents. Covers dual-kernel layout flags (e.g. transpose=True/False + autotune grid via META) per translations/advanced-patterns.md. Use when converting, porting, or translating cuTile kernels to Triton, or debugging existing Triton translations.
 license: CC-BY-4.0 AND Apache-2.0
-tools:
-  - Read
-  - Write
-  - Grep
-  - Glob
-  - Bash
 metadata:
-  author: "TileGym Team <TileGym@nvidia.com>"
-  tags:
-    - cutile
-    - triton
-    - conversion
-    - gpu
-    - kernel
+  author: TileGym Team <TileGym@nvidia.com>
+  tags: '["cutile","triton","conversion","gpu","kernel"]'
+  version: 1.0.0
+  tools: '["Read","Write","Grep","Glob","Bash"]'
 ---
-
 # cuTile → Triton Conversion
 
 Convert `@ct.kernel` kernels to `@triton.jit`. API mapping: [references/api-mapping.md](./references/api-mapping.md) (cuTile → Triton).

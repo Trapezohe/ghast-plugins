@@ -1,28 +1,12 @@
 ---
 name: tao-finetune-huggingface-model
-description: >
-  Fine-tune any HuggingFace CV / VLM / LLM model on local NVIDIA GPUs inside an
-  NGC PyTorch container. Use when the user wants to fine-tune a HuggingFace
-  model (full or LoRA), train a vision / VLM / LLM model end-to-end, generate a
-  reproducible HF training pipeline, smoke-test a HuggingFace model locally
-  before scale-up, push a fine-tuned model to the HF Hub with a model card, or
-  emit a self-contained rerun skill for an existing HuggingFace finetune.
-  Supports image classification, object detection, semantic / instance /
-  panoptic segmentation, depth estimation, image-text-to-text VLM (SFT / LoRA),
-  and LLM SFT / DPO / GRPO. Six-step workflow: inspect and qualify, hardware
-  and NGC image, research, generate and smoke, train + eval + infer, push and
-  emit rerun skill.
+description: 'Fine-tune any HuggingFace CV / VLM / LLM model on local NVIDIA GPUs inside an NGC PyTorch container. Use when the user wants to fine-tune a HuggingFace model (full or LoRA), train a vision / VLM / LLM model end-to-end, generate a reproducible HF training pipeline, smoke-test a HuggingFace model locally before scale-up, push a fine-tuned model to the HF Hub with a model card, or emit a self-contained rerun skill for an existing HuggingFace finetune. Supports image classification, object detection, semantic / instance / panoptic segmentation, depth estimation, image-text-to-text VLM (SFT / LoRA), and LLM SFT / DPO / GRPO. Six-step workflow: inspect and qualify, hardware and NGC image, research, generate and smoke, train + eval + infer, push and emit rerun skill.'
 license: Apache-2.0
-tags:
-  - finetuning
-  - huggingface
-  - nvidia-tao
-  - computer-vision
-  - training
 compatibility: Requires docker + nvidia-container-toolkit, NVIDIA GPU (driver ≥ 545, ≥ 24 GB VRAM for ≤3B models), ~40 GB free disk. Optional credentials (read from the session environment, exported before launching) — HF_TOKEN is read only when the model/dataset is gated or `push_to_hub` is on; WANDB_API_KEY and WANDB_PROJECT only when WandB logging is enabled.
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["finetuning","huggingface","nvidia-tao","computer-vision","training"]'
 allowed-tools: Read Bash Write
 ---
 <!-- Copyright (c) 2026, NVIDIA CORPORATION. All rights reserved. Licensed under the Apache License, Version 2.0; see http://www.apache.org/licenses/LICENSE-2.0 -->

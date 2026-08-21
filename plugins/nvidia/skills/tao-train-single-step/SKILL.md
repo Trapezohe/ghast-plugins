@@ -1,21 +1,14 @@
 ---
 name: tao-train-single-step
-description: Standard single-step train/eval/export workflow for any TAO model. Use when training a TAO model on a dataset
-  without iterative data augmentation, AutoML, or DEFT loops. Trigger phrases include "single train run", "train then evaluate
-  then export", "plain TAO training", "normal training", "no AutoML", "skip the loop". Routes through the per-model SKILL.md
-  for action specifics and through `tao-launch-workflow` for platform/credentials/dataset intake.
+description: Standard single-step train/eval/export workflow for any TAO model. Use when training a TAO model on a dataset without iterative data augmentation, AutoML, or DEFT loops. Trigger phrases include "single train run", "train then evaluate then export", "plain TAO training", "normal training", "no AutoML", "skip the loop". Routes through the per-model SKILL.md for action specifics and through `tao-launch-workflow` for platform/credentials/dataset intake.
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit. Workflows declare additional requirements.
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["training","single-step","generic"]'
 allowed-tools: Read Bash Write
-tags:
-- training
-- single-step
-- generic
 ---
-
 # Normal Train
 
 Standard supervised fine-tuning: train a model on a labeled dataset, optionally evaluate, then optionally export. The most common TAO workflow for adapting a pretrained model to a new dataset.

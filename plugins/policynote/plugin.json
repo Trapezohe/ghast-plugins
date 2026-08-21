@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "policynote",
+  "version": "1.0.3-ghast.1",
+  "description": "Research global legislation, regulation, officials, elections, transcripts, and policy activity through PolicyNote.",
+  "author": {
+    "name": "FiscalNote, Inc.",
+    "url": "https://fiscalnote.com/products/policynote-api"
+  },
+  "homepage": "https://data.policynote.com/docs",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "data",
+      "upstreamRevision": "policynote-openapi-4d5c3f24a751+tools-0e493cadeb9c+resource-623cd1868d2a+oauth-b4a930c792dc+terms-f2c8c8b7bafb",
+      "portStatus": "full",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

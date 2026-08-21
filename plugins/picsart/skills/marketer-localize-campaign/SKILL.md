@@ -2,9 +2,11 @@
 name: marketer-localize-campaign
 description: Localize a campaign across N markets.
 license: MIT
-metadata: {"author": "Picsart", "version": "1.0.0", "hermes": {"category": "marketing", "tags": ["picsart", "marketing", "campaigns", "creative"]}}
+metadata:
+  author: Picsart
+  version: 1.0.0
+  hermes: '{"category":"marketing","tags":["picsart","marketing","campaigns","creative"]}'
 ---
-
 # Localize campaign
 
 Take one finished campaign and adapt it to N markets — translated copy, culturally appropriate visuals, right-to-left handling for AR/HE, and text-expansion-safe layouts. Built for consistency (same campaign identity per market) and speed (one batch per locale).

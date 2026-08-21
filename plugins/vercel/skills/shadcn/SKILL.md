@@ -2,50 +2,13 @@
 name: shadcn
 description: shadcn/ui expert guidance — CLI, component installation, composition patterns, custom registries, theming, Tailwind CSS integration, and high-quality interface design. Use when initializing shadcn, adding components, composing product UI, building custom registries, configuring themes, or troubleshooting component issues.
 metadata:
-  priority: 6
-  docs:
-    - "https://ui.shadcn.com/docs"
-    - "https://ui.shadcn.com/docs/components"
-  pathPatterns:
-    - 'components.json'
-    - 'components/ui/**'
-    - 'src/components/ui/**'
-    - 'apps/*/components/ui/**'
-    - 'apps/*/src/components/ui/**'
-    - 'packages/*/components/ui/**'
-    - 'packages/*/src/components/ui/**'
-  bashPatterns:
-    - '\bnpx\s+shadcn\b'
-    - '\bnpx\s+shadcn@latest\s+(init|add|build|search|list|migrate|info|docs|view)\b'
-    - '\bnpx\s+create-next-app\b'
-    - '\bbunx\s+create-next-app\b'
-    - '\bpnpm\s+create\s+next-app\b'
-    - '\bnpm\s+create\s+next-app\b'
-validate:
-  -
-    pattern: '"base"\s*:\s*"base-ui"'
-    message: 'AI Elements components use Radix-specific APIs (asChild, openDelay) and have type errors with Base UI. If this project uses AI Elements, reinitialize with: npx shadcn@latest init -d --base radix -f'
-    severity: warn
-retrieval:
-  aliases:
-    - shadcn ui
-    - component library
-    - ui components
-    - tailwind components
-  intents:
-    - add shadcn component
-    - set up shadcn
-    - customize theme
-    - build ui
-  entities:
-    - shadcn/ui
-    - Tailwind CSS
-    - registry
-    - theme
-    - components.json
-
+  priority: '6'
+  docs: '["https://ui.shadcn.com/docs","https://ui.shadcn.com/docs/components"]'
+  pathPatterns: '["components.json","components/ui/**","src/components/ui/**","apps/*/components/ui/**","apps/*/src/components/ui/**","packages/*/components/ui/**","packages/*/src/components/ui/**"]'
+  bashPatterns: '["\\bnpx\\s+shadcn\\b","\\bnpx\\s+shadcn@latest\\s+(init|add|build|search|list|migrate|info|docs|view)\\b","\\bnpx\\s+create-next-app\\b","\\bbunx\\s+create-next-app\\b","\\bpnpm\\s+create\\s+next-app\\b","\\bnpm\\s+create\\s+next-app\\b"]'
+  validate: '[{"message":"AI Elements components use Radix-specific APIs (asChild, openDelay) and have type errors with Base UI. If this project uses AI Elements, reinitialize with: npx shadcn@latest init -d --base radix -f","pattern":"\"base\"\\s*:\\s*\"base-ui\"","severity":"warn"}]'
+  retrieval: '{"aliases":["shadcn ui","component library","ui components","tailwind components"],"entities":["shadcn/ui","Tailwind CSS","registry","theme","components.json"],"intents":["add shadcn component","set up shadcn","customize theme","build ui"]}'
 ---
-
 # shadcn/ui
 
 You are an expert in shadcn/ui — a collection of beautifully designed, accessible, and customizable React components built on Radix UI primitives and Tailwind CSS. Components are added directly to your codebase as source code, not installed as a dependency.

@@ -1,22 +1,14 @@
 ---
 name: tao-analyze-changenet-rca
-description: Performs deep Root Cause Analysis (RCA) on NVIDIA TAO Visual ChangeNet classification experiments with
-  image-evidence-driven investigation. Use when analyzing ChangeNet model failures, investigating poor recall / FAR / PASS-NO_PASS
-  metrics, auditing visual inspection pipeline quality, or running an RCA report for an AOI defect-detection model.
-  Trigger phrases include "RCA on my ChangeNet model", "why is my AOI model failing", "audit ChangeNet predictions",
-  "investigate FAR regressions", "root cause analysis on visual-changenet".
+description: Performs deep Root Cause Analysis (RCA) on NVIDIA TAO Visual ChangeNet classification experiments with image-evidence-driven investigation. Use when analyzing ChangeNet model failures, investigating poor recall / FAR / PASS-NO_PASS metrics, auditing visual inspection pipeline quality, or running an RCA report for an AOI defect-detection model. Trigger phrases include "RCA on my ChangeNet model", "why is my AOI model failing", "audit ChangeNet predictions", "investigate FAR regressions", "root cause analysis on visual-changenet".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit. Workflows declare additional requirements.
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["application","rca","changenet"]'
 allowed-tools: Read Bash
-tags:
-- application
-- rca
-- changenet
 ---
-
 # TAO ChangeNet Classification RCA Skill
 
 You are an expert investigator for NVIDIA TAO Visual ChangeNet classification experiments. Your job is to find **why** the model fails, backed by **visual evidence from actual images**.

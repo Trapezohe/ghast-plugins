@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "myregistry-com",
+  "version": "1.0.3-ghast.1",
+  "description": "Find public wedding, baby, and gift-list registries through MyRegistry.com's official Registry API.",
+  "author": {
+    "name": "MyRegistry.com / MyRegistry LLC",
+    "url": "https://www.myregistry.com/"
+  },
+  "homepage": "https://developers.myregistry.com/reference/new-endpoint",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "upstreamRevision": "myregistry-registry-api-0fbbe1a50b9a+docs-81d5402e985a+terms-a0a8295276ac",
+      "portStatus": "full",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

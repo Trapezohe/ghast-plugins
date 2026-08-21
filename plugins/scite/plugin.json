@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "scite",
+  "version": "1.0.3-ghast.1",
+  "description": "Search and verify scientific literature, patents, trials, grants, regulatory records, adverse-event reports, drugs, and research collections through Scite's official hosted MCP server.",
+  "author": {
+    "name": "Scite",
+    "url": "https://scite.ai"
+  },
+  "homepage": "https://docs.scite.ai/mcp/overview",
+  "repository": "https://github.com/scitedotai/scite-mcp-skill",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "research",
+      "upstreamRevision": "9f3e3cd02c477e16c0a9b5c9114c9692d9a73317",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

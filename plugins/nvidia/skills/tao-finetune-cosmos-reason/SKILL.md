@@ -1,24 +1,14 @@
 ---
 name: tao-finetune-cosmos-reason
-description: Cosmos3-Nano video QA supervised fine-tuning with FSDP parallelism. Use when training or evaluating video
-  question-answering models, fine-tuning Cosmos3-Nano or compatible Cosmos Reason models with SFT/LoRA, or working with
-  Cosmos-RL. Trigger phrases include "fine-tune Cosmos", "Cosmos3 Nano Reasoner", "Cosmos-RL SFT",
-  "video QA fine-tune", "Cosmos3-Nano training".
+description: Cosmos3-Nano video QA supervised fine-tuning with FSDP parallelism. Use when training or evaluating video question-answering models, fine-tuning Cosmos3-Nano or compatible Cosmos Reason models with SFT/LoRA, or working with Cosmos-RL. Trigger phrases include "fine-tune Cosmos", "Cosmos3 Nano Reasoner", "Cosmos-RL SFT", "video QA fine-tune", "Cosmos3-Nano training".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["video","qa","cosmos","sft","reasoning","vlm"]'
 allowed-tools: Read Bash
-tags:
-- video
-- qa
-- cosmos
-- sft
-- reasoning
-- vlm
 ---
-
 # Cosmos-RL
 
 Supervised fine-tuning (SFT) of Cosmos Reason video QA models. The packaged

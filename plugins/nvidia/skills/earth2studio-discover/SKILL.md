@@ -1,21 +1,12 @@
 ---
 name: earth2studio-discover
-version: 0.16.0
+description: Find Earth2Studio models, data sources, and examples for a weather/climate use case. Do NOT use for writing inference code, downloading data, or installation.
 license: Apache-2.0
 metadata:
   author: NVIDIA Earth-2 Team
-  tags:
-    - earth2studio
-    - earth2
-    - python
-    - discovery
-    - models
-    - data-sources
-description: >
-  Find Earth2Studio models, data sources, and examples for a weather/climate use
-  case. Do NOT use for writing inference code, downloading data, or installation.
+  tags: '["earth2studio","earth2","python","discovery","models","data-sources"]'
+  version: 0.16.0
 ---
-
 # Earth2Studio Discoverability Skill
 
 ## Purpose

@@ -1,51 +1,17 @@
 ---
 name: physical-ai-neural-reconstruction
-description: "Router for NVIDIA NuRec/NRE: USDZ rendering, NCore conversion, 3DGS, gRPC sensor sim, PhysicalAI HF datasets. Do NOT use for SimReady or infra setup."
+description: 'Router for NVIDIA NuRec/NRE: USDZ rendering, NCore conversion, 3DGS, gRPC sensor sim, PhysicalAI HF datasets. Do NOT use for SimReady or infra setup.'
 license: Apache-2.0
-version: "0.3.0"
-tools:
-  - Read
-  - Shell
-compatibility: >-
-  Router skill; downstream sibling skills require Docker, NVIDIA Container
-  Toolkit, GPU, NGC API key, Hugging Face token with PhysicalAI gated
-  licenses accepted, Python 3.10+, and `huggingface_hub`. Optional:
-  CARLA / Isaac Sim 5.1 / AlpaSim for simulator integration over
-  `serve-grpc`.
+compatibility: 'Router skill; downstream sibling skills require Docker, NVIDIA Container Toolkit, GPU, NGC API key, Hugging Face token with PhysicalAI gated licenses accepted, Python 3.10+, and `huggingface_hub`. Optional: CARLA / Isaac Sim 5.1 / AlpaSim for simulator integration over `serve-grpc`.'
 metadata:
   author: NVIDIA Physical AI
-  tags:
-    - physical-ai
-    - nurec
-    - neural-reconstruction
-  upstream:
-    repo: https://github.com/NVIDIA/nurec-skills
-    branch: main
-    skills_dir: .agents/skills/
-    skills_dir_alias: skills/
-    index_skill: .agents/skills/SKILL.md
-    index_skill_name: nurec-index
-    sibling_skills:
-      - name: physical-ai-datasets
-        folder: physical-ai-datasets/
-        upstream: https://huggingface.co/nvidia
-      - name: ncore
-        folder: ncore/
-        upstream: https://github.com/NVIDIA/ncore
-      - name: nre
-        folder: nre/
-        upstream: nvcr.io/nvidia/nre/nre
-      - name: asset-harvester
-        folder: asset-harvester/
-        upstream: https://github.com/NVIDIA/asset-harvester
-      - name: nurec-fixer
-        folder: nurec-fixer/
-        upstream: https://github.com/NVIDIA/harmonizer
-        hf_model: https://huggingface.co/nvidia/DiffusionHarmonizer
-  upstream_clone_path: "${PHYSICAL_AI_SKILL_HUB_UPSTREAM_ROOT:-$HOME/.physical-ai-skill-hub/upstreams}/nurec-skills"
+  tags: '["physical-ai","nurec","neural-reconstruction"]'
+  upstream: '{"branch":"main","index_skill":".agents/skills/SKILL.md","index_skill_name":"nurec-index","repo":"https://github.com/NVIDIA/nurec-skills","sibling_skills":[{"folder":"physical-ai-datasets/","name":"physical-ai-datasets","upstream":"https://huggingface.co/nvidia"},{"folder":"ncore/","name":"ncore","upstream":"https://github.com/NVIDIA/ncore"},{"folder":"nre/","name":"nre","upstream":"nvcr.io/nvidia/nre/nre"},{"folder":"asset-harvester/","name":"asset-harvester","upstream":"https://github.com/NVIDIA/asset-harvester"},{"folder":"nurec-fixer/","hf_model":"https://huggingface.co/nvidia/DiffusionHarmonizer","name":"nurec-fixer","upstream":"https://github.com/NVIDIA/harmonizer"}],"skills_dir":".agents/skills/","skills_dir_alias":"skills/"}'
+  upstream_clone_path: ${PHYSICAL_AI_SKILL_HUB_UPSTREAM_ROOT:-$HOME/.physical-ai-skill-hub/upstreams}/nurec-skills
   upstream_override_env: NUREC_SKILLS_UPSTREAM_ROOT
+  version: 0.3.0
+  tools: '["Read","Shell"]'
 ---
-
 # Physical AI Neural Reconstruction (NuRec) Router
 
 ## Purpose

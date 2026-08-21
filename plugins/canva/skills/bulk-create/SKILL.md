@@ -1,8 +1,7 @@
 ---
-name: canva-bulk-create
+name: bulk-create
 description: Bulk-create Canva designs from tabular data using a brand template with autofill fields, producing one design per row. Use when users say "bulk create designs from this CSV", "generate one design per row", "create a design for each product", "batch generate from a template", or "autofill a template from a spreadsheet". Accepts any tabular data source — uploaded files, pasted tables, JSON, or URLs.
 ---
-
 # Canva Bulk Design Creation
 
 Create one Canva design per row of data by autofilling a brand template with data tags.

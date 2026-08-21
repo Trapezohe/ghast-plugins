@@ -1,10 +1,10 @@
 ---
 name: uptime-check
 description: Use this skill when the user asks whether a website or API endpoint is up, reachable, or how fast it responds. Probes the URL with curl (timing) or WebFetch and reports HTTP status + latency.
-version: 1.0.0
-allowed-tools: [Bash, WebFetch]
+metadata:
+  version: 1.0.0
+allowed-tools: Bash WebFetch
 ---
-
 # Uptime Check
 
 When the user asks "is <site> up", "can you reach <url>", "how fast does

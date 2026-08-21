@@ -2,9 +2,11 @@
 name: dev-screenshot-beautifier
 description: Polish raw screenshots into LP-ready heroes.
 license: MIT
-metadata: {"author": "Picsart", "version": "1.0.0", "hermes": {"category": "dev", "tags": ["picsart", "dev", "developer-tools", "automation"]}}
+metadata:
+  author: Picsart
+  version: 1.0.0
+  hermes: '{"category":"dev","tags":["picsart","dev","developer-tools","automation"]}'
 ---
-
 # Screenshot beautifier
 
 A polish pipeline that takes a raw UI screenshot (localhost capture, production screen grab, mobile viewport) and turns it into a blog-ready, changelog-ready, doc-ready hero: device-framed, drop-shadowed, on a gradient backdrop, dark-mode matched.

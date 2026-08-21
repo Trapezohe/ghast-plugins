@@ -1,27 +1,19 @@
 ---
-name: "cudaq-guide"
-title: "Cuda Quantum"
-description: "CUDA-Q onboarding guide for installation, test programs, GPU simulation, QPU hardware, and quantum applications."
-version: "1.0.1"
-author: "CUDA-Q Team <cuda-quantum@nvidia.com>"
-tags: [cuda-quantum, quantum-computing, onboarding, getting-started, nvidia]
-tools: [Read, Glob, Grep]
-license: "Apache-2.0"
-compatibility: "Python 3.10+, C++ 20"
+name: cudaq-guide
+description: CUDA-Q onboarding guide for installation, test programs, GPU simulation, QPU hardware, and quantum applications.
+license: Apache-2.0
+compatibility: Python 3.10+, C++ 20
 metadata:
-    author: "CUDA-Q Team <cuda-quantum@nvidia.com>"
-    tags:
-        - cuda-quantum
-        - quantum-computing
-        - onboarding
-        - getting-started
-        - nvidia
-    languages:
-        - python
-        - c++
-    domain: "quantum"
+  author: CUDA-Q Team <cuda-quantum@nvidia.com>
+  tags: '["cuda-quantum","quantum-computing","onboarding","getting-started","nvidia"]'
+  languages: '["python","c++"]'
+  domain: quantum
+  title: Cuda Quantum
+  version: 1.0.1
+  legacy-author: CUDA-Q Team <cuda-quantum@nvidia.com>
+  legacy-tags: '["cuda-quantum","quantum-computing","onboarding","getting-started","nvidia"]'
+  tools: '["Read","Glob","Grep"]'
 ---
-
 ## CUDA-Q Getting Started Guide
 
 You are a CUDA-Q expert assistant. Use `$ARGUMENTS` with the routing table

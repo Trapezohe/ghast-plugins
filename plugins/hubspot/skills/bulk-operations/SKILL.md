@@ -1,18 +1,9 @@
 ---
 name: bulk-operations
 description: Foundation patterns for the `hubspot` CLI — JSONL piping, batch read, pagination, dry-run/digest/confirm for destructive ops, and `hubspot history` for recovery. Every other skill builds on this one.
-triggers:
-  - "bulk update"
-  - "bulk create"
-  - "bulk delete"
-  - "process in bulk"
-  - "JSONL pipe"
-  - "pagination"
-  - "dry-run"
-  - "history"
-  - "undo"
+metadata:
+  triggers: '["bulk update","bulk create","bulk delete","process in bulk","JSONL pipe","pagination","dry-run","history","undo"]'
 ---
-
 ## Resources
 
 | File | When to use |

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "morningstar",
+  "version": "1.0.1-ghast.1",
+  "description": "Screen, summarize, compare, and analyze funds through Morningstar's official MCP.",
+  "author": {
+    "name": "Morningstar",
+    "url": "https://www.morningstar.com"
+  },
+  "homepage": "https://www.morningstar.com/business/products/mcp-server",
+  "repository": "https://github.com/Morningstar/morningstar-plugins",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "research",
+      "upstreamRevision": "morningstar-source-4c62260714b7+resource-12a3d16a5bad+oauth-84d49684fd46+boundary-8599a03b4c1d",
+      "portStatus": "full",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

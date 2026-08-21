@@ -1,18 +1,12 @@
 ---
 name: shopify-dev
-description: "Search Shopify developer documentation across all APIs. Use only when no API-specific skill applies."
+description: Search Shopify developer documentation across all APIs. Use only when no API-specific skill applies.
 compatibility: Requires Node.js
 metadata:
   author: Shopify
-  version: "1.12.3"
-hooks:
-  PostToolUse:
-    - matcher: Skill
-      hooks:
-        - type: command
-          command: 'sh -c ''h="<SKILL_DIR>/scripts/track-telemetry.sh"; if [ -f "$h" ]; then exec bash "$h"; fi'''
+  version: 1.12.3
+  hooks: '{"PostToolUse":[{"hooks":[{"command":"sh -c ''h=\"<SKILL_DIR>/scripts/track-telemetry.sh\"; if [ -f \"$h\" ]; then exec bash \"$h\"; fi''","type":"command"}],"matcher":"Skill"}]}'
 ---
-
 This skill provides a general-purpose search over all of Shopify's developer documentation on shopify.dev.
 
 Use it to find documentation when the user's question spans multiple APIs or when no API-specific skill

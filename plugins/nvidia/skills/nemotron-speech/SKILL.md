@@ -1,63 +1,15 @@
 ---
-name: "nemotron-speech"
+name: nemotron-speech
 description: Routes NVIDIA Nemotron Speech (Riva) NIM tasks — deploys, runs, and tests ASR, TTS, and NMT NIMs on build.nvidia.com or self-hosted.
-triggers:
-  - Nemotron Speech
-  - deploy Riva NIM
-  - deploy ASR/TTS/NMT NIM
-  - Riva ASR
-  - Riva TTS
-  - Riva translation
-  - Parakeet
-  - Canary
-  - Whisper
-  - Nemotron ASR Streaming
-  - Magpie TTS
-  - DNT tag
-  - nemo2riva
-  - riva-build
-  - riva-deploy
-  - RMIR
-  - Riva NIM setup
-  - NGC API key
-  - force_eou
-  - Silero VAD
-  - Sortformer diarization
-  - chunk size Riva
-  - Riva HTTP
-  - Riva WebSocket
-  - grpc.nvcf.nvidia.com
-  - build.nvidia.com Riva
-version: "1.0.0"
 license: Apache-2.0
 metadata:
-  author: "Nemotron Speech Team"
+  author: Nemotron Speech Team
   team: riva
-  tags:
-    - nvidia
-    - nemotron-speech
-    - riva
-    - nim
-    - asr
-    - tts
-    - nmt
-    - speech
-    - speech-to-text
-    - text-to-speech
-    - translation
-    - parakeet
-    - canary
-    - whisper
-    - magpie
-    - nemotron
-    - grpc
-    - http
-    - websocket
-    - cloud
-    - nvcf
+  tags: '["nvidia","nemotron-speech","riva","nim","asr","tts","nmt","speech","speech-to-text","text-to-speech","translation","parakeet","canary","whisper","magpie","nemotron","grpc","http","websocket","cloud","nvcf"]'
   domain: ml
+  triggers: '["Nemotron Speech","deploy Riva NIM","deploy ASR/TTS/NMT NIM","Riva ASR","Riva TTS","Riva translation","Parakeet","Canary","Whisper","Nemotron ASR Streaming","Magpie TTS","DNT tag","nemo2riva","riva-build","riva-deploy","RMIR","Riva NIM setup","NGC API key","force_eou","Silero VAD","Sortformer diarization","chunk size Riva","Riva HTTP","Riva WebSocket","grpc.nvcf.nvidia.com","build.nvidia.com Riva"]'
+  version: 1.0.0
 ---
-
 # Nemotron Speech Skills
 
 > **Note:** "Nemotron Speech" is the public-facing name for what NVIDIA documents today as **Riva** / **Riva NIM**. All commands, container images, gRPC APIs, Python imports, and documentation URLs still use **"Riva"** — the rename is brand-only. Do not rename commands, images, or doc URLs.

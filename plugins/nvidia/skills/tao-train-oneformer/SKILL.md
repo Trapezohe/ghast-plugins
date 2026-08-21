@@ -1,19 +1,14 @@
 ---
 name: tao-train-oneformer
-description: OneFormer for universal image segmentation. Unifies panoptic, instance, and semantic segmentation with a
-  single architecture using task-conditioned queries. Use when training, evaluating, exporting, quantizing, or running
-  inference for a TAO OneFormer model. Trigger phrases include "train OneFormer", "universal segmentation",
-  "task-conditioned segmentation", "panoptic / instance / semantic in one model".
+description: OneFormer for universal image segmentation. Unifies panoptic, instance, and semantic segmentation with a single architecture using task-conditioned queries. Use when training, evaluating, exporting, quantizing, or running inference for a TAO OneFormer model. Trigger phrases include "train OneFormer", "universal segmentation", "task-conditioned segmentation", "panoptic / instance / semantic in one model".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["segmentation"]'
 allowed-tools: Read Bash
-tags:
-- segmentation
 ---
-
 # OneFormer
 
 OneFormer for universal image segmentation. Unifies panoptic, instance, and semantic segmentation with a single architecture using task-conditioned queries.

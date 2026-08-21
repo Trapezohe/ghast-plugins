@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "chronograph-gp",
+  "version": "0.2.3-ghast.1",
+  "description": "Analyze private-capital GP portfolios, operating performance, valuations, fund reviews, company reports, and TVPI attribution through Chronograph's official skills and hosted OAuth MCP.",
+  "author": {
+    "name": "Chronograph",
+    "url": "https://www.chronograph.pe/"
+  },
+  "homepage": "https://www.chronograph.pe/",
+  "repository": "https://github.com/chronograph-pe/chronograph-gp-claude-plugin",
+  "license": "Apache-2.0",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "finance",
+      "upstreamRevision": "88a4290f29009e1cfe4341e0b9518d23c537d853",
+      "upstreamPath": ".",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

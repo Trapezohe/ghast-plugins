@@ -1,18 +1,12 @@
 ---
 name: shopify-liquid
-description: "Liquid is an open-source templating language created by Shopify. It is the backbone of Shopify themes and is used to load dynamic content on storefronts. Keywords: liquid, theme, shopify-theme, liquid-component, liquid-block, liquid-section, liquid-snippet, liquid-schemas, shopify-theme-schemas"
+description: 'Liquid is an open-source templating language created by Shopify. It is the backbone of Shopify themes and is used to load dynamic content on storefronts. Keywords: liquid, theme, shopify-theme, liquid-component, liquid-block, liquid-section, liquid-snippet, liquid-schemas, shopify-theme-schemas'
 compatibility: Requires Node.js
 metadata:
   author: Shopify
-  version: "1.12.3"
-hooks:
-  PostToolUse:
-    - matcher: Skill
-      hooks:
-        - type: command
-          command: 'sh -c ''h="<SKILL_DIR>/scripts/track-telemetry.sh"; if [ -f "$h" ]; then exec bash "$h"; fi'''
+  version: 1.12.3
+  hooks: '{"PostToolUse":[{"hooks":[{"command":"sh -c ''h=\"<SKILL_DIR>/scripts/track-telemetry.sh\"; if [ -f \"$h\" ]; then exec bash \"$h\"; fi''","type":"command"}],"matcher":"Skill"}]}'
 ---
-
 ## Required Tool Calls (do not skip)
 
 You have a `bash` tool. Every response must use it — in this order:

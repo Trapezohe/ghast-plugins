@@ -1,36 +1,15 @@
 ---
 name: jetson-customize-mgbe
-description: >-
-  Enable Jetson Thor 25G/10G/1G MGBE QSFP via kernel-DT overlay.
-  Do NOT use for UPHY lane allocation or ODMDATA edits.
-version: 0.0.1
-license: "Apache-2.0"
+description: Enable Jetson Thor 25G/10G/1G MGBE QSFP via kernel-DT overlay. Do NOT use for UPHY lane allocation or ODMDATA edits.
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
-  tags:
-    - bsp
-    - phase-2
-    - io
-    - mgbe
-    - ethernet
+  author: Jetson Team
+  tags: '["bsp","phase-2","io","mgbe","ethernet"]'
   domain: meta
-  permissions:
-    file_read:
-      - "{workspace}/target-platform/"
-      - "{source.root_path}/"
-      - "{bsp_image.root_path}/Linux_for_Tegra/"
-      - "{documents.root_path}/"
-    file_write:
-      - "{workspace}/target-platform/"
-      - "{source.root_path}/bsp_sources/hardware/nvidia/"
-    shell:
-      - "dtc"
-      - "fdtoverlay"
-      - "cpp"
-      - "git"
+  permissions: '{"file_read":["{workspace}/target-platform/","{source.root_path}/","{bsp_image.root_path}/Linux_for_Tegra/","{documents.root_path}/"],"file_write":["{workspace}/target-platform/","{source.root_path}/bsp_sources/hardware/nvidia/"],"shell":["dtc","fdtoverlay","cpp","git"]}'
+  version: 0.0.1
 ---
-
 # Customize MGBE / 25G QSFP
 
 ## Overview

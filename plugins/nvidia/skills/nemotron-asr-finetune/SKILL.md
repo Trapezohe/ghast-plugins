@@ -1,44 +1,15 @@
 ---
-name: "nemotron-asr-finetune"
+name: nemotron-asr-finetune
 description: Orchestration skill for NVIDIA Nemotron Speech (Riva) / NeMo ASR domain and language adaptation. Given a goal like "improve/fine-tune ASR for my domain or language", it scopes the task, picks the cheapest sufficient path (word boosting → n-gram LM → fine-tuning), delegates each stage to the right sub-skill (data generation, training, evaluation, deployment), and answers cost/time/data questions along the way.
-triggers:
-  - fine-tune ASR for my domain
-  - adapt ASR to my language
-  - improve ASR accuracy
-  - customize ASR
-  - ASR domain adaptation
-  - new language ASR
-  - reduce WER
-  - my ASR gets jargon wrong
-  - noisy call-center ASR
-  - how much data to fine-tune ASR
-  - cheapest way to improve ASR
-  - orchestrate ASR fine-tuning
-  - ASR customization pipeline
-version: "1.0.0"
 license: Apache-2.0
 metadata:
-  author: "Nemotron Speech Team"
+  author: Nemotron Speech Team
   team: riva
-  tags:
-    - nvidia
-    - nemotron-speech
-    - riva
-    - nemo
-    - asr
-    - speech-to-text
-    - orchestration
-    - customization
-    - domain-adaptation
-    - fine-tuning
-    - word-boosting
-    - language-model
-    - synthetic-data
-    - evaluation
-    - deployment
+  tags: '["nvidia","nemotron-speech","riva","nemo","asr","speech-to-text","orchestration","customization","domain-adaptation","fine-tuning","word-boosting","language-model","synthetic-data","evaluation","deployment"]'
   domain: ml
+  triggers: '["fine-tune ASR for my domain","adapt ASR to my language","improve ASR accuracy","customize ASR","ASR domain adaptation","new language ASR","reduce WER","my ASR gets jargon wrong","noisy call-center ASR","how much data to fine-tune ASR","cheapest way to improve ASR","orchestrate ASR fine-tuning","ASR customization pipeline"]'
+  version: 1.0.0
 ---
-
 # Nemotron Speech ASR Customization — Orchestration Skill
 
 > **Note:** "Nemotron Speech" is the public-facing name for what NVIDIA documents today as **Riva** / **Riva NIM**; the acoustic models are trained and fine-tuned with **NVIDIA NeMo**. Commands, config paths, imports, and doc URLs still use **"Riva"** / **"NeMo"** — the rename is brand-only. Do not rename them.

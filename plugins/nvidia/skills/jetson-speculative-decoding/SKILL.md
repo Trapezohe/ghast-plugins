@@ -1,15 +1,14 @@
 ---
 name: jetson-speculative-decoding
 description: Add EAGLE-3 or draft-model speculative decoding to a Jetson vLLM server when TPOT is the bottleneck.
-version: 0.0.1
-license: "Apache-2.0"
+license: Apache-2.0
 metadata:
-  author: "Jetson Team"
-  tags: [jetson, llm, speculative-decoding]
-  languages: [markdown]
+  author: Jetson Team
+  tags: '["jetson","llm","speculative-decoding"]'
+  languages: '["markdown"]'
   data-classification: public
+  version: 0.0.1
 ---
-
 # Jetson Speculative Decoding (vLLM)
 
 Speculative decoding lets a small "draft" model propose tokens that the target model verifies in a single forward pass, reducing per-token latency. On Jetson, the win/loss is **dominated by VRAM headroom**, not by the draft quality. This skill encodes the parts an LLM won't already know.

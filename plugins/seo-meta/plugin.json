@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "seo-meta",
+  "description": "Skill for pulling SEO tags from any URL — title, meta description, OG tags, canonical, H1s, robots — so the model can audit how a page presents itself to search engines and social scrapers.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/seo-meta",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "web",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

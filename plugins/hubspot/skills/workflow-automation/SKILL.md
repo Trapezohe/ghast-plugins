@@ -1,21 +1,9 @@
 ---
 name: workflow-automation
 description: List, inspect, create, update, and delete HubSpot workflows (v4 flows API) from the `hubspot` agent CLI, not the `hs` developer CLI.
-triggers:
-  - "workflow"
-  - "automation"
-  - "automated flow"
-  - "enrollment trigger"
-  - "find workflow by name"
-  - "duplicate workflow"
-  - "update workflow"
-  - "delete workflow"
-  - "create a workflow"
-  - "create a workflow with the hubspot cli"
-  - "build an automation"
-  - "does the cli support workflows"
+metadata:
+  triggers: '["workflow","automation","automated flow","enrollment trigger","find workflow by name","duplicate workflow","update workflow","delete workflow","create a workflow","create a workflow with the hubspot cli","build an automation","does the cli support workflows"]'
 ---
-
 ## Which CLI
 
 Two different HubSpot CLIs share a confusing resemblance — don't mix them up:

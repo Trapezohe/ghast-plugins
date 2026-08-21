@@ -1,35 +1,24 @@
 ---
 name: aiq-research
-description: |
-  Use when asked to run deep research or AI-Q research through a reachable NVIDIA AI-Q Blueprint backend.
+description: Use when asked to run deep research or AI-Q research through a reachable NVIDIA AI-Q Blueprint backend.
 license: Apache-2.0
-permissions:
-  env:
-    - AIQ_SERVER_URL
-  network:
-    - http://localhost:8000
-compatibility: |
-  Designed for Claude Code, OpenCode, Codex, and Agent Skills-compatible tools. Requires Python 3.11+ and network
+compatibility: 'Designed for Claude Code, OpenCode, Codex, and Agent Skills-compatible tools. Requires Python 3.11+ and network
+
   access to a running local AI-Q Blueprint server at `http://localhost:8000` by default. Non-local backends must be
+
   explicitly trusted by the user and granted by the host tool outside this public skill.
+
+  '
 metadata:
-  version: "2.1.0"
-  author: "NVIDIA AI-Q Blueprint Team <aiq-blueprint@nvidia.com>"
-  github-url: "https://github.com/NVIDIA-AI-Blueprints/aiq"
-  tags:
-    - nvidia
-    - aiq
-    - blueprint
-    - deep-research
-    - research-agents
-    - agent-skills
-  languages:
-    - python
-    - bash
-  domain: "research-agents"
+  version: 2.1.0
+  author: NVIDIA AI-Q Blueprint Team <aiq-blueprint@nvidia.com>
+  github-url: https://github.com/NVIDIA-AI-Blueprints/aiq
+  tags: '["nvidia","aiq","blueprint","deep-research","research-agents","agent-skills"]'
+  languages: '["python","bash"]'
+  domain: research-agents
+  permissions: '{"env":["AIQ_SERVER_URL"],"network":["http://localhost:8000"]}'
 allowed-tools: Read Bash
 ---
-
 # AIQ Research Skill
 
 ## Purpose

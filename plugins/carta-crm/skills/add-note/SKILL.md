@@ -1,11 +1,9 @@
 ---
 name: add-note
-description: >
-  Create a standalone note in Carta CRM and optionally link it to the exact
-  deal, company, contact, investor, or fundraising record the user chooses.
-version: 1.0.0-ghast.1
+description: Create a standalone note in Carta CRM and optionally link it to the exact deal, company, contact, investor, or fundraising record the user chooses.
+metadata:
+  version: 1.0.0-ghast.1
 ---
-
 # Add a Carta CRM note
 
 Use Carta's current direct `create_note` and `link_note` MCP tools. The older

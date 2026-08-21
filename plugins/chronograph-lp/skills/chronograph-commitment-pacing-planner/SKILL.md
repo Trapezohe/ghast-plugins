@@ -1,14 +1,9 @@
 ---
 name: chronograph-commitment-pacing-planner
-description: Plan forward fund commitments to reach and hold a target private capital allocation,
-  using Chronograph portfolio data and a cashflow-projection model.
-when_to_use: "Use when an LP wants to build or stress-test a commitment pacing plan — how much to
-  commit per year, by strategy or vintage, to hit a target allocation or keep exposure steady.
-  Triggers: \"how much should we commit next year\", \"build a pacing plan\", \"what pace keeps us
-  at X% private markets\", \"model our vintage diversification\". Not for forecasting an existing
-  portfolio's runoff alone (use chronograph-cashflow-forecast)."
+description: Plan forward fund commitments to reach and hold a target private capital allocation, using Chronograph portfolio data and a cashflow-projection model.
+metadata:
+  when_to_use: 'Use when an LP wants to build or stress-test a commitment pacing plan — how much to commit per year, by strategy or vintage, to hit a target allocation or keep exposure steady. Triggers: "how much should we commit next year", "build a pacing plan", "what pace keeps us at X% private markets", "model our vintage diversification". Not for forecasting an existing portfolio''s runoff alone (use chronograph-cashflow-forecast).'
 ---
-
 # Commitment Pacing Planner
 
 **Requirements:** A connected Chronograph MCP server as an LP client for the existing-portfolio baseline. Pure forward planning (no existing portfolio) can run from user-provided assumptions, with every figure labeled a planning assumption.

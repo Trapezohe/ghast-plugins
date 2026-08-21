@@ -1,15 +1,14 @@
 ---
 name: jetson-inference-mem-tune
 description: Pick the serving stack and per-runtime memory flags (vLLM, SGLang, llama.cpp, TensorRT Edge-LLM) for an LLM/VLM workload on any NVIDIA Jetson.
-version: 0.0.1
-license: "Apache-2.0"
+license: Apache-2.0
 metadata:
-  author: "Jetson Team"
-  tags: [jetson, inference, memory]
-  languages: [python]
+  author: Jetson Team
+  tags: '["jetson","inference","memory"]'
+  languages: '["python"]'
   data-classification: public
+  version: 0.0.1
 ---
-
 # Jetson Inference Memory Tuning
 
 Recommends an inference runtime and the specific memory-related flags to pass to it, given the Jetson SKU/variant and the user's workload. Does not include quantization recipe selection — that lives in the model-benchmarking skill — but it does point at the precision floor each runtime can serve efficiently.

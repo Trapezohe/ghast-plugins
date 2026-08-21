@@ -1,25 +1,14 @@
 ---
 name: tao-run-deft-aoi
-description: >
-  Run the full DEFT AOI improvement loop for NVIDIA TAO VisualChangeNet / ChangeNet PCB inspection models:
-  baseline evaluate, RCA, Cosmos AnomalyGen / AMP synthetic defects, k-NN mining, retraining, and deployment
-  gating until FAR / recall KPI targets are met. Use for prompts like "run the DEFT loop", "fine-tune until
-  FAR below 0.1% at recall=100%", or "improve my AOI ChangeNet model with RCA and synthetic defects"; do not use
-  for standalone TAO training, one-off inference, generic anomaly generation, or RCA-only analysis.
+description: 'Run the full DEFT AOI improvement loop for NVIDIA TAO VisualChangeNet / ChangeNet PCB inspection models: baseline evaluate, RCA, Cosmos AnomalyGen / AMP synthetic defects, k-NN mining, retraining, and deployment gating until FAR / recall KPI targets are met. Use for prompts like "run the DEFT loop", "fine-tune until FAR below 0.1% at recall=100%", or "improve my AOI ChangeNet model with RCA and synthetic defects"; do not use for standalone TAO training, one-off inference, generic anomaly generation, or RCA-only analysis.'
 license: Apache-2.0 AND CC-BY-4.0
 compatibility: Requires docker + nvidia-container-toolkit. Workflows declare additional requirements.
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["application","workflow","deft","aoi","loop"]'
 allowed-tools: Read Task Bash Write
-tags:
-- application
-- workflow
-- deft
-- aoi
-- loop
 ---
-
 # Skill: tao-run-deft-aoi
 
 ## When to Use This Skill

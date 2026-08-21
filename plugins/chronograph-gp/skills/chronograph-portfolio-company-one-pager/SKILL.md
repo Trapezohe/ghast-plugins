@@ -1,21 +1,11 @@
 ---
 name: chronograph-portfolio-company-one-pager
-description: >
-  Generate one-pagers and investor reports for private equity portfolio companies. Handles live data
-  fetching via the Chronograph MCP OR an uploaded Excel model, metric formatting, AI-generated or
-  model-sourced commentary, and rendering a fully styled HTML one-pager.
-when_to_use: >
-  Use whenever a user asks to generate a company tearsheet, one-pager, investor report, portfolio
-  overview, or company deep-dive — especially when they name a company or ask to "build a report",
-  "create a one-pager", or "show me a tearsheet". Also trigger when the user asks to include
-  commentary, quarterly updates, investment narratives, or any Investment Overview in the report
-  output. Also trigger for LP quarterly updates, valuation summaries, and portco performance pages —
-  any output that combines financials, valuation, and return data for a single portfolio company.
-  This is a GP-side report that needs GP-level data (company financials and per-investment gross
-  returns). Not for LP portfolio cashflow or pacing analysis (use chronograph-cashflow-forecast) or
-  LP fund-meeting prep (use chronograph-gp-meeting-prep).
----
+description: Generate one-pagers and investor reports for private equity portfolio companies. Handles live data fetching via the Chronograph MCP OR an uploaded Excel model, metric formatting, AI-generated or model-sourced commentary, and rendering a fully styled HTML one-pager.
+metadata:
+  when_to_use: 'Use whenever a user asks to generate a company tearsheet, one-pager, investor report, portfolio overview, or company deep-dive — especially when they name a company or ask to "build a report", "create a one-pager", or "show me a tearsheet". Also trigger when the user asks to include commentary, quarterly updates, investment narratives, or any Investment Overview in the report output. Also trigger for LP quarterly updates, valuation summaries, and portco performance pages — any output that combines financials, valuation, and return data for a single portfolio company. This is a GP-side report that needs GP-level data (company financials and per-investment gross returns). Not for LP portfolio cashflow or pacing analysis (use chronograph-cashflow-forecast) or LP fund-meeting prep (use chronograph-gp-meeting-prep).
 
+    '
+---
 # GP Report Builder
 
 Generates a fully styled, self-contained HTML investor report for a named portfolio company.

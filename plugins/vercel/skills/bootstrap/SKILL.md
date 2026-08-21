@@ -2,71 +2,15 @@
 name: bootstrap
 description: Project bootstrapping orchestrator for repos that depend on Vercel-linked resources (databases, auth, and managed integrations). Use when setting up or repairing a repository so linking, environment provisioning, env pulls, and first-run db/dev commands happen in the correct safe order.
 metadata:
-  priority: 8
-  docs:
-    - "https://vercel.com/docs/getting-started-with-vercel"
-    - "https://nextjs.org/docs/getting-started/installation"
-  sitemap: "https://vercel.com/sitemap/docs.xml"
-  pathPatterns:
-    - '.env.example'
-    - '.env.sample'
-    - '.env.template'
-    - 'README*'
-    - 'docs/**/setup*'
-    - 'package.json'
-    - 'drizzle.config.*'
-    - 'prisma/schema.prisma'
-    - 'auth.*'
-    - 'src/**/auth.*'
-  bashPatterns:
-    - '\\bcp\\s+\\.env\\.(?:example|sample|template)\\s+\\.env\\.local\\b'
-    - '\\b(?:npm|pnpm|bun|yarn)\\s+run\\s+db:(?:push|seed|migrate|generate)\\b'
-    - '\\b(?:npm|pnpm|bun|yarn)\\s+run\\s+dev\\b'
-    - '\\bvercel\\s+link\\b'
-    - '\\bvercel\\s+integration\\s+(?:add|install)\\b'
-    - '\\bvercel\\s+env\\s+pull\\b'
-  importPatterns:
-    - '@neondatabase/serverless'
-    - 'drizzle-orm'
-    - '@upstash/redis'
-    - '@vercel/blob'
-    - '@vercel/edge-config'
-    - 'next-auth'
-    - '@auth/core'
-    - 'better-auth'
-chainTo:
-  -
-    pattern: '@vercel/(postgres|kv)|\b(KV_REST_API_URL|POSTGRES_URL)\b'
-    targetSkill: vercel-storage
-    message: '@vercel/postgres and @vercel/kv are sunset — loading Vercel Storage guidance for Neon and Upstash migration.'
-  -
-    pattern: 'from\s+[''""](next-auth|@auth/core|@clerk/nextjs|better-auth)[''""]'
-    targetSkill: auth
-    message: 'Auth library detected during bootstrap — loading Auth guidance for Clerk Marketplace setup and middleware patterns.'
-  -
-    pattern: 'OPENAI_API_KEY|ANTHROPIC_API_KEY|AI_GATEWAY'
-    targetSkill: env-vars
-    message: 'AI provider env vars detected — loading Environment Variables guidance for OIDC-based auth via vercel env pull.'
-    skipIfFileContains: 'VERCEL_OIDC|vercel env pull'
-retrieval:
-  aliases:
-    - project setup
-    - repo init
-    - getting started
-    - scaffold
-  intents:
-    - set up project
-    - initialize repo
-    - link vercel project
-    - pull env vars
-  entities:
-    - vercel link
-    - env pull
-    - database setup
-    - first run
-
+  priority: '8'
+  docs: '["https://vercel.com/docs/getting-started-with-vercel","https://nextjs.org/docs/getting-started/installation"]'
+  sitemap: https://vercel.com/sitemap/docs.xml
+  pathPatterns: '[".env.example",".env.sample",".env.template","README*","docs/**/setup*","package.json","drizzle.config.*","prisma/schema.prisma","auth.*","src/**/auth.*"]'
+  bashPatterns: '["\\\\bcp\\\\s+\\\\.env\\\\.(?:example|sample|template)\\\\s+\\\\.env\\\\.local\\\\b","\\\\b(?:npm|pnpm|bun|yarn)\\\\s+run\\\\s+db:(?:push|seed|migrate|generate)\\\\b","\\\\b(?:npm|pnpm|bun|yarn)\\\\s+run\\\\s+dev\\\\b","\\\\bvercel\\\\s+link\\\\b","\\\\bvercel\\\\s+integration\\\\s+(?:add|install)\\\\b","\\\\bvercel\\\\s+env\\\\s+pull\\\\b"]'
+  importPatterns: '["@neondatabase/serverless","drizzle-orm","@upstash/redis","@vercel/blob","@vercel/edge-config","next-auth","@auth/core","better-auth"]'
+  chainTo: '[{"message":"@vercel/postgres and @vercel/kv are sunset — loading Vercel Storage guidance for Neon and Upstash migration.","pattern":"@vercel/(postgres|kv)|\\b(KV_REST_API_URL|POSTGRES_URL)\\b","targetSkill":"vercel-storage"},{"message":"Auth library detected during bootstrap — loading Auth guidance for Clerk Marketplace setup and middleware patterns.","pattern":"from\\s+[''\"\"](next-auth|@auth/core|@clerk/nextjs|better-auth)[''\"\"]","targetSkill":"auth"},{"message":"AI provider env vars detected — loading Environment Variables guidance for OIDC-based auth via vercel env pull.","pattern":"OPENAI_API_KEY|ANTHROPIC_API_KEY|AI_GATEWAY","skipIfFileContains":"VERCEL_OIDC|vercel env pull","targetSkill":"env-vars"}]'
+  retrieval: '{"aliases":["project setup","repo init","getting started","scaffold"],"entities":["vercel link","env pull","database setup","first run"],"intents":["set up project","initialize repo","link vercel project","pull env vars"]}'
 ---
-
 # Project Bootstrap Orchestrator
 
 Execute bootstrap in strict order. Do not run migrations or development server until project linking and environment verification are complete.

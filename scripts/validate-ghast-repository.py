@@ -13,7 +13,13 @@ import sys
 import zipfile
 from collections import Counter
 from pathlib import Path
+from urllib.parse import urlsplit
 from xml.etree import ElementTree
+
+try:
+    from skills_ref import validate as validate_agent_skill
+except ImportError:
+    validate_agent_skill = None
 
 
 PLUGIN_DIR = Path("plugins")
@@ -21,6 +27,24 @@ PACKAGE_DIR = Path("packages")
 CATALOG_PATH = Path("plugin-catalog.json")
 AUDIT_PATH = Path("third-party-plugin-audit.json")
 REVIEWS_PATH = Path("third-party-plugin-reviews.json")
+PLUGIN_SCHEMA = "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json"
+MCP_SCHEMA = "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json"
+GHAST_NAMESPACE = "ai.trapezohe.ghast"
+PLUGIN_FIELDS = {
+    "$schema",
+    "name",
+    "version",
+    "description",
+    "author",
+    "homepage",
+    "repository",
+    "license",
+    "keywords",
+    "extensions",
+}
+PLUGIN_NAME = re.compile(
+    r"^(?!.*(?:--|\.\.))[a-z0-9](?:[a-z0-9.-]*[a-z0-9])?$"
+)
 
 # This signed NVIDIA source file is byte-identical to the pinned official
 # catalog. macOS ships Bash 3.2, whose parser rejects the quoted heredoc inside
@@ -64,6 +88,11 @@ def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
 
+    if validate_agent_skill is None:
+        errors.append(
+            "skills-ref is unavailable; install requirements-agent-plugins.txt"
+        )
+
     manifests = validate_sources(errors)
     validate_catalog_and_packages(manifests, errors)
     validate_audit(errors)
@@ -92,8 +121,9 @@ def main() -> int:
 def validate_sources(errors: list[str]) -> dict[str, dict]:
     manifests: dict[str, dict] = {}
     for plugin_dir in sorted(path for path in PLUGIN_DIR.iterdir() if path.is_dir()):
-        manifest_path = plugin_dir / ".ghast-plugin/plugin.json"
+        manifest_path = plugin_dir / "plugin.json"
         if not manifest_path.is_file():
+            errors.append(f"{plugin_dir}: missing Agent Plugins plugin.json")
             continue
         manifest = load_json(manifest_path, errors)
         if manifest is None:
@@ -104,7 +134,13 @@ def validate_sources(errors: list[str]) -> dict[str, dict]:
             continue
         manifests[name] = manifest
 
-        icon = manifest.get("icon")
+        validate_agent_plugin_manifest(manifest_path, manifest, errors)
+        for legacy_path in (plugin_dir / ".ghast-plugin", plugin_dir / ".mcp.json"):
+            if legacy_path.exists():
+                errors.append(f"{legacy_path}: legacy Ghast layout is not allowed")
+
+        ghast = (manifest.get("extensions") or {}).get(GHAST_NAMESPACE, {})
+        icon = ghast.get("icon")
         if not isinstance(icon, str) or not icon.startswith("./assets/"):
             errors.append(f"{manifest_path}: invalid icon path")
         else:
@@ -117,20 +153,143 @@ def validate_sources(errors: list[str]) -> dict[str, dict]:
                 except ElementTree.ParseError as exc:
                     errors.append(f"{icon_path}: invalid SVG: {exc}")
 
-        for field, relative in (
-            ("skills", "skills"),
-            ("commands", "commands"),
-            ("mcpServers", ".mcp.json"),
-        ):
-            if field in manifest and not (plugin_dir / relative).exists():
-                errors.append(f"{manifest_path}: {field} points to missing {relative}")
+        commands = ghast.get("commands")
+        if commands is not None:
+            expected = f"./{GHAST_NAMESPACE}/commands/"
+            if commands != expected or not (plugin_dir / GHAST_NAMESPACE / "commands").is_dir():
+                errors.append(f"{manifest_path}: invalid Ghast commands extension")
 
-        mcp_path = plugin_dir / ".mcp.json"
+        mcp_path = plugin_dir / "mcp.json"
         if mcp_path.is_file():
-            load_json(mcp_path, errors)
+            mcp = load_json(mcp_path, errors)
+            if mcp is not None:
+                validate_agent_plugin_mcp(mcp_path, mcp, errors)
         validate_skill_frontmatter(plugin_dir, errors)
 
     return manifests
+
+
+def validate_agent_plugin_manifest(
+    path: Path, manifest: dict, errors: list[str]
+) -> None:
+    unknown = set(manifest) - PLUGIN_FIELDS
+    if unknown:
+        errors.append(f"{path}: unknown Agent Plugins fields {sorted(unknown)}")
+    if manifest.get("$schema") != PLUGIN_SCHEMA:
+        errors.append(f"{path}: must target Agent Plugins 1.0.0")
+    name = manifest.get("name")
+    if (
+        not isinstance(name, str)
+        or not 1 <= len(name) <= 64
+        or PLUGIN_NAME.fullmatch(name) is None
+    ):
+        errors.append(f"{path}: invalid Agent Plugins name")
+    for field in ("version", "description", "homepage", "repository", "license"):
+        if field in manifest and not isinstance(manifest[field], str):
+            errors.append(f"{path}: {field} must be a string")
+    author = manifest.get("author")
+    if author is not None:
+        if not isinstance(author, dict):
+            errors.append(f"{path}: author must be an object")
+        elif set(author) - {"name", "email", "url"} or any(
+            not isinstance(value, str) for value in author.values()
+        ):
+            errors.append(f"{path}: invalid author object")
+    keywords = manifest.get("keywords")
+    if keywords is not None and (
+        not isinstance(keywords, list)
+        or any(not isinstance(value, str) for value in keywords)
+    ):
+        errors.append(f"{path}: keywords must be an array of strings")
+    extensions = manifest.get("extensions")
+    if extensions is not None and (
+        not isinstance(extensions, dict)
+        or any(not isinstance(value, dict) for value in extensions.values())
+    ):
+        errors.append(f"{path}: extensions must map namespaces to objects")
+    ghast = (extensions or {}).get(GHAST_NAMESPACE)
+    if not isinstance(ghast, dict):
+        errors.append(f"{path}: missing {GHAST_NAMESPACE} metadata extension")
+
+
+def validate_agent_plugin_mcp(path: Path, mcp: dict, errors: list[str]) -> None:
+    if set(mcp) != {"$schema", "mcpServers"}:
+        errors.append(f"{path}: MCP top-level fields must be $schema and mcpServers")
+    if mcp.get("$schema") != MCP_SCHEMA:
+        errors.append(f"{path}: must target Agent Plugins MCP 1.0.0")
+    servers = mcp.get("mcpServers")
+    if not isinstance(servers, dict):
+        errors.append(f"{path}: mcpServers must be an object")
+        return
+    for name, server in servers.items():
+        if not isinstance(server, dict):
+            errors.append(f"{path}: server {name!r} must be an object")
+            continue
+        transport = server.get("type")
+        if transport == "stdio":
+            allowed = {"type", "command", "args", "env", "cwd"}
+            command = server.get("command")
+            if not isinstance(command, str) or not command:
+                errors.append(f"{path}: stdio server {name!r} needs command")
+            elif command.startswith(".") and not command.startswith("./"):
+                errors.append(f"{path}: invalid relative command for {name!r}")
+            args = server.get("args")
+            if args is not None and (
+                not isinstance(args, list)
+                or any(not isinstance(value, str) for value in args)
+            ):
+                errors.append(f"{path}: invalid args for {name!r}")
+            env = server.get("env")
+            if env is not None and (
+                not isinstance(env, dict)
+                or any(not isinstance(key, str) or not isinstance(value, str) for key, value in env.items())
+                or "PLUGIN_ROOT" in env
+                or "PLUGIN_DATA" in env
+            ):
+                errors.append(f"{path}: invalid env for {name!r}")
+            cwd = server.get("cwd")
+            if cwd is not None and (
+                not isinstance(cwd, str)
+                or not cwd.startswith(("./", "${PLUGIN_ROOT}", "${PLUGIN_DATA}"))
+                or contains_parent_segment(cwd)
+            ):
+                errors.append(f"{path}: invalid cwd for {name!r}")
+        elif transport in {"streamable-http", "sse"}:
+            allowed = {"type", "url", "headers"}
+            validate_mcp_url(path, name, server.get("url"), errors)
+            headers = server.get("headers")
+            if headers is not None:
+                if not isinstance(headers, dict) or any(
+                    not isinstance(key, str) or not isinstance(value, str)
+                    for key, value in headers.items()
+                ):
+                    errors.append(f"{path}: invalid headers for {name!r}")
+                elif len({key.lower() for key in headers}) != len(headers):
+                    errors.append(f"{path}: duplicate case-insensitive header for {name!r}")
+                elif any("$VAULT:" in value or "${" in value for value in headers.values()):
+                    errors.append(f"{path}: credential placeholders are not portable for {name!r}")
+        else:
+            errors.append(f"{path}: unsupported MCP transport for {name!r}")
+            continue
+        unknown = set(server) - allowed
+        if unknown:
+            errors.append(f"{path}: server {name!r} has unknown fields {sorted(unknown)}")
+
+
+def validate_mcp_url(path: Path, name: str, value: object, errors: list[str]) -> None:
+    if not isinstance(value, str):
+        errors.append(f"{path}: server {name!r} needs a URL")
+        return
+    parsed = urlsplit(value)
+    if parsed.scheme not in {"http", "https"} or not parsed.hostname or parsed.username or parsed.password or parsed.fragment:
+        errors.append(f"{path}: invalid MCP URL for {name!r}")
+    loopback = parsed.hostname == "localhost" or parsed.hostname in {"127.0.0.1", "::1"}
+    if parsed.scheme != "https" and not loopback:
+        errors.append(f"{path}: non-loopback MCP URL must use HTTPS for {name!r}")
+
+
+def contains_parent_segment(value: str) -> bool:
+    return ".." in value.replace("\\", "/").split("/")
 
 
 def validate_skill_frontmatter(plugin_dir: Path, errors: list[str]) -> None:
@@ -145,9 +304,9 @@ def validate_skill_frontmatter(plugin_dir: Path, errors: list[str]) -> None:
         if not skill_path.is_file():
             errors.append(f"{skill_dir}: missing SKILL.md")
             continue
-        text = skill_path.read_text(errors="replace")
-        if not text.startswith("---\n") or text.find("\n---\n", 4) < 0:
-            errors.append(f"{skill_path}: missing YAML frontmatter")
+        if validate_agent_skill is not None:
+            for problem in validate_agent_skill(skill_dir):
+                errors.append(f"{skill_path}: {problem}")
 
 
 def validate_catalog_and_packages(
@@ -188,14 +347,15 @@ def validate_catalog_and_packages(
                     errors.append(f"{package_path}: bad CRC at {bad_member}")
                 prefix = f"{name}/"
                 names = set(archive.namelist())
-                manifest_member = f"{prefix}.ghast-plugin/plugin.json"
+                manifest_member = f"{prefix}plugin.json"
                 if manifest_member not in names:
                     errors.append(f"{package_path}: missing {manifest_member}")
                     continue
                 packaged_manifest = json.loads(archive.read(manifest_member))
                 if packaged_manifest != manifests[name]:
                     errors.append(f"{package_path}: manifest differs from source")
-                icon_member = prefix + packaged_manifest["icon"].removeprefix("./")
+                ghast = packaged_manifest["extensions"][GHAST_NAMESPACE]
+                icon_member = prefix + ghast["icon"].removeprefix("./")
                 if icon_member not in names:
                     errors.append(f"{package_path}: missing packaged icon")
                 if any(not member.startswith(prefix) for member in names):

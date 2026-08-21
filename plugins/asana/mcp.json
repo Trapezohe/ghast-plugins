@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "asana": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "-e",
+        "const fs = require(\"node:fs\");\nconst path = require(\"node:path\");\nconst { spawn } = require(\"node:child_process\");\nconst clientFile = process.env.ASANA_OAUTH_CLIENT_FILE;\nif (!clientFile) {\n  console.error(\"Set ASANA_OAUTH_CLIENT_FILE to an absolute OAuth client JSON path.\");\n  process.exit(1);\n}\nif (!path.isAbsolute(clientFile)) {\n  console.error(\"ASANA_OAUTH_CLIENT_FILE must be an absolute path.\");\n  process.exit(1);\n}\nlet clientInfo;\nlet stat;\ntry {\n  stat = fs.statSync(clientFile);\n  clientInfo = JSON.parse(fs.readFileSync(clientFile, \"utf8\"));\n} catch {\n  console.error(\"ASANA_OAUTH_CLIENT_FILE must point to readable valid JSON.\");\n  process.exit(1);\n}\nif (\n  typeof clientInfo.client_id !== \"string\" ||\n  !clientInfo.client_id ||\n  typeof clientInfo.client_secret !== \"string\" ||\n  !clientInfo.client_secret\n) {\n  console.error(\"Asana OAuth JSON must contain client_id and client_secret.\");\n  process.exit(1);\n}\nif (process.platform !== \"win32\" && (stat.mode & 0o077) !== 0) {\n  console.error(\"Protect the Asana OAuth JSON with chmod 600.\");\n  process.exit(1);\n}\nconst executable = process.platform === \"win32\" ? \"npx.cmd\" : \"npx\";\nconst child = spawn(\n  executable,\n  [\n    \"--yes\",\n    \"mcp-remote@0.1.38\",\n    \"https://mcp.asana.com/v2/mcp\",\n    \"3334\",\n    \"--static-oauth-client-info\",\n    `@${clientFile}`,\n    \"--resource\",\n    \"https://mcp.asana.com/v2\",\n  ],\n  { stdio: \"inherit\" },\n);\nchild.on(\"error\", (error) => {\n  console.error(`Unable to start Asana MCP bridge: ${error.message}`);\n  process.exit(1);\n});\nfor (const signal of [\"SIGINT\", \"SIGTERM\"]) {\n  process.on(signal, () => child.kill(signal));\n}\nchild.on(\"exit\", (code, signal) => {\n  if (signal) process.kill(process.pid, signal);\n  else process.exit(code === null ? 1 : code);\n});\n"
+      ]
+    }
+  }
+}

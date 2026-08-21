@@ -1,20 +1,14 @@
 ---
 name: tao-train-rtdetr
-description: RT-DETR (Real-Time DEtection TRansformer) for 2D object detection. Designed for real-time inference with
-  competitive accuracy and supports distillation and quantization for deployment optimization. Use when training, evaluating,
-  distilling, quantizing, exporting, or running inference for a TAO RT-DETR model. Trigger phrases include "train RT-DETR",
-  "real-time DETR", "low-latency object detection", "RT-DETR distillation / quantization".
+description: RT-DETR (Real-Time DEtection TRansformer) for 2D object detection. Designed for real-time inference with competitive accuracy and supports distillation and quantization for deployment optimization. Use when training, evaluating, distilling, quantizing, exporting, or running inference for a TAO RT-DETR model. Trigger phrases include "train RT-DETR", "real-time DETR", "low-latency object detection", "RT-DETR distillation / quantization".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["object","detection"]'
 allowed-tools: Read Bash
-tags:
-- object
-- detection
 ---
-
 # RT-DETR
 
 RT-DETR (Real-Time DEtection TRansformer) for 2D object detection. Designed for real-time inference with competitive accuracy. Supports distillation and quantization for deployment optimization.

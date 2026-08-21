@@ -1,19 +1,9 @@
 ---
 name: rivet-sdk
-description: "Zoom Rivet SDK for JavaScript/TypeScript server-side integrations. Use for auth handling, webhook event consumers, API endpoint wrappers, multi-module app composition, and AWS Lambda receiver patterns."
-triggers:
-  - "rivet"
-  - "zoom rivet"
-  - "@zoom/rivet"
-  - "rivet javascript"
-  - "rivet sdk"
-  - "rivet webhook"
-  - "rivet oauth"
-  - "rivet lambda"
-  - "rivet team chat"
-  - "rivet chatbot"
+description: Zoom Rivet SDK for JavaScript/TypeScript server-side integrations. Use for auth handling, webhook event consumers, API endpoint wrappers, multi-module app composition, and AWS Lambda receiver patterns.
+metadata:
+  triggers: '["rivet","zoom rivet","@zoom/rivet","rivet javascript","rivet sdk","rivet webhook","rivet oauth","rivet lambda","rivet team chat","rivet chatbot"]'
 ---
-
 # Zoom Rivet SDK
 
 Implementation guidance for Zoom Rivet (JavaScript/TypeScript) as a server-side framework for:

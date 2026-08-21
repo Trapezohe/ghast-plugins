@@ -2,9 +2,11 @@
 name: product-photo-studio
 description: Transform product photos via Picsart gen-ai — six modes.
 license: MIT
-metadata: {"author": "Picsart", "version": "1.0.0", "hermes": {"category": "creative", "tags": ["picsart", "product-photos", "ecommerce", "catalog", "mockups", "variants"]}}
+metadata:
+  author: Picsart
+  version: 1.0.0
+  hermes: '{"category":"creative","tags":["picsart","product-photos","ecommerce","catalog","mockups","variants"]}'
 ---
-
 # Product Photo Studio
 
 A single skill that covers every "transform a product photo with AI" workflow Picsart's `gen-ai` CLI supports. Use this whenever the user has product photography (single packshot, full catalog, or one artwork) and needs it re-rendered, re-staged, or fanned out into variants. Replaces six narrower skills with one entry point and six mode references.

@@ -1,10 +1,10 @@
 ---
 name: realtime-weather
 description: Use this skill when the user asks about current weather, temperature, conditions, or forecast for any city or place name. Provides current conditions and a 24h hourly forecast via the free Open-Meteo API — no API key, no signup required.
-version: 1.0.0
-allowed-tools: [WebFetch, Bash]
+metadata:
+  version: 1.0.0
+allowed-tools: WebFetch Bash
 ---
-
 # Realtime Weather (Open-Meteo)
 
 When the user asks "what's the weather in <place>", "is it raining in <city>",

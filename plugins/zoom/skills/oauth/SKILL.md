@@ -1,27 +1,9 @@
 ---
-name: zoom-oauth
-description: |
-  Zoom OAuth authentication and authorization. Covers four authorization flows: Account (S2S), 
-  User (authorization code), Device (device flow), and Client (chatbot). Use when implementing 
-  authentication for Zoom APIs, managing access tokens, or understanding OAuth flows.
-triggers:
-  - zoom oauth
-  - zoom authentication
-  - zoom authorization
-  - server to server oauth
-  - s2s oauth
-  - zoom access token
-  - zoom refresh token
-  - authorization code flow
-  - device authorization
-  - pkce
-  - zoom api authentication
-  - oauth error 4709
-  - oauth error 4733
-  - oauth error 4735
-  - redirect uri mismatch
+name: oauth
+description: "Zoom OAuth authentication and authorization. Covers four authorization flows: Account (S2S), \nUser (authorization code), Device (device flow), and Client (chatbot). Use when implementing \nauthentication for Zoom APIs, managing access tokens, or understanding OAuth flows."
+metadata:
+  triggers: '["zoom oauth","zoom authentication","zoom authorization","server to server oauth","s2s oauth","zoom access token","zoom refresh token","authorization code flow","device authorization","pkce","zoom api authentication","oauth error 4709","oauth error 4733","oauth error 4735","redirect uri mismatch"]'
 ---
-
 # Zoom OAuth
 
 Authentication and authorization for Zoom APIs.

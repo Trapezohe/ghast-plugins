@@ -2,56 +2,15 @@
 name: react-best-practices
 description: React best-practices reviewer for TSX files. Triggers after editing multiple TSX components to run a condensed quality checklist covering component structure, hooks usage, accessibility, performance, and TypeScript patterns.
 metadata:
-  priority: 4
-  docs:
-    - "https://react.dev/reference/react"
-    - "https://react.dev/learn"
-  pathPatterns:
-    - 'src/components/**/*.tsx'
-    - 'src/components/**/*.jsx'
-    - 'app/components/**/*.tsx'
-    - 'app/components/**/*.jsx'
-    - 'components/**/*.tsx'
-    - 'components/**/*.jsx'
-    - 'src/ui/**/*.tsx'
-    - 'lib/components/**/*.tsx'
-  bashPatterns: []
-  importPatterns:
-    - 'react'
-    - 'react-dom'
-validate:
-  -
-    pattern: 'from\s+[''"](styled-components|@emotion/styled|@emotion/react|@mui/material|@chakra-ui/react)[''"]|styled\.'
-    message: 'Legacy CSS-in-JS or component library detected. Consider shadcn/ui + Tailwind for modern Vercel-native UI.'
-    severity: warn
-    upgradeToSkill: shadcn
-    upgradeWhy: 'Migrate from CSS-in-JS/MUI/Chakra to shadcn/ui + Tailwind CSS for better SSR performance and Vercel ecosystem alignment.'
-    skipIfFileContains: '@/components/ui|shadcn|tailwindcss'
-retrieval:
-  aliases:
-    - react review
-    - component quality
-    - tsx linter
-    - react patterns
-  intents:
-    - review react code
-    - improve component quality
-    - check accessibility
-    - optimize react
-  entities:
-    - hooks
-    - accessibility
-    - React
-    - TSX
-    - component
-chainTo:
-  -
-    pattern: 'from\s+[''\"](styled-components|@emotion/styled|@emotion/react|@mui/material|@chakra-ui/react)[''"]|styled\.'
-    targetSkill: shadcn
-    message: 'Legacy CSS-in-JS or component library detected — loading shadcn/ui guidance for modern Vercel-native UI.'
-
+  priority: '4'
+  docs: '["https://react.dev/reference/react","https://react.dev/learn"]'
+  pathPatterns: '["src/components/**/*.tsx","src/components/**/*.jsx","app/components/**/*.tsx","app/components/**/*.jsx","components/**/*.tsx","components/**/*.jsx","src/ui/**/*.tsx","lib/components/**/*.tsx"]'
+  bashPatterns: '[]'
+  importPatterns: '["react","react-dom"]'
+  validate: '[{"message":"Legacy CSS-in-JS or component library detected. Consider shadcn/ui + Tailwind for modern Vercel-native UI.","pattern":"from\\s+[''\"](styled-components|@emotion/styled|@emotion/react|@mui/material|@chakra-ui/react)[''\"]|styled\\.","severity":"warn","skipIfFileContains":"@/components/ui|shadcn|tailwindcss","upgradeToSkill":"shadcn","upgradeWhy":"Migrate from CSS-in-JS/MUI/Chakra to shadcn/ui + Tailwind CSS for better SSR performance and Vercel ecosystem alignment."}]'
+  retrieval: '{"aliases":["react review","component quality","tsx linter","react patterns"],"entities":["hooks","accessibility","React","TSX","component"],"intents":["review react code","improve component quality","check accessibility","optimize react"]}'
+  chainTo: '[{"message":"Legacy CSS-in-JS or component library detected — loading shadcn/ui guidance for modern Vercel-native UI.","pattern":"from\\s+[''\\\"](styled-components|@emotion/styled|@emotion/react|@mui/material|@chakra-ui/react)[''\"]|styled\\.","targetSkill":"shadcn"}]'
 ---
-
 # Vercel React Best Practices
 
 Comprehensive performance optimization guide for React and Next.js applications, maintained by Vercel. Contains 64 rules across 8 categories, prioritized by impact to guide automated refactoring and code generation.

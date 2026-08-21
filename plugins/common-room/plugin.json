@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "common-room",
+  "version": "1.0.3-ghast.1",
+  "description": "Research accounts and contacts, query buyer signals, build prospect lists, and safely write records through Common Room's official hosted MCP.",
+  "author": {
+    "name": "Common Room",
+    "url": "https://www.commonroom.io"
+  },
+  "homepage": "https://www.commonroom.io/docs/using-common-room/mcp-server/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "upstreamRevision": "common-room-docs-a9dbd0442b28+cli-0.1.2-9c87bd173b7e+oauth-325111f2b2c7+auth-83da7abc3978",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

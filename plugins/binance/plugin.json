@@ -1,0 +1,27 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "binance",
+  "version": "2.0.0-ghast.1",
+  "description": "Comprehensive Binance workflows for public market data, Spot, Futures, Options, Convert, Margin, Earn, Loans, Wallet, Fiat, P2P, and Onchain Pay.",
+  "author": {
+    "name": "Binance",
+    "url": "https://www.binance.com"
+  },
+  "homepage": "https://github.com/binance/binance-skills-hub",
+  "repository": "https://github.com/binance/binance-skills-hub",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "finance",
+      "upstreamRevision": "2863a186d2bbd8987fa4790d7b81a299a58364ce",
+      "icon": "./assets/icon.svg",
+      "includedSkills": [
+        "binance",
+        "fiat",
+        "onchain-pay",
+        "p2p"
+      ],
+      "portStatus": "licensed-subset"
+    }
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "channel99": {
-      "type": "http",
-      "url": "https://mcp.channel99.com/mcp"
-    }
-  }
-}

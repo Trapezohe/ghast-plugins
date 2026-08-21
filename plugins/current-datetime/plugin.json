@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "current-datetime",
+  "description": "Slash command and skill that tells the model the current wall-clock time in any IANA timezone — kills the 'I don't know what day it is' problem.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/current-datetime",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "utility",
+      "icon": "./assets/icon.svg",
+      "commands": "./ai.trapezohe.ghast/commands/"
+    }
+  }
+}

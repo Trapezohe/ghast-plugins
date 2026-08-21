@@ -1,20 +1,12 @@
 ---
 name: cuopt-server-api-python
-version: "26.08.00"
 description: cuOpt REST server — start server, endpoints, Python/curl client examples. Use when the user is deploying or calling the REST API.
 license: Apache-2.0
 metadata:
   author: NVIDIA cuOpt Team
-  tags:
-    - cuopt
-    - server
-    - rest-api
-    - python
-    - deployment
+  tags: '["cuopt","server","rest-api","python","deployment"]'
+  version: 26.08.00
 ---
-
-
-
 # cuOpt Server — Deploy and client (Python/curl)
 
 This skill covers **starting the server** and **client examples** (curl, Python). Server has no separate C API (clients can be any language).

@@ -1,19 +1,9 @@
 ---
 name: ticket-resolution
 description: Create, triage, advance, and close HubSpot support tickets — pipeline discovery, contact/company association, priority queues, bulk stage moves, resolution close-out.
-triggers:
-  - "create ticket"
-  - "support ticket"
-  - "triage tickets"
-  - "open tickets"
-  - "resolve ticket"
-  - "close ticket"
-  - "advance ticket"
-  - "ticket pipeline"
-  - "unassigned tickets"
-  - "reassign ticket"
+metadata:
+  triggers: '["create ticket","support ticket","triage tickets","open tickets","resolve ticket","close ticket","advance ticket","ticket pipeline","unassigned tickets","reassign ticket"]'
 ---
-
 Read `bulk-operations/SKILL.md` first — JSONL piping, batch read, pagination, dry-run/digest/confirm, and `hubspot history` recovery live there. `hubspot <command> --help` is authoritative. Tickets use the `tickets` object type (plural, e.g. `tickets:45123`).
 
 ## 1. Discover pipeline + stages (portal-specific, run every session)

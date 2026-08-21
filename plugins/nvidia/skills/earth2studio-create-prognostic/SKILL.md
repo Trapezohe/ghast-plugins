@@ -1,16 +1,13 @@
 ---
 name: earth2studio-create-prognostic
-version: 0.16.0
+description: Create Earth2Studio prognostic (time-stepping forecast) model wrappers. Do NOT use for diagnostic models, data sources, or installation.
 license: Apache-2.0
 metadata:
   author: NVIDIA Earth-2 Team <agent-skills@nvidia.com>
-  tags: [earth2studio, prognostic-model, python]
-description: >
-  Create Earth2Studio prognostic (time-stepping forecast) model wrappers.
-  Do NOT use for diagnostic models, data sources, or installation.
-argument-hint: URL or local path to reference inference script (optional)
+  tags: '["earth2studio","prognostic-model","python"]'
+  version: 0.16.0
+  argument-hint: URL or local path to reference inference script (optional)
 ---
-
 ## Quick Start Checklist
 
 **Do these steps IN ORDER. Do not skip any step.**

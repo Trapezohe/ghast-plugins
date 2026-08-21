@@ -1,19 +1,13 @@
 ---
 name: holoscan-install-wheel
-version: "1.0.0"
-description: "Install Holoscan SDK Python wheel via pip into a venv. Use for Python installs; not for native C++/apt or Conda installs."
+description: Install Holoscan SDK Python wheel via pip into a venv. Use for Python installs; not for native C++/apt or Conda installs.
 license: Apache-2.0
 metadata:
-  author: "Holoscan Team <holoscan-team@nvidia.com>"
-  github-url: "https://github.com/nvidia-holoscan/holoscan-sdk"
-  tags:
-    - holoscan
-    - install
-    - pip
-    - wheel
-    - python
+  author: Holoscan Team <holoscan-team@nvidia.com>
+  github-url: https://github.com/nvidia-holoscan/holoscan-sdk
+  tags: '["holoscan","install","pip","wheel","python"]'
+  version: 1.0.0
 ---
-
 # Holoscan pip Wheel Installation
 
 ## Purpose

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "channel99": {
+      "type": "streamable-http",
+      "url": "https://mcp.channel99.com/mcp"
+    }
+  }
+}

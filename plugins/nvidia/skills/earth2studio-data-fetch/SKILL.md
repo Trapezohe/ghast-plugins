@@ -1,21 +1,12 @@
 ---
 name: earth2studio-data-fetch
-version: 0.16.0
+description: Fetch weather/climate data via Earth2Studio data sources for specific variables and times. Do NOT use for inference pipelines, model discovery, or installation.
 license: Apache-2.0
 metadata:
   author: NVIDIA Earth-2 Team
-  tags:
-    - earth2studio
-    - earth2
-    - python
-    - data-fetch
-    - weather-data
-    - xarray
-description: >
-  Fetch weather/climate data via Earth2Studio data sources for specific variables
-  and times. Do NOT use for inference pipelines, model discovery, or installation.
+  tags: '["earth2studio","earth2","python","data-fetch","weather-data","xarray"]'
+  version: 0.16.0
 ---
-
 # Earth2Studio Data Fetch Skill
 
 ## Purpose

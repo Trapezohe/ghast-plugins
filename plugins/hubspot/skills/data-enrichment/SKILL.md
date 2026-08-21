@@ -1,15 +1,9 @@
 ---
 name: data-enrichment
 description: Match external CSV/JSONL records to CRM contacts (by email) or companies (by domain) and write enriched data back in one pass using `hubspot objects upsert`.
-triggers:
-  - "spreadsheet to CRM"
-  - "match contacts by email"
-  - "match companies by domain"
-  - "enrich CRM from CSV"
-  - "CRM write-back"
-  - "create or update by email"
+metadata:
+  triggers: '["spreadsheet to CRM","match contacts by email","match companies by domain","enrich CRM from CSV","CRM write-back","create or update by email"]'
 ---
-
 Prereq: read `bulk-operations/SKILL.md` first — JSONL piping, dry-run/digest, history, and rate-limit hygiene live there. This skill is the upsert-by-natural-key workflow on top.
 
 ## The core move: upsert, not search-then-create

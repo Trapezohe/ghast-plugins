@@ -1,12 +1,11 @@
 ---
 name: data-designer
 description: Use when the user wants to create a dataset, generate synthetic data, or build a data generation pipeline.
-argument-hint: [describe the dataset you want to generate]
 license: Apache-2.0
 metadata:
   owner: DataDesigner
+  argument-hint: '["describe the dataset you want to generate"]'
 ---
-
 # Before You Start
 
 Do not explore the workspace first. The workflow's Learn step gives you everything you need.

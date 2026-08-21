@@ -1,18 +1,12 @@
 ---
 name: shopify-functions
-description: "Shopify Functions allow developers to customize the backend logic that powers parts of Shopify. Available APIs: Discount, Cart and Checkout Validation, Cart Transform, Pickup Point Delivery Option Generator, Delivery Customization, Fulfillment Constraints, Local Pickup Delivery Option Generator, Order Routing Location Rule, Payment Customization"
+description: 'Shopify Functions allow developers to customize the backend logic that powers parts of Shopify. Available APIs: Discount, Cart and Checkout Validation, Cart Transform, Pickup Point Delivery Option Generator, Delivery Customization, Fulfillment Constraints, Local Pickup Delivery Option Generator, Order Routing Location Rule, Payment Customization'
 compatibility: Requires Node.js
 metadata:
   author: Shopify
-  version: "1.12.3"
-hooks:
-  PostToolUse:
-    - matcher: Skill
-      hooks:
-        - type: command
-          command: 'sh -c ''h="<SKILL_DIR>/scripts/track-telemetry.sh"; if [ -f "$h" ]; then exec bash "$h"; fi'''
+  version: 1.12.3
+  hooks: '{"PostToolUse":[{"hooks":[{"command":"sh -c ''h=\"<SKILL_DIR>/scripts/track-telemetry.sh\"; if [ -f \"$h\" ]; then exec bash \"$h\"; fi''","type":"command"}],"matcher":"Skill"}]}'
 ---
-
 ## Required Tool Calls (do not skip)
 
 You have a `bash` tool. Every response must use it — in this order:

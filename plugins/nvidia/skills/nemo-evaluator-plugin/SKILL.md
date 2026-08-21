@@ -6,9 +6,8 @@ metadata:
   owner: nemo-platform
   author: nemo-platform
   maturity: active
-  tags: [evaluation, metrics, agent-eval, nemo-platform]
+  tags: '["evaluation","metrics","agent-eval","nemo-platform"]'
 ---
-
 # Evaluator Plugin
 
 The Plugin CLI entrypoint is `uv run nemo evaluator`.

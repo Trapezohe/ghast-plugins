@@ -1,31 +1,13 @@
 ---
 name: tao-port-huggingface-model
-description: >
-  Integrate a HuggingFace Computer Vision model into the NVIDIA TAO Toolkit
-  ecosystem (tao-core config, tao-pytorch trainer, tao-deploy TensorRT
-  pipeline). Use when the user asks to "integrate a HuggingFace model into
-  TAO", "add an HF model to TAO Toolkit", "wire a HuggingFace ViT/DETR/
-  SegFormer into tao-pytorch", "build a TAO trainer + deploy pipeline for an
-  HF CV model", or pastes a HuggingFace model URL/ID and wants it turned
-  into a TAO model. Covers the full 7-phase loop: prerequisites check,
-  HuggingFace inspection and validation, codebase exploration, tao-core
-  configuration and native trainer implementation, ONNX export plus TensorRT
-  deploy integration, packaging and L0 testing, container-based end-to-end
-  validation, and (conditional) accuracy/latency tuning. Supports
-  classification, object detection, semantic / instance / panoptic
-  segmentation, zero-shot detection, and depth estimation.
+description: 'Integrate a HuggingFace Computer Vision model into the NVIDIA TAO Toolkit ecosystem (tao-core config, tao-pytorch trainer, tao-deploy TensorRT pipeline). Use when the user asks to "integrate a HuggingFace model into TAO", "add an HF model to TAO Toolkit", "wire a HuggingFace ViT/DETR/ SegFormer into tao-pytorch", "build a TAO trainer + deploy pipeline for an HF CV model", or pastes a HuggingFace model URL/ID and wants it turned into a TAO model. Covers the full 7-phase loop: prerequisites check, HuggingFace inspection and validation, codebase exploration, tao-core configuration and native trainer implementation, ONNX export plus TensorRT deploy integration, packaging and L0 testing, container-based end-to-end validation, and (conditional) accuracy/latency tuning. Supports classification, object detection, semantic / instance / panoptic segmentation, zero-shot detection, and depth estimation.'
 license: Apache-2.0
 compatibility: Requires Python 3.10+, NVIDIA driver, CUDA 13.0+, docker + nvidia-container-toolkit, an NGC API key (`docker login nvcr.io`), an HF_TOKEN, and access to the TAO Toolkit container images on `nvcr.io` for `tao-pytorch`, `tao-deploy`, and (optionally) `tao-dataservices` — Phase 0 asks the user for the exact image references and prepares them locally as `tao-pytorch-base:latest`, `tao-deploy-base:latest`, `tao-dataservices-base:latest`. Local clones of `tao-core`, `tao-pytorch`, `tao-deploy`,...
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["tao","huggingface","integration","computer-vision","deploy"]'
 allowed-tools: Read Bash Write Edit Grep Glob
-tags:
-- tao
-- huggingface
-- integration
-- computer-vision
-- deploy
 ---
 <!--
 Copyright (c) 2026, NVIDIA CORPORATION.  All rights reserved.

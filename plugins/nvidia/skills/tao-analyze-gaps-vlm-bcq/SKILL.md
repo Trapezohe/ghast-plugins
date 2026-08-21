@@ -1,23 +1,14 @@
 ---
 name: tao-analyze-gaps-vlm-bcq
-description: Extract false-positive and false-negative gaps from VLM binary-classification-question (BCQ, yes/no) predictions.
-  Use when the user asks to "analyze VLM BCQ gaps", "extract VLM false positives and false negatives", or identify failure
-  cases from a predictions JSON for DEFT root-cause analysis on a binary-classification VLM workflow.
+description: Extract false-positive and false-negative gaps from VLM binary-classification-question (BCQ, yes/no) predictions. Use when the user asks to "analyze VLM BCQ gaps", "extract VLM false positives and false negatives", or identify failure cases from a predictions JSON for DEFT root-cause analysis on a binary-classification VLM workflow.
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["gap-analysis","rcca","vlm","evaluation","false-positive","false-negative"]'
 allowed-tools: Read Bash
-tags:
-- gap-analysis
-- rcca
-- vlm
-- evaluation
-- false-positive
-- false-negative
 ---
-
 # VLM Binary Classification Gap Analysis
 
 Reads a VLM predictions JSON, compares each model response against ground truth, and writes FP/FN failure cases to a JSONL file with a summary report.

@@ -1,18 +1,13 @@
 ---
 name: holoscan-install-conda
-version: "1.0.0"
-description: "Install Holoscan SDK v4.3+ via Conda in a CUDA 13 environment. Use for Conda installs; redirect CUDA 12 hosts to container/wheel."
+description: Install Holoscan SDK v4.3+ via Conda in a CUDA 13 environment. Use for Conda installs; redirect CUDA 12 hosts to container/wheel.
 license: Apache-2.0
 metadata:
-  author: "Holoscan Team <holoscan-team@nvidia.com>"
-  github-url: "https://github.com/nvidia-holoscan/holoscan-sdk"
-  tags:
-    - holoscan
-    - install
-    - conda
-    - cuda
+  author: Holoscan Team <holoscan-team@nvidia.com>
+  github-url: https://github.com/nvidia-holoscan/holoscan-sdk
+  tags: '["holoscan","install","conda","cuda"]'
+  version: 1.0.0
 ---
-
 # Holoscan Conda Installation
 
 ## Purpose

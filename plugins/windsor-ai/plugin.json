@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "windsor-ai",
+  "version": "1.0.3-ghast.1",
+  "description": "Query, analyze, connect, and carefully act on business data from Windsor.ai's official hosted MCP across 350+ sources.",
+  "author": {
+    "name": "Windsor.ai",
+    "url": "https://windsor.ai"
+  },
+  "homepage": "https://mcp.windsor.ai/docs",
+  "repository": "https://github.com/windsor-ai/windsor_mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "data",
+      "upstreamRevision": "mcp-f1632eefcae4+plugin-d7ba1cb036c7+docs-d85a5536428d+oauth-1e68eaf1c788",
+      "icon": "./assets/icon.svg",
+      "commands": "./ai.trapezohe.ghast/commands/",
+      "portStatus": "superset-newer-official-hosted-mcp"
+    }
+  }
+}

@@ -1,16 +1,10 @@
 ---
 name: add-fundraising
-description: >
-  Adds one or more fundraising records to the Carta CRM via the Carta CRM MCP Server.
-  Use this skill when the user says things like "add a fundraising", "create a fundraising",
-  "log a fundraising round", "add fundraising to CRM", "create fundraising record",
-  or "/add-fundraising". Collects fundraising information conversationally, then creates
-  it via the MCP server.
-version: 1.0.0
-model: haiku
+description: Adds one or more fundraising records to the Carta CRM via the Carta CRM MCP Server. Use this skill when the user says things like "add a fundraising", "create a fundraising", "log a fundraising round", "add fundraising to CRM", "create fundraising record", or "/add-fundraising". Collects fundraising information conversationally, then creates it via the MCP server.
+metadata:
+  version: 1.0.0
+  model: haiku
 ---
-
-
 ## Ghast MCP routing
 
 This port connects directly to Carta's hosted MCP server. Use the direct tool

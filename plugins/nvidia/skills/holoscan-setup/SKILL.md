@@ -1,19 +1,13 @@
 ---
 name: holoscan-setup
-version: "1.0.0"
-description: "Guides Holoscan SDK installation: inspects the host, assesses platform compatibility, recommends an install method, and delegates to the matching install skill."
+description: 'Guides Holoscan SDK installation: inspects the host, assesses platform compatibility, recommends an install method, and delegates to the matching install skill.'
 license: Apache-2.0
 metadata:
-  author: "Holoscan Team <holoscan-team@nvidia.com>"
-  github-url: "https://github.com/nvidia-holoscan/holoscan-sdk"
-  tags:
-    - holoscan
-    - installation
-    - nvidia
-    - sdk
-    - setup
+  author: Holoscan Team <holoscan-team@nvidia.com>
+  github-url: https://github.com/nvidia-holoscan/holoscan-sdk
+  tags: '["holoscan","installation","nvidia","sdk","setup"]'
+  version: 1.0.0
 ---
-
 # Holoscan SDK Setup
 
 ## Purpose

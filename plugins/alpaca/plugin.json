@@ -1,0 +1,38 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "alpaca",
+  "version": "0.1.0-ghast.1",
+  "description": "Research stocks, options, crypto, fixed income, indices, news, and corporate actions through Alpaca's official market-data MCP, with separately authorized paper and live trading servers for account, order, position, portfolio, and watchlist workflows.",
+  "author": {
+    "name": "Alpaca",
+    "email": "support@alpaca.markets"
+  },
+  "homepage": "https://github.com/alpacahq/agentic",
+  "repository": "https://github.com/alpacahq/agentic",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "finance",
+      "upstreamRevision": "a97b49ecdf47b6b46d8fc1027139c475296dc696",
+      "upstreamPath": "plugins/alpaca-trading",
+      "icon": "./assets/icon.svg",
+      "mcpServerExtensions": {
+        "alpaca-trading": {
+          "oauth": {
+            "client_id": "PCIEJZTPCQEBUBAINMQOGDHF7I"
+          }
+        },
+        "alpaca-trading-paper": {
+          "oauth": {
+            "client_id": "PCIEJZTPCQEBUBAINMQOGDHF7I"
+          }
+        },
+        "alpaca-market-data": {
+          "oauth": {
+            "client_id": "PCIEJZTPCQEBUBAINMQOGDHF7I"
+          }
+        }
+      }
+    }
+  }
+}

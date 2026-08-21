@@ -1,18 +1,12 @@
 ---
 name: i4h-catheter-navigation-render-drr
-version: "0.7.0"
 description: Render a single DRR fluoroscopy frame from a CT cache or synthetic phantom. Use when asked to render DRR, generate a fluoro image, or smoke-test the Slang renderer.
 license: Apache-2.0
 metadata:
-  author: "Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>"
-  tags:
-    - isaac-for-healthcare
-    - i4h
-    - catheter-navigation
-    - drr
-    - fluoroscopy
+  author: Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>
+  tags: '["isaac-for-healthcare","i4h","catheter-navigation","drr","fluoroscopy"]'
+  version: 0.7.0
 ---
-
 # i4h Catheter Navigation - Render DRR
 
 ## Purpose

@@ -1,22 +1,14 @@
 ---
 name: jetson-generate-kb
-description: >-
-  Build a per-target knowledge-base markdown next to the active
-  profile by walking the BSP root and source tree. Use after
-  init-image / init-source; not for editing profile fields.
-version: 0.0.1
-license: "Apache-2.0"
+description: Build a per-target knowledge-base markdown next to the active profile by walking the BSP root and source tree. Use after init-image / init-source; not for editing profile fields.
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
-  tags:
-    - target-platform
-    - knowledge-base
-    - documentation
-    - meta
+  author: Jetson Team
+  tags: '["target-platform","knowledge-base","documentation","meta"]'
   domain: meta
+  version: 0.0.1
 ---
-
 # Generate Target Knowledge Base
 
 ## Overview

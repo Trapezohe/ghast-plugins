@@ -1,24 +1,13 @@
 ---
 name: earth2studio-create-datasource
-version: 0.16.0
+description: Create and validate Earth2Studio data source wrappers (DataSource, ForecastSource, DataFrameSource, ForecastFrameSource) from remote stores. Do NOT use for fetching data with existing sources, model inference, or installation tasks.
 license: Apache-2.0
 metadata:
   author: NVIDIA Earth-2 Team <agent-skills@nvidia.com>
-  tags:
-    - earth2studio
-    - earth2
-    - python
-    - data-source
-    - forecast-source
-    - integration
-description: >
-  Create and validate Earth2Studio data source wrappers (DataSource,
-  ForecastSource, DataFrameSource, ForecastFrameSource) from remote stores.
-  Do NOT use for fetching data with existing sources, model inference, or
-  installation tasks.
-argument-hint: URL or description of remote data store (optional)
+  tags: '["earth2studio","earth2","python","data-source","forecast-source","integration"]'
+  version: 0.16.0
+  argument-hint: URL or description of remote data store (optional)
 ---
-
 # Create and Validate Data Source
 
 ## Purpose

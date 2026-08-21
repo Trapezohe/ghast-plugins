@@ -1,4 +1,4 @@
-# Ghast Plugins & MCP Registry
+# Ghast Agent Plugins & MCP Registry
 
 Ghast's public plugin catalog. The desktop client downloads
 `plugin-catalog.json`, verifies each package's SHA-256 digest, and installs the
@@ -8,22 +8,24 @@ selected bundle into the active profile.
 
 | Path | Purpose |
 | --- | --- |
-| `plugins/<name>/` | Ghast-native plugin sources |
+| `plugins/<name>/` | Agent Plugins 1.0.0 sources |
 | `packages/<name>.zip` | Deterministic downloadable packages |
 | `plugin-catalog.json` | Package metadata consumed by Ghast |
 | `mcp-registry.json` | Standalone MCP marketplace |
 
 ## Plugin format
 
-Every plugin uses Ghast's native declarative format:
+Every plugin conforms to the vendor-neutral
+[Agent Plugins 1.0.0 specification](https://agent-plugins.org/specification):
 
 ```text
 plugins/<name>/
-├── .ghast-plugin/plugin.json
+├── plugin.json                # required Agent Plugins 1.0 manifest
 ├── assets/icon.svg           # required; PNG/JPEG/WebP also supported
-├── commands/                  # optional slash commands
-├── skills/                    # optional model-invoked skills
-├── .mcp.json                  # optional MCP servers
+├── skills/                    # optional Agent Skills
+├── mcp.json                   # optional MCP server configuration
+├── ai.trapezohe.ghast/        # optional Ghast extension files
+│   └── commands/              # optional Ghast slash commands
 ├── README.md                  # optional
 └── LICENSE                    # required for third-party ports
 ```
@@ -32,23 +34,35 @@ Minimal manifest:
 
 ```json
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "your-plugin",
   "version": "1.0.0",
   "description": "What the plugin adds.",
   "author": { "name": "Your Name" },
-  "icon": "./assets/icon.svg",
-  "skills": "./skills/",
-  "commands": "./commands/",
-  "mcpServers": "./.mcp.json"
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "development",
+      "icon": "./assets/icon.svg"
+    }
+  }
 }
 ```
 
-Every plugin must declare one icon under `./assets/`; the catalog exposes that
-asset before installation and the package includes the same file. Only declare
-paths that exist. Ghast currently hosts skills, slash commands, and MCP
-servers. Open remote MCP plugins can use Ghast's OAuth flow; private connector
-IDs tied to another vendor's backend cannot be published as working Ghast
-plugins.
+Agent Plugins discovers skills and MCP configuration from their fixed paths;
+they are never declared inline in `plugin.json`. Ghast-specific category,
+icon, provenance, command, and credential-reference metadata lives under the
+reverse-domain `ai.trapezohe.ghast` extension. Agent Plugins 1.0 intentionally
+leaves OAuth and credentials to clients, so portable `mcp.json` files contain
+no secret references. Private connector IDs tied to another vendor's backend
+cannot be published as working Ghast plugins.
+
+Legacy importer output can be converted deterministically before packaging:
+
+```bash
+python3 scripts/migrate-agent-plugins-1.0.py
+python3 -m pip install -r requirements-agent-plugins.txt
+python3 scripts/normalize-agent-skills.py
+```
 
 ## Build the catalog
 
@@ -56,7 +70,7 @@ plugins.
 python3 scripts/build-ghast-catalog.py
 ```
 
-The script reads only `.ghast-plugin/plugin.json` sources, creates stable ZIPs,
+The script reads only root `plugin.json` sources, creates stable ZIPs,
 computes their SHA-256 digests, and rewrites `plugin-catalog.json`.
 
 ## Validate the repository
@@ -65,8 +79,8 @@ computes their SHA-256 digests, and rewrites `plugin-catalog.json`.
 python3 scripts/validate-ghast-repository.py
 ```
 
-The validator checks plugin manifests, declared paths, icons, skill
-frontmatter, JSON, Python, JavaScript, shell scripts, package layout and
+The validator checks Agent Plugins 1.0 manifests and MCP configuration, icons,
+skill frontmatter, JSON, Python, JavaScript, shell scripts, package layout and
 SHA-256 hashes, audit summaries, and common embedded-secret patterns.
 
 ## Import connector-free OpenAI plugins
@@ -81,6 +95,8 @@ python3 scripts/import-openai-portable-plugins.py \
   --source ../openai-plugins \
   --external-root ../upstreams
 python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins
+python3 scripts/migrate-agent-plugins-1.0.py
+python3 scripts/normalize-agent-skills.py
 python3 scripts/build-ghast-catalog.py
 ```
 
@@ -98,6 +114,8 @@ as canonical.
 python3 scripts/import-official-third-party-plugins.py \
   --source-root ../upstreams
 python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins
+python3 scripts/migrate-agent-plugins-1.0.py
+python3 scripts/normalize-agent-skills.py
 python3 scripts/build-ghast-catalog.py
 ```
 
@@ -116,6 +134,8 @@ configuration and safety instructions.
 ```bash
 python3 scripts/import-official-hosted-plugins.py
 python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins
+python3 scripts/migrate-agent-plugins-1.0.py
+python3 scripts/normalize-agent-skills.py
 python3 scripts/build-ghast-catalog.py
 ```
 
@@ -134,6 +154,8 @@ come from environment variables instead of process arguments.
 python3 scripts/import-binance-plugin.py \
   --source ../upstreams/binance-skills-hub
 python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins
+python3 scripts/migrate-agent-plugins-1.0.py
+python3 scripts/normalize-agent-skills.py
 python3 scripts/build-ghast-catalog.py
 ```
 
@@ -195,7 +217,7 @@ runtime dependency:
 
 1. Verify the upstream repository, exact revision, and redistribution license.
 2. Copy only contributions Ghast actually supports.
-3. Replace the source manifest with `.ghast-plugin/plugin.json`.
+3. Emit or migrate to the root Agent Plugins 1.0 `plugin.json` manifest.
 4. Remove connector-app declarations unless a Ghast connector exists.
 5. Include the upstream license and provenance in the plugin directory.
 6. Build the catalog and install the generated package through Ghast before
@@ -207,7 +229,7 @@ HTTPS and provide a valid SHA-256 digest.
 
 ## Contribution policy
 
-Add the plugin source under `plugins/<name>/`, run the catalog builder, and
+Add the Agent Plugins 1.0 source under `plugins/<name>/`, run the catalog builder, and
 commit both the source and generated package/catalog changes. Do not mirror an
 external marketplace wholesale: each plugin must be licensed, reviewed, and
 verified against Ghast's real runtime.

@@ -1,25 +1,11 @@
 ---
-name: zoom-video-sdk
-description: |
-  Zoom Video SDK for building custom video experiences (not Zoom meetings) on web, React Native, Flutter, Android, iOS, macOS, Windows, Unity, and Linux platforms.
-  Use when you want full control over the video UI and experience.
-triggers:
-  - "custom video"
-  - "video sdk"
-  - "build video app"
-  - "video session"
-  - "video chat"
-  - "video call"
-  - "video conferencing"
-  - "custom video ui"
-  - "twitter spaces"
-  - "clubhouse alternative"
-  - "audio-only room"
-  - "screen sharing"
-  - "virtual background"
-  - "native video sdk"
----
+name: video-sdk
+description: 'Zoom Video SDK for building custom video experiences (not Zoom meetings) on web, React Native, Flutter, Android, iOS, macOS, Windows, Unity, and Linux platforms.
 
+  Use when you want full control over the video UI and experience.'
+metadata:
+  triggers: '["custom video","video sdk","build video app","video session","video chat","video call","video conferencing","custom video ui","twitter spaces","clubhouse alternative","audio-only room","screen sharing","virtual background","native video sdk"]'
+---
 # Zoom Video SDK
 
 Build custom video experiences powered by Zoom's infrastructure.

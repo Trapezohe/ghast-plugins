@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mixpanel",
+  "version": "1.0.0-ghast.1",
+  "description": "Analyze Mixpanel data and manage dashboards, Lexicon, data quality, experiments, feature flags, metrics, cohorts, and business context through Mixpanel's official skills and hosted MCP server.",
+  "author": {
+    "name": "Mixpanel",
+    "url": "https://mixpanel.com"
+  },
+  "homepage": "https://docs.mixpanel.com/docs/mcp",
+  "repository": "https://github.com/mixpanel/ai-plugins",
+  "license": "Apache-2.0",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "data",
+      "upstreamRevision": "2bde5a300d40afbc934ae74f44444744b80c09b6",
+      "upstreamPath": "plugins/mixpanel",
+      "icon": "./assets/icon.svg",
+      "commands": "./ai.trapezohe.ghast/commands/"
+    }
+  }
+}

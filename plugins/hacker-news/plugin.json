@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "hacker-news",
+  "description": "Skill for reading Hacker News from chat — top / new / best stories plus thread fetches via the public Firebase API.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/hacker-news",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "news",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

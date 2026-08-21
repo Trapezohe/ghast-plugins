@@ -1,16 +1,15 @@
 ---
-name: "amc-run-sample-calibration"
-description: "Run end-to-end calibration on the shipped sample dataset (sdg_08_2_sample_data_010926.zip) against a running AMC microservice. Use when user says 'test sample dataset', 'run sample calibration', 'verify AMC install', or 'launch and test'."
-owner: "NVIDIA CORPORATION"
-service: "auto-magic-calib"
-version: "1.0.0"
-reviewed: "2026-04-28"
-license: "Apache-2.0"
+name: amc-run-sample-calibration
+description: Run end-to-end calibration on the shipped sample dataset (sdg_08_2_sample_data_010926.zip) against a running AMC microservice. Use when user says 'test sample dataset', 'run sample calibration', 'verify AMC install', or 'launch and test'.
+license: Apache-2.0
 metadata:
-  author: "NVIDIA CORPORATION"
-  tags: [amc, calibration, sample, rest-api, validation, python]
+  author: NVIDIA CORPORATION
+  tags: '["amc","calibration","sample","rest-api","validation","python"]'
+  owner: NVIDIA CORPORATION
+  service: auto-magic-calib
+  version: 1.0.0
+  reviewed: '2026-04-28'
 ---
-
 # Skill: Calibrate Sample Dataset
 
 ## When to Use This Skill

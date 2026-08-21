@@ -1,0 +1,27 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "lovable",
+  "version": "1.0.2-ghast.1",
+  "description": "Create, inspect, iterate, deploy, and manage full-stack Lovable apps, code, knowledge, databases, connectors, analytics, and workspaces through Lovable's official hosted MCP server.",
+  "author": {
+    "name": "Lovable",
+    "url": "https://lovable.dev"
+  },
+  "homepage": "https://docs.lovable.dev/integrations/lovable-mcp-server",
+  "repository": "https://github.com/lovablelabs/mcp",
+  "license": "Apache-2.0",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "developer-tools",
+      "upstreamRevision": "0336e6db8026b0f02cb89d1451cc48ea3f469791",
+      "icon": "./assets/icon.svg",
+      "mcpServerExtensions": {
+        "lovable": {
+          "oauth": {
+            "client_id": "6d465f583e1e4ce5801b1616f735670c"
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,9 +2,9 @@
 name: nemo-mbridge-resiliency
 description: Resiliency features in Megatron Bridge including fault tolerance, straggler detection, in-process restart, preemption, and re-run state machine.
 license: Apache-2.0
-when_to_use: Enabling resiliency features, or investigating a commit that caused training hangs, straggler detection failures, or broken restarts; 'fault tolerance', 'straggler detection', 'hang detection', 'automatic restart', 'in-process restart', 'preemption', 'nvidia-resiliency-ext'.
+metadata:
+  when_to_use: Enabling resiliency features, or investigating a commit that caused training hangs, straggler detection failures, or broken restarts; 'fault tolerance', 'straggler detection', 'hang detection', 'automatic restart', 'in-process restart', 'preemption', 'nvidia-resiliency-ext'.
 ---
-
 # Resiliency
 
 Stable docs: @docs/training/resiliency.md, @docs/training/checkpointing.md

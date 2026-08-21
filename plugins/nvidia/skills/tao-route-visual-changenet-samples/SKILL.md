@@ -1,22 +1,14 @@
 ---
 name: tao-route-visual-changenet-samples
-description: Routes the weakest VCN samples (output of `tao-analyze-gaps-visual-changenet`) into per-augmentation-module
-  subsets based on each module's label eligibility. Use when the user asks to "route VCN gap samples", "split AOI gaps for
-  k-NN mining and AnomalyGen", or prepare the immediate next step after DEFT gap analysis in a VCN AOI SDA iteration.
+description: Routes the weakest VCN samples (output of `tao-analyze-gaps-visual-changenet`) into per-augmentation-module subsets based on each module's label eligibility. Use when the user asks to "route VCN gap samples", "split AOI gaps for k-NN mining and AnomalyGen", or prepare the immediate next step after DEFT gap analysis in a VCN AOI SDA iteration.
 license: Apache-2.0
 compatibility: Standalone — no external runtime requirements.
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["data","routing","vcn","aoi","sda"]'
 allowed-tools: Read Bash
-tags:
-- data
-- routing
-- vcn
-- aoi
-- sda
 ---
-
 # TAO VCN Sample Routing Skill
 
 You are the dispatcher between gap analysis and the augmentation modules in a VCN AOI SDA pipeline. Each augmentation module can only act on labels it knows how to handle:

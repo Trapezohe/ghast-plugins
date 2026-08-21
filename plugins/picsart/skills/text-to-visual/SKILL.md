@@ -2,9 +2,11 @@
 name: text-to-visual
 description: Generate matching visuals from text via Picsart gen-ai.
 license: MIT
-metadata: {"author": "Picsart", "version": "1.0.0", "hermes": {"category": "creative", "tags": ["picsart", "text-to-image", "blog-visuals", "og-images", "content"]}}
+metadata:
+  author: Picsart
+  version: 1.0.0
+  hermes: '{"category":"creative","tags":["picsart","text-to-image","blog-visuals","og-images","content"]}'
 ---
-
 # Text to Visual
 
 A single skill that covers every "given text, produce a matching image" workflow Picsart's `gen-ai` CLI supports. Use when the user has any kind of written content — a paragraph, a blog draft, a URL — and needs visuals generated from it. Replaces three narrower skills with one entry point and three mode references.

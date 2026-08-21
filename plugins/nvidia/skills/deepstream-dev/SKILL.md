@@ -1,13 +1,13 @@
 ---
 name: deepstream-dev
 description: NVIDIA DeepStream SDK development with Python pyservicemaker API. Use when building video analytics pipelines, GStreamer-based video processing, TensorRT inference integration, object detection/tracking, or Kafka/message broker integration.
-owner: NVIDIA CORPORATION
-service: deepstream
-version: 1.1.1
-reviewed: 2026-04-24
 license: CC-BY-4.0 AND Apache-2.0
+metadata:
+  owner: NVIDIA CORPORATION
+  service: deepstream
+  version: 1.1.1
+  reviewed: '"2026-04-24"'
 ---
-
 # DeepStream Development Skill
 
 When this skill is active, **ALWAYS read the relevant reference documents** before generating code. Do NOT rely on memory - the reference documents contain critical details about exact property names, correct API usage, and common pitfalls.

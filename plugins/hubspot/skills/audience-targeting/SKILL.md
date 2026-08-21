@@ -1,17 +1,9 @@
 ---
 name: audience-targeting
 description: Build a targeted contact segment by filtering on lifecycle, engagement, jobtitle, geography, or firmographics — then export it as JSONL for a campaign or downstream tool.
-triggers:
-  - "segment contacts"
-  - "target audience"
-  - "find prospects"
-  - "build audience"
-  - "contact segmentation"
-  - "contacts in industry"
-  - "decision makers"
-  - "engaged contacts"
+metadata:
+  triggers: '["segment contacts","target audience","find prospects","build audience","contact segmentation","contacts in industry","decision makers","engaged contacts"]'
 ---
-
 ## Foundation
 
 Read `bulk-operations/SKILL.md` first — pagination, JSONL piping, destructive-op safety. Reshape recipes in `bulk-operations/resources/json-patterns.md`. Resource: `resources/contact-segmentation-filters.md` is the filter-expression cookbook (lifecycle, lead status, email engagement, activity, deals, owner).

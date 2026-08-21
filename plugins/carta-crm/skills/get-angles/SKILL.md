@@ -1,17 +1,10 @@
 ---
 name: get-angles
-description: >
-  Finds the best warm introduction path into a target company through the user's network, and
-  then sets the introduction up. Use this skill when the user says things like "find intro
-  angles into [company]", "how can I get introduced to [company]", "who do I know at
-  [company]", "warm intro to [company]", "find connections at [company]", "how do I reach
-  [company]", or "/get-angles". Input: a company name or domain. Output: a ranked route map,
-  a drafted intro request, and the follow-through actions.
-version: 1.0.0
-model: inherit
+description: 'Finds the best warm introduction path into a target company through the user''s network, and then sets the introduction up. Use this skill when the user says things like "find intro angles into [company]", "how can I get introduced to [company]", "who do I know at [company]", "warm intro to [company]", "find connections at [company]", "how do I reach [company]", or "/get-angles". Input: a company name or domain. Output: a ranked route map, a drafted intro request, and the follow-through actions.'
+metadata:
+  version: 1.0.0
+  model: inherit
 ---
-
-
 ## Ghast MCP routing
 
 This port connects directly to Carta's hosted MCP server. Use the direct tool

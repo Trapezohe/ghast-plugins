@@ -1,21 +1,9 @@
 ---
 name: communication-history
 description: Retrieve activity history (calls, emails, notes, meetings, tasks) for a CRM record and assemble pre-call briefs.
-triggers:
-  - "pre-call research"
-  - "call history"
-  - "email history"
-  - "recent activity"
-  - "communication history"
-  - "meeting prep"
-  - "transcripts"
-  - "call transcripts"
-  - "dump transcripts"
-  - "fetch transcripts"
-  - "call recordings"
-  - "export transcripts"
+metadata:
+  triggers: '["pre-call research","call history","email history","recent activity","communication history","meeting prep","transcripts","call transcripts","dump transcripts","fetch transcripts","call recordings","export transcripts"]'
 ---
-
 Read `bulk-operations/SKILL.md` first — JSONL piping, batch read, and `jq` reshape patterns (`resources/json-patterns.md`) apply. `hubspot activities list --help` is the source of truth.
 
 ## Output shape

@@ -1,15 +1,9 @@
 ---
 name: chronograph-markup-markdown-brief
-description: Identify which portfolio companies were marked up or down this period, quantify each
-  change, surface the stated basis, and rank by impact on fund NAV — using Chronograph investment
-  metrics.
-when_to_use: 'Use when reviewing valuation changes across a fund or portfolio for a period.
-  Triggers: "what got marked up/down this quarter", "valuation changes", "biggest write-ups and
-  write-downs", "what drove the NAV change", "markup brief". Useful for GP valuation review and IC
-  prep; LP analysts can use it too. For a full per-company report use
-  chronograph-portfolio-company-one-pager.'
+description: Identify which portfolio companies were marked up or down this period, quantify each change, surface the stated basis, and rank by impact on fund NAV — using Chronograph investment metrics.
+metadata:
+  when_to_use: 'Use when reviewing valuation changes across a fund or portfolio for a period. Triggers: "what got marked up/down this quarter", "valuation changes", "biggest write-ups and write-downs", "what drove the NAV change", "markup brief". Useful for GP valuation review and IC prep; LP analysts can use it too. For a full per-company report use chronograph-portfolio-company-one-pager.'
 ---
-
 # Markup / Markdown Brief
 
 **Requirements:** A connected Chronograph MCP server as a GP client, with investment-level valuation data for the current and prior period.

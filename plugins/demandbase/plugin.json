@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "demandbase",
+  "version": "1.0.3-ghast.1",
+  "description": "Research internal accounts and people, global companies and contacts, Intent, Buying Groups, opportunities, and meeting-ready account briefs through Demandbase's official hosted MCP.",
+  "author": {
+    "name": "Demandbase Inc",
+    "url": "https://www.demandbase.com"
+  },
+  "homepage": "https://developer.demandbase.com/docs/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "business",
+      "upstreamRevision": "demandbase-docs-f41df5ef1529+custom-5ae757d63c7b+oauth-4b6086018213+auth-974b2f8f4944",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

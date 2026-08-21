@@ -1,10 +1,12 @@
 ---
 name: agency-pitch-mockups
-description: Client-branded pitch mockups: hero, tiles, slides.
+description: 'Client-branded pitch mockups: hero, tiles, slides.'
 license: MIT
-metadata: {"author": "Picsart", "version": "1.0.0", "hermes": {"category": "agency", "tags": ["picsart", "agency", "creative", "client-work"]}}
+metadata:
+  author: Picsart
+  version: 1.0.0
+  hermes: '{"category":"agency","tags":["picsart","agency","creative","client-work"]}'
 ---
-
 # Agency pitch mockups
 
 Rapid visuals for a new-business pitch deck: campaign hero, product tiles, key-visual explorations, quote slides — all client-branded, all clearly-labeled-as-mockup, all iterable in under an hour before the pitch.

@@ -2,9 +2,11 @@
 name: gen-ai-persona-creation
 description: Create AI influencer or branded character personas.
 license: MIT
-metadata: {"author": "Picsart", "version": "1.0.0", "hermes": {"category": "creative", "tags": ["picsart", "personas", "character-design", "creative"]}}
+metadata:
+  author: Picsart
+  version: 1.0.0
+  hermes: '{"category":"creative","tags":["picsart","personas","character-design","creative"]}'
 ---
-
 # AI Influencer Persona
 
 Turn one sentence into a head-to-toe 4-angle casting card in signature wardrobe, persona profile, platform-tuned captions, and (optional) a reel with ambient audio. Output: `./<persona-slug>/`.

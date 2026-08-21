@@ -1,18 +1,14 @@
 ---
 name: jetson-download-bsp
-description: >-
-  Download NVIDIA Jetson Linux BSP artifacts (BSP tarball, sample
-  rootfs, public_sources, x-tools, guides) for the active target. Use
-  for Auto Setup; not for extraction or profile edits.
-version: 0.0.1
-license: "Apache-2.0"
+description: Download NVIDIA Jetson Linux BSP artifacts (BSP tarball, sample rootfs, public_sources, x-tools, guides) for the active target. Use for Auto Setup; not for extraction or profile edits.
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
-  tags: [setup, bootstrap, download]
+  author: Jetson Team
+  tags: '["setup","bootstrap","download"]'
   domain: setup
+  version: 0.0.1
 ---
-
 # Download BSP Artifacts
 
 `jetson-download-bsp` owns network fetches for the Auto Setup path.

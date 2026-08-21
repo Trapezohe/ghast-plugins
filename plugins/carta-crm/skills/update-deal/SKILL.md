@@ -1,18 +1,10 @@
 ---
 name: update-deal
-description: >
-  Updates an existing deal record in the Carta CRM.
-  Use this skill when the user says things like "update a deal", "move deal to [stage]",
-  "change deal stage", "edit deal", "update deal fields", "add a tag to deal",
-  "assign deal lead", "update company info on deal", "link contacts to deal",
-  or "/update-deal".
-  Accepts a deal ID or company name (will search if no ID provided).
-  Only the fields explicitly provided are changed — all other fields are left untouched.
-version: 1.0.0
-model: haiku
+description: Updates an existing deal record in the Carta CRM. Use this skill when the user says things like "update a deal", "move deal to [stage]", "change deal stage", "edit deal", "update deal fields", "add a tag to deal", "assign deal lead", "update company info on deal", "link contacts to deal", or "/update-deal". Accepts a deal ID or company name (will search if no ID provided). Only the fields explicitly provided are changed — all other fields are left untouched.
+metadata:
+  version: 1.0.0
+  model: haiku
 ---
-
-
 ## Ghast MCP routing
 
 This port connects directly to Carta's hosted MCP server. Use the direct tool

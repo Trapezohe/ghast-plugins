@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "convex",
+  "version": "1.44.0-ghast.1",
+  "description": "Build and inspect Convex backends with the official Convex CLI, project Agent Skills, and 12-tool MCP server.",
+  "author": {
+    "name": "Convex, Inc.",
+    "url": "https://www.convex.dev"
+  },
+  "homepage": "https://docs.convex.dev/ai/using-codex",
+  "repository": "https://github.com/get-convex/convex-backend",
+  "license": "Apache-2.0 AND MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "development",
+      "upstreamRevision": "convex-npm-1.44.0-8bdb320a17ed+icon-7023eb599ffe+tools-5d3be1fb3d20",
+      "icon": "./assets/icon.png"
+    }
+  }
+}

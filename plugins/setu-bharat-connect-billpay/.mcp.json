@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "setu-bharat-connect-billpay": {
-      "type": "http",
-      "url": "https://billpay-mcp.setu.co/mcp"
-    }
-  }
-}

@@ -1,18 +1,10 @@
 ---
 name: prepare-for-meeting
-description: >
-  Builds a one-page tear sheet for the next upcoming meeting with a counterparty, from CRM
-  data only. Use this skill when the user says things like "prepare me for my meeting",
-  "meeting brief", "brief me for this meeting", "prep for upcoming meeting", "what do I
-  need to know before my call with [company]", or "/prepare-for-meeting". Compiles the
-  invitees and their interaction history, the organization's notes and relationship
-  status, and related deal, investor, fundraising or company context. Briefs exactly one
-  meeting — the next one; not an agenda view.
-version: 1.0.0
-model: inherit
+description: Builds a one-page tear sheet for the next upcoming meeting with a counterparty, from CRM data only. Use this skill when the user says things like "prepare me for my meeting", "meeting brief", "brief me for this meeting", "prep for upcoming meeting", "what do I need to know before my call with [company]", or "/prepare-for-meeting". Compiles the invitees and their interaction history, the organization's notes and relationship status, and related deal, investor, fundraising or company context. Briefs exactly one meeting — the next one; not an agenda view.
+metadata:
+  version: 1.0.0
+  model: inherit
 ---
-
-
 ## Ghast MCP routing
 
 This port connects directly to Carta's hosted MCP server. Use the direct tool

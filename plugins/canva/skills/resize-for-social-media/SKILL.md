@@ -1,8 +1,7 @@
 ---
-name: canva-resize-for-social-media
+name: resize-for-social-media
 description: Resize a Canva design into multiple social media formats (Facebook post, Facebook story, Instagram post, Instagram story, LinkedIn post). Use this skill when users want to resize Canva designs specifically for multiple social media platforms in one operation, rather than resizing to a single format manually.
 ---
-
 # Canva Resize for Social Media
 
 Automatically resize a single Canva design into multiple social media formats.

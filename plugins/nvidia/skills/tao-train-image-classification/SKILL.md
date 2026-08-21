@@ -1,20 +1,14 @@
 ---
 name: tao-train-image-classification
-description: PyTorch-based TAO image classification. Supports a wide range of backbones (FAN, EfficientNet, ResNet, etc.)
-  with distillation and quantization for deployment. Use when training, evaluating, distilling, quantizing, exporting, or
-  running inference for a TAO image-classification (PyT) model. Trigger phrases include "train image classifier",
-  "TAO classification", "ResNet/EfficientNet/FAN backbone classifier", "classification-pyt".
+description: PyTorch-based TAO image classification. Supports a wide range of backbones (FAN, EfficientNet, ResNet, etc.) with distillation and quantization for deployment. Use when training, evaluating, distilling, quantizing, exporting, or running inference for a TAO image-classification (PyT) model. Trigger phrases include "train image classifier", "TAO classification", "ResNet/EfficientNet/FAN backbone classifier", "classification-pyt".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["image","classification"]'
 allowed-tools: Read Bash
-tags:
-- image
-- classification
 ---
-
 # Classification PyT
 
 PyTorch image classification. Supports a wide range of backbones (FAN, EfficientNet, ResNet, etc.) with distillation and quantization for deployment.

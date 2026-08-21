@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "carta-crm",
+  "version": "1.5.3-ghast.1",
+  "description": "Manage investors, companies, contacts, deals, notes, fundraisings, tasks, themes, reports, campaigns, files, and relationship context through Carta's official CRM skills and hosted MCP server.",
+  "author": {
+    "name": "Carta",
+    "email": "crm@carta.com"
+  },
+  "homepage": "https://carta.com/crm/",
+  "repository": "https://github.com/carta/plugins",
+  "license": "Apache-2.0",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "upstreamRevision": "daef48d9c7d110a1b3ea55d2b9bad3d19d079d75",
+      "upstreamPath": "plugins/carta-crm",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

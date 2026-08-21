@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "steam-search",
+  "description": "Skill for searching the Steam store and looking up game details (price, release date, genres, reviews) — uses Steam's public store endpoints, no key required.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/steam-search",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "gaming",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

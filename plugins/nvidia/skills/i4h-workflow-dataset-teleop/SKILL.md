@@ -1,18 +1,12 @@
 ---
 name: i4h-workflow-dataset-teleop
-version: "0.6.0"
 description: Record episodes for an agentic env via teleoperation (keyboard, SO-ARM leader, or VR) into HDF5. Use when the user wants to teleop or record human demos.
 license: Apache-2.0
 metadata:
-  author: "Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>"
-  tags:
-    - isaac-for-healthcare
-    - i4h
-    - dataset
-    - teleoperation
-    - recording
+  author: Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>
+  tags: '["isaac-for-healthcare","i4h","dataset","teleoperation","recording"]'
+  version: 0.6.0
 ---
-
 # i4h Workflow — Teleop Record
 
 ## Purpose

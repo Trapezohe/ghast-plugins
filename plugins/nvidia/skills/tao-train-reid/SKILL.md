@@ -1,20 +1,14 @@
 ---
 name: tao-train-reid
-description: Person re-identification (ReID). Learns discriminative embeddings to match the same person across different
-  camera views, based on metric learning. Use when training, evaluating, exporting, or running inference for a TAO person
-  re-identification model. Trigger phrases include "train ReID", "person re-identification", "cross-camera person matching",
-  "ReID embeddings", "person re-id".
+description: Person re-identification (ReID). Learns discriminative embeddings to match the same person across different camera views, based on metric learning. Use when training, evaluating, exporting, or running inference for a TAO person re-identification model. Trigger phrases include "train ReID", "person re-identification", "cross-camera person matching", "ReID embeddings", "person re-id".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["re","identification"]'
 allowed-tools: Read Bash
-tags:
-- re
-- identification
 ---
-
 # Re-Identification
 
 Person re-identification. Learns discriminative embeddings to match the same person across different camera views. Metric learning based.

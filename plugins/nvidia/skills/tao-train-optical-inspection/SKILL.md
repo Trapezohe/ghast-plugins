@@ -1,20 +1,14 @@
 ---
 name: tao-train-optical-inspection
-description: Optical Inspection for defect detection using Siamese networks. Compares image pairs to detect manufacturing
-  defects, anomalies, or quality issues. Use when training, evaluating, exporting, or running inference for a TAO Optical
-  Inspection model on AOI / quality-control data. Trigger phrases include "train optical inspection", "AOI defect
-  detection", "Siamese defect classifier", "PCB / manufacturing inspection".
+description: Optical Inspection for defect detection using Siamese networks. Compares image pairs to detect manufacturing defects, anomalies, or quality issues. Use when training, evaluating, exporting, or running inference for a TAO Optical Inspection model on AOI / quality-control data. Trigger phrases include "train optical inspection", "AOI defect detection", "Siamese defect classifier", "PCB / manufacturing inspection".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["defect","detection"]'
 allowed-tools: Read Bash
-tags:
-- defect
-- detection
 ---
-
 # Optical Inspection
 
 Optical inspection for defect detection using Siamese networks. Compares image pairs to detect manufacturing defects, anomalies, or quality issues.

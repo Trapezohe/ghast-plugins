@@ -1,20 +1,11 @@
 ---
 name: chronograph-gp-meeting-prep
-description: >
-  Prepare an LP (investor) to meet with their fund manager (GP) — an LP-side skill where the user is
-  the LP, not the GP. Review the fund's latest reporting, surface what changed since last period,
-  and draft the questions worth raising. Draws on Chronograph fund and portfolio data when connected
-  — captured reporting such as fund performance, schedules of investments, and portfolio company KPI
-  profiles — and asks the LP to provide anything else it needs, such as a capital account statement,
-  investor letter, or AGM or board deck.
-when_to_use: >
-  Use when someone is getting ready for a manager call, quarterly check-in, annual meeting, LPAC
-  meeting, or a re-up decision — for example "I have my quarterly call with this manager next week,
-  help me prep," "what changed in this fund this quarter," "what should I ask them about these
-  marks," or "what are the red flags in this reporting package." Not for generating GP
-  portfolio-company reports or one-pagers — use chronograph-portfolio-company-one-pager.
----
+description: Prepare an LP (investor) to meet with their fund manager (GP) — an LP-side skill where the user is the LP, not the GP. Review the fund's latest reporting, surface what changed since last period, and draft the questions worth raising. Draws on Chronograph fund and portfolio data when connected — captured reporting such as fund performance, schedules of investments, and portfolio company KPI profiles — and asks the LP to provide anything else it needs, such as a capital account statement, investor letter, or AGM or board deck.
+metadata:
+  when_to_use: 'Use when someone is getting ready for a manager call, quarterly check-in, annual meeting, LPAC meeting, or a re-up decision — for example "I have my quarterly call with this manager next week, help me prep," "what changed in this fund this quarter," "what should I ask them about these marks," or "what are the red flags in this reporting package." Not for generating GP portfolio-company reports or one-pagers — use chronograph-portfolio-company-one-pager.
 
+    '
+---
 # Chronograph GP Meeting Prep
 
 **Requirements:** A connected Chronograph MCP server as an LP client is recommended — these workflows are designed for permissioned Chronograph users to connect to their private investment data — but the skill also works from user-provided reporting materials when Chronograph is unavailable (see Fallback Behavior).

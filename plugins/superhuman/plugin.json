@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "superhuman",
+  "version": "0.1.0-ghast.1",
+  "description": "Connect Codex to the official Superhuman Mail MCP server for email and calendar workflows.",
+  "author": {
+    "name": "Superhuman",
+    "url": "https://superhuman.com/"
+  },
+  "homepage": "https://help.superhuman.com/hc/en-us/articles/49810745762067-Superhuman-Mail-MCP-Server",
+  "repository": "https://github.com/superhuman/mcp-mail",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "upstreamRevision": "a83580e994604edca1cd5661a4a1865f3f39abc9",
+      "upstreamPath": ".",
+      "icon": "./assets/icon.svg",
+      "mcpServerExtensions": {
+        "superhuman-mail": {
+          "note": "Official Superhuman Mail MCP server. Uses OAuth on first connection and exposes Superhuman Mail email and calendar tools for authenticated accounts."
+        }
+      }
+    }
+  }
+}

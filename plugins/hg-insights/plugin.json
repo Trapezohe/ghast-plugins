@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "hg-insights",
+  "version": "1.0.3-ghast.2",
+  "description": "Research companies, markets, technology adoption, buying signals, spend, contracts, contacts, and GTM segments through HG Insights' official Phoenix MCP server.",
+  "author": {
+    "name": "HG Insights",
+    "url": "https://hginsights.com"
+  },
+  "homepage": "https://phoenix.hginsights.com/docs/getting-started",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "upstreamRevision": "hg-phoenix-docs-c5c35d6c9232+auth-57567aa2b2e3+tools-0ee3682befea+admin-17be9845965d",
+      "icon": "./assets/icon.svg",
+      "mcpServerExtensions": {
+        "hg-insights": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:hg-insights-api-key"
+          }
+        }
+      }
+    }
+  }
+}

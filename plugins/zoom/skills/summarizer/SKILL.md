@@ -1,18 +1,9 @@
 ---
 name: summarizer
-description: "Zoom AI Services Summarizer for synchronous transcript summarization and asynchronous batch summary jobs. Use for conversation recaps, action items, detailed summaries, Build-platform JWT auth, S3 transcript archives, and webhook-driven summary pipelines."
-triggers:
-  - "summarizer"
-  - "ai services summarizer"
-  - "zoom summarizer"
-  - "summarize transcript"
-  - "meeting recap api"
-  - "extract action items"
-  - "batch summarization"
-  - "fast mode summarization"
-  - "build platform jwt"
+description: Zoom AI Services Summarizer for synchronous transcript summarization and asynchronous batch summary jobs. Use for conversation recaps, action items, detailed summaries, Build-platform JWT auth, S3 transcript archives, and webhook-driven summary pipelines.
+metadata:
+  triggers: '["summarizer","ai services summarizer","zoom summarizer","summarize transcript","meeting recap api","extract action items","batch summarization","fast mode summarization","build platform jwt"]'
 ---
-
 # Zoom AI Services Summarizer
 
 **Current API audit:** Official docs and OpenAPI were rechecked on 2026-07-10. The May 21, 2026

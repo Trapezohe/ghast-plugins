@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "marcopolo",
+  "version": "3.3.1-ghast.1",
+  "description": "Work with governed company data in MarcoPolo's secure, persistent remote workspace using the official MCP server and Apache-2.0 workflow skills.",
+  "author": {
+    "name": "Immersa, Inc.",
+    "url": "https://www.marcopolo.dev"
+  },
+  "homepage": "https://docs.marcopolo.dev/getting-started/codex-plugin",
+  "repository": "https://github.com/immersa-co/marcopolo-plugin",
+  "license": "Apache-2.0",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "data",
+      "upstreamRevision": "plugin-113b842f35c8+oauth-b3f86c27fd39+docs-4f9e4cad2748",
+      "icon": "./assets/icon.png"
+    }
+  }
+}

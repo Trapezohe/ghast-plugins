@@ -1,14 +1,9 @@
 ---
 name: chronograph-budget-vs-actuals-variance
-description: Compare portfolio company operating actuals against budget/plan, compute variances,
-  flag off-plan companies, and roll up to the fund, using Chronograph company metrics.
-when_to_use: 'Use when a GP value-creation or monitoring team is tracking operating performance
-  against plan. Triggers: "budget vs actuals", "variance analysis", "which companies are off-plan",
-  "how are portcos tracking vs budget", "performance vs plan". For valuation moves use
-  chronograph-markup-markdown-brief; for a full company report use
-  chronograph-portfolio-company-one-pager.'
+description: Compare portfolio company operating actuals against budget/plan, compute variances, flag off-plan companies, and roll up to the fund, using Chronograph company metrics.
+metadata:
+  when_to_use: 'Use when a GP value-creation or monitoring team is tracking operating performance against plan. Triggers: "budget vs actuals", "variance analysis", "which companies are off-plan", "how are portcos tracking vs budget", "performance vs plan". For valuation moves use chronograph-markup-markdown-brief; for a full company report use chronograph-portfolio-company-one-pager.'
 ---
-
 # Budget vs. Actuals Variance
 
 **Requirements:** A connected Chronograph MCP server as a GP client.

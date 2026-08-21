@@ -1,21 +1,14 @@
 ---
 name: jetson-init-target
-description: >-
-  Author a new Jetson target-platform profile (reference_devkit +
-  optional custom_carrier) and update the active pointer. Use to
-  create a target; not for switching existing profiles.
-version: 0.0.1
-license: "Apache-2.0"
+description: Author a new Jetson target-platform profile (reference_devkit + optional custom_carrier) and update the active pointer. Use to create a target; not for switching existing profiles.
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
-  tags:
-    - target-platform
-    - configuration
-    - meta
+  author: Jetson Team
+  tags: '["target-platform","configuration","meta"]'
   domain: meta
+  version: 0.0.1
 ---
-
 # Initialize Target Platform
 
 ## Overview

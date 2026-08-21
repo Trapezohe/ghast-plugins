@@ -1,17 +1,10 @@
 ---
 name: update-investor
-description: >
-  Updates an existing investor record in the Carta CRM.
-  Use this skill when the user says things like "update an investor", "edit investor",
-  "update investor details", "change investor name", "update investor website",
-  "update investor fields", "add a tag to investor", or "/update-investor".
-  Accepts an investor ID or name (will search if no ID provided).
-  Only the fields explicitly provided are changed — all other fields are left untouched.
-version: 1.0.0
-model: haiku
+description: Updates an existing investor record in the Carta CRM. Use this skill when the user says things like "update an investor", "edit investor", "update investor details", "change investor name", "update investor website", "update investor fields", "add a tag to investor", or "/update-investor". Accepts an investor ID or name (will search if no ID provided). Only the fields explicitly provided are changed — all other fields are left untouched.
+metadata:
+  version: 1.0.0
+  model: haiku
 ---
-
-
 ## Ghast MCP routing
 
 This port connects directly to Carta's hosted MCP server. Use the direct tool

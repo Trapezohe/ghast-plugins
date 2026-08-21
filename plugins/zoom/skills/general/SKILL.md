@@ -1,23 +1,9 @@
 ---
-name: zoom-general
-description: |
-  Generic Zoom Developer Platform guide. Covers cross-product use cases, authentication (OAuth 2.0, 
-  Server-to-Server OAuth, JWT), app types, OAuth scopes, and Marketplace setup. Use when starting 
-  any Zoom integration, when working on cross-product tasks, or when user needs help choosing 
-  between Zoom SDKs and APIs.
-triggers:
-  - "zoom integration"
-  - "getting started"
-  - "which zoom sdk"
-  - "zoom platform"
-  - "choose zoom api"
-  - "zoom scopes"
-  - "marketplace"
-  - "cross-product"
-  - "apis vs mcp"
-  - "api vs mcp"
+name: general
+description: "Generic Zoom Developer Platform guide. Covers cross-product use cases, authentication (OAuth 2.0, \nServer-to-Server OAuth, JWT), app types, OAuth scopes, and Marketplace setup. Use when starting \nany Zoom integration, when working on cross-product tasks, or when user needs help choosing \nbetween Zoom SDKs and APIs."
+metadata:
+  triggers: '["zoom integration","getting started","which zoom sdk","zoom platform","choose zoom api","zoom scopes","marketplace","cross-product","apis vs mcp","api vs mcp"]'
 ---
-
 # Zoom General (Cross-Product Skills)
 
 Entry point for building with Zoom. This skill helps you choose the right SDK or API and provides cross-product guidance.

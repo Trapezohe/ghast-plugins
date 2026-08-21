@@ -1,11 +1,9 @@
 ---
 name: carta-crm-current-service
-description: >
-  Route requests across Carta CRM's current official hosted MCP surface,
-  including capabilities not covered by the pinned Carta workflow skills.
-version: 1.0.0-ghast.1
+description: Route requests across Carta CRM's current official hosted MCP surface, including capabilities not covered by the pinned Carta workflow skills.
+metadata:
+  version: 1.0.0-ghast.1
 ---
-
 # Carta CRM current service
 
 This is Ghast compatibility guidance, not an additional Carta-authored skill.

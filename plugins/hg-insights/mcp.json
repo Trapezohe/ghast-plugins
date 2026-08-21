@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "hg-insights": {
+      "type": "streamable-http",
+      "url": "https://phoenix.hginsights.com/api/mcp"
+    }
+  }
+}

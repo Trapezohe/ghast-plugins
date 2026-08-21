@@ -1,18 +1,12 @@
 ---
 name: i4h-catheter-navigation-smoke
-version: "0.7.0"
 description: Run CPU-only fluorosim smoke tests (imports, preprocessing, CLI parsers). Use when asked to smoke-test catheter navigation in CI or without a GPU.
 license: Apache-2.0
 metadata:
-  author: "Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>"
-  tags:
-    - isaac-for-healthcare
-    - i4h
-    - catheter-navigation
-    - smoke-test
-    - ci
+  author: Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>
+  tags: '["isaac-for-healthcare","i4h","catheter-navigation","smoke-test","ci"]'
+  version: 0.7.0
 ---
-
 # i4h Catheter Navigation - Smoke Tests
 
 ## Purpose

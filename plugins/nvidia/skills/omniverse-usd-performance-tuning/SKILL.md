@@ -1,24 +1,17 @@
 ---
 name: omniverse-usd-performance-tuning
-description: "Top-level workflow skill for USD performance diagnosis and optimization. Handles slow loading, high memory, low FPS, and broad scene-optimization requests; delegates auth/runtime setup to Phase 0 owners."
-version: "0.1.0"
+description: Top-level workflow skill for USD performance diagnosis and optimization. Handles slow loading, high memory, low FPS, and broad scene-optimization requests; delegates auth/runtime setup to Phase 0 owners.
 license: Apache-2.0
-tools:
-  - Read
-  - Shell
-  - Write
-compatibility: >
-  Orchestrator skill. Downstream phases may require Kit, Usd Optimize, usd-validation-nvidia, USD Python, writable output paths, and omniverse:// authentication selected by setup-usd-performance-tuning.
+compatibility: 'Orchestrator skill. Downstream phases may require Kit, Usd Optimize, usd-validation-nvidia, USD Python, writable output paths, and omniverse:// authentication selected by setup-usd-performance-tuning.
+
+  '
 metadata:
   author: NVIDIA Omniverse
-  tags:
-    - triage
-    - performance
-    - usd
-    - profiling
+  tags: '["triage","performance","usd","profiling"]'
   domain: ai-ml
-  languages:
-    - python
+  languages: '["python"]'
+  version: 0.1.0
+  tools: '["Read","Shell","Write"]'
 ---
 # Omniverse USD Performance Tuning
 

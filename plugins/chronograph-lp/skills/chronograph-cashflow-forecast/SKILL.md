@@ -1,13 +1,9 @@
 ---
 name: chronograph-cashflow-forecast
-description: Forecast LP-level private capital cashflows for existing portfolios using Chronograph
-  MCP data and a Takahashi-Alexander style model.
-when_to_use: Use when analyzing or forecasting LP-level contributions, distributions, NAV, unfunded
-  exposure, net cashflows, or Excel-style cashflow forecast outputs from existing Chronograph funds,
-  commitments, groups, or portfolios. Not for building GP portfolio-company one-pagers, tearsheets,
-  or investor reports — use chronograph-portfolio-company-one-pager.
+description: Forecast LP-level private capital cashflows for existing portfolios using Chronograph MCP data and a Takahashi-Alexander style model.
+metadata:
+  when_to_use: Use when analyzing or forecasting LP-level contributions, distributions, NAV, unfunded exposure, net cashflows, or Excel-style cashflow forecast outputs from existing Chronograph funds, commitments, groups, or portfolios. Not for building GP portfolio-company one-pagers, tearsheets, or investor reports — use chronograph-portfolio-company-one-pager.
 ---
-
 # Chronograph Cashflow Forecast
 
 **Requirements:** The Existing Portfolio Forecast mode requires a connected Chronograph MCP server as an LP client — these workflows are designed for permissioned Chronograph users to connect to their private investment data. The Future Commitment Pacing Overlay mode runs from user-provided assumptions and works without a connection.

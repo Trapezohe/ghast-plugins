@@ -1,18 +1,12 @@
 ---
 name: i4h-workflow-scene-edit
-version: "0.7.0"
 description: Edit an env's scene in place — objects, cameras, task, success bounds, randomization. Use when asked to edit a scene or launch/run/open an env in edit mode (`--bridge`), incl. a just-created env.
 license: Apache-2.0
 metadata:
-  author: "Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>"
-  tags:
-    - isaac-for-healthcare
-    - i4h
-    - agentic-workflow
-    - scene-edit
-    - environment
+  author: Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>
+  tags: '["isaac-for-healthcare","i4h","agentic-workflow","scene-edit","environment"]'
+  version: 0.7.0
 ---
-
 # i4h Workflow — Scene Edit
 
 ## Purpose

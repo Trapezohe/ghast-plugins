@@ -2,9 +2,11 @@
 name: agency-client-handoff
 description: Export a white-label client deliverable as a zip.
 license: MIT
-metadata: {"author": "Picsart", "version": "1.0.0", "hermes": {"category": "agency", "tags": ["picsart", "agency", "creative", "client-work"]}}
+metadata:
+  author: Picsart
+  version: 1.0.0
+  hermes: '{"category":"agency","tags":["picsart","agency","creative","client-work"]}'
 ---
-
 # Agency client handoff
 
 Package a completed engagement for transfer to the client's in-house team, DAM, or next agency — with the asset set, prompt library, model pins, rights documentation, and everything else the receiving team needs to regenerate consistent work without you in the loop.

@@ -1,15 +1,14 @@
 ---
 name: jetson-llm-benchmark
 description: Benchmark Jetson LLM/VLM serving performance across vLLM, llama.cpp, and Ollama with structured JSON output.
-version: 0.0.2
-license: "Apache-2.0"
+license: Apache-2.0
 metadata:
-  author: "Jetson Team"
-  tags: [jetson, llm, benchmark]
-  languages: [bash]
+  author: Jetson Team
+  tags: '["jetson","llm","benchmark"]'
+  languages: '["bash"]'
   data-classification: public
+  version: 0.0.2
 ---
-
 # Jetson LLM Benchmark
 
 Reproducible Jetson benchmarks with **structured JSON output** so an agent can compare runs. Encodes the workflow from the [Jetson AI Lab GenAI Benchmarking tutorial](https://www.jetson-ai-lab.com/tutorials/genai-benchmarking/).

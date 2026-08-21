@@ -1,40 +1,20 @@
 ---
 name: rag-blueprint
-version: "2.6.0"
-description: "NVIDIA RAG Blueprint — deploy, configure, troubleshoot, and manage. Handles any RAG action: deploy, install, start, enable, disable, toggle, change, configure, troubleshoot, debug, fix, shutdown, stop, or tear down any RAG feature or service (Agentic RAG, VLM, guardrails, query rewriting, models, search, ingestion, observability, summarization, reasoning, and more)."
+description: 'NVIDIA RAG Blueprint — deploy, configure, troubleshoot, and manage. Handles any RAG action: deploy, install, start, enable, disable, toggle, change, configure, troubleshoot, debug, fix, shutdown, stop, or tear down any RAG feature or service (Agentic RAG, VLM, guardrails, query rewriting, models, search, ingestion, observability, summarization, reasoning, and more).'
 license: Apache-2.0
-compatibility: >-
-  NVIDIA RAG Blueprint repository checkout; Docker/Compose or Kubernetes/Helm
-  for deployments; Python 3.11+ for library workflows; NVIDIA GPU tooling for
-  self-hosted NIM services.
+compatibility: NVIDIA RAG Blueprint repository checkout; Docker/Compose or Kubernetes/Helm for deployments; Python 3.11+ for library workflows; NVIDIA GPU tooling for self-hosted NIM services.
 metadata:
-  author: "NVIDIA RAG <foundational-rag-dev@exchange.nvidia.com>"
-  github-url: "https://github.com/NVIDIA-AI-Blueprints/rag"
-  endpoint-openapi-schemas:
-    - docs/api_reference/openapi_schema_rag_server.json
-    - docs/api_reference/openapi_schema_ingestor_server.json
+  author: NVIDIA RAG <foundational-rag-dev@exchange.nvidia.com>
+  github-url: https://github.com/NVIDIA-AI-Blueprints/rag
+  endpoint-openapi-schemas: '["docs/api_reference/openapi_schema_rag_server.json","docs/api_reference/openapi_schema_ingestor_server.json"]'
   argument-hint: deploy RAG | enable feature | disable feature | configure | troubleshoot | shutdown
-  tags:
-    - nvidia
-    - blueprint
-    - rag
-    - deployment
-    - configuration
-    - troubleshooting
-  languages:
-    - python
-    - typescript
-    - shell
-  frameworks:
-    - fastapi
-    - langchain
-    - react
-    - docker-compose
-    - helm
+  tags: '["nvidia","blueprint","rag","deployment","configuration","troubleshooting"]'
+  languages: '["python","typescript","shell"]'
+  frameworks: '["fastapi","langchain","react","docker-compose","helm"]'
   domain: ai-ml
+  version: 2.6.0
 allowed-tools: Bash(echo *) Bash(nvidia-smi *) Bash(curl --version *) Bash(docker ps *) Bash(docker info *) Bash(docker --version *) Bash(docker version *) Bash(docker logs *) Bash(docker inspect *) Bash(docker stats *) Bash(docker compose ps *) Bash(docker compose logs *) Bash(docker compose config *) Bash(docker compose version *) Bash(kubectl get *) Bash(kubectl describe *) Bash(kubectl version *) Bash(kubectl logs *) Bash(kubectl api-resources *) Bash(kubectl rollout status *) Bash(helm version *) Bash(helm list *) Bash(helm status *) Bash(oc get *) Bash(oc describe *) Bash(oc logs *) Bash(oc whoami *) Bash(oc version *) Bash(git rev-parse *) Bash(git describe *) Bash(git status *) Bash(python3 --version *) Bash(pip3 show *) Bash(df *) Bash(du *) Bash(cat /proc/*) Bash(cat /etc/os-release *) Bash(ss *) Bash(netstat *) Bash(ls *) Bash(grep *) Bash(lsof *) Bash(ps aux *) Read Grep Glob
 ---
-
 # NVIDIA RAG Blueprint
 
 ## Purpose

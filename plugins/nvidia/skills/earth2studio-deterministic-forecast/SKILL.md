@@ -1,22 +1,12 @@
 ---
 name: earth2studio-deterministic-forecast
-version: 0.16.0
+description: Build deterministic forecast scripts with Earth2Studio (model, data source, IO, inference). Do NOT use for ensemble, diagnostics, data-only fetch, or install.
 license: Apache-2.0
 metadata:
   author: NVIDIA Earth-2 Team
-  tags:
-    - earth2studio
-    - earth2
-    - python
-    - inference
-    - forecast
-    - deterministic
-description: >
-  Build deterministic forecast scripts with Earth2Studio (model, data source,
-  IO, inference). Do NOT use for ensemble, diagnostics, data-only fetch, or
-  install.
+  tags: '["earth2studio","earth2","python","inference","forecast","deterministic"]'
+  version: 0.16.0
 ---
-
 # Earth2Studio Deterministic Forecast Skill
 
 Guide users through building deterministic (single-member) weather forecast

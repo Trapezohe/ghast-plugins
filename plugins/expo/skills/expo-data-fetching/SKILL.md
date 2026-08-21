@@ -1,10 +1,10 @@
 ---
 name: expo-data-fetching
 description: Framework (OSS). Use when implementing or debugging ANY network request, API call, or data fetching. Covers fetch API, React Query, SWR, error handling, caching, offline support, and Expo Router data loaders (`useLoaderData`).
-version: 1.0.0
 license: MIT
+metadata:
+  version: 1.0.0
 ---
-
 # Expo Networking
 
 **You MUST use this skill for ANY networking work including API requests, data fetching, caching, or network debugging.**

@@ -1,10 +1,10 @@
 ---
 name: prospect
-description: "Full ICP-to-leads pipeline. Describe your ideal customer in plain English and get a ranked table of enriched decision-maker leads with emails and phone numbers."
-user-invocable: true
-argument-hint: [describe your ideal customer]
+description: Full ICP-to-leads pipeline. Describe your ideal customer in plain English and get a ranked table of enriched decision-maker leads with emails and phone numbers.
+metadata:
+  user-invocable: 'true'
+  argument-hint: '["describe your ideal customer"]'
 ---
-
 # Prospect
 
 Go from an ICP description to a ranked, enriched lead list in one shot. The user describes their ideal customer via "$ARGUMENTS".

@@ -1,29 +1,15 @@
 ---
-name: zoom-rtms
-description: |
-  Zoom Realtime Media Streams (RTMS) for accessing live audio, video, transcript, chat, and
-  screen share from Zoom meetings, webinars, Video SDK sessions, and Zoom Contact Center Voice.
-  WebSocket-based protocol using open web standards. Use when building AI/ML applications, live
-  transcription, recording, streaming, or real-time meeting/webinar/session/contact-center analysis.
-triggers:
-  - "real-time media"
-  - "rtms"
-  - "live audio stream"
-  - "live video stream"
-  - "meeting transcription"
-  - "raw audio"
-  - "raw video"
-  - "websocket media"
-  - "live transcript"
-  - "streaming audio"
-  - "streaming video"
-  - "meeting bot media"
-  - "contact center voice media"
-  - "participant video on"
-  - "participant video off"
-  - "single individual video stream"
----
+name: rtms
+description: 'Zoom Realtime Media Streams (RTMS) for accessing live audio, video, transcript, chat, and
 
+  screen share from Zoom meetings, webinars, Video SDK sessions, and Zoom Contact Center Voice.
+
+  WebSocket-based protocol using open web standards. Use when building AI/ML applications, live
+
+  transcription, recording, streaming, or real-time meeting/webinar/session/contact-center analysis.'
+metadata:
+  triggers: '["real-time media","rtms","live audio stream","live video stream","meeting transcription","raw audio","raw video","websocket media","live transcript","streaming audio","streaming video","meeting bot media","contact center voice media","participant video on","participant video off","single individual video stream"]'
+---
 # Zoom Realtime Media Streams (RTMS)
 
 Expert guidance for accessing live audio, video, transcript, chat, and screen share data from Zoom meetings, webinars, Video SDK sessions, and Zoom Contact Center Voice in real-time. RTMS uses a WebSocket-based protocol with open standards and does not require a meeting bot to capture the media plane.

@@ -1,21 +1,14 @@
 ---
 name: tao-train-nvdinov2
-description: NVDINOv2 for self-supervised visual representation learning. Trains vision transformers via self-distillation
-  (teacher-student) without labels and produces general-purpose visual features. Use when training, exporting, or
-  running inference for a TAO NVDINOv2 backbone. Trigger phrases include "train NVDINOv2", "self-supervised ViT pretraining",
-  "DINOv2 backbone", "visual representation learning".
+description: NVDINOv2 for self-supervised visual representation learning. Trains vision transformers via self-distillation (teacher-student) without labels and produces general-purpose visual features. Use when training, exporting, or running inference for a TAO NVDINOv2 backbone. Trigger phrases include "train NVDINOv2", "self-supervised ViT pretraining", "DINOv2 backbone", "visual representation learning".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["self","supervised","learning"]'
 allowed-tools: Read Bash
-tags:
-- self
-- supervised
-- learning
 ---
-
 # NVDINOv2
 
 NVDINOv2 for self-supervised visual representation learning. Trains vision transformers via self-distillation (teacher-student) without labels. Produces general-purpose visual features.

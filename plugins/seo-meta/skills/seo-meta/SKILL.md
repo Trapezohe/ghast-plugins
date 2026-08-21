@@ -1,10 +1,10 @@
 ---
 name: seo-meta
 description: Use this skill when the user asks to audit, review, or extract SEO meta tags from a webpage — `<title>`, meta description, canonical, robots, OpenGraph, Twitter Card, H1s. Fetches the raw HTML and pulls out the head-section signals search engines and social scrapers consume.
-version: 1.0.0
-allowed-tools: [WebFetch, Bash]
+metadata:
+  version: 1.0.0
+allowed-tools: WebFetch Bash
 ---
-
 # SEO Meta Analyzer
 
 When the user asks to audit how a page presents itself to search engines or

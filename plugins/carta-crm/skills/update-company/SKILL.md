@@ -1,17 +1,10 @@
 ---
 name: update-company
-description: >
-  Updates an existing company record in the Carta CRM.
-  Use this skill when the user says things like "update a company", "edit company",
-  "update company details", "change company name", "update company website",
-  "update company fields", "add a tag to company", or "/update-company".
-  Accepts a company ID or name (will search if no ID provided).
-  Only the fields explicitly provided are changed — all other fields are left untouched.
-version: 1.0.0
-model: haiku
+description: Updates an existing company record in the Carta CRM. Use this skill when the user says things like "update a company", "edit company", "update company details", "change company name", "update company website", "update company fields", "add a tag to company", or "/update-company". Accepts a company ID or name (will search if no ID provided). Only the fields explicitly provided are changed — all other fields are left untouched.
+metadata:
+  version: 1.0.0
+  model: haiku
 ---
-
-
 ## Ghast MCP routing
 
 This port connects directly to Carta's hosted MCP server. Use the direct tool

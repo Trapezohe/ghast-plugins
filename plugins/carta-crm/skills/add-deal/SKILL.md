@@ -1,15 +1,10 @@
 ---
 name: add-deal
-description: >
-  Creates one or more deal records in the Carta CRM via the Carta CRM MCP Server.
-  Use this skill when the user says things like "add a deal", "create a deal",
-  "log a deal", "add deal to CRM", "add deal to Carta CRM", or "/add-deal".
-  Collects deal information conversationally, then creates it via the MCP server.
-version: 1.0.0
-model: haiku
+description: Creates one or more deal records in the Carta CRM via the Carta CRM MCP Server. Use this skill when the user says things like "add a deal", "create a deal", "log a deal", "add deal to CRM", "add deal to Carta CRM", or "/add-deal". Collects deal information conversationally, then creates it via the MCP server.
+metadata:
+  version: 1.0.0
+  model: haiku
 ---
-
-
 ## Ghast MCP routing
 
 This port connects directly to Carta's hosted MCP server. Use the direct tool

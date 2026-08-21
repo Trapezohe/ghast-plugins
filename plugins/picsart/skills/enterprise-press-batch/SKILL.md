@@ -2,9 +2,11 @@
 name: enterprise-press-batch
 description: Press photos into wire, web, print, social packs.
 license: MIT
-metadata: {"author": "Picsart", "version": "1.0.0", "hermes": {"category": "enterprise", "tags": ["picsart", "enterprise", "governance", "scale"]}}
+metadata:
+  author: Picsart
+  version: 1.0.0
+  hermes: '{"category":"enterprise","tags":["picsart","enterprise","governance","scale"]}'
 ---
-
 # Enterprise Press Batch
 
 Produce full press-release asset bundles — hero, executive headshots, product shots, event-ready horizontal and vertical crops — with embargo controls, wire-service naming conventions, EXIF rights metadata, and multi-resolution exports. Built for comms / PR teams shipping to Reuters, AP, Getty, and corporate newsrooms under embargo.

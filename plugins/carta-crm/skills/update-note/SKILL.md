@@ -1,11 +1,9 @@
 ---
 name: update-note
-description: >
-  Find and update a standalone Carta CRM note, including explicitly requested
-  link or unlink changes.
-version: 1.0.0-ghast.1
+description: Find and update a standalone Carta CRM note, including explicitly requested link or unlink changes.
+metadata:
+  version: 1.0.0-ghast.1
 ---
-
 # Update a Carta CRM note
 
 Use Carta's current direct `search_notes`, `fetch_note_by_id`, `update_note`,

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "bilibili-search",
+  "description": "Skill for searching Bilibili videos and the daily ranking via the public web search endpoint — no login required for top-level results.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/bilibili-search",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "media",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

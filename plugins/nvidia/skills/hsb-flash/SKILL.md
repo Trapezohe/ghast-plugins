@@ -1,34 +1,19 @@
 ---
 name: hsb-flash
 description: Flash the FPGA on an HSB board connected to an NVIDIA devkit. Supports HSB Lattice boards (FPGA versions 2407, 2412, 2507, 2510) and Leopard Imaging VB1940 "all-in-one" cameras (FPGA versions 2507, 2510). Uses release-specific YAML manifests and board-type-specific program commands. Lattice and VB1940 commands must never be mixed.
-author: "Holoscan Team <holoscan-team@nvidia.com>"
-license: "Apache-2.0"
-version: "1.0.0"
-tags:
-  - holoscan-sensor-bridge
-  - hsb
-  - fpga-flashing
-tools:
-  - Read
-  - Write
-  - Edit
-  - Grep
-  - Glob
-  - Bash
-disable-model-invocation: true
-allowed-tools: Read,Write,Edit,MultiEdit,Grep,Glob,Bash
+license: Apache-2.0
 metadata:
-  author: "Holoscan Team <holoscan-team@nvidia.com>"
+  author: Holoscan Team <holoscan-team@nvidia.com>
   team: holoscan
-  tags:
-    - holoscan-sensor-bridge
-    - hsb
-    - fpga-flashing
-  agents:
-    - claude-code
-    - codex
+  tags: '["holoscan-sensor-bridge","hsb","fpga-flashing"]'
+  agents: '["claude-code","codex"]'
+  legacy-author: Holoscan Team <holoscan-team@nvidia.com>
+  version: 1.0.0
+  legacy-tags: '["holoscan-sensor-bridge","hsb","fpga-flashing"]'
+  tools: '["Read","Write","Edit","Grep","Glob","Bash"]'
+  disable-model-invocation: 'true'
+allowed-tools: Read,Write,Edit,MultiEdit,Grep,Glob,Bash
 ---
-
 # HSB FPGA Flash
 
 Use this skill when the user wants to flash (upgrade or downgrade) the FPGA firmware on an HSB board connected to a supported NVIDIA devkit.

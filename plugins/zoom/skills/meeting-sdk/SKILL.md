@@ -1,27 +1,9 @@
 ---
-name: zoom-meeting-sdk
-description: |
-  Zoom Meeting SDK for embedding Zoom meetings into web, Android, iOS, macOS, Unreal, React Native, Electron, and Linux applications. 
-  Use when you want to integrate the full Zoom meeting experience into your app.
-  Supports Web (JavaScript), React Native (iOS/Android), Electron desktop apps, Linux (C++ headless bots), and native platforms.
-triggers:
-  - "embed meeting"
-  - "embed zoom meeting"
-  - "integrate meeting"
-  - "meeting in web app"
-  - "meeting in website"
-  - "add zoom to website"
-  - "meeting sdk"
-  - "join meeting programmatically"
-  - "meeting bot"
-  - "bot joins meeting"
-  - "joining meeting timeout"
-  - "join meeting failed"
-  - "waiting room"
-  - "hide meeting info"
-  - "hide meeting password"
+name: meeting-sdk
+description: "Zoom Meeting SDK for embedding Zoom meetings into web, Android, iOS, macOS, Unreal, React Native, Electron, and Linux applications. \nUse when you want to integrate the full Zoom meeting experience into your app.\nSupports Web (JavaScript), React Native (iOS/Android), Electron desktop apps, Linux (C++ headless bots), and native platforms."
+metadata:
+  triggers: '["embed meeting","embed zoom meeting","integrate meeting","meeting in web app","meeting in website","add zoom to website","meeting sdk","join meeting programmatically","meeting bot","bot joins meeting","joining meeting timeout","join meeting failed","waiting room","hide meeting info","hide meeting password"]'
 ---
-
 # Zoom Meeting SDK
 
 Embed the full Zoom meeting experience into web, mobile, desktop, and headless integrations.

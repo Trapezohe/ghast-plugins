@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "cube": {
-      "type": "http",
-      "url": "https://cubecloud.dev/mcp"
-    }
-  }
-}

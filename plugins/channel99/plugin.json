@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "channel99",
+  "version": "1.0.3-ghast.1",
+  "description": "Analyze read-only B2B marketing performance, channels, vendors, campaigns, audiences, account engagement, attribution, spend efficiency, and pipeline influence through Channel99's official hosted MCP server.",
+  "author": {
+    "name": "Channel99 Inc.",
+    "url": "https://www.channel99.com"
+  },
+  "homepage": "https://www.channel99.com/articles/channel99-connects-marketing-intelligence-data-to-genai-platforms",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "upstreamRevision": "channel99-faq-81edc9b0c206+mcp-4cd47d0e9970+release-a3f1d62a2d0e+schema-4acb7bcdb5b5+api-d35fdf232c66+oauth-01e50ee050ad",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

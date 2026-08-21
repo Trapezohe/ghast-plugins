@@ -1,37 +1,21 @@
 ---
-name: "digital-health-clinical-asr-finetune"
-description: "Stage 4 of the Clinical ASR Flywheel. Use when priority KER is above 0.3 to run stock NeMo SFT on Parakeet TDT v2 and offline cycle N+1 re-eval. NOT for generic word boosting (use /finetune-asr)."
-version: "1.0.0"
-author: "Ben Randoing <brandoing@nvidia.com>"
-tags:
-  - clinical-asr
-  - finetune
-  - sft
-  - nemo
-  - parakeet
-  - flywheel
-tools:
-  - Read
-  - Write
-  - Bash
-  - Skill
+name: digital-health-clinical-asr-finetune
+description: Stage 4 of the Clinical ASR Flywheel. Use when priority KER is above 0.3 to run stock NeMo SFT on Parakeet TDT v2 and offline cycle N+1 re-eval. NOT for generic word boosting (use /finetune-asr).
 license: Apache-2.0
-compatibility: "Requires a CUDA host (24 GB VRAM comfortable, 16 GB workable with batch_size=4), the NeMo container (nvcr.io/nvidia/nemo:25.11.01), and the finetune-asr + riva-asr-custom skills installed alongside this one. No local GPU? Use Brev. NVIDIA_API_KEY required for the offline cycle N+1 eval round-trip and for any NIM deploy."
+compatibility: Requires a CUDA host (24 GB VRAM comfortable, 16 GB workable with batch_size=4), the NeMo container (nvcr.io/nvidia/nemo:25.11.01), and the finetune-asr + riva-asr-custom skills installed alongside this one. No local GPU? Use Brev. NVIDIA_API_KEY required for the offline cycle N+1 eval round-trip and for any NIM deploy.
 metadata:
-  author: "Ben Randoing <brandoing@nvidia.com>"
-  tags:
-    - clinical-asr
-    - flywheel
-    - finetune
-    - nemo-sft
-    - parakeet
+  author: Ben Randoing <brandoing@nvidia.com>
+  tags: '["clinical-asr","flywheel","finetune","nemo-sft","parakeet"]'
   team: healthcare-tme
   domain: ai-ml
-  stage: 4
+  stage: '4'
   previous_skill: digital-health-clinical-asr-eval
   next_skill: riva-asr-custom
+  version: 1.0.0
+  legacy-author: Ben Randoing <brandoing@nvidia.com>
+  legacy-tags: '["clinical-asr","finetune","sft","nemo","parakeet","flywheel"]'
+  tools: '["Read","Write","Bash","Skill"]'
 ---
-
 <!--
 SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
 SPDX-License-Identifier: Apache-2.0

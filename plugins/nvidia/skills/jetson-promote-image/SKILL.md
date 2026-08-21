@@ -1,22 +1,15 @@
 ---
 name: jetson-promote-image
-description: >-
-  Use to promote overlay files and built artifacts into the staged
-  BSP image. Do NOT use to flash or build. Triggers: promote bsp
-  image.
-version: 0.0.1
-license: "Apache-2.0"
+description: 'Use to promote overlay files and built artifacts into the staged BSP image. Do NOT use to flash or build. Triggers: promote bsp image.'
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
+  author: Jetson Team
   team: pts
-  tags:
-    - bsp
-    - promote
-    - deploy
+  tags: '["bsp","promote","deploy"]'
   domain: meta
+  version: 0.0.1
 ---
-
 # Promote BSP Image
 
 ## Purpose

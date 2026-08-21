@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "chronograph-lp",
+  "version": "0.2.3-ghast.1",
+  "description": "Analyze private-capital LP portfolios with cashflow forecasts, commitment pacing, look-through exposure, and GP-meeting preparation through Chronograph's official skills and OAuth MCP.",
+  "author": {
+    "name": "Chronograph",
+    "url": "https://www.chronograph.pe/"
+  },
+  "homepage": "https://www.chronograph.pe/",
+  "repository": "https://github.com/chronograph-pe/chronograph-lp-claude-plugin",
+  "license": "Apache-2.0",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "finance",
+      "upstreamRevision": "6c18b66e882c44db26d88afabc52853ba39dcd98",
+      "upstreamPath": ".",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

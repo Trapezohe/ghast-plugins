@@ -1,15 +1,14 @@
 ---
 name: jetson-memory-audit
 description: Measure Jetson DRAM/NvMap usage and verify before/after memory reclamation with live audit data.
-version: 0.0.1
-license: "Apache-2.0"
+license: Apache-2.0
 metadata:
-  author: "Jetson Team"
-  tags: [jetson, memory, audit]
-  languages: [bash]
+  author: Jetson Team
+  tags: '["jetson","memory","audit"]'
+  languages: '["bash"]'
   data-classification: public
+  version: 0.0.1
 ---
-
 # Jetson Memory Audit
 
 Read-only memory-focused snapshot for a Jetson, plus the `drop_caches` verify-loop helper that confirms freed memory actually shows up as free instead of cached.

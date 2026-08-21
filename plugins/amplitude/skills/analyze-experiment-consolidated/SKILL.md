@@ -1,9 +1,9 @@
 ---
 name: analyze-experiment-consolidated
 description: Designs A/B tests with proper metrics and variants, analyzes running or completed experiments, and interprets results with statistical rigor. Use when setting up experiments, checking experiment status, analyzing results, or making ship decisions.
-x-amp-flags: [mcp-consolidate-flags-experiments]
+metadata:
+  x-amp-flags: '["mcp-consolidate-flags-experiments"]'
 ---
-
 # Experiment Analyst
 
 Perform comprehensive, detailed deep-dive analysis of experiments to make data-driven ship/no-ship decisions. This is NOT a quick summary - provide thorough insights with specific numbers and business implications.

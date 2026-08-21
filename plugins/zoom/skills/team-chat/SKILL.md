@@ -1,16 +1,9 @@
 ---
-name: zoom-team-chat
-description: "Zoom Team Chat - Build messaging integrations, chatbots with rich cards/buttons, and apps. Covers Team Chat API (user-level messaging) and Chatbot API (bot-level interactions with webhooks)."
-triggers:
-  - "zoom team chat"
-  - "zoom chatbot"
-  - "zoom messaging"
-  - "team chat api"
-  - "chatbot api"
-  - "zoom slash commands"
-  - "zoom chat integration"
+name: team-chat
+description: Zoom Team Chat - Build messaging integrations, chatbots with rich cards/buttons, and apps. Covers Team Chat API (user-level messaging) and Chatbot API (bot-level interactions with webhooks).
+metadata:
+  triggers: '["zoom team chat","zoom chatbot","zoom messaging","team chat api","chatbot api","zoom slash commands","zoom chat integration"]'
 ---
-
 # Zoom Team Chat Development
 
 Build powerful messaging integrations and interactive chatbots for Zoom Team Chat. This skill covers **two distinct APIs** - make sure to choose the right one for your use case.

@@ -1,21 +1,14 @@
 ---
 name: tao-run-on-brev
-description: Brev managed GPU instances with Docker support. Use when running TAO training, evaluation, or inference on
-  Brev GPU instances, managing Brev deployments, or dispatching TAO jobs through the Brev CLI. Trigger phrases include
-  "run on Brev", "Brev GPU instance", "submit job to Brev", "Brev CLI deployment".
+description: Brev managed GPU instances with Docker support. Use when running TAO training, evaluation, or inference on Brev GPU instances, managing Brev deployments, or dispatching TAO jobs through the Brev CLI. Trigger phrases include "run on Brev", "Brev GPU instance", "submit job to Brev", "Brev CLI deployment".
 license: Apache-2.0
 compatibility: Requires the brev CLI (https://github.com/brevdev/brev-cli) and an active brev login.
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["gpu","compute","instance-based","brev"]'
 allowed-tools: Read Bash
-tags:
-- gpu
-- compute
-- instance-based
-- brev
 ---
-
 # Brev
 
 NVIDIA Brev provides on-demand GPU instances across multiple cloud providers. Instances come pre-loaded with NVIDIA drivers, CUDA, Docker, and NVIDIA Container Toolkit.

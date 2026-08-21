@@ -2,9 +2,11 @@
 name: marketer-ad-variant-factory
 description: Fan out 50+ ad variants from one hero image.
 license: MIT
-metadata: {"author": "Picsart", "version": "1.0.0", "hermes": {"category": "marketing", "tags": ["picsart", "marketing", "campaigns", "creative"]}}
+metadata:
+  author: Picsart
+  version: 1.0.0
+  hermes: '{"category":"marketing","tags":["picsart","marketing","campaigns","creative"]}'
 ---
-
 # Ad variant factory
 
 Take one approved concept and explode it into 10-30 shippable ad variants for A/B testing on Meta, Google, TikTok, and Pinterest. Built for speed (parallel batch) and for direct upload to ad accounts (deterministic naming).

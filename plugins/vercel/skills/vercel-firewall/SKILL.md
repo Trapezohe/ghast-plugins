@@ -2,63 +2,12 @@
 name: vercel-firewall
 description: Vercel Firewall expert guidance — automatic DDoS mitigation, the Vercel WAF (custom rules, IP blocking, managed rulesets, rate limiting), Attack Mode, system bypass, bot management, and the `vercel firewall` CLI. Use when configuring platform-level security, responding to attacks, or staging firewall rules.
 metadata:
-  priority: 7
-  docs:
-    - 'https://vercel.com/docs/vercel-firewall'
-    - 'https://vercel.com/docs/cli/firewall'
-  bashPatterns:
-    - '\bvercel\s+firewall\b'
-  promptSignals:
-    phrases:
-      - 'vercel firewall'
-      - 'vercel waf'
-      - 'attack mode'
-      - 'ddos protection'
-      - 'ip block'
-      - 'managed ruleset'
-      - 'bot protection'
-      - 'system bypass'
-      - 'rate limit rule'
-    allOf:
-      - [firewall, vercel]
-      - [waf, vercel]
-      - [ddos, vercel]
-      - [challenge, vercel]
-      - ['rate limit', vercel]
-      - ['system bypass', vercel]
-      - ['ip block', vercel]
-    noneOf: []
-    minScore: 6
-retrieval:
-  aliases:
-    - ddos protection
-    - waf rules
-    - bot protection
-    - rate limiting
-    - attack mode
-    - ip allowlist
-    - traffic filtering
-    - verified bots
-  intents:
-    - protect from ddos
-    - block malicious traffic
-    - configure firewall
-    - rate limit api
-    - allow bot through firewall
-    - enable attack mode
-    - publish firewall rule
-  entities:
-    - Vercel Firewall
-    - Vercel WAF
-    - DDoS
-    - Attack Mode
-    - Bot Protection
-    - Managed Rulesets
-    - System Bypass
-    - JA3
-    - JA4
+  priority: '7'
+  docs: '["https://vercel.com/docs/vercel-firewall","https://vercel.com/docs/cli/firewall"]'
+  bashPatterns: '["\\bvercel\\s+firewall\\b"]'
+  promptSignals: '{"allOf":[["firewall","vercel"],["waf","vercel"],["ddos","vercel"],["challenge","vercel"],["rate limit","vercel"],["system bypass","vercel"],["ip block","vercel"]],"minScore":6,"noneOf":[],"phrases":["vercel firewall","vercel waf","attack mode","ddos protection","ip block","managed ruleset","bot protection","system bypass","rate limit rule"]}'
+  retrieval: '{"aliases":["ddos protection","waf rules","bot protection","rate limiting","attack mode","ip allowlist","traffic filtering","verified bots"],"entities":["Vercel Firewall","Vercel WAF","DDoS","Attack Mode","Bot Protection","Managed Rulesets","System Bypass","JA3","JA4"],"intents":["protect from ddos","block malicious traffic","configure firewall","rate limit api","allow bot through firewall","enable attack mode","publish firewall rule"]}'
 ---
-
 # Vercel Firewall
 
 You are an expert in the Vercel Firewall including the `vercel firewall` CLI, Vercel WAF and platform-level protections (custom rules, IP blocks, system bypass, Attack Mode, system mitigations). You follow all the [best practices](#best-practices) outlined below.

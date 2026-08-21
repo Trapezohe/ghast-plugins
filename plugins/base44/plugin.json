@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "base44",
+  "version": "1.0.0-beta.1-ghast.1",
+  "description": "Build and deploy Base44 full-stack apps with CLI project management and JavaScript/TypeScript SDK development skills",
+  "author": {
+    "name": "base44",
+    "url": "https://base44.com"
+  },
+  "homepage": "https://docs.base44.com",
+  "repository": "https://github.com/base44/skills",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "development",
+      "upstreamRevision": "773a301cfb79112141add32d19c024f2bafc44ee",
+      "upstreamPath": ".",
+      "icon": "./assets/icon.png"
+    }
+  }
+}

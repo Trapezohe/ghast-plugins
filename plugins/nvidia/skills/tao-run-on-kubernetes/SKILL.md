@@ -1,22 +1,14 @@
 ---
 name: tao-run-on-kubernetes
-description: Kubernetes execution platform — submits TAO container jobs as single-pod k8s Jobs with NVIDIA GPU scheduling.
-  Use when running on EKS / GKE / AKS / on-prem clusters with the NVIDIA GPU Operator installed, or when integrating TAO
-  into an existing k8s-native ML platform.
+description: Kubernetes execution platform — submits TAO container jobs as single-pod k8s Jobs with NVIDIA GPU scheduling. Use when running on EKS / GKE / AKS / on-prem clusters with the NVIDIA GPU Operator installed, or when integrating TAO into an existing k8s-native ML platform.
 license: Apache-2.0
 compatibility: Requires GPU worker nodes with NVIDIA driver branch 580, CUDA Toolkit 13.0, and NVIDIA Container Toolkit 1.19.0; the nvidia-tao-sdk Python package with the kubernetes extra (pip install 'nvidia-tao-sdk[kubernetes]'); an authenticated cluster; and the NVIDIA GPU Operator or device plugin.
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["kubernetes","k8s","gpu","compute","container"]'
 allowed-tools: Read Bash
-tags:
-- kubernetes
-- k8s
-- gpu
-- compute
-- container
 ---
-
 # Kubernetes
 
 Submits TAO container jobs as Kubernetes Jobs. Works on any cluster reachable via kubeconfig (EKS / GKE / AKS / on-prem) or in-cluster service account (when the SDK runs inside a pod).

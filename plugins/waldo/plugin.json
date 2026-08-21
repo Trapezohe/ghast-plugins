@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "waldo",
+  "version": "1.0.3-ghast.1",
+  "description": "Research brands, ads, audiences, trends, and workspaces through Waldo's official curated strategy MCP.",
+  "author": {
+    "name": "Curiosities, Inc. DBA Waldo",
+    "url": "https://www.waldo.fyi"
+  },
+  "homepage": "https://agentic.waldo.fyi/docs/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "upstreamRevision": "waldo-docs-2467b590ff1b+developers-d93fe7dd2d4b+terms-685dde629e34+resource-d15bb784b8af+oauth-503cc02e147f+boundary-4ad7751110ef",
+      "portStatus": "full",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

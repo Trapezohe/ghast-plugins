@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "posthog",
+  "version": "1.0.0-ghast.1",
+  "description": "Analyze and manage PostHog analytics, flags, experiments, errors, replays, surveys, dashboards, SQL, AI observability, data pipelines, and product workflows through PostHog's official hosted MCP server.",
+  "author": {
+    "name": "PostHog Inc.",
+    "url": "https://posthog.com"
+  },
+  "homepage": "https://posthog.com/docs/model-context-protocol",
+  "repository": "https://github.com/PostHog/posthog",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "data",
+      "upstreamRevision": "bbc6f4bf597f133e3ca435ed300835036a23a4a7",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

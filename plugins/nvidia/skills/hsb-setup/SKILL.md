@@ -1,34 +1,19 @@
 ---
 name: hsb-setup
 description: Clone the latest NVIDIA Holoscan Sensor Bridge repo, ask which supported devkit is being used, configure the host per platform, build the correct demo container, run it, and verify HSB connectivity by pinging 192.168.0.2. Use for Holoscan Sensor Bridge setup, build, container launch, and first-connectivity bring-up.
-author: "Holoscan Team <holoscan-team@nvidia.com>"
-license: "Apache-2.0"
-version: "1.0.0"
-tags:
-  - holoscan-sensor-bridge
-  - hsb
-  - setup
-tools:
-  - Read
-  - Write
-  - Edit
-  - Grep
-  - Glob
-  - Bash
-disable-model-invocation: true
-allowed-tools: Read,Write,Edit,MultiEdit,Grep,Glob,Bash
+license: Apache-2.0
 metadata:
-  author: "Holoscan Team <holoscan-team@nvidia.com>"
+  author: Holoscan Team <holoscan-team@nvidia.com>
   team: holoscan
-  tags:
-    - holoscan-sensor-bridge
-    - hsb
-    - setup
-  agents:
-    - claude-code
-    - codex
+  tags: '["holoscan-sensor-bridge","hsb","setup"]'
+  agents: '["claude-code","codex"]'
+  legacy-author: Holoscan Team <holoscan-team@nvidia.com>
+  version: 1.0.0
+  legacy-tags: '["holoscan-sensor-bridge","hsb","setup"]'
+  tools: '["Read","Write","Edit","Grep","Glob","Bash"]'
+  disable-model-invocation: 'true'
+allowed-tools: Read,Write,Edit,MultiEdit,Grep,Glob,Bash
 ---
-
 # Holoscan Sensor Bridge demo bring-up
 
 Use this skill when the user wants to bring up the Holoscan Sensor Bridge demo environment end to end.

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "hugging-face",
+  "version": "1.0.23-ghast.1",
+  "description": "Explore and manage Hugging Face models, datasets, Spaces, jobs, papers, evaluations, training, Gradio apps, local models, and Hub workflows with the complete official skill catalog and official Hugging Face MCP server.",
+  "author": {
+    "name": "Hugging Face"
+  },
+  "homepage": "https://github.com/huggingface/skills",
+  "repository": "https://github.com/huggingface/skills",
+  "license": "Apache-2.0",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "development",
+      "upstreamRevision": "ec0108293521ef698e451ec044e8b4feba6b732b",
+      "upstreamPath": ".",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

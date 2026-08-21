@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "setu-bharat-connect-billpay": {
+      "type": "streamable-http",
+      "url": "https://billpay-mcp.setu.co/mcp"
+    }
+  }
+}

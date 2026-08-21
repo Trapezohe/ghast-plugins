@@ -1,17 +1,9 @@
 ---
 name: team-ownership
 description: Assign and reassign CRM record ownership, audit who-owns-what across object types, and handle rep transitions. Built on `bulk-operations`.
-triggers:
-  - "assign owner"
-  - "reassign records"
-  - "ownership audit"
-  - "rep leaving"
-  - "transfer records"
-  - "change owner"
-  - "find records owned by"
-  - "redistribute accounts"
+metadata:
+  triggers: '["assign owner","reassign records","ownership audit","rep leaving","transfer records","change owner","find records owned by","redistribute accounts"]'
 ---
-
 Prereq: read `bulk-operations/SKILL.md` first. JSONL piping, pagination, dry-run/digest/confirm, and `hubspot history` recovery live there. Reshape patterns live in `bulk-operations/resources/json-patterns.md`.
 
 `hubspot_owner_id` is a string field on `contacts`, `companies`, `deals`, and `tickets`. Owners are CRM users — `hubspot owners list` returns them; there is no `teams` object, so team-level views are client-side groupings by `hubspot_owner_id`.

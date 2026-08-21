@@ -1,15 +1,14 @@
 ---
 name: jetson-headless-mode
 description: Plan and apply safe Jetson headless-mode changes to reclaim GUI and daemon memory.
-version: 0.0.1
-license: "Apache-2.0"
+license: Apache-2.0
 metadata:
-  author: "Jetson Team"
-  tags: [jetson, headless, memory]
-  languages: [bash]
+  author: Jetson Team
+  tags: '["jetson","headless","memory"]'
+  languages: '["bash"]'
   data-classification: public
+  version: 0.0.1
 ---
-
 # Jetson Headless Mode
 
 Plan-then-apply for safe, reversible user-space memory reclamation: switch the default systemd target away from `graphical.target` and disable a curated set of non-essential daemons. This is the highest-yield, lowest-risk memory win on Jetson.

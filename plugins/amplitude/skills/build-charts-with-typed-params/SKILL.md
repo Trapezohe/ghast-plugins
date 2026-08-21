@@ -1,9 +1,9 @@
 ---
 name: build-charts-with-typed-params
 description: Builds Amplitude charts using the typed `chart` parameter on query_amplitude_data — events, filters, group-bys, segments, date ranges, and per-kind fields for segmentation, funnel, retention, sessions, and data tables. Use when creating a chart, modifying or forking a saved one, or when a query returns empty data.
-x-amp-flags: [mcp-consolidate-charts]
+metadata:
+  x-amp-flags: '["mcp-consolidate-charts"]'
 ---
-
 # Build Charts With Typed Params
 
 Express the chart as typed, UI-shaped parameters and let the server compile it.

@@ -1,20 +1,14 @@
 ---
 name: tao-train-foundation-stereo
-description: Stereo depth estimation using FoundationStereo. Predicts disparity maps from stereo image pairs for 3D
-  reconstruction. Use when training, evaluating, exporting, or running inference for a TAO FoundationStereo model. Trigger
-  phrases include "train stereo depth", "FoundationStereo", "stereo disparity estimation", "3D reconstruction from stereo".
+description: Stereo depth estimation using FoundationStereo. Predicts disparity maps from stereo image pairs for 3D reconstruction. Use when training, evaluating, exporting, or running inference for a TAO FoundationStereo model. Trigger phrases include "train stereo depth", "FoundationStereo", "stereo disparity estimation", "3D reconstruction from stereo".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["stereo","depth","estimation"]'
 allowed-tools: Read Bash
-tags:
-- stereo
-- depth
-- estimation
 ---
-
 # Depth Net Stereo
 
 Stereo depth estimation using FoundationStereo architecture. Predicts disparity maps from stereo image pairs for 3D reconstruction.

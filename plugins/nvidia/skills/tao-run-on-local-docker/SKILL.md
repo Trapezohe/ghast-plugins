@@ -1,21 +1,14 @@
 ---
 name: tao-run-on-local-docker
-description: Local or remote Docker execution for TAO SDK job containers using a Docker daemon with NVIDIA GPU runtime. Use
-  when running TAO jobs on the current machine, a directly attached Docker host, or a remote GPU box exposed through
-  DOCKER_HOST. Trigger phrases include "run locally", "local Docker", "remote Docker", "use my GPU", "run on my
-  machine", "host Docker daemon".
+description: Local or remote Docker execution for TAO SDK job containers using a Docker daemon with NVIDIA GPU runtime. Use when running TAO jobs on the current machine, a directly attached Docker host, or a remote GPU box exposed through DOCKER_HOST. Trigger phrases include "run locally", "local Docker", "remote Docker", "use my GPU", "run on my machine", "host Docker daemon".
 license: Apache-2.0
 compatibility: Requires NVIDIA driver branch 580, CUDA Toolkit 13.0, Docker, and NVIDIA Container Toolkit 1.19.0. The TAO SDK with the docker extra (pip install 'nvidia-tao-sdk[docker]') is needed only if you want Job handles, S3 I/O wrapping, or run-folder durability via ActionWorkflow.
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["platform","local","docker"]'
 allowed-tools: Read Bash
-tags:
-- platform
-- local
-- docker
 ---
-
 # Local Docker
 
 Single-node execution platform that runs TAO jobs as named Docker containers on

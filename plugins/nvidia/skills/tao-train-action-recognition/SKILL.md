@@ -1,20 +1,14 @@
 ---
 name: tao-train-action-recognition
-description: Action recognition from video sequences. Supports RGB, optical flow, and joint (multi-stream) input types for
-  classifying temporal actions in video clips. Use when training, evaluating, exporting, or running inference on a TAO
-  action-recognition model. Trigger phrases include "train action recognition", "video action classification", "RGB +
-  optical flow action model", "TAO ActionRecognition".
+description: Action recognition from video sequences. Supports RGB, optical flow, and joint (multi-stream) input types for classifying temporal actions in video clips. Use when training, evaluating, exporting, or running inference on a TAO action-recognition model. Trigger phrases include "train action recognition", "video action classification", "RGB + optical flow action model", "TAO ActionRecognition".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["action","recognition"]'
 allowed-tools: Read Bash
-tags:
-- action
-- recognition
 ---
-
 # Action Recognition
 
 Action recognition from video sequences. Supports RGB, optical flow, and joint (multi-stream) input types for classifying temporal actions in video clips.

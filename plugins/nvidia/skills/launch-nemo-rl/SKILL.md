@@ -1,19 +1,11 @@
 ---
 name: launch-nemo-rl
-license: Apache-2.0
 description: Playbook for launching, monitoring, stopping, and debugging NeMo-RL recipes on a Kubernetes cluster via the nrl-k8s CLI. Covers ephemeral vs long-lived RayCluster modes, iterating on runs, and debugging hung or failed training jobs.
-when_to_use:
-  - "run this recipe on k8s"
-  - "launch on the cluster"
-  - "submit a training job"
-  - "tear down the cluster"
-  - "resubmit as rayjob"
-  - "why is the run stuck"
-  - "how do I get logs for job X"
-  - "bring the cluster back up"
+license: Apache-2.0
+metadata:
+  when_to_use: '["run this recipe on k8s","launch on the cluster","submit a training job","tear down the cluster","resubmit as rayjob","why is the run stuck","how do I get logs for job X","bring the cluster back up"]'
 allowed-tools: Bash Read Grep Glob Edit Write
 ---
-
 # launch-nemo-rl — running NeMo-RL recipes on Kubernetes via nrl-k8s
 
 This is the playbook for the `nrl-k8s` CLI at `infra/nrl_k8s/`. Follow it when the user asks to launch / iterate / debug a NeMo-RL recipe on a Kubernetes cluster. Verify current state (`kubectl`, `git log`, the recipe + infra files) before acting — the cluster is shared and the cost of a wrong action is high.

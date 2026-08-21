@@ -1,8 +1,7 @@
 ---
-name: ui-toolkit-web
-description: "Zoom Video SDK UI Toolkit for Web. Use when building prebuilt or low-code Zoom Video SDK browser UI with @zoom/videosdk-ui-toolkit, composite UI, individual components, session lifecycle, React/Vue/Angular/Next.js/vanilla integration, featuresOptions, JWT auth, CSS/CDN install, troubleshooting, or deciding between UI Toolkit and raw Video SDK."
+name: ui-toolkit
+description: Zoom Video SDK UI Toolkit for Web. Use when building prebuilt or low-code Zoom Video SDK browser UI with @zoom/videosdk-ui-toolkit, composite UI, individual components, session lifecycle, React/Vue/Angular/Next.js/vanilla integration, featuresOptions, JWT auth, CSS/CDN install, troubleshooting, or deciding between UI Toolkit and raw Video SDK.
 ---
-
 # Zoom Video SDK UI Toolkit
 
 Pre-built video conferencing UI powered by Zoom Video SDK. Drop-in solution for web applications.

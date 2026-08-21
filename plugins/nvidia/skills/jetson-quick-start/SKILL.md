@@ -1,18 +1,14 @@
 ---
 name: jetson-quick-start
-description: >-
-  Entry skill for Jetson / IGX BSP customization. Asks one core
-  click-to-select setup questionnaire and passes prefilled answers to
-  downstream setup skills.
-version: 0.0.1
-license: "Apache-2.0"
+description: Entry skill for Jetson / IGX BSP customization. Asks one core click-to-select setup questionnaire and passes prefilled answers to downstream setup skills.
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
-  tags: [setup, bootstrap, download]
+  author: Jetson Team
+  tags: '["setup","bootstrap","download"]'
   domain: setup
+  version: 0.0.1
 ---
-
 # Quick Start — BSP customization entrypoint
 
 `jetson-quick-start` is a dispatcher and intake form. It does not download,

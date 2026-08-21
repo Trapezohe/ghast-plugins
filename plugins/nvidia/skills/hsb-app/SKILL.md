@@ -1,34 +1,19 @@
 ---
 name: hsb-app
 description: Discover and run Holoscan Sensor Bridge example applications on a connected devkit. Filters available apps by the user's platform, HSB software version, board type, and sensors. Supports timed execution, failure analysis, code-edit suggestions, and iterative re-runs.
-author: "Holoscan Team <holoscan-team@nvidia.com>"
-license: "Apache-2.0"
-version: "1.0.0"
-tags:
-  - holoscan-sensor-bridge
-  - hsb
-  - running-app
-tools:
-  - Read
-  - Write
-  - Edit
-  - Grep
-  - Glob
-  - Bash
-disable-model-invocation: true
-allowed-tools: Read,Write,Edit,MultiEdit,Grep,Glob,Bash
+license: Apache-2.0
 metadata:
-  author: "Holoscan Team <holoscan-team@nvidia.com>"
+  author: Holoscan Team <holoscan-team@nvidia.com>
   team: holoscan
-  tags:
-    - holoscan-sensor-bridge
-    - hsb
-    - running-app
-  agents:
-    - claude-code
-    - codex
+  tags: '["holoscan-sensor-bridge","hsb","running-app"]'
+  agents: '["claude-code","codex"]'
+  legacy-author: Holoscan Team <holoscan-team@nvidia.com>
+  version: 1.0.0
+  legacy-tags: '["holoscan-sensor-bridge","hsb","running-app"]'
+  tools: '["Read","Write","Edit","Grep","Glob","Bash"]'
+  disable-model-invocation: 'true'
+allowed-tools: Read,Write,Edit,MultiEdit,Grep,Glob,Bash
 ---
-
 # HSB Application Runner
 
 Use this skill when the user wants to discover, select, and run Holoscan Sensor Bridge example applications on a devkit with a connected HSB board.

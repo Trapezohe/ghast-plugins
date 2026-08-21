@@ -1,33 +1,21 @@
 ---
 name: hsb-ip-packetizer
-author: "Holoscan Team <holoscan-team@nvidia.com>"
 description: Choose or explain HSB Sensor RX packetizer fields for HOLOLINK_def.svh. Do not use for full defs, validation, or runtime APB programming.
-version: "0.1.0"
-tags:
-  - holoscan
-  - hsb
-  - packetizer
-  - systemverilog
-  - fpga
 license: Apache-2.0
 compatibility: Targets HSB IP rev 16'h2604; backward-compatible with 16'h2603. Prefer live HSB IP packetizer source when available; warn on unknown revisions. Designed to work standalone or as a companion to hsb-ip-def.
 metadata:
-  author: "Holoscan Team <holoscan-team@nvidia.com>"
+  author: Holoscan Team <holoscan-team@nvidia.com>
   team: holoscan
   domain: fpga
   vendor: nvidia
-  tags:
-    - holoscan
-    - hsb
-    - fpga
-    - packetizer
-    - systemverilog
-  languages:
-    - systemverilog
+  tags: '["holoscan","hsb","fpga","packetizer","systemverilog"]'
+  languages: '["systemverilog"]'
   artifact: HOLOLINK_def.svh
-  hsb_ip_version: "16'h2604"
+  hsb_ip_version: 16'h2604
+  legacy-author: Holoscan Team <holoscan-team@nvidia.com>
+  version: 0.1.0
+  legacy-tags: '["holoscan","hsb","packetizer","systemverilog","fpga"]'
 ---
-
 # HSB IP Packetizer Skill
 
 ## Purpose

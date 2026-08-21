@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "coupler-io": {
-      "type": "http",
-      "url": "https://mcp.coupler.io/mcp"
-    }
-  }
-}

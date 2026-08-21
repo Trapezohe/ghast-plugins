@@ -1,18 +1,12 @@
 ---
 name: i4h-catheter-navigation-viewport
-version: "0.7.0"
 description: Launch the interactive Slang fluoroscopy viewport with XPBD catheter physics. Use when asked to open the viewport, teleop a catheter, or demo fluoro navigation.
 license: Apache-2.0
 metadata:
-  author: "Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>"
-  tags:
-    - isaac-for-healthcare
-    - i4h
-    - catheter-navigation
-    - viewport
-    - interactive
+  author: Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>
+  tags: '["isaac-for-healthcare","i4h","catheter-navigation","viewport","interactive"]'
+  version: 0.7.0
 ---
-
 # i4h Catheter Navigation - Interactive Viewport
 
 ## Purpose

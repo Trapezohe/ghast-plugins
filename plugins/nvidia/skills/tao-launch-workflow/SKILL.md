@@ -1,21 +1,14 @@
 ---
 name: tao-launch-workflow
-description: >-
-  Shared launch intake for any TAO workflow or action. Use when the user wants
-  to run TAO AutoML, train, evaluate, infer, export, generate TensorRT engines,
-  or launch DEFT/workflow jobs on an execution platform.
+description: Shared launch intake for any TAO workflow or action. Use when the user wants to run TAO AutoML, train, evaluate, infer, export, generate TensorRT engines, or launch DEFT/workflow jobs on an execution platform.
 license: Apache-2.0
 compatibility: Requires the packaged TAO skill bank helper scripts.
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["tao","workflow","launch"]'
 allowed-tools: Read Bash
-tags:
-- tao
-- workflow
-- launch
 ---
-
 # TAO Workflow Launch Intake
 
 Use this skill before launching any TAO workflow or model action.

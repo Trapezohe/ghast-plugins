@@ -1,8 +1,7 @@
 ---
-name: zoom-plugin-sdk
+name: plugin-sdk
 description: Zoom Plugin SDK guidance for native macOS and Windows applications that control an installed Zoom Workplace desktop client over IPC. Use for desktop companion apps that start or join meetings, control meeting audio/video/share/UI, inspect participants, or manage supported meeting features without embedding a Zoom client. Route platform-specific implementation to the macOS or Windows child skill.
 ---
-
 # Zoom Plugin SDK
 
 Build native desktop companion applications that control the user's installed Zoom Workplace client through inter-process communication (IPC).

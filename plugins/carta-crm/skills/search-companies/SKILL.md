@@ -1,17 +1,10 @@
 ---
 name: search-companies
-description: >
-  Searches for and retrieves company records from the Carta CRM.
-  Use this skill when the user says things like "find a company", "search companies",
-  "look up a company", "show me company details for [name]", "get company by ID",
-  "get company by domain", "list companies", "what companies do we have", or "/search-companies".
-  Returns company details including ID, name, and custom fields.
-  The company ID returned can be used with the update-company skill.
-version: 1.0.0
-model: haiku
+description: Searches for and retrieves company records from the Carta CRM. Use this skill when the user says things like "find a company", "search companies", "look up a company", "show me company details for [name]", "get company by ID", "get company by domain", "list companies", "what companies do we have", or "/search-companies". Returns company details including ID, name, and custom fields. The company ID returned can be used with the update-company skill.
+metadata:
+  version: 1.0.0
+  model: haiku
 ---
-
-
 ## Ghast MCP routing
 
 This port connects directly to Carta's hosted MCP server. Use the direct tool

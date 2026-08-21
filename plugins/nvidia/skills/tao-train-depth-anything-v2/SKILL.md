@@ -1,21 +1,14 @@
 ---
 name: tao-train-depth-anything-v2
-description: Monocular depth estimation using Metric Depth Anything v2 or Relative Depth Anything architectures. Predicts
-  per-pixel depth from single RGB images. Use when training, evaluating, exporting, or running inference for a TAO
-  monocular depth model. Trigger phrases include "train monocular depth", "DepthAnything v2", "metric depth from single
-  image", "monocular depth estimation".
+description: Monocular depth estimation using Metric Depth Anything v2 or Relative Depth Anything architectures. Predicts per-pixel depth from single RGB images. Use when training, evaluating, exporting, or running inference for a TAO monocular depth model. Trigger phrases include "train monocular depth", "DepthAnything v2", "metric depth from single image", "monocular depth estimation".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["monocular","depth","estimation"]'
 allowed-tools: Read Bash
-tags:
-- monocular
-- depth
-- estimation
 ---
-
 # Depth Net Mono
 
 Monocular depth estimation using Metric Depth Anything v2 or Relative Depth Anything architectures. Predicts per-pixel depth from single RGB images.

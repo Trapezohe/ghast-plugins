@@ -2,9 +2,11 @@
 name: enterprise-brand-governor
 description: Gate every generation through a brand policy file.
 license: MIT
-metadata: {"author": "Picsart", "version": "1.0.0", "hermes": {"category": "enterprise", "tags": ["picsart", "enterprise", "governance", "scale"]}}
+metadata:
+  author: Picsart
+  version: 1.0.0
+  hermes: '{"category":"enterprise","tags":["picsart","enterprise","governance","scale"]}'
 ---
-
 # Enterprise Brand Governor
 
 Policy-as-code for AI-generated imagery. Every prompt is pre-validated against `brand.md`, every output is post-checked, violations escalate to a human approver, and every decision is logged. Built for regulated industries and any enterprise where an off-brand asset in production is a material risk.

@@ -1,22 +1,16 @@
 ---
 name: jetson-build-source
-description: >-
-  Use when you need to rebuild the BSP overlay — DT, OOT modules,
-  or kernel — from changes under bsp_sources/. Triggers: build
-  bsp, rebuild dtb, rebuild kernel.
-version: 0.0.1
-license: "Apache-2.0"
-argument-hint: "dt | oot | kernel | full"
+description: 'Use when you need to rebuild the BSP overlay — DT, OOT modules, or kernel — from changes under bsp_sources/. Triggers: build bsp, rebuild dtb, rebuild kernel.'
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
+  author: Jetson Team
   team: pts
-  tags:
-    - bsp
-    - build
+  tags: '["bsp","build"]'
   domain: meta
+  version: 0.0.1
+  argument-hint: dt | oot | kernel | full
 ---
-
 # Build BSP Source
 
 ## Purpose

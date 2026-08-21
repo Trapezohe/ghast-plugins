@@ -2,9 +2,9 @@
 name: nemo-mbridge-perf-tp-dp-comm-overlap
 description: Operational guide for enabling TP, DP, and PP communication overlap in Megatron-Bridge, including config knobs, code anchors, pitfalls, and verification.
 license: Apache-2.0
-when_to_use: Enabling TP/DP/PP comm overlap, or tracing a throughput regression to a comm overlap config change; 'overlap_param_gather', 'overlap_grad_reduce', 'sequence-parallel overlap', 'TP overlap', 'DP overlap', 'comm overlap'.
+metadata:
+  when_to_use: Enabling TP/DP/PP comm overlap, or tracing a throughput regression to a comm overlap config change; 'overlap_param_gather', 'overlap_grad_reduce', 'sequence-parallel overlap', 'TP overlap', 'DP overlap', 'comm overlap'.
 ---
-
 # TP / DP / PP Communication Overlap Skill
 
 For stable background and recommendation level, see:

@@ -1,20 +1,14 @@
 ---
 name: tao-train-deformable-detr
-description: Deformable DETR for 2D object detection. Uses deformable attention for efficient multi-scale feature processing,
-  lighter than DINO with competitive accuracy. Use when training, evaluating, exporting, quantizing, or running inference for
-  a TAO Deformable-DETR model. Trigger phrases include "train deformable-detr", "Deformable DETR object detection",
-  "lightweight DETR detector".
+description: Deformable DETR for 2D object detection. Uses deformable attention for efficient multi-scale feature processing, lighter than DINO with competitive accuracy. Use when training, evaluating, exporting, quantizing, or running inference for a TAO Deformable-DETR model. Trigger phrases include "train deformable-detr", "Deformable DETR object detection", "lightweight DETR detector".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["object","detection"]'
 allowed-tools: Read Bash
-tags:
-- object
-- detection
 ---
-
 # Deformable DETR
 
 Deformable DETR for 2D object detection. Uses deformable attention for efficient multi-scale feature processing. Lighter than DINO with competitive accuracy.

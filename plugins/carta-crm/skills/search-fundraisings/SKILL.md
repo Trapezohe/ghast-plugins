@@ -1,17 +1,10 @@
 ---
 name: search-fundraisings
-description: >
-  Searches for and retrieves fundraising records from the Carta CRM.
-  Use this skill when the user says things like "find a fundraising", "search fundraisings",
-  "look up a fundraising round", "show fundraising details for [name]", "get fundraising by ID",
-  "list fundraisings", "what fundraisings do we have", or "/search-fundraisings".
-  Returns fundraising details including ID, name, stage, and custom fields.
-  The fundraising ID returned can be used with the update-fundraising skill.
-version: 1.0.0
-model: haiku
+description: Searches for and retrieves fundraising records from the Carta CRM. Use this skill when the user says things like "find a fundraising", "search fundraisings", "look up a fundraising round", "show fundraising details for [name]", "get fundraising by ID", "list fundraisings", "what fundraisings do we have", or "/search-fundraisings". Returns fundraising details including ID, name, stage, and custom fields. The fundraising ID returned can be used with the update-fundraising skill.
+metadata:
+  version: 1.0.0
+  model: haiku
 ---
-
-
 ## Ghast MCP routing
 
 This port connects directly to Carta's hosted MCP server. Use the direct tool

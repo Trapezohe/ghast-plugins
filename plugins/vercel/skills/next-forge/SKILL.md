@@ -1,146 +1,18 @@
 ---
 name: next-forge
 description: next-forge expert guidance — production-grade Turborepo monorepo SaaS starter by Vercel. Use when working in a next-forge project, scaffolding with `npx next-forge init`, or editing @repo/* workspace packages.
-summary: "next-forge monorepo SaaS starter (Turborepo, Clerk, Prisma/Neon, Stripe, Resend, shadcn/ui, Sentry, PostHog). See => skill:next-forge for full guide."
 metadata:
-  priority: 6
-  docs:
-    - "https://next-forge.com/docs"
-    - "https://github.com/haydenbleasel/next-forge"
-  pathPatterns:
-    - 'pnpm-workspace.yaml'
-    - 'apps/app/**'
-    - 'apps/web/**'
-    - 'apps/api/**'
-    - 'apps/email/**'
-    - 'apps/docs/**'
-    - 'apps/studio/**'
-    - 'apps/storybook/**'
-    - 'packages/auth/**'
-    - 'packages/database/**'
-    - 'packages/design-system/**'
-    - 'packages/payments/**'
-    - 'packages/email/**'
-    - 'packages/analytics/**'
-    - 'packages/observability/**'
-    - 'packages/security/**'
-    - 'packages/ai/**'
-    - 'packages/cms/**'
-    - 'packages/collaboration/**'
-    - 'packages/feature-flags/**'
-    - 'packages/internationalization/**'
-    - 'packages/notifications/**'
-    - 'packages/rate-limit/**'
-    - 'packages/seo/**'
-    - 'packages/storage/**'
-    - 'packages/webhooks/**'
-    - 'packages/next-config/**'
-    - 'packages/typescript-config/**'
-    - '**/keys.ts'
-    - '**/env.ts'
-    - '**/proxy.ts'
-    - 'biome.jsonc'
-  bashPatterns:
-    - '\bnext-forge\b'
-    - '\bnpx\s+next-forge\b'
-    - '\bpnpm\s+migrate\b'
-    - '\bpnpm\s+bump-deps\b'
-    - '\bpnpm\s+bump-ui\b'
-    - '\bprisma\s+(generate|db\s+push|format|studio)\b'
-    - '\bstripe\s+listen\b'
-    - '\bnpx\s+shadcn@latest\s+add\b.*-c\s+packages/design-system\b'
-  importPatterns:
-    - '@repo/auth'
-    - '@repo/database'
-    - '@repo/design-system'
-    - '@repo/payments'
-    - '@repo/email'
-    - '@repo/analytics'
-    - '@repo/observability'
-    - '@repo/security'
-    - '@repo/ai'
-    - '@repo/cms'
-    - '@repo/collaboration'
-    - '@repo/feature-flags'
-    - '@repo/internationalization'
-    - '@repo/notifications'
-    - '@repo/rate-limit'
-    - '@repo/seo'
-    - '@repo/storage'
-    - '@repo/webhooks'
-    - '@repo/next-config'
-    - '@t3-oss/env-nextjs'
-    - '@rescale/nemo'
-  promptSignals:
-    phrases:
-      - 'next-forge'
-      - 'next forge'
-      - '@repo/'
-    allOf:
-      -
-        - 'monorepo'
-        - 'saas'
-        - 'starter'
-      -
-        - 'turborepo'
-        - 'clerk'
-        - 'stripe'
-    anyOf:
-      - 'saas starter'
-      - 'production monorepo'
-      - 'keys.ts'
-      - 'pnpm-workspace'
-    noneOf:
-      - 'create-t3-app'
-    minScore: 6
-validate:
-  -
-    pattern: '"pipeline"\s*:'
-    message: 'turbo.json "pipeline" was renamed to "tasks" in Turborepo v2 — update to "tasks"'
-    severity: error
-  -
-    pattern: 'new Pool\('
-    message: 'PrismaNeon expects a connection config object, not a Pool instance — use PrismaNeon({ connectionString: url })'
-    severity: error
-    skipIfFileContains: 'pg\.Pool'
-  -
-    pattern: 'prisma studio --schema'
-    message: 'Prisma v7 removed --schema flag for studio — use --config instead'
-    severity: error
-  -
-    pattern: 'middleware\.ts'
-    message: 'next-forge uses proxy.ts (Next.js 16+), not middleware.ts — rename to proxy.ts'
-    severity: warn
-    skipIfFileContains: 'proxy\.ts'
-retrieval:
-  aliases:
-    - saas starter
-    - monorepo starter
-    - next forge
-    - turborepo template
-  intents:
-    - scaffold saas
-    - set up next-forge
-    - create monorepo project
-    - use next-forge
-  entities:
-    - next-forge
-    - '@repo/*'
-    - Turborepo
-    - monorepo
-    - SaaS starter
-chainTo:
-  -
-    pattern: 'export\s+(default\s+)?function\s+middleware'
-    targetSkill: routing-middleware
-    message: 'middleware.ts detected in next-forge project — loading Routing Middleware guidance for proxy.ts migration.'
-  -
-    pattern: '@clerk/|clerkMiddleware|ClerkProvider|getAuth\(\)|auth\(\)'
-    targetSkill: auth
-    message: 'Clerk auth patterns in next-forge — loading Auth guidance for middleware auth, sign-in/sign-up flows, and organization handling.'
-    skipIfFileContains: '@auth0/|@descope/'
+  priority: '6'
+  docs: '["https://next-forge.com/docs","https://github.com/haydenbleasel/next-forge"]'
+  pathPatterns: '["pnpm-workspace.yaml","apps/app/**","apps/web/**","apps/api/**","apps/email/**","apps/docs/**","apps/studio/**","apps/storybook/**","packages/auth/**","packages/database/**","packages/design-system/**","packages/payments/**","packages/email/**","packages/analytics/**","packages/observability/**","packages/security/**","packages/ai/**","packages/cms/**","packages/collaboration/**","packages/feature-flags/**","packages/internationalization/**","packages/notifications/**","packages/rate-limit/**","packages/seo/**","packages/storage/**","packages/webhooks/**","packages/next-config/**","packages/typescript-config/**","**/keys.ts","**/env.ts","**/proxy.ts","biome.jsonc"]'
+  bashPatterns: '["\\bnext-forge\\b","\\bnpx\\s+next-forge\\b","\\bpnpm\\s+migrate\\b","\\bpnpm\\s+bump-deps\\b","\\bpnpm\\s+bump-ui\\b","\\bprisma\\s+(generate|db\\s+push|format|studio)\\b","\\bstripe\\s+listen\\b","\\bnpx\\s+shadcn@latest\\s+add\\b.*-c\\s+packages/design-system\\b"]'
+  importPatterns: '["@repo/auth","@repo/database","@repo/design-system","@repo/payments","@repo/email","@repo/analytics","@repo/observability","@repo/security","@repo/ai","@repo/cms","@repo/collaboration","@repo/feature-flags","@repo/internationalization","@repo/notifications","@repo/rate-limit","@repo/seo","@repo/storage","@repo/webhooks","@repo/next-config","@t3-oss/env-nextjs","@rescale/nemo"]'
+  promptSignals: '{"allOf":[["monorepo","saas","starter"],["turborepo","clerk","stripe"]],"anyOf":["saas starter","production monorepo","keys.ts","pnpm-workspace"],"minScore":6,"noneOf":["create-t3-app"],"phrases":["next-forge","next forge","@repo/"]}'
+  summary: next-forge monorepo SaaS starter (Turborepo, Clerk, Prisma/Neon, Stripe, Resend, shadcn/ui, Sentry, PostHog). See => skill:next-forge for full guide.
+  validate: '[{"message":"turbo.json \"pipeline\" was renamed to \"tasks\" in Turborepo v2 — update to \"tasks\"","pattern":"\"pipeline\"\\s*:","severity":"error"},{"message":"PrismaNeon expects a connection config object, not a Pool instance — use PrismaNeon({ connectionString: url })","pattern":"new Pool\\(","severity":"error","skipIfFileContains":"pg\\.Pool"},{"message":"Prisma v7 removed --schema flag for studio — use --config instead","pattern":"prisma studio --schema","severity":"error"},{"message":"next-forge uses proxy.ts (Next.js 16+), not middleware.ts — rename to proxy.ts","pattern":"middleware\\.ts","severity":"warn","skipIfFileContains":"proxy\\.ts"}]'
+  retrieval: '{"aliases":["saas starter","monorepo starter","next forge","turborepo template"],"entities":["next-forge","@repo/*","Turborepo","monorepo","SaaS starter"],"intents":["scaffold saas","set up next-forge","create monorepo project","use next-forge"]}'
+  chainTo: '[{"message":"middleware.ts detected in next-forge project — loading Routing Middleware guidance for proxy.ts migration.","pattern":"export\\s+(default\\s+)?function\\s+middleware","targetSkill":"routing-middleware"},{"message":"Clerk auth patterns in next-forge — loading Auth guidance for middleware auth, sign-in/sign-up flows, and organization handling.","pattern":"@clerk/|clerkMiddleware|ClerkProvider|getAuth\\(\\)|auth\\(\\)","skipIfFileContains":"@auth0/|@descope/","targetSkill":"auth"}]'
 ---
-
 # next-forge
 
 next-forge is a production-grade Turborepo template for building Next.js SaaS applications. It provides a monorepo structure with multiple apps, shared packages, and integrations for authentication, database, payments, email, CMS, analytics, observability, security, and more.

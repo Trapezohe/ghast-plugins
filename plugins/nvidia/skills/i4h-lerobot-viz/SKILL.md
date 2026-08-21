@@ -1,18 +1,12 @@
 ---
 name: i4h-lerobot-viz
-version: "0.6.0"
 description: Serve the LeRobot HTML visualizer for a converted dataset in a browser. Use when asked to visualize, inspect, or open a LeRobot dataset; not for converting HDF5 (use [[i4h-workflow-dataset-convert]]).
 license: Apache-2.0
 metadata:
-  author: "Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>"
-  tags:
-    - isaac-for-healthcare
-    - i4h
-    - lerobot
-    - visualization
-    - dataset
+  author: Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>
+  tags: '["isaac-for-healthcare","i4h","lerobot","visualization","dataset"]'
+  version: 0.6.0
 ---
-
 # i4h Workflow — LeRobot Viz
 
 ## Purpose

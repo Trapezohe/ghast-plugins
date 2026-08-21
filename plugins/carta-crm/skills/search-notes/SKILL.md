@@ -1,16 +1,10 @@
 ---
 name: search-notes
-description: >
-  Searches for and retrieves note records from the Carta CRM.
-  Use this skill when the user says things like "find a note", "search notes",
-  "look up a note", "show me notes about [topic]", "list notes",
-  "find notes mentioning [keyword]", or "/search-notes".
-  Returns note details including ID, title, and text content.
-version: 1.0.0
-model: haiku
+description: Searches for and retrieves note records from the Carta CRM. Use this skill when the user says things like "find a note", "search notes", "look up a note", "show me notes about [topic]", "list notes", "find notes mentioning [keyword]", or "/search-notes". Returns note details including ID, title, and text content.
+metadata:
+  version: 1.0.0
+  model: haiku
 ---
-
-
 ## Ghast MCP routing
 
 This port connects directly to Carta's hosted MCP server. Use the direct tool

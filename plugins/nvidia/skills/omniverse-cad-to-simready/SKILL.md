@@ -1,33 +1,16 @@
 ---
 name: omniverse-cad-to-simready
-description: "Coordinate the end-to-end CAD/source-asset to SimReady workflow. Use for broad requests such as CAD to SimReady, source asset to simulation-ready USD, or prop packaging that require conversion, material/physics assignment, SimReady conformance, validation, and optional package creation; deploy or verify Content Agents services first when property assignment is enabled; route single-stage work through nested references."
-version: "0.2.0"
+description: Coordinate the end-to-end CAD/source-asset to SimReady workflow. Use for broad requests such as CAD to SimReady, source asset to simulation-ready USD, or prop packaging that require conversion, material/physics assignment, SimReady conformance, validation, and optional package creation; deploy or verify Content Agents services first when property assignment is enabled; route single-stage work through nested references.
 license: Apache-2.0
-tools:
-  - Read
-  - Shell
-compatibility: >
-  Orchestrator skill. Managed Content Agents deployment requires a configured
-  model provider key matching the selected backend, such as NVIDIA_API_KEY,
-  OPENAI_API_KEY, ANTHROPIC_API_KEY, GOOGLE_API_KEY, or GEMINI_API_KEY,
-  Docker + NVIDIA Container Toolkit + GPU, Python 3.12, and an upstream checkout of
-  nvidia-omniverse/content-agents at the ref pinned in upstream-versions.lock.json.
-  Reused/provided endpoints may
-  instead use explicit endpoint and usage-token environment variables.
-  Linux/macOS only.
+compatibility: Orchestrator skill. Managed Content Agents deployment requires a configured model provider key matching the selected backend, such as NVIDIA_API_KEY, OPENAI_API_KEY, ANTHROPIC_API_KEY, GOOGLE_API_KEY, or GEMINI_API_KEY, Docker + NVIDIA Container Toolkit + GPU, Python 3.12, and an upstream checkout of nvidia-omniverse/content-agents at the ref pinned in upstream-versions.lock.json. Reused/provided endpoints may instead use explicit endpoint and usage-token environment variables. Linux/macOS on...
 metadata:
   author: Omniverse
-  tags:
-    - physical-ai
-    - simready
-    - workflow
-    - cad
-    - conversion
+  tags: '["physical-ai","simready","workflow","cad","conversion"]'
   domain: ai-ml
-  languages:
-    - python
+  languages: '["python"]'
+  version: 0.2.0
+  tools: '["Read","Shell"]'
 ---
-
 # CAD to SimReady
 
 ## When to Use

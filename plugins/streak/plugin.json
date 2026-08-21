@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "streak",
+  "version": "1.0.0-ghast.1",
+  "description": "Read, analyze, and update Streak CRM pipelines, boxes, deals, contacts, organizations, comments, tasks, and timelines through Streak's official hosted MCP server.",
+  "author": {
+    "name": "Rewardly, Inc.",
+    "url": "https://www.streak.com"
+  },
+  "homepage": "https://www.streak.com/integrations/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "upstreamRevision": "streak-docs-87c17a922fb5+claude-f49193624657+oauth-493b0f31d7f3",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "deepnote",
+  "version": "0.1.2-ghast.1",
+  "description": "Search, inspect, create, edit, link, and run Deepnote projects and notebooks through Deepnote's official hosted MCP server.",
+  "author": {
+    "name": "Deepnote",
+    "url": "https://deepnote.com"
+  },
+  "homepage": "https://deepnote.com/docs/deepnote-mcp",
+  "repository": "https://github.com/deepnote/codex-plugin",
+  "license": "Apache-2.0",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "data",
+      "upstreamRevision": "46088505120f7056ccf2fed2f0b1039bd732ad54",
+      "upstreamPath": "plugins/deepnote",
+      "icon": "./assets/icon.svg",
+      "mcpServerExtensions": {
+        "deepnote": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:deepnote-api-key"
+          }
+        }
+      }
+    }
+  }
+}

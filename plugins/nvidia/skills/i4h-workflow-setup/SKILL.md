@@ -1,18 +1,12 @@
 ---
 name: i4h-workflow-setup
-version: "0.6.0"
 description: Verify host requirements and run `workflows/agentic/setup.sh`. Use when asked to set up, install, or bootstrap the agentic workflow, or hits missing `.venv`, third-party checkout, or engine errors.
 license: Apache-2.0
 metadata:
-  author: "Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>"
-  tags:
-    - isaac-for-healthcare
-    - i4h
-    - agentic-workflow
-    - setup
-    - installation
+  author: Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>
+  tags: '["isaac-for-healthcare","i4h","agentic-workflow","setup","installation"]'
+  version: 0.6.0
 ---
-
 # i4h Workflow — Setup
 
 ## Purpose

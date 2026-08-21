@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "apollo",
+  "version": "0.1.1-ghast.1",
+  "description": "Prospect for people and companies, enrich leads, load reviewed contacts into outreach sequences, and query sales analytics through Apollo.io's official skills and hosted MCP server.",
+  "author": {
+    "name": "Apollo.io",
+    "url": "https://www.apollo.io/"
+  },
+  "homepage": "https://www.apollo.io/",
+  "repository": "https://github.com/apolloio/apollo-mcp-plugin",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "upstreamRevision": "2adde980e45f421b7e9383d92870455627936bce",
+      "upstreamPath": ".",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

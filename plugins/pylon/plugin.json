@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "pylon",
+  "version": "1.0.3-ghast.1",
+  "description": "Search and manage Pylon support issues, accounts, contacts, messages, and internal notes through official interfaces.",
+  "author": {
+    "name": "Pylon Labs, Inc.",
+    "url": "https://www.usepylon.com/"
+  },
+  "homepage": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp.md",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "upstreamRevision": "pylon-mcp-doc-7e1bdd12b729+messages-f084f9c0abb0+resource-2c83dcf3cc83+oauth-92cae1ab0e93+terms-2a942b005436",
+      "portStatus": "full",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

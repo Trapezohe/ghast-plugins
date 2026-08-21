@@ -1,13 +1,9 @@
 ---
 name: virtual-agent
-description: "Zoom Virtual Agent skill pack for web campaigns/chat embeds, Android and iOS WebView bridge integrations, and knowledge-base sync workflows. Use for lifecycle patterns, event handling, and version-drift troubleshooting."
-triggers:
-  - "virtual agent"
-  - "zva"
-  - "virtual assistant sdk"
-  - "knowledge base sync"
+description: Zoom Virtual Agent skill pack for web campaigns/chat embeds, Android and iOS WebView bridge integrations, and knowledge-base sync workflows. Use for lifecycle patterns, event handling, and version-drift troubleshooting.
+metadata:
+  triggers: '["virtual agent","zva","virtual assistant sdk","knowledge base sync"]'
 ---
-
 # Zoom Virtual Agent
 
 Implementation guidance for Zoom Virtual Agent across:

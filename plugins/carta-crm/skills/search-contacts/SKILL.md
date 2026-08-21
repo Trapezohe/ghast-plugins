@@ -1,17 +1,10 @@
 ---
 name: search-contacts
-description: >
-  Searches for and retrieves contact (people) records from the Carta CRM.
-  Use this skill when the user says things like "find a contact", "search contacts",
-  "look up a person", "show me contact details for [name]", "get contact by ID",
-  "list contacts", "find people at [company]", "search people", or "/search-contacts".
-  Returns contact details including ID, name, email, title, company, and tags.
-  The contact ID returned can be used with the update-contact skill.
-version: 1.0.0
-model: haiku
+description: Searches for and retrieves contact (people) records from the Carta CRM. Use this skill when the user says things like "find a contact", "search contacts", "look up a person", "show me contact details for [name]", "get contact by ID", "list contacts", "find people at [company]", "search people", or "/search-contacts". Returns contact details including ID, name, email, title, company, and tags. The contact ID returned can be used with the update-contact skill.
+metadata:
+  version: 1.0.0
+  model: haiku
 ---
-
-
 ## Ghast MCP routing
 
 This port connects directly to Carta's hosted MCP server. Use the direct tool

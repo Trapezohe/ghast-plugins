@@ -1,23 +1,14 @@
 ---
 name: jetson-customize-camera
-description: >-
-  Enable MIPI/GMSL camera sensors on a Jetson Thor or Orin custom
-  carrier by rendering a kernel-DT overlay from the in-tree sensor
-  DTSI. Do NOT use for UPHY lane allocation or ODMDATA edits.
-version: 0.0.1
-license: "Apache-2.0"
+description: Enable MIPI/GMSL camera sensors on a Jetson Thor or Orin custom carrier by rendering a kernel-DT overlay from the in-tree sensor DTSI. Do NOT use for UPHY lane allocation or ODMDATA edits.
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
-  tags:
-    - bsp
-    - phase-2
-    - io
-    - camera
-    - csi
+  author: Jetson Team
+  tags: '["bsp","phase-2","io","camera","csi"]'
   domain: meta
+  version: 0.0.1
 ---
-
 # Customize camera (CSI / MIPI / GMSL sensor bring-up)
 
 ## Overview

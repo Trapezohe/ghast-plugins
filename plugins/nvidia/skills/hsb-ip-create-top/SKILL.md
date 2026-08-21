@@ -1,34 +1,22 @@
 ---
 name: hsb-ip-create-top
-author: "Holoscan Team <holoscan-team@nvidia.com>"
 description: Create or explain fixed-format HSB FPGA_top.sv wrappers from validated HOLOLINK_def.svh files. Do not use for def generation or validation.
-version: "0.1.0"
-tags:
-  - holoscan
-  - hsb
-  - fpga
-  - systemverilog
-  - top-level
 license: Apache-2.0
 compatibility: Targets HSB IP rev 16'h2604; backward-compatible with 16'h2603. Prefer live HSB IP source when available; warn on unknown revisions. Designed to work standalone or as a companion to hsb-ip-def.
 metadata:
-  author: "Holoscan Team <holoscan-team@nvidia.com>"
+  author: Holoscan Team <holoscan-team@nvidia.com>
   team: holoscan
   domain: fpga
   vendor: nvidia
-  tags:
-    - holoscan
-    - hsb
-    - fpga
-    - top-level
-    - systemverilog
-  languages:
-    - systemverilog
+  tags: '["holoscan","hsb","fpga","top-level","systemverilog"]'
+  languages: '["systemverilog"]'
   artifact: FPGA_top.sv
   source_artifact: HOLOLINK_def.svh
-  hsb_ip_version: "16'h2604"
+  hsb_ip_version: 16'h2604
+  legacy-author: Holoscan Team <holoscan-team@nvidia.com>
+  version: 0.1.0
+  legacy-tags: '["holoscan","hsb","fpga","systemverilog","top-level"]'
 ---
-
 # HSB IP Create Top Skill
 
 ## Purpose

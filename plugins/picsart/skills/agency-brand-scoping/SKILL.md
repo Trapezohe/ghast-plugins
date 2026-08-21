@@ -2,9 +2,11 @@
 name: agency-brand-scoping
 description: Five brand direction variations for pitch discovery.
 license: MIT
-metadata: {"author": "Picsart", "version": "1.0.0", "hermes": {"category": "agency", "tags": ["picsart", "agency", "creative", "client-work"]}}
+metadata:
+  author: Picsart
+  version: 1.0.0
+  hermes: '{"category":"agency","tags":["picsart","agency","creative","client-work"]}'
 ---
-
 # Agency brand scoping
 
 A fast discovery pass for a new client: gather brand signals (site, deck, competitors, audience, tone), lock them into a reusable `brand-system.json` file, and produce 5 on-direction visual explorations to validate with the client before any production spend.

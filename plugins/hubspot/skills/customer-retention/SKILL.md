@@ -1,17 +1,9 @@
 ---
 name: customer-retention
 description: Identify inactive/at-risk customers via CRM filters and create follow-up tasks at scale. Builds on `bulk-operations`; defers activity-creation specifics to `sales-execution`.
-triggers:
-  - "customer retention"
-  - "churn risk"
-  - "inactive customers"
-  - "customer follow-up"
-  - "at-risk accounts"
-  - "customers not contacted"
-  - "renewal"
-  - "account health"
+metadata:
+  triggers: '["customer retention","churn risk","inactive customers","customer follow-up","at-risk accounts","customers not contacted","renewal","account health"]'
 ---
-
 ## Resources
 
 | File | When to use |

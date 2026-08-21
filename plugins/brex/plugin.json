@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "brex",
+  "version": "1.0.3-ghast.1",
+  "description": "Analyze Brex expenses, cards, limits, banking, bills, accounting, travel, and organization data, or safely update supported expense details through Brex's official hosted MCP server.",
+  "author": {
+    "name": "Brex Inc.",
+    "url": "https://brex.com"
+  },
+  "homepage": "https://developer.brex.com/docs/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "finance",
+      "upstreamRevision": "brex-docs-0d1f82f38bb5+oauth-06b076acaeca+auth-6cf20c287281",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

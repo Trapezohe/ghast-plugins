@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "netlify",
+  "version": "1.2.1-ghast.1",
+  "description": "Build, deploy, and operate Netlify projects with official skills for Functions, Edge Functions, Blobs, Database, Identity, Image CDN, Forms, configuration, caching, AI Gateway, and deployment, plus the official Netlify MCP server.",
+  "author": {
+    "name": "Netlify",
+    "url": "https://www.netlify.com"
+  },
+  "homepage": "https://docs.netlify.com",
+  "repository": "https://github.com/netlify/context-and-tools",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "development",
+      "upstreamRevision": "47848e2d6405291caeed0b23689878ec5253bb6f",
+      "upstreamPath": "agent-plugin",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

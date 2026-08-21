@@ -1,18 +1,12 @@
 ---
 name: i4h-workflow-dataset-annotate
-version: "0.6.0"
 description: Use a VLM to verify whether each episode satisfies the env's task description. Use when the user asks to annotate, label episodes, filter demos, or gate finetuning on a success classifier.
 license: Apache-2.0
 metadata:
-  author: "Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>"
-  tags:
-    - isaac-for-healthcare
-    - i4h
-    - dataset
-    - annotation
-    - vlm
+  author: Isaac for Healthcare Team <isaac-for-healthcare-support@nvidia.com>
+  tags: '["isaac-for-healthcare","i4h","dataset","annotation","vlm"]'
+  version: 0.6.0
 ---
-
 # i4h Workflow — Annotate Dataset
 
 ## Purpose

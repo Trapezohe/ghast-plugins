@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "clay",
+  "version": "1.0.2-ghast.1",
+  "description": "Search companies and people, enrich prospect records, and run admin-approved GTM functions through Clay's official hosted MCP.",
+  "author": {
+    "name": "Clay",
+    "url": "https://www.clay.com"
+  },
+  "homepage": "https://www.clay.com/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "upstreamRevision": "clay-product-99faa3c0f6c5+docs-52d04c63c45b+openapi-258cc399172d+oauth-f114e17a4bc5+source-4ab1ca54c908",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

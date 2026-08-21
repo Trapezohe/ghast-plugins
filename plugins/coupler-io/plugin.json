@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "coupler-io",
+  "version": "0.0.5-ghast.1",
+  "description": "Analyze marketing, sales, finance, ecommerce, product, and other business data from Coupler.io data flows through Coupler.io's official hosted OAuth MCP and Analytical Engine.",
+  "author": {
+    "name": "Coupler.io",
+    "url": "https://www.coupler.io/"
+  },
+  "homepage": "https://www.coupler.io/ai-integrations",
+  "repository": "https://github.com/railsware/coupler-io-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "data",
+      "upstreamRevision": "550ec75cb48bbbe0be286577b30c3a32f9bb0eea",
+      "upstreamPath": ".",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

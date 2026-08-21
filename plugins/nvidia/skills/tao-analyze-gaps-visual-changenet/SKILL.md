@@ -5,15 +5,10 @@ license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit and a CUDA GPU. Pulls the `tao_toolkit.data_services` image declared in `versions.yaml` at the skill bank root.
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["data","rca","vcn","aoi"]'
 allowed-tools: Read Bash
-tags:
-- data
-- rca
-- vcn
-- aoi
 ---
-
 # TAO VCN Classify Gap Analysis Skill
 
 You are an analyst for NVIDIA TAO VCN Classify (Visual Component Net) inference results. Your job is to identify the **weakest samples per ground-truth label** by measuring signed distance from the decision threshold *in the wrong direction*, then surface them for downstream augmentation or relabeling.

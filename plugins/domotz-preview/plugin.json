@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "domotz-preview",
+  "version": "1.0.3-ghast.1",
+  "description": "Discover, monitor, configure, and remediate Domotz-managed networks through Domotz's official hosted MCP.",
+  "author": {
+    "name": "Domotz",
+    "url": "https://www.domotz.com"
+  },
+  "homepage": "https://www.domotz.com/mcp-server.php",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "upstreamRevision": "domotz-product-003fdd383c02+setup-323607fa9c60+oauth-95014110a362+auth-711fd29f57aa",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

@@ -1,24 +1,15 @@
 ---
 name: jetson-optimize-memory
-description: >-
-  Reclaim DRAM by disabling unused subsystems across MB1 BCT, MB2 BCT,
-  kernel reserved-memory, and SWIOTLB. Use for headless or no-camera
-  Jetson deployments; not for CPU/GPU frequency tuning.
-
-version: 0.0.1
-license: "Apache-2.0"
-argument-hint: "headless | no-camera | swiotlb"
+description: Reclaim DRAM by disabling unused subsystems across MB1 BCT, MB2 BCT, kernel reserved-memory, and SWIOTLB. Use for headless or no-camera Jetson deployments; not for CPU/GPU frequency tuning.
+license: Apache-2.0
 metadata:
   data-classification: public
-  author: "Jetson Team"
-  tags:
-    - memory
-    - dram
-    - carveout
-    - swiotlb
+  author: Jetson Team
+  tags: '["memory","dram","carveout","swiotlb"]'
   domain: memory
+  version: 0.0.1
+  argument-hint: headless | no-camera | swiotlb
 ---
-
 # jetson-optimize-memory
 
 Memory is reserved across four layers ordered by boot chronology

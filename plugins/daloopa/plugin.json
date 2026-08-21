@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "daloopa",
+  "version": "1.0.0-ghast.1",
+  "description": "Financial analysis skills powered by Daloopa's institutional-grade data.",
+  "author": {
+    "name": "Daloopa",
+    "url": "https://daloopa.com"
+  },
+  "homepage": "https://daloopa.com",
+  "repository": "https://github.com/daloopa/daloopa-plugin-codex",
+  "license": "Apache-2.0",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "finance",
+      "upstreamRevision": "1f112599065abb7cac3489c30f9e4bb27c68ad8e",
+      "upstreamPath": ".",
+      "icon": "./assets/icon.png"
+    }
+  }
+}

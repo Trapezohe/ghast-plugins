@@ -1,20 +1,14 @@
 ---
 name: tao-train-pose-classification
-description: Pose classification using ST-GCN (Spatial Temporal Graph Convolutional Network). Classifies skeleton sequences
-  into action categories from pose-keypoint data. Use when training, evaluating, exporting, or running inference for a TAO
-  pose-classification model. Trigger phrases include "train pose classification", "skeleton action recognition", "ST-GCN",
-  "keypoint sequence classifier".
+description: Pose classification using ST-GCN (Spatial Temporal Graph Convolutional Network). Classifies skeleton sequences into action categories from pose-keypoint data. Use when training, evaluating, exporting, or running inference for a TAO pose-classification model. Trigger phrases include "train pose classification", "skeleton action recognition", "ST-GCN", "keypoint sequence classifier".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["pose","classification"]'
 allowed-tools: Read Bash
-tags:
-- pose
-- classification
 ---
-
 # Pose Classification
 
 Pose classification using ST-GCN (Spatial Temporal Graph Convolutional Network). Classifies skeleton sequences into action categories from pose keypoint data.

@@ -1,10 +1,10 @@
 ---
 name: hacker-news
 description: Use this skill when the user asks "what's on Hacker News", "show me HN top stories", "what's trending in tech", or asks to dig into a specific HN story or comment thread. Hits HN's public Firebase API (no auth).
-version: 1.0.0
-allowed-tools: [WebFetch, Bash]
+metadata:
+  version: 1.0.0
+allowed-tools: WebFetch Bash
 ---
-
 # Hacker News
 
 When the user wants to read Hacker News, use this skill — don't make up

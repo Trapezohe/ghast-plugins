@@ -288,10 +288,13 @@ def load_reviews() -> dict[str, dict]:
 def load_ghast_plugins() -> dict[str, dict]:
     result = {}
     for plugin_dir in sorted(GHAST_PLUGIN_DIR.iterdir()):
-        manifest_path = plugin_dir / ".ghast-plugin/plugin.json"
+        manifest_path = plugin_dir / "plugin.json"
         if manifest_path.exists():
             manifest = json.loads(manifest_path.read_text())
-            result[manifest["name"]] = manifest
+            ghast = (manifest.get("extensions") or {}).get(
+                "ai.trapezohe.ghast", {}
+            )
+            result[manifest["name"]] = {**ghast, **manifest}
     return result
 
 

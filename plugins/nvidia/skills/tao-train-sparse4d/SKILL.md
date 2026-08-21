@@ -1,22 +1,14 @@
 ---
 name: tao-train-sparse4d
-description: Sparse4D for multi-camera temporal 3D object detection and tracking. Uses sparse queries with deformable
-  attention across camera views and time for end-to-end 3D perception, with an instance bank for temporal tracking. Use when
-  training, evaluating, exporting, quantizing, or running inference for a TAO Sparse4D model. Trigger phrases include
-  "train Sparse4D", "multi-camera 3D detection", "temporal 3D tracker", "sparse query 3D perception".
+description: Sparse4D for multi-camera temporal 3D object detection and tracking. Uses sparse queries with deformable attention across camera views and time for end-to-end 3D perception, with an instance bank for temporal tracking. Use when training, evaluating, exporting, quantizing, or running inference for a TAO Sparse4D model. Trigger phrases include "train Sparse4D", "multi-camera 3D detection", "temporal 3D tracker", "sparse query 3D perception".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["temporal","3d","detection","tracking"]'
 allowed-tools: Read Bash
-tags:
-- temporal
-- 3d
-- detection
-- tracking
 ---
-
 # Sparse4D
 
 Sparse4D for multi-camera temporal 3D object detection and tracking. Uses sparse queries with deformable attention across camera views and time for end-to-end 3D perception. Includes instance bank for temporal tracking.

@@ -1,28 +1,14 @@
 ---
 name: tao-run-automl-deft-pipeline
-description: >
-  Run the canonical NVIDIA AOI three-phase training pipeline — Phase 1 AutoML baseline (HPO),
-  Phase 2 DEFT loop (RCA → SDG → mining → plain-train retrain), Phase 3 AutoML refinement on
-  the DEFT-augmented dataset. Use when the user asks to "run the AOI workflow",
-  "fine-tune my PCB AOI model end-to-end", "improve my AOI ChangeNet model", or "AOI workflow
-  with AutoML" request — route here instead of tao-run-deft-aoi directly unless the user
-  explicitly asks for the DEFT loop ONLY (e.g. "run JUST the DEFT loop", "skip AutoML, only
-  DEFT"). Also handles the same three-phase pattern for non-AOI DEFT applications — AutoML
-  baseline then DEFT loop warm-started from AutoML's winning HPs then post-DEFT AutoML
-  refinement on the iteration-augmented dataset. Trigger phrases include "run the AOI
-  workflow", "AOI end-to-end", "AutoML + DEFT", "AutoML then DEFT", "tune hyperparameters then
-  DEFT", "DEFT with AutoML at both ends", "warm-start DEFT", "improve my AOI model".
+description: Run the canonical NVIDIA AOI three-phase training pipeline — Phase 1 AutoML baseline (HPO), Phase 2 DEFT loop (RCA → SDG → mining → plain-train retrain), Phase 3 AutoML refinement on the DEFT-augmented dataset. Use when the user asks to "run the AOI workflow", "fine-tune my PCB AOI model end-to-end", "improve my AOI ChangeNet model", or "AOI workflow with AutoML" request — route here instead of tao-run-deft-aoi directly unless the user explicitly asks for the DEFT loop ONLY (e.g. "run JUST the DEFT loop", "skip AutoML, only DEFT"). Also handles the same three-phase pattern for non-AOI DEFT applications — AutoML baseline then DEFT loop warm-started from AutoML's winning HPs then post-DEFT AutoML refinement on the iteration-augmented dataset. Trigger phrases include "run the AOI workflow", "AOI end-to-end", "AutoML + DEFT", "AutoML then DEFT", "tune hyperparameters then DEFT", "DEFT with AutoML at both ends", "warm-start DEFT", "improve my AOI model".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit. Workflows (tao-run-automl, tao-run-deft-aoi) declare additional requirements.
 metadata:
   author: NVIDIA Corporation
-  version: "0.1.0"
+  version: 0.1.0
+  tags: '["tao","applications"]'
 allowed-tools: Read Skill Bash Write
-tags:
-- tao
-- applications
 ---
-
 # AutoML + DEFT Pipeline
 
 A workflow-bridge skill that runs **three phases** in sequence by delegating to two existing skills — `tao-run-automl` for HPO and a DEFT application skill (default `tao-run-deft-aoi` for AOI; other `skills/applications/deft-*` skills for non-AOI cases) for the iterative data-improvement loop.

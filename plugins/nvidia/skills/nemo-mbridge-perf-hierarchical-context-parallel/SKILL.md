@@ -2,9 +2,9 @@
 name: nemo-mbridge-perf-hierarchical-context-parallel
 description: Operational guide for enabling hierarchical context parallelism in Megatron-Bridge, including config knobs, code anchors, pitfalls, and verification.
 license: Apache-2.0
-when_to_use: Scaling context parallelism beyond KV heads, or investigating a commit that changed CP config and caused OOM or a regression; 'hierarchical_context_parallel_sizes', 'a2a+p2p', 'hierarchical CP', 'CP beyond KV heads', 'multi-level CP'.
+metadata:
+  when_to_use: Scaling context parallelism beyond KV heads, or investigating a commit that changed CP config and caused OOM or a regression; 'hierarchical_context_parallel_sizes', 'a2a+p2p', 'hierarchical CP', 'CP beyond KV heads', 'multi-level CP'.
 ---
-
 # Hierarchical Context Parallel Skill
 
 This skill covers hierarchical context parallelism: nested context-parallel process

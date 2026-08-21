@@ -1,10 +1,10 @@
 ---
 name: stock-quote
 description: Use this skill when the user asks for the price of a stock, ETF, index, or crypto ticker (e.g. AAPL, TSLA, ^GSPC, BTC-USD). Returns a delayed quote via Yahoo Finance's public chart endpoint — no API key required.
-version: 1.0.0
-allowed-tools: [WebFetch, Bash]
+metadata:
+  version: 1.0.0
+allowed-tools: WebFetch Bash
 ---
-
 # Stock Quote (Yahoo Finance)
 
 When the user asks "what's AAPL trading at", "price of TSLA", "S&P 500 today",

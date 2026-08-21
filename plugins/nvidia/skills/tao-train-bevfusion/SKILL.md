@@ -1,22 +1,14 @@
 ---
 name: tao-train-bevfusion
-description: BEVFusion for multi-sensor 3D object detection. Fuses LiDAR point clouds and camera images in bird's-eye-view
-  (BEV) space, used in autonomous driving for robust 3D perception. Use when training, evaluating, or running inference for
-  a TAO BEVFusion model. Trigger phrases include "train BEVFusion", "LiDAR + camera fusion", "BEV 3D detection", "multi-sensor
-  3D perception".
+description: BEVFusion for multi-sensor 3D object detection. Fuses LiDAR point clouds and camera images in bird's-eye-view (BEV) space, used in autonomous driving for robust 3D perception. Use when training, evaluating, or running inference for a TAO BEVFusion model. Trigger phrases include "train BEVFusion", "LiDAR + camera fusion", "BEV 3D detection", "multi-sensor 3D perception".
 license: Apache-2.0
 compatibility: Requires docker + nvidia-container-toolkit.
 metadata:
-  version: "0.1.0"
+  version: 0.1.0
   author: NVIDIA Corporation
+  tags: '["multi","sensor","3d","detection"]'
 allowed-tools: Read Bash
-tags:
-- multi
-- sensor
-- 3d
-- detection
 ---
-
 # BEVFusion
 
 BEVFusion for multi-sensor 3D object detection. Fuses LiDAR point clouds and camera images in bird's-eye-view (BEV) space. Used in autonomous driving for robust 3D perception.

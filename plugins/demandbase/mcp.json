@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "demandbase": {
+      "type": "streamable-http",
+      "url": "https://gateway.demandbase.com/mcp/servers/db-mcp"
+    }
+  }
+}

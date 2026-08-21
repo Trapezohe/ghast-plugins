@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "responsive",
+  "version": "1.0.3-ghast.1",
+  "description": "Search governed Responsive proposal content, inspect projects and unanswered questions, and generate grounded draft responses through Responsive's official hosted MCP.",
+  "author": {
+    "name": "RFPIO Inc. (d/b/a Responsive)",
+    "url": "https://www.responsive.io"
+  },
+  "homepage": "https://developer.responsive.io/docs/responsive-api/86b14fe0ae541-overview",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "upstreamRevision": "responsive-mcp-overview-dc0c9d286bf3+connect-eff6a43bb847+tools-973756d53113+auth-3c7db377bbdd+oauth-f3d4fd4917ff+boundary-e3b0c44298fc",
+      "portStatus": "full",
+      "icon": "./assets/icon.svg"
+    }
+  }
+}

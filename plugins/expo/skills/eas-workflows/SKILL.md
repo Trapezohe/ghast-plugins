@@ -1,11 +1,11 @@
 ---
 name: eas-workflows
 description: EAS service (paid). Helps understand and write EAS workflow YAML files for Expo projects. Use this skill when the user asks about CI/CD or workflows in an Expo or EAS context, mentions .eas/workflows/, or wants help with EAS build pipelines or deployment automation.
-allowed-tools: "Read,Write,Bash(node:*)"
-version: 1.0.0
 license: MIT License
+metadata:
+  version: 1.0.0
+allowed-tools: Read,Write,Bash(node:*)
 ---
-
 # EAS Workflows Skill
 
 > **EAS service - costs apply.** EAS Workflows run on Expo Application Services, a paid product with free-tier limits. Each workflow job consumes your plan's build/compute minutes, and jobs that build or submit also need paid Apple Developer and Google Play accounts. Review https://expo.dev/pricing before triggering runs.
