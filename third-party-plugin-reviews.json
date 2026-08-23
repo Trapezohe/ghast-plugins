@@ -4957,7 +4957,7 @@
       "verificationStatus": "official-source-research-required",
       "officialDeveloper": "Figma",
       "officialRepository": "https://github.com/figma/mcp-server-guide",
-      "officialRevision": "72fcf1f4b170bcaa78fa8bef2f27cce15f4d58f4",
+      "officialRevision": "7f6562c4900fafb46e5e8fd3cc8ced954779bab3",
       "license": "LicenseRef-Figma-Developer-Terms",
       "licenseEvidence": [
         "The pinned August 14, 2026 official revision contains 123 files and no LICENSE, COPYING, NOTICE, or equivalent open-source license file.",
@@ -4966,7 +4966,8 @@
       ],
       "officialityEvidence": [
         "The repository is owned by the Figma GitHub organization.",
-        "It publishes the official Figma MCP endpoint, twelve bundled agent skills at release 2.2.95, client manifests, and Figma-authored setup guidance.",
+        "It publishes the official Figma MCP endpoint, twelve bundled agent skills at release 2.2.96, client manifests, and Figma-authored setup guidance.",
+        "Release 2.2.96 adds the public X-Figma-Plugin-Bundle value figma_prod@2_2_96 to the repository MCP entry solely for plugin-bundle traffic attribution in Figma's Pixie and Datadog telemetry; the merged Figma PR states that the middleware parses but does not validate the value, so it is neither a credential nor evidence that an unlisted client is admitted.",
         "The twelve bundled official skill names match the current Codex plugin skill set.",
         "Figma's official tools documentation currently lists 24 remote MCP tools covering design context, screenshots, metadata, assets, Code Connect, files, diagrams, design generation, libraries, design-system search, motion, shaders, uploads, identity, and general canvas reads and writes."
       ],
@@ -4981,6 +4982,7 @@
       "limitations": [
         "The official endpoint at https://mcp.figma.com/mcp publishes protected-resource metadata for scope mcp:connect and an OAuth authorization server with PKCE S256 and a dynamic registration endpoint.",
         "Figma's official documentation says only clients listed in the Figma MCP Catalog can connect and directs developers of new MCP clients to a waitlist. A single bounded standards-shaped registration request from the Ghast audit on August 20, 2026 returned HTTP 403 Forbidden.",
+        "The public X-Figma-Plugin-Bundle header introduced in release 2.2.96 is an attribution label for the official plugin bundle, not an OAuth client, access token, catalog admission, or authorization workaround. Ghast must not treat or alter that telemetry header to impersonate an admitted client.",
         "Ghast must not impersonate Codex, Claude, Cursor, VS Code, Xcode, or another admitted client's OAuth identity, ask users to extract platform tokens, or embed credentials obtained for a different integration.",
         "The Developer Terms permit development of an integration but do not provide an open-source license to copy, modify, or redistribute the twelve official skill texts or Figma brand assets. A future implementation must use independently authored workflow instructions and generic artwork.",
         "Authenticated tools/list and write operations were not exercised because no authorized Ghast OAuth client or user test account was available. Published documentation establishes 24 tool names, but live schemas, plan entitlements, beta availability, and client-specific exclusions still require bounded authenticated verification.",
@@ -4988,7 +4990,7 @@
       ],
       "verification": [
         "python3 scripts/audit-figma-plugin.py --openai-source ../openai-plugins --official-source ../upstreams/figma-mcp-guide",
-        "Verify official revision 72fcf1f4b170bcaa78fa8bef2f27cce15f4d58f4, tree 15eabd7564b5c30511c0e25281def746b0b172c8, complete Git inventory, twelve skills, and continued absence of an open-source license file",
+        "Verify official revision 7f6562c4900fafb46e5e8fd3cc8ced954779bab3, tree 339bebfa2711577b306a4603a462680933faa3d4, complete Git inventory, twelve skills, release 2.2.96 manifests, X-Figma-Plugin-Bundle attribution, and continued absence of an open-source license file",
         "Verify the protected-resource and authorization-server metadata, mcp:connect scope, PKCE S256, authentication requirement, and official 24-tool documentation inventory",
         "Verify Figma's current MCP Catalog restriction and new-client waitlist guidance; re-audit immediately if Figma documents generic independent-client registration or admits Ghast",
         "Verify the May 5, 2026 Developer Terms integration license and reserved-rights boundary without copying official skill text or Figma artwork",

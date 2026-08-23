@@ -16,11 +16,13 @@ from pathlib import Path
 sys.dont_write_bytecode = True
 
 OPENAI_REVISION = "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9"
-OFFICIAL_REVISION = "72fcf1f4b170bcaa78fa8bef2f27cce15f4d58f4"
-OFFICIAL_TREE = "15eabd7564b5c30511c0e25281def746b0b172c8"
+OFFICIAL_REVISION = "7f6562c4900fafb46e5e8fd3cc8ced954779bab3"
+OFFICIAL_TREE = "339bebfa2711577b306a4603a462680933faa3d4"
 OFFICIAL_INVENTORY_SHA256 = (
-    "cea948ec79d7c1c1002be48639568abd426d7ad32d72fdb51911353c36753309"
+    "1567d1814dd536be47251f779c585d60252b86e214925179c48a386c0b75fde1"
 )
+OFFICIAL_VERSION = "2.2.96"
+PLUGIN_BUNDLE_HEADER = "figma_prod@2_2_96"
 MCP_URL = "https://mcp.figma.com/mcp"
 PROTECTED_RESOURCE_URL = (
     "https://mcp.figma.com/.well-known/oauth-protected-resource/mcp"
@@ -156,6 +158,25 @@ def verify_official_source(source: Path) -> None:
     )
     if tuple(skills) != SKILLS:
         raise ValueError("Figma official skill inventory changed")
+
+    mcp = json.loads((source / ".mcp.json").read_text())
+    server = mcp.get("mcpServers", {}).get("figma", {})
+    if (
+        server.get("url") != MCP_URL
+        or server.get("headers", {}).get("X-Figma-Plugin-Bundle")
+        != PLUGIN_BUNDLE_HEADER
+    ):
+        raise ValueError("Figma official MCP bundle attribution changed")
+    for manifest_path in (
+        ".claude-plugin/plugin.json",
+        ".cursor-plugin/plugin.json",
+        ".github/plugin/plugin.json",
+        "gemini-extension.json",
+        "server.json",
+    ):
+        manifest = json.loads((source / manifest_path).read_text())
+        if manifest.get("version") != OFFICIAL_VERSION:
+            raise ValueError(f"Figma version changed in {manifest_path}")
 
     readme = (source / "README.md").read_text()
     for marker in (
