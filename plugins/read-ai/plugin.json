@@ -12,7 +12,7 @@
   "extensions": {
     "ai.trapezohe.ghast": {
       "category": "productivity",
-      "upstreamRevision": "zendesk-49381158409491-2026-08-06T22:43:06Z-0b2e23cff48d",
+      "upstreamRevision": "zendesk-49381158409491-2026-08-19T23:57:53Z-0050b9f9a3b3",
       "icon": "./assets/icon.svg"
     }
   }

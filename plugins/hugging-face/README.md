@@ -4,7 +4,7 @@ Explore and manage Hugging Face models, datasets, Spaces, jobs, papers, evaluati
 
 ## Official Ghast port
 
-This package is generated directly from the developer-owned repository `https://github.com/huggingface/skills` at `ec0108293521ef698e451ec044e8b4feba6b732b`.
+This package is generated directly from the developer-owned repository `https://github.com/huggingface/skills` at `020194918dc4a27d5a5d9a154b6b56cc2bd21364`.
 
 Skills, references, scripts, commands, and public MCP declarations remain sourced from the pinned official repository. Unsupported client metadata is omitted.
 

@@ -20,21 +20,19 @@ TINMAN_APP_CORE_SHA256 = (
     "f849dcb291b1ad64737169eada6b587b75496908484c6df2ff222444b67374e8"
 )
 CHATGPT_RELEASE_URL = (
-    "https://investors.better.com/news/news-details/2026/"
-    "Better-Announces-First-Conversational-Credit-Decision-Engine-in-"
-    "ChatGPT-with-OpenAI/default.aspx"
+    "https://investors.better.com/2026-03-05-Better-Announces-First-"
+    "Conversational-Credit-Decision-Engine-in-ChatGPT-with-OpenAI"
 )
 CHATGPT_RELEASE_CORE_SHA256 = (
-    "9b2aceeb4cc27f6f3e4409f5ff279a9ffa591d94ae8b491f13d1384b19974cbe"
+    "832735686a327958ca8529379af6044779ab6cee5de8977b0306b773df37b6c5"
 )
 PARTNER_RELEASE_URL = (
-    "https://investors.better.com/news/news-details/2025/"
-    "Finance-of-America-Partners-with-Better-com-to-Leverage-Tinman-AI-"
-    "Platform--Expanding-Home-Equity-Product-Suite-for-Homeowners-Over-"
-    "55/default.aspx"
+    "https://investors.better.com/2025-10-14-Finance-of-America-Partners-"
+    "with-Better-com-to-Leverage-Tinman-R-AI-Platform-Expanding-Home-"
+    "Equity-Product-Suite-for-Homeowners-Over-55"
 )
 PARTNER_RELEASE_CORE_SHA256 = (
-    "737549e9d48fe1bc7c6adaece94f6c687a6874a764922c3404bd94636a1eeb19"
+    "3ef273a643ef0caec814570d9d601cd944faae77695ea418c4af49abaf08e3d1"
 )
 TERMS_URL = "https://better.com/about-us/terms-of-use"
 TERMS_CORE_SHA256 = (
@@ -153,7 +151,7 @@ def verify_chatgpt_release() -> None:
         text,
         (
             "Better Announces First Conversational Credit Decision Engine in "
-            "ChatGPT with OpenAI March 5, 2026"
+            "ChatGPT with OpenAI Mar 5, 2026"
         ),
         "About Better Home & Finance Holding Company",
     )
@@ -180,7 +178,7 @@ def verify_partner_release() -> None:
         (
             "Finance of America Partners with Better.com to Leverage Tinman® "
             "AI Platform — Expanding Home Equity Product Suite for Homeowners "
-            "Over 55 October 14, 2025"
+            "Over 55 Oct 14, 2025"
         ),
         "For more information, follow",
     )

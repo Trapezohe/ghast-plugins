@@ -20,7 +20,7 @@ ROX_LLMS_SHA256 = (
 )
 ROX_LLMS_FULL_URL = "https://docs.rox.com/development/llms-full.txt"
 ROX_LLMS_FULL_SHA256 = (
-    "ef14971217979c91d77374a796086ab9894c9b0a8a0d8200d9d39fbb12eb741f"
+    "39a4e9225bcd0a7a73550ec4be93801dac76bd58bdec381cfb0128a92c440d94"
 )
 ROX_RELEASE_NOTES_URL = (
     "https://docs.rox.com/development/about-rox/release-notes.md"
@@ -47,7 +47,7 @@ ROX_GITHUB_REPOS_URL = (
     "https://api.github.com/orgs/Rox-AI/repos?per_page=100&type=public"
 )
 ROX_GITHUB_REPOS_SHA256 = (
-    "738b402429a9247aa2373a79c7b00eb20139f554b2a10de558f24827baefb25d"
+    "22a3041628f78bb96c3b149afc47782fc9329d9e7fde3a4c4a72eeecf5718d94"
 )
 OPENAI_HASHES = {
     ".app.json": (

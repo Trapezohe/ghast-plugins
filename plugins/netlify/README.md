@@ -4,7 +4,7 @@ Build, deploy, and operate Netlify projects with official skills for Functions, 
 
 ## Official Ghast port
 
-This package is generated directly from the developer-owned repository `https://github.com/netlify/context-and-tools` at `47848e2d6405291caeed0b23689878ec5253bb6f`.
+This package is generated directly from the developer-owned repository `https://github.com/netlify/context-and-tools` at `32a261b6b2437464aca7e51bf9b48bcac1e2835c`.
 
 Skills, references, scripts, commands, and public MCP declarations remain sourced from the pinned official repository. Unsupported client metadata is omitted.
 

@@ -12,5 +12,6 @@ Skills, references, scripts, commands, and public MCP declarations remain source
 
 - The Codex private app mapping is replaced by Atlassian's official public Rovo MCP endpoint with OAuth 2.1 and supported API-token authentication.
 - The pinned official suite adds a Jira sprint dashboard skill beyond the five workflows in the Codex snapshot.
+- The official JQL helper's ORDER BY validator is narrowed to a comma-separated field and ASC/DESC grammar so its documented default runs while arbitrary JQL clauses remain rejected.
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

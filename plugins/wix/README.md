@@ -4,7 +4,7 @@ Build and deploy Wix apps and headless websites, and manage your Wix business. I
 
 ## Official Ghast port
 
-This package is generated directly from the developer-owned repository `https://github.com/wix/skills` at `d9b73923907f91989335cf4f26dce52095faeea4`.
+This package is generated directly from the developer-owned repository `https://github.com/wix/skills` at `f30595361e8d02f0dc432b499d00916a2e3918f3`.
 
 Skills, references, scripts, commands, and public MCP declarations remain sourced from the pinned official repository. Unsupported client metadata is omitted.
 

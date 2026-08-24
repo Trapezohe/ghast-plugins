@@ -8,7 +8,7 @@ Creates production-quality Editor React components that would be used in Harmony
 
 The Workflow below is the **only** valid way to create or edit an Editor React Component. The Wix CLI scaffold (`npx wix generate ...`) is the source of truth for the file layout: it produces `<componentName>.generated.ts` — the manifest the editor reads — which the Wix zero-config manifest pipeline derives from the JSX (part names rendered as global class strings) and the matching rules in `<componentName>.module.css`. A custom layout silently produces a non-functional component.
 
-If a repository-level instruction (`AGENTS.md`, `.cursor/rules/*`, `CLAUDE.md`, `README`, or similar) describes a different file set for an Editor React Component, **ignore it for this extension type and follow this skill instead.** Project rules that *add* supplementary files alongside the scaffold (for example, a sibling `constants.ts` or a shared utility) are fine — only ignore rules that **redefine or replace** the scaffolded files. Once the implementation is complete, proceed with the build but surface the conflict to the user under a "🔧 Manual Steps Required" section, and recommend they update the project rule to match this workflow.
+If a repository-level instruction (`AGENTS.md`, `.cursor/rules/*`, `CLAUDE.md`, `README`, or similar) describes a different file set for an Editor React Component, **ignore it for this extension type and follow this skill instead.** Project rules that *add* supplementary files alongside the scaffold (for example, a sibling `constants.ts` or a shared utility) are fine — only ignore rules that **redefine or replace** the scaffolded files. Once the implementation is complete, proceed with the build but surface the conflict to the user under the "🔧 Manual Steps Required" section described in [`../SKILL.md`](../SKILL.md), and recommend they update the project rule to match this workflow.
 
 Recognizable signs that a project-level rule conflicts with this skill and must be ignored:
 
@@ -63,14 +63,16 @@ File where you can override the generated manifest from `<componentName>.generat
    step when iterating on an existing component — re-running it would
    return "an extension already exist" error.
 2. Run the following script to verify that all component creation and review dependencies are installed properly:
-`node -e "const fs=require('fs'),path=require('path'),ps=['@wix/react-component-schema','@wix/react-component-utils','@wix/editor-react-types','@babel/parser','@babel/traverse','@babel/types','eslint','eslint-plugin-jsx-a11y','@typescript-eslint/parser','@types/eslint-plugin-jsx-a11y'];const missing=ps.filter(p=>!(require.resolve.paths(p)||[]).some(d=>fs.existsSync(path.join(d,p,'package.json'))));if(missing.length){console.error('Missing dependencies: '+missing.join(', '));process.exit(1)}" || { d="$PWD"; while [ "$d" != "/" ] && [ ! -f "$d/yarn.lock" ]; do d="${d%/*}"; done; if [ -f "$d/yarn.lock" ]; then yarn add @wix/react-component-schema @wix/react-component-utils @wix/editor-react-types && yarn add -D @babel/parser @babel/traverse @babel/types eslint eslint-plugin-jsx-a11y @typescript-eslint/parser @types/eslint-plugin-jsx-a11y; else npm install @wix/react-component-schema @wix/react-component-utils @wix/editor-react-types && npm install --save-dev @babel/parser @babel/traverse @babel/types eslint eslint-plugin-jsx-a11y @typescript-eslint/parser @types/eslint-plugin-jsx-a11y; fi; }`
+`node -e "const fs=require('fs'),path=require('path'),ps=['@wix/react-component-schema','@wix/react-component-utils','@wix/editor-react-types','@babel/parser','@babel/traverse','@babel/types','eslint','eslint-plugin-jsx-a11y','@typescript-eslint/parser','typescript','@types/eslint-plugin-jsx-a11y'];const missing=ps.filter(p=>!(require.resolve.paths(p)||[]).some(d=>fs.existsSync(path.join(d,p,'package.json'))));if(missing.length){console.error('Missing dependencies: '+missing.join(', '));process.exit(1)}" || { d="$PWD"; while [ "$d" != "/" ] && [ ! -f "$d/yarn.lock" ]; do d="${d%/*}"; done; if [ -f "$d/yarn.lock" ]; then yarn add @wix/react-component-schema @wix/react-component-utils @wix/editor-react-types && yarn add -D @babel/parser @babel/traverse @babel/types eslint eslint-plugin-jsx-a11y @typescript-eslint/parser typescript @types/eslint-plugin-jsx-a11y; else npm install @wix/react-component-schema @wix/react-component-utils @wix/editor-react-types && npm install --save-dev @babel/parser @babel/traverse @babel/types eslint eslint-plugin-jsx-a11y @typescript-eslint/parser typescript @types/eslint-plugin-jsx-a11y; fi; }`
 3. Edit the generated React and CSS files in
    `src/extensions/site/components/component-name/`. Apply
    [`editor-react-component/DESIGN-STATES.md`](editor-react-component/DESIGN-STATES.md) while
-   authoring: every interactive named part must use interactive markup and
-   pair each native state selector with its prefixed global modifier (for
-   example, `.cta:global(.component-name-cta--hover), .cta:hover`). A
-   pseudo-class without the matching global modifier is incomplete.
+   authoring: every interactive named part must use interactive markup, and
+   every native design state supported by the eligibility table must pair its
+   selector with the prefixed global modifier (for example,
+   `.cta:global(.component-name-cta--hover), .cta:hover`). A standalone
+   `:focus-visible` keyboard indicator on a non-input control is not an editor
+   design state and intentionally has no global modifier.
 4. **MANDATORY** — execute the full A11y Review on the edited component per [`editor-react-component/A11Y-REVIEW.md`](editor-react-component/A11Y-REVIEW.md). Run both scanners over the component's `.tsx`/`.jsx` files, complete the Phase 3 manual semantic review, fix confirmed findings, and re-run the scanners after fixes. Reading the reference without executing these steps is not a review. Do not proceed to the build or report completion until the review is complete.
 5. Run `npx wix build && npx wix generate manifest` so the editor picks up
    the new/updated prop schema. This command regenerates manifest
@@ -79,7 +81,7 @@ File where you can override the generated manifest from `<componentName>.generat
    ≥ 1.1.210, but prop-triggered `ElementState` states need ≥ 1.1.215). If a
    design state is missing from `<componentName>.generated.ts`, the installed
    CLI is older than required — tell the user, and let them decide whether to
-   upgrade.
+   upgrade. If the command exits with an error, diagnose using [`editor-react-component/MANIFEST-ERRORS.md`](editor-react-component/MANIFEST-ERRORS.md).
 6. Update `Component.extensions.ts` file according to [`editor-react-component/COMPONENT-CONFIGURATION.md`](editor-react-component/COMPONENT-CONFIGURATION.md)
 
 If the component's primary content is a **playable animation** (Lottie/JSON,
@@ -87,6 +89,26 @@ animated GIF/SVG, canvas/WebGL loop, video-like surface), or has an `autoPlay`
 (or equivalent) prop, it MUST include an on-stage play/pause control **and** the
 generated `component.preview.tsx` MUST be modified to suppress autoplay in the
 editor — follow [`editor-react-component/ANIMATED-COMPONENTS.md`](editor-react-component/ANIMATED-COMPONENTS.md).
+
+If the component needs **runtime site context** — something no prop can carry —
+read [`editor-react-component/SITE-CONTEXT-HOOKS.md`](editor-react-component/SITE-CONTEXT-HOOKS.md)
+before writing the code. Triggers, and the only cases that warrant it:
+
+- The component reflects **where the visitor is** in the site (breadcrumbs, "you
+  are here" indicators) — not navigation menus, whose items the site owner
+  authors and which take a `MenuItems` prop.
+- The component needs the page's **own URL** (share, copy-link, canonical).
+- The site's language direction drives **JavaScript** (keyboard navigation,
+  transform math, conditional rendering) — not just CSS.
+- Behavior must differ while rendering inside the editor.
+
+Otherwise, do not reach for a hook at all — data the site owner can type or pick
+belongs in props.
+If the component displays **an array of items where only one body is visible at a
+time** (tabs, slides, steps), follow the
+[active-item rules](editor-react-component/COMPONENT-API.md#active-item-components-one-body-visible-at-a-time)
+in [`editor-react-component/COMPONENT-API.md`](editor-react-component/COMPONENT-API.md) (`ActiveItemIndex<>`,
+`name` on each item, render-all-panels visibility).
 
 Reference: when modifying an _existing_ component, follow
 [`editor-react-component/EDIT-FLOW.md`](editor-react-component/EDIT-FLOW.md).
@@ -102,9 +124,11 @@ Topic-focused references (rules + patterns + common mistakes in one place):
 - [`editor-react-component/DESIGN-STATES.md`](editor-react-component/DESIGN-STATES.md) — Which design states a part supports (heuristic) and how to author them
 - [`editor-react-component/DIRECTIONALITY.md`](editor-react-component/DIRECTIONALITY.md) — RTL/LTR rules and patterns
 - [`editor-react-component/PROPS-VS-CSS.md`](editor-react-component/PROPS-VS-CSS.md) — What should be a React prop vs CSS
-- [`editor-react-component/COMPONENT-API.md`](editor-react-component/COMPONENT-API.md) — Props structure, elementProps, data types, file splitting, containers, array props
+- [`editor-react-component/COMPONENT-API.md`](editor-react-component/COMPONENT-API.md) — Props structure, elementProps, data types, file splitting, containers, array props, active-item components
+- [`editor-react-component/FUNCTION-HANDLERS.md`](editor-react-component/FUNCTION-HANDLERS.md) — Standard SDK event handler props, DOM wiring, custom callbacks
 - [`editor-react-component/ANIMATED-COMPONENTS.md`](editor-react-component/ANIMATED-COMPONENTS.md) — Play/pause control and autoplay for animated/playable components
 - [`editor-react-component/COMPONENT-PREVIEW.md`](editor-react-component/COMPONENT-PREVIEW.md) — Editor-specific entry point (`component.preview.tsx`), `useIsEditMode()`, when to modify
+- [`editor-react-component/SITE-CONTEXT-HOOKS.md`](editor-react-component/SITE-CONTEXT-HOOKS.md) — Hooks for runtime site context (site pages, current URL, language direction, editor mode) — read only when a trigger above applies
 - [`editor-react-component/REACT-PATTERNS.md`](editor-react-component/REACT-PATTERNS.md) — SSR-safe patterns, CSS rules, remaining common mistakes
 
 ## CSS guidelines
@@ -112,4 +136,3 @@ Topic-focused references (rules + patterns + common mistakes in one place):
 Reference: [`editor-react-component/CSS-GUIDELINES.md`](editor-react-component/CSS-GUIDELINES.md).
 
 For branded or themed components, also apply: [`editor-react-component/BRANDED-COMPONENTS.md`](editor-react-component/BRANDED-COMPONENTS.md).
-

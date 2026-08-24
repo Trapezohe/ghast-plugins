@@ -11,7 +11,7 @@ instructions, and catalog metadata. It does not copy or redistribute Quartr's
 hosted MCP implementation, proprietary data, or private Codex connector.
 
 The adapter is pinned to Quartr's official MCP documentation with SHA-256
-`1d651d2a9ac88fa63f904c244c87083c7cd6e17140751ed7a5d2abd48a257b6c`. The official OAuth protected-resource metadata is
+`b37a9c381dedfe23d8ae237b922e12235f908746497924ed6c07cf4cee8d223a`. The official OAuth protected-resource metadata is
 pinned at SHA-256 `a379a77612f2fa51d06c105bd11b0c34c83fdeb4b40667cb2792a1093598b7d8`, and the authorization
 server metadata is pinned at SHA-256 `20a1464a05ed203ecad5e4aa5bce8fb9e85ea56ea4489294c1343e8fbe90ac3b`.
 

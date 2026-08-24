@@ -55,6 +55,10 @@ BASH_32_EXCEPTIONS = {
         "plugins/nvidia/skills/vss-deploy-detection-tracking-2d/"
         "scripts/write_deployment_log.sh"
     ): "c62d8335d30708e7a6d5f23b8bc66f8e693bb1d71bb16ba2fa6239b92f87e765",
+    (
+        "plugins/nvidia/upstream-signed/skills/"
+        "vss-deploy-detection-tracking-2d/scripts/write_deployment_log.sh"
+    ): "c62d8335d30708e7a6d5f23b8bc66f8e693bb1d71bb16ba2fa6239b92f87e765",
 }
 
 SECRET_PATTERNS = (
@@ -384,10 +388,76 @@ def validate_audit(errors: list[str]) -> None:
         "ghastImplementationStatus"
     ):
         errors.append(f"{AUDIT_PATH}: implementation summary is stale")
+    runtime_gap_count = sum(
+        row.get("ghast", {}).get("authenticatedCoreExercised") is False
+        for row in rows
+    )
+    if runtime_gap_count != summary.get("authenticatedRuntimeGaps"):
+        errors.append(f"{AUDIT_PATH}: authenticated runtime summary is stale")
+    runtime_statuses = {
+        "authenticated-core-not-exercised",
+        "recorded-core-verification",
+        "runtime-evidence-review-required",
+        "not-implemented",
+    }
+    for row in rows:
+        runtime_status = row.get("ghast", {}).get("runtimeVerification")
+        authenticated_core = row.get("ghast", {}).get(
+            "authenticatedCoreExercised"
+        )
+        if runtime_status not in runtime_statuses:
+            errors.append(
+                f"{AUDIT_PATH}: {row.get('id')} has invalid runtime verification"
+            )
+        implementation_status = row.get("ghast", {}).get("implementationStatus")
+        if authenticated_core not in {True, False, None}:
+            errors.append(
+                f"{AUDIT_PATH}: {row.get('id')} has invalid authenticated-core status"
+            )
+        if (
+            runtime_status == "authenticated-core-not-exercised"
+            and authenticated_core is not False
+        ):
+            errors.append(
+                f"{AUDIT_PATH}: {row.get('id')} has inconsistent authenticated runtime evidence"
+            )
+        if (
+            runtime_status == "authenticated-core-not-exercised"
+            and implementation_status != "implemented-contract-verified"
+        ):
+            errors.append(
+                f"{AUDIT_PATH}: {row.get('id')} overstates authenticated runtime verification"
+            )
+        if (
+            runtime_status == "recorded-core-verification"
+            and implementation_status != "implemented-verified"
+        ):
+            errors.append(
+                f"{AUDIT_PATH}: {row.get('id')} has inconsistent recorded runtime verification"
+            )
+        if (
+            runtime_status == "runtime-evidence-review-required"
+            and implementation_status != "implemented-runtime-review-required"
+        ):
+            errors.append(
+                f"{AUDIT_PATH}: {row.get('id')} lacks explicit runtime evidence"
+            )
+        if (
+            runtime_status == "not-implemented"
+            and implementation_status != "not-implemented"
+        ):
+            errors.append(
+                f"{AUDIT_PATH}: {row.get('id')} has inconsistent unimplemented status"
+            )
     verified = {
         row["id"]
         for row in rows
-        if row["ghast"]["implementationStatus"] == "implemented-verified"
+        if row["ghast"]["implementationStatus"]
+        in {
+            "implemented-verified",
+            "implemented-contract-verified",
+            "implemented-runtime-review-required",
+        }
     }
     reviewed = {
         name

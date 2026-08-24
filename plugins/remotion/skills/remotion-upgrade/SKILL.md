@@ -2,8 +2,9 @@
 name: remotion-upgrade
 description: Upgrade Remotion, and related packages
 metadata:
-  version: 4.0.509
+  version: '4.0.515'
 ---
+
 # Upgrade Remotion
 
 1. Inspect the project manifests and lockfile to identify the package manager and workspaces. Preserve unrelated changes.

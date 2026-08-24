@@ -4,7 +4,7 @@ Manage Neon Lakebase Postgres projects, branches, schemas, SQL, migrations, Auth
 
 ## Official Ghast port
 
-This package is generated directly from the developer-owned repository `https://github.com/neondatabase/agent-skills` at `af27b52659c3c5bbf05d6c626b166163eb351e19`.
+This package is generated directly from the developer-owned repository `https://github.com/neondatabase/agent-skills` at `b7f87949583782238aef20414a29b1f5ca2773ea`.
 
 Skills, references, scripts, commands, and public MCP declarations remain sourced from the pinned official repository. Unsupported client metadata is omitted.
 

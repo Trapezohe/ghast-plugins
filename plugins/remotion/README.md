@@ -4,7 +4,7 @@ Remotion video creation skills — best practices, animations, audio, captions, 
 
 ## Official Ghast port
 
-This package is generated directly from the developer-owned repository `https://github.com/remotion-dev/remotion` at `a23672203e00db3d9ad905b2b2088bdc6aa2f2ac`.
+This package is generated directly from the developer-owned repository `https://github.com/remotion-dev/remotion` at `05075f384a0a28e193876c1fd43ab9fba5ef10f9`.
 
 Skills, references, scripts, commands, and public MCP declarations remain sourced from the pinned official repository. Unsupported client metadata is omitted.
 

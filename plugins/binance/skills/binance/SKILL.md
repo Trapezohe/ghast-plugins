@@ -65,6 +65,21 @@ curl --proto '=https' --tlsv1.2 -LsSf \
 binance-cli --version
 ```
 
+## Public Spot data fallback
+
+If the default Spot API reports a regional eligibility restriction, public,
+unsigned Spot `GET` requests may use Binance's official market-data-only base
+URL, `https://data-api.binance.vision`. This fallback must never be used for a
+signed endpoint, an account endpoint, or a state-changing request.
+
+```bash
+curl --proto '=https' --tlsv1.2 --fail-with-body --silent --show-error \
+  'https://data-api.binance.vision/api/v3/ticker/price?symbol=BTCUSDT'
+```
+
+Keep the endpoint path and query parameters aligned with the corresponding
+official Binance Spot API operation. Treat an eligibility response as a service
+restriction, not as permission to route through an unofficial proxy.
 
 > **PREREQUISITE:** Read [`auth.md`](./references/auth.md) for auth, global flags, and security rules.
 

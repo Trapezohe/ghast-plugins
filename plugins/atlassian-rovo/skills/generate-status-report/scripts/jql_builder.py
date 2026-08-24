@@ -104,8 +104,16 @@ def build_project_query(
     query = " AND ".join(conditions)
     
     if order_by:
-        # Validate order_by contains only safe keywords
-        order_by = sanitize_jql_value(order_by)
+        # Accept only comma-separated field names with optional directions.
+        order_pattern = re.compile(
+            r'^[A-Za-z][A-Za-z0-9_.]*(?:\s+(?:ASC|DESC))?'
+            r'(?:\s*,\s*[A-Za-z][A-Za-z0-9_.]*'
+            r'(?:\s+(?:ASC|DESC))?)*$',
+            re.IGNORECASE,
+        )
+        if not order_pattern.fullmatch(order_by.strip()):
+            raise ValueError(f"Invalid ORDER BY clause: {order_by!r}")
+        order_by = re.sub(r'\s*,\s*', ', ', order_by.strip())
         query += f' ORDER BY {order_by}'
     
     return query

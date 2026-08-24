@@ -5,7 +5,7 @@ license: Apache-2.0
 metadata:
   author: NVIDIA cuOpt Team
   tags: '["cuopt","routing","vrp","tsp","python"]'
-  version: 26.08.00
+  version: 26.10.00
 ---
 # cuOpt Routing — Python API
 

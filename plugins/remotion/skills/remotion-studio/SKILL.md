@@ -2,8 +2,9 @@
 name: remotion-studio
 description: Preview a Remotion video
 metadata:
-  version: 4.0.509
+  version: '4.0.515'
 ---
+
 Execute the following command:
 
 ```bash

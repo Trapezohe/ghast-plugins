@@ -12,7 +12,7 @@
   "extensions": {
     "ai.trapezohe.ghast": {
       "category": "finance",
-      "upstreamRevision": "quartr-docs-1d651d2a9ac8+oauth-a379a77612f2",
+      "upstreamRevision": "quartr-docs-b37a9c381ded+oauth-a379a77612f2",
       "icon": "./assets/icon.svg"
     }
   }

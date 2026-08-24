@@ -12,7 +12,7 @@
   "extensions": {
     "ai.trapezohe.ghast": {
       "category": "web",
-      "upstreamRevision": "similarweb-docs-b3970ea5dd33+claude-228a7abde362+oauth-4f4e48ae9c75",
+      "upstreamRevision": "similarweb-docs-eac1d71df335+claude-aa84c3a66647+oauth-4f4e48ae9c75",
       "icon": "./assets/icon.svg"
     }
   }

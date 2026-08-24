@@ -180,12 +180,17 @@ Run both — don't let the scan stand in for the per-domain comparison.
 2. After download, cluster the top designs' contact footprints into candidate
    sites:
    ```bash
-   python3 scripts/scan_sites.py <run-dir> --target-chain A --top 20 --cutoff 6 --jaccard 0.25
+   python3 scripts/scan_sites.py <run-dir> --target-chain A --binder-chain B \
+  --top 20 --cutoff 6 --jaccard 0.25
    ```
    It computes each top design's all-atom footprint on `--target-chain` (default
-   `A`; all other chains are treated as binder), greedily clusters footprints by
-   Jaccard > 0.25, and prints a consensus site (0-based API indices) per
-   cluster — the residues contacted by ≥2 designs in the cluster.
+   `A`) using only generated binder chains selected by repeatable
+   `--binder-chain` flags, clusters footprints by single-linkage at Jaccard >
+   0.25, and prints a consensus site (0-based API indices) per cluster. Read
+   the generated binder entity's `chain_ids` from a result record and pass
+   each ID separately. With exactly one non-target chain the script can infer
+   it; with multiple candidates it fails closed so native target chains are not
+   silently treated as binder.
 3. For each discovered site, scout two configs **in parallel**: (a) site
    specified + target cropped to ~35 Å around it, and (b) the same crop
    **without** the site specified. Feed each consensus site back through

@@ -2,8 +2,9 @@
 name: remotion-interactivity
 description: Structure Remotion markup for interactivity
 metadata:
-  version: 4.0.509
+  version: '4.0.515'
 ---
+
 By writing Remotion markup in a specific way, the Remotion Studio is able to recognize the structure of the code and makes it interactive:
 
 - Allowing items to be selected by clicking on them

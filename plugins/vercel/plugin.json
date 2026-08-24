@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "vercel",
-  "version": "0.48.0-ghast.1",
+  "version": "0.48.1-ghast.1",
   "description": "Build and deploy web apps and agents",
   "author": {
     "name": "Vercel",
@@ -13,7 +13,7 @@
   "extensions": {
     "ai.trapezohe.ghast": {
       "category": "development",
-      "upstreamRevision": "11c32588786a9d49791372657433b88d49561874",
+      "upstreamRevision": "c4a1c4e2e16feefb1d9f2ad2a4a451abd0ae91c6",
       "upstreamPath": ".",
       "icon": "./assets/icon.svg",
       "commands": "./ai.trapezohe.ghast/commands/",

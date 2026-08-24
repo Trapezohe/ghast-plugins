@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "boltz-api-cli",
-  "version": "0.1.0-ghast.1",
+  "version": "0.1.1-ghast.1",
   "description": "Predict structures, screen molecules and proteins, and design binders.",
   "author": {
     "name": "Boltz",

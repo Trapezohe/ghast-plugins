@@ -15,7 +15,16 @@
       "category": "creativity",
       "upstreamRevision": "dca5790c0af2bcde291d732af05c47ad7f75d341",
       "upstreamPath": ".",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "mcpServerExtensions": {
+        "cloudinary-mediaflows": {
+          "credentialHeaders": {
+            "cld-cloud-name": "$VAULT:cloudinary-cloud-name",
+            "cld-api-key": "$VAULT:cloudinary-api-key",
+            "cld-secret": "$VAULT:cloudinary-api-secret"
+          }
+        }
+      }
     }
   }
 }

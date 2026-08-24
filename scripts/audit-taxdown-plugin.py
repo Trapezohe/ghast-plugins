@@ -448,7 +448,7 @@ def verify_openai_snapshot(source: Path) -> None:
 
 def review() -> dict:
     return {
-        "verificationStatus": "official-source-research-required",
+        "verificationStatus": "official-port-unavailable",
         "officialDeveloper": "Tax Down S.L.",
         "officialRepository": None,
         "officialRevision": UPSTREAM_REVISION,

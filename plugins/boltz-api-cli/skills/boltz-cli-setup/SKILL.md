@@ -71,3 +71,18 @@ If a user asks why the CLI thinks it is stale, explain the split:
 - The Boltz version endpoint defines API compatibility, including the minimum supported CLI version.
 
 Respect user or CI opt-outs such as `BOLTZ_API_NO_UPDATE_CHECK=1`; do not force update checks when the environment disables them.
+
+
+## Ghast Safety and Provenance Boundary
+
+- The official installer URL serves mutable remote code. Before downloading or
+  executing it, show the exact platform command, explain that it runs code from
+  `install.boltz.bio` as the current user, and obtain explicit confirmation.
+  Prefer a version-pinned release artifact with a verifiable vendor checksum or
+  signature when Boltz publishes one for the user's platform.
+- Treat device-code login as an interactive authentication transition. Relay
+  the URL and one-time code only to the requesting user, do not persist them,
+  and do not start overlapping login attempts.
+- Never ask the user to paste `BOLTZ_API_KEY` into chat or a command, and never
+  print, log, or write it into generated files. Use the host's secret manager or
+  an already provisioned environment variable.

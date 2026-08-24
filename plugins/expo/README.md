@@ -4,7 +4,7 @@ Official Expo skills for building, deploying, upgrading, and debugging Expo and 
 
 ## Official Ghast port
 
-This package is generated directly from the developer-owned repository `https://github.com/expo/skills` at `dcff9e7cd61f79ee821e18b5b215d5585eaac441`.
+This package is generated directly from the developer-owned repository `https://github.com/expo/skills` at `472d040092900dc8bbf84dc7efb0c90abff77a0d`.
 
 Skills, references, scripts, commands, and public MCP declarations remain sourced from the pinned official repository. Unsupported client metadata is omitted.
 

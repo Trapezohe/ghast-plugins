@@ -130,6 +130,38 @@ when arithmetic is needed: `price: number`, not `price: string`).
 
 When the parent component defines an array prop (e.g., `items`), child/item components receive a single item directly. They do NOT redeclare the data structure in their own props.
 
+### Active-item components (one body visible at a time)
+
+Apply when the UI shows **one array item body at a time** (tabs, slideshow,
+steps). Skip for always-visible lists, multi-select, or multi-expand accordion.
+
+- Each item needs **`name: string`** — Studio hat labels (not `label` or other keys).
+- Pair the array with **`ActiveItemIndex<'arrayPropName'>`** from
+  `@wix/react-component-utils`; the type param must match the array prop name.
+  Default the index to `0` in `defaultProps`.
+- Render **all** item bodies (`.map`); toggle visibility with `--active` +
+  `display: none` on inactive panels (functional visibility — see
+  [`PROPS-VS-CSS.md`](PROPS-VS-CSS.md)), plus `aria-hidden` and `inert` on
+  inactive bodies.
+- Keyboard navigation between triggers; ARIA roles per
+  [`ACCESSIBILITY.md`](ACCESSIBILITY.md).
+
+```typescript
+import type { ActiveItemIndex } from '@wix/react-component-utils';
+
+export type ItemType = { name: string; body: string };
+
+export type MyComponentProps = {
+  items: Array<ItemType>;
+  activeItem: ActiveItemIndex<'items'>;
+};
+
+export const defaultProps = {
+  items: [{ name: 'Item 1', body: '…' }],
+  activeItem: 0,
+} satisfies Omit<MyComponentProps, 'id' | 'className'>;
+```
+
 ### Array Element Types: Always Objects with Named Keys
 
 Array elements MUST be objects with named keys. This enables stable item identity (each item can carry its own `id`/`key`), non-breaking extension (new fields can be added later without changing the prop signature), and semantic naming (each value has meaning instead of being an opaque scalar).
@@ -186,6 +218,12 @@ When creating TypeScript interfaces for component props, use types from `@wix/ed
 ```typescript
 import type { Link } from "@wix/editor-react-types"; // Reference at node_modules/@wix/react-component-schema/dist/editor-react-types.d.ts
 ```
+
+For **function event handler props** (`onClick`, `onDblClick`, `onChange`, `onFocus`, `onBlur`, `onMouseIn`, `onMouseOut`) and custom callbacks, follow [`FUNCTION-HANDLERS.md`](FUNCTION-HANDLERS.md). Key rules:
+
+- Use the exact SDK prop names from that file — the manifest system recognizes them
+- Wire them to the correct DOM events (note: `onDblClick` → `onDoubleClick`, `onMouseIn` → `onMouseEnter`, `onMouseOut` → `onMouseLeave`)
+- Custom callbacks not tied to DOM events use `() => void` (no React event parameter)
 
 ### External resources are forbidden
 
@@ -476,4 +514,3 @@ interface ComponentProps {
 ```
 
 See also: [Array Element Types: Always Objects with Named Keys](#array-element-types-always-objects-with-named-keys) — items must be objects with named keys.
-

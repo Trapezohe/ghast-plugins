@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "expo",
-  "version": "1.9.6-ghast.1",
+  "version": "1.12.0-ghast.1",
   "description": "Official Expo skills for building, deploying, upgrading, and debugging Expo and React Native apps.",
   "author": {
     "name": "Expo Team",
@@ -14,7 +14,7 @@
   "extensions": {
     "ai.trapezohe.ghast": {
       "category": "development",
-      "upstreamRevision": "dcff9e7cd61f79ee821e18b5b215d5585eaac441",
+      "upstreamRevision": "472d040092900dc8bbf84dc7efb0c90abff77a0d",
       "upstreamPath": "plugins/expo",
       "icon": "./assets/icon.png"
     }

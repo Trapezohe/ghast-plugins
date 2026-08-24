@@ -12,8 +12,8 @@ redistribute Similarweb's hosted MCP implementation, proprietary datasets,
 private Codex connector, or marketplace artwork.
 
 The adapter is pinned to Similarweb's official MCP overview. Its SHA-256 is
-`b3970ea5dd3348773500820d6d5d63d5b878d038155f02c68b276313242f4073`. The current Claude integration guide has SHA-256
-`228a7abde362e0a923a4ab299dbd688e994153ad02305668b64b1054bcc241ac`. The official OAuth protected-resource
+`eac1d71df3350d455fcdd7d793ae7c6a1a1029fe43cc3a170bd6474ed0c6e816`. The current Claude integration guide has SHA-256
+`aa84c3a66647dca14f6a78172176a1e731e4ff5cad092547a909bb148c36679a`. The official OAuth protected-resource
 metadata is pinned at SHA-256 `4f4e48ae9c754ff1c1a31371be71d27738437576e8d6a668cd7b627e360978a7`. The
 authorization-server metadata is pinned at SHA-256
 `537ef1981b3bb69036da41c59f4c9e1da74c84d652aa21e3e3bfaad7005db480`.

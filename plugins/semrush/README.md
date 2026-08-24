@@ -11,7 +11,7 @@ instructions, and catalog metadata. It does not copy or redistribute
 Semrush's hosted MCP implementation, proprietary data, or private connector.
 
 The adapter is pinned to Semrush's official current MCP documentation with
-SHA-256 `2508d6192982bd86eb524a5605e7367f6c9186e600e808d4d633d5627e5de25c`. The version-2 OAuth protected-resource
+SHA-256 `e34fd6ac19244b1178e12b8c25a1e8ca50de518ee90537b679d0484f450f1e48`. The version-2 OAuth protected-resource
 metadata is pinned at SHA-256 `5d0b459a41d7ae3596cc2c72b480888d3dd7fa85a3fb32dd1282e89e2840f1be`, and the
 authorization-server metadata is pinned at SHA-256
 `4e70ad04ad9ce53dcc59818a702f197d5c521c3b7e4f967111814e41b35871e3`.

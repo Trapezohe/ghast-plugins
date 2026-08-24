@@ -26,9 +26,9 @@ READ_AI_ARTICLE_URL = (
     "49381158409491.json"
 )
 READ_AI_ARTICLE_ID = 49381158409491
-READ_AI_ARTICLE_UPDATED_AT = "2026-08-06T22:43:06Z"
+READ_AI_ARTICLE_UPDATED_AT = "2026-08-19T23:57:53Z"
 READ_AI_ARTICLE_BODY_SHA256 = (
-    "0b2e23cff48d4c0ab7ef3d52b630f83742bd9ec7bc08b62bc4cc9d9c47f492d9"
+    "0050b9f9a3b33f35d6606eae62d81541726401204b7bf432132821ebe6c30bd5"
 )
 READ_AI_OAUTH_METADATA_URL = (
     "https://api.read.ai/.well-known/oauth-protected-resource/mcp"
@@ -37,7 +37,7 @@ READ_AI_OAUTH_METADATA_SHA256 = (
     "e6ff640763dc8d8520bd204c605f91b24869d76476f1add83c15167eb61ff273"
 )
 READ_AI_EVIDENCE_REVISION = (
-    "zendesk-49381158409491-2026-08-06T22:43:06Z-0b2e23cff48d"
+    "zendesk-49381158409491-2026-08-19T23:57:53Z-0050b9f9a3b3"
 )
 READWISE_MCP_PAGE_URL = "https://readwise.io/mcp"
 READWISE_MCP_URL = "https://mcp2.readwise.io/mcp"
@@ -85,7 +85,7 @@ READWISE_TOOLS = (
 QUARTR_DOCS_URL = "https://mcp.quartr.com/docs"
 QUARTR_MCP_URL = "https://mcp.quartr.com/mcp"
 QUARTR_DOCS_SHA256 = (
-    "1d651d2a9ac88fa63f904c244c87083c7cd6e17140751ed7a5d2abd48a257b6c"
+    "b37a9c381dedfe23d8ae237b922e12235f908746497924ed6c07cf4cee8d223a"
 )
 QUARTR_OAUTH_METADATA_URL = (
     "https://mcp.quartr.com/.well-known/oauth-protected-resource/mcp"
@@ -100,7 +100,7 @@ QUARTR_AUTH_SERVER_SHA256 = (
     "20a1464a05ed203ecad5e4aa5bce8fb9e85ea56ea4489294c1343e8fbe90ac3b"
 )
 QUARTR_EVIDENCE_REVISION = (
-    "quartr-docs-1d651d2a9ac8+oauth-a379a77612f2"
+    "quartr-docs-b37a9c381ded+oauth-a379a77612f2"
 )
 QUARTR_TOOLS = (
     "get_current_user",
@@ -246,7 +246,7 @@ SEMRUSH_DOCS_URL = (
 )
 SEMRUSH_MCP_URL = "https://mcp.semrush.com/v2/mcp"
 SEMRUSH_DOCS_SHA256 = (
-    "2508d6192982bd86eb524a5605e7367f6c9186e600e808d4d633d5627e5de25c"
+    "e34fd6ac19244b1178e12b8c25a1e8ca50de518ee90537b679d0484f450f1e48"
 )
 SEMRUSH_OAUTH_METADATA_URL = (
     "https://mcp.semrush.com/.well-known/oauth-protected-resource/v2/mcp"
@@ -261,7 +261,7 @@ SEMRUSH_AUTH_SERVER_SHA256 = (
     "4e70ad04ad9ce53dcc59818a702f197d5c521c3b7e4f967111814e41b35871e3"
 )
 SEMRUSH_EVIDENCE_REVISION = (
-    "semrush-docs-2508d6192982+oauth-5d0b459a41d7"
+    "semrush-docs-e34fd6ac1924+oauth-5d0b459a41d7"
 )
 SEMRUSH_TOOLS = (
     "domain_overview",
@@ -489,10 +489,10 @@ SIMILARWEB_CLAUDE_DOCS_URL = (
 )
 SIMILARWEB_MCP_URL = "https://mcp.similarweb.com"
 SIMILARWEB_DOCS_SHA256 = (
-    "b3970ea5dd3348773500820d6d5d63d5b878d038155f02c68b276313242f4073"
+    "eac1d71df3350d455fcdd7d793ae7c6a1a1029fe43cc3a170bd6474ed0c6e816"
 )
 SIMILARWEB_CLAUDE_DOCS_SHA256 = (
-    "228a7abde362e0a923a4ab299dbd688e994153ad02305668b64b1054bcc241ac"
+    "aa84c3a66647dca14f6a78172176a1e731e4ff5cad092547a909bb148c36679a"
 )
 SIMILARWEB_OAUTH_METADATA_URL = (
     "https://mcp.similarweb.com/.well-known/oauth-protected-resource"
@@ -507,7 +507,7 @@ SIMILARWEB_AUTH_SERVER_SHA256 = (
     "537ef1981b3bb69036da41c59f4c9e1da74c84d652aa21e3e3bfaad7005db480"
 )
 SIMILARWEB_EVIDENCE_REVISION = (
-    "similarweb-docs-b3970ea5dd33+claude-228a7abde362+oauth-4f4e48ae9c75"
+    "similarweb-docs-eac1d71df335+claude-aa84c3a66647+oauth-4f4e48ae9c75"
 )
 SKYWATCH_DOCS_URL = "https://docs.skywatch.com/docs/mcp/mcp-server/"
 SKYWATCH_CLIENT_DOCS_URL = (
@@ -3794,7 +3794,7 @@ FINN_GITHUB_REPOS_URL = (
 FINN_FRONTEND_CHUNK_URL = (
     "https://www.finn.com/_next/static/chunks/app/"
     "%5Blang%5D/subscribe/%5B%5B...slug%5D%5D/"
-    "page-54ca9cbb63b7b41e.js"
+    "page-d8cf5e7005825e24.js"
 )
 FINN_OPENAPI_SHA256 = (
     "e4574f2ce9ad88fcc1bb8af4173cee8b8edc1ad8fb1b133ac6279c788f548e43"
@@ -3815,7 +3815,7 @@ FINN_ROBOTS_CORE_SHA256 = (
     "6ce2f8042bb49f5920428a772a59b26192e66f77574656f9688f1d0869c9900a"
 )
 FINN_FRONTEND_CHUNK_SHA256 = (
-    "96ebf75a9bbb836d6648df85bcdf9a304c794ee721a458dffd1d3148caea3887"
+    "f0fb8bf625a847e460e58fda87f94283c32334a7acb039934ca7cc7ec3da4366"
 )
 FINN_GITHUB_ORG_SHA256 = (
     "cb1c0e1f131f0c07640cd52e42c03884ec6b4673689d6cbb2d6197d05bfe1029"
@@ -3944,7 +3944,7 @@ LSEG_ANTHROPIC_TUTORIAL_CORE_SHA256 = (
     "6a0186eef6c8c38bb7800d451e6603caac82a560a3b9804fb847fc50466234ef"
 )
 LSEG_PROTECTED_RESOURCE_SHA256 = (
-    "1fd4a302b3891cdc3a84c64434a49b04f12f67248a8cfde341947a73afff559b"
+    "362d60c2abff4500b81f5512da9e5d3f2288447ea549a5e16908af6dafd48fdd"
 )
 LSEG_AUTHORIZATION_METADATA_SHA256 = (
     "844ae6de8cf0e8b6b0ac45451471ba50122534cc6c6c4f1f31eb86cba82d4f02"
@@ -14106,7 +14106,7 @@ def verify_lseg_evidence() -> None:
         LSEG_CLAUDE_PROTECTED_RESOURCE_URL
     )
     expected_protected_resource = {
-        "resource": "https://api.analytics.lseg.com",
+        "resource": LSEG_MCP_URL,
         "authorization_servers": ["https://login.ciam.refinitiv.com"],
     }
     if (

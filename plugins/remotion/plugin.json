@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "remotion",
-  "version": "4.0.509-ghast.1",
+  "version": "4.0.515-ghast.1",
   "description": "Remotion video creation skills — best practices, animations, audio, captions, 3D, and more for building programmatic videos with React.",
   "author": {
     "name": "Remotion",
@@ -14,7 +14,7 @@
   "extensions": {
     "ai.trapezohe.ghast": {
       "category": "creativity",
-      "upstreamRevision": "a23672203e00db3d9ad905b2b2088bdc6aa2f2ac",
+      "upstreamRevision": "05075f384a0a28e193876c1fd43ab9fba5ef10f9",
       "upstreamPath": "packages/codex-plugin",
       "icon": "./assets/icon.png"
     }

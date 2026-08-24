@@ -17,11 +17,11 @@ from pathlib import Path
 EXPECTED_OPENAI_REVISION = "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9"
 HOMEPAGE_URL = "https://meticulate.ai/"
 HOMEPAGE_SHA256 = (
-    "e9568eaf85bc24f9857ab1c6b30b986dfd41e6d50a57301db2a3d690805ecf0f"
+    "d42048824077491686a42ee2e062ef02a0df332cdc9918c316a0fd74774fa76c"
 )
 TERMS_URL = "https://meticulate.ai/terms"
 TERMS_SHA256 = (
-    "d421a42a0f4180776d0609a6355b9ad08b969b040c8b64cd8d572189def53a6f"
+    "209b1436aaf98765661c5aed648980abd5c29676105da3486470d61de23b647f"
 )
 TERMS_NORMALIZED_SHA256 = (
     "15506cdecc56b56ca4c84e5361e46230a260dbf80d4ab0b48f10821de0d9094e"
@@ -32,13 +32,13 @@ STOREFRONT_URL = (
 STOREFRONT_SHA256 = (
     "0b7d432f1aafb5b46b58b3ff08c3eb93c4b6bcc47c2257c5a9c3be9573927a4b"
 )
-APP_JS_URL = "https://app.meticulate.ai/assets/index-WlPvR7Jf.js"
+APP_JS_URL = "https://app.meticulate.ai/assets/index-DkkRc8d3.js"
 APP_JS_SHA256 = (
-    "658fa49c5e63b53272b87759c67bb468dd147419bd2974cb1367895ae839bc8b"
+    "f84ebe5dbda20f691cdfd65df991a27a49378cc468c0a3a72844d129960676a0"
 )
 OPENAPI_URL = "https://brain.meticulate.ai/openapi.json"
 OPENAPI_SHA256 = (
-    "6c59966a2d8bf347c94055772d8ea47bf32caa514bdc18251ac1a9b33acfe6d0"
+    "1eba2a77a4fdf95a98798a62c1769f1345788e082adc4377d45091090e07b8fa"
 )
 OPENAI_HASHES = {
     ".app.json": (
@@ -160,7 +160,7 @@ def verify_private_platform_surface() -> None:
         spec.get("info", {}).get("title")
         != "Meticulate Web Server - OpenAPI 3.0"
         or spec.get("info", {}).get("version") != "0.0.1"
-        or len(paths) != 733
+        or len(paths) != 743
         or spec.get("components", {}).get("securitySchemes")
         != {"HTTPBearer": {"type": "http", "scheme": "bearer"}}
     ):

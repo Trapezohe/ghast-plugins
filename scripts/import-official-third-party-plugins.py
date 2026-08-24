@@ -1884,6 +1884,12 @@ PLUGINS = {
                 "The pinned official suite adds a Jira sprint dashboard "
                 "skill beyond the five workflows in the Codex snapshot."
             ),
+            (
+                "The official JQL helper's ORDER BY validator is narrowed "
+                "to a comma-separated field and ASC/DESC grammar so its "
+                "documented default runs while arbitrary JQL clauses remain "
+                "rejected."
+            ),
         ],
     },
     "base44": {
@@ -1896,6 +1902,14 @@ PLUGINS = {
         "icon": "assets/base44-logo.png",
         "category": "development",
         "license_name": "MIT",
+        "extra_directories": ["scripts"],
+        "compatibility_notes": [
+            (
+                "Base44 CLI 0.1.7 may begin a device-code login and wait when "
+                "the documented whoami check runs without credentials; Ghast "
+                "labels that transition as interactive authentication."
+            ),
+        ],
     },
     "boltz-api-cli": {
         "directory": "boltz-api-skills",
@@ -1907,6 +1921,16 @@ PLUGINS = {
         "icon": "assets/app-icon.png",
         "category": "research",
         "license_name": "MIT",
+        "version_override": "0.1.1",
+        "compatibility_notes": [
+            (
+                "The official 0.1.1 Codex release skill tree is retained, "
+                "with an explicitly identified Ghast hardening patch for "
+                "installer confirmation, secret handling, pinned analysis "
+                "dependencies, transitive clustering, and multi-chain binder "
+                "selection."
+            ),
+        ],
     },
     "canva": {
         "directory": "canva-skills",
@@ -2429,6 +2453,11 @@ PLUGINS = {
                 "cloudinary-mediaflows": {
                     "type": "http",
                     "url": "https://mediaflows.mcp.cloudinary.com/v2/mcp",
+                    "headers": {
+                        "cld-cloud-name": "$VAULT:cloudinary-cloud-name",
+                        "cld-api-key": "$VAULT:cloudinary-api-key",
+                        "cld-secret": "$VAULT:cloudinary-api-secret",
+                    },
                 },
             },
         },
@@ -2442,6 +2471,12 @@ PLUGINS = {
                 "The Codex private app mapping is replaced by Cloudinary's "
                 "five official hosted MCP servers with OAuth2 or supported "
                 "API-key authentication."
+            ),
+            (
+                "The first four servers use their published dynamic OAuth "
+                "flow. MediaFlows has no OAuth metadata, so its three "
+                "documented cld-* headers are supplied from the encrypted "
+                "Profile Vault."
             ),
             (
                 "A generic media-library icon is used because the official "
@@ -2469,7 +2504,7 @@ PLUGINS = {
             "Both portable skills, the GitHub thread workflow reference, "
             "official icon, and MIT license are copied from CodeRabbit's "
             "canonical multi-agent skills repository. Ghast updates only "
-            "stale CLI scope examples to the verified v0.7.2 command surface "
+            "stale CLI scope examples to the verified v0.7.5 command surface "
             "and replaces host-specific question calls with portable explicit "
             "approval language."
         ),
@@ -2509,6 +2544,10 @@ PLUGINS = {
         "category": "finance",
         "mcp": ".mcp.json",
         "license_name": "Apache-2.0",
+        "extra_repository_files": [
+            ["skills/data-access.md", "skills/data-access.md"],
+            ["skills/design-system.md", "skills/design-system.md"],
+        ],
         "compatibility_notes": [
             (
                 "The official source repository does not publish an icon, so "
@@ -2818,7 +2857,7 @@ PLUGINS = {
     },
     "expo": {
         "directory": "expo-skills",
-        "revision": "dcff9e7cd61f79ee821e18b5b215d5585eaac441",
+        "revision": "472d040092900dc8bbf84dc7efb0c90abff77a0d",
         "repository": "https://github.com/expo/skills",
         "plugin_root": "plugins/expo",
         "manifest": ".codex-plugin/plugin.json",
@@ -2896,7 +2935,7 @@ PLUGINS = {
     },
     "hyperframes": {
         "directory": "hyperframes",
-        "revision": "9b0c5e85596efaf93823bf5f19b7f1d1216ca7d5",
+        "revision": "dd0626a55a0d0f24cae1b00bd2c95c0ebfa7a573",
         "repository": "https://github.com/heygen-com/hyperframes",
         "plugin_root": ".",
         "manifest": ".codex-plugin/plugin.json",
@@ -2911,6 +2950,7 @@ PLUGINS = {
         "repository": "https://github.com/heygen-com/skills",
         "plugin_root": ".",
         "manifest": ".codex-plugin/plugin.json",
+        "version_override": "3.2.0",
         "license": "LICENSE",
         "icon": "assets/icon.png",
         "category": "creativity",
@@ -3162,7 +3202,7 @@ PLUGINS = {
         "repository": "https://github.com/HubSpot/agent-cli-skills",
         "plugin_root": ".",
         "manifest_inline": {
-            "version": "0.11.0",
+            "version": "0.13.0",
             "description": (
                 "Operate HubSpot CRM data with HubSpot's official Agent CLI "
                 "skills."
@@ -3194,7 +3234,7 @@ PLUGINS = {
                 "The beta CLI binary is installed separately from HubSpot's "
                 "official distribution and is not redistributed in this "
                 "Apache-2.0 skills package; this port was verified against "
-                "hubspot 0.11.0."
+                "hubspot 0.13.0."
             ),
             (
                 "A generic CRM icon is used because the licensed skills "
@@ -3337,11 +3377,11 @@ PLUGINS = {
     },
     "motherduck": {
         "directory": "motherduck-mcp",
-        "revision": "b43ad1473fc5a3ca29317bf6df2db40a9a80eb90",
+        "revision": "275d2e7d2ba4f5b48ce8ad3f01a9aeea8bd08616",
         "repository": "https://github.com/motherduckdb/mcp-server-motherduck",
         "plugin_root": ".",
         "manifest_inline": {
-            "version": "1.0.7",
+            "version": "1.0.8",
             "description": "Official MotherDuck MCP server.",
             "author": {
                 "name": "MotherDuck",
@@ -3381,7 +3421,7 @@ PLUGINS = {
     },
     "neon-postgres": {
         "directory": "neon-agent-skills",
-        "revision": "af27b52659c3c5bbf05d6c626b166163eb351e19",
+        "revision": "b7f87949583782238aef20414a29b1f5ca2773ea",
         "repository": "https://github.com/neondatabase/agent-skills",
         "plugin_root": ".",
         "manifest": "plugin.json",
@@ -3405,7 +3445,7 @@ PLUGINS = {
     },
     "nvidia": {
         "directory": "nvidia-skills",
-        "revision": "aa116673017bf75f9885edabab34d8ec883c0a3a",
+        "revision": "7149a886d50da8db72cdc1f20ff01cefeadfe6a9",
         "repository": "https://github.com/NVIDIA/skills",
         "plugin_root": "plugins/nvidia-skills",
         "manifest": ".codex-plugin/plugin.json",
@@ -3418,26 +3458,30 @@ PLUGINS = {
         "license_name": "Apache-2.0 AND CC-BY-4.0",
         "skills_root": "skills",
         "skills_from_repository_root": True,
-        "preserve_agent_metadata": True,
+        "signed_source_archive": True,
         "compatibility_notes": [
             (
-                "NVIDIA's signed skill directories, agent metadata, skill "
-                "cards, evaluations, and detached signatures are retained "
-                "byte-for-byte so the official trust chain is not broken."
+                "NVIDIA's skill directories, agent metadata, skill cards, "
+                "evaluations, and detached signatures are retained byte-for-"
+                "byte under upstream-signed/. Runnable skills use portable "
+                "Agent Skills frontmatter and omit detached signatures that "
+                "would no longer attest to the normalized files. Signature "
+                "verification status is recorded separately because the "
+                "pinned official catalog contains known upstream drift."
             ),
         ],
         "extra_repository_files": [
             ["nv-agent-root-cert.pem", "nv-agent-root-cert.pem"]
         ],
         "description": (
-            "Complete pinned catalog of NVIDIA-verified skills for GPU "
+            "Complete pinned catalog of official NVIDIA skills for GPU "
             "acceleration, CUDA, AI, data, training, inference, robotics, "
             "Physical AI, Omniverse, simulation, networking, and more."
         ),
     },
     "remotion": {
         "directory": "remotion",
-        "revision": "a23672203e00db3d9ad905b2b2088bdc6aa2f2ac",
+        "revision": "05075f384a0a28e193876c1fd43ab9fba5ef10f9",
         "repository": "https://github.com/remotion-dev/remotion",
         "plugin_root": "packages/codex-plugin",
         "manifest": ".codex-plugin/plugin.json",
@@ -3456,7 +3500,7 @@ PLUGINS = {
     },
     "netlify": {
         "directory": "netlify-context",
-        "revision": "47848e2d6405291caeed0b23689878ec5253bb6f",
+        "revision": "32a261b6b2437464aca7e51bf9b48bcac1e2835c",
         "repository": "https://github.com/netlify/context-and-tools",
         "plugin_root": "agent-plugin",
         "manifest": "plugin.json",
@@ -3492,8 +3536,27 @@ PLUGINS = {
         "license": "LICENSE",
         "icon": "assets/logo.svg",
         "category": "development",
-        "mcp": ".mcp.json",
+        "mcp_inline": {
+            "mcpServers": {
+                "render": {
+                    "type": "http",
+                    "url": "https://mcp.render.com/mcp",
+                    "headers": {
+                        "Authorization": "Bearer $VAULT:render-api-key",
+                    },
+                },
+            },
+        },
         "license_name": "MIT",
+        "extra_directories": ["scripts"],
+        "compatibility_notes": [
+            (
+                "The pre-registered Codex OAuth client id is not reused. "
+                "Ghast follows Render's official generic-client setup and "
+                "sends a user-managed Render API key from the encrypted "
+                "Profile Vault."
+            ),
+        ],
     },
     "quicknode": {
         "directory": "quicknode-cli",
@@ -3603,33 +3666,24 @@ PLUGINS = {
     },
     "stripe": {
         "directory": "stripe-ai",
-        "revision": "1953b6cce7344d880a054c42b8dd21ca3e50ebd5",
+        "revision": "bad904b02f7071592c38bcca83d33667ff015bb1",
         "repository": "https://github.com/stripe/ai",
-        "plugin_root": "providers/codex/plugin",
-        "manifest": ".codex-plugin/plugin.json",
+        "plugin_root": "providers/agent-plugins/plugin",
+        "manifest": "plugin.json",
         "license": "../../../LICENSE",
-        "icon": "assets/parallelogram.png",
+        "icon": "../../../providers/codex/plugin/assets/parallelogram.png",
         "category": "finance",
-        "mcp_inline": {
-            "mcpServers": {
-                "stripe": {
-                    "type": "http",
-                    "url": "https://mcp.stripe.com",
-                },
-            },
-        },
+        "mcp": "mcp.json",
         "license_name": "MIT",
         "description": (
             "Build and operate Stripe payments, subscriptions, invoices, "
-            "Connect platforms, apps, and API integrations with all seven "
+            "Connect platforms, apps, and API integrations with all eight "
             "official Stripe skills and Stripe's hosted OAuth MCP server."
         ),
         "compatibility_notes": [
             (
-                "The official Stripe repository publishes the hosted MCP "
-                "endpoint in its README while its Codex package uses a "
-                "private app mapping; Ghast declares the same official "
-                "OAuth endpoint directly."
+                "Ghast imports Stripe's official Agent Plugins 1.0 package "
+                "directly, including its Streamable HTTP MCP declaration."
             ),
         ],
     },
@@ -3755,7 +3809,7 @@ PLUGINS = {
     },
     "temporal": {
         "directory": "temporal-codex-plugin",
-        "revision": "a3fa2bdff73a93e60e1077c08bde2b682cd0f5ae",
+        "revision": "e9a28b0de6beb5305bd49d73453ab0f1cbd8d160",
         "repository": "https://github.com/temporalio/codex-temporal-plugin",
         "plugin_root": "plugins/temporal",
         "manifest": ".codex-plugin/plugin.json",
@@ -3777,12 +3831,13 @@ PLUGINS = {
     },
     "twilio-developer-kit": {
         "directory": "twilio-ai",
-        "revision": "d7b0f231468cd9a6a0bab9ebcde8c1a5c9220bba",
+        "revision": "8aba46fb65dc8d9a20f4b301a68352064b4159a5",
         "repository": "https://github.com/twilio/ai",
         "plugin_root": ".",
         "manifest": ".codex-plugin/plugin.json",
         "license": "LICENSE",
         "category": "development",
+        "mcp": "mcp.json",
         "license_name": "MIT",
         "recursive_skills": True,
         "generated_icon": "./assets/icon.svg",
@@ -3799,11 +3854,15 @@ PLUGINS = {
                 "twilio-agent-connect because that official skill is the "
                 "only source skill without one."
             ),
+            (
+                "The official anonymous Twilio documentation MCP server is "
+                "packaged as a direct Streamable HTTP connection."
+            ),
         ],
     },
     "hugging-face": {
         "directory": "huggingface-skills",
-        "revision": "ec0108293521ef698e451ec044e8b4feba6b732b",
+        "revision": "020194918dc4a27d5a5d9a154b6b56cc2bd21364",
         "repository": "https://github.com/huggingface/skills",
         "plugin_root": ".",
         "manifest": ".claude-plugin/plugin.json",
@@ -3902,7 +3961,7 @@ PLUGINS = {
     },
     "vercel": {
         "directory": "vercel-plugin",
-        "revision": "11c32588786a9d49791372657433b88d49561874",
+        "revision": "c4a1c4e2e16feefb1d9f2ad2a4a451abd0ae91c6",
         "repository": "https://github.com/vercel/vercel-plugin",
         "plugin_root": ".",
         "manifest": ".claude-plugin/plugin.json",
@@ -3928,7 +3987,7 @@ PLUGINS = {
     },
     "wix": {
         "directory": "wix-skills",
-        "revision": "d9b73923907f91989335cf4f26dce52095faeea4",
+        "revision": "f30595361e8d02f0dc432b499d00916a2e3918f3",
         "repository": "https://github.com/wix/skills",
         "plugin_root": ".",
         "manifest": ".codex-plugin/plugin.json",
@@ -4240,6 +4299,15 @@ def import_plugin(name: str, config: dict, source_root: Path) -> None:
                         skills_target,
                         config["root_skill"],
                     )
+                if config.get("signed_source_archive"):
+                    archive = staging / "upstream-signed/skills"
+                    shutil.copytree(
+                        repository / "skills",
+                        archive,
+                        copy_function=shutil.copy2,
+                    )
+                    for signature in skills_target.rglob("skill.oms.sig"):
+                        signature.unlink()
 
         if config.get("commands"):
             shutil.copytree(
@@ -4307,7 +4375,10 @@ def import_plugin(name: str, config: dict, source_root: Path) -> None:
 
         manifest = {
             "name": name,
-            "version": f"{source_manifest.get('version', '1.0.0')}-ghast.1",
+            "version": (
+                f"{config.get('version_override', source_manifest.get('version', '1.0.0'))}"
+                "-ghast.1"
+            ),
             "description": config.get(
                 "description", source_manifest["description"]
             ),
@@ -4910,7 +4981,36 @@ def ensure_skill_frontmatter(
 
 
 def apply_ghast_compatibility(name: str, staging: Path) -> None:
-    if name == "aiera":
+    if name == "atlassian-rovo":
+        rewrite_text(
+            staging
+            / "skills/generate-status-report/scripts/jql_builder.py",
+            {
+                """    if order_by:
+        # Validate order_by contains only safe keywords
+        order_by = sanitize_jql_value(order_by)
+        query += f' ORDER BY {order_by}'
+""": """    if order_by:
+        # Accept only comma-separated field names with optional directions.
+        order_pattern = re.compile(
+            r'^[A-Za-z][A-Za-z0-9_.]*(?:\\s+(?:ASC|DESC))?'
+            r'(?:\\s*,\\s*[A-Za-z][A-Za-z0-9_.]*'
+            r'(?:\\s+(?:ASC|DESC))?)*$',
+            re.IGNORECASE,
+        )
+        if not order_pattern.fullmatch(order_by.strip()):
+            raise ValueError(f"Invalid ORDER BY clause: {order_by!r}")
+        order_by = re.sub(r'\\s*,\\s*', ', ', order_by.strip())
+        query += f' ORDER BY {order_by}'
+"""
+            },
+        )
+    elif name == "heygen":
+        # Agent Plugins frontmatter normalization omits HeyGen's custom
+        # version field. Preserve the official fallback as a local VERSION
+        # file so the bundled update checker remains runnable.
+        (staging / "skills/heygen-video/VERSION").write_text("3.2.0\n")
+    elif name == "aiera":
         usage_dir = staging / "skills/aiera"
         usage_dir.mkdir()
         (usage_dir / "SKILL.md").write_text(render_aiera_usage_skill())
@@ -4999,6 +5099,24 @@ def apply_ghast_compatibility(name: str, staging: Path) -> None:
         usage_dir = staging / "skills/alpaca"
         usage_dir.mkdir()
         (usage_dir / "SKILL.md").write_text(render_alpaca_usage_skill())
+    elif name == "base44":
+        skill_path = staging / "skills/base44-cli/SKILL.md"
+        text = skill_path.read_text()
+        marker = "## MANDATORY: Authentication Check at Session Start\n"
+        note = """
+
+> **Ghast runtime note:** In Base44 CLI 0.1.7, `npx base44 whoami`
+> can begin a device-code login and wait when no credential is configured.
+> Treat any emitted verification URL and code as an interactive authentication
+> transition, not as passive status output. Relay it only to the user who
+> requested the Base44 operation, do not persist it, do not start a second
+> login flow, and wait for that flow to finish or be cancelled before retrying.
+"""
+        if text.count(marker) != 1:
+            raise ValueError("Base44 authentication marker changed")
+        skill_path.write_text(text.replace(marker, marker + note, 1))
+    elif name == "boltz-api-cli":
+        harden_boltz_skills(staging)
     elif name == "coupler-io":
         usage_dir = staging / "skills/coupler-io"
         usage_dir.mkdir()
@@ -11494,17 +11612,17 @@ def verify_coderabbit_evidence(repository: Path) -> None:
 
     docs_expectations = {
         CODERABBIT_REFERENCE_URL: (
-            "cc0998869d56160156038e7593ce097aee2a222c2b455da74535911da7d3dca6",
+            "c509543aaea8ba8fd89a641f3f98cfa87ffff982a24a6726e2e9b7916a7366a7",
             (
                 "`cr review --committed`",
                 "`cr review --uncommitted`",
                 "`cr review --include-untracked`",
-                "`cr review findings`",
+                "`cr review findings ",
                 "`cr auth status --agent`",
             ),
         ),
         CODERABBIT_SKILLS_DOCS_URL: (
-            "92603b667aeb484953a4ec800a0f093e21cf3055a5d6a6434e643cf2bc8c38af",
+            "35a2eb7e8c54a43cdcd13c5bf12b05074448f3df0c37fdbf51619f3d592495fc",
             (
                 "CodeRabbit Skills are open-source",
                 "coderabbitai/skills",
@@ -11514,7 +11632,7 @@ def verify_coderabbit_evidence(repository: Path) -> None:
             ),
         ),
         CODERABBIT_CODEX_DOCS_URL: (
-            "702ccd54e67cc4f4efc530e55db26f2f0643b30b3ab744056fa3622d6914473e",
+            "739057fa2070ab81b079cc89fa4f1205b7ec315107e4f2a8aaff3208edbc182a",
             (
                 "CodeRabbit plugin for Codex",
                 "coderabbit auth status --agent",
@@ -11541,8 +11659,8 @@ def verify_coderabbit_evidence(repository: Path) -> None:
     version_bytes = fetch_bytes(CODERABBIT_VERSION_URL)
     if (
         sha256_bytes(version_bytes)
-        != "d0176718bd214ce8474c06ed61c395ca113fdfc2acdd86d9aa9933b40d9b561e"
-        or version_bytes.decode().strip() != "0.7.2"
+        != "966f2f8695b5c07de3f37c682b1409da1ac84b5c7ce04a27068bb4c017ac0cb8"
+        or version_bytes.decode().strip() != "0.7.5"
     ):
         raise ValueError(
             "CodeRabbit current CLI version evidence changed; re-audit required"
@@ -11550,7 +11668,7 @@ def verify_coderabbit_evidence(repository: Path) -> None:
 
     installer = fetch_bytes(CODERABBIT_INSTALLER_URL)
     if sha256_bytes(installer) != (
-        "b7e1267e4ab27dccfc757a81d26b8d2cbfa719716bbe975260df9c4b3425ddef"
+        "4ffc7fb7443f0c562adea5c998867bcbe772a14d0e6620d328dfa6045afe446d"
     ):
         raise ValueError(
             "CodeRabbit official installer changed; re-audit required"
@@ -15391,6 +15509,8 @@ def build_remotion_skills(repository: Path, target: Path) -> None:
         remove_empty_directories(target_skill)
 
     prepare_remotion_embedded_skills(target)
+    for skill_path in sorted(target.glob("*/SKILL.md")):
+        normalize_remotion_skill_version(skill_path)
     remotion_create = target / "remotion-create/SKILL.md"
     text = remotion_create.read_text()
     preview_phrases = [
@@ -15413,6 +15533,22 @@ def build_remotion_skills(repository: Path, target: Path) -> None:
         ),
     )
     remotion_create.write_text(text)
+
+
+def normalize_remotion_skill_version(skill_path: Path) -> None:
+    text = skill_path.read_text()
+    parts = text.split("---", 2)
+    if len(parts) != 3 or parts[0].strip():
+        raise ValueError(f"{skill_path}: expected YAML frontmatter")
+    frontmatter = parts[1]
+    normalized, count = re.subn(
+        r"(?m)^version: ([0-9]+\.[0-9]+\.[0-9]+)$",
+        r"metadata:\n  version: '\1'",
+        frontmatter,
+    )
+    if count != 1:
+        raise ValueError(f"{skill_path}: expected one semantic version field")
+    skill_path.write_text(f"---{normalized}---{parts[2]}")
 
 
 def ignore_remotion_build_files(directory: str, names: list[str]) -> set[str]:
@@ -15482,6 +15618,89 @@ def append_text(path: Path, appendix: str) -> None:
     if appendix.strip() in text:
         raise ValueError(f"{path}: compatibility appendix is already present")
     path.write_text(text.rstrip() + "\n\n\n" + appendix.strip() + "\n")
+
+
+def harden_boltz_skills(staging: Path) -> None:
+    setup_path = staging / "skills/boltz-cli-setup/SKILL.md"
+    append_text(
+        setup_path,
+        """
+## Ghast Safety and Provenance Boundary
+
+- The official installer URL serves mutable remote code. Before downloading or
+  executing it, show the exact platform command, explain that it runs code from
+  `install.boltz.bio` as the current user, and obtain explicit confirmation.
+  Prefer a version-pinned release artifact with a verifiable vendor checksum or
+  signature when Boltz publishes one for the user's platform.
+- Treat device-code login as an interactive authentication transition. Relay
+  the URL and one-time code only to the requesting user, do not persist them,
+  and do not start overlapping login attempts.
+- Never ask the user to paste `BOLTZ_API_KEY` into chat or a command, and never
+  print, log, or write it into generated files. Use the host's secret manager or
+  an already provisioned environment variable.
+""",
+    )
+
+    requirements = (
+        staging
+        / "skills/boltz-protein-design/scripts/requirements.txt"
+    )
+    requirements.write_text(
+        "# Pinned by Ghast for reproducible target-exploration analysis.\n"
+        "gemmi==0.7.5\n"
+        'numpy==1.26.4; python_version < "3.11"\n'
+        'numpy==2.4.6; python_version >= "3.11"\n'
+    )
+    shutil.copy2(
+        Path(__file__).with_name("boltz-scan-sites-hardened.py"),
+        staging / "skills/boltz-protein-design/scripts/scan_sites.py",
+    )
+
+    reference_path = (
+        staging
+        / "skills/boltz-protein-design/references/target-exploration.md"
+    )
+    text = reference_path.read_text()
+    old_command = (
+        "python3 scripts/scan_sites.py <run-dir> --target-chain A --top 20 "
+        "--cutoff 6 --jaccard 0.25"
+    )
+    new_command = (
+        "python3 scripts/scan_sites.py <run-dir> --target-chain A "
+        "--binder-chain B \\\n"
+        "  --top 20 --cutoff 6 --jaccard 0.25"
+    )
+    if text.count(old_command) != 1:
+        raise ValueError("Boltz target-exploration command changed")
+    text = text.replace(old_command, new_command, 1)
+    old_guidance = (
+        "It computes each top design's all-atom footprint on `--target-chain` "
+        "(default\n"
+        "   `A`; all other chains are treated as binder), greedily clusters "
+        "footprints by\n"
+        "   Jaccard > 0.25, and prints a consensus site (0-based API indices) "
+        "per\n"
+        "   cluster — the residues contacted by ≥2 designs in the cluster."
+    )
+    new_guidance = (
+        "It computes each top design's all-atom footprint on `--target-chain` "
+        "(default\n"
+        "   `A`) using only generated binder chains selected by repeatable\n"
+        "   `--binder-chain` flags, clusters footprints by single-linkage at "
+        "Jaccard >\n"
+        "   0.25, and prints a consensus site (0-based API indices) per "
+        "cluster. Read\n"
+        "   the generated binder entity's `chain_ids` from a result record "
+        "and pass\n"
+        "   each ID separately. With exactly one non-target chain the script "
+        "can infer\n"
+        "   it; with multiple candidates it fails closed so native target "
+        "chains are not\n"
+        "   silently treated as binder."
+    )
+    if text.count(old_guidance) != 1:
+        raise ValueError("Boltz target-exploration guidance changed")
+    reference_path.write_text(text.replace(old_guidance, new_guidance, 1))
 
 
 def render_readme(

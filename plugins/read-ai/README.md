@@ -11,8 +11,8 @@ instructions, and catalog metadata. It does not copy or redistribute Read AI's
 private connector or hosted server implementation.
 
 The adapter is pinned to official Read AI help-center article
-`49381158409491`, updated `2026-08-06T22:43:06Z`, with body SHA-256
-`0b2e23cff48d4c0ab7ef3d52b630f83742bd9ec7bc08b62bc4cc9d9c47f492d9`. The official OAuth protected-resource
+`49381158409491`, updated `2026-08-19T23:57:53Z`, with body SHA-256
+`0050b9f9a3b33f35d6606eae62d81541726401204b7bf432132821ebe6c30bd5`. The official OAuth protected-resource
 metadata is pinned at SHA-256 `e6ff640763dc8d8520bd204c605f91b24869d76476f1add83c15167eb61ff273`.
 
 ## Ghast compatibility

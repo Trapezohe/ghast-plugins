@@ -13,7 +13,7 @@
   "extensions": {
     "ai.trapezohe.ghast": {
       "category": "development",
-      "upstreamRevision": "af27b52659c3c5bbf05d6c626b166163eb351e19",
+      "upstreamRevision": "b7f87949583782238aef20414a29b1f5ca2773ea",
       "upstreamPath": ".",
       "icon": "./assets/icon.svg"
     }

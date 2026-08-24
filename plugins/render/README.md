@@ -8,4 +8,8 @@ This package is generated directly from the developer-owned repository `https://
 
 Skills, references, scripts, commands, and public MCP declarations remain sourced from the pinned official repository. Unsupported client metadata is omitted.
 
+## Ghast compatibility
+
+- The pre-registered Codex OAuth client id is not reused. Ghast follows Render's official generic-client setup and sends a user-managed Render API key from the encrypted Profile Vault.
+
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

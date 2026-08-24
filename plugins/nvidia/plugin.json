@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "nvidia",
   "version": "1.4.0-ghast.1",
-  "description": "Complete pinned catalog of NVIDIA-verified skills for GPU acceleration, CUDA, AI, data, training, inference, robotics, Physical AI, Omniverse, simulation, networking, and more.",
+  "description": "Complete pinned catalog of official NVIDIA skills for GPU acceleration, CUDA, AI, data, training, inference, robotics, Physical AI, Omniverse, simulation, networking, and more.",
   "author": {
     "name": "NVIDIA",
     "url": "https://github.com/NVIDIA/skills"
@@ -13,7 +13,7 @@
   "extensions": {
     "ai.trapezohe.ghast": {
       "category": "development",
-      "upstreamRevision": "aa116673017bf75f9885edabab34d8ec883c0a3a",
+      "upstreamRevision": "7149a886d50da8db72cdc1f20ff01cefeadfe6a9",
       "upstreamPath": "plugins/nvidia-skills",
       "icon": "./assets/icon.png"
     }

@@ -325,7 +325,7 @@
       },
       "package": {
         "url": "./packages/atlassian-rovo.zip",
-        "sha256": "1fdc8e47fc1be7eb442cc0039748fdf4dc43411fbc8d9d43db2ca0accd0088b8"
+        "sha256": "97fbe35591daf936303ff46a3684ff5c3d55a5ac8285c007df3cc3a60de8f263"
       },
       "icon": "./plugins/atlassian-rovo/assets/icon.svg",
       "homepage": "https://github.com/atlassian/atlassian-mcp-server",
@@ -392,7 +392,7 @@
       },
       "package": {
         "url": "./packages/base44.zip",
-        "sha256": "07f0c94e25a2dd14dc5a0c828c43f9572be852377788fe3a53d348dd143f8502"
+        "sha256": "2693324c4f21fdd5b4392a279f3ee71427e3c569cc508ba633a34b2a82a0a2f0"
       },
       "icon": "./plugins/base44/assets/icon.png",
       "homepage": "https://docs.base44.com",
@@ -461,7 +461,7 @@
       },
       "package": {
         "url": "./packages/binance.zip",
-        "sha256": "8cdb709000432c83e2c787c20aeafa41ee9802f3697dabb5a827023fbc37b83b"
+        "sha256": "a2c2a5c54dfa552bcf68dd50a737e61977354a8efc80ad6bb4c63aa928cc4837"
       },
       "icon": "./plugins/binance/assets/icon.svg",
       "homepage": "https://github.com/binance/binance-skills-hub",
@@ -508,7 +508,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "boltz-api-cli",
-        "version": "0.1.0-ghast.1",
+        "version": "0.1.1-ghast.1",
         "description": "Predict structures, screen molecules and proteins, and design binders.",
         "author": {
           "name": "Boltz",
@@ -529,7 +529,7 @@
       },
       "package": {
         "url": "./packages/boltz-api-cli.zip",
-        "sha256": "87e5069cab9c5e2e38058f2664536f77b8d5e64ba091dbf4b184a72c55b2ad2d"
+        "sha256": "629b7d968fd7cca239f8c99a3c14ad892364b94e386944e3e2a15fe52dc394bb"
       },
       "icon": "./plugins/boltz-api-cli/assets/icon.png",
       "homepage": "https://boltz.bio",
@@ -1130,13 +1130,22 @@
             "category": "creativity",
             "upstreamRevision": "dca5790c0af2bcde291d732af05c47ad7f75d341",
             "upstreamPath": ".",
-            "icon": "./assets/icon.svg"
+            "icon": "./assets/icon.svg",
+            "mcpServerExtensions": {
+              "cloudinary-mediaflows": {
+                "credentialHeaders": {
+                  "cld-cloud-name": "$VAULT:cloudinary-cloud-name",
+                  "cld-api-key": "$VAULT:cloudinary-api-key",
+                  "cld-secret": "$VAULT:cloudinary-api-secret"
+                }
+              }
+            }
           }
         }
       },
       "package": {
         "url": "./packages/cloudinary.zip",
-        "sha256": "4a0a2ba4883c16307d4964b0a90853bbec88e4a1bd79e8756fc912f45a22c455"
+        "sha256": "2258105a89953b9c793843e9d45f3a6797f256246b2b3bec2b0a3a5a851d5f98"
       },
       "icon": "./plugins/cloudinary/assets/icon.svg",
       "homepage": "https://cloudinary.com/documentation/cloudinary_llm_mcp",
@@ -1172,7 +1181,7 @@
       },
       "package": {
         "url": "./packages/coderabbit.zip",
-        "sha256": "b2174ce530387d61dab7492c848a3f1c31cffa12ed207bb00828a7d553918120"
+        "sha256": "0b05cb2a5e8cf88ff75c457e7a5b9dd8ce16292d68a4d4fdce7f1e73423ce0dc"
       },
       "icon": "./plugins/coderabbit/assets/icon.svg",
       "homepage": "https://docs.coderabbit.ai/cli",
@@ -1467,7 +1476,7 @@
       },
       "package": {
         "url": "./packages/daloopa.zip",
-        "sha256": "5807df053810defea0a5ee5f1de60a54cd91b0b2fdede79043f61128df5a3197"
+        "sha256": "ba98f43129327152ec7dab7422cecf12b190c603cf27be2a4f9f3cdc2f2e8c3f"
       },
       "icon": "./plugins/daloopa/assets/icon.png",
       "homepage": "https://daloopa.com",
@@ -1829,7 +1838,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "expo",
-        "version": "1.9.6-ghast.1",
+        "version": "1.12.0-ghast.1",
         "description": "Official Expo skills for building, deploying, upgrading, and debugging Expo and React Native apps.",
         "author": {
           "name": "Expo Team",
@@ -1842,7 +1851,7 @@
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "development",
-            "upstreamRevision": "dcff9e7cd61f79ee821e18b5b215d5585eaac441",
+            "upstreamRevision": "472d040092900dc8bbf84dc7efb0c90abff77a0d",
             "upstreamPath": "plugins/expo",
             "icon": "./assets/icon.png"
           }
@@ -1850,7 +1859,7 @@
       },
       "package": {
         "url": "./packages/expo.zip",
-        "sha256": "79a4482b9d951ccfcddcd0632a362641c4a0e963d2b0700c26e1c1ed00ec37e9"
+        "sha256": "942518f35fc227daae7bb61c6c8510be0e4bc0411a76bb8d36df25b963b0a29a"
       },
       "icon": "./plugins/expo/assets/icon.png",
       "homepage": "https://docs.expo.dev/skills/",
@@ -2269,7 +2278,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "heygen",
-        "version": "1.3.2-ghast.1",
+        "version": "3.2.0-ghast.1",
         "description": "Create HeyGen avatar videos, personalized video messages, and translated / dubbed videos. Build a persistent digital identity from a photo, generate presenter-led videos with your digital twin, and localize existing videos into 175+ languages with voice cloning and lip-sync.",
         "author": {
           "name": "HeyGen",
@@ -2295,7 +2304,7 @@
       },
       "package": {
         "url": "./packages/heygen.zip",
-        "sha256": "5e46a2bb91c9d6ed8f34b2868f75b78ff94930fa76e7476f06f45c38c0c825f8"
+        "sha256": "5b35513fabca755349a6b14afe8544fa5e7d1b46acbf21dda66ac03b1db5b662"
       },
       "icon": "./plugins/heygen/assets/icon.png",
       "homepage": "https://heygen.com",
@@ -2419,7 +2428,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "hubspot",
-        "version": "0.11.0-ghast.1",
+        "version": "0.13.0-ghast.1",
         "description": "Operate HubSpot CRM records, pipelines, activities, workflows, reports, data quality, sales execution, support, retention, ownership, and quote-to-cash through all 15 official Agent CLI skills.",
         "author": {
           "name": "HubSpot",
@@ -2439,7 +2448,7 @@
       },
       "package": {
         "url": "./packages/hubspot.zip",
-        "sha256": "de9e3688d7049052f871a5e181e2fb3958b9d563b50e4e27bc100018e5dd39f8"
+        "sha256": "b9c6b50b17b53879503c9cded671c66aa5934e160a782a2996792622f7f2f3e8"
       },
       "icon": "./plugins/hubspot/assets/icon.svg",
       "homepage": "https://developers.hubspot.com/docs/developer-tooling/local-development/agent-cli/guide",
@@ -2454,7 +2463,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "hugging-face",
-        "version": "1.0.23-ghast.1",
+        "version": "1.0.25-ghast.1",
         "description": "Explore and manage Hugging Face models, datasets, Spaces, jobs, papers, evaluations, training, Gradio apps, local models, and Hub workflows with the complete official skill catalog and official Hugging Face MCP server.",
         "author": {
           "name": "Hugging Face"
@@ -2465,7 +2474,7 @@
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "development",
-            "upstreamRevision": "ec0108293521ef698e451ec044e8b4feba6b732b",
+            "upstreamRevision": "020194918dc4a27d5a5d9a154b6b56cc2bd21364",
             "upstreamPath": ".",
             "icon": "./assets/icon.svg"
           }
@@ -2473,7 +2482,7 @@
       },
       "package": {
         "url": "./packages/hugging-face.zip",
-        "sha256": "1fa2b903a90c52c6a294cd7604695e10d86ff3debc555b935794a7de24de4557"
+        "sha256": "905bc6deac39bbbf346bdf1b216315babd42028d3af8b4e702535017a8c45fde"
       },
       "icon": "./plugins/hugging-face/assets/icon.svg",
       "homepage": "https://github.com/huggingface/skills",
@@ -2488,7 +2497,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "hyperframes",
-        "version": "0.7.107-ghast.1",
+        "version": "0.8.10-ghast.1",
         "description": "Write HTML, render video. Compositions, Tailwind v4 styles, GSAP and runtime adapter animations, captions, voiceovers, audio-reactive visuals, and website capture for HyperFrames.",
         "author": {
           "name": "HeyGen",
@@ -2501,7 +2510,7 @@
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "creativity",
-            "upstreamRevision": "9b0c5e85596efaf93823bf5f19b7f1d1216ca7d5",
+            "upstreamRevision": "dd0626a55a0d0f24cae1b00bd2c95c0ebfa7a573",
             "upstreamPath": ".",
             "icon": "./assets/icon.png"
           }
@@ -2509,7 +2518,7 @@
       },
       "package": {
         "url": "./packages/hyperframes.zip",
-        "sha256": "0e0b5bae3dd4cea48d1c95080466c7a9331bb5a5f3b36fa036fa01f31dfed2a9"
+        "sha256": "74836ff08dccbabb3ae7a71938e302f8b77852e607da822db733026b543da227"
       },
       "icon": "./plugins/hyperframes/assets/icon.png",
       "homepage": "https://hyperframes.heygen.com",
@@ -2969,7 +2978,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "motherduck",
-        "version": "1.0.7-ghast.1",
+        "version": "1.0.8-ghast.1",
         "description": "Explore, query, manage, analyze, and visualize MotherDuck data with the official hosted OAuth MCP server, including Dives.",
         "author": {
           "name": "MotherDuck",
@@ -2981,7 +2990,7 @@
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "data",
-            "upstreamRevision": "b43ad1473fc5a3ca29317bf6df2db40a9a80eb90",
+            "upstreamRevision": "275d2e7d2ba4f5b48ce8ad3f01a9aeea8bd08616",
             "upstreamPath": ".",
             "icon": "./assets/icon.png"
           }
@@ -2989,7 +2998,7 @@
       },
       "package": {
         "url": "./packages/motherduck.zip",
-        "sha256": "be5c9d5626ac415c3e5fb2c0573dbe646d37c8be3c467036049dd56a7ed05cf4"
+        "sha256": "3efb9d71a37cdafed9fa4c9305fcfc93e240168e60cfe88509eb86d6ad8ac80d"
       },
       "icon": "./plugins/motherduck/assets/icon.png",
       "homepage": "https://motherduck.com/docs/sql-reference/mcp/",
@@ -3081,7 +3090,7 @@
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "development",
-            "upstreamRevision": "af27b52659c3c5bbf05d6c626b166163eb351e19",
+            "upstreamRevision": "b7f87949583782238aef20414a29b1f5ca2773ea",
             "upstreamPath": ".",
             "icon": "./assets/icon.svg"
           }
@@ -3089,7 +3098,7 @@
       },
       "package": {
         "url": "./packages/neon-postgres.zip",
-        "sha256": "1b08dbb90f314bceae1c6875e52c46265b2d193a9a2e312c3e05d29e48ba9fde"
+        "sha256": "384c61056647b5bac7f9806cb226ea60becd37de151e9c5801274bf9bb265ab0"
       },
       "icon": "./plugins/neon-postgres/assets/icon.svg",
       "homepage": "https://neon.com",
@@ -3104,7 +3113,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "netlify",
-        "version": "1.2.1-ghast.1",
+        "version": "1.3.0-ghast.1",
         "description": "Build, deploy, and operate Netlify projects with official skills for Functions, Edge Functions, Blobs, Database, Identity, Image CDN, Forms, configuration, caching, AI Gateway, and deployment, plus the official Netlify MCP server.",
         "author": {
           "name": "Netlify",
@@ -3116,7 +3125,7 @@
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "development",
-            "upstreamRevision": "47848e2d6405291caeed0b23689878ec5253bb6f",
+            "upstreamRevision": "32a261b6b2437464aca7e51bf9b48bcac1e2835c",
             "upstreamPath": "agent-plugin",
             "icon": "./assets/icon.svg"
           }
@@ -3124,7 +3133,7 @@
       },
       "package": {
         "url": "./packages/netlify.zip",
-        "sha256": "8603fd4fd85ac74d6d147b2c3b26af6bdc5cf8fa8471d0ceb2744368b3b0f78b"
+        "sha256": "86c0645ce4a200d84e27e5ce2e53a87142c3c9cefe04eaff299d2b6ab23eabe5"
       },
       "icon": "./plugins/netlify/assets/icon.svg",
       "homepage": "https://docs.netlify.com",
@@ -3168,12 +3177,12 @@
     {
       "id": "nvidia",
       "name": "nvidia",
-      "description": "Complete pinned catalog of NVIDIA-verified skills for GPU acceleration, CUDA, AI, data, training, inference, robotics, Physical AI, Omniverse, simulation, networking, and more.",
+      "description": "Complete pinned catalog of official NVIDIA skills for GPU acceleration, CUDA, AI, data, training, inference, robotics, Physical AI, Omniverse, simulation, networking, and more.",
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "nvidia",
         "version": "1.4.0-ghast.1",
-        "description": "Complete pinned catalog of NVIDIA-verified skills for GPU acceleration, CUDA, AI, data, training, inference, robotics, Physical AI, Omniverse, simulation, networking, and more.",
+        "description": "Complete pinned catalog of official NVIDIA skills for GPU acceleration, CUDA, AI, data, training, inference, robotics, Physical AI, Omniverse, simulation, networking, and more.",
         "author": {
           "name": "NVIDIA",
           "url": "https://github.com/NVIDIA/skills"
@@ -3184,7 +3193,7 @@
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "development",
-            "upstreamRevision": "aa116673017bf75f9885edabab34d8ec883c0a3a",
+            "upstreamRevision": "7149a886d50da8db72cdc1f20ff01cefeadfe6a9",
             "upstreamPath": "plugins/nvidia-skills",
             "icon": "./assets/icon.png"
           }
@@ -3192,7 +3201,7 @@
       },
       "package": {
         "url": "./packages/nvidia.zip",
-        "sha256": "4debf1f5f2948f769120779ed19d1f84014cffb6bc21c60539b833060f25d0ad"
+        "sha256": "7160fe25b343cd8d03592495a3d6ebbe99286b7ddb44d60d5306fb052f38dccd"
       },
       "icon": "./plugins/nvidia/assets/icon.png",
       "homepage": "https://build.nvidia.com/skills/",
@@ -3489,14 +3498,14 @@
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "finance",
-            "upstreamRevision": "quartr-docs-1d651d2a9ac8+oauth-a379a77612f2",
+            "upstreamRevision": "quartr-docs-b37a9c381ded+oauth-a379a77612f2",
             "icon": "./assets/icon.svg"
           }
         }
       },
       "package": {
         "url": "./packages/quartr.zip",
-        "sha256": "7ab2cee82beb32aff2b9a22b9a7b6db4433c6d9a07db639bbf7ca21e773606e3"
+        "sha256": "8a7c60cea1cf1521788faf57c56113fe14014f7556debd0a9fb7f25336469116"
       },
       "icon": "./plugins/quartr/assets/icon.svg",
       "homepage": "https://mcp.quartr.com/docs",
@@ -3624,14 +3633,14 @@
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "productivity",
-            "upstreamRevision": "zendesk-49381158409491-2026-08-06T22:43:06Z-0b2e23cff48d",
+            "upstreamRevision": "zendesk-49381158409491-2026-08-19T23:57:53Z-0050b9f9a3b3",
             "icon": "./assets/icon.svg"
           }
         }
       },
       "package": {
         "url": "./packages/read-ai.zip",
-        "sha256": "9b7575c8429af2c8aeb0e5bcf3b0c88fd288ed0f34df5c03c4b0cb52b70c02a6"
+        "sha256": "5fcb4e637ae7cc74cbef9c127a02f607255f5c3c5d701f721d09a1cef9a98cd8"
       },
       "icon": "./plugins/read-ai/assets/icon.svg",
       "homepage": "https://support.read.ai/hc/en-us/articles/49381158409491-MCP-Server",
@@ -3705,7 +3714,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "remotion",
-        "version": "4.0.509-ghast.1",
+        "version": "4.0.515-ghast.1",
         "description": "Remotion video creation skills — best practices, animations, audio, captions, 3D, and more for building programmatic videos with React.",
         "author": {
           "name": "Remotion",
@@ -3718,7 +3727,7 @@
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "creativity",
-            "upstreamRevision": "a23672203e00db3d9ad905b2b2088bdc6aa2f2ac",
+            "upstreamRevision": "05075f384a0a28e193876c1fd43ab9fba5ef10f9",
             "upstreamPath": "packages/codex-plugin",
             "icon": "./assets/icon.png"
           }
@@ -3726,7 +3735,7 @@
       },
       "package": {
         "url": "./packages/remotion.zip",
-        "sha256": "22560c1327012a29854d9208ef004d6b05faa8dc14ec759e09a17f4f99cdfb8c"
+        "sha256": "1169003fc135f4fffda00c6da06ec0f5d4afc0fb557d2d1902548db1dae65b84"
       },
       "icon": "./plugins/remotion/assets/icon.png",
       "homepage": "https://remotion.dev",
@@ -3759,8 +3768,8 @@
             "icon": "./assets/icon.svg",
             "mcpServerExtensions": {
               "render": {
-                "oauth": {
-                  "client_id": "codex"
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:render-api-key"
                 }
               }
             }
@@ -3769,7 +3778,7 @@
       },
       "package": {
         "url": "./packages/render.zip",
-        "sha256": "e3e797780bf6cdbfeecd0bab99337068f4472987b370fa8a6577421825d737a0"
+        "sha256": "deb56320def9b9b51b7e59605f6233c3a4840380d324c0f8e232010e86d8b7a8"
       },
       "icon": "./plugins/render/assets/icon.svg",
       "homepage": "https://github.com/renderinc/render-codex-plugin",
@@ -3965,14 +3974,14 @@
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "web",
-            "upstreamRevision": "semrush-docs-2508d6192982+oauth-5d0b459a41d7",
+            "upstreamRevision": "semrush-docs-e34fd6ac1924+oauth-5d0b459a41d7",
             "icon": "./assets/icon.svg"
           }
         }
       },
       "package": {
         "url": "./packages/semrush.zip",
-        "sha256": "0fbc666455926c5319a0a8c6b4cfb5cdef58b42da58f9e798dfd90fce34bf631"
+        "sha256": "198a9353ac732221741c3d5889fa97b296bcb1c22688d72bb6cbf60cc2d9a94c"
       },
       "icon": "./plugins/semrush/assets/icon.svg",
       "homepage": "https://developer.semrush.com/api/v4/introduction/semrush-mcp/",
@@ -4195,14 +4204,14 @@
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "web",
-            "upstreamRevision": "similarweb-docs-b3970ea5dd33+claude-228a7abde362+oauth-4f4e48ae9c75",
+            "upstreamRevision": "similarweb-docs-eac1d71df335+claude-aa84c3a66647+oauth-4f4e48ae9c75",
             "icon": "./assets/icon.svg"
           }
         }
       },
       "package": {
         "url": "./packages/similarweb.zip",
-        "sha256": "704c9d007673bc2e6e270696b36a05029740be8bcf570c79283eb8f1722b8703"
+        "sha256": "7915896144e2511f19e4b5a0177b2368d5e17b36292c5392e858f12a14ba79f9"
       },
       "icon": "./plugins/similarweb/assets/icon.svg",
       "homepage": "https://developers.similarweb.com/docs/similarweb-mcp.md",
@@ -4367,34 +4376,34 @@
     {
       "id": "stripe",
       "name": "stripe",
-      "description": "Build and operate Stripe payments, subscriptions, invoices, Connect platforms, apps, and API integrations with all seven official Stripe skills and Stripe's hosted OAuth MCP server.",
+      "description": "Build and operate Stripe payments, subscriptions, invoices, Connect platforms, apps, and API integrations with all eight official Stripe skills and Stripe's hosted OAuth MCP server.",
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "stripe",
-        "version": "5.3.1-ghast.1",
-        "description": "Build and operate Stripe payments, subscriptions, invoices, Connect platforms, apps, and API integrations with all seven official Stripe skills and Stripe's hosted OAuth MCP server.",
+        "version": "0.1.3-ghast.1",
+        "description": "Build and operate Stripe payments, subscriptions, invoices, Connect platforms, apps, and API integrations with all eight official Stripe skills and Stripe's hosted OAuth MCP server.",
         "author": {
           "name": "Stripe",
           "url": "https://stripe.com"
         },
-        "homepage": "https://stripe.com",
+        "homepage": "https://docs.stripe.com",
         "repository": "https://github.com/stripe/ai",
         "license": "MIT",
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "finance",
-            "upstreamRevision": "1953b6cce7344d880a054c42b8dd21ca3e50ebd5",
-            "upstreamPath": "providers/codex/plugin",
+            "upstreamRevision": "bad904b02f7071592c38bcca83d33667ff015bb1",
+            "upstreamPath": "providers/agent-plugins/plugin",
             "icon": "./assets/icon.png"
           }
         }
       },
       "package": {
         "url": "./packages/stripe.zip",
-        "sha256": "0efd94bdcd88e69890f0bd74e3540c02f953a8c50832bdf010c5de57918e0d77"
+        "sha256": "f08d7b86cd449d392e58080c476ff9ad5140a832530f76e7b6a2f5a9d9761c03"
       },
       "icon": "./plugins/stripe/assets/icon.png",
-      "homepage": "https://stripe.com",
+      "homepage": "https://docs.stripe.com",
       "repository": "https://github.com/stripe/ai",
       "license": "MIT",
       "category": "finance"
@@ -4517,7 +4526,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "temporal",
-        "version": "0.3.1-ghast.1",
+        "version": "0.4.0-ghast.1",
         "description": "Comprehensive skill for the entire Temporal lifecycle — developing applications, using the Temporal CLI, running and managing Temporal Server, and working with Temporal Cloud.",
         "author": {
           "name": "Temporal",
@@ -4529,7 +4538,7 @@
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "development",
-            "upstreamRevision": "a3fa2bdff73a93e60e1077c08bde2b682cd0f5ae",
+            "upstreamRevision": "e9a28b0de6beb5305bd49d73453ab0f1cbd8d160",
             "upstreamPath": "plugins/temporal",
             "icon": "./assets/icon.svg"
           }
@@ -4537,7 +4546,7 @@
       },
       "package": {
         "url": "./packages/temporal.zip",
-        "sha256": "50f79c1a38b04892972317cf2eebb353095fc1972963ac50f88f7469d073319d"
+        "sha256": "76476ca73e68f6f3116788eaf837b3ca85d1757ef201e9c15dc0bf7b96499b10"
       },
       "icon": "./plugins/temporal/assets/icon.svg",
       "homepage": "https://temporal.io/",
@@ -4672,7 +4681,7 @@
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "development",
-            "upstreamRevision": "d7b0f231468cd9a6a0bab9ebcde8c1a5c9220bba",
+            "upstreamRevision": "8aba46fb65dc8d9a20f4b301a68352064b4159a5",
             "upstreamPath": ".",
             "icon": "./assets/icon.svg"
           }
@@ -4680,7 +4689,7 @@
       },
       "package": {
         "url": "./packages/twilio-developer-kit.zip",
-        "sha256": "2f1dfa6ca0238345ee60c7af49db7e04e180adeb8c5d74878cc3cfbf71ca06b4"
+        "sha256": "364fe8f6c89fcefb27215ffa63e6d33c74299a200562becfa2abfeab875a8981"
       },
       "icon": "./plugins/twilio-developer-kit/assets/icon.svg",
       "homepage": "https://www.twilio.com/docs",
@@ -4758,7 +4767,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "vercel",
-        "version": "0.48.0-ghast.1",
+        "version": "0.48.1-ghast.1",
         "description": "Build and deploy web apps and agents",
         "author": {
           "name": "Vercel",
@@ -4770,7 +4779,7 @@
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "development",
-            "upstreamRevision": "11c32588786a9d49791372657433b88d49561874",
+            "upstreamRevision": "c4a1c4e2e16feefb1d9f2ad2a4a451abd0ae91c6",
             "upstreamPath": ".",
             "icon": "./assets/icon.svg",
             "commands": "./ai.trapezohe.ghast/commands/",
@@ -4784,7 +4793,7 @@
       },
       "package": {
         "url": "./packages/vercel.zip",
-        "sha256": "58dcd628cc2f693be798186ce2250254c4ff665a6f7f1154f641d36838d89447"
+        "sha256": "52267c783d9f8fff7f82cc78b4e4b9546de38ca1efd0411d6df1fe15651270d3"
       },
       "icon": "./plugins/vercel/assets/icon.svg",
       "homepage": "https://github.com/vercel/vercel-plugin",
@@ -4896,7 +4905,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "wix",
-        "version": "1.16.0-ghast.1",
+        "version": "1.16.3-ghast.1",
         "description": "Build and deploy Wix apps and headless websites, and manage your Wix business. Includes CLI development skills, Wix Headless for any frontend framework, and Wix MCP server for eCommerce, CMS, dashboard extensions, and more.",
         "author": {
           "name": "Wix",
@@ -4908,7 +4917,7 @@
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "development",
-            "upstreamRevision": "d9b73923907f91989335cf4f26dce52095faeea4",
+            "upstreamRevision": "f30595361e8d02f0dc432b499d00916a2e3918f3",
             "upstreamPath": ".",
             "icon": "./assets/icon.svg"
           }
@@ -4916,7 +4925,7 @@
       },
       "package": {
         "url": "./packages/wix.zip",
-        "sha256": "e43ddc581d0174ca4002a7e849d293cc8101b359197ce59c7dcad497d8e6fa6d"
+        "sha256": "ea7fa7bb919f780a7d174d89be745ba89b1991c4904c16476ad81ab17544c68b"
       },
       "icon": "./plugins/wix/assets/icon.svg",
       "homepage": "https://dev.wix.com/docs/api-reference/articles/ai-tools/about-wix-skills",

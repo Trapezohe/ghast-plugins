@@ -4,7 +4,7 @@ Explore, query, manage, analyze, and visualize MotherDuck data with the official
 
 ## Official Ghast port
 
-This package is generated directly from the developer-owned repository `https://github.com/motherduckdb/mcp-server-motherduck` at `b43ad1473fc5a3ca29317bf6df2db40a9a80eb90`.
+This package is generated directly from the developer-owned repository `https://github.com/motherduckdb/mcp-server-motherduck` at `275d2e7d2ba4f5b48ce8ad3f01a9aeea8bd08616`.
 
 The public MCP declaration is generated from the developer's official documentation and pinned source evidence. No private connector mapping is copied.
 

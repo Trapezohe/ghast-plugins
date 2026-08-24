@@ -19,8 +19,8 @@
       "icon": "./assets/icon.svg",
       "mcpServerExtensions": {
         "render": {
-          "oauth": {
-            "client_id": "codex"
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:render-api-key"
           }
         }
       }

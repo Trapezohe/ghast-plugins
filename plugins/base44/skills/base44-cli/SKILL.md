@@ -41,6 +41,14 @@ RIGHT: `npx base44 login`
 
 ## MANDATORY: Authentication Check at Session Start
 
+
+> **Ghast runtime note:** In Base44 CLI 0.1.7, `npx base44 whoami`
+> can begin a device-code login and wait when no credential is configured.
+> Treat any emitted verification URL and code as an interactive authentication
+> transition, not as passive status output. Relay it only to the user who
+> requested the Base44 operation, do not persist it, do not start a second
+> login flow, and wait for that flow to finish or be cancelled before retrying.
+
 **CRITICAL**: At the very start of every AI session when this skill is activated, you MUST:
 
 1. **Check authentication status** by running:

@@ -8,4 +8,8 @@ This package is generated directly from the developer-owned repository `https://
 
 Skills, references, scripts, commands, and public MCP declarations remain sourced from the pinned official repository. Unsupported client metadata is omitted.
 
+## Ghast compatibility
+
+- The official 0.1.1 Codex release skill tree is retained, with an explicitly identified Ghast hardening patch for installer confirmation, secret handling, pinned analysis dependencies, transitive clustering, and multi-chain binder selection.
+
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

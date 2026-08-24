@@ -2,8 +2,9 @@
 name: remotion-create
 description: Create a new Remotion video
 metadata:
-  version: 4.0.509
+  version: '4.0.515'
 ---
+
 These are instructions for making a new Remotion project and composition.  
 If this is not the next task, see [Remotion Best Practices](../remotion-best-practices/SKILL.md)
 

@@ -2,8 +2,9 @@
 name: remotion-maps
 description: Remotion Map animation knowledge
 metadata:
-  version: 4.0.509
+  version: '4.0.515'
 ---
+
 # Remotion Maps
 
 Choose exactly one technique from the intended shot, then load only that technique's `TECHNIQUE.md`.

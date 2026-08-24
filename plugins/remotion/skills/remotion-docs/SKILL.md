@@ -2,8 +2,9 @@
 name: remotion-docs
 description: Search Remotion documentation
 metadata:
-  version: 4.0.509
+  version: '4.0.515'
 ---
+
 This skill teaches you how to discover and read current Remotion documentation.
 If this is not relevant, load [Remotion Best Practices](../remotion-best-practices/SKILL.md) instead.
 

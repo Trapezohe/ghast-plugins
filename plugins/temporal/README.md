@@ -4,7 +4,7 @@ Comprehensive skill for the entire Temporal lifecycle — developing application
 
 ## Official Ghast port
 
-This package is generated directly from the developer-owned repository `https://github.com/temporalio/codex-temporal-plugin` at `a3fa2bdff73a93e60e1077c08bde2b682cd0f5ae`.
+This package is generated directly from the developer-owned repository `https://github.com/temporalio/codex-temporal-plugin` at `e9a28b0de6beb5305bd49d73453ab0f1cbd8d160`.
 
 Skills, references, scripts, commands, and public MCP declarations remain sourced from the pinned official repository. Unsupported client metadata is omitted.
 

@@ -117,6 +117,25 @@ configure it themselves in a trusted terminal with
 - Follow the Ghast financial execution policy before every write operation.
 """
 
+PUBLIC_DATA_FALLBACK = """\
+## Public Spot data fallback
+
+If the default Spot API reports a regional eligibility restriction, public,
+unsigned Spot `GET` requests may use Binance's official market-data-only base
+URL, `https://data-api.binance.vision`. This fallback must never be used for a
+signed endpoint, an account endpoint, or a state-changing request.
+
+```bash
+curl --proto '=https' --tlsv1.2 --fail-with-body --silent --show-error \\
+  'https://data-api.binance.vision/api/v3/ticker/price?symbol=BTCUSDT'
+```
+
+Keep the endpoint path and query parameters aligned with the corresponding
+official Binance Spot API operation. Treat an eligibility response as a service
+restriction, not as permission to route through an unofficial proxy.
+
+"""
+
 HMAC_AUTH_REFERENCE = """\
 # Binance P2P Authentication
 
@@ -449,7 +468,11 @@ def secure_binance_cli(skill_dir: Path) -> None:
         "- ⚠️ **Prod transactions** — always ask user to type `CONFIRM` before executing.",
         "- **Prod transactions** — follow the Ghast policy and require the exact reply `CONFIRM BINANCE`.",
     )
-    skill_path.write_text(content)
+    marker = "\n\n\n> **PREREQUISITE:** Read [`auth.md`](./references/auth.md)"
+    if marker not in content:
+        raise ValueError(f"{skill_path}: missing authentication prerequisite")
+    content = content.replace(marker, "\n\n" + PUBLIC_DATA_FALLBACK + marker.lstrip(), 1)
+    skill_path.write_text(content.rstrip() + "\n")
 
 
 def secure_fiat(skill_dir: Path) -> None:
