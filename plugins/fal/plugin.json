@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "creativity",
       "upstreamRevision": "fal-docs-66aa306b5115+tools-a56c797a64ed+prompts-7da44a2905f0+oauth-672d054000bc",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "mcpServerExtensions": {
         "fal": {
           "credentialHeaders": {

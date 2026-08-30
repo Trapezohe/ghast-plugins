@@ -15,7 +15,7 @@
       "category": "creativity",
       "upstreamRevision": "dca5790c0af2bcde291d732af05c47ad7f75d341",
       "upstreamPath": ".",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "mcpServerExtensions": {
         "cloudinary-mediaflows": {
           "credentialHeaders": {

@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "communication",
       "upstreamRevision": "circleback-help-95ffb254cd36+oauth-00a8e855d323+auth-1d48ae9d33e7+openclaw-a4637f051977+release-63146071c6c9",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.png"
     }
   }
 }

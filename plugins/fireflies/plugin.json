@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "communication",
       "upstreamRevision": "fireflies-docs-5c8c1927db3b+tools-b2b5c5e4c79d+oauth-8f44680d0fcb+auth-97aa931cc88a",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.png"
     }
   }
 }

@@ -14,7 +14,7 @@
     "ai.trapezohe.ghast": {
       "category": "finance",
       "upstreamRevision": "cbi-mcp-97e8c8b7ecf4+chat-92d179a62a18+product-6ce534ffa0e9+oauth-7f4d1f126334+source-778e1acb6a74",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.png"
     }
   }
 }

@@ -448,7 +448,7 @@
           "ai.trapezohe.ghast": {
             "category": "finance",
             "upstreamRevision": "2863a186d2bbd8987fa4790d7b81a299a58364ce",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "includedSkills": [
               "binance",
               "fiat",
@@ -461,9 +461,9 @@
       },
       "package": {
         "url": "./packages/binance.zip",
-        "sha256": "a2c2a5c54dfa552bcf68dd50a737e61977354a8efc80ad6bb4c63aa928cc4837"
+        "sha256": "319a6af7caf903805afc0e3bada04cc7e51b225aee855fff01076b9004736422"
       },
-      "icon": "./plugins/binance/assets/icon.svg",
+      "icon": "./plugins/binance/assets/icon.png",
       "homepage": "https://github.com/binance/binance-skills-hub",
       "repository": "https://github.com/binance/binance-skills-hub",
       "license": "MIT",
@@ -488,15 +488,15 @@
           "ai.trapezohe.ghast": {
             "category": "creativity",
             "upstreamRevision": "biorender-help-fb87519f4022+auth-7e351acc74e9+anthropic-3da37488e11a",
-            "icon": "./assets/icon.svg"
+            "icon": "./assets/icon.png"
           }
         }
       },
       "package": {
         "url": "./packages/biorender.zip",
-        "sha256": "12b9b76bb9680de133bf46e98a6c1731c70a6f71adc0ecc7fe10017b6990a7ed"
+        "sha256": "fd3fb11d3f22cf349d7b717bc5c9a572c1a2ae2ed708ade9349111b9c0a6d386"
       },
-      "icon": "./plugins/biorender/assets/icon.svg",
+      "icon": "./plugins/biorender/assets/icon.png",
       "homepage": "https://help.biorender.com/hc/en-gb/articles/37237276158109-How-to-use-the-BioRender-MCP-connector",
       "license": "MIT",
       "category": "creativity"
@@ -588,15 +588,15 @@
           "ai.trapezohe.ghast": {
             "category": "finance",
             "upstreamRevision": "brex-docs-0d1f82f38bb5+oauth-06b076acaeca+auth-6cf20c287281",
-            "icon": "./assets/icon.svg"
+            "icon": "./assets/icon.png"
           }
         }
       },
       "package": {
         "url": "./packages/brex.zip",
-        "sha256": "1773c5f8f85eea9404cc29371c6d9f5965ea5009b89875f3c3c85dd6de238a2a"
+        "sha256": "ad66e6463efc5e9d310ca8f7d7adfcfd3b1baad83faf0da77b4172036d12c961"
       },
-      "icon": "./plugins/brex/assets/icon.svg",
+      "icon": "./plugins/brex/assets/icon.png",
       "homepage": "https://developer.brex.com/docs/mcp",
       "license": "MIT",
       "category": "finance"
@@ -689,15 +689,15 @@
             "category": "creativity",
             "upstreamRevision": "b56291ea0a36d0a941e1478b47959be5f1771dee",
             "upstreamPath": "plugins/canva",
-            "icon": "./assets/icon.svg"
+            "icon": "./assets/icon.png"
           }
         }
       },
       "package": {
         "url": "./packages/canva.zip",
-        "sha256": "7d43fd0e6bd9d64f04ae6524a197d20dbc6371697faebedcb15b0b6dc07651b2"
+        "sha256": "e5314575781ffe1ab8ee98384cae08c20228a6ae2f41b87e004b6e3c3d7ba78e"
       },
-      "icon": "./plugins/canva/assets/icon.svg",
+      "icon": "./plugins/canva/assets/icon.png",
       "homepage": "https://www.canva.com/developers/",
       "repository": "https://github.com/canva-sdks/canva-skills",
       "license": "Apache-2.0",
@@ -794,15 +794,15 @@
           "ai.trapezohe.ghast": {
             "category": "finance",
             "upstreamRevision": "cbi-mcp-97e8c8b7ecf4+chat-92d179a62a18+product-6ce534ffa0e9+oauth-7f4d1f126334+source-778e1acb6a74",
-            "icon": "./assets/icon.svg"
+            "icon": "./assets/icon.png"
           }
         }
       },
       "package": {
         "url": "./packages/cb-insights.zip",
-        "sha256": "6038dae8236ab0b1f47fdf0cb0501aaa6351fd5173c411726713678705393dbf"
+        "sha256": "027fee27a76c316ae9380829c1280eb5d76f088bdef0978843af4f9793739cc1"
       },
-      "icon": "./plugins/cb-insights/assets/icon.svg",
+      "icon": "./plugins/cb-insights/assets/icon.png",
       "homepage": "https://www.cbinsights.com/october-2025-product-launch/",
       "repository": "https://github.com/cbinsights/cbi-mcp-server",
       "license": "MIT",
@@ -861,15 +861,15 @@
             "category": "finance",
             "upstreamRevision": "88a4290f29009e1cfe4341e0b9518d23c537d853",
             "upstreamPath": ".",
-            "icon": "./assets/icon.svg"
+            "icon": "./assets/icon.png"
           }
         }
       },
       "package": {
         "url": "./packages/chronograph-gp.zip",
-        "sha256": "159fb0440e56b92ca7ce431e622cebeb0aba9d6f5099cf0aa770e41ae8b4c74f"
+        "sha256": "978dfa4f44c57b589a150deb196ee3922443d9a28096018725ba69c2527e8166"
       },
-      "icon": "./plugins/chronograph-gp/assets/icon.svg",
+      "icon": "./plugins/chronograph-gp/assets/icon.png",
       "homepage": "https://www.chronograph.pe/",
       "repository": "https://github.com/chronograph-pe/chronograph-gp-claude-plugin",
       "license": "Apache-2.0",
@@ -896,15 +896,15 @@
             "category": "finance",
             "upstreamRevision": "6c18b66e882c44db26d88afabc52853ba39dcd98",
             "upstreamPath": ".",
-            "icon": "./assets/icon.svg"
+            "icon": "./assets/icon.png"
           }
         }
       },
       "package": {
         "url": "./packages/chronograph-lp.zip",
-        "sha256": "c8bc42f4abb8a49db05297edc3b2a4d6c3eb6d92f242dc6c129bdfeefdfcca57"
+        "sha256": "83340a12e8f40e0aa7b0cebdfd9d4d2c37676fea8769189d2a588f0e66c0fb94"
       },
-      "icon": "./plugins/chronograph-lp/assets/icon.svg",
+      "icon": "./plugins/chronograph-lp/assets/icon.png",
       "homepage": "https://www.chronograph.pe/",
       "repository": "https://github.com/chronograph-pe/chronograph-lp-claude-plugin",
       "license": "Apache-2.0",
@@ -929,15 +929,15 @@
           "ai.trapezohe.ghast": {
             "category": "communication",
             "upstreamRevision": "circleback-help-95ffb254cd36+oauth-00a8e855d323+auth-1d48ae9d33e7+openclaw-a4637f051977+release-63146071c6c9",
-            "icon": "./assets/icon.svg"
+            "icon": "./assets/icon.png"
           }
         }
       },
       "package": {
         "url": "./packages/circleback.zip",
-        "sha256": "ff3b62c70bb52e032965020caa97cac7539ae29e70d6d77de41d889773205981"
+        "sha256": "bad13a4e571c1a5d2f36a2a7c83e36605458e7835798e8998ae55b7a933766b9"
       },
-      "icon": "./plugins/circleback/assets/icon.svg",
+      "icon": "./plugins/circleback/assets/icon.png",
       "homepage": "https://support.circleback.ai/en/articles/13249081-circleback-mcp",
       "license": "MIT",
       "category": "communication"
@@ -1130,7 +1130,7 @@
             "category": "creativity",
             "upstreamRevision": "dca5790c0af2bcde291d732af05c47ad7f75d341",
             "upstreamPath": ".",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "mcpServerExtensions": {
               "cloudinary-mediaflows": {
                 "credentialHeaders": {
@@ -1145,9 +1145,9 @@
       },
       "package": {
         "url": "./packages/cloudinary.zip",
-        "sha256": "2258105a89953b9c793843e9d45f3a6797f256246b2b3bec2b0a3a5a851d5f98"
+        "sha256": "31fd5daedaea752d86c57c6f0f49c9ba183d4334562784d42bed79ab2134ac32"
       },
-      "icon": "./plugins/cloudinary/assets/icon.svg",
+      "icon": "./plugins/cloudinary/assets/icon.png",
       "homepage": "https://cloudinary.com/documentation/cloudinary_llm_mcp",
       "repository": "https://github.com/cloudinary/mcp-servers",
       "license": "MIT",
@@ -1608,15 +1608,15 @@
           "ai.trapezohe.ghast": {
             "category": "business",
             "upstreamRevision": "demandbase-docs-f41df5ef1529+custom-5ae757d63c7b+oauth-4b6086018213+auth-974b2f8f4944",
-            "icon": "./assets/icon.svg"
+            "icon": "./assets/icon.png"
           }
         }
       },
       "package": {
         "url": "./packages/demandbase.zip",
-        "sha256": "394265fe24a6a44b89ff2bc93eeef8751f8067b88632befa79236c5a77e62f9d"
+        "sha256": "eeccb773c81222a4a8c317df5821a4ac89934e2efb69cca1578494850de9799b"
       },
-      "icon": "./plugins/demandbase/assets/icon.svg",
+      "icon": "./plugins/demandbase/assets/icon.png",
       "homepage": "https://developer.demandbase.com/docs/mcp",
       "license": "MIT",
       "category": "business"
@@ -1782,15 +1782,15 @@
             "category": "business",
             "upstreamRevision": "231615fb3369ccafd4afb6fea4d817080922e772+retrieval-28c28089596e+auth-80e5c6cd55d8+links-376678f49e7f",
             "portStatus": "full",
-            "icon": "./assets/icon.svg"
+            "icon": "./assets/icon.png"
           }
         }
       },
       "package": {
         "url": "./packages/dow-jones-factiva.zip",
-        "sha256": "a38c31e559067ad2fcbea6c111f1c9e143a3521bfdd96a8d3cb67cd391f7fedf"
+        "sha256": "d3f1659af6a100bb67673abc2a3f1fe2f38dbd22483dffd7cdc4a244ea289d27"
       },
-      "icon": "./plugins/dow-jones-factiva/assets/icon.svg",
+      "icon": "./plugins/dow-jones-factiva/assets/icon.png",
       "homepage": "https://developer.dowjones.com/documents/factiva_integration-factiva_retrieval_api",
       "repository": "https://github.com/dowjones/factiva-retrievalapi-demo",
       "license": "MIT",
@@ -1921,7 +1921,7 @@
           "ai.trapezohe.ghast": {
             "category": "creativity",
             "upstreamRevision": "fal-docs-66aa306b5115+tools-a56c797a64ed+prompts-7da44a2905f0+oauth-672d054000bc",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "mcpServerExtensions": {
               "fal": {
                 "credentialHeaders": {
@@ -1934,9 +1934,9 @@
       },
       "package": {
         "url": "./packages/fal.zip",
-        "sha256": "b6d9304209acb18e3e2de8eb8ddcee566e7c0cfebb3d9ecad378cbdc4d415d14"
+        "sha256": "89c868524b8f35b0afc1b5a86a27a61252404aad29da64ca926554ce36c797d0"
       },
-      "icon": "./plugins/fal/assets/icon.svg",
+      "icon": "./plugins/fal/assets/icon.png",
       "homepage": "https://fal.ai/docs/documentation/setting-up/mcp",
       "license": "MIT",
       "category": "creativity"
@@ -1960,15 +1960,15 @@
           "ai.trapezohe.ghast": {
             "category": "communication",
             "upstreamRevision": "fireflies-docs-5c8c1927db3b+tools-b2b5c5e4c79d+oauth-8f44680d0fcb+auth-97aa931cc88a",
-            "icon": "./assets/icon.svg"
+            "icon": "./assets/icon.png"
           }
         }
       },
       "package": {
         "url": "./packages/fireflies.zip",
-        "sha256": "ec721b694f8c764c65ab67427ca93b13f539a43a349e517f5c4509e550cc1ace"
+        "sha256": "f379771337d7b8c9a83f1061ea06419fd45238d76a920b47a9054fb7daff5f58"
       },
-      "icon": "./plugins/fireflies/assets/icon.svg",
+      "icon": "./plugins/fireflies/assets/icon.png",
       "homepage": "https://docs.fireflies.ai/getting-started/mcp-configuration",
       "license": "MIT",
       "category": "communication"
@@ -2031,15 +2031,15 @@
           "ai.trapezohe.ghast": {
             "category": "communication",
             "upstreamRevision": "fyxer-docs-524a8683cf7b+addons-d1b55e0ef54e+oauth-c0a99fecb69d+auth-fde6773cf908",
-            "icon": "./assets/icon.svg"
+            "icon": "./assets/icon.png"
           }
         }
       },
       "package": {
         "url": "./packages/fyxer.zip",
-        "sha256": "6f9bc2892e8aa038c6191376eb00103efda8965a102bb4e1ca52a21aa659b24d"
+        "sha256": "1bd5e5664226a3c5eda49cac93633472b33a387b059c75d5f6a1d00f4f3450e9"
       },
-      "icon": "./plugins/fyxer/assets/icon.svg",
+      "icon": "./plugins/fyxer/assets/icon.png",
       "homepage": "https://support.fyxer.com/article/fyxer-mcp",
       "license": "MIT",
       "category": "communication"
@@ -2166,15 +2166,15 @@
           "ai.trapezohe.ghast": {
             "category": "communication",
             "upstreamRevision": "granola-docs-b091dacafcec+oauth-ffbe7699c7ae+auth-710cc56359dd",
-            "icon": "./assets/icon.svg"
+            "icon": "./assets/icon.png"
           }
         }
       },
       "package": {
         "url": "./packages/granola.zip",
-        "sha256": "d47d979b6de685cc7f5749b1bbdd2af5c0325ecbb8b76bf334d9f683ba6a1ea2"
+        "sha256": "7e6278acc82cd5037a9a2dba32ac1f668d5c4d5dd934239b60493dbd03280ac8"
       },
-      "icon": "./plugins/granola/assets/icon.svg",
+      "icon": "./plugins/granola/assets/icon.png",
       "homepage": "https://docs.granola.ai/help-center/sharing/integrations/mcp",
       "license": "MIT",
       "category": "communication"
@@ -2646,7 +2646,7 @@
           "ai.trapezohe.ghast": {
             "category": "developer-tools",
             "upstreamRevision": "0336e6db8026b0f02cb89d1451cc48ea3f469791",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "mcpServerExtensions": {
               "lovable": {
                 "oauth": {
@@ -2659,9 +2659,9 @@
       },
       "package": {
         "url": "./packages/lovable.zip",
-        "sha256": "cee222ae22894380631394a9fe75f6867b53e219897b2b2f33401a5bb25c8a9d"
+        "sha256": "a6284cba25d46ac0548d7757fb23496aad2c6b521f5f90a6a8244f9af0e20b51"
       },
-      "icon": "./plugins/lovable/assets/icon.svg",
+      "icon": "./plugins/lovable/assets/icon.png",
       "homepage": "https://docs.lovable.dev/integrations/lovable-mcp-server",
       "repository": "https://github.com/lovablelabs/mcp",
       "license": "Apache-2.0",
@@ -3260,15 +3260,15 @@
           "ai.trapezohe.ghast": {
             "category": "communication",
             "upstreamRevision": "otter-zendesk-35287607569687-2026-08-12+oauth-1b480247ee26+auth-901170a75106",
-            "icon": "./assets/icon.svg"
+            "icon": "./assets/icon.png"
           }
         }
       },
       "package": {
         "url": "./packages/otter-ai.zip",
-        "sha256": "b9e30df224f08b542776224b32677672401fea70a3b53a422894156e90ad6822"
+        "sha256": "b717e0f8e6539af36807ac67c433ee0ea6725bca1a8950348926eff4fb4824eb"
       },
-      "icon": "./plugins/otter-ai/assets/icon.svg",
+      "icon": "./plugins/otter-ai/assets/icon.png",
       "homepage": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
       "license": "MIT",
       "category": "communication"
@@ -3840,15 +3840,15 @@
           "ai.trapezohe.ghast": {
             "category": "developer-tools",
             "upstreamRevision": "replit-docs-8391016162ec+oauth-41b41e6b0d6d+native-6c682a9cf3ef",
-            "icon": "./assets/icon.svg"
+            "icon": "./assets/icon.png"
           }
         }
       },
       "package": {
         "url": "./packages/replit.zip",
-        "sha256": "1667048081a6ebcd2ceea380d032bb91c8b6680faedb31c7263cf98f53ada86d"
+        "sha256": "da535e0cdc9c16dae0c9919e3a084d0b42f3ccaef71bd38f308a0b0eb562f245"
       },
-      "icon": "./plugins/replit/assets/icon.svg",
+      "icon": "./plugins/replit/assets/icon.png",
       "homepage": "https://docs.replit.com/platforms/mcp-server",
       "license": "MIT",
       "category": "developer-tools"
@@ -4301,15 +4301,15 @@
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "gaming",
-            "icon": "./assets/icon.svg"
+            "icon": "./assets/icon.png"
           }
         }
       },
       "package": {
         "url": "./packages/steam-search.zip",
-        "sha256": "ee51462e7d03c5880eb16c96cccdd1ea77222e507f541bbc3bbeaca0ad553fcb"
+        "sha256": "86c7fade35cae228c9fa88d1d4c7869bf3534e8867b22b9d14f5ba84ca887aa4"
       },
-      "icon": "./plugins/steam-search/assets/icon.svg",
+      "icon": "./plugins/steam-search/assets/icon.png",
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/steam-search",
       "category": "gaming"
     },
@@ -4649,15 +4649,15 @@
           "ai.trapezohe.ghast": {
             "category": "data-analytics",
             "upstreamRevision": "thoughtspot-79e978603135+tools-5d067ec65a48+docs-19631cc2bc1a+auth-bd3db075f410",
-            "icon": "./assets/icon.svg"
+            "icon": "./assets/icon.png"
           }
         }
       },
       "package": {
         "url": "./packages/thoughtspot.zip",
-        "sha256": "88466edd9e0fb5cbf2440e16ad21ead06122c5fe9344a27e8f1ef3cb5015d5c8"
+        "sha256": "3839419ba742d0a0551de10ded19de75fdd57d6516886f450ef3f1a1e9233e81"
       },
-      "icon": "./plugins/thoughtspot/assets/icon.svg",
+      "icon": "./plugins/thoughtspot/assets/icon.png",
       "homepage": "https://developers.thoughtspot.com/docs/mcp-integration",
       "license": "MIT",
       "category": "data-analytics"

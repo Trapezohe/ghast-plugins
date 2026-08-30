@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "developer-tools",
       "upstreamRevision": "replit-docs-8391016162ec+oauth-41b41e6b0d6d+native-6c682a9cf3ef",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.png"
     }
   }
 }

@@ -15,7 +15,7 @@
       "category": "business",
       "upstreamRevision": "231615fb3369ccafd4afb6fea4d817080922e772+retrieval-28c28089596e+auth-80e5c6cd55d8+links-376678f49e7f",
       "portStatus": "full",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.png"
     }
   }
 }

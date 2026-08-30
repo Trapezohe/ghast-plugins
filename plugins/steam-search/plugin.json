@@ -10,7 +10,7 @@
   "extensions": {
     "ai.trapezohe.ghast": {
       "category": "gaming",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.png"
     }
   }
 }

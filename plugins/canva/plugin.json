@@ -15,7 +15,7 @@
       "category": "creativity",
       "upstreamRevision": "b56291ea0a36d0a941e1478b47959be5f1771dee",
       "upstreamPath": "plugins/canva",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.png"
     }
   }
 }

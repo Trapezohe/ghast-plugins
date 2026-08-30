@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "data-analytics",
       "upstreamRevision": "thoughtspot-79e978603135+tools-5d067ec65a48+docs-19631cc2bc1a+auth-bd3db075f410",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.png"
     }
   }
 }

@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "communication",
       "upstreamRevision": "otter-zendesk-35287607569687-2026-08-12+oauth-1b480247ee26+auth-901170a75106",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.png"
     }
   }
 }

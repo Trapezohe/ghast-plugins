@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "creativity",
       "upstreamRevision": "biorender-help-fb87519f4022+auth-7e351acc74e9+anthropic-3da37488e11a",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.png"
     }
   }
 }

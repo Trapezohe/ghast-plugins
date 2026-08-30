@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "communication",
       "upstreamRevision": "fyxer-docs-524a8683cf7b+addons-d1b55e0ef54e+oauth-c0a99fecb69d+auth-fde6773cf908",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.png"
     }
   }
 }

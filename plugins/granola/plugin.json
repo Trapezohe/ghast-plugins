@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "communication",
       "upstreamRevision": "granola-docs-b091dacafcec+oauth-ffbe7699c7ae+auth-710cc56359dd",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.png"
     }
   }
 }

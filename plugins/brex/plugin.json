@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "finance",
       "upstreamRevision": "brex-docs-0d1f82f38bb5+oauth-06b076acaeca+auth-6cf20c287281",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.png"
     }
   }
 }

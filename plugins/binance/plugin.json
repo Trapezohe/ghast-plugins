@@ -14,7 +14,7 @@
     "ai.trapezohe.ghast": {
       "category": "finance",
       "upstreamRevision": "2863a186d2bbd8987fa4790d7b81a299a58364ce",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "includedSkills": [
         "binance",
         "fiat",

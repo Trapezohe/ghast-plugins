@@ -14,7 +14,7 @@
     "ai.trapezohe.ghast": {
       "category": "developer-tools",
       "upstreamRevision": "0336e6db8026b0f02cb89d1451cc48ea3f469791",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "mcpServerExtensions": {
         "lovable": {
           "oauth": {
