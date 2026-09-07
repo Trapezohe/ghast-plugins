@@ -4479,6 +4479,44 @@
       "category": "creative"
     },
     {
+      "id": "eraser",
+      "name": "Eraser",
+      "description": "Create and edit technical diagrams, search workspace files and manage diagram presets in Eraser.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "eraser",
+        "version": "1.0.0-ghast.1",
+        "description": "Create and edit technical diagrams, search workspace files and manage diagram presets in Eraser.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.eraser.io/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.eraser.io/mcp",
+            "connectorPublisher": "Eraser",
+            "category": "design",
+            "icon": "./assets/icon.png",
+            "displayName": "Eraser",
+            "descriptions": {
+              "en": "Create and edit technical diagrams, search workspace files and manage diagram presets in Eraser.",
+              "zh-CN": "在 Eraser 中创建与编辑技术图表、搜索工作区文件并管理图表预设。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/eraser.zip",
+        "sha256": "7833ae727871a6c5436cab0b510bf2a4fc2b44da6db7e3cafae81d4914ffb691"
+      },
+      "icon": "./plugins/eraser/assets/icon.png",
+      "homepage": "https://docs.eraser.io/mcp",
+      "license": "MIT",
+      "category": "design"
+    },
+    {
       "id": "etherscan",
       "name": "Etherscan",
       "description": "Read multi-chain balances, transactions, token transfers and contract data.",
@@ -8489,6 +8527,44 @@
       "category": "data"
     },
     {
+      "id": "productboard",
+      "name": "Productboard",
+      "description": "Search and refine product specifications, read feedback and track delivery status in Productboard.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "productboard",
+        "version": "1.0.0-ghast.1",
+        "description": "Search and refine product specifications, read feedback and track delivery status in Productboard.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.productboard.com/reference/mcp-install",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.productboard.com/reference/mcp-install",
+            "connectorPublisher": "Productboard",
+            "category": "productivity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Productboard",
+            "descriptions": {
+              "en": "Search and refine product specifications, read feedback and track delivery status in Productboard.",
+              "zh-CN": "在 Productboard 中搜索与完善产品规格、阅读反馈并跟踪交付状态。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/productboard.zip",
+        "sha256": "01a7a18136ffac6c8778d2231cb4bed95d39d173fe2593bd8a67eaaaf8f16652"
+      },
+      "icon": "./plugins/productboard/assets/icon.svg",
+      "homepage": "https://developer.productboard.com/reference/mcp-install",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "pylon",
       "name": "pylon",
       "description": "Search and manage Pylon support issues, accounts, contacts, messages, and internal notes through official interfaces.",
@@ -8945,6 +9021,44 @@
       "homepage": "https://docs.ref.tools/context/install/index",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "relume",
+      "name": "Relume",
+      "description": "Find Relume library components and retrieve editable React code with its design system.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "relume",
+        "version": "1.0.0-ghast.1",
+        "description": "Find Relume library components and retrieve editable React code with its design system.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.relume.ai/relume-library-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.relume.ai/relume-library-mcp",
+            "connectorPublisher": "Relume",
+            "category": "design",
+            "icon": "./assets/icon.png",
+            "displayName": "Relume",
+            "descriptions": {
+              "en": "Find Relume library components and retrieve editable React code with its design system.",
+              "zh-CN": "查找 Relume 组件库内容，获取可编辑的 React 代码及其设计系统。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/relume.zip",
+        "sha256": "9691925d901a974796efa80fb48faff762ec4b2222ad30d9b6bdb03afce21795"
+      },
+      "icon": "./plugins/relume/assets/icon.png",
+      "homepage": "https://www.relume.ai/relume-library-mcp",
+      "license": "MIT",
+      "category": "design"
     },
     {
       "id": "remotion",
@@ -9668,6 +9782,44 @@
       "repository": "https://github.com/Shopify/Shopify-AI-Toolkit",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "shortcut",
+      "name": "Shortcut",
+      "description": "Find and manage Shortcut stories, epics and documents to connect product planning with development.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "shortcut",
+        "version": "1.0.0-ghast.1",
+        "description": "Find and manage Shortcut stories, epics and documents to connect product planning with development.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.shortcut.com/help/integrations/mcp-server/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.shortcut.com/help/integrations/mcp-server/",
+            "connectorPublisher": "Shortcut",
+            "category": "productivity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Shortcut",
+            "descriptions": {
+              "en": "Find and manage Shortcut stories, epics and documents to connect product planning with development.",
+              "zh-CN": "查找与管理 Shortcut 故事、史诗与文档，连接产品规划和研发工作。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/shortcut.zip",
+        "sha256": "d0b58ba529d037a6aa61dec47ce3ded7320f4b58afe5b9a43fcc133bee5bd7d4"
+      },
+      "icon": "./plugins/shortcut/assets/icon.svg",
+      "homepage": "https://www.shortcut.com/help/integrations/mcp-server/",
+      "license": "MIT",
+      "category": "productivity"
     },
     {
       "id": "shutterstock",

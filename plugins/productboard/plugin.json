@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "productboard",
+  "version": "1.0.0-ghast.1",
+  "description": "Search and refine product specifications, read feedback and track delivery status in Productboard.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.productboard.com/reference/mcp-install",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developer.productboard.com/reference/mcp-install",
+      "connectorPublisher": "Productboard",
+      "category": "productivity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Productboard",
+      "descriptions": {
+        "en": "Search and refine product specifications, read feedback and track delivery status in Productboard.",
+        "zh-CN": "在 Productboard 中搜索与完善产品规格、阅读反馈并跟踪交付状态。"
+      }
+    }
+  }
+}

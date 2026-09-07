@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "relume",
+  "version": "1.0.0-ghast.1",
+  "description": "Find Relume library components and retrieve editable React code with its design system.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.relume.ai/relume-library-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.relume.ai/relume-library-mcp",
+      "connectorPublisher": "Relume",
+      "category": "design",
+      "icon": "./assets/icon.png",
+      "displayName": "Relume",
+      "descriptions": {
+        "en": "Find Relume library components and retrieve editable React code with its design system.",
+        "zh-CN": "查找 Relume 组件库内容，获取可编辑的 React 代码及其设计系统。"
+      }
+    }
+  }
+}

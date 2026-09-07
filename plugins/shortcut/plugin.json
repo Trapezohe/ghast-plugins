@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "shortcut",
+  "version": "1.0.0-ghast.1",
+  "description": "Find and manage Shortcut stories, epics and documents to connect product planning with development.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.shortcut.com/help/integrations/mcp-server/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.shortcut.com/help/integrations/mcp-server/",
+      "connectorPublisher": "Shortcut",
+      "category": "productivity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Shortcut",
+      "descriptions": {
+        "en": "Find and manage Shortcut stories, epics and documents to connect product planning with development.",
+        "zh-CN": "查找与管理 Shortcut 故事、史诗与文档，连接产品规划和研发工作。"
+      }
+    }
+  }
+}

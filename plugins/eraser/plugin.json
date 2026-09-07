@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "eraser",
+  "version": "1.0.0-ghast.1",
+  "description": "Create and edit technical diagrams, search workspace files and manage diagram presets in Eraser.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.eraser.io/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.eraser.io/mcp",
+      "connectorPublisher": "Eraser",
+      "category": "design",
+      "icon": "./assets/icon.png",
+      "displayName": "Eraser",
+      "descriptions": {
+        "en": "Create and edit technical diagrams, search workspace files and manage diagram presets in Eraser.",
+        "zh-CN": "在 Eraser 中创建与编辑技术图表、搜索工作区文件并管理图表预设。"
+      }
+    }
+  }
+}

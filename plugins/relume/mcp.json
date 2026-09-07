@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "relume": {
+      "type": "streamable-http",
+      "url": "https://relume-library-mcp.relume.io/mcp"
+    }
+  }
+}
