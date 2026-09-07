@@ -10395,6 +10395,51 @@
       "category": "web"
     },
     {
+      "id": "semgrep",
+      "name": "Semgrep",
+      "description": "Analyze code and investigate security findings with the MCP server built into the official Semgrep CLI.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "semgrep",
+        "version": "1.0.0-ghast.1",
+        "description": "Analyze code and investigate security findings with the MCP server built into the official Semgrep CLI.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/semgrep/semgrep/tree/develop/cli/src/semgrep/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/semgrep/semgrep/tree/develop/cli/src/semgrep/mcp",
+            "connectorPublisher": "Semgrep",
+            "category": "developer-tools",
+            "icon": "./assets/icon.svg",
+            "displayName": "Semgrep",
+            "descriptions": {
+              "en": "Analyze code and investigate security findings with the MCP server built into the official Semgrep CLI.",
+              "zh-CN": "通过 Semgrep 官方 CLI 内置 MCP 分析代码并排查安全发现。"
+            },
+            "mcpServerExtensions": {
+              "semgrep": {
+                "credentialEnv": {
+                  "SEMGREP_APP_TOKEN": "$VAULT:semgrep-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/semgrep.zip",
+        "sha256": "bb649fa006460139a58712bdb77e68925b947828da1dd9d5e48d2f37bb016a33"
+      },
+      "icon": "./plugins/semgrep/assets/icon.svg",
+      "homepage": "https://github.com/semgrep/semgrep/tree/develop/cli/src/semgrep/mcp",
+      "license": "MIT",
+      "category": "developer-tools"
+    },
+    {
       "id": "semrush",
       "name": "semrush",
       "description": "Retrieve read-only Semrush SEO, keyword, backlink, traffic, audience, market, paid search, shopping, site audit, position tracking, and project data through Semrush's official MCP server.",
@@ -10925,6 +10970,94 @@
       "homepage": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server/manually-configure-the-mcp-server",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "snyk",
+      "name": "Snyk",
+      "description": "Scan code, dependencies and infrastructure for security issues through Snyk’s official local MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "snyk",
+        "version": "1.0.0-ghast.1",
+        "description": "Scan code, dependencies and infrastructure for security issues through Snyk’s official local MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.snyk.io/integrations/snyk-studio-agentic-integrations/getting-started-with-snyk-studio",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.snyk.io/integrations/snyk-studio-agentic-integrations/getting-started-with-snyk-studio",
+            "connectorPublisher": "Snyk",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "Snyk",
+            "descriptions": {
+              "en": "Scan code, dependencies and infrastructure for security issues through Snyk’s official local MCP.",
+              "zh-CN": "通过 Snyk 官方本地 MCP 扫描代码、依赖与基础设施安全问题。"
+            },
+            "mcpServerExtensions": {
+              "snyk": {
+                "credentialEnv": {
+                  "SNYK_TOKEN": "$VAULT:snyk-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/snyk.zip",
+        "sha256": "ccf0083e55583a75039ffc4fdeebe23704e96039b51a1fc6e5d8ace4617b1e74"
+      },
+      "icon": "./plugins/snyk/assets/icon.png",
+      "homepage": "https://docs.snyk.io/integrations/snyk-studio-agentic-integrations/getting-started-with-snyk-studio",
+      "license": "MIT",
+      "category": "developer-tools"
+    },
+    {
+      "id": "socket",
+      "name": "Socket",
+      "description": "Review dependency risk, package contents, alerts and threat intelligence through Socket’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "socket",
+        "version": "1.0.0-ghast.1",
+        "description": "Review dependency risk, package contents, alerts and threat intelligence through Socket’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.socket.dev/docs/remote-socket-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.socket.dev/docs/remote-socket-mcp",
+            "connectorPublisher": "Socket",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "Socket",
+            "descriptions": {
+              "en": "Review dependency risk, package contents, alerts and threat intelligence through Socket’s official MCP.",
+              "zh-CN": "通过 Socket 官方 MCP 检查依赖风险、软件包内容、告警与威胁情报。"
+            },
+            "mcpServerExtensions": {
+              "socket": {
+                "oauthRequired": true
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/socket.zip",
+        "sha256": "553589e8a9c3c8ab5350296d19cd2448928f3c12f030284cf2b0e4842fba6e83"
+      },
+      "icon": "./plugins/socket/assets/icon.png",
+      "homepage": "https://docs.socket.dev/docs/remote-socket-mcp",
+      "license": "MIT",
+      "category": "developer-tools"
     },
     {
       "id": "square",

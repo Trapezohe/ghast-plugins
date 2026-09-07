@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "semgrep",
+  "version": "1.0.0-ghast.1",
+  "description": "Analyze code and investigate security findings with the MCP server built into the official Semgrep CLI.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/semgrep/semgrep/tree/develop/cli/src/semgrep/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/semgrep/semgrep/tree/develop/cli/src/semgrep/mcp",
+      "connectorPublisher": "Semgrep",
+      "category": "developer-tools",
+      "icon": "./assets/icon.svg",
+      "displayName": "Semgrep",
+      "descriptions": {
+        "en": "Analyze code and investigate security findings with the MCP server built into the official Semgrep CLI.",
+        "zh-CN": "通过 Semgrep 官方 CLI 内置 MCP 分析代码并排查安全发现。"
+      },
+      "mcpServerExtensions": {
+        "semgrep": {
+          "credentialEnv": {
+            "SEMGREP_APP_TOKEN": "$VAULT:semgrep-token"
+          }
+        }
+      }
+    }
+  }
+}

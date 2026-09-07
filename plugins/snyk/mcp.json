@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "snyk": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "snyk@1.1307.0",
+        "mcp",
+        "-t",
+        "stdio"
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "socket",
+  "version": "1.0.0-ghast.1",
+  "description": "Review dependency risk, package contents, alerts and threat intelligence through Socket’s official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.socket.dev/docs/remote-socket-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.socket.dev/docs/remote-socket-mcp",
+      "connectorPublisher": "Socket",
+      "category": "developer-tools",
+      "icon": "./assets/icon.png",
+      "displayName": "Socket",
+      "descriptions": {
+        "en": "Review dependency risk, package contents, alerts and threat intelligence through Socket’s official MCP.",
+        "zh-CN": "通过 Socket 官方 MCP 检查依赖风险、软件包内容、告警与威胁情报。"
+      },
+      "mcpServerExtensions": {
+        "socket": {
+          "oauthRequired": true
+        }
+      }
+    }
+  }
+}

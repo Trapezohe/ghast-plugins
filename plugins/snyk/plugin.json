@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "snyk",
+  "version": "1.0.0-ghast.1",
+  "description": "Scan code, dependencies and infrastructure for security issues through Snyk’s official local MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.snyk.io/integrations/snyk-studio-agentic-integrations/getting-started-with-snyk-studio",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.snyk.io/integrations/snyk-studio-agentic-integrations/getting-started-with-snyk-studio",
+      "connectorPublisher": "Snyk",
+      "category": "developer-tools",
+      "icon": "./assets/icon.png",
+      "displayName": "Snyk",
+      "descriptions": {
+        "en": "Scan code, dependencies and infrastructure for security issues through Snyk’s official local MCP.",
+        "zh-CN": "通过 Snyk 官方本地 MCP 扫描代码、依赖与基础设施安全问题。"
+      },
+      "mcpServerExtensions": {
+        "snyk": {
+          "credentialEnv": {
+            "SNYK_TOKEN": "$VAULT:snyk-token"
+          }
+        }
+      }
+    }
+  }
+}
