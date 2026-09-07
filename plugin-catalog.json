@@ -3499,6 +3499,44 @@
       "category": "productivity"
     },
     {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "description": "Generate speech and manage voice agents, conversations and knowledge resources through ElevenLabs.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "elevenlabs",
+        "version": "1.0.0-ghast.1",
+        "description": "Generate speech and manage voice agents, conversations and knowledge resources through ElevenLabs.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://elevenlabs.io/docs/eleven-agents/operate/hosted-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://elevenlabs.io/docs/eleven-agents/operate/hosted-mcp",
+            "connectorPublisher": "ElevenLabs",
+            "category": "creative",
+            "icon": "./assets/icon.svg",
+            "displayName": "ElevenLabs",
+            "descriptions": {
+              "en": "Generate speech and manage voice agents, conversations and knowledge resources through ElevenLabs.",
+              "zh-CN": "通过 ElevenLabs 生成语音，并管理语音智能体、会话与知识资源。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/elevenlabs.zip",
+        "sha256": "5942bd72c2efb55182ad44021d2499b31f5aa350826eb0df16eaea4eaca13da8"
+      },
+      "icon": "./plugins/elevenlabs/assets/icon.svg",
+      "homepage": "https://elevenlabs.io/docs/eleven-agents/operate/hosted-mcp",
+      "license": "MIT",
+      "category": "creative"
+    },
+    {
       "id": "etherscan",
       "name": "Etherscan",
       "description": "Read multi-chain balances, transactions, token transfers and contract data.",
@@ -5120,6 +5158,44 @@
       "homepage": "https://github.com/jina-ai/MCP",
       "license": "MIT",
       "category": "research"
+    },
+    {
+      "id": "kittl",
+      "name": "Kittl",
+      "description": "Create images, videos and design assets and run creative workflows in Kittl.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "kittl",
+        "version": "1.0.0-ghast.1",
+        "description": "Create images, videos and design assets and run creative workflows in Kittl.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.kittl.com/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.kittl.com/mcp",
+            "connectorPublisher": "Kittl",
+            "category": "design",
+            "icon": "./assets/icon.png",
+            "displayName": "Kittl",
+            "descriptions": {
+              "en": "Create images, videos and design assets and run creative workflows in Kittl.",
+              "zh-CN": "在 Kittl 中创作图片、视频与设计素材，执行创意工作流。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/kittl.zip",
+        "sha256": "ce3cf01880c46c18603caf16a477ec5a49004a4b9973a3c19b1c8c26b9ffdf59"
+      },
+      "icon": "./plugins/kittl/assets/icon.png",
+      "homepage": "https://www.kittl.com/mcp",
+      "license": "MIT",
+      "category": "design"
     },
     {
       "id": "klaviyo",
@@ -7082,6 +7158,44 @@
       "homepage": "https://developer.responsive.io/docs/responsive-api/86b14fe0ae541-overview",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "runway",
+      "name": "Runway",
+      "description": "Generate creative images and videos with Runway’s official MCP service.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "runway",
+        "version": "1.0.0-ghast.1",
+        "description": "Generate creative images and videos with Runway’s official MCP service.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.runwayml.com/hc/en-us/articles/51931843164691-Connecting-to-Runway-MCP",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.runwayml.com/hc/en-us/articles/51931843164691-Connecting-to-Runway-MCP",
+            "connectorPublisher": "Runway",
+            "category": "creative",
+            "icon": "./assets/icon.png",
+            "displayName": "Runway",
+            "descriptions": {
+              "en": "Generate creative images and videos with Runway’s official MCP service.",
+              "zh-CN": "通过 Runway 官方 MCP 服务生成创意图片与视频。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/runway.zip",
+        "sha256": "80c585a1b38cb7fa9239bc2f2e66a51aec979492e46fbd8d110f4fa5c5f0216c"
+      },
+      "icon": "./plugins/runway/assets/icon.png",
+      "homepage": "https://help.runwayml.com/hc/en-us/articles/51931843164691-Connecting-to-Runway-MCP",
+      "license": "MIT",
+      "category": "creative"
     },
     {
       "id": "s-p",

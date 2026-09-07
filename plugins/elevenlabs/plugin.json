@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "elevenlabs",
+  "version": "1.0.0-ghast.1",
+  "description": "Generate speech and manage voice agents, conversations and knowledge resources through ElevenLabs.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://elevenlabs.io/docs/eleven-agents/operate/hosted-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://elevenlabs.io/docs/eleven-agents/operate/hosted-mcp",
+      "connectorPublisher": "ElevenLabs",
+      "category": "creative",
+      "icon": "./assets/icon.svg",
+      "displayName": "ElevenLabs",
+      "descriptions": {
+        "en": "Generate speech and manage voice agents, conversations and knowledge resources through ElevenLabs.",
+        "zh-CN": "通过 ElevenLabs 生成语音，并管理语音智能体、会话与知识资源。"
+      }
+    }
+  }
+}

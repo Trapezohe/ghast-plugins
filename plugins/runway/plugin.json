@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "runway",
+  "version": "1.0.0-ghast.1",
+  "description": "Generate creative images and videos with Runway’s official MCP service.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://help.runwayml.com/hc/en-us/articles/51931843164691-Connecting-to-Runway-MCP",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://help.runwayml.com/hc/en-us/articles/51931843164691-Connecting-to-Runway-MCP",
+      "connectorPublisher": "Runway",
+      "category": "creative",
+      "icon": "./assets/icon.png",
+      "displayName": "Runway",
+      "descriptions": {
+        "en": "Generate creative images and videos with Runway’s official MCP service.",
+        "zh-CN": "通过 Runway 官方 MCP 服务生成创意图片与视频。"
+      }
+    }
+  }
+}
