@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ashby",
+  "version": "1.0.0-ghast.1",
+  "description": "Search recruiting records, prepare interviews and manage supported candidate workflows through Ashby’s official MCP (Beta).",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.ashbyhq.com/ashby-mcp-server-beta",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.ashbyhq.com/ashby-mcp-server-beta",
+      "connectorPublisher": "Ashby",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Ashby",
+      "descriptions": {
+        "en": "Search recruiting records, prepare interviews and manage supported candidate workflows through Ashby’s official MCP (Beta).",
+        "zh-CN": "通过 Ashby 官方 MCP（Beta）搜索招聘记录、准备面试并管理受支持的候选人流程。"
+      }
+    }
+  }
+}

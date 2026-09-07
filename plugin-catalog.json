@@ -811,6 +811,44 @@
       "category": "productivity"
     },
     {
+      "id": "ashby",
+      "name": "Ashby",
+      "description": "Search recruiting records, prepare interviews and manage supported candidate workflows through Ashby’s official MCP (Beta).",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "ashby",
+        "version": "1.0.0-ghast.1",
+        "description": "Search recruiting records, prepare interviews and manage supported candidate workflows through Ashby’s official MCP (Beta).",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.ashbyhq.com/ashby-mcp-server-beta",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.ashbyhq.com/ashby-mcp-server-beta",
+            "connectorPublisher": "Ashby",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Ashby",
+            "descriptions": {
+              "en": "Search recruiting records, prepare interviews and manage supported candidate workflows through Ashby’s official MCP (Beta).",
+              "zh-CN": "通过 Ashby 官方 MCP（Beta）搜索招聘记录、准备面试并管理受支持的候选人流程。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/ashby.zip",
+        "sha256": "ab8c6ff37349678a553693f065b84261838b9820cbf9a4985cb175c52a825a29"
+      },
+      "icon": "./plugins/ashby/assets/icon.png",
+      "homepage": "https://docs.ashbyhq.com/ashby-mcp-server-beta",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "astro",
       "name": "Astro Docs",
       "description": "Search Astro documentation for content sites and integrations.",
@@ -4352,6 +4390,51 @@
       "category": "development"
     },
     {
+      "id": "deel",
+      "name": "Deel",
+      "description": "Access workforce, contract, time-off and payroll tools through Deel’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "deel",
+        "version": "1.0.0-ghast.1",
+        "description": "Access workforce, contract, time-off and payroll tools through Deel’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.deel.com/mcp/authorization",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.deel.com/mcp/authorization",
+            "connectorPublisher": "Deel",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Deel",
+            "descriptions": {
+              "en": "Access workforce, contract, time-off and payroll tools through Deel’s official MCP.",
+              "zh-CN": "通过 Deel 官方 MCP 访问员工、合同、休假与薪酬相关工具。"
+            },
+            "mcpServerExtensions": {
+              "deel": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:deel-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/deel.zip",
+        "sha256": "4e06e6f67ca5c987e03d9216d53c3eb93c33b0f4322b2a769f5c2250cfefdca7"
+      },
+      "icon": "./plugins/deel/assets/icon.png",
+      "homepage": "https://developer.deel.com/mcp/authorization",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "deepnote",
       "name": "deepnote",
       "description": "Search, inspect, create, edit, link, and run Deepnote projects and notebooks through Deepnote's official hosted MCP server.",
@@ -6571,6 +6654,44 @@
       "homepage": "https://docs.granola.ai/help-center/sharing/integrations/mcp",
       "license": "MIT",
       "category": "communication"
+    },
+    {
+      "id": "greenhouse",
+      "name": "Greenhouse",
+      "description": "Explore recruiting data and perform supported hiring workflows with Greenhouse’s official MCP (Open Beta).",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "greenhouse",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore recruiting data and perform supported hiring workflows with Greenhouse’s official MCP (Open Beta).",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://support.greenhouse.io/hc/en-us/articles/52096319906971-Set-up-Greenhouse-MCP-with-supported-AI-tools",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://support.greenhouse.io/hc/en-us/articles/52096319906971-Set-up-Greenhouse-MCP-with-supported-AI-tools",
+            "connectorPublisher": "Greenhouse",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Greenhouse",
+            "descriptions": {
+              "en": "Explore recruiting data and perform supported hiring workflows with Greenhouse’s official MCP (Open Beta).",
+              "zh-CN": "通过 Greenhouse 官方 MCP（公开测试版）探索招聘数据并执行受支持的招聘流程。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/greenhouse.zip",
+        "sha256": "c44d1c29547ae969c1d0fb049d9b85cec497479f97a1d7eef7366b457f16c297"
+      },
+      "icon": "./plugins/greenhouse/assets/icon.png",
+      "homepage": "https://support.greenhouse.io/hc/en-us/articles/52096319906971-Set-up-Greenhouse-MCP-with-supported-AI-tools",
+      "license": "MIT",
+      "category": "productivity"
     },
     {
       "id": "hacker-news",

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "greenhouse",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore recruiting data and perform supported hiring workflows with Greenhouse’s official MCP (Open Beta).",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://support.greenhouse.io/hc/en-us/articles/52096319906971-Set-up-Greenhouse-MCP-with-supported-AI-tools",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://support.greenhouse.io/hc/en-us/articles/52096319906971-Set-up-Greenhouse-MCP-with-supported-AI-tools",
+      "connectorPublisher": "Greenhouse",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Greenhouse",
+      "descriptions": {
+        "en": "Explore recruiting data and perform supported hiring workflows with Greenhouse’s official MCP (Open Beta).",
+        "zh-CN": "通过 Greenhouse 官方 MCP（公开测试版）探索招聘数据并执行受支持的招聘流程。"
+      }
+    }
+  }
+}

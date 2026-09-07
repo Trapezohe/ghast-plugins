@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "deel",
+  "version": "1.0.0-ghast.1",
+  "description": "Access workforce, contract, time-off and payroll tools through Deel’s official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.deel.com/mcp/authorization",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developer.deel.com/mcp/authorization",
+      "connectorPublisher": "Deel",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Deel",
+      "descriptions": {
+        "en": "Access workforce, contract, time-off and payroll tools through Deel’s official MCP.",
+        "zh-CN": "通过 Deel 官方 MCP 访问员工、合同、休假与薪酬相关工具。"
+      },
+      "mcpServerExtensions": {
+        "deel": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:deel-token"
+          }
+        }
+      }
+    }
+  }
+}
