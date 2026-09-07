@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "gate",
+  "version": "1.0.0-ghast.1",
+  "description": "Research crypto markets, news and on-chain data, and connect a Gate exchange account through OAuth.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/gate/gate-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/gate/gate-mcp",
+      "connectorPublisher": "Gate",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Gate",
+      "descriptions": {
+        "en": "Research crypto markets, news and on-chain data, and connect a Gate exchange account through OAuth.",
+        "zh-CN": "研究加密市场、新闻与链上数据，并通过 OAuth 连接 Gate 交易所账号。"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "gate": {
+      "type": "streamable-http",
+      "url": "https://api.gatemcp.ai/mcp"
+    },
+    "gate-exchange": {
+      "type": "streamable-http",
+      "url": "https://api.gatemcp.ai/mcp/exchange"
+    },
+    "gate-info": {
+      "type": "streamable-http",
+      "url": "https://api.gatemcp.ai/mcp/info"
+    },
+    "gate-news": {
+      "type": "streamable-http",
+      "url": "https://api.gatemcp.ai/mcp/news"
+    },
+    "gate-docs": {
+      "type": "streamable-http",
+      "url": "https://api.gatemcp.ai/mcp/docs"
+    }
+  }
+}

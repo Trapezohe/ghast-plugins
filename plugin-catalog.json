@@ -2917,6 +2917,51 @@
       "category": "data"
     },
     {
+      "id": "coinglass",
+      "name": "CoinGlass",
+      "description": "Analyze crypto derivatives, funding rates, open interest, liquidations and ETF flows with CoinGlass.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "coinglass",
+        "version": "1.0.0-ghast.1",
+        "description": "Analyze crypto derivatives, funding rates, open interest, liquidations and ETF flows with CoinGlass.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.coinglass.com/reference/mcp-service",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.coinglass.com/reference/mcp-service",
+            "connectorPublisher": "CoinGlass",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "CoinGlass",
+            "descriptions": {
+              "en": "Analyze crypto derivatives, funding rates, open interest, liquidations and ETF flows with CoinGlass.",
+              "zh-CN": "通过 CoinGlass 分析加密衍生品、资金费率、持仓量、清算与 ETF 资金流。"
+            },
+            "mcpServerExtensions": {
+              "coinglass": {
+                "credentialHeaders": {
+                  "CG-API-KEY": "$VAULT:coinglass-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/coinglass.zip",
+        "sha256": "740ccf0f3851128afe8e8ceebb74da2e46e75bc61f70adae5fd3756e4d6a9ba5"
+      },
+      "icon": "./plugins/coinglass/assets/icon.png",
+      "homepage": "https://docs.coinglass.com/reference/mcp-service",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
       "id": "coinmarketcap",
       "name": "CoinMarketCap",
       "description": "Research cryptocurrency prices, rankings, market metrics and news.",
@@ -5150,6 +5195,44 @@
       "category": "communication"
     },
     {
+      "id": "gate",
+      "name": "Gate",
+      "description": "Research crypto markets, news and on-chain data, and connect a Gate exchange account through OAuth.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "gate",
+        "version": "1.0.0-ghast.1",
+        "description": "Research crypto markets, news and on-chain data, and connect a Gate exchange account through OAuth.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/gate/gate-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/gate/gate-mcp",
+            "connectorPublisher": "Gate",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Gate",
+            "descriptions": {
+              "en": "Research crypto markets, news and on-chain data, and connect a Gate exchange account through OAuth.",
+              "zh-CN": "研究加密市场、新闻与链上数据，并通过 OAuth 连接 Gate 交易所账号。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/gate.zip",
+        "sha256": "c87091cc0eae99b9f5aa2fb9e2e70cf0e11ccf49dc117333400a89305c98b91b"
+      },
+      "icon": "./plugins/gate/assets/icon.png",
+      "homepage": "https://github.com/gate/gate-mcp",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
       "id": "github",
       "name": "GitHub",
       "description": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Connect with your GitHub token.",
@@ -6782,6 +6865,44 @@
       "homepage": "https://docs.knock.app/ai/mcp-server",
       "license": "MIT",
       "category": "communication"
+    },
+    {
+      "id": "kraken",
+      "name": "Kraken",
+      "description": "Query public Kraken prices, order books, trades and market information through the official CLI MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "kraken",
+        "version": "1.0.0-ghast.1",
+        "description": "Query public Kraken prices, order books, trades and market information through the official CLI MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/krakenfx/kraken-cli",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/krakenfx/kraken-cli",
+            "connectorPublisher": "Kraken",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Kraken",
+            "descriptions": {
+              "en": "Query public Kraken prices, order books, trades and market information through the official CLI MCP server.",
+              "zh-CN": "通过 Kraken 官方 CLI MCP 服务查询公开价格、订单簿、成交与市场信息。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/kraken.zip",
+        "sha256": "e7ebf9088a9d2a86b870e9fdd81b6ffce7bcefa84bd247ef05cdbafc13575e00"
+      },
+      "icon": "./plugins/kraken/assets/icon.png",
+      "homepage": "https://github.com/krakenfx/kraken-cli",
+      "license": "MIT",
+      "category": "finance"
     },
     {
       "id": "launchdarkly",

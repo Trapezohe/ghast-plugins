@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kraken",
+  "version": "1.0.0-ghast.1",
+  "description": "Query public Kraken prices, order books, trades and market information through the official CLI MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/krakenfx/kraken-cli",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/krakenfx/kraken-cli",
+      "connectorPublisher": "Kraken",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Kraken",
+      "descriptions": {
+        "en": "Query public Kraken prices, order books, trades and market information through the official CLI MCP server.",
+        "zh-CN": "通过 Kraken 官方 CLI MCP 服务查询公开价格、订单簿、成交与市场信息。"
+      }
+    }
+  }
+}

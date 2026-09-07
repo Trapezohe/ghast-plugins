@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "kraken": {
+      "type": "stdio",
+      "command": "kraken",
+      "args": [
+        "mcp",
+        "-s",
+        "market"
+      ]
+    }
+  }
+}

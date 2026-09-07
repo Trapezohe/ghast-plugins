@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "coinglass",
+  "version": "1.0.0-ghast.1",
+  "description": "Analyze crypto derivatives, funding rates, open interest, liquidations and ETF flows with CoinGlass.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.coinglass.com/reference/mcp-service",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.coinglass.com/reference/mcp-service",
+      "connectorPublisher": "CoinGlass",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "CoinGlass",
+      "descriptions": {
+        "en": "Analyze crypto derivatives, funding rates, open interest, liquidations and ETF flows with CoinGlass.",
+        "zh-CN": "通过 CoinGlass 分析加密衍生品、资金费率、持仓量、清算与 ETF 资金流。"
+      },
+      "mcpServerExtensions": {
+        "coinglass": {
+          "credentialHeaders": {
+            "CG-API-KEY": "$VAULT:coinglass-token"
+          }
+        }
+      }
+    }
+  }
+}
