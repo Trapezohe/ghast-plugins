@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "cockroachdb",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore CockroachDB Cloud databases and run SQL using the official managed MCP service.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.cockroachlabs.com/blog/cockroachdb-ai-agents-managed-mcp-server/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.cockroachlabs.com/blog/cockroachdb-ai-agents-managed-mcp-server/",
+      "connectorPublisher": "CockroachDB Cloud",
+      "category": "data",
+      "icon": "./assets/icon.svg",
+      "displayName": "CockroachDB Cloud",
+      "descriptions": {
+        "en": "Explore CockroachDB Cloud databases and run SQL using the official managed MCP service.",
+        "zh-CN": "通过 CockroachDB Cloud 官方托管 MCP 服务探索数据库并执行 SQL。"
+      },
+      "mcpServerExtensions": {
+        "cockroachdb": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:cockroachdb-token",
+            "mcp-cluster-id": "$VAULT:cockroachdb-cluster-id"
+          }
+        }
+      }
+    }
+  }
+}

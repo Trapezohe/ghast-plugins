@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "okx": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@okx_ai/okx-trade-mcp@1.4.6",
+        "--modules",
+        "market",
+        "--read-only"
+      ]
+    }
+  }
+}

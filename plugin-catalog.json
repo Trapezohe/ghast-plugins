@@ -271,6 +271,44 @@
       "category": "finance"
     },
     {
+      "id": "algolia",
+      "name": "Algolia",
+      "description": "Inspect and manage Algolia search workflows and search public developer documentation with DocSearch.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "algolia",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect and manage Algolia search workflows and search public developer documentation with DocSearch.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.algolia.com/doc/guides/model-context-protocol/productivity-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.algolia.com/doc/guides/model-context-protocol/productivity-mcp",
+            "connectorPublisher": "Algolia",
+            "category": "development",
+            "icon": "./assets/icon.svg",
+            "displayName": "Algolia",
+            "descriptions": {
+              "en": "Inspect and manage Algolia search workflows and search public developer documentation with DocSearch.",
+              "zh-CN": "查看与管理 Algolia 搜索工作流，并通过 DocSearch 检索公开开发文档。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/algolia.zip",
+        "sha256": "65bc1cce61beab34ebd5fae966529064c75116039bdaa1302a2f82a41305f535"
+      },
+      "icon": "./plugins/algolia/assets/icon.svg",
+      "homepage": "https://www.algolia.com/doc/guides/model-context-protocol/productivity-mcp",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "alpaca",
       "name": "alpaca",
       "description": "Research stocks, options, crypto, fixed income, indices, news, and corporate actions through Alpaca's official market-data MCP, with separately authorized paper and live trading servers for account, order, position, portfolio, and watchlist workflows.",
@@ -2031,6 +2069,52 @@
       "repository": "https://github.com/cloudinary/mcp-servers",
       "license": "MIT",
       "category": "creativity"
+    },
+    {
+      "id": "cockroachdb",
+      "name": "CockroachDB Cloud",
+      "description": "Explore CockroachDB Cloud databases and run SQL using the official managed MCP service.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "cockroachdb",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore CockroachDB Cloud databases and run SQL using the official managed MCP service.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.cockroachlabs.com/blog/cockroachdb-ai-agents-managed-mcp-server/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.cockroachlabs.com/blog/cockroachdb-ai-agents-managed-mcp-server/",
+            "connectorPublisher": "CockroachDB Cloud",
+            "category": "data",
+            "icon": "./assets/icon.svg",
+            "displayName": "CockroachDB Cloud",
+            "descriptions": {
+              "en": "Explore CockroachDB Cloud databases and run SQL using the official managed MCP service.",
+              "zh-CN": "通过 CockroachDB Cloud 官方托管 MCP 服务探索数据库并执行 SQL。"
+            },
+            "mcpServerExtensions": {
+              "cockroachdb": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:cockroachdb-token",
+                  "mcp-cluster-id": "$VAULT:cockroachdb-cluster-id"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/cockroachdb.zip",
+        "sha256": "6b77b94cc3b614714ebb6abc71c39b5037f3ec73aab4599cd0bdfdb08bd87b7c"
+      },
+      "icon": "./plugins/cockroachdb/assets/icon.svg",
+      "homepage": "https://www.cockroachlabs.com/blog/cockroachdb-ai-agents-managed-mcp-server/",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "coderabbit",
@@ -5906,6 +5990,44 @@
       "category": "development"
     },
     {
+      "id": "okx",
+      "name": "OKX Market Data",
+      "description": "Read OKX market prices, order books, candles and derivatives market data through the official Agent Trade Kit.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "okx",
+        "version": "1.0.0-ghast.1",
+        "description": "Read OKX market prices, order books, candles and derivatives market data through the official Agent Trade Kit.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.okx.com/docs-v5/agent_en/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.okx.com/docs-v5/agent_en/",
+            "connectorPublisher": "OKX",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "OKX Market Data",
+            "descriptions": {
+              "en": "Read OKX market prices, order books, candles and derivatives market data through the official Agent Trade Kit.",
+              "zh-CN": "通过 OKX 官方 Agent Trade Kit 查询市场价格、订单簿、K 线与衍生品行情。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/okx.zip",
+        "sha256": "5f505cc0b4f4deef87620b4bab3f94c9a3a4a5931ec0f778aad006cb7c8a6bdd"
+      },
+      "icon": "./plugins/okx/assets/icon.png",
+      "homepage": "https://www.okx.com/docs-v5/agent_en/",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
       "id": "omni-analytics",
       "name": "omni-analytics",
       "description": "Query governed Omni semantic models, run multi-step analysis, and search Omni documentation through Omni's official hosted MCP server.",
@@ -6644,6 +6766,44 @@
       "icon": "./plugins/realtime-weather/assets/icon.svg",
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/realtime-weather",
       "category": "information"
+    },
+    {
+      "id": "redis-docs",
+      "name": "Redis Documentation",
+      "description": "Search, retrieve and ask questions about Redis documentation using Redis’s public MCP service.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "redis-docs",
+        "version": "1.0.0-ghast.1",
+        "description": "Search, retrieve and ask questions about Redis documentation using Redis’s public MCP service.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://redis.io/docs/latest/develop/setup/build-with-an-agent/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://redis.io/docs/latest/develop/setup/build-with-an-agent/",
+            "connectorPublisher": "Redis Documentation",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Redis Documentation",
+            "descriptions": {
+              "en": "Search, retrieve and ask questions about Redis documentation using Redis’s public MCP service.",
+              "zh-CN": "通过 Redis 官方公开 MCP 服务检索和阅读文档，查询数据结构、缓存、搜索与部署用法。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/redis-docs.zip",
+        "sha256": "7bec7786e89b3d778e0bf9df556ffd88f0bc57e58e8fd5ae1fd867ed08f594ce"
+      },
+      "icon": "./plugins/redis-docs/assets/icon.png",
+      "homepage": "https://redis.io/docs/latest/develop/setup/build-with-an-agent/",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "ref",
@@ -8593,6 +8753,44 @@
       "homepage": "https://developers.wrike.com/docs/setup-other-mcp-clients-with-wrike-mcp",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "xata",
+      "name": "Xata",
+      "description": "Explore Postgres schemas, query data and manage database branches through Xata’s official MCP service.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "xata",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore Postgres schemas, query data and manage database branches through Xata’s official MCP service.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://xata.io/docs/platform/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://xata.io/docs/platform/mcp",
+            "connectorPublisher": "Xata",
+            "category": "data",
+            "icon": "./assets/icon.svg",
+            "displayName": "Xata",
+            "descriptions": {
+              "en": "Explore Postgres schemas, query data and manage database branches through Xata’s official MCP service.",
+              "zh-CN": "通过 Xata 官方 MCP 服务探索 Postgres 结构、查询数据并管理数据库分支。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/xata.zip",
+        "sha256": "d427356693ba28873d87f42dfab8e2f2a9974a43c7b34372170b2435217f6ff4"
+      },
+      "icon": "./plugins/xata/assets/icon.svg",
+      "homepage": "https://xata.io/docs/platform/mcp",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "yepcode",

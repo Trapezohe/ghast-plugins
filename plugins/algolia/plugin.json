@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "algolia",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect and manage Algolia search workflows and search public developer documentation with DocSearch.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.algolia.com/doc/guides/model-context-protocol/productivity-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.algolia.com/doc/guides/model-context-protocol/productivity-mcp",
+      "connectorPublisher": "Algolia",
+      "category": "development",
+      "icon": "./assets/icon.svg",
+      "displayName": "Algolia",
+      "descriptions": {
+        "en": "Inspect and manage Algolia search workflows and search public developer documentation with DocSearch.",
+        "zh-CN": "查看与管理 Algolia 搜索工作流，并通过 DocSearch 检索公开开发文档。"
+      }
+    }
+  }
+}

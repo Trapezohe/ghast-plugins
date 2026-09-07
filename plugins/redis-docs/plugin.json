@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "redis-docs",
+  "version": "1.0.0-ghast.1",
+  "description": "Search, retrieve and ask questions about Redis documentation using Redis’s public MCP service.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://redis.io/docs/latest/develop/setup/build-with-an-agent/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://redis.io/docs/latest/develop/setup/build-with-an-agent/",
+      "connectorPublisher": "Redis Documentation",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Redis Documentation",
+      "descriptions": {
+        "en": "Search, retrieve and ask questions about Redis documentation using Redis’s public MCP service.",
+        "zh-CN": "通过 Redis 官方公开 MCP 服务检索和阅读文档，查询数据结构、缓存、搜索与部署用法。"
+      }
+    }
+  }
+}

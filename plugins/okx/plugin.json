@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "okx",
+  "version": "1.0.0-ghast.1",
+  "description": "Read OKX market prices, order books, candles and derivatives market data through the official Agent Trade Kit.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.okx.com/docs-v5/agent_en/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.okx.com/docs-v5/agent_en/",
+      "connectorPublisher": "OKX",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "OKX Market Data",
+      "descriptions": {
+        "en": "Read OKX market prices, order books, candles and derivatives market data through the official Agent Trade Kit.",
+        "zh-CN": "通过 OKX 官方 Agent Trade Kit 查询市场价格、订单簿、K 线与衍生品行情。"
+      }
+    }
+  }
+}

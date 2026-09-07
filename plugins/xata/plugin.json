@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "xata",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore Postgres schemas, query data and manage database branches through Xata’s official MCP service.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://xata.io/docs/platform/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://xata.io/docs/platform/mcp",
+      "connectorPublisher": "Xata",
+      "category": "data",
+      "icon": "./assets/icon.svg",
+      "displayName": "Xata",
+      "descriptions": {
+        "en": "Explore Postgres schemas, query data and manage database branches through Xata’s official MCP service.",
+        "zh-CN": "通过 Xata 官方 MCP 服务探索 Postgres 结构、查询数据并管理数据库分支。"
+      }
+    }
+  }
+}
