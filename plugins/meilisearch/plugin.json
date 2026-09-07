@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "meilisearch",
+  "version": "1.0.0-ghast.1",
+  "description": "Search documents and manage indexes, relevance settings and indexing tasks through Meilisearch’s official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.meilisearch.com/integrations/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.meilisearch.com/integrations/mcp",
+      "connectorPublisher": "Meilisearch",
+      "category": "developer-tools",
+      "icon": "./assets/icon.png",
+      "displayName": "Meilisearch",
+      "descriptions": {
+        "en": "Search documents and manage indexes, relevance settings and indexing tasks through Meilisearch’s official MCP.",
+        "zh-CN": "通过 Meilisearch 官方 MCP 搜索文档并管理索引、相关性设置与索引任务。"
+      },
+      "mcpServerExtensions": {
+        "meilisearch": {
+          "credentialEnv": {
+            "MEILI_HTTP_ADDR": "$VAULT:meilisearch-url",
+            "MEILI_MASTER_KEY": "$VAULT:meilisearch-key"
+          }
+        }
+      }
+    }
+  }
+}

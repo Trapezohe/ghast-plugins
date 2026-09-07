@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "couchbase": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "--python",
+        "3.12",
+        "couchbase-mcp-server==1.0.1.post1",
+        "--read-only-mode=true",
+        "--log-sinks=stderr"
+      ]
+    }
+  }
+}

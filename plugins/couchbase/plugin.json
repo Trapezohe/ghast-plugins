@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "couchbase",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect Couchbase schemas, query documents and analyze cluster health with the official MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://mcp-server.couchbase.com/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://mcp-server.couchbase.com/",
+      "connectorPublisher": "Couchbase",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Couchbase",
+      "descriptions": {
+        "en": "Inspect Couchbase schemas, query documents and analyze cluster health with the official MCP server.",
+        "zh-CN": "通过 Couchbase 官方 MCP 检查数据结构、查询文档并分析集群健康情况。"
+      },
+      "mcpServerExtensions": {
+        "couchbase": {
+          "credentialEnv": {
+            "CB_CONNECTION_STRING": "$VAULT:couchbase-url",
+            "CB_USERNAME": "$VAULT:couchbase-user",
+            "CB_PASSWORD": "$VAULT:couchbase-password"
+          }
+        }
+      }
+    }
+  }
+}

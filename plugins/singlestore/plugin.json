@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "singlestore",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore SingleStore Helios workspaces, databases, notebooks, jobs and usage with the official MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.singlestore.com/cloud/ai/singlestore-mcp-server/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.singlestore.com/cloud/ai/singlestore-mcp-server/",
+      "connectorPublisher": "SingleStore",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "SingleStore",
+      "descriptions": {
+        "en": "Explore SingleStore Helios workspaces, databases, notebooks, jobs and usage with the official MCP server.",
+        "zh-CN": "通过 SingleStore 官方 MCP 探索 Helios 工作区、数据库、笔记本、任务与用量。"
+      },
+      "mcpServerExtensions": {
+        "singlestore": {
+          "credentialEnv": {
+            "MCP_API_KEY": "$VAULT:singlestore-token"
+          }
+        }
+      }
+    }
+  }
+}

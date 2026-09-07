@@ -3379,6 +3379,53 @@
       "category": "data"
     },
     {
+      "id": "couchbase",
+      "name": "Couchbase",
+      "description": "Inspect Couchbase schemas, query documents and analyze cluster health with the official MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "couchbase",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect Couchbase schemas, query documents and analyze cluster health with the official MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://mcp-server.couchbase.com/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://mcp-server.couchbase.com/",
+            "connectorPublisher": "Couchbase",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Couchbase",
+            "descriptions": {
+              "en": "Inspect Couchbase schemas, query documents and analyze cluster health with the official MCP server.",
+              "zh-CN": "通过 Couchbase 官方 MCP 检查数据结构、查询文档并分析集群健康情况。"
+            },
+            "mcpServerExtensions": {
+              "couchbase": {
+                "credentialEnv": {
+                  "CB_CONNECTION_STRING": "$VAULT:couchbase-url",
+                  "CB_USERNAME": "$VAULT:couchbase-user",
+                  "CB_PASSWORD": "$VAULT:couchbase-password"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/couchbase.zip",
+        "sha256": "5803a1a5e2184056a07ad390aa658b7d331ff8a578c141e6b707df480920770e"
+      },
+      "icon": "./plugins/couchbase/assets/icon.png",
+      "homepage": "https://mcp-server.couchbase.com/",
+      "license": "MIT",
+      "category": "data"
+    },
+    {
       "id": "coupler-io",
       "name": "coupler-io",
       "description": "Analyze marketing, sales, finance, ecommerce, product, and other business data from Coupler.io data flows through Coupler.io's official hosted OAuth MCP and Analytical Engine.",
@@ -7587,6 +7634,52 @@
       "category": "data"
     },
     {
+      "id": "meilisearch",
+      "name": "Meilisearch",
+      "description": "Search documents and manage indexes, relevance settings and indexing tasks through Meilisearch’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "meilisearch",
+        "version": "1.0.0-ghast.1",
+        "description": "Search documents and manage indexes, relevance settings and indexing tasks through Meilisearch’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.meilisearch.com/integrations/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.meilisearch.com/integrations/mcp",
+            "connectorPublisher": "Meilisearch",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "Meilisearch",
+            "descriptions": {
+              "en": "Search documents and manage indexes, relevance settings and indexing tasks through Meilisearch’s official MCP.",
+              "zh-CN": "通过 Meilisearch 官方 MCP 搜索文档并管理索引、相关性设置与索引任务。"
+            },
+            "mcpServerExtensions": {
+              "meilisearch": {
+                "credentialEnv": {
+                  "MEILI_HTTP_ADDR": "$VAULT:meilisearch-url",
+                  "MEILI_MASTER_KEY": "$VAULT:meilisearch-key"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/meilisearch.zip",
+        "sha256": "97719ff768ae6881cda12e17f99826fb7e800891e4a96a8392cf068ac89e2b3e"
+      },
+      "icon": "./plugins/meilisearch/assets/icon.png",
+      "homepage": "https://www.meilisearch.com/integrations/mcp",
+      "license": "MIT",
+      "category": "developer-tools"
+    },
+    {
       "id": "mem",
       "name": "mem",
       "description": "Search and manage Mem notes, attachments, recordings, and collections through Mem Labs' official hosted MCP server.",
@@ -10541,6 +10634,51 @@
       "homepage": "https://developers.similarweb.com/docs/similarweb-mcp.md",
       "license": "MIT",
       "category": "web"
+    },
+    {
+      "id": "singlestore",
+      "name": "SingleStore",
+      "description": "Explore SingleStore Helios workspaces, databases, notebooks, jobs and usage with the official MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "singlestore",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore SingleStore Helios workspaces, databases, notebooks, jobs and usage with the official MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.singlestore.com/cloud/ai/singlestore-mcp-server/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.singlestore.com/cloud/ai/singlestore-mcp-server/",
+            "connectorPublisher": "SingleStore",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "SingleStore",
+            "descriptions": {
+              "en": "Explore SingleStore Helios workspaces, databases, notebooks, jobs and usage with the official MCP server.",
+              "zh-CN": "通过 SingleStore 官方 MCP 探索 Helios 工作区、数据库、笔记本、任务与用量。"
+            },
+            "mcpServerExtensions": {
+              "singlestore": {
+                "credentialEnv": {
+                  "MCP_API_KEY": "$VAULT:singlestore-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/singlestore.zip",
+        "sha256": "cde2b235ba0292a8bf467226f3844df369bd5de80613591e549021d3814da54f"
+      },
+      "icon": "./plugins/singlestore/assets/icon.png",
+      "homepage": "https://docs.singlestore.com/cloud/ai/singlestore-mcp-server/",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "skywatch",
