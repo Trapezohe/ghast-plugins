@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "tavily",
+  "version": "1.0.0-ghast.1",
+  "description": "Research the web, extract page content and explore websites with Tavily search and crawling tools. 使用 Tavily 搜索网络、提取网页内容并探索站点，支持带来源的调研。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.tavily.com/documentation/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "research",
+      "icon": "./assets/icon.svg",
+      "displayName": "Tavily",
+      "descriptions": {
+        "en": "Research the web, extract page content and explore websites with Tavily search and crawling tools.",
+        "zh-CN": "使用 Tavily 搜索网络、提取网页内容并探索站点，支持带来源的调研。"
+      }
+    }
+  }
+}

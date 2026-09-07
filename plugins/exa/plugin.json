@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "exa",
+  "version": "1.0.0-ghast.1",
+  "description": "Search the web and retrieve source pages with Exa for grounded research and current information. 使用 Exa 搜索网络并读取来源网页，为调研与时效信息查询提供依据。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://exa.ai/docs/reference/exa-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "research",
+      "icon": "./assets/icon.svg",
+      "displayName": "Exa",
+      "descriptions": {
+        "en": "Search the web and retrieve source pages with Exa for grounded research and current information.",
+        "zh-CN": "使用 Exa 搜索网络并读取来源网页，为调研与时效信息查询提供依据。"
+      }
+    }
+  }
+}

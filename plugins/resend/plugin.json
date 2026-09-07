@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "resend",
+  "version": "1.0.0-ghast.1",
+  "description": "Review email activity, manage contacts and domains, and prepare transactional email workflows with Resend. 通过 Resend 查看邮件记录、管理联系人和域名，并准备事务邮件流程。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/resend/resend-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "communication",
+      "icon": "./assets/icon.svg",
+      "displayName": "Resend",
+      "descriptions": {
+        "en": "Review email activity, manage contacts and domains, and prepare transactional email workflows with Resend.",
+        "zh-CN": "通过 Resend 查看邮件记录、管理联系人和域名，并准备事务邮件流程。"
+      }
+    }
+  }
+}

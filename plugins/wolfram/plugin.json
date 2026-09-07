@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "wolfram",
+  "version": "1.0.0-ghast.1",
+  "description": "Solve mathematical problems, evaluate Wolfram Language and explore scientific knowledge with Wolfram MCP Service. 通过 Wolfram MCP Service 求解数学问题、运行 Wolfram Language 并查询科学知识。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/WolframResearch/AgentTools/blob/main/AgentSkills/Skills/wolfram-language/references/SetUpWolframMCPServer.md",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "research",
+      "icon": "./assets/icon.svg",
+      "displayName": "Wolfram",
+      "descriptions": {
+        "en": "Solve mathematical problems, evaluate Wolfram Language and explore scientific knowledge with Wolfram MCP Service.",
+        "zh-CN": "通过 Wolfram MCP Service 求解数学问题、运行 Wolfram Language 并查询科学知识。"
+      },
+      "mcpServerExtensions": {
+        "wolfram": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:wolfram-api-key"
+          }
+        }
+      }
+    }
+  }
+}

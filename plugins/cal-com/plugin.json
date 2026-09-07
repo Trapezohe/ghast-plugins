@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "cal-com",
+  "version": "1.0.0-ghast.1",
+  "description": "Check availability, manage event types and organize bookings and schedules with Cal.com. 使用 Cal.com 查询空闲时间、管理预约类型、整理日程和会议预约。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://cal.com/docs/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Cal.com",
+      "descriptions": {
+        "en": "Check availability, manage event types and organize bookings and schedules with Cal.com.",
+        "zh-CN": "使用 Cal.com 查询空闲时间、管理预约类型、整理日程和会议预约。"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "square",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore retail locations, catalogs, customers, orders and payments through Square. 通过 Square 查看门店、商品、客户、订单和支付，协助零售运营。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.squareup.com/docs/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "business",
+      "icon": "./assets/icon.svg",
+      "displayName": "Square",
+      "descriptions": {
+        "en": "Explore retail locations, catalogs, customers, orders and payments through Square.",
+        "zh-CN": "通过 Square 查看门店、商品、客户、订单和支付，协助零售运营。"
+      }
+    }
+  }
+}

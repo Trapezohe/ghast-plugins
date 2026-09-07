@@ -637,6 +637,42 @@
       "category": "productivity"
     },
     {
+      "id": "cal-com",
+      "name": "Cal.com",
+      "description": "Check availability, manage event types and organize bookings and schedules with Cal.com. 使用 Cal.com 查询空闲时间、管理预约类型、整理日程和会议预约。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "cal-com",
+        "version": "1.0.0-ghast.1",
+        "description": "Check availability, manage event types and organize bookings and schedules with Cal.com. 使用 Cal.com 查询空闲时间、管理预约类型、整理日程和会议预约。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://cal.com/docs/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "productivity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Cal.com",
+            "descriptions": {
+              "en": "Check availability, manage event types and organize bookings and schedules with Cal.com.",
+              "zh-CN": "使用 Cal.com 查询空闲时间、管理预约类型、整理日程和会议预约。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/cal-com.zip",
+        "sha256": "89039edadc23e61c2b0c9d0646c12c8a360f12e762103637abffbacb2684f48d"
+      },
+      "icon": "./plugins/cal-com/assets/icon.svg",
+      "homepage": "https://cal.com/docs/mcp-server",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "calendly",
       "name": "calendly",
       "description": "Inspect Calendly meetings and availability, manage event types and schedules, create booking links, book or cancel meetings, and administer invitations through Calendly's official hosted MCP server.",
@@ -1873,6 +1909,42 @@
       "category": "productivity"
     },
     {
+      "id": "exa",
+      "name": "Exa",
+      "description": "Search the web and retrieve source pages with Exa for grounded research and current information. 使用 Exa 搜索网络并读取来源网页，为调研与时效信息查询提供依据。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "exa",
+        "version": "1.0.0-ghast.1",
+        "description": "Search the web and retrieve source pages with Exa for grounded research and current information. 使用 Exa 搜索网络并读取来源网页，为调研与时效信息查询提供依据。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://exa.ai/docs/reference/exa-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "research",
+            "icon": "./assets/icon.svg",
+            "displayName": "Exa",
+            "descriptions": {
+              "en": "Search the web and retrieve source pages with Exa for grounded research and current information.",
+              "zh-CN": "使用 Exa 搜索网络并读取来源网页，为调研与时效信息查询提供依据。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/exa.zip",
+        "sha256": "db11ed88357f0f777844794df12cf1cd58acd209fbaf6182225bb72fdf0961f9"
+      },
+      "icon": "./plugins/exa/assets/icon.svg",
+      "homepage": "https://exa.ai/docs/reference/exa-mcp",
+      "license": "MIT",
+      "category": "research"
+    },
+    {
       "id": "expo",
       "name": "expo",
       "description": "Official Expo skills for building, deploying, upgrading, and debugging Expo and React Native apps.",
@@ -2986,6 +3058,42 @@
       "category": "research"
     },
     {
+      "id": "miro",
+      "name": "Miro",
+      "description": "Read team whiteboards and develop diagrams, ideas and collaborative board content with Miro. 读取团队白板，整理创意、制作图表并协作编辑 Miro 看板。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "miro",
+        "version": "1.0.0-ghast.1",
+        "description": "Read team whiteboards and develop diagrams, ideas and collaborative board content with Miro. 读取团队白板，整理创意、制作图表并协作编辑 Miro 看板。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developers.miro.com/docs/miro-mcp-server-frequently-asked-questions",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "creativity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Miro",
+            "descriptions": {
+              "en": "Read team whiteboards and develop diagrams, ideas and collaborative board content with Miro.",
+              "zh-CN": "读取团队白板，整理创意、制作图表并协作编辑 Miro 看板。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/miro.zip",
+        "sha256": "fdd3da4e6457f35c22374a235ba30d6289c59f6a8b6a875a729eaed4e05efe0d"
+      },
+      "icon": "./plugins/miro/assets/icon.svg",
+      "homepage": "https://developers.miro.com/docs/miro-mcp-server-frequently-asked-questions",
+      "license": "MIT",
+      "category": "creativity"
+    },
+    {
       "id": "mixpanel",
       "name": "mixpanel",
       "description": "Analyze Mixpanel data and manage dashboards, Lexicon, data quality, experiments, feature flags, metrics, cohorts, and business context through Mixpanel's official skills and hosted MCP server.",
@@ -3494,6 +3602,42 @@
       "homepage": "https://www.particl.com/docs/mcp",
       "license": "MIT",
       "category": "data"
+    },
+    {
+      "id": "paypal",
+      "name": "PayPal",
+      "description": "Review PayPal transactions and invoices and assist with authorized payment workflows. 查询 PayPal 交易和发票，并协助完成用户明确授权的支付业务流程。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "paypal",
+        "version": "1.0.0-ghast.1",
+        "description": "Review PayPal transactions and invoices and assist with authorized payment workflows. 查询 PayPal 交易和发票，并协助完成用户明确授权的支付业务流程。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://paypal.gitbook.com/agent-toolkit-and-mcp-server/mcp-server/set-up-a-remote-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "finance",
+            "icon": "./assets/icon.svg",
+            "displayName": "PayPal",
+            "descriptions": {
+              "en": "Review PayPal transactions and invoices and assist with authorized payment workflows.",
+              "zh-CN": "查询 PayPal 交易和发票，并协助完成用户明确授权的支付业务流程。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/paypal.zip",
+        "sha256": "3d88549ddfd4b50a50e27d602068fa572bbfb39c5df93f54c3680be7ccc0c8c2"
+      },
+      "icon": "./plugins/paypal/assets/icon.svg",
+      "homepage": "https://paypal.gitbook.com/agent-toolkit-and-mcp-server/mcp-server/set-up-a-remote-mcp-server",
+      "license": "MIT",
+      "category": "finance"
     },
     {
       "id": "picsart",
@@ -4011,6 +4155,42 @@
       "category": "developer-tools"
     },
     {
+      "id": "resend",
+      "name": "Resend",
+      "description": "Review email activity, manage contacts and domains, and prepare transactional email workflows with Resend. 通过 Resend 查看邮件记录、管理联系人和域名，并准备事务邮件流程。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "resend",
+        "version": "1.0.0-ghast.1",
+        "description": "Review email activity, manage contacts and domains, and prepare transactional email workflows with Resend. 通过 Resend 查看邮件记录、管理联系人和域名，并准备事务邮件流程。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/resend/resend-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "communication",
+            "icon": "./assets/icon.svg",
+            "displayName": "Resend",
+            "descriptions": {
+              "en": "Review email activity, manage contacts and domains, and prepare transactional email workflows with Resend.",
+              "zh-CN": "通过 Resend 查看邮件记录、管理联系人和域名，并准备事务邮件流程。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/resend.zip",
+        "sha256": "c544d89fc7b786183fbeeeb5532fa22893b9abe6e8664fc1845d3591b6d5ce8a"
+      },
+      "icon": "./plugins/resend/assets/icon.svg",
+      "homepage": "https://github.com/resend/resend-mcp",
+      "license": "MIT",
+      "category": "communication"
+    },
+    {
       "id": "responsive",
       "name": "responsive",
       "description": "Search governed Responsive proposal content, inspect projects and unanswered questions, and generate grounded draft responses through Responsive's official hosted MCP.",
@@ -4408,6 +4588,42 @@
       "category": "research"
     },
     {
+      "id": "square",
+      "name": "Square",
+      "description": "Explore retail locations, catalogs, customers, orders and payments through Square. 通过 Square 查看门店、商品、客户、订单和支付，协助零售运营。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "square",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore retail locations, catalogs, customers, orders and payments through Square. 通过 Square 查看门店、商品、客户、订单和支付，协助零售运营。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.squareup.com/docs/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "business",
+            "icon": "./assets/icon.svg",
+            "displayName": "Square",
+            "descriptions": {
+              "en": "Explore retail locations, catalogs, customers, orders and payments through Square.",
+              "zh-CN": "通过 Square 查看门店、商品、客户、订单和支付，协助零售运营。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/square.zip",
+        "sha256": "c548404a8b3749ece3b28ee9f364de5fe1ced4aabfb7b30f0337badc9c542256"
+      },
+      "icon": "./plugins/square/assets/icon.svg",
+      "homepage": "https://developer.squareup.com/docs/mcp",
+      "license": "MIT",
+      "category": "business"
+    },
+    {
       "id": "statsig",
       "name": "statsig",
       "description": "Inspect and manage Statsig experiments, feature gates, dynamic configs, segments, metrics, results, audit logs, and dashboards through official skills and the official Statsig MCP server.",
@@ -4677,6 +4893,42 @@
       "category": "development"
     },
     {
+      "id": "tavily",
+      "name": "Tavily",
+      "description": "Research the web, extract page content and explore websites with Tavily search and crawling tools. 使用 Tavily 搜索网络、提取网页内容并探索站点，支持带来源的调研。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "tavily",
+        "version": "1.0.0-ghast.1",
+        "description": "Research the web, extract page content and explore websites with Tavily search and crawling tools. 使用 Tavily 搜索网络、提取网页内容并探索站点，支持带来源的调研。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.tavily.com/documentation/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "research",
+            "icon": "./assets/icon.svg",
+            "displayName": "Tavily",
+            "descriptions": {
+              "en": "Research the web, extract page content and explore websites with Tavily search and crawling tools.",
+              "zh-CN": "使用 Tavily 搜索网络、提取网页内容并探索站点，支持带来源的调研。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/tavily.zip",
+        "sha256": "a55eae5809861d6099ab58d63f7c316337def32adaa12a860233f0b395ae492c"
+      },
+      "icon": "./plugins/tavily/assets/icon.svg",
+      "homepage": "https://docs.tavily.com/documentation/mcp",
+      "license": "MIT",
+      "category": "research"
+    },
+    {
       "id": "temporal",
       "name": "temporal",
       "description": "Comprehensive skill for the entire Temporal lifecycle — developing applications, using the Temporal CLI, running and managing Temporal Server, and working with Temporal Cloud.",
@@ -4854,6 +5106,49 @@
       "homepage": "https://developer.todoist.com/api/v1/#tag/Todoist-MCP",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "tomtom",
+      "name": "TomTom",
+      "description": "Find places, geocode addresses, compare routes and inspect traffic with TomTom Maps. 通过 TomTom 地图查找地点、解析地址、比较路线和查看交通，辅助出行与物流规划。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "tomtom",
+        "version": "1.0.0-ghast.1",
+        "description": "Find places, geocode addresses, compare routes and inspect traffic with TomTom Maps. 通过 TomTom 地图查找地点、解析地址、比较路线和查看交通，辅助出行与物流规划。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.tomtom.com/tomtom-maps-mcp/documentation/quick-setup",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "lifestyle",
+            "icon": "./assets/icon.svg",
+            "displayName": "TomTom",
+            "descriptions": {
+              "en": "Find places, geocode addresses, compare routes and inspect traffic with TomTom Maps.",
+              "zh-CN": "通过 TomTom 地图查找地点、解析地址、比较路线和查看交通，辅助出行与物流规划。"
+            },
+            "mcpServerExtensions": {
+              "tomtom": {
+                "credentialHeaders": {
+                  "tomtom-api-key": "$VAULT:tomtom-api-key"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/tomtom.zip",
+        "sha256": "da71a71a9274e6c378a3d46edcef82b9ffb9152030782b59d724c0b01f27f57d"
+      },
+      "icon": "./plugins/tomtom/assets/icon.svg",
+      "homepage": "https://docs.tomtom.com/tomtom-maps-mcp/documentation/quick-setup",
+      "license": "MIT",
+      "category": "lifestyle"
     },
     {
       "id": "twilio-developer-kit",
@@ -5125,6 +5420,49 @@
       "repository": "https://github.com/wix/skills",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "wolfram",
+      "name": "Wolfram",
+      "description": "Solve mathematical problems, evaluate Wolfram Language and explore scientific knowledge with Wolfram MCP Service. 通过 Wolfram MCP Service 求解数学问题、运行 Wolfram Language 并查询科学知识。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "wolfram",
+        "version": "1.0.0-ghast.1",
+        "description": "Solve mathematical problems, evaluate Wolfram Language and explore scientific knowledge with Wolfram MCP Service. 通过 Wolfram MCP Service 求解数学问题、运行 Wolfram Language 并查询科学知识。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/WolframResearch/AgentTools/blob/main/AgentSkills/Skills/wolfram-language/references/SetUpWolframMCPServer.md",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "research",
+            "icon": "./assets/icon.svg",
+            "displayName": "Wolfram",
+            "descriptions": {
+              "en": "Solve mathematical problems, evaluate Wolfram Language and explore scientific knowledge with Wolfram MCP Service.",
+              "zh-CN": "通过 Wolfram MCP Service 求解数学问题、运行 Wolfram Language 并查询科学知识。"
+            },
+            "mcpServerExtensions": {
+              "wolfram": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:wolfram-api-key"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/wolfram.zip",
+        "sha256": "c98149aa86c65a0f80a5b78eb795586e0f3e4940890da35ea685f3ff0f07c49c"
+      },
+      "icon": "./plugins/wolfram/assets/icon.svg",
+      "homepage": "https://github.com/WolframResearch/AgentTools/blob/main/AgentSkills/Skills/wolfram-language/references/SetUpWolframMCPServer.md",
+      "license": "MIT",
+      "category": "research"
     },
     {
       "id": "yepcode",
