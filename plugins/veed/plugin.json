@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "veed",
+  "version": "1.0.0-ghast.1",
+  "description": "Create talking-head videos with AI characters, voices and workspace assets.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://veedstudio.github.io/veed-fabric-mcp/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://veedstudio.github.io/veed-fabric-mcp/",
+      "connectorPublisher": "VEED",
+      "category": "creativity",
+      "icon": "./assets/icon.svg",
+      "displayName": "VEED",
+      "descriptions": {
+        "en": "Create talking-head videos with AI characters, voices and workspace assets.",
+        "zh-CN": "使用 AI 角色、声音与工作区素材创建口播视频。"
+      }
+    }
+  }
+}

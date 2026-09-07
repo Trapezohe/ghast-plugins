@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "aave",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore Aave markets, rates, positions and governance, and prepare transaction previews.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://mcp.aave.com",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://mcp.aave.com",
+      "connectorPublisher": "Aave",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Aave",
+      "descriptions": {
+        "en": "Explore Aave markets, rates, positions and governance, and prepare transaction previews.",
+        "zh-CN": "查询 Aave 市场、利率、仓位与治理信息，并预览交易。"
+      }
+    }
+  }
+}

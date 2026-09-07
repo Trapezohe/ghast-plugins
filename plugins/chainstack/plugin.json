@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "chainstack",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect blockchain infrastructure, search documentation and manage Chainstack nodes.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.chainstack.com/docs/chainstack-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.chainstack.com/docs/chainstack-mcp-server",
+      "connectorPublisher": "Chainstack",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Chainstack",
+      "descriptions": {
+        "en": "Inspect blockchain infrastructure, search documentation and manage Chainstack nodes.",
+        "zh-CN": "查询区块链基础设施与文档，管理 Chainstack 节点。"
+      },
+      "mcpServerExtensions": {
+        "chainstack": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:chainstack-token"
+          }
+        }
+      }
+    }
+  }
+}

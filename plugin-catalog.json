@@ -3,6 +3,44 @@
   "description": "Downloadable Ghast-compatible plugin packages.",
   "plugins": [
     {
+      "id": "aave",
+      "name": "Aave",
+      "description": "Explore Aave markets, rates, positions and governance, and prepare transaction previews.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "aave",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore Aave markets, rates, positions and governance, and prepare transaction previews.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://mcp.aave.com",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://mcp.aave.com",
+            "connectorPublisher": "Aave",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Aave",
+            "descriptions": {
+              "en": "Explore Aave markets, rates, positions and governance, and prepare transaction previews.",
+              "zh-CN": "查询 Aave 市场、利率、仓位与治理信息，并预览交易。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/aave.zip",
+        "sha256": "1a911bb190b2bae5cd6a097bd75eb0540d4fd7378a440fd6a8b44851b96e9621"
+      },
+      "icon": "./plugins/aave/assets/icon.png",
+      "homepage": "https://mcp.aave.com",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
       "id": "actively",
       "name": "actively",
       "description": "Research and prioritize accounts using Actively's persistent Per-Account Agent intelligence, buying signals, prospect context, strategy, and next-best actions.",
@@ -37,6 +75,44 @@
       "homepage": "https://www.actively.ai/products/mcp-server",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "agilitycms",
+      "name": "Agility CMS",
+      "description": "Manage structured content, models, pages and media in Agility CMS.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "agilitycms",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage structured content, models, pages and media in Agility CMS.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/agility/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/agility/mcp-server",
+            "connectorPublisher": "Agility CMS",
+            "category": "marketing",
+            "icon": "./assets/icon.svg",
+            "displayName": "Agility CMS",
+            "descriptions": {
+              "en": "Manage structured content, models, pages and media in Agility CMS.",
+              "zh-CN": "管理 Agility CMS 中的结构化内容、模型、页面与媒体。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/agilitycms.zip",
+        "sha256": "bb52223c417c8059d43c364649954904ecf543d612ebfec8a5a3acef5235657e"
+      },
+      "icon": "./plugins/agilitycms/assets/icon.svg",
+      "homepage": "https://github.com/agility/mcp-server",
+      "license": "MIT",
+      "category": "marketing"
     },
     {
       "id": "aiera",
@@ -373,6 +449,44 @@
       "category": "productivity"
     },
     {
+      "id": "arcjet",
+      "name": "Arcjet",
+      "description": "Investigate application traffic, security decisions, quotas and protection rules.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "arcjet",
+        "version": "1.0.0-ghast.1",
+        "description": "Investigate application traffic, security decisions, quotas and protection rules.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.arcjet.com/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.arcjet.com/mcp-server",
+            "connectorPublisher": "Arcjet",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Arcjet",
+            "descriptions": {
+              "en": "Investigate application traffic, security decisions, quotas and protection rules.",
+              "zh-CN": "分析应用流量、安全判定、配额与防护规则。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/arcjet.zip",
+        "sha256": "b967bf13afc06960c06d2c3e87bc85ef5aa329d80959af93a9f1c816692dbe3a"
+      },
+      "icon": "./plugins/arcjet/assets/icon.png",
+      "homepage": "https://docs.arcjet.com/mcp-server",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "asana",
       "name": "asana",
       "description": "Read and manage Asana tasks, subtasks, comments, due dates, projects, portfolios, status updates, teams, users, and workspace priorities through Asana's official V2 MCP server.",
@@ -523,6 +637,44 @@
       "category": "productivity"
     },
     {
+      "id": "avaza",
+      "name": "Avaza",
+      "description": "Manage projects, tasks, timesheets, expenses, invoices and team schedules.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "avaza",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage projects, tasks, timesheets, expenses, invoices and team schedules.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://support.avaza.com/avaza-mcp-server/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://support.avaza.com/avaza-mcp-server/",
+            "connectorPublisher": "Avaza",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Avaza",
+            "descriptions": {
+              "en": "Manage projects, tasks, timesheets, expenses, invoices and team schedules.",
+              "zh-CN": "管理项目、任务、工时、费用、发票与团队排期。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/avaza.zip",
+        "sha256": "f2ed3df037158a38051a8df8b3e2c445289059631f205b8812a4647f765c7af8"
+      },
+      "icon": "./plugins/avaza/assets/icon.png",
+      "homepage": "https://support.avaza.com/avaza-mcp-server/",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "aws-knowledge",
       "name": "AWS Knowledge",
       "description": "Find AWS documentation, regional availability and implementation guidance.",
@@ -632,6 +784,44 @@
       "repository": "https://github.com/base44/skills",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "basedash",
+      "name": "Basedash",
+      "description": "Analyze governed business data and create or inspect dashboards and charts.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "basedash",
+        "version": "1.0.0-ghast.1",
+        "description": "Analyze governed business data and create or inspect dashboards and charts.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.basedash.com/features/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.basedash.com/features/mcp-server",
+            "connectorPublisher": "Basedash",
+            "category": "data",
+            "icon": "./assets/icon.svg",
+            "displayName": "Basedash",
+            "descriptions": {
+              "en": "Analyze governed business data and create or inspect dashboards and charts.",
+              "zh-CN": "分析受权限控制的业务数据，创建或查看仪表盘与图表。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/basedash.zip",
+        "sha256": "17f234cc167f192782d0acb561edd708db91f2e8453d16bb40ae8a8a63053bd0"
+      },
+      "icon": "./plugins/basedash/assets/icon.svg",
+      "homepage": "https://www.basedash.com/features/mcp-server",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "bilibili-search",
@@ -745,6 +935,44 @@
       "homepage": "https://help.biorender.com/hc/en-gb/articles/37237276158109-How-to-use-the-BioRender-MCP-connector",
       "license": "MIT",
       "category": "creativity"
+    },
+    {
+      "id": "bird",
+      "name": "Bird",
+      "description": "Manage Bird messaging across email, SMS, WhatsApp and voice.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "bird",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage Bird messaging across email, SMS, WhatsApp and voice.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://bird.com/docs/ai/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://bird.com/docs/ai/mcp-server",
+            "connectorPublisher": "Bird",
+            "category": "communication",
+            "icon": "./assets/icon.svg",
+            "displayName": "Bird",
+            "descriptions": {
+              "en": "Manage Bird messaging across email, SMS, WhatsApp and voice.",
+              "zh-CN": "通过 Bird 管理邮件、短信、WhatsApp 与语音通信。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/bird.zip",
+        "sha256": "fd811a9c903b9b8f1f963ded7aae491d73a68949c589b3de9a4911600607c74d"
+      },
+      "icon": "./plugins/bird/assets/icon.svg",
+      "homepage": "https://bird.com/docs/ai/mcp-server",
+      "license": "MIT",
+      "category": "communication"
     },
     {
       "id": "bitly",
@@ -1291,6 +1519,51 @@
       "repository": "https://github.com/cbinsights/cbi-mcp-server",
       "license": "MIT",
       "category": "finance"
+    },
+    {
+      "id": "chainstack",
+      "name": "Chainstack",
+      "description": "Inspect blockchain infrastructure, search documentation and manage Chainstack nodes.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "chainstack",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect blockchain infrastructure, search documentation and manage Chainstack nodes.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.chainstack.com/docs/chainstack-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.chainstack.com/docs/chainstack-mcp-server",
+            "connectorPublisher": "Chainstack",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Chainstack",
+            "descriptions": {
+              "en": "Inspect blockchain infrastructure, search documentation and manage Chainstack nodes.",
+              "zh-CN": "查询区块链基础设施与文档，管理 Chainstack 节点。"
+            },
+            "mcpServerExtensions": {
+              "chainstack": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:chainstack-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/chainstack.zip",
+        "sha256": "01c38252602328b7d136114057c9dc0def31a24e0fbda5372dc66a38342e6649"
+      },
+      "icon": "./plugins/chainstack/assets/icon.png",
+      "homepage": "https://docs.chainstack.com/docs/chainstack-mcp-server",
+      "license": "MIT",
+      "category": "development"
     },
     {
       "id": "channel99",
@@ -3490,6 +3763,44 @@
       "category": "development"
     },
     {
+      "id": "gitlab",
+      "name": "GitLab",
+      "description": "Work with GitLab projects, issues, merge requests and development workflows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "gitlab",
+        "version": "1.0.0-ghast.1",
+        "description": "Work with GitLab projects, issues, merge requests and development workflows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.gitlab.com/user/model_context_protocol/mcp_server/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.gitlab.com/user/model_context_protocol/mcp_server/",
+            "connectorPublisher": "GitLab",
+            "category": "development",
+            "icon": "./assets/icon.svg",
+            "displayName": "GitLab",
+            "descriptions": {
+              "en": "Work with GitLab projects, issues, merge requests and development workflows.",
+              "zh-CN": "访问 GitLab 项目、议题、合并请求与开发工作流。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/gitlab.zip",
+        "sha256": "47965bfc16abca889a397761b57aba2a97ed720c239b6bff6168ee1d170d4480"
+      },
+      "icon": "./plugins/gitlab/assets/icon.svg",
+      "homepage": "https://docs.gitlab.com/user/model_context_protocol/mcp_server/",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "glean",
       "name": "glean",
       "description": "Search enterprise documents, Slack, email, code, people, meetings, memory, and organization-specific tools through Glean's official Codex plugin and local MCP adapter.",
@@ -5317,6 +5628,44 @@
       "category": "business"
     },
     {
+      "id": "planetscale",
+      "name": "PlanetScale",
+      "description": "Inspect databases, branches, schemas and query performance with PlanetScale.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "planetscale",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect databases, branches, schemas and query performance with PlanetScale.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://planetscale.com/docs/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://planetscale.com/docs/mcp-server",
+            "connectorPublisher": "PlanetScale",
+            "category": "data",
+            "icon": "./assets/icon.svg",
+            "displayName": "PlanetScale",
+            "descriptions": {
+              "en": "Inspect databases, branches, schemas and query performance with PlanetScale.",
+              "zh-CN": "查询 PlanetScale 数据库、分支、表结构与查询性能。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/planetscale.zip",
+        "sha256": "a4170012d4a44dada2684c1ddef4f60ce555be4f3a4e1be97ef09859d31f2725"
+      },
+      "icon": "./plugins/planetscale/assets/icon.svg",
+      "homepage": "https://planetscale.com/docs/mcp-server",
+      "license": "MIT",
+      "category": "data"
+    },
+    {
       "id": "policynote",
       "name": "policynote",
       "description": "Research global legislation, regulation, officials, elections, transcripts, and policy activity through PolicyNote.",
@@ -6288,6 +6637,44 @@
       "icon": "./plugins/seo-meta/assets/icon.svg",
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/seo-meta",
       "category": "web"
+    },
+    {
+      "id": "serpstat",
+      "name": "Serpstat",
+      "description": "Research keywords, competitors, backlinks, rankings and technical SEO.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "serpstat",
+        "version": "1.0.0-ghast.1",
+        "description": "Research keywords, competitors, backlinks, rankings and technical SEO.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://serpstat.com/page/serpstat-mcp/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://serpstat.com/page/serpstat-mcp/",
+            "connectorPublisher": "Serpstat",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "Serpstat",
+            "descriptions": {
+              "en": "Research keywords, competitors, backlinks, rankings and technical SEO.",
+              "zh-CN": "研究关键词、竞品、外链、排名与技术 SEO。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/serpstat.zip",
+        "sha256": "ab1658c9ccea813be092d7ce3d98538c929898bbb95abace48a08f5da5b4b557"
+      },
+      "icon": "./plugins/serpstat/assets/icon.png",
+      "homepage": "https://serpstat.com/page/serpstat-mcp/",
+      "license": "MIT",
+      "category": "marketing"
     },
     {
       "id": "setu-bharat-connect-billpay",
@@ -7312,6 +7699,44 @@
       "repository": "https://github.com/vantage-sh/vantage-mcp-server",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "veed",
+      "name": "VEED",
+      "description": "Create talking-head videos with AI characters, voices and workspace assets.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "veed",
+        "version": "1.0.0-ghast.1",
+        "description": "Create talking-head videos with AI characters, voices and workspace assets.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://veedstudio.github.io/veed-fabric-mcp/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://veedstudio.github.io/veed-fabric-mcp/",
+            "connectorPublisher": "VEED",
+            "category": "creativity",
+            "icon": "./assets/icon.svg",
+            "displayName": "VEED",
+            "descriptions": {
+              "en": "Create talking-head videos with AI characters, voices and workspace assets.",
+              "zh-CN": "使用 AI 角色、声音与工作区素材创建口播视频。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/veed.zip",
+        "sha256": "3a924e4452070d056625198d2c395bb52a5120423c994c3a3614be2a410cdbf0"
+      },
+      "icon": "./plugins/veed/assets/icon.svg",
+      "homepage": "https://veedstudio.github.io/veed-fabric-mcp/",
+      "license": "MIT",
+      "category": "creativity"
     },
     {
       "id": "vercel",

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "avaza",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage projects, tasks, timesheets, expenses, invoices and team schedules.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://support.avaza.com/avaza-mcp-server/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://support.avaza.com/avaza-mcp-server/",
+      "connectorPublisher": "Avaza",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Avaza",
+      "descriptions": {
+        "en": "Manage projects, tasks, timesheets, expenses, invoices and team schedules.",
+        "zh-CN": "管理项目、任务、工时、费用、发票与团队排期。"
+      }
+    }
+  }
+}

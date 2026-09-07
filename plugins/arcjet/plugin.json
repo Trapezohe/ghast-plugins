@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "arcjet",
+  "version": "1.0.0-ghast.1",
+  "description": "Investigate application traffic, security decisions, quotas and protection rules.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.arcjet.com/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.arcjet.com/mcp-server",
+      "connectorPublisher": "Arcjet",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Arcjet",
+      "descriptions": {
+        "en": "Investigate application traffic, security decisions, quotas and protection rules.",
+        "zh-CN": "分析应用流量、安全判定、配额与防护规则。"
+      }
+    }
+  }
+}

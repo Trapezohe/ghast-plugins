@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "agilitycms",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage structured content, models, pages and media in Agility CMS.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/agility/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/agility/mcp-server",
+      "connectorPublisher": "Agility CMS",
+      "category": "marketing",
+      "icon": "./assets/icon.svg",
+      "displayName": "Agility CMS",
+      "descriptions": {
+        "en": "Manage structured content, models, pages and media in Agility CMS.",
+        "zh-CN": "管理 Agility CMS 中的结构化内容、模型、页面与媒体。"
+      }
+    }
+  }
+}

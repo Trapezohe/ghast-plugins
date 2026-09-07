@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "serpstat",
+  "version": "1.0.0-ghast.1",
+  "description": "Research keywords, competitors, backlinks, rankings and technical SEO.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://serpstat.com/page/serpstat-mcp/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://serpstat.com/page/serpstat-mcp/",
+      "connectorPublisher": "Serpstat",
+      "category": "marketing",
+      "icon": "./assets/icon.png",
+      "displayName": "Serpstat",
+      "descriptions": {
+        "en": "Research keywords, competitors, backlinks, rankings and technical SEO.",
+        "zh-CN": "研究关键词、竞品、外链、排名与技术 SEO。"
+      }
+    }
+  }
+}

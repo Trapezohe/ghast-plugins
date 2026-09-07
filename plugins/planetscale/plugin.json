@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "planetscale",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect databases, branches, schemas and query performance with PlanetScale.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://planetscale.com/docs/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://planetscale.com/docs/mcp-server",
+      "connectorPublisher": "PlanetScale",
+      "category": "data",
+      "icon": "./assets/icon.svg",
+      "displayName": "PlanetScale",
+      "descriptions": {
+        "en": "Inspect databases, branches, schemas and query performance with PlanetScale.",
+        "zh-CN": "查询 PlanetScale 数据库、分支、表结构与查询性能。"
+      }
+    }
+  }
+}

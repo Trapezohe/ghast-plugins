@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "basedash",
+  "version": "1.0.0-ghast.1",
+  "description": "Analyze governed business data and create or inspect dashboards and charts.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.basedash.com/features/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.basedash.com/features/mcp-server",
+      "connectorPublisher": "Basedash",
+      "category": "data",
+      "icon": "./assets/icon.svg",
+      "displayName": "Basedash",
+      "descriptions": {
+        "en": "Analyze governed business data and create or inspect dashboards and charts.",
+        "zh-CN": "分析受权限控制的业务数据，创建或查看仪表盘与图表。"
+      }
+    }
+  }
+}

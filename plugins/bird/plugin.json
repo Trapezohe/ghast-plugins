@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "bird",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage Bird messaging across email, SMS, WhatsApp and voice.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://bird.com/docs/ai/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://bird.com/docs/ai/mcp-server",
+      "connectorPublisher": "Bird",
+      "category": "communication",
+      "icon": "./assets/icon.svg",
+      "displayName": "Bird",
+      "descriptions": {
+        "en": "Manage Bird messaging across email, SMS, WhatsApp and voice.",
+        "zh-CN": "通过 Bird 管理邮件、短信、WhatsApp 与语音通信。"
+      }
+    }
+  }
+}
