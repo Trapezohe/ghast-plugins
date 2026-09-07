@@ -229,6 +229,49 @@
       "category": "data"
     },
     {
+      "id": "apify",
+      "name": "Apify",
+      "description": "Discover web data Actors and run scoped extraction workflows. 检索网页数据采集 Actor，执行限定范围的数据提取。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "apify",
+        "version": "1.0.0-ghast.1",
+        "description": "Discover web data Actors and run scoped extraction workflows. 检索网页数据采集 Actor，执行限定范围的数据提取。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.apify.com/integrations/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "web",
+            "icon": "./assets/icon.svg",
+            "displayName": "Apify",
+            "descriptions": {
+              "en": "Discover web data Actors and run scoped extraction workflows.",
+              "zh-CN": "检索网页数据采集 Actor，执行限定范围的数据提取。"
+            },
+            "mcpServerExtensions": {
+              "apify": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:apify-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/apify.zip",
+        "sha256": "e5e158cecf97211f2af91f1efc84405694a4c13fc18576db02d5c5988b79956a"
+      },
+      "icon": "./plugins/apify/assets/icon.svg",
+      "homepage": "https://docs.apify.com/integrations/mcp",
+      "license": "MIT",
+      "category": "web"
+    },
+    {
       "id": "apollo",
       "name": "apollo",
       "description": "Prospect for people and companies, enrich leads, load reviewed contacts into outreach sequences, and query sales analytics through Apollo.io's official skills and hosted MCP server.",
@@ -299,6 +342,42 @@
       "category": "productivity"
     },
     {
+      "id": "astro",
+      "name": "Astro Docs",
+      "description": "Search Astro documentation for content sites and integrations. 检索 Astro 官方文档，开发内容站点并接入集成。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "astro",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Astro documentation for content sites and integrations. 检索 Astro 官方文档，开发内容站点并接入集成。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.astro.build/en/guides/build-with-ai/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "development",
+            "icon": "./assets/icon.svg",
+            "displayName": "Astro Docs",
+            "descriptions": {
+              "en": "Search Astro documentation for content sites and integrations.",
+              "zh-CN": "检索 Astro 官方文档，开发内容站点并接入集成。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/astro.zip",
+        "sha256": "19bc4ce90fae4705dc1211b4030b8eb4db8a68753ef02eae5f6a22dfee922de2"
+      },
+      "icon": "./plugins/astro/assets/icon.svg",
+      "homepage": "https://docs.astro.build/en/guides/build-with-ai/",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "atlassian-rovo",
       "name": "atlassian-rovo",
       "description": "Search and manage Jira, Confluence, Jira Service Management, Bitbucket, Compass, and Teamwork Graph through Atlassian's official Rovo MCP server and workflow skills.",
@@ -364,6 +443,78 @@
       "homepage": "https://docs.attio.com/mcp/overview.md",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "aws-knowledge",
+      "name": "AWS Knowledge",
+      "description": "Find AWS documentation, regional availability and implementation guidance. 查询 AWS 官方文档、区域可用性与实现指南。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "aws-knowledge",
+        "version": "1.0.0-ghast.1",
+        "description": "Find AWS documentation, regional availability and implementation guidance. 查询 AWS 官方文档、区域可用性与实现指南。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://awslabs.github.io/mcp/servers/aws-knowledge-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "AWS Knowledge",
+            "descriptions": {
+              "en": "Find AWS documentation, regional availability and implementation guidance.",
+              "zh-CN": "查询 AWS 官方文档、区域可用性与实现指南。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/aws-knowledge.zip",
+        "sha256": "2c2eb144b63f5e47c121e68bc86f208cddc6f61001335779e5d62b8a428a47ab"
+      },
+      "icon": "./plugins/aws-knowledge/assets/icon.png",
+      "homepage": "https://awslabs.github.io/mcp/servers/aws-knowledge-mcp-server",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
+      "id": "axiom",
+      "name": "Axiom",
+      "description": "Investigate logs and events with Axiom dataset queries. 查询 Axiom 日志与事件，分析故障和运行趋势。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "axiom",
+        "version": "1.0.0-ghast.1",
+        "description": "Investigate logs and events with Axiom dataset queries. 查询 Axiom 日志与事件，分析故障和运行趋势。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://axiom.co/docs/console/intelligence/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Axiom",
+            "descriptions": {
+              "en": "Investigate logs and events with Axiom dataset queries.",
+              "zh-CN": "查询 Axiom 日志与事件，分析故障和运行趋势。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/axiom.zip",
+        "sha256": "5e59c75ca9e86b488ebbbfee3f168a94a9f6803c85bb0eeefd6e6371fb210588"
+      },
+      "icon": "./plugins/axiom/assets/icon.png",
+      "homepage": "https://axiom.co/docs/console/intelligence/mcp-server",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "base44",
@@ -502,6 +653,49 @@
       "category": "creativity"
     },
     {
+      "id": "bitly",
+      "name": "Bitly",
+      "description": "Create branded short links and analyze link and QR engagement. 创建品牌短链接，分析链接与二维码互动效果。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "bitly",
+        "version": "1.0.0-ghast.1",
+        "description": "Create branded short links and analyze link and QR engagement. 创建品牌短链接，分析链接与二维码互动效果。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://dev.bitly.com/bitly-mcp/overview/quickstart/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "business",
+            "icon": "./assets/icon.svg",
+            "displayName": "Bitly",
+            "descriptions": {
+              "en": "Create branded short links and analyze link and QR engagement.",
+              "zh-CN": "创建品牌短链接，分析链接与二维码互动效果。"
+            },
+            "mcpServerExtensions": {
+              "bitly": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:bitly-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/bitly.zip",
+        "sha256": "fbfcfebb39cf83da5a574c30e02cd022b7389cea00567f1b720d4dcd68e29a25"
+      },
+      "icon": "./plugins/bitly/assets/icon.svg",
+      "homepage": "https://dev.bitly.com/bitly-mcp/overview/quickstart/",
+      "license": "MIT",
+      "category": "business"
+    },
+    {
       "id": "boltz-api-cli",
       "name": "boltz-api-cli",
       "description": "Predict structures, screen molecules and proteins, and design binders.",
@@ -600,6 +794,49 @@
       "homepage": "https://developer.brex.com/docs/mcp",
       "license": "MIT",
       "category": "finance"
+    },
+    {
+      "id": "bright-data",
+      "name": "Bright Data",
+      "description": "Search and extract public web data for market and SEO research. 检索和提取公开网页数据，支持市场调研与 SEO 分析。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "bright-data",
+        "version": "1.0.0-ghast.1",
+        "description": "Search and extract public web data for market and SEO research. 检索和提取公开网页数据，支持市场调研与 SEO 分析。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://brightdata.com/blog/ai/trueforge-with-bright-data",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "web",
+            "icon": "./assets/icon.png",
+            "displayName": "Bright Data",
+            "descriptions": {
+              "en": "Search and extract public web data for market and SEO research.",
+              "zh-CN": "检索和提取公开网页数据，支持市场调研与 SEO 分析。"
+            },
+            "mcpServerExtensions": {
+              "bright-data": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:bright-data-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/bright-data.zip",
+        "sha256": "4ad2132a8cb8a333d7b4a48fb51d4eaa6b71896e4f2ae6f537f160fb634d23d9"
+      },
+      "icon": "./plugins/bright-data/assets/icon.png",
+      "homepage": "https://brightdata.com/blog/ai/trueforge-with-bright-data",
+      "license": "MIT",
+      "category": "web"
     },
     {
       "id": "brighthire",
@@ -1435,6 +1672,42 @@
       "category": "web"
     },
     {
+      "id": "contentful",
+      "name": "Contentful",
+      "description": "Manage multilingual content, assets and content models in Contentful. 管理 Contentful 多语言内容、媒体素材与内容模型。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "contentful",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage multilingual content, assets and content models in Contentful. 管理 Contentful 多语言内容、媒体素材与内容模型。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.contentful.com/developers/docs/tools/mcp-server/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "web",
+            "icon": "./assets/icon.svg",
+            "displayName": "Contentful",
+            "descriptions": {
+              "en": "Manage multilingual content, assets and content models in Contentful.",
+              "zh-CN": "管理 Contentful 多语言内容、媒体素材与内容模型。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/contentful.zip",
+        "sha256": "a071223e14f8c4195c56d0c2d399ac27748da3b4be01320d6ffcdaf398b4cbc1"
+      },
+      "icon": "./plugins/contentful/assets/icon.svg",
+      "homepage": "https://www.contentful.com/developers/docs/tools/mcp-server/",
+      "license": "MIT",
+      "category": "web"
+    },
+    {
       "id": "context7",
       "name": "Context7",
       "description": "Find current library documentation and version-specific code examples with Context7. 使用 Context7 查询软件库文档与指定版本的代码示例，辅助开发、集成和升级。",
@@ -1572,6 +1845,49 @@
       "repository": "https://github.com/coveo-labs/coveo-mcp-server",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "crawl4ai",
+      "name": "Crawl4AI",
+      "description": "Crawl web pages and extract structured content through Crawl4AI Cloud. 通过 Crawl4AI 云服务抓取网页并提取结构化内容。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "crawl4ai",
+        "version": "1.0.0-ghast.1",
+        "description": "Crawl web pages and extract structured content through Crawl4AI Cloud. 通过 Crawl4AI 云服务抓取网页并提取结构化内容。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://gate.crawl4ai.com/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "web",
+            "icon": "./assets/icon.png",
+            "displayName": "Crawl4AI",
+            "descriptions": {
+              "en": "Crawl web pages and extract structured content through Crawl4AI Cloud.",
+              "zh-CN": "通过 Crawl4AI 云服务抓取网页并提取结构化内容。"
+            },
+            "mcpServerExtensions": {
+              "crawl4ai": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:crawl4ai-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/crawl4ai.zip",
+        "sha256": "aa6b12f86f4931c3e60db83f36aac94fbabf2e1105566c5ee058c0a5b22a95fd"
+      },
+      "icon": "./plugins/crawl4ai/assets/icon.png",
+      "homepage": "https://gate.crawl4ai.com/",
+      "license": "MIT",
+      "category": "web"
     },
     {
       "id": "cube",
@@ -1745,6 +2061,42 @@
       "repository": "https://github.com/deepnote/codex-plugin",
       "license": "Apache-2.0",
       "category": "data"
+    },
+    {
+      "id": "deepwiki",
+      "name": "DeepWiki",
+      "description": "Explore public repository architecture and ask grounded code questions. 阅读公开仓库架构文档，查询有代码依据的技术问题。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "deepwiki",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore public repository architecture and ask grounded code questions. 阅读公开仓库架构文档，查询有代码依据的技术问题。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.devin.ai/work-with-devin/deepwiki-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "DeepWiki",
+            "descriptions": {
+              "en": "Explore public repository architecture and ask grounded code questions.",
+              "zh-CN": "阅读公开仓库架构文档，查询有代码依据的技术问题。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/deepwiki.zip",
+        "sha256": "671d824aad0fdf85fc3b76e4efee72b3c602626e6495c1314090045f881e8101"
+      },
+      "icon": "./plugins/deepwiki/assets/icon.png",
+      "homepage": "https://docs.devin.ai/work-with-devin/deepwiki-mcp",
+      "license": "MIT",
+      "category": "development"
     },
     {
       "id": "defillama",
@@ -1980,6 +2332,49 @@
       "repository": "https://github.com/dowjones/factiva-retrievalapi-demo",
       "license": "MIT",
       "category": "business"
+    },
+    {
+      "id": "dune",
+      "name": "Dune",
+      "description": "Research on-chain datasets and execute Dune SQL analytics. 检索链上数据集，执行 Dune SQL 并分析链上活动。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "dune",
+        "version": "1.0.0-ghast.1",
+        "description": "Research on-chain datasets and execute Dune SQL analytics. 检索链上数据集，执行 Dune SQL 并分析链上活动。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://dune.com/blog/dune-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Dune",
+            "descriptions": {
+              "en": "Research on-chain datasets and execute Dune SQL analytics.",
+              "zh-CN": "检索链上数据集，执行 Dune SQL 并分析链上活动。"
+            },
+            "mcpServerExtensions": {
+              "dune": {
+                "credentialHeaders": {
+                  "x-dune-api-key": "$VAULT:dune-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/dune.zip",
+        "sha256": "bfed789b323e1d932983907cc27641141f3e08ed6c0fff7f84e6f64f11455d24"
+      },
+      "icon": "./plugins/dune/assets/icon.png",
+      "homepage": "https://dune.com/blog/dune-mcp",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "egnyte",
@@ -2803,6 +3198,42 @@
       "category": "productivity"
     },
     {
+      "id": "honeycomb",
+      "name": "Honeycomb",
+      "description": "Explore traces, latency and service health with Honeycomb. 分析 Honeycomb 链路追踪、请求延迟与服务健康状况。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "honeycomb",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore traces, latency and service health with Honeycomb. 分析 Honeycomb 链路追踪、请求延迟与服务健康状况。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.honeycomb.io/integrations/mcp/configuration-guide",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Honeycomb",
+            "descriptions": {
+              "en": "Explore traces, latency and service health with Honeycomb.",
+              "zh-CN": "分析 Honeycomb 链路追踪、请求延迟与服务健康状况。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/honeycomb.zip",
+        "sha256": "b0951bed8a4a23f23312770a4e54b7209c8d7c0bf320d72de3562c56da3c05ec"
+      },
+      "icon": "./plugins/honeycomb/assets/icon.png",
+      "homepage": "https://docs.honeycomb.io/integrations/mcp/configuration-guide",
+      "license": "MIT",
+      "category": "data"
+    },
+    {
       "id": "hostinger",
       "name": "hostinger",
       "description": "Create Hostinger Horizons websites from natural-language briefs and build, connect, deploy, verify, and operate websites, domains, DNS, VPS, ecommerce, WordPress, mail, campaigns, and billing through Hostinger's official MCP and Headless skill.",
@@ -2943,6 +3374,42 @@
       "category": "creativity"
     },
     {
+      "id": "imagekit",
+      "name": "ImageKit",
+      "description": "Manage media assets and build image and video transformations. 管理媒体素材，构建图片与视频变换。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "imagekit",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage media assets and build image and video transformations. 管理媒体素材，构建图片与视频变换。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://imagekit.io/docs/build-with-ai",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "creativity",
+            "icon": "./assets/icon.png",
+            "displayName": "ImageKit",
+            "descriptions": {
+              "en": "Manage media assets and build image and video transformations.",
+              "zh-CN": "管理媒体素材，构建图片与视频变换。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/imagekit.zip",
+        "sha256": "36eccbc316fd34214a4fe0ce94176db219b7f8cedabef5c8483eaf21d507165d"
+      },
+      "icon": "./plugins/imagekit/assets/icon.png",
+      "homepage": "https://imagekit.io/docs/build-with-ai",
+      "license": "MIT",
+      "category": "creativity"
+    },
+    {
       "id": "intercom",
       "name": "intercom",
       "description": "Search and analyze Intercom conversations, contacts, companies, Help Center articles, and tickets through Intercom's official hosted MCP service and official CLI.",
@@ -3008,6 +3475,49 @@
       "homepage": "https://jam.dev/docs/jam-mcp",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "jina-ai",
+      "name": "Jina AI",
+      "description": "Read web pages, search research and rerank relevant information. 读取网页、检索研究资料并按相关性整理信息。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "jina-ai",
+        "version": "1.0.0-ghast.1",
+        "description": "Read web pages, search research and rerank relevant information. 读取网页、检索研究资料并按相关性整理信息。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/jina-ai/MCP",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "research",
+            "icon": "./assets/icon.png",
+            "displayName": "Jina AI",
+            "descriptions": {
+              "en": "Read web pages, search research and rerank relevant information.",
+              "zh-CN": "读取网页、检索研究资料并按相关性整理信息。"
+            },
+            "mcpServerExtensions": {
+              "jina-ai": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:jina-ai-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/jina-ai.zip",
+        "sha256": "bd4b94137dccb9fdfc558d11d63c42bcef8cfa1c0e08e7191a5b63b20fce2a25"
+      },
+      "icon": "./plugins/jina-ai/assets/icon.png",
+      "homepage": "https://github.com/jina-ai/MCP",
+      "license": "MIT",
+      "category": "research"
     },
     {
       "id": "klaviyo",
@@ -3118,6 +3628,42 @@
       "repository": "https://github.com/lovablelabs/mcp",
       "license": "Apache-2.0",
       "category": "developer-tools"
+    },
+    {
+      "id": "lucid",
+      "name": "Lucid",
+      "description": "Create and explore Lucid diagrams for processes and collaboration. 创建和检索 Lucid 图表，梳理业务流程与团队协作。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "lucid",
+        "version": "1.0.0-ghast.1",
+        "description": "Create and explore Lucid diagrams for processes and collaboration. 创建和检索 Lucid 图表，梳理业务流程与团队协作。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.lucid.co/hc/en-us/articles/42578801807508-Integrate-Lucid-with-AI-tools-using-the-Lucid-MCP-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "creativity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Lucid",
+            "descriptions": {
+              "en": "Create and explore Lucid diagrams for processes and collaboration.",
+              "zh-CN": "创建和检索 Lucid 图表，梳理业务流程与团队协作。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/lucid.zip",
+        "sha256": "3dd2b8d204b10964f939023bdd7e07969871492aba529b99eca865b57968c3d4"
+      },
+      "icon": "./plugins/lucid/assets/icon.svg",
+      "homepage": "https://help.lucid.co/hc/en-us/articles/42578801807508-Integrate-Lucid-with-AI-tools-using-the-Lucid-MCP-server",
+      "license": "MIT",
+      "category": "creativity"
     },
     {
       "id": "magicpath",
@@ -3245,6 +3791,42 @@
       "icon": "./plugins/mermaid-mindmap/assets/icon.svg",
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/mermaid-mindmap",
       "category": "productivity"
+    },
+    {
+      "id": "microsoft-learn",
+      "name": "Microsoft Learn",
+      "description": "Search Microsoft documentation and retrieve official code samples. 检索微软官方文档与代码示例，辅助 Azure 和 Microsoft 开发。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "microsoft-learn",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Microsoft documentation and retrieve official code samples. 检索微软官方文档与代码示例，辅助 Azure 和 Microsoft 开发。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://learn.microsoft.com/en-us/training/support/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "development",
+            "icon": "./assets/icon.svg",
+            "displayName": "Microsoft Learn",
+            "descriptions": {
+              "en": "Search Microsoft documentation and retrieve official code samples.",
+              "zh-CN": "检索微软官方文档与代码示例，辅助 Azure 和 Microsoft 开发。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/microsoft-learn.zip",
+        "sha256": "8591b63b1375c34ecb96822bf6198280a8eb2dff9fe4f0cdf3d757485a8f070a"
+      },
+      "icon": "./plugins/microsoft-learn/assets/icon.svg",
+      "homepage": "https://learn.microsoft.com/en-us/training/support/mcp",
+      "license": "MIT",
+      "category": "development"
     },
     {
       "id": "midpage",
@@ -3525,6 +4107,42 @@
       "homepage": "https://www.mtnewswires.com/ai-enablement",
       "license": "MIT",
       "category": "finance"
+    },
+    {
+      "id": "mux",
+      "name": "Mux",
+      "description": "Work with video assets, live streaming and playback analytics. 管理视频素材、直播资源与播放质量分析。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "mux",
+        "version": "1.0.0-ghast.1",
+        "description": "Work with video assets, live streaming and playback analytics. 管理视频素材、直播资源与播放质量分析。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.mux.com/docs/integrations/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "media",
+            "icon": "./assets/icon.png",
+            "displayName": "Mux",
+            "descriptions": {
+              "en": "Work with video assets, live streaming and playback analytics.",
+              "zh-CN": "管理视频素材、直播资源与播放质量分析。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/mux.zip",
+        "sha256": "2f72aa66eebb22d6c0e9bc0753726f2fefe5beff05d19c1722d82852a00796d5"
+      },
+      "icon": "./plugins/mux/assets/icon.png",
+      "homepage": "https://www.mux.com/docs/integrations/mcp-server",
+      "license": "MIT",
+      "category": "media"
     },
     {
       "id": "myregistry-com",
@@ -3903,6 +4521,42 @@
       "repository": "https://github.com/PicsArt/gen-ai-skills",
       "license": "MIT",
       "category": "creativity"
+    },
+    {
+      "id": "pipedrive",
+      "name": "Pipedrive",
+      "description": "Find CRM deals, update contacts and organize sales follow-ups. 检索销售商机、更新客户资料并安排销售跟进。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "pipedrive",
+        "version": "1.0.0-ghast.1",
+        "description": "Find CRM deals, update contacts and organize sales follow-ups. 检索销售商机、更新客户资料并安排销售跟进。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://support.pipedrive.com/en/article/mcp-chatgpt",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "business",
+            "icon": "./assets/icon.png",
+            "displayName": "Pipedrive",
+            "descriptions": {
+              "en": "Find CRM deals, update contacts and organize sales follow-ups.",
+              "zh-CN": "检索销售商机、更新客户资料并安排销售跟进。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/pipedrive.zip",
+        "sha256": "c2d15a609a5808acb1fd348cc49136547c6aaf85bf54f1a4d287fa53c49e69c6"
+      },
+      "icon": "./plugins/pipedrive/assets/icon.png",
+      "homepage": "https://support.pipedrive.com/en/article/mcp-chatgpt",
+      "license": "MIT",
+      "category": "business"
     },
     {
       "id": "policynote",
@@ -4304,6 +4958,49 @@
       "category": "information"
     },
     {
+      "id": "ref",
+      "name": "Ref",
+      "description": "Search and read focused technical documentation with Ref. 通过 Ref 精准检索和阅读技术文档。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "ref",
+        "version": "1.0.0-ghast.1",
+        "description": "Search and read focused technical documentation with Ref. 通过 Ref 精准检索和阅读技术文档。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.ref.tools/context/install/index",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Ref",
+            "descriptions": {
+              "en": "Search and read focused technical documentation with Ref.",
+              "zh-CN": "通过 Ref 精准检索和阅读技术文档。"
+            },
+            "mcpServerExtensions": {
+              "ref": {
+                "credentialHeaders": {
+                  "x-ref-api-key": "$VAULT:ref-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/ref.zip",
+        "sha256": "91c475e44f0cd07954e1a28c1ada135ff5161aeee63504fbbabd52ff736aafab"
+      },
+      "icon": "./plugins/ref/assets/icon.png",
+      "homepage": "https://docs.ref.tools/context/install/index",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "remotion",
       "name": "remotion",
       "description": "Remotion video creation skills — best practices, animations, audio, captions, 3D, and more for building programmatic videos with React.",
@@ -4553,6 +5250,42 @@
       "repository": "https://github.com/kensho-technologies/spglobal-agent-skills",
       "license": "Apache-2.0",
       "category": "finance"
+    },
+    {
+      "id": "sanity",
+      "name": "Sanity",
+      "description": "Query structured content and manage Sanity documents and releases. 检索结构化内容，管理 Sanity 文档与内容发布。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "sanity",
+        "version": "1.0.0-ghast.1",
+        "description": "Query structured content and manage Sanity documents and releases. 检索结构化内容，管理 Sanity 文档与内容发布。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.sanity.io/docs/ai/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "web",
+            "icon": "./assets/icon.svg",
+            "displayName": "Sanity",
+            "descriptions": {
+              "en": "Query structured content and manage Sanity documents and releases.",
+              "zh-CN": "检索结构化内容，管理 Sanity 文档与内容发布。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/sanity.zip",
+        "sha256": "64e923a2410545730529e9baf5a46d973cb4732500471ec0af2d918955bee3d8"
+      },
+      "icon": "./plugins/sanity/assets/icon.svg",
+      "homepage": "https://www.sanity.io/docs/ai/mcp-server",
+      "license": "MIT",
+      "category": "web"
     },
     {
       "id": "scite",
@@ -5263,6 +5996,42 @@
       "icon": "./plugins/superpowers/assets/icon.png",
       "homepage": "https://github.com/obra/superpowers",
       "repository": "https://github.com/obra/superpowers",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
+      "id": "svelte",
+      "name": "Svelte",
+      "description": "Read Svelte and SvelteKit documentation and analyze component code. 查询 Svelte 与 SvelteKit 文档，分析组件代码。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "svelte",
+        "version": "1.0.0-ghast.1",
+        "description": "Read Svelte and SvelteKit documentation and analyze component code. 查询 Svelte 与 SvelteKit 文档，分析组件代码。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://svelte.dev/docs/ai/remote-setup",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "development",
+            "icon": "./assets/icon.svg",
+            "displayName": "Svelte",
+            "descriptions": {
+              "en": "Read Svelte and SvelteKit documentation and analyze component code.",
+              "zh-CN": "查询 Svelte 与 SvelteKit 文档，分析组件代码。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/svelte.zip",
+        "sha256": "dcb96c1d809431833115625a17ec647e8bcf31062589d39a87e626afffe20f8f"
+      },
+      "icon": "./plugins/svelte/assets/icon.svg",
+      "homepage": "https://svelte.dev/docs/ai/remote-setup",
       "license": "MIT",
       "category": "development"
     },

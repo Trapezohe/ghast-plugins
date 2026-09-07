@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "dune",
+  "version": "1.0.0-ghast.1",
+  "description": "Research on-chain datasets and execute Dune SQL analytics. 检索链上数据集，执行 Dune SQL 并分析链上活动。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://dune.com/blog/dune-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Dune",
+      "descriptions": {
+        "en": "Research on-chain datasets and execute Dune SQL analytics.",
+        "zh-CN": "检索链上数据集，执行 Dune SQL 并分析链上活动。"
+      },
+      "mcpServerExtensions": {
+        "dune": {
+          "credentialHeaders": {
+            "x-dune-api-key": "$VAULT:dune-token"
+          }
+        }
+      }
+    }
+  }
+}

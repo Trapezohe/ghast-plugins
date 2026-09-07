@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ref",
+  "version": "1.0.0-ghast.1",
+  "description": "Search and read focused technical documentation with Ref. 通过 Ref 精准检索和阅读技术文档。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.ref.tools/context/install/index",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Ref",
+      "descriptions": {
+        "en": "Search and read focused technical documentation with Ref.",
+        "zh-CN": "通过 Ref 精准检索和阅读技术文档。"
+      },
+      "mcpServerExtensions": {
+        "ref": {
+          "credentialHeaders": {
+            "x-ref-api-key": "$VAULT:ref-token"
+          }
+        }
+      }
+    }
+  }
+}

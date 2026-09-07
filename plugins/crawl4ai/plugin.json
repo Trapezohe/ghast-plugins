@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "crawl4ai",
+  "version": "1.0.0-ghast.1",
+  "description": "Crawl web pages and extract structured content through Crawl4AI Cloud. 通过 Crawl4AI 云服务抓取网页并提取结构化内容。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://gate.crawl4ai.com/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "web",
+      "icon": "./assets/icon.png",
+      "displayName": "Crawl4AI",
+      "descriptions": {
+        "en": "Crawl web pages and extract structured content through Crawl4AI Cloud.",
+        "zh-CN": "通过 Crawl4AI 云服务抓取网页并提取结构化内容。"
+      },
+      "mcpServerExtensions": {
+        "crawl4ai": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:crawl4ai-token"
+          }
+        }
+      }
+    }
+  }
+}

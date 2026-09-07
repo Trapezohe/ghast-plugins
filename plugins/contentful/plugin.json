@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "contentful",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage multilingual content, assets and content models in Contentful. 管理 Contentful 多语言内容、媒体素材与内容模型。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.contentful.com/developers/docs/tools/mcp-server/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "web",
+      "icon": "./assets/icon.svg",
+      "displayName": "Contentful",
+      "descriptions": {
+        "en": "Manage multilingual content, assets and content models in Contentful.",
+        "zh-CN": "管理 Contentful 多语言内容、媒体素材与内容模型。"
+      }
+    }
+  }
+}

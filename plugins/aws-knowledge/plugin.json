@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "aws-knowledge",
+  "version": "1.0.0-ghast.1",
+  "description": "Find AWS documentation, regional availability and implementation guidance. 查询 AWS 官方文档、区域可用性与实现指南。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://awslabs.github.io/mcp/servers/aws-knowledge-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "AWS Knowledge",
+      "descriptions": {
+        "en": "Find AWS documentation, regional availability and implementation guidance.",
+        "zh-CN": "查询 AWS 官方文档、区域可用性与实现指南。"
+      }
+    }
+  }
+}

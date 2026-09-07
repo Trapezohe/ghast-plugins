@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "microsoft-learn",
+  "version": "1.0.0-ghast.1",
+  "description": "Search Microsoft documentation and retrieve official code samples. 检索微软官方文档与代码示例，辅助 Azure 和 Microsoft 开发。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://learn.microsoft.com/en-us/training/support/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "development",
+      "icon": "./assets/icon.svg",
+      "displayName": "Microsoft Learn",
+      "descriptions": {
+        "en": "Search Microsoft documentation and retrieve official code samples.",
+        "zh-CN": "检索微软官方文档与代码示例，辅助 Azure 和 Microsoft 开发。"
+      }
+    }
+  }
+}

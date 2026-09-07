@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "astro",
+  "version": "1.0.0-ghast.1",
+  "description": "Search Astro documentation for content sites and integrations. 检索 Astro 官方文档，开发内容站点并接入集成。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.astro.build/en/guides/build-with-ai/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "development",
+      "icon": "./assets/icon.svg",
+      "displayName": "Astro Docs",
+      "descriptions": {
+        "en": "Search Astro documentation for content sites and integrations.",
+        "zh-CN": "检索 Astro 官方文档，开发内容站点并接入集成。"
+      }
+    }
+  }
+}

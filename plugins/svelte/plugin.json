@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "svelte",
+  "version": "1.0.0-ghast.1",
+  "description": "Read Svelte and SvelteKit documentation and analyze component code. 查询 Svelte 与 SvelteKit 文档，分析组件代码。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://svelte.dev/docs/ai/remote-setup",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "development",
+      "icon": "./assets/icon.svg",
+      "displayName": "Svelte",
+      "descriptions": {
+        "en": "Read Svelte and SvelteKit documentation and analyze component code.",
+        "zh-CN": "查询 Svelte 与 SvelteKit 文档，分析组件代码。"
+      }
+    }
+  }
+}

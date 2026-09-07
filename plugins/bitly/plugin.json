@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "bitly",
+  "version": "1.0.0-ghast.1",
+  "description": "Create branded short links and analyze link and QR engagement. 创建品牌短链接，分析链接与二维码互动效果。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://dev.bitly.com/bitly-mcp/overview/quickstart/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "business",
+      "icon": "./assets/icon.svg",
+      "displayName": "Bitly",
+      "descriptions": {
+        "en": "Create branded short links and analyze link and QR engagement.",
+        "zh-CN": "创建品牌短链接，分析链接与二维码互动效果。"
+      },
+      "mcpServerExtensions": {
+        "bitly": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:bitly-token"
+          }
+        }
+      }
+    }
+  }
+}

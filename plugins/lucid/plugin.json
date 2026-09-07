@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "lucid",
+  "version": "1.0.0-ghast.1",
+  "description": "Create and explore Lucid diagrams for processes and collaboration. 创建和检索 Lucid 图表，梳理业务流程与团队协作。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://help.lucid.co/hc/en-us/articles/42578801807508-Integrate-Lucid-with-AI-tools-using-the-Lucid-MCP-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "creativity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Lucid",
+      "descriptions": {
+        "en": "Create and explore Lucid diagrams for processes and collaboration.",
+        "zh-CN": "创建和检索 Lucid 图表，梳理业务流程与团队协作。"
+      }
+    }
+  }
+}

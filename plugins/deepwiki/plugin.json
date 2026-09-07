@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "deepwiki",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore public repository architecture and ask grounded code questions. 阅读公开仓库架构文档，查询有代码依据的技术问题。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.devin.ai/work-with-devin/deepwiki-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "DeepWiki",
+      "descriptions": {
+        "en": "Explore public repository architecture and ask grounded code questions.",
+        "zh-CN": "阅读公开仓库架构文档，查询有代码依据的技术问题。"
+      }
+    }
+  }
+}

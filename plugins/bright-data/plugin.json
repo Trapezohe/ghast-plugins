@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "bright-data",
+  "version": "1.0.0-ghast.1",
+  "description": "Search and extract public web data for market and SEO research. 检索和提取公开网页数据，支持市场调研与 SEO 分析。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://brightdata.com/blog/ai/trueforge-with-bright-data",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "web",
+      "icon": "./assets/icon.png",
+      "displayName": "Bright Data",
+      "descriptions": {
+        "en": "Search and extract public web data for market and SEO research.",
+        "zh-CN": "检索和提取公开网页数据，支持市场调研与 SEO 分析。"
+      },
+      "mcpServerExtensions": {
+        "bright-data": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:bright-data-token"
+          }
+        }
+      }
+    }
+  }
+}

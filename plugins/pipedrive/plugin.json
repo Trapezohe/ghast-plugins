@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "pipedrive",
+  "version": "1.0.0-ghast.1",
+  "description": "Find CRM deals, update contacts and organize sales follow-ups. 检索销售商机、更新客户资料并安排销售跟进。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://support.pipedrive.com/en/article/mcp-chatgpt",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "business",
+      "icon": "./assets/icon.png",
+      "displayName": "Pipedrive",
+      "descriptions": {
+        "en": "Find CRM deals, update contacts and organize sales follow-ups.",
+        "zh-CN": "检索销售商机、更新客户资料并安排销售跟进。"
+      }
+    }
+  }
+}

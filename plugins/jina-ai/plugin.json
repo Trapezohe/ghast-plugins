@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "jina-ai",
+  "version": "1.0.0-ghast.1",
+  "description": "Read web pages, search research and rerank relevant information. 读取网页、检索研究资料并按相关性整理信息。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/jina-ai/MCP",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "research",
+      "icon": "./assets/icon.png",
+      "displayName": "Jina AI",
+      "descriptions": {
+        "en": "Read web pages, search research and rerank relevant information.",
+        "zh-CN": "读取网页、检索研究资料并按相关性整理信息。"
+      },
+      "mcpServerExtensions": {
+        "jina-ai": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:jina-ai-token"
+          }
+        }
+      }
+    }
+  }
+}

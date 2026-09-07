@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mux",
+  "version": "1.0.0-ghast.1",
+  "description": "Work with video assets, live streaming and playback analytics. 管理视频素材、直播资源与播放质量分析。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.mux.com/docs/integrations/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "media",
+      "icon": "./assets/icon.png",
+      "displayName": "Mux",
+      "descriptions": {
+        "en": "Work with video assets, live streaming and playback analytics.",
+        "zh-CN": "管理视频素材、直播资源与播放质量分析。"
+      }
+    }
+  }
+}

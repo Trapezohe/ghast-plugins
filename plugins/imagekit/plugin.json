@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "imagekit",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage media assets and build image and video transformations. 管理媒体素材，构建图片与视频变换。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://imagekit.io/docs/build-with-ai",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "creativity",
+      "icon": "./assets/icon.png",
+      "displayName": "ImageKit",
+      "descriptions": {
+        "en": "Manage media assets and build image and video transformations.",
+        "zh-CN": "管理媒体素材，构建图片与视频变换。"
+      }
+    }
+  }
+}

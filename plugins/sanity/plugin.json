@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "sanity",
+  "version": "1.0.0-ghast.1",
+  "description": "Query structured content and manage Sanity documents and releases. 检索结构化内容，管理 Sanity 文档与内容发布。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.sanity.io/docs/ai/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "web",
+      "icon": "./assets/icon.svg",
+      "displayName": "Sanity",
+      "descriptions": {
+        "en": "Query structured content and manage Sanity documents and releases.",
+        "zh-CN": "检索结构化内容，管理 Sanity 文档与内容发布。"
+      }
+    }
+  }
+}
