@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "chroma",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage Chroma Cloud collections and documents, run vector queries and inspect stored data.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/chroma-core/chroma-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/chroma-core/chroma-mcp",
+      "connectorPublisher": "Chroma",
+      "category": "databases",
+      "icon": "./assets/icon.png",
+      "displayName": "Chroma",
+      "descriptions": {
+        "en": "Manage Chroma Cloud collections and documents, run vector queries and inspect stored data.",
+        "zh-CN": "管理 Chroma Cloud 集合与文档、执行向量查询并检查存储数据。"
+      },
+      "mcpServerExtensions": {
+        "chroma": {
+          "credentialEnv": {
+            "CHROMA_TENANT": "$VAULT:chroma-tenant",
+            "CHROMA_DATABASE": "$VAULT:chroma-database",
+            "CHROMA_API_KEY": "$VAULT:chroma-api-key"
+          }
+        }
+      }
+    }
+  }
+}

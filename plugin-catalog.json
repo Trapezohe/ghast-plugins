@@ -1215,6 +1215,53 @@
       "category": "communication"
     },
     {
+      "id": "bitget",
+      "name": "Bitget",
+      "description": "Explore crypto market data and manage Bitget account, order and position workflows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "bitget",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore crypto market data and manage Bitget account, order and position workflows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/Bitget-AI/agent-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/Bitget-AI/agent-mcp",
+            "connectorPublisher": "Bitget",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Bitget",
+            "descriptions": {
+              "en": "Explore crypto market data and manage Bitget account, order and position workflows.",
+              "zh-CN": "查询加密货币行情，处理 Bitget 账户、订单与持仓工作流。"
+            },
+            "mcpServerExtensions": {
+              "bitget": {
+                "credentialEnv": {
+                  "BITGET_API_KEY": "$VAULT:bitget-api-key",
+                  "BITGET_SECRET_KEY": "$VAULT:bitget-secret-key",
+                  "BITGET_PASSPHRASE": "$VAULT:bitget-passphrase"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/bitget.zip",
+        "sha256": "7da98060e5feb74f28b7e25d176ed95d609db0e544c9a91179a5079aa52c6a48"
+      },
+      "icon": "./plugins/bitget/assets/icon.png",
+      "homepage": "https://github.com/Bitget-AI/agent-mcp",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
       "id": "bitly",
       "name": "Bitly",
       "description": "Create branded short links and analyze link and QR engagement.",
@@ -2087,6 +2134,53 @@
       "homepage": "https://www.checklyhq.com/docs/ai/mcp-server/setup/",
       "license": "MIT",
       "category": "developer-tools"
+    },
+    {
+      "id": "chroma",
+      "name": "Chroma",
+      "description": "Manage Chroma Cloud collections and documents, run vector queries and inspect stored data.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "chroma",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage Chroma Cloud collections and documents, run vector queries and inspect stored data.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/chroma-core/chroma-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/chroma-core/chroma-mcp",
+            "connectorPublisher": "Chroma",
+            "category": "databases",
+            "icon": "./assets/icon.png",
+            "displayName": "Chroma",
+            "descriptions": {
+              "en": "Manage Chroma Cloud collections and documents, run vector queries and inspect stored data.",
+              "zh-CN": "管理 Chroma Cloud 集合与文档、执行向量查询并检查存储数据。"
+            },
+            "mcpServerExtensions": {
+              "chroma": {
+                "credentialEnv": {
+                  "CHROMA_TENANT": "$VAULT:chroma-tenant",
+                  "CHROMA_DATABASE": "$VAULT:chroma-database",
+                  "CHROMA_API_KEY": "$VAULT:chroma-api-key"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/chroma.zip",
+        "sha256": "42be31d4fa5cbe43f7aa3832a70f5ba63b8c85b81852e817d0e08e32ee1482d7"
+      },
+      "icon": "./plugins/chroma/assets/icon.png",
+      "homepage": "https://github.com/chroma-core/chroma-mcp",
+      "license": "MIT",
+      "category": "databases"
     },
     {
       "id": "chronograph-gp",
@@ -8114,6 +8208,53 @@
       "homepage": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp.md",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "qdrant",
+      "name": "Qdrant",
+      "description": "Store knowledge and retrieve relevant information from Qdrant using semantic search.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "qdrant",
+        "version": "1.0.0-ghast.1",
+        "description": "Store knowledge and retrieve relevant information from Qdrant using semantic search.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/qdrant/mcp-server-qdrant",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/qdrant/mcp-server-qdrant",
+            "connectorPublisher": "Qdrant",
+            "category": "databases",
+            "icon": "./assets/icon.png",
+            "displayName": "Qdrant",
+            "descriptions": {
+              "en": "Store knowledge and retrieve relevant information from Qdrant using semantic search.",
+              "zh-CN": "向 Qdrant 存储知识，并通过语义搜索检索相关信息。"
+            },
+            "mcpServerExtensions": {
+              "qdrant": {
+                "credentialEnv": {
+                  "QDRANT_URL": "$VAULT:qdrant-url",
+                  "QDRANT_API_KEY": "$VAULT:qdrant-api-key",
+                  "COLLECTION_NAME": "$VAULT:qdrant-collection"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/qdrant.zip",
+        "sha256": "47bcef24ece317ece00502110d850af49e89f4b3a686a07df424335f497526f7"
+      },
+      "icon": "./plugins/qdrant/assets/icon.png",
+      "homepage": "https://github.com/qdrant/mcp-server-qdrant",
+      "license": "MIT",
+      "category": "databases"
     },
     {
       "id": "quartr",

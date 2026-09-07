@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "qdrant",
+  "version": "1.0.0-ghast.1",
+  "description": "Store knowledge and retrieve relevant information from Qdrant using semantic search.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/qdrant/mcp-server-qdrant",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/qdrant/mcp-server-qdrant",
+      "connectorPublisher": "Qdrant",
+      "category": "databases",
+      "icon": "./assets/icon.png",
+      "displayName": "Qdrant",
+      "descriptions": {
+        "en": "Store knowledge and retrieve relevant information from Qdrant using semantic search.",
+        "zh-CN": "向 Qdrant 存储知识，并通过语义搜索检索相关信息。"
+      },
+      "mcpServerExtensions": {
+        "qdrant": {
+          "credentialEnv": {
+            "QDRANT_URL": "$VAULT:qdrant-url",
+            "QDRANT_API_KEY": "$VAULT:qdrant-api-key",
+            "COLLECTION_NAME": "$VAULT:qdrant-collection"
+          }
+        }
+      }
+    }
+  }
+}
