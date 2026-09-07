@@ -1893,6 +1893,44 @@
       "category": "creativity"
     },
     {
+      "id": "capacities",
+      "name": "Capacities",
+      "description": "Search and retrieve knowledge from your Capacities space through its official MCP service.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "capacities",
+        "version": "1.0.0-ghast.1",
+        "description": "Search and retrieve knowledge from your Capacities space through its official MCP service.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.capacities.io/developer/model-context-protocol",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.capacities.io/developer/model-context-protocol",
+            "connectorPublisher": "Capacities",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Capacities",
+            "descriptions": {
+              "en": "Search and retrieve knowledge from your Capacities space through its official MCP service.",
+              "zh-CN": "通过 Capacities 官方 MCP 服务搜索并读取空间中的知识内容。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/capacities.zip",
+        "sha256": "009680218a1735f43658ea414364d54d312822d08e5df045d1468ec10840185e"
+      },
+      "icon": "./plugins/capacities/assets/icon.png",
+      "homepage": "https://docs.capacities.io/developer/model-context-protocol",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "carta-crm",
       "name": "carta-crm",
       "description": "Manage investors, companies, contacts, deals, notes, fundraisings, tasks, themes, reports, campaigns, files, and relationship context through Carta's official CRM skills and hosted MCP server.",
@@ -2653,6 +2691,44 @@
       "category": "data"
     },
     {
+      "id": "coda",
+      "name": "Coda",
+      "description": "Search Coda docs and tables, read structured data and update collaborative workflows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "coda",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Coda docs and tables, read structured data and update collaborative workflows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.coda.io/hc/en-us/articles/44722661982989-Connect-to-the-Coda-MCP",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.coda.io/hc/en-us/articles/44722661982989-Connect-to-the-Coda-MCP",
+            "connectorPublisher": "Coda",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Coda",
+            "descriptions": {
+              "en": "Search Coda docs and tables, read structured data and update collaborative workflows.",
+              "zh-CN": "搜索 Coda 文档与表格、读取结构化数据并更新协作工作流。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/coda.zip",
+        "sha256": "f55302513cee0558c8aec9f862558598fb05adee8e820c17af7809d5ad6ed621"
+      },
+      "icon": "./plugins/coda/assets/icon.png",
+      "homepage": "https://help.coda.io/hc/en-us/articles/44722661982989-Connect-to-the-Coda-MCP",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "coderabbit",
       "name": "coderabbit",
       "description": "Review local code changes with CodeRabbit's official CLI and safely triage or apply unresolved CodeRabbit GitHub PR feedback through the official code-review and autofix skills.",
@@ -3262,6 +3338,44 @@
       "icon": "./plugins/coveo/assets/icon.svg",
       "homepage": "https://www.coveo.com/en/developers/mcp-server",
       "repository": "https://github.com/coveo-labs/coveo-mcp-server",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
+      "id": "craft",
+      "name": "Craft",
+      "description": "Search and organize Craft documents, edit content and manage collections in a connected space.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "craft",
+        "version": "1.0.0-ghast.1",
+        "description": "Search and organize Craft documents, edit content and manage collections in a connected space.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.craft.do/imagine/guide/mcp/vscode",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.craft.do/imagine/guide/mcp/vscode",
+            "connectorPublisher": "Craft",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Craft",
+            "descriptions": {
+              "en": "Search and organize Craft documents, edit content and manage collections in a connected space.",
+              "zh-CN": "搜索与整理 Craft 文档、编辑内容，并管理已连接空间中的集合。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/craft.zip",
+        "sha256": "cf13ecbd1c774f8946f3a693157120cd3e377ae86d41758c76d561e9df0eac4f"
+      },
+      "icon": "./plugins/craft/assets/icon.png",
+      "homepage": "https://www.craft.do/imagine/guide/mcp/vscode",
       "license": "MIT",
       "category": "productivity"
     },
@@ -10117,6 +10231,44 @@
       },
       "icon": "./plugins/tallyfy/assets/icon.svg",
       "homepage": "https://tallyfy.com/products/pro/integrations/mcp-server/",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
+      "id": "tana",
+      "name": "Tana",
+      "description": "Search Tana content, read meeting context and prepare updates to documents and structured items.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "tana",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Tana content, read meeting context and prepare updates to documents and structured items.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://tana.inc/learn/features/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://tana.inc/learn/features/mcp",
+            "connectorPublisher": "Tana",
+            "category": "productivity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Tana",
+            "descriptions": {
+              "en": "Search Tana content, read meeting context and prepare updates to documents and structured items.",
+              "zh-CN": "搜索 Tana 内容、读取会议上下文，并准备文档与结构化条目的更新。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/tana.zip",
+        "sha256": "6910029aa7ce63446a8a09a26c148fd9dda77aa41fa6ce0f5bfad33e1c58f143"
+      },
+      "icon": "./plugins/tana/assets/icon.svg",
+      "homepage": "https://tana.inc/learn/features/mcp",
       "license": "MIT",
       "category": "productivity"
     },

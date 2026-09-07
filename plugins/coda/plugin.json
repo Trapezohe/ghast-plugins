@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "coda",
+  "version": "1.0.0-ghast.1",
+  "description": "Search Coda docs and tables, read structured data and update collaborative workflows.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://help.coda.io/hc/en-us/articles/44722661982989-Connect-to-the-Coda-MCP",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://help.coda.io/hc/en-us/articles/44722661982989-Connect-to-the-Coda-MCP",
+      "connectorPublisher": "Coda",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Coda",
+      "descriptions": {
+        "en": "Search Coda docs and tables, read structured data and update collaborative workflows.",
+        "zh-CN": "搜索 Coda 文档与表格、读取结构化数据并更新协作工作流。"
+      }
+    }
+  }
+}

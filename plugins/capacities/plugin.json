@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "capacities",
+  "version": "1.0.0-ghast.1",
+  "description": "Search and retrieve knowledge from your Capacities space through its official MCP service.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.capacities.io/developer/model-context-protocol",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.capacities.io/developer/model-context-protocol",
+      "connectorPublisher": "Capacities",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Capacities",
+      "descriptions": {
+        "en": "Search and retrieve knowledge from your Capacities space through its official MCP service.",
+        "zh-CN": "通过 Capacities 官方 MCP 服务搜索并读取空间中的知识内容。"
+      }
+    }
+  }
+}

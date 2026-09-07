@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "craft",
+  "version": "1.0.0-ghast.1",
+  "description": "Search and organize Craft documents, edit content and manage collections in a connected space.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.craft.do/imagine/guide/mcp/vscode",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.craft.do/imagine/guide/mcp/vscode",
+      "connectorPublisher": "Craft",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Craft",
+      "descriptions": {
+        "en": "Search and organize Craft documents, edit content and manage collections in a connected space.",
+        "zh-CN": "搜索与整理 Craft 文档、编辑内容，并管理已连接空间中的集合。"
+      }
+    }
+  }
+}
