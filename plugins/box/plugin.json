@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "box",
+  "version": "1.0.0-ghast.1",
+  "description": "Search and manage Box files and folders and use available Box AI document tools.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.box.com/guides/box-mcp/setup",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developer.box.com/guides/box-mcp/setup",
+      "connectorPublisher": "Box",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Box",
+      "descriptions": {
+        "en": "Search and manage Box files and folders and use available Box AI document tools.",
+        "zh-CN": "搜索与管理 Box 文件和文件夹，并使用可用的 Box AI 文档工具。"
+      },
+      "mcpServerExtensions": {
+        "box": {
+          "oauthClientRequired": true
+        }
+      }
+    }
+  }
+}

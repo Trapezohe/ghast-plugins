@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "freshworks-developer",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect Freshworks custom apps and versions and manage app package submission workflows.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developers.freshworks.com/docs/agentic-dev-tools/mcp-server/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developers.freshworks.com/docs/agentic-dev-tools/mcp-server/",
+      "connectorPublisher": "Freshworks Developer",
+      "category": "developer-tools",
+      "icon": "./assets/icon.png",
+      "displayName": "Freshworks Developer",
+      "descriptions": {
+        "en": "Inspect Freshworks custom apps and versions and manage app package submission workflows.",
+        "zh-CN": "查看 Freshworks 自定义应用及版本，并管理应用包提交流程。"
+      },
+      "mcpServerExtensions": {
+        "freshworks-developer": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:freshworks-developer-token"
+          }
+        }
+      }
+    }
+  }
+}

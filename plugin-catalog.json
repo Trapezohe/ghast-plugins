@@ -1186,6 +1186,49 @@
       "category": "research"
     },
     {
+      "id": "box",
+      "name": "Box",
+      "description": "Search and manage Box files and folders and use available Box AI document tools.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "box",
+        "version": "1.0.0-ghast.1",
+        "description": "Search and manage Box files and folders and use available Box AI document tools.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.box.com/guides/box-mcp/setup",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.box.com/guides/box-mcp/setup",
+            "connectorPublisher": "Box",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Box",
+            "descriptions": {
+              "en": "Search and manage Box files and folders and use available Box AI document tools.",
+              "zh-CN": "搜索与管理 Box 文件和文件夹，并使用可用的 Box AI 文档工具。"
+            },
+            "mcpServerExtensions": {
+              "box": {
+                "oauthClientRequired": true
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/box.zip",
+        "sha256": "a185552fca3395e9d326ac265205682a24b24b8d8dda6d0f11de29fe970735c2"
+      },
+      "icon": "./plugins/box/assets/icon.png",
+      "homepage": "https://developer.box.com/guides/box-mcp/setup",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "brand24",
       "name": "brand24",
       "description": "Explore current Brand24 project summaries, important events, discussions, influencers, and mention sources through Brand24's official read-only hosted MCP server.",
@@ -3666,6 +3709,49 @@
       "category": "business"
     },
     {
+      "id": "dropbox",
+      "name": "Dropbox",
+      "description": "Search, organize and work with Dropbox files, sharing links, revisions and file requests.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "dropbox",
+        "version": "1.0.0-ghast.1",
+        "description": "Search, organize and work with Dropbox files, sharing links, revisions and file requests.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.dropbox.com/integrations/connect-dropbox-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.dropbox.com/integrations/connect-dropbox-mcp-server",
+            "connectorPublisher": "Dropbox",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Dropbox",
+            "descriptions": {
+              "en": "Search, organize and work with Dropbox files, sharing links, revisions and file requests.",
+              "zh-CN": "搜索与整理 Dropbox 文件，管理分享链接、文件版本和文件收集请求。"
+            },
+            "mcpServerExtensions": {
+              "dropbox": {
+                "oauthClientRequired": true
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/dropbox.zip",
+        "sha256": "153fb9a1b92a6676d71ad38e22c6530e1b01e230d8ed70ca6ef8ab171439ea6b"
+      },
+      "icon": "./plugins/dropbox/assets/icon.png",
+      "homepage": "https://help.dropbox.com/integrations/connect-dropbox-mcp-server",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "dune",
       "name": "Dune",
       "description": "Research on-chain datasets and execute Dune SQL analytics.",
@@ -4217,6 +4303,94 @@
       "homepage": "https://docs.fiscal.ai/docs/guides/mcp-integration",
       "license": "MIT",
       "category": "finance"
+    },
+    {
+      "id": "freshworks-developer",
+      "name": "Freshworks Developer",
+      "description": "Inspect Freshworks custom apps and versions and manage app package submission workflows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "freshworks-developer",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect Freshworks custom apps and versions and manage app package submission workflows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developers.freshworks.com/docs/agentic-dev-tools/mcp-server/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developers.freshworks.com/docs/agentic-dev-tools/mcp-server/",
+            "connectorPublisher": "Freshworks Developer",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "Freshworks Developer",
+            "descriptions": {
+              "en": "Inspect Freshworks custom apps and versions and manage app package submission workflows.",
+              "zh-CN": "查看 Freshworks 自定义应用及版本，并管理应用包提交流程。"
+            },
+            "mcpServerExtensions": {
+              "freshworks-developer": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:freshworks-developer-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/freshworks-developer.zip",
+        "sha256": "2f4ae0961416dae52ce4e21c6a6ba6431c11d73856beb85c587b080934a71ffe"
+      },
+      "icon": "./plugins/freshworks-developer/assets/icon.png",
+      "homepage": "https://developers.freshworks.com/docs/agentic-dev-tools/mcp-server/",
+      "license": "MIT",
+      "category": "developer-tools"
+    },
+    {
+      "id": "front",
+      "name": "Front",
+      "description": "Search Front conversations, inspect customer context, prepare drafts and manage inbox workflows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "front",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Front conversations, inspect customer context, prepare drafts and manage inbox workflows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://dev.frontapp.com/docs/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://dev.frontapp.com/docs/mcp-server",
+            "connectorPublisher": "Front",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "Front",
+            "descriptions": {
+              "en": "Search Front conversations, inspect customer context, prepare drafts and manage inbox workflows.",
+              "zh-CN": "搜索 Front 会话、查看客户上下文、准备回复草稿并管理收件箱工作流。"
+            },
+            "mcpServerExtensions": {
+              "front": {
+                "oauthClientRequired": true
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/front.zip",
+        "sha256": "33e46c42c1ce2981c69552219525ad2b33c7c57cc1a67ca5da4ece495624843a"
+      },
+      "icon": "./plugins/front/assets/icon.png",
+      "homepage": "https://dev.frontapp.com/docs/mcp-server",
+      "license": "MIT",
+      "category": "communication"
     },
     {
       "id": "fyxer",

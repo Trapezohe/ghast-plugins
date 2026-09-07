@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "dropbox",
+  "version": "1.0.0-ghast.1",
+  "description": "Search, organize and work with Dropbox files, sharing links, revisions and file requests.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://help.dropbox.com/integrations/connect-dropbox-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://help.dropbox.com/integrations/connect-dropbox-mcp-server",
+      "connectorPublisher": "Dropbox",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Dropbox",
+      "descriptions": {
+        "en": "Search, organize and work with Dropbox files, sharing links, revisions and file requests.",
+        "zh-CN": "搜索与整理 Dropbox 文件，管理分享链接、文件版本和文件收集请求。"
+      },
+      "mcpServerExtensions": {
+        "dropbox": {
+          "oauthClientRequired": true
+        }
+      }
+    }
+  }
+}
