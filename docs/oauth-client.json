@@ -1,0 +1,10 @@
+{
+  "client_id": "https://trapezohe.github.io/ghast-plugins/oauth-client.json",
+  "client_name": "Ghast",
+  "client_uri": "https://ghast.trapezohe.ai",
+  "application_type": "native",
+  "redirect_uris": ["http://127.0.0.1/mcp/oauth/callback"],
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none"
+}
