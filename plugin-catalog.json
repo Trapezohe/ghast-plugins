@@ -466,6 +466,51 @@
       "category": "development"
     },
     {
+      "id": "allium",
+      "name": "Allium",
+      "description": "Query blockchain datasets, explore wallet data and manage saved analytics with Allium’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "allium",
+        "version": "1.0.0-ghast.1",
+        "description": "Query blockchain datasets, explore wallet data and manage saved analytics with Allium’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.allium.so/ai/mcp/overview",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.allium.so/ai/mcp/overview",
+            "connectorPublisher": "Allium",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Allium",
+            "descriptions": {
+              "en": "Query blockchain datasets, explore wallet data and manage saved analytics with Allium’s official MCP.",
+              "zh-CN": "通过 Allium 官方 MCP 查询区块链数据、探索钱包数据并管理已保存分析。"
+            },
+            "mcpServerExtensions": {
+              "allium": {
+                "credentialHeaders": {
+                  "X-API-KEY": "$VAULT:allium-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/allium.zip",
+        "sha256": "47a041af7733ad43a37d09819dfcd1294d24ad2fb899493971051660d14ea587"
+      },
+      "icon": "./plugins/allium/assets/icon.png",
+      "homepage": "https://docs.allium.so/ai/mcp/overview",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
       "id": "alpaca",
       "name": "alpaca",
       "description": "Research stocks, options, crypto, fixed income, indices, news, and corporate actions through Alpaca's official market-data MCP, with separately authorized paper and live trading servers for account, order, position, portfolio, and watchlist workflows.",
@@ -1365,6 +1410,51 @@
       "homepage": "https://bird.com/docs/ai/mcp-server",
       "license": "MIT",
       "category": "communication"
+    },
+    {
+      "id": "birdeye",
+      "name": "Birdeye",
+      "description": "Explore token markets, DEX liquidity, trends and historical prices through Birdeye’s official MCP (Beta).",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "birdeye",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore token markets, DEX liquidity, trends and historical prices through Birdeye’s official MCP (Beta).",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.birdeye.so/docs/birdeye-ai",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.birdeye.so/docs/birdeye-ai",
+            "connectorPublisher": "Birdeye",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Birdeye",
+            "descriptions": {
+              "en": "Explore token markets, DEX liquidity, trends and historical prices through Birdeye’s official MCP (Beta).",
+              "zh-CN": "通过 Birdeye 官方 MCP（Beta）探索代币市场、DEX 流动性、热点与历史价格。"
+            },
+            "mcpServerExtensions": {
+              "birdeye": {
+                "credentialHeaders": {
+                  "x-api-key": "$VAULT:birdeye-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/birdeye.zip",
+        "sha256": "462e942261424bfb67cff48d622c73252c5ed876dbb828a05d6d5764906c50e0"
+      },
+      "icon": "./plugins/birdeye/assets/icon.png",
+      "homepage": "https://docs.birdeye.so/docs/birdeye-ai",
+      "license": "MIT",
+      "category": "finance"
     },
     {
       "id": "bitget",
@@ -3997,6 +4087,44 @@
       },
       "icon": "./plugins/cryptoquant/assets/icon.png",
       "homepage": "https://userguide.cryptoquant.com/api/mcp-server-beta/remote-mcp-recommended",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
+      "id": "cryptorank",
+      "name": "CryptoRank",
+      "description": "Research crypto funding rounds, investors, token unlocks and project teams through CryptoRank’s official MCP (Beta).",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "cryptorank",
+        "version": "1.0.0-ghast.1",
+        "description": "Research crypto funding rounds, investors, token unlocks and project teams through CryptoRank’s official MCP (Beta).",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://cryptorank.io/insights/analytics/how-to-use-CryptoRank-MCP-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://cryptorank.io/insights/analytics/how-to-use-CryptoRank-MCP-server",
+            "connectorPublisher": "CryptoRank",
+            "category": "finance",
+            "icon": "./assets/icon.svg",
+            "displayName": "CryptoRank",
+            "descriptions": {
+              "en": "Research crypto funding rounds, investors, token unlocks and project teams through CryptoRank’s official MCP (Beta).",
+              "zh-CN": "通过 CryptoRank 官方 MCP（Beta）研究加密项目融资、投资机构、代币解锁与团队。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/cryptorank.zip",
+        "sha256": "a911103dd3485cf329fdaec40b09d22031f5d3530d68ceea3990f536ba89092e"
+      },
+      "icon": "./plugins/cryptorank/assets/icon.svg",
+      "homepage": "https://cryptorank.io/insights/analytics/how-to-use-CryptoRank-MCP-server",
       "license": "MIT",
       "category": "finance"
     },

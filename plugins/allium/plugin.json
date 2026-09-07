@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "allium",
+  "version": "1.0.0-ghast.1",
+  "description": "Query blockchain datasets, explore wallet data and manage saved analytics with Allium’s official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.allium.so/ai/mcp/overview",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.allium.so/ai/mcp/overview",
+      "connectorPublisher": "Allium",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Allium",
+      "descriptions": {
+        "en": "Query blockchain datasets, explore wallet data and manage saved analytics with Allium’s official MCP.",
+        "zh-CN": "通过 Allium 官方 MCP 查询区块链数据、探索钱包数据并管理已保存分析。"
+      },
+      "mcpServerExtensions": {
+        "allium": {
+          "credentialHeaders": {
+            "X-API-KEY": "$VAULT:allium-token"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "cryptorank",
+  "version": "1.0.0-ghast.1",
+  "description": "Research crypto funding rounds, investors, token unlocks and project teams through CryptoRank’s official MCP (Beta).",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://cryptorank.io/insights/analytics/how-to-use-CryptoRank-MCP-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://cryptorank.io/insights/analytics/how-to-use-CryptoRank-MCP-server",
+      "connectorPublisher": "CryptoRank",
+      "category": "finance",
+      "icon": "./assets/icon.svg",
+      "displayName": "CryptoRank",
+      "descriptions": {
+        "en": "Research crypto funding rounds, investors, token unlocks and project teams through CryptoRank’s official MCP (Beta).",
+        "zh-CN": "通过 CryptoRank 官方 MCP（Beta）研究加密项目融资、投资机构、代币解锁与团队。"
+      }
+    }
+  }
+}
