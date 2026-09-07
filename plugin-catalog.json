@@ -10285,6 +10285,51 @@
       "category": "business"
     },
     {
+      "id": "starrocks",
+      "name": "StarRocks",
+      "description": "Explore StarRocks schemas, run SQL and create charts from analytical queries.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "starrocks",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore StarRocks schemas, run SQL and create charts from analytical queries.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/StarRocks/mcp-server-starrocks",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/StarRocks/mcp-server-starrocks",
+            "connectorPublisher": "StarRocks",
+            "category": "data",
+            "icon": "./assets/icon.svg",
+            "displayName": "StarRocks",
+            "descriptions": {
+              "en": "Explore StarRocks schemas, run SQL and create charts from analytical queries.",
+              "zh-CN": "浏览 StarRocks 数据结构、执行 SQL 并根据分析查询生成图表。"
+            },
+            "mcpServerExtensions": {
+              "starrocks": {
+                "credentialEnv": {
+                  "STARROCKS_URL": "$VAULT:starrocks-url"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/starrocks.zip",
+        "sha256": "bbfc85191782ed1a39c177078b744a95eab390b3e7d5659f01b93431dfbc7aaa"
+      },
+      "icon": "./plugins/starrocks/assets/icon.svg",
+      "homepage": "https://github.com/StarRocks/mcp-server-starrocks",
+      "license": "MIT",
+      "category": "data"
+    },
+    {
       "id": "statsig",
       "name": "statsig",
       "description": "Inspect and manage Statsig experiments, feature gates, dynamic configs, segments, metrics, results, audit logs, and dashboards through official skills and the official Statsig MCP server.",
@@ -10586,6 +10631,49 @@
       "category": "development"
     },
     {
+      "id": "surrealdb",
+      "name": "SurrealDB",
+      "description": "Manage SurrealDB Cloud instances, query databases and inspect usage and diagnostics.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "surrealdb",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage SurrealDB Cloud instances, query databases and inspect usage and diagnostics.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://surrealdb.com/docs/build/ai-agents/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://surrealdb.com/docs/build/ai-agents/mcp",
+            "connectorPublisher": "SurrealDB",
+            "category": "data",
+            "icon": "./assets/icon.svg",
+            "displayName": "SurrealDB",
+            "descriptions": {
+              "en": "Manage SurrealDB Cloud instances, query databases and inspect usage and diagnostics.",
+              "zh-CN": "管理 SurrealDB Cloud 实例、查询数据库并检查用量与诊断信息。"
+            },
+            "mcpServerExtensions": {
+              "surrealdb": {
+                "oauthRequired": true
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/surrealdb.zip",
+        "sha256": "8a1727c6fff87c84be5100e6c95b06841148865e287983fa5429ea1da0034509"
+      },
+      "icon": "./plugins/surrealdb/assets/icon.svg",
+      "homepage": "https://surrealdb.com/docs/build/ai-agents/mcp",
+      "license": "MIT",
+      "category": "data"
+    },
+    {
       "id": "svelte",
       "name": "Svelte",
       "description": "Read Svelte and SvelteKit documentation and analyze component code.",
@@ -10620,6 +10708,44 @@
       "homepage": "https://svelte.dev/docs/ai/remote-setup",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "swagger",
+      "name": "Swagger",
+      "description": "Discover and manage API specifications and developer portals with Swagger Studio and Portal.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "swagger",
+        "version": "1.0.0-ghast.1",
+        "description": "Discover and manage API specifications and developer portals with Swagger Studio and Portal.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.smartbear.com/smartbear-mcp/docs/remote-swagger",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.smartbear.com/smartbear-mcp/docs/remote-swagger",
+            "connectorPublisher": "Swagger",
+            "category": "developer-tools",
+            "icon": "./assets/icon.svg",
+            "displayName": "Swagger",
+            "descriptions": {
+              "en": "Discover and manage API specifications and developer portals with Swagger Studio and Portal.",
+              "zh-CN": "通过 Swagger Studio 与 Portal 查找和管理 API 规范及开发者门户。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/swagger.zip",
+        "sha256": "1a635c8837e5451ee9f19e2d3d07fdf5a2c3891b5cdea466367614c96dbe2ba3"
+      },
+      "icon": "./plugins/swagger/assets/icon.svg",
+      "homepage": "https://developer.smartbear.com/smartbear-mcp/docs/remote-swagger",
+      "license": "MIT",
+      "category": "developer-tools"
     },
     {
       "id": "tallyfy",

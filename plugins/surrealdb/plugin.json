@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "surrealdb",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage SurrealDB Cloud instances, query databases and inspect usage and diagnostics.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://surrealdb.com/docs/build/ai-agents/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://surrealdb.com/docs/build/ai-agents/mcp",
+      "connectorPublisher": "SurrealDB",
+      "category": "data",
+      "icon": "./assets/icon.svg",
+      "displayName": "SurrealDB",
+      "descriptions": {
+        "en": "Manage SurrealDB Cloud instances, query databases and inspect usage and diagnostics.",
+        "zh-CN": "管理 SurrealDB Cloud 实例、查询数据库并检查用量与诊断信息。"
+      },
+      "mcpServerExtensions": {
+        "surrealdb": {
+          "oauthRequired": true
+        }
+      }
+    }
+  }
+}

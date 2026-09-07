@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "swagger",
+  "version": "1.0.0-ghast.1",
+  "description": "Discover and manage API specifications and developer portals with Swagger Studio and Portal.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.smartbear.com/smartbear-mcp/docs/remote-swagger",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developer.smartbear.com/smartbear-mcp/docs/remote-swagger",
+      "connectorPublisher": "Swagger",
+      "category": "developer-tools",
+      "icon": "./assets/icon.svg",
+      "displayName": "Swagger",
+      "descriptions": {
+        "en": "Discover and manage API specifications and developer portals with Swagger Studio and Portal.",
+        "zh-CN": "通过 Swagger Studio 与 Portal 查找和管理 API 规范及开发者门户。"
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "starrocks",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore StarRocks schemas, run SQL and create charts from analytical queries.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/StarRocks/mcp-server-starrocks",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/StarRocks/mcp-server-starrocks",
+      "connectorPublisher": "StarRocks",
+      "category": "data",
+      "icon": "./assets/icon.svg",
+      "displayName": "StarRocks",
+      "descriptions": {
+        "en": "Explore StarRocks schemas, run SQL and create charts from analytical queries.",
+        "zh-CN": "浏览 StarRocks 数据结构、执行 SQL 并根据分析查询生成图表。"
+      },
+      "mcpServerExtensions": {
+        "starrocks": {
+          "credentialEnv": {
+            "STARROCKS_URL": "$VAULT:starrocks-url"
+          }
+        }
+      }
+    }
+  }
+}
