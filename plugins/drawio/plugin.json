@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "drawio",
+  "version": "1.0.0-ghast.1",
+  "description": "Create editable diagrams from draw.io XML, Mermaid or CSV using the official MCP tool server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.drawio.com/docs/manual/generate/drawio-mcp-server/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.drawio.com/docs/manual/generate/drawio-mcp-server/",
+      "connectorPublisher": "draw.io",
+      "category": "design",
+      "icon": "./assets/icon.svg",
+      "displayName": "draw.io",
+      "descriptions": {
+        "en": "Create editable diagrams from draw.io XML, Mermaid or CSV using the official MCP tool server.",
+        "zh-CN": "通过 draw.io 官方 MCP 工具将 XML、Mermaid 或 CSV 转成可编辑图表。"
+      }
+    }
+  }
+}

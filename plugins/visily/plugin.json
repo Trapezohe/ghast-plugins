@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "visily",
+  "version": "1.0.0-ghast.1",
+  "description": "Find UI boards, inspect designs and extract theme tokens with Visily’s official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/visily-app/mcp-plugins",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/visily-app/mcp-plugins",
+      "connectorPublisher": "Visily",
+      "category": "design",
+      "icon": "./assets/icon.png",
+      "displayName": "Visily",
+      "descriptions": {
+        "en": "Find UI boards, inspect designs and extract theme tokens with Visily’s official MCP.",
+        "zh-CN": "通过 Visily 官方 MCP 查找 UI 画板、检查设计并提取主题样式。"
+      }
+    }
+  }
+}

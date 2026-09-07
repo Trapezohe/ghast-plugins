@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "balsamiq",
+  "version": "1.0.0-ghast.1",
+  "description": "Read, create and refine wireframes in Balsamiq Cloud through its official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://community.balsamiq.com/support/integrations/mcp/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://community.balsamiq.com/support/integrations/mcp/",
+      "connectorPublisher": "Balsamiq",
+      "category": "design",
+      "icon": "./assets/icon.svg",
+      "displayName": "Balsamiq",
+      "descriptions": {
+        "en": "Read, create and refine wireframes in Balsamiq Cloud through its official MCP.",
+        "zh-CN": "通过 Balsamiq Cloud 官方 MCP 读取、创建与完善线框图。"
+      }
+    }
+  }
+}

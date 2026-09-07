@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "lottiefiles",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore animation workspaces, projects and assets through LottieFiles’ official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.lottiefiles.com/en/platform/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.lottiefiles.com/en/platform/mcp",
+      "connectorPublisher": "LottieFiles",
+      "category": "design",
+      "icon": "./assets/icon.png",
+      "displayName": "LottieFiles",
+      "descriptions": {
+        "en": "Explore animation workspaces, projects and assets through LottieFiles’ official MCP.",
+        "zh-CN": "通过 LottieFiles 官方 MCP 探索动画工作区、项目与素材。"
+      }
+    }
+  }
+}

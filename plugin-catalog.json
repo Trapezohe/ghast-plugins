@@ -987,6 +987,44 @@
       "category": "data"
     },
     {
+      "id": "balsamiq",
+      "name": "Balsamiq",
+      "description": "Read, create and refine wireframes in Balsamiq Cloud through its official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "balsamiq",
+        "version": "1.0.0-ghast.1",
+        "description": "Read, create and refine wireframes in Balsamiq Cloud through its official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://community.balsamiq.com/support/integrations/mcp/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://community.balsamiq.com/support/integrations/mcp/",
+            "connectorPublisher": "Balsamiq",
+            "category": "design",
+            "icon": "./assets/icon.svg",
+            "displayName": "Balsamiq",
+            "descriptions": {
+              "en": "Read, create and refine wireframes in Balsamiq Cloud through its official MCP.",
+              "zh-CN": "通过 Balsamiq Cloud 官方 MCP 读取、创建与完善线框图。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/balsamiq.zip",
+        "sha256": "d6b3a3208d6b7468e789579d8714c4a1b6360c73099b912b9dd0581b017a35e0"
+      },
+      "icon": "./plugins/balsamiq/assets/icon.svg",
+      "homepage": "https://community.balsamiq.com/support/integrations/mcp/",
+      "license": "MIT",
+      "category": "design"
+    },
+    {
       "id": "base44",
       "name": "base44",
       "description": "Build and deploy Base44 full-stack apps with CLI project management and JavaScript/TypeScript SDK development skills",
@@ -4569,6 +4607,44 @@
       "category": "business"
     },
     {
+      "id": "drawio",
+      "name": "draw.io",
+      "description": "Create editable diagrams from draw.io XML, Mermaid or CSV using the official MCP tool server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "drawio",
+        "version": "1.0.0-ghast.1",
+        "description": "Create editable diagrams from draw.io XML, Mermaid or CSV using the official MCP tool server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.drawio.com/docs/manual/generate/drawio-mcp-server/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.drawio.com/docs/manual/generate/drawio-mcp-server/",
+            "connectorPublisher": "draw.io",
+            "category": "design",
+            "icon": "./assets/icon.svg",
+            "displayName": "draw.io",
+            "descriptions": {
+              "en": "Create editable diagrams from draw.io XML, Mermaid or CSV using the official MCP tool server.",
+              "zh-CN": "通过 draw.io 官方 MCP 工具将 XML、Mermaid 或 CSV 转成可编辑图表。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/drawio.zip",
+        "sha256": "93649e23e02ccae21b238f2bad4b9735c32acbf429a1e884ce214f4095db8dc7"
+      },
+      "icon": "./plugins/drawio/assets/icon.svg",
+      "homepage": "https://www.drawio.com/docs/manual/generate/drawio-mcp-server/",
+      "license": "MIT",
+      "category": "design"
+    },
+    {
       "id": "dropbox",
       "name": "Dropbox",
       "description": "Search, organize and work with Dropbox files, sharing links, revisions and file requests.",
@@ -7403,6 +7479,44 @@
       "homepage": "https://docs.lokalise.com/en/articles/13547066-setting-up-and-using-the-lokalise-mcp-server",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "lottiefiles",
+      "name": "LottieFiles",
+      "description": "Explore animation workspaces, projects and assets through LottieFiles’ official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "lottiefiles",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore animation workspaces, projects and assets through LottieFiles’ official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.lottiefiles.com/en/platform/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.lottiefiles.com/en/platform/mcp",
+            "connectorPublisher": "LottieFiles",
+            "category": "design",
+            "icon": "./assets/icon.png",
+            "displayName": "LottieFiles",
+            "descriptions": {
+              "en": "Explore animation workspaces, projects and assets through LottieFiles’ official MCP.",
+              "zh-CN": "通过 LottieFiles 官方 MCP 探索动画工作区、项目与素材。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/lottiefiles.zip",
+        "sha256": "19b33aac454ea9cb66aa062b2c96e8ee3fb01927012aa7218e6278f998b0bca7"
+      },
+      "icon": "./plugins/lottiefiles/assets/icon.png",
+      "homepage": "https://docs.lottiefiles.com/en/platform/mcp",
+      "license": "MIT",
+      "category": "design"
     },
     {
       "id": "lovable",
@@ -12504,6 +12618,44 @@
       "repository": "https://github.com/vercel/vercel-plugin",
       "license": "Apache-2.0",
       "category": "development"
+    },
+    {
+      "id": "visily",
+      "name": "Visily",
+      "description": "Find UI boards, inspect designs and extract theme tokens with Visily’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "visily",
+        "version": "1.0.0-ghast.1",
+        "description": "Find UI boards, inspect designs and extract theme tokens with Visily’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/visily-app/mcp-plugins",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/visily-app/mcp-plugins",
+            "connectorPublisher": "Visily",
+            "category": "design",
+            "icon": "./assets/icon.png",
+            "displayName": "Visily",
+            "descriptions": {
+              "en": "Find UI boards, inspect designs and extract theme tokens with Visily’s official MCP.",
+              "zh-CN": "通过 Visily 官方 MCP 查找 UI 画板、检查设计并提取主题样式。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/visily.zip",
+        "sha256": "d9c48e7c45233d34c982382db38bccf6aa516d5cf386055bba0030189efed0cd"
+      },
+      "icon": "./plugins/visily/assets/icon.png",
+      "homepage": "https://github.com/visily-app/mcp-plugins",
+      "license": "MIT",
+      "category": "design"
     },
     {
       "id": "waldo",
