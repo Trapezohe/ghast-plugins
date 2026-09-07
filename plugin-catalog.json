@@ -6998,6 +6998,51 @@
       "category": "productivity"
     },
     {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "description": "Explore MongoDB collections, inspect schemas, run queries and analyze database performance.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "mongodb",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore MongoDB collections, inspect schemas, run queries and analyze database performance.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.mongodb.com/docs/mcp-server/local-mcp/configuration/options/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.mongodb.com/docs/mcp-server/local-mcp/configuration/options/",
+            "connectorPublisher": "MongoDB",
+            "category": "databases",
+            "icon": "./assets/icon.png",
+            "displayName": "MongoDB",
+            "descriptions": {
+              "en": "Explore MongoDB collections, inspect schemas, run queries and analyze database performance.",
+              "zh-CN": "浏览 MongoDB 集合、检查结构、执行查询并分析数据库性能。"
+            },
+            "mcpServerExtensions": {
+              "mongodb": {
+                "credentialEnv": {
+                  "MDB_MCP_CONNECTION_STRING": "$VAULT:mongodb-connection-string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/mongodb.zip",
+        "sha256": "6fbae5dba98f7c221cebeee382762074e31670e8c0206bba38a7e175e9b8bdc4"
+      },
+      "icon": "./plugins/mongodb/assets/icon.png",
+      "homepage": "https://www.mongodb.com/docs/mcp-server/local-mcp/configuration/options/",
+      "license": "MIT",
+      "category": "databases"
+    },
+    {
       "id": "morningstar",
       "name": "morningstar",
       "description": "Screen, summarize, compare, and analyze funds through Morningstar's official MCP.",
@@ -10158,6 +10203,52 @@
       "repository": "https://github.com/twilio/ai",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "upstash",
+      "name": "Upstash Redis",
+      "description": "Query and manage Upstash Redis data, run Redis commands and search official documentation.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "upstash",
+        "version": "1.0.0-ghast.1",
+        "description": "Query and manage Upstash Redis data, run Redis commands and search official documentation.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/upstash/redis-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/upstash/redis-mcp",
+            "connectorPublisher": "Upstash Redis",
+            "category": "databases",
+            "icon": "./assets/icon.png",
+            "displayName": "Upstash Redis",
+            "descriptions": {
+              "en": "Query and manage Upstash Redis data, run Redis commands and search official documentation.",
+              "zh-CN": "查询与管理 Upstash Redis 数据、执行 Redis 命令并搜索官方文档。"
+            },
+            "mcpServerExtensions": {
+              "upstash": {
+                "credentialEnv": {
+                  "UPSTASH_REDIS_REST_URL": "$VAULT:upstash-rest-url",
+                  "UPSTASH_REDIS_REST_TOKEN": "$VAULT:upstash-rest-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/upstash.zip",
+        "sha256": "f2612e9d6051b0f6c8115b9ceee779fd390dd57fa954b31532f419d7f11d74e8"
+      },
+      "icon": "./plugins/upstash/assets/icon.png",
+      "homepage": "https://github.com/upstash/redis-mcp",
+      "license": "MIT",
+      "category": "databases"
     },
     {
       "id": "uptime-check",

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mongodb",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore MongoDB collections, inspect schemas, run queries and analyze database performance.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.mongodb.com/docs/mcp-server/local-mcp/configuration/options/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.mongodb.com/docs/mcp-server/local-mcp/configuration/options/",
+      "connectorPublisher": "MongoDB",
+      "category": "databases",
+      "icon": "./assets/icon.png",
+      "displayName": "MongoDB",
+      "descriptions": {
+        "en": "Explore MongoDB collections, inspect schemas, run queries and analyze database performance.",
+        "zh-CN": "浏览 MongoDB 集合、检查结构、执行查询并分析数据库性能。"
+      },
+      "mcpServerExtensions": {
+        "mongodb": {
+          "credentialEnv": {
+            "MDB_MCP_CONNECTION_STRING": "$VAULT:mongodb-connection-string"
+          }
+        }
+      }
+    }
+  }
+}
