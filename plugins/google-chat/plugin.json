@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "google-chat",
+  "version": "1.0.0-ghast.1",
+  "description": "Search conversations, read messages and communicate through Google’s official Workspace MCP service.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "connectorPublisher": "Google",
+      "category": "communication",
+      "icon": "./assets/icon.svg",
+      "displayName": "Google Chat",
+      "descriptions": {
+        "en": "Search conversations, read messages and communicate through Google’s official Workspace MCP service.",
+        "zh-CN": "通过 Google 官方 Workspace MCP 服务检索会话、阅读消息与沟通协作。"
+      },
+      "mcpServerExtensions": {
+        "google-chat": {
+          "oauthClientRequired": true
+        }
+      }
+    }
+  }
+}

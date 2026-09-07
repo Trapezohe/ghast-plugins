@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "google-calendar",
+  "version": "1.0.0-ghast.1",
+  "description": "Find events, check availability and manage meetings through Google’s official Workspace MCP service.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "connectorPublisher": "Google",
+      "category": "productivity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Google Calendar",
+      "descriptions": {
+        "en": "Find events, check availability and manage meetings through Google’s official Workspace MCP service.",
+        "zh-CN": "通过 Google 官方 Workspace MCP 服务查找日程、检查空闲时间与管理会议。"
+      },
+      "mcpServerExtensions": {
+        "google-calendar": {
+          "oauthClientRequired": true
+        }
+      }
+    }
+  }
+}
