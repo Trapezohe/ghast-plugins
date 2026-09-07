@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "devcycle",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect and manage feature flags, targeting rules and release environments.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.devcycle.com/cli-mcp/mcp-getting-started/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.devcycle.com/cli-mcp/mcp-getting-started/",
+      "connectorPublisher": "DevCycle",
+      "category": "development",
+      "icon": "./assets/icon.svg",
+      "displayName": "DevCycle",
+      "descriptions": {
+        "en": "Inspect and manage feature flags, targeting rules and release environments.",
+        "zh-CN": "查看和管理功能开关、定向规则与发布环境。"
+      }
+    }
+  }
+}

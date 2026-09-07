@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "devexpress",
+  "version": "1.0.0-ghast.1",
+  "description": "Search DevExpress component documentation, APIs and implementation examples.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.devexpress.com/GeneralInformation/405551/help-resources/dev-express-documentation-mcp-server-configure-an-ai-powered-assistant",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.devexpress.com/GeneralInformation/405551/help-resources/dev-express-documentation-mcp-server-configure-an-ai-powered-assistant",
+      "connectorPublisher": "DevExpress Documentation",
+      "category": "development",
+      "icon": "./assets/icon.svg",
+      "displayName": "DevExpress Documentation",
+      "descriptions": {
+        "en": "Search DevExpress component documentation, APIs and implementation examples.",
+        "zh-CN": "检索 DevExpress 组件文档、API 与实现示例。"
+      }
+    }
+  }
+}

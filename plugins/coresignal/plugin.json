@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "coresignal",
+  "version": "1.0.0-ghast.1",
+  "description": "Research company, employee and job data with Coresignal.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/Coresignal-com/coresignal-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/Coresignal-com/coresignal-mcp",
+      "connectorPublisher": "Coresignal",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Coresignal",
+      "descriptions": {
+        "en": "Research company, employee and job data with Coresignal.",
+        "zh-CN": "通过 Coresignal 研究企业、员工与招聘岗位数据。"
+      }
+    }
+  }
+}

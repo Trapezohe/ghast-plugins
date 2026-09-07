@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "devexpress": {
+      "type": "streamable-http",
+      "url": "https://api.devexpress.com/mcp/docs"
+    }
+  }
+}

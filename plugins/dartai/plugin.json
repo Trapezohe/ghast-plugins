@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "dartai",
+  "version": "1.0.0-ghast.1",
+  "description": "Organize tasks, documents and project collaboration in Dart.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://help.dartai.com/en/articles/10733406-dart-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://help.dartai.com/en/articles/10733406-dart-mcp",
+      "connectorPublisher": "Dart",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Dart",
+      "descriptions": {
+        "en": "Organize tasks, documents and project collaboration in Dart.",
+        "zh-CN": "在 Dart 中组织任务、文档与项目协作。"
+      }
+    }
+  }
+}

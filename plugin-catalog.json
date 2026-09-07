@@ -449,6 +449,51 @@
       "category": "productivity"
     },
     {
+      "id": "appsflyer",
+      "name": "AppsFlyer",
+      "description": "Analyze campaign attribution, installs, ROAS, lifetime value and marketing performance.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "appsflyer",
+        "version": "1.0.0-ghast.1",
+        "description": "Analyze campaign attribution, installs, ROAS, lifetime value and marketing performance.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://support.appsflyer.com/hc/en-us/articles/36349070304785--Beta-AppsFlyer-MCP",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://support.appsflyer.com/hc/en-us/articles/36349070304785--Beta-AppsFlyer-MCP",
+            "connectorPublisher": "AppsFlyer",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "AppsFlyer",
+            "descriptions": {
+              "en": "Analyze campaign attribution, installs, ROAS, lifetime value and marketing performance.",
+              "zh-CN": "分析广告归因、安装量、ROAS、用户终身价值与营销表现。"
+            },
+            "mcpServerExtensions": {
+              "appsflyer": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:appsflyer-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/appsflyer.zip",
+        "sha256": "cdb33c27cd023b23b4e315d3bea6481869613af4970ce95b9d83a4c79f776028"
+      },
+      "icon": "./plugins/appsflyer/assets/icon.png",
+      "homepage": "https://support.appsflyer.com/hc/en-us/articles/36349070304785--Beta-AppsFlyer-MCP",
+      "license": "MIT",
+      "category": "marketing"
+    },
+    {
       "id": "arcjet",
       "name": "Arcjet",
       "description": "Investigate application traffic, security decisions, quotas and protection rules.",
@@ -2403,6 +2448,44 @@
       "category": "development"
     },
     {
+      "id": "coresignal",
+      "name": "Coresignal",
+      "description": "Research company, employee and job data with Coresignal.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "coresignal",
+        "version": "1.0.0-ghast.1",
+        "description": "Research company, employee and job data with Coresignal.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/Coresignal-com/coresignal-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/Coresignal-com/coresignal-mcp",
+            "connectorPublisher": "Coresignal",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Coresignal",
+            "descriptions": {
+              "en": "Research company, employee and job data with Coresignal.",
+              "zh-CN": "通过 Coresignal 研究企业、员工与招聘岗位数据。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/coresignal.zip",
+        "sha256": "5e2f7fcfd17c10a5d0450595338a97c94963bb9966ed70ec921ac409af257d29"
+      },
+      "icon": "./plugins/coresignal/assets/icon.png",
+      "homepage": "https://github.com/Coresignal-com/coresignal-mcp",
+      "license": "MIT",
+      "category": "data"
+    },
+    {
       "id": "coupler-io",
       "name": "coupler-io",
       "description": "Analyze marketing, sales, finance, ecommerce, product, and other business data from Coupler.io data flows through Coupler.io's official hosted OAuth MCP and Analytical Engine.",
@@ -2714,6 +2797,44 @@
       "category": "finance"
     },
     {
+      "id": "dartai",
+      "name": "Dart",
+      "description": "Organize tasks, documents and project collaboration in Dart.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "dartai",
+        "version": "1.0.0-ghast.1",
+        "description": "Organize tasks, documents and project collaboration in Dart.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.dartai.com/en/articles/10733406-dart-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.dartai.com/en/articles/10733406-dart-mcp",
+            "connectorPublisher": "Dart",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Dart",
+            "descriptions": {
+              "en": "Organize tasks, documents and project collaboration in Dart.",
+              "zh-CN": "在 Dart 中组织任务、文档与项目协作。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/dartai.zip",
+        "sha256": "dd963a63b103133d2c61580057e27c0edfb6e35c1e98ebcab78f2680e47d8f70"
+      },
+      "icon": "./plugins/dartai/assets/icon.png",
+      "homepage": "https://help.dartai.com/en/articles/10733406-dart-mcp",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "datadog",
       "name": "datadog",
       "description": "Investigate Datadog logs, metrics, traces, monitors, incidents, dashboards, services, and widgets through Datadog's official hosted MCP server and Datadog-derived setup workflows.",
@@ -2901,6 +3022,82 @@
       "homepage": "https://developer.demandbase.com/docs/mcp",
       "license": "MIT",
       "category": "business"
+    },
+    {
+      "id": "devcycle",
+      "name": "DevCycle",
+      "description": "Inspect and manage feature flags, targeting rules and release environments.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "devcycle",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect and manage feature flags, targeting rules and release environments.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.devcycle.com/cli-mcp/mcp-getting-started/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.devcycle.com/cli-mcp/mcp-getting-started/",
+            "connectorPublisher": "DevCycle",
+            "category": "development",
+            "icon": "./assets/icon.svg",
+            "displayName": "DevCycle",
+            "descriptions": {
+              "en": "Inspect and manage feature flags, targeting rules and release environments.",
+              "zh-CN": "查看和管理功能开关、定向规则与发布环境。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/devcycle.zip",
+        "sha256": "c2ca85a726631d31bfc602401be4336a40ee2e288721f9b730b780d0030b648c"
+      },
+      "icon": "./plugins/devcycle/assets/icon.svg",
+      "homepage": "https://docs.devcycle.com/cli-mcp/mcp-getting-started/",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
+      "id": "devexpress",
+      "name": "DevExpress Documentation",
+      "description": "Search DevExpress component documentation, APIs and implementation examples.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "devexpress",
+        "version": "1.0.0-ghast.1",
+        "description": "Search DevExpress component documentation, APIs and implementation examples.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.devexpress.com/GeneralInformation/405551/help-resources/dev-express-documentation-mcp-server-configure-an-ai-powered-assistant",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.devexpress.com/GeneralInformation/405551/help-resources/dev-express-documentation-mcp-server-configure-an-ai-powered-assistant",
+            "connectorPublisher": "DevExpress Documentation",
+            "category": "development",
+            "icon": "./assets/icon.svg",
+            "displayName": "DevExpress Documentation",
+            "descriptions": {
+              "en": "Search DevExpress component documentation, APIs and implementation examples.",
+              "zh-CN": "检索 DevExpress 组件文档、API 与实现示例。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/devexpress.zip",
+        "sha256": "e3b974f484b259350299683b1f43bf915229216ae70a8abf0b8790bd39975c6d"
+      },
+      "icon": "./plugins/devexpress/assets/icon.svg",
+      "homepage": "https://docs.devexpress.com/GeneralInformation/405551/help-resources/dev-express-documentation-mcp-server-configure-an-ai-powered-assistant",
+      "license": "MIT",
+      "category": "development"
     },
     {
       "id": "dexpaprika",

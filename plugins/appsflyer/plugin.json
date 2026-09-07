@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "appsflyer",
+  "version": "1.0.0-ghast.1",
+  "description": "Analyze campaign attribution, installs, ROAS, lifetime value and marketing performance.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://support.appsflyer.com/hc/en-us/articles/36349070304785--Beta-AppsFlyer-MCP",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://support.appsflyer.com/hc/en-us/articles/36349070304785--Beta-AppsFlyer-MCP",
+      "connectorPublisher": "AppsFlyer",
+      "category": "marketing",
+      "icon": "./assets/icon.png",
+      "displayName": "AppsFlyer",
+      "descriptions": {
+        "en": "Analyze campaign attribution, installs, ROAS, lifetime value and marketing performance.",
+        "zh-CN": "分析广告归因、安装量、ROAS、用户终身价值与营销表现。"
+      },
+      "mcpServerExtensions": {
+        "appsflyer": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:appsflyer-token"
+          }
+        }
+      }
+    }
+  }
+}
