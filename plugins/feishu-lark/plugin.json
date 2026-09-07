@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "feishu-lark",
+  "version": "1.0.0-ghast.1",
+  "description": "Work with documents, Base tables, chats, calendars and tasks through the official Feishu / Lark OpenAPI MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/larksuite/lark-openapi-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/larksuite/lark-openapi-mcp",
+      "connectorPublisher": "Feishu / Lark",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Feishu / Lark",
+      "descriptions": {
+        "en": "Work with documents, Base tables, chats, calendars and tasks through the official Feishu / Lark OpenAPI MCP.",
+        "zh-CN": "通过飞书／Lark 官方 OpenAPI MCP 处理文档、多维表格、群聊、日历与任务。"
+      },
+      "mcpServerExtensions": {
+        "feishu-lark": {
+          "credentialEnv": {
+            "APP_ID": "$VAULT:feishu-lark-app-id",
+            "APP_SECRET": "$VAULT:feishu-lark-app-secret",
+            "USER_ACCESS_TOKEN": "$VAULT:feishu-lark-user-token"
+          }
+        }
+      }
+    }
+  }
+}

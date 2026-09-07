@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "dingtalk": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "dingtalk-mcp@1.1.21"
+      ],
+      "env": {
+        "ACTIVE_PROFILES": "ALL"
+      }
+    }
+  }
+}

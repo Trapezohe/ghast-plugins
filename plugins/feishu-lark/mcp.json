@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "feishu-lark": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@larksuiteoapi/lark-mcp@0.5.1",
+        "mcp",
+        "-t",
+        "preset.default,preset.calendar.default,preset.task.default"
+      ]
+    }
+  }
+}
