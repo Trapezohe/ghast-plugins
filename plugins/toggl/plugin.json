@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "toggl",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage tasks, projects, time entries and reports in Toggl 2.0.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.toggl.com/toggl-mcp-and-cl",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.toggl.com/toggl-mcp-and-cl",
+      "connectorPublisher": "Toggl 2.0",
+      "category": "productivity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Toggl 2.0",
+      "descriptions": {
+        "en": "Manage tasks, projects, time entries and reports in Toggl 2.0.",
+        "zh-CN": "在 Toggl 2.0 中管理任务、项目、工时记录与报表。"
+      }
+    }
+  }
+}

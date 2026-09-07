@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "teamwork",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage client projects, tasks, time logs and help desk workflows in Teamwork.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/Teamwork/mcp/blob/main/docs/usage/other-platforms.md",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/Teamwork/mcp/blob/main/docs/usage/other-platforms.md",
+      "connectorPublisher": "Teamwork",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Teamwork",
+      "descriptions": {
+        "en": "Manage client projects, tasks, time logs and help desk workflows in Teamwork.",
+        "zh-CN": "在 Teamwork 中管理客户项目、任务、工时与客服工作流。"
+      },
+      "mcpServerExtensions": {
+        "teamwork": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:teamwork-token"
+          }
+        }
+      }
+    }
+  }
+}

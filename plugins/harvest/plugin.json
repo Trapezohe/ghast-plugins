@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "harvest",
+  "version": "1.0.0-ghast.1",
+  "description": "Track time, review project budgets and prepare invoice drafts in Harvest.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+      "connectorPublisher": "Harvest",
+      "category": "productivity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Harvest",
+      "descriptions": {
+        "en": "Track time, review project budgets and prepare invoice drafts in Harvest.",
+        "zh-CN": "在 Harvest 中记录工时、查看项目预算并准备发票草稿。"
+      }
+    }
+  }
+}

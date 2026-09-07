@@ -5890,6 +5890,44 @@
       "category": "productivity"
     },
     {
+      "id": "harvest",
+      "name": "Harvest",
+      "description": "Track time, review project budgets and prepare invoice drafts in Harvest.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "harvest",
+        "version": "1.0.0-ghast.1",
+        "description": "Track time, review project budgets and prepare invoice drafts in Harvest.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+            "connectorPublisher": "Harvest",
+            "category": "productivity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Harvest",
+            "descriptions": {
+              "en": "Track time, review project budgets and prepare invoice drafts in Harvest.",
+              "zh-CN": "在 Harvest 中记录工时、查看项目预算并准备发票草稿。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/harvest.zip",
+        "sha256": "243a2e6e88dcfe9b0a50e47229dd9f2fe94d26a3d5f0a840eefbb84e26e93102"
+      },
+      "icon": "./plugins/harvest/assets/icon.svg",
+      "homepage": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "hebbia",
       "name": "hebbia",
       "description": "Search authorized institutional knowledge, analyze document sets with traceable evidence, and support financial research workflows through Hebbia's official hosted MCP.",
@@ -10537,6 +10575,51 @@
       "category": "research"
     },
     {
+      "id": "teamwork",
+      "name": "Teamwork",
+      "description": "Manage client projects, tasks, time logs and help desk workflows in Teamwork.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "teamwork",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage client projects, tasks, time logs and help desk workflows in Teamwork.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/Teamwork/mcp/blob/main/docs/usage/other-platforms.md",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/Teamwork/mcp/blob/main/docs/usage/other-platforms.md",
+            "connectorPublisher": "Teamwork",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Teamwork",
+            "descriptions": {
+              "en": "Manage client projects, tasks, time logs and help desk workflows in Teamwork.",
+              "zh-CN": "在 Teamwork 中管理客户项目、任务、工时与客服工作流。"
+            },
+            "mcpServerExtensions": {
+              "teamwork": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:teamwork-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/teamwork.zip",
+        "sha256": "fa67efe0e937eac0f69bc4c91276b3f18988fe165b065e0d67045fdc1eb175f1"
+      },
+      "icon": "./plugins/teamwork/assets/icon.png",
+      "homepage": "https://github.com/Teamwork/mcp/blob/main/docs/usage/other-platforms.md",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "tella",
       "name": "Tella",
       "description": "Find videos, edit clips, organize playlists and export finished videos with Tella.",
@@ -10804,6 +10887,44 @@
       },
       "icon": "./plugins/todoist/assets/icon.svg",
       "homepage": "https://developer.todoist.com/api/v1/#tag/Todoist-MCP",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
+      "id": "toggl",
+      "name": "Toggl 2.0",
+      "description": "Manage tasks, projects, time entries and reports in Toggl 2.0.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "toggl",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage tasks, projects, time entries and reports in Toggl 2.0.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.toggl.com/toggl-mcp-and-cl",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.toggl.com/toggl-mcp-and-cl",
+            "connectorPublisher": "Toggl 2.0",
+            "category": "productivity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Toggl 2.0",
+            "descriptions": {
+              "en": "Manage tasks, projects, time entries and reports in Toggl 2.0.",
+              "zh-CN": "在 Toggl 2.0 中管理任务、项目、工时记录与报表。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/toggl.zip",
+        "sha256": "5476f73a011e01389a66723ae3ca391d10ec6b4c19d90e24fd8d45a08e512950"
+      },
+      "icon": "./plugins/toggl/assets/icon.svg",
+      "homepage": "https://docs.toggl.com/toggl-mcp-and-cl",
       "license": "MIT",
       "category": "productivity"
     },
