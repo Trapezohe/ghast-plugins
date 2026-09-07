@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "1inch",
+  "version": "1.0.0-ghast.1",
+  "description": "Research DeFi data and access 1inch swaps, limit orders and portfolio tools with account authorization.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://business.1inch.com/portal/documentation/ai-integration/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://business.1inch.com/portal/documentation/ai-integration/mcp-server",
+      "connectorPublisher": "1inch",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "1inch",
+      "descriptions": {
+        "en": "Research DeFi data and access 1inch swaps, limit orders and portfolio tools with account authorization.",
+        "zh-CN": "研究 DeFi 数据，并在账号授权后使用 1inch 兑换、限价单与投资组合工具。"
+      },
+      "mcpServerExtensions": {
+        "1inch": {
+          "oauthRequired": true
+        }
+      }
+    }
+  }
+}

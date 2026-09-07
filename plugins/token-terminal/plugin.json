@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "token-terminal",
+  "version": "1.0.0-ghast.1",
+  "description": "Research onchain projects, financial metrics and methodologies with Token Terminal.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://tokenterminal.com/docs/mcp/introduction",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://tokenterminal.com/docs/mcp/introduction",
+      "connectorPublisher": "Token Terminal",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Token Terminal",
+      "descriptions": {
+        "en": "Research onchain projects, financial metrics and methodologies with Token Terminal.",
+        "zh-CN": "使用 Token Terminal 研究链上项目、财务指标与统计方法。"
+      }
+    }
+  }
+}
