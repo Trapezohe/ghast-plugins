@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "zapier",
+  "version": "1.0.0-ghast.1",
+  "description": "Run the actions configured in your Zapier MCP server from Ghast.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.zapier.com/mcp/home",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.zapier.com/mcp/home",
+      "connectorPublisher": "Zapier",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Zapier",
+      "descriptions": {
+        "en": "Run the actions configured in your Zapier MCP server from Ghast.",
+        "zh-CN": "从 Ghast 运行你在 Zapier MCP 服务中配置的动作。"
+      }
+    }
+  }
+}

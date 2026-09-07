@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "brevo",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage contacts, email campaigns, templates, CRM records and marketing analytics in Brevo.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://help.brevo.com/hc/en-us/articles/27978590646802-What-is-Model-Context-Protocol-MCP",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://help.brevo.com/hc/en-us/articles/27978590646802-What-is-Model-Context-Protocol-MCP",
+      "connectorPublisher": "Brevo",
+      "category": "marketing",
+      "icon": "./assets/icon.svg",
+      "displayName": "Brevo",
+      "descriptions": {
+        "en": "Manage contacts, email campaigns, templates, CRM records and marketing analytics in Brevo.",
+        "zh-CN": "在 Brevo 中管理联系人、邮件活动、模板、CRM 记录与营销分析。"
+      },
+      "mcpServerExtensions": {
+        "brevo": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:brevo-token"
+          }
+        }
+      }
+    }
+  }
+}

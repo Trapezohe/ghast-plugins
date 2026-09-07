@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "jotform",
+  "version": "1.0.0-ghast.1",
+  "description": "Create and update Jotform forms and inspect or manage form submissions.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/jotform/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/jotform/mcp-server",
+      "connectorPublisher": "Jotform",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Jotform",
+      "descriptions": {
+        "en": "Create and update Jotform forms and inspect or manage form submissions.",
+        "zh-CN": "创建和更新 Jotform 表单，查看与管理表单提交。"
+      }
+    }
+  }
+}

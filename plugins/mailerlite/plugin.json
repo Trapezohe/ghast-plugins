@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mailerlite",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage subscribers, campaigns, groups and email marketing workflows in MailerLite.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developers.mailerlite.com/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developers.mailerlite.com/mcp",
+      "connectorPublisher": "MailerLite",
+      "category": "marketing",
+      "icon": "./assets/icon.png",
+      "displayName": "MailerLite",
+      "descriptions": {
+        "en": "Manage subscribers, campaigns, groups and email marketing workflows in MailerLite.",
+        "zh-CN": "在 MailerLite 中管理订阅者、邮件活动、分组与邮件营销流程。"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "make",
+  "version": "1.0.0-ghast.1",
+  "description": "Build, inspect, manage and run automation scenarios through Make’s official MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developers.make.com/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developers.make.com/mcp-server",
+      "connectorPublisher": "Make",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Make",
+      "descriptions": {
+        "en": "Build, inspect, manage and run automation scenarios through Make’s official MCP server.",
+        "zh-CN": "通过 Make 官方 MCP 服务构建、查看、管理与运行自动化场景。"
+      }
+    }
+  }
+}

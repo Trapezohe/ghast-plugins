@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "customer-io",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect customer journeys and manage campaigns, newsletters, segments and workspace data in Customer.io.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.customer.io/ai/mcp-server/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.customer.io/ai/mcp-server/",
+      "connectorPublisher": "Customer.io",
+      "category": "marketing",
+      "icon": "./assets/icon.svg",
+      "displayName": "Customer.io",
+      "descriptions": {
+        "en": "Inspect customer journeys and manage campaigns, newsletters, segments and workspace data in Customer.io.",
+        "zh-CN": "在 Customer.io 中查看客户旅程，管理活动、简报、分群与工作区数据。"
+      }
+    }
+  }
+}

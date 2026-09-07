@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "tallyfy",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage workflow tasks, business processes and approvals through Tallyfy.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://tallyfy.com/products/pro/integrations/mcp-server/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://tallyfy.com/products/pro/integrations/mcp-server/",
+      "connectorPublisher": "Tallyfy",
+      "category": "productivity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Tallyfy",
+      "descriptions": {
+        "en": "Manage workflow tasks, business processes and approvals through Tallyfy.",
+        "zh-CN": "通过 Tallyfy 管理工作流任务、业务流程与审批。"
+      }
+    }
+  }
+}

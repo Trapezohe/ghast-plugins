@@ -1222,6 +1222,51 @@
       "category": "productivity"
     },
     {
+      "id": "brevo",
+      "name": "Brevo",
+      "description": "Manage contacts, email campaigns, templates, CRM records and marketing analytics in Brevo.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "brevo",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage contacts, email campaigns, templates, CRM records and marketing analytics in Brevo.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.brevo.com/hc/en-us/articles/27978590646802-What-is-Model-Context-Protocol-MCP",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.brevo.com/hc/en-us/articles/27978590646802-What-is-Model-Context-Protocol-MCP",
+            "connectorPublisher": "Brevo",
+            "category": "marketing",
+            "icon": "./assets/icon.svg",
+            "displayName": "Brevo",
+            "descriptions": {
+              "en": "Manage contacts, email campaigns, templates, CRM records and marketing analytics in Brevo.",
+              "zh-CN": "在 Brevo 中管理联系人、邮件活动、模板、CRM 记录与营销分析。"
+            },
+            "mcpServerExtensions": {
+              "brevo": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:brevo-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/brevo.zip",
+        "sha256": "08576949f9f9ba316d90eb588f1de45a2b582ff47ae208942462a00976441a82"
+      },
+      "icon": "./plugins/brevo/assets/icon.svg",
+      "homepage": "https://help.brevo.com/hc/en-us/articles/27978590646802-What-is-Model-Context-Protocol-MCP",
+      "license": "MIT",
+      "category": "marketing"
+    },
+    {
       "id": "brex",
       "name": "brex",
       "description": "Analyze Brex expenses, cards, limits, banking, bills, accounting, travel, and organization data, or safely update supported expense details through Brex's official hosted MCP server.",
@@ -2840,6 +2885,44 @@
       "icon": "./plugins/current-datetime/assets/icon.svg",
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/current-datetime",
       "category": "utility"
+    },
+    {
+      "id": "customer-io",
+      "name": "Customer.io",
+      "description": "Inspect customer journeys and manage campaigns, newsletters, segments and workspace data in Customer.io.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "customer-io",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect customer journeys and manage campaigns, newsletters, segments and workspace data in Customer.io.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.customer.io/ai/mcp-server/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.customer.io/ai/mcp-server/",
+            "connectorPublisher": "Customer.io",
+            "category": "marketing",
+            "icon": "./assets/icon.svg",
+            "displayName": "Customer.io",
+            "descriptions": {
+              "en": "Inspect customer journeys and manage campaigns, newsletters, segments and workspace data in Customer.io.",
+              "zh-CN": "在 Customer.io 中查看客户旅程，管理活动、简报、分群与工作区数据。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/customer-io.zip",
+        "sha256": "223fdfc64eac21807c51d33f67434037814f1393e31b1173350e5a31367cdab8"
+      },
+      "icon": "./plugins/customer-io/assets/icon.svg",
+      "homepage": "https://docs.customer.io/ai/mcp-server/",
+      "license": "MIT",
+      "category": "marketing"
     },
     {
       "id": "daloopa",
@@ -5160,6 +5243,44 @@
       "category": "research"
     },
     {
+      "id": "jotform",
+      "name": "Jotform",
+      "description": "Create and update Jotform forms and inspect or manage form submissions.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "jotform",
+        "version": "1.0.0-ghast.1",
+        "description": "Create and update Jotform forms and inspect or manage form submissions.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/jotform/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/jotform/mcp-server",
+            "connectorPublisher": "Jotform",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Jotform",
+            "descriptions": {
+              "en": "Create and update Jotform forms and inspect or manage form submissions.",
+              "zh-CN": "创建和更新 Jotform 表单，查看与管理表单提交。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/jotform.zip",
+        "sha256": "98c1857b136757c04768ada00a31fbecbbfedc037534c93d83c6828293b06cba"
+      },
+      "icon": "./plugins/jotform/assets/icon.png",
+      "homepage": "https://github.com/jotform/mcp-server",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "kittl",
       "name": "Kittl",
       "description": "Create images, videos and design assets and run creative workflows in Kittl.",
@@ -5386,6 +5507,82 @@
       "homepage": "https://www.magicpath.ai",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "mailerlite",
+      "name": "MailerLite",
+      "description": "Manage subscribers, campaigns, groups and email marketing workflows in MailerLite.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "mailerlite",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage subscribers, campaigns, groups and email marketing workflows in MailerLite.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developers.mailerlite.com/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developers.mailerlite.com/mcp",
+            "connectorPublisher": "MailerLite",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "MailerLite",
+            "descriptions": {
+              "en": "Manage subscribers, campaigns, groups and email marketing workflows in MailerLite.",
+              "zh-CN": "在 MailerLite 中管理订阅者、邮件活动、分组与邮件营销流程。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/mailerlite.zip",
+        "sha256": "13fcc926aecdff9bf1a9d81dcb639ad7c1a0015b1d572787a4ebf5fdda809b4b"
+      },
+      "icon": "./plugins/mailerlite/assets/icon.png",
+      "homepage": "https://developers.mailerlite.com/mcp",
+      "license": "MIT",
+      "category": "marketing"
+    },
+    {
+      "id": "make",
+      "name": "Make",
+      "description": "Build, inspect, manage and run automation scenarios through Make’s official MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "make",
+        "version": "1.0.0-ghast.1",
+        "description": "Build, inspect, manage and run automation scenarios through Make’s official MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developers.make.com/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developers.make.com/mcp-server",
+            "connectorPublisher": "Make",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Make",
+            "descriptions": {
+              "en": "Build, inspect, manage and run automation scenarios through Make’s official MCP server.",
+              "zh-CN": "通过 Make 官方 MCP 服务构建、查看、管理与运行自动化场景。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/make.zip",
+        "sha256": "e5d19e3b9c274db67970ba81d4dedeacd301fc6a70903706821e15e3574ef0f6"
+      },
+      "icon": "./plugins/make/assets/icon.png",
+      "homepage": "https://developers.make.com/mcp-server",
+      "license": "MIT",
+      "category": "productivity"
     },
     {
       "id": "marcopolo",
@@ -8132,6 +8329,44 @@
       "category": "development"
     },
     {
+      "id": "tallyfy",
+      "name": "Tallyfy",
+      "description": "Manage workflow tasks, business processes and approvals through Tallyfy.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "tallyfy",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage workflow tasks, business processes and approvals through Tallyfy.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://tallyfy.com/products/pro/integrations/mcp-server/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://tallyfy.com/products/pro/integrations/mcp-server/",
+            "connectorPublisher": "Tallyfy",
+            "category": "productivity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Tallyfy",
+            "descriptions": {
+              "en": "Manage workflow tasks, business processes and approvals through Tallyfy.",
+              "zh-CN": "通过 Tallyfy 管理工作流任务、业务流程与审批。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/tallyfy.zip",
+        "sha256": "55e914bc8643d0d73adefdea1ae67509712e98cb62f25542a9ccc8e5652ea8e9"
+      },
+      "icon": "./plugins/tallyfy/assets/icon.svg",
+      "homepage": "https://tallyfy.com/products/pro/integrations/mcp-server/",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "tavily",
       "name": "Tavily",
       "description": "Research the web, extract page content and explore websites with Tavily search and crawling tools.",
@@ -8951,6 +9186,44 @@
       "repository": "https://github.com/yepcode/mcp-server-js",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "zapier",
+      "name": "Zapier",
+      "description": "Run the actions configured in your Zapier MCP server from Ghast.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "zapier",
+        "version": "1.0.0-ghast.1",
+        "description": "Run the actions configured in your Zapier MCP server from Ghast.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.zapier.com/mcp/home",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.zapier.com/mcp/home",
+            "connectorPublisher": "Zapier",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Zapier",
+            "descriptions": {
+              "en": "Run the actions configured in your Zapier MCP server from Ghast.",
+              "zh-CN": "从 Ghast 运行你在 Zapier MCP 服务中配置的动作。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/zapier.zip",
+        "sha256": "30d575ab0d8cd5b9731bfcfc7c450590faf99219af1b0237239abb3d6e681566"
+      },
+      "icon": "./plugins/zapier/assets/icon.png",
+      "homepage": "https://docs.zapier.com/mcp/home",
+      "license": "MIT",
+      "category": "productivity"
     },
     {
       "id": "zoho",
