@@ -7005,6 +7005,51 @@
       "category": "developer-tools"
     },
     {
+      "id": "instantly",
+      "name": "Instantly",
+      "description": "Manage email campaigns, leads, sending accounts and performance through Instantly’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "instantly",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage email campaigns, leads, sending accounts and performance through Instantly’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.instantly.ai/mcp/authentication",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.instantly.ai/mcp/authentication",
+            "connectorPublisher": "Instantly",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "Instantly",
+            "descriptions": {
+              "en": "Manage email campaigns, leads, sending accounts and performance through Instantly’s official MCP.",
+              "zh-CN": "通过 Instantly 官方 MCP 管理邮件活动、销售线索、发件账号与效果数据。"
+            },
+            "mcpServerExtensions": {
+              "instantly": {
+                "credentialHeaders": {
+                  "x-instantly-api-key": "$VAULT:instantly-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/instantly.zip",
+        "sha256": "01c9ced8c28ad8fd9e82424174a92e8f441688241c77c8ee27c7af9d041471b0"
+      },
+      "icon": "./plugins/instantly/assets/icon.png",
+      "homepage": "https://developer.instantly.ai/mcp/authentication",
+      "license": "MIT",
+      "category": "marketing"
+    },
+    {
       "id": "intercom",
       "name": "intercom",
       "description": "Search and analyze Intercom conversations, contacts, companies, Help Center articles, and tickets through Intercom's official hosted MCP service and official CLI.",
@@ -7432,6 +7477,44 @@
       "category": "developer-tools"
     },
     {
+      "id": "lemlist",
+      "name": "lemlist",
+      "description": "Manage outreach campaigns, explore leads and analyze performance with lemlist’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "lemlist",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage outreach campaigns, explore leads and analyze performance with lemlist’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.lemlist.com/en/articles/13728466-set-up-the-lemlist-mcp-server-in-your-llm-client-oauth-or-api-key",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.lemlist.com/en/articles/13728466-set-up-the-lemlist-mcp-server-in-your-llm-client-oauth-or-api-key",
+            "connectorPublisher": "lemlist",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "lemlist",
+            "descriptions": {
+              "en": "Manage outreach campaigns, explore leads and analyze performance with lemlist’s official MCP.",
+              "zh-CN": "通过 lemlist 官方 MCP 管理触达活动、查找销售线索并分析效果。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/lemlist.zip",
+        "sha256": "7782b863613265211325de6b0dc2faa1fcd37b83b7d13fe77dfab366068da3ff"
+      },
+      "icon": "./plugins/lemlist/assets/icon.png",
+      "homepage": "https://help.lemlist.com/en/articles/13728466-set-up-the-lemlist-mcp-server-in-your-llm-client-oauth-or-api-key",
+      "license": "MIT",
+      "category": "marketing"
+    },
+    {
       "id": "linear",
       "name": "linear",
       "description": "Manage Linear issues, projects, and team workflows through Linear's official MCP server.",
@@ -7593,6 +7676,44 @@
       "homepage": "https://docs.lokalise.com/en/articles/13547066-setting-up-and-using-the-lokalise-mcp-server",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "loops",
+      "name": "Loops",
+      "description": "Manage contacts, mailing lists, events and transactional email with Loops’ official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "loops",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage contacts, mailing lists, events and transactional email with Loops’ official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://loops.so/agents/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://loops.so/agents/mcp",
+            "connectorPublisher": "Loops",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "Loops",
+            "descriptions": {
+              "en": "Manage contacts, mailing lists, events and transactional email with Loops’ official MCP.",
+              "zh-CN": "通过 Loops 官方 MCP 管理联系人、邮件列表、事件与事务邮件。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/loops.zip",
+        "sha256": "461a369124912f4e011ba6ae0d92de82498dec5d38205c470f85f2cde95de5d4"
+      },
+      "icon": "./plugins/loops/assets/icon.png",
+      "homepage": "https://loops.so/agents/mcp",
+      "license": "MIT",
+      "category": "marketing"
     },
     {
       "id": "lottiefiles",

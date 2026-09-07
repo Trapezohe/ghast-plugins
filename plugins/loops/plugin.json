@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "loops",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage contacts, mailing lists, events and transactional email with Loops’ official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://loops.so/agents/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://loops.so/agents/mcp",
+      "connectorPublisher": "Loops",
+      "category": "marketing",
+      "icon": "./assets/icon.png",
+      "displayName": "Loops",
+      "descriptions": {
+        "en": "Manage contacts, mailing lists, events and transactional email with Loops’ official MCP.",
+        "zh-CN": "通过 Loops 官方 MCP 管理联系人、邮件列表、事件与事务邮件。"
+      }
+    }
+  }
+}

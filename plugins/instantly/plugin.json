@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "instantly",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage email campaigns, leads, sending accounts and performance through Instantly’s official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.instantly.ai/mcp/authentication",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developer.instantly.ai/mcp/authentication",
+      "connectorPublisher": "Instantly",
+      "category": "marketing",
+      "icon": "./assets/icon.png",
+      "displayName": "Instantly",
+      "descriptions": {
+        "en": "Manage email campaigns, leads, sending accounts and performance through Instantly’s official MCP.",
+        "zh-CN": "通过 Instantly 官方 MCP 管理邮件活动、销售线索、发件账号与效果数据。"
+      },
+      "mcpServerExtensions": {
+        "instantly": {
+          "credentialHeaders": {
+            "x-instantly-api-key": "$VAULT:instantly-token"
+          }
+        }
+      }
+    }
+  }
+}
