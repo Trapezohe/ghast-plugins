@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "knock",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage Knock notification workflows, users and tenants through its official MCP service.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.knock.app/ai/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.knock.app/ai/mcp-server",
+      "connectorPublisher": "Knock",
+      "category": "communication",
+      "icon": "./assets/icon.svg",
+      "displayName": "Knock",
+      "descriptions": {
+        "en": "Manage Knock notification workflows, users and tenants through its official MCP service.",
+        "zh-CN": "通过 Knock 官方 MCP 服务管理通知工作流、用户与租户。"
+      }
+    }
+  }
+}

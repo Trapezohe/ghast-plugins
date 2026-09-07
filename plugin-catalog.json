@@ -3008,6 +3008,51 @@
       "category": "data"
     },
     {
+      "id": "courier",
+      "name": "Courier",
+      "description": "Manage Courier notifications, users and automations and investigate message delivery.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "courier",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage Courier notifications, users and automations and investigate message delivery.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.courier.com/guides/ai-notifications/chapter-2-install-the-courier-mcp-server-and-cli",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.courier.com/guides/ai-notifications/chapter-2-install-the-courier-mcp-server-and-cli",
+            "connectorPublisher": "Courier",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "Courier",
+            "descriptions": {
+              "en": "Manage Courier notifications, users and automations and investigate message delivery.",
+              "zh-CN": "管理 Courier 通知、用户和自动化流程，并排查消息投递情况。"
+            },
+            "mcpServerExtensions": {
+              "courier": {
+                "credentialHeaders": {
+                  "api_key": "$VAULT:courier-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/courier.zip",
+        "sha256": "ca0bd98d6ab2aa40267b571baa86bf4bdf39778780fb996e4fd5a667315948dd"
+      },
+      "icon": "./plugins/courier/assets/icon.png",
+      "homepage": "https://www.courier.com/guides/ai-notifications/chapter-2-install-the-courier-mcp-server-and-cli",
+      "license": "MIT",
+      "category": "communication"
+    },
+    {
       "id": "coveo",
       "name": "coveo",
       "description": "Search authorized enterprise content, retrieve grounded passages, and generate source-linked answers through Coveo's pinned official Labs MCP implementation.",
@@ -6089,6 +6134,44 @@
       "category": "business"
     },
     {
+      "id": "knock",
+      "name": "Knock",
+      "description": "Manage Knock notification workflows, users and tenants through its official MCP service.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "knock",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage Knock notification workflows, users and tenants through its official MCP service.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.knock.app/ai/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.knock.app/ai/mcp-server",
+            "connectorPublisher": "Knock",
+            "category": "communication",
+            "icon": "./assets/icon.svg",
+            "displayName": "Knock",
+            "descriptions": {
+              "en": "Manage Knock notification workflows, users and tenants through its official MCP service.",
+              "zh-CN": "通过 Knock 官方 MCP 服务管理通知工作流、用户与租户。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/knock.zip",
+        "sha256": "f7c2ac3c769b0f74bdf79082bb99413920b1cb0624b92ee39fe7c1aa43a4cead"
+      },
+      "icon": "./plugins/knock/assets/icon.svg",
+      "homepage": "https://docs.knock.app/ai/mcp-server",
+      "license": "MIT",
+      "category": "communication"
+    },
+    {
       "id": "linear",
       "name": "linear",
       "description": "Manage Linear issues, projects, and team workflows through Linear's official MCP server.",
@@ -8386,6 +8469,44 @@
       "homepage": "https://developer.responsive.io/docs/responsive-api/86b14fe0ae541-overview",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "rudderstack",
+      "name": "RudderStack",
+      "description": "Inspect customer data pipelines, sources and destinations and manage RudderStack transformations.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "rudderstack",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect customer data pipelines, sources and destinations and manage RudderStack transformations.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://mcp.rudderstack.com/docs",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://mcp.rudderstack.com/docs",
+            "connectorPublisher": "RudderStack",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "RudderStack",
+            "descriptions": {
+              "en": "Inspect customer data pipelines, sources and destinations and manage RudderStack transformations.",
+              "zh-CN": "检查客户数据管道、数据源与目标端，并管理 RudderStack 数据转换。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/rudderstack.zip",
+        "sha256": "d93cb5d737bf21f7a3ebadbbd73642238d49cfec17e4d953e15ae2c1fe1a06b7"
+      },
+      "icon": "./plugins/rudderstack/assets/icon.png",
+      "homepage": "https://mcp.rudderstack.com/docs",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "runway",

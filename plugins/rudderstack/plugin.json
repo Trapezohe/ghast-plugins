@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "rudderstack",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect customer data pipelines, sources and destinations and manage RudderStack transformations.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://mcp.rudderstack.com/docs",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://mcp.rudderstack.com/docs",
+      "connectorPublisher": "RudderStack",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "RudderStack",
+      "descriptions": {
+        "en": "Inspect customer data pipelines, sources and destinations and manage RudderStack transformations.",
+        "zh-CN": "检查客户数据管道、数据源与目标端，并管理 RudderStack 数据转换。"
+      }
+    }
+  }
+}

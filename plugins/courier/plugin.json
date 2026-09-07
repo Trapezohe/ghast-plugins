@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "courier",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage Courier notifications, users and automations and investigate message delivery.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.courier.com/guides/ai-notifications/chapter-2-install-the-courier-mcp-server-and-cli",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.courier.com/guides/ai-notifications/chapter-2-install-the-courier-mcp-server-and-cli",
+      "connectorPublisher": "Courier",
+      "category": "communication",
+      "icon": "./assets/icon.png",
+      "displayName": "Courier",
+      "descriptions": {
+        "en": "Manage Courier notifications, users and automations and investigate message delivery.",
+        "zh-CN": "管理 Courier 通知、用户和自动化流程，并排查消息投递情况。"
+      },
+      "mcpServerExtensions": {
+        "courier": {
+          "credentialHeaders": {
+            "api_key": "$VAULT:courier-token"
+          }
+        }
+      }
+    }
+  }
+}
