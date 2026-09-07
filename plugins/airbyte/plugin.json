@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "airbyte",
+  "version": "1.0.0-ghast.1",
+  "description": "Query and work with the data sources connected to your Airbyte Agents account.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.airbyte.com/ai-agents/interfaces/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.airbyte.com/ai-agents/interfaces/mcp",
+      "connectorPublisher": "Airbyte Agents",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Airbyte Agents",
+      "descriptions": {
+        "en": "Query and work with the data sources connected to your Airbyte Agents account.",
+        "zh-CN": "查询与使用 Airbyte Agents 账号中已连接的数据源。"
+      }
+    }
+  }
+}

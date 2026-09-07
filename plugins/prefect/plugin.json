@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "prefect",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect Prefect Cloud workflows, deployments, runs, logs and infrastructure with read-only diagnostics.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/PrefectHQ/prefect-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/PrefectHQ/prefect-mcp-server",
+      "connectorPublisher": "Prefect",
+      "category": "developer-tools",
+      "icon": "./assets/icon.png",
+      "displayName": "Prefect",
+      "descriptions": {
+        "en": "Inspect Prefect Cloud workflows, deployments, runs, logs and infrastructure with read-only diagnostics.",
+        "zh-CN": "以只读方式查看 Prefect Cloud 工作流、部署、运行记录、日志与基础设施。"
+      }
+    }
+  }
+}

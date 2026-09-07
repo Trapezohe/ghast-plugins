@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "browserless",
+  "version": "1.0.0-ghast.1",
+  "description": "Automate cloud browser sessions, extract web content, capture pages and run website audits with Browserless.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.browserless.io/mcp/browserless-mcp-server/setup",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.browserless.io/mcp/browserless-mcp-server/setup",
+      "connectorPublisher": "Browserless",
+      "category": "developer-tools",
+      "icon": "./assets/icon.svg",
+      "displayName": "Browserless",
+      "descriptions": {
+        "en": "Automate cloud browser sessions, extract web content, capture pages and run website audits with Browserless.",
+        "zh-CN": "使用 Browserless 自动化云端浏览器、提取网页内容、截图并执行网站审计。"
+      }
+    }
+  }
+}

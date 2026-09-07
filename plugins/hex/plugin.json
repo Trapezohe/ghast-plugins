@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "hex",
+  "version": "1.0.0-ghast.1",
+  "description": "Search Hex projects and explore data through Hex Threads conversations.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://learn.hex.tech/docs/api-integrations/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://learn.hex.tech/docs/api-integrations/mcp-server",
+      "connectorPublisher": "Hex",
+      "category": "data",
+      "icon": "./assets/icon.svg",
+      "displayName": "Hex",
+      "descriptions": {
+        "en": "Search Hex projects and explore data through Hex Threads conversations.",
+        "zh-CN": "搜索 Hex 项目，并通过 Hex Threads 会话探索和分析数据。"
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "pagerduty",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect incidents, services and on-call context and manage incident response in PagerDuty.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://support.pagerduty.com/main/docs/pagerduty-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://support.pagerduty.com/main/docs/pagerduty-mcp-server",
+      "connectorPublisher": "PagerDuty",
+      "category": "developer-tools",
+      "icon": "./assets/icon.png",
+      "displayName": "PagerDuty",
+      "descriptions": {
+        "en": "Inspect incidents, services and on-call context and manage incident response in PagerDuty.",
+        "zh-CN": "查看 PagerDuty 事件、服务与值班信息，并管理事件响应。"
+      },
+      "mcpServerExtensions": {
+        "pagerduty": {
+          "oauthClientRequired": true
+        }
+      }
+    }
+  }
+}

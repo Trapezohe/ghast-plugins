@@ -154,6 +154,44 @@
       "category": "data"
     },
     {
+      "id": "airbyte",
+      "name": "Airbyte Agents",
+      "description": "Query and work with the data sources connected to your Airbyte Agents account.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "airbyte",
+        "version": "1.0.0-ghast.1",
+        "description": "Query and work with the data sources connected to your Airbyte Agents account.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.airbyte.com/ai-agents/interfaces/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.airbyte.com/ai-agents/interfaces/mcp",
+            "connectorPublisher": "Airbyte Agents",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Airbyte Agents",
+            "descriptions": {
+              "en": "Query and work with the data sources connected to your Airbyte Agents account.",
+              "zh-CN": "查询与使用 Airbyte Agents 账号中已连接的数据源。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/airbyte.zip",
+        "sha256": "4faf9d0de33e15222439fef978e9e46cf5e76120b80a50e0ab1f814b432f276c"
+      },
+      "icon": "./plugins/airbyte/assets/icon.png",
+      "homepage": "https://docs.airbyte.com/ai-agents/interfaces/mcp",
+      "license": "MIT",
+      "category": "data"
+    },
+    {
       "id": "airtable",
       "name": "airtable",
       "description": "Airtable is the database and operations layer for your agents — whether running product, marketing, sales, ops, HR, or a custom business app. It combines structured data with multiplayer visual surfaces (grid, kanban, calendar, gallery, timeline) humans and agents share — plus sync integrations to Jira, Salesforce, Zendesk, Google Drive, and Databricks. Makes Codex fluent in Airtable: bases and schema, records, and collaboration UI. Bundles the official Airtable MCP server.",
@@ -907,6 +945,44 @@
       "category": "data"
     },
     {
+      "id": "better-stack",
+      "name": "Better Stack",
+      "description": "Investigate uptime incidents and query logs, traces and telemetry in Better Stack.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "better-stack",
+        "version": "1.0.0-ghast.1",
+        "description": "Investigate uptime incidents and query logs, traces and telemetry in Better Stack.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://betterstack.com/docs/getting-started/integrations/mcp/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://betterstack.com/docs/getting-started/integrations/mcp/",
+            "connectorPublisher": "Better Stack",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "Better Stack",
+            "descriptions": {
+              "en": "Investigate uptime incidents and query logs, traces and telemetry in Better Stack.",
+              "zh-CN": "在 Better Stack 中调查可用性事件，查询日志、追踪与遥测数据。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/better-stack.zip",
+        "sha256": "9a246b643be3a2a31f64474e33f5ce6b89e685967e613baa2845b8ceda1f29f4"
+      },
+      "icon": "./plugins/better-stack/assets/icon.png",
+      "homepage": "https://betterstack.com/docs/getting-started/integrations/mcp/",
+      "license": "MIT",
+      "category": "developer-tools"
+    },
+    {
       "id": "bilibili-search",
       "name": "bilibili-search",
       "description": "Skill for searching Bilibili videos and the daily ranking via the public web search endpoint — no login required for top-level results.",
@@ -1426,6 +1502,44 @@
       "repository": "https://github.com/brighthire/brighthire-codex-plugin",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "browserless",
+      "name": "Browserless",
+      "description": "Automate cloud browser sessions, extract web content, capture pages and run website audits with Browserless.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "browserless",
+        "version": "1.0.0-ghast.1",
+        "description": "Automate cloud browser sessions, extract web content, capture pages and run website audits with Browserless.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.browserless.io/mcp/browserless-mcp-server/setup",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.browserless.io/mcp/browserless-mcp-server/setup",
+            "connectorPublisher": "Browserless",
+            "category": "developer-tools",
+            "icon": "./assets/icon.svg",
+            "displayName": "Browserless",
+            "descriptions": {
+              "en": "Automate cloud browser sessions, extract web content, capture pages and run website audits with Browserless.",
+              "zh-CN": "使用 Browserless 自动化云端浏览器、提取网页内容、截图并执行网站审计。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/browserless.zip",
+        "sha256": "3153869cfbeefbcf43a509d66fabd712d09d98670d0b70c2032a62bb035524c8"
+      },
+      "icon": "./plugins/browserless/assets/icon.svg",
+      "homepage": "https://docs.browserless.io/mcp/browserless-mcp-server/setup",
+      "license": "MIT",
+      "category": "developer-tools"
     },
     {
       "id": "browserstack",
@@ -5193,6 +5307,44 @@
       "category": "productivity"
     },
     {
+      "id": "hex",
+      "name": "Hex",
+      "description": "Search Hex projects and explore data through Hex Threads conversations.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "hex",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Hex projects and explore data through Hex Threads conversations.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://learn.hex.tech/docs/api-integrations/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://learn.hex.tech/docs/api-integrations/mcp-server",
+            "connectorPublisher": "Hex",
+            "category": "data",
+            "icon": "./assets/icon.svg",
+            "displayName": "Hex",
+            "descriptions": {
+              "en": "Search Hex projects and explore data through Hex Threads conversations.",
+              "zh-CN": "搜索 Hex 项目，并通过 Hex Threads 会话探索和分析数据。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/hex.zip",
+        "sha256": "cc30646f57e1212d9235b8a72aa399f157973c36da954bc33cbcb32d0b7bb7f7"
+      },
+      "icon": "./plugins/hex/assets/icon.svg",
+      "homepage": "https://learn.hex.tech/docs/api-integrations/mcp-server",
+      "license": "MIT",
+      "category": "data"
+    },
+    {
       "id": "heygen",
       "name": "heygen",
       "description": "Create HeyGen avatar videos, personalized video messages, and translated / dubbed videos. Build a persistent digital identity from a photo, generate presenter-led videos with your digital twin, and localize existing videos into 175+ languages with voice cloning and lip-sync.",
@@ -6965,6 +7117,49 @@
       "category": "productivity"
     },
     {
+      "id": "pagerduty",
+      "name": "PagerDuty",
+      "description": "Inspect incidents, services and on-call context and manage incident response in PagerDuty.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "pagerduty",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect incidents, services and on-call context and manage incident response in PagerDuty.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://support.pagerduty.com/main/docs/pagerduty-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://support.pagerduty.com/main/docs/pagerduty-mcp-server",
+            "connectorPublisher": "PagerDuty",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "PagerDuty",
+            "descriptions": {
+              "en": "Inspect incidents, services and on-call context and manage incident response in PagerDuty.",
+              "zh-CN": "查看 PagerDuty 事件、服务与值班信息，并管理事件响应。"
+            },
+            "mcpServerExtensions": {
+              "pagerduty": {
+                "oauthClientRequired": true
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/pagerduty.zip",
+        "sha256": "3bea00cd045343e35f81fc51ef0167a85bbfba9b8f7a9ebcacc908409ced6212"
+      },
+      "icon": "./plugins/pagerduty/assets/icon.png",
+      "homepage": "https://support.pagerduty.com/main/docs/pagerduty-mcp-server",
+      "license": "MIT",
+      "category": "developer-tools"
+    },
+    {
       "id": "particl-market-research",
       "name": "particl-market-research",
       "description": "Research ecommerce companies, products, sales, marketing, events, pricing, and market trends through Particl's official hosted MCP.",
@@ -7267,6 +7462,44 @@
       "homepage": "https://learning.postman.com/latest-v-12/docs/reference/postman-api/postman-mcp-server/postman-mcp-remote-server",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "prefect",
+      "name": "Prefect",
+      "description": "Inspect Prefect Cloud workflows, deployments, runs, logs and infrastructure with read-only diagnostics.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "prefect",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect Prefect Cloud workflows, deployments, runs, logs and infrastructure with read-only diagnostics.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/PrefectHQ/prefect-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/PrefectHQ/prefect-mcp-server",
+            "connectorPublisher": "Prefect",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "Prefect",
+            "descriptions": {
+              "en": "Inspect Prefect Cloud workflows, deployments, runs, logs and infrastructure with read-only diagnostics.",
+              "zh-CN": "以只读方式查看 Prefect Cloud 工作流、部署、运行记录、日志与基础设施。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/prefect.zip",
+        "sha256": "7c2c75314c7346e391de2a78f94c6ea6bcf6236b061f30e3cf4311e2b221b9bb"
+      },
+      "icon": "./plugins/prefect/assets/icon.png",
+      "homepage": "https://github.com/PrefectHQ/prefect-mcp-server",
+      "license": "MIT",
+      "category": "developer-tools"
     },
     {
       "id": "prisma",
