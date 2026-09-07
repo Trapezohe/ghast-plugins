@@ -3309,6 +3309,51 @@
       "category": "web"
     },
     {
+      "id": "crisp",
+      "name": "Crisp",
+      "description": "Review customer conversations, contacts and helpdesk articles in your Crisp workspace.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "crisp",
+        "version": "1.0.0-ghast.1",
+        "description": "Review customer conversations, contacts and helpdesk articles in your Crisp workspace.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.crisp.chat/guides/mcp-server/quickstart/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.crisp.chat/guides/mcp-server/quickstart/",
+            "connectorPublisher": "Crisp",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "Crisp",
+            "descriptions": {
+              "en": "Review customer conversations, contacts and helpdesk articles in your Crisp workspace.",
+              "zh-CN": "查看 Crisp 工作区的客户对话、联系人与帮助中心文章。"
+            },
+            "mcpServerExtensions": {
+              "crisp": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:crisp-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/crisp.zip",
+        "sha256": "22c4e5b8fe388b0b704a704c6b0b9003467d93a187ff65b360a9586f3e4381c6"
+      },
+      "icon": "./plugins/crisp/assets/icon.png",
+      "homepage": "https://docs.crisp.chat/guides/mcp-server/quickstart/",
+      "license": "MIT",
+      "category": "communication"
+    },
+    {
       "id": "crowdin",
       "name": "Crowdin",
       "description": "Manage translation projects, source files, tasks, glossaries and translation memory in Crowdin.",
@@ -5503,6 +5548,49 @@
       "category": "design"
     },
     {
+      "id": "gorgias",
+      "name": "Gorgias",
+      "description": "Analyze support tickets and manage customer service workflows, settings and AI guidance in Gorgias.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "gorgias",
+        "version": "1.0.0-ghast.1",
+        "description": "Analyze support tickets and manage customer service workflows, settings and AI guidance in Gorgias.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-the-gorgias-mcp-6310546",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-the-gorgias-mcp-6310546",
+            "connectorPublisher": "Gorgias",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Gorgias",
+            "descriptions": {
+              "en": "Analyze support tickets and manage customer service workflows, settings and AI guidance in Gorgias.",
+              "zh-CN": "分析客服工单，管理 Gorgias 客服工作流、设置与 AI 指引。"
+            },
+            "mcpServerExtensions": {
+              "gorgias": {
+                "oauthRequired": true
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/gorgias.zip",
+        "sha256": "46578b1c589cde441a4befe9a775b4732a5cdaa911eb4e88f494bdd917179a36"
+      },
+      "icon": "./plugins/gorgias/assets/icon.png",
+      "homepage": "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-the-gorgias-mcp-6310546",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "govtribe",
       "name": "govtribe",
       "description": "Research public-sector opportunities, awards, vendors, agencies, forecasts, pricing, files, news, and authorized workspace records through GovTribe's official hosted MCP.",
@@ -5684,6 +5772,44 @@
       "homepage": "https://www.hebbia.com/product",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "help-scout",
+      "name": "Help Scout",
+      "description": "Search Help Scout conversations, customers and knowledge articles, and retrieve support reports.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "help-scout",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Help Scout conversations, customers and knowledge articles, and retrieve support reports.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+            "connectorPublisher": "Help Scout",
+            "category": "communication",
+            "icon": "./assets/icon.svg",
+            "displayName": "Help Scout",
+            "descriptions": {
+              "en": "Search Help Scout conversations, customers and knowledge articles, and retrieve support reports.",
+              "zh-CN": "搜索 Help Scout 对话、客户与知识库文章，并读取客服报表。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/help-scout.zip",
+        "sha256": "184df77200b5ca26acc59602c729ce2e763b8ce6773e871e2ce52dfd30e5dd45"
+      },
+      "icon": "./plugins/help-scout/assets/icon.svg",
+      "homepage": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+      "license": "MIT",
+      "category": "communication"
     },
     {
       "id": "hex",
@@ -7520,6 +7646,44 @@
       "homepage": "https://novu.co/mcp",
       "license": "MIT",
       "category": "communication"
+    },
+    {
+      "id": "nuclino",
+      "name": "Nuclino",
+      "description": "Search Nuclino workspaces, read pages and organize collaborative documentation.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "nuclino",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Nuclino workspaces, read pages and organize collaborative documentation.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.nuclino.com/70af7f4f-connect-nuclino-to-ai-assistants-with-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.nuclino.com/70af7f4f-connect-nuclino-to-ai-assistants-with-mcp",
+            "connectorPublisher": "Nuclino",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Nuclino",
+            "descriptions": {
+              "en": "Search Nuclino workspaces, read pages and organize collaborative documentation.",
+              "zh-CN": "搜索 Nuclino 工作区、阅读页面并整理协作文档。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/nuclino.zip",
+        "sha256": "ab5bf370504947cef6f2659ff8257a2f062ba37df0d418bb2bf0920d923d39bd"
+      },
+      "icon": "./plugins/nuclino/assets/icon.png",
+      "homepage": "https://help.nuclino.com/70af7f4f-connect-nuclino-to-ai-assistants-with-mcp",
+      "license": "MIT",
+      "category": "productivity"
     },
     {
       "id": "nvidia",
@@ -9463,6 +9627,44 @@
       "homepage": "https://docs.skywatch.com/docs/mcp/mcp-server/",
       "license": "MIT",
       "category": "research"
+    },
+    {
+      "id": "slite",
+      "name": "Slite",
+      "description": "Search team knowledge, create notes and update workspace documents in Slite.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "slite",
+        "version": "1.0.0-ghast.1",
+        "description": "Search team knowledge, create notes and update workspace documents in Slite.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://slite.com/changelog/slite-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://slite.com/changelog/slite-mcp-server",
+            "connectorPublisher": "Slite",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Slite",
+            "descriptions": {
+              "en": "Search team knowledge, create notes and update workspace documents in Slite.",
+              "zh-CN": "搜索团队知识，在 Slite 中创建笔记并更新工作区文档。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/slite.zip",
+        "sha256": "ad84627586c6bc1bde2819a6f5eaab832886b9b854b7c68865f0cfa4e87cad8e"
+      },
+      "icon": "./plugins/slite/assets/icon.png",
+      "homepage": "https://slite.com/changelog/slite-mcp-server",
+      "license": "MIT",
+      "category": "productivity"
     },
     {
       "id": "smartsheet",

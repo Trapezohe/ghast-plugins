@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "gorgias",
+  "version": "1.0.0-ghast.1",
+  "description": "Analyze support tickets and manage customer service workflows, settings and AI guidance in Gorgias.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-the-gorgias-mcp-6310546",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-the-gorgias-mcp-6310546",
+      "connectorPublisher": "Gorgias",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Gorgias",
+      "descriptions": {
+        "en": "Analyze support tickets and manage customer service workflows, settings and AI guidance in Gorgias.",
+        "zh-CN": "分析客服工单，管理 Gorgias 客服工作流、设置与 AI 指引。"
+      },
+      "mcpServerExtensions": {
+        "gorgias": {
+          "oauthRequired": true
+        }
+      }
+    }
+  }
+}

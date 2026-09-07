@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "crisp",
+  "version": "1.0.0-ghast.1",
+  "description": "Review customer conversations, contacts and helpdesk articles in your Crisp workspace.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.crisp.chat/guides/mcp-server/quickstart/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.crisp.chat/guides/mcp-server/quickstart/",
+      "connectorPublisher": "Crisp",
+      "category": "communication",
+      "icon": "./assets/icon.png",
+      "displayName": "Crisp",
+      "descriptions": {
+        "en": "Review customer conversations, contacts and helpdesk articles in your Crisp workspace.",
+        "zh-CN": "查看 Crisp 工作区的客户对话、联系人与帮助中心文章。"
+      },
+      "mcpServerExtensions": {
+        "crisp": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:crisp-token"
+          }
+        }
+      }
+    }
+  }
+}

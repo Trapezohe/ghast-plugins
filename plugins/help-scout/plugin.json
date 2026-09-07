@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "help-scout",
+  "version": "1.0.0-ghast.1",
+  "description": "Search Help Scout conversations, customers and knowledge articles, and retrieve support reports.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+      "connectorPublisher": "Help Scout",
+      "category": "communication",
+      "icon": "./assets/icon.svg",
+      "displayName": "Help Scout",
+      "descriptions": {
+        "en": "Search Help Scout conversations, customers and knowledge articles, and retrieve support reports.",
+        "zh-CN": "搜索 Help Scout 对话、客户与知识库文章，并读取客服报表。"
+      }
+    }
+  }
+}

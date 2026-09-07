@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "slite",
+  "version": "1.0.0-ghast.1",
+  "description": "Search team knowledge, create notes and update workspace documents in Slite.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://slite.com/changelog/slite-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://slite.com/changelog/slite-mcp-server",
+      "connectorPublisher": "Slite",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Slite",
+      "descriptions": {
+        "en": "Search team knowledge, create notes and update workspace documents in Slite.",
+        "zh-CN": "搜索团队知识，在 Slite 中创建笔记并更新工作区文档。"
+      }
+    }
+  }
+}
