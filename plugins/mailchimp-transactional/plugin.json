@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mailchimp-transactional",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage transactional email templates, inspect delivery results and troubleshoot Mailchimp Transactional messaging.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://mailchimp.com/developer/transactional/guides/how-to-use-mailchimps-transactional-messaging-mcp/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://mailchimp.com/developer/transactional/guides/how-to-use-mailchimps-transactional-messaging-mcp/",
+      "connectorPublisher": "Mailchimp Transactional",
+      "category": "marketing",
+      "icon": "./assets/icon.svg",
+      "displayName": "Mailchimp Transactional",
+      "descriptions": {
+        "en": "Manage transactional email templates, inspect delivery results and troubleshoot Mailchimp Transactional messaging.",
+        "zh-CN": "管理 Mailchimp Transactional 事务邮件模板、查看投递结果并排查消息发送问题。"
+      },
+      "mcpServerExtensions": {
+        "mailchimp-transactional": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:mailchimp-transactional-token"
+          }
+        }
+      }
+    }
+  }
+}

@@ -4306,6 +4306,44 @@
       "category": "communication"
     },
     {
+      "id": "fellow",
+      "name": "Fellow",
+      "description": "Find meeting transcripts, summaries, decisions and action items in Fellow.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "fellow",
+        "version": "1.0.0-ghast.1",
+        "description": "Find meeting transcripts, summaries, decisions and action items in Fellow.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developers.fellow.ai/reference/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developers.fellow.ai/reference/mcp-server",
+            "connectorPublisher": "Fellow",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Fellow",
+            "descriptions": {
+              "en": "Find meeting transcripts, summaries, decisions and action items in Fellow.",
+              "zh-CN": "搜索 Fellow 会议逐字稿、摘要、决策与待办事项。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/fellow.zip",
+        "sha256": "84903809f28868cb131c6d19292501e7e54fbdd8df0036c9def514e39e580020"
+      },
+      "icon": "./plugins/fellow/assets/icon.png",
+      "homepage": "https://developers.fellow.ai/reference/mcp-server",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "financial-datasets",
       "name": "Financial Datasets",
       "description": "Research stock prices, company financials, SEC filings and news through Financial Datasets.",
@@ -6132,6 +6170,51 @@
       "homepage": "https://www.magicpath.ai",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "mailchimp-transactional",
+      "name": "Mailchimp Transactional",
+      "description": "Manage transactional email templates, inspect delivery results and troubleshoot Mailchimp Transactional messaging.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "mailchimp-transactional",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage transactional email templates, inspect delivery results and troubleshoot Mailchimp Transactional messaging.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://mailchimp.com/developer/transactional/guides/how-to-use-mailchimps-transactional-messaging-mcp/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://mailchimp.com/developer/transactional/guides/how-to-use-mailchimps-transactional-messaging-mcp/",
+            "connectorPublisher": "Mailchimp Transactional",
+            "category": "marketing",
+            "icon": "./assets/icon.svg",
+            "displayName": "Mailchimp Transactional",
+            "descriptions": {
+              "en": "Manage transactional email templates, inspect delivery results and troubleshoot Mailchimp Transactional messaging.",
+              "zh-CN": "管理 Mailchimp Transactional 事务邮件模板、查看投递结果并排查消息发送问题。"
+            },
+            "mcpServerExtensions": {
+              "mailchimp-transactional": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:mailchimp-transactional-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/mailchimp-transactional.zip",
+        "sha256": "d331d1450f6c618191a373d39f170ad9d29df1d895dd627bdf61b9ed5a71e93e"
+      },
+      "icon": "./plugins/mailchimp-transactional/assets/icon.svg",
+      "homepage": "https://mailchimp.com/developer/transactional/guides/how-to-use-mailchimps-transactional-messaging-mcp/",
+      "license": "MIT",
+      "category": "marketing"
     },
     {
       "id": "mailerlite",

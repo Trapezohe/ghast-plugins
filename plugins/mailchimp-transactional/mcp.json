@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "mailchimp-transactional": {
+      "type": "streamable-http",
+      "url": "https://mandrillapp.com/mcp"
+    }
+  }
+}
