@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "glassnode",
+  "version": "1.0.0-ghast.1",
+  "description": "Discover crypto on-chain metrics and retrieve market analytics using your Glassnode API access.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.glassnode.com/guides-and-tutorials/glassnode-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.glassnode.com/guides-and-tutorials/glassnode-mcp-server",
+      "connectorPublisher": "Glassnode",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Glassnode",
+      "descriptions": {
+        "en": "Discover crypto on-chain metrics and retrieve market analytics using your Glassnode API access.",
+        "zh-CN": "使用 Glassnode API 权限发现加密货币链上指标并获取市场分析数据。"
+      },
+      "mcpServerExtensions": {
+        "glassnode": {
+          "credentialHeaders": {
+            "X-Api-Key": "$VAULT:glassnode-token"
+          }
+        }
+      }
+    }
+  }
+}

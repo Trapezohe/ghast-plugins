@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "santiment",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore crypto on-chain metrics, social sentiment, trending narratives and analyst insights with Santiment.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://academy.santiment.net/mcp-connector/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://academy.santiment.net/mcp-connector/",
+      "connectorPublisher": "Santiment",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Santiment",
+      "descriptions": {
+        "en": "Explore crypto on-chain metrics, social sentiment, trending narratives and analyst insights with Santiment.",
+        "zh-CN": "通过 Santiment 探索加密货币链上指标、社交情绪、热门叙事与分析师观点。"
+      },
+      "mcpServerExtensions": {
+        "santiment": {
+          "oauthRequired": true
+        }
+      }
+    }
+  }
+}

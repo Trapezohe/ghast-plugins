@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "messari",
+  "version": "1.0.0-ghast.1",
+  "description": "Research crypto assets and protocols and query market intelligence and time-series data from Messari.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.messari.io/mcp-server/hosted",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.messari.io/mcp-server/hosted",
+      "connectorPublisher": "Messari",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Messari",
+      "descriptions": {
+        "en": "Research crypto assets and protocols and query market intelligence and time-series data from Messari.",
+        "zh-CN": "通过 Messari 研究加密资产与协议，查询市场情报和时间序列数据。"
+      }
+    }
+  }
+}

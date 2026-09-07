@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "messari": {
+      "type": "streamable-http",
+      "url": "https://mcp.messari.io/mcp"
+    }
+  }
+}

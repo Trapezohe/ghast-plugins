@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "crypto-com",
+  "version": "1.0.0-ghast.1",
+  "description": "Look up cryptocurrency prices, market trends and trading volumes through Crypto.com’s public market-data service.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://mcp.crypto.com/docs/getting-started",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://mcp.crypto.com/docs/getting-started",
+      "connectorPublisher": "Crypto.com Market Data",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Crypto.com Market Data",
+      "descriptions": {
+        "en": "Look up cryptocurrency prices, market trends and trading volumes through Crypto.com’s public market-data service.",
+        "zh-CN": "通过 Crypto.com 公开行情服务查询加密货币价格、市场趋势与交易量。"
+      }
+    }
+  }
+}

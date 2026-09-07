@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "nansen",
+  "version": "1.0.0-ghast.1",
+  "description": "Analyze blockchain activity, token flows, wallets and smart-money data with Nansen.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.nansen.ai/mcp/connecting",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.nansen.ai/mcp/connecting",
+      "connectorPublisher": "Nansen",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Nansen",
+      "descriptions": {
+        "en": "Analyze blockchain activity, token flows, wallets and smart-money data with Nansen.",
+        "zh-CN": "通过 Nansen 分析链上活动、代币流向、钱包与聪明钱数据。"
+      },
+      "mcpServerExtensions": {
+        "nansen": {
+          "credentialHeaders": {
+            "NANSEN-API-KEY": "$VAULT:nansen-token"
+          }
+        }
+      }
+    }
+  }
+}

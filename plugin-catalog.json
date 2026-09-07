@@ -2944,6 +2944,44 @@
       "category": "productivity"
     },
     {
+      "id": "crypto-com",
+      "name": "Crypto.com Market Data",
+      "description": "Look up cryptocurrency prices, market trends and trading volumes through Crypto.com’s public market-data service.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "crypto-com",
+        "version": "1.0.0-ghast.1",
+        "description": "Look up cryptocurrency prices, market trends and trading volumes through Crypto.com’s public market-data service.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://mcp.crypto.com/docs/getting-started",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://mcp.crypto.com/docs/getting-started",
+            "connectorPublisher": "Crypto.com Market Data",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Crypto.com Market Data",
+            "descriptions": {
+              "en": "Look up cryptocurrency prices, market trends and trading volumes through Crypto.com’s public market-data service.",
+              "zh-CN": "通过 Crypto.com 公开行情服务查询加密货币价格、市场趋势与交易量。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/crypto-com.zip",
+        "sha256": "610b53f1591f3f66bc39ce1ff3c47ac0a157bbc614e724589667ff083d204f98"
+      },
+      "icon": "./plugins/crypto-com/assets/icon.png",
+      "homepage": "https://mcp.crypto.com/docs/getting-started",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
       "id": "cryptohopper",
       "name": "Cryptohopper Market Data",
       "description": "Read exchange tickers, order books and OHLCV candles through Cryptohopper.",
@@ -4543,6 +4581,51 @@
       "category": "development"
     },
     {
+      "id": "glassnode",
+      "name": "Glassnode",
+      "description": "Discover crypto on-chain metrics and retrieve market analytics using your Glassnode API access.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "glassnode",
+        "version": "1.0.0-ghast.1",
+        "description": "Discover crypto on-chain metrics and retrieve market analytics using your Glassnode API access.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.glassnode.com/guides-and-tutorials/glassnode-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.glassnode.com/guides-and-tutorials/glassnode-mcp-server",
+            "connectorPublisher": "Glassnode",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Glassnode",
+            "descriptions": {
+              "en": "Discover crypto on-chain metrics and retrieve market analytics using your Glassnode API access.",
+              "zh-CN": "使用 Glassnode API 权限发现加密货币链上指标并获取市场分析数据。"
+            },
+            "mcpServerExtensions": {
+              "glassnode": {
+                "credentialHeaders": {
+                  "X-Api-Key": "$VAULT:glassnode-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/glassnode.zip",
+        "sha256": "b4574031740193e9b3948d64cd2a6b9966ce7f8adba8e7a173aed5a2a5033c69"
+      },
+      "icon": "./plugins/glassnode/assets/icon.png",
+      "homepage": "https://docs.glassnode.com/guides-and-tutorials/glassnode-mcp-server",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
       "id": "glean",
       "name": "glean",
       "description": "Search enterprise documents, Slack, email, code, people, meetings, memory, and organization-specific tools through Glean's official Codex plugin and local MCP adapter.",
@@ -6082,6 +6165,44 @@
       "category": "productivity"
     },
     {
+      "id": "messari",
+      "name": "Messari",
+      "description": "Research crypto assets and protocols and query market intelligence and time-series data from Messari.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "messari",
+        "version": "1.0.0-ghast.1",
+        "description": "Research crypto assets and protocols and query market intelligence and time-series data from Messari.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.messari.io/mcp-server/hosted",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.messari.io/mcp-server/hosted",
+            "connectorPublisher": "Messari",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Messari",
+            "descriptions": {
+              "en": "Research crypto assets and protocols and query market intelligence and time-series data from Messari.",
+              "zh-CN": "通过 Messari 研究加密资产与协议，查询市场情报和时间序列数据。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/messari.zip",
+        "sha256": "17d2b91d6421bbe8953eea1e330fc61c8c73c921c94683cc67f88e7129de290d"
+      },
+      "icon": "./plugins/messari/assets/icon.png",
+      "homepage": "https://docs.messari.io/mcp-server/hosted",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
       "id": "microsoft-learn",
       "name": "Microsoft Learn",
       "description": "Search Microsoft documentation and retrieve official code samples.",
@@ -6497,6 +6618,51 @@
       "homepage": "https://developers.myregistry.com/reference/new-endpoint",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "nansen",
+      "name": "Nansen",
+      "description": "Analyze blockchain activity, token flows, wallets and smart-money data with Nansen.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "nansen",
+        "version": "1.0.0-ghast.1",
+        "description": "Analyze blockchain activity, token flows, wallets and smart-money data with Nansen.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.nansen.ai/mcp/connecting",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.nansen.ai/mcp/connecting",
+            "connectorPublisher": "Nansen",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Nansen",
+            "descriptions": {
+              "en": "Analyze blockchain activity, token flows, wallets and smart-money data with Nansen.",
+              "zh-CN": "通过 Nansen 分析链上活动、代币流向、钱包与聪明钱数据。"
+            },
+            "mcpServerExtensions": {
+              "nansen": {
+                "credentialHeaders": {
+                  "NANSEN-API-KEY": "$VAULT:nansen-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/nansen.zip",
+        "sha256": "5e48a8b762fbce367db90dba680f54eb26091e5a2249a2439d8427cb3eadff26"
+      },
+      "icon": "./plugins/nansen/assets/icon.png",
+      "homepage": "https://docs.nansen.ai/mcp/connecting",
+      "license": "MIT",
+      "category": "finance"
     },
     {
       "id": "neon-postgres",
@@ -7859,6 +8025,49 @@
       "homepage": "https://www.sanity.io/docs/ai/mcp-server",
       "license": "MIT",
       "category": "web"
+    },
+    {
+      "id": "santiment",
+      "name": "Santiment",
+      "description": "Explore crypto on-chain metrics, social sentiment, trending narratives and analyst insights with Santiment.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "santiment",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore crypto on-chain metrics, social sentiment, trending narratives and analyst insights with Santiment.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://academy.santiment.net/mcp-connector/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://academy.santiment.net/mcp-connector/",
+            "connectorPublisher": "Santiment",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Santiment",
+            "descriptions": {
+              "en": "Explore crypto on-chain metrics, social sentiment, trending narratives and analyst insights with Santiment.",
+              "zh-CN": "通过 Santiment 探索加密货币链上指标、社交情绪、热门叙事与分析师观点。"
+            },
+            "mcpServerExtensions": {
+              "santiment": {
+                "oauthRequired": true
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/santiment.zip",
+        "sha256": "6f1890d3b0d8399f05ba8e66a446d2608e847fe2d9374c446a566d1bedba6ac6"
+      },
+      "icon": "./plugins/santiment/assets/icon.png",
+      "homepage": "https://academy.santiment.net/mcp-connector/",
+      "license": "MIT",
+      "category": "finance"
     },
     {
       "id": "scite",
