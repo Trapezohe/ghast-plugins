@@ -1,0 +1,37 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "lokalise",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage localization projects, translation keys, tasks, glossaries and screenshots in Lokalise.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.lokalise.com/en/articles/13547066-setting-up-and-using-the-lokalise-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.lokalise.com/en/articles/13547066-setting-up-and-using-the-lokalise-mcp-server",
+      "connectorPublisher": "Lokalise",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Lokalise",
+      "descriptions": {
+        "en": "Manage localization projects, translation keys, tasks, glossaries and screenshots in Lokalise.",
+        "zh-CN": "在 Lokalise 中管理本地化项目、翻译键、任务、术语表与截图。"
+      },
+      "mcpServerExtensions": {
+        "lokalise": {
+          "credentialHeaders": {
+            "apikey": "$VAULT:lokalise-token"
+          }
+        },
+        "lokalise-development": {
+          "credentialHeaders": {
+            "apikey": "$VAULT:lokalise-token"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "youcam": {
+      "type": "streamable-http",
+      "url": "https://mcp-api-01.makeupar.com/mcp/creators"
+    },
+    "youcam-beauty": {
+      "type": "streamable-http",
+      "url": "https://mcp-api-01.makeupar.com/mcp/beauty"
+    },
+    "youcam-fashion": {
+      "type": "streamable-http",
+      "url": "https://mcp-api-01.makeupar.com/mcp/fashion"
+    }
+  }
+}

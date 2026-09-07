@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "crowdin",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage translation projects, source files, tasks, glossaries and translation memory in Crowdin.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://store.crowdin.com/crowdin-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://store.crowdin.com/crowdin-mcp-server",
+      "connectorPublisher": "Crowdin",
+      "category": "productivity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Crowdin",
+      "descriptions": {
+        "en": "Manage translation projects, source files, tasks, glossaries and translation memory in Crowdin.",
+        "zh-CN": "在 Crowdin 中管理翻译项目、源文件、任务、术语表与翻译记忆库。"
+      },
+      "mcpServerExtensions": {
+        "crowdin": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:crowdin-token"
+          }
+        }
+      }
+    }
+  }
+}

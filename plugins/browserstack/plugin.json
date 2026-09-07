@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "browserstack",
+  "version": "1.0.0-ghast.1",
+  "description": "Access real-device testing, test management, accessibility and test reporting through BrowserStack.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.browserstack.com/docs/browserstack-mcp-server/get-started/remote-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.browserstack.com/docs/browserstack-mcp-server/get-started/remote-mcp-server",
+      "connectorPublisher": "BrowserStack",
+      "category": "developer-tools",
+      "icon": "./assets/icon.png",
+      "displayName": "BrowserStack",
+      "descriptions": {
+        "en": "Access real-device testing, test management, accessibility and test reporting through BrowserStack.",
+        "zh-CN": "通过 BrowserStack 访问真机测试、测试管理、无障碍检查与测试报告。"
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "checkly",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect monitoring checks, test results and incidents, and trigger existing checks in Checkly.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.checklyhq.com/docs/ai/mcp-server/setup/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.checklyhq.com/docs/ai/mcp-server/setup/",
+      "connectorPublisher": "Checkly",
+      "category": "developer-tools",
+      "icon": "./assets/icon.png",
+      "displayName": "Checkly",
+      "descriptions": {
+        "en": "Inspect monitoring checks, test results and incidents, and trigger existing checks in Checkly.",
+        "zh-CN": "在 Checkly 中查看监控检查、测试结果与事件，并运行已有检查。"
+      },
+      "mcpServerExtensions": {
+        "checkly": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:checkly-token"
+          }
+        }
+      }
+    }
+  }
+}

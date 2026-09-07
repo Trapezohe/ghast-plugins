@@ -159,6 +159,9 @@ def validate_sources(errors: list[str]) -> dict[str, dict]:
             icon_path = plugin_dir / icon.removeprefix("./")
             if not icon_path.is_file():
                 errors.append(f"{manifest_path}: missing icon {icon}")
+            elif icon_path.suffix.lower() == ".png":
+                if not icon_path.read_bytes().startswith(b"\x89PNG\r\n\x1a\n"):
+                    errors.append(f"{icon_path}: invalid PNG signature")
             elif icon_path.suffix.lower() == ".svg":
                 try:
                     ElementTree.parse(icon_path)
@@ -370,6 +373,8 @@ def validate_catalog_and_packages(
                 icon_member = prefix + ghast["icon"].removeprefix("./")
                 if icon_member not in names:
                     errors.append(f"{package_path}: missing packaged icon")
+                elif archive.read(icon_member) != (PLUGIN_DIR / name / ghast["icon"].removeprefix("./")).read_bytes():
+                    errors.append(f"{package_path}: packaged icon differs from source")
                 if any(not member.startswith(prefix) for member in names):
                     errors.append(f"{package_path}: member outside {prefix}")
         except (OSError, zipfile.BadZipFile, json.JSONDecodeError) as exc:

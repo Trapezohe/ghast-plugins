@@ -1,0 +1,42 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "youcam",
+  "version": "1.0.0-ghast.1",
+  "description": "Use Perfect Corp’s YouCam tools for image and video editing, beauty visualization and virtual try-on.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.perfectcorp.com/develop/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.perfectcorp.com/develop/mcp",
+      "connectorPublisher": "YouCam",
+      "category": "design",
+      "icon": "./assets/icon.png",
+      "displayName": "YouCam",
+      "descriptions": {
+        "en": "Use Perfect Corp’s YouCam tools for image and video editing, beauty visualization and virtual try-on.",
+        "zh-CN": "使用玩美移动 YouCam 进行图片与视频编辑、美妆效果预览和虚拟试穿。"
+      },
+      "mcpServerExtensions": {
+        "youcam": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:youcam-token"
+          }
+        },
+        "youcam-beauty": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:youcam-token"
+          }
+        },
+        "youcam-fashion": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:youcam-token"
+          }
+        }
+      }
+    }
+  }
+}

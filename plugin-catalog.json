@@ -1385,6 +1385,44 @@
       "category": "productivity"
     },
     {
+      "id": "browserstack",
+      "name": "BrowserStack",
+      "description": "Access real-device testing, test management, accessibility and test reporting through BrowserStack.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "browserstack",
+        "version": "1.0.0-ghast.1",
+        "description": "Access real-device testing, test management, accessibility and test reporting through BrowserStack.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.browserstack.com/docs/browserstack-mcp-server/get-started/remote-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.browserstack.com/docs/browserstack-mcp-server/get-started/remote-mcp-server",
+            "connectorPublisher": "BrowserStack",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "BrowserStack",
+            "descriptions": {
+              "en": "Access real-device testing, test management, accessibility and test reporting through BrowserStack.",
+              "zh-CN": "通过 BrowserStack 访问真机测试、测试管理、无障碍检查与测试报告。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/browserstack.zip",
+        "sha256": "10aef2528a2ff19c7106f2ce54f13fb63087b24808633f89fb6814c3293ead7a"
+      },
+      "icon": "./plugins/browserstack/assets/icon.png",
+      "homepage": "https://www.browserstack.com/docs/browserstack-mcp-server/get-started/remote-mcp-server",
+      "license": "MIT",
+      "category": "developer-tools"
+    },
+    {
       "id": "buffer",
       "name": "Buffer",
       "description": "Organize social media ideas, review channel performance and prepare posts and publishing schedules with Buffer.",
@@ -1419,6 +1457,44 @@
       "homepage": "https://buffer.com/integrations/claude",
       "license": "MIT",
       "category": "business"
+    },
+    {
+      "id": "buildkite",
+      "name": "Buildkite",
+      "description": "Inspect pipelines, builds, jobs and test results and manage CI workflows in Buildkite.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "buildkite",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect pipelines, builds, jobs and test results and manage CI workflows in Buildkite.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://buildkite.com/docs/apis/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://buildkite.com/docs/apis/mcp-server",
+            "connectorPublisher": "Buildkite",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "Buildkite",
+            "descriptions": {
+              "en": "Inspect pipelines, builds, jobs and test results and manage CI workflows in Buildkite.",
+              "zh-CN": "在 Buildkite 中查看流水线、构建、作业与测试结果，并管理持续集成工作流。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/buildkite.zip",
+        "sha256": "f42feb002102218bfdfa8513b7f0a1878722d835edf83ae6dab4c72fc8b43114"
+      },
+      "icon": "./plugins/buildkite/assets/icon.png",
+      "homepage": "https://buildkite.com/docs/apis/mcp-server",
+      "license": "MIT",
+      "category": "developer-tools"
     },
     {
       "id": "cal-com",
@@ -1728,6 +1804,51 @@
       "homepage": "https://www.channel99.com/articles/channel99-connects-marketing-intelligence-data-to-genai-platforms",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "checkly",
+      "name": "Checkly",
+      "description": "Inspect monitoring checks, test results and incidents, and trigger existing checks in Checkly.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "checkly",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect monitoring checks, test results and incidents, and trigger existing checks in Checkly.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.checklyhq.com/docs/ai/mcp-server/setup/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.checklyhq.com/docs/ai/mcp-server/setup/",
+            "connectorPublisher": "Checkly",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "Checkly",
+            "descriptions": {
+              "en": "Inspect monitoring checks, test results and incidents, and trigger existing checks in Checkly.",
+              "zh-CN": "在 Checkly 中查看监控检查、测试结果与事件，并运行已有检查。"
+            },
+            "mcpServerExtensions": {
+              "checkly": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:checkly-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/checkly.zip",
+        "sha256": "8fc43a38dc2dfd264b5605ad94dffd8174db7134bc7d6829c6b8a59aeb4c99a2"
+      },
+      "icon": "./plugins/checkly/assets/icon.png",
+      "homepage": "https://www.checklyhq.com/docs/ai/mcp-server/setup/",
+      "license": "MIT",
+      "category": "developer-tools"
     },
     {
       "id": "chronograph-gp",
@@ -2733,6 +2854,51 @@
       "homepage": "https://gate.crawl4ai.com/",
       "license": "MIT",
       "category": "web"
+    },
+    {
+      "id": "crowdin",
+      "name": "Crowdin",
+      "description": "Manage translation projects, source files, tasks, glossaries and translation memory in Crowdin.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "crowdin",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage translation projects, source files, tasks, glossaries and translation memory in Crowdin.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://store.crowdin.com/crowdin-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://store.crowdin.com/crowdin-mcp-server",
+            "connectorPublisher": "Crowdin",
+            "category": "productivity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Crowdin",
+            "descriptions": {
+              "en": "Manage translation projects, source files, tasks, glossaries and translation memory in Crowdin.",
+              "zh-CN": "在 Crowdin 中管理翻译项目、源文件、任务、术语表与翻译记忆库。"
+            },
+            "mcpServerExtensions": {
+              "crowdin": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:crowdin-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/crowdin.zip",
+        "sha256": "dfb2f396121872c07b77ff245ca8285d82a1c2267db15caec1ce3430dbc0f977"
+      },
+      "icon": "./plugins/crowdin/assets/icon.svg",
+      "homepage": "https://store.crowdin.com/crowdin-mcp-server",
+      "license": "MIT",
+      "category": "productivity"
     },
     {
       "id": "cryptohopper",
@@ -5389,6 +5555,56 @@
       "homepage": "https://linear.app/docs/mcp",
       "repository": "https://github.com/openai/plugins",
       "license": "Apache-2.0",
+      "category": "productivity"
+    },
+    {
+      "id": "lokalise",
+      "name": "Lokalise",
+      "description": "Manage localization projects, translation keys, tasks, glossaries and screenshots in Lokalise.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "lokalise",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage localization projects, translation keys, tasks, glossaries and screenshots in Lokalise.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.lokalise.com/en/articles/13547066-setting-up-and-using-the-lokalise-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.lokalise.com/en/articles/13547066-setting-up-and-using-the-lokalise-mcp-server",
+            "connectorPublisher": "Lokalise",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Lokalise",
+            "descriptions": {
+              "en": "Manage localization projects, translation keys, tasks, glossaries and screenshots in Lokalise.",
+              "zh-CN": "在 Lokalise 中管理本地化项目、翻译键、任务、术语表与截图。"
+            },
+            "mcpServerExtensions": {
+              "lokalise": {
+                "credentialHeaders": {
+                  "apikey": "$VAULT:lokalise-token"
+                }
+              },
+              "lokalise-development": {
+                "credentialHeaders": {
+                  "apikey": "$VAULT:lokalise-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/lokalise.zip",
+        "sha256": "57daf81f853adf986c91b5a92ebadf161c5c73e7bf9eb6252069f18a00c22e63"
+      },
+      "icon": "./plugins/lokalise/assets/icon.png",
+      "homepage": "https://docs.lokalise.com/en/articles/13547066-setting-up-and-using-the-lokalise-mcp-server",
+      "license": "MIT",
       "category": "productivity"
     },
     {
@@ -9186,6 +9402,61 @@
       "repository": "https://github.com/yepcode/mcp-server-js",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "youcam",
+      "name": "YouCam",
+      "description": "Use Perfect Corp’s YouCam tools for image and video editing, beauty visualization and virtual try-on.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "youcam",
+        "version": "1.0.0-ghast.1",
+        "description": "Use Perfect Corp’s YouCam tools for image and video editing, beauty visualization and virtual try-on.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.perfectcorp.com/develop/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.perfectcorp.com/develop/mcp",
+            "connectorPublisher": "YouCam",
+            "category": "design",
+            "icon": "./assets/icon.png",
+            "displayName": "YouCam",
+            "descriptions": {
+              "en": "Use Perfect Corp’s YouCam tools for image and video editing, beauty visualization and virtual try-on.",
+              "zh-CN": "使用玩美移动 YouCam 进行图片与视频编辑、美妆效果预览和虚拟试穿。"
+            },
+            "mcpServerExtensions": {
+              "youcam": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:youcam-token"
+                }
+              },
+              "youcam-beauty": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:youcam-token"
+                }
+              },
+              "youcam-fashion": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:youcam-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/youcam.zip",
+        "sha256": "9958a03d2a07b808b6e416ef7d5797776413c2eca636fac243e15e61bd55a920"
+      },
+      "icon": "./plugins/youcam/assets/icon.png",
+      "homepage": "https://docs.perfectcorp.com/develop/mcp",
+      "license": "MIT",
+      "category": "design"
     },
     {
       "id": "zapier",
