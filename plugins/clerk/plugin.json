@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "clerk",
+  "version": "1.0.0-ghast.1",
+  "description": "Find official Clerk SDK snippets and authentication implementation patterns.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://clerk.com/docs/guides/ai/mcp/clerk-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://clerk.com/docs/guides/ai/mcp/clerk-mcp-server",
+      "connectorPublisher": "Clerk",
+      "category": "developer-tools",
+      "icon": "./assets/icon.png",
+      "displayName": "Clerk",
+      "descriptions": {
+        "en": "Find official Clerk SDK snippets and authentication implementation patterns.",
+        "zh-CN": "查询 Clerk 官方 SDK 示例与身份认证实现方案。"
+      }
+    }
+  }
+}

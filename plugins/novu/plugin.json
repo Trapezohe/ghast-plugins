@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "novu",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage notification workflows, subscriber preferences and delivery diagnostics in Novu.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://novu.co/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://novu.co/mcp",
+      "connectorPublisher": "Novu",
+      "category": "communication",
+      "icon": "./assets/icon.png",
+      "displayName": "Novu",
+      "descriptions": {
+        "en": "Manage notification workflows, subscriber preferences and delivery diagnostics in Novu.",
+        "zh-CN": "管理 Novu 通知工作流、订阅者偏好与消息投递诊断。"
+      }
+    }
+  }
+}

@@ -2197,6 +2197,44 @@
       "category": "productivity"
     },
     {
+      "id": "clerk",
+      "name": "Clerk",
+      "description": "Find official Clerk SDK snippets and authentication implementation patterns.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "clerk",
+        "version": "1.0.0-ghast.1",
+        "description": "Find official Clerk SDK snippets and authentication implementation patterns.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://clerk.com/docs/guides/ai/mcp/clerk-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://clerk.com/docs/guides/ai/mcp/clerk-mcp-server",
+            "connectorPublisher": "Clerk",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "Clerk",
+            "descriptions": {
+              "en": "Find official Clerk SDK snippets and authentication implementation patterns.",
+              "zh-CN": "查询 Clerk 官方 SDK 示例与身份认证实现方案。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/clerk.zip",
+        "sha256": "c70bf71e04db113f5c46df82b0140f1a58ee228a222399d60402f0241ec6043f"
+      },
+      "icon": "./plugins/clerk/assets/icon.png",
+      "homepage": "https://clerk.com/docs/guides/ai/mcp/clerk-mcp-server",
+      "license": "MIT",
+      "category": "developer-tools"
+    },
+    {
       "id": "clickhouse",
       "name": "ClickHouse Cloud",
       "description": "Explore ClickHouse Cloud data and analytical context and assist with SQL-based reporting.",
@@ -2671,6 +2709,44 @@
       "homepage": "https://github.com/coinpaprika/coinpaprika-mcp",
       "license": "MIT",
       "category": "finance"
+    },
+    {
+      "id": "cometchat",
+      "name": "CometChat",
+      "description": "Search official CometChat documentation and integration guides for chat, voice, video and moderation.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "cometchat",
+        "version": "1.0.0-ghast.1",
+        "description": "Search official CometChat documentation and integration guides for chat, voice, video and moderation.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/cometchat/docs-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/cometchat/docs-mcp",
+            "connectorPublisher": "CometChat",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "CometChat",
+            "descriptions": {
+              "en": "Search official CometChat documentation and integration guides for chat, voice, video and moderation.",
+              "zh-CN": "搜索 CometChat 官方文档及聊天、语音、视频和内容审核集成指南。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/cometchat.zip",
+        "sha256": "00759fca37b2ca44d34d1e5b0c4bef707daeeb97aa5e01e21c5ad4d960d51bb6"
+      },
+      "icon": "./plugins/cometchat/assets/icon.png",
+      "homepage": "https://github.com/cometchat/docs-mcp",
+      "license": "MIT",
+      "category": "developer-tools"
     },
     {
       "id": "common-room",
@@ -5738,6 +5814,51 @@
       "category": "creativity"
     },
     {
+      "id": "inngest",
+      "name": "Inngest",
+      "description": "Inspect Inngest Cloud functions, events, runs and traces and manage deployed workflows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "inngest",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect Inngest Cloud functions, events, runs and traces and manage deployed workflows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.inngest.com/docs/ai-dev-tools/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.inngest.com/docs/ai-dev-tools/mcp",
+            "connectorPublisher": "Inngest",
+            "category": "developer-tools",
+            "icon": "./assets/icon.svg",
+            "displayName": "Inngest",
+            "descriptions": {
+              "en": "Inspect Inngest Cloud functions, events, runs and traces and manage deployed workflows.",
+              "zh-CN": "查看 Inngest Cloud 函数、事件、运行与追踪记录，并管理已部署的工作流。"
+            },
+            "mcpServerExtensions": {
+              "inngest": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:inngest-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/inngest.zip",
+        "sha256": "e00414357a131fea3e1b1aadd9fd1b6811016cb2a3ba4c2e72f9cc95db3219e4"
+      },
+      "icon": "./plugins/inngest/assets/icon.svg",
+      "homepage": "https://www.inngest.com/docs/ai-dev-tools/mcp",
+      "license": "MIT",
+      "category": "developer-tools"
+    },
+    {
       "id": "intercom",
       "name": "intercom",
       "description": "Search and analyze Intercom conversations, contacts, companies, Help Center articles, and tickets through Intercom's official hosted MCP service and official CLI.",
@@ -7013,6 +7134,44 @@
       "repository": "https://github.com/openai/plugins",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "novu",
+      "name": "Novu",
+      "description": "Manage notification workflows, subscriber preferences and delivery diagnostics in Novu.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "novu",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage notification workflows, subscriber preferences and delivery diagnostics in Novu.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://novu.co/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://novu.co/mcp",
+            "connectorPublisher": "Novu",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "Novu",
+            "descriptions": {
+              "en": "Manage notification workflows, subscriber preferences and delivery diagnostics in Novu.",
+              "zh-CN": "管理 Novu 通知工作流、订阅者偏好与消息投递诊断。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/novu.zip",
+        "sha256": "718f2b3b7362b1a9689e21a796e54e75410244899d8890381272e2894d3bae94"
+      },
+      "icon": "./plugins/novu/assets/icon.png",
+      "homepage": "https://novu.co/mcp",
+      "license": "MIT",
+      "category": "communication"
     },
     {
       "id": "nvidia",
@@ -10050,6 +10209,44 @@
       "homepage": "https://github.com/WolframResearch/AgentTools/blob/main/AgentSkills/Skills/wolfram-language/references/SetUpWolframMCPServer.md",
       "license": "MIT",
       "category": "research"
+    },
+    {
+      "id": "workos",
+      "name": "WorkOS",
+      "description": "Manage WorkOS organizations, users, SSO connections and workspace configuration.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "workos",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage WorkOS organizations, users, SSO connections and workspace configuration.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://workos.com/docs/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://workos.com/docs/mcp",
+            "connectorPublisher": "WorkOS",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "WorkOS",
+            "descriptions": {
+              "en": "Manage WorkOS organizations, users, SSO connections and workspace configuration.",
+              "zh-CN": "管理 WorkOS 组织、用户、单点登录连接与工作区配置。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/workos.zip",
+        "sha256": "198d57172f270ab290024abf6cbfda087ee1e5c04b93671803e97d906d399594"
+      },
+      "icon": "./plugins/workos/assets/icon.png",
+      "homepage": "https://workos.com/docs/mcp",
+      "license": "MIT",
+      "category": "developer-tools"
     },
     {
       "id": "wrike",

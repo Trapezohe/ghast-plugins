@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "workos",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage WorkOS organizations, users, SSO connections and workspace configuration.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://workos.com/docs/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://workos.com/docs/mcp",
+      "connectorPublisher": "WorkOS",
+      "category": "developer-tools",
+      "icon": "./assets/icon.png",
+      "displayName": "WorkOS",
+      "descriptions": {
+        "en": "Manage WorkOS organizations, users, SSO connections and workspace configuration.",
+        "zh-CN": "管理 WorkOS 组织、用户、单点登录连接与工作区配置。"
+      }
+    }
+  }
+}

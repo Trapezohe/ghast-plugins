@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "inngest",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect Inngest Cloud functions, events, runs and traces and manage deployed workflows.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.inngest.com/docs/ai-dev-tools/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.inngest.com/docs/ai-dev-tools/mcp",
+      "connectorPublisher": "Inngest",
+      "category": "developer-tools",
+      "icon": "./assets/icon.svg",
+      "displayName": "Inngest",
+      "descriptions": {
+        "en": "Inspect Inngest Cloud functions, events, runs and traces and manage deployed workflows.",
+        "zh-CN": "查看 Inngest Cloud 函数、事件、运行与追踪记录，并管理已部署的工作流。"
+      },
+      "mcpServerExtensions": {
+        "inngest": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:inngest-token"
+          }
+        }
+      }
+    }
+  }
+}
