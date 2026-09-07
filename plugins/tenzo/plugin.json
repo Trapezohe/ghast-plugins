@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "tenzo",
+  "version": "1.0.0-ghast.1",
+  "description": "Analyze restaurant sales, labor costs, customer reviews and shift logs through Tenzo’s official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://support.gotenzo.com/developers/mcp-server/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://support.gotenzo.com/developers/mcp-server/",
+      "connectorPublisher": "Tenzo",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Tenzo",
+      "descriptions": {
+        "en": "Analyze restaurant sales, labor costs, customer reviews and shift logs through Tenzo’s official MCP.",
+        "zh-CN": "通过 Tenzo 官方 MCP 分析餐厅销售、人工成本、顾客评价与班次日志。"
+      }
+    }
+  }
+}

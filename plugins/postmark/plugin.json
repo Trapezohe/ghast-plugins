@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "postmark",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage transactional email, templates, delivery diagnostics and webhooks through Postmark’s official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://postmarkapp.com/lp/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://postmarkapp.com/lp/mcp",
+      "connectorPublisher": "Postmark",
+      "category": "communication",
+      "icon": "./assets/icon.png",
+      "displayName": "Postmark",
+      "descriptions": {
+        "en": "Manage transactional email, templates, delivery diagnostics and webhooks through Postmark’s official MCP.",
+        "zh-CN": "通过 Postmark 官方 MCP 管理事务邮件、模板、投递诊断与 Webhook。"
+      },
+      "mcpServerExtensions": {
+        "postmark": {
+          "credentialEnv": {
+            "POSTMARK_SERVER_TOKEN": "$VAULT:postmark-server-token",
+            "DEFAULT_SENDER_EMAIL": "$VAULT:postmark-sender",
+            "DEFAULT_MESSAGE_STREAM": "$VAULT:postmark-stream"
+          }
+        }
+      }
+    }
+  }
+}

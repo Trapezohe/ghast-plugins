@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mailtrap",
+  "version": "1.0.0-ghast.1",
+  "description": "Test email in sandboxes, manage templates and inspect delivery workflows using Mailtrap’s official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/mailtrap/mailtrap-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/mailtrap/mailtrap-mcp",
+      "connectorPublisher": "Mailtrap",
+      "category": "communication",
+      "icon": "./assets/icon.png",
+      "displayName": "Mailtrap",
+      "descriptions": {
+        "en": "Test email in sandboxes, manage templates and inspect delivery workflows using Mailtrap’s official MCP.",
+        "zh-CN": "通过 Mailtrap 官方 MCP 测试沙箱邮件、管理模板与检查邮件投递流程。"
+      },
+      "mcpServerExtensions": {
+        "mailtrap": {
+          "credentialEnv": {
+            "MAILTRAP_API_TOKEN": "$VAULT:mailtrap-token",
+            "MAILTRAP_ACCOUNT_ID": "$VAULT:mailtrap-account-id"
+          }
+        }
+      }
+    }
+  }
+}

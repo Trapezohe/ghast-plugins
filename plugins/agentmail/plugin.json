@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "agentmail",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage agent email inboxes, messages, threads, drafts and attachments through AgentMail’s official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.agentmail.to/docs/integrations/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.agentmail.to/docs/integrations/mcp",
+      "connectorPublisher": "AgentMail",
+      "category": "communication",
+      "icon": "./assets/icon.png",
+      "displayName": "AgentMail",
+      "descriptions": {
+        "en": "Manage agent email inboxes, messages, threads, drafts and attachments through AgentMail’s official MCP.",
+        "zh-CN": "通过 AgentMail 官方 MCP 管理智能体邮箱、邮件、会话、草稿与附件。"
+      }
+    }
+  }
+}

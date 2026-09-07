@@ -120,6 +120,44 @@
       "category": "productivity"
     },
     {
+      "id": "agentmail",
+      "name": "AgentMail",
+      "description": "Manage agent email inboxes, messages, threads, drafts and attachments through AgentMail’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "agentmail",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage agent email inboxes, messages, threads, drafts and attachments through AgentMail’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.agentmail.to/docs/integrations/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.agentmail.to/docs/integrations/mcp",
+            "connectorPublisher": "AgentMail",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "AgentMail",
+            "descriptions": {
+              "en": "Manage agent email inboxes, messages, threads, drafts and attachments through AgentMail’s official MCP.",
+              "zh-CN": "通过 AgentMail 官方 MCP 管理智能体邮箱、邮件、会话、草稿与附件。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/agentmail.zip",
+        "sha256": "549c05537e8296c52e2b5a65e138b4efaa0a7fe954a35e423ad9706d0adca88e"
+      },
+      "icon": "./plugins/agentmail/assets/icon.png",
+      "homepage": "https://www.agentmail.to/docs/integrations/mcp",
+      "license": "MIT",
+      "category": "communication"
+    },
+    {
       "id": "agilitycms",
       "name": "Agility CMS",
       "description": "Manage structured content, models, pages and media in Agility CMS.",
@@ -7382,6 +7420,97 @@
       "category": "marketing"
     },
     {
+      "id": "mailgun",
+      "name": "Mailgun",
+      "description": "Manage sending domains, email templates, delivery metrics and suppression workflows with Mailgun’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "mailgun",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage sending domains, email templates, delivery metrics and suppression workflows with Mailgun’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://documentation.mailgun.com/docs/mailgun/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://documentation.mailgun.com/docs/mailgun/mcp",
+            "connectorPublisher": "Mailgun",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "Mailgun",
+            "descriptions": {
+              "en": "Manage sending domains, email templates, delivery metrics and suppression workflows with Mailgun’s official MCP.",
+              "zh-CN": "通过 Mailgun 官方 MCP 管理发信域名、邮件模板、投递指标与退订抑制流程。"
+            },
+            "mcpServerExtensions": {
+              "mailgun": {
+                "credentialEnv": {
+                  "MAILGUN_API_KEY": "$VAULT:mailgun-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/mailgun.zip",
+        "sha256": "8160279336437265f486c4302cb6b5edbd3d9ee6e2bf76f5cfac3a058c529a1e"
+      },
+      "icon": "./plugins/mailgun/assets/icon.png",
+      "homepage": "https://documentation.mailgun.com/docs/mailgun/mcp",
+      "license": "MIT",
+      "category": "communication"
+    },
+    {
+      "id": "mailtrap",
+      "name": "Mailtrap",
+      "description": "Test email in sandboxes, manage templates and inspect delivery workflows using Mailtrap’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "mailtrap",
+        "version": "1.0.0-ghast.1",
+        "description": "Test email in sandboxes, manage templates and inspect delivery workflows using Mailtrap’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/mailtrap/mailtrap-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/mailtrap/mailtrap-mcp",
+            "connectorPublisher": "Mailtrap",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "Mailtrap",
+            "descriptions": {
+              "en": "Test email in sandboxes, manage templates and inspect delivery workflows using Mailtrap’s official MCP.",
+              "zh-CN": "通过 Mailtrap 官方 MCP 测试沙箱邮件、管理模板与检查邮件投递流程。"
+            },
+            "mcpServerExtensions": {
+              "mailtrap": {
+                "credentialEnv": {
+                  "MAILTRAP_API_TOKEN": "$VAULT:mailtrap-token",
+                  "MAILTRAP_ACCOUNT_ID": "$VAULT:mailtrap-account-id"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/mailtrap.zip",
+        "sha256": "afcec0f7681439c7feeb8c0f20018979a356f2f57fa5e69af87f5bb44949539b"
+      },
+      "icon": "./plugins/mailtrap/assets/icon.png",
+      "homepage": "https://github.com/mailtrap/mailtrap-mcp",
+      "license": "MIT",
+      "category": "communication"
+    },
+    {
       "id": "make",
       "name": "Make",
       "description": "Build, inspect, manage and run automation scenarios through Make’s official MCP server.",
@@ -8838,6 +8967,53 @@
       "homepage": "https://learning.postman.com/latest-v-12/docs/reference/postman-api/postman-mcp-server/postman-mcp-remote-server",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "postmark",
+      "name": "Postmark",
+      "description": "Manage transactional email, templates, delivery diagnostics and webhooks through Postmark’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "postmark",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage transactional email, templates, delivery diagnostics and webhooks through Postmark’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://postmarkapp.com/lp/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://postmarkapp.com/lp/mcp",
+            "connectorPublisher": "Postmark",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "Postmark",
+            "descriptions": {
+              "en": "Manage transactional email, templates, delivery diagnostics and webhooks through Postmark’s official MCP.",
+              "zh-CN": "通过 Postmark 官方 MCP 管理事务邮件、模板、投递诊断与 Webhook。"
+            },
+            "mcpServerExtensions": {
+              "postmark": {
+                "credentialEnv": {
+                  "POSTMARK_SERVER_TOKEN": "$VAULT:postmark-server-token",
+                  "DEFAULT_SENDER_EMAIL": "$VAULT:postmark-sender",
+                  "DEFAULT_MESSAGE_STREAM": "$VAULT:postmark-stream"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/postmark.zip",
+        "sha256": "0fa7172ea7c824d3c6a6911411edca4c7e44460924c2e002d6ea32edffad8f0f"
+      },
+      "icon": "./plugins/postmark/assets/icon.png",
+      "homepage": "https://postmarkapp.com/lp/mcp",
+      "license": "MIT",
+      "category": "communication"
     },
     {
       "id": "prefect",
@@ -11215,6 +11391,44 @@
       "repository": "https://github.com/temporalio/codex-temporal-plugin",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "tenzo",
+      "name": "Tenzo",
+      "description": "Analyze restaurant sales, labor costs, customer reviews and shift logs through Tenzo’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "tenzo",
+        "version": "1.0.0-ghast.1",
+        "description": "Analyze restaurant sales, labor costs, customer reviews and shift logs through Tenzo’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://support.gotenzo.com/developers/mcp-server/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://support.gotenzo.com/developers/mcp-server/",
+            "connectorPublisher": "Tenzo",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Tenzo",
+            "descriptions": {
+              "en": "Analyze restaurant sales, labor costs, customer reviews and shift logs through Tenzo’s official MCP.",
+              "zh-CN": "通过 Tenzo 官方 MCP 分析餐厅销售、人工成本、顾客评价与班次日志。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/tenzo.zip",
+        "sha256": "bddc75d224182f7d8f7335c3732ff1844937fde04943667e0bb631b83073e1bb"
+      },
+      "icon": "./plugins/tenzo/assets/icon.png",
+      "homepage": "https://support.gotenzo.com/developers/mcp-server/",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "test-android-apps",

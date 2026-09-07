@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "postmark": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@activecampaign/postmark-mcp@2.1.1"
+      ]
+    }
+  }
+}
