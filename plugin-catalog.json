@@ -987,6 +987,44 @@
       "category": "data"
     },
     {
+      "id": "azure",
+      "name": "Microsoft Azure",
+      "description": "Explore and manage Azure cloud resources with Microsoft’s official Azure MCP Server (Beta).",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "azure",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore and manage Azure cloud resources with Microsoft’s official Azure MCP Server (Beta).",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/get-started",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/get-started",
+            "connectorPublisher": "Microsoft",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "Microsoft Azure",
+            "descriptions": {
+              "en": "Explore and manage Azure cloud resources with Microsoft’s official Azure MCP Server (Beta).",
+              "zh-CN": "通过 Microsoft 官方 Azure MCP Server（Beta）探索与管理 Azure 云资源。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/azure.zip",
+        "sha256": "bf81bf6e5517cbaeece338b5d165bc7fb3d774b0ff827e0e00bb9ca3586a71e7"
+      },
+      "icon": "./plugins/azure/assets/icon.png",
+      "homepage": "https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/get-started",
+      "license": "MIT",
+      "category": "developer-tools"
+    },
+    {
       "id": "balsamiq",
       "name": "Balsamiq",
       "description": "Read, create and refine wireframes in Balsamiq Cloud through its official MCP.",
@@ -5238,6 +5276,44 @@
       "homepage": "https://docs.financialdatasets.ai/mcp-server",
       "license": "MIT",
       "category": "data"
+    },
+    {
+      "id": "firebase",
+      "name": "Firebase",
+      "description": "Develop and manage Firebase projects, inspect app configuration and deploy services through Google’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "firebase",
+        "version": "1.0.0-ghast.1",
+        "description": "Develop and manage Firebase projects, inspect app configuration and deploy services through Google’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://firebase.google.com/docs/ai-assistance/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://firebase.google.com/docs/ai-assistance/mcp-server",
+            "connectorPublisher": "Google",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "Firebase",
+            "descriptions": {
+              "en": "Develop and manage Firebase projects, inspect app configuration and deploy services through Google’s official MCP.",
+              "zh-CN": "通过 Google 官方 MCP 开发与管理 Firebase 项目、检查应用配置并部署服务。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/firebase.zip",
+        "sha256": "d95ae08b0eeb22549e684180b3434446e74c99a4d79e2e55d11a0ccf5c6bf1db"
+      },
+      "icon": "./plugins/firebase/assets/icon.png",
+      "homepage": "https://firebase.google.com/docs/ai-assistance/mcp-server",
+      "license": "MIT",
+      "category": "developer-tools"
     },
     {
       "id": "firecrawl",

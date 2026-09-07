@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "azure",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore and manage Azure cloud resources with Microsoft’s official Azure MCP Server (Beta).",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/get-started",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/get-started",
+      "connectorPublisher": "Microsoft",
+      "category": "developer-tools",
+      "icon": "./assets/icon.png",
+      "displayName": "Microsoft Azure",
+      "descriptions": {
+        "en": "Explore and manage Azure cloud resources with Microsoft’s official Azure MCP Server (Beta).",
+        "zh-CN": "通过 Microsoft 官方 Azure MCP Server（Beta）探索与管理 Azure 云资源。"
+      }
+    }
+  }
+}
