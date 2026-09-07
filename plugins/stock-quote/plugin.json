@@ -10,7 +10,11 @@
   "extensions": {
     "ai.trapezohe.ghast": {
       "category": "finance",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Skill for fetching delayed stock quotes (price, change, volume) via Yahoo Finance's public chart endpoint. No API key required.",
+        "zh-CN": "通过公开行情接口获取延迟股票价格、涨跌和成交量。"
+      }
     }
   }
 }

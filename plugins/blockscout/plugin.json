@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "blockscout",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect blockchain transactions, tokens, addresses and verified contracts.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/blockscout/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/blockscout/mcp-server",
+      "connectorPublisher": "Blockscout",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Blockscout",
+      "descriptions": {
+        "en": "Inspect blockchain transactions, tokens, addresses and verified contracts.",
+        "zh-CN": "查询区块链交易、代币、地址与已验证合约。"
+      },
+      "mcpServerExtensions": {
+        "blockscout": {
+          "credentialHeaders": {
+            "Blockscout-MCP-Pro-Api-Key": "$VAULT:blockscout-token"
+          }
+        }
+      }
+    }
+  }
+}

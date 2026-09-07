@@ -10,7 +10,11 @@
   "extensions": {
     "ai.trapezohe.ghast": {
       "category": "finance",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Skill for looking up DeFi protocol TVL, chain stats, and ranking via the free DeFi Llama API.",
+        "zh-CN": "查询 DeFi 协议锁仓量、链上统计与排行榜。"
+      }
     }
   }
 }

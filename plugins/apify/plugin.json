@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "apify",
   "version": "1.0.0-ghast.1",
-  "description": "Discover web data Actors and run scoped extraction workflows. 检索网页数据采集 Actor，执行限定范围的数据提取。",
+  "description": "Discover web data Actors and run scoped extraction workflows.",
   "author": {
     "name": "Ghast AI",
     "url": "https://ghast.trapezohe.ai"

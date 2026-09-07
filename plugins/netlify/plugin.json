@@ -15,7 +15,11 @@
       "category": "development",
       "upstreamRevision": "32a261b6b2437464aca7e51bf9b48bcac1e2835c",
       "upstreamPath": "agent-plugin",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Build, deploy, and operate Netlify projects with official skills for Functions, Edge Functions, Blobs, Database, Identity, Image CDN, Forms, configuration, caching, AI Gateway, and deployment, plus the official Netlify MCP server.",
+        "zh-CN": "开发、部署和运维网站，配置函数、存储、数据库、身份与表单。"
+      }
     }
   }
 }

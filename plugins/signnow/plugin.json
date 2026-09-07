@@ -14,7 +14,11 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "upstreamRevision": "80c7de587367d611fc5c689a625b5a34fc5cd35e",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Create and send SignNow documents, templates, signing invites, reminders, embedded workflows, status checks, field updates, and signed-file links through SignNow's official hosted open-source MCP server.",
+        "zh-CN": "创建和发送签署文档，管理模板、邀请、提醒、字段与签署状态。"
+      }
     }
   }
 }

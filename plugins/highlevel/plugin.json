@@ -15,7 +15,11 @@
       "category": "productivity",
       "upstreamRevision": "0af86a4cbd48c66a4071c7e509d1079f9f10ed17",
       "upstreamPath": ".",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Inspect contacts, opportunities, pipelines, appointments, calendars, conversations, messages, and related CRM activity through HighLevel's official hosted MCP server.",
+        "zh-CN": "查询客户、商机、销售管道、预约、日历与沟通记录。"
+      }
     }
   }
 }

@@ -15,7 +15,11 @@
       "category": "productivity",
       "upstreamRevision": "b2f1d26aa81a09cc729dc22040004c8064ec3495",
       "portStatus": "full",
-      "icon": "./assets/logo.svg"
+      "icon": "./assets/logo.svg",
+      "descriptions": {
+        "en": "Search, read, analyze, upload, share, and administer Egnyte content through Egnyte's official hosted MCP and agent CLI.",
+        "zh-CN": "检索、读取、上传和分享文件，管理授权的企业内容。"
+      }
     }
   }
 }

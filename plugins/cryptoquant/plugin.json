@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "cryptoquant",
+  "version": "1.0.0-ghast.1",
+  "description": "Analyze cryptocurrency on-chain indicators, market data and research.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://userguide.cryptoquant.com/api/mcp-server-beta/remote-mcp-recommended",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://userguide.cryptoquant.com/api/mcp-server-beta/remote-mcp-recommended",
+      "connectorPublisher": "CryptoQuant",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "CryptoQuant",
+      "descriptions": {
+        "en": "Analyze cryptocurrency on-chain indicators, market data and research.",
+        "zh-CN": "分析加密货币链上指标、市场数据与研究内容。"
+      }
+    }
+  }
+}

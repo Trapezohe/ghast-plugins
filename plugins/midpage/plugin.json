@@ -14,7 +14,11 @@
     "ai.trapezohe.ghast": {
       "category": "research",
       "upstreamRevision": "plugin-a7900c82da0d+mcp-f4deb58545d8+oauth-6627f7d4fb4a",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Research US case law, statutes, regulations, and federal dockets, then draft and cite-check litigation work product with Midpage's official MCP and MIT-licensed skills.",
+        "zh-CN": "研究美国案例、法规与诉讼记录，起草并核对法律文书引用。"
+      }
     }
   }
 }

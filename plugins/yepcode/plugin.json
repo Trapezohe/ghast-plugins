@@ -22,6 +22,10 @@
             "Authorization": "Bearer $VAULT:yepcode-api-token"
           }
         }
+      },
+      "descriptions": {
+        "en": "Build, expose, schedule, execute, and audit JavaScript or Python automation tools in YepCode's isolated environment through YepCode's official hosted MCP server.",
+        "zh-CN": "在隔离环境中创建、调度和运行 JavaScript 或 Python 自动化工具。"
       }
     }
   }

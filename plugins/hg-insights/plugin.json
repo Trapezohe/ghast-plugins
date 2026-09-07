@@ -20,6 +20,10 @@
             "Authorization": "Bearer $VAULT:hg-insights-api-key"
           }
         }
+      },
+      "descriptions": {
+        "en": "Research companies, markets, technology adoption, buying signals, spend, contracts, contacts, and GTM segments through HG Insights' official Phoenix MCP server.",
+        "zh-CN": "研究企业技术采用、购买信号、预算、合同与市场细分。"
       }
     }
   }

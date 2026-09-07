@@ -16,7 +16,11 @@
       "upstreamRevision": "2bde5a300d40afbc934ae74f44444744b80c09b6",
       "upstreamPath": "plugins/mixpanel",
       "icon": "./assets/icon.svg",
-      "commands": "./ai.trapezohe.ghast/commands/"
+      "commands": "./ai.trapezohe.ghast/commands/",
+      "descriptions": {
+        "en": "Analyze Mixpanel data and manage dashboards, Lexicon, data quality, experiments, feature flags, metrics, cohorts, and business context through Mixpanel's official skills and hosted MCP server.",
+        "zh-CN": "分析产品数据，管理仪表板、指标、用户群、实验与功能开关。"
+      }
     }
   }
 }

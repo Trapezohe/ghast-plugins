@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "communication",
       "upstreamRevision": "circleback-help-95ffb254cd36+oauth-00a8e855d323+auth-1d48ae9d33e7+openclaw-a4637f051977+release-63146071c6c9",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Search authorized Circleback meetings, transcripts, action items, calendar events, emails, people, companies, tags, and support content through Circleback's official hosted MCP server.",
+        "zh-CN": "检索会议记录、行动项、日历事件、邮件与相关联系人。"
+      }
     }
   }
 }

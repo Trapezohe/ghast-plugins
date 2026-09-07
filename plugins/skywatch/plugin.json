@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "research",
       "upstreamRevision": "skywatch-docs-f4ed1fbadb7c+client-a16e47fecde3+tools-c6b9fe481f16",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Search orderable satellite imagery, compare scene pricing, and browse satellites and products through SkyWatch's official MCP.",
+        "zh-CN": "搜索可购买的卫星影像，比较场景价格和卫星产品。"
+      }
     }
   }
 }

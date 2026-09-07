@@ -23,7 +23,11 @@
           "reason": "No redistributable license file was present in the source snapshot."
         }
       ],
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Test Android apps on a local emulator with reproducible UI inspection, screenshots, input actions, and log capture.",
+        "zh-CN": "在本地模拟器测试 Android 应用，检查界面、截图、输入和日志。"
+      }
     }
   }
 }

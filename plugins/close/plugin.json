@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "upstreamRevision": "close-docs-c700a654c0a0+tools-37b3dda1465b+oauth-5f59d0eb26ef+auth-2c3287ebc60f",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Search, analyze, create, and explicitly update Close CRM leads, contacts, opportunities, activities, tasks, pipelines, workflows, templates, and voice agents through Close's official hosted MCP server.",
+        "zh-CN": "检索和管理销售线索、联系人、商机、任务与 CRM 工作流。"
+      }
     }
   }
 }

@@ -14,7 +14,11 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "upstreamRevision": "d93b77ee3d1a53b8547adad431e8c6355bb85f23",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Search authorized enterprise content, retrieve grounded passages, and generate source-linked answers through Coveo's pinned official Labs MCP implementation.",
+        "zh-CN": "检索有权访问的企业内容，提取依据并生成带来源的回答。"
+      }
     }
   }
 }

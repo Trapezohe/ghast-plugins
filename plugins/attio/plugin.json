@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "upstreamRevision": "attio-docs-2e2e355662dd+oauth-f4f72e868155+auth-0ea2dac5158a",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Search, read, create, and update Attio CRM records, lists, comments, notes, tasks, meetings, calls, emails, and reports through Attio's official hosted MCP server.",
+        "zh-CN": "检索和管理 CRM 记录、联系人、列表、笔记、任务与会议。"
+      }
     }
   }
 }

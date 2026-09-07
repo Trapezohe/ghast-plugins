@@ -15,7 +15,11 @@
       "category": "data",
       "upstreamRevision": "275d2e7d2ba4f5b48ce8ad3f01a9aeea8bd08616",
       "upstreamPath": ".",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Explore, query, manage, analyze, and visualize MotherDuck data with the official hosted OAuth MCP server, including Dives.",
+        "zh-CN": "查询、管理、分析和可视化 MotherDuck 数据。"
+      }
     }
   }
 }

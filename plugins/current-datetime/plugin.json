@@ -11,7 +11,11 @@
     "ai.trapezohe.ghast": {
       "category": "utility",
       "icon": "./assets/icon.svg",
-      "commands": "./ai.trapezohe.ghast/commands/"
+      "commands": "./ai.trapezohe.ghast/commands/",
+      "descriptions": {
+        "en": "Slash command and skill that tells the model the current wall-clock time in any IANA timezone — kills the 'I don't know what day it is' problem.",
+        "zh-CN": "查询任意 IANA 时区的当前日期与时间。"
+      }
     }
   }
 }

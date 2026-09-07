@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "se-ranking",
   "version": "1.0.0-ghast.1",
-  "description": "Research keywords, competitors, rankings, backlinks and AI search visibility with SE Ranking. 使用 SE Ranking 调研关键词、竞争对手、排名、外链和 AI 搜索可见性，支持 SEO 优化。",
+  "description": "Research keywords, competitors, rankings, backlinks and AI search visibility with SE Ranking.",
   "author": {
     "name": "Ghast AI",
     "url": "https://ghast.trapezohe.ai"

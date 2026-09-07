@@ -16,7 +16,11 @@
       "category": "creativity",
       "upstreamRevision": "dd0626a55a0d0f24cae1b00bd2c95c0ebfa7a573",
       "upstreamPath": ".",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Write HTML, render video. Compositions, Tailwind v4 styles, GSAP and runtime adapter animations, captions, voiceovers, audio-reactive visuals, and website capture for HyperFrames.",
+        "zh-CN": "通过 HTML、动画、字幕、配音和音频可视化制作视频。"
+      }
     }
   }
 }

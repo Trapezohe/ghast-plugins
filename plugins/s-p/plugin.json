@@ -16,7 +16,11 @@
       "upstreamRevision": "1d7d364a07d755d401b6f66d41affe71bc62a9b9",
       "upstreamPath": "plugins/spglobal-plugin",
       "portStatus": "partial",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Query S&P Global company financial data through Kensho's official MCP and generate official tear sheets, funding digests, and conditional earnings previews.",
+        "zh-CN": "查询标普全球企业财务数据，生成企业概览与融资研究摘要。"
+      }
     }
   }
 }

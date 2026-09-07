@@ -15,7 +15,11 @@
       "category": "development",
       "upstreamRevision": "e9a28b0de6beb5305bd49d73453ab0f1cbd8d160",
       "upstreamPath": "plugins/temporal",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Comprehensive skill for the entire Temporal lifecycle — developing applications, using the Temporal CLI, running and managing Temporal Server, and working with Temporal Cloud.",
+        "zh-CN": "开发 Temporal 应用，使用 CLI 并管理服务端和工作流生命周期。"
+      }
     }
   }
 }

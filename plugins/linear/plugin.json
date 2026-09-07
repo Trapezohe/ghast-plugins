@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Manage Linear issues, projects, and team workflows through Linear's official MCP server.",
+        "zh-CN": "管理 Linear 问题、项目与团队工作流程。"
+      }
     }
   }
 }

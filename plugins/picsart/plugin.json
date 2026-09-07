@@ -22,6 +22,10 @@
             "X-Picsart-API-Key": "${PICSART_API_KEY}"
           }
         }
+      },
+      "descriptions": {
+        "en": "Generate and edit images, video, audio, and motion graphics through Picsart's official skills, CLI workflows, and hosted MCP servers.",
+        "zh-CN": "生成和编辑图片、视频、音频与动态图形。"
       }
     }
   }

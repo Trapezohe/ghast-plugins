@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "business",
       "upstreamRevision": "demandbase-docs-f41df5ef1529+custom-5ae757d63c7b+oauth-4b6086018213+auth-974b2f8f4944",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Research internal accounts and people, global companies and contacts, Intent, Buying Groups, opportunities, and meeting-ready account briefs through Demandbase's official hosted MCP.",
+        "zh-CN": "研究目标账户、联系人、购买意向与商机，准备客户会议资料。"
+      }
     }
   }
 }

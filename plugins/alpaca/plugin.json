@@ -32,6 +32,10 @@
             "client_id": "PCIEJZTPCQEBUBAINMQOGDHF7I"
           }
         }
+      },
+      "descriptions": {
+        "en": "Research stocks, options, crypto, fixed income, indices, news, and corporate actions through Alpaca's official market-data MCP, with separately authorized paper and live trading servers for account, order, position, portfolio, and watchlist workflows.",
+        "zh-CN": "查询股票、期权与加密资产行情，支持单独授权的模拟和实盘交易。"
       }
     }
   }

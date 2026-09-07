@@ -16,7 +16,11 @@
       "upstreamRevision": "mcp-f1632eefcae4+plugin-d7ba1cb036c7+docs-d85a5536428d+oauth-1e68eaf1c788",
       "icon": "./assets/icon.svg",
       "commands": "./ai.trapezohe.ghast/commands/",
-      "portStatus": "superset-newer-official-hosted-mcp"
+      "portStatus": "superset-newer-official-hosted-mcp",
+      "descriptions": {
+        "en": "Query, analyze, connect, and carefully act on business data from Windsor.ai's official hosted MCP across 350+ sources.",
+        "zh-CN": "查询、连接和分析多个来源的营销与业务数据。"
+      }
     }
   }
 }

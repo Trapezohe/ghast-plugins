@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "coinbase-developer",
+  "version": "1.0.0-ghast.1",
+  "description": "Search Coinbase Developer Platform documentation for wallet and payment integrations.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.cdp.coinbase.com/get-started/build-with-ai/docs-for-ai/cdp-docs-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.cdp.coinbase.com/get-started/build-with-ai/docs-for-ai/cdp-docs-mcp",
+      "connectorPublisher": "Coinbase Developer",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Coinbase Developer",
+      "descriptions": {
+        "en": "Search Coinbase Developer Platform documentation for wallet and payment integrations.",
+        "zh-CN": "检索 Coinbase 开发者平台文档，辅助钱包与支付集成开发。"
+      }
+    }
+  }
+}

@@ -15,7 +15,11 @@
       "category": "finance",
       "upstreamRevision": "88a4290f29009e1cfe4341e0b9518d23c537d853",
       "upstreamPath": ".",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Analyze private-capital GP portfolios, operating performance, valuations, fund reviews, company reports, and TVPI attribution through Chronograph's official skills and hosted OAuth MCP.",
+        "zh-CN": "分析私募资本投资组合、经营表现、估值与基金回报归因。"
+      }
     }
   }
 }

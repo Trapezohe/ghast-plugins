@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "coinpaprika",
+  "version": "1.0.0-ghast.1",
+  "description": "Query cryptocurrency tickers, exchanges, historical candles and market metadata.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/coinpaprika/coinpaprika-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/coinpaprika/coinpaprika-mcp",
+      "connectorPublisher": "CoinPaprika",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "CoinPaprika",
+      "descriptions": {
+        "en": "Query cryptocurrency tickers, exchanges, historical candles and market metadata.",
+        "zh-CN": "查询加密货币行情、交易所、历史 K 线与市场资料。"
+      }
+    }
+  }
+}

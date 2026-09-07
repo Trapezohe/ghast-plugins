@@ -21,6 +21,10 @@
             "client_id": "6d465f583e1e4ce5801b1616f735670c"
           }
         }
+      },
+      "descriptions": {
+        "en": "Create, inspect, iterate, deploy, and manage full-stack Lovable apps, code, knowledge, databases, connectors, analytics, and workspaces through Lovable's official hosted MCP server.",
+        "zh-CN": "创建、修改、部署和管理全栈应用、数据库与工作区。"
       }
     }
   }

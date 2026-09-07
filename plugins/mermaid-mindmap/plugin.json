@@ -11,7 +11,11 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "icon": "./assets/icon.svg",
-      "commands": "./ai.trapezohe.ghast/commands/"
+      "commands": "./ai.trapezohe.ghast/commands/",
+      "descriptions": {
+        "en": "Slash command that turns a topic or outline into a Mermaid mindmap code block the chat can render as a tree.",
+        "zh-CN": "将主题或提纲转换为可渲染的 Mermaid 思维导图。"
+      }
     }
   }
 }

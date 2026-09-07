@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "communication",
       "upstreamRevision": "otter-zendesk-35287607569687-2026-08-12+oauth-1b480247ee26+auth-901170a75106",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Search Otter meeting history and retrieve full transcripts, summaries, action items, attendees, and meeting context through Otter.ai's official hosted MCP server.",
+        "zh-CN": "搜索会议历史，读取完整转录、摘要、行动项与参会信息。"
+      }
     }
   }
 }

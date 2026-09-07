@@ -15,7 +15,11 @@
       "category": "development",
       "upstreamRevision": "b7f87949583782238aef20414a29b1f5ca2773ea",
       "upstreamPath": ".",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Manage Neon Lakebase Postgres projects, branches, schemas, SQL, migrations, Auth, Object Storage, Functions, AI Gateway, and database performance with official Neon skills and MCP.",
+        "zh-CN": "管理 Postgres 项目、分支、表结构、SQL、迁移与数据库性能。"
+      }
     }
   }
 }

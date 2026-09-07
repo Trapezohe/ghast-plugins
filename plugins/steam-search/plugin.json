@@ -10,7 +10,11 @@
   "extensions": {
     "ai.trapezohe.ghast": {
       "category": "gaming",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Skill for searching the Steam store and looking up game details (price, release date, genres, reviews) — uses Steam's public store endpoints, no key required.",
+        "zh-CN": "搜索 Steam 商店，查询游戏价格、发行日期、类型与评价。"
+      }
     }
   }
 }

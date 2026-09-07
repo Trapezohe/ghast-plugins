@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "context7",
   "version": "1.0.0-ghast.1",
-  "description": "Find current library documentation and version-specific code examples with Context7. 使用 Context7 查询软件库文档与指定版本的代码示例，辅助开发、集成和升级。",
+  "description": "Find current library documentation and version-specific code examples with Context7.",
   "author": {
     "name": "Ghast AI",
     "url": "https://ghast.trapezohe.ai"

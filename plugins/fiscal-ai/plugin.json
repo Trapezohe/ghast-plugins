@@ -20,6 +20,10 @@
             "Authorization": "Bearer $VAULT:fiscal-api-key"
           }
         }
+      },
+      "descriptions": {
+        "en": "Research public companies with source-linked financials, filings, ratios, segments, KPIs, prices, ownership, news, events, and fund letters through Fiscal.ai's official hosted MCP server.",
+        "zh-CN": "研究上市公司财务、公告、估值指标、持仓、新闻与经营数据。"
       }
     }
   }

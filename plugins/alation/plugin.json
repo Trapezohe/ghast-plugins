@@ -16,7 +16,11 @@
       "category": "data",
       "upstreamRevision": "b450039495787ecd6bc16176cca6df6c4a1336c3",
       "upstreamPath": ".",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Search and browse trusted Alation catalog context, query data products, inspect BI lineage, configure agents and tools, automate workflows, and curate governed metadata through Alation's official Codex skills and CLI.",
+        "zh-CN": "检索数据目录、数据产品与 BI 血缘，管理受治理的数据知识。"
+      }
     }
   }
 }

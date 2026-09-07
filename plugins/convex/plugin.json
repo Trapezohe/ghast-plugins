@@ -14,7 +14,11 @@
     "ai.trapezohe.ghast": {
       "category": "development",
       "upstreamRevision": "convex-npm-1.44.0-8bdb320a17ed+icon-7023eb599ffe+tools-5d3be1fb3d20",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Build and inspect Convex backends with the official Convex CLI, project Agent Skills, and 12-tool MCP server.",
+        "zh-CN": "通过官方 CLI、技能与 MCP 开发和检查 Convex 后端。"
+      }
     }
   }
 }

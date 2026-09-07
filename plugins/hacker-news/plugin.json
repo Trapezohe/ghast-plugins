@@ -10,7 +10,11 @@
   "extensions": {
     "ai.trapezohe.ghast": {
       "category": "news",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Skill for reading Hacker News from chat — top / new / best stories plus thread fetches via the public Firebase API.",
+        "zh-CN": "读取 Hacker News 热门、最新与精选内容以及讨论串。"
+      }
     }
   }
 }

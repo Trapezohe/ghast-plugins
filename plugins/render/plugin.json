@@ -23,6 +23,10 @@
             "Authorization": "Bearer $VAULT:render-api-key"
           }
         }
+      },
+      "descriptions": {
+        "en": "Skills for deploying, debugging, monitoring, and migrating apps on Render.",
+        "zh-CN": "部署、调试、监控和迁移 Render 应用。"
       }
     }
   }

@@ -10,7 +10,11 @@
   "extensions": {
     "ai.trapezohe.ghast": {
       "category": "media",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Skill for searching Bilibili videos and the daily ranking via the public web search endpoint — no login required for top-level results.",
+        "zh-CN": "搜索哔哩哔哩视频与每日排行榜，无需登录即可获取公开结果。"
+      }
     }
   }
 }

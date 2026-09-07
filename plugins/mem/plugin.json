@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "upstreamRevision": "mem-docs-68ae96105315+oauth-d1a5188d322a+tools-092589b5e1c6+openapi-0626dda21186",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Search and manage Mem notes, attachments, recordings, and collections through Mem Labs' official hosted MCP server.",
+        "zh-CN": "检索和管理笔记、附件、录音与知识集合。"
+      }
     }
   }
 }

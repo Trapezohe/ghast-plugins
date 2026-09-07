@@ -16,7 +16,11 @@
       "category": "development",
       "upstreamRevision": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
       "upstreamPath": ".",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "An agentic skills framework & software development methodology that works: planning, TDD, debugging, and collaboration workflows.",
+        "zh-CN": "通过规划、测试驱动开发、调试与协作方法完成软件开发。"
+      }
     }
   }
 }

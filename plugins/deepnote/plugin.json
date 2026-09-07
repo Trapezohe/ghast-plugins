@@ -22,6 +22,10 @@
             "Authorization": "Bearer $VAULT:deepnote-api-key"
           }
         }
+      },
+      "descriptions": {
+        "en": "Search, inspect, create, edit, link, and run Deepnote projects and notebooks through Deepnote's official hosted MCP server.",
+        "zh-CN": "检索、创建、编辑与运行数据分析项目和笔记本。"
       }
     }
   }

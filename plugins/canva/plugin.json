@@ -15,7 +15,11 @@
       "category": "creativity",
       "upstreamRevision": "b56291ea0a36d0a941e1478b47959be5f1771dee",
       "upstreamPath": "plugins/canva",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Create, edit, review, resize, bulk-generate, and brand-check Canva designs through Canva's official skills and hosted MCP server.",
+        "zh-CN": "创建、编辑、调整和批量生成设计，检查品牌规范。"
+      }
     }
   }
 }

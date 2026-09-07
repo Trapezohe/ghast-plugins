@@ -20,6 +20,10 @@
         "superhuman-mail": {
           "note": "Official Superhuman Mail MCP server. Uses OAuth on first connection and exposes Superhuman Mail email and calendar tools for authenticated accounts."
         }
+      },
+      "descriptions": {
+        "en": "Connect Codex to the official Superhuman Mail MCP server for email and calendar workflows.",
+        "zh-CN": "连接 Superhuman Mail，处理授权的邮件与日历工作。"
       }
     }
   }

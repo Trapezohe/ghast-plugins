@@ -15,7 +15,11 @@
       "category": "development",
       "upstreamRevision": "cc04bafbeae9362a35af1b6443d3c3833f9f30d5",
       "upstreamPath": ".",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Create Hostinger Horizons websites from natural-language briefs and build, connect, deploy, verify, and operate websites, domains, DNS, VPS, ecommerce, WordPress, mail, campaigns, and billing through Hostinger's official MCP and Headless skill.",
+        "zh-CN": "创建和部署网站，管理域名、DNS、云主机、电商与 WordPress 业务。"
+      }
     }
   }
 }

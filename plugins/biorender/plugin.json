@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "creativity",
       "upstreamRevision": "biorender-help-fb87519f4022+auth-7e351acc74e9+anthropic-3da37488e11a",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Search BioRender templates and accessible figures, preview results, and create editable scientific figure drafts through BioRender's official hosted MCP server.",
+        "zh-CN": "搜索科学绘图模板与已有图稿，预览并创建可编辑的科学插图草稿。"
+      }
     }
   }
 }

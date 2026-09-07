@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "upstreamRevision": "hebbia-product-7f99fc43f3f6+home-92b907df1539+oauth-78b5d22dd33e+auth-9b1ae93cc36d",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Search authorized institutional knowledge, analyze document sets with traceable evidence, and support financial research workflows through Hebbia's official hosted MCP.",
+        "zh-CN": "分析有权访问的机构知识和文档，提供可追溯的研究依据。"
+      }
     }
   }
 }

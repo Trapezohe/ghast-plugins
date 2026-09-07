@@ -15,7 +15,11 @@
       "category": "development",
       "upstreamRevision": "773a301cfb79112141add32d19c024f2bafc44ee",
       "upstreamPath": ".",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Build and deploy Base44 full-stack apps with CLI project management and JavaScript/TypeScript SDK development skills",
+        "zh-CN": "通过官方 CLI 和 SDK 开发、部署与管理 Base44 全栈应用。"
+      }
     }
   }
 }

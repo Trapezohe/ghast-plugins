@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "upstreamRevision": "outreach-docs-fad773e5a468+tools-71d9d8bf5845+oauth-bd349848c7a7+auth-7815bab59627",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Research prospects, accounts, opportunities, sequences, emails, meetings, and tasks, draft grounded follow-ups, and safely perform approved Outreach revenue actions.",
+        "zh-CN": "研究潜客、商机和会议，起草跟进内容并执行授权的销售操作。"
+      }
     }
   }
 }

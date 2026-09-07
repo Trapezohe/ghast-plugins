@@ -16,7 +16,11 @@
       "category": "development",
       "upstreamRevision": "4cfbca7041b14ffa874488cd9b0ba88970cd168f",
       "upstreamPath": "catalyst-by-zoho",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Build, deploy, and operate Catalyst by Zoho applications with official service, SDK, CLI, architecture, pricing, and Zoho MCP skills across eight supported data centers.",
+        "zh-CN": "开发、部署和运维 Zoho Catalyst 应用，查询 SDK、架构与服务配置。"
+      }
     }
   }
 }

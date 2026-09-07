@@ -15,7 +15,11 @@
       "category": "development",
       "upstreamRevision": "8aba46fb65dc8d9a20f4b301a68352064b4159a5",
       "upstreamPath": ".",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Twilio Skills provide procedural knowledge for AI coding agents — which APIs to use, in what order, and what to avoid. Covers Messaging, Voice, Verify, SendGrid, and 30+ products.",
+        "zh-CN": "开发短信、语音、验证和邮件集成，使用官方 API 工作流指南。"
+      }
     }
   }
 }

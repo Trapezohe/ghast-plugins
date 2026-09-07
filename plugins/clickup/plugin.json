@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "upstreamRevision": "clickup-tools-2d3fddb826de+overview-dff0d558c63b+setup-3d9416ff8959+oauth-19f2f7a0a70c",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Search and manage ClickUp tasks, lists, folders, documents, comments, chat, assignments, relationships, and time tracking through ClickUp's official hosted MCP server.",
+        "zh-CN": "管理任务、列表、文档、评论、聊天、分工与工时记录。"
+      }
     }
   }
 }

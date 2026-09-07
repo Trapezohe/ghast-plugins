@@ -14,7 +14,11 @@
       "category": "productivity",
       "upstreamRevision": "responsive-mcp-overview-dc0c9d286bf3+connect-eff6a43bb847+tools-973756d53113+auth-3c7db377bbdd+oauth-f3d4fd4917ff+boundary-e3b0c44298fc",
       "portStatus": "full",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Search governed Responsive proposal content, inspect projects and unanswered questions, and generate grounded draft responses through Responsive's official hosted MCP.",
+        "zh-CN": "检索方案知识库、查看项目问题并起草有依据的答复。"
+      }
     }
   }
 }

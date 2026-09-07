@@ -21,6 +21,10 @@
             "Authorization": "Bearer $VAULT:dovetail-api-token"
           }
         }
+      },
+      "descriptions": {
+        "en": "Search, inspect, synthesize, and explicitly create Dovetail projects, research data, highlights, docs, channels, themes, people, tags, fields, and files through Dovetail's official hosted MCP server.",
+        "zh-CN": "检索研究项目、资料和洞察，管理标签、主题、文档与文件。"
       }
     }
   }

@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "upstreamRevision": "common-room-docs-a9dbd0442b28+cli-0.1.2-9c87bd173b7e+oauth-325111f2b2c7+auth-83da7abc3978",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Research accounts and contacts, query buyer signals, build prospect lists, and safely write records through Common Room's official hosted MCP.",
+        "zh-CN": "研究客户与购买信号，建立潜客列表并更新授权的客户记录。"
+      }
     }
   }
 }

@@ -14,7 +14,11 @@
       "category": "development",
       "upstreamRevision": "020194918dc4a27d5a5d9a154b6b56cc2bd21364",
       "upstreamPath": ".",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Explore and manage Hugging Face models, datasets, Spaces, jobs, papers, evaluations, training, Gradio apps, local models, and Hub workflows with the complete official skill catalog and official Hugging Face MCP server.",
+        "zh-CN": "发现和管理模型、数据集、Spaces、任务、论文、评测与训练流程。"
+      }
     }
   }
 }

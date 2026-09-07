@@ -15,7 +15,9 @@ selected bundle into the active profile.
 
 ## Official store presentation
 
-New official listings must ship the service’s real brand logo under `assets/` (no letter placeholders), record its source, and include both English and Simplified Chinese introductions in the manifest and README. Use `extensions.ai.trapezohe.ghast.descriptions` with `en` and `zh-CN`; keep the portable `description` bilingual as well. Verify local installation, visible branding and uninstall before publishing. Account authorization is a separate check from installation.
+Official listings must ship the service’s real brand logo under `assets/` (no letter placeholders), record its source, and include English and Simplified Chinese introductions. Store translations in `extensions.ai.trapezohe.ghast.descriptions` with `en` and `zh-CN`; the portable `description` must equal the English introduction. Ghast displays Chinese for a Chinese UI locale and English for other locales, never concatenating both. Verify local installation, visible branding and uninstall before publishing. Account authorization is a separate check from installation.
+
+New connectors must be published or maintained by the service provider. Verify the provider's documentation or repository and record that source in the plugin README. A marketplace listing alone is not evidence of official ownership. Community wrappers and third-party gateways require an explicit user request and must not be presented as provider-official connectors. Do not split one connector into duplicate listings to meet a catalog count target.
 
 ## Plugin format
 
@@ -46,7 +48,11 @@ Minimal manifest:
   "extensions": {
     "ai.trapezohe.ghast": {
       "category": "development",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "What the plugin adds.",
+        "zh-CN": "插件提供的功能。"
+      }
     }
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "postman",
   "version": "1.0.0-ghast.1",
-  "description": "Find API collections and workspaces, inspect requests and support API collaboration with Postman. 通过 Postman 查找 API 集合与工作区、检查请求定义，辅助接口开发和团队协作。",
+  "description": "Find API collections and workspaces, inspect requests and support API collaboration with Postman.",
   "author": {
     "name": "Ghast AI",
     "url": "https://ghast.trapezohe.ai"

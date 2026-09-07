@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "microsoft-learn",
   "version": "1.0.0-ghast.1",
-  "description": "Search Microsoft documentation and retrieve official code samples. 检索微软官方文档与代码示例，辅助 Azure 和 Microsoft 开发。",
+  "description": "Search Microsoft documentation and retrieve official code samples.",
   "author": {
     "name": "Ghast AI",
     "url": "https://ghast.trapezohe.ai"

@@ -21,6 +21,10 @@
         "heygen": {
           "note": "Official HeyGen MCP server. OAuth on first connection — runs against the user's existing HeyGen plan credits. The heygen-avatar and heygen-video skills detect this MCP and use it instead of the HeyGen CLI when available."
         }
+      },
+      "descriptions": {
+        "en": "Create HeyGen avatar videos, personalized video messages, and translated / dubbed videos. Build a persistent digital identity from a photo, generate presenter-led videos with your digital twin, and localize existing videos into 175+ languages with voice cloning and lip-sync.",
+        "zh-CN": "创建数字人视频、个性化视频消息，并翻译和配音现有视频。"
       }
     }
   }

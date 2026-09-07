@@ -15,7 +15,11 @@
       "category": "development",
       "upstreamRevision": "c6cd28ff3d47f4e8e8b23040c69925ec2a820695",
       "upstreamPath": "codex/replayio",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Record and inspect Replay browser runs, create verified MP4 evidence, debug uploaded recordings through Replay MCP, and run Replay QA project, bug, journey, and exploration workflows.",
+        "zh-CN": "录制和检查浏览器运行过程，调试问题并生成可核验的视频证据。"
+      }
     }
   }
 }

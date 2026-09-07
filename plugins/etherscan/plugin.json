@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "etherscan",
+  "version": "1.0.0-ghast.1",
+  "description": "Read multi-chain balances, transactions, token transfers and contract data.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.etherscan.io/build-with-ai/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.etherscan.io/build-with-ai/mcp",
+      "connectorPublisher": "Etherscan",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Etherscan",
+      "descriptions": {
+        "en": "Read multi-chain balances, transactions, token transfers and contract data.",
+        "zh-CN": "查询多链余额、交易、代币转账与合约数据。"
+      },
+      "mcpServerExtensions": {
+        "etherscan": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:etherscan-token"
+          }
+        }
+      }
+    }
+  }
+}

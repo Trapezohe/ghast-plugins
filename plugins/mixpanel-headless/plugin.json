@@ -17,7 +17,11 @@
       "upstreamRevision": "6c2c2f975d51628bdbc75802fb879d4f6cb66f69",
       "upstreamPath": "mixpanel-plugin",
       "icon": "./assets/icon.png",
-      "commands": "./ai.trapezohe.ghast/commands/"
+      "commands": "./ai.trapezohe.ghast/commands/",
+      "descriptions": {
+        "en": "Query and analyze Mixpanel data with Python. Provides the mixpanel_headless auth surface (Account → Project → Workspace hierarchy), API (5 query engines, discovery, entity CRUD), and Business Context read/write (the markdown documentation that grounds AI assistants, at org and project scopes), with a live documentation system (help.py) for method signatures, type lookup, fuzzy search, and hosted docs.",
+        "zh-CN": "通过 Python 查询和分析 Mixpanel 数据，管理账号、项目与工作区。"
+      }
     }
   }
 }

@@ -15,7 +15,11 @@
       "category": "data",
       "upstreamRevision": "882acfc09c5e5c1eed82b6e2a64e8780503ec099",
       "upstreamPath": ".",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Search and analyze Aiera corporate events, transcripts, filings, company publications, equities, financials, broker research, Third Bridge content, and trusted web results through Aiera's official MCP server.",
+        "zh-CN": "检索企业活动、财报、电话会议记录与研究资料，开展金融分析。"
+      }
     }
   }
 }

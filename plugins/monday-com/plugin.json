@@ -15,7 +15,11 @@
       "category": "productivity",
       "upstreamRevision": "ce381e93a0a6c2ed3b9942ff1803b8078ba89389",
       "upstreamPath": ".",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Manage monday.com boards, items, status reporting, docs, and WorkForms with five official workflow skills and monday.com's hosted OAuth MCP server.",
+        "zh-CN": "管理看板、工作项、进度报告、文档与表单。"
+      }
     }
   }
 }

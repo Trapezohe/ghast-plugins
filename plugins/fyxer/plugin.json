@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "communication",
       "upstreamRevision": "fyxer-docs-524a8683cf7b+addons-d1b55e0ef54e+oauth-c0a99fecb69d+auth-fde6773cf908",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Search authorized email and meeting context, retrieve summaries and transcripts, resolve contacts, and draft personalized email through Fyxer's official hosted MCP.",
+        "zh-CN": "检索邮件和会议上下文，读取摘要，查找联系人并起草邮件。"
+      }
     }
   }
 }

@@ -14,7 +14,11 @@
       "category": "productivity",
       "upstreamRevision": "myregistry-registry-api-0fbbe1a50b9a+docs-81d5402e985a+terms-a0a8295276ac",
       "portStatus": "full",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Find public wedding, baby, and gift-list registries through MyRegistry.com's official Registry API.",
+        "zh-CN": "查询公开的婚礼、婴儿用品与礼品愿望清单。"
+      }
     }
   }
 }

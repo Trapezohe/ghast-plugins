@@ -15,7 +15,11 @@
       "category": "development",
       "upstreamRevision": "f30595361e8d02f0dc432b499d00916a2e3918f3",
       "upstreamPath": ".",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Build and deploy Wix apps and headless websites, and manage your Wix business. Includes CLI development skills, Wix Headless for any frontend framework, and Wix MCP server for eCommerce, CMS, dashboard extensions, and more.",
+        "zh-CN": "开发和部署 Wix 网站与应用，管理无头站点及相关业务。"
+      }
     }
   }
 }

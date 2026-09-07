@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "cryptohopper",
+  "version": "1.0.0-ghast.1",
+  "description": "Read exchange tickers, order books and OHLCV candles through Cryptohopper.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.cryptohopper.com/docs/cryptohopper-mcp/setup-overview",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.cryptohopper.com/docs/cryptohopper-mcp/setup-overview",
+      "connectorPublisher": "Cryptohopper Market Data",
+      "category": "finance",
+      "icon": "./assets/icon.svg",
+      "displayName": "Cryptohopper Market Data",
+      "descriptions": {
+        "en": "Read exchange tickers, order books and OHLCV candles through Cryptohopper.",
+        "zh-CN": "通过 Cryptohopper 查询交易所行情、订单簿与 K 线。"
+      },
+      "mcpServerExtensions": {
+        "cryptohopper": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:cryptohopper-token"
+          }
+        }
+      }
+    }
+  }
+}

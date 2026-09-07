@@ -16,7 +16,11 @@
       "category": "data",
       "upstreamRevision": "90c0a8e658db547ab63a2210e84be07c23ce4cd0",
       "upstreamPath": "plugins/amplitude",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Analyze Amplitude charts, dashboards, experiments, session replays, feedback, accounts, reliability, AI agents, taxonomy, and instrumentation through Amplitude's official skills and hosted MCP server.",
+        "zh-CN": "分析产品图表、实验、会话回放与用户反馈，管理数据埋点。"
+      }
     }
   }
 }

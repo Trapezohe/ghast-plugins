@@ -15,7 +15,11 @@
       "category": "development",
       "upstreamRevision": "1121fafe77b5b2bfa623dda1a244517ff604a823",
       "upstreamPath": ".",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Diagnose CircleCI runs, inspect logs, tests, and artifacts, rerun or cancel workflows, validate configuration, and manage CircleCI resources through CircleCI's official hosted MCP and full CLI MCP.",
+        "zh-CN": "诊断构建与测试结果，查看日志和产物，管理授权的 CI 工作流。"
+      }
     }
   }
 }

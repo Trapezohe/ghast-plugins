@@ -16,7 +16,11 @@
       "category": "development",
       "upstreamRevision": "aa49953c4cb2590e35480637b1b6a29cf4187cfa",
       "upstreamPath": ".",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Review local code changes with CodeRabbit's official CLI and safely triage or apply unresolved CodeRabbit GitHub PR feedback through the official code-review and autofix skills.",
+        "zh-CN": "审查本地代码变更，整理和处理 GitHub 拉取请求中的代码审查反馈。"
+      }
     }
   }
 }

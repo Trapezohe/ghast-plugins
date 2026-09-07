@@ -14,7 +14,11 @@
     "ai.trapezohe.ghast": {
       "category": "development",
       "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Inspect recent Sentry issues and events through a read-only, redacting API workflow.",
+        "zh-CN": "通过只读接口调查近期错误与事件，并脱敏输出。"
+      }
     }
   }
 }

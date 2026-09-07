@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "financial-datasets",
   "version": "1.0.0-ghast.1",
-  "description": "Research stock prices, company financials, SEC filings and news through Financial Datasets. 通过 Financial Datasets 检索股票行情、公司财报、SEC 文件与新闻。",
+  "description": "Research stock prices, company financials, SEC filings and news through Financial Datasets.",
   "author": {
     "name": "Ghast AI",
     "url": "https://ghast.trapezohe.ai"

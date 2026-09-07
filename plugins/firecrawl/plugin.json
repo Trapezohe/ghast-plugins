@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "firecrawl",
   "version": "1.0.0-ghast.1",
-  "description": "Extract structured web content, map websites and support research, data collection and SEO audits with Firecrawl. 使用 Firecrawl 提取结构化网页内容、梳理站点，支持调研、数据采集和 SEO 审核。",
+  "description": "Extract structured web content, map websites and support research, data collection and SEO audits with Firecrawl.",
   "author": {
     "name": "Ghast AI",
     "url": "https://ghast.trapezohe.ai"

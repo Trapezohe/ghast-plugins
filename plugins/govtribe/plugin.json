@@ -20,6 +20,10 @@
             "Authorization": "Bearer $VAULT:govtribe-mcp-api-key"
           }
         }
+      },
+      "descriptions": {
+        "en": "Research public-sector opportunities, awards, vendors, agencies, forecasts, pricing, files, news, and authorized workspace records through GovTribe's official hosted MCP.",
+        "zh-CN": "研究政府采购机会、合同、供应商、机构与获授权的工作区资料。"
       }
     }
   }

@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "upstreamRevision": "domotz-product-003fdd383c02+setup-323607fa9c60+oauth-95014110a362+auth-711fd29f57aa",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Discover, monitor, configure, and remediate Domotz-managed networks through Domotz's official hosted MCP.",
+        "zh-CN": "发现、监控和配置网络设备，处理已授权的网络故障。"
+      }
     }
   }
 }

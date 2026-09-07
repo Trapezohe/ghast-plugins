@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "communication",
       "upstreamRevision": "granola-docs-b091dacafcec+oauth-ffbe7699c7ae+auth-710cc56359dd",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Search and analyze Granola meeting notes, transcripts, attendees, folders, decisions, and action items through Granola's official hosted MCP server.",
+        "zh-CN": "检索会议笔记、转录、参会人、决策与行动项。"
+      }
     }
   }
 }

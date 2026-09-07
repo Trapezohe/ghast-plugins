@@ -14,7 +14,11 @@
       "category": "data",
       "upstreamRevision": "policynote-openapi-4d5c3f24a751+tools-0e493cadeb9c+resource-623cd1868d2a+oauth-b4a930c792dc+terms-f2c8c8b7bafb",
       "portStatus": "full",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Research global legislation, regulation, officials, elections, transcripts, and policy activity through PolicyNote.",
+        "zh-CN": "研究立法、监管、官员、选举、会议记录与政策动态。"
+      }
     }
   }
 }

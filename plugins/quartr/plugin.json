@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "finance",
       "upstreamRevision": "quartr-docs-b37a9c381ded+oauth-a379a77612f2",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Research public companies with first-party earnings calls, transcripts, filings, reports, slides, events, summaries, and financial statements through Quartr's official MCP server.",
+        "zh-CN": "通过一手电话会议、转录、公告、报告与演示文稿研究上市公司。"
+      }
     }
   }
 }

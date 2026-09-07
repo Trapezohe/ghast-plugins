@@ -15,7 +15,11 @@
       "category": "development",
       "upstreamRevision": "71364156c14b27466f3d646c8924318154e2321a",
       "upstreamPath": ".",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Investigate Datadog logs, metrics, traces, monitors, incidents, dashboards, services, and widgets through Datadog's official hosted MCP server and Datadog-derived setup workflows.",
+        "zh-CN": "调查日志、指标、链路追踪、告警、事件与服务运行情况。"
+      }
     }
   }
 }

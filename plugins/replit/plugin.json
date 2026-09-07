@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "developer-tools",
       "upstreamRevision": "replit-docs-8391016162ec+oauth-41b41e6b0d6d+native-6c682a9cf3ef",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Create, find, inspect, update, and publish Replit Apps through Replit's official hosted MCP server and Agent.",
+        "zh-CN": "创建、查找、修改和发布 Replit 应用。"
+      }
     }
   }
 }

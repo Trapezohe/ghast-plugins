@@ -24,6 +24,10 @@
             "cld-secret": "$VAULT:cloudinary-api-secret"
           }
         }
+      },
+      "descriptions": {
+        "en": "Upload, search, transform, analyze, organize, and automate Cloudinary media through five official hosted MCP servers.",
+        "zh-CN": "上传、检索、转换和整理图片与视频素材，自动化媒体处理。"
       }
     }
   }

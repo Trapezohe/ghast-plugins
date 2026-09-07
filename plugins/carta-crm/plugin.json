@@ -15,7 +15,11 @@
       "category": "productivity",
       "upstreamRevision": "daef48d9c7d110a1b3ea55d2b9bad3d19d079d75",
       "upstreamPath": "plugins/carta-crm",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Manage investors, companies, contacts, deals, notes, fundraisings, tasks, themes, reports, campaigns, files, and relationship context through Carta's official CRM skills and hosted MCP server.",
+        "zh-CN": "管理投资者、企业、联系人、交易、融资、任务与关系资料。"
+      }
     }
   }
 }

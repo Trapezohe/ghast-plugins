@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "honeycomb",
   "version": "1.0.0-ghast.1",
-  "description": "Explore traces, latency and service health with Honeycomb. 分析 Honeycomb 链路追踪、请求延迟与服务健康状况。",
+  "description": "Explore traces, latency and service health with Honeycomb.",
   "author": {
     "name": "Ghast AI",
     "url": "https://ghast.trapezohe.ai"

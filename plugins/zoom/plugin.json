@@ -15,7 +15,11 @@
       "category": "development",
       "upstreamRevision": "1858eadc17d9bd0d1279ce7f66304362a774e3b4",
       "upstreamPath": ".",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Build Zoom integrations and access meeting search, transcripts, recordings, assets, Team Chat, Canvas, Tasks, Whiteboard, and Revenue Accelerator through Zoom's official skills and MCP servers.",
+        "zh-CN": "检索会议、转录和录制资料，连接团队聊天、任务、画布与白板工作流。"
+      }
     }
   }
 }

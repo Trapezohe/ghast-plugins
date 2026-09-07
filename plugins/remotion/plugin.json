@@ -16,7 +16,11 @@
       "category": "creativity",
       "upstreamRevision": "05075f384a0a28e193876c1fd43ab9fba5ef10f9",
       "upstreamPath": "packages/codex-plugin",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Remotion video creation skills — best practices, animations, audio, captions, 3D, and more for building programmatic videos with React.",
+        "zh-CN": "使用 React 制作视频，处理动画、音频、字幕与三维效果。"
+      }
     }
   }
 }

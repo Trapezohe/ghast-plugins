@@ -15,7 +15,11 @@
       "category": "finance",
       "upstreamRevision": "mcp-248bd4b02bb4+sdk-36c67dfb8ff2+oauth-446c80d9c183+auth-b8e63e5e699e",
       "portStatus": "full",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Research financial data, analytics, and licensed broker research through FactSet's official MCP and APIs.",
+        "zh-CN": "查询金融数据、分析结果与获授权的券商研究资料。"
+      }
     }
   }
 }

@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "web",
       "upstreamRevision": "semrush-docs-e34fd6ac1924+oauth-5d0b459a41d7",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Retrieve read-only Semrush SEO, keyword, backlink, traffic, audience, market, paid search, shopping, site audit, position tracking, and project data through Semrush's official MCP server.",
+        "zh-CN": "查询 SEO、关键词、外链、流量、市场、广告与站点审计数据。"
+      }
     }
   }
 }

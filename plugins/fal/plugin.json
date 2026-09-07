@@ -20,6 +20,10 @@
             "Authorization": "Bearer $VAULT:fal-api-key"
           }
         }
+      },
+      "descriptions": {
+        "en": "Discover, price, run, upload for, monitor, and cancel image, video, audio, 3D, training, editing, and other generative-media workflows through fal's official hosted MCP server.",
+        "zh-CN": "发现和运行图像、视频、音频与三维生成模型，查询费用和任务进度。"
       }
     }
   }

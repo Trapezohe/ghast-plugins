@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "dexpaprika",
+  "version": "1.0.0-ghast.1",
+  "description": "Analyze DEX liquidity pools, token prices and historical on-chain market data.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/coinpaprika/dexpaprika-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/coinpaprika/dexpaprika-mcp",
+      "connectorPublisher": "DexPaprika",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "DexPaprika",
+      "descriptions": {
+        "en": "Analyze DEX liquidity pools, token prices and historical on-chain market data.",
+        "zh-CN": "分析 DEX 流动性池、代币价格与历史链上行情。"
+      }
+    }
+  }
+}

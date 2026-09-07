@@ -15,7 +15,11 @@
       "category": "finance",
       "upstreamRevision": "bad904b02f7071592c38bcca83d33667ff015bb1",
       "upstreamPath": "providers/agent-plugins/plugin",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Build and operate Stripe payments, subscriptions, invoices, Connect platforms, apps, and API integrations with all eight official Stripe skills and Stripe's hosted OAuth MCP server.",
+        "zh-CN": "开发和管理支付、订阅、账单、平台业务与 Stripe API 集成。"
+      }
     }
   }
 }

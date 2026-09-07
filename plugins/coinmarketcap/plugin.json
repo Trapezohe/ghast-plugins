@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "coinmarketcap",
+  "version": "1.0.0-ghast.1",
+  "description": "Research cryptocurrency prices, rankings, market metrics and news.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://coinmarketcap.com/api/mcp/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://coinmarketcap.com/api/mcp/",
+      "connectorPublisher": "CoinMarketCap",
+      "category": "finance",
+      "icon": "./assets/icon.svg",
+      "displayName": "CoinMarketCap",
+      "descriptions": {
+        "en": "Research cryptocurrency prices, rankings, market metrics and news.",
+        "zh-CN": "研究加密货币价格、排名、市场指标与新闻。"
+      },
+      "mcpServerExtensions": {
+        "coinmarketcap": {
+          "credentialHeaders": {
+            "X-CMC-MCP-API-KEY": "$VAULT:coinmarketcap-token"
+          }
+        }
+      }
+    }
+  }
+}

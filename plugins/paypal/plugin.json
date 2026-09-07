@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "paypal",
   "version": "1.0.0-ghast.1",
-  "description": "Review PayPal transactions and invoices and assist with authorized payment workflows. 查询 PayPal 交易和发票，并协助完成用户明确授权的支付业务流程。",
+  "description": "Review PayPal transactions and invoices and assist with authorized payment workflows.",
   "author": {
     "name": "Ghast AI",
     "url": "https://ghast.trapezohe.ai"

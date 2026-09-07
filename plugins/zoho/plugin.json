@@ -15,7 +15,11 @@
       "category": "productivity",
       "upstreamRevision": "sdk-7dbcafa4f794+docs-c1e19ceac01d+oauth-10de99e7-f719809e-2d55b0d9-52d561f5",
       "icon": "./assets/icon.svg",
-      "portStatus": "equivalent-hybrid-official-mcp-sdk"
+      "portStatus": "equivalent-hybrid-official-mcp-sdk",
+      "descriptions": {
+        "en": "Query, manage, customize, and automate Zoho CRM through Zoho's official hosted MCP and read org/user access through Zoho's official SDK.",
+        "zh-CN": "查询和管理 Zoho CRM，配置业务流程并读取授权的组织与用户资料。"
+      }
     }
   }
 }

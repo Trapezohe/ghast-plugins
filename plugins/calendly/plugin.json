@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "upstreamRevision": "calendly-docs-9cc165e39526+tools-62c1741ac3df+oauth-379eb5537223+auth-512f41277070",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Inspect Calendly meetings and availability, manage event types and schedules, create booking links, book or cancel meetings, and administer invitations through Calendly's official hosted MCP server.",
+        "zh-CN": "查询会议与可用时间，管理活动类型、预约链接和日程安排。"
+      }
     }
   }
 }

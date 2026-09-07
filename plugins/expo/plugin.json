@@ -16,7 +16,11 @@
       "category": "development",
       "upstreamRevision": "472d040092900dc8bbf84dc7efb0c90abff77a0d",
       "upstreamPath": "plugins/expo",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Official Expo skills for building, deploying, upgrading, and debugging Expo and React Native apps.",
+        "zh-CN": "开发、部署、升级与调试 Expo 和 React Native 应用。"
+      }
     }
   }
 }

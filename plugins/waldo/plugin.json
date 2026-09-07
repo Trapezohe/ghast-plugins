@@ -14,7 +14,11 @@
       "category": "productivity",
       "upstreamRevision": "waldo-docs-2467b590ff1b+developers-d93fe7dd2d4b+terms-685dde629e34+resource-d15bb784b8af+oauth-503cc02e147f+boundary-4ad7751110ef",
       "portStatus": "full",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Research brands, ads, audiences, trends, and workspaces through Waldo's official curated strategy MCP.",
+        "zh-CN": "研究品牌、广告、受众与趋势，整理策略工作区。"
+      }
     }
   }
 }

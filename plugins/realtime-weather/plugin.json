@@ -10,7 +10,11 @@
   "extensions": {
     "ai.trapezohe.ghast": {
       "category": "information",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Skill that pulls current weather and a 24h forecast for any place name via Open-Meteo — no API key, no signup.",
+        "zh-CN": "查询地点当前天气与未来 24 小时预报，无需 API Key。"
+      }
     }
   }
 }

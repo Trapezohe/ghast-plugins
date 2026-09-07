@@ -16,7 +16,11 @@
       "category": "research",
       "upstreamRevision": "70e480ebb14baecfc4456b49eb8b724611470b7c",
       "upstreamPath": "plugins/boltz-api-cli",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Predict structures, screen molecules and proteins, and design binders.",
+        "zh-CN": "预测分子结构、筛选分子与蛋白质，并设计结合蛋白。"
+      }
     }
   }
 }

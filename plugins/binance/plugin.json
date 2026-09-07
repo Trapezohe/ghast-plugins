@@ -21,7 +21,11 @@
         "onchain-pay",
         "p2p"
       ],
-      "portStatus": "licensed-subset"
+      "portStatus": "licensed-subset",
+      "descriptions": {
+        "en": "Comprehensive Binance workflows for public market data, Spot, Futures, Options, Convert, Margin, Earn, Loans, Wallet, Fiat, P2P, and Onchain Pay.",
+        "zh-CN": "查询币安行情，支持现货、合约、期权、钱包及其他已授权业务流程。"
+      }
     }
   }
 }

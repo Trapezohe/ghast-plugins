@@ -15,7 +15,11 @@
       "category": "development",
       "upstreamRevision": "8331f910845103c08d51f6ca1d86ebb7d1f745e3",
       "upstreamPath": ".",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Develop and operate Supabase projects with the complete current official Supabase and Postgres best-practice skills plus Supabase's hosted OAuth MCP server.",
+        "zh-CN": "开发和管理 Supabase 项目，使用官方 Postgres 与数据库实践指南。"
+      }
     }
   }
 }

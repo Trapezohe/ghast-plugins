@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "alchemy",
+  "version": "1.0.0-ghast.1",
+  "description": "Query blockchain data, inspect transfers and simulate transactions with Alchemy.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.alchemy.com/docs/alchemy-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.alchemy.com/docs/alchemy-mcp-server",
+      "connectorPublisher": "Alchemy",
+      "category": "finance",
+      "icon": "./assets/icon.svg",
+      "displayName": "Alchemy",
+      "descriptions": {
+        "en": "Query blockchain data, inspect transfers and simulate transactions with Alchemy.",
+        "zh-CN": "查询多链数据、分析资产转移并模拟交易。"
+      }
+    }
+  }
+}

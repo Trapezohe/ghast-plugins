@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "web",
       "upstreamRevision": "conductor-chatgpt-8f616240df58+data-159f29e8eeae+faq-0932a35ad457",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Analyze AI and traditional search visibility, citations, sentiment, rankings, competitors, and tracked configuration through Conductor's official read-only MCP server.",
+        "zh-CN": "分析传统搜索与 AI 搜索中的可见性、引用、排名和竞争表现。"
+      }
     }
   }
 }

@@ -15,7 +15,11 @@
       "category": "development",
       "upstreamRevision": "7149a886d50da8db72cdc1f20ff01cefeadfe6a9",
       "upstreamPath": "plugins/nvidia-skills",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Complete pinned catalog of official NVIDIA skills for GPU acceleration, CUDA, AI, data, training, inference, robotics, Physical AI, Omniverse, simulation, networking, and more.",
+        "zh-CN": "使用 NVIDIA 官方技能开展 GPU、CUDA、AI、机器人、仿真与推理开发。"
+      }
     }
   }
 }

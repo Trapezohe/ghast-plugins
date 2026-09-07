@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "upstreamRevision": "actively-mcp-3c7c7f1750ee+api-e090dc2a687e+oauth-908b8114e7a6+auth-11a7486ac6ab",
-      "icon": "./assets/icon.svg"
+      "icon": "./assets/icon.svg",
+      "descriptions": {
+        "en": "Research and prioritize accounts using Actively's persistent Per-Account Agent intelligence, buying signals, prospect context, strategy, and next-best actions.",
+        "zh-CN": "分析客户账户、购买信号与潜在商机，制定销售优先级和后续行动。"
+      }
     }
   }
 }

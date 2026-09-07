@@ -13,7 +13,11 @@
     "ai.trapezohe.ghast": {
       "category": "finance",
       "upstreamRevision": "brex-docs-0d1f82f38bb5+oauth-06b076acaeca+auth-6cf20c287281",
-      "icon": "./assets/icon.png"
+      "icon": "./assets/icon.png",
+      "descriptions": {
+        "en": "Analyze Brex expenses, cards, limits, banking, bills, accounting, travel, and organization data, or safely update supported expense details through Brex's official hosted MCP server.",
+        "zh-CN": "分析费用、卡片、额度、账单与财务数据，更新已授权的费用信息。"
+      }
     }
   }
 }
