@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "beehiiv",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage newsletter drafts, audiences, segments and growth analytics through beehiiv’s official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://beehiivhelp.zendesk.com/hc/en-us/articles/39255979546263-Getting-started-with-the-beehiiv-MCP",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://beehiivhelp.zendesk.com/hc/en-us/articles/39255979546263-Getting-started-with-the-beehiiv-MCP",
+      "connectorPublisher": "beehiiv",
+      "category": "marketing",
+      "icon": "./assets/icon.png",
+      "displayName": "beehiiv",
+      "descriptions": {
+        "en": "Manage newsletter drafts, audiences, segments and growth analytics through beehiiv’s official MCP.",
+        "zh-CN": "通过 beehiiv 官方 MCP 管理通讯草稿、订阅受众、分群与增长分析。"
+      }
+    }
+  }
+}

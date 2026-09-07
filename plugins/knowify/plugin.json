@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "knowify",
+  "version": "1.0.0-ghast.1",
+  "description": "Analyze construction jobs, profitability and invoicing with Knowify’s official read-only AI connector.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://knowify.zendesk.com/hc/en-us/articles/49623682048660-Getting-started-with-the-Knowify-AI-Connector",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://knowify.zendesk.com/hc/en-us/articles/49623682048660-Getting-started-with-the-Knowify-AI-Connector",
+      "connectorPublisher": "Knowify",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Knowify",
+      "descriptions": {
+        "en": "Analyze construction jobs, profitability and invoicing with Knowify’s official read-only AI connector.",
+        "zh-CN": "通过 Knowify 官方只读 AI 连接器分析施工项目、利润与开票数据。"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "linearb",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore engineering delivery metrics, repository activity and AI adoption with LinearB’s official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://linearb.zendesk.com/hc/en-us/articles/45552138846491-2026-Release-Notes",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://linearb.zendesk.com/hc/en-us/articles/45552138846491-2026-Release-Notes",
+      "connectorPublisher": "LinearB",
+      "category": "developer-tools",
+      "icon": "./assets/icon.png",
+      "displayName": "LinearB",
+      "descriptions": {
+        "en": "Explore engineering delivery metrics, repository activity and AI adoption with LinearB’s official MCP.",
+        "zh-CN": "通过 LinearB 官方 MCP 分析研发交付指标、仓库活动与 AI 采用情况。"
+      }
+    }
+  }
+}

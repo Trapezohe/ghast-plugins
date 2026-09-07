@@ -1026,6 +1026,44 @@
       "category": "data"
     },
     {
+      "id": "beehiiv",
+      "name": "beehiiv",
+      "description": "Manage newsletter drafts, audiences, segments and growth analytics through beehiiv’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "beehiiv",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage newsletter drafts, audiences, segments and growth analytics through beehiiv’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://beehiivhelp.zendesk.com/hc/en-us/articles/39255979546263-Getting-started-with-the-beehiiv-MCP",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://beehiivhelp.zendesk.com/hc/en-us/articles/39255979546263-Getting-started-with-the-beehiiv-MCP",
+            "connectorPublisher": "beehiiv",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "beehiiv",
+            "descriptions": {
+              "en": "Manage newsletter drafts, audiences, segments and growth analytics through beehiiv’s official MCP.",
+              "zh-CN": "通过 beehiiv 官方 MCP 管理通讯草稿、订阅受众、分群与增长分析。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/beehiiv.zip",
+        "sha256": "6f954a99149ae7f805f9ffaa1770644e5476d96ce868b593ca86015db73cb53a"
+      },
+      "icon": "./plugins/beehiiv/assets/icon.png",
+      "homepage": "https://beehiivhelp.zendesk.com/hc/en-us/articles/39255979546263-Getting-started-with-the-beehiiv-MCP",
+      "license": "MIT",
+      "category": "marketing"
+    },
+    {
       "id": "better-stack",
       "name": "Better Stack",
       "description": "Investigate uptime incidents and query logs, traces and telemetry in Better Stack.",
@@ -6867,6 +6905,44 @@
       "category": "communication"
     },
     {
+      "id": "knowify",
+      "name": "Knowify",
+      "description": "Analyze construction jobs, profitability and invoicing with Knowify’s official read-only AI connector.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "knowify",
+        "version": "1.0.0-ghast.1",
+        "description": "Analyze construction jobs, profitability and invoicing with Knowify’s official read-only AI connector.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://knowify.zendesk.com/hc/en-us/articles/49623682048660-Getting-started-with-the-Knowify-AI-Connector",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://knowify.zendesk.com/hc/en-us/articles/49623682048660-Getting-started-with-the-Knowify-AI-Connector",
+            "connectorPublisher": "Knowify",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Knowify",
+            "descriptions": {
+              "en": "Analyze construction jobs, profitability and invoicing with Knowify’s official read-only AI connector.",
+              "zh-CN": "通过 Knowify 官方只读 AI 连接器分析施工项目、利润与开票数据。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/knowify.zip",
+        "sha256": "f0d13aa1b1f548688454a4090f09179634a982a7217017180c3a88440fe12122"
+      },
+      "icon": "./plugins/knowify/assets/icon.png",
+      "homepage": "https://knowify.zendesk.com/hc/en-us/articles/49623682048660-Getting-started-with-the-Knowify-AI-Connector",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "kraken",
       "name": "Kraken",
       "description": "Query public Kraken prices, order books, trades and market information through the official CLI MCP server.",
@@ -6978,6 +7054,44 @@
       "repository": "https://github.com/openai/plugins",
       "license": "Apache-2.0",
       "category": "productivity"
+    },
+    {
+      "id": "linearb",
+      "name": "LinearB",
+      "description": "Explore engineering delivery metrics, repository activity and AI adoption with LinearB’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "linearb",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore engineering delivery metrics, repository activity and AI adoption with LinearB’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://linearb.zendesk.com/hc/en-us/articles/45552138846491-2026-Release-Notes",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://linearb.zendesk.com/hc/en-us/articles/45552138846491-2026-Release-Notes",
+            "connectorPublisher": "LinearB",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "LinearB",
+            "descriptions": {
+              "en": "Explore engineering delivery metrics, repository activity and AI adoption with LinearB’s official MCP.",
+              "zh-CN": "通过 LinearB 官方 MCP 分析研发交付指标、仓库活动与 AI 采用情况。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/linearb.zip",
+        "sha256": "d254864d7ce96fd9e28412ee1258d91a6d03f691076329863b72d3f99abb6ed2"
+      },
+      "icon": "./plugins/linearb/assets/icon.png",
+      "homepage": "https://linearb.zendesk.com/hc/en-us/articles/45552138846491-2026-Release-Notes",
+      "license": "MIT",
+      "category": "developer-tools"
     },
     {
       "id": "logrocket",
