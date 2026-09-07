@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "bugsnag",
+  "version": "1.0.0-ghast.1",
+  "description": "Investigate application errors, performance traces and releases with BugSnag.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.smartbear.com/smartbear-mcp/docs/remote-bugsnag",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developer.smartbear.com/smartbear-mcp/docs/remote-bugsnag",
+      "connectorPublisher": "BugSnag",
+      "category": "developer-tools",
+      "icon": "./assets/icon.png",
+      "displayName": "BugSnag",
+      "descriptions": {
+        "en": "Investigate application errors, performance traces and releases with BugSnag.",
+        "zh-CN": "通过 BugSnag 调查应用错误、性能追踪与发布版本。"
+      }
+    }
+  }
+}

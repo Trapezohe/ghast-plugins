@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "rollbar",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect production errors, occurrences, deployments and session replays in Rollbar.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.rollbar.com/docs/mcp-server-setup",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.rollbar.com/docs/mcp-server-setup",
+      "connectorPublisher": "Rollbar",
+      "category": "developer-tools",
+      "icon": "./assets/icon.png",
+      "displayName": "Rollbar",
+      "descriptions": {
+        "en": "Inspect production errors, occurrences, deployments and session replays in Rollbar.",
+        "zh-CN": "在 Rollbar 中查看生产错误、发生记录、部署与会话回放。"
+      },
+      "mcpServerExtensions": {
+        "rollbar": {
+          "credentialEnv": {
+            "ROLLBAR_ACCOUNT_ACCESS_TOKEN": "$VAULT:rollbar-account-token"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "logrocket",
+  "version": "1.0.0-ghast.1",
+  "description": "Analyze user sessions, product metrics and application issues with LogRocket.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.logrocket.com/docs/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.logrocket.com/docs/mcp",
+      "connectorPublisher": "LogRocket",
+      "category": "data",
+      "icon": "./assets/icon.svg",
+      "displayName": "LogRocket",
+      "descriptions": {
+        "en": "Analyze user sessions, product metrics and application issues with LogRocket.",
+        "zh-CN": "通过 LogRocket 分析用户会话、产品指标与应用问题。"
+      }
+    }
+  }
+}

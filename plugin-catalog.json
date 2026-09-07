@@ -1744,6 +1744,44 @@
       "category": "business"
     },
     {
+      "id": "bugsnag",
+      "name": "BugSnag",
+      "description": "Investigate application errors, performance traces and releases with BugSnag.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "bugsnag",
+        "version": "1.0.0-ghast.1",
+        "description": "Investigate application errors, performance traces and releases with BugSnag.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.smartbear.com/smartbear-mcp/docs/remote-bugsnag",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.smartbear.com/smartbear-mcp/docs/remote-bugsnag",
+            "connectorPublisher": "BugSnag",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "BugSnag",
+            "descriptions": {
+              "en": "Investigate application errors, performance traces and releases with BugSnag.",
+              "zh-CN": "通过 BugSnag 调查应用错误、性能追踪与发布版本。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/bugsnag.zip",
+        "sha256": "83235cb8745b0c5571e66580b6c4ca8f8b4a2e36f39dae54e655bb60e9be0e67"
+      },
+      "icon": "./plugins/bugsnag/assets/icon.png",
+      "homepage": "https://developer.smartbear.com/smartbear-mcp/docs/remote-bugsnag",
+      "license": "MIT",
+      "category": "developer-tools"
+    },
+    {
       "id": "buildkite",
       "name": "Buildkite",
       "description": "Inspect pipelines, builds, jobs and test results and manage CI workflows in Buildkite.",
@@ -6746,6 +6784,44 @@
       "category": "communication"
     },
     {
+      "id": "launchdarkly",
+      "name": "LaunchDarkly",
+      "description": "Manage feature flags, AgentControl configurations and observability data in LaunchDarkly.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "launchdarkly",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage feature flags, AgentControl configurations and observability data in LaunchDarkly.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://launchdarkly.com/docs/home/getting-started/mcp-hosted",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://launchdarkly.com/docs/home/getting-started/mcp-hosted",
+            "connectorPublisher": "LaunchDarkly",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "LaunchDarkly",
+            "descriptions": {
+              "en": "Manage feature flags, AgentControl configurations and observability data in LaunchDarkly.",
+              "zh-CN": "在 LaunchDarkly 中管理功能开关、AgentControl 配置与可观测数据。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/launchdarkly.zip",
+        "sha256": "dcc96a4acbe6c08f590d866626a21c078f465c0240cf2e59db63135f9b4b772e"
+      },
+      "icon": "./plugins/launchdarkly/assets/icon.png",
+      "homepage": "https://launchdarkly.com/docs/home/getting-started/mcp-hosted",
+      "license": "MIT",
+      "category": "developer-tools"
+    },
+    {
       "id": "linear",
       "name": "linear",
       "description": "Manage Linear issues, projects, and team workflows through Linear's official MCP server.",
@@ -6781,6 +6857,44 @@
       "repository": "https://github.com/openai/plugins",
       "license": "Apache-2.0",
       "category": "productivity"
+    },
+    {
+      "id": "logrocket",
+      "name": "LogRocket",
+      "description": "Analyze user sessions, product metrics and application issues with LogRocket.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "logrocket",
+        "version": "1.0.0-ghast.1",
+        "description": "Analyze user sessions, product metrics and application issues with LogRocket.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.logrocket.com/docs/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.logrocket.com/docs/mcp",
+            "connectorPublisher": "LogRocket",
+            "category": "data",
+            "icon": "./assets/icon.svg",
+            "displayName": "LogRocket",
+            "descriptions": {
+              "en": "Analyze user sessions, product metrics and application issues with LogRocket.",
+              "zh-CN": "通过 LogRocket 分析用户会话、产品指标与应用问题。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/logrocket.zip",
+        "sha256": "49abba9c7e048272b47c3a4ecd4a23e47021e6f98c2def7cdb0ec9c4924e0493"
+      },
+      "icon": "./plugins/logrocket/assets/icon.svg",
+      "homepage": "https://docs.logrocket.com/docs/mcp",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "lokalise",
@@ -9332,6 +9446,51 @@
       "homepage": "https://developer.responsive.io/docs/responsive-api/86b14fe0ae541-overview",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "rollbar",
+      "name": "Rollbar",
+      "description": "Inspect production errors, occurrences, deployments and session replays in Rollbar.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "rollbar",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect production errors, occurrences, deployments and session replays in Rollbar.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.rollbar.com/docs/mcp-server-setup",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.rollbar.com/docs/mcp-server-setup",
+            "connectorPublisher": "Rollbar",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "Rollbar",
+            "descriptions": {
+              "en": "Inspect production errors, occurrences, deployments and session replays in Rollbar.",
+              "zh-CN": "在 Rollbar 中查看生产错误、发生记录、部署与会话回放。"
+            },
+            "mcpServerExtensions": {
+              "rollbar": {
+                "credentialEnv": {
+                  "ROLLBAR_ACCOUNT_ACCESS_TOKEN": "$VAULT:rollbar-account-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/rollbar.zip",
+        "sha256": "542ebcbce12e27aff6a9bd9f982abdba9ca0853b3a2b730a5d006eeb2129ae9b"
+      },
+      "icon": "./plugins/rollbar/assets/icon.png",
+      "homepage": "https://docs.rollbar.com/docs/mcp-server-setup",
+      "license": "MIT",
+      "category": "developer-tools"
     },
     {
       "id": "rudderstack",
