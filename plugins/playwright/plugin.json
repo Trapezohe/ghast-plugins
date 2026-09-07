@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "playwright",
+  "version": "1.0.0-ghast.1",
+  "description": "Automate browser workflows and verify web interfaces using Microsoft’s official Playwright MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/microsoft/playwright-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/microsoft/playwright-mcp",
+      "connectorPublisher": "Microsoft",
+      "category": "developer-tools",
+      "icon": "./assets/icon.svg",
+      "displayName": "Playwright",
+      "descriptions": {
+        "en": "Automate browser workflows and verify web interfaces using Microsoft’s official Playwright MCP.",
+        "zh-CN": "通过 Microsoft 官方 Playwright MCP 自动化浏览器流程并验证网页界面。"
+      }
+    }
+  }
+}

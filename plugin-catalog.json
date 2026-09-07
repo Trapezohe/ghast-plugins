@@ -2373,6 +2373,44 @@
       "category": "databases"
     },
     {
+      "id": "chrome-devtools",
+      "name": "Chrome DevTools",
+      "description": "Inspect browser pages, debug network and console issues, and analyze performance with Google’s official Chrome DevTools MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "chrome-devtools",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect browser pages, debug network and console issues, and analyze performance with Google’s official Chrome DevTools MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+            "connectorPublisher": "Google",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "Chrome DevTools",
+            "descriptions": {
+              "en": "Inspect browser pages, debug network and console issues, and analyze performance with Google’s official Chrome DevTools MCP.",
+              "zh-CN": "通过 Google 官方 Chrome DevTools MCP 检查网页、排查网络与控制台问题，并分析页面性能。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/chrome-devtools.zip",
+        "sha256": "bcf6e2beb6fd9f020267a7029f460110a2299787f9643888f63ea0c9c242894e"
+      },
+      "icon": "./plugins/chrome-devtools/assets/icon.png",
+      "homepage": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "license": "MIT",
+      "category": "developer-tools"
+    },
+    {
       "id": "chronograph-gp",
       "name": "chronograph-gp",
       "description": "Analyze private-capital GP portfolios, operating performance, valuations, fund reviews, company reports, and TVPI attribution through Chronograph's official skills and hosted OAuth MCP.",
@@ -9201,6 +9239,44 @@
       "homepage": "https://planetscale.com/docs/mcp-server",
       "license": "MIT",
       "category": "data"
+    },
+    {
+      "id": "playwright",
+      "name": "Playwright",
+      "description": "Automate browser workflows and verify web interfaces using Microsoft’s official Playwright MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "playwright",
+        "version": "1.0.0-ghast.1",
+        "description": "Automate browser workflows and verify web interfaces using Microsoft’s official Playwright MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/microsoft/playwright-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/microsoft/playwright-mcp",
+            "connectorPublisher": "Microsoft",
+            "category": "developer-tools",
+            "icon": "./assets/icon.svg",
+            "displayName": "Playwright",
+            "descriptions": {
+              "en": "Automate browser workflows and verify web interfaces using Microsoft’s official Playwright MCP.",
+              "zh-CN": "通过 Microsoft 官方 Playwright MCP 自动化浏览器流程并验证网页界面。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/playwright.zip",
+        "sha256": "1ceb10ea3fa1d7667c3cbdba70287fd6ebf142c5d81b72f27a7dafcbcf1ce1cf"
+      },
+      "icon": "./plugins/playwright/assets/icon.svg",
+      "homepage": "https://github.com/microsoft/playwright-mcp",
+      "license": "MIT",
+      "category": "developer-tools"
     },
     {
       "id": "policynote",

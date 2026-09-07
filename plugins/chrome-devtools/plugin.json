@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "chrome-devtools",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect browser pages, debug network and console issues, and analyze performance with Google’s official Chrome DevTools MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "connectorPublisher": "Google",
+      "category": "developer-tools",
+      "icon": "./assets/icon.png",
+      "displayName": "Chrome DevTools",
+      "descriptions": {
+        "en": "Inspect browser pages, debug network and console issues, and analyze performance with Google’s official Chrome DevTools MCP.",
+        "zh-CN": "通过 Google 官方 Chrome DevTools MCP 检查网页、排查网络与控制台问题，并分析页面性能。"
+      }
+    }
+  }
+}
