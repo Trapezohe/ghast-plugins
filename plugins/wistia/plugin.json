@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "wistia",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage video libraries, update media and review video performance in Wistia.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.wistia.com/docs/mcp-server-guide",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.wistia.com/docs/mcp-server-guide",
+      "connectorPublisher": "Wistia",
+      "category": "marketing",
+      "icon": "./assets/icon.png",
+      "displayName": "Wistia",
+      "descriptions": {
+        "en": "Manage video libraries, update media and review video performance in Wistia.",
+        "zh-CN": "管理 Wistia 视频库、更新媒体内容并查看视频表现数据。"
+      }
+    }
+  }
+}

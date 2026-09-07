@@ -9318,6 +9318,44 @@
       "category": "research"
     },
     {
+      "id": "tella",
+      "name": "Tella",
+      "description": "Find videos, edit clips, organize playlists and export finished videos with Tella.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "tella",
+        "version": "1.0.0-ghast.1",
+        "description": "Find videos, edit clips, organize playlists and export finished videos with Tella.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.tella.com/docs/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.tella.com/docs/mcp-server",
+            "connectorPublisher": "Tella",
+            "category": "design",
+            "icon": "./assets/icon.svg",
+            "displayName": "Tella",
+            "descriptions": {
+              "en": "Find videos, edit clips, organize playlists and export finished videos with Tella.",
+              "zh-CN": "使用 Tella 搜索视频、编辑片段、整理播放列表并导出成片。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/tella.zip",
+        "sha256": "fbfe540b8ab16aef6b3d4cd247c7c7b9b5e93bb64ca0af89bf407f85d101f43a"
+      },
+      "icon": "./plugins/tella/assets/icon.svg",
+      "homepage": "https://www.tella.com/docs/mcp-server",
+      "license": "MIT",
+      "category": "design"
+    },
+    {
       "id": "temporal",
       "name": "temporal",
       "description": "Comprehensive skill for the entire Temporal lifecycle — developing applications, using the Temporal CLI, running and managing Temporal Server, and working with Temporal Cloud.",
@@ -9892,6 +9930,44 @@
       "repository": "https://github.com/windsor-ai/windsor_mcp",
       "license": "MIT",
       "category": "data"
+    },
+    {
+      "id": "wistia",
+      "name": "Wistia",
+      "description": "Manage video libraries, update media and review video performance in Wistia.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "wistia",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage video libraries, update media and review video performance in Wistia.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.wistia.com/docs/mcp-server-guide",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.wistia.com/docs/mcp-server-guide",
+            "connectorPublisher": "Wistia",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "Wistia",
+            "descriptions": {
+              "en": "Manage video libraries, update media and review video performance in Wistia.",
+              "zh-CN": "管理 Wistia 视频库、更新媒体内容并查看视频表现数据。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/wistia.zip",
+        "sha256": "827bbe0172adfbcb96113157b5b4d45da5d11ab6a9121b491e6b7010f62cb41f"
+      },
+      "icon": "./plugins/wistia/assets/icon.png",
+      "homepage": "https://docs.wistia.com/docs/mcp-server-guide",
+      "license": "MIT",
+      "category": "marketing"
     },
     {
       "id": "wix",
