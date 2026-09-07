@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "tigerdata-pg-aiguide",
+  "version": "1.0.0-ghast.1",
+  "description": "Search version-specific PostgreSQL, TimescaleDB and PostGIS documentation and implementation guidance.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/timescale/pg-aiguide",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/timescale/pg-aiguide",
+      "connectorPublisher": "Tiger Data pg-aiguide",
+      "category": "developer-tools",
+      "icon": "./assets/icon.png",
+      "displayName": "Tiger Data pg-aiguide",
+      "descriptions": {
+        "en": "Search version-specific PostgreSQL, TimescaleDB and PostGIS documentation and implementation guidance.",
+        "zh-CN": "按版本搜索 PostgreSQL、TimescaleDB 与 PostGIS 文档和实现指南。"
+      }
+    }
+  }
+}

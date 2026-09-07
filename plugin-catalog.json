@@ -274,6 +274,44 @@
       "category": "productivity"
     },
     {
+      "id": "aiven",
+      "name": "Aiven",
+      "description": "Manage Aiven data services, including PostgreSQL and Kafka, and inspect metrics, logs and configuration.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "aiven",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage Aiven data services, including PostgreSQL and Kafka, and inspect metrics, logs and configuration.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://aiven.io/docs/tools/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://aiven.io/docs/tools/mcp-server",
+            "connectorPublisher": "Aiven",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Aiven",
+            "descriptions": {
+              "en": "Manage Aiven data services, including PostgreSQL and Kafka, and inspect metrics, logs and configuration.",
+              "zh-CN": "管理 Aiven 数据服务，包括 PostgreSQL 与 Kafka，并查看指标、日志和配置。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/aiven.zip",
+        "sha256": "5d365752fe46afb25760140ad41d1f8064aa740af85b136f6030c978767a995c"
+      },
+      "icon": "./plugins/aiven/assets/icon.png",
+      "homepage": "https://aiven.io/docs/tools/mcp-server",
+      "license": "MIT",
+      "category": "data"
+    },
+    {
       "id": "alation",
       "name": "alation",
       "description": "Search and browse trusted Alation catalog context, query data products, inspect BI lineage, configure agents and tools, automate workflows, and curate governed metadata through Alation's official Codex skills and CLI.",
@@ -9836,6 +9874,44 @@
       "homepage": "https://developers.thoughtspot.com/docs/mcp-integration",
       "license": "MIT",
       "category": "data-analytics"
+    },
+    {
+      "id": "tigerdata-pg-aiguide",
+      "name": "Tiger Data pg-aiguide",
+      "description": "Search version-specific PostgreSQL, TimescaleDB and PostGIS documentation and implementation guidance.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "tigerdata-pg-aiguide",
+        "version": "1.0.0-ghast.1",
+        "description": "Search version-specific PostgreSQL, TimescaleDB and PostGIS documentation and implementation guidance.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/timescale/pg-aiguide",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/timescale/pg-aiguide",
+            "connectorPublisher": "Tiger Data pg-aiguide",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "Tiger Data pg-aiguide",
+            "descriptions": {
+              "en": "Search version-specific PostgreSQL, TimescaleDB and PostGIS documentation and implementation guidance.",
+              "zh-CN": "按版本搜索 PostgreSQL、TimescaleDB 与 PostGIS 文档和实现指南。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/tigerdata-pg-aiguide.zip",
+        "sha256": "03263036dd50adab538818a5538eb3267baba3b27788ff201956a2667f110ec5"
+      },
+      "icon": "./plugins/tigerdata-pg-aiguide/assets/icon.png",
+      "homepage": "https://github.com/timescale/pg-aiguide",
+      "license": "MIT",
+      "category": "developer-tools"
     },
     {
       "id": "todoist",

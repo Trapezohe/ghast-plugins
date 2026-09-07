@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "tigerdata-pg-aiguide": {
+      "type": "streamable-http",
+      "url": "https://mcp.tigerdata.com/docs"
+    }
+  }
+}

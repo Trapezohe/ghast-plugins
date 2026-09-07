@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "aiven",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage Aiven data services, including PostgreSQL and Kafka, and inspect metrics, logs and configuration.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://aiven.io/docs/tools/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://aiven.io/docs/tools/mcp-server",
+      "connectorPublisher": "Aiven",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Aiven",
+      "descriptions": {
+        "en": "Manage Aiven data services, including PostgreSQL and Kafka, and inspect metrics, logs and configuration.",
+        "zh-CN": "管理 Aiven 数据服务，包括 PostgreSQL 与 Kafka，并查看指标、日志和配置。"
+      }
+    }
+  }
+}
