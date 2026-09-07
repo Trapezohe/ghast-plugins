@@ -6283,6 +6283,44 @@
       "category": "creativity"
     },
     {
+      "id": "ideogram",
+      "name": "Ideogram",
+      "description": "Generate and edit images, organize creative assets and manage custom-model workflows in Ideogram.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "ideogram",
+        "version": "1.0.0-ghast.1",
+        "description": "Generate and edit images, organize creative assets and manage custom-model workflows in Ideogram.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://ideogram.ai/features/mcp/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://ideogram.ai/features/mcp/",
+            "connectorPublisher": "Ideogram",
+            "category": "design",
+            "icon": "./assets/icon.svg",
+            "displayName": "Ideogram",
+            "descriptions": {
+              "en": "Generate and edit images, organize creative assets and manage custom-model workflows in Ideogram.",
+              "zh-CN": "在 Ideogram 中生成与编辑图像、整理创意素材并管理自定义模型工作流。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/ideogram.zip",
+        "sha256": "f889f41146c406b1c630eec171de24e09f0f016ab3b3cb5a3ca5aa28ef56d573"
+      },
+      "icon": "./plugins/ideogram/assets/icon.svg",
+      "homepage": "https://ideogram.ai/features/mcp/",
+      "license": "MIT",
+      "category": "design"
+    },
+    {
       "id": "imagekit",
       "name": "ImageKit",
       "description": "Manage media assets and build image and video transformations.",
@@ -8790,6 +8828,44 @@
       "category": "information"
     },
     {
+      "id": "recraft",
+      "name": "Recraft",
+      "description": "Generate and edit raster or vector images, remove backgrounds and create custom styles with Recraft.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "recraft",
+        "version": "1.0.0-ghast.1",
+        "description": "Generate and edit raster or vector images, remove backgrounds and create custom styles with Recraft.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.recraft.ai/docs/mcp-reference/remote-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.recraft.ai/docs/mcp-reference/remote-server",
+            "connectorPublisher": "Recraft",
+            "category": "design",
+            "icon": "./assets/icon.png",
+            "displayName": "Recraft",
+            "descriptions": {
+              "en": "Generate and edit raster or vector images, remove backgrounds and create custom styles with Recraft.",
+              "zh-CN": "通过 Recraft 生成和编辑位图或矢量图、移除背景并创建自定义风格。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/recraft.zip",
+        "sha256": "44ef295e5b17f78ea12367449754cc04b2f6429b12c6af1fb0c9a3638703b33d"
+      },
+      "icon": "./plugins/recraft/assets/icon.png",
+      "homepage": "https://www.recraft.ai/docs/mcp-reference/remote-server",
+      "license": "MIT",
+      "category": "design"
+    },
+    {
       "id": "redis-docs",
       "name": "Redis Documentation",
       "description": "Search, retrieve and ask questions about Redis documentation using Redis’s public MCP service.",
@@ -11003,6 +11079,44 @@
       "icon": "./plugins/website-fetcher/assets/icon.svg",
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/website-fetcher",
       "category": "web"
+    },
+    {
+      "id": "whimsical",
+      "name": "Whimsical",
+      "description": "Search Whimsical files and create or edit diagrams, wireframes and visual plans.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "whimsical",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Whimsical files and create or edit diagrams, wireframes and visual plans.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://whimsical.com/learn/integrations/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://whimsical.com/learn/integrations/mcp",
+            "connectorPublisher": "Whimsical",
+            "category": "design",
+            "icon": "./assets/icon.png",
+            "displayName": "Whimsical",
+            "descriptions": {
+              "en": "Search Whimsical files and create or edit diagrams, wireframes and visual plans.",
+              "zh-CN": "搜索 Whimsical 文件，创建或编辑图表、线框图与可视化计划。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/whimsical.zip",
+        "sha256": "261b8ce41438674f3c725a6e94f08beb60984ee9cb9e22f2d0d3798b1419b3ff"
+      },
+      "icon": "./plugins/whimsical/assets/icon.png",
+      "homepage": "https://whimsical.com/learn/integrations/mcp",
+      "license": "MIT",
+      "category": "design"
     },
     {
       "id": "windsor-ai",

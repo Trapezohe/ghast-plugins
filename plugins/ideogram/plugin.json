@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ideogram",
+  "version": "1.0.0-ghast.1",
+  "description": "Generate and edit images, organize creative assets and manage custom-model workflows in Ideogram.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://ideogram.ai/features/mcp/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://ideogram.ai/features/mcp/",
+      "connectorPublisher": "Ideogram",
+      "category": "design",
+      "icon": "./assets/icon.svg",
+      "displayName": "Ideogram",
+      "descriptions": {
+        "en": "Generate and edit images, organize creative assets and manage custom-model workflows in Ideogram.",
+        "zh-CN": "在 Ideogram 中生成与编辑图像、整理创意素材并管理自定义模型工作流。"
+      }
+    }
+  }
+}

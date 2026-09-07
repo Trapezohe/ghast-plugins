@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "recraft",
+  "version": "1.0.0-ghast.1",
+  "description": "Generate and edit raster or vector images, remove backgrounds and create custom styles with Recraft.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.recraft.ai/docs/mcp-reference/remote-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.recraft.ai/docs/mcp-reference/remote-server",
+      "connectorPublisher": "Recraft",
+      "category": "design",
+      "icon": "./assets/icon.png",
+      "displayName": "Recraft",
+      "descriptions": {
+        "en": "Generate and edit raster or vector images, remove backgrounds and create custom styles with Recraft.",
+        "zh-CN": "通过 Recraft 生成和编辑位图或矢量图、移除背景并创建自定义风格。"
+      }
+    }
+  }
+}

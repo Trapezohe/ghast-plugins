@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "whimsical",
+  "version": "1.0.0-ghast.1",
+  "description": "Search Whimsical files and create or edit diagrams, wireframes and visual plans.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://whimsical.com/learn/integrations/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://whimsical.com/learn/integrations/mcp",
+      "connectorPublisher": "Whimsical",
+      "category": "design",
+      "icon": "./assets/icon.png",
+      "displayName": "Whimsical",
+      "descriptions": {
+        "en": "Search Whimsical files and create or edit diagrams, wireframes and visual plans.",
+        "zh-CN": "搜索 Whimsical 文件，创建或编辑图表、线框图与可视化计划。"
+      }
+    }
+  }
+}
