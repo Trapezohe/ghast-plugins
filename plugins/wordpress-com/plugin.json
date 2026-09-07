@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "wordpress-com",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore WordPress.com sites, posts, pages and publishing workflows through its official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.wordpress.com/docs/mcp/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developer.wordpress.com/docs/mcp/",
+      "connectorPublisher": "WordPress.com",
+      "category": "marketing",
+      "icon": "./assets/icon.png",
+      "displayName": "WordPress.com",
+      "descriptions": {
+        "en": "Explore WordPress.com sites, posts, pages and publishing workflows through its official MCP.",
+        "zh-CN": "通过 WordPress.com 官方 MCP 探索站点、文章、页面与内容发布工作流。"
+      }
+    }
+  }
+}

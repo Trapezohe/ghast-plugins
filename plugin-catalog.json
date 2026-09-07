@@ -3267,6 +3267,53 @@
       "category": "web"
     },
     {
+      "id": "contentstack",
+      "name": "Contentstack",
+      "description": "Manage content entries, assets, models and publishing in Contentstack through its official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "contentstack",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage content entries, assets, models and publishing in Contentstack through its official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developers.contentstack.com/contentstack-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developers.contentstack.com/contentstack-mcp",
+            "connectorPublisher": "Contentstack",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "Contentstack",
+            "descriptions": {
+              "en": "Manage content entries, assets, models and publishing in Contentstack through its official MCP.",
+              "zh-CN": "通过 Contentstack 官方 MCP 管理内容条目、素材、内容模型与发布流程。"
+            },
+            "mcpServerExtensions": {
+              "contentstack": {
+                "credentialEnv": {
+                  "CONTENTSTACK_API_KEY": "$VAULT:contentstack-stack-key",
+                  "CONTENTSTACK_MANAGEMENT_TOKEN": "$VAULT:contentstack-management-token",
+                  "CONTENTSTACK_REGION": "$VAULT:contentstack-region"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/contentstack.zip",
+        "sha256": "14ddb34bed0d997b5607f51eda7747ca6768d479b43f92c931bd705bad4fba0e"
+      },
+      "icon": "./plugins/contentstack/assets/icon.png",
+      "homepage": "https://developers.contentstack.com/contentstack-mcp",
+      "license": "MIT",
+      "category": "marketing"
+    },
+    {
       "id": "context7",
       "name": "Context7",
       "description": "Find current library documentation and version-specific code examples with Context7.",
@@ -11244,6 +11291,44 @@
       "category": "finance"
     },
     {
+      "id": "storyblok",
+      "name": "Storyblok",
+      "description": "Manage structured content, stories, assets and space settings using Storyblok’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "storyblok",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage structured content, stories, assets and space settings using Storyblok’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.storyblok.com/docs/libraries/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.storyblok.com/docs/libraries/mcp-server",
+            "connectorPublisher": "Storyblok",
+            "category": "marketing",
+            "icon": "./assets/icon.svg",
+            "displayName": "Storyblok",
+            "descriptions": {
+              "en": "Manage structured content, stories, assets and space settings using Storyblok’s official MCP.",
+              "zh-CN": "通过 Storyblok 官方 MCP 管理结构化内容、Story、素材与 Space 设置。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/storyblok.zip",
+        "sha256": "7fad5c0878045383d071a2db90a10ad0962c65d79ef2d593a38e6fd708386f8e"
+      },
+      "icon": "./plugins/storyblok/assets/icon.svg",
+      "homepage": "https://www.storyblok.com/docs/libraries/mcp-server",
+      "license": "MIT",
+      "category": "marketing"
+    },
+    {
       "id": "streak",
       "name": "streak",
       "description": "Read, analyze, and update Streak CRM pipelines, boxes, deals, contacts, organizations, comments, tasks, and timelines through Streak's official hosted MCP server.",
@@ -12722,6 +12807,44 @@
       "homepage": "https://github.com/WolframResearch/AgentTools/blob/main/AgentSkills/Skills/wolfram-language/references/SetUpWolframMCPServer.md",
       "license": "MIT",
       "category": "research"
+    },
+    {
+      "id": "wordpress-com",
+      "name": "WordPress.com",
+      "description": "Explore WordPress.com sites, posts, pages and publishing workflows through its official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "wordpress-com",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore WordPress.com sites, posts, pages and publishing workflows through its official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.wordpress.com/docs/mcp/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.wordpress.com/docs/mcp/",
+            "connectorPublisher": "WordPress.com",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "WordPress.com",
+            "descriptions": {
+              "en": "Explore WordPress.com sites, posts, pages and publishing workflows through its official MCP.",
+              "zh-CN": "通过 WordPress.com 官方 MCP 探索站点、文章、页面与内容发布工作流。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/wordpress-com.zip",
+        "sha256": "ca509770ec73a6e690fe1d35faaf84bf1435b860f4a9231e5745d4c6fa32ee33"
+      },
+      "icon": "./plugins/wordpress-com/assets/icon.png",
+      "homepage": "https://developer.wordpress.com/docs/mcp/",
+      "license": "MIT",
+      "category": "marketing"
     },
     {
       "id": "workos",

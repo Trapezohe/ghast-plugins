@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "contentstack",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage content entries, assets, models and publishing in Contentstack through its official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developers.contentstack.com/contentstack-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developers.contentstack.com/contentstack-mcp",
+      "connectorPublisher": "Contentstack",
+      "category": "marketing",
+      "icon": "./assets/icon.png",
+      "displayName": "Contentstack",
+      "descriptions": {
+        "en": "Manage content entries, assets, models and publishing in Contentstack through its official MCP.",
+        "zh-CN": "通过 Contentstack 官方 MCP 管理内容条目、素材、内容模型与发布流程。"
+      },
+      "mcpServerExtensions": {
+        "contentstack": {
+          "credentialEnv": {
+            "CONTENTSTACK_API_KEY": "$VAULT:contentstack-stack-key",
+            "CONTENTSTACK_MANAGEMENT_TOKEN": "$VAULT:contentstack-management-token",
+            "CONTENTSTACK_REGION": "$VAULT:contentstack-region"
+          }
+        }
+      }
+    }
+  }
+}
