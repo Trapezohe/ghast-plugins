@@ -6030,6 +6030,52 @@
       "category": "research"
     },
     {
+      "id": "grafana",
+      "name": "Grafana",
+      "description": "Explore dashboards, metrics, logs, alerts and incidents using Grafana’s official MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "grafana",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore dashboards, metrics, logs, alerts and incidents using Grafana’s official MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://grafana.com/docs/grafana/latest/developer-resources/mcp/set-up/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://grafana.com/docs/grafana/latest/developer-resources/mcp/set-up/",
+            "connectorPublisher": "Grafana",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "Grafana",
+            "descriptions": {
+              "en": "Explore dashboards, metrics, logs, alerts and incidents using Grafana’s official MCP server.",
+              "zh-CN": "通过 Grafana 官方 MCP 探索仪表盘、指标、日志、告警与事件。"
+            },
+            "mcpServerExtensions": {
+              "grafana": {
+                "credentialEnv": {
+                  "GRAFANA_URL": "$VAULT:grafana-url",
+                  "GRAFANA_SERVICE_ACCOUNT_TOKEN": "$VAULT:grafana-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/grafana.zip",
+        "sha256": "cf2f2bf8c0f681349ce28cd04475de2102ef60a5572f842305ea4b37bcf94efe"
+      },
+      "icon": "./plugins/grafana/assets/icon.png",
+      "homepage": "https://grafana.com/docs/grafana/latest/developer-resources/mcp/set-up/",
+      "license": "MIT",
+      "category": "developer-tools"
+    },
+    {
       "id": "granola",
       "name": "granola",
       "description": "Search and analyze Granola meeting notes, transcripts, attendees, folders, decisions, and action items through Granola's official hosted MCP server.",
@@ -7026,6 +7072,51 @@
       "homepage": "https://knowify.zendesk.com/hc/en-us/articles/49623682048660-Getting-started-with-the-Knowify-AI-Connector",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "kong-konnect",
+      "name": "Kong Konnect",
+      "description": "Inspect API gateways, services, routes and performance with Kong Konnect’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "kong-konnect",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect API gateways, services, routes and performance with Kong Konnect’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.konghq.com/konnect-platform/konnect-mcp/installation/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.konghq.com/konnect-platform/konnect-mcp/installation/",
+            "connectorPublisher": "Kong Konnect",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "Kong Konnect",
+            "descriptions": {
+              "en": "Inspect API gateways, services, routes and performance with Kong Konnect’s official MCP.",
+              "zh-CN": "通过 Kong Konnect 官方 MCP 检查 API 网关、服务、路由与性能。"
+            },
+            "mcpServerExtensions": {
+              "kong-konnect": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:kong-konnect-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/kong-konnect.zip",
+        "sha256": "38690137883941d8145623b4bf1ba531be911be4f64ed76a546713b65dd15626"
+      },
+      "icon": "./plugins/kong-konnect/assets/icon.png",
+      "homepage": "https://developer.konghq.com/konnect-platform/konnect-mcp/installation/",
+      "license": "MIT",
+      "category": "developer-tools"
     },
     {
       "id": "kraken",
@@ -9219,6 +9310,44 @@
       "homepage": "https://developer.productboard.com/reference/mcp-install",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "pulumi",
+      "name": "Pulumi",
+      "description": "Explore cloud resources, stacks and infrastructure workflows through Pulumi’s official remote MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "pulumi",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore cloud resources, stacks and infrastructure workflows through Pulumi’s official remote MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.pulumi.com/docs/ai/mcp-server/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.pulumi.com/docs/ai/mcp-server/",
+            "connectorPublisher": "Pulumi",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "displayName": "Pulumi",
+            "descriptions": {
+              "en": "Explore cloud resources, stacks and infrastructure workflows through Pulumi’s official remote MCP.",
+              "zh-CN": "通过 Pulumi 官方远程 MCP 探索云资源、Stack 与基础设施工作流。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/pulumi.zip",
+        "sha256": "2b14359d0639764206942174e24fb4e67e452e9196697e06e7e65c12f36c29bb"
+      },
+      "icon": "./plugins/pulumi/assets/icon.png",
+      "homepage": "https://www.pulumi.com/docs/ai/mcp-server/",
+      "license": "MIT",
+      "category": "developer-tools"
     },
     {
       "id": "pylon",
@@ -11567,6 +11696,44 @@
       "homepage": "https://support.gotenzo.com/developers/mcp-server/",
       "license": "MIT",
       "category": "data"
+    },
+    {
+      "id": "terraform",
+      "name": "Terraform",
+      "description": "Find Terraform providers, modules and policy documentation using HashiCorp’s official MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "terraform",
+        "version": "1.0.0-ghast.1",
+        "description": "Find Terraform providers, modules and policy documentation using HashiCorp’s official MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.hashicorp.com/terraform/mcp-server/deploy/local",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.hashicorp.com/terraform/mcp-server/deploy/local",
+            "connectorPublisher": "Terraform",
+            "category": "developer-tools",
+            "icon": "./assets/icon.svg",
+            "displayName": "Terraform",
+            "descriptions": {
+              "en": "Find Terraform providers, modules and policy documentation using HashiCorp’s official MCP server.",
+              "zh-CN": "通过 HashiCorp 官方 MCP 查找 Terraform Provider、模块与策略文档。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/terraform.zip",
+        "sha256": "1d7ab69bf128aa9f135f75c79d23e6f135999cc585f36120d89e226837f222c0"
+      },
+      "icon": "./plugins/terraform/assets/icon.svg",
+      "homepage": "https://developer.hashicorp.com/terraform/mcp-server/deploy/local",
+      "license": "MIT",
+      "category": "developer-tools"
     },
     {
       "id": "test-android-apps",

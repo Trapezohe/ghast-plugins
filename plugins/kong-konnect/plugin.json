@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kong-konnect",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect API gateways, services, routes and performance with Kong Konnect’s official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.konghq.com/konnect-platform/konnect-mcp/installation/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developer.konghq.com/konnect-platform/konnect-mcp/installation/",
+      "connectorPublisher": "Kong Konnect",
+      "category": "developer-tools",
+      "icon": "./assets/icon.png",
+      "displayName": "Kong Konnect",
+      "descriptions": {
+        "en": "Inspect API gateways, services, routes and performance with Kong Konnect’s official MCP.",
+        "zh-CN": "通过 Kong Konnect 官方 MCP 检查 API 网关、服务、路由与性能。"
+      },
+      "mcpServerExtensions": {
+        "kong-konnect": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:kong-konnect-token"
+          }
+        }
+      }
+    }
+  }
+}

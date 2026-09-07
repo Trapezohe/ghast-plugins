@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "terraform",
+  "version": "1.0.0-ghast.1",
+  "description": "Find Terraform providers, modules and policy documentation using HashiCorp’s official MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.hashicorp.com/terraform/mcp-server/deploy/local",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developer.hashicorp.com/terraform/mcp-server/deploy/local",
+      "connectorPublisher": "Terraform",
+      "category": "developer-tools",
+      "icon": "./assets/icon.svg",
+      "displayName": "Terraform",
+      "descriptions": {
+        "en": "Find Terraform providers, modules and policy documentation using HashiCorp’s official MCP server.",
+        "zh-CN": "通过 HashiCorp 官方 MCP 查找 Terraform Provider、模块与策略文档。"
+      }
+    }
+  }
+}
