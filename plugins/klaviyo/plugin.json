@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "klaviyo",
+  "version": "1.0.0-ghast.1",
+  "description": "Analyze lifecycle marketing campaigns, flows, audiences and performance reports with Klaviyo. 通过 Klaviyo 分析生命周期营销活动、自动化流程、受众和效果报表，辅助运营复盘。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "business",
+      "icon": "./assets/icon.png",
+      "displayName": "Klaviyo",
+      "descriptions": {
+        "en": "Analyze lifecycle marketing campaigns, flows, audiences and performance reports with Klaviyo.",
+        "zh-CN": "通过 Klaviyo 分析生命周期营销活动、自动化流程、受众和效果报表，辅助运营复盘。"
+      }
+    }
+  }
+}

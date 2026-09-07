@@ -637,6 +637,42 @@
       "category": "productivity"
     },
     {
+      "id": "buffer",
+      "name": "Buffer",
+      "description": "Organize social media ideas, review channel performance and prepare posts and publishing schedules with Buffer. 使用 Buffer 整理社媒创意、查看渠道表现，准备内容草稿与发布排期。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "buffer",
+        "version": "1.0.0-ghast.1",
+        "description": "Organize social media ideas, review channel performance and prepare posts and publishing schedules with Buffer. 使用 Buffer 整理社媒创意、查看渠道表现，准备内容草稿与发布排期。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://buffer.com/integrations/claude",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "business",
+            "icon": "./assets/icon.svg",
+            "displayName": "Buffer",
+            "descriptions": {
+              "en": "Organize social media ideas, review channel performance and prepare posts and publishing schedules with Buffer.",
+              "zh-CN": "使用 Buffer 整理社媒创意、查看渠道表现，准备内容草稿与发布排期。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/buffer.zip",
+        "sha256": "e8d702fb83fe1d2232c2959c0598de3b255999a4849ee9829d09913f501cda9e"
+      },
+      "icon": "./plugins/buffer/assets/icon.svg",
+      "homepage": "https://buffer.com/integrations/claude",
+      "license": "MIT",
+      "category": "business"
+    },
+    {
       "id": "cal-com",
       "name": "Cal.com",
       "description": "Check availability, manage event types and organize bookings and schedules with Cal.com. 使用 Cal.com 查询空闲时间、管理预约类型、整理日程和会议预约。",
@@ -1046,6 +1082,42 @@
       "category": "productivity"
     },
     {
+      "id": "clickhouse",
+      "name": "ClickHouse Cloud",
+      "description": "Explore ClickHouse Cloud data and analytical context and assist with SQL-based reporting. 探索 ClickHouse Cloud 数据与分析上下文，辅助 SQL 查询、指标分析和报表工作。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "clickhouse",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore ClickHouse Cloud data and analytical context and assist with SQL-based reporting. 探索 ClickHouse Cloud 数据与分析上下文，辅助 SQL 查询、指标分析和报表工作。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/ClickHouse/agentic-data-stack/blob/main/librechat.yaml",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "data",
+            "icon": "./assets/icon.svg",
+            "displayName": "ClickHouse Cloud",
+            "descriptions": {
+              "en": "Explore ClickHouse Cloud data and analytical context and assist with SQL-based reporting.",
+              "zh-CN": "探索 ClickHouse Cloud 数据与分析上下文，辅助 SQL 查询、指标分析和报表工作。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/clickhouse.zip",
+        "sha256": "986c3180a449339959d0ce31b116cab22881035ad2ba50a8772f687ef3c6ad8f"
+      },
+      "icon": "./plugins/clickhouse/assets/icon.svg",
+      "homepage": "https://github.com/ClickHouse/agentic-data-stack/blob/main/librechat.yaml",
+      "license": "MIT",
+      "category": "data"
+    },
+    {
       "id": "clickup",
       "name": "clickup",
       "description": "Search and manage ClickUp tasks, lists, folders, documents, comments, chat, assignments, relationships, and time tracking through ClickUp's official hosted MCP server.",
@@ -1361,6 +1433,42 @@
       "homepage": "https://www.conductor.com/docs/mcp/chatgpt-codex",
       "license": "MIT",
       "category": "web"
+    },
+    {
+      "id": "context7",
+      "name": "Context7",
+      "description": "Find current library documentation and version-specific code examples with Context7. 使用 Context7 查询软件库文档与指定版本的代码示例，辅助开发、集成和升级。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "context7",
+        "version": "1.0.0-ghast.1",
+        "description": "Find current library documentation and version-specific code examples with Context7. 使用 Context7 查询软件库文档与指定版本的代码示例，辅助开发、集成和升级。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://context7.com/docs/resources/all-clients",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "development",
+            "icon": "./assets/icon.svg",
+            "displayName": "Context7",
+            "descriptions": {
+              "en": "Find current library documentation and version-specific code examples with Context7.",
+              "zh-CN": "使用 Context7 查询软件库文档与指定版本的代码示例，辅助开发、集成和升级。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/context7.zip",
+        "sha256": "5a670d149f1368f5158a23dc2478a635c950fee2e1a215e8cda00ac12cc21f65"
+      },
+      "icon": "./plugins/context7/assets/icon.svg",
+      "homepage": "https://context7.com/docs/resources/all-clients",
+      "license": "MIT",
+      "category": "development"
     },
     {
       "id": "convex",
@@ -1945,6 +2053,49 @@
       "category": "research"
     },
     {
+      "id": "excalidraw-plus",
+      "name": "Excalidraw+",
+      "description": "Create and edit diagrams, wireframes and presentation scenes in an Excalidraw Plus workspace. 在 Excalidraw Plus 工作区创建与编辑图表、线框图和演示画布，辅助创意表达。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "excalidraw-plus",
+        "version": "1.0.0-ghast.1",
+        "description": "Create and edit diagrams, wireframes and presentation scenes in an Excalidraw Plus workspace. 在 Excalidraw Plus 工作区创建与编辑图表、线框图和演示画布，辅助创意表达。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://plus.excalidraw.com/docs/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "creativity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Excalidraw+",
+            "descriptions": {
+              "en": "Create and edit diagrams, wireframes and presentation scenes in an Excalidraw Plus workspace.",
+              "zh-CN": "在 Excalidraw Plus 工作区创建与编辑图表、线框图和演示画布，辅助创意表达。"
+            },
+            "mcpServerExtensions": {
+              "excalidraw-plus": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:excalidraw-plus-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/excalidraw-plus.zip",
+        "sha256": "623ee40d94c1f5d56c45227a15d547e4731e5919677572f9db214227ac8a50df"
+      },
+      "icon": "./plugins/excalidraw-plus/assets/icon.svg",
+      "homepage": "https://plus.excalidraw.com/docs/mcp",
+      "license": "MIT",
+      "category": "creativity"
+    },
+    {
       "id": "expo",
       "name": "expo",
       "description": "Official Expo skills for building, deploying, upgrading, and debugging Expo and React Native apps.",
@@ -2125,6 +2276,42 @@
       "homepage": "https://docs.financialdatasets.ai/mcp-server",
       "license": "MIT",
       "category": "data"
+    },
+    {
+      "id": "firecrawl",
+      "name": "Firecrawl",
+      "description": "Extract structured web content, map websites and support research, data collection and SEO audits with Firecrawl. 使用 Firecrawl 提取结构化网页内容、梳理站点，支持调研、数据采集和 SEO 审核。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "firecrawl",
+        "version": "1.0.0-ghast.1",
+        "description": "Extract structured web content, map websites and support research, data collection and SEO audits with Firecrawl. 使用 Firecrawl 提取结构化网页内容、梳理站点，支持调研、数据采集和 SEO 审核。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/firecrawl/firecrawl-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "web",
+            "icon": "./assets/icon.png",
+            "displayName": "Firecrawl",
+            "descriptions": {
+              "en": "Extract structured web content, map websites and support research, data collection and SEO audits with Firecrawl.",
+              "zh-CN": "使用 Firecrawl 提取结构化网页内容、梳理站点，支持调研、数据采集和 SEO 审核。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/firecrawl.zip",
+        "sha256": "52a9ec1fc80861d09f5b18fbcda04db8ab3af085448ba15aaee9ec0c83f6c9a1"
+      },
+      "icon": "./plugins/firecrawl/assets/icon.png",
+      "homepage": "https://github.com/firecrawl/firecrawl-mcp-server",
+      "license": "MIT",
+      "category": "web"
     },
     {
       "id": "fireflies",
@@ -2821,6 +3008,42 @@
       "homepage": "https://jam.dev/docs/jam-mcp",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "klaviyo",
+      "name": "Klaviyo",
+      "description": "Analyze lifecycle marketing campaigns, flows, audiences and performance reports with Klaviyo. 通过 Klaviyo 分析生命周期营销活动、自动化流程、受众和效果报表，辅助运营复盘。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "klaviyo",
+        "version": "1.0.0-ghast.1",
+        "description": "Analyze lifecycle marketing campaigns, flows, audiences and performance reports with Klaviyo. 通过 Klaviyo 分析生命周期营销活动、自动化流程、受众和效果报表，辅助运营复盘。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "business",
+            "icon": "./assets/icon.png",
+            "displayName": "Klaviyo",
+            "descriptions": {
+              "en": "Analyze lifecycle marketing campaigns, flows, audiences and performance reports with Klaviyo.",
+              "zh-CN": "通过 Klaviyo 分析生命周期营销活动、自动化流程、受众和效果报表，辅助运营复盘。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/klaviyo.zip",
+        "sha256": "eb46b5741a13a6eaa996b164b2f05aa1e3eb5e1ed9196b48b7733786df6dcc5b"
+      },
+      "icon": "./plugins/klaviyo/assets/icon.png",
+      "homepage": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+      "license": "MIT",
+      "category": "business"
     },
     {
       "id": "linear",
@@ -3749,6 +3972,78 @@
       "category": "data"
     },
     {
+      "id": "postman",
+      "name": "Postman",
+      "description": "Find API collections and workspaces, inspect requests and support API collaboration with Postman. 通过 Postman 查找 API 集合与工作区、检查请求定义，辅助接口开发和团队协作。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "postman",
+        "version": "1.0.0-ghast.1",
+        "description": "Find API collections and workspaces, inspect requests and support API collaboration with Postman. 通过 Postman 查找 API 集合与工作区、检查请求定义，辅助接口开发和团队协作。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://learning.postman.com/latest-v-12/docs/reference/postman-api/postman-mcp-server/postman-mcp-remote-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "development",
+            "icon": "./assets/icon.svg",
+            "displayName": "Postman",
+            "descriptions": {
+              "en": "Find API collections and workspaces, inspect requests and support API collaboration with Postman.",
+              "zh-CN": "通过 Postman 查找 API 集合与工作区、检查请求定义，辅助接口开发和团队协作。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/postman.zip",
+        "sha256": "b8541e7f272ace64fd449583faa56aed5e92b9b231d457a8ac08f9c8f25e08fa"
+      },
+      "icon": "./plugins/postman/assets/icon.svg",
+      "homepage": "https://learning.postman.com/latest-v-12/docs/reference/postman-api/postman-mcp-server/postman-mcp-remote-server",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
+      "id": "prisma",
+      "name": "Prisma Postgres",
+      "description": "Inspect Prisma Postgres databases and schemas, query data and manage authorized backup workflows. 查看 Prisma Postgres 数据库与表结构、查询数据，并管理获授权的备份流程。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "prisma",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect Prisma Postgres databases and schemas, query data and manage authorized backup workflows. 查看 Prisma Postgres 数据库与表结构、查询数据，并管理获授权的备份流程。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/prisma/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "data",
+            "icon": "./assets/icon.svg",
+            "displayName": "Prisma Postgres",
+            "descriptions": {
+              "en": "Inspect Prisma Postgres databases and schemas, query data and manage authorized backup workflows.",
+              "zh-CN": "查看 Prisma Postgres 数据库与表结构、查询数据，并管理获授权的备份流程。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/prisma.zip",
+        "sha256": "e04929d7291784019ac5f06a7a75cf240c600a20dcb65d8095f00a6f544000ab"
+      },
+      "icon": "./plugins/prisma/assets/icon.svg",
+      "homepage": "https://github.com/prisma/mcp",
+      "license": "MIT",
+      "category": "data"
+    },
+    {
       "id": "pylon",
       "name": "pylon",
       "description": "Search and manage Pylon support issues, accounts, contacts, messages, and internal notes through official interfaces.",
@@ -4294,6 +4589,42 @@
       "category": "research"
     },
     {
+      "id": "se-ranking",
+      "name": "SE Ranking",
+      "description": "Research keywords, competitors, rankings, backlinks and AI search visibility with SE Ranking. 使用 SE Ranking 调研关键词、竞争对手、排名、外链和 AI 搜索可见性，支持 SEO 优化。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "se-ranking",
+        "version": "1.0.0-ghast.1",
+        "description": "Research keywords, competitors, rankings, backlinks and AI search visibility with SE Ranking. 使用 SE Ranking 调研关键词、竞争对手、排名、外链和 AI 搜索可见性，支持 SEO 优化。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://seranking.com/api/integrations/mcp/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "web",
+            "icon": "./assets/icon.svg",
+            "displayName": "SE Ranking",
+            "descriptions": {
+              "en": "Research keywords, competitors, rankings, backlinks and AI search visibility with SE Ranking.",
+              "zh-CN": "使用 SE Ranking 调研关键词、竞争对手、排名、外链和 AI 搜索可见性，支持 SEO 优化。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/se-ranking.zip",
+        "sha256": "ab0fdca4cd224efebeb7854f9ab6896651465e0bf86937d8303091f9ee0a1be9"
+      },
+      "icon": "./plugins/se-ranking/assets/icon.svg",
+      "homepage": "https://seranking.com/api/integrations/mcp/",
+      "license": "MIT",
+      "category": "web"
+    },
+    {
       "id": "semrush",
       "name": "semrush",
       "description": "Retrieve read-only Semrush SEO, keyword, backlink, traffic, audience, market, paid search, shopping, site audit, position tracking, and project data through Semrush's official MCP server.",
@@ -4586,6 +4917,49 @@
       "homepage": "https://docs.skywatch.com/docs/mcp/mcp-server/",
       "license": "MIT",
       "category": "research"
+    },
+    {
+      "id": "smartsheet",
+      "name": "Smartsheet",
+      "description": "Read collaborative sheets, organize project rows and prepare progress reports with Smartsheet. 通过 Smartsheet 读取协作表格、整理项目记录和准备进度报告，支持日常办公。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "smartsheet",
+        "version": "1.0.0-ghast.1",
+        "description": "Read collaborative sheets, organize project rows and prepare progress reports with Smartsheet. 通过 Smartsheet 读取协作表格、整理项目记录和准备进度报告，支持日常办公。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server/manually-configure-the-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Smartsheet",
+            "descriptions": {
+              "en": "Read collaborative sheets, organize project rows and prepare progress reports with Smartsheet.",
+              "zh-CN": "通过 Smartsheet 读取协作表格、整理项目记录和准备进度报告，支持日常办公。"
+            },
+            "mcpServerExtensions": {
+              "smartsheet": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:smartsheet-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/smartsheet.zip",
+        "sha256": "6bfcd0711a0d1ec800fad8cc62f723ad865b351e0e1ac1b0c4353c8fef690eab"
+      },
+      "icon": "./plugins/smartsheet/assets/icon.png",
+      "homepage": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server/manually-configure-the-mcp-server",
+      "license": "MIT",
+      "category": "productivity"
     },
     {
       "id": "square",
@@ -5323,6 +5697,42 @@
       "category": "productivity"
     },
     {
+      "id": "webflow",
+      "name": "Webflow",
+      "description": "Build and refine Webflow sites, inspect CMS content and manage authorized design workflows. 通过 Webflow 构建与调整网站、检查 CMS 内容，协助页面设计与内容运营。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "webflow",
+        "version": "1.0.0-ghast.1",
+        "description": "Build and refine Webflow sites, inspect CMS content and manage authorized design workflows. 通过 Webflow 构建与调整网站、检查 CMS 内容，协助页面设计与内容运营。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developers.webflow.com/mcp/reference/getting-started",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "creativity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Webflow",
+            "descriptions": {
+              "en": "Build and refine Webflow sites, inspect CMS content and manage authorized design workflows.",
+              "zh-CN": "通过 Webflow 构建与调整网站、检查 CMS 内容，协助页面设计与内容运营。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/webflow.zip",
+        "sha256": "7f8649ee3f23e241435c6b02430853a846934e0e9f71ce446b9aba7bed9e3931"
+      },
+      "icon": "./plugins/webflow/assets/icon.svg",
+      "homepage": "https://developers.webflow.com/mcp/reference/getting-started",
+      "license": "MIT",
+      "category": "creativity"
+    },
+    {
       "id": "website-fetcher",
       "name": "website-fetcher",
       "description": "Skill that teaches the model to fetch a URL and read its text content via the built-in WebFetch tool — 'just look at this page' without opening a browser.",
@@ -5463,6 +5873,49 @@
       "homepage": "https://github.com/WolframResearch/AgentTools/blob/main/AgentSkills/Skills/wolfram-language/references/SetUpWolframMCPServer.md",
       "license": "MIT",
       "category": "research"
+    },
+    {
+      "id": "wrike",
+      "name": "Wrike",
+      "description": "Search projects and tasks, review workload and organize team work and follow-ups with Wrike. 使用 Wrike 搜索项目与任务、查看工作进展，整理团队协作和后续待办。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "wrike",
+        "version": "1.0.0-ghast.1",
+        "description": "Search projects and tasks, review workload and organize team work and follow-ups with Wrike. 使用 Wrike 搜索项目与任务、查看工作进展，整理团队协作和后续待办。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developers.wrike.com/docs/setup-other-mcp-clients-with-wrike-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "productivity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Wrike",
+            "descriptions": {
+              "en": "Search projects and tasks, review workload and organize team work and follow-ups with Wrike.",
+              "zh-CN": "使用 Wrike 搜索项目与任务、查看工作进展，整理团队协作和后续待办。"
+            },
+            "mcpServerExtensions": {
+              "wrike": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:wrike-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/wrike.zip",
+        "sha256": "13252a515864e0cae0a55ce54200f580b65a21eb86510dd93817a1cbb03e8011"
+      },
+      "icon": "./plugins/wrike/assets/icon.svg",
+      "homepage": "https://developers.wrike.com/docs/setup-other-mcp-clients-with-wrike-mcp",
+      "license": "MIT",
+      "category": "productivity"
     },
     {
       "id": "yepcode",

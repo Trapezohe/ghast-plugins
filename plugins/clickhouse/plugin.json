@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "clickhouse",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore ClickHouse Cloud data and analytical context and assist with SQL-based reporting. 探索 ClickHouse Cloud 数据与分析上下文，辅助 SQL 查询、指标分析和报表工作。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/ClickHouse/agentic-data-stack/blob/main/librechat.yaml",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "data",
+      "icon": "./assets/icon.svg",
+      "displayName": "ClickHouse Cloud",
+      "descriptions": {
+        "en": "Explore ClickHouse Cloud data and analytical context and assist with SQL-based reporting.",
+        "zh-CN": "探索 ClickHouse Cloud 数据与分析上下文，辅助 SQL 查询、指标分析和报表工作。"
+      }
+    }
+  }
+}

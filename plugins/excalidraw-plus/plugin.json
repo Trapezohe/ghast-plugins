@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "excalidraw-plus",
+  "version": "1.0.0-ghast.1",
+  "description": "Create and edit diagrams, wireframes and presentation scenes in an Excalidraw Plus workspace. 在 Excalidraw Plus 工作区创建与编辑图表、线框图和演示画布，辅助创意表达。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://plus.excalidraw.com/docs/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "creativity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Excalidraw+",
+      "descriptions": {
+        "en": "Create and edit diagrams, wireframes and presentation scenes in an Excalidraw Plus workspace.",
+        "zh-CN": "在 Excalidraw Plus 工作区创建与编辑图表、线框图和演示画布，辅助创意表达。"
+      },
+      "mcpServerExtensions": {
+        "excalidraw-plus": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:excalidraw-plus-token"
+          }
+        }
+      }
+    }
+  }
+}

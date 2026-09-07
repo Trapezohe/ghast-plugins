@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "buffer",
+  "version": "1.0.0-ghast.1",
+  "description": "Organize social media ideas, review channel performance and prepare posts and publishing schedules with Buffer. 使用 Buffer 整理社媒创意、查看渠道表现，准备内容草稿与发布排期。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://buffer.com/integrations/claude",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "business",
+      "icon": "./assets/icon.svg",
+      "displayName": "Buffer",
+      "descriptions": {
+        "en": "Organize social media ideas, review channel performance and prepare posts and publishing schedules with Buffer.",
+        "zh-CN": "使用 Buffer 整理社媒创意、查看渠道表现，准备内容草稿与发布排期。"
+      }
+    }
+  }
+}

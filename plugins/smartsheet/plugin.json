@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "smartsheet",
+  "version": "1.0.0-ghast.1",
+  "description": "Read collaborative sheets, organize project rows and prepare progress reports with Smartsheet. 通过 Smartsheet 读取协作表格、整理项目记录和准备进度报告，支持日常办公。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server/manually-configure-the-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Smartsheet",
+      "descriptions": {
+        "en": "Read collaborative sheets, organize project rows and prepare progress reports with Smartsheet.",
+        "zh-CN": "通过 Smartsheet 读取协作表格、整理项目记录和准备进度报告，支持日常办公。"
+      },
+      "mcpServerExtensions": {
+        "smartsheet": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:smartsheet-token"
+          }
+        }
+      }
+    }
+  }
+}

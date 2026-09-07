@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "webflow",
+  "version": "1.0.0-ghast.1",
+  "description": "Build and refine Webflow sites, inspect CMS content and manage authorized design workflows. 通过 Webflow 构建与调整网站、检查 CMS 内容，协助页面设计与内容运营。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developers.webflow.com/mcp/reference/getting-started",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "creativity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Webflow",
+      "descriptions": {
+        "en": "Build and refine Webflow sites, inspect CMS content and manage authorized design workflows.",
+        "zh-CN": "通过 Webflow 构建与调整网站、检查 CMS 内容，协助页面设计与内容运营。"
+      }
+    }
+  }
+}

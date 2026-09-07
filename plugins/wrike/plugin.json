@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "wrike",
+  "version": "1.0.0-ghast.1",
+  "description": "Search projects and tasks, review workload and organize team work and follow-ups with Wrike. 使用 Wrike 搜索项目与任务、查看工作进展，整理团队协作和后续待办。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developers.wrike.com/docs/setup-other-mcp-clients-with-wrike-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Wrike",
+      "descriptions": {
+        "en": "Search projects and tasks, review workload and organize team work and follow-ups with Wrike.",
+        "zh-CN": "使用 Wrike 搜索项目与任务、查看工作进展，整理团队协作和后续待办。"
+      },
+      "mcpServerExtensions": {
+        "wrike": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:wrike-token"
+          }
+        }
+      }
+    }
+  }
+}
