@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "goldrush",
+  "version": "1.0.0-ghast.1",
+  "description": "Query multichain wallet balances, transactions, token prices and NFT data through GoldRush.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://goldrush.dev/agents/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://goldrush.dev/agents/",
+      "connectorPublisher": "GoldRush",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "GoldRush",
+      "descriptions": {
+        "en": "Query multichain wallet balances, transactions, token prices and NFT data through GoldRush.",
+        "zh-CN": "通过 GoldRush 查询多链钱包余额、交易、代币价格与 NFT 数据。"
+      },
+      "mcpServerExtensions": {
+        "goldrush": {
+          "credentialEnv": {
+            "GOLDRUSH_API_KEY": "$VAULT:goldrush-api-key"
+          }
+        }
+      }
+    }
+  }
+}

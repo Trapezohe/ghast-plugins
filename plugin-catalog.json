@@ -5020,6 +5020,51 @@
       "category": "productivity"
     },
     {
+      "id": "goldrush",
+      "name": "GoldRush",
+      "description": "Query multichain wallet balances, transactions, token prices and NFT data through GoldRush.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "goldrush",
+        "version": "1.0.0-ghast.1",
+        "description": "Query multichain wallet balances, transactions, token prices and NFT data through GoldRush.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://goldrush.dev/agents/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://goldrush.dev/agents/",
+            "connectorPublisher": "GoldRush",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "GoldRush",
+            "descriptions": {
+              "en": "Query multichain wallet balances, transactions, token prices and NFT data through GoldRush.",
+              "zh-CN": "通过 GoldRush 查询多链钱包余额、交易、代币价格与 NFT 数据。"
+            },
+            "mcpServerExtensions": {
+              "goldrush": {
+                "credentialEnv": {
+                  "GOLDRUSH_API_KEY": "$VAULT:goldrush-api-key"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/goldrush.zip",
+        "sha256": "6d7551cb7f08bfce45c943cfccc97769f464acb789002d6c89c6408652cf96ce"
+      },
+      "icon": "./plugins/goldrush/assets/icon.png",
+      "homepage": "https://goldrush.dev/agents/",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
       "id": "google-calendar",
       "name": "Google Calendar",
       "description": "Find events, check availability and manage meetings through Google’s official Workspace MCP service.",
@@ -7683,6 +7728,51 @@
       "repository": "https://github.com/PicsArt/gen-ai-skills",
       "license": "MIT",
       "category": "creativity"
+    },
+    {
+      "id": "pinecone",
+      "name": "Pinecone",
+      "description": "Manage Pinecone vector indexes, upsert records, query data and search official documentation.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "pinecone",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage Pinecone vector indexes, upsert records, query data and search official documentation.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.pinecone.io/guides/operations/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.pinecone.io/guides/operations/mcp-server",
+            "connectorPublisher": "Pinecone",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Pinecone",
+            "descriptions": {
+              "en": "Manage Pinecone vector indexes, upsert records, query data and search official documentation.",
+              "zh-CN": "管理 Pinecone 向量索引、写入记录、查询数据并搜索官方文档。"
+            },
+            "mcpServerExtensions": {
+              "pinecone": {
+                "credentialEnv": {
+                  "PINECONE_API_KEY": "$VAULT:pinecone-api-key"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/pinecone.zip",
+        "sha256": "c2fa85901a6f9527cb81450690e05c42f54dfe860db9539a94ed3c5ae9a105ab"
+      },
+      "icon": "./plugins/pinecone/assets/icon.png",
+      "homepage": "https://docs.pinecone.io/guides/operations/mcp-server",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "pipedrive",

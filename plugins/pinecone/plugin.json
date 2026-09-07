@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "pinecone",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage Pinecone vector indexes, upsert records, query data and search official documentation.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.pinecone.io/guides/operations/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.pinecone.io/guides/operations/mcp-server",
+      "connectorPublisher": "Pinecone",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Pinecone",
+      "descriptions": {
+        "en": "Manage Pinecone vector indexes, upsert records, query data and search official documentation.",
+        "zh-CN": "管理 Pinecone 向量索引、写入记录、查询数据并搜索官方文档。"
+      },
+      "mcpServerExtensions": {
+        "pinecone": {
+          "credentialEnv": {
+            "PINECONE_API_KEY": "$VAULT:pinecone-api-key"
+          }
+        }
+      }
+    }
+  }
+}
