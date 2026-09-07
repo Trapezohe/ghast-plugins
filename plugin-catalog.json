@@ -1075,13 +1075,13 @@
     },
     {
       "id": "cloudflare",
-      "name": "cloudflare",
-      "description": "Build and operate on Cloudflare with official skills, slash commands, and five official MCP servers.",
+      "name": "Cloudflare",
+      "description": "Build and operate on Cloudflare with skills, commands and five official MCP services. 通过技能、快捷命令与五项官方 MCP 服务开发和管理 Cloudflare 资源。",
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "cloudflare",
         "version": "1.0.0-ghast.1",
-        "description": "Build and operate on Cloudflare with official skills, slash commands, and five official MCP servers.",
+        "description": "Build and operate on Cloudflare with skills, commands and five official MCP services. 通过技能、快捷命令与五项官方 MCP 服务开发和管理 Cloudflare 资源。",
         "author": {
           "name": "Cloudflare",
           "url": "https://workers.cloudflare.com"
@@ -1095,13 +1095,18 @@
             "upstreamRevision": "f96bff754e428838818017f75817f0f9428acd48",
             "upstreamPath": ".",
             "icon": "./assets/icon.svg",
-            "commands": "./ai.trapezohe.ghast/commands/"
+            "commands": "./ai.trapezohe.ghast/commands/",
+            "displayName": "Cloudflare",
+            "descriptions": {
+              "en": "Build and operate on Cloudflare with skills, commands and five official MCP services.",
+              "zh-CN": "通过技能、快捷命令与五项官方 MCP 服务开发和管理 Cloudflare 资源。"
+            }
           }
         }
       },
       "package": {
         "url": "./packages/cloudflare.zip",
-        "sha256": "90b49ecbc7946741f24645754c2489d82da56f2eef2055836ff800c451bfc030"
+        "sha256": "f7713bb922123927090bc04b9fef32051073ba688cfcd8751df7dd626fea2c5d"
       },
       "icon": "./plugins/cloudflare/assets/icon.svg",
       "homepage": "https://workers.cloudflare.com",
@@ -1220,6 +1225,42 @@
       "homepage": "https://www.cogedim.com/mcp",
       "license": "MIT",
       "category": "lifestyle"
+    },
+    {
+      "id": "coingecko",
+      "name": "CoinGecko",
+      "description": "Explore crypto prices, historical charts, market data and DEX pools. No API key required for the public service. 查询加密资产价格、历史走势、市场数据与交易池；公共服务无需 API Key。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "coingecko",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore crypto prices, historical charts, market data and DEX pools. No API key required for the public service. 查询加密资产价格、历史走势、市场数据与交易池；公共服务无需 API Key。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://mcp.api.coingecko.com/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "data",
+            "icon": "./assets/icon.svg",
+            "displayName": "CoinGecko",
+            "descriptions": {
+              "en": "Explore crypto prices, historical charts, market data and DEX pools. No API key required for the public service.",
+              "zh-CN": "查询加密资产价格、历史走势、市场数据与交易池；公共服务无需 API Key。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/coingecko.zip",
+        "sha256": "919e0c6125dc46681a3e7e25cd4ffbeac8e34351befea252ff265be8ae8aa5bf"
+      },
+      "icon": "./plugins/coingecko/assets/icon.svg",
+      "homepage": "https://mcp.api.coingecko.com/",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "common-room",
@@ -1942,6 +1983,78 @@
       "category": "creativity"
     },
     {
+      "id": "fathom",
+      "name": "Fathom",
+      "description": "Search meeting records, read transcripts and summaries, and extract decisions and action items through Fathom. 通过 Fathom 搜索会议记录、读取转录与摘要，整理决策和行动项。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "fathom",
+        "version": "1.0.0-ghast.1",
+        "description": "Search meeting records, read transcripts and summaries, and extract decisions and action items through Fathom. 通过 Fathom 搜索会议记录、读取转录与摘要，整理决策和行动项。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developers.fathom.ai/mcp-docs",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "Fathom",
+            "descriptions": {
+              "en": "Search meeting records, read transcripts and summaries, and extract decisions and action items through Fathom.",
+              "zh-CN": "通过 Fathom 搜索会议记录、读取转录与摘要，整理决策和行动项。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/fathom.zip",
+        "sha256": "2a96ea529571694b89c418748de9528fc40448432399397f07bac2878a8cfa2d"
+      },
+      "icon": "./plugins/fathom/assets/icon.png",
+      "homepage": "https://developers.fathom.ai/mcp-docs",
+      "license": "MIT",
+      "category": "communication"
+    },
+    {
+      "id": "financial-datasets",
+      "name": "Financial Datasets",
+      "description": "Research stock prices, company financials, SEC filings and news through Financial Datasets. 通过 Financial Datasets 检索股票行情、公司财报、SEC 文件与新闻。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "financial-datasets",
+        "version": "1.0.0-ghast.1",
+        "description": "Research stock prices, company financials, SEC filings and news through Financial Datasets. 通过 Financial Datasets 检索股票行情、公司财报、SEC 文件与新闻。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.financialdatasets.ai/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Financial Datasets",
+            "descriptions": {
+              "en": "Research stock prices, company financials, SEC filings and news through Financial Datasets.",
+              "zh-CN": "通过 Financial Datasets 检索股票行情、公司财报、SEC 文件与新闻。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/financial-datasets.zip",
+        "sha256": "1ae4d1410c47abde9a5c997094be83fa6b3890bf6eb4890cd5adef318c2ce0da"
+      },
+      "icon": "./plugins/financial-datasets/assets/icon.png",
+      "homepage": "https://docs.financialdatasets.ai/mcp-server",
+      "license": "MIT",
+      "category": "data"
+    },
+    {
       "id": "fireflies",
       "name": "fireflies",
       "description": "Search, summarize, analyze, organize, share, and create clips from meeting transcripts through Fireflies' official hosted MCP server.",
@@ -2043,6 +2156,50 @@
       "homepage": "https://support.fyxer.com/article/fyxer-mcp",
       "license": "MIT",
       "category": "communication"
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "description": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Connect with your GitHub token. 读取仓库、审查 PR、管理 Issue 与排查 CI；使用 GitHub Token 连接。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "github",
+        "version": "1.0.0-ghast.1",
+        "description": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Connect with your GitHub token. 读取仓库、审查 PR、管理 Issue 与排查 CI；使用 GitHub Token 连接。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/github/github-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "development",
+            "icon": "./assets/icon.svg",
+            "commands": "./ai.trapezohe.ghast/commands/",
+            "mcpServerExtensions": {
+              "github": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:github-token"
+                }
+              }
+            },
+            "displayName": "GitHub",
+            "descriptions": {
+              "en": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Connect with your GitHub token.",
+              "zh-CN": "读取仓库、审查 PR、管理 Issue 与排查 CI；使用 GitHub Token 连接。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/github.zip",
+        "sha256": "81afd03c9ae3492359843179f967aaf64aefb47d9b1c56f39c494ecdd010165a"
+      },
+      "icon": "./plugins/github/assets/icon.svg",
+      "homepage": "https://github.com/github/github-mcp-server",
+      "license": "MIT",
+      "category": "development"
     },
     {
       "id": "github-stats",
@@ -4661,6 +4818,42 @@
       "homepage": "https://developers.thoughtspot.com/docs/mcp-integration",
       "license": "MIT",
       "category": "data-analytics"
+    },
+    {
+      "id": "todoist",
+      "name": "Todoist",
+      "description": "Plan projects, organize tasks, review deadlines and update your to-do lists through Todoist. 规划项目、整理待办、查看截止日期与更新任务，通过 Todoist 连接账号。",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "todoist",
+        "version": "1.0.0-ghast.1",
+        "description": "Plan projects, organize tasks, review deadlines and update your to-do lists through Todoist. 规划项目、整理待办、查看截止日期与更新任务，通过 Todoist 连接账号。",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.todoist.com/api/v1/#tag/Todoist-MCP",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "category": "productivity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Todoist",
+            "descriptions": {
+              "en": "Plan projects, organize tasks, review deadlines and update your to-do lists through Todoist.",
+              "zh-CN": "规划项目、整理待办、查看截止日期与更新任务，通过 Todoist 连接账号。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/todoist.zip",
+        "sha256": "1431dbb4f22922a0c24a93e778127eeb4a74849179e37f9bcd8e8ea0fea0f250"
+      },
+      "icon": "./plugins/todoist/assets/icon.svg",
+      "homepage": "https://developer.todoist.com/api/v1/#tag/Todoist-MCP",
+      "license": "MIT",
+      "category": "productivity"
     },
     {
       "id": "twilio-developer-kit",

@@ -144,6 +144,15 @@ def validate_sources(errors: list[str]) -> dict[str, dict]:
                 errors.append(f"{legacy_path}: legacy Ghast layout is not allowed")
 
         ghast = (manifest.get("extensions") or {}).get(GHAST_NAMESPACE, {})
+        descriptions = ghast.get("descriptions")
+        if descriptions is not None:
+            if not isinstance(descriptions, dict) or any(
+                not isinstance(descriptions.get(locale), str) or not descriptions[locale].strip()
+                for locale in ("en", "zh-CN")
+            ):
+                errors.append(f"{manifest_path}: introductions must include en and zh-CN")
+            elif any(text not in manifest.get("description", "") for text in descriptions.values()):
+                errors.append(f"{manifest_path}: portable description must include both introductions")
         icon = ghast.get("icon")
         if not isinstance(icon, str) or not icon.startswith("./assets/"):
             errors.append(f"{manifest_path}: invalid icon path")

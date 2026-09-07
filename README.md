@@ -13,6 +13,10 @@ selected bundle into the active profile.
 | `plugin-catalog.json` | Package metadata consumed by Ghast |
 | `mcp-registry.json` | Standalone MCP marketplace |
 
+## Official store presentation
+
+New official listings must ship the service’s real brand logo under `assets/` (no letter placeholders), record its source, and include both English and Simplified Chinese introductions in the manifest and README. Use `extensions.ai.trapezohe.ghast.descriptions` with `en` and `zh-CN`; keep the portable `description` bilingual as well. Verify local installation, visible branding and uninstall before publishing. Account authorization is a separate check from installation.
+
 ## Plugin format
 
 Every plugin conforms to the vendor-neutral

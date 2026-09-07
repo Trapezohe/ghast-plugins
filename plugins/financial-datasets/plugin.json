@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "financial-datasets",
+  "version": "1.0.0-ghast.1",
+  "description": "Research stock prices, company financials, SEC filings and news through Financial Datasets. 通过 Financial Datasets 检索股票行情、公司财报、SEC 文件与新闻。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.financialdatasets.ai/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Financial Datasets",
+      "descriptions": {
+        "en": "Research stock prices, company financials, SEC filings and news through Financial Datasets.",
+        "zh-CN": "通过 Financial Datasets 检索股票行情、公司财报、SEC 文件与新闻。"
+      }
+    }
+  }
+}

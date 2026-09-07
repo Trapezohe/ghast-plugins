@@ -47,7 +47,7 @@ def main() -> int:
 
         catalog_entry = {
             "id": manifest["name"],
-            "name": manifest["name"],
+            "name": ghast.get("displayName", manifest["name"]),
             "description": manifest["description"],
             "manifest": manifest_for_catalog,
             "package": {

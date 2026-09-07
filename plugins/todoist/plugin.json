@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "todoist",
+  "version": "1.0.0-ghast.1",
+  "description": "Plan projects, organize tasks, review deadlines and update your to-do lists through Todoist. 规划项目、整理待办、查看截止日期与更新任务，通过 Todoist 连接账号。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.todoist.com/api/v1/#tag/Todoist-MCP",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "productivity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Todoist",
+      "descriptions": {
+        "en": "Plan projects, organize tasks, review deadlines and update your to-do lists through Todoist.",
+        "zh-CN": "规划项目、整理待办、查看截止日期与更新任务，通过 Todoist 连接账号。"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "github",
+  "version": "1.0.0-ghast.1",
+  "description": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Connect with your GitHub token. 读取仓库、审查 PR、管理 Issue 与排查 CI；使用 GitHub Token 连接。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/github/github-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "development",
+      "icon": "./assets/icon.svg",
+      "commands": "./ai.trapezohe.ghast/commands/",
+      "mcpServerExtensions": {
+        "github": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:github-token"
+          }
+        }
+      },
+      "displayName": "GitHub",
+      "descriptions": {
+        "en": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Connect with your GitHub token.",
+        "zh-CN": "读取仓库、审查 PR、管理 Issue 与排查 CI；使用 GitHub Token 连接。"
+      }
+    }
+  }
+}

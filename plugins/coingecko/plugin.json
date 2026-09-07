@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "coingecko",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore crypto prices, historical charts, market data and DEX pools. No API key required for the public service. 查询加密资产价格、历史走势、市场数据与交易池；公共服务无需 API Key。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://mcp.api.coingecko.com/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "data",
+      "icon": "./assets/icon.svg",
+      "displayName": "CoinGecko",
+      "descriptions": {
+        "en": "Explore crypto prices, historical charts, market data and DEX pools. No API key required for the public service.",
+        "zh-CN": "查询加密资产价格、历史走势、市场数据与交易池；公共服务无需 API Key。"
+      }
+    }
+  }
+}

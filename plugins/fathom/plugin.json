@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "fathom",
+  "version": "1.0.0-ghast.1",
+  "description": "Search meeting records, read transcripts and summaries, and extract decisions and action items through Fathom. 通过 Fathom 搜索会议记录、读取转录与摘要，整理决策和行动项。",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developers.fathom.ai/mcp-docs",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "category": "communication",
+      "icon": "./assets/icon.png",
+      "displayName": "Fathom",
+      "descriptions": {
+        "en": "Search meeting records, read transcripts and summaries, and extract decisions and action items through Fathom.",
+        "zh-CN": "通过 Fathom 搜索会议记录、读取转录与摘要，整理决策和行动项。"
+      }
+    }
+  }
+}
