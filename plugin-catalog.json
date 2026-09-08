@@ -120,6 +120,44 @@
       "category": "productivity"
     },
     {
+      "id": "adobe-analytics",
+      "name": "Adobe Analytics",
+      "description": "Connect Adobe’s official Analytics and Customer Journey Analytics MCP servers to query reports, explore trends and manage analytics components.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "adobe-analytics",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Adobe’s official Analytics and Customer Journey Analytics MCP servers to query reports, explore trends and manage analytics components.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.adobe.com/analytics-mcp/docs/guides/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.adobe.com/analytics-mcp/docs/guides/",
+            "connectorPublisher": "Adobe Analytics",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "Adobe Analytics",
+            "descriptions": {
+              "en": "Connect Adobe’s official Analytics and Customer Journey Analytics MCP servers to query reports, explore trends and manage analytics components.",
+              "zh-CN": "连接 Adobe 官方 Analytics 与 Customer Journey Analytics MCP 服务，查询报表、分析趋势并管理分析组件。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/adobe-analytics.zip",
+        "sha256": "1a8b40f7b628086a43823b029361a731bf390adb75290be8d9fd0d81ab13e7fb"
+      },
+      "icon": "./plugins/adobe-analytics/assets/icon.png",
+      "homepage": "https://developer.adobe.com/analytics-mcp/docs/guides/",
+      "license": "MIT",
+      "category": "marketing"
+    },
+    {
       "id": "adobe-express",
       "name": "Adobe Express Developer",
       "description": "Search Adobe Express add-on documentation and retrieve official SDK TypeScript definitions with Adobe’s native developer MCP.",
