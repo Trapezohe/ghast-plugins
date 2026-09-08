@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "sitecore",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Sitecore’s official Marketer MCP to work with sites, pages, content, assets, brand context and campaign optimization.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://doc.sitecore.com/sai/en/users/sitecoreai/sitecore-marketer-mcp-server/index.html",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://doc.sitecore.com/sai/en/users/sitecoreai/sitecore-marketer-mcp-server/index.html",
+      "connectorPublisher": "Sitecore Marketer",
+      "category": "marketing",
+      "icon": "./assets/icon.png",
+      "displayName": "Sitecore Marketer",
+      "descriptions": {
+        "en": "Connect Sitecore’s official Marketer MCP to work with sites, pages, content, assets, brand context and campaign optimization.",
+        "zh-CN": "连接 Sitecore 官方 Marketer MCP，处理站点、页面、内容、素材、品牌上下文与活动优化。"
+      }
+    }
+  }
+}

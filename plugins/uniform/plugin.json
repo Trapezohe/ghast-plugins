@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "uniform",
+  "version": "1.0.0-ghast.1",
+  "description": "Use Uniform’s official local MCP package to inspect and manage project components, content types, patterns, entries and compositions.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.uniform.app/docs/guides/cli/commands/ai",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.uniform.app/docs/guides/cli/commands/ai",
+      "connectorPublisher": "Uniform",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Uniform",
+      "descriptions": {
+        "en": "Use Uniform’s official local MCP package to inspect and manage project components, content types, patterns, entries and compositions.",
+        "zh-CN": "通过 Uniform 官方本地 MCP 包查看和管理项目组件、内容类型、模式、条目与页面组合。"
+      },
+      "mcpServerExtensions": {
+        "uniform": {
+          "credentialEnv": {
+            "UNIFORM_API_KEY": "$VAULT:uniform-api-key",
+            "UNIFORM_PROJECT_ID": "$VAULT:uniform-project-id"
+          }
+        }
+      }
+    }
+  }
+}
