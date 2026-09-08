@@ -1870,6 +1870,44 @@
       "category": "productivity"
     },
     {
+      "id": "braze",
+      "name": "Braze",
+      "description": "Analyze Braze campaign and Canvas performance and manage supported content assets with Braze’s official remote MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "braze",
+        "version": "1.0.0-ghast.1",
+        "description": "Analyze Braze campaign and Canvas performance and manage supported content assets with Braze’s official remote MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.braze.com/docs/user_guide/brazeai/mcp_server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.braze.com/docs/user_guide/brazeai/mcp_server",
+            "connectorPublisher": "Braze",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "Braze",
+            "descriptions": {
+              "en": "Analyze Braze campaign and Canvas performance and manage supported content assets with Braze’s official remote MCP.",
+              "zh-CN": "通过 Braze 官方远程 MCP 分析营销活动与 Canvas 表现，并管理受支持的内容素材。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/braze.zip",
+        "sha256": "4dd88caf9978b3287714e7680346004ea4791088d68612084d8e1d9e2d9f96c9"
+      },
+      "icon": "./plugins/braze/assets/icon.png",
+      "homepage": "https://www.braze.com/docs/user_guide/brazeai/mcp_server",
+      "license": "MIT",
+      "category": "marketing"
+    },
+    {
       "id": "brevo",
       "name": "Brevo",
       "description": "Manage contacts, email campaigns, templates, CRM records and marketing analytics in Brevo.",
@@ -4704,6 +4742,44 @@
       "homepage": "https://developer.demandbase.com/docs/mcp",
       "license": "MIT",
       "category": "business"
+    },
+    {
+      "id": "descope",
+      "name": "Descope",
+      "description": "Manage Descope identity projects, users, tenants, access controls and flows through its official MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "descope",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage Descope identity projects, users, tenants, access controls and flows through its official MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.descope.com/mcp/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.descope.com/mcp/mcp-server",
+            "connectorPublisher": "Descope",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Descope",
+            "descriptions": {
+              "en": "Manage Descope identity projects, users, tenants, access controls and flows through its official MCP server.",
+              "zh-CN": "通过 Descope 官方 MCP 管理身份认证项目、用户、租户、访问控制和认证流程。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/descope.zip",
+        "sha256": "3d2badca54d3d630005ffb78f77bd3673f1fa29c6680505d9c0e614fbd3650b4"
+      },
+      "icon": "./plugins/descope/assets/icon.png",
+      "homepage": "https://docs.descope.com/mcp/mcp-server",
+      "license": "MIT",
+      "category": "development"
     },
     {
       "id": "devcycle",
@@ -12429,6 +12505,44 @@
       "category": "finance"
     },
     {
+      "id": "stytch",
+      "name": "Stytch",
+      "description": "Configure Stytch projects, redirect URLs and authentication assets through Stytch’s official MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "stytch",
+        "version": "1.0.0-ghast.1",
+        "description": "Configure Stytch projects, redirect URLs and authentication assets through Stytch’s official MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://stytch.com/docs/resources/workspace-management/stytch-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://stytch.com/docs/resources/workspace-management/stytch-mcp-server",
+            "connectorPublisher": "Stytch",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Stytch",
+            "descriptions": {
+              "en": "Configure Stytch projects, redirect URLs and authentication assets through Stytch’s official MCP server.",
+              "zh-CN": "通过 Stytch 官方 MCP 配置项目、回调地址及身份认证相关资源。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/stytch.zip",
+        "sha256": "7cf4612205eac848dbebdf88c250abb07a49972ada263e837dc25c5aa73880ad"
+      },
+      "icon": "./plugins/stytch/assets/icon.png",
+      "homepage": "https://stytch.com/docs/resources/workspace-management/stytch-mcp-server",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "supabase",
       "name": "supabase",
       "description": "Develop and operate Supabase projects with the complete current official Supabase and Postgres best-practice skills plus Supabase's hosted OAuth MCP server.",
@@ -12550,6 +12664,51 @@
       "repository": "https://github.com/obra/superpowers",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "suprsend",
+      "name": "SuprSend",
+      "description": "Manage SuprSend users, tenants and notification preferences, list workflows and search documentation through the official MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "suprsend",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage SuprSend users, tenants and notification preferences, list workflows and search documentation through the official MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.suprsend.com/reference/mcp-quickstart-cursor",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.suprsend.com/reference/mcp-quickstart-cursor",
+            "connectorPublisher": "SuprSend",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "SuprSend",
+            "descriptions": {
+              "en": "Manage SuprSend users, tenants and notification preferences, list workflows and search documentation through the official MCP server.",
+              "zh-CN": "通过 SuprSend 官方 MCP 管理用户、租户和通知偏好，查询工作流列表与文档。"
+            },
+            "mcpServerExtensions": {
+              "suprsend": {
+                "credentialEnv": {
+                  "SUPRSEND_SERVICE_TOKEN": "$VAULT:suprsend-service-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/suprsend.zip",
+        "sha256": "9c9f557c8370d1325b430b2105b9b20e1ef97e9b709d244f012955269ef08fd4"
+      },
+      "icon": "./plugins/suprsend/assets/icon.png",
+      "homepage": "https://docs.suprsend.com/reference/mcp-quickstart-cursor",
+      "license": "MIT",
+      "category": "marketing"
     },
     {
       "id": "surrealdb",

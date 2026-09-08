@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "suprsend",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage SuprSend users, tenants and notification preferences, list workflows and search documentation through the official MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.suprsend.com/reference/mcp-quickstart-cursor",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.suprsend.com/reference/mcp-quickstart-cursor",
+      "connectorPublisher": "SuprSend",
+      "category": "marketing",
+      "icon": "./assets/icon.png",
+      "displayName": "SuprSend",
+      "descriptions": {
+        "en": "Manage SuprSend users, tenants and notification preferences, list workflows and search documentation through the official MCP server.",
+        "zh-CN": "通过 SuprSend 官方 MCP 管理用户、租户和通知偏好，查询工作流列表与文档。"
+      },
+      "mcpServerExtensions": {
+        "suprsend": {
+          "credentialEnv": {
+            "SUPRSEND_SERVICE_TOKEN": "$VAULT:suprsend-service-token"
+          }
+        }
+      }
+    }
+  }
+}

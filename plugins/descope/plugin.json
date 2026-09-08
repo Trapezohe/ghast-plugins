@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "descope",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage Descope identity projects, users, tenants, access controls and flows through its official MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.descope.com/mcp/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.descope.com/mcp/mcp-server",
+      "connectorPublisher": "Descope",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Descope",
+      "descriptions": {
+        "en": "Manage Descope identity projects, users, tenants, access controls and flows through its official MCP server.",
+        "zh-CN": "通过 Descope 官方 MCP 管理身份认证项目、用户、租户、访问控制和认证流程。"
+      }
+    }
+  }
+}
