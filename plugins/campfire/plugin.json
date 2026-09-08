@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "campfire",
+  "version": "1.0.0-ghast.1",
+  "description": "Query accounting records, budgets, revenue contracts and financial statements through Campfire’s official MCP service.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.campfire.ai/guides/ai-integration",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.campfire.ai/guides/ai-integration",
+      "connectorPublisher": "Campfire",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Campfire",
+      "descriptions": {
+        "en": "Query accounting records, budgets, revenue contracts and financial statements through Campfire’s official MCP service.",
+        "zh-CN": "通过 Campfire 官方 MCP 服务查询会计记录、预算、收入合同与财务报表。"
+      }
+    }
+  }
+}

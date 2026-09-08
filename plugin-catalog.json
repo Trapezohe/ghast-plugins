@@ -2852,6 +2852,44 @@
       "category": "productivity"
     },
     {
+      "id": "campfire",
+      "name": "Campfire",
+      "description": "Query accounting records, budgets, revenue contracts and financial statements through Campfire’s official MCP service.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "campfire",
+        "version": "1.0.0-ghast.1",
+        "description": "Query accounting records, budgets, revenue contracts and financial statements through Campfire’s official MCP service.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.campfire.ai/guides/ai-integration",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.campfire.ai/guides/ai-integration",
+            "connectorPublisher": "Campfire",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Campfire",
+            "descriptions": {
+              "en": "Query accounting records, budgets, revenue contracts and financial statements through Campfire’s official MCP service.",
+              "zh-CN": "通过 Campfire 官方 MCP 服务查询会计记录、预算、收入合同与财务报表。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/campfire.zip",
+        "sha256": "50afe680cdf1917a8b690928d37e17718c4189a469d487a7f5c868822be47cf0"
+      },
+      "icon": "./plugins/campfire/assets/icon.png",
+      "homepage": "https://docs.campfire.ai/guides/ai-integration",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
       "id": "canva",
       "name": "canva",
       "description": "Create, edit, review, resize, bulk-generate, and brand-check Canva designs through Canva's official skills and hosted MCP server.",
@@ -7501,7 +7539,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "gitbook",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Create and maintain documentation, pages, change requests and spaces through GitBook’s official account MCP server.",
         "author": {
           "name": "Ghast AI",
@@ -7513,7 +7551,7 @@
           "ai.trapezohe.ghast": {
             "officialConnectorSource": "https://www.gitbook.com/blog/create-documentation-with-ai-and-mcp",
             "connectorPublisher": "GitBook",
-            "category": "Developer Tools",
+            "category": "development",
             "icon": "./assets/icon.png",
             "displayName": "GitBook",
             "descriptions": {
@@ -7525,12 +7563,12 @@
       },
       "package": {
         "url": "./packages/gitbook.zip",
-        "sha256": "891f3805a88a38f7b6358e6751ea3c3cbfb908129d7cf1d4a63a55234ff6523c"
+        "sha256": "bbea2004a4a8fdc7a36b7bf8a4e7ea750bc2ec099baf2f00b6479a712ea5d1fc"
       },
       "icon": "./plugins/gitbook/assets/icon.png",
       "homepage": "https://www.gitbook.com/blog/create-documentation-with-ai-and-mcp",
       "license": "MIT",
-      "category": "Developer Tools"
+      "category": "development"
     },
     {
       "id": "github",
@@ -8473,7 +8511,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "guru",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Find trusted workspace knowledge, ask Knowledge Agents and prepare Card drafts using Guru’s official MCP service.",
         "author": {
           "name": "Ghast AI",
@@ -8485,7 +8523,7 @@
           "ai.trapezohe.ghast": {
             "officialConnectorSource": "https://help.getguru.com/docs/connecting-gurus-mcp-server",
             "connectorPublisher": "Guru",
-            "category": "Productivity",
+            "category": "productivity",
             "icon": "./assets/icon.png",
             "displayName": "Guru",
             "descriptions": {
@@ -8497,12 +8535,12 @@
       },
       "package": {
         "url": "./packages/guru.zip",
-        "sha256": "26bcaaaf74e1092a735353cbcbcffe9ab5f86549eb2e83cdfdefc9f97693c045"
+        "sha256": "623fd32551eb7d2115d0a31bbd2234ae9d9f1c4421b2d7522732357799bf22fd"
       },
       "icon": "./plugins/guru/assets/icon.png",
       "homepage": "https://help.getguru.com/docs/connecting-gurus-mcp-server",
       "license": "MIT",
-      "category": "Productivity"
+      "category": "productivity"
     },
     {
       "id": "hacker-news",
@@ -11256,7 +11294,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "mercury",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Analyze balances, transactions, statements and spending with Mercury’s official read-only MCP connector (Beta).",
         "author": {
           "name": "Ghast AI",
@@ -11268,7 +11306,7 @@
           "ai.trapezohe.ghast": {
             "officialConnectorSource": "https://docs.mercury.com/docs/connecting-mercury-mcp",
             "connectorPublisher": "Mercury",
-            "category": "Finance",
+            "category": "finance",
             "icon": "./assets/icon.png",
             "displayName": "Mercury",
             "descriptions": {
@@ -11280,12 +11318,12 @@
       },
       "package": {
         "url": "./packages/mercury.zip",
-        "sha256": "73abefffa039f68f0ca35fadc8e445aa34e15d8389587ade4fe7f40eef3aa646"
+        "sha256": "7587e599494428f5b4a5a476d5860325b438ad3fa2c75a7818048162f9c45fb7"
       },
       "icon": "./plugins/mercury/assets/icon.png",
       "homepage": "https://docs.mercury.com/docs/connecting-mercury-mcp",
       "license": "MIT",
-      "category": "Finance"
+      "category": "finance"
     },
     {
       "id": "mermaid-mindmap",
@@ -12558,6 +12596,44 @@
       },
       "icon": "./plugins/optimizely/assets/icon.png",
       "homepage": "https://docs.developers.optimizely.com/content-management-system/v1.0.0-CMS-SaaS/docs/configure-mcp-server",
+      "license": "MIT",
+      "category": "marketing"
+    },
+    {
+      "id": "ordinal",
+      "name": "Ordinal",
+      "description": "Draft and schedule social posts, analyze performance and manage approvals with Ordinal’s official OAuth MCP connector.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "ordinal",
+        "version": "1.0.0-ghast.1",
+        "description": "Draft and schedule social posts, analyze performance and manage approvals with Ordinal’s official OAuth MCP connector.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.tryordinal.com/mcp/introduction",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.tryordinal.com/mcp/introduction",
+            "connectorPublisher": "Ordinal",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "Ordinal",
+            "descriptions": {
+              "en": "Draft and schedule social posts, analyze performance and manage approvals with Ordinal’s official OAuth MCP connector.",
+              "zh-CN": "通过 Ordinal 官方 OAuth MCP 连接器起草和排期社媒帖子、分析表现并管理审批。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/ordinal.zip",
+        "sha256": "ac0ec2be4546c24f34c7ec12e628c95014f90be59beac42ed1b253493cc2cab1"
+      },
+      "icon": "./plugins/ordinal/assets/icon.png",
+      "homepage": "https://docs.tryordinal.com/mcp/introduction",
       "license": "MIT",
       "category": "marketing"
     },
