@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "prismic",
+  "version": "1.0.0-ghast.1",
+  "description": "Use Prismic’s official MCP to search content, prepare localized drafts and assets, and manage releases with explicit publishing control.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://prismic.io/docs/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://prismic.io/docs/mcp",
+      "connectorPublisher": "Prismic",
+      "category": "marketing",
+      "icon": "./assets/icon.png",
+      "displayName": "Prismic",
+      "descriptions": {
+        "en": "Use Prismic’s official MCP to search content, prepare localized drafts and assets, and manage releases with explicit publishing control.",
+        "zh-CN": "通过 Prismic 官方 MCP 检索内容、准备本地化草稿与素材，并在明确授权后管理发布版本。"
+      }
+    }
+  }
+}

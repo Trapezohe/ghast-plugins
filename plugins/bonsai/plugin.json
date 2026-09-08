@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "bonsai",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Bonsai’s official MCP beta to manage tasks, projects, CRM records, time entries and invoices within your account permissions.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.hellobonsai.com/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.hellobonsai.com/",
+      "connectorPublisher": "Bonsai",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Bonsai",
+      "descriptions": {
+        "en": "Connect Bonsai’s official MCP beta to manage tasks, projects, CRM records, time entries and invoices within your account permissions.",
+        "zh-CN": "连接 Bonsai 官方 MCP 测试版，在账号权限内管理任务、项目、CRM 资料、工时与发票。"
+      }
+    }
+  }
+}

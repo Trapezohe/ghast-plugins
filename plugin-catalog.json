@@ -1986,6 +1986,44 @@
       "category": "research"
     },
     {
+      "id": "bonsai",
+      "name": "Bonsai",
+      "description": "Connect Bonsai’s official MCP beta to manage tasks, projects, CRM records, time entries and invoices within your account permissions.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "bonsai",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Bonsai’s official MCP beta to manage tasks, projects, CRM records, time entries and invoices within your account permissions.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.hellobonsai.com/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.hellobonsai.com/",
+            "connectorPublisher": "Bonsai",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Bonsai",
+            "descriptions": {
+              "en": "Connect Bonsai’s official MCP beta to manage tasks, projects, CRM records, time entries and invoices within your account permissions.",
+              "zh-CN": "连接 Bonsai 官方 MCP 测试版，在账号权限内管理任务、项目、CRM 资料、工时与发票。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/bonsai.zip",
+        "sha256": "c4c41cff41fa294a08c55f4140064f8be402e40294768c188463bc013734bfc7"
+      },
+      "icon": "./plugins/bonsai/assets/icon.png",
+      "homepage": "https://docs.hellobonsai.com/",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "box",
       "name": "Box",
       "description": "Search and manage Box files and folders and use available Box AI document tools.",
@@ -8484,6 +8522,44 @@
       "category": "development"
     },
     {
+      "id": "hygraph",
+      "name": "Hygraph",
+      "description": "Connect Hygraph’s official global MCP to discover your projects and environments, inspect schemas and work with structured content.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "hygraph",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Hygraph’s official global MCP to discover your projects and environments, inspect schemas and work with structured content.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://hygraph.com/docs/hygraph-ai/mcp-server-setup",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://hygraph.com/docs/hygraph-ai/mcp-server-setup",
+            "connectorPublisher": "Hygraph",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "Hygraph",
+            "descriptions": {
+              "en": "Connect Hygraph’s official global MCP to discover your projects and environments, inspect schemas and work with structured content.",
+              "zh-CN": "连接 Hygraph 官方全局 MCP，发现账号可访问的项目与环境、查看模型并处理结构化内容。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/hygraph.zip",
+        "sha256": "2be19a05b0e183232b73661c071dbc8e402cac38564fe1a29ecbc9a01051a723"
+      },
+      "icon": "./plugins/hygraph/assets/icon.png",
+      "homepage": "https://hygraph.com/docs/hygraph-ai/mcp-server-setup",
+      "license": "MIT",
+      "category": "marketing"
+    },
+    {
       "id": "hyperframes",
       "name": "hyperframes",
       "description": "Write HTML, render video. Compositions, Tailwind v4 styles, GSAP and runtime adapter animations, captions, voiceovers, audio-reactive visuals, and website capture for HyperFrames.",
@@ -12285,6 +12361,44 @@
       "homepage": "https://github.com/prisma/mcp",
       "license": "MIT",
       "category": "data"
+    },
+    {
+      "id": "prismic",
+      "name": "Prismic",
+      "description": "Use Prismic’s official MCP to search content, prepare localized drafts and assets, and manage releases with explicit publishing control.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "prismic",
+        "version": "1.0.0-ghast.1",
+        "description": "Use Prismic’s official MCP to search content, prepare localized drafts and assets, and manage releases with explicit publishing control.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://prismic.io/docs/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://prismic.io/docs/mcp",
+            "connectorPublisher": "Prismic",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "Prismic",
+            "descriptions": {
+              "en": "Use Prismic’s official MCP to search content, prepare localized drafts and assets, and manage releases with explicit publishing control.",
+              "zh-CN": "通过 Prismic 官方 MCP 检索内容、准备本地化草稿与素材，并在明确授权后管理发布版本。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/prismic.zip",
+        "sha256": "b6411a7697d09bc4af32d19cc73b145cd0997d81c82796234148980d7317b19a"
+      },
+      "icon": "./plugins/prismic/assets/icon.png",
+      "homepage": "https://prismic.io/docs/mcp",
+      "license": "MIT",
+      "category": "marketing"
     },
     {
       "id": "privy",
