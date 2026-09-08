@@ -7318,7 +7318,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "fireflies",
-        "version": "1.0.2-ghast.1",
+        "version": "1.0.2-ghast.2",
         "description": "Search, summarize, analyze, organize, share, and create clips from meeting transcripts through Fireflies' official hosted MCP server.",
         "author": {
           "name": "Fireflies",
@@ -7340,7 +7340,7 @@
       },
       "package": {
         "url": "./packages/fireflies.zip",
-        "sha256": "8e2660d62ab898d4a851907c2dba215535f1a33ac6f75a3e532ee9132688ede5"
+        "sha256": "51f4aa54de7c711516e23c94b351fd47272114bc71cdf9cea394326f0c95b913"
       },
       "icon": "./plugins/fireflies/assets/icon.png",
       "homepage": "https://docs.fireflies.ai/getting-started/mcp-configuration",
@@ -8600,7 +8600,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "granola",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Search and analyze Granola meeting notes, transcripts, attendees, folders, decisions, and action items through Granola's official hosted MCP server.",
         "author": {
           "name": "Granola",
@@ -8622,7 +8622,7 @@
       },
       "package": {
         "url": "./packages/granola.zip",
-        "sha256": "1c60e6fed91467f160f7de9340028ba08b37176e8ccb90ee9656cfa956c766bd"
+        "sha256": "ffd3816d14d80b8ba6967ae4af2b307d1373525fef348f9f5c98b68aa60aaf07"
       },
       "icon": "./plugins/granola/assets/icon.png",
       "homepage": "https://docs.granola.ai/help-center/sharing/integrations/mcp",
@@ -13063,7 +13063,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "otter-ai",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Search Otter meeting history and retrieve full transcripts, summaries, action items, attendees, and meeting context through Otter.ai's official hosted MCP server.",
         "author": {
           "name": "Otter.ai",
@@ -13085,7 +13085,7 @@
       },
       "package": {
         "url": "./packages/otter-ai.zip",
-        "sha256": "e12810425f145e18f67a5f2ce167d84a859b95aa36cb7f45567e696b2b2e5255"
+        "sha256": "5e05be38e1b07d12ec11e3e126d1f288c8f7607d3aa73cc3d2534c69c249b2d8"
       },
       "icon": "./plugins/otter-ai/assets/icon.png",
       "homepage": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
@@ -14687,7 +14687,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "read-ai",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Browse Read AI meetings and retrieve summaries, chapters, action items, key questions, topics, transcripts, metrics, and recordings through Read AI's official hosted MCP server.",
         "author": {
           "name": "Read AI, Inc",
@@ -14699,7 +14699,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "zendesk-49381158409491-2026-08-19T23:57:53Z-0050b9f9a3b3",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Browse Read AI meetings and retrieve summaries, chapters, action items, key questions, topics, transcripts, metrics, and recordings through Read AI's official hosted MCP server.",
               "zh-CN": "读取会议摘要、章节、行动项、关键问题、转录与录制资料。"
@@ -14709,9 +14709,9 @@
       },
       "package": {
         "url": "./packages/read-ai.zip",
-        "sha256": "55a4ec6e4c201295dcef451fad192e196188395869aced45e5c34754646230de"
+        "sha256": "05d151b24c03a375525ced652c847c03dbf0774ff200e6d4540ab485fcc1a2e1"
       },
-      "icon": "./plugins/read-ai/assets/icon.svg",
+      "icon": "./plugins/read-ai/assets/icon.png",
       "homepage": "https://support.read.ai/hc/en-us/articles/49381158409491-MCP-Server",
       "license": "MIT",
       "category": "productivity"

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "otter-ai",
-  "version": "1.0.3-ghast.1",
+  "version": "1.0.3-ghast.2",
   "description": "Search Otter meeting history and retrieve full transcripts, summaries, action items, attendees, and meeting context through Otter.ai's official hosted MCP server.",
   "author": {
     "name": "Otter.ai",

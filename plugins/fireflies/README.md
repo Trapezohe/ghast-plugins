@@ -51,8 +51,7 @@ copying its connector mapping or artwork.
   disposable public-client registration, Codex capability evidence, and
   unauthenticated protocol behavior were verified without a Fireflies
   account. Authenticated tools/list and meeting-data operations were not run.
-- A generic meeting-intelligence icon is used because no licensed catalog
-  artwork is included in a public official MCP source repository.
+- Brand logo source: https://fireflies.ai/apple-icon.png?81a7679a0c7e6094. Brand names and logos belong to Fireflies.ai. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Fireflies accounts, subscriptions, hosted service behavior, meeting data,

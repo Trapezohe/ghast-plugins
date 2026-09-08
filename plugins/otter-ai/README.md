@@ -7,9 +7,9 @@ server.
 ## Official hosted MCP adapter
 
 This package contains only Ghast-authored MCP configuration, safety
-instructions, documentation, catalog metadata, and a generic icon. It does not
+instructions, documentation, catalog metadata, and the provider brand logo. It does not
 copy or redistribute Otter's hosted MCP implementation, private Codex
-connector, meeting data, OAuth credentials, branded icon, or marketplace
+connector, meeting data, OAuth credentials, or marketplace
 artwork.
 
 The adapter is pinned to Otter's official Help Center article
@@ -43,8 +43,7 @@ capability evidence is pinned to OpenAI's plugin snapshot revision
   disposable public-client registration, Codex capability evidence, and
   unauthenticated protocol behavior were verified without an Otter account.
   Authenticated tools/list and meeting-data operations were not run.
-- A generic meeting-transcript icon is used because the downloadable official
-  icon does not include a public redistribution license.
+- Brand logo source: https://cdn.prod.website-files.com/618e9316785b3582a5178502/618e943a80919a98b5e9bf69_apple-icon.png. Brand names and logos belong to Otter.ai. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Otter accounts, subscriptions, hosted service behavior, meeting data,

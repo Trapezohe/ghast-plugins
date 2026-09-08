@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "read-ai",
-  "version": "1.0.0-ghast.1",
+  "version": "1.0.0-ghast.2",
   "description": "Browse Read AI meetings and retrieve summaries, chapters, action items, key questions, topics, transcripts, metrics, and recordings through Read AI's official hosted MCP server.",
   "author": {
     "name": "Read AI, Inc",
@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "upstreamRevision": "zendesk-49381158409491-2026-08-19T23:57:53Z-0050b9f9a3b3",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Browse Read AI meetings and retrieve summaries, chapters, action items, key questions, topics, transcripts, metrics, and recordings through Read AI's official hosted MCP server.",
         "zh-CN": "读取会议摘要、章节、行动项、关键问题、转录与录制资料。"

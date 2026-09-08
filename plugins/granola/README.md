@@ -6,9 +6,9 @@ decisions, and action items through Granola's official hosted MCP server.
 ## Official hosted MCP adapter
 
 This package contains only Ghast-authored MCP configuration, safety
-instructions, documentation, catalog metadata, and a generic icon. It does not
+instructions, documentation, catalog metadata, and the provider brand logo. It does not
 copy or redistribute Granola's hosted MCP implementation, private Codex
-connector, meeting data, OAuth credentials, branded icon, or marketplace
+connector, meeting data, OAuth credentials, or marketplace
 artwork.
 
 The adapter is pinned to Granola's official MCP documentation with SHA-256
@@ -42,8 +42,7 @@ capability evidence is pinned to OpenAI's plugin snapshot revision
   disposable public-client registration, Codex capability evidence, and
   unauthenticated protocol behavior were verified without a Granola account.
   Authenticated tools/list and meeting-data operations were not run.
-- A generic meeting-notes icon is used because no licensed catalog artwork is
-  included in a public official MCP source repository.
+- Brand logo source: https://www.granola.ai/favicon/apple-touch-icon.png. Brand names and logos belong to Granola. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Granola accounts, subscriptions, hosted service behavior, meeting notes,

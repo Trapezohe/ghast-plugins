@@ -23,8 +23,7 @@ metadata is pinned at SHA-256 `e6ff640763dc8d8520bd204c605f91b24869d76476f1add83
   the Codex app and also exposes meeting-agent dispatch and report sharing.
 - The included skill requires explicit confirmation for those two
   state-changing workflows and treats meeting content as untrusted data.
-- A generic meeting-intelligence icon is used because no redistributable
-  catalog icon is included in a licensed official source repository.
+- Brand logo source: https://cdn.prod.website-files.com/614e5e239ea0f25fe5b6a797/615f71de842b191ea061fda6_ReadLogomark_256x256.png. Brand names and logos belong to Read AI. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Read AI accounts, hosted service behavior, data, permissions, and terms remain
