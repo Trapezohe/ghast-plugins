@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "heptabase",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Heptabase’s official MCP to search knowledge, read notes and journals, and organize cards, tags and whiteboards.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://support.heptabase.com/en/articles/12679581-how-to-use-heptabase-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://support.heptabase.com/en/articles/12679581-how-to-use-heptabase-mcp",
+      "connectorPublisher": "Heptabase",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Heptabase",
+      "descriptions": {
+        "en": "Connect Heptabase’s official MCP to search knowledge, read notes and journals, and organize cards, tags and whiteboards.",
+        "zh-CN": "连接 Heptabase 官方 MCP，搜索知识、阅读笔记与日记，并整理卡片、标签和白板。"
+      }
+    }
+  }
+}
