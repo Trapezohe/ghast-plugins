@@ -16,7 +16,6 @@ PLUGIN_DIR = Path("plugins")
 OPENAI_ICONS = {
     "daloopa": "plugins/daloopa/assets/app-icon.png",
     "github-stats": "plugins/github/assets/github-small.svg",
-    "linear": "plugins/linear/assets/linear-icon.svg",
     "mixpanel-headless": "plugins/mixpanel-headless/assets/app-icon.png",
     "notion": "plugins/notion/assets/notion-small.svg",
     "sentry": "plugins/sentry/assets/sentry-small.svg",
@@ -26,6 +25,7 @@ OPENAI_ICONS = {
 }
 
 LOCAL_ICONS = {
+    "linear": "assets/icon.png",
     "aiera": "assets/icon.png",
     "airtable": "assets/icon.svg",
     "alation": "assets/icon.png",

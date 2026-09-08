@@ -10742,39 +10742,40 @@
     },
     {
       "id": "linear",
-      "name": "linear",
+      "name": "Linear",
       "description": "Manage Linear issues, projects, and team workflows through Linear's official MCP server.",
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "linear",
-        "version": "0.0.3-ghast.1",
+        "version": "0.0.3-ghast.2",
         "description": "Manage Linear issues, projects, and team workflows through Linear's official MCP server.",
         "author": {
-          "name": "OpenAI"
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
         },
         "homepage": "https://linear.app/docs/mcp",
-        "repository": "https://github.com/openai/plugins",
-        "license": "Apache-2.0",
+        "license": "MIT",
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "productivity",
-            "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Manage Linear issues, projects, and team workflows through Linear's official MCP server.",
               "zh-CN": "管理 Linear 问题、项目与团队工作流程。"
-            }
+            },
+            "officialConnectorSource": "https://linear.app/docs/mcp",
+            "connectorPublisher": "Linear",
+            "displayName": "Linear"
           }
         }
       },
       "package": {
         "url": "./packages/linear.zip",
-        "sha256": "1df363d22d1cf7764a120a9bf8b118c44c2f0b28065a90f687290d6daec2e470"
+        "sha256": "1a2887d5de1f9f465bd110de07bc611d29f3481317d6cdff75189b6aa725782c"
       },
-      "icon": "./plugins/linear/assets/icon.svg",
+      "icon": "./plugins/linear/assets/icon.png",
       "homepage": "https://linear.app/docs/mcp",
-      "repository": "https://github.com/openai/plugins",
-      "license": "Apache-2.0",
+      "license": "MIT",
       "category": "productivity"
     },
     {
