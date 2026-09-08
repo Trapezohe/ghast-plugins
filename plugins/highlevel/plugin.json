@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "highlevel",
-  "version": "1.0.0-ghast.1",
+  "version": "1.0.0-ghast.2",
   "description": "Inspect contacts, opportunities, pipelines, appointments, calendars, conversations, messages, and related CRM activity through HighLevel's official hosted MCP server.",
   "author": {
     "name": "HighLevel",
@@ -15,7 +15,7 @@
       "category": "productivity",
       "upstreamRevision": "0af86a4cbd48c66a4071c7e509d1079f9f10ed17",
       "upstreamPath": ".",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Inspect contacts, opportunities, pipelines, appointments, calendars, conversations, messages, and related CRM activity through HighLevel's official hosted MCP server.",
         "zh-CN": "查询客户、商机、销售管道、预约、日历与沟通记录。"

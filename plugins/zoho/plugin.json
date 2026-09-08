@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "zoho",
-  "version": "1.0.3-ghast.1",
+  "version": "1.0.3-ghast.2",
   "description": "Query, manage, customize, and automate Zoho CRM through Zoho's official hosted MCP and read org/user access through Zoho's official SDK.",
   "author": {
     "name": "Zoho Corporation",
@@ -14,7 +14,7 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "upstreamRevision": "sdk-7dbcafa4f794+docs-c1e19ceac01d+oauth-10de99e7-f719809e-2d55b0d9-52d561f5",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "portStatus": "equivalent-hybrid-official-mcp-sdk",
       "descriptions": {
         "en": "Query, manage, customize, and automate Zoho CRM through Zoho's official hosted MCP and read org/user access through Zoho's official SDK.",

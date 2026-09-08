@@ -7,9 +7,9 @@ files through Dovetail's official hosted MCP server.
 ## Official hosted MCP adapter
 
 This package contains only Ghast-authored MCP configuration, safety
-instructions, catalog metadata, documentation, and a generic icon. It does
+instructions, catalog metadata, documentation, and the provider brand logo. It does
 not copy or redistribute Dovetail's hosted MCP implementation, private Codex
-connector, API tokens, workspace data, branded artwork, or marketplace icon.
+connector, API tokens, workspace data, or marketplace icon.
 
 Dovetail's official public source repository is pinned at
 `88a7389ccca718f9eff2f680ecb3f34713500866`. The importer verifies its MIT license, README,
@@ -67,8 +67,7 @@ private app identifier or artwork.
 - Research transcripts, customer evidence, contacts, comments, files,
   presigned download URLs, and unpublished findings can be sensitive. The
   skill bounds retrieval, disclosure, file access, and state-changing calls.
-- A generic research-workspace icon is used because the official public
-  source repository does not include redistributable catalog artwork.
+- Brand logo source: https://avatars.githubusercontent.com/u/17648725?v=4. Brand names and logos belong to Dovetail. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Dovetail accounts, hosted service behavior, workspace data, API access,

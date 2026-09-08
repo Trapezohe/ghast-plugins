@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "yepcode",
-  "version": "1.6.0-ghast.1",
+  "version": "1.6.0-ghast.2",
   "description": "Build, expose, schedule, execute, and audit JavaScript or Python automation tools in YepCode's isolated environment through YepCode's official hosted MCP server.",
   "author": {
     "name": "YepCode S.L.",
@@ -15,7 +15,7 @@
       "category": "development",
       "upstreamRevision": "15cf0527dda6c818a1528ed4467389e0962a1eea",
       "upstreamPath": ".",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "mcpServerExtensions": {
         "yepcode": {
           "credentialHeaders": {

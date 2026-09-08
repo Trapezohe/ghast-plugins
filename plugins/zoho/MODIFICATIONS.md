@@ -16,7 +16,6 @@ Ghast-authored adapter material:
 - `README.md`
 - `MODIFICATIONS.md`
 - `NOTICE`
-- `assets/icon.svg`
 - `licenses/README.md`
 - `skills/zoho/SKILL.md`
 - `skills/zoho/scripts/zoho_crm_admin_read.py`
@@ -25,3 +24,7 @@ The helper script is an independently authored read-only adapter over Zoho's
 official SDK. It does not copy the SDK samples or generated API source into the
 adapter. Official wheel bytes are preserved exactly and verified by SHA-256.
 Every wheel's license text is extracted byte-for-byte into `licenses/`.
+
+Brand asset:
+
+- `assets/icon.png`: Zoho brand logo from its official GitHub organization; brand rights remain with Zoho.

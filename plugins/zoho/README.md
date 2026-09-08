@@ -93,4 +93,4 @@ The plugin's Apache-2.0 license covers Zoho's public SDK and the Ghast adapter
 files. Bundled dependency wheels retain their Apache-2.0, MIT, MPL-2.0,
 BSD-3-Clause, or dual Apache/BSD license texts under `licenses/`. These
 licenses do not cover Zoho's hosted service, CRM data, private Codex connector,
-trademarks, or marketplace artwork. A generic multi-color CRM icon is used.
+trademarks, or marketplace artwork. Brand logo source: https://avatars.githubusercontent.com/u/5611631?v=4. Brand names and logos belong to Zoho. 品牌名称与标识归对应服务商所有。

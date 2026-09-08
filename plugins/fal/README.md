@@ -7,9 +7,9 @@ official hosted MCP server.
 ## Official hosted MCP adapter
 
 This package contains only Ghast-authored MCP configuration, safety
-instructions, catalog metadata, documentation, and a generic icon. It does
+instructions, catalog metadata, documentation, and the provider brand logo. It does
 not copy or redistribute fal's hosted MCP implementation, private Codex
-connector, API keys, account data, generated media, branded artwork, or
+connector, API keys, account data, generated media, or
 marketplace icon.
 
 fal's official MCP guide is pinned at SHA-256 `66aa306b5115499a0726440defcab7ae597a73142feef10fa42622decb5d0d7f`. Its ordered
@@ -72,8 +72,7 @@ artwork.
   licensed source repository. The official endpoint, documentation, live
   protocol catalogs, Codex capability evidence, and public fal API behavior
   are verified without redistributing service code.
-- A generic generative-media icon is used because no redistributable catalog
-  artwork is included in a public official MCP source repository.
+- Brand logo source: https://avatars.githubusercontent.com/u/74778219?v=4. Brand names and logos belong to fal. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 fal accounts, credits, hosted service behavior, models, generated media,

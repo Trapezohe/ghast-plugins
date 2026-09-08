@@ -6318,7 +6318,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "dovetail",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Search, inspect, synthesize, and explicitly create Dovetail projects, research data, highlights, docs, channels, themes, people, tags, fields, and files through Dovetail's official hosted MCP server.",
         "author": {
           "name": "Dovetail",
@@ -6331,7 +6331,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "88a7389ccca718f9eff2f680ecb3f34713500866",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "mcpServerExtensions": {
               "dovetail": {
                 "credentialHeaders": {
@@ -6348,9 +6348,9 @@
       },
       "package": {
         "url": "./packages/dovetail.zip",
-        "sha256": "20dde8defb781eab508c5c3a8c31acbe7169beac9b6ac4826f5ceb0f87db81c6"
+        "sha256": "d52c78caa92898e570daf565031139d9405621e48d6f8676b9883ce623b570db"
       },
-      "icon": "./plugins/dovetail/assets/icon.svg",
+      "icon": "./plugins/dovetail/assets/icon.png",
       "homepage": "https://developers.dovetail.com/docs/mcp",
       "repository": "https://github.com/dovetail/dovetail-mcp",
       "license": "MIT",
@@ -6965,7 +6965,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "fal",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Discover, price, run, upload for, monitor, and cancel image, video, audio, 3D, training, editing, and other generative-media workflows through fal's official hosted MCP server.",
         "author": {
           "name": "Fal",
@@ -6994,7 +6994,7 @@
       },
       "package": {
         "url": "./packages/fal.zip",
-        "sha256": "af38140e164dd38578d3dfbbe7e9e33b0e1a9669a33d057c0550431c058a098c"
+        "sha256": "40d19726f2418eded5adb8ff1ce072e9c4316828a594f5b60c9be8c4ae721e47"
       },
       "icon": "./plugins/fal/assets/icon.png",
       "homepage": "https://fal.ai/docs/documentation/setting-up/mcp",
@@ -9413,7 +9413,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "highlevel",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Inspect contacts, opportunities, pipelines, appointments, calendars, conversations, messages, and related CRM activity through HighLevel's official hosted MCP server.",
         "author": {
           "name": "HighLevel",
@@ -9427,7 +9427,7 @@
             "category": "productivity",
             "upstreamRevision": "0af86a4cbd48c66a4071c7e509d1079f9f10ed17",
             "upstreamPath": ".",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Inspect contacts, opportunities, pipelines, appointments, calendars, conversations, messages, and related CRM activity through HighLevel's official hosted MCP server.",
               "zh-CN": "查询客户、商机、销售管道、预约、日历与沟通记录。"
@@ -9437,9 +9437,9 @@
       },
       "package": {
         "url": "./packages/highlevel.zip",
-        "sha256": "c872cce6dfbc40ae59e47c56046b65c5f83d17dabb3b90b13d46c9a1e13af604"
+        "sha256": "7a3d13a279f60d3a7cfe550a2e96547cef87d0e851039c3e4a1f0379c4ce9443"
       },
-      "icon": "./plugins/highlevel/assets/icon.svg",
+      "icon": "./plugins/highlevel/assets/icon.png",
       "homepage": "https://marketplace.gohighlevel.com/docs/other/mcp/",
       "repository": "https://github.com/GoHighLevel/highlevel-api-docs",
       "license": "CC0-1.0",
@@ -15314,7 +15314,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "replit",
-        "version": "1.0.2-ghast.1",
+        "version": "1.0.2-ghast.2",
         "description": "Create, find, inspect, update, and publish Replit Apps through Replit's official hosted MCP server and Agent.",
         "author": {
           "name": "Replit",
@@ -15336,7 +15336,7 @@
       },
       "package": {
         "url": "./packages/replit.zip",
-        "sha256": "5cd375fe864d62178e751659af66450af3e921f2f772a70a3ee2f4241e69cdd2"
+        "sha256": "4ccb121b4c6287ba9f4283d221966ab2eb60fd13d071d9246b148b29e2221487"
       },
       "icon": "./plugins/replit/assets/icon.png",
       "homepage": "https://docs.replit.com/platforms/mcp-server",
@@ -19625,7 +19625,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "yepcode",
-        "version": "1.6.0-ghast.1",
+        "version": "1.6.0-ghast.2",
         "description": "Build, expose, schedule, execute, and audit JavaScript or Python automation tools in YepCode's isolated environment through YepCode's official hosted MCP server.",
         "author": {
           "name": "YepCode S.L.",
@@ -19639,7 +19639,7 @@
             "category": "development",
             "upstreamRevision": "15cf0527dda6c818a1528ed4467389e0962a1eea",
             "upstreamPath": ".",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "mcpServerExtensions": {
               "yepcode": {
                 "credentialHeaders": {
@@ -19656,9 +19656,9 @@
       },
       "package": {
         "url": "./packages/yepcode.zip",
-        "sha256": "b1fd007cb7d6455253f14880c0c94078ba58b12886a79e54a9eaa10b3d0255f1"
+        "sha256": "bd6ace691060f8049f9588fc97d145d3d1ba764db021c80dc3a651ead657cd06"
       },
-      "icon": "./plugins/yepcode/assets/icon.svg",
+      "icon": "./plugins/yepcode/assets/icon.png",
       "homepage": "https://yepcode.io/docs/mcp-server/",
       "repository": "https://github.com/yepcode/mcp-server-js",
       "license": "MIT",
@@ -19923,7 +19923,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "zoho",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Query, manage, customize, and automate Zoho CRM through Zoho's official hosted MCP and read org/user access through Zoho's official SDK.",
         "author": {
           "name": "Zoho Corporation",
@@ -19936,7 +19936,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "sdk-7dbcafa4f794+docs-c1e19ceac01d+oauth-10de99e7-f719809e-2d55b0d9-52d561f5",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "portStatus": "equivalent-hybrid-official-mcp-sdk",
             "descriptions": {
               "en": "Query, manage, customize, and automate Zoho CRM through Zoho's official hosted MCP and read org/user access through Zoho's official SDK.",
@@ -19947,9 +19947,9 @@
       },
       "package": {
         "url": "./packages/zoho.zip",
-        "sha256": "30de1949b2a53b115dacb8337ec87c253c6587ed9b067092e163def3c033c099"
+        "sha256": "2442818897de82b6c6317ffd8811ccea5abbad2736bb26769556b99c28927527"
       },
-      "icon": "./plugins/zoho/assets/icon.svg",
+      "icon": "./plugins/zoho/assets/icon.png",
       "homepage": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
       "repository": "https://github.com/zoho/zohocrm-python-sdk-8.0",
       "license": "Apache-2.0",

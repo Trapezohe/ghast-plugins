@@ -62,7 +62,7 @@ metadata at `dfe20c56545aad3736e4e007ddfcd7551b7f4f445db73ff846fc70ac57b023e0`.
   behavior, native initialization, native user-visible schemas, and public
   documentation were verified without a Replit account. Authenticated app
   listing, Agent execution, creation, update, and publishing were not run.
-- A generic app-builder icon is used instead of Replit marketplace artwork.
+- Brand logo source: https://avatars.githubusercontent.com/u/983194?v=4. Brand names and logos belong to Replit. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Replit accounts, plans, Agent behavior, hosted services, app data, secrets,
