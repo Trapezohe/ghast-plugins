@@ -1,0 +1,44 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "influxdb",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect to InfluxDB 3 through its official MCP for time-series queries, schema discovery and database administration, with a separate documentation service.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/influxdata/influxdb3_mcp_server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/influxdata/influxdb3_mcp_server",
+      "connectorPublisher": "InfluxDB",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "InfluxDB",
+      "descriptions": {
+        "en": "Connect to InfluxDB 3 through its official MCP for time-series queries, schema discovery and database administration, with a separate documentation service.",
+        "zh-CN": "通过 InfluxDB 3 官方 MCP 查询时序数据、发现表结构和管理数据库，并连接独立的官方文档服务。"
+      },
+      "mcpServerExtensions": {
+        "influxdb": {
+          "credentialEnv": {
+            "INFLUX_DB_PRODUCT_TYPE": "$VAULT:influxdb-product-type",
+            "INFLUX_DB_INSTANCE_URL": "$VAULT:influxdb-url",
+            "INFLUX_DB_TOKEN": "$VAULT:influxdb-token",
+            "INFLUX_DB_CLUSTER_ID": "$VAULT:influxdb-cluster-id",
+            "INFLUX_DB_ACCOUNT_ID": "$VAULT:influxdb-account-id",
+            "INFLUX_DB_MANAGEMENT_TOKEN": "$VAULT:influxdb-management-token"
+          },
+          "optionalCredentials": [
+            "influxdb-url",
+            "influxdb-token",
+            "influxdb-cluster-id",
+            "influxdb-account-id",
+            "influxdb-management-token"
+          ]
+        }
+      }
+    }
+  }
+}

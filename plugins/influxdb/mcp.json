@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "influxdb": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@influxdata/influxdb3-mcp-server@1.4.1"
+      ],
+      "cwd": "${PLUGIN_DATA}",
+      "env": {
+        "INFLUX_DB_DATABASE_TOKEN": "",
+        "INFLUX_MCP_TOOL_PROFILE": "operator"
+      }
+    },
+    "influxdb-docs": {
+      "type": "streamable-http",
+      "url": "https://influxdb-docs.mcp.kapa.ai"
+    }
+  }
+}

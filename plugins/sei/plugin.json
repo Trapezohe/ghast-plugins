@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "sei",
+  "version": "1.0.0-ghast.1",
+  "description": "Use Sei’s official MCP to inspect blocks, balances, tokens, NFTs and contracts, with a separate optional wallet connection for authorized transactions.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.sei.io/ai/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.sei.io/ai/mcp-server",
+      "connectorPublisher": "Sei",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Sei",
+      "descriptions": {
+        "en": "Use Sei’s official MCP to inspect blocks, balances, tokens, NFTs and contracts, with a separate optional wallet connection for authorized transactions.",
+        "zh-CN": "通过 Sei 官方 MCP 查询区块、余额、代币、NFT 与合约，并通过独立可选的钱包连接执行已授权的交易。"
+      },
+      "mcpServerExtensions": {
+        "sei-wallet": {
+          "credentialEnv": {
+            "PRIVATE_KEY": "$VAULT:sei-private-key"
+          }
+        }
+      }
+    }
+  }
+}

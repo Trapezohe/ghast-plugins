@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "zerion",
+  "version": "1.0.0-ghast.1",
+  "description": "Search Zerion’s official API documentation for wallet analytics, portfolio endpoints, authentication and integration guidance.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/zeriontech/zerion-ai",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/zeriontech/zerion-ai",
+      "connectorPublisher": "Zerion",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Zerion",
+      "descriptions": {
+        "en": "Search Zerion’s official API documentation for wallet analytics, portfolio endpoints, authentication and integration guidance.",
+        "zh-CN": "检索 Zerion 官方 API 文档，了解钱包分析、投资组合接口、身份验证与集成方式。"
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "sei": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@sei-js/mcp-server@1.0.0"
+      ],
+      "cwd": "${PLUGIN_DATA}",
+      "env": {
+        "WALLET_MODE": "disabled",
+        "PRIVATE_KEY": "",
+        "WALLET_API_KEY": "",
+        "SERVER_TRANSPORT": "stdio",
+        "MAINNET_RPC_URL": "https://evm-rpc.sei-apis.com",
+        "TESTNET_RPC_URL": "https://evm-rpc-testnet.sei-apis.com"
+      }
+    },
+    "sei-wallet": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@sei-js/mcp-server@1.0.0"
+      ],
+      "cwd": "${PLUGIN_DATA}",
+      "env": {
+        "WALLET_MODE": "private-key",
+        "PRIVATE_KEY": "",
+        "WALLET_API_KEY": "",
+        "SERVER_TRANSPORT": "stdio",
+        "MAINNET_RPC_URL": "https://evm-rpc.sei-apis.com",
+        "TESTNET_RPC_URL": "https://evm-rpc-testnet.sei-apis.com"
+      }
+    }
+  }
+}

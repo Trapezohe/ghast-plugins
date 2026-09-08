@@ -8137,6 +8137,63 @@
       "category": "creativity"
     },
     {
+      "id": "influxdb",
+      "name": "InfluxDB",
+      "description": "Connect to InfluxDB 3 through its official MCP for time-series queries, schema discovery and database administration, with a separate documentation service.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "influxdb",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect to InfluxDB 3 through its official MCP for time-series queries, schema discovery and database administration, with a separate documentation service.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/influxdata/influxdb3_mcp_server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/influxdata/influxdb3_mcp_server",
+            "connectorPublisher": "InfluxDB",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "InfluxDB",
+            "descriptions": {
+              "en": "Connect to InfluxDB 3 through its official MCP for time-series queries, schema discovery and database administration, with a separate documentation service.",
+              "zh-CN": "通过 InfluxDB 3 官方 MCP 查询时序数据、发现表结构和管理数据库，并连接独立的官方文档服务。"
+            },
+            "mcpServerExtensions": {
+              "influxdb": {
+                "credentialEnv": {
+                  "INFLUX_DB_PRODUCT_TYPE": "$VAULT:influxdb-product-type",
+                  "INFLUX_DB_INSTANCE_URL": "$VAULT:influxdb-url",
+                  "INFLUX_DB_TOKEN": "$VAULT:influxdb-token",
+                  "INFLUX_DB_CLUSTER_ID": "$VAULT:influxdb-cluster-id",
+                  "INFLUX_DB_ACCOUNT_ID": "$VAULT:influxdb-account-id",
+                  "INFLUX_DB_MANAGEMENT_TOKEN": "$VAULT:influxdb-management-token"
+                },
+                "optionalCredentials": [
+                  "influxdb-url",
+                  "influxdb-token",
+                  "influxdb-cluster-id",
+                  "influxdb-account-id",
+                  "influxdb-management-token"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/influxdb.zip",
+        "sha256": "de0d6b244dfe8067219b25be1d223e73424c3e0329200cd7b79564266dbdda99"
+      },
+      "icon": "./plugins/influxdb/assets/icon.png",
+      "homepage": "https://github.com/influxdata/influxdb3_mcp_server",
+      "license": "MIT",
+      "category": "data"
+    },
+    {
       "id": "infobip",
       "name": "Infobip",
       "description": "Connect official Infobip tools for SMS, email, WhatsApp, voice, customer profiles, account management and documentation.",
@@ -12743,6 +12800,51 @@
       "category": "web"
     },
     {
+      "id": "sei",
+      "name": "Sei",
+      "description": "Use Sei’s official MCP to inspect blocks, balances, tokens, NFTs and contracts, with a separate optional wallet connection for authorized transactions.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "sei",
+        "version": "1.0.0-ghast.1",
+        "description": "Use Sei’s official MCP to inspect blocks, balances, tokens, NFTs and contracts, with a separate optional wallet connection for authorized transactions.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.sei.io/ai/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.sei.io/ai/mcp-server",
+            "connectorPublisher": "Sei",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Sei",
+            "descriptions": {
+              "en": "Use Sei’s official MCP to inspect blocks, balances, tokens, NFTs and contracts, with a separate optional wallet connection for authorized transactions.",
+              "zh-CN": "通过 Sei 官方 MCP 查询区块、余额、代币、NFT 与合约，并通过独立可选的钱包连接执行已授权的交易。"
+            },
+            "mcpServerExtensions": {
+              "sei-wallet": {
+                "credentialEnv": {
+                  "PRIVATE_KEY": "$VAULT:sei-private-key"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/sei.zip",
+        "sha256": "8738775492aa510b7fe854e0bf8350a45e2cef45000f2f51a8f772e1a9e23f1d"
+      },
+      "icon": "./plugins/sei/assets/icon.png",
+      "homepage": "https://docs.sei.io/ai/mcp-server",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
       "id": "semgrep",
       "name": "Semgrep",
       "description": "Analyze code and investigate security findings with the MCP server built into the official Semgrep CLI.",
@@ -13449,6 +13551,44 @@
       "homepage": "https://docs.socket.dev/docs/remote-socket-mcp",
       "license": "MIT",
       "category": "developer-tools"
+    },
+    {
+      "id": "solana",
+      "name": "Solana",
+      "description": "Use Solana’s official Developer MCP to search ecosystem documentation and check Anchor or Pinocchio Rust programs.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "solana",
+        "version": "1.0.0-ghast.1",
+        "description": "Use Solana’s official Developer MCP to search ecosystem documentation and check Anchor or Pinocchio Rust programs.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://mcp.solana.com/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://mcp.solana.com/",
+            "connectorPublisher": "Solana",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Solana",
+            "descriptions": {
+              "en": "Use Solana’s official Developer MCP to search ecosystem documentation and check Anchor or Pinocchio Rust programs.",
+              "zh-CN": "通过 Solana 官方开发者 MCP 检索生态文档，并检查 Anchor 或 Pinocchio Rust 程序。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/solana.zip",
+        "sha256": "e4889302a9b2a2d803b45e6c3430b6e4fe30d23f0b1b3d121ae2389e21805a50"
+      },
+      "icon": "./plugins/solana/assets/icon.png",
+      "homepage": "https://mcp.solana.com/",
+      "license": "MIT",
+      "category": "development"
     },
     {
       "id": "square",
@@ -16034,6 +16174,44 @@
       "homepage": "https://help.getzep.com/memory-mcp-server/connect",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "zerion",
+      "name": "Zerion",
+      "description": "Search Zerion’s official API documentation for wallet analytics, portfolio endpoints, authentication and integration guidance.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "zerion",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Zerion’s official API documentation for wallet analytics, portfolio endpoints, authentication and integration guidance.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/zeriontech/zerion-ai",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/zeriontech/zerion-ai",
+            "connectorPublisher": "Zerion",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Zerion",
+            "descriptions": {
+              "en": "Search Zerion’s official API documentation for wallet analytics, portfolio endpoints, authentication and integration guidance.",
+              "zh-CN": "检索 Zerion 官方 API 文档，了解钱包分析、投资组合接口、身份验证与集成方式。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/zerion.zip",
+        "sha256": "d639d2e4421b7d1bdd0dac527b052cfd7b8c98b685237265e7bea4eb864afcbd"
+      },
+      "icon": "./plugins/zerion/assets/icon.png",
+      "homepage": "https://github.com/zeriontech/zerion-ai",
+      "license": "MIT",
+      "category": "development"
     },
     {
       "id": "zilliz",

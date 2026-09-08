@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "solana",
+  "version": "1.0.0-ghast.1",
+  "description": "Use Solana’s official Developer MCP to search ecosystem documentation and check Anchor or Pinocchio Rust programs.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://mcp.solana.com/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://mcp.solana.com/",
+      "connectorPublisher": "Solana",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Solana",
+      "descriptions": {
+        "en": "Use Solana’s official Developer MCP to search ecosystem documentation and check Anchor or Pinocchio Rust programs.",
+        "zh-CN": "通过 Solana 官方开发者 MCP 检索生态文档，并检查 Anchor 或 Pinocchio Rust 程序。"
+      }
+    }
+  }
+}
