@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "appwrite",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage Appwrite Cloud projects, discover service tools and search documentation through Appwrite’s official hosted MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://appwrite.io/changelog/5",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://appwrite.io/changelog/5",
+      "connectorPublisher": "Appwrite",
+      "category": "development",
+      "icon": "./assets/icon.svg",
+      "displayName": "Appwrite",
+      "descriptions": {
+        "en": "Manage Appwrite Cloud projects, discover service tools and search documentation through Appwrite’s official hosted MCP.",
+        "zh-CN": "通过 Appwrite 官方托管 MCP 管理云端项目、发现服务工具并搜索文档。"
+      }
+    }
+  }
+}

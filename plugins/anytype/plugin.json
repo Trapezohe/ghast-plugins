@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "anytype",
+  "version": "1.0.0-ghast.1",
+  "description": "Search and organize Anytype spaces, objects, lists and knowledge through Anytype’s official local MCP connector.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/anyproto/anytype-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/anyproto/anytype-mcp",
+      "connectorPublisher": "Anytype",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Anytype",
+      "descriptions": {
+        "en": "Search and organize Anytype spaces, objects, lists and knowledge through Anytype’s official local MCP connector.",
+        "zh-CN": "通过 Anytype 官方本地 MCP 连接器搜索和整理空间、对象、列表及知识资料。"
+      },
+      "mcpServerExtensions": {
+        "anytype": {
+          "credentialEnv": {
+            "OPENAPI_MCP_HEADERS": "$VAULT:anytype-api-headers"
+          }
+        }
+      }
+    }
+  }
+}

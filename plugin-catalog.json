@@ -645,6 +645,51 @@
       "category": "development"
     },
     {
+      "id": "anytype",
+      "name": "Anytype",
+      "description": "Search and organize Anytype spaces, objects, lists and knowledge through Anytype’s official local MCP connector.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "anytype",
+        "version": "1.0.0-ghast.1",
+        "description": "Search and organize Anytype spaces, objects, lists and knowledge through Anytype’s official local MCP connector.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/anyproto/anytype-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/anyproto/anytype-mcp",
+            "connectorPublisher": "Anytype",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Anytype",
+            "descriptions": {
+              "en": "Search and organize Anytype spaces, objects, lists and knowledge through Anytype’s official local MCP connector.",
+              "zh-CN": "通过 Anytype 官方本地 MCP 连接器搜索和整理空间、对象、列表及知识资料。"
+            },
+            "mcpServerExtensions": {
+              "anytype": {
+                "credentialEnv": {
+                  "OPENAPI_MCP_HEADERS": "$VAULT:anytype-api-headers"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/anytype.zip",
+        "sha256": "bbb9d4e4dfd89c04adcf5676d0658c4e40b94df9576de84a0e580d0b6eda8f2b"
+      },
+      "icon": "./plugins/anytype/assets/icon.png",
+      "homepage": "https://github.com/anyproto/anytype-mcp",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "apify",
       "name": "Apify",
       "description": "Discover web data Actors and run scoped extraction workflows.",
@@ -770,6 +815,44 @@
       "homepage": "https://support.appsflyer.com/hc/en-us/articles/36349070304785--Beta-AppsFlyer-MCP",
       "license": "MIT",
       "category": "marketing"
+    },
+    {
+      "id": "appwrite",
+      "name": "Appwrite",
+      "description": "Manage Appwrite Cloud projects, discover service tools and search documentation through Appwrite’s official hosted MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "appwrite",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage Appwrite Cloud projects, discover service tools and search documentation through Appwrite’s official hosted MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://appwrite.io/changelog/5",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://appwrite.io/changelog/5",
+            "connectorPublisher": "Appwrite",
+            "category": "development",
+            "icon": "./assets/icon.svg",
+            "displayName": "Appwrite",
+            "descriptions": {
+              "en": "Manage Appwrite Cloud projects, discover service tools and search documentation through Appwrite’s official hosted MCP.",
+              "zh-CN": "通过 Appwrite 官方托管 MCP 管理云端项目、发现服务工具并搜索文档。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/appwrite.zip",
+        "sha256": "2289dfe77e420535c948ccf6897da3616ec760baead4cb640015b9a556a76332"
+      },
+      "icon": "./plugins/appwrite/assets/icon.svg",
+      "homepage": "https://appwrite.io/changelog/5",
+      "license": "MIT",
+      "category": "development"
     },
     {
       "id": "arcjet",
@@ -4823,6 +4906,52 @@
       "homepage": "https://github.com/open-dingtalk/dingtalk-mcp",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "directus",
+      "name": "Directus",
+      "description": "Query and manage Directus content, assets and supported automation workflows using the official Content MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "directus",
+        "version": "1.0.0-ghast.1",
+        "description": "Query and manage Directus content, assets and supported automation workflows using the official Content MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/directus/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/directus/mcp",
+            "connectorPublisher": "Directus",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Directus",
+            "descriptions": {
+              "en": "Query and manage Directus content, assets and supported automation workflows using the official Content MCP server.",
+              "zh-CN": "通过 Directus 官方 Content MCP 服务查询和管理内容、素材及受支持的自动化流程。"
+            },
+            "mcpServerExtensions": {
+              "directus": {
+                "credentialEnv": {
+                  "DIRECTUS_URL": "$VAULT:directus-url",
+                  "DIRECTUS_TOKEN": "$VAULT:directus-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/directus.zip",
+        "sha256": "2cf97cbe0e17d640710d6d541e3e17fb16f42b130b8b9d40897c38dc9c4096ee"
+      },
+      "icon": "./plugins/directus/assets/icon.png",
+      "homepage": "https://github.com/directus/mcp",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "docusign",

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "directus",
+  "version": "1.0.0-ghast.1",
+  "description": "Query and manage Directus content, assets and supported automation workflows using the official Content MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/directus/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/directus/mcp",
+      "connectorPublisher": "Directus",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Directus",
+      "descriptions": {
+        "en": "Query and manage Directus content, assets and supported automation workflows using the official Content MCP server.",
+        "zh-CN": "通过 Directus 官方 Content MCP 服务查询和管理内容、素材及受支持的自动化流程。"
+      },
+      "mcpServerExtensions": {
+        "directus": {
+          "credentialEnv": {
+            "DIRECTUS_URL": "$VAULT:directus-url",
+            "DIRECTUS_TOKEN": "$VAULT:directus-token"
+          }
+        }
+      }
+    }
+  }
+}
