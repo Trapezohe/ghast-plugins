@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mem0",
+  "version": "1.0.0-ghast.1",
+  "description": "Search and manage persistent user and agent memories through Mem0’s official hosted MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.mem0.ai/platform/mem0-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.mem0.ai/platform/mem0-mcp",
+      "connectorPublisher": "Mem0",
+      "category": "productivity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Mem0",
+      "descriptions": {
+        "en": "Search and manage persistent user and agent memories through Mem0’s official hosted MCP server.",
+        "zh-CN": "通过 Mem0 官方托管 MCP 查询和管理用户及智能体的持久记忆。"
+      }
+    }
+  }
+}

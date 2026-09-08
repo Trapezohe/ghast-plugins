@@ -6065,6 +6065,44 @@
       "category": "finance"
     },
     {
+      "id": "fish-audio-docs",
+      "name": "Fish Audio Docs",
+      "description": "Search official Fish Audio documentation for text-to-speech, voice models and audio API integration.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "fish-audio-docs",
+        "version": "1.0.0-ghast.1",
+        "description": "Search official Fish Audio documentation for text-to-speech, voice models and audio API integration.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.fish.audio/developer-guide/resources/coding-agents",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.fish.audio/developer-guide/resources/coding-agents",
+            "connectorPublisher": "Fish Audio",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Fish Audio Docs",
+            "descriptions": {
+              "en": "Search official Fish Audio documentation for text-to-speech, voice models and audio API integration.",
+              "zh-CN": "查询 Fish Audio 官方文档，辅助接入文本转语音、声音模型和音频 API。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/fish-audio-docs.zip",
+        "sha256": "451516aa9d01d0c0becf5ccd32c4b05e3a410e2424ea750364331ecd2cd02fae"
+      },
+      "icon": "./plugins/fish-audio-docs/assets/icon.png",
+      "homepage": "https://docs.fish.audio/developer-guide/resources/coding-agents",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "freshworks-developer",
       "name": "Freshworks Developer",
       "description": "Inspect Freshworks custom apps and versions and manage app package submission workflows.",
@@ -8909,6 +8947,44 @@
       },
       "icon": "./plugins/mem/assets/icon.svg",
       "homepage": "https://docs.mem.ai/mcp/overview",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
+      "id": "mem0",
+      "name": "Mem0",
+      "description": "Search and manage persistent user and agent memories through Mem0’s official hosted MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "mem0",
+        "version": "1.0.0-ghast.1",
+        "description": "Search and manage persistent user and agent memories through Mem0’s official hosted MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.mem0.ai/platform/mem0-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.mem0.ai/platform/mem0-mcp",
+            "connectorPublisher": "Mem0",
+            "category": "productivity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Mem0",
+            "descriptions": {
+              "en": "Search and manage persistent user and agent memories through Mem0’s official hosted MCP server.",
+              "zh-CN": "通过 Mem0 官方托管 MCP 查询和管理用户及智能体的持久记忆。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/mem0.zip",
+        "sha256": "d063fc1f3135087e9b665b0e600b54370e7ad1b7e19735c0b81e81c42f4045db"
+      },
+      "icon": "./plugins/mem0/assets/icon.svg",
+      "homepage": "https://docs.mem0.ai/platform/mem0-mcp",
       "license": "MIT",
       "category": "productivity"
     },
@@ -14573,6 +14649,44 @@
       },
       "icon": "./plugins/zapier/assets/icon.png",
       "homepage": "https://docs.zapier.com/mcp/home",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
+      "id": "zep",
+      "name": "Zep",
+      "description": "Search Zep memory, retrieve user context and add authorized information to connected knowledge graphs.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "zep",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Zep memory, retrieve user context and add authorized information to connected knowledge graphs.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.getzep.com/memory-mcp-server/connect",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.getzep.com/memory-mcp-server/connect",
+            "connectorPublisher": "Zep",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Zep",
+            "descriptions": {
+              "en": "Search Zep memory, retrieve user context and add authorized information to connected knowledge graphs.",
+              "zh-CN": "查询 Zep 记忆、获取用户上下文，并向已连接的知识图谱添加经授权的信息。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/zep.zip",
+        "sha256": "5dbf202c1c50c2f57575a39f601050b3c57bd4d01242f5d7abc8e8c527047bfe"
+      },
+      "icon": "./plugins/zep/assets/icon.png",
+      "homepage": "https://help.getzep.com/memory-mcp-server/connect",
       "license": "MIT",
       "category": "productivity"
     },

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "zep",
+  "version": "1.0.0-ghast.1",
+  "description": "Search Zep memory, retrieve user context and add authorized information to connected knowledge graphs.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://help.getzep.com/memory-mcp-server/connect",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://help.getzep.com/memory-mcp-server/connect",
+      "connectorPublisher": "Zep",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Zep",
+      "descriptions": {
+        "en": "Search Zep memory, retrieve user context and add authorized information to connected knowledge graphs.",
+        "zh-CN": "查询 Zep 记忆、获取用户上下文，并向已连接的知识图谱添加经授权的信息。"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "fish-audio-docs",
+  "version": "1.0.0-ghast.1",
+  "description": "Search official Fish Audio documentation for text-to-speech, voice models and audio API integration.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.fish.audio/developer-guide/resources/coding-agents",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.fish.audio/developer-guide/resources/coding-agents",
+      "connectorPublisher": "Fish Audio",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Fish Audio Docs",
+      "descriptions": {
+        "en": "Search official Fish Audio documentation for text-to-speech, voice models and audio API integration.",
+        "zh-CN": "查询 Fish Audio 官方文档，辅助接入文本转语音、声音模型和音频 API。"
+      }
+    }
+  }
+}
