@@ -6387,6 +6387,51 @@
       "category": "finance"
     },
     {
+      "id": "everhour",
+      "name": "Everhour",
+      "description": "Connect Everhour’s official MCP for timers, time entries, timesheets, project lookup and team work tracking.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "everhour",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Everhour’s official MCP for timers, time entries, timesheets, project lookup and team work tracking.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://support.everhour.com/article/618-connecting-with-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://support.everhour.com/article/618-connecting-with-mcp",
+            "connectorPublisher": "Everhour",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Everhour",
+            "descriptions": {
+              "en": "Connect Everhour’s official MCP for timers, time entries, timesheets, project lookup and team work tracking.",
+              "zh-CN": "连接 Everhour 官方 MCP，管理计时器、工时记录、时间表，查询项目并跟踪团队工作。"
+            },
+            "mcpServerExtensions": {
+              "everhour": {
+                "credentialHeaders": {
+                  "x-api-key": "$VAULT:everhour-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/everhour.zip",
+        "sha256": "26a45574e4afea903623881e2812f9fe46bd7264fe490612e0f18c7d06ca70ab"
+      },
+      "icon": "./plugins/everhour/assets/icon.png",
+      "homepage": "https://support.everhour.com/article/618-connecting-with-mcp",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "exa",
       "name": "Exa",
       "description": "Search the web and retrieve source pages with Exa for grounded research and current information.",
@@ -13053,6 +13098,52 @@
       "homepage": "https://www.pulumi.com/docs/ai/mcp-server/",
       "license": "MIT",
       "category": "developer-tools"
+    },
+    {
+      "id": "pumble",
+      "name": "Pumble",
+      "description": "Connect Pumble’s official MCP to find workspace conversations, summarize threads and perform authorized collaboration actions.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "pumble",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Pumble’s official MCP to find workspace conversations, summarize threads and perform authorized collaboration actions.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+            "connectorPublisher": "Pumble",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "Pumble",
+            "descriptions": {
+              "en": "Connect Pumble’s official MCP to find workspace conversations, summarize threads and perform authorized collaboration actions.",
+              "zh-CN": "连接 Pumble 官方 MCP，查找工作区对话、总结讨论串并执行已授权的协作操作。"
+            },
+            "mcpServerExtensions": {
+              "pumble": {
+                "credentialHeaders": {
+                  "token": "$VAULT:pumble-token",
+                  "x-app-token": "$VAULT:pumble-app-key"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/pumble.zip",
+        "sha256": "78d23dcea5094ee7fa3e35027e165e8f5f927330c17b00a26d81d7a0b303dd1f"
+      },
+      "icon": "./plugins/pumble/assets/icon.png",
+      "homepage": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+      "license": "MIT",
+      "category": "communication"
     },
     {
       "id": "pylon",

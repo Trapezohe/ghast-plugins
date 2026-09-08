@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "everhour",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Everhour’s official MCP for timers, time entries, timesheets, project lookup and team work tracking.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://support.everhour.com/article/618-connecting-with-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://support.everhour.com/article/618-connecting-with-mcp",
+      "connectorPublisher": "Everhour",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Everhour",
+      "descriptions": {
+        "en": "Connect Everhour’s official MCP for timers, time entries, timesheets, project lookup and team work tracking.",
+        "zh-CN": "连接 Everhour 官方 MCP，管理计时器、工时记录、时间表，查询项目并跟踪团队工作。"
+      },
+      "mcpServerExtensions": {
+        "everhour": {
+          "credentialHeaders": {
+            "x-api-key": "$VAULT:everhour-token"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "pumble",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Pumble’s official MCP to find workspace conversations, summarize threads and perform authorized collaboration actions.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+      "connectorPublisher": "Pumble",
+      "category": "communication",
+      "icon": "./assets/icon.png",
+      "displayName": "Pumble",
+      "descriptions": {
+        "en": "Connect Pumble’s official MCP to find workspace conversations, summarize threads and perform authorized collaboration actions.",
+        "zh-CN": "连接 Pumble 官方 MCP，查找工作区对话、总结讨论串并执行已授权的协作操作。"
+      },
+      "mcpServerExtensions": {
+        "pumble": {
+          "credentialHeaders": {
+            "token": "$VAULT:pumble-token",
+            "x-app-token": "$VAULT:pumble-app-key"
+          }
+        }
+      }
+    }
+  }
+}
