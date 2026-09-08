@@ -11,6 +11,6 @@ Skills, references, scripts, commands, and public MCP declarations remain source
 ## Ghast compatibility
 
 - The Codex private app mapping is replaced by Hugging Face's official public MCP endpoint with browser login or bearer token authentication.
-- A generic machine-learning icon is used because the skills repository does not publish a small catalog icon.
+Brand logo source: https://avatars.githubusercontent.com/u/25720743?v=4. The logo belongs to Hugging Face. 品牌标识归对应服务商所有。
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

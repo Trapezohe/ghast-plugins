@@ -15,6 +15,6 @@ Datadog's repository supplies the official plugin design and three setup, config
 - DD_MCP_DOMAIN selects one of seven verified public Datadog MCP regions. US1 is the default. DD_MCP_TOOLSETS defaults to core,widgets and can select other documented toolsets.
 - Optional DD_API_KEY and DD_APPLICATION_KEY values are expanded inside mcp-remote and are never stored in the plugin or inserted into process arguments.
 - A Ghast-authored Datadog usage skill adds prompt-injection defenses and explicit confirmation boundaries for write, execution, deletion, retention, billing, and security tools.
-- A generic observability icon is used because the official Cursor plugin does not publish a catalog icon.
+Brand logo source: https://avatars.githubusercontent.com/u/365230?v=4. The logo belongs to Datadog, Inc.. 品牌标识归对应服务商所有。
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

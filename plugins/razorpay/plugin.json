@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "razorpay",
-  "version": "1.0.3-ghast.1",
+  "version": "1.0.3-ghast.2",
   "description": "Read Razorpay payments, orders, refunds, settlements, QR codes, payment links, payouts, reconciliation, and saved payment methods through Razorpay's official MCP source and SDK.",
   "author": {
     "name": "Razorpay",
@@ -14,7 +14,7 @@
     "ai.trapezohe.ghast": {
       "category": "finance",
       "upstreamRevision": "7950d51d118ca164c32b7cf0cfaa14f34f24849f",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "portStatus": "official-source-readonly-adapter",
       "descriptions": {
         "en": "Read Razorpay payments, orders, refunds, settlements, QR codes, payment links, payouts, reconciliation, and saved payment methods through Razorpay's official MCP source and SDK.",

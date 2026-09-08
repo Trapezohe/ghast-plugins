@@ -5555,7 +5555,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "datadog",
-        "version": "0.7.14-ghast.1",
+        "version": "0.7.14-ghast.2",
         "description": "Investigate Datadog logs, metrics, traces, monitors, incidents, dashboards, services, and widgets through Datadog's official hosted MCP server and Datadog-derived setup workflows.",
         "author": {
           "name": "Datadog, Inc.",
@@ -5569,7 +5569,7 @@
             "category": "development",
             "upstreamRevision": "71364156c14b27466f3d646c8924318154e2321a",
             "upstreamPath": ".",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Investigate Datadog logs, metrics, traces, monitors, incidents, dashboards, services, and widgets through Datadog's official hosted MCP server and Datadog-derived setup workflows.",
               "zh-CN": "调查日志、指标、链路追踪、告警、事件与服务运行情况。"
@@ -5579,9 +5579,9 @@
       },
       "package": {
         "url": "./packages/datadog.zip",
-        "sha256": "ccf32085043e35bb3e1a8f05cb39a43b2151f34ac77727d6487c9e8bcb68979b"
+        "sha256": "0b0df13c24979f19969a281de7fe59316a5bc9c6461b6e38e71785e2f64fa2ee"
       },
-      "icon": "./plugins/datadog/assets/icon.svg",
+      "icon": "./plugins/datadog/assets/icon.png",
       "homepage": "https://docs.datadoghq.com/mcp_server/",
       "repository": "https://github.com/datadog-labs/cursor-plugin",
       "license": "Apache-2.0",
@@ -9528,7 +9528,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "hugging-face",
-        "version": "1.0.25-ghast.1",
+        "version": "1.0.25-ghast.2",
         "description": "Explore and manage Hugging Face models, datasets, Spaces, jobs, papers, evaluations, training, Gradio apps, local models, and Hub workflows with the complete official skill catalog and official Hugging Face MCP server.",
         "author": {
           "name": "Hugging Face"
@@ -9541,7 +9541,7 @@
             "category": "development",
             "upstreamRevision": "020194918dc4a27d5a5d9a154b6b56cc2bd21364",
             "upstreamPath": ".",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Explore and manage Hugging Face models, datasets, Spaces, jobs, papers, evaluations, training, Gradio apps, local models, and Hub workflows with the complete official skill catalog and official Hugging Face MCP server.",
               "zh-CN": "发现和管理模型、数据集、Spaces、任务、论文、评测与训练流程。"
@@ -9551,9 +9551,9 @@
       },
       "package": {
         "url": "./packages/hugging-face.zip",
-        "sha256": "7529d33092ad3875805c1c92f2810b473d18125eaeb2558ef3ae8f633f420770"
+        "sha256": "e8ff5ae71017c15182c45ce3c23248f90601c3f395d7cee42b445846749e8e9c"
       },
-      "icon": "./plugins/hugging-face/assets/icon.svg",
+      "icon": "./plugins/hugging-face/assets/icon.png",
       "homepage": "https://github.com/huggingface/skills",
       "repository": "https://github.com/huggingface/skills",
       "license": "Apache-2.0",
@@ -13817,7 +13817,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "posthog",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Analyze and manage PostHog analytics, flags, experiments, errors, replays, surveys, dashboards, SQL, AI observability, data pipelines, and product workflows through PostHog's official hosted MCP server.",
         "author": {
           "name": "PostHog Inc.",
@@ -13830,7 +13830,7 @@
           "ai.trapezohe.ghast": {
             "category": "data",
             "upstreamRevision": "bbc6f4bf597f133e3ca435ed300835036a23a4a7",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Analyze and manage PostHog analytics, flags, experiments, errors, replays, surveys, dashboards, SQL, AI observability, data pipelines, and product workflows through PostHog's official hosted MCP server.",
               "zh-CN": "分析产品行为，管理实验、功能开关、错误、回放、问卷与仪表板。"
@@ -13840,9 +13840,9 @@
       },
       "package": {
         "url": "./packages/posthog.zip",
-        "sha256": "2d193d1ea22e670a70a309bc9717049d69f428440411761b74909071847b66cc"
+        "sha256": "6fe3af3467305e459ec6166161d85a8ce1a07f9d7ad22ca2b19937dd349d2d15"
       },
-      "icon": "./plugins/posthog/assets/icon.svg",
+      "icon": "./plugins/posthog/assets/icon.png",
       "homepage": "https://posthog.com/docs/model-context-protocol",
       "repository": "https://github.com/PostHog/posthog",
       "license": "MIT",
@@ -14572,7 +14572,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "razorpay",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Read Razorpay payments, orders, refunds, settlements, QR codes, payment links, payouts, reconciliation, and saved payment methods through Razorpay's official MCP source and SDK.",
         "author": {
           "name": "Razorpay",
@@ -14585,7 +14585,7 @@
           "ai.trapezohe.ghast": {
             "category": "finance",
             "upstreamRevision": "7950d51d118ca164c32b7cf0cfaa14f34f24849f",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "portStatus": "official-source-readonly-adapter",
             "descriptions": {
               "en": "Read Razorpay payments, orders, refunds, settlements, QR codes, payment links, payouts, reconciliation, and saved payment methods through Razorpay's official MCP source and SDK.",
@@ -14596,9 +14596,9 @@
       },
       "package": {
         "url": "./packages/razorpay.zip",
-        "sha256": "72579173e13cbe26c9524ebfae660f3d8375718021f4d8f213b01047e1f65f11"
+        "sha256": "d781ea75a41a3cc824ef5db0f1bf5c023cad7c871b945adf3b3cb4bdbb388079"
       },
-      "icon": "./plugins/razorpay/assets/icon.svg",
+      "icon": "./plugins/razorpay/assets/icon.png",
       "homepage": "https://github.com/razorpay/razorpay-mcp-server",
       "repository": "https://github.com/razorpay/razorpay-mcp-server",
       "license": "MIT",

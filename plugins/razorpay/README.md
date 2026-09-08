@@ -48,6 +48,5 @@ merchant data, test/live mode, and monetary units remain controlled by
 Razorpay. No authenticated merchant account was used during the repository
 audit.
 
-The generic icon is independently authored because the official source does
-not publish reusable catalog artwork. See `MODIFICATIONS.md`, `LICENSE`, and
+Brand logo source: https://avatars.githubusercontent.com/u/7713209?v=4. The logo belongs to Razorpay. 品牌标识归对应服务商所有。 See `MODIFICATIONS.md`, `LICENSE`, and
 `UPSTREAM_LICENSE` for the adaptation and licensing boundary.
