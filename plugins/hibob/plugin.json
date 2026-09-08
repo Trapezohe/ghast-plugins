@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "hibob",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect HiBob’s official MCP with employee OAuth for people, organization, time-off and workplace workflows.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://apidocs.hibob.com/changelog/developer-docs-update-bob-mcp-server-now-uses-oauth",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://apidocs.hibob.com/changelog/developer-docs-update-bob-mcp-server-now-uses-oauth",
+      "connectorPublisher": "HiBob",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "HiBob",
+      "descriptions": {
+        "en": "Connect HiBob’s official MCP with employee OAuth for people, organization, time-off and workplace workflows.",
+        "zh-CN": "通过员工 OAuth 连接 HiBob 官方 MCP，处理人员、组织、休假与办公工作流。"
+      }
+    }
+  }
+}
