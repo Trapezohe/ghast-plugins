@@ -6635,6 +6635,44 @@
       "category": "creative"
     },
     {
+      "id": "enterpret",
+      "name": "Enterpret",
+      "description": "Analyze customer feedback, themes, sentiment and account context with cited answers from Enterpret’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "enterpret",
+        "version": "1.0.0-ghast.1",
+        "description": "Analyze customer feedback, themes, sentiment and account context with cited answers from Enterpret’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://helpcenter.enterpret.com/en/articles/12665166-enterpret-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://helpcenter.enterpret.com/en/articles/12665166-enterpret-mcp-server",
+            "connectorPublisher": "Enterpret",
+            "category": "research",
+            "icon": "./assets/icon.png",
+            "displayName": "Enterpret",
+            "descriptions": {
+              "en": "Analyze customer feedback, themes, sentiment and account context with cited answers from Enterpret’s official MCP.",
+              "zh-CN": "通过 Enterpret 官方 MCP 分析客户反馈、主题、情绪与账号背景，并获取带来源引用的答案。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/enterpret.zip",
+        "sha256": "f54f2c1059180c0adebb4fcf4346d68422392ba0a3f47227fd8e598f05504b30"
+      },
+      "icon": "./plugins/enterpret/assets/icon.png",
+      "homepage": "https://helpcenter.enterpret.com/en/articles/12665166-enterpret-mcp-server",
+      "license": "MIT",
+      "category": "research"
+    },
+    {
       "id": "eraser",
       "name": "Eraser",
       "description": "Create and edit technical diagrams, search workspace files and manage diagram presets in Eraser.",
