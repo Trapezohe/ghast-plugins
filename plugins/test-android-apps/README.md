@@ -1,15 +1,24 @@
-# Test Android Apps
+# Android App Testing
 
-Test Android apps with emulator workflows for reproduction, screenshots, UI inspection, log capture, and performance profiling.
+Ghast-authored Android test workflows using Google's official Android SDK
+Platform Tools. This package includes one local CLI skill and no MCP server.
 
-## Ghast port
+Official sources:
+- https://developer.android.com/tools/adb
+- https://developer.android.com/studio/run/emulator-commandline
 
-This package contains the connector-free skill payload from `plugins/test-android-apps` in `openai/plugins` at `11c74d6ba24d3a6d48f54a194cd00ef3beea18f9`.
+The user supplies an Android SDK, authorized emulator and target app/project.
+No SDK binary, device credentials, copied Codex workflow or third-party UI
+control wrapper is bundled. This version replaces the previous OpenAI-derived
+skill and Python helpers with Ghast-maintained instructions.
 
-The Codex marketplace manifest, screenshots, and OpenAI-specific agent metadata are not included. A single marketplace icon is retained by the Ghast icon sync step. The plugin does not contain an OpenAI `.app.json` connector declaration.
+The workflow covers launch, UI hierarchy inspection, screenshots, input and
+scoped logs. It does not claim performance profiling coverage. Local plugin
+installation does not prove an app ran successfully on a device.
 
-## Partial port
-
-- `skills/android-performance`: No redistributable license file was present in the source snapshot.
-
-Local CLIs, SDKs, API credentials, or paid services described by individual skills remain user-managed dependencies.
+English and Chinese introductions are separate manifest fields selected by UI
+language. Brand icon source:
+https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/android/images/touchicon-180.png
+This asset is linked by https://developer.android.com/. Android branding remains
+Google's property; the MIT license covers Ghast-authored instructions and
+configuration only.

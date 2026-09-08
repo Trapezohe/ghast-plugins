@@ -18,11 +18,11 @@ OPENAI_ICONS = {
     "github-stats": "plugins/github/assets/github-small.svg",
     "mixpanel-headless": "plugins/mixpanel-headless/assets/app-icon.png",
     "supabase": "plugins/supabase/assets/logo.svg",
-    "test-android-apps": "plugins/test-android-apps/assets/test-android-apps-small.svg",
     "twilio-developer-kit": "plugins/twilio-developer-kit/assets/logo.svg",
 }
 
 LOCAL_ICONS = {
+    "test-android-apps": "assets/icon.png",
     "notion": "assets/icon.png",
     "sentry": "assets/icon.png",
     "linear": "assets/icon.png",

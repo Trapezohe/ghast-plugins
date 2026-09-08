@@ -4,8 +4,7 @@
   "selectionRule": "Plugin directory does not contain .app.json.",
   "summary": {
     "blocked": 11,
-    "existing": 14,
-    "partial": 1
+    "existing": 15
   },
   "plugins": [
     {
@@ -125,8 +124,8 @@
     },
     {
       "name": "test-android-apps",
-      "status": "partial",
-      "reason": "Imported only the explicitly licensed skill subset."
+      "status": "existing",
+      "reason": "Ghast maintains its own Android QA workflow using official Android SDK tools."
     },
     {
       "name": "twilio-developer-kit",

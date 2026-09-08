@@ -17,32 +17,10 @@ OPENAI_REPOSITORY = "https://github.com/openai/plugins"
 PLUGIN_DIR = Path("plugins")
 REPORT_PATH = Path("openai-portability.json")
 
-PORTS = {
-    "test-android-apps": {
-        "category": "development",
-        "description": (
-            "Test Android apps on a local emulator with reproducible UI "
-            "inspection, screenshots, input actions, and log capture."
-        ),
-        "license": "Apache-2.0",
-        "license_files": [
-            (
-                "plugin",
-                "skills/android-emulator-qa/LICENSE.txt",
-                "LICENSE",
-            )
-        ],
-        "skills": ["android-emulator-qa"],
-        "omitted": [
-            {
-                "path": "skills/android-performance",
-                "reason": "No redistributable license file was present in the source snapshot.",
-            }
-        ],
-    },
-}
+PORTS = {}
 
 EXISTING_PORTS = {
+    "test-android-apps": "Ghast maintains its own Android QA workflow using official Android SDK tools.",
     "boltz-api-cli": "Ghast regenerates Boltz directly from the pinned official Boltz repository.",
     "circleci": "Ghast regenerates CircleCI from the MIT-licensed official CLI repository and current CircleCI-operated MCP services.",
     "cloudflare": "Ghast already ships a broader Cloudflare port with public MCP support.",

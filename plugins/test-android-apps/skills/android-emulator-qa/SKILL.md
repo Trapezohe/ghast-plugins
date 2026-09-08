@@ -1,80 +1,64 @@
 ---
-name: "android-emulator-qa"
-description: "Use when validating Android feature flows in an emulator with adb-driven launch, input, UI-tree inspection, screenshots, and logcat capture."
+name: android-emulator-qa
+description: Validate Android app flows with official Android SDK tools, including emulator selection, launch, UI inspection, screenshots, input and scoped diagnostic logs.
 ---
 
-# Android Emulator QA
+# Android testing in Ghast
 
-Validate Android app flows in an emulator using adb for launch, input, UI-tree inspection, screenshots, and logs.
+Use the project's existing Android build tooling and the official SDK's `adb`.
+This is a local CLI workflow, not a hosted MCP service. Follow any active host
+restrictions on computer interaction; do not use adb to bypass those restrictions.
 
-## When to use
-- QA a feature flow in an Android emulator.
-- Reproduce UI bugs by driving navigation with adb input events.
-- Capture screenshots and logcat output while testing.
+## Establish the target
 
-## Quick start
-1) List emulators and pick a serial:
-   - `adb devices`
-2) Build and install the target variant:
-   - `./gradlew :<module>:install<BuildVariant> --console=plain --quiet`
-   - If unsure about task names: `./gradlew tasks --all | rg install`
-3) Launch the app:
-   - Resolve activity: `adb -s <serial> shell cmd package resolve-activity --brief <package>`
-   - Start app: `adb -s <serial> shell am start -n <package>/<activity>`
-4) Capture a screenshot for visual verification:
-   - `adb -s <serial> exec-out screencap -p > /tmp/emu.png`
+Check `adb version` and `adb devices -l`. Select the user-authorized emulator
+serial explicitly with `adb -s SERIAL` for every device operation. An offline or
+unauthorized device is not usable; do not bypass device consent or connect to
+another device just because it is reachable. If no emulator is available, report
+that fact. Do not wipe, reset or silently start a different device.
 
-## adb control commands
-- Tap (use UI tree-derived coordinates):
-  - `adb -s <serial> shell input tap <x> <y>`
-- Swipe:
-  - `adb -s <serial> shell input swipe <x1> <y1> <x2> <y2>`
-  - Avoid edges (start ~150-200 px from left/right) to reduce accidental back gestures.
-- Text:
-  - `adb -s <serial> shell input text "hello"`
-- Back:
-  - `adb -s <serial> shell input keyevent 4`
-- UI tree dump:
-  - `adb -s <serial> exec-out uiautomator dump /dev/tty`
+Read the repository's build instructions and identify the requested variant,
+application ID and existing Gradle task. Build/install only the requested test
+application. For an already supplied APK, `adb -s SERIAL install -r APK` replaces
+that app while retaining data; do not downgrade, uninstall, clear data or install
+unrelated packages without explicit scope.
 
-## Coordinate picking (UI tree only)
-Always compute tap coordinates from the UI tree, not screenshots.
+Resolve the launch component with
+`adb -s SERIAL shell cmd package resolve-activity --brief PACKAGE` and use the
+returned component with `adb -s SERIAL shell am start -n COMPONENT`. A successful
+launch command does not prove that the intended screen rendered.
 
-1) Dump the UI tree to a step-specific file:
-   - `adb -s <serial> exec-out uiautomator dump /dev/tty > /tmp/ui-settings.xml`
-2) Find the target node and derive center coordinates (`x y`) from bounds:
-   - Bounds format: `bounds="[x1,y1][x2,y2]"`
-   - Helper script:
-   - `python3 <path-to-skill>/scripts/ui_pick.py /tmp/ui-settings.xml "Settings"`
-3) If the node is missing and there are `scrollable` elements:
-   - swipe, re-dump, and re-search at least once before concluding the target is missing.
-4) Tap the center:
-   - `adb -s <serial> shell input tap <x> <y>`
+## Observe and exercise
 
-## UI tree skeleton (helper)
-Use this helper to create a compact, readable overview before inspecting full XML.
+Capture a fresh screenshot with
+`adb -s SERIAL exec-out screencap -p > LOCAL_SCREENSHOT.png` and inspect it using
+the available image viewer. Use a task-specific output path.
 
-1) Dump full UI tree:
-   - `adb -s <serial> exec-out uiautomator dump /dev/tty > /tmp/ui-full.xml`
-2) Generate summary:
-   - `python3 <path-to-skill>/scripts/ui_tree_summarize.py /tmp/ui-full.xml /tmp/ui-summary.txt`
-3) Review `/tmp/ui-summary.txt` to choose likely targets, then compute exact bounds from full XML.
+For semantic inspection, dump the UI hierarchy to a task-specific device path
+with `adb -s SERIAL shell uiautomator dump DEVICE_XML_PATH`, then pull that file
+with `adb -s SERIAL pull DEVICE_XML_PATH LOCAL_XML_PATH`. Read node text,
+content descriptions, resource IDs, visibility/state and bounds. Canvas or
+WebView content can be absent from the hierarchy; do not equate missing nodes
+with an empty screen. Use fresh visual evidence when semantic data is incomplete.
 
-## Logs (logcat)
-1) Clear logs:
-   - `adb -s <serial> logcat -c`
-2) Stream app process logs:
-   - Resolve pid: `adb -s <serial> shell pidof -s <package>`
-   - Stream: `adb -s <serial> logcat --pid <pid>`
-3) Crash buffer only:
-   - `adb -s <serial> logcat -b crash`
-4) Save logs:
-   - `adb -s <serial> logcat -d > /tmp/logcat.txt`
+Resolve a unique visible target before each action. For bounds
+`[left,top][right,bottom]`, the center is `((left+right)/2,(top+bottom)/2)`.
+Do not reuse coordinates after navigation, scrolling or rotation. Use
+`adb -s SERIAL shell input tap X Y`, bounded swipes, or a relevant key event
+only for actions covered by the test. Capture new evidence after each step.
+Text input must contain test data, not credentials or personal information.
+For duplicate labels, use the surrounding UI and resource ID to disambiguate.
 
-## Package shortcuts
-- List installed packages:
-  - `adb -s <serial> shell pm list packages`
-- Filter to your namespace:
-  - `adb -s <serial> shell pm list packages | rg <company_or_app_id>`
-- Confirm the activity resolves before launching:
-  - `adb -s <serial> shell cmd package resolve-activity --brief <package>`
+## Diagnostics and results
+
+Resolve the app process with `adb -s SERIAL shell pidof -s PACKAGE`. Capture
+bounded logs with `adb -s SERIAL logcat -d --pid PID`, using an observed PID.
+For a crash, inspect `adb -s SERIAL logcat -d -b crash` and retain only entries
+relevant to the test. Do not clear shared log buffers. Sanitize secrets and
+personal data before including excerpts in an artifact.
+
+Record the build/variant, emulator serial, reproduction steps, expected result,
+observed result and evidence files. Separate passed, failed, blocked and
+unobserved checks. Screenshots prove appearance; logs and assertions provide
+additional evidence for behavior. Remove only temporary files created by this
+test; preserve application data and existing device state.
