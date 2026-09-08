@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mercury",
+  "version": "1.0.0-ghast.1",
+  "description": "Analyze balances, transactions, statements and spending with Mercury’s official read-only MCP connector (Beta).",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.mercury.com/docs/connecting-mercury-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.mercury.com/docs/connecting-mercury-mcp",
+      "connectorPublisher": "Mercury",
+      "category": "Finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Mercury",
+      "descriptions": {
+        "en": "Analyze balances, transactions, statements and spending with Mercury’s official read-only MCP connector (Beta).",
+        "zh-CN": "通过 Mercury 官方只读 MCP 连接器分析余额、交易、对账单与支出（Beta）。"
+      }
+    }
+  }
+}

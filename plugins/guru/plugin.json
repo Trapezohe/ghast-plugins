@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "guru",
+  "version": "1.0.0-ghast.1",
+  "description": "Find trusted workspace knowledge, ask Knowledge Agents and prepare Card drafts using Guru’s official MCP service.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://help.getguru.com/docs/connecting-gurus-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://help.getguru.com/docs/connecting-gurus-mcp-server",
+      "connectorPublisher": "Guru",
+      "category": "Productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Guru",
+      "descriptions": {
+        "en": "Find trusted workspace knowledge, ask Knowledge Agents and prepare Card drafts using Guru’s official MCP service.",
+        "zh-CN": "通过 Guru 官方 MCP 服务检索工作区知识、向知识代理提问并准备知识卡片草稿。"
+      }
+    }
+  }
+}

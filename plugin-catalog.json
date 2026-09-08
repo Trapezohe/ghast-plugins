@@ -8467,6 +8467,44 @@
       "category": "productivity"
     },
     {
+      "id": "guru",
+      "name": "Guru",
+      "description": "Find trusted workspace knowledge, ask Knowledge Agents and prepare Card drafts using Guru’s official MCP service.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "guru",
+        "version": "1.0.0-ghast.1",
+        "description": "Find trusted workspace knowledge, ask Knowledge Agents and prepare Card drafts using Guru’s official MCP service.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.getguru.com/docs/connecting-gurus-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.getguru.com/docs/connecting-gurus-mcp-server",
+            "connectorPublisher": "Guru",
+            "category": "Productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Guru",
+            "descriptions": {
+              "en": "Find trusted workspace knowledge, ask Knowledge Agents and prepare Card drafts using Guru’s official MCP service.",
+              "zh-CN": "通过 Guru 官方 MCP 服务检索工作区知识、向知识代理提问并准备知识卡片草稿。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/guru.zip",
+        "sha256": "26bcaaaf74e1092a735353cbcbcffe9ab5f86549eb2e83cdfdefc9f97693c045"
+      },
+      "icon": "./plugins/guru/assets/icon.png",
+      "homepage": "https://help.getguru.com/docs/connecting-gurus-mcp-server",
+      "license": "MIT",
+      "category": "Productivity"
+    },
+    {
       "id": "hacker-news",
       "name": "hacker-news",
       "description": "Skill for reading Hacker News from chat — top / new / best stories plus thread fetches via the public Firebase API.",
@@ -11210,6 +11248,44 @@
       "homepage": "https://docs.mem0.ai/platform/mem0-mcp",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "description": "Analyze balances, transactions, statements and spending with Mercury’s official read-only MCP connector (Beta).",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "mercury",
+        "version": "1.0.0-ghast.1",
+        "description": "Analyze balances, transactions, statements and spending with Mercury’s official read-only MCP connector (Beta).",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.mercury.com/docs/connecting-mercury-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.mercury.com/docs/connecting-mercury-mcp",
+            "connectorPublisher": "Mercury",
+            "category": "Finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Mercury",
+            "descriptions": {
+              "en": "Analyze balances, transactions, statements and spending with Mercury’s official read-only MCP connector (Beta).",
+              "zh-CN": "通过 Mercury 官方只读 MCP 连接器分析余额、交易、对账单与支出（Beta）。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/mercury.zip",
+        "sha256": "73abefffa039f68f0ca35fadc8e445aa34e15d8389587ade4fe7f40eef3aa646"
+      },
+      "icon": "./plugins/mercury/assets/icon.png",
+      "homepage": "https://docs.mercury.com/docs/connecting-mercury-mcp",
+      "license": "MIT",
+      "category": "Finance"
     },
     {
       "id": "mermaid-mindmap",
