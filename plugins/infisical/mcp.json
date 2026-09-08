@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "infisical": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@infisical/mcp@0.0.23"
+      ],
+      "cwd": "${PLUGIN_DATA}",
+      "env": {
+        "INFISICAL_AUTH_METHOD": "access-token"
+      }
+    }
+  }
+}

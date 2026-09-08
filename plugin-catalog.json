@@ -8750,6 +8750,52 @@
       "category": "development"
     },
     {
+      "id": "infisical",
+      "name": "Infisical",
+      "description": "Connect Infisical’s official MCP to manage project environments, folders, scoped secrets and project membership.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "infisical",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Infisical’s official MCP to manage project environments, folders, scoped secrets and project membership.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/Infisical/infisical-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/Infisical/infisical-mcp-server",
+            "connectorPublisher": "Infisical",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Infisical",
+            "descriptions": {
+              "en": "Connect Infisical’s official MCP to manage project environments, folders, scoped secrets and project membership.",
+              "zh-CN": "连接 Infisical 官方 MCP，管理项目环境、文件夹、授权范围内的密钥和项目成员。"
+            },
+            "mcpServerExtensions": {
+              "infisical": {
+                "credentialEnv": {
+                  "INFISICAL_TOKEN": "$VAULT:infisical-token",
+                  "INFISICAL_HOST_URL": "$VAULT:infisical-host-url"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/infisical.zip",
+        "sha256": "224865fe5263742760f817c019fb4bb717ec3136104cc5515506134026624937"
+      },
+      "icon": "./plugins/infisical/assets/icon.png",
+      "homepage": "https://github.com/Infisical/infisical-mcp-server",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "influxdb",
       "name": "InfluxDB",
       "description": "Connect to InfluxDB 3 through its official MCP for time-series queries, schema discovery and database administration, with a separate documentation service.",

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "infisical",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Infisical’s official MCP to manage project environments, folders, scoped secrets and project membership.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/Infisical/infisical-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/Infisical/infisical-mcp-server",
+      "connectorPublisher": "Infisical",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Infisical",
+      "descriptions": {
+        "en": "Connect Infisical’s official MCP to manage project environments, folders, scoped secrets and project membership.",
+        "zh-CN": "连接 Infisical 官方 MCP，管理项目环境、文件夹、授权范围内的密钥和项目成员。"
+      },
+      "mcpServerExtensions": {
+        "infisical": {
+          "credentialEnv": {
+            "INFISICAL_TOKEN": "$VAULT:infisical-token",
+            "INFISICAL_HOST_URL": "$VAULT:infisical-host-url"
+          }
+        }
+      }
+    }
+  }
+}
