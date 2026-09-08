@@ -350,6 +350,44 @@
       "category": "data"
     },
     {
+      "id": "akiflow",
+      "name": "Akiflow",
+      "description": "Manage Akiflow tasks, subtasks, calendars and time slots, and review meeting transcripts through its official MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "akiflow",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage Akiflow tasks, subtasks, calendars and time slots, and review meeting transcripts through its official MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://product.akiflow.com/en/help/articles/4302815-akiflow-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://product.akiflow.com/en/help/articles/4302815-akiflow-mcp",
+            "connectorPublisher": "Akiflow",
+            "category": "productivity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Akiflow",
+            "descriptions": {
+              "en": "Manage Akiflow tasks, subtasks, calendars and time slots, and review meeting transcripts through its official MCP server.",
+              "zh-CN": "通过 Akiflow 官方 MCP 管理任务、子任务、日历与时间块，并查看会议转录。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/akiflow.zip",
+        "sha256": "7182ed088f2d5cf30b8f8ed40673344f848681e30d74f1210004d6be14740281"
+      },
+      "icon": "./plugins/akiflow/assets/icon.svg",
+      "homepage": "https://product.akiflow.com/en/help/articles/4302815-akiflow-mcp",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "alation",
       "name": "alation",
       "description": "Search and browse trusted Alation catalog context, query data products, inspect BI lineage, configure agents and tools, automate workflows, and curate governed metadata through Alation's official Codex skills and CLI.",
@@ -5914,6 +5952,44 @@
       "category": "productivity"
     },
     {
+      "id": "fibery",
+      "name": "Fibery",
+      "description": "Search Fibery workspace data and documents, inspect schemas, and manage entities and views through its official MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "fibery",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Fibery workspace data and documents, inspect schemas, and manage entities and views through its official MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://community.fibery.io/t/january-22-2026-architect-mode-many-ai-and-validation-rules-improvements/10284",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://community.fibery.io/t/january-22-2026-architect-mode-many-ai-and-validation-rules-improvements/10284",
+            "connectorPublisher": "Fibery",
+            "category": "productivity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Fibery",
+            "descriptions": {
+              "en": "Search Fibery workspace data and documents, inspect schemas, and manage entities and views through its official MCP server.",
+              "zh-CN": "通过 Fibery 官方 MCP 搜索工作区数据与文档、查看数据结构，并管理实体与视图。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/fibery.zip",
+        "sha256": "53c292e7c5b669ad73b3bf9ef054454bd156d83eeecdb6ec1b8b68cd330fcfa2"
+      },
+      "icon": "./plugins/fibery/assets/icon.svg",
+      "homepage": "https://community.fibery.io/t/january-22-2026-architect-mode-many-ai-and-validation-rules-improvements/10284",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "financial-datasets",
       "name": "Financial Datasets",
       "description": "Research stock prices, company financials, SEC filings and news through Financial Datasets.",
@@ -6139,6 +6215,44 @@
       "homepage": "https://docs.fish.audio/developer-guide/resources/coding-agents",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "folk",
+      "name": "folk",
+      "description": "Search contacts, companies and notes, manage CRM records and update sales pipelines through the official folk MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "folk",
+        "version": "1.0.0-ghast.1",
+        "description": "Search contacts, companies and notes, manage CRM records and update sales pipelines through the official folk MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.folk.app/en/articles/16760382-mcp-connect-folk-to-other-mcps",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.folk.app/en/articles/16760382-mcp-connect-folk-to-other-mcps",
+            "connectorPublisher": "folk",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "folk",
+            "descriptions": {
+              "en": "Search contacts, companies and notes, manage CRM records and update sales pipelines through the official folk MCP.",
+              "zh-CN": "通过 folk 官方 MCP 搜索联系人、公司和笔记，管理 CRM 记录与销售管道。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/folk.zip",
+        "sha256": "3b67002ee364dd7d5958480ffa66dd736d244a65df7010da81cc9a9a4fc09f6b"
+      },
+      "icon": "./plugins/folk/assets/icon.png",
+      "homepage": "https://help.folk.app/en/articles/16760382-mcp-connect-folk-to-other-mcps",
+      "license": "MIT",
+      "category": "marketing"
     },
     {
       "id": "freshworks-developer",
@@ -13029,6 +13143,44 @@
       "category": "development"
     },
     {
+      "id": "sunsama",
+      "name": "Sunsama",
+      "description": "Plan daily work and manage Sunsama tasks, notes and channels through the official OAuth MCP connection.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "sunsama",
+        "version": "1.0.0-ghast.1",
+        "description": "Plan daily work and manage Sunsama tasks, notes and channels through the official OAuth MCP connection.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.sunsama.com/docs/integrations/mcp/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.sunsama.com/docs/integrations/mcp/",
+            "connectorPublisher": "Sunsama",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Sunsama",
+            "descriptions": {
+              "en": "Plan daily work and manage Sunsama tasks, notes and channels through the official OAuth MCP connection.",
+              "zh-CN": "通过 Sunsama 官方 OAuth MCP 规划每日工作，管理任务、笔记和频道。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/sunsama.zip",
+        "sha256": "2b6dc39b317ad284328af4a2993edf62cf86eb9a91c63839a154c24acfb814d2"
+      },
+      "icon": "./plugins/sunsama/assets/icon.png",
+      "homepage": "https://help.sunsama.com/docs/integrations/mcp/",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "supabase",
       "name": "supabase",
       "description": "Develop and operate Supabase projects with the complete current official Supabase and Postgres best-practice skills plus Supabase's hosted OAuth MCP server.",
@@ -13386,6 +13538,44 @@
       },
       "icon": "./plugins/tana/assets/icon.svg",
       "homepage": "https://tana.inc/learn/features/mcp",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
+      "id": "taskade",
+      "name": "Taskade",
+      "description": "Work with Taskade projects, tasks, agents and Genesis app files through the official hosted MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "taskade",
+        "version": "1.0.0-ghast.1",
+        "description": "Work with Taskade projects, tasks, agents and Genesis app files through the official hosted MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.taskade.com/learn/connect/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.taskade.com/learn/connect/mcp-server",
+            "connectorPublisher": "Taskade",
+            "category": "productivity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Taskade",
+            "descriptions": {
+              "en": "Work with Taskade projects, tasks, agents and Genesis app files through the official hosted MCP server.",
+              "zh-CN": "通过 Taskade 官方托管 MCP 处理项目、任务、智能体与 Genesis 应用文件。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/taskade.zip",
+        "sha256": "63343c2fce1d2e74b07a0fd1689f9de75451d75fb441f530597f3dce3c2f3cef"
+      },
+      "icon": "./plugins/taskade/assets/icon.svg",
+      "homepage": "https://www.taskade.com/learn/connect/mcp-server",
       "license": "MIT",
       "category": "productivity"
     },

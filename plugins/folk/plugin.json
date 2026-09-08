@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "folk",
+  "version": "1.0.0-ghast.1",
+  "description": "Search contacts, companies and notes, manage CRM records and update sales pipelines through the official folk MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://help.folk.app/en/articles/16760382-mcp-connect-folk-to-other-mcps",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://help.folk.app/en/articles/16760382-mcp-connect-folk-to-other-mcps",
+      "connectorPublisher": "folk",
+      "category": "marketing",
+      "icon": "./assets/icon.png",
+      "displayName": "folk",
+      "descriptions": {
+        "en": "Search contacts, companies and notes, manage CRM records and update sales pipelines through the official folk MCP.",
+        "zh-CN": "通过 folk 官方 MCP 搜索联系人、公司和笔记，管理 CRM 记录与销售管道。"
+      }
+    }
+  }
+}

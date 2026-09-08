@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "akiflow",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage Akiflow tasks, subtasks, calendars and time slots, and review meeting transcripts through its official MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://product.akiflow.com/en/help/articles/4302815-akiflow-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://product.akiflow.com/en/help/articles/4302815-akiflow-mcp",
+      "connectorPublisher": "Akiflow",
+      "category": "productivity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Akiflow",
+      "descriptions": {
+        "en": "Manage Akiflow tasks, subtasks, calendars and time slots, and review meeting transcripts through its official MCP server.",
+        "zh-CN": "通过 Akiflow 官方 MCP 管理任务、子任务、日历与时间块，并查看会议转录。"
+      }
+    }
+  }
+}

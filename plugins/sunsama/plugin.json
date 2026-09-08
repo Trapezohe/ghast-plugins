@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "sunsama",
+  "version": "1.0.0-ghast.1",
+  "description": "Plan daily work and manage Sunsama tasks, notes and channels through the official OAuth MCP connection.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://help.sunsama.com/docs/integrations/mcp/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://help.sunsama.com/docs/integrations/mcp/",
+      "connectorPublisher": "Sunsama",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Sunsama",
+      "descriptions": {
+        "en": "Plan daily work and manage Sunsama tasks, notes and channels through the official OAuth MCP connection.",
+        "zh-CN": "通过 Sunsama 官方 OAuth MCP 规划每日工作，管理任务、笔记和频道。"
+      }
+    }
+  }
+}

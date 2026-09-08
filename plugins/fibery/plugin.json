@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "fibery",
+  "version": "1.0.0-ghast.1",
+  "description": "Search Fibery workspace data and documents, inspect schemas, and manage entities and views through its official MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://community.fibery.io/t/january-22-2026-architect-mode-many-ai-and-validation-rules-improvements/10284",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://community.fibery.io/t/january-22-2026-architect-mode-many-ai-and-validation-rules-improvements/10284",
+      "connectorPublisher": "Fibery",
+      "category": "productivity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Fibery",
+      "descriptions": {
+        "en": "Search Fibery workspace data and documents, inspect schemas, and manage entities and views through its official MCP server.",
+        "zh-CN": "通过 Fibery 官方 MCP 搜索工作区数据与文档、查看数据结构，并管理实体与视图。"
+      }
+    }
+  }
+}

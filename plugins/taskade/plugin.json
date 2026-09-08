@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "taskade",
+  "version": "1.0.0-ghast.1",
+  "description": "Work with Taskade projects, tasks, agents and Genesis app files through the official hosted MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.taskade.com/learn/connect/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.taskade.com/learn/connect/mcp-server",
+      "connectorPublisher": "Taskade",
+      "category": "productivity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Taskade",
+      "descriptions": {
+        "en": "Work with Taskade projects, tasks, agents and Genesis app files through the official hosted MCP server.",
+        "zh-CN": "通过 Taskade 官方托管 MCP 处理项目、任务、智能体与 Genesis 应用文件。"
+      }
+    }
+  }
+}
