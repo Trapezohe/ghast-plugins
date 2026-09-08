@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "jam",
-  "version": "1.0.2-ghast.1",
+  "version": "1.0.2-ghast.2",
   "description": "Inspect, analyze, organize, comment on, and manage Jam bug recordings, screenshots, video frames, transcripts, logs, network requests, user events, metadata, folders, and recording links through Jam's official hosted MCP server.",
   "author": {
     "name": "Jam",
@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "upstreamRevision": "jam-docs-16753f7a8592+pat-ed4cde60e15d+oauth-675651395646",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Inspect, analyze, organize, comment on, and manage Jam bug recordings, screenshots, video frames, transcripts, logs, network requests, user events, metadata, folders, and recording links through Jam's official hosted MCP server.",
         "zh-CN": "检查缺陷录屏、截图、日志、网络请求和用户事件，协助问题诊断。"

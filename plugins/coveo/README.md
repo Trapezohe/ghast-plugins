@@ -7,9 +7,9 @@ implementation.
 ## Official source adapter
 
 This package contains only a Ghast-authored launcher, safety instructions,
-documentation, metadata, and a generic enterprise-search icon. It does not
+documentation, metadata, and the provider brand logo. It does not
 redistribute Coveo source code, hosted implementation, OAuth client
-credentials, API keys, indexed content, branded artwork, or marketplace
+credentials, API keys, indexed content, or marketplace
 icons.
 
 Coveo Labs' official `coveo-mcp-server` repository is pinned to revision
@@ -72,8 +72,7 @@ Codex capability evidence is pinned to OpenAI plugin snapshot
 - Authenticated searches, passage retrieval, generated answers, private
   source access, and real organization configuration were not exercised
   because no Coveo account or enterprise data was used.
-- A generic document-search icon is used because no licensed Coveo
-  marketplace artwork is redistributed.
+- Brand logo source: https://avatars.githubusercontent.com/u/8632328?v=4. Brand names and logos belong to Coveo. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored launcher,
 configuration, skill, documentation, metadata, and icon. Coveo accounts,

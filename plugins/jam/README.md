@@ -7,9 +7,9 @@ metadata, folders, and recording links through Jam's official hosted MCP.
 ## Official hosted MCP adapter
 
 This package contains only Ghast-authored configuration, safety instructions,
-metadata, documentation, and a generic icon. It does not redistribute Jam's
+metadata, documentation, and the provider brand logo. It does not redistribute Jam's
 hosted implementation, private Codex connector, OAuth credentials, recordings,
-workspace data, or branded artwork.
+or workspace data.
 
 Jam's official MCP and PAT guides are pinned at SHA-256 `16753f7a8592c82f484aa98a4ffefef1f785511d49c195f2f89022f8a0b0d9fb`
 and `ed4cde60e15dc2cb5651dee2bbc82d892f62068821e8ef07a0d546666d335450`. The ordered 30-tool inventory is pinned at
@@ -40,8 +40,7 @@ authorization-server metadata are pinned at `675651395646d616e5b85b89ddff52cc4ae
 - Jam recordings can contain secrets, customer data, voices, screens, logs,
   request payloads, and identifiers. Some analysis tools use Google Gemini;
   Jam states that customer data is opted out of training and de-identified.
-- A generic bug-recording icon is used because no redistributable catalog
-  artwork is included in a public official MCP source repository.
+- Brand logo source: https://avatars.githubusercontent.com/u/63420153?v=4. Brand names and logos belong to Jam. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Jam accounts, hosted behavior, recordings, permissions, trademarks, and terms

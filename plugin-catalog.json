@@ -4965,7 +4965,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "coveo",
-        "version": "0.1.0-ghast.1",
+        "version": "0.1.0-ghast.2",
         "description": "Search authorized enterprise content, retrieve grounded passages, and generate source-linked answers through Coveo's pinned official Labs MCP implementation.",
         "author": {
           "name": "Coveo",
@@ -4978,7 +4978,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "d93b77ee3d1a53b8547adad431e8c6355bb85f23",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Search authorized enterprise content, retrieve grounded passages, and generate source-linked answers through Coveo's pinned official Labs MCP implementation.",
               "zh-CN": "检索有权访问的企业内容，提取依据并生成带来源的回答。"
@@ -4988,9 +4988,9 @@
       },
       "package": {
         "url": "./packages/coveo.zip",
-        "sha256": "cb0804d8366485443e8b3f5c6a6cc456de4fdc2fff8dc8d850d1e679ac79abca"
+        "sha256": "edaa3dc4f5986db8bdb264e6ff7afb4c1ba887a1131fbfe0fabe3e626c4f6353"
       },
-      "icon": "./plugins/coveo/assets/icon.svg",
+      "icon": "./plugins/coveo/assets/icon.png",
       "homepage": "https://www.coveo.com/en/developers/mcp-server",
       "repository": "https://github.com/coveo-labs/coveo-mcp-server",
       "license": "MIT",
@@ -9527,7 +9527,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "hubspot",
-        "version": "0.13.0-ghast.1",
+        "version": "0.13.0-ghast.2",
         "description": "Operate HubSpot CRM records, pipelines, activities, workflows, reports, data quality, sales execution, support, retention, ownership, and quote-to-cash through all 15 official Agent CLI skills.",
         "author": {
           "name": "HubSpot",
@@ -9541,7 +9541,7 @@
             "category": "productivity",
             "upstreamRevision": "71f2bdefcc0247b1f378cb98186800dc57b6f6b1",
             "upstreamPath": ".",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Operate HubSpot CRM records, pipelines, activities, workflows, reports, data quality, sales execution, support, retention, ownership, and quote-to-cash through all 15 official Agent CLI skills.",
               "zh-CN": "管理 CRM 记录、销售管道、工作流、报表、客户支持与业务数据。"
@@ -9551,9 +9551,9 @@
       },
       "package": {
         "url": "./packages/hubspot.zip",
-        "sha256": "c7849d6867c15e9ffe65d13505276a788a6fd03274e6f0a9c0fd6668f691c6f9"
+        "sha256": "b539e486a7cab1a33e94c4e3ff4ede3fd135fef240b451c9db4a5cfedd2c2703"
       },
-      "icon": "./plugins/hubspot/assets/icon.svg",
+      "icon": "./plugins/hubspot/assets/icon.png",
       "homepage": "https://developers.hubspot.com/docs/developer-tooling/local-development/agent-cli/guide",
       "repository": "https://github.com/HubSpot/agent-cli-skills",
       "license": "Apache-2.0",
@@ -10064,7 +10064,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "jam",
-        "version": "1.0.2-ghast.1",
+        "version": "1.0.2-ghast.2",
         "description": "Inspect, analyze, organize, comment on, and manage Jam bug recordings, screenshots, video frames, transcripts, logs, network requests, user events, metadata, folders, and recording links through Jam's official hosted MCP server.",
         "author": {
           "name": "Jam",
@@ -10076,7 +10076,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "jam-docs-16753f7a8592+pat-ed4cde60e15d+oauth-675651395646",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Inspect, analyze, organize, comment on, and manage Jam bug recordings, screenshots, video frames, transcripts, logs, network requests, user events, metadata, folders, and recording links through Jam's official hosted MCP server.",
               "zh-CN": "检查缺陷录屏、截图、日志、网络请求和用户事件，协助问题诊断。"
@@ -10086,9 +10086,9 @@
       },
       "package": {
         "url": "./packages/jam.zip",
-        "sha256": "34aefd9bd8b7151e025d16a3462f34d8068881ea91648121b4779bde4741b8a4"
+        "sha256": "13d04cdd851b35709b5890600ac5363a9e1dfe8d3b7b955bebc398245ab62d4b"
       },
-      "icon": "./plugins/jam/assets/icon.svg",
+      "icon": "./plugins/jam/assets/icon.png",
       "homepage": "https://jam.dev/docs/jam-mcp",
       "license": "MIT",
       "category": "productivity"
@@ -16206,7 +16206,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "signnow",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Create and send SignNow documents, templates, signing invites, reminders, embedded workflows, status checks, field updates, and signed-file links through SignNow's official hosted open-source MCP server.",
         "author": {
           "name": "airSlate Inc",
@@ -16219,7 +16219,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "80c7de587367d611fc5c689a625b5a34fc5cd35e",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Create and send SignNow documents, templates, signing invites, reminders, embedded workflows, status checks, field updates, and signed-file links through SignNow's official hosted open-source MCP server.",
               "zh-CN": "创建和发送签署文档，管理模板、邀请、提醒、字段与签署状态。"
@@ -16229,9 +16229,9 @@
       },
       "package": {
         "url": "./packages/signnow.zip",
-        "sha256": "1db21695efe2a3c3fcdf3d8fd5f6fa9fd4726e1a4268b212bff9af99bd151354"
+        "sha256": "82aeb685fd606639b564c869116c4c3095ba7f56e00b55cd80f863f4c434e3d2"
       },
-      "icon": "./plugins/signnow/assets/icon.svg",
+      "icon": "./plugins/signnow/assets/icon.png",
       "homepage": "https://docs.signnow.com/docs/signnow/mcp-server",
       "repository": "https://github.com/signnow/sn-mcp-server",
       "license": "MIT",
@@ -16730,7 +16730,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "statsig",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Inspect and manage Statsig experiments, feature gates, dynamic configs, segments, metrics, results, audit logs, and dashboards through official skills and the official Statsig MCP server.",
         "author": {
           "name": "Statsig",
@@ -16744,7 +16744,7 @@
             "category": "development",
             "upstreamRevision": "e720bbb3fc7bb4f5d50ad6175e050138ddb1a1c6",
             "upstreamPath": ".",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Inspect and manage Statsig experiments, feature gates, dynamic configs, segments, metrics, results, audit logs, and dashboards through official skills and the official Statsig MCP server.",
               "zh-CN": "查询和管理实验、功能开关、动态配置、用户分群与指标。"
@@ -16754,9 +16754,9 @@
       },
       "package": {
         "url": "./packages/statsig.zip",
-        "sha256": "6f001e4771eebdbef068bcb6b8af2be547e901bffba8d4952a153824985f78d0"
+        "sha256": "1ec52a6713829474f0e75d6fc7b7b8c573ae5c2d2ecfa93bb51f481924d1c25b"
       },
-      "icon": "./plugins/statsig/assets/icon.svg",
+      "icon": "./plugins/statsig/assets/icon.png",
       "homepage": "https://docs.statsig.com/",
       "repository": "https://github.com/statsig-io/agent-skills",
       "license": "ISC",
@@ -16909,7 +16909,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "streak",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Read, analyze, and update Streak CRM pipelines, boxes, deals, contacts, organizations, comments, tasks, and timelines through Streak's official hosted MCP server.",
         "author": {
           "name": "Rewardly, Inc.",
@@ -16921,7 +16921,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "streak-docs-87c17a922fb5+claude-f49193624657+oauth-493b0f31d7f3",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Read, analyze, and update Streak CRM pipelines, boxes, deals, contacts, organizations, comments, tasks, and timelines through Streak's official hosted MCP server.",
               "zh-CN": "读取和更新 CRM 管道、交易、联系人、企业、任务与时间线。"
@@ -16931,9 +16931,9 @@
       },
       "package": {
         "url": "./packages/streak.zip",
-        "sha256": "4919e64042da07ab56002b42bb3dd268c984e035495d794eac5eb46a77b46593"
+        "sha256": "0f754765e13d864cb963cc2817408409d316fa376938ce408a80b7cecb77571a"
       },
-      "icon": "./plugins/streak/assets/icon.svg",
+      "icon": "./plugins/streak/assets/icon.png",
       "homepage": "https://www.streak.com/integrations/mcp",
       "license": "MIT",
       "category": "productivity"

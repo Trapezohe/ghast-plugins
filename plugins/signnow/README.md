@@ -53,8 +53,7 @@ The OAuth protected-resource metadata is pinned at canonical JSON SHA-256
 - The endpoint advertises wildcard `*` and `offline_access` scopes rather than
   a separately verified read-only scope. The skill therefore requires fresh
   state and explicit confirmation for every write or externally usable link.
-- A generic document-signing icon is used instead of SignNow marketplace
-  artwork.
+- Brand logo source: https://avatars.githubusercontent.com/u/3308995?v=4. Brand names and logos belong to SignNow. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies to the Ghast-authored adapter.
 SignNow's source repository has its own MIT license. SignNow accounts, plans,

@@ -13,6 +13,6 @@ Skills, references, scripts, commands, and public MCP declarations remain source
 - The Codex private app mapping is replaced by Statsig's official Console-key MCP endpoint through pinned mcp-remote@0.1.38.
 - The MCP bridge expands STATSIG_CONSOLE_API_KEY inside its own process, so the secret is not written into the plugin.
 - The experimental statsig-create-cloud-metric skill is excluded because its curl example expands an API key into a process argument; core Codex capabilities remain covered and the official dashboard skill is retained.
-- A generic experimentation icon is used because the official skills repository does not publish a catalog icon.
+- Brand logo source: https://avatars.githubusercontent.com/u/74584511?v=4. Brand names and logos belong to Statsig. 品牌名称与标识归对应服务商所有。
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

@@ -12,6 +12,6 @@ Skills, references, scripts, commands, and public MCP declarations remain source
 
 - The Codex private app mapping is replaced by HubSpot's official Agent CLI, which authenticates through browser OAuth or a supported HUBSPOT_ACCESS_TOKEN service key.
 - The beta CLI binary is installed separately from HubSpot's official distribution and is not redistributed in this Apache-2.0 skills package; this port was verified against hubspot 0.13.0.
-- A generic CRM icon is used because the licensed skills repository does not publish a catalog icon and the CLI public-home repository does not grant redistribution rights for its social-preview asset.
+- Brand logo source: https://avatars.githubusercontent.com/u/326419?v=4. Brand names and logos belong to HubSpot. 品牌名称与标识归对应服务商所有。
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

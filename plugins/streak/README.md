@@ -34,8 +34,7 @@ authorization-server metadata is pinned at canonical JSON SHA-256
 - Endpoint discovery and the complete OAuth protocol were verified without an
   account. Authenticated tool execution was not run and requires an eligible
   Streak Pro, Pro+, or Enterprise account with appropriate workspace access.
-- A generic CRM pipeline icon is used because no licensed catalog icon is
-  included in a public official MCP source repository.
+- Brand logo source: https://cdn.prod.website-files.com/6744e71b115ff83278f43fd3/6a8dd57015a13b96eacaa7a1_streak-logo-favicon-512.png. Brand names and logos belong to Streak. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Streak accounts, subscriptions, hosted service behavior, CRM data,
