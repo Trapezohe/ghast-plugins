@@ -139,7 +139,7 @@
       "icon": "./plugins/abtasty/assets/icon.png",
       "homepage": "https://github.com/flagship-io/mcp-server",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "actively",
@@ -256,7 +256,7 @@
       "icon": "./plugins/adobe-express/assets/icon.png",
       "homepage": "https://developer.adobe.com/express/add-ons/docs/guides/getting-started/local-development/mcp-server",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "adobe-target",
@@ -716,7 +716,7 @@
       "icon": "./plugins/algolia/assets/icon.svg",
       "homepage": "https://www.algolia.com/doc/guides/model-context-protocol/productivity-mcp",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "allium",
@@ -895,7 +895,7 @@
       "icon": "./plugins/angular/assets/icon.svg",
       "homepage": "https://angular.dev/ai/mcp",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "ankr",
@@ -1150,7 +1150,7 @@
       "icon": "./plugins/appwrite/assets/icon.svg",
       "homepage": "https://appwrite.io/changelog/5",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "arcjet",
@@ -1188,7 +1188,7 @@
       "icon": "./plugins/arcjet/assets/icon.png",
       "homepage": "https://docs.arcjet.com/mcp-server",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "asana",
@@ -1303,7 +1303,7 @@
       "icon": "./plugins/assemblyai-docs/assets/icon.png",
       "homepage": "https://www.assemblyai.com/docs/coding-agent-prompts",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "astro",
@@ -1339,7 +1339,7 @@
       "icon": "./plugins/astro/assets/icon.svg",
       "homepage": "https://docs.astro.build/en/guides/build-with-ai/",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "atlassian-rovo",
@@ -1452,7 +1452,7 @@
       "icon": "./plugins/avalanche/assets/icon.svg",
       "homepage": "https://build.avax.network/docs/tooling/ai-llm/mcp-server",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "avaza",
@@ -1526,7 +1526,7 @@
       "icon": "./plugins/aws-knowledge/assets/icon.png",
       "homepage": "https://awslabs.github.io/mcp/servers/aws-knowledge-mcp-server",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "axiom",
@@ -1638,7 +1638,7 @@
       "icon": "./plugins/balsamiq/assets/icon.svg",
       "homepage": "https://community.balsamiq.com/support/integrations/mcp/",
       "license": "MIT",
-      "category": "design"
+      "category": "creative"
     },
     {
       "id": "base44",
@@ -1677,7 +1677,7 @@
       "homepage": "https://docs.base44.com",
       "repository": "https://github.com/base44/skills",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "basedash",
@@ -1904,7 +1904,7 @@
       "icon": "./plugins/biorender/assets/icon.png",
       "homepage": "https://help.biorender.com/hc/en-gb/articles/37237276158109-How-to-use-the-BioRender-MCP-connector",
       "license": "MIT",
-      "category": "creativity"
+      "category": "creative"
     },
     {
       "id": "bird",
@@ -2319,7 +2319,7 @@
       "icon": "./plugins/braintrust/assets/icon.png",
       "homepage": "https://www.braintrust.dev/docs/integrations/developer-tools/mcp",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "brand24",
@@ -3022,7 +3022,7 @@
       "homepage": "https://www.canva.com/developers/",
       "repository": "https://github.com/canva-sdks/canva-skills",
       "license": "Apache-2.0",
-      "category": "creativity"
+      "category": "creative"
     },
     {
       "id": "capacities",
@@ -3150,7 +3150,7 @@
       "icon": "./plugins/cartesia/assets/icon.svg",
       "homepage": "https://docs.cartesia.ai/tools/ai/mcp",
       "license": "MIT",
-      "category": "creativity"
+      "category": "creative"
     },
     {
       "id": "catalyst-by-zoho",
@@ -3190,7 +3190,7 @@
       "homepage": "https://catalyst.zoho.com/",
       "repository": "https://github.com/catalystbyzoho/codex-plugin",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "cb-insights",
@@ -3266,7 +3266,7 @@
       "icon": "./plugins/censys/assets/icon.png",
       "homepage": "https://docs.censys.com/docs/platform-mcp-server",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "chainstack",
@@ -3311,7 +3311,7 @@
       "icon": "./plugins/chainstack/assets/icon.png",
       "homepage": "https://docs.chainstack.com/docs/chainstack-mcp-server",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "channel99",
@@ -3439,7 +3439,7 @@
       "icon": "./plugins/chroma/assets/icon.png",
       "homepage": "https://github.com/chroma-core/chroma-mcp",
       "license": "MIT",
-      "category": "databases"
+      "category": "data"
     },
     {
       "id": "chrome-devtools",
@@ -3630,7 +3630,7 @@
       "homepage": "https://circleci.com/docs/guides/toolkit/circleci-mcp-overview/",
       "repository": "https://github.com/CircleCI-Public/circleci-cli",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "clay",
@@ -3898,7 +3898,7 @@
       "homepage": "https://workers.cloudflare.com",
       "repository": "https://github.com/cloudflare/skills",
       "license": "Apache-2.0",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "cloudinary",
@@ -3946,7 +3946,7 @@
       "homepage": "https://cloudinary.com/documentation/cloudinary_llm_mcp",
       "repository": "https://github.com/cloudinary/mcp-servers",
       "license": "MIT",
-      "category": "creativity"
+      "category": "creative"
     },
     {
       "id": "cobo",
@@ -4115,7 +4115,7 @@
       "homepage": "https://docs.coderabbit.ai/cli",
       "repository": "https://github.com/coderabbitai/skills",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "cogedim",
@@ -4189,7 +4189,7 @@
       "icon": "./plugins/coinbase-developer/assets/icon.png",
       "homepage": "https://docs.cdp.coinbase.com/get-started/build-with-ai/docs-for-ai/cdp-docs-mcp",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "coingecko",
@@ -4547,7 +4547,7 @@
       "icon": "./plugins/configcat/assets/icon.png",
       "homepage": "https://configcat.com/docs/advanced/mcp-server/",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "confluent",
@@ -4749,7 +4749,7 @@
       "icon": "./plugins/context7/assets/icon.svg",
       "homepage": "https://context7.com/docs/resources/all-clients",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "convex",
@@ -4787,7 +4787,7 @@
       "homepage": "https://docs.convex.dev/ai/using-codex",
       "repository": "https://github.com/get-convex/convex-backend",
       "license": "Apache-2.0 AND MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "coresignal",
@@ -5158,7 +5158,7 @@
       "icon": "./plugins/crossmint/assets/icon.png",
       "homepage": "https://docs.crossmint.com/introduction/ai-assistants",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "crowdin",
@@ -5585,7 +5585,7 @@
       "homepage": "https://docs.datadoghq.com/mcp_server/",
       "repository": "https://github.com/datadog-labs/cursor-plugin",
       "license": "Apache-2.0",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "dataforseo",
@@ -5757,7 +5757,7 @@
       "icon": "./plugins/deepwiki/assets/icon.png",
       "homepage": "https://docs.devin.ai/work-with-devin/deepwiki-mcp",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "defillama",
@@ -5863,7 +5863,7 @@
       "icon": "./plugins/descope/assets/icon.png",
       "homepage": "https://docs.descope.com/mcp/mcp-server",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "descript",
@@ -5901,7 +5901,7 @@
       "icon": "./plugins/descript/assets/icon.png",
       "homepage": "https://help.descript.com/api-and-mcp/mcp-custom",
       "license": "MIT",
-      "category": "design"
+      "category": "creative"
     },
     {
       "id": "devcycle",
@@ -5939,7 +5939,7 @@
       "icon": "./plugins/devcycle/assets/icon.svg",
       "homepage": "https://docs.devcycle.com/cli-mcp/mcp-getting-started/",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "devexpress",
@@ -5977,7 +5977,7 @@
       "icon": "./plugins/devexpress/assets/icon.svg",
       "homepage": "https://docs.devexpress.com/GeneralInformation/405551/help-resources/dev-express-documentation-mcp-server-configure-an-ai-powered-assistant",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "dexpaprika",
@@ -6054,7 +6054,7 @@
       "homepage": "https://github.com/digitalocean-labs/mcp-digitalocean",
       "repository": "https://github.com/digitalocean-labs/mcp-digitalocean",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "dingtalk",
@@ -6309,7 +6309,7 @@
       "icon": "./plugins/doppler/assets/icon.png",
       "homepage": "https://github.com/DopplerHQ/mcp-server",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "dovetail",
@@ -6431,7 +6431,7 @@
       "icon": "./plugins/drawio/assets/icon.svg",
       "homepage": "https://www.drawio.com/docs/manual/generate/drawio-mcp-server/",
       "license": "MIT",
-      "category": "design"
+      "category": "creative"
     },
     {
       "id": "dropbox",
@@ -6708,7 +6708,7 @@
       "icon": "./plugins/eraser/assets/icon.png",
       "homepage": "https://docs.eraser.io/mcp",
       "license": "MIT",
-      "category": "design"
+      "category": "creative"
     },
     {
       "id": "etherscan",
@@ -6877,7 +6877,7 @@
       "icon": "./plugins/excalidraw-plus/assets/icon.svg",
       "homepage": "https://plus.excalidraw.com/docs/mcp",
       "license": "MIT",
-      "category": "creativity"
+      "category": "creative"
     },
     {
       "id": "expo",
@@ -6917,7 +6917,7 @@
       "homepage": "https://docs.expo.dev/skills/",
       "repository": "https://github.com/expo/skills",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "factset",
@@ -6999,7 +6999,7 @@
       "icon": "./plugins/fal/assets/icon.png",
       "homepage": "https://fal.ai/docs/documentation/setting-up/mcp",
       "license": "MIT",
-      "category": "creativity"
+      "category": "creative"
     },
     {
       "id": "fathom",
@@ -7426,7 +7426,7 @@
       "icon": "./plugins/fish-audio-docs/assets/icon.png",
       "homepage": "https://docs.fish.audio/developer-guide/resources/coding-agents",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "folk",
@@ -7778,7 +7778,7 @@
       "icon": "./plugins/gitbook/assets/icon.png",
       "homepage": "https://www.gitbook.com/blog/create-documentation-with-ai-and-mcp",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "github",
@@ -7822,7 +7822,7 @@
       "icon": "./plugins/github/assets/icon.svg",
       "homepage": "https://github.com/github/github-mcp-server",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "github-stats",
@@ -7854,7 +7854,7 @@
       },
       "icon": "./plugins/github-stats/assets/icon.svg",
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/github-stats",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "gitlab",
@@ -7892,7 +7892,7 @@
       "icon": "./plugins/gitlab/assets/icon.svg",
       "homepage": "https://docs.gitlab.com/user/model_context_protocol/mcp_server/",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "glassnode",
@@ -8459,7 +8459,7 @@
       "icon": "./plugins/google-slides/assets/icon.svg",
       "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
       "license": "MIT",
-      "category": "design"
+      "category": "creative"
     },
     {
       "id": "gorgias",
@@ -8757,7 +8757,7 @@
       "icon": "./plugins/growthbook/assets/icon.png",
       "homepage": "https://github.com/growthbook/growthbook-mcp",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "guru",
@@ -8917,7 +8917,7 @@
       "icon": "./plugins/harness/assets/icon.png",
       "homepage": "https://developer.harness.io/docs/platform/harness-ai/connect-with-ai/harness-mcp-server/hosted-mcp/",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "harvest",
@@ -9081,7 +9081,7 @@
       "icon": "./plugins/helicone/assets/icon.png",
       "homepage": "https://docs.helicone.ai/integrations/tools/mcp",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "helius",
@@ -9285,7 +9285,7 @@
       "homepage": "https://heygen.com",
       "repository": "https://github.com/heygen-com/skills",
       "license": "MIT",
-      "category": "creativity"
+      "category": "creative"
     },
     {
       "id": "hg-insights",
@@ -9404,7 +9404,7 @@
       "icon": "./plugins/higgsfield/assets/icon.png",
       "homepage": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-higgsfield-mcp",
       "license": "MIT",
-      "category": "design"
+      "category": "creative"
     },
     {
       "id": "highlevel",
@@ -9518,7 +9518,7 @@
       "homepage": "https://www.hostinger.com/connector",
       "repository": "https://github.com/hostinger/api-mcp-server",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "hubspot",
@@ -9595,7 +9595,7 @@
       "homepage": "https://github.com/huggingface/skills",
       "repository": "https://github.com/huggingface/skills",
       "license": "Apache-2.0",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "hygraph",
@@ -9673,7 +9673,7 @@
       "homepage": "https://hyperframes.heygen.com",
       "repository": "https://github.com/heygen-com/hyperframes",
       "license": "Apache-2.0",
-      "category": "creativity"
+      "category": "creative"
     },
     {
       "id": "ideogram",
@@ -9711,7 +9711,7 @@
       "icon": "./plugins/ideogram/assets/icon.svg",
       "homepage": "https://ideogram.ai/features/mcp/",
       "license": "MIT",
-      "category": "design"
+      "category": "creative"
     },
     {
       "id": "imagekit",
@@ -9747,7 +9747,7 @@
       "icon": "./plugins/imagekit/assets/icon.png",
       "homepage": "https://imagekit.io/docs/build-with-ai",
       "license": "MIT",
-      "category": "creativity"
+      "category": "creative"
     },
     {
       "id": "incident-io",
@@ -9785,7 +9785,7 @@
       "icon": "./plugins/incident-io/assets/icon.png",
       "homepage": "https://docs.incident.io/ai/remote-mcp",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "infisical",
@@ -9831,7 +9831,7 @@
       "icon": "./plugins/infisical/assets/icon.png",
       "homepage": "https://github.com/Infisical/infisical-mcp-server",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "influxdb",
@@ -10300,7 +10300,7 @@
       "icon": "./plugins/kittl/assets/icon.png",
       "homepage": "https://www.kittl.com/mcp",
       "license": "MIT",
-      "category": "design"
+      "category": "creative"
     },
     {
       "id": "klaviyo",
@@ -10624,7 +10624,7 @@
       "icon": "./plugins/langfuse/assets/icon.png",
       "homepage": "https://langfuse.com/docs/api-and-data-platform/features/mcp-server",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "langsmith",
@@ -10662,7 +10662,7 @@
       "icon": "./plugins/langsmith/assets/icon.png",
       "homepage": "https://docs.langchain.com/langsmith/langsmith-remote-mcp",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "launchdarkly",
@@ -10852,7 +10852,7 @@
       "icon": "./plugins/livekit-docs/assets/icon.svg",
       "homepage": "https://docs.livekit.io/reference/developer-tools/docs-mcp/",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "logrocket",
@@ -11016,7 +11016,7 @@
       "icon": "./plugins/lottiefiles/assets/icon.png",
       "homepage": "https://docs.lottiefiles.com/en/platform/mcp",
       "license": "MIT",
-      "category": "design"
+      "category": "creative"
     },
     {
       "id": "lovable",
@@ -11097,7 +11097,7 @@
       "icon": "./plugins/lucid/assets/icon.svg",
       "homepage": "https://help.lucid.co/hc/en-us/articles/42578801807508-Integrate-Lucid-with-AI-tools-using-the-Lucid-MCP-server",
       "license": "MIT",
-      "category": "creativity"
+      "category": "creative"
     },
     {
       "id": "magicpath",
@@ -11133,7 +11133,7 @@
       "icon": "./plugins/magicpath/assets/icon.png",
       "homepage": "https://www.magicpath.ai",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "magnific",
@@ -11171,7 +11171,7 @@
       "icon": "./plugins/magnific/assets/icon.png",
       "homepage": "https://www.magnific.com/ai/docs/magnific-mcp",
       "license": "MIT",
-      "category": "design"
+      "category": "creative"
     },
     {
       "id": "mailchimp-transactional",
@@ -11800,7 +11800,7 @@
       "icon": "./plugins/microsoft-learn/assets/icon.svg",
       "homepage": "https://learn.microsoft.com/en-us/training/support/mcp",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "microsoft-release-communications",
@@ -11838,7 +11838,7 @@
       "icon": "./plugins/microsoft-release-communications/assets/icon.svg",
       "homepage": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/mrc-mcp?view=o365-worldwide",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "microsoft-workiq",
@@ -11955,7 +11955,7 @@
       "icon": "./plugins/miro/assets/icon.svg",
       "homepage": "https://developers.miro.com/docs/miro-mcp-server-frequently-asked-questions",
       "license": "MIT",
-      "category": "creativity"
+      "category": "creative"
     },
     {
       "id": "missive",
@@ -12158,7 +12158,7 @@
       "icon": "./plugins/mongodb/assets/icon.png",
       "homepage": "https://www.mongodb.com/docs/mcp-server/local-mcp/configuration/options/",
       "license": "MIT",
-      "category": "databases"
+      "category": "data"
     },
     {
       "id": "moonpay",
@@ -12196,7 +12196,7 @@
       "icon": "./plugins/moonpay/assets/icon.png",
       "homepage": "https://dev.moonpay.com/platform/overview/using-agents",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "moralis",
@@ -12512,7 +12512,7 @@
       "homepage": "https://neon.com",
       "repository": "https://github.com/neondatabase/agent-skills",
       "license": "Apache-2.0",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "netlify",
@@ -12551,7 +12551,7 @@
       "homepage": "https://docs.netlify.com",
       "repository": "https://github.com/netlify/context-and-tools",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "nextjs",
@@ -12589,7 +12589,7 @@
       "icon": "./plugins/nextjs/assets/icon.png",
       "homepage": "https://github.com/vercel/next-devtools-mcp",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "notion",
@@ -12741,7 +12741,7 @@
       "icon": "./plugins/nuxt/assets/icon.svg",
       "homepage": "https://nuxt.com/docs/4.x/guide/ai/mcp",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "nvidia",
@@ -12780,7 +12780,7 @@
       "homepage": "https://build.nvidia.com/skills/",
       "repository": "https://github.com/NVIDIA/skills",
       "license": "Apache-2.0 AND CC-BY-4.0",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "nylas",
@@ -13365,7 +13365,7 @@
       "icon": "./plugins/penpot/assets/icon.png",
       "homepage": "https://help.penpot.app/mcp/",
       "license": "MIT",
-      "category": "design"
+      "category": "creative"
     },
     {
       "id": "perplexity",
@@ -13448,7 +13448,7 @@
       "icon": "./plugins/phantom/assets/icon.png",
       "homepage": "https://docs.phantom.com/phantom-mcp-server/setup",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "phoenix",
@@ -13494,7 +13494,7 @@
       "icon": "./plugins/phoenix/assets/icon.png",
       "homepage": "https://arize.com/docs/phoenix/sdk-api-reference/typescript/mcp-server",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "photoroom",
@@ -13532,7 +13532,7 @@
       "icon": "./plugins/photoroom/assets/icon.svg",
       "homepage": "https://help.photoroom.com/en/articles/15421163-photoroom-connector-for-claude-team-and-enterprise",
       "license": "MIT",
-      "category": "design"
+      "category": "creative"
     },
     {
       "id": "picsart",
@@ -13578,7 +13578,7 @@
       "homepage": "https://picsart.com",
       "repository": "https://github.com/PicsArt/gen-ai-skills",
       "license": "MIT",
-      "category": "creativity"
+      "category": "creative"
     },
     {
       "id": "pinecone",
@@ -13960,7 +13960,7 @@
       "icon": "./plugins/postman/assets/icon.svg",
       "homepage": "https://learning.postman.com/latest-v-12/docs/reference/postman-api/postman-mcp-server/postman-mcp-remote-server",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "postmark",
@@ -14157,7 +14157,7 @@
       "icon": "./plugins/privy/assets/icon.png",
       "homepage": "https://docs.privy.io/basics/get-started/using-llms",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "productboard",
@@ -14401,7 +14401,7 @@
       "icon": "./plugins/qdrant/assets/icon.png",
       "homepage": "https://github.com/qdrant/mcp-server-qdrant",
       "license": "MIT",
-      "category": "databases"
+      "category": "data"
     },
     {
       "id": "quartr",
@@ -14521,7 +14521,7 @@
       "homepage": "https://www.quicknode.com/docs",
       "repository": "https://github.com/quicknode/cli",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "railway",
@@ -14559,7 +14559,7 @@
       "icon": "./plugins/railway/assets/icon.png",
       "homepage": "https://docs.railway.com/ai/mcp-server",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "ramp",
@@ -14860,7 +14860,7 @@
       "icon": "./plugins/recraft/assets/icon.png",
       "homepage": "https://www.recraft.ai/docs/mcp-reference/remote-server",
       "license": "MIT",
-      "category": "design"
+      "category": "creative"
     },
     {
       "id": "recurly",
@@ -15024,7 +15024,7 @@
       "icon": "./plugins/redpanda/assets/icon.png",
       "homepage": "https://docs.redpanda.com/home/how-to-use-these-docs/",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "ref",
@@ -15067,7 +15067,7 @@
       "icon": "./plugins/ref/assets/icon.png",
       "homepage": "https://docs.ref.tools/context/install/index",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "relume",
@@ -15105,7 +15105,7 @@
       "icon": "./plugins/relume/assets/icon.png",
       "homepage": "https://www.relume.ai/relume-library-mcp",
       "license": "MIT",
-      "category": "design"
+      "category": "creative"
     },
     {
       "id": "remote",
@@ -15183,7 +15183,7 @@
       "homepage": "https://remotion.dev",
       "repository": "https://github.com/remotion-dev/remotion",
       "license": "MIT",
-      "category": "creativity"
+      "category": "creative"
     },
     {
       "id": "render",
@@ -15230,7 +15230,7 @@
       "homepage": "https://github.com/renderinc/render-codex-plugin",
       "repository": "https://github.com/renderinc/render-codex-plugin",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "replayio",
@@ -15269,7 +15269,7 @@
       "homepage": "https://replay.io",
       "repository": "https://github.com/replayio/plugins",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "replicate",
@@ -15307,7 +15307,7 @@
       "icon": "./plugins/replicate/assets/icon.png",
       "homepage": "https://replicate.com/docs/reference/mcp",
       "license": "MIT",
-      "category": "creativity"
+      "category": "creative"
     },
     {
       "id": "replit",
@@ -15544,7 +15544,7 @@
       "icon": "./plugins/rootly/assets/icon.svg",
       "homepage": "https://docs.rootly.com/integrations/mcp-server",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "rudderstack",
@@ -15977,7 +15977,7 @@
       "icon": "./plugins/sentry/assets/icon.png",
       "homepage": "https://mcp.sentry.dev/",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "seo-meta",
@@ -16122,7 +16122,7 @@
       "homepage": "https://shopify.dev/docs/apps/build/devmcp",
       "repository": "https://github.com/Shopify/Shopify-AI-Toolkit",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "shortcut",
@@ -16642,7 +16642,7 @@
       "icon": "./plugins/solana/assets/icon.png",
       "homepage": "https://mcp.solana.com/",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "square",
@@ -16762,7 +16762,7 @@
       "homepage": "https://docs.statsig.com/",
       "repository": "https://github.com/statsig-io/agent-skills",
       "license": "ISC",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "steam-search",
@@ -16832,7 +16832,7 @@
       "icon": "./plugins/stellar/assets/icon.png",
       "homepage": "https://raven.stellar.org/docs",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "stock-quote",
@@ -17015,7 +17015,7 @@
       "icon": "./plugins/stytch/assets/icon.png",
       "homepage": "https://stytch.com/docs/resources/workspace-management/stytch-mcp-server",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "sunsama",
@@ -17092,7 +17092,7 @@
       "homepage": "https://supabase.com",
       "repository": "https://github.com/supabase/agent-skills",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "superhuman",
@@ -17176,7 +17176,7 @@
       "homepage": "https://github.com/obra/superpowers",
       "repository": "https://github.com/obra/superpowers",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "suprsend",
@@ -17338,7 +17338,7 @@
       "icon": "./plugins/svelte/assets/icon.svg",
       "homepage": "https://svelte.dev/docs/ai/remote-setup",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "swagger",
@@ -17573,7 +17573,7 @@
       "icon": "./plugins/tatum/assets/icon.png",
       "homepage": "https://docs.tatum.io/oa/docs/tatum-documentation-mcp",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "tavily",
@@ -17647,7 +17647,7 @@
       "icon": "./plugins/tavus-docs/assets/icon.png",
       "homepage": "https://docs.tavus.io/sections/agents-and-automation",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "teamwork",
@@ -17730,7 +17730,7 @@
       "icon": "./plugins/tella/assets/icon.svg",
       "homepage": "https://www.tella.com/docs/mcp-server",
       "license": "MIT",
-      "category": "design"
+      "category": "creative"
     },
     {
       "id": "telnyx",
@@ -17814,7 +17814,7 @@
       "homepage": "https://temporal.io/",
       "repository": "https://github.com/temporalio/codex-temporal-plugin",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "tenderly",
@@ -17852,7 +17852,7 @@
       "icon": "./plugins/tenderly/assets/icon.png",
       "homepage": "https://tenderly.co/blog/validating-agentic-workflows-with-tenderly-mcp-server/",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "tenzo",
@@ -17966,7 +17966,7 @@
       "icon": "./plugins/test-android-apps/assets/icon.png",
       "homepage": "https://developer.android.com/tools/adb",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "third-bridge",
@@ -18039,7 +18039,7 @@
       "icon": "./plugins/thoughtspot/assets/icon.png",
       "homepage": "https://developers.thoughtspot.com/docs/mcp-integration",
       "license": "MIT",
-      "category": "data-analytics"
+      "category": "data"
     },
     {
       "id": "tigerdata-pg-aiguide",
@@ -18393,7 +18393,7 @@
       "homepage": "https://www.twilio.com/docs",
       "repository": "https://github.com/twilio/ai",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "uniform",
@@ -18439,7 +18439,7 @@
       "icon": "./plugins/uniform/assets/icon.png",
       "homepage": "https://docs.uniform.app/docs/guides/cli/commands/ai",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "unleash",
@@ -18491,7 +18491,7 @@
       "icon": "./plugins/unleash/assets/icon.png",
       "homepage": "https://docs.getunleash.io/integrate/mcp",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "upstash",
@@ -18537,7 +18537,7 @@
       "icon": "./plugins/upstash/assets/icon.png",
       "homepage": "https://github.com/upstash/redis-mcp",
       "license": "MIT",
-      "category": "databases"
+      "category": "data"
     },
     {
       "id": "uptime-check",
@@ -18608,7 +18608,7 @@
       "homepage": "https://docs.vantage.sh/vantage_mcp",
       "repository": "https://github.com/vantage-sh/vantage-mcp-server",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "vapi",
@@ -18691,7 +18691,7 @@
       "icon": "./plugins/veed/assets/icon.svg",
       "homepage": "https://veedstudio.github.io/veed-fabric-mcp/",
       "license": "MIT",
-      "category": "creativity"
+      "category": "creative"
     },
     {
       "id": "vercel",
@@ -18736,7 +18736,7 @@
       "homepage": "https://github.com/vercel/vercel-plugin",
       "repository": "https://github.com/vercel/vercel-plugin",
       "license": "Apache-2.0",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "visily",
@@ -18774,7 +18774,7 @@
       "icon": "./plugins/visily/assets/icon.png",
       "homepage": "https://github.com/visily-app/mcp-plugins",
       "license": "MIT",
-      "category": "design"
+      "category": "creative"
     },
     {
       "id": "vonage",
@@ -19047,7 +19047,7 @@
       "icon": "./plugins/webflow/assets/icon.svg",
       "homepage": "https://developers.webflow.com/mcp/reference/getting-started",
       "license": "MIT",
-      "category": "creativity"
+      "category": "creative"
     },
     {
       "id": "website-fetcher",
@@ -19117,7 +19117,7 @@
       "icon": "./plugins/whimsical/assets/icon.png",
       "homepage": "https://whimsical.com/learn/integrations/mcp",
       "license": "MIT",
-      "category": "design"
+      "category": "creative"
     },
     {
       "id": "windsor-ai",
@@ -19272,7 +19272,7 @@
       "homepage": "https://dev.wix.com/docs/api-reference/articles/ai-tools/about-wix-skills",
       "repository": "https://github.com/wix/skills",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "wolfram",
@@ -19655,7 +19655,7 @@
       "homepage": "https://yepcode.io/docs/mcp-server/",
       "repository": "https://github.com/yepcode/mcp-server-js",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "you-com",
@@ -19748,7 +19748,7 @@
       "icon": "./plugins/youcam/assets/icon.png",
       "homepage": "https://docs.perfectcorp.com/develop/mcp",
       "license": "MIT",
-      "category": "design"
+      "category": "creative"
     },
     {
       "id": "zapier",
@@ -19862,7 +19862,7 @@
       "icon": "./plugins/zerion/assets/icon.png",
       "homepage": "https://github.com/zeriontech/zerion-ai",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "zilliz",
@@ -19985,7 +19985,7 @@
       "homepage": "https://developers.zoom.us/",
       "repository": "https://github.com/zoom/skills",
       "license": "MIT",
-      "category": "development"
+      "category": "developer-tools"
     },
     {
       "id": "zoominfo",

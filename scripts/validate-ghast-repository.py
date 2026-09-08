@@ -3,6 +3,8 @@
 
 from __future__ import annotations
 
+from plugin_categories import CATEGORIES, CATEGORY_ALIASES
+
 import ast
 import hashlib
 import json
@@ -144,6 +146,8 @@ def validate_sources(errors: list[str]) -> dict[str, dict]:
                 errors.append(f"{legacy_path}: legacy Ghast layout is not allowed")
 
         ghast = (manifest.get("extensions") or {}).get(GHAST_NAMESPACE, {})
+        if ghast.get("category") not in CATEGORIES | CATEGORY_ALIASES.keys():
+            errors.append(f"{manifest_path}: unknown plugin category {ghast.get('category')!r}")
         descriptions = ghast.get("descriptions")
         if not isinstance(descriptions, dict) or any(
             not isinstance(descriptions.get(locale), str) or not descriptions[locale].strip()
@@ -342,6 +346,8 @@ def validate_catalog_and_packages(
         )
 
     for entry in entries:
+        if entry.get("category") not in CATEGORIES:
+            errors.append(f"{CATALOG_PATH}: {entry.get('id')} must use a canonical category")
         name = entry.get("id")
         if name not in manifests:
             continue

@@ -6,6 +6,7 @@ from __future__ import annotations
 import hashlib
 import json
 import zipfile
+from plugin_categories import plugin_category
 from pathlib import Path
 
 
@@ -60,7 +61,7 @@ def main() -> int:
             if field in manifest:
                 catalog_entry[field] = manifest[field]
         if "category" in ghast:
-            catalog_entry["category"] = ghast["category"]
+            catalog_entry["category"] = plugin_category(ghast["category"])
         plugins.append(catalog_entry)
 
     for package_path in PACKAGE_DIR.glob("*.zip"):
