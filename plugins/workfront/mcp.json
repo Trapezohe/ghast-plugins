@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "workfront": {
+      "type": "streamable-http",
+      "url": "https://mcp.workfront.adobe.com/mcp/v1/workfront"
+    }
+  }
+}

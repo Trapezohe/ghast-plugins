@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "workfront",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Adobe Workfront’s official MCP using service credentials to search work, inspect projects and perform authorized project operations.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://experienceleague.adobe.com/en/docs/workfront/using/basics/workfront-mcp-server/configure-workfront-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://experienceleague.adobe.com/en/docs/workfront/using/basics/workfront-mcp-server/configure-workfront-mcp-server",
+      "connectorPublisher": "Adobe Workfront",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Adobe Workfront",
+      "descriptions": {
+        "en": "Connect Adobe Workfront’s official MCP using service credentials to search work, inspect projects and perform authorized project operations.",
+        "zh-CN": "使用服务凭据连接 Adobe Workfront 官方 MCP，搜索工作内容、检查项目并执行已授权的项目操作。"
+      },
+      "mcpServerExtensions": {
+        "workfront": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:workfront-token",
+            "wf-url": "$VAULT:workfront-instance"
+          }
+        }
+      }
+    }
+  }
+}
