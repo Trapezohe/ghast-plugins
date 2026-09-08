@@ -14,6 +14,6 @@ All 16 official skill trees and their 37 reference files come from Catalyst by Z
 - The bridge runs pinned mcp-remote@0.1.38 with HTTP-only transport and uses Zoho's browser OAuth, public dynamic client registration, refresh tokens, and PKCE S256.
 - Ghast does not support the source SessionStart hook. The ported readiness guidance therefore reads .catalystrc and catalyst.json explicitly before project mutations, while CLI and runtime prerequisite checks run only when relevant.
 - The authenticated Global MCP surface is dynamic: four ZohoMCP meta-tools enumerate and execute the available CatalystbyZoho operations. Account, data-center, project, service, and plan entitlements determine the live catalog.
-- A generic cloud-development icon is used so the package does not imply trademark rights in Zoho's official logo.
+- Brand logo source: https://www.zohowebstatic.com/sites/zweb/images/catalyst/favicon.ico. Brand names and logos belong to Catalyst by Zoho. 品牌名称与标识归对应服务商所有。
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

@@ -10,7 +10,7 @@ This package contains only Ghast-authored MCP configuration, safety
 instructions, documentation, catalog metadata, and a generic financial-
 research icon. It does not copy or redistribute Fiscal.ai's hosted MCP
 implementation, private Codex connector, API key, account data, official
-workflow bundle, source skill, branded artwork, or marketplace icon.
+workflow bundle, source skill, or marketplace icon.
 
 Fiscal.ai's current MCP guide main content is pinned at normalized SHA-256
 `ed7d01d13419e9aa2aa6f8d674b82400e9aacf50d4664bf9d3b1f64435150418`. Its documentation index and OpenAPI document are
@@ -81,8 +81,7 @@ marketplace artwork.
 - Authenticated tools/list and company-data requests were not exercised
   because no Fiscal.ai API key, account, private entitlement, or research
   data was used during the audit.
-- A generic financial-research icon is used because no licensed Fiscal.ai
-  catalog artwork is redistributed.
+- Brand logo source: https://docs.fiscal.ai/icon.png?icon.0m.8f225_ag9k.png?dpl=dpl_H558uaKyXeo5eioWT73MTasRLVmb. Brand names and logos belong to Fiscal.ai. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Fiscal.ai accounts, plans, hosted service behavior, financial data, source

@@ -8,9 +8,9 @@ official hosted MCP server.
 
 This package uses Lovable's official public Streamable HTTP endpoint and
 public OAuth client ID. It includes Ghast-authored safety instructions,
-catalog metadata, and a generic icon. It does not copy or redistribute
+catalog metadata, and the provider brand logo. It does not copy or redistribute
 Lovable's hosted MCP implementation, private Codex connector, user projects,
-OAuth tokens, branded artwork, or marketplace icon.
+OAuth tokens, or marketplace icon.
 
 Lovable's official public integration repository is pinned at
 `0336e6db8026b0f02cb89d1451cc48ea3f469791`. The importer verifies its Apache-2.0 license,
@@ -61,8 +61,7 @@ identifier or artwork.
   commands, security policy, and registry metadata, not the hosted service
   implementation. Authenticated tools/list and real project operations were
   not run because no Lovable account was supplied.
-- A generic app-builder icon is used because the official integration
-  repository does not include licensed catalog artwork.
+- Brand logo source: https://docs.lovable.dev/mintlify-assets/_mintlify/favicons/lovable-f9060f1e/AU_uVgnksniw8mje/_generated/favicon/apple-touch-icon.png. Brand names and logos belong to Lovable. 品牌名称与标识归对应服务商所有。
 
 The Apache License 2.0 in this package covers the adapter files distributed
 here. Lovable accounts, credits, hosted service behavior, project data,

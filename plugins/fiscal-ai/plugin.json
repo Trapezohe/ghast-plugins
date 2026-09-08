@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "fiscal-ai",
-  "version": "1.0.3-ghast.1",
+  "version": "1.0.3-ghast.2",
   "description": "Research public companies with source-linked financials, filings, ratios, segments, KPIs, prices, ownership, news, events, and fund letters through Fiscal.ai's official hosted MCP server.",
   "author": {
     "name": "Fiscal AI",
@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "finance",
       "upstreamRevision": "fiscal-docs-ed7d01d13419+tools-81b3f6f1dd2f+oauth-d3acf769990a+auth-4cedf324baa9+skills-25015c6addfb",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "mcpServerExtensions": {
         "fiscal": {
           "credentialHeaders": {

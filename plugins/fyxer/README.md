@@ -7,9 +7,9 @@ official hosted MCP server.
 ## Official hosted MCP adapter
 
 This package contains only Ghast-authored configuration, safety instructions,
-documentation, metadata, and a generic email-context icon. It does not
+documentation, metadata, and the provider brand logo. It does not
 redistribute Fyxer's hosted implementation, private Codex connector, account
-data, OAuth credentials, writing-style model, branded artwork, or marketplace
+data, OAuth credentials, writing-style model, or marketplace
 icon.
 
 Fyxer's official MCP and add-ons pages are pinned at normalized visible-text
@@ -45,8 +45,7 @@ marketplace artwork.
 - Missing and invalid credentials returned HTTP 401 with Fyxer's exact OAuth
   challenge. Authenticated tools/list and private email or meeting operations
   were not run because no Fyxer account or user data was used.
-- A generic email-context icon is used because no licensed Fyxer catalog
-  artwork is redistributed.
+- Brand logo source: https://www.fyxer.com/favicon.ico. Brand names and logos belong to Fyxer. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Fyxer accounts, connected inboxes and calendars, hosted behavior, private

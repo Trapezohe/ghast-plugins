@@ -3159,7 +3159,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "catalyst-by-zoho",
-        "version": "0.0.2-ghast.1",
+        "version": "0.0.2-ghast.2",
         "description": "Build, deploy, and operate Catalyst by Zoho applications with official service, SDK, CLI, architecture, pricing, and Zoho MCP skills across eight supported data centers.",
         "author": {
           "name": "Catalyst by Zoho",
@@ -3174,7 +3174,7 @@
             "category": "development",
             "upstreamRevision": "4cfbca7041b14ffa874488cd9b0ba88970cd168f",
             "upstreamPath": "catalyst-by-zoho",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Build, deploy, and operate Catalyst by Zoho applications with official service, SDK, CLI, architecture, pricing, and Zoho MCP skills across eight supported data centers.",
               "zh-CN": "开发、部署和运维 Zoho Catalyst 应用，查询 SDK、架构与服务配置。"
@@ -3184,9 +3184,9 @@
       },
       "package": {
         "url": "./packages/catalyst-by-zoho.zip",
-        "sha256": "bb77903c107556cd18e698c95255685e40dcdb2cd45a54296de7b137c7d61735"
+        "sha256": "0a7859b851c7f823389de7e4d46207cb999f2542e87eabbad6ac40dc8704330f"
       },
-      "icon": "./plugins/catalyst-by-zoho/assets/icon.svg",
+      "icon": "./plugins/catalyst-by-zoho/assets/icon.png",
       "homepage": "https://catalyst.zoho.com/",
       "repository": "https://github.com/catalystbyzoho/codex-plugin",
       "license": "MIT",
@@ -7354,7 +7354,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "fiscal-ai",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Research public companies with source-linked financials, filings, ratios, segments, KPIs, prices, ownership, news, events, and fund letters through Fiscal.ai's official hosted MCP server.",
         "author": {
           "name": "Fiscal AI",
@@ -7366,7 +7366,7 @@
           "ai.trapezohe.ghast": {
             "category": "finance",
             "upstreamRevision": "fiscal-docs-ed7d01d13419+tools-81b3f6f1dd2f+oauth-d3acf769990a+auth-4cedf324baa9+skills-25015c6addfb",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "mcpServerExtensions": {
               "fiscal": {
                 "credentialHeaders": {
@@ -7383,9 +7383,9 @@
       },
       "package": {
         "url": "./packages/fiscal-ai.zip",
-        "sha256": "d6809af6362e58bce046d22af3fc4d0a003ac9b4b8e0bca71d5a4984c730aad3"
+        "sha256": "94032814696fd12be670cae85647418f53e09df6e9229f3f561bc6e43e2acbaf"
       },
-      "icon": "./plugins/fiscal-ai/assets/icon.svg",
+      "icon": "./plugins/fiscal-ai/assets/icon.png",
       "homepage": "https://docs.fiscal.ai/docs/guides/mcp-integration",
       "license": "MIT",
       "category": "finance"
@@ -7637,7 +7637,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "fyxer",
-        "version": "1.0.2-ghast.1",
+        "version": "1.0.2-ghast.2",
         "description": "Search authorized email and meeting context, retrieve summaries and transcripts, resolve contacts, and draft personalized email through Fyxer's official hosted MCP.",
         "author": {
           "name": "Fyxer",
@@ -7659,7 +7659,7 @@
       },
       "package": {
         "url": "./packages/fyxer.zip",
-        "sha256": "6f433c9f2d3512c539027a53432d8f588571214ec3bbf683e3c4559145892d21"
+        "sha256": "95cfd73f9b12ead9f229b209f3c511d30c5849dce2f111e4cbcdf7b34f753cd0"
       },
       "icon": "./plugins/fyxer/assets/icon.png",
       "homepage": "https://support.fyxer.com/article/fyxer-mcp",
@@ -11024,7 +11024,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "lovable",
-        "version": "1.0.2-ghast.1",
+        "version": "1.0.2-ghast.2",
         "description": "Create, inspect, iterate, deploy, and manage full-stack Lovable apps, code, knowledge, databases, connectors, analytics, and workspaces through Lovable's official hosted MCP server.",
         "author": {
           "name": "Lovable",
@@ -11054,7 +11054,7 @@
       },
       "package": {
         "url": "./packages/lovable.zip",
-        "sha256": "edd0ac76f534636636bdde18483c76aa010371f016696fcbe98e0f8481f4e8b3"
+        "sha256": "96d908f96e859a677df801dd6919b8a3f27e16d2893cca63a3aaef88dddf3483"
       },
       "icon": "./plugins/lovable/assets/icon.png",
       "homepage": "https://docs.lovable.dev/integrations/lovable-mcp-server",
