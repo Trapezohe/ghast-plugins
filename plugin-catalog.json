@@ -2992,7 +2992,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "canva",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Create, edit, review, resize, bulk-generate, and brand-check Canva designs through Canva's official skills and hosted MCP server.",
         "author": {
           "name": "Canva",
@@ -3016,7 +3016,7 @@
       },
       "package": {
         "url": "./packages/canva.zip",
-        "sha256": "c08ab35774266223ede185afa7c2a4baaaf10c85722a12e37fc5e1056a14b246"
+        "sha256": "ad3b6f2b4b1259ccf1691e9c81034711ebb48b532081d7451837c534c46ebc54"
       },
       "icon": "./plugins/canva/assets/icon.png",
       "homepage": "https://www.canva.com/developers/",
@@ -3069,7 +3069,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "carta-crm",
-        "version": "1.5.3-ghast.1",
+        "version": "1.5.3-ghast.2",
         "description": "Manage investors, companies, contacts, deals, notes, fundraisings, tasks, themes, reports, campaigns, files, and relationship context through Carta's official CRM skills and hosted MCP server.",
         "author": {
           "name": "Carta",
@@ -3083,7 +3083,7 @@
             "category": "productivity",
             "upstreamRevision": "daef48d9c7d110a1b3ea55d2b9bad3d19d079d75",
             "upstreamPath": "plugins/carta-crm",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Manage investors, companies, contacts, deals, notes, fundraisings, tasks, themes, reports, campaigns, files, and relationship context through Carta's official CRM skills and hosted MCP server.",
               "zh-CN": "管理投资者、企业、联系人、交易、融资、任务与关系资料。"
@@ -3093,9 +3093,9 @@
       },
       "package": {
         "url": "./packages/carta-crm.zip",
-        "sha256": "1a409324c6c257a167d39ac8befbd46a793d238ec40b5b5c0aa3d751f97e07f5"
+        "sha256": "7edef374e7eecaf4b45b437b79ac17c7bb80c5894a3216265af7cab7ebe11e09"
       },
-      "icon": "./plugins/carta-crm/assets/icon.svg",
+      "icon": "./plugins/carta-crm/assets/icon.png",
       "homepage": "https://carta.com/crm/",
       "repository": "https://github.com/carta/plugins",
       "license": "Apache-2.0",
@@ -3199,7 +3199,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "cb-insights",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Research private companies, markets, deals, competitors, predictive signals, market maps, and investment questions through CB Insights' official hosted MCP server.",
         "author": {
           "name": "CB Insights",
@@ -3222,7 +3222,7 @@
       },
       "package": {
         "url": "./packages/cb-insights.zip",
-        "sha256": "031f3afde2f8b16c166adf40504c7b3218ea578c8c3b000e7384511ef75935b6"
+        "sha256": "b78a229be4b4e97f4f37addba7bd19d1edd3bf9ed5d526838bf86e91d7eceed7"
       },
       "icon": "./plugins/cb-insights/assets/icon.png",
       "homepage": "https://www.cbinsights.com/october-2025-product-launch/",
@@ -6363,7 +6363,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "dow-jones-factiva",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Search licensed Factiva news for company, industry, market, and event research through Dow Jones's official Retrieval API.",
         "author": {
           "name": "Factiva, Inc. / Dow Jones",
@@ -6387,7 +6387,7 @@
       },
       "package": {
         "url": "./packages/dow-jones-factiva.zip",
-        "sha256": "a26faeab292a9fb533ca1a3d6cfcf8133801a290af2eb0bec7c0d5a54d6ff413"
+        "sha256": "7e17c9a2fbb3d0cae9ac72125de76f93ee04063831b9a31d5593c6d00e461cf9"
       },
       "icon": "./plugins/dow-jones-factiva/assets/icon.png",
       "homepage": "https://developer.dowjones.com/documents/factiva_integration-factiva_retrieval_api",
@@ -12249,7 +12249,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "morningstar",
-        "version": "1.0.1-ghast.1",
+        "version": "1.0.1-ghast.2",
         "description": "Screen, summarize, compare, and analyze funds through Morningstar's official MCP.",
         "author": {
           "name": "Morningstar",
@@ -12263,7 +12263,7 @@
             "category": "research",
             "upstreamRevision": "morningstar-source-4c62260714b7+resource-12a3d16a5bad+oauth-84d49684fd46+boundary-8599a03b4c1d",
             "portStatus": "full",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Screen, summarize, compare, and analyze funds through Morningstar's official MCP.",
               "zh-CN": "筛选、总结、比较和分析基金。"
@@ -12273,9 +12273,9 @@
       },
       "package": {
         "url": "./packages/morningstar.zip",
-        "sha256": "d6fec34e0ecc460c6454c22a92aad3f46a7ec0d8218ff1e0e98550b920560469"
+        "sha256": "9031937d6c564fd18c7524ec972d3802df3dcea79cdaa3e1162283990ce5e2a2"
       },
-      "icon": "./plugins/morningstar/assets/icon.svg",
+      "icon": "./plugins/morningstar/assets/icon.png",
       "homepage": "https://www.morningstar.com/business/products/mcp-server",
       "repository": "https://github.com/Morningstar/morningstar-plugins",
       "license": "MIT",

@@ -14,6 +14,6 @@ All six packaged skills, the MCP declaration, manifest metadata, and license com
 - A disposable localhost public client registered successfully during the audit, and its authorization request reached Canva's official login page in a real browser. No account login, token exchange, or design operation was performed.
 - Canva's current active package supersedes the older Codex snapshot: it adds brand checking, bulk creation, safe design editing, structured review, and comment-driven feedback implementation, while older branded-presentation and translation skills are now inactive upstream.
 - Generation, Brand Kit, copy, resize, export, content-read, and transactional editing primitives remain available in the official hosted MCP. Ghast does not silently reactivate Canva's inactive workflow files.
-- A generic design-workspace icon is used because the Apache-2.0 source license does not grant Canva trademark rights and the main branch publishes no separately licensed catalog artwork.
+- Brand logo source: https://avatars.githubusercontent.com/u/2562356?v=4. Brand names and logos belong to Canva. 品牌名称与标识归对应服务商所有。
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

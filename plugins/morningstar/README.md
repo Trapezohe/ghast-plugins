@@ -26,7 +26,7 @@ COPYING, NOTICE, or equivalent license text. This package therefore copies none
 of its five skills, detailed workflows, scripts, HTML templates, report styles,
 rating icons, logos, fonts, manifests, or documentation. It independently
 provides only a factual endpoint declaration, Ghast-owned workflow and safety
-guidance, metadata, documentation, and a generic fund-research icon.
+guidance, metadata, and documentation.
 
 The bundled MIT license covers only these independently authored adapter files.
 It does not license Morningstar's hosted implementation, official plugin
@@ -47,3 +47,5 @@ Authenticated tools and licensed data calls were not run during the audit
 because no user Morningstar Direct account was supplied. Exact schemas, data
 coverage, quotas, ratings, disclosures, and entitlements remain controlled by
 Morningstar and the customer's contract.
+
+Brand logo source: https://avatars.githubusercontent.com/u/1441317?v=4. Brand names and logos belong to Morningstar. 品牌名称与标识归对应服务商所有。

@@ -61,8 +61,7 @@ app ID or official artwork.
 - Authenticated tools, subscription data, company profiles, deals, signals,
   research, and ChatCBI responses were not accessed because no CB Insights
   account or private-market data was supplied.
-- A generic market-research icon is used because the official marketplace
-  logo is not included in redistributable licensed material.
+- Brand logo source: https://avatars.githubusercontent.com/u/1653651?v=4. Brand names and logos belong to CB Insights. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 CB Insights accounts, subscriptions, hosted service behavior, proprietary

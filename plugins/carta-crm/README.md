@@ -14,6 +14,6 @@ Twenty-three workflow skills and their three HTML templates come from Carta's pi
 - Carta's source skills use Claude's crm_call_tool dispatcher. Ghast maps those examples to the current direct MCP tool names documented by Carta.
 - Carta's Claude hooks and local telemetry registry are not included. Ghast does not inject _instrumentation_v2 into tool arguments.
 - The current official service documentation lists 143 direct tools, while the pinned skills reference 47 CRM operations. The added current-service skill routes the broader official surface without presenting Ghast-authored guidance as Carta-authored source.
-- A generic CRM icon is used because Apache-2.0 does not grant Carta trademark rights and no separate catalog-artwork license was identified.
+- Brand logo source: https://avatars.githubusercontent.com/u/3220408?v=4. Brand names and logos belong to Carta. 品牌名称与标识归对应服务商所有。
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

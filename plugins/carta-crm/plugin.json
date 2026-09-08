@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "carta-crm",
-  "version": "1.5.3-ghast.1",
+  "version": "1.5.3-ghast.2",
   "description": "Manage investors, companies, contacts, deals, notes, fundraisings, tasks, themes, reports, campaigns, files, and relationship context through Carta's official CRM skills and hosted MCP server.",
   "author": {
     "name": "Carta",
@@ -15,7 +15,7 @@
       "category": "productivity",
       "upstreamRevision": "daef48d9c7d110a1b3ea55d2b9bad3d19d079d75",
       "upstreamPath": "plugins/carta-crm",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Manage investors, companies, contacts, deals, notes, fundraisings, tasks, themes, reports, campaigns, files, and relationship context through Carta's official CRM skills and hosted MCP server.",
         "zh-CN": "管理投资者、企业、联系人、交易、融资、任务与关系资料。"

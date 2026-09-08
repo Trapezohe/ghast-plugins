@@ -43,6 +43,8 @@ cached, redistributed, or used for model training. Every derived claim must be
 attributed, and full reading should occur through an entitled Factiva link.
 
 The MIT license in this package covers the Ghast-authored adapter, metadata,
-workflow, documentation, and generic news-research icon. Factiva content,
+workflow, and documentation. Factiva content,
 accounts, API access, metering, rights, terms, trademarks, and service behavior
 remain controlled by Dow Jones and applicable publishers.
+
+Brand logo source: https://avatars.githubusercontent.com/u/4172353?v=4. Brand names and logos belong to Dow Jones. 品牌名称与标识归对应服务商所有。
