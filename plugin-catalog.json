@@ -11168,6 +11168,44 @@
       "category": "data"
     },
     {
+      "id": "maze",
+      "name": "Maze",
+      "description": "Find user studies, review responses and transcripts, and compare research findings through Maze’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "maze",
+        "version": "1.0.0-ghast.1",
+        "description": "Find user studies, review responses and transcripts, and compare research findings through Maze’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.maze.co/articles/8675970764-set-up-maze-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.maze.co/articles/8675970764-set-up-maze-mcp",
+            "connectorPublisher": "Maze",
+            "category": "research",
+            "icon": "./assets/icon.png",
+            "displayName": "Maze",
+            "descriptions": {
+              "en": "Find user studies, review responses and transcripts, and compare research findings through Maze’s official MCP.",
+              "zh-CN": "通过 Maze 官方 MCP 查找用户研究、阅读回答与访谈记录，并比较研究发现。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/maze.zip",
+        "sha256": "e24ac191a0344f65ba5977d37d462f06ae43e2e3b00539c47feb01c0790dd114"
+      },
+      "icon": "./plugins/maze/assets/icon.png",
+      "homepage": "https://help.maze.co/articles/8675970764-set-up-maze-mcp",
+      "license": "MIT",
+      "category": "research"
+    },
+    {
       "id": "meilisearch",
       "name": "Meilisearch",
       "description": "Search documents and manage indexes, relevance settings and indexing tasks through Meilisearch’s official MCP.",
@@ -16856,6 +16894,44 @@
       "homepage": "https://surrealdb.com/docs/build/ai-agents/mcp",
       "license": "MIT",
       "category": "data"
+    },
+    {
+      "id": "survicate",
+      "name": "Survicate",
+      "description": "Analyze survey feedback, explore research insights and prepare survey drafts using Survicate’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "survicate",
+        "version": "1.0.0-ghast.1",
+        "description": "Analyze survey feedback, explore research insights and prepare survey drafts using Survicate’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.survicate.com/en/articles/16271576-what-is-survicate-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.survicate.com/en/articles/16271576-what-is-survicate-mcp",
+            "connectorPublisher": "Survicate",
+            "category": "research",
+            "icon": "./assets/icon.png",
+            "displayName": "Survicate",
+            "descriptions": {
+              "en": "Analyze survey feedback, explore research insights and prepare survey drafts using Survicate’s official MCP.",
+              "zh-CN": "通过 Survicate 官方 MCP 分析问卷反馈、探索研究洞察并准备问卷草稿。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/survicate.zip",
+        "sha256": "65ac68dfce45cff4b0662daa35d432530a43cbb1a3416c631b9b316e2ed44b8b"
+      },
+      "icon": "./plugins/survicate/assets/icon.png",
+      "homepage": "https://help.survicate.com/en/articles/16271576-what-is-survicate-mcp",
+      "license": "MIT",
+      "category": "research"
     },
     {
       "id": "svelte",

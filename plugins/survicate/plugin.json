@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "survicate",
+  "version": "1.0.0-ghast.1",
+  "description": "Analyze survey feedback, explore research insights and prepare survey drafts using Survicate’s official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://help.survicate.com/en/articles/16271576-what-is-survicate-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://help.survicate.com/en/articles/16271576-what-is-survicate-mcp",
+      "connectorPublisher": "Survicate",
+      "category": "research",
+      "icon": "./assets/icon.png",
+      "displayName": "Survicate",
+      "descriptions": {
+        "en": "Analyze survey feedback, explore research insights and prepare survey drafts using Survicate’s official MCP.",
+        "zh-CN": "通过 Survicate 官方 MCP 分析问卷反馈、探索研究洞察并准备问卷草稿。"
+      }
+    }
+  }
+}
