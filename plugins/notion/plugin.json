@@ -1,23 +1,25 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "notion",
-  "version": "0.1.5-ghast.1",
+  "version": "0.1.5-ghast.2",
   "description": "Search, create, and update Notion content through Notion's official MCP server.",
   "author": {
-    "name": "Notion and OpenAI"
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
   },
   "homepage": "https://developers.notion.com/guides/mcp/overview",
-  "repository": "https://github.com/openai/plugins",
   "license": "MIT",
   "extensions": {
     "ai.trapezohe.ghast": {
       "category": "productivity",
-      "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Search, create, and update Notion content through Notion's official MCP server.",
         "zh-CN": "检索、创建和更新 Notion 页面与数据库内容。"
-      }
+      },
+      "officialConnectorSource": "https://developers.notion.com/guides/mcp/get-started-with-mcp",
+      "connectorPublisher": "Notion",
+      "displayName": "Notion"
     }
   }
 }

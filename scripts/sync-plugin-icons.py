@@ -17,13 +17,13 @@ OPENAI_ICONS = {
     "daloopa": "plugins/daloopa/assets/app-icon.png",
     "github-stats": "plugins/github/assets/github-small.svg",
     "mixpanel-headless": "plugins/mixpanel-headless/assets/app-icon.png",
-    "notion": "plugins/notion/assets/notion-small.svg",
     "supabase": "plugins/supabase/assets/logo.svg",
     "test-android-apps": "plugins/test-android-apps/assets/test-android-apps-small.svg",
     "twilio-developer-kit": "plugins/twilio-developer-kit/assets/logo.svg",
 }
 
 LOCAL_ICONS = {
+    "notion": "assets/icon.png",
     "sentry": "assets/icon.png",
     "linear": "assets/icon.png",
     "aiera": "assets/icon.png",

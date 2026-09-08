@@ -12593,38 +12593,39 @@
     },
     {
       "id": "notion",
-      "name": "notion",
+      "name": "Notion",
       "description": "Search, create, and update Notion content through Notion's official MCP server.",
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "notion",
-        "version": "0.1.5-ghast.1",
+        "version": "0.1.5-ghast.2",
         "description": "Search, create, and update Notion content through Notion's official MCP server.",
         "author": {
-          "name": "Notion and OpenAI"
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
         },
         "homepage": "https://developers.notion.com/guides/mcp/overview",
-        "repository": "https://github.com/openai/plugins",
         "license": "MIT",
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "productivity",
-            "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Search, create, and update Notion content through Notion's official MCP server.",
               "zh-CN": "检索、创建和更新 Notion 页面与数据库内容。"
-            }
+            },
+            "officialConnectorSource": "https://developers.notion.com/guides/mcp/get-started-with-mcp",
+            "connectorPublisher": "Notion",
+            "displayName": "Notion"
           }
         }
       },
       "package": {
         "url": "./packages/notion.zip",
-        "sha256": "8191b861856713c1b9cc9650eec84a5775d78974e866ccce9dd795f947d3d39b"
+        "sha256": "8153d2f663c100471766e0d4f623eb3c103e0c8f69fdd9c80a11f51b7c212817"
       },
-      "icon": "./plugins/notion/assets/icon.svg",
+      "icon": "./plugins/notion/assets/icon.png",
       "homepage": "https://developers.notion.com/guides/mcp/overview",
-      "repository": "https://github.com/openai/plugins",
       "license": "MIT",
       "category": "productivity"
     },
