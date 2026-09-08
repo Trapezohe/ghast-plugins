@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "microsoft-workiq",
+  "version": "1.0.0-ghast.1",
+  "description": "Search and work with Microsoft 365 mail, meetings, files and Teams context through Microsoft’s official Work IQ MCP. Requires tenant setup and your own Entra app.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview",
+      "connectorPublisher": "Microsoft",
+      "category": "productivity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Microsoft Work IQ",
+      "descriptions": {
+        "en": "Search and work with Microsoft 365 mail, meetings, files and Teams context through Microsoft’s official Work IQ MCP. Requires tenant setup and your own Entra app.",
+        "zh-CN": "通过微软官方 Work IQ MCP 检索和处理 Microsoft 365 邮件、会议、文件与 Teams 工作上下文。需要租户配置和自有 Entra 应用。"
+      },
+      "mcpServerExtensions": {
+        "microsoft-workiq": {
+          "oauthClientRequired": true
+        }
+      }
+    }
+  }
+}

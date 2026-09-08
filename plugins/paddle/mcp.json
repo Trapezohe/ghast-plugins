@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "paddle": {
+      "type": "streamable-http",
+      "url": "https://mcp.paddle.com/mcp"
+    },
+    "paddle-sandbox": {
+      "type": "streamable-http",
+      "url": "https://sandbox-mcp.paddle.com/mcp"
+    },
+    "paddle-docs": {
+      "type": "streamable-http",
+      "url": "https://paddlehq.mcp.kapa.ai"
+    }
+  }
+}

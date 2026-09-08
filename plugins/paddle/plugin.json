@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "paddle",
+  "version": "1.0.0-ghast.1",
+  "description": "Use official Paddle tools for billing, subscriptions and revenue workflows, with separate live, sandbox and documentation connections.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.paddle.com/sdks/ai/paddle-mcp/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developer.paddle.com/sdks/ai/paddle-mcp/",
+      "connectorPublisher": "Paddle",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Paddle",
+      "descriptions": {
+        "en": "Use official Paddle tools for billing, subscriptions and revenue workflows, with separate live, sandbox and documentation connections.",
+        "zh-CN": "通过 Paddle 官方工具处理计费、订阅与收入运营，分别连接生产环境、沙盒和开发文档。"
+      },
+      "mcpServerExtensions": {
+        "paddle-sandbox": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:paddle-sandbox-token"
+          }
+        }
+      }
+    }
+  }
+}

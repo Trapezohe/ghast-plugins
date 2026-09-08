@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "infobip",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect official Infobip tools for SMS, email, WhatsApp, voice, customer profiles, account management and documentation.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.infobip.com/docs/mcp/using-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.infobip.com/docs/mcp/using-mcp",
+      "connectorPublisher": "Infobip",
+      "category": "communication",
+      "icon": "./assets/icon.png",
+      "displayName": "Infobip",
+      "descriptions": {
+        "en": "Connect official Infobip tools for SMS, email, WhatsApp, voice, customer profiles, account management and documentation.",
+        "zh-CN": "连接 Infobip 官方 SMS、邮件、WhatsApp、语音、客户资料、账号管理及文档工具。"
+      }
+    }
+  }
+}

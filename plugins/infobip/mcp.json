@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "infobip": {
+      "type": "streamable-http",
+      "url": "https://mcp.infobip.com/sms"
+    },
+    "infobip-email": {
+      "type": "streamable-http",
+      "url": "https://mcp.infobip.com/email"
+    },
+    "infobip-whatsapp": {
+      "type": "streamable-http",
+      "url": "https://mcp.infobip.com/whatsapp"
+    },
+    "infobip-voice": {
+      "type": "streamable-http",
+      "url": "https://mcp.infobip.com/voice"
+    },
+    "infobip-people": {
+      "type": "streamable-http",
+      "url": "https://mcp.infobip.com/people"
+    },
+    "infobip-account-management": {
+      "type": "streamable-http",
+      "url": "https://mcp.infobip.com/account-management"
+    },
+    "infobip-search": {
+      "type": "streamable-http",
+      "url": "https://mcp.infobip.com/search"
+    }
+  }
+}

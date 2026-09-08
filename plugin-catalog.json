@@ -7912,6 +7912,44 @@
       "category": "creativity"
     },
     {
+      "id": "infobip",
+      "name": "Infobip",
+      "description": "Connect official Infobip tools for SMS, email, WhatsApp, voice, customer profiles, account management and documentation.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "infobip",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect official Infobip tools for SMS, email, WhatsApp, voice, customer profiles, account management and documentation.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.infobip.com/docs/mcp/using-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.infobip.com/docs/mcp/using-mcp",
+            "connectorPublisher": "Infobip",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "Infobip",
+            "descriptions": {
+              "en": "Connect official Infobip tools for SMS, email, WhatsApp, voice, customer profiles, account management and documentation.",
+              "zh-CN": "连接 Infobip 官方 SMS、邮件、WhatsApp、语音、客户资料、账号管理及文档工具。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/infobip.zip",
+        "sha256": "5556882e9cebad33efd1cd2a45ea6f5f2f44e978ab88fc98b7d6cd81bd02c92e"
+      },
+      "icon": "./plugins/infobip/assets/icon.png",
+      "homepage": "https://www.infobip.com/docs/mcp/using-mcp",
+      "license": "MIT",
+      "category": "communication"
+    },
+    {
       "id": "inngest",
       "name": "Inngest",
       "description": "Inspect Inngest Cloud functions, events, runs and traces and manage deployed workflows.",
@@ -9497,6 +9535,49 @@
       "category": "development"
     },
     {
+      "id": "microsoft-workiq",
+      "name": "Microsoft Work IQ",
+      "description": "Search and work with Microsoft 365 mail, meetings, files and Teams context through Microsoft’s official Work IQ MCP. Requires tenant setup and your own Entra app.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "microsoft-workiq",
+        "version": "1.0.0-ghast.1",
+        "description": "Search and work with Microsoft 365 mail, meetings, files and Teams context through Microsoft’s official Work IQ MCP. Requires tenant setup and your own Entra app.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview",
+            "connectorPublisher": "Microsoft",
+            "category": "productivity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Microsoft Work IQ",
+            "descriptions": {
+              "en": "Search and work with Microsoft 365 mail, meetings, files and Teams context through Microsoft’s official Work IQ MCP. Requires tenant setup and your own Entra app.",
+              "zh-CN": "通过微软官方 Work IQ MCP 检索和处理 Microsoft 365 邮件、会议、文件与 Teams 工作上下文。需要租户配置和自有 Entra 应用。"
+            },
+            "mcpServerExtensions": {
+              "microsoft-workiq": {
+                "oauthClientRequired": true
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/microsoft-workiq.zip",
+        "sha256": "f5f143cf9da381854dd348be25f7b310f5fedd329a83034c99e9f9664bab6f75"
+      },
+      "icon": "./plugins/microsoft-workiq/assets/icon.svg",
+      "homepage": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "midpage",
       "name": "midpage",
       "description": "Research US case law, statutes, regulations, and federal dockets, then draft and cite-check litigation work product with Midpage's official MCP and MIT-licensed skills.",
@@ -10463,6 +10544,51 @@
       "homepage": "https://developers.outreach.io/mcp-server",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "paddle",
+      "name": "Paddle",
+      "description": "Use official Paddle tools for billing, subscriptions and revenue workflows, with separate live, sandbox and documentation connections.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "paddle",
+        "version": "1.0.0-ghast.1",
+        "description": "Use official Paddle tools for billing, subscriptions and revenue workflows, with separate live, sandbox and documentation connections.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.paddle.com/sdks/ai/paddle-mcp/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.paddle.com/sdks/ai/paddle-mcp/",
+            "connectorPublisher": "Paddle",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Paddle",
+            "descriptions": {
+              "en": "Use official Paddle tools for billing, subscriptions and revenue workflows, with separate live, sandbox and documentation connections.",
+              "zh-CN": "通过 Paddle 官方工具处理计费、订阅与收入运营，分别连接生产环境、沙盒和开发文档。"
+            },
+            "mcpServerExtensions": {
+              "paddle-sandbox": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:paddle-sandbox-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/paddle.zip",
+        "sha256": "a19539c023dc728fae2c582f30a87f25aafa68452d44ee7f62c003e25ee51663"
+      },
+      "icon": "./plugins/paddle/assets/icon.png",
+      "homepage": "https://developer.paddle.com/sdks/ai/paddle-mcp/",
+      "license": "MIT",
+      "category": "finance"
     },
     {
       "id": "pagerduty",
