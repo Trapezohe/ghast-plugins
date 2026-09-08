@@ -15942,40 +15942,40 @@
     },
     {
       "id": "sentry",
-      "name": "sentry",
-      "description": "Inspect recent Sentry issues and events through a read-only, redacting API workflow.",
+      "name": "Sentry",
+      "description": "Investigate Sentry errors, events and performance through Sentry’s official MCP server.",
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "sentry",
-        "version": "0.1.2-ghast.1",
-        "description": "Inspect recent Sentry issues and events through a read-only, redacting API workflow.",
+        "version": "0.1.2-ghast.2",
+        "description": "Investigate Sentry errors, events and performance through Sentry’s official MCP server.",
         "author": {
-          "name": "OpenAI",
-          "url": "https://openai.com"
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
         },
-        "homepage": "https://sentry.io/",
-        "repository": "https://github.com/openai/plugins",
-        "license": "Apache-2.0",
+        "homepage": "https://mcp.sentry.dev/",
+        "license": "MIT",
         "extensions": {
           "ai.trapezohe.ghast": {
             "category": "development",
-            "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
-              "en": "Inspect recent Sentry issues and events through a read-only, redacting API workflow.",
-              "zh-CN": "通过只读接口调查近期错误与事件，并脱敏输出。"
-            }
+              "en": "Investigate Sentry errors, events and performance through Sentry’s official MCP server.",
+              "zh-CN": "通过 Sentry 官方 MCP 调查应用错误、事件与性能问题。"
+            },
+            "officialConnectorSource": "https://mcp.sentry.dev/",
+            "connectorPublisher": "Sentry",
+            "displayName": "Sentry"
           }
         }
       },
       "package": {
         "url": "./packages/sentry.zip",
-        "sha256": "b24bc3f882da3e7c97c73a2b9b4edc3aba0d678bdf71b1dad16f38343553cfa3"
+        "sha256": "37d406696b2248a177f327a74676e057c255a391597ab088b42a3eec9c9a2a06"
       },
-      "icon": "./plugins/sentry/assets/icon.svg",
-      "homepage": "https://sentry.io/",
-      "repository": "https://github.com/openai/plugins",
-      "license": "Apache-2.0",
+      "icon": "./plugins/sentry/assets/icon.png",
+      "homepage": "https://mcp.sentry.dev/",
+      "license": "MIT",
       "category": "development"
     },
     {

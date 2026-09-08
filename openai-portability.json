@@ -111,7 +111,7 @@
     {
       "name": "sentry",
       "status": "existing",
-      "reason": "Ghast already ships the licensed read-only Sentry skill."
+      "reason": "Ghast maintains its own Sentry workflow connected directly to Sentry’s official hosted MCP."
     },
     {
       "name": "superpowers",

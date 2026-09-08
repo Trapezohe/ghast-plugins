@@ -1,24 +1,25 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "sentry",
-  "version": "0.1.2-ghast.1",
-  "description": "Inspect recent Sentry issues and events through a read-only, redacting API workflow.",
+  "version": "0.1.2-ghast.2",
+  "description": "Investigate Sentry errors, events and performance through Sentry’s official MCP server.",
   "author": {
-    "name": "OpenAI",
-    "url": "https://openai.com"
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
   },
-  "homepage": "https://sentry.io/",
-  "repository": "https://github.com/openai/plugins",
-  "license": "Apache-2.0",
+  "homepage": "https://mcp.sentry.dev/",
+  "license": "MIT",
   "extensions": {
     "ai.trapezohe.ghast": {
       "category": "development",
-      "upstreamRevision": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
-        "en": "Inspect recent Sentry issues and events through a read-only, redacting API workflow.",
-        "zh-CN": "通过只读接口调查近期错误与事件，并脱敏输出。"
-      }
+        "en": "Investigate Sentry errors, events and performance through Sentry’s official MCP server.",
+        "zh-CN": "通过 Sentry 官方 MCP 调查应用错误、事件与性能问题。"
+      },
+      "officialConnectorSource": "https://mcp.sentry.dev/",
+      "connectorPublisher": "Sentry",
+      "displayName": "Sentry"
     }
   }
 }

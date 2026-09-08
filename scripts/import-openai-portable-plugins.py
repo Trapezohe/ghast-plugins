@@ -53,7 +53,7 @@ EXISTING_PORTS = {
     "nvidia": "Ghast regenerates the complete NVIDIA skill catalog directly from the pinned official repository.",
     "remotion": "Ghast already ships a port pinned to the canonical Remotion repository.",
     "render": "Ghast regenerates Render directly from the pinned official Render repository.",
-    "sentry": "Ghast already ships the licensed read-only Sentry skill.",
+    "sentry": "Ghast maintains its own Sentry workflow connected directly to Sentry’s official hosted MCP.",
     "superpowers": "Ghast regenerates Superpowers directly from its pinned canonical repository.",
     "temporal": "Ghast already ships a newer canonical Temporal port.",
     "twilio-developer-kit": "Ghast regenerates the Twilio Developer Kit directly from the pinned official Twilio repository.",
