@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "formbricks",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage surveys, workflows and customer feedback through Formbricks Cloud’s official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://formbricks.com/docs/platform/mcp/overview",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://formbricks.com/docs/platform/mcp/overview",
+      "connectorPublisher": "Formbricks",
+      "category": "marketing",
+      "icon": "./assets/icon.png",
+      "displayName": "Formbricks",
+      "descriptions": {
+        "en": "Manage surveys, workflows and customer feedback through Formbricks Cloud’s official MCP.",
+        "zh-CN": "通过 Formbricks Cloud 官方 MCP 管理问卷、工作流与客户反馈。"
+      }
+    }
+  }
+}

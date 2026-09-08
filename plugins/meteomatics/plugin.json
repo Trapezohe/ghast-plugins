@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "meteomatics",
+  "version": "1.0.0-ghast.1",
+  "description": "Query weather forecasts and historical data for location, energy, logistics and climate analysis through Meteomatics’ official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.meteomatics.com/en/api/data-connectors/mcp/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.meteomatics.com/en/api/data-connectors/mcp/",
+      "connectorPublisher": "Meteomatics",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Meteomatics",
+      "descriptions": {
+        "en": "Query weather forecasts and historical data for location, energy, logistics and climate analysis through Meteomatics’ official MCP.",
+        "zh-CN": "通过 Meteomatics 官方 MCP 查询天气预报和历史数据，支持位置、能源、物流与气候分析。"
+      }
+    }
+  }
+}
