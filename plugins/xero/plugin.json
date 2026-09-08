@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "xero",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Xero’s official MCP for accounting records, invoices, contacts, financial reports and payroll workflows.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/XeroAPI/xero-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/XeroAPI/xero-mcp-server",
+      "connectorPublisher": "Xero",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Xero",
+      "descriptions": {
+        "en": "Connect Xero’s official MCP for accounting records, invoices, contacts, financial reports and payroll workflows.",
+        "zh-CN": "连接 Xero 官方 MCP，处理会计记录、发票、联系人、财务报表和工资办公流程。"
+      },
+      "mcpServerExtensions": {
+        "xero": {
+          "credentialEnv": {
+            "XERO_CLIENT_ID": "$VAULT:xero-client-id",
+            "XERO_CLIENT_SECRET": "$VAULT:xero-client-secret"
+          }
+        }
+      }
+    }
+  }
+}

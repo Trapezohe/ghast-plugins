@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "xero": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@xeroapi/xero-mcp-server@0.0.17"
+      ],
+      "type": "stdio"
+    }
+  }
+}
