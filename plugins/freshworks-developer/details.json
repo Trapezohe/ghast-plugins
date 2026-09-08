@@ -38,5 +38,20 @@
         "url": "https://www.freshworks.com/privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "freshworks-developer",
+      "name": "freshworks-developer",
+      "descriptions": {
+        "en": "Use Freshworks Developer in Ghast. Inspect Freshworks custom apps and versions and manage app package submission workflows. 查看 Freshworks 自定义应用及版本，并管理应用包提交流程。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "freshworks-developer",
+      "name": "Freshworks Developer"
+    }
+  ]
 }

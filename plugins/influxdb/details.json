@@ -25,5 +25,24 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "influxdb",
+      "name": "influxdb",
+      "descriptions": {
+        "en": "Use InfluxDB in Ghast. Connect to InfluxDB 3 through its official MCP for time-series queries, schema discovery and database administration, with a separate documentation service. 通过 InfluxDB 3 官方 MCP 查询时序数据、发现表结构和管理数据库，并连接独立的官方文档服务。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "influxdb",
+      "name": "influxdb"
+    },
+    {
+      "id": "influxdb-docs",
+      "name": "influxdb docs"
+    }
+  ]
 }

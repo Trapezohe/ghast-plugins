@@ -30,5 +30,24 @@
         "url": "https://docs.phantom.com/phantom-mcp-server/setup"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "phantom",
+      "name": "phantom",
+      "descriptions": {
+        "en": "Use Phantom in Ghast. Connect Phantom’s official agent wallet and developer documentation MCP services for crypto and wallet integration workflows. 连接 Phantom 官方代理钱包与开发文档 MCP 服务，支持加密资产和钱包集成工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "phantom",
+      "name": "phantom"
+    },
+    {
+      "id": "phantom-docs",
+      "name": "phantom docs"
+    }
+  ]
 }

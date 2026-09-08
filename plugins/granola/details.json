@@ -39,5 +39,20 @@
         "url": "https://docs.granola.ai/help-center/policies/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "granola",
+      "name": "granola",
+      "descriptions": {
+        "en": "Search and analyze Granola meeting notes, transcripts, attendees, folders, decisions, and action items through Granola's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "granola",
+      "name": "granola"
+    }
+  ]
 }

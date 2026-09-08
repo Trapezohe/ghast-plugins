@@ -47,5 +47,160 @@
         "url": "https://render.com/terms"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "render-background-workers",
+      "name": "render-background-workers",
+      "descriptions": {
+        "en": "Sets up and configures background workers on Render for queue-based job processing. Use when the user needs to process async jobs, consume from a queue, run Celery/Sidekiq/BullMQ/Asynq/Oban workers, handle graceful shutdown with SIGTERM, wire a worker to Key Value (Redis), or choose between workers and cron jobs for background work. Trigger terms: background worker, async jobs, queue consumer, Celery, Sidekiq, BullMQ, Asynq, Oban, job processing, SIGTERM, graceful shutdown."
+      }
+    },
+    {
+      "id": "render-blueprints",
+      "name": "render-blueprints",
+      "descriptions": {
+        "en": "Authors and validates render.yaml Blueprints for Render infrastructure. Use when the user needs to write or edit a render.yaml, wire services together with fromDatabase/fromService/fromGroup, set up projects and environments for multi-service apps, configure preview environments, validate against the schema, or fix immutable field errors. Trigger terms: render.yaml, Blueprint, IaC, fromDatabase, fromService, envVarGroups, previews, projects, environments."
+      }
+    },
+    {
+      "id": "render-cli",
+      "name": "render-cli",
+      "descriptions": {
+        "en": "Installs and uses the Render CLI for deploys, logs, SSH, psql, Blueprint validation, and automation. Use when the user needs to run Render CLI commands, script deploys in CI/CD, authenticate with an API key, query services non-interactively, or troubleshoot CLI auth issues. Trigger terms: render CLI, render login, render deploys, render logs, render ssh, render psql, render blueprints validate, render skills, RENDER_API_KEY, non-interactive, CI/CD deploy."
+      }
+    },
+    {
+      "id": "render-cron-jobs",
+      "name": "render-cron-jobs",
+      "descriptions": {
+        "en": "Configures and troubleshoots scheduled tasks on Render using cron job services. Use when the user needs to run something on a schedule, write a cron expression, set up a periodic job, migrate from Heroku Scheduler, choose between cron jobs and background workers, or fix a cron that isn't firing. Trigger terms: cron job, scheduled task, periodic job, cron expression, schedule, run every, timer, Heroku Scheduler migration."
+      }
+    },
+    {
+      "id": "render-debug",
+      "name": "render-debug",
+      "descriptions": {
+        "en": "Debug failed Render deployments by analyzing logs, metrics, and database state. Identifies errors (missing env vars, port binding, OOM, etc.) and suggests fixes. Use when deployments fail, services won't start, or users mention errors, logs, or debugging."
+      }
+    },
+    {
+      "id": "render-deploy",
+      "name": "render-deploy",
+      "descriptions": {
+        "en": "Deploy applications to Render by analyzing codebases, generating render.yaml Blueprints, and providing Dashboard deeplinks. Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform."
+      }
+    },
+    {
+      "id": "render-disks",
+      "name": "render-disks",
+      "descriptions": {
+        "en": "Attaches and manages persistent disks on Render services—mount paths, sizing, snapshots, file transfers, and single-instance constraints. Use when the user needs persistent storage, file uploads, a custom database on disk, CMS media storage, or needs to understand why their service can't scale horizontally or use zero-downtime deploys. Trigger terms: persistent disk, disk, storage, mount path, sizeGB, SSD, file uploads, snapshots, disk restore, ephemeral filesystem."
+      }
+    },
+    {
+      "id": "render-docker",
+      "name": "render-docker",
+      "descriptions": {
+        "en": "Builds and deploys Docker containers on Render—Dockerfiles, multi-stage builds, Blueprint Docker fields, private registries, layer caching, and platform constraints. Use when the user mentions Docker, Dockerfile, container images, multi-stage builds, container registry, GHCR, ECR, BuildKit, dockerContext, runtime docker or image, or optimizing Docker builds on Render."
+      }
+    },
+    {
+      "id": "render-domains",
+      "name": "render-domains",
+      "descriptions": {
+        "en": "Configures custom domains and TLS certificates on Render—DNS setup, CNAME records, apex domains, wildcard domains, and certificate troubleshooting. Use when the user needs to add a custom domain, configure DNS, set up HTTPS/TLS, troubleshoot certificate issuance, disable the onrender.com subdomain, or add a wildcard domain. Trigger terms: custom domain, DNS, CNAME, TLS, SSL, HTTPS, certificate, apex domain, wildcard domain, onrender.com, domain verification."
+      }
+    },
+    {
+      "id": "render-env-vars",
+      "name": "render-env-vars",
+      "descriptions": {
+        "en": "Configures environment variables, secrets, and env groups on Render. Use when the user needs to set env vars, wire secrets between services, create env groups, use generateValue, set sync: false, or troubleshoot missing or incorrect environment variable values in Blueprints or the Dashboard."
+      }
+    },
+    {
+      "id": "render-keyvalue",
+      "name": "render-keyvalue",
+      "descriptions": {
+        "en": "Provisions and configures Render Key Value (Redis-compatible Valkey 8) instances for caching, session storage, and job queues. Use when the user needs Redis, Key Value, Valkey, a cache, session store, job queue backend, or needs to configure maxmemory policy, ipAllowList, connection strings, or internal vs external access. Trigger terms: Key Value, Redis, Valkey, cache, session store, REDIS_URL, maxmemory, ipAllowList, allkeys-lru, noeviction."
+      }
+    },
+    {
+      "id": "render-mcp",
+      "name": "render-mcp",
+      "descriptions": {
+        "en": "Connects and configures the Render MCP server for AI coding tools—setup per tool (Cursor, Claude Code, Codex), authentication, workspace selection, tool catalog, and troubleshooting. Use when MCP is not configured, list_services() fails, the user asks about Render MCP setup, or an action skill needs MCP but it's not connected yet. Trigger terms: MCP, Render MCP, list_services, MCP setup, MCP server, API key, Bearer token, mcp.render.com, workspace selection."
+      }
+    },
+    {
+      "id": "render-migrate-from-heroku",
+      "name": "render-migrate-from-heroku",
+      "descriptions": {
+        "en": "Migrate from Heroku to Render by reading local project files and generating equivalent Render services. Triggers: any mention of migrating from Heroku, moving off Heroku, Heroku to Render migration, or switching from Heroku. Reads Procfile, dependency files, and app config from the local repo. Optionally uses Heroku MCP to enrich with live config vars, add-on details, and dyno sizes. Uses Render MCP or Blueprint YAML to create services."
+      }
+    },
+    {
+      "id": "render-monitor",
+      "name": "render-monitor",
+      "descriptions": {
+        "en": "Monitor Render services in real-time. Check health, performance metrics, logs, and resource usage. Use when users want to check service status, view metrics, monitor performance, or verify deployments are healthy."
+      }
+    },
+    {
+      "id": "render-networking",
+      "name": "render-networking",
+      "descriptions": {
+        "en": "Connects Render services over the private network—internal DNS, service discovery, and cross-service communication. Use when the user needs to wire services together, resolve internal hostnames, troubleshoot connectivity between services, configure environment isolation, or understand which services can reach each other."
+      }
+    },
+    {
+      "id": "render-postgres",
+      "name": "render-postgres",
+      "descriptions": {
+        "en": "Sets up and optimizes Managed PostgreSQL on Render—connection strings (internal vs external), creation constraints, storage autoscaling, connection limits, high availability, read replicas, backups, and MCP inspection. Use when the user mentions Postgres, PostgreSQL, Render database, connection string, DATABASE_URL, backups, snapshots, replicas, HA, disk storage, connection pooling, or troubleshooting DB connectivity."
+      }
+    },
+    {
+      "id": "render-private-services",
+      "name": "render-private-services",
+      "descriptions": {
+        "en": "Configures Render private services—internal-only apps that accept traffic exclusively from other Render services over the private network. Use when the user needs an internal API, microservice, gRPC server, sidecar, or any service that should not be publicly accessible. Also use when choosing between a private service and a background worker. Trigger terms: private service, pserv, internal service, internal API, microservice, gRPC, not public, private network service."
+      }
+    },
+    {
+      "id": "render-scaling",
+      "name": "render-scaling",
+      "descriptions": {
+        "en": "Scales Render services—configures autoscaling targets, chooses instance types, sets manual instance counts, and optimizes cost. Use when the user needs to handle more traffic, set up autoscaling, pick the right instance type, reduce costs, or troubleshoot scaling behavior like slow scale-down or stuck instances."
+      }
+    },
+    {
+      "id": "render-static-sites",
+      "name": "render-static-sites",
+      "descriptions": {
+        "en": "Deploys and configures static sites on Render's global CDN—build commands, publish paths, SPA routing, redirects, custom headers, and PR previews. Use when the user needs to deploy a static site, set up a React/Vue/Hugo/Gatsby frontend, configure SPA fallback routing, add redirect rules, customize response headers, or choose between a static site and a web service for their frontend. Trigger terms: static site, CDN, SPA, single-page app, React deploy, Vue deploy, Hugo, Gatsby, Docusaurus, Jekyll, staticPublishPath."
+      }
+    },
+    {
+      "id": "render-web-services",
+      "name": "render-web-services",
+      "descriptions": {
+        "en": "Configures Render web services—port binding, TLS, health checks, custom domains, auto-deploy, PR previews, persistent disks, and deploy lifecycle. Use when the user needs to set up a web service, fix health check failures, add a custom domain, configure zero-downtime deploys, or troubleshoot port binding issues."
+      }
+    },
+    {
+      "id": "render-workflows",
+      "name": "render-workflows",
+      "descriptions": {
+        "en": "Sets up, develops, tests, and deploys Render Workflows. Covers first-time scaffolding (via CLI or manual), SDK installation (Python or TypeScript), task patterns (retries, subtasks, fan-out), local development, Dashboard deployment, and troubleshooting. Use when a user wants to set up Render Workflows for the first time, scaffold a workflow service, add or modify workflow tasks, test workflows locally, or deploy workflows to Render."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "render",
+      "name": "render"
+    }
+  ]
 }

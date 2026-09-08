@@ -38,5 +38,24 @@
         "url": "https://www.algolia.com/policies/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "algolia",
+      "name": "algolia",
+      "descriptions": {
+        "en": "Use Algolia in Ghast. Inspect and manage Algolia search workflows and search public developer documentation with DocSearch. 查看与管理 Algolia 搜索工作流，并通过 DocSearch 检索公开开发文档。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "algolia",
+      "name": "algolia"
+    },
+    {
+      "id": "algolia-docsearch",
+      "name": "algolia docsearch"
+    }
+  ]
 }

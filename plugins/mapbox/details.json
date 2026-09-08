@@ -40,5 +40,20 @@
         "url": "https://www.mapbox.com/legal/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "mapbox",
+      "name": "mapbox",
+      "descriptions": {
+        "en": "Use Mapbox in Ghast. Find addresses and places, plan routes and create map visualizations through Mapbox’s official hosted MCP. 通过 Mapbox 官方托管 MCP 查找地址与地点、规划路线并生成地图可视化。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "mapbox",
+      "name": "Mapbox"
+    }
+  ]
 }

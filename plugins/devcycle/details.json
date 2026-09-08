@@ -38,5 +38,20 @@
         "url": "https://www.dynatrace.com/company/trust-center/privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "devcycle",
+      "name": "devcycle",
+      "descriptions": {
+        "en": "Use DevCycle in Ghast. Inspect and manage feature flags, targeting rules and release environments. 查看和管理功能开关、定向规则与发布环境。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "devcycle",
+      "name": "DevCycle"
+    }
+  ]
 }

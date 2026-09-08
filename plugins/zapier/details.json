@@ -31,5 +31,20 @@
         "url": "https://docs.zapier.com/mcp/home"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "zapier",
+      "name": "zapier",
+      "descriptions": {
+        "en": "Use Zapier in Ghast. Run the actions configured in your Zapier MCP server from Ghast. 从 Ghast 运行你在 Zapier MCP 服务中配置的动作。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "zapier",
+      "name": "Zapier"
+    }
+  ]
 }

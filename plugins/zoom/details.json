@@ -31,5 +31,198 @@
         "url": "https://developers.zoom.us/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "cobrowse-sdk",
+      "name": "cobrowse-sdk",
+      "descriptions": {
+        "en": "Zoom Cobrowse SDK for web - JavaScript SDK for real-time collaborative browsing between agents and customers. Features include annotation tools, privacy masking, remote assist, and PIN-based session sharing."
+      }
+    },
+    {
+      "id": "contact-center",
+      "name": "contact-center",
+      "descriptions": {
+        "en": "Zoom Contact Center skill pack for Contact Center apps, web embeds, and native mobile SDK integrations. Use for lifecycle patterns, engagement context/state handling, campaigns, callbacks, and version-drift troubleshooting."
+      }
+    },
+    {
+      "id": "general",
+      "name": "general",
+      "descriptions": {
+        "en": "Generic Zoom Developer Platform guide. Covers cross-product use cases, authentication (OAuth 2.0, \nServer-to-Server OAuth, JWT), app types, OAuth scopes, and Marketplace setup. Use when starting \nany Zoom integration, when working on cross-product tasks, or when user needs help choosing \nbetween Zoom SDKs and APIs."
+      }
+    },
+    {
+      "id": "meeting-sdk",
+      "name": "meeting-sdk",
+      "descriptions": {
+        "en": "Zoom Meeting SDK for embedding Zoom meetings into web, Android, iOS, macOS, Unreal, React Native, Electron, and Linux applications. \nUse when you want to integrate the full Zoom meeting experience into your app.\nSupports Web (JavaScript), React Native (iOS/Android), Electron desktop apps, Linux (C++ headless bots), and native platforms."
+      }
+    },
+    {
+      "id": "oauth",
+      "name": "oauth",
+      "descriptions": {
+        "en": "Zoom OAuth authentication and authorization. Covers four authorization flows: Account (S2S), \nUser (authorization code), Device (device flow), and Client (chatbot). Use when implementing \nauthentication for Zoom APIs, managing access tokens, or understanding OAuth flows."
+      }
+    },
+    {
+      "id": "phone",
+      "name": "phone",
+      "descriptions": {
+        "en": "Zoom Phone skill pack for OAuth, Phone APIs, webhooks, Smart Embed postMessage events, URI schemes, and call-history migration patterns. Use for CRM/CTI dialer workflows, real-time call tracking, and call handling automation."
+      }
+    },
+    {
+      "id": "plugin-sdk",
+      "name": "plugin-sdk",
+      "descriptions": {
+        "en": "Zoom Plugin SDK guidance for native macOS and Windows applications that control an installed Zoom Workplace desktop client over IPC. Use for desktop companion apps that start or join meetings, control meeting audio/video/share/UI, inspect participants, or manage supported meeting features without embedding a Zoom client. Route platform-specific implementation to the macOS or Windows child skill."
+      }
+    },
+    {
+      "id": "probe-sdk",
+      "name": "probe-sdk",
+      "descriptions": {
+        "en": "Zoom Probe SDK for web diagnostics. Use to test media permissions, audio/video/screen-share diagnostics, network quality, compatibility reporting, and consented offline camera-dump evidence before users join meetings or sessions."
+      }
+    },
+    {
+      "id": "rest-api",
+      "name": "rest-api",
+      "descriptions": {
+        "en": "Zoom REST API - 600+ endpoints for meetings, users, webinars, recordings, reports, and more. Server-side API for managing Zoom resources programmatically with OAuth 2.0 authentication."
+      }
+    },
+    {
+      "id": "rivet-sdk",
+      "name": "rivet-sdk",
+      "descriptions": {
+        "en": "Zoom Rivet SDK for JavaScript/TypeScript server-side integrations. Use for auth handling, webhook event consumers, API endpoint wrappers, multi-module app composition, and AWS Lambda receiver patterns."
+      }
+    },
+    {
+      "id": "rtms",
+      "name": "rtms",
+      "descriptions": {
+        "en": "Zoom Realtime Media Streams (RTMS) for accessing live audio, video, transcript, chat, and\nscreen share from Zoom meetings, webinars, Video SDK sessions, and Zoom Contact Center Voice.\nWebSocket-based protocol using open web standards. Use when building AI/ML applications, live\ntranscription, recording, streaming, or real-time meeting/webinar/session/contact-center analysis."
+      }
+    },
+    {
+      "id": "scribe",
+      "name": "scribe",
+      "descriptions": {
+        "en": "Zoom AI Services Scribe for synchronous and batch transcription of uploaded or stored media. Use for Build-platform JWT auth, fast mode transcription, batch S3 jobs, webhook callbacks, and transcript-pipeline design."
+      }
+    },
+    {
+      "id": "summarizer",
+      "name": "summarizer",
+      "descriptions": {
+        "en": "Zoom AI Services Summarizer for synchronous transcript summarization and asynchronous batch summary jobs. Use for conversation recaps, action items, detailed summaries, Build-platform JWT auth, S3 transcript archives, and webhook-driven summary pipelines."
+      }
+    },
+    {
+      "id": "team-chat",
+      "name": "team-chat",
+      "descriptions": {
+        "en": "Zoom Team Chat - Build messaging integrations, chatbots with rich cards/buttons, and apps. Covers Team Chat API (user-level messaging) and Chatbot API (bot-level interactions with webhooks)."
+      }
+    },
+    {
+      "id": "translator",
+      "name": "translator",
+      "descriptions": {
+        "en": "Zoom AI Services Translator for synchronous text translation and asynchronous batch file translation. Use for plain-text translation, one-target-language jobs, S3 text archives, Build-platform JWT auth, and webhook-driven translation pipelines."
+      }
+    },
+    {
+      "id": "ui-toolkit",
+      "name": "ui-toolkit",
+      "descriptions": {
+        "en": "Zoom Video SDK UI Toolkit for Web. Use when building prebuilt or low-code Zoom Video SDK browser UI with @zoom/videosdk-ui-toolkit, composite UI, individual components, session lifecycle, React/Vue/Angular/Next.js/vanilla integration, featuresOptions, JWT auth, CSS/CDN install, troubleshooting, or deciding between UI Toolkit and raw Video SDK."
+      }
+    },
+    {
+      "id": "video-sdk",
+      "name": "video-sdk",
+      "descriptions": {
+        "en": "Zoom Video SDK for building custom video experiences (not Zoom meetings) on web, React Native, Flutter, Android, iOS, macOS, Windows, Unity, and Linux platforms.\nUse when you want full control over the video UI and experience."
+      }
+    },
+    {
+      "id": "virtual-agent",
+      "name": "virtual-agent",
+      "descriptions": {
+        "en": "Zoom Virtual Agent skill pack for web campaigns/chat embeds, Android and iOS WebView bridge integrations, and knowledge-base sync workflows. Use for lifecycle patterns, event handling, and version-drift troubleshooting."
+      }
+    },
+    {
+      "id": "webhooks",
+      "name": "webhooks",
+      "descriptions": {
+        "en": "Zoom webhooks for real-time event notifications. Covers webhook verification, event types,\nand subscription management. Use when you need to receive notifications about meetings,\nusers, recordings, or other Zoom events."
+      }
+    },
+    {
+      "id": "websockets",
+      "name": "websockets",
+      "descriptions": {
+        "en": "Zoom WebSockets for real-time event notifications via persistent connection. Alternative to webhooks \nwith lower latency, bidirectional communication, and enhanced security. Use when you need real-time \nevent updates, are in security-sensitive industries, or want faster event delivery than webhooks."
+      }
+    },
+    {
+      "id": "zoom-apps-sdk",
+      "name": "zoom-apps-sdk",
+      "descriptions": {
+        "en": "Zoom Apps SDK for building web apps that run inside the Zoom client. JavaScript SDK (@zoom/appssdk)\nfor in-meeting experiences, Layers API for immersive visuals, Collaborate Mode for shared state,\nand In-Client OAuth for seamless authorization. Use when building apps that appear within Zoom\nmeetings, webinars, the main client, or Zoom Phone."
+      }
+    },
+    {
+      "id": "zoom-mcp",
+      "name": "zoom-mcp",
+      "descriptions": {
+        "en": "Official Zoom MCP Server guidance for AI-agent access to the unified Zoom MCP Server and\ndedicated Meetings, Chat, Canvas, Tasks, Whiteboard, and Revenue Accelerator servers. Use\nfor Zoom-hosted MCP endpoints, tools/list, tools/call, OAuth scopes, or server selection.\nRoute product-specific work to the matching zoom-mcp child skill."
+      }
+    },
+    {
+      "id": "zoom-skills",
+      "name": "zoom-skills",
+      "descriptions": {
+        "en": "Zoom Developer Platform skills organized by product. Each folder contains product-specific \ndocumentation and use cases. The zoom-general folder contains generic, cross-product skills \nand references."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "zoom-mcp",
+      "name": "zoom mcp"
+    },
+    {
+      "id": "zoom-whiteboard-mcp",
+      "name": "zoom whiteboard mcp"
+    },
+    {
+      "id": "zoom-team-chat-mcp",
+      "name": "zoom team chat mcp"
+    },
+    {
+      "id": "zoom-canvas-mcp",
+      "name": "zoom canvas mcp"
+    },
+    {
+      "id": "zoom-revenue-accelerator-mcp",
+      "name": "zoom revenue accelerator mcp"
+    },
+    {
+      "id": "zoom-meetings-mcp",
+      "name": "zoom meetings mcp"
+    },
+    {
+      "id": "zoom-tasks-mcp",
+      "name": "zoom tasks mcp"
+    }
+  ]
 }

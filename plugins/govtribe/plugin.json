@@ -17,7 +17,11 @@
         "govtribe": {
           "credentialHeaders": {
             "Authorization": "Bearer $VAULT:govtribe-mcp-api-key"
-          }
+          },
+          "optionalCredentials": [
+            "govtribe-mcp-api-key"
+          ],
+          "oauthRequired": true
         }
       },
       "descriptions": {

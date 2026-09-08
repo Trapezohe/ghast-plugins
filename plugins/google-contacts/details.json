@@ -46,5 +46,20 @@
         "url": "https://policies.google.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "google-contacts",
+      "name": "google-contacts",
+      "descriptions": {
+        "en": "Use Google Contacts in Ghast. Find contacts, directory people and profile details through Google’s official People MCP service. 通过 Google 官方 People MCP 服务查找联系人、组织目录与个人资料。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "google-contacts",
+      "name": "Google Contacts"
+    }
+  ]
 }

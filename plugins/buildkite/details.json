@@ -39,5 +39,20 @@
         "url": "https://buildkite.com/docs/apis/graphql/schemas/enum/teamprivacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "buildkite",
+      "name": "buildkite",
+      "descriptions": {
+        "en": "Use Buildkite in Ghast. Inspect pipelines, builds, jobs and test results and manage CI workflows in Buildkite. 在 Buildkite 中查看流水线、构建、作业与测试结果，并管理持续集成工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "buildkite",
+      "name": "Buildkite"
+    }
+  ]
 }

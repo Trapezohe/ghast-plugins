@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "mailtrap",
+      "name": "mailtrap",
+      "descriptions": {
+        "en": "Use Mailtrap in Ghast. Test email in sandboxes, manage templates and inspect delivery workflows using Mailtrap’s official MCP. 通过 Mailtrap 官方 MCP 测试沙箱邮件、管理模板与检查邮件投递流程。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "mailtrap",
+      "name": "Mailtrap"
+    }
+  ]
 }

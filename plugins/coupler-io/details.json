@@ -48,5 +48,20 @@
         "url": "https://www.coupler.io/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "coupler-io",
+      "name": "coupler-io",
+      "descriptions": {
+        "en": "Analyze marketing, sales, finance, ecommerce, product, and other structured business data through Coupler.io's official hosted MCP and Analytical Engine. Use for cross-channel metrics, ROI, CAC, pipeline, forecasts, profits, cash flow, receivables, dataset discovery, and data-flow status.\n"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "coupler-io",
+      "name": "coupler-io"
+    }
+  ]
 }

@@ -23,12 +23,20 @@
         "lokalise": {
           "credentialHeaders": {
             "apikey": "$VAULT:lokalise-token"
-          }
+          },
+          "optionalCredentials": [
+            "lokalise-token"
+          ],
+          "oauthRequired": true
         },
         "lokalise-development": {
           "credentialHeaders": {
             "apikey": "$VAULT:lokalise-token"
-          }
+          },
+          "optionalCredentials": [
+            "lokalise-token"
+          ],
+          "oauthRequired": true
         }
       }
     }

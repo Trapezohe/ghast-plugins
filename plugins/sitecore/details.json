@@ -46,5 +46,20 @@
         "url": "https://www.sitecore.com/legal/terms-of-use"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "sitecore",
+      "name": "sitecore",
+      "descriptions": {
+        "en": "Use Sitecore Marketer in Ghast. Connect Sitecore’s official Marketer MCP to work with sites, pages, content, assets, brand context and campaign optimization. 连接 Sitecore 官方 Marketer MCP，处理站点、页面、内容、素材、品牌上下文与活动优化。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "sitecore",
+      "name": "Sitecore Marketer"
+    }
+  ]
 }

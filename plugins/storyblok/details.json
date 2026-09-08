@@ -46,5 +46,20 @@
         "url": "https://policies.google.com/terms"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "storyblok",
+      "name": "storyblok",
+      "descriptions": {
+        "en": "Use Storyblok in Ghast. Manage structured content, stories, assets and space settings using Storyblok’s official MCP. 通过 Storyblok 官方 MCP 管理结构化内容、Story、素材与 Space 设置。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "storyblok",
+      "name": "Storyblok"
+    }
+  ]
 }

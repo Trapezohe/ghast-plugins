@@ -30,5 +30,20 @@
         "url": "https://angular.dev/ai/mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "angular",
+      "name": "angular",
+      "descriptions": {
+        "en": "Use Angular in Ghast. Use Angular’s official CLI MCP tools for workspace analysis, documentation, development servers and build workflows. 使用 Angular 官方 CLI MCP 工具分析工作区、查询文档、运行开发服务器及构建流程。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "angular",
+      "name": "Angular"
+    }
+  ]
 }

@@ -47,5 +47,34 @@
         "url": "https://www.docusign.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "docusign",
+      "name": "docusign",
+      "descriptions": {
+        "en": "Create, send, search, inspect, and automate Docusign agreements, envelopes, recipients, dates, obligations, and Workflow Builder processes through Docusign's official hosted MCP server."
+      }
+    },
+    {
+      "id": "docusign-setup",
+      "name": "docusign-setup",
+      "descriptions": {
+        "en": "Configure Docusign's official hosted MCP server for Ghast using a user-owned confidential OAuth application."
+      }
+    },
+    {
+      "id": "docusign-troubleshooting",
+      "name": "docusign-troubleshooting",
+      "descriptions": {
+        "en": "Diagnose Docusign MCP environment, OAuth app, callback, credential-file, local bridge, entitlement, and tool failures in Ghast."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "docusign",
+      "name": "docusign"
+    }
+  ]
 }

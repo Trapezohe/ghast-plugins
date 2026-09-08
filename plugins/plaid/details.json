@@ -31,5 +31,20 @@
         "url": "https://plaid.com/docs/resources/mcp/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "plaid",
+      "name": "plaid",
+      "descriptions": {
+        "en": "Use Plaid Dashboard in Ghast. Connect Plaid’s official Dashboard MCP for production integration diagnostics, Link conversion analysis and usage metrics. 连接 Plaid 官方 Dashboard MCP，诊断生产集成、分析 Link 转化并查询使用指标。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "plaid",
+      "name": "Plaid Dashboard"
+    }
+  ]
 }

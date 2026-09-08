@@ -25,5 +25,15 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "steam-search",
+      "name": "steam-search",
+      "descriptions": {
+        "en": "Use this skill when the user asks to search Steam for games, look up a specific game's price/release-date/genres/reviews, or browse what's currently selling on Steam. Uses Steam's public store endpoints — no API key."
+      }
+    }
+  ],
+  "apps": []
 }

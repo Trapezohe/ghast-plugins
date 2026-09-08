@@ -47,5 +47,20 @@
         "url": "https://novu.co/privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "novu",
+      "name": "novu",
+      "descriptions": {
+        "en": "Use Novu in Ghast. Manage notification workflows, subscriber preferences and delivery diagnostics in Novu. 管理 Novu 通知工作流、订阅者偏好与消息投递诊断。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "novu",
+      "name": "Novu"
+    }
+  ]
 }

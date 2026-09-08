@@ -38,5 +38,20 @@
         "url": "https://cloud.app.box.com/s/rmwxu64h1ipr41u49w3bbuvbsa29wku9"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "box",
+      "name": "box",
+      "descriptions": {
+        "en": "Use Box in Ghast. Search and manage Box files and folders and use available Box AI document tools. 搜索与管理 Box 文件和文件夹，并使用可用的 Box AI 文档工具。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "box",
+      "name": "Box"
+    }
+  ]
 }

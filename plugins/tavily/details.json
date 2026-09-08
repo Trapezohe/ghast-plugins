@@ -47,5 +47,20 @@
         "url": "https://www.tavily.com/website-terms"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "tavily",
+      "name": "tavily",
+      "descriptions": {
+        "en": "Use Tavily in Ghast. Research the web, extract page content and explore websites with Tavily search and crawling tools. 使用 Tavily 搜索网络、提取网页内容并探索站点，支持带来源的调研。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "tavily",
+      "name": "Tavily"
+    }
+  ]
 }

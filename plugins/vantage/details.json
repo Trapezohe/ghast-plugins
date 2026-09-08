@@ -48,5 +48,20 @@
         "url": "https://www.vantage.sh/legal/website-terms-of-use"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "vantage",
+      "name": "vantage",
+      "descriptions": {
+        "en": "Analyze and govern cloud costs safely through Vantage's official hosted MCP server, including costs, forecasts, recommendations, budgets, alerts, reports, tags, dashboards, and workspaces."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "vantage",
+      "name": "vantage"
+    }
+  ]
 }

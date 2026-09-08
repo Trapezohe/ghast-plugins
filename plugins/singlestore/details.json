@@ -47,5 +47,20 @@
         "url": "https://policies.google.com/terms"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "singlestore",
+      "name": "singlestore",
+      "descriptions": {
+        "en": "Use SingleStore in Ghast. Explore SingleStore Helios workspaces, databases, notebooks, jobs and usage with the official MCP server. 通过 SingleStore 官方 MCP 探索 Helios 工作区、数据库、笔记本、任务与用量。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "singlestore",
+      "name": "SingleStore"
+    }
+  ]
 }

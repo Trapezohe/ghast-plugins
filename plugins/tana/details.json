@@ -46,5 +46,20 @@
         "url": "https://tana.inc/terms"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "tana",
+      "name": "tana",
+      "descriptions": {
+        "en": "Use Tana in Ghast. Search Tana content, read meeting context and prepare updates to documents and structured items. 搜索 Tana 内容、读取会议上下文，并准备文档与结构化条目的更新。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "tana",
+      "name": "Tana"
+    }
+  ]
 }

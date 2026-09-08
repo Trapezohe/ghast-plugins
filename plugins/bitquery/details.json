@@ -30,5 +30,20 @@
         "url": "https://docs.bitquery.io/docs/mcp/mcp-server/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "bitquery",
+      "name": "bitquery",
+      "descriptions": {
+        "en": "Use Bitquery in Ghast. Research on-chain trades, transfers, token markets and wallet activity through Bitquery’s official hosted MCP. 通过 Bitquery 官方托管 MCP 研究链上成交、转账、代币市场与钱包活动。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "bitquery",
+      "name": "Bitquery"
+    }
+  ]
 }

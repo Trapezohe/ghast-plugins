@@ -32,5 +32,20 @@
         "url": "https://dovetail.com"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "dovetail",
+      "name": "dovetail",
+      "descriptions": {
+        "en": "Search, inspect, synthesize, and explicitly create Dovetail projects, research data, highlights, docs, channels, themes, people, tags, fields, and files through Dovetail's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "dovetail",
+      "name": "dovetail"
+    }
+  ]
 }

@@ -30,5 +30,20 @@
         "url": "https://experienceleague.adobe.com/en/docs/workfront/using/basics/workfront-mcp-server/configure-workfront-mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "workfront",
+      "name": "workfront",
+      "descriptions": {
+        "en": "Use Adobe Workfront in Ghast. Connect Adobe Workfront’s official MCP using service credentials to search work, inspect projects and perform authorized project operations. 使用服务凭据连接 Adobe Workfront 官方 MCP，搜索工作内容、检查项目并执行已授权的项目操作。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "workfront",
+      "name": "Adobe Workfront"
+    }
+  ]
 }

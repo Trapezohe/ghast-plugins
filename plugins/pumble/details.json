@@ -38,5 +38,20 @@
         "url": "https://cake.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "pumble",
+      "name": "pumble",
+      "descriptions": {
+        "en": "Use Pumble in Ghast. Connect Pumble’s official MCP to find workspace conversations, summarize threads and perform authorized collaboration actions. 连接 Pumble 官方 MCP，查找工作区对话、总结讨论串并执行已授权的协作操作。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "pumble",
+      "name": "Pumble"
+    }
+  ]
 }

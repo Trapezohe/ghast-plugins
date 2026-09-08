@@ -30,5 +30,20 @@
         "url": "https://hygraph.com/docs/hygraph-ai/mcp-server-setup"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "hygraph",
+      "name": "hygraph",
+      "descriptions": {
+        "en": "Use Hygraph in Ghast. Connect Hygraph’s official global MCP to discover your projects and environments, inspect schemas and work with structured content. 连接 Hygraph 官方全局 MCP，发现账号可访问的项目与环境、查看模型并处理结构化内容。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "hygraph",
+      "name": "Hygraph"
+    }
+  ]
 }

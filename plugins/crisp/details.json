@@ -46,5 +46,20 @@
         "url": "https://crisp.chat/en/privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "crisp",
+      "name": "crisp",
+      "descriptions": {
+        "en": "Use Crisp in Ghast. Review customer conversations, contacts and helpdesk articles in your Crisp workspace. 查看 Crisp 工作区的客户对话、联系人与帮助中心文章。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "crisp",
+      "name": "Crisp"
+    }
+  ]
 }

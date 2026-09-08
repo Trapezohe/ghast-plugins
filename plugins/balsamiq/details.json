@@ -38,5 +38,20 @@
         "url": "https://community.balsamiq.com/legal/privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "balsamiq",
+      "name": "balsamiq",
+      "descriptions": {
+        "en": "Use Balsamiq in Ghast. Read, create and refine wireframes in Balsamiq Cloud through its official MCP. 通过 Balsamiq Cloud 官方 MCP 读取、创建与完善线框图。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "balsamiq",
+      "name": "Balsamiq"
+    }
+  ]
 }

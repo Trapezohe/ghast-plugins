@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "jotform",
+      "name": "jotform",
+      "descriptions": {
+        "en": "Use Jotform in Ghast. Create and update Jotform forms and inspect or manage form submissions. 创建和更新 Jotform 表单，查看与管理表单提交。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "jotform",
+      "name": "Jotform"
+    }
+  ]
 }

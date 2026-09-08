@@ -25,5 +25,36 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "binance",
+      "name": "binance",
+      "descriptions": {
+        "en": "Use binance-cli for Binance Spot, Futures (USD-S), and Convert. Requires auth."
+      }
+    },
+    {
+      "id": "fiat",
+      "name": "fiat",
+      "descriptions": {
+        "en": "Query Binance fiat payment capabilities — supported countries, currencies, payment methods, limits, and crypto prices — via public APIs, plus authenticated order/payment history lookup. Use whenever users ask about buying or selling crypto with fiat, depositing or withdrawing fiat, fiat-crypto exchange rates, payment options in a specific country, or their fiat order history — even if they don't explicitly mention Binance APIs."
+      }
+    },
+    {
+      "id": "onchain-pay",
+      "name": "onchain-pay",
+      "descriptions": {
+        "en": "Binance Onchain Pay enables users to buy cryptocurrency with fiat (e.g., EUR, USD) or send existing crypto from their Binance account directly to any external on-chain wallet address in a single flow—no manual withdrawal needed.\n\nEnables partners to integrate crypto buying services:\n- payment-method-list: Get available payment methods (Card, P2P, Google Pay, Apple Pay, etc.) with limits for a fiat/crypto pair\n- trading-pairs: List all supported fiat currencies and cryptocurrencies\n- estimated-quote: Get real-time price quote including exchange rate, fees, and estimated crypto amount\n- pre-order: Create a buy order and get redirect URL to Binance payment flow\n- order: Query order status and details (processing, completed, failed, etc.)\n- crypto-network: Get supported blockchain networks with withdraw fees and limits\n- p2p/trading-pairs: List P2P-specific trading pairs"
+      }
+    },
+    {
+      "id": "p2p",
+      "name": "p2p",
+      "descriptions": {
+        "en": "Binance P2P trading assistant for natural-language queries about P2P/C2C market ads, the user's own P2P order history, order detail & appeal tracking, and advertisement publish & management.\n\nUse when the user asks about P2P prices, searching/choosing ads, comparing payment methods, reviewing P2P order history, checking order detail/appeal status, querying complaints, publishing/updating/managing P2P advertisements, or viewing merchant profiles.\n\nDo NOT use for spot/futures prices, exchange trading, deposits/withdrawals, on-chain transfers, or anything unrelated to P2P/C2C.\n"
+      }
+    }
+  ],
+  "apps": []
 }

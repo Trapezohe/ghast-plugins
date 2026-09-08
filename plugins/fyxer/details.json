@@ -39,5 +39,20 @@
         "url": "https://app.fyxer.com/privacy-policy?device_id=f68a933b-03df-4b54-af7d-a728518683c5"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "fyxer",
+      "name": "fyxer",
+      "descriptions": {
+        "en": "Search authorized email and meeting context, retrieve summaries and transcripts, resolve contacts, and draft personalized email through Fyxer's official hosted MCP."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "fyxer",
+      "name": "fyxer"
+    }
+  ]
 }

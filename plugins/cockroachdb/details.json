@@ -38,5 +38,20 @@
         "url": "https://www.cockroachlabs.com/privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "cockroachdb",
+      "name": "cockroachdb",
+      "descriptions": {
+        "en": "Use CockroachDB Cloud in Ghast. Explore CockroachDB Cloud databases and run SQL using the official managed MCP service. 通过 CockroachDB Cloud 官方托管 MCP 服务探索数据库并执行 SQL。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "cockroachdb",
+      "name": "CockroachDB Cloud"
+    }
+  ]
 }

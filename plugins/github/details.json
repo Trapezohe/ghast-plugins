@@ -1,7 +1,7 @@
 {
   "overview": {
-    "en": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Connect with your GitHub token.\n\nConnect repository and issue context to code review or delivery work. Start with the repository and issue or change reference, then retain links to the evidence behind the proposed next steps.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
-    "zh-CN": "读取仓库、审查 PR、管理 Issue 与排查 CI；使用 GitHub Token 连接。\n\n把仓库与问题上下文用于代码审查或交付工作。从仓库及问题、变更引用出发，为建议的后续步骤保留证据链接。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+    "en": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Use GitHub browser authorization when the Ghast OAuth application is configured. Personal tokens remain an advanced alternative.\n\nConnect repository and issue context to code review or delivery work. Start with the repository and issue or change reference, then retain links to the evidence behind the proposed next steps.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "读取仓库、审查 PR、管理 Issue 与排查 CI；在 Ghast 授权应用配置完成后通过浏览器授权连接，个人 Token 仅作为高级备选。\n\n把仓库与问题上下文用于代码审查或交付工作。从仓库及问题、变更引用出发，为建议的后续步骤保留证据链接。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
   },
   "starterPrompts": [
     {
@@ -41,5 +41,20 @@
         "url": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "github",
+      "name": "github",
+      "descriptions": {
+        "en": "Read GitHub repositories, review PRs and issues, diagnose failing Actions, and make requested GitHub changes through the connected official GitHub MCP. Use for GitHub links, PR reviews, CI failures, issues, 仓库、代码审查、拉取请求、持续集成."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "github",
+      "name": "GitHub"
+    }
+  ]
 }

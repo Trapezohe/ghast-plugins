@@ -39,5 +39,20 @@
         "url": "https://www.responsive.io/legal/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "responsive",
+      "name": "responsive",
+      "descriptions": {
+        "en": "Search governed Responsive Content Library material, inspect proposal projects and unanswered questions, retrieve source content, and generate grounded draft responses through Responsive's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "responsive",
+      "name": "responsive"
+    }
+  ]
 }

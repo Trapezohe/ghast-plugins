@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "prisma",
+      "name": "prisma",
+      "descriptions": {
+        "en": "Use Prisma Postgres in Ghast. Inspect Prisma Postgres databases and schemas, query data and manage authorized backup workflows. 查看 Prisma Postgres 数据库与表结构、查询数据，并管理获授权的备份流程。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "prisma",
+      "name": "Prisma Postgres"
+    }
+  ]
 }

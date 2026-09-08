@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "risingwave",
+      "name": "risingwave",
+      "descriptions": {
+        "en": "Use RisingWave in Ghast. Connect through RisingWave’s official MCP to query streaming SQL, inspect schemas and jobs, and manage authorized database resources. 通过 RisingWave 官方 MCP 查询流式 SQL、检查表结构与作业，并管理已授权的数据库资源。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "risingwave",
+      "name": "RisingWave"
+    }
+  ]
 }

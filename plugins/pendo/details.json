@@ -46,5 +46,36 @@
         "url": "https://www.pendo.io/legal/terms-of-use/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "pendo",
+      "name": "pendo",
+      "descriptions": {
+        "en": "Use Pendo in Ghast. Analyze product usage, visitor activity and guide performance using Pendo’s official regional MCP services. 通过 Pendo 官方区域 MCP 服务分析产品使用、访客活动与引导内容表现。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "pendo",
+      "name": "pendo"
+    },
+    {
+      "id": "pendo-us1",
+      "name": "pendo us1"
+    },
+    {
+      "id": "pendo-eu",
+      "name": "pendo eu"
+    },
+    {
+      "id": "pendo-japan",
+      "name": "pendo japan"
+    },
+    {
+      "id": "pendo-australia",
+      "name": "pendo australia"
+    }
+  ]
 }

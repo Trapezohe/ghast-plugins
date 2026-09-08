@@ -48,5 +48,237 @@
         "url": "https://amplitude.com/terms"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "add-analytics-instrumentation",
+      "name": "add-analytics-instrumentation",
+      "descriptions": {
+        "en": "End-to-end analytics instrumentation workflow for a PR, branch, file, directory, or feature. Reads the code, discovers what events should be tracked, and produces a concrete instrumentation plan — all in one shot. Use this skill whenever a user wants to add analytics to a PR, asks \"instrument this PR\", \"add tracking to this branch\", \"what analytics does this file need\", \"instrument the checkout flow\", \"run the full instrumentation workflow\", or any request that implies going from code changes to a tracking plan. Also trigger when the user gives you a PR link, branch name, file path, or feature description and mentions analytics, events, or instrumentation. This is the main entry point for the analytics workflow — prefer it over calling the individual steps (diff-intake, discover-event-surfaces, instrument-events) separately.\n"
+      }
+    },
+    {
+      "id": "analyze-account-health",
+      "name": "analyze-account-health",
+      "descriptions": {
+        "en": "Summarizes B2B account health by analyzing usage patterns, engagement trends, risk signals, and expansion opportunities. Use for customer success reviews, renewal preparation, QBRs, or account prioritization."
+      }
+    },
+    {
+      "id": "analyze-ai-topics",
+      "name": "analyze-ai-topics",
+      "descriptions": {
+        "en": "Analyzes what users ask AI agents about and how well each topic is served. Only use when the user has Amplitude Agent Analytics instrumented in their project. Use when the user asks \"what are people asking the AI\", \"top AI topics\", \"where is the AI struggling\", \"AI coverage gaps\", \"what should we improve in our AI\", or wants product insights from AI conversation patterns.\n"
+      }
+    },
+    {
+      "id": "analyze-dashboard",
+      "name": "analyze-dashboard",
+      "descriptions": {
+        "en": "Deeply analyze Amplitude dashboards by analyzing key charts, surfacing top areas for concern and takeaways, identify anomalies, then explain changes using customer feedback trends"
+      }
+    },
+    {
+      "id": "analyze-experiment-consolidated",
+      "name": "analyze-experiment-consolidated",
+      "descriptions": {
+        "en": "Designs A/B tests with proper metrics and variants, analyzes running or completed experiments, and interprets results with statistical rigor. Use when setting up experiments, checking experiment status, analyzing results, or making ship decisions."
+      }
+    },
+    {
+      "id": "analyze-feedback",
+      "name": "analyze-feedback",
+      "descriptions": {
+        "en": "Synthesizes customer feedback into actionable themes including feature requests, bugs, pain points, and praise. Use when planning product roadmap, understanding user sentiment, investigating specific issues, or preparing voice-of-customer reports."
+      }
+    },
+    {
+      "id": "build-charts-with-typed-params",
+      "name": "build-charts-with-typed-params",
+      "descriptions": {
+        "en": "Builds Amplitude charts using the typed `chart` parameter on query_amplitude_data — events, filters, group-bys, segments, date ranges, and per-kind fields for segmentation, funnel, retention, sessions, and data tables. Use when creating a chart, modifying or forking a saved one, or when a query returns empty data."
+      }
+    },
+    {
+      "id": "chart-link-analysis",
+      "name": "chart-link-analysis",
+      "descriptions": {
+        "en": "Answers questions from an Amplitude chart or dashboard link — fetch the definition, pull the data, explain or adapt it. Use when the user pastes an Amplitude URL, asks \"what does this chart show\", wants a report refreshed from a dashboard, or wants to clone/adapt an existing analysis."
+      }
+    },
+    {
+      "id": "compare-user-journeys",
+      "name": "compare-user-journeys",
+      "descriptions": {
+        "en": "Compares how two user groups behave differently by analyzing Amplitude Session Replays and metrics side by side. Produces a behavioral diff showing what one group does that the other doesn't. Use when a PM or growth lead asks \"what do converters do differently\", \"how do power users behave\", \"why do churned users leave\", \"compare these cohorts\", \"what separates segment A from B\", or wants to understand the qualitative behavioral gap between two user populations.\n"
+      }
+    },
+    {
+      "id": "create-dashboard",
+      "name": "create-dashboard",
+      "descriptions": {
+        "en": "Builds comprehensive Amplitude dashboards from requirements or goals, organizing charts into logical sections with appropriate layouts. Use when creating a complete dashboard from scratch or assembling existing charts into a cohesive view."
+      }
+    },
+    {
+      "id": "daily-brief",
+      "name": "daily-brief",
+      "descriptions": {
+        "en": "Delivers a daily briefing of the most important changes across your Amplitude instance. Use when the user asks for a \"daily download\", \"morning briefing\", \"what's happening\", \"anything I should know\", or wants a summary of recent metric changes, experiments, and user feedback.\n"
+      }
+    },
+    {
+      "id": "debug-replay",
+      "name": "debug-replay",
+      "descriptions": {
+        "en": "Turns bug reports into reproducible steps by finding error sessions in Amplitude Session Replay, extracting interaction timelines, and identifying the common action sequence that precedes the failure. Use when a user reports a bug, an error event spikes, someone says \"how do I reproduce this\", \"what happened to user X\", \"repro steps\", or you need to understand what a user did before an error occurred.\n"
+      }
+    },
+    {
+      "id": "diagnose-errors",
+      "name": "diagnose-errors",
+      "descriptions": {
+        "en": "Investigates errors across network failures, JavaScript errors, and error clicks to identify what's broken, where, and why. Use when the user says \"what's broken\", \"errors are up\", \"why are users seeing errors\", \"JS errors\", \"network failures\", \"5xx spike\", \"something is broken\", or wants to triage product reliability issues.\n"
+      }
+    },
+    {
+      "id": "diff-intake",
+      "name": "diff-intake",
+      "descriptions": {
+        "en": "Reads a PR or branch diff and produces a structured YAML change brief for downstream analytics instrumentation skills. Use this as the first step whenever a user shares a PR link, branch comparison, or raw diff and wants to understand what changed, what needs tracking, or how to instrument a feature. Trigger on phrases like \"review this PR\", \"what changed in this branch\", \"help me instrument this diff\", \"check analytics coverage for this change\", or any request to start the analytics review workflow.\n"
+      }
+    },
+    {
+      "id": "discover-analytics-patterns",
+      "name": "discover-analytics-patterns",
+      "descriptions": {
+        "en": "Discovers how analytics tracking calls are actually written in this codebase — the concrete SDK calls, function signatures, and import patterns used to send events. Use this skill whenever you need to understand the existing analytics instrumentation patterns before adding new tracking, when someone asks \"how do we track events here?\", \"show me the analytics setup\", \"what's the analytics pattern in this codebase?\", or any time the instrument-events or discover-event-surfaces skills are about to run and you need to know the correct coding style to follow. Outputs a deduplicated list of patterns with generalized examples and the file paths where each pattern appears, plus the dominant event and property naming conventions inferred from those call sites. Always use this skill before writing any analytics instrumentation code.\n"
+      }
+    },
+    {
+      "id": "discover-event-surfaces",
+      "name": "discover-event-surfaces",
+      "descriptions": {
+        "en": "Given a change_brief YAML (output from diff-intake), generates an exhaustive list of candidate analytics events to instrument. Takes the perspective of an engineer with a PM mindset — surfaces everything worth considering so a PM can decide what actually matters. Use this as step 2 of the analytics instrumentation workflow, immediately after diff-intake produces a change_brief. Trigger whenever a user has a change_brief YAML and wants to know what analytics events to add, or asks \"what should I track for this PR\", \"what events should I instrument\", \"generate event candidates\", or any request to surface analytics coverage gaps for a code change.\n"
+      }
+    },
+    {
+      "id": "discover-opportunities",
+      "name": "discover-opportunities",
+      "descriptions": {
+        "en": "Discovers product opportunities by analyzing Amplitude analytics, experiments, session replays, and customer feedback. Synthesizes evidence into prioritized, actionable opportunities with RICE scoring. Use when the user asks to \"find opportunities\", \"what should we build\", \"where are we losing users\", \"product gaps\", or wants a data-driven backlog of improvements.\n"
+      }
+    },
+    {
+      "id": "instrument-events",
+      "name": "instrument-events",
+      "descriptions": {
+        "en": "Given event_candidates YAML (output from discover-event-surfaces), generates a concrete instrumentation plan for priority-3 (critical) events. Acts as a Software Architect: discovers existing analytics patterns in the codebase, reads the hinted files to determine what variables are in scope, designs minimal chart-useful properties, and identifies the exact insertion point for each tracking call. Outputs a structured JSON trackingPlan. Use this as step 3 of the analytics instrumentation workflow, after discover-event-surfaces. Trigger whenever a user has event_candidates and wants to generate tracking code, asks \"instrument these events\", \"generate tracking plan\", \"add analytics for these events\", \"where should I put the tracking calls\", or any request to turn event candidates into concrete implementation guidance.\n"
+      }
+    },
+    {
+      "id": "investigate-ai-session",
+      "name": "investigate-ai-session",
+      "descriptions": {
+        "en": "Deep-dives into specific AI agent sessions or failure patterns to explain why something went wrong. Only use when the user has Amplitude Agent Analytics instrumented in their project. Use when investigating a specific session ID, debugging agent failures, understanding why quality is low, tracing tool errors, or when monitor-ai-quality surfaces an issue that needs root cause analysis.\n"
+      }
+    },
+    {
+      "id": "live-data-forensics",
+      "name": "live-data-forensics",
+      "descriptions": {
+        "en": "Investigates live product issues against Amplitude data — \"is X firing today\", \"did the release break Y\", \"which users are affected by Z\". Covers the verify-then-query loop, query_amplitude_data parameterization, and its common failure modes. Use for incident analysis, instrumentation checks, and affected-user discovery."
+      }
+    },
+    {
+      "id": "manage-amp-context",
+      "name": "manage-amp-context",
+      "descriptions": {
+        "en": "Lists projects for an employee-accessible organization or writes organization/project AI context with `manage_amp_context`; use `get_amplitude_context` for reads."
+      }
+    },
+    {
+      "id": "monitor-ai-quality",
+      "name": "monitor-ai-quality",
+      "descriptions": {
+        "en": "Monitors AI agent health across quality, cost, performance, and errors. Only use when the user has Amplitude Agent Analytics instrumented in their project. Use when the user asks \"how are our AI agents doing\", \"AI quality check\", \"agent health\", \"AI errors\", \"agent performance\", \"LLM cost\", or wants a proactive health report on their AI/LLM features.\n"
+      }
+    },
+    {
+      "id": "monitor-experiments-consolidated",
+      "name": "monitor-experiments-consolidated",
+      "descriptions": {
+        "en": "Monitors all active and recently completed experiments across Amplitude projects, triages them by importance, then runs deep analysis and reporting on the most impactful ones. Use when the user asks to \"check on experiments\", \"experiment status\", \"experiment review\", \"what experiments are running\", or wants a periodic experiment health report."
+      }
+    },
+    {
+      "id": "monitor-reliability",
+      "name": "monitor-reliability",
+      "descriptions": {
+        "en": "Delivers a reliability health check using auto-captured network request, JS error, and error click data. Use when the user asks for a \"reliability check\", \"error rate\", \"quality metrics\", \"page health\", \"did the release break anything\", \"error budget\", or wants a proactive product quality report.\n"
+      }
+    },
+    {
+      "id": "replay-ux-audit",
+      "name": "replay-ux-audit",
+      "descriptions": {
+        "en": "Finds and analyzes Amplitude Session Replays to surface UX friction patterns across multiple sessions. Produces a ranked friction map showing where users struggle, hesitate, or abandon. Use when a PM or designer asks \"where's the friction\", \"what's confusing users\", \"UX issues on this page\", \"why is this flow clunky\", \"audit the user experience\", or wants qualitative evidence of usability problems in a specific feature or flow.\n"
+      }
+    },
+    {
+      "id": "review-agent-insights",
+      "name": "review-agent-insights",
+      "descriptions": {
+        "en": "Retrieves, synthesizes, and prioritizes all recent AI agent results from Amplitude. Queries every agent type available in get_agent_results, validates freshness, and produces a unified narrative ranked by impact. Use when the user asks \"what has the AI found\", \"show me agent insights\", \"any AI findings\", \"what did Amplitude discover\", \"review AI insights\", or wants a digest of everything Amplitude's AI agents have surfaced recently.\n"
+      }
+    },
+    {
+      "id": "scheduled-report-refresh",
+      "name": "scheduled-report-refresh",
+      "descriptions": {
+        "en": "Refreshes recurring reports (daily briefings, WBRs, experiment briefs) from saved Amplitude content — fetch the dashboard, re-pull its charts, fill gaps with ad hoc queries, summarize deltas. Use for \"run the daily/weekly report\", \"refresh this dashboard's numbers\", or scheduled custom-agent report runs."
+      }
+    },
+    {
+      "id": "taxonomy",
+      "name": "taxonomy",
+      "descriptions": {
+        "en": "Source of truth for event taxonomy generation, data auditing, and governance best practices in Amplitude. Use when an agent needs to create, validate, audit, score, or recommend improvements to event tracking plans, naming conventions, property standards, data quality, or deprecation workflows. Covers naming rules, property standards, scoring frameworks, safe metadata operations, deprecation procedures, and AI readiness guidance.\n"
+      }
+    },
+    {
+      "id": "use-amp-guides-surveys",
+      "name": "use-amp-guides-surveys",
+      "descriptions": {
+        "en": "Lists Amplitude Guides and Surveys or reads one item's full configuration with `use_amp_guides_surveys`."
+      }
+    },
+    {
+      "id": "user-cohort-forensics",
+      "name": "user-cohort-forensics",
+      "descriptions": {
+        "en": "Investigates individual users and user populations in Amplitude — resolve users by email/ID, read profiles, batch-analyze event timelines, spot-check cohort membership. Use for \"what did user X do\", attribution audits, population sampling, and email-to-user-ID resolution."
+      }
+    },
+    {
+      "id": "weekly-brief",
+      "name": "weekly-brief",
+      "descriptions": {
+        "en": "Delivers a weekly briefing summarizing the most important trends, wins, and risks across your Amplitude instance. Use when the user asks for a \"weekly review\", \"weekly summary\", \"week in review\", \"what happened this week\", or wants a recap of the past 7 days to share with their team or leadership.\n"
+      }
+    },
+    {
+      "id": "what-would-lenny-do",
+      "name": "what-would-lenny-do",
+      "descriptions": {
+        "en": "Answers product strategy, growth, pricing, hiring, and leadership questions using Lenny Rachitsky's archive. ONLY use this skill if the `lennysdata` MCP server is connected and its tools (search_content, read_content, etc.) are available. If the lennysdata MCP is not connected, do NOT use this skill — respond using your own knowledge instead.\n"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "amplitude",
+      "name": "amplitude"
+    }
+  ]
 }

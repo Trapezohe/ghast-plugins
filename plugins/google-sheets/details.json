@@ -46,5 +46,20 @@
         "url": "https://policies.google.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "google-sheets",
+      "name": "google-sheets",
+      "descriptions": {
+        "en": "Use Google Sheets in Ghast. Read spreadsheets and update values, formulas and structure through Google’s official Workspace MCP service. 通过 Google 官方 Workspace MCP 服务读取表格并更新数据、公式与结构。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "google-sheets",
+      "name": "Google Sheets"
+    }
+  ]
 }

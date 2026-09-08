@@ -31,5 +31,20 @@
         "url": "https://www.sanity.io/docs/ai/mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "sanity",
+      "name": "sanity",
+      "descriptions": {
+        "en": "Use Sanity in Ghast. Query structured content and manage Sanity documents and releases. 检索结构化内容，管理 Sanity 文档与内容发布。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "sanity",
+      "name": "Sanity"
+    }
+  ]
 }

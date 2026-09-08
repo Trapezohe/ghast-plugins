@@ -47,5 +47,20 @@
         "url": "https://seranking.com/legal/privacy-statement.html"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "se-ranking",
+      "name": "se-ranking",
+      "descriptions": {
+        "en": "Use SE Ranking in Ghast. Research keywords, competitors, rankings, backlinks and AI search visibility with SE Ranking. 使用 SE Ranking 调研关键词、竞争对手、排名、外链和 AI 搜索可见性，支持 SEO 优化。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "se-ranking",
+      "name": "SE Ranking"
+    }
+  ]
 }

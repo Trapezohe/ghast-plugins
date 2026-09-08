@@ -31,5 +31,20 @@
         "url": "https://mem.ai"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "mem",
+      "name": "mem",
+      "descriptions": {
+        "en": "Search, read, create, update, organize, trash, and restore Mem notes and collections through Mem Labs' official hosted MCP. Use for personal knowledge management, meeting notes, research, attachments, transcripts, collections, and note-based task workflows."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "mem",
+      "name": "mem"
+    }
+  ]
 }

@@ -47,5 +47,20 @@
         "url": "https://postmarkapp.com/terms-of-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "postmark",
+      "name": "postmark",
+      "descriptions": {
+        "en": "Use Postmark in Ghast. Manage transactional email, templates, delivery diagnostics and webhooks through Postmark’s official MCP. 通过 Postmark 官方 MCP 管理事务邮件、模板、投递诊断与 Webhook。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "postmark",
+      "name": "Postmark"
+    }
+  ]
 }

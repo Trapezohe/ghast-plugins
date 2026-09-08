@@ -38,5 +38,20 @@
         "url": "https://help.maze.co/articles/5736723999-maze-mcp-data-privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "maze",
+      "name": "maze",
+      "descriptions": {
+        "en": "Use Maze in Ghast. Find user studies, review responses and transcripts, and compare research findings through Maze’s official MCP. 通过 Maze 官方 MCP 查找用户研究、阅读回答与访谈记录，并比较研究发现。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "maze",
+      "name": "Maze"
+    }
+  ]
 }

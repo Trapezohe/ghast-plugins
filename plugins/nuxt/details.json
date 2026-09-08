@@ -30,5 +30,20 @@
         "url": "https://nuxt.com/docs/4.x/guide/ai/mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "nuxt",
+      "name": "nuxt",
+      "descriptions": {
+        "en": "Use Nuxt in Ghast. Explore official Nuxt documentation, modules and deployment guidance through Nuxt’s public MCP server. 通过 Nuxt 官方公开 MCP 服务查询文档、模块和部署指南。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "nuxt",
+      "name": "Nuxt"
+    }
+  ]
 }

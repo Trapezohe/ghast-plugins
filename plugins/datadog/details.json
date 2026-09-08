@@ -40,5 +40,41 @@
         "url": "https://www.datadoghq.com/privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "datadog",
+      "name": "datadog",
+      "descriptions": {
+        "en": "Investigate Datadog logs, metrics, traces, monitors, incidents, dashboards, services, and widgets safely through Datadog's official MCP server."
+      }
+    },
+    {
+      "id": "ddconfig",
+      "name": "ddconfig",
+      "descriptions": {
+        "en": "Diagnose or change Datadog MCP site, authentication, permissions, toolsets, and connectivity in Ghast without exposing credentials."
+      }
+    },
+    {
+      "id": "ddsetup",
+      "name": "ddsetup",
+      "descriptions": {
+        "en": "Configure first-time access to Datadog's official regional MCP server in Ghast using OAuth or optional user-managed API and application keys."
+      }
+    },
+    {
+      "id": "ddtoolsets",
+      "name": "ddtoolsets",
+      "descriptions": {
+        "en": "Inspect and configure Datadog MCP toolsets in Ghast while keeping the active tool surface narrow and reviewable."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "datadog",
+      "name": "datadog"
+    }
+  ]
 }

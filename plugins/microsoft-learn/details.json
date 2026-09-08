@@ -46,5 +46,20 @@
         "url": "https://account.microsoft.com/privacy/third-party-ads?scrolltonewtoggle=true"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "microsoft-learn",
+      "name": "microsoft-learn",
+      "descriptions": {
+        "en": "Use Microsoft Learn in Ghast. Search Microsoft documentation and retrieve official code samples. 检索微软官方文档与代码示例，辅助 Azure 和 Microsoft 开发。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "microsoft-learn",
+      "name": "Microsoft Learn"
+    }
+  ]
 }

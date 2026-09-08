@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "anytype",
+      "name": "anytype",
+      "descriptions": {
+        "en": "Use Anytype in Ghast. Search and organize Anytype spaces, objects, lists and knowledge through Anytype’s official local MCP connector. 通过 Anytype 官方本地 MCP 连接器搜索和整理空间、对象、列表及知识资料。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "anytype",
+      "name": "Anytype"
+    }
+  ]
 }

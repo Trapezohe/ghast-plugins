@@ -30,5 +30,20 @@
         "url": "https://developer.hashicorp.com/terraform/mcp-server/deploy/local"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "terraform",
+      "name": "terraform",
+      "descriptions": {
+        "en": "Use Terraform in Ghast. Find Terraform providers, modules and policy documentation using HashiCorp’s official MCP server. 通过 HashiCorp 官方 MCP 查找 Terraform Provider、模块与策略文档。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "terraform",
+      "name": "Terraform"
+    }
+  ]
 }

@@ -30,5 +30,20 @@
         "url": "https://docs.toggl.com/toggl-mcp-and-cl"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "toggl",
+      "name": "toggl",
+      "descriptions": {
+        "en": "Use Toggl 2.0 in Ghast. Manage tasks, projects, time entries and reports in Toggl 2.0. 在 Toggl 2.0 中管理任务、项目、工时记录与报表。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "toggl",
+      "name": "Toggl 2.0"
+    }
+  ]
 }

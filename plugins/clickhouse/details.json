@@ -26,5 +26,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "clickhouse",
+      "name": "clickhouse",
+      "descriptions": {
+        "en": "Use ClickHouse Cloud in Ghast. Explore ClickHouse Cloud data and analytical context and assist with SQL-based reporting. 探索 ClickHouse Cloud 数据与分析上下文，辅助 SQL 查询、指标分析和报表工作。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "clickhouse",
+      "name": "ClickHouse Cloud"
+    }
+  ]
 }

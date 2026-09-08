@@ -38,5 +38,20 @@
         "url": "https://slack.com/trust/privacy/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "slack",
+      "name": "slack",
+      "descriptions": {
+        "en": "Use Slack in Ghast. Search Slack conversations and files, read threads, and manage messages, canvases and lists through the official Slack MCP. 通过 Slack 官方 MCP 搜索会话与文件、阅读讨论串，并管理消息、画布和列表。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "slack",
+      "name": "Slack"
+    }
+  ]
 }

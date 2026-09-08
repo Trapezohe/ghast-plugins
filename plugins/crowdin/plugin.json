@@ -23,7 +23,11 @@
         "crowdin": {
           "credentialHeaders": {
             "Authorization": "Bearer $VAULT:crowdin-token"
-          }
+          },
+          "optionalCredentials": [
+            "crowdin-token"
+          ],
+          "oauthRequired": true
         }
       }
     }

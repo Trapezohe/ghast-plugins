@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "blockscout",
+      "name": "blockscout",
+      "descriptions": {
+        "en": "Use Blockscout in Ghast. Inspect blockchain transactions, tokens, addresses and verified contracts. 查询区块链交易、代币、地址与已验证合约。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "blockscout",
+      "name": "Blockscout"
+    }
+  ]
 }

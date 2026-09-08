@@ -46,5 +46,20 @@
         "url": "https://account.microsoft.com/privacy/third-party-ads?scrolltonewtoggle=true"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "microsoft-release-communications",
+      "name": "microsoft-release-communications",
+      "descriptions": {
+        "en": "Use Microsoft Release Communications in Ghast. Search Microsoft 365 roadmap entries and Azure updates through Microsoft's public Release Communications MCP server. 通过微软公开的 Release Communications MCP 查询 Microsoft 365 路线图与 Azure 更新。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "microsoft-release-communications",
+      "name": "Microsoft Release Communications"
+    }
+  ]
 }

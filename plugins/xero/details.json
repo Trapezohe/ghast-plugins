@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "xero",
+      "name": "xero",
+      "descriptions": {
+        "en": "Use Xero in Ghast. Connect Xero’s official MCP for accounting records, invoices, contacts, financial reports and payroll workflows. 连接 Xero 官方 MCP，处理会计记录、发票、联系人、财务报表和工资办公流程。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "xero",
+      "name": "Xero"
+    }
+  ]
 }

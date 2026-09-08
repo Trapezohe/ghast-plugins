@@ -38,5 +38,20 @@
         "url": "https://docs.capacities.io/more/ai-privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "capacities",
+      "name": "capacities",
+      "descriptions": {
+        "en": "Use Capacities in Ghast. Search and retrieve knowledge from your Capacities space through its official MCP service. 通过 Capacities 官方 MCP 服务搜索并读取空间中的知识内容。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "capacities",
+      "name": "Capacities"
+    }
+  ]
 }

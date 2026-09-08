@@ -21,7 +21,11 @@
         "tomtom": {
           "credentialHeaders": {
             "tomtom-api-key": "$VAULT:tomtom-api-key"
-          }
+          },
+          "optionalCredentials": [
+            "tomtom-api-key"
+          ],
+          "oauthRequired": true
         }
       }
     }

@@ -38,5 +38,20 @@
         "url": "https://buffer.com/legal#privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "buffer",
+      "name": "buffer",
+      "descriptions": {
+        "en": "Use Buffer in Ghast. Organize social media ideas, review channel performance and prepare posts and publishing schedules with Buffer. 使用 Buffer 整理社媒创意、查看渠道表现，准备内容草稿与发布排期。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "buffer",
+      "name": "Buffer"
+    }
+  ]
 }

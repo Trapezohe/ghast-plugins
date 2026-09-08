@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "graphlit",
+      "name": "graphlit",
+      "descriptions": {
+        "en": "Use Graphlit in Ghast. Use Graphlit’s official MCP to retrieve project knowledge, search content, organize collections and build content workflows. 通过 Graphlit 官方 MCP 检索项目知识、搜索内容、整理集合并构建内容工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "graphlit",
+      "name": "Graphlit"
+    }
+  ]
 }

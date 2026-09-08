@@ -47,5 +47,20 @@
         "url": "https://brighthire.com/privacy-policy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "brighthire-interview-intelligence",
+      "name": "brighthire-interview-intelligence",
+      "descriptions": {
+        "en": "Find and analyze authorized BrightHire candidates, roles, interviews, calls, transcripts, scorecards, and hiring evidence through BrightHire's official read-only MCP. Use for scoped interview-intelligence retrieval and summaries, with privacy, bias, provenance, and human-decision safeguards."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "brighthire",
+      "name": "brighthire"
+    }
+  ]
 }

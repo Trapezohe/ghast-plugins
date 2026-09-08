@@ -21,7 +21,7 @@
       },
       "mcpServerExtensions": {
         "dropbox": {
-          "oauthClientRequired": true
+          "oauthRequired": true
         }
       }
     }

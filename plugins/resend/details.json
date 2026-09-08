@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "resend",
+      "name": "resend",
+      "descriptions": {
+        "en": "Use Resend in Ghast. Review email activity, manage contacts and domains, and prepare transactional email workflows with Resend. 通过 Resend 查看邮件记录、管理联系人和域名，并准备事务邮件流程。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "resend",
+      "name": "Resend"
+    }
+  ]
 }

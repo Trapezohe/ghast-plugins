@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "jina-ai",
+      "name": "jina-ai",
+      "descriptions": {
+        "en": "Use Jina AI in Ghast. Read web pages, search research and rerank relevant information. 读取网页、检索研究资料并按相关性整理信息。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "jina-ai",
+      "name": "Jina AI"
+    }
+  ]
 }

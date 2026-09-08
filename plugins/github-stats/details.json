@@ -25,5 +25,15 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "github-stats",
+      "name": "github-stats",
+      "descriptions": {
+        "en": "Use this skill when the user asks about a public GitHub repository's stars, forks, issues, language, last commit, or topics; or about a GitHub user/organization's profile, follower count, or public repos. Hits the anonymous GitHub REST API."
+      }
+    }
+  ],
+  "apps": []
 }

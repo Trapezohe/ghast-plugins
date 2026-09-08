@@ -21,7 +21,12 @@
         "smartsheet": {
           "credentialHeaders": {
             "Authorization": "Bearer $VAULT:smartsheet-token"
-          }
+          },
+          "optionalCredentials": [
+            "smartsheet-token"
+          ],
+          "oauthRequired": true,
+          "oauthClientRequired": true
         }
       }
     }

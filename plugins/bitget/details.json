@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "bitget",
+      "name": "bitget",
+      "descriptions": {
+        "en": "Use Bitget in Ghast. Explore crypto market data and manage Bitget account, order and position workflows. 查询加密货币行情，处理 Bitget 账户、订单与持仓工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "bitget",
+      "name": "Bitget"
+    }
+  ]
 }

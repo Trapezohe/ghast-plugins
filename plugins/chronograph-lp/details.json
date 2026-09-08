@@ -47,5 +47,48 @@
         "url": "https://www.chronograph.pe/legal/privacy-policy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "chronograph-cashflow-forecast",
+      "name": "chronograph-cashflow-forecast",
+      "descriptions": {
+        "en": "Forecast LP-level private capital cashflows for existing portfolios using Chronograph MCP data and a Takahashi-Alexander style model."
+      }
+    },
+    {
+      "id": "chronograph-commitment-pacing-planner",
+      "name": "chronograph-commitment-pacing-planner",
+      "descriptions": {
+        "en": "Plan forward fund commitments to reach and hold a target private capital allocation, using Chronograph portfolio data and a cashflow-projection model."
+      }
+    },
+    {
+      "id": "chronograph-gp-meeting-prep",
+      "name": "chronograph-gp-meeting-prep",
+      "descriptions": {
+        "en": "Prepare an LP (investor) to meet with their fund manager (GP) — an LP-side skill where the user is the LP, not the GP. Review the fund's latest reporting, surface what changed since last period, and draft the questions worth raising. Draws on Chronograph fund and portfolio data when connected — captured reporting such as fund performance, schedules of investments, and portfolio company KPI profiles — and asks the LP to provide anything else it needs, such as a capital account statement, investor letter, or AGM or board deck."
+      }
+    },
+    {
+      "id": "chronograph-look-through-exposure-scan",
+      "name": "chronograph-look-through-exposure-scan",
+      "descriptions": {
+        "en": "Aggregate an LP's look-through portfolio exposure across funds — by company, sector, geography, vintage, strategy, and currency — and surface concentration, using the Chronograph top-exposures tool."
+      }
+    },
+    {
+      "id": "chronograph-lp-analyst",
+      "name": "chronograph-lp-analyst",
+      "descriptions": {
+        "en": "Route end-to-end Chronograph LP portfolio analysis across the official LP workflow skills."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "chronograph-lp",
+      "name": "chronograph-lp"
+    }
+  ]
 }

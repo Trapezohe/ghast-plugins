@@ -30,5 +30,24 @@
         "url": "https://developer.adobe.com/analytics-mcp/docs/guides/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "adobe-analytics",
+      "name": "adobe-analytics",
+      "descriptions": {
+        "en": "Use Adobe Analytics in Ghast. Connect Adobe’s official Analytics and Customer Journey Analytics MCP servers to query reports, explore trends and manage analytics components. 连接 Adobe 官方 Analytics 与 Customer Journey Analytics MCP 服务，查询报表、分析趋势并管理分析组件。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "adobe-analytics",
+      "name": "adobe analytics"
+    },
+    {
+      "id": "adobe-cja",
+      "name": "adobe cja"
+    }
+  ]
 }

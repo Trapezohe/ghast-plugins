@@ -31,5 +31,20 @@
         "url": "https://razorpay.com"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "razorpay-readonly",
+      "name": "razorpay-readonly",
+      "descriptions": {
+        "en": "Safely inspect Razorpay payments, orders, refunds, settlements, QR codes, payment links, payouts, reconciliation, and saved customer payment methods through the official-source Ghast read-only MCP adapter."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "razorpay",
+      "name": "razorpay"
+    }
+  ]
 }

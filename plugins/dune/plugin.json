@@ -21,7 +21,11 @@
         "dune": {
           "credentialHeaders": {
             "x-dune-api-key": "$VAULT:dune-token"
-          }
+          },
+          "optionalCredentials": [
+            "dune-token"
+          ],
+          "oauthRequired": true
         }
       }
     }

@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "coinpaprika",
+      "name": "coinpaprika",
+      "descriptions": {
+        "en": "Use CoinPaprika in Ghast. Query cryptocurrency tickers, exchanges, historical candles and market metadata. 查询加密货币行情、交易所、历史 K 线与市场资料。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "coinpaprika",
+      "name": "CoinPaprika"
+    }
+  ]
 }

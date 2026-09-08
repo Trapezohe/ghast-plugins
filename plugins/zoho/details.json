@@ -40,5 +40,32 @@
         "url": "https://www.zoho.com/privacy-commitment.html?src=zindex"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "zoho",
+      "name": "zoho",
+      "descriptions": {
+        "en": "Query and manage Zoho CRM through Zoho's four official hosted MCP servers, and read organization and user access data through Zoho's official v8 Python SDK."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "zoho-crm-data-insights",
+      "name": "zoho crm data insights"
+    },
+    {
+      "id": "zoho-crm-data-operations",
+      "name": "zoho crm data operations"
+    },
+    {
+      "id": "zoho-crm-module-customization",
+      "name": "zoho crm module customization"
+    },
+    {
+      "id": "zoho-crm-automation",
+      "name": "zoho crm automation"
+    }
+  ]
 }

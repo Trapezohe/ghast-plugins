@@ -30,5 +30,20 @@
         "url": "https://developers.fellow.ai/reference/mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "fellow",
+      "name": "fellow",
+      "descriptions": {
+        "en": "Use Fellow in Ghast. Find meeting transcripts, summaries, decisions and action items in Fellow. 搜索 Fellow 会议逐字稿、摘要、决策与待办事项。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "fellow",
+      "name": "Fellow"
+    }
+  ]
 }

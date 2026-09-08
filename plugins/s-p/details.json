@@ -32,5 +32,41 @@
         "url": "https://kensho.com/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "earnings-preview-beta",
+      "name": "earnings-preview-beta",
+      "descriptions": {
+        "en": "Generate a concise 4-5 page equity research earnings preview for a single company. Analyzes the most recent earnings transcript, competitor landscape, valuation, and recent news to produce a professional HTML report."
+      }
+    },
+    {
+      "id": "funding-digest",
+      "name": "funding-digest",
+      "descriptions": {
+        "en": "Generate a polished one-page PowerPoint slide summarizing key takeaways from recent funding rounds and notable capital markets activity across a user's watched sectors or companies. Use this skill when the user asks for a deal flow summary, weekly recap, funding digest, transaction roundup, or capital markets briefing. Triggers on: 'deal flow digest', 'weekly funding recap', 'deal roundup', 'transaction summary this week', 'what happened in [sector] this week', 'capital markets update', or any request to compile recent funding activity into a briefing slide. Produces a professional single-slide PPTX with key takeaways, valuation data, and Capital IQ deal links."
+      }
+    },
+    {
+      "id": "sp-global-data",
+      "name": "sp-global-data",
+      "descriptions": {
+        "en": "Use S&P Global's official kFinance MCP tools for company-specific financial research, peer comparisons, earnings and transcript analysis, historical prices, transactions, estimates, guidance, professionals, relationships, and ratings. Use this as the default entry point when the user wants data or analysis rather than one of the packaged document workflows.\n"
+      }
+    },
+    {
+      "id": "tear-sheet",
+      "name": "tear-sheet",
+      "descriptions": {
+        "en": "Generate professional company tear sheets using S&P Capital IQ data via the Kensho LLM-ready API MCP server. Use this skill whenever the user asks for a tear sheet, company one-pager, company profile, fact sheet, company snapshot, or company overview document — especially when they mention a specific company name or ticker. Also trigger when users ask for equity research summaries, M&A company profiles, corporate development target profiles, sales/BD meeting prep documents, or any concise single-company financial summary. This skill supports four audience types: equity research, investment banking/M&A, corporate development, and sales/business development. If the user doesn't specify an audience, ask. Works for both public and private companies."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "spglobal",
+      "name": "s-p"
+    }
+  ]
 }

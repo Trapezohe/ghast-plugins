@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "brevo",
+      "name": "brevo",
+      "descriptions": {
+        "en": "Use Brevo in Ghast. Manage contacts, email campaigns, templates, CRM records and marketing analytics in Brevo. 在 Brevo 中管理联系人、邮件活动、模板、CRM 记录与营销分析。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "brevo",
+      "name": "Brevo"
+    }
+  ]
 }

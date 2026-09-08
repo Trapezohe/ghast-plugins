@@ -31,5 +31,20 @@
         "url": "https://exa.ai/docs/reference/exa-mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "exa",
+      "name": "exa",
+      "descriptions": {
+        "en": "Use Exa in Ghast. Search the web and retrieve source pages with Exa for grounded research and current information. 使用 Exa 搜索网络并读取来源网页，为调研与时效信息查询提供依据。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "exa",
+      "name": "Exa"
+    }
+  ]
 }

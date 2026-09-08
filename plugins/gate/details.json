@@ -25,5 +25,36 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "gate",
+      "name": "gate",
+      "descriptions": {
+        "en": "Use Gate in Ghast. Research crypto markets, news and on-chain data, and connect a Gate exchange account through OAuth. 研究加密市场、新闻与链上数据，并通过 OAuth 连接 Gate 交易所账号。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "gate",
+      "name": "gate"
+    },
+    {
+      "id": "gate-exchange",
+      "name": "gate exchange"
+    },
+    {
+      "id": "gate-info",
+      "name": "gate info"
+    },
+    {
+      "id": "gate-news",
+      "name": "gate news"
+    },
+    {
+      "id": "gate-docs",
+      "name": "gate docs"
+    }
+  ]
 }

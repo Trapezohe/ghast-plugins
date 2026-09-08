@@ -46,5 +46,20 @@
         "url": "https://www.devexpress.com/aboutus/privacy-policy.xml"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "devexpress",
+      "name": "devexpress",
+      "descriptions": {
+        "en": "Use DevExpress Documentation in Ghast. Search DevExpress component documentation, APIs and implementation examples. 检索 DevExpress 组件文档、API 与实现示例。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "devexpress",
+      "name": "DevExpress Documentation"
+    }
+  ]
 }

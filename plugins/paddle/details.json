@@ -38,5 +38,28 @@
         "url": "https://www.paddle.com/legal/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "paddle",
+      "name": "paddle",
+      "descriptions": {
+        "en": "Use Paddle in Ghast. Use official Paddle tools for billing, subscriptions and revenue workflows, with separate live, sandbox and documentation connections. 通过 Paddle 官方工具处理计费、订阅与收入运营，分别连接生产环境、沙盒和开发文档。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "paddle",
+      "name": "paddle"
+    },
+    {
+      "id": "paddle-sandbox",
+      "name": "paddle sandbox"
+    },
+    {
+      "id": "paddle-docs",
+      "name": "paddle docs"
+    }
+  ]
 }

@@ -31,5 +31,20 @@
         "url": "https://docs.honeycomb.io/integrations/mcp/configuration-guide"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "honeycomb",
+      "name": "honeycomb",
+      "descriptions": {
+        "en": "Use Honeycomb in Ghast. Explore traces, latency and service health with Honeycomb. 分析 Honeycomb 链路追踪、请求延迟与服务健康状况。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "honeycomb",
+      "name": "Honeycomb"
+    }
+  ]
 }

@@ -31,5 +31,20 @@
         "url": "https://docs.nansen.ai/mcp/connecting"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "nansen",
+      "name": "nansen",
+      "descriptions": {
+        "en": "Use Nansen in Ghast. Analyze blockchain activity, token flows, wallets and smart-money data with Nansen. 通过 Nansen 分析链上活动、代币流向、钱包与聪明钱数据。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "nansen",
+      "name": "Nansen"
+    }
+  ]
 }

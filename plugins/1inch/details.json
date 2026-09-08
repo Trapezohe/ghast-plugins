@@ -46,5 +46,20 @@
         "url": "https://business.1inch.com/portal/assets/legal-docs/privacy_policy_20260708.pdf"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "1inch",
+      "name": "1inch",
+      "descriptions": {
+        "en": "Use 1inch in Ghast. Research DeFi data and access 1inch swaps, limit orders and portfolio tools with account authorization. 研究 DeFi 数据，并在账号授权后使用 1inch 兑换、限价单与投资组合工具。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "1inch",
+      "name": "1inch"
+    }
+  ]
 }

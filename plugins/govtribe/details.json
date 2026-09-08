@@ -47,5 +47,20 @@
         "url": "https://govtribe.com/docs/govtribe-user-guide/privacy-policy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "govtribe",
+      "name": "govtribe",
+      "descriptions": {
+        "en": "Research public-sector opportunities, awards, vendors, agencies, forecasts, pricing, files, news, and authorized workspace records through GovTribe's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "govtribe",
+      "name": "govtribe"
+    }
+  ]
 }

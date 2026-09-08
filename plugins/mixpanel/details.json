@@ -40,5 +40,97 @@
         "url": "https://mixpanel.com/security-privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "analyze-report",
+      "name": "analyze-report",
+      "descriptions": {
+        "en": "Read and explain a Mixpanel report or chart — what it shows, what's notable, and what's worth a closer look. Use whenever the user asks to interpret, explain, summarize, review, or break down an existing chart, report, or saved query in Mixpanel. Trigger phrases: \"what does this chart show\", \"explain this report\", \"interpret this chart\", \"summarize this for me\", \"what's notable here\", \"anything weird in this chart\", \"tell me what's happening\", \"review this insight\", \"walk me through this report\", \"what's the takeaway from this\". Also trigger when the user pastes a Mixpanel chart or report URL and asks anything about it. Lean by default — surfaces what the report shows and flags notable patterns, but does not chase root causes. Do NOT trigger for building new charts, reviewing entire dashboards, or full root-cause diagnostic workflows (for \"why did this change\" questions, use monitor-metrics). Requires a Mixpanel engine — run /mixpanel:install if not set up.\n"
+      }
+    },
+    {
+      "id": "create-dashboard",
+      "name": "create-dashboard",
+      "descriptions": {
+        "en": "Creates a well-designed Mixpanel dashboard. Use when the user asks you to build, create, or design a dashboard, or when you need to present findings from an investigation as a live dashboard. Handles layout, text cards, report validation, and narrative structure."
+      }
+    },
+    {
+      "id": "deep-research",
+      "name": "deep-research",
+      "descriptions": {
+        "en": "Conducts a structured metric investigation in Mixpanel. Use when the user asks why a metric changed, what's driving a trend, requests a \"deep dive\" or \"root cause,\" or wants to understand a phenomenon in their data. Walks through project / event / property scoping, plan confirmation, and an iterative query → interpret → hypothesise loop."
+      }
+    },
+    {
+      "id": "install",
+      "name": "install",
+      "descriptions": {
+        "en": "Set up Mixpanel for this project using Mixpanel's official hosted MCP server, the official mixpanel-headless Python SDK, or an existing custom integration. Use when the user asks to install, connect, configure, switch region, change authentication, or repair Mixpanel. Interactive; do not handle raw credentials in conversation.\n"
+      }
+    },
+    {
+      "id": "learn-mcp",
+      "name": "learn-mcp",
+      "descriptions": {
+        "en": "Onboard users to the Mixpanel MCP server through guided, interactive modules. Use when the user asks \"how do I use MCP\", \"what can I ask\", \"what should I try first\", \"show me what MCP can do\", or is figuring out where to start (e.g. \"what now?\"). Always invoke this skill when the user asks about MCP capabilities, even if the question seems simple. Do NOT use for: creating reports or dashboards, running queries, tracking setup, experiment analysis, or Lexicon management — use the dedicated skills for those tasks.\n"
+      }
+    },
+    {
+      "id": "manage-boards",
+      "name": "manage-boards",
+      "descriptions": {
+        "en": "Full lifecycle dashboard management for Mixpanel — create, template, clone, clean up, inventory, and update dashboards across projects and teams. ALWAYS use when a user asks to: create a dashboard, build a board, template or clone a dashboard, clean up stale dashboards, audit dashboards, list all dashboards, inventory boards, update or rename a dashboard, delete a dashboard, or standardize boards across projects. Also trigger on \"duplicate board\", \"stale dashboards\", \"empty boards\", \"board management\", or when dashboards are mentioned with \"governance\", \"cleanup\", \"template\", \"onboarding\", or \"standardize\". Do NOT use for A/B experiments (use `manage-experiment`), feature-flag rollouts (use `manage-feature-flags`), or Lexicon/event-and-property metadata cleanup (use `manage-lexicon`). Requires a Mixpanel engine — run /mixpanel:install if not set up.\n"
+      }
+    },
+    {
+      "id": "manage-experiment",
+      "name": "manage-experiment",
+      "descriptions": {
+        "en": "Coach the user through any phase of a Mixpanel experiment — design (hypothesis framing, metric selection, sizing, statistical-model choice, advanced features like CUPED / Winsorization / multiple-testing correction), launch (pre-launch readiness check and the irreversible launch), monitor (mid-flight safety: SRM, sample pace, guardrail peeks, terminate-early calls), and interpret (read results, decide ship / iterate / kill / wait, read health checks like SRM and Retro A/A, break down by segment, use session replays). Use when the user mentions an experiment or A/B test, a ship/kill decision, MDE, sample ratio mismatch, CUPED, or statistical significance, or asks things like \"set up an experiment\", \"is my experiment SRM-ing\", \"should we ship\", \"what's my MDE\", or \"audit my experiment\". Do NOT use for plain feature-flag rollouts with no measurement criterion — that belongs to the `manage-feature-flags` skill.\n"
+      }
+    },
+    {
+      "id": "manage-feature-flags",
+      "name": "manage-feature-flags",
+      "descriptions": {
+        "en": "Coach the user through Mixpanel feature-flag work — picking the right flag-shaped product (Feature Gate vs Dynamic Config vs Experiment), naming and keying, staged rollouts, the kill switch, exposure debugging, and archive/restore. Use when the user wants to create, configure, ramp, kill, archive, restore, debug, or clean up a Mixpanel feature flag, or asks why exposures are zero, why a rollout-percentage change had no effect, whether to use a flag or an experiment, or how to clean up stale flags. Trigger on phrasings like 'create a feature flag', 'roll out X to 10%', 'kill the flag', 'why doesn't my flag work', 'archive these stale flags', or 'is this a feature flag or an experiment'. Do NOT use for experiment design ('how should I size this A/B test?', 'what MDE can I detect?'), launch, mid-flight monitoring, or results interpretation ('should we ship?', 'what does this SRM failure mean?') — those belong to the `manage-experiment` skill."
+      }
+    },
+    {
+      "id": "manage-lexicon",
+      "name": "manage-lexicon",
+      "descriptions": {
+        "en": "Audit, score, enrich, or clean up the Lexicon (events and properties metadata) for a Mixpanel project. Use whenever the user wants to score Lexicon health, bulk-fill missing descriptions / display names / tags, reset metadata, triage data quality issues (type drift, null values, volume anomalies), or rename and delete tags. Also use when the user describes the problem in their own words — \"score lexicon\", \"enrich lexicon\", \"bulk enrich\", \"auto-tag events\", \"reset lexicon\", \"wipe tags\", \"review data quality issues\", \"rename/delete Lexicon tags\", \"event names are a mess\", \"half my events have no descriptions\", \"tracking plan audit\", \"clean up the schema\", \"score our instrumentation\" — as long as Mixpanel is the context. Do NOT use for: deleting event data or user profiles; dashboard cleanup; cohort tagging; customer health scoring. Requires a Mixpanel engine — run /mixpanel:install if not set up.\n"
+      }
+    },
+    {
+      "id": "monitor-metrics",
+      "name": "monitor-metrics",
+      "descriptions": {
+        "en": "Monitor and diagnose a Mixpanel metric for anomalies, drift, and root cause. Use whenever the user asks to investigate, debug, monitor, or explain a change in a metric tracked in Mixpanel — a saved Metric, KPI, conversion rate, retention, event count, funnel step, or anything tracked in a saved report or dashboard. Trigger phrases: \"monitor [metric]\", \"what's going on with [metric]\", \"why did [metric] drop/spike\", \"diagnose this metric\", \"check for anomalies\", \"has [metric] drifted\", \"what's driving the drop\", \"where is the movement coming from\", \"run RCA on this metric\". Also trigger when the user shares a Mixpanel report/dashboard/metric link and asks what's happening, or describes a metric in prose and wants to know if the movement is real. Do NOT trigger for portfolio health checks (use `weekly-pulse`) or adoption reports (use `gtm-customer-intelligence`). Requires a Mixpanel engine — run /mixpanel:install if not set up.\n"
+      }
+    },
+    {
+      "id": "prepare-ai-readiness",
+      "name": "prepare-ai-readiness",
+      "descriptions": {
+        "en": "Gets a Mixpanel org or project ready for its AI assistants — business context and Lexicon metadata. Use to set up or import context, fill gaps, or check AI-readiness: \"set us up for Mixpanel AI\", \"how ready are we for the agent\". Not for dashboards or metrics. Requires a Mixpanel engine — run /mixpanel:install if not set up.\n"
+      }
+    },
+    {
+      "id": "tracking-implementation",
+      "name": "tracking-implementation",
+      "descriptions": {
+        "en": "Guides a coding agent through helping a Mixpanel customer implement analytics correctly. Covers Quick Start (first events in one session), Full Implementation (complete production-ready setup), Add Tracking (extend existing implementation), and Implementation Audit. Use when a user wants to implement Mixpanel, set up Mixpanel, add Mixpanel tracking, configure a new Mixpanel project, or is a Mixpanel customer starting or extending their implementation."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "mixpanel",
+      "name": "mixpanel"
+    }
+  ]
 }

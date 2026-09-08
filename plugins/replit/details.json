@@ -47,5 +47,20 @@
         "url": "https://replit.com/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "replit",
+      "name": "replit",
+      "descriptions": {
+        "en": "Create, find, inspect, explain, update, publish, and check the publish status of Replit Apps through Replit's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "replit",
+      "name": "replit"
+    }
+  ]
 }

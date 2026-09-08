@@ -38,5 +38,20 @@
         "url": "https://docs.logrocket.com/docs/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "logrocket",
+      "name": "logrocket",
+      "descriptions": {
+        "en": "Use LogRocket in Ghast. Analyze user sessions, product metrics and application issues with LogRocket. 通过 LogRocket 分析用户会话、产品指标与应用问题。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "logrocket",
+      "name": "LogRocket"
+    }
+  ]
 }

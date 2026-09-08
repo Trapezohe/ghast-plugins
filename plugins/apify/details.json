@@ -31,5 +31,20 @@
         "url": "https://docs.apify.com/integrations/mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "apify",
+      "name": "apify",
+      "descriptions": {
+        "en": "Use Apify in Ghast. Discover web data Actors and run scoped extraction workflows. 检索网页数据采集 Actor，执行限定范围的数据提取。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "apify",
+      "name": "Apify"
+    }
+  ]
 }

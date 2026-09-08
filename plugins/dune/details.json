@@ -46,5 +46,20 @@
         "url": "https://dune.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "dune",
+      "name": "dune",
+      "descriptions": {
+        "en": "Use Dune in Ghast. Research on-chain datasets and execute Dune SQL analytics. 检索链上数据集，执行 Dune SQL 并分析链上活动。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "dune",
+      "name": "Dune"
+    }
+  ]
 }

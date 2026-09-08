@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "tigerdata-pg-aiguide",
+      "name": "tigerdata-pg-aiguide",
+      "descriptions": {
+        "en": "Use Tiger Data pg-aiguide in Ghast. Search version-specific PostgreSQL, TimescaleDB and PostGIS documentation and implementation guidance. 按版本搜索 PostgreSQL、TimescaleDB 与 PostGIS 文档和实现指南。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "tigerdata-pg-aiguide",
+      "name": "Tiger Data pg-aiguide"
+    }
+  ]
 }

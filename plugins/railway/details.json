@@ -30,5 +30,20 @@
         "url": "https://docs.railway.com/ai/mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "railway",
+      "name": "railway",
+      "descriptions": {
+        "en": "Use Railway in Ghast. Manage Railway projects, environments and deployments through Railway’s official hosted MCP server. 通过 Railway 官方托管 MCP 管理项目、环境和部署。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "railway",
+      "name": "Railway"
+    }
+  ]
 }

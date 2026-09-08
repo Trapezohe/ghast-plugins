@@ -38,5 +38,20 @@
         "url": "https://appwrite.io/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "appwrite",
+      "name": "appwrite",
+      "descriptions": {
+        "en": "Use Appwrite in Ghast. Manage Appwrite Cloud projects, discover service tools and search documentation through Appwrite’s official hosted MCP. 通过 Appwrite 官方托管 MCP 管理云端项目、发现服务工具并搜索文档。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "appwrite",
+      "name": "Appwrite"
+    }
+  ]
 }

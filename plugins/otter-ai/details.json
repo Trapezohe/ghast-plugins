@@ -47,5 +47,20 @@
         "url": "https://otter.ai/terms-of-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "otter-ai",
+      "name": "otter-ai",
+      "descriptions": {
+        "en": "Search Otter meeting history and retrieve full transcripts, summaries, action items, attendees, and meeting context through Otter.ai's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "otter-ai",
+      "name": "otter-ai"
+    }
+  ]
 }

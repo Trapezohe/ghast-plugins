@@ -47,5 +47,20 @@
         "url": "https://fireflies.ai/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "fireflies",
+      "name": "fireflies",
+      "descriptions": {
+        "en": "Search, summarize, analyze, organize, share, and create clips from meeting transcripts through Fireflies' official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "fireflies",
+      "name": "fireflies"
+    }
+  ]
 }

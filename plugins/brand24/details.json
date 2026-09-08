@@ -31,5 +31,20 @@
         "url": "https://brand24.com"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "brand24",
+      "name": "brand24",
+      "descriptions": {
+        "en": "Explore current Brand24 project summaries, important events, discussions, influencers, and mention sources through Brand24's official read-only hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "brand24",
+      "name": "brand24"
+    }
+  ]
 }

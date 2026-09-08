@@ -30,5 +30,20 @@
         "url": "https://developers.webflow.com/mcp/reference/getting-started"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "webflow",
+      "name": "webflow",
+      "descriptions": {
+        "en": "Use Webflow in Ghast. Build and refine Webflow sites, inspect CMS content and manage authorized design workflows. 通过 Webflow 构建与调整网站、检查 CMS 内容，协助页面设计与内容运营。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "webflow",
+      "name": "Webflow"
+    }
+  ]
 }

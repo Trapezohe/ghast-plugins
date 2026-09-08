@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "cometchat",
+      "name": "cometchat",
+      "descriptions": {
+        "en": "Use CometChat in Ghast. Search official CometChat documentation and integration guides for chat, voice, video and moderation. 搜索 CometChat 官方文档及聊天、语音、视频和内容审核集成指南。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "cometchat",
+      "name": "CometChat"
+    }
+  ]
 }

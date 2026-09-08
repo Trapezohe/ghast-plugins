@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "kittl",
+      "name": "kittl",
+      "descriptions": {
+        "en": "Use Kittl in Ghast. Create images, videos and design assets and run creative workflows in Kittl. 在 Kittl 中创作图片、视频与设计素材，执行创意工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "kittl",
+      "name": "Kittl"
+    }
+  ]
 }

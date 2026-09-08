@@ -47,5 +47,44 @@
         "url": "https://www.infobip.com/privacy-documents"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "infobip",
+      "name": "infobip",
+      "descriptions": {
+        "en": "Use Infobip in Ghast. Connect official Infobip tools for SMS, email, WhatsApp, voice, customer profiles, account management and documentation. 连接 Infobip 官方 SMS、邮件、WhatsApp、语音、客户资料、账号管理及文档工具。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "infobip",
+      "name": "infobip"
+    },
+    {
+      "id": "infobip-email",
+      "name": "infobip email"
+    },
+    {
+      "id": "infobip-whatsapp",
+      "name": "infobip whatsapp"
+    },
+    {
+      "id": "infobip-voice",
+      "name": "infobip voice"
+    },
+    {
+      "id": "infobip-people",
+      "name": "infobip people"
+    },
+    {
+      "id": "infobip-account-management",
+      "name": "infobip account management"
+    },
+    {
+      "id": "infobip-search",
+      "name": "infobip search"
+    }
+  ]
 }

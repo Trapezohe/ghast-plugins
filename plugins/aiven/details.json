@@ -38,5 +38,20 @@
         "url": "https://aiven.io/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "aiven",
+      "name": "aiven",
+      "descriptions": {
+        "en": "Use Aiven in Ghast. Manage Aiven data services, including PostgreSQL and Kafka, and inspect metrics, logs and configuration. 管理 Aiven 数据服务，包括 PostgreSQL 与 Kafka，并查看指标、日志和配置。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "aiven",
+      "name": "Aiven"
+    }
+  ]
 }

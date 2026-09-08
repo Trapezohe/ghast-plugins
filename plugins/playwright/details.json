@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "playwright",
+      "name": "playwright",
+      "descriptions": {
+        "en": "Use Playwright in Ghast. Automate browser workflows and verify web interfaces using Microsoft’s official Playwright MCP. 通过 Microsoft 官方 Playwright MCP 自动化浏览器流程并验证网页界面。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "playwright",
+      "name": "Playwright"
+    }
+  ]
 }

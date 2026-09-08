@@ -46,5 +46,20 @@
         "url": "https://www.pulumi.com/privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "pulumi",
+      "name": "pulumi",
+      "descriptions": {
+        "en": "Use Pulumi in Ghast. Explore cloud resources, stacks and infrastructure workflows through Pulumi’s official remote MCP. 通过 Pulumi 官方远程 MCP 探索云资源、Stack 与基础设施工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "pulumi",
+      "name": "Pulumi"
+    }
+  ]
 }

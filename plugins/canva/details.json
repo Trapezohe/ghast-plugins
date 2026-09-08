@@ -34,5 +34,55 @@
         "url": "https://www.canva.com/policies/privacy-policy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "brand-check",
+      "name": "brand-check",
+      "descriptions": {
+        "en": "Check a Canva design against a brand kit and report where it diverges — off-palette colors, non-brand fonts, logo misuse, and off-tone copy. Read-only; makes no changes. Use when the user asks \"is this on brand\", \"check this against our brand kit\", \"do a brand review\", \"does this match our brand guidelines\", or \"brand-check my design\"."
+      }
+    },
+    {
+      "id": "bulk-create",
+      "name": "bulk-create",
+      "descriptions": {
+        "en": "Bulk-create Canva designs from tabular data using a brand template with autofill fields, producing one design per row. Use when users say \"bulk create designs from this CSV\", \"generate one design per row\", \"create a design for each product\", \"batch generate from a template\", or \"autofill a template from a spreadsheet\". Accepts any tabular data source — uploaded files, pasted tables, JSON, or URLs."
+      }
+    },
+    {
+      "id": "edit-design",
+      "name": "edit-design",
+      "descriptions": {
+        "en": "Make edits to an existing Canva design — change or fix text, replace/insert/delete images and videos, reformat text (size, weight, style, color, alignment, lists, line height), reposition or resize elements, and update the title. Use when the user wants to change, edit, update, fix, translate, replace, or reformat content in a specific Canva design. This is the safe edit engine that other Canva skills (e.g. implement-feedback) build on."
+      }
+    },
+    {
+      "id": "get-design-feedback",
+      "name": "get-design-feedback",
+      "descriptions": {
+        "en": "Read a Canva design and return structured, actionable design feedback — visual hierarchy, copy/messaging, layout & spacing, consistency, readability, and accessibility. Read-only; makes no changes to the design. Use when the user asks to \"review my design\", \"give me feedback on this\", \"critique my deck/poster/flyer\", \"how can I improve this design\", or \"what's wrong with this slide\"."
+      }
+    },
+    {
+      "id": "implement-feedback",
+      "name": "implement-feedback",
+      "descriptions": {
+        "en": "Implement reviewer feedback on a Canva design. Reads all comment threads, synthesises what reviewers want, makes the clear-cut changes directly, and flags anything that needs a human decision. Use when the user asks to \"implement feedback on my deck\", \"address comments on a design\", \"apply review feedback\", \"fix the comments on my presentation\", or \"implement the feedback\"."
+      }
+    },
+    {
+      "id": "resize-for-social-media",
+      "name": "resize-for-social-media",
+      "descriptions": {
+        "en": "Resize a Canva design into multiple social media formats (Facebook post, Facebook story, Instagram post, Instagram story, LinkedIn post). Use this skill when users want to resize Canva designs specifically for multiple social media platforms in one operation, rather than resizing to a single format manually."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "canva",
+      "name": "canva"
+    }
+  ]
 }

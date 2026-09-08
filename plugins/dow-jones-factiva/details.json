@@ -40,5 +40,15 @@
         "url": "https://www.dowjones.com/privacy-notice/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "dow-jones-factiva",
+      "name": "dow-jones-factiva",
+      "descriptions": {
+        "en": "Search licensed Factiva news for company, industry, market, and event research through Dow Jones's official Retrieval API, with compliant citations and direct Factiva article links."
+      }
+    }
+  ],
+  "apps": []
 }

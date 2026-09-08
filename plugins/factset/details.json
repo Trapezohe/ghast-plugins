@@ -32,5 +32,20 @@
         "url": "https://www.factset.com"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "factset",
+      "name": "factset",
+      "descriptions": {
+        "en": "Research public and private companies, securities, estimates, prices, fundamentals, ownership, events, transcripts, StreetAccount news, supply chains, funds, and licensed broker research through FactSet's official MCP and APIs."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "factset",
+      "name": "factset"
+    }
+  ]
 }

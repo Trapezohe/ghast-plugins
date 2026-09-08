@@ -47,5 +47,41 @@
         "url": "https://www.apollo.io/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "analytics",
+      "name": "analytics",
+      "descriptions": {
+        "en": "Instant sales analytics. Ask any performance question — emails, calls, meetings, tasks, opportunities, sequences, conversation intelligence — and get formatted tables with real Apollo data."
+      }
+    },
+    {
+      "id": "enrich-lead",
+      "name": "enrich-lead",
+      "descriptions": {
+        "en": "Instant lead enrichment. Drop a name, company, LinkedIn URL, or email and get the full contact card with email, phone, title, company intel, and next actions."
+      }
+    },
+    {
+      "id": "prospect",
+      "name": "prospect",
+      "descriptions": {
+        "en": "Full ICP-to-leads pipeline. Describe your ideal customer in plain English and get a ranked table of enriched decision-maker leads with emails and phone numbers."
+      }
+    },
+    {
+      "id": "sequence-load",
+      "name": "sequence-load",
+      "descriptions": {
+        "en": "Find leads matching criteria and bulk-add them to an Apollo outreach sequence. Handles enrichment, contact creation, deduplication, and enrollment in one flow."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "apollo",
+      "name": "apollo"
+    }
+  ]
 }

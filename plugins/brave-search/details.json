@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "brave-search",
+      "name": "brave-search",
+      "descriptions": {
+        "en": "Use Brave Search in Ghast. Search the web, news, images, videos and places with Brave’s official Search API MCP server. 通过 Brave 官方 Search API MCP 检索网页、新闻、图片、视频与地点信息。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "brave-search",
+      "name": "Brave Search"
+    }
+  ]
 }

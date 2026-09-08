@@ -30,5 +30,15 @@
         "url": "https://www.magicpath.ai"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "magicpath",
+      "name": "magicpath",
+      "descriptions": {
+        "en": "Search, inspect, install, create, and edit MagicPath UI components, projects, themes, canvas code, images, and hosted skills through MagicPath's official pinned CLI."
+      }
+    }
+  ],
+  "apps": []
 }

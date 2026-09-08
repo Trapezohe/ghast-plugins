@@ -38,5 +38,20 @@
         "url": "https://www.smartsheet.com/legal/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "smartsheet",
+      "name": "smartsheet",
+      "descriptions": {
+        "en": "Use Smartsheet in Ghast. Read collaborative sheets, organize project rows and prepare progress reports with Smartsheet. 通过 Smartsheet 读取协作表格、整理项目记录和准备进度报告，支持日常办公。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "smartsheet",
+      "name": "Smartsheet"
+    }
+  ]
 }

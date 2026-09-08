@@ -25,5 +25,24 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "bybit",
+      "name": "bybit",
+      "descriptions": {
+        "en": "Use Bybit in Ghast. Use Bybit’s official MCP for market data and authorized account, trading and asset workflows. Availability depends on regional access. 通过 Bybit 官方 MCP 查询行情并处理已授权的账号、交易与资产业务；服务可用性受地区限制。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "bybit",
+      "name": "bybit"
+    },
+    {
+      "id": "bybit-public",
+      "name": "bybit public"
+    }
+  ]
 }

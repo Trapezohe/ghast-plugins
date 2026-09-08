@@ -47,5 +47,28 @@
         "url": "https://cloudinary.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [],
+  "apps": [
+    {
+      "id": "cloudinary-asset-management",
+      "name": "cloudinary asset management"
+    },
+    {
+      "id": "cloudinary-environment-config",
+      "name": "cloudinary environment config"
+    },
+    {
+      "id": "cloudinary-structured-metadata",
+      "name": "cloudinary structured metadata"
+    },
+    {
+      "id": "cloudinary-analysis",
+      "name": "cloudinary analysis"
+    },
+    {
+      "id": "cloudinary-mediaflows",
+      "name": "cloudinary mediaflows"
+    }
+  ]
 }

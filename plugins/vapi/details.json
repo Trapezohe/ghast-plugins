@@ -31,5 +31,20 @@
         "url": "https://docs.vapi.ai/sdk/mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "vapi",
+      "name": "vapi",
+      "descriptions": {
+        "en": "Use Vapi in Ghast. Manage Vapi voice assistants, inspect calls and phone numbers, and perform authorized voice workflows with the official MCP server. 通过 Vapi 官方 MCP 管理语音助手，查看通话和电话号码，并执行经授权的语音工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "vapi",
+      "name": "Vapi"
+    }
+  ]
 }

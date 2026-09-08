@@ -28,3 +28,12 @@ Independently authored for Ghast using public provider MCP services, without Cod
 Ghast-authored manifests and skill text are MIT licensed. Brand names and logos belong to their respective owners. 品牌名称与标识归相应权利人所有。
 
 Brand logo source: https://cdn.simpleicons.org/coinmarketcap
+
+
+## Browser authorization / 浏览器授权
+
+`coinmarketcap` publishes OAuth authorization metadata. Ghast prefers browser authorization; an existing API key or token remains an optional advanced alternative. The service advertises dynamic registration or client metadata documents. Discovery was checked without signing in; account authorization and tool execution were not tested.
+
+Ghast 优先使用浏览器授权；已有 API Key 或 Token 保留为高级备选项。服务公开提供动态注册或客户端元数据文档支持。本次只验证了公开授权元数据，没有登录账户或执行工具。
+
+Official discovery: [coinmarketcap resource metadata](https://mcp.coinmarketcap.com/.well-known/oauth-protected-resource/mcp) · [authorization metadata](https://mcp.coinmarketcap.com/.well-known/oauth-authorization-server)

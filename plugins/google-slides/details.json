@@ -46,5 +46,20 @@
         "url": "https://policies.google.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "google-slides",
+      "name": "google-slides",
+      "descriptions": {
+        "en": "Use Google Slides in Ghast. Read and update presentations through Google’s official Workspace MCP service. 通过 Google 官方 Workspace MCP 服务阅读与更新演示文稿。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "google-slides",
+      "name": "Google Slides"
+    }
+  ]
 }

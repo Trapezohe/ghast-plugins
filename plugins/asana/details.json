@@ -48,5 +48,34 @@
         "url": "https://asana.com/terms/privacy-statement"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "asana-mcp-troubleshooting",
+      "name": "asana-mcp-troubleshooting",
+      "descriptions": {
+        "en": "Diagnose Asana V2 MCP connection, OAuth app, credential-file, workspace, and tool availability failures in Ghast."
+      }
+    },
+    {
+      "id": "asana-setup",
+      "name": "asana-setup",
+      "descriptions": {
+        "en": "Detect and configure Asana V2 MCP credentials for Ghast. Run before using Asana when the connection is not already active."
+      }
+    },
+    {
+      "id": "asana-usage",
+      "name": "asana-usage",
+      "descriptions": {
+        "en": "Best practices for using Asana MCP tools in Ghast. Use when working with tasks, projects, or portfolios."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "asana",
+      "name": "asana"
+    }
+  ]
 }

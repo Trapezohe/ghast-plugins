@@ -30,5 +30,28 @@
         "url": "https://docs.ramp.com/developer-api/v1/mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "ramp",
+      "name": "ramp",
+      "descriptions": {
+        "en": "Use Ramp in Ghast. Connect Ramp’s official account, developer documentation and benchmark data services for spend and finance workflows. 连接 Ramp 官方账号、开发文档和基准数据服务，支持企业支出与财务办公流程。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "ramp",
+      "name": "ramp"
+    },
+    {
+      "id": "ramp-developer",
+      "name": "ramp developer"
+    },
+    {
+      "id": "ramp-data",
+      "name": "ramp data"
+    }
+  ]
 }

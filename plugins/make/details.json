@@ -38,5 +38,20 @@
         "url": "https://www.celonis.com/legal/privacy-notice"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "make",
+      "name": "make",
+      "descriptions": {
+        "en": "Use Make in Ghast. Build, inspect, manage and run automation scenarios through Make’s official MCP server. 通过 Make 官方 MCP 服务构建、查看、管理与运行自动化场景。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "make",
+      "name": "Make"
+    }
+  ]
 }

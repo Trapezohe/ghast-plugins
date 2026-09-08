@@ -30,5 +30,20 @@
         "url": "https://help.survicate.com/en/articles/16271576-what-is-survicate-mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "survicate",
+      "name": "survicate",
+      "descriptions": {
+        "en": "Use Survicate in Ghast. Analyze survey feedback, explore research insights and prepare survey drafts using Survicate’s official MCP. 通过 Survicate 官方 MCP 分析问卷反馈、探索研究洞察并准备问卷草稿。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "survicate",
+      "name": "Survicate"
+    }
+  ]
 }

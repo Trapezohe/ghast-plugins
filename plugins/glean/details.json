@@ -40,5 +40,153 @@
         "url": "https://www.glean.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "catch-up",
+      "name": "catch-up",
+      "descriptions": {
+        "en": "Catch up on what you missed while away — meetings, decisions, action items, mentions, and important threads from a defined time window. Trigger phrases include \"what did I miss\", \"catch me up\", \"I was out\", \"I'm back from PTO\", \"summarize while I was away\", \"what happened last week while I was off\", \"I just got back\", \"fill me in on what I missed\"."
+      }
+    },
+    {
+      "id": "code-owners",
+      "name": "code-owners",
+      "descriptions": {
+        "en": "Identify who owns, maintains, or has expertise in a specific code area — use when asked who to talk to about a system, who to request a code review from, or who has been actively working in a codebase area."
+      }
+    },
+    {
+      "id": "codebase-context",
+      "name": "codebase-context",
+      "descriptions": {
+        "en": "Gather architectural context about an internal system from code and documentation across the organization — use when asked to understand a system's architecture, find its repos, or get an overview before working on it."
+      }
+    },
+    {
+      "id": "connect-glean",
+      "name": "connect-glean",
+      "descriptions": {
+        "en": "Help the user connect a Glean MCP server so the Glean skills have tools to call — use when setting up Glean for the first time, adding another Glean server, checking whether Glean is connected, or troubleshooting missing Glean tools. Trigger phrases include \"set up Glean\", \"connect Glean\", \"configure Glean MCP\", \"add a Glean server\", \"is Glean connected\", \"check Glean status\", \"Glean isn't working\", \"no Glean tools\", \"the Glean tools aren't showing up\", \"I installed the Glean plugin but nothing happens\". Don't use it for actual enterprise queries once connected (use the using-glean skill); this skill only sets up and verifies the connection."
+      }
+    },
+    {
+      "id": "find-examples",
+      "name": "find-examples",
+      "descriptions": {
+        "en": "Find usage examples of an API, library, or code pattern across internal repositories — use when looking for how other teams use an internal API, library, or pattern before implementing something new."
+      }
+    },
+    {
+      "id": "find-expert",
+      "name": "find-expert",
+      "descriptions": {
+        "en": "Find subject matter experts on a topic, technology, or internal system by combining real expertise signals (code contributions, document authorship, and meeting or discussion activity) rather than relying on job titles. Use this whenever the user wants to know who to ask about something — phrasings such as who knows about, who is the expert on, the go-to person for, who has worked on, who can I ask about, or subject matter expert for. Use it even when the user does not say the word expert but clearly needs a person with deep, demonstrated knowledge of an area. Do not use it for plain directory lookups (an email address, manager, or org placement with no expertise angle), which is a simple employee lookup."
+      }
+    },
+    {
+      "id": "glean-run",
+      "name": "glean-run",
+      "descriptions": {
+        "en": "Discover and run Glean skills for enterprise app tasks"
+      }
+    },
+    {
+      "id": "meeting-prep",
+      "name": "meeting-prep",
+      "descriptions": {
+        "en": "Prepare for an upcoming meeting — surface context from past meetings, related docs, and attendee information. Trigger phrases include \"prep for my meeting\", \"context for the meeting\", \"what should I know before\", \"1:1 prep with\", \"prepare for [name]\", \"background on this meeting\", \"agenda context\", \"talking points for\"."
+      }
+    },
+    {
+      "id": "onboarding",
+      "name": "onboarding",
+      "descriptions": {
+        "en": "Get up to speed on a new team, project, or area — surface key people, foundational docs, current priorities, and recent activity. Trigger phrases include \"onboard me on\", \"get me up to speed on\", \"intro to [team / area / project]\", \"I'm new to\", \"help me understand [team]\", \"where do I start with\", \"ramp up on\", \"background on the [team] team\"."
+      }
+    },
+    {
+      "id": "plan-prep",
+      "name": "plan-prep",
+      "descriptions": {
+        "en": "Research enterprise context before plan mode — surface design docs, similar implementations, stakeholders, and related systems before architecting or designing a feature."
+      }
+    },
+    {
+      "id": "project-awareness",
+      "name": "project-awareness",
+      "descriptions": {
+        "en": "Quick project context — surface a project's status, owner, recent activity, and key links. Use when the user wants a fast situational read on a project (trigger phrases include what's the status of, who owns, what's happening with, where does the project stand) rather than a deep handoff document."
+      }
+    },
+    {
+      "id": "project-handoff",
+      "name": "project-handoff",
+      "descriptions": {
+        "en": "Generate a comprehensive handoff document so someone new can take over a project — current state, key people, essential knowledge, open items, and a first-30-days plan. Use when the user is handing off a project (trigger phrases include \"generate a handoff\", \"hand off this project\", \"create a handoff doc\", \"I'm going on PTO / leaving / changing teams and need to document\", \"help someone take over\") rather than a quick status read (use project-awareness for that)."
+      }
+    },
+    {
+      "id": "search",
+      "name": "search",
+      "descriptions": {
+        "en": "Search Glean enterprise knowledge - use for find the doc about, search for, where is, look up, search company knowledge, search Glean for; returns vetted results with freshness and authority indicators. For broader enterprise queries needing synthesis across multiple tools, prefer the using-glean skill instead."
+      }
+    },
+    {
+      "id": "similar-code",
+      "name": "similar-code",
+      "descriptions": {
+        "en": "Find similar implementations and prior art for a code pattern across internal repositories — use when checking whether something already exists internally before building it, or looking for reference implementations to follow."
+      }
+    },
+    {
+      "id": "skill-creation-guide",
+      "name": "skill-creation-guide",
+      "descriptions": {
+        "en": "Discover and vet reusable skill opportunities from the user's Glean work patterns. Use when the user asks \"what should I automate\", \"find skill opportunities\", or wants to turn recurring work into skills. For authoring a known skill in Codex, hand off to the built-in skill-creator."
+      }
+    },
+    {
+      "id": "stakeholders",
+      "name": "stakeholders",
+      "descriptions": {
+        "en": "Identify people who need to approve, consult on, or be informed about a change or project — use when someone asks who needs to know about a change, who should be looped in, who needs to approve, who should be consulted, who is affected, or needs a RACI for a change, refactor, migration, or decision."
+      }
+    },
+    {
+      "id": "using-glean",
+      "name": "using-glean",
+      "descriptions": {
+        "en": "Use Glean MCP tools to answer questions about company documents, internal wikis, policies, RFCs, design docs, people, teams, meetings, decisions, action items, email, calendar events, internal code, and the user's own work activity. Reach for this whenever the answer lives in enterprise systems rather than the local codebase or public web. Trigger phrases include \"find the doc about\", \"what's our policy on\", \"where is the spec for\", \"who works on\", \"who owns\", \"find someone who knows\", \"what was decided in the meeting\", \"action items from\", \"search my email\", \"what did I work on last week\", and \"find the implementation in our repos\". Don't use it for questions answerable from the local working directory, the public web, or generic programming knowledge."
+      }
+    },
+    {
+      "id": "using-glean-code",
+      "name": "using-glean-code",
+      "descriptions": {
+        "en": "Search and analyze internal source code across the organization's repositories — use when asked how something is implemented, where the code for a system lives, who has been working on a codebase, or to find similar patterns across teams. Trigger phrases include how is X implemented, where is the code for, find the implementation of, what repos contain, who wrote the code for, how do other teams handle, find similar code to, examples of using, prior art for. Do not use for code in the current working directory (prefer local Grep/Glob), for design docs (use the using-glean skill's search reference), or for finding people without code context (use the using-glean skill's employee-search reference)."
+      }
+    },
+    {
+      "id": "using-glean-productivity",
+      "name": "using-glean-productivity",
+      "descriptions": {
+        "en": "Synthesize the user's own work activity, priorities, and recent context using Glean — use when the user asks about their recent work, what they accomplished, what is urgent, what needs their attention, or wants help with status updates, 1:1 prep, or weekly summaries. Trigger phrases include what have I been working on, what did I do last week, what should I focus on, summarize my week, help me with my status update, what's blocking me, morning briefing, what happened while I was out. Do not use for general enterprise queries (use the using-glean skill), for someone else's activity, or for project-status questions where the user is not the subject (use a project-awareness skill)."
+      }
+    },
+    {
+      "id": "verify-rfc",
+      "name": "verify-rfc",
+      "descriptions": {
+        "en": "Verify an RFC or design doc against the actual implementation — find drift, missing pieces, and undocumented changes. Trigger phrases include \"verify the RFC\", \"compare design doc to implementation\", \"is the spec implemented\", \"does the code match the design\", \"what's drifted from the RFC\", \"audit the doc against\", \"spec compliance check\", \"is what we built what we designed\"."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "glean_plugin",
+      "name": "glean"
+    }
+  ]
 }

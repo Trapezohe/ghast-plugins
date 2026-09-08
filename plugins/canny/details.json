@@ -30,5 +30,20 @@
         "url": "https://help.canny.io/en/articles/13063190-canny-mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "canny",
+      "name": "canny",
+      "descriptions": {
+        "en": "Use Canny in Ghast. Analyze product feedback and customer impact, and manage Ideas through Canny’s official MCP. Requires Pro or Business with Canny Ideas. 通过 Canny 官方 MCP 分析产品反馈与客户影响，并管理 Ideas；需要启用 Canny Ideas 的 Pro 或 Business 套餐。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "canny",
+      "name": "Canny"
+    }
+  ]
 }

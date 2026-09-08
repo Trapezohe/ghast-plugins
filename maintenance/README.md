@@ -97,3 +97,26 @@ the update. No local revision counter is incremented.
 Changes with the same upstream version still change the package SHA-256, which
 Ghast uses for update detection. Version evidence is independent of npm/PyPI
 monitoring: discovering a newer runtime release does not mean it is packaged.
+
+## Connector authentication audit
+
+Run `python scripts/audit-connector-auth.py` to inventory every packaged MCP service
+and inspect its public OAuth discovery metadata. The result is written to
+[`connector-auth-audit.json`](connector-auth-audit.json). Use a Python environment
+with a valid trusted CA bundle; do not disable TLS verification.
+
+Discovery is an audit signal, not a successful connection test. A failed request,
+missing metadata, or HTTP 403 does not establish that OAuth is unsupported. Check
+the provider's official documentation before changing credentials or OAuth flags.
+Never convert every API-key connector to OAuth automatically.
+
+GitHub's remote MCP supports OAuth but does not support dynamic client registration.
+Ghast must register its own OAuth application before offering managed browser login.
+The GitHub package marks its personal token as an optional advanced alternative;
+it does not embed an application secret or borrow another client's identity.
+Source: [GitHub host integration guide](https://github.com/github/github-mcp-server/blob/main/docs/host-integration.md).
+
+连接器认证审查覆盖全部已打包的 MCP 服务，只读取公开授权元数据，不登录用户账户、
+不交换 Token，也不执行服务工具。网络失败和缺少发现元数据不能解释为不支持 OAuth。
+GitHub 的默认接入方向为浏览器授权，但 Ghast 仍须注册自己的授权应用；个人 Token
+保留为高级备选项。不得复用其他客户端的授权身份。

@@ -48,5 +48,20 @@
         "url": "https://aiera.com/terms-of-service/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "aiera",
+      "name": "aiera",
+      "descriptions": {
+        "en": "Research companies, events, transcripts, filings, company publications, equities, financials, broker research, Third Bridge interviews, and related topics through Aiera's official read-only MCP server. Use for Aiera data discovery, transcript summaries, cross-company topic searches, management commentary comparisons, and source-grounded institutional research.\n"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "aiera",
+      "name": "aiera"
+    }
+  ]
 }

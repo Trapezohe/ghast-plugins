@@ -31,5 +31,20 @@
         "url": "https://www.hebbia.com"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "hebbia",
+      "name": "hebbia",
+      "descriptions": {
+        "en": "Search authorized institutional knowledge, analyze document sets with traceable evidence, and support financial research workflows through Hebbia's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "hebbia",
+      "name": "hebbia"
+    }
+  ]
 }

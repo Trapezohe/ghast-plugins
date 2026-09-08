@@ -47,5 +47,20 @@
         "url": "https://squareup.com/us/en/legal/general/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "square",
+      "name": "square",
+      "descriptions": {
+        "en": "Use Square in Ghast. Explore retail locations, catalogs, customers, orders and payments through Square. 通过 Square 查看门店、商品、客户、订单和支付，协助零售运营。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "square",
+      "name": "Square"
+    }
+  ]
 }

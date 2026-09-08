@@ -39,5 +39,20 @@
         "url": "https://omni.co/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "omni-analytics",
+      "name": "omni-analytics",
+      "descriptions": {
+        "en": "Query governed Omni semantic models, run multi-step analysis, and search Omni documentation through Omni's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "omni",
+      "name": "omni-analytics"
+    }
+  ]
 }

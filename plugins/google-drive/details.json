@@ -46,5 +46,20 @@
         "url": "https://policies.google.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "google-drive",
+      "name": "google-drive",
+      "descriptions": {
+        "en": "Use Google Drive in Ghast. Search, read and organize Drive files through Google’s official Workspace MCP service. 通过 Google 官方 Workspace MCP 服务检索、阅读与整理云端硬盘文件。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "google-drive",
+      "name": "Google Drive"
+    }
+  ]
 }

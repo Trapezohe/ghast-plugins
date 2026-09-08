@@ -39,5 +39,20 @@
         "url": "https://www.taskade.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "taskade",
+      "name": "taskade",
+      "descriptions": {
+        "en": "Use Taskade in Ghast. Work with Taskade projects, tasks, agents and Genesis app files through the official hosted MCP server. 通过 Taskade 官方托管 MCP 处理项目、任务、智能体与 Genesis 应用文件。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "taskade",
+      "name": "Taskade"
+    }
+  ]
 }

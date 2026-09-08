@@ -39,5 +39,20 @@
         "url": "https://www.basedash.com/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "basedash",
+      "name": "basedash",
+      "descriptions": {
+        "en": "Use Basedash in Ghast. Analyze governed business data and create or inspect dashboards and charts. 分析受权限控制的业务数据，创建或查看仪表盘与图表。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "basedash",
+      "name": "Basedash"
+    }
+  ]
 }

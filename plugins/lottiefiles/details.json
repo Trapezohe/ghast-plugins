@@ -30,5 +30,20 @@
         "url": "https://docs.lottiefiles.com/en/platform/mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "lottiefiles",
+      "name": "lottiefiles",
+      "descriptions": {
+        "en": "Use LottieFiles in Ghast. Explore animation workspaces, projects and assets through LottieFiles’ official MCP. 通过 LottieFiles 官方 MCP 探索动画工作区、项目与素材。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "lottiefiles",
+      "name": "LottieFiles"
+    }
+  ]
 }

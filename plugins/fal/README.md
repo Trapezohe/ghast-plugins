@@ -78,3 +78,12 @@ The MIT license in this package applies only to the Ghast-authored adapter.
 fal accounts, credits, hosted service behavior, models, generated media,
 provider terms, permissions, trademarks, and terms remain controlled by fal
 and the applicable model providers.
+
+
+## Browser authorization / 浏览器授权
+
+`fal` publishes OAuth authorization metadata. Ghast prefers browser authorization; an existing API key or token remains an optional advanced alternative. The service advertises dynamic registration or client metadata documents. Discovery was checked without signing in; account authorization and tool execution were not tested.
+
+Ghast 优先使用浏览器授权；已有 API Key 或 Token 保留为高级备选项。服务公开提供动态注册或客户端元数据文档支持。本次只验证了公开授权元数据，没有登录账户或执行工具。
+
+Official discovery: [fal resource metadata](https://mcp.fal.ai/.well-known/oauth-protected-resource/mcp) · [authorization metadata](https://auth.fal.ai/.well-known/oauth-authorization-server)

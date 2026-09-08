@@ -48,5 +48,20 @@
         "url": "https://readwise.io/tos"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "readwise",
+      "name": "readwise",
+      "descriptions": {
+        "en": "Search and manage Readwise highlights and Reader documents through Readwise's official hosted MCP server. Use for saved content, inbox and feed triage, library organization, tags, notes, highlights, exports, and daily review."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "readwise",
+      "name": "readwise"
+    }
+  ]
 }

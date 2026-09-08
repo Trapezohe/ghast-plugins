@@ -47,5 +47,20 @@
         "url": "https://redis.io/legal/redis-website-terms-of-use/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "redis-docs",
+      "name": "redis-docs",
+      "descriptions": {
+        "en": "Use Redis Documentation in Ghast. Search, retrieve and ask questions about Redis documentation using Redis’s public MCP service. 通过 Redis 官方公开 MCP 服务检索和阅读文档，查询数据结构、缓存、搜索与部署用法。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "redis-docs",
+      "name": "Redis Documentation"
+    }
+  ]
 }

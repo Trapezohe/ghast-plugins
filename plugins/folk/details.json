@@ -30,5 +30,20 @@
         "url": "https://help.folk.app/en/articles/16760382-mcp-connect-folk-to-other-mcps"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "folk",
+      "name": "folk",
+      "descriptions": {
+        "en": "Use folk in Ghast. Search contacts, companies and notes, manage CRM records and update sales pipelines through the official folk MCP. 通过 folk 官方 MCP 搜索联系人、公司和笔记，管理 CRM 记录与销售管道。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "folk",
+      "name": "folk"
+    }
+  ]
 }

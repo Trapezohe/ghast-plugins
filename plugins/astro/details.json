@@ -31,5 +31,20 @@
         "url": "https://docs.astro.build/en/guides/build-with-ai/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "astro",
+      "name": "astro",
+      "descriptions": {
+        "en": "Use Astro Docs in Ghast. Search Astro documentation for content sites and integrations. 检索 Astro 官方文档，开发内容站点并接入集成。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "astro",
+      "name": "Astro Docs"
+    }
+  ]
 }

@@ -27,3 +27,12 @@ Ghast-authored manifests and skill text are MIT licensed. Service names and bran
 Brand logo source: https://www.wrike.com/tp/storage/uploads/ea10c069-f31a-4c6f-ad2e-8e5998be5a95/wrike-website-logo-light.svg
 
 The square icon uses the unchanged brand mark extracted from the official wordmark SVG. 方形图标提取自官方 SVG 中的品牌图形，未改动图形路径。
+
+
+## Browser authorization / 浏览器授权
+
+`wrike` publishes OAuth authorization metadata. Ghast prefers browser authorization; an existing API key or token remains an optional advanced alternative. Ghast must configure a registered OAuth application before managed login is available. Discovery was checked without signing in; account authorization and tool execution were not tested.
+
+Ghast 优先使用浏览器授权；已有 API Key 或 Token 保留为高级备选项。正式一键登录仍需 Ghast 配置已注册的 OAuth 应用。本次只验证了公开授权元数据，没有登录账户或执行工具。
+
+Official discovery: [wrike resource metadata](https://mcp.wrike.com/.well-known/oauth-protected-resource/v2) · [authorization metadata](https://login.wrike.com/.well-known/oauth-authorization-server/oauth2)

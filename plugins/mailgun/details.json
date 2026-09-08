@@ -39,5 +39,20 @@
         "url": "https://sinch.com/es/legal/emea-terms/privacy-policy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "mailgun",
+      "name": "mailgun",
+      "descriptions": {
+        "en": "Use Mailgun in Ghast. Manage sending domains, email templates, delivery metrics and suppression workflows with Mailgun’s official MCP. 通过 Mailgun 官方 MCP 管理发信域名、邮件模板、投递指标与退订抑制流程。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "mailgun",
+      "name": "Mailgun"
+    }
+  ]
 }

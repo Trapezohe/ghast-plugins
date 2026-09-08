@@ -38,5 +38,20 @@
         "url": "https://brightdata.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "bright-data",
+      "name": "bright-data",
+      "descriptions": {
+        "en": "Use Bright Data in Ghast. Search and extract public web data for market and SEO research. 检索和提取公开网页数据，支持市场调研与 SEO 分析。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "bright-data",
+      "name": "Bright Data"
+    }
+  ]
 }

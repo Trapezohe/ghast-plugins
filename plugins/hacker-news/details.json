@@ -25,5 +25,15 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "hacker-news",
+      "name": "hacker-news",
+      "descriptions": {
+        "en": "Use this skill when the user asks \"what's on Hacker News\", \"show me HN top stories\", \"what's trending in tech\", or asks to dig into a specific HN story or comment thread. Hits HN's public Firebase API (no auth)."
+      }
+    }
+  ],
+  "apps": []
 }

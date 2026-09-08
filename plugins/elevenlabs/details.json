@@ -39,5 +39,20 @@
         "url": "https://elevenlabs.io/docs/eleven-agents/customization/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "elevenlabs",
+      "name": "elevenlabs",
+      "descriptions": {
+        "en": "Use ElevenLabs in Ghast. Generate speech and manage voice agents, conversations and knowledge resources through ElevenLabs. 通过 ElevenLabs 生成语音，并管理语音智能体、会话与知识资源。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "elevenlabs",
+      "name": "ElevenLabs"
+    }
+  ]
 }

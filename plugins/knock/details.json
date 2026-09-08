@@ -30,5 +30,20 @@
         "url": "https://docs.knock.app/ai/mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "knock",
+      "name": "knock",
+      "descriptions": {
+        "en": "Use Knock in Ghast. Manage Knock notification workflows, users and tenants through its official MCP service. 通过 Knock 官方 MCP 服务管理通知工作流、用户与租户。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "knock",
+      "name": "Knock"
+    }
+  ]
 }

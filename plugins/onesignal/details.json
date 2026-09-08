@@ -30,5 +30,20 @@
         "url": "https://documentation.onesignal.com/docs/en/model-context-protocol"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "onesignal",
+      "name": "onesignal",
+      "descriptions": {
+        "en": "Use OneSignal in Ghast. Connect OneSignal’s official OAuth MCP for messaging, audiences, templates and delivery analytics (open beta). 连接 OneSignal 官方 OAuth MCP，处理消息通知、受众、模板与送达分析（公开测试版）。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "onesignal",
+      "name": "OneSignal"
+    }
+  ]
 }

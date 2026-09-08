@@ -26,5 +26,181 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "add-company",
+      "name": "add-company",
+      "descriptions": {
+        "en": "Adds one or more company records to the Carta CRM via the Carta CRM MCP Server. Use this skill when the user says things like \"add a company\", \"create company record\", \"add company to CRM\", \"add company to Carta CRM\", or \"/add-company\". Collects company information conversationally, then creates it via the MCP server."
+      }
+    },
+    {
+      "id": "add-contact",
+      "name": "add-contact",
+      "descriptions": {
+        "en": "Adds one or more contact records to the Carta CRM via the Carta CRM MCP Server. Use this skill when the user says things like \"add a contact\", \"create a contact record\", \"add contact to CRM\", \"save a contact\", \"upload contact to Carta CRM\", or \"/add-contact\". Collects contact information conversationally, then creates it via the MCP server. Only name is required — all other fields are optional."
+      }
+    },
+    {
+      "id": "add-deal",
+      "name": "add-deal",
+      "descriptions": {
+        "en": "Creates one or more deal records in the Carta CRM via the Carta CRM MCP Server. Use this skill when the user says things like \"add a deal\", \"create a deal\", \"log a deal\", \"add deal to CRM\", \"add deal to Carta CRM\", or \"/add-deal\". Collects deal information conversationally, then creates it via the MCP server."
+      }
+    },
+    {
+      "id": "add-fundraising",
+      "name": "add-fundraising",
+      "descriptions": {
+        "en": "Adds one or more fundraising records to the Carta CRM via the Carta CRM MCP Server. Use this skill when the user says things like \"add a fundraising\", \"create a fundraising\", \"log a fundraising round\", \"add fundraising to CRM\", \"create fundraising record\", or \"/add-fundraising\". Collects fundraising information conversationally, then creates it via the MCP server."
+      }
+    },
+    {
+      "id": "add-investor",
+      "name": "add-investor",
+      "descriptions": {
+        "en": "Adds one or more investor records to the Carta CRM via the Carta CRM MCP Server. Use this skill when the user says things like \"add an investor\", \"/add-investor\", \"add investor to Carta CRM\", \"create investor record\", \"add this VC fund to the CRM\", or \"save investor data\". Collects investor information conversationally, then creates it via the MCP server."
+      }
+    },
+    {
+      "id": "add-note",
+      "name": "add-note",
+      "descriptions": {
+        "en": "Create a standalone note in Carta CRM and optionally link it to the exact deal, company, contact, investor, or fundraising record the user chooses."
+      }
+    },
+    {
+      "id": "carta-crm-current-service",
+      "name": "carta-crm-current-service",
+      "descriptions": {
+        "en": "Route requests across Carta CRM's current official hosted MCP surface, including capabilities not covered by the pinned Carta workflow skills."
+      }
+    },
+    {
+      "id": "deal-flow-analytics",
+      "name": "deal-flow-analytics",
+      "descriptions": {
+        "en": "Aggregates recent deal flow in the Carta CRM into a dealmaker-facing report, auto-discovering which fields matter for this tenant's schema. Use this skill when the user says things like \"deal flow analytics\", \"analyze our deal flow\", \"review deals added in the last 12 months\", \"who introduced most of our deals\", \"breakdown of deals by sector\", \"where is our deal flow coming from\", or \"/deal-flow-analytics\". Defaults to a trailing-12-month window but accepts any date range or dimension the user specifies. Returns counts and concentration callouts per dimension, not a list of individual deals — use search-deals for that."
+      }
+    },
+    {
+      "id": "enrich-company",
+      "name": "enrich-company",
+      "descriptions": {
+        "en": "Researches a company by fetching its website and returning structured profile data. Use this skill when the user says things like \"enrich this company\", \"look up company info\", \"research this company\", \"what does [domain] do\", \"get company details for [url]\", \"find info on [company]\", or \"/enrich-company\". Input: target (domain name or website URL). Output: structured JSON with name, industry, tags, description, and website. Saves the result locally at ~/.carta-crm/enriched-companies/ for auditing."
+      }
+    },
+    {
+      "id": "get-angles",
+      "name": "get-angles",
+      "descriptions": {
+        "en": "Finds the best warm introduction path into a target company through the user's network, and then sets the introduction up. Use this skill when the user says things like \"find intro angles into [company]\", \"how can I get introduced to [company]\", \"who do I know at [company]\", \"warm intro to [company]\", \"find connections at [company]\", \"how do I reach [company]\", or \"/get-angles\". Input: a company name or domain. Output: a ranked route map, a drafted intro request, and the follow-through actions."
+      }
+    },
+    {
+      "id": "prepare-for-meeting",
+      "name": "prepare-for-meeting",
+      "descriptions": {
+        "en": "Builds a one-page tear sheet for the next upcoming meeting with a counterparty, from CRM data only. Use this skill when the user says things like \"prepare me for my meeting\", \"meeting brief\", \"brief me for this meeting\", \"prep for upcoming meeting\", \"what do I need to know before my call with [company]\", or \"/prepare-for-meeting\". Compiles the invitees and their interaction history, the organization's notes and relationship status, and related deal, investor, fundraising or company context. Briefs exactly one meeting — the next one; not an agenda view."
+      }
+    },
+    {
+      "id": "search-companies",
+      "name": "search-companies",
+      "descriptions": {
+        "en": "Searches for and retrieves company records from the Carta CRM. Use this skill when the user says things like \"find a company\", \"search companies\", \"look up a company\", \"show me company details for [name]\", \"get company by ID\", \"get company by domain\", \"list companies\", \"what companies do we have\", or \"/search-companies\". Returns company details including ID, name, and custom fields. The company ID returned can be used with the update-company skill."
+      }
+    },
+    {
+      "id": "search-contacts",
+      "name": "search-contacts",
+      "descriptions": {
+        "en": "Searches for and retrieves contact (people) records from the Carta CRM. Use this skill when the user says things like \"find a contact\", \"search contacts\", \"look up a person\", \"show me contact details for [name]\", \"get contact by ID\", \"list contacts\", \"find people at [company]\", \"search people\", or \"/search-contacts\". Returns contact details including ID, name, email, title, company, and tags. The contact ID returned can be used with the update-contact skill."
+      }
+    },
+    {
+      "id": "search-deals",
+      "name": "search-deals",
+      "descriptions": {
+        "en": "Searches for and retrieves deal records from the Carta CRM. Use this skill when the user says things like \"find a deal\", \"search deals\", \"look up a deal\", \"show me deals for [company]\", \"get deal by ID\", \"find deal in [stage]\", \"list deals\", \"what deals do we have for [company]\", or \"/search-deals\". Returns deal details including ID, company, stage, pipeline, tags, and custom fields. The deal ID returned can be used with the update-deal skill."
+      }
+    },
+    {
+      "id": "search-fundraisings",
+      "name": "search-fundraisings",
+      "descriptions": {
+        "en": "Searches for and retrieves fundraising records from the Carta CRM. Use this skill when the user says things like \"find a fundraising\", \"search fundraisings\", \"look up a fundraising round\", \"show fundraising details for [name]\", \"get fundraising by ID\", \"list fundraisings\", \"what fundraisings do we have\", or \"/search-fundraisings\". Returns fundraising details including ID, name, stage, and custom fields. The fundraising ID returned can be used with the update-fundraising skill."
+      }
+    },
+    {
+      "id": "search-investors",
+      "name": "search-investors",
+      "descriptions": {
+        "en": "Searches for and retrieves investor records from the Carta CRM. Use this skill when the user says things like \"find an investor\", \"search investors\", \"look up an investor\", \"show me investor details for [name]\", \"get investor by ID\", \"list investors\", \"what investors do we have\", or \"/search-investors\". Returns investor details including ID, name, and custom fields. The investor ID returned can be used with the update-investor skill."
+      }
+    },
+    {
+      "id": "search-notes",
+      "name": "search-notes",
+      "descriptions": {
+        "en": "Searches for and retrieves note records from the Carta CRM. Use this skill when the user says things like \"find a note\", \"search notes\", \"look up a note\", \"show me notes about [topic]\", \"list notes\", \"find notes mentioning [keyword]\", or \"/search-notes\". Returns note details including ID, title, and text content."
+      }
+    },
+    {
+      "id": "tutorial",
+      "name": "tutorial",
+      "descriptions": {
+        "en": "Interactive ~5-minute walkthrough of the Carta CRM plugin. Covers plugin overview, setup verification, how to kick off each skill, and a demo walkthrough of 4 realistic CRM scenarios. Trigger phrases: \"carta crm tutorial\", \"show me the crm tutorial\", \"how do I use carta crm\", \"walk me through carta crm\", \"getting started with crm\", \"demo carta crm\", \"crm tutorial\". Do NOT use for real data lookups (searching, adding, or updating CRM records) — just describe what you need in plain language and the agent picks the right action."
+      }
+    },
+    {
+      "id": "update-company",
+      "name": "update-company",
+      "descriptions": {
+        "en": "Updates an existing company record in the Carta CRM. Use this skill when the user says things like \"update a company\", \"edit company\", \"update company details\", \"change company name\", \"update company website\", \"update company fields\", \"add a tag to company\", or \"/update-company\". Accepts a company ID or name (will search if no ID provided). Only the fields explicitly provided are changed — all other fields are left untouched."
+      }
+    },
+    {
+      "id": "update-contact",
+      "name": "update-contact",
+      "descriptions": {
+        "en": "Updates an existing contact (person) record in the Carta CRM. Use this skill when the user says things like \"update a contact\", \"edit contact\", \"update contact details\", \"change contact email\", \"update person's title\", \"update contact company\", \"add a tag to contact\", or \"/update-contact\". Accepts a contact ID or name (will search if no ID provided). Only the fields explicitly provided are changed — all other fields are left untouched."
+      }
+    },
+    {
+      "id": "update-deal",
+      "name": "update-deal",
+      "descriptions": {
+        "en": "Updates an existing deal record in the Carta CRM. Use this skill when the user says things like \"update a deal\", \"move deal to [stage]\", \"change deal stage\", \"edit deal\", \"update deal fields\", \"add a tag to deal\", \"assign deal lead\", \"update company info on deal\", \"link contacts to deal\", or \"/update-deal\". Accepts a deal ID or company name (will search if no ID provided). Only the fields explicitly provided are changed — all other fields are left untouched."
+      }
+    },
+    {
+      "id": "update-fundraising",
+      "name": "update-fundraising",
+      "descriptions": {
+        "en": "Updates an existing fundraising record in the Carta CRM. Use this skill when the user says things like \"update a fundraising\", \"edit fundraising\", \"update fundraising details\", \"change fundraising stage\", \"update fundraising fields\", or \"/update-fundraising\". Accepts a fundraising ID or name (will search if no ID provided). Only the fields explicitly provided are changed — all other fields are left untouched."
+      }
+    },
+    {
+      "id": "update-investor",
+      "name": "update-investor",
+      "descriptions": {
+        "en": "Updates an existing investor record in the Carta CRM. Use this skill when the user says things like \"update an investor\", \"edit investor\", \"update investor details\", \"change investor name\", \"update investor website\", \"update investor fields\", \"add a tag to investor\", or \"/update-investor\". Accepts an investor ID or name (will search if no ID provided). Only the fields explicitly provided are changed — all other fields are left untouched."
+      }
+    },
+    {
+      "id": "update-note",
+      "name": "update-note",
+      "descriptions": {
+        "en": "Find and update a standalone Carta CRM note, including explicitly requested link or unlink changes."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "carta-crm",
+      "name": "carta-crm"
+    }
+  ]
 }

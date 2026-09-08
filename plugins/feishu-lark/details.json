@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "feishu-lark",
+      "name": "feishu-lark",
+      "descriptions": {
+        "en": "Use Feishu / Lark in Ghast. Work with documents, Base tables, chats, calendars and tasks through the official Feishu / Lark OpenAPI MCP. 通过飞书／Lark 官方 OpenAPI MCP 处理文档、多维表格、群聊、日历与任务。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "feishu-lark",
+      "name": "Feishu / Lark"
+    }
+  ]
 }

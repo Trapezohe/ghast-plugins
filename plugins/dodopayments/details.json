@@ -30,5 +30,20 @@
         "url": "https://docs.dodopayments.com/developer-resources/mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "dodopayments",
+      "name": "dodopayments",
+      "descriptions": {
+        "en": "Use Dodo Payments in Ghast. Connect Dodo Payments’ official MCP to work with payments, subscriptions, customers and product catalogs. 连接 Dodo Payments 官方 MCP，处理支付、订阅、客户与产品目录工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "dodopayments",
+      "name": "Dodo Payments"
+    }
+  ]
 }

@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "nextjs",
+      "name": "nextjs",
+      "descriptions": {
+        "en": "Use Next.js DevTools in Ghast. Inspect running Next.js applications through Vercel’s official DevTools MCP connector for runtime errors, routes and logs. 通过 Vercel 官方 DevTools MCP 连接器检查运行中的 Next.js 应用，查询运行时错误、路由和日志。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "nextjs",
+      "name": "Next.js DevTools"
+    }
+  ]
 }

@@ -47,5 +47,20 @@
         "url": "https://docs.rollbar.com/docs/terms-of-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "rollbar",
+      "name": "rollbar",
+      "descriptions": {
+        "en": "Use Rollbar in Ghast. Inspect production errors, occurrences, deployments and session replays in Rollbar. 在 Rollbar 中查看生产错误、发生记录、部署与会话回放。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "rollbar",
+      "name": "Rollbar"
+    }
+  ]
 }

@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "kraken",
+      "name": "kraken",
+      "descriptions": {
+        "en": "Use Kraken in Ghast. Query public Kraken prices, order books, trades and market information through the official CLI MCP server. 通过 Kraken 官方 CLI MCP 服务查询公开价格、订单簿、成交与市场信息。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "kraken",
+      "name": "Kraken"
+    }
+  ]
 }

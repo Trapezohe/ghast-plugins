@@ -47,5 +47,20 @@
         "url": "https://www.clay.com/terms-of-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "clay",
+      "name": "clay",
+      "descriptions": {
+        "en": "Search companies and people, enrich prospect records, and run administrator-approved GTM functions through Clay's official hosted MCP."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "clay",
+      "name": "clay"
+    }
+  ]
 }

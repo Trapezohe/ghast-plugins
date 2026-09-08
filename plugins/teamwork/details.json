@@ -26,5 +26,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "teamwork",
+      "name": "teamwork",
+      "descriptions": {
+        "en": "Use Teamwork in Ghast. Manage client projects, tasks, time logs and help desk workflows in Teamwork. 在 Teamwork 中管理客户项目、任务、工时与客服工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "teamwork",
+      "name": "Teamwork"
+    }
+  ]
 }

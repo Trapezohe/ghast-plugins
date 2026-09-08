@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "kagi",
+      "name": "kagi",
+      "descriptions": {
+        "en": "Use Kagi in Ghast. Search the web, news, images, videos and podcasts with Kagi’s official MCP, and extract page content. 通过 Kagi 官方 MCP 搜索网页、新闻、图片、视频和播客，并提取页面内容。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "kagi",
+      "name": "Kagi"
+    }
+  ]
 }

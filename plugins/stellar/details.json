@@ -30,5 +30,20 @@
         "url": "https://raven.stellar.org/docs"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "stellar",
+      "name": "stellar",
+      "descriptions": {
+        "en": "Use Stellar Raven in Ghast. Search Stellar documentation, ecosystem data and development playbooks through the Stellar Development Foundation’s official Raven MCP. 通过 Stellar Development Foundation 官方 Raven MCP 检索 Stellar 文档、生态数据与开发指南。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "stellar",
+      "name": "Stellar Raven"
+    }
+  ]
 }

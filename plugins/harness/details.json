@@ -47,5 +47,24 @@
         "url": "https://www.harness.io/legal/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "harness",
+      "name": "harness",
+      "descriptions": {
+        "en": "Use Harness in Ghast. Explore pipelines, deployments, infrastructure and feature management using Harness’s official MCP integrations. 通过 Harness 官方 MCP 集成查询流水线、部署、基础设施与功能管理信息。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "harness",
+      "name": "harness"
+    },
+    {
+      "id": "harness-hosted",
+      "name": "harness hosted"
+    }
+  ]
 }

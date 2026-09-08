@@ -46,5 +46,20 @@
         "url": "https://www.optimizely.com/legal/website-terms-of-use"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "optimizely",
+      "name": "optimizely",
+      "descriptions": {
+        "en": "Use Optimizely CMS in Ghast. Connect Optimizely’s official CMS SaaS MCP to inspect content types, audit content and perform authorized site content workflows. 连接 Optimizely 官方 CMS SaaS MCP，查看内容类型、审查内容并执行已授权的网站内容工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "optimizely",
+      "name": "Optimizely CMS"
+    }
+  ]
 }

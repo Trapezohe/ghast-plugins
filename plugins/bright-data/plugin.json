@@ -21,7 +21,11 @@
         "bright-data": {
           "credentialHeaders": {
             "Authorization": "Bearer $VAULT:bright-data-token"
-          }
+          },
+          "optionalCredentials": [
+            "bright-data-token"
+          ],
+          "oauthRequired": true
         }
       }
     }

@@ -46,5 +46,20 @@
         "url": "https://telnyx.com/terms-and-conditions"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "telnyx",
+      "name": "telnyx",
+      "descriptions": {
+        "en": "Use Telnyx in Ghast. Discover Telnyx API actions and manage voice, messaging and phone-number resources through the official MCP server. 通过 Telnyx 官方 MCP 查询 API 操作，管理语音、消息和电话号码资源。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "telnyx",
+      "name": "Telnyx"
+    }
+  ]
 }

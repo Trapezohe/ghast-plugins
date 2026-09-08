@@ -30,5 +30,20 @@
         "url": "https://www.braintrust.dev/docs/integrations/developer-tools/mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "braintrust",
+      "name": "braintrust",
+      "descriptions": {
+        "en": "Use Braintrust in Ghast. Inspect Braintrust traces and experiments, manage evaluation datasets and prompts, and build authorized AI evaluation workflows. 查看 Braintrust 调用追踪和实验，管理评测数据集与提示词，并构建经授权的 AI 评测工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "braintrust",
+      "name": "Braintrust"
+    }
+  ]
 }

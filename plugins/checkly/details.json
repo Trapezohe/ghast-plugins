@@ -30,5 +30,20 @@
         "url": "https://www.checklyhq.com/docs/ai/mcp-server/setup/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "checkly",
+      "name": "checkly",
+      "descriptions": {
+        "en": "Use Checkly in Ghast. Inspect monitoring checks, test results and incidents, and trigger existing checks in Checkly. 在 Checkly 中查看监控检查、测试结果与事件，并运行已有检查。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "checkly",
+      "name": "Checkly"
+    }
+  ]
 }

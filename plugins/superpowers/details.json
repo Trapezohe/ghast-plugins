@@ -25,5 +25,106 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "brainstorming",
+      "name": "brainstorming",
+      "descriptions": {
+        "en": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation."
+      }
+    },
+    {
+      "id": "dispatching-parallel-agents",
+      "name": "dispatching-parallel-agents",
+      "descriptions": {
+        "en": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies"
+      }
+    },
+    {
+      "id": "executing-plans",
+      "name": "executing-plans",
+      "descriptions": {
+        "en": "Use when you have a written implementation plan to execute in a separate session with review checkpoints"
+      }
+    },
+    {
+      "id": "finishing-a-development-branch",
+      "name": "finishing-a-development-branch",
+      "descriptions": {
+        "en": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work"
+      }
+    },
+    {
+      "id": "receiving-code-review",
+      "name": "receiving-code-review",
+      "descriptions": {
+        "en": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation"
+      }
+    },
+    {
+      "id": "requesting-code-review",
+      "name": "requesting-code-review",
+      "descriptions": {
+        "en": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements"
+      }
+    },
+    {
+      "id": "subagent-driven-development",
+      "name": "subagent-driven-development",
+      "descriptions": {
+        "en": "Use when executing implementation plans with independent tasks in the current session"
+      }
+    },
+    {
+      "id": "systematic-debugging",
+      "name": "systematic-debugging",
+      "descriptions": {
+        "en": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes"
+      }
+    },
+    {
+      "id": "test-driven-development",
+      "name": "test-driven-development",
+      "descriptions": {
+        "en": "Use when implementing any feature or bugfix, before writing implementation code"
+      }
+    },
+    {
+      "id": "using-git-worktrees",
+      "name": "using-git-worktrees",
+      "descriptions": {
+        "en": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback"
+      }
+    },
+    {
+      "id": "using-superpowers",
+      "name": "using-superpowers",
+      "descriptions": {
+        "en": "Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions"
+      }
+    },
+    {
+      "id": "verification-before-completion",
+      "name": "verification-before-completion",
+      "descriptions": {
+        "en": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always"
+      }
+    },
+    {
+      "id": "writing-plans",
+      "name": "writing-plans",
+      "descriptions": {
+        "en": "Use when you have a spec or requirements for a multi-step task, before touching code"
+      }
+    },
+    {
+      "id": "writing-skills",
+      "name": "writing-skills",
+      "descriptions": {
+        "en": "Use when creating new skills, editing existing skills, or verifying skills work before deployment"
+      }
+    }
+  ],
+  "apps": []
 }

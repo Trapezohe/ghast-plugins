@@ -38,5 +38,20 @@
         "url": "https://gate.crawl4ai.com/legal/#privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "crawl4ai",
+      "name": "crawl4ai",
+      "descriptions": {
+        "en": "Use Crawl4AI in Ghast. Crawl web pages and extract structured content through Crawl4AI Cloud. 通过 Crawl4AI 云服务抓取网页并提取结构化内容。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "crawl4ai",
+      "name": "Crawl4AI"
+    }
+  ]
 }

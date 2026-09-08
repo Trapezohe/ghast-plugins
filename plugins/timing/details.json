@@ -46,5 +46,20 @@
         "url": "https://timingapp.com/privacy?lang=en"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "timing",
+      "name": "timing",
+      "descriptions": {
+        "en": "Use Timing in Ghast. Use Timing’s official MCP to review tracked activity, manage projects and time entries, and control timers. 通过 Timing 官方 MCP 查看跟踪活动、管理项目与工时记录，并控制计时器。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "timing",
+      "name": "Timing"
+    }
+  ]
 }

@@ -39,5 +39,20 @@
         "url": "https://www.domotz.com/product-privacy-policy.php"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "domotz-preview",
+      "name": "domotz-preview",
+      "descriptions": {
+        "en": "Discover, monitor, configure, and remediate Domotz-managed networks through Domotz's official hosted MCP with OAuth, RBAC, and per-action consent."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "domotz",
+      "name": "domotz-preview"
+    }
+  ]
 }

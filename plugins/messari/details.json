@@ -30,5 +30,20 @@
         "url": "https://docs.messari.io/mcp-server/hosted"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "messari",
+      "name": "messari",
+      "descriptions": {
+        "en": "Use Messari in Ghast. Research crypto assets and protocols and query market intelligence and time-series data from Messari. 通过 Messari 研究加密资产与协议，查询市场情报和时间序列数据。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "messari",
+      "name": "Messari"
+    }
+  ]
 }

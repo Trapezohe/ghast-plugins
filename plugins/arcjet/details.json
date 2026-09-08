@@ -39,5 +39,20 @@
         "url": "https://docs.arcjet.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "arcjet",
+      "name": "arcjet",
+      "descriptions": {
+        "en": "Use Arcjet in Ghast. Investigate application traffic, security decisions, quotas and protection rules. 分析应用流量、安全判定、配额与防护规则。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "arcjet",
+      "name": "Arcjet"
+    }
+  ]
 }

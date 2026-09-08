@@ -30,5 +30,20 @@
         "url": "https://www.alchemy.com/docs/alchemy-mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "alchemy",
+      "name": "alchemy",
+      "descriptions": {
+        "en": "Use Alchemy in Ghast. Query blockchain data, inspect transfers and simulate transactions with Alchemy. 查询多链数据、分析资产转移并模拟交易。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "alchemy",
+      "name": "Alchemy"
+    }
+  ]
 }

@@ -38,5 +38,20 @@
         "url": "https://www.redpanda.com/legal/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "redpanda",
+      "name": "redpanda",
+      "descriptions": {
+        "en": "Use Redpanda in Ghast. Search Redpanda’s official documentation and API references for streaming clusters, Kafka compatibility, Connect pipelines and operational troubleshooting. 检索 Redpanda 官方文档和 API 参考，了解流式集群、Kafka 兼容性、Connect 数据管道与运维排障。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "redpanda",
+      "name": "Redpanda"
+    }
+  ]
 }

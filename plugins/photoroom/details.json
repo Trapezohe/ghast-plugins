@@ -30,5 +30,20 @@
         "url": "https://help.photoroom.com/en/articles/15421163-photoroom-connector-for-claude-team-and-enterprise"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "photoroom",
+      "name": "photoroom",
+      "descriptions": {
+        "en": "Use Photoroom in Ghast. Create and edit product visuals with Photoroom background removal, virtual models and other available official API tools. 通过 Photoroom 官方工具进行背景移除、虚拟模特展示等商品图创作与编辑。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "photoroom",
+      "name": "Photoroom"
+    }
+  ]
 }

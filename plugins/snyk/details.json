@@ -39,5 +39,20 @@
         "url": "https://snyk.io/policies/privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "snyk",
+      "name": "snyk",
+      "descriptions": {
+        "en": "Use Snyk in Ghast. Scan code, dependencies and infrastructure for security issues through Snyk’s official local MCP. 通过 Snyk 官方本地 MCP 扫描代码、依赖与基础设施安全问题。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "snyk",
+      "name": "Snyk"
+    }
+  ]
 }

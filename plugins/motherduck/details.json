@@ -47,5 +47,12 @@
         "url": "https://motherduck.com/privacy-policy/"
       }
     ]
-  }
+  },
+  "skills": [],
+  "apps": [
+    {
+      "id": "motherduck",
+      "name": "motherduck"
+    }
+  ]
 }

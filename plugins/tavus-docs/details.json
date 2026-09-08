@@ -30,5 +30,20 @@
         "url": "https://docs.tavus.io/sections/agents-and-automation"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "tavus-docs",
+      "name": "tavus-docs",
+      "descriptions": {
+        "en": "Use Tavus Docs in Ghast. Explore official Tavus documentation for conversational video, digital replicas and video API integration. 查询 Tavus 官方文档，辅助接入对话式视频、数字分身和视频 API。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "tavus-docs",
+      "name": "Tavus Docs"
+    }
+  ]
 }

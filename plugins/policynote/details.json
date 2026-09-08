@@ -47,5 +47,20 @@
         "url": "https://fiscalnote.com/terms"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "policynote",
+      "name": "policynote",
+      "descriptions": {
+        "en": "Research legislation, regulation, officials, elections, transcripts, local government, CQ news, and organization policy activity through PolicyNote."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "policynote",
+      "name": "policynote"
+    }
+  ]
 }

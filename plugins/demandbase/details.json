@@ -47,5 +47,20 @@
         "url": "https://www.demandbase.com/terms-of-use/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "demandbase",
+      "name": "demandbase",
+      "descriptions": {
+        "en": "Research Demandbase internal accounts and people, global companies and contacts, Intent, Buying Groups, opportunities, engagement, and account briefs through Demandbase's official hosted MCP."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "demandbase",
+      "name": "demandbase"
+    }
+  ]
 }

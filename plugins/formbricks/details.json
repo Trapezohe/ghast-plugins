@@ -30,5 +30,20 @@
         "url": "https://formbricks.com/docs/platform/mcp/overview"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "formbricks",
+      "name": "formbricks",
+      "descriptions": {
+        "en": "Use Formbricks in Ghast. Manage surveys, workflows and customer feedback through Formbricks Cloud’s official MCP. 通过 Formbricks Cloud 官方 MCP 管理问卷、工作流与客户反馈。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "formbricks",
+      "name": "Formbricks"
+    }
+  ]
 }

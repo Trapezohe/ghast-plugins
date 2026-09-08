@@ -25,5 +25,15 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "seo-meta",
+      "name": "seo-meta",
+      "descriptions": {
+        "en": "Use this skill when the user asks to audit, review, or extract SEO meta tags from a webpage — `<title>`, meta description, canonical, robots, OpenGraph, Twitter Card, H1s. Fetches the raw HTML and pulls out the head-section signals search engines and social scrapers consume."
+      }
+    }
+  ],
+  "apps": []
 }

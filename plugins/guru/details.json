@@ -30,5 +30,20 @@
         "url": "https://help.getguru.com/docs/connecting-gurus-mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "guru",
+      "name": "guru",
+      "descriptions": {
+        "en": "Use Guru in Ghast. Find trusted workspace knowledge, ask Knowledge Agents and prepare Card drafts using Guru’s official MCP service. 通过 Guru 官方 MCP 服务检索工作区知识、向知识代理提问并准备知识卡片草稿。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "guru",
+      "name": "Guru"
+    }
+  ]
 }

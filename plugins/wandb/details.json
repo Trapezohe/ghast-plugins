@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "wandb",
+      "name": "wandb",
+      "descriptions": {
+        "en": "Use Weights & Biases in Ghast. Analyze W&B runs and artifacts and Weave traces and evaluations through the official Weights & Biases MCP server. 通过 Weights & Biases 官方 MCP 分析 W&B 运行记录与制品，以及 Weave 调用追踪和评测。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "wandb",
+      "name": "Weights & Biases"
+    }
+  ]
 }

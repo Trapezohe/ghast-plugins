@@ -30,5 +30,20 @@
         "url": "https://missiveapp.com/docs/ai/mcp/server/connect"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "missive",
+      "name": "missive",
+      "descriptions": {
+        "en": "Use Missive in Ghast. Use Missive’s official MCP to search shared inbox conversations and work with contacts, calendars and drafts under your chosen permissions. 通过 Missive 官方 MCP 检索共享收件箱会话，并在所选权限内处理联系人、日历与草稿。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "missive",
+      "name": "Missive"
+    }
+  ]
 }

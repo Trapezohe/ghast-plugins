@@ -30,5 +30,20 @@
         "url": "https://cal.com/docs/mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "cal-com",
+      "name": "cal-com",
+      "descriptions": {
+        "en": "Use Cal.com in Ghast. Check availability, manage event types and organize bookings and schedules with Cal.com. 使用 Cal.com 查询空闲时间、管理预约类型、整理日程和会议预约。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "cal-com",
+      "name": "Cal.com"
+    }
+  ]
 }

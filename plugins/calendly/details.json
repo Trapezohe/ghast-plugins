@@ -39,5 +39,20 @@
         "url": "https://calendly.com/legal/privacy-notice"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "calendly",
+      "name": "calendly",
+      "descriptions": {
+        "en": "Inspect Calendly meetings, invitees, event types, schedules, busy times, routing forms, and organization context, or safely create and update scheduling resources through Calendly's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "calendly",
+      "name": "calendly"
+    }
+  ]
 }

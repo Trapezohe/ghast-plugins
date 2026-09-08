@@ -47,5 +47,164 @@
         "url": "https://daloopa.com/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "build-model",
+      "name": "build-model",
+      "descriptions": {
+        "en": "Build a multi-tab Excel financial model"
+      }
+    },
+    {
+      "id": "bull-bear",
+      "name": "bull-bear",
+      "descriptions": {
+        "en": "Bull/bear/base case scenario framework for a given company"
+      }
+    },
+    {
+      "id": "capital-allocation",
+      "name": "capital-allocation",
+      "descriptions": {
+        "en": "Deep dive into capital deployment, buybacks, dividends, and shareholder yield"
+      }
+    },
+    {
+      "id": "comp-sheet",
+      "name": "comp-sheet",
+      "descriptions": {
+        "en": "Build an industry comp sheet Excel model with deep operational KPIs"
+      }
+    },
+    {
+      "id": "comps",
+      "name": "comps",
+      "descriptions": {
+        "en": "Trading comparables analysis with peer multiples and implied valuation"
+      }
+    },
+    {
+      "id": "dcf",
+      "name": "dcf",
+      "descriptions": {
+        "en": "Discounted cash flow valuation with sensitivity analysis"
+      }
+    },
+    {
+      "id": "earnings-flash",
+      "name": "earnings-flash",
+      "descriptions": {
+        "en": "Rapid first-read earnings flash for a given company"
+      }
+    },
+    {
+      "id": "earnings-prep",
+      "name": "earnings-prep",
+      "descriptions": {
+        "en": "Pre-earnings preparation report for the night before a company reports"
+      }
+    },
+    {
+      "id": "earnings-review",
+      "name": "earnings-review",
+      "descriptions": {
+        "en": "Full earnings analysis with guidance tracking for a given company"
+      }
+    },
+    {
+      "id": "guidance-tracker",
+      "name": "guidance-tracker",
+      "descriptions": {
+        "en": "Track management guidance accuracy over time for a given company"
+      }
+    },
+    {
+      "id": "ib-deck",
+      "name": "ib-deck",
+      "descriptions": {
+        "en": "Generate an institutional-grade investment banking pitch deck (HTML)"
+      }
+    },
+    {
+      "id": "industry",
+      "name": "industry",
+      "descriptions": {
+        "en": "Cross-company industry comparison across multiple tickers"
+      }
+    },
+    {
+      "id": "inflection",
+      "name": "inflection",
+      "descriptions": {
+        "en": "Auto-detect biggest acceleration/deceleration inflections across all metrics"
+      }
+    },
+    {
+      "id": "initiate",
+      "name": "initiate",
+      "descriptions": {
+        "en": "Initiate coverage — generate both research note (HTML) and Excel model (.xlsx)"
+      }
+    },
+    {
+      "id": "precedent-transactions",
+      "name": "precedent-transactions",
+      "descriptions": {
+        "en": "Precedent M&A transactions analysis with deal multiples and acquisition history"
+      }
+    },
+    {
+      "id": "research-note",
+      "name": "research-note",
+      "descriptions": {
+        "en": "Generate a professional Word document research note"
+      }
+    },
+    {
+      "id": "setup",
+      "name": "setup",
+      "descriptions": {
+        "en": "Verify Daloopa MCP connection and show available skills"
+      }
+    },
+    {
+      "id": "supply-chain",
+      "name": "supply-chain",
+      "descriptions": {
+        "en": "Interactive supply chain dashboard mapping suppliers, customers, and financial interdependencies"
+      }
+    },
+    {
+      "id": "tearsheet",
+      "name": "tearsheet",
+      "descriptions": {
+        "en": "Quick one-page company overview and snapshot"
+      }
+    },
+    {
+      "id": "unit-economics",
+      "name": "unit-economics",
+      "descriptions": {
+        "en": "Bottoms-up unit economics decomposition for any public company"
+      }
+    },
+    {
+      "id": "working-capital",
+      "name": "working-capital",
+      "descriptions": {
+        "en": "Cash conversion cycle, earnings quality, and working capital deep-dive"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "daloopa",
+      "name": "daloopa"
+    },
+    {
+      "id": "daloopa-docs",
+      "name": "daloopa docs"
+    }
+  ]
 }

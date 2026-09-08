@@ -38,5 +38,20 @@
         "url": "https://www.relume.ai/legal/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "relume",
+      "name": "relume",
+      "descriptions": {
+        "en": "Use Relume in Ghast. Find Relume library components and retrieve editable React code with its design system. 查找 Relume 组件库内容，获取可编辑的 React 代码及其设计系统。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "relume",
+      "name": "Relume"
+    }
+  ]
 }

@@ -47,5 +47,20 @@
         "url": "https://www.waldo.fyi/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "waldo-brand-strategy",
+      "name": "waldo-brand-strategy",
+      "descriptions": {
+        "en": "Research brands, competitors, ads, social signals, audiences, categories, trends, feeds, and Waldo workspaces through Waldo's official curated strategy MCP. Use for authorized brand-intelligence and agency strategy work, with source, freshness, credit, privacy, and terms safeguards.\n"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "waldo",
+      "name": "waldo"
+    }
+  ]
 }

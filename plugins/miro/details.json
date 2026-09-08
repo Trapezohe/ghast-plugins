@@ -38,5 +38,20 @@
         "url": "https://miro.com/legal/developer-terms-of-use/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "miro",
+      "name": "miro",
+      "descriptions": {
+        "en": "Use Miro in Ghast. Read team whiteboards and develop diagrams, ideas and collaborative board content with Miro. 读取团队白板，整理创意、制作图表并协作编辑 Miro 看板。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "miro",
+      "name": "Miro"
+    }
+  ]
 }

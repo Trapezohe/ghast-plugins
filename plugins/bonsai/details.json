@@ -30,5 +30,20 @@
         "url": "https://docs.hellobonsai.com/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "bonsai",
+      "name": "bonsai",
+      "descriptions": {
+        "en": "Use Bonsai in Ghast. Connect Bonsai’s official MCP beta to manage tasks, projects, CRM records, time entries and invoices within your account permissions. 连接 Bonsai 官方 MCP 测试版，在账号权限内管理任务、项目、CRM 资料、工时与发票。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "bonsai",
+      "name": "Bonsai"
+    }
+  ]
 }

@@ -30,5 +30,20 @@
         "url": "https://developers.fathom.ai/mcp-docs"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "fathom",
+      "name": "fathom",
+      "descriptions": {
+        "en": "Use Fathom in Ghast. 搜索会议记录、读取转录与摘要，整理决策和行动项。通过 Fathom 官方服务连接账号。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "fathom",
+      "name": "Fathom"
+    }
+  ]
 }

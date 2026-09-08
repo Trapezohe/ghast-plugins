@@ -47,5 +47,20 @@
         "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "azure",
+      "name": "azure",
+      "descriptions": {
+        "en": "Use Microsoft Azure in Ghast. Explore and manage Azure cloud resources with Microsoft’s official Azure MCP Server (Beta). 通过 Microsoft 官方 Azure MCP Server（Beta）探索与管理 Azure 云资源。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "azure",
+      "name": "Microsoft Azure"
+    }
+  ]
 }

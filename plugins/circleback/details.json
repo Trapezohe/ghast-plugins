@@ -47,5 +47,20 @@
         "url": "https://circleback.ai/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "circleback",
+      "name": "circleback",
+      "descriptions": {
+        "en": "Search authorized Circleback meetings, transcripts, action items, calendar events, emails, people, companies, tags, and support content through Circleback's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "circleback",
+      "name": "circleback"
+    }
+  ]
 }

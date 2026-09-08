@@ -39,5 +39,20 @@
         "url": "https://policies.google.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "firebase",
+      "name": "firebase",
+      "descriptions": {
+        "en": "Use Firebase in Ghast. Develop and manage Firebase projects, inspect app configuration and deploy services through Google’s official MCP. 通过 Google 官方 MCP 开发与管理 Firebase 项目、检查应用配置并部署服务。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "firebase",
+      "name": "Firebase"
+    }
+  ]
 }

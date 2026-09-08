@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "qdrant",
+      "name": "qdrant",
+      "descriptions": {
+        "en": "Use Qdrant in Ghast. Store knowledge and retrieve relevant information from Qdrant using semantic search. 向 Qdrant 存储知识，并通过语义搜索检索相关信息。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "qdrant",
+      "name": "Qdrant"
+    }
+  ]
 }

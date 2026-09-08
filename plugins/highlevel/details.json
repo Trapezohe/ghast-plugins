@@ -48,5 +48,20 @@
         "url": "https://www.gohighlevel.com/terms-of-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "highlevel",
+      "name": "highlevel",
+      "descriptions": {
+        "en": "Inspect and manage HighLevel contacts, opportunities, pipelines, appointments, calendars, conversations, messages, and related CRM activity through HighLevel's official hosted MCP server. Use for CRM overviews, pipeline analysis, lead qualification, customer-history summaries, appointment review, and drafting or explicitly approved follow-up actions.\n"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "highlevel",
+      "name": "highlevel"
+    }
+  ]
 }

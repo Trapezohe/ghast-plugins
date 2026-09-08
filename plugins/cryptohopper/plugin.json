@@ -23,7 +23,11 @@
         "cryptohopper": {
           "credentialHeaders": {
             "Authorization": "Bearer $VAULT:cryptohopper-token"
-          }
+          },
+          "optionalCredentials": [
+            "cryptohopper-token"
+          ],
+          "oauthRequired": true
         }
       }
     }

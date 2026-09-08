@@ -30,5 +30,20 @@
         "url": "https://docs.etherscan.io/build-with-ai/mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "etherscan",
+      "name": "etherscan",
+      "descriptions": {
+        "en": "Use Etherscan in Ghast. Read multi-chain balances, transactions, token transfers and contract data. 查询多链余额、交易、代币转账与合约数据。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "etherscan",
+      "name": "Etherscan"
+    }
+  ]
 }

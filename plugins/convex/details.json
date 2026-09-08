@@ -32,5 +32,20 @@
         "url": "https://www.convex.dev"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "convex",
+      "name": "convex",
+      "descriptions": {
+        "en": "Build and inspect Convex backends with the official Convex CLI, project-level Agent Skills, and the official 12-tool Convex MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "convex",
+      "name": "convex"
+    }
+  ]
 }

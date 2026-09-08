@@ -23,7 +23,11 @@
         "appsflyer": {
           "credentialHeaders": {
             "Authorization": "Bearer $VAULT:appsflyer-token"
-          }
+          },
+          "optionalCredentials": [
+            "appsflyer-token"
+          ],
+          "oauthRequired": true
         }
       }
     }

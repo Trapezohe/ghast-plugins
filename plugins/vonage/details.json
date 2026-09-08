@@ -30,5 +30,20 @@
         "url": "https://developer.vonage.com/en/mcp-server/how-to-guides/install-tooling-mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "vonage",
+      "name": "vonage",
+      "descriptions": {
+        "en": "Use Vonage in Ghast. Use Vonage’s official MCP for account balances, phone numbers, communication reports, SMS, WhatsApp, RCS and voice workflows. 通过 Vonage 官方 MCP 查询账户余额、电话号码与通信报表，并处理短信、WhatsApp、RCS 和语音业务。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "vonage",
+      "name": "Vonage"
+    }
+  ]
 }

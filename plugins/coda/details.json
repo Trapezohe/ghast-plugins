@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "coda",
+      "name": "coda",
+      "descriptions": {
+        "en": "Use Coda in Ghast. Search Coda docs and tables, read structured data and update collaborative workflows. 搜索 Coda 文档与表格、读取结构化数据并更新协作工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "coda",
+      "name": "Coda"
+    }
+  ]
 }

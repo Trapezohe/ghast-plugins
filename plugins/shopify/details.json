@@ -48,5 +48,155 @@
         "url": "https://www.shopify.com/legal/privacy?shpxid=222dd762-CA08-48FF-E4D4-FF926B8FFCAD"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "shopify-admin",
+      "name": "shopify-admin",
+      "descriptions": {
+        "en": "Write or explain **Admin GraphQL** queries and mutations for apps and integrations that extend the Shopify admin. Use when the user wants to **understand, design, or generate** the operation itself—even before deciding how to run it. Do **not** choose `admin` first for **app or extension config validation** —use **`use-shopify-cli`**. Do **not** choose `admin` first to **execute** Admin GraphQL **now via Shopify CLI** or for CLI setup/troubleshooting on store workflows—use **`use-shopify-cli`** (store auth/execute, handle/SKU/location lookups, inventory changes)."
+      }
+    },
+    {
+      "id": "shopify-app-store-review",
+      "name": "shopify-app-store-review",
+      "descriptions": {
+        "en": "Run a pre-submission compliance check against your Shopify app's codebase. Reviews App Store requirements and surfaces likely issues before you submit for official review."
+      }
+    },
+    {
+      "id": "shopify-custom-data",
+      "name": "shopify-custom-data",
+      "descriptions": {
+        "en": "MUST be used first when prompts mention Metafields or Metaobjects. Use Metafields and Metaobjects to model and store custom data for your app. Metafields extend built-in Shopify data types like products or customers, Metaobjects are custom data types that can be used to store bespoke data structures. Metafield and Metaobject definitions provide a schema and configuration for values to follow."
+      }
+    },
+    {
+      "id": "shopify-customer",
+      "name": "shopify-customer",
+      "descriptions": {
+        "en": "The Customer Account API allows customers to access their own data including orders, payment methods, and addresses."
+      }
+    },
+    {
+      "id": "shopify-dev",
+      "name": "shopify-dev",
+      "descriptions": {
+        "en": "Search Shopify developer documentation across all APIs. Use only when no API-specific skill applies."
+      }
+    },
+    {
+      "id": "shopify-functions",
+      "name": "shopify-functions",
+      "descriptions": {
+        "en": "Shopify Functions allow developers to customize the backend logic that powers parts of Shopify. Available APIs: Discount, Cart and Checkout Validation, Cart Transform, Pickup Point Delivery Option Generator, Delivery Customization, Fulfillment Constraints, Local Pickup Delivery Option Generator, Order Routing Location Rule, Payment Customization"
+      }
+    },
+    {
+      "id": "shopify-hydrogen",
+      "name": "shopify-hydrogen",
+      "descriptions": {
+        "en": "Hydrogen storefront implementation cookbooks. Some of the available recipes are: B2B Commerce, Bundles, Combined Listings, Custom Cart Method, Dynamic Content with Metaobjects, Express Server, Google Tag Manager Integration, Infinite Scroll, Legacy Customer Account Flow, Markets, Partytown + Google Tag Manager, Subscriptions, Third-party API Queries and Caching. MANDATORY: Use this API for ANY Hydrogen storefront question - do NOT use Storefront GraphQL when 'Hydrogen' is mentioned."
+      }
+    },
+    {
+      "id": "shopify-liquid",
+      "name": "shopify-liquid",
+      "descriptions": {
+        "en": "Liquid is an open-source templating language created by Shopify. It is the backbone of Shopify themes and is used to load dynamic content on storefronts. Keywords: liquid, theme, shopify-theme, liquid-component, liquid-block, liquid-section, liquid-snippet, liquid-schemas, shopify-theme-schemas"
+      }
+    },
+    {
+      "id": "shopify-onboarding-dev",
+      "name": "shopify-onboarding-dev",
+      "descriptions": {
+        "en": "Get started building on Shopify. Use when a developer asks to build an app, build a theme, create a dev store, set up a partner account, scaffold a project, or get started developing for Shopify. NOT for merchants managing stores."
+      }
+    },
+    {
+      "id": "shopify-onboarding-merchant",
+      "name": "shopify-onboarding-merchant",
+      "descriptions": {
+        "en": "Set up and connect a Shopify store from your AI assistant. Use when the user wants to start selling online, open a first Shopify store, try Shopify before they have an account, or get merchant-facing next steps after a preview store is created, including how to keep it, save it, or make it real. This is for store owners — not developers. Preview-store creation for brand-new merchants belongs here via `shopify store create preview`; explicit CLI troubleshooting and named-store command execution belong in **`use-shopify-cli`**."
+      }
+    },
+    {
+      "id": "shopify-partner",
+      "name": "shopify-partner",
+      "descriptions": {
+        "en": "The Partner API lets you programmatically access data about your Partner Dashboard, including your apps, themes, and affiliate referrals."
+      }
+    },
+    {
+      "id": "shopify-payments-apps",
+      "name": "shopify-payments-apps",
+      "descriptions": {
+        "en": "The Payments Apps API enables payment providers to integrate their payment solutions with Shopify's checkout."
+      }
+    },
+    {
+      "id": "shopify-polaris-admin-extensions",
+      "name": "shopify-polaris-admin-extensions",
+      "descriptions": {
+        "en": "Add custom actions and blocks from your app at contextually relevant spots throughout the Shopify Admin. Admin UI Extensions also supports scaffolding new adminextensions using Shopify CLI commands."
+      }
+    },
+    {
+      "id": "shopify-polaris-app-home",
+      "name": "shopify-polaris-app-home",
+      "descriptions": {
+        "en": "Build your app's primary user interface embedded in the Shopify admin. If the prompt just mentions `Polaris` and you can't tell based off of the context what API they meant, assume they meant this API."
+      }
+    },
+    {
+      "id": "shopify-polaris-checkout-extensions",
+      "name": "shopify-polaris-checkout-extensions",
+      "descriptions": {
+        "en": "Build custom functionality that merchants can install at defined points in the checkout flow, including product information, shipping, payment, order summary, and Shop Pay. Checkout UI Extensions also supports scaffolding new checkout extensions using Shopify CLI commands."
+      }
+    },
+    {
+      "id": "shopify-polaris-customer-account-extensions",
+      "name": "shopify-polaris-customer-account-extensions",
+      "descriptions": {
+        "en": "Build custom functionality that merchants can install at defined points on the Order index, Order status, and Profile pages in customer accounts. Customer Account UI Extensions also supports scaffolding new customer account extensions using Shopify CLI commands."
+      }
+    },
+    {
+      "id": "shopify-pos-ui",
+      "name": "shopify-pos-ui",
+      "descriptions": {
+        "en": "Build retail point-of-sale applications using Shopify's POS UI components. These components provide a consistent and familiar interface for POS applications. POS UI Extensions also supports scaffolding new POS extensions using Shopify CLI commands. Keywords: POS, Retail, smart grid"
+      }
+    },
+    {
+      "id": "shopify-shopifyql",
+      "name": "shopify-shopifyql",
+      "descriptions": {
+        "en": "Answer a merchant's **analytics and reporting** questions with **ShopifyQL** — Shopify's query language for aggregated store metrics that the Admin GraphQL API cannot compute. Choose this (not `admin`) whenever the ask is for **numbers, totals, trends, or breakdowns** rather than fetching or mutating individual records: including but not limited to total/gross/net sales and revenue, order counts, average order value, refunds, quantity sold, sessions, conversion rate, and traffic — sliced by product, channel, region, or customer, trended over time, or compared period-over-period. Examples: \"total sales last 7 days\", \"orders by sales channel this month\", \"top products by revenue\", \"conversion rate this week\", \"sales this year vs last year\". This topic covers writing the ShopifyQL query; if the merchant wants to run it against their store, execution is handed off to `use-shopify-cli`. Not for general Admin GraphQL record operations — fetching or mutating individual resources (use `admin`)."
+      }
+    },
+    {
+      "id": "shopify-storefront-graphql",
+      "name": "shopify-storefront-graphql",
+      "descriptions": {
+        "en": "Use for custom storefronts requiring direct GraphQL queries/mutations for data fetching and cart operations. Choose this when you need full control over data fetching and rendering your own UI. NOT for Web Components - if the prompt mentions HTML tags like <shopify-store>, <shopify-cart>, use storefront-web-components instead."
+      }
+    },
+    {
+      "id": "shopify-use-shopify-cli",
+      "name": "shopify-use-shopify-cli",
+      "descriptions": {
+        "en": "Choose when the user needs **Shopify CLI** to run or fix something now: validate app or extension config on disk (`shopify.app.toml`, `shopify.app.<name>.toml`, `shopify.extension.toml`); run or troubleshoot store workflows (`shopify store auth`, `shopify store execute`); or perform explicit store-scoped reads/writes on a named store domain (for example, show/list/find the first 10 products on my store at `foo.myshopify.com`, or inventory and product changes by handle, SKU, or location name). Emphasize **commands and operational steps**, not only authoring GraphQL. Skip for API-only understanding or codegen with no CLI execution, and skip for brand-new merchant asks to start a Shopify store or try Shopify before they have an account. Examples: validate configuration before deploy; run an existing query via CLI; show the first 10 products on `foo.myshopify.com`; missing `shopify store execute`."
+      }
+    },
+    {
+      "id": "ucp",
+      "name": "ucp",
+      "descriptions": {
+        "en": "Use when the user wants to use the UCP CLI to find, compare, buy, or track products from online merchants, or to set up and troubleshoot the local UCP profile required for merchant-scoped operations. Covers global catalog search (\"find me X under $Y\"), named-merchant transactions (\"buy this from Z.com\"), order tracking, `ucp profile init`, `ucp doctor`, carts, checkout, orders, and UCP setup/help. Falls back to merchant-hosted handoff when direct in-protocol checkout isn't available."
+      }
+    }
+  ],
+  "apps": []
 }

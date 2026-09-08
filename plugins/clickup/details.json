@@ -39,5 +39,20 @@
         "url": "https://clickup.com/terms/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "clickup",
+      "name": "clickup",
+      "descriptions": {
+        "en": "Search and manage ClickUp tasks, lists, folders, documents, comments, chat, assignments, relationships, and time tracking through ClickUp's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "clickup",
+      "name": "clickup"
+    }
+  ]
 }

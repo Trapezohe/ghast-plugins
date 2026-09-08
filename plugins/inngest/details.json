@@ -30,5 +30,20 @@
         "url": "https://www.inngest.com/docs/ai-dev-tools/mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "inngest",
+      "name": "inngest",
+      "descriptions": {
+        "en": "Use Inngest in Ghast. Inspect Inngest Cloud functions, events, runs and traces and manage deployed workflows. 查看 Inngest Cloud 函数、事件、运行与追踪记录，并管理已部署的工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "inngest",
+      "name": "Inngest"
+    }
+  ]
 }

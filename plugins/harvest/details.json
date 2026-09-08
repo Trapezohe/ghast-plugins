@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "harvest",
+      "name": "harvest",
+      "descriptions": {
+        "en": "Use Harvest in Ghast. Track time, review project budgets and prepare invoice drafts in Harvest. 在 Harvest 中记录工时、查看项目预算并准备发票草稿。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "harvest",
+      "name": "Harvest"
+    }
+  ]
 }

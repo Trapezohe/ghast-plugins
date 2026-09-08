@@ -21,7 +21,12 @@
         "wrike": {
           "credentialHeaders": {
             "Authorization": "Bearer $VAULT:wrike-token"
-          }
+          },
+          "optionalCredentials": [
+            "wrike-token"
+          ],
+          "oauthRequired": true,
+          "oauthClientRequired": true
         }
       }
     }

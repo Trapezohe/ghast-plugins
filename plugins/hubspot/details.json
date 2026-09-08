@@ -40,5 +40,113 @@
         "url": "https://legal.hubspot.com/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "audience-targeting",
+      "name": "audience-targeting",
+      "descriptions": {
+        "en": "Build a targeted contact segment by filtering on lifecycle, engagement, jobtitle, geography, or firmographics — then export it as JSONL for a campaign or downstream tool."
+      }
+    },
+    {
+      "id": "bulk-operations",
+      "name": "bulk-operations",
+      "descriptions": {
+        "en": "Foundation patterns for the `hubspot` CLI — JSONL piping, batch read, pagination, dry-run/digest/confirm for destructive ops, and `hubspot history` for recovery. Every other skill builds on this one."
+      }
+    },
+    {
+      "id": "communication-history",
+      "name": "communication-history",
+      "descriptions": {
+        "en": "Retrieve activity history (calls, emails, notes, meetings, tasks) for a CRM record and assemble pre-call briefs."
+      }
+    },
+    {
+      "id": "crm-data-quality",
+      "name": "crm-data-quality",
+      "descriptions": {
+        "en": "Find incomplete records, normalize field values in bulk, dedupe with `hubspot objects merge`, and audit custom properties. Builds on `bulk-operations` for JSONL piping and dry-run/digest/confirm."
+      }
+    },
+    {
+      "id": "crm-lookup",
+      "name": "crm-lookup",
+      "descriptions": {
+        "en": "Find a specific CRM record by ID, email, domain, or name fragment, and traverse associations for the full account picture."
+      }
+    },
+    {
+      "id": "custom-object-management",
+      "name": "custom-object-management",
+      "descriptions": {
+        "en": "Discover, create, update, and delete custom CRM object schemas. Use when defining a new object type, inspecting existing schemas, or removing one. Record CRUD on custom objects is identical to standard objects — see `bulk-operations`."
+      }
+    },
+    {
+      "id": "customer-retention",
+      "name": "customer-retention",
+      "descriptions": {
+        "en": "Identify inactive/at-risk customers via CRM filters and create follow-up tasks at scale. Builds on `bulk-operations`; defers activity-creation specifics to `sales-execution`."
+      }
+    },
+    {
+      "id": "data-enrichment",
+      "name": "data-enrichment",
+      "descriptions": {
+        "en": "Match external CSV/JSONL records to CRM contacts (by email) or companies (by domain) and write enriched data back in one pass using `hubspot objects upsert`."
+      }
+    },
+    {
+      "id": "deal-management",
+      "name": "deal-management",
+      "descriptions": {
+        "en": "Run the full deal lifecycle from CLI — discover pipelines/stages, qualify MQLs into deals with associations, advance/reassign in bulk, hunt stalled deals, and close."
+      }
+    },
+    {
+      "id": "quote-to-cash",
+      "name": "quote-to-cash",
+      "descriptions": {
+        "en": "Build the product catalog, assemble quotes (line items + associations to deals), and track invoices and subscriptions through to revenue."
+      }
+    },
+    {
+      "id": "sales-execution",
+      "name": "sales-execution",
+      "descriptions": {
+        "en": "Log sales activities — calls, notes, meetings, tasks — against contacts and deals, with the mandatory create-then-associate step that makes them visible in the CRM."
+      }
+    },
+    {
+      "id": "sales-reporting",
+      "name": "sales-reporting",
+      "descriptions": {
+        "en": "Daily briefings, pipeline snapshots, and win/loss analysis from the terminal — closing-this-week, open pipeline by stage/owner, and closed-won vs closed-lost over a period."
+      }
+    },
+    {
+      "id": "team-ownership",
+      "name": "team-ownership",
+      "descriptions": {
+        "en": "Assign and reassign CRM record ownership, audit who-owns-what across object types, and handle rep transitions. Built on `bulk-operations`."
+      }
+    },
+    {
+      "id": "ticket-resolution",
+      "name": "ticket-resolution",
+      "descriptions": {
+        "en": "Create, triage, advance, and close HubSpot support tickets — pipeline discovery, contact/company association, priority queues, bulk stage moves, resolution close-out."
+      }
+    },
+    {
+      "id": "workflow-automation",
+      "name": "workflow-automation",
+      "descriptions": {
+        "en": "List, inspect, create, update, and delete HubSpot workflows (v4 flows API) from the `hubspot` agent CLI, not the `hs` developer CLI."
+      }
+    }
+  ],
+  "apps": []
 }

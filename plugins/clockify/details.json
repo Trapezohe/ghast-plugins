@@ -38,5 +38,20 @@
         "url": "https://cake.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "clockify",
+      "name": "clockify",
+      "descriptions": {
+        "en": "Use Clockify in Ghast. Connect Clockify’s official MCP preview for time tracking, project lookup and reports; provider documentation still marks the service as coming soon. 连接 Clockify 官方 MCP 预览服务，进行时间记录、项目查询与报表分析；服务商文档仍标注即将推出。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "clockify",
+      "name": "Clockify"
+    }
+  ]
 }

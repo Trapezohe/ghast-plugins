@@ -46,5 +46,20 @@
         "url": "https://bitly.com/pages/terms-of-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "bitly",
+      "name": "bitly",
+      "descriptions": {
+        "en": "Use Bitly in Ghast. Create branded short links and analyze link and QR engagement. 创建品牌短链接，分析链接与二维码互动效果。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "bitly",
+      "name": "Bitly"
+    }
+  ]
 }

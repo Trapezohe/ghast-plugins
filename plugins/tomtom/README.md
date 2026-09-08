@@ -25,3 +25,12 @@ Enter a TomTom API key in Ghast connection settings. Enable MCP Server and only 
 Ghast-authored manifests and skill text are MIT licensed. Service names and brand assets belong to their respective owners. 品牌标识归相应权利人所有。
 
 Brand logo source: https://cdn.simpleicons.org/tomtom/DF1B12
+
+
+## Browser authorization / 浏览器授权
+
+`tomtom` publishes OAuth authorization metadata. Ghast prefers browser authorization; an existing API key or token remains an optional advanced alternative. The service advertises dynamic registration or client metadata documents. Discovery was checked without signing in; account authorization and tool execution were not tested.
+
+Ghast 优先使用浏览器授权；已有 API Key 或 Token 保留为高级备选项。服务公开提供动态注册或客户端元数据文档支持。本次只验证了公开授权元数据，没有登录账户或执行工具。
+
+Official discovery: [tomtom resource metadata](https://mcp.tomtom.com/.well-known/oauth-protected-resource/maps) · [authorization metadata](https://oauth.my.tomtom.com/.well-known/oauth-authorization-server)

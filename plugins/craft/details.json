@@ -38,5 +38,20 @@
         "url": "https://www.craft.do/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "craft",
+      "name": "craft",
+      "descriptions": {
+        "en": "Use Craft in Ghast. Search and organize Craft documents, edit content and manage collections in a connected space. 搜索与整理 Craft 文档、编辑内容，并管理已连接空间中的集合。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "craft",
+      "name": "Craft"
+    }
+  ]
 }

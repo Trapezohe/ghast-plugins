@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "growthbook",
+      "name": "growthbook",
+      "descriptions": {
+        "en": "Use GrowthBook in Ghast. Manage feature flags and inspect experiments through GrowthBook’s official MCP and bundled workflow guidance. 通过 GrowthBook 官方 MCP 及配套流程指引管理功能开关并查看实验。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "growthbook",
+      "name": "GrowthBook"
+    }
+  ]
 }

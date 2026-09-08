@@ -47,5 +47,20 @@
         "url": "https://hginsights.com/terms-of-service/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "hg-insights",
+      "name": "hg-insights",
+      "descriptions": {
+        "en": "Research companies, markets, technology adoption, buying signals, spend, contracts, contacts, and GTM segments through HG Insights' official Phoenix MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "hg-insights",
+      "name": "hg-insights"
+    }
+  ]
 }

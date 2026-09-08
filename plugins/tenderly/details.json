@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "tenderly",
+      "name": "tenderly",
+      "descriptions": {
+        "en": "Use Tenderly in Ghast. Simulate, trace and debug blockchain transactions and work with virtual environments through the official Tenderly MCP. 通过 Tenderly 官方 MCP 模拟、追踪和调试链上交易，并使用虚拟环境。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "tenderly",
+      "name": "Tenderly"
+    }
+  ]
 }

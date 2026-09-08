@@ -38,5 +38,20 @@
         "url": "https://www.productboard.com/privacy-policy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "productboard",
+      "name": "productboard",
+      "descriptions": {
+        "en": "Use Productboard in Ghast. Search and refine product specifications, read feedback and track delivery status in Productboard. 在 Productboard 中搜索与完善产品规格、阅读反馈并跟踪交付状态。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "productboard",
+      "name": "Productboard"
+    }
+  ]
 }

@@ -30,5 +30,24 @@
         "url": "https://help.productive.io/en/articles/14817386-mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "productive",
+      "name": "productive",
+      "descriptions": {
+        "en": "Use Productive in Ghast. Connect Productive’s official MCP to manage projects, tasks, time tracking, CRM and business reports in your authorized organization. 连接 Productive 官方 MCP，在已授权组织中管理项目、任务、工时、CRM 与业务报表。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "productive",
+      "name": "productive"
+    },
+    {
+      "id": "productive-sandbox",
+      "name": "productive sandbox"
+    }
+  ]
 }

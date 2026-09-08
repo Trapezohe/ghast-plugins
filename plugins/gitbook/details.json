@@ -46,5 +46,20 @@
         "url": "https://gitbook.com/docs/policies/privacy-and-security/statement"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "gitbook",
+      "name": "gitbook",
+      "descriptions": {
+        "en": "Use GitBook in Ghast. Create and maintain documentation, pages, change requests and spaces through GitBook’s official account MCP server. 通过 GitBook 官方账号 MCP 服务创建和维护文档、页面、变更请求与空间。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "gitbook",
+      "name": "GitBook"
+    }
+  ]
 }

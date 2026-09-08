@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "glassnode",
+      "name": "glassnode",
+      "descriptions": {
+        "en": "Use Glassnode in Ghast. Discover crypto on-chain metrics and retrieve market analytics using your Glassnode API access. 使用 Glassnode API 权限发现加密货币链上指标并获取市场分析数据。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "glassnode",
+      "name": "Glassnode"
+    }
+  ]
 }

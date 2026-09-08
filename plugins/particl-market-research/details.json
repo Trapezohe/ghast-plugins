@@ -47,5 +47,20 @@
         "url": "https://www.particl.com/legal/terms"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "particl-market-research",
+      "name": "particl-market-research",
+      "descriptions": {
+        "en": "Research ecommerce companies, products, variants, sales, marketing assets, events, pricing, and market trends through Particl's official hosted MCP."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "particl-market-research",
+      "name": "particl-market-research"
+    }
+  ]
 }

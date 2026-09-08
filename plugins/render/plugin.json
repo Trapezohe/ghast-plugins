@@ -21,7 +21,12 @@
         "render": {
           "credentialHeaders": {
             "Authorization": "Bearer $VAULT:render-api-key"
-          }
+          },
+          "optionalCredentials": [
+            "render-api-key"
+          ],
+          "oauthRequired": true,
+          "oauthClientRequired": true
         }
       },
       "descriptions": {

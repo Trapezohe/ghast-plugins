@@ -30,5 +30,20 @@
         "url": "https://developer.smartbear.com/smartbear-mcp/docs/remote-bugsnag"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "bugsnag",
+      "name": "bugsnag",
+      "descriptions": {
+        "en": "Use BugSnag in Ghast. Investigate application errors, performance traces and releases with BugSnag. 通过 BugSnag 调查应用错误、性能追踪与发布版本。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "bugsnag",
+      "name": "BugSnag"
+    }
+  ]
 }

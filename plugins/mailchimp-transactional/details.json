@@ -30,5 +30,20 @@
         "url": "https://mailchimp.com/developer/transactional/guides/how-to-use-mailchimps-transactional-messaging-mcp/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "mailchimp-transactional",
+      "name": "mailchimp-transactional",
+      "descriptions": {
+        "en": "Use Mailchimp Transactional in Ghast. Manage transactional email templates, inspect delivery results and troubleshoot Mailchimp Transactional messaging. 管理 Mailchimp Transactional 事务邮件模板、查看投递结果并排查消息发送问题。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "mailchimp-transactional",
+      "name": "Mailchimp Transactional"
+    }
+  ]
 }

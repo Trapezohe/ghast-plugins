@@ -38,5 +38,20 @@
         "url": "https://docs.censys.com/docs/platform-privacy-ai-settings"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "censys",
+      "name": "censys",
+      "descriptions": {
+        "en": "Use Censys in Ghast. Connect Censys’s official Platform MCP for internet asset research, host history, certificates and exposure investigation. 连接 Censys 官方 Platform MCP，研究互联网资产、主机历史、证书和暴露面。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "censys",
+      "name": "Censys"
+    }
+  ]
 }

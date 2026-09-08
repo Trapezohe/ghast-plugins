@@ -39,5 +39,20 @@
         "url": "https://quartr.com/terms-of-service/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "quartr",
+      "name": "quartr",
+      "descriptions": {
+        "en": "Research public companies using Quartr's official hosted MCP server. Use for earnings calls, transcripts, filings, reports, slides, financial statements, event summaries, peer comparisons, watchlists, keywords, and workspaces."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "quartr",
+      "name": "quartr"
+    }
+  ]
 }

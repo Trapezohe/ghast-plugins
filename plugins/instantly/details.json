@@ -30,5 +30,20 @@
         "url": "https://developer.instantly.ai/mcp/authentication"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "instantly",
+      "name": "instantly",
+      "descriptions": {
+        "en": "Use Instantly in Ghast. Manage email campaigns, leads, sending accounts and performance through Instantly’s official MCP. 通过 Instantly 官方 MCP 管理邮件活动、销售线索、发件账号与效果数据。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "instantly",
+      "name": "Instantly"
+    }
+  ]
 }

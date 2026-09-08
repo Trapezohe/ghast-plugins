@@ -36,3 +36,12 @@ Enable Create MCP server API key when creating the key; an ordinary API key is n
 验证涵盖官方端点、认证元数据与本地安装/卸载；未使用真实账号验证业务读写。
 
 Validation covers the official endpoint, auth metadata and local install/removal. Business reads and writes with real accounts have not been tested.
+
+
+## Browser authorization / 浏览器授权
+
+`brevo` publishes OAuth authorization metadata. Ghast prefers browser authorization; an existing API key or token remains an optional advanced alternative. The service advertises dynamic registration or client metadata documents. Discovery was checked without signing in; account authorization and tool execution were not tested.
+
+Ghast 优先使用浏览器授权；已有 API Key 或 Token 保留为高级备选项。服务公开提供动态注册或客户端元数据文档支持。本次只验证了公开授权元数据，没有登录账户或执行工具。
+
+Official discovery: [brevo resource metadata](https://mcp.brevo.com/.well-known/oauth-protected-resource/v1/brevo/mcp) · [authorization metadata](https://mcp.brevo.com/.well-known/oauth-authorization-server/oauth)

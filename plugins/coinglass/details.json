@@ -30,5 +30,20 @@
         "url": "https://docs.coinglass.com/reference/mcp-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "coinglass",
+      "name": "coinglass",
+      "descriptions": {
+        "en": "Use CoinGlass in Ghast. Analyze crypto derivatives, funding rates, open interest, liquidations and ETF flows with CoinGlass. 通过 CoinGlass 分析加密衍生品、资金费率、持仓量、清算与 ETF 资金流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "coinglass",
+      "name": "CoinGlass"
+    }
+  ]
 }

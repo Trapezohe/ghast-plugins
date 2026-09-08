@@ -30,5 +30,20 @@
         "url": "https://docs.descope.com/mcp/mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "descope",
+      "name": "descope",
+      "descriptions": {
+        "en": "Use Descope in Ghast. Manage Descope identity projects, users, tenants, access controls and flows through its official MCP server. 通过 Descope 官方 MCP 管理身份认证项目、用户、租户、访问控制和认证流程。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "descope",
+      "name": "Descope"
+    }
+  ]
 }

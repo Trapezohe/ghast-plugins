@@ -31,5 +31,20 @@
         "url": "https://docs.consensus.app/consensus-mcp.md"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "consensus",
+      "name": "consensus",
+      "descriptions": {
+        "en": "Use Consensus in Ghast. Search academic research with Consensus’s official MCP and build evidence-backed reading lists and literature reviews. 通过 Consensus 官方 MCP 搜索学术研究，整理有文献依据的阅读清单与文献综述。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "consensus",
+      "name": "Consensus"
+    }
+  ]
 }

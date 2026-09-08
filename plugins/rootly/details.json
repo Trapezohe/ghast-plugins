@@ -31,5 +31,20 @@
         "url": "https://docs.rootly.com/integrations/mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "rootly",
+      "name": "rootly",
+      "descriptions": {
+        "en": "Use Rootly in Ghast. Explore incident response and on-call workflows using Rootly’s official Code Mode MCP connection. 通过 Rootly 官方 Code Mode MCP 连接查询事故响应信息并处理值班工作流程。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "rootly",
+      "name": "Rootly"
+    }
+  ]
 }

@@ -48,5 +48,48 @@
         "url": "https://www.marcopolo.dev/terms-and-conditions"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "marcopolo-safety",
+      "name": "marcopolo-safety",
+      "descriptions": {
+        "en": "Apply authorization, privacy, query, shell, connection, upload, dashboard, and scheduling safeguards whenever using MarcoPolo, its remote workspace, MCP tools, connection CLI, cron CLI, dashboards, or company data."
+      }
+    },
+    {
+      "id": "query-and-analyze",
+      "name": "query-and-analyze",
+      "descriptions": {
+        "en": "Queries connections, joins results across sources through DuckDB, and analyzes workspace data. Use this skill whenever the user wants to look at, count, summarize, filter, group, join, aggregate, compare, or analyze data, or when exploring a connection's schema or doing follow-up analysis on a previous query."
+      }
+    },
+    {
+      "id": "setup-connection",
+      "name": "setup-connection",
+      "descriptions": {
+        "en": "Adds a new connection to the MarcoPolo workspace — hosted demo connections (no credentials) and credentialed connections to databases, warehouses, APIs, and storage (Postgres, Snowflake, BigQuery, Salesforce, S3, Google Drive, etc.). Use this skill whenever the user mentions adding, connecting, installing, hooking up, or wiring up a datasource — even when they describe it informally (\"connect my Snowflake\", \"try the demo data\", \"let me hook up our Salesforce\", \"I want to look at the data in S3\"). Also use when troubleshooting `connection test` failures, expired credentials, or an OAuth flow that didn't finish."
+      }
+    },
+    {
+      "id": "using-connection-cli",
+      "name": "using-connection-cli",
+      "descriptions": {
+        "en": "Reference for the in-workspace `connection` CLI — verb shape, JSON envelope, the capability rule, and per-verb flag details. Use this skill whenever any `connection` verb (`list`, `add`, `test`, `describe`, `query`, `browse`, `download`, `upload`) is about to run, when looking up flags, when checking whether a verb is allowed by a connection's capabilities, or when reading the JSON response. Consult it even for routine commands — guessing flag names or capability-gating leads to wasted work and surprising failures."
+      }
+    },
+    {
+      "id": "using-marcopolo-workspace",
+      "name": "using-marcopolo-workspace",
+      "descriptions": {
+        "en": "Orientation for the MarcoPolo remote workspace, what it is, how `/workspace` is laid out, when to use the product MCP data tools versus `workspace_shell`, and how the `connection` CLI fits in. Use this skill whenever MarcoPolo, the marcopolo MCP server, `workspace_shell`, `/workspace`, connections, or `connection` CLI commands come up. Read this first when entering a MarcoPolo session, before reaching for a more specific skill."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "MarcoPolo",
+      "name": "marcopolo"
+    }
+  ]
 }

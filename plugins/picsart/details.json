@@ -31,5 +31,178 @@
         "url": "https://picsart.com"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "agency-brand-scoping",
+      "name": "agency-brand-scoping",
+      "descriptions": {
+        "en": "Five brand direction variations for pitch discovery."
+      }
+    },
+    {
+      "id": "agency-client-handoff",
+      "name": "agency-client-handoff",
+      "descriptions": {
+        "en": "Export a white-label client deliverable as a zip."
+      }
+    },
+    {
+      "id": "agency-multi-brand-pack",
+      "name": "agency-multi-brand-pack",
+      "descriptions": {
+        "en": "Per-client asset templates scoped by workspace."
+      }
+    },
+    {
+      "id": "agency-pitch-mockups",
+      "name": "agency-pitch-mockups",
+      "descriptions": {
+        "en": "Client-branded pitch mockups: hero, tiles, slides."
+      }
+    },
+    {
+      "id": "dev-app-assets",
+      "name": "dev-app-assets",
+      "descriptions": {
+        "en": "Generate icons, empty states, onboarding for apps."
+      }
+    },
+    {
+      "id": "dev-avatar-service",
+      "name": "dev-avatar-service",
+      "descriptions": {
+        "en": "Deterministic default-avatar generator per user."
+      }
+    },
+    {
+      "id": "dev-screenshot-beautifier",
+      "name": "dev-screenshot-beautifier",
+      "descriptions": {
+        "en": "Polish raw screenshots into LP-ready heroes."
+      }
+    },
+    {
+      "id": "enterprise-brand-governor",
+      "name": "enterprise-brand-governor",
+      "descriptions": {
+        "en": "Gate every generation through a brand policy file."
+      }
+    },
+    {
+      "id": "enterprise-pinned-registry",
+      "name": "enterprise-pinned-registry",
+      "descriptions": {
+        "en": "Pin exact model versions for reproducible output."
+      }
+    },
+    {
+      "id": "enterprise-press-batch",
+      "name": "enterprise-press-batch",
+      "descriptions": {
+        "en": "Press photos into wire, web, print, social packs."
+      }
+    },
+    {
+      "id": "gen-ai-batch",
+      "name": "gen-ai-batch",
+      "descriptions": {
+        "en": "Batch generation, manifests, JSON output, and CI/CD integration with the Picsart gen-ai CLI or MCP server. AUTO-TRIGGER whenever the user asks to process many files or assets at once, run a manifest, render at scale, fan out variants, pipe output into jq / curl / next-build, wire generation into GitHub Actions / Vercel / Cloudflare Workers / cron, or automate content generation in CI."
+      }
+    },
+    {
+      "id": "gen-ai-explainer",
+      "name": "gen-ai-explainer",
+      "descriptions": {
+        "en": "Use when the user wants a short animated explainer video. Trigger phrases include \"animated explainer\", \"make an explainer\", \"explainer video about X\", \"30-second video about Y\", \"90-second video explaining Z\", \"how X works as a video\", \"explain X in a short video\"."
+      }
+    },
+    {
+      "id": "gen-ai-local-files",
+      "name": "gen-ai-local-files",
+      "descriptions": {
+        "en": "Turn a local file into a URL for Picsart MCP tools."
+      }
+    },
+    {
+      "id": "gen-ai-persona-creation",
+      "name": "gen-ai-persona-creation",
+      "descriptions": {
+        "en": "Create AI influencer or branded character personas."
+      }
+    },
+    {
+      "id": "gen-ai-use",
+      "name": "gen-ai-use",
+      "descriptions": {
+        "en": "Generate AI images, videos, audio via Picsart gen-ai CLI."
+      }
+    },
+    {
+      "id": "gen-ai-workflows",
+      "name": "gen-ai-workflows",
+      "descriptions": {
+        "en": "End-to-end multi-step creative pipelines with the Picsart gen-ai CLI or MCP server. AUTO-TRIGGER whenever the user describes an outcome that needs more than one generation — blog-to-visuals, campaign kits, catalog re-shoots, OG image services, launch kits, headshot studio, localize a campaign, ad-variant factory, product mockups, press-batch, seasonal refresh, pitch mockups, or client handoffs. Pick the matching workflow instead of emitting a single generate call."
+      }
+    },
+    {
+      "id": "marketer-ad-variant-factory",
+      "name": "marketer-ad-variant-factory",
+      "descriptions": {
+        "en": "Fan out 50+ ad variants from one hero image."
+      }
+    },
+    {
+      "id": "marketer-localize-campaign",
+      "name": "marketer-localize-campaign",
+      "descriptions": {
+        "en": "Localize a campaign across N markets."
+      }
+    },
+    {
+      "id": "multi-channel-bundle",
+      "name": "multi-channel-bundle",
+      "descriptions": {
+        "en": "Ship a coordinated multi-format asset bundle for any push."
+      }
+    },
+    {
+      "id": "picsart-api",
+      "name": "picsart-api",
+      "descriptions": {
+        "en": "Generate and edit media via Picsart MCP API tools."
+      }
+    },
+    {
+      "id": "product-photo-studio",
+      "name": "product-photo-studio",
+      "descriptions": {
+        "en": "Transform product photos via Picsart gen-ai — six modes."
+      }
+    },
+    {
+      "id": "prosumer-headshot-studio",
+      "name": "prosumer-headshot-studio",
+      "descriptions": {
+        "en": "Selfie to four polished headshots for any use."
+      }
+    },
+    {
+      "id": "text-to-visual",
+      "name": "text-to-visual",
+      "descriptions": {
+        "en": "Generate matching visuals from text via Picsart gen-ai."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "picsart",
+      "name": "picsart"
+    },
+    {
+      "id": "picsart-gen-ai",
+      "name": "picsart gen ai"
+    }
+  ]
 }

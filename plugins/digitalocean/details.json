@@ -39,5 +39,24 @@
         "url": "https://www.digitalocean.com/legal/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "provision-droplet",
+      "name": "provision-droplet",
+      "descriptions": {
+        "en": "Provision a DigitalOcean Droplet as a remote SSH development workspace, using DigitalOcean's official accounts and droplets MCP services.\n"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "digitalocean-accounts",
+      "name": "digitalocean accounts"
+    },
+    {
+      "id": "digitalocean-droplets",
+      "name": "digitalocean droplets"
+    }
+  ]
 }

@@ -38,5 +38,20 @@
         "url": "https://www.coinbase.com/legal/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "coinbase-developer",
+      "name": "coinbase-developer",
+      "descriptions": {
+        "en": "Use Coinbase Developer in Ghast. Search Coinbase Developer Platform documentation for wallet and payment integrations. 检索 Coinbase 开发者平台文档，辅助钱包与支付集成开发。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "coinbase-developer",
+      "name": "Coinbase Developer"
+    }
+  ]
 }

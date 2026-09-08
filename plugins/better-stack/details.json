@@ -46,5 +46,20 @@
         "url": "https://betterstack.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "better-stack",
+      "name": "better-stack",
+      "descriptions": {
+        "en": "Use Better Stack in Ghast. Investigate uptime incidents and query logs, traces and telemetry in Better Stack. 在 Better Stack 中调查可用性事件，查询日志、追踪与遥测数据。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "better-stack",
+      "name": "Better Stack"
+    }
+  ]
 }

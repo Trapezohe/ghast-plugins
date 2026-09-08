@@ -31,5 +31,20 @@
         "url": "https://jam.dev"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "jam",
+      "name": "jam",
+      "descriptions": {
+        "en": "Inspect, analyze, organize, comment on, and manage Jam bug recordings, screenshots, video frames, transcripts, logs, network requests, user events, metadata, folders, and recording links."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "jam",
+      "name": "jam"
+    }
+  ]
 }

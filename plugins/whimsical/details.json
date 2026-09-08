@@ -46,5 +46,20 @@
         "url": "https://whimsical.com/terms/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "whimsical",
+      "name": "whimsical",
+      "descriptions": {
+        "en": "Use Whimsical in Ghast. Search Whimsical files and create or edit diagrams, wireframes and visual plans. 搜索 Whimsical 文件，创建或编辑图表、线框图与可视化计划。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "whimsical",
+      "name": "Whimsical"
+    }
+  ]
 }

@@ -39,5 +39,20 @@
         "url": "https://replicate.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "replicate",
+      "name": "replicate",
+      "descriptions": {
+        "en": "Use Replicate in Ghast. Discover, compare and run AI models on Replicate through its official MCP server. 通过 Replicate 官方 MCP 查找、比较并运行 AI 模型。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "replicate",
+      "name": "Replicate"
+    }
+  ]
 }

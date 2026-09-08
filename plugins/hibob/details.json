@@ -30,5 +30,20 @@
         "url": "https://apidocs.hibob.com/changelog/developer-docs-update-bob-mcp-server-now-uses-oauth"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "hibob",
+      "name": "hibob",
+      "descriptions": {
+        "en": "Use HiBob in Ghast. Connect HiBob’s official MCP with employee OAuth for people, organization, time-off and workplace workflows. 通过员工 OAuth 连接 HiBob 官方 MCP，处理人员、组织、休假与办公工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "hibob",
+      "name": "HiBob"
+    }
+  ]
 }

@@ -30,5 +30,20 @@
         "url": "https://product.akiflow.com/en/help/articles/4302815-akiflow-mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "akiflow",
+      "name": "akiflow",
+      "descriptions": {
+        "en": "Use Akiflow in Ghast. Manage Akiflow tasks, subtasks, calendars and time slots, and review meeting transcripts through its official MCP server. 通过 Akiflow 官方 MCP 管理任务、子任务、日历与时间块，并查看会议转录。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "akiflow",
+      "name": "Akiflow"
+    }
+  ]
 }

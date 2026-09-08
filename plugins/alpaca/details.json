@@ -25,5 +25,28 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "alpaca",
+      "name": "alpaca",
+      "descriptions": {
+        "en": "Use Alpaca's official hosted MCP servers for stock, options, crypto, fixed income, index, news, corporate-action, account, portfolio, watchlist, order, and position workflows. Default to the market-data server for research. Use paper or live trading only when the user explicitly requests the corresponding account or transaction.\n"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "alpaca-trading",
+      "name": "alpaca trading"
+    },
+    {
+      "id": "alpaca-trading-paper",
+      "name": "alpaca trading paper"
+    },
+    {
+      "id": "alpaca-market-data",
+      "name": "alpaca market data"
+    }
+  ]
 }

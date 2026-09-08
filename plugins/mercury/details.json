@@ -30,5 +30,20 @@
         "url": "https://docs.mercury.com/docs/connecting-mercury-mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "mercury",
+      "name": "mercury",
+      "descriptions": {
+        "en": "Use Mercury in Ghast. Analyze balances, transactions, statements and spending with Mercury’s official read-only MCP connector (Beta). 通过 Mercury 官方只读 MCP 连接器分析余额、交易、对账单与支出（Beta）。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "mercury",
+      "name": "Mercury"
+    }
+  ]
 }

@@ -31,5 +31,125 @@
         "url": "https://catalyst.zoho.com/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "catalyst-appsail",
+      "name": "catalyst-appsail",
+      "descriptions": {
+        "en": "Catalyst AppSail — persistent backend PaaS with managed runtimes (Node.js, Java, Python) and custom Docker containers. Trigger on 'AppSail', 'persistent server', 'Docker on Catalyst', 'X_ZOHO_CATALYST_LISTEN_PORT', or 'long-running process on Catalyst'. Do NOT use for stateless request/response handlers, event-driven functions, or scheduled jobs — use catalyst-functions instead."
+      }
+    },
+    {
+      "id": "catalyst-authentication",
+      "name": "catalyst-authentication",
+      "descriptions": {
+        "en": "Catalyst Authentication — user login/signup, ZAID, Web SDK auth flows, and OAuth token management via Connections. Trigger on 'authentication', 'login', 'signup', 'getCurrentUser', 'ZAID', 'isUserAuthenticated', 'signOut', 'Connections', or 'getAccessToken'. You MUST load this skill whenever implementing user login or protecting data — ZAID differs between Development and Production and is the #1 cause of auth failures after environment promotion. For Security Rules (function invocation control), route to catalyst-functions."
+      }
+    },
+    {
+      "id": "catalyst-basics",
+      "name": "catalyst-basics",
+      "descriptions": {
+        "en": "Core Catalyst project setup — directory structure, environments, CLI commands, and all Catalyst IDs (Project ID, ZAID, Table ID, Segment ID, Org ID). Trigger on 'start a Catalyst project', 'what is .catalystrc', 'where do I find my Table ID', 'difference between Development and Production', or any Catalyst ID or CLI question."
+      }
+    },
+    {
+      "id": "catalyst-by-zoho",
+      "name": "catalyst-by-zoho",
+      "descriptions": {
+        "en": "Expert coding assistant for Catalyst by Zoho — Zoho's full-stack serverless cloud platform. Use for any question about Catalyst services, CLI, SDKs, architecture, pricing, or Zoho MCP tool-based infrastructure management."
+      }
+    },
+    {
+      "id": "catalyst-cache",
+      "name": "catalyst-cache",
+      "descriptions": {
+        "en": "Catalyst Cache — in-memory key-value store with TTL for ephemeral session and temporary data. Trigger on 'Cache', 'cache segment', 'cache key', 'TTL', 'segment.put', 'segment.get', or 'temporary data Catalyst'."
+      }
+    },
+    {
+      "id": "catalyst-datastore",
+      "name": "catalyst-datastore",
+      "descriptions": {
+        "en": "Catalyst Data Store — relational cloud database with ZCQL, CRUD operations, table permissions, and result pagination. Requires MCP connection — check for the ZohoMCP_* meta-tools before any operation. Trigger on 'Data Store', 'ZCQL', 'create table', 'executeZCQLQuery', 'table permissions', 'ROWID', 'boolean column', 'boolean always true', 'truthy string', 'boolean stored as string', or 'DataStore data types'. You MUST load this skill whenever writing code that reads or writes Data Store data — ZCQL result wrapping, boolean-as-string behavior, and App User permissions are non-obvious and cause silent bugs if skipped."
+      }
+    },
+    {
+      "id": "catalyst-functions",
+      "name": "catalyst-functions",
+      "descriptions": {
+        "en": "Catalyst serverless functions — all 7 types (Basic I/O, Advanced I/O, Event, Cron, Job, Integration, Browser Logic), handler signatures, catalyst-config.json, Security Rules, API Gateway routing, file uploads, busboy, Express middleware, environment variables, function URL, and function testing. Requires MCP connection — check for the ZohoMCP_* meta-tools before any operation. Trigger on 'write a function', 'catalyst function', 'API Gateway', 'Security Rules', 'function not found', 'function returns 401', 'busboy', 'middleware', 'function URL', 'environment variable in function', 'duplicate CORS headers', 'CORS error in browser', 'Access-Control-Allow-Origin multiple values', 'function URL 404', 'execute suffix', 'function timeout', 'function hangs', or any function type question. Do NOT use for persistent servers, long-running processes, or Docker deployments — use catalyst-appsail instead."
+      }
+    },
+    {
+      "id": "catalyst-nosql",
+      "name": "catalyst-nosql",
+      "descriptions": {
+        "en": "Catalyst NoSQL — key-value table store with typed items built via NoSQLItem builder. Partition key required. Trigger on 'NoSQL', 'nosql.table', 'insertItems', 'fetchItem', 'updateItems', 'deleteItems', 'queryTable', 'NoSQLItem', 'document storage', 'flexible schema', or 'Catalyst document database'. Do NOT use when you need SQL joins, ZCQL queries, or a fixed relational schema — use catalyst-datastore instead."
+      }
+    },
+    {
+      "id": "catalyst-pricing",
+      "name": "catalyst-pricing",
+      "descriptions": {
+        "en": "Catalyst pricing — free tier limits, pay-as-you-go rates, GB-seconds calculation, and cost estimation for functions, storage, and other services. Trigger on 'pricing', 'cost', 'free tier', 'how much does Catalyst cost', 'GB-seconds', 'billing', or 'will this be free'."
+      }
+    },
+    {
+      "id": "catalyst-sdk",
+      "name": "catalyst-sdk",
+      "descriptions": {
+        "en": "Catalyst SDKs — initialization patterns, service access, and method reference for Node.js, Web (browser), Python, Java, Android, iOS, and Flutter. Trigger on 'SDK', 'zcatalyst-sdk-node', 'Node.js SDK', 'Web SDK', 'Python SDK', 'Java SDK', 'Android SDK', 'iOS SDK', 'Flutter SDK', or 'initialize SDK'."
+      }
+    },
+    {
+      "id": "catalyst-signals",
+      "name": "catalyst-signals",
+      "descriptions": {
+        "en": "Catalyst Signals — event-driven architecture platform for near-instantaneous communication between decoupled applications. Supports Zoho publishers, Catalyst publishers, custom publishers, webhooks, functions, circuits, event filtering, transformation, instant/batch dispatch, and retry policies. Trigger on 'Signals', 'event bus', 'publisher', 'event-driven', 'webhook target', 'dispatch policy', 'event transformation', 'rule filter', or 'event ordering'. Console-only service — no SDK or programmatic API."
+      }
+    },
+    {
+      "id": "catalyst-slate",
+      "name": "catalyst-slate",
+      "descriptions": {
+        "en": "Catalyst Slate — Git-based frontend hosting for React, Next.js, Vue, Angular, Svelte, Astro, SolidJS, Preact and other frameworks with preview deploys. Trigger on 'Slate', 'frontend hosting', 'slate-config.toml', 'deploy React app', 'cross-domain Slate to function', or ANY request to run/serve/start the frontend app locally (\"start the server locally\", \"run the app\", \"start the dev server\"). Do NOT use for backend APIs or server-side logic — use catalyst-appsail or catalyst-functions instead."
+      }
+    },
+    {
+      "id": "catalyst-smartbrowz",
+      "name": "catalyst-smartbrowz",
+      "descriptions": {
+        "en": "Catalyst SmartBrowz — browser automation and document generation service. Includes Headless (connect to a remote Chrome browser with Puppeteer/Playwright/Selenium), Browser Logic (serverless functions for browser tasks in Java/Node.js), PDF & Screenshot (generate visual documents from HTML/URL/Template), Templates (design dynamic content templates), Browser Grid (parallel headless browsers with auto-scaling, Early Access), and Dataverse (data scraping APIs). Trigger on 'SmartBrowz', 'headless browser', 'Headless Browser', 'Puppeteer', 'Selenium', 'Playwright', 'Browser Logic', 'PDF generation', 'screenshot', 'PDF/Screenshot generation', 'PDF & Screenshot', 'browser automation', 'Browser Grid', or 'web scraping'. Console + SDK (Java/Node.js/Python for PDF/Screenshot + Browser Grid) + CLI (for Browser Logic functions)."
+      }
+    },
+    {
+      "id": "catalyst-stratus",
+      "name": "catalyst-stratus",
+      "descriptions": {
+        "en": "Catalyst Stratus — object storage service with upload/download, signed URLs, and multipart upload support. Stratus uses its own SDK-based APIs (not S3-API-compatible). Migrate from AWS S3 or GCS using the Stratus Migration Tool. Trigger on 'Stratus', 'object storage', 'upload file', 'signed URL', 'putObject', 'getObject', or 'bucket'."
+      }
+    },
+    {
+      "id": "catalyst-zia",
+      "name": "catalyst-zia",
+      "descriptions": {
+        "en": "Catalyst Zia Services and QuickML — OCR, Face Analytics, Text Analytics, Object Detection, Barcode Scanner, Content Moderation, and AutoML predictions. Trigger on 'Zia', 'QuickML', 'OCR', 'face detection', 'text analytics', 'AutoML', 'ML model', or 'train a model on Catalyst'. DC restrictions: Identity Scanner is IN DC only; AutoML/QuickML is not available in EU, AU, IN, JP, SA, CA, UAE data centers."
+      }
+    },
+    {
+      "id": "catalyst-zoho-mcp",
+      "name": "catalyst-zoho-mcp",
+      "descriptions": {
+        "en": "Catalyst Zoho MCP — manage Catalyst infrastructure (tables, buckets, cache) via CatalystbyZoho_* MCP tools using natural language. Trigger on 'Zoho MCP', 'MCP tools', 'catalyst MCP', 'CatalystbyZoho', 'create table with AI', 'MCP setup', 'MCP config', 'global MCP server', 'infrastructure as conversation', 'MCP first', 'avoid Catalyst console', or 'use MCP instead of console', 'switch DC', 'change data center'."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "catalyst-by-zoho",
+      "name": "catalyst-by-zoho"
+    }
+  ]
 }
