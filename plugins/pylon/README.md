@@ -33,6 +33,8 @@ API operation instead of claiming a nonexistent MCP tool.
 
 The bundled adapter SHA-256 is `4d788c5898469d32dfaff5cbf142a88d64ca4a5ce60afb9e729d8098e380a503`. The MIT license covers only
 the Ghast-authored endpoint declaration, adapter, workflow, metadata,
-documentation, and generic support-ticket icon. It does not license or
+and documentation. It does not license or
 redistribute Pylon's hosted MCP implementation, API service, customer data,
-private Codex connector, credentials, documentation, logos, or trademarks.
+private Codex connector, credentials, documentation, or trademark rights.
+
+Brand logo source: https://cdn.prod.website-files.com/6a2c6d7ab6674379553c0824/6a2c722c63cfe1af0f3302b7_webclip.png. Brand names and logos belong to Pylon. 品牌名称与标识归对应服务商所有。

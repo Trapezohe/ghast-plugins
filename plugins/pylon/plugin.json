@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "pylon",
-  "version": "1.0.3-ghast.1",
+  "version": "1.0.3-ghast.2",
   "description": "Search and manage Pylon support issues, accounts, contacts, messages, and internal notes through official interfaces.",
   "author": {
     "name": "Pylon Labs, Inc.",
@@ -14,7 +14,7 @@
       "category": "productivity",
       "upstreamRevision": "pylon-mcp-doc-7e1bdd12b729+messages-f084f9c0abb0+resource-2c83dcf3cc83+oauth-92cae1ab0e93+terms-2a942b005436",
       "portStatus": "full",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Search and manage Pylon support issues, accounts, contacts, messages, and internal notes through official interfaces.",
         "zh-CN": "检索和管理客户支持问题、账户、联系人、消息与内部备注。"

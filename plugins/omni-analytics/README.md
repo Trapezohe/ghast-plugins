@@ -6,9 +6,9 @@ documentation through Omni's official hosted MCP server.
 ## Official hosted MCP adapter
 
 This package contains only Ghast-authored configuration, safety instructions,
-documentation, metadata, and a generic analytics icon. It does not
+documentation, metadata, and the provider brand logo. It does not
 redistribute Omni's hosted implementation, private Codex connector, OAuth
-PAT, organization data, semantic models, branded artwork, or marketplace
+PAT, organization data, semantic models, or marketplace
 icon.
 
 Omni's official MCP overview, tools, authentication, and Codex guides are
@@ -45,8 +45,7 @@ or marketplace artwork.
   `mcp:access` protected-resource challenge. Authenticated tools/list and
   organization-data queries were not run because no Omni account or data was
   used.
-- A generic analytics icon is used because no licensed Omni catalog artwork
-  is redistributed.
+- Brand logo source: https://omni.co/favicon.png. Brand names and logos belong to Omni. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Omni accounts, organizations, PATs, semantic models, hosted behavior, data,

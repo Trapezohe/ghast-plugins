@@ -7,10 +7,9 @@ official hosted MCP server.
 ## Official hosted MCP adapter
 
 This package contains only Ghast-authored MCP configuration, safety
-instructions, documentation, metadata, and a generic document-analysis icon.
+instructions, documentation, metadata, and the provider brand logo.
 It does not redistribute Hebbia's hosted implementation, private Codex
-connector, OAuth credentials, customer data, service source code, branded
-artwork, or marketplace icon.
+connector, OAuth credentials, customer data, service source code, or marketplace icon.
 
 Hebbia's official product page and homepage are pinned as normalized visible
 text with SHA-256 `7f99fc43f3f653685cd64bc5867393facfe6a99ef1991ed645ea52c41c208118` and
@@ -62,8 +61,7 @@ or marketplace artwork.
   scoping, source traceability, prompt-injection resistance, financial-data
   reconciliation, evidence-gap reporting, and explicit confirmation for any
   state-changing operation exposed by the live server.
-- A generic document-analysis icon is used because no licensed Hebbia catalog
-  artwork is redistributed.
+- Brand logo source: https://www.hebbia.com/favicon.svg. Brand names and logos belong to Hebbia. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Hebbia accounts, subscriptions, hosted service behavior, customer and source

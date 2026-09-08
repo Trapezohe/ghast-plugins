@@ -6,10 +6,10 @@ administrator-approved GTM functions through Clay's official hosted MCP.
 ## Official hosted MCP adapter
 
 This package contains only Ghast-authored MCP configuration, safety
-instructions, documentation, metadata, and a generic prospect-research icon.
+instructions, documentation, metadata, and the provider brand logo.
 It does not redistribute Clay's hosted implementation, private Codex
 connector, OAuth credentials, customer data, official agent-plugin skills,
-hooks, CLI wrapper, binaries, branded artwork, or marketplace icon.
+hooks, CLI wrapper, binaries, or marketplace icon.
 
 Clay's official MCP product-page core is pinned as normalized visible text
 with SHA-256 `99faa3c0f6c5c87017292b8f92cb114c057a32cd858da0f863fe1c984c0418f5`. Global navigation, promotional
@@ -83,8 +83,7 @@ Codex marketplace capability evidence is pinned to OpenAI plugin snapshot
 - Authenticated tools/list, workspace Functions, Audiences data, searches,
   paid enrichment, CRM writes, sequence pushes, and outreach were not
   exercised because no Clay account or prospect data was used.
-- A generic prospect-research icon is used because no licensed Clay catalog
-  artwork is redistributed.
+- Brand logo source: https://cdn.prod.website-files.com/61477f2c24a826836f969afe/6a3a92ab3c92c9caa6245619_dot-com_favicon_2026_512.png. Brand names and logos belong to Clay. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Clay accounts, plans, credits, hosted service behavior, prospect and customer

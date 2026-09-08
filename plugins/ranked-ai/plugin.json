@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ranked-ai",
-  "version": "1.0.3-ghast.1",
+  "version": "1.0.3-ghast.2",
   "description": "Analyze and manage Ranked AI SEO projects, rankings, AI visibility, audits, backlinks, content, and reports through Ranked AI's official hosted MCP.",
   "author": {
     "name": "Ranked AI, LLC",
@@ -14,7 +14,7 @@
       "category": "productivity",
       "upstreamRevision": "ranked-ai-mcp-overview-26942caa0c93+setup-a2d69edafb9a+tools-a8ef44ff1dea+oauth-703859fd6204+boundary-e40f29e81b3e",
       "portStatus": "full",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Analyze and manage Ranked AI SEO projects, rankings, AI visibility, audits, backlinks, content, and reports through Ranked AI's official hosted MCP.",
         "zh-CN": "管理 SEO 项目，分析排名、AI 可见性、站点审计、外链与内容。"

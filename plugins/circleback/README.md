@@ -10,7 +10,7 @@ This package contains only Ghast-authored MCP configuration, safety
 instructions, documentation, catalog metadata, and a generic meeting-context
 icon. It does not copy or redistribute Circleback's hosted MCP
 implementation, private Codex connector, public client rules or schemas,
-meeting or email data, recordings, OAuth credentials, branded artwork, or
+meeting or email data, recordings, OAuth credentials, or
 marketplace icon.
 
 Circleback's official Help Center article is pinned at article ID
@@ -74,8 +74,7 @@ marketplace artwork.
   timestamp, speaker, identity, and filter provenance, separates generated
   notes from source facts, protects recordings, and prevents search results
   from being described as external changes.
-- A generic meeting-context icon is used because no licensed Circleback
-  catalog artwork is included in the adapter.
+- Brand logo source: https://circleback.ai/apple-touch-icon.png. Brand names and logos belong to Circleback. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Circleback accounts, plans, hosted service behavior, meeting and message data,

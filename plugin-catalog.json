@@ -3564,7 +3564,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "circleback",
-        "version": "1.0.2-ghast.1",
+        "version": "1.0.2-ghast.2",
         "description": "Search authorized Circleback meetings, transcripts, action items, calendar events, emails, people, companies, tags, and support content through Circleback's official hosted MCP server.",
         "author": {
           "name": "Circleback AI, Inc.",
@@ -3586,7 +3586,7 @@
       },
       "package": {
         "url": "./packages/circleback.zip",
-        "sha256": "cbbd83430656e6be64c89e72620841f7969f48006eaef34d540a10fd20cb5f8f"
+        "sha256": "bfb2edf5fb5ec9ba6691c96ea4254c1de09b92898f463f2c776f548cffef0295"
       },
       "icon": "./plugins/circleback/assets/icon.png",
       "homepage": "https://support.circleback.ai/en/articles/13249081-circleback-mcp",
@@ -3639,7 +3639,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "clay",
-        "version": "1.0.2-ghast.1",
+        "version": "1.0.2-ghast.2",
         "description": "Search companies and people, enrich prospect records, and run admin-approved GTM functions through Clay's official hosted MCP.",
         "author": {
           "name": "Clay",
@@ -3651,7 +3651,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "clay-product-99faa3c0f6c5+docs-52d04c63c45b+openapi-258cc399172d+oauth-f114e17a4bc5+source-4ab1ca54c908",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Search companies and people, enrich prospect records, and run admin-approved GTM functions through Clay's official hosted MCP.",
               "zh-CN": "检索企业和联系人、补充客户资料，执行管理员批准的获客流程。"
@@ -3661,9 +3661,9 @@
       },
       "package": {
         "url": "./packages/clay.zip",
-        "sha256": "2da24f2a33e60e84cd69693143256a4beac3b51593c85bec9c12ce5458c82306"
+        "sha256": "cd09207bdbebc35dd0e92df267ec8e69d6069aae853cee5901987c317fd3d64b"
       },
-      "icon": "./plugins/clay/assets/icon.svg",
+      "icon": "./plugins/clay/assets/icon.png",
       "homepage": "https://www.clay.com/mcp",
       "license": "MIT",
       "category": "productivity"
@@ -8964,7 +8964,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "hebbia",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Search authorized institutional knowledge, analyze document sets with traceable evidence, and support financial research workflows through Hebbia's official hosted MCP.",
         "author": {
           "name": "Hebbia",
@@ -8986,7 +8986,7 @@
       },
       "package": {
         "url": "./packages/hebbia.zip",
-        "sha256": "8e005327461bc67778273b29ed4c9bfb25950f9ffe1d8831ca38547bc5807d34"
+        "sha256": "53711e0829694a1adddf98f603099d45ced148662d1b12512a3ac70e37a39a57"
       },
       "icon": "./plugins/hebbia/assets/icon.svg",
       "homepage": "https://www.hebbia.com/product",
@@ -12875,7 +12875,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "omni-analytics",
-        "version": "1.0.4-ghast.1",
+        "version": "1.0.4-ghast.2",
         "description": "Query governed Omni semantic models, run multi-step analysis, and search Omni documentation through Omni's official hosted MCP server.",
         "author": {
           "name": "Omni Analytics",
@@ -12887,7 +12887,7 @@
           "ai.trapezohe.ghast": {
             "category": "data",
             "upstreamRevision": "omni-docs-d22f4d9c42b1+tools-18dce31231e8+oauth-14b3543ee3f0+auth-c75b0e080de0",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Query governed Omni semantic models, run multi-step analysis, and search Omni documentation through Omni's official hosted MCP server.",
               "zh-CN": "查询受治理的语义模型，开展多步骤数据分析并检索官方文档。"
@@ -12897,9 +12897,9 @@
       },
       "package": {
         "url": "./packages/omni-analytics.zip",
-        "sha256": "ae6656f14c67e49b55edd475b5cab0484c426f5920435f44f55cd23663afe85c"
+        "sha256": "daf5f54f17a0df620edbb4cf1ef5dcfe6ce336cf82a9598369813d276738d84c"
       },
-      "icon": "./plugins/omni-analytics/assets/icon.svg",
+      "icon": "./plugins/omni-analytics/assets/icon.png",
       "homepage": "https://docs.omni.co/ai/mcp",
       "license": "MIT",
       "category": "data"
@@ -14324,7 +14324,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "pylon",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Search and manage Pylon support issues, accounts, contacts, messages, and internal notes through official interfaces.",
         "author": {
           "name": "Pylon Labs, Inc.",
@@ -14337,7 +14337,7 @@
             "category": "productivity",
             "upstreamRevision": "pylon-mcp-doc-7e1bdd12b729+messages-f084f9c0abb0+resource-2c83dcf3cc83+oauth-92cae1ab0e93+terms-2a942b005436",
             "portStatus": "full",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Search and manage Pylon support issues, accounts, contacts, messages, and internal notes through official interfaces.",
               "zh-CN": "检索和管理客户支持问题、账户、联系人、消息与内部备注。"
@@ -14347,9 +14347,9 @@
       },
       "package": {
         "url": "./packages/pylon.zip",
-        "sha256": "64f94b9cbbfd85a3f33be18e02acad2b41c0b3140f4c6fab947344553800ac97"
+        "sha256": "c91b18d5802cf0310b68bd08ad42f17b103e8b6bb55f1887f327cf851704c7e9"
       },
-      "icon": "./plugins/pylon/assets/icon.svg",
+      "icon": "./plugins/pylon/assets/icon.png",
       "homepage": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp.md",
       "license": "MIT",
       "category": "productivity"
@@ -14611,7 +14611,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "ranked-ai",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Analyze and manage Ranked AI SEO projects, rankings, AI visibility, audits, backlinks, content, and reports through Ranked AI's official hosted MCP.",
         "author": {
           "name": "Ranked AI, LLC",
@@ -14624,7 +14624,7 @@
             "category": "productivity",
             "upstreamRevision": "ranked-ai-mcp-overview-26942caa0c93+setup-a2d69edafb9a+tools-a8ef44ff1dea+oauth-703859fd6204+boundary-e40f29e81b3e",
             "portStatus": "full",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Analyze and manage Ranked AI SEO projects, rankings, AI visibility, audits, backlinks, content, and reports through Ranked AI's official hosted MCP.",
               "zh-CN": "管理 SEO 项目，分析排名、AI 可见性、站点审计、外链与内容。"
@@ -14634,9 +14634,9 @@
       },
       "package": {
         "url": "./packages/ranked-ai.zip",
-        "sha256": "039b9199ab711ebea44a7451b8f221c6d36773ebaadf5d94e3bc06409f6482e7"
+        "sha256": "5614d8c37c1512c136ea31956452ab9aabec18ccbc4ccfb7c2c248c0af3c9666"
       },
-      "icon": "./plugins/ranked-ai/assets/icon.svg",
+      "icon": "./plugins/ranked-ai/assets/icon.png",
       "homepage": "https://dev.ranked.ai/mcp/overview",
       "license": "MIT",
       "category": "productivity"

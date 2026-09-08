@@ -39,8 +39,10 @@ advertises only `read:projects` and OAuth metadata lists only `read:*` scopes;
 actual write authorization therefore remains an account-level verification.
 
 The MIT license in this package covers only the Ghast-authored endpoint
-declaration, workflow guidance, metadata, documentation, and generic SEO icon.
+declaration, workflow guidance, metadata, and documentation.
 It does not license or redistribute Ranked AI's hosted implementation, private
-Codex connector, service data, credentials, documentation, logos, trademarks,
+Codex connector, service data, credentials, documentation, trademark rights,
 or customer content. Account access, subscriptions, usage limits, service
 behavior, and terms remain controlled by Ranked AI.
+
+Brand logo source: https://www.ranked.ai/apple-icon-ranked.png. Brand names and logos belong to Ranked AI. 品牌名称与标识归对应服务商所有。

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "omni-analytics",
-  "version": "1.0.4-ghast.1",
+  "version": "1.0.4-ghast.2",
   "description": "Query governed Omni semantic models, run multi-step analysis, and search Omni documentation through Omni's official hosted MCP server.",
   "author": {
     "name": "Omni Analytics",
@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "data",
       "upstreamRevision": "omni-docs-d22f4d9c42b1+tools-18dce31231e8+oauth-14b3543ee3f0+auth-c75b0e080de0",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Query governed Omni semantic models, run multi-step analysis, and search Omni documentation through Omni's official hosted MCP server.",
         "zh-CN": "查询受治理的语义模型，开展多步骤数据分析并检索官方文档。"
