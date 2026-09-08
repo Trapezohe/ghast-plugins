@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "google-ads": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/googleads/google-ads-mcp.git@88f0467b9e536c562941fa52a94dd02b193c8fa4",
+        "google-ads-mcp"
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "google-ads",
+  "version": "1.0.0-ghast.1",
+  "description": "Query Google Ads accounts, campaign performance and GAQL metadata through Google’s official read-only MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+      "connectorPublisher": "Google Ads",
+      "category": "marketing",
+      "icon": "./assets/icon.svg",
+      "displayName": "Google Ads",
+      "descriptions": {
+        "en": "Query Google Ads accounts, campaign performance and GAQL metadata through Google’s official read-only MCP.",
+        "zh-CN": "通过 Google 官方只读 MCP 查询 Ads 账号、广告系列表现与 GAQL 元数据。"
+      },
+      "mcpServerExtensions": {
+        "google-ads": {
+          "credentialEnv": {
+            "GOOGLE_APPLICATION_CREDENTIALS": "$VAULT:google-ads-credentials-path",
+            "GOOGLE_PROJECT_ID": "$VAULT:google-ads-project-id",
+            "GOOGLE_ADS_DEVELOPER_TOKEN": "$VAULT:google-ads-developer-token"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "google-analytics": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "--from",
+        "analytics-mcp==0.7.0",
+        "analytics-mcp"
+      ]
+    }
+  }
+}

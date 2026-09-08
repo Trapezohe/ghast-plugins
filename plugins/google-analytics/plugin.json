@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "google-analytics",
+  "version": "1.0.0-ghast.1",
+  "description": "Read Google Analytics account, property and reporting data through Google’s official local MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developers.google.com/analytics/devguides/MCP",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developers.google.com/analytics/devguides/MCP",
+      "connectorPublisher": "Google Analytics",
+      "category": "marketing",
+      "icon": "./assets/icon.png",
+      "displayName": "Google Analytics",
+      "descriptions": {
+        "en": "Read Google Analytics account, property and reporting data through Google’s official local MCP server.",
+        "zh-CN": "通过 Google 官方本地 MCP 服务读取 Analytics 账号、媒体资源与报表数据。"
+      },
+      "mcpServerExtensions": {
+        "google-analytics": {
+          "credentialEnv": {
+            "GOOGLE_APPLICATION_CREDENTIALS": "$VAULT:google-analytics-credentials-path",
+            "GOOGLE_PROJECT_ID": "$VAULT:google-analytics-project-id"
+          }
+        }
+      }
+    }
+  }
+}

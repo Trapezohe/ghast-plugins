@@ -7739,6 +7739,99 @@
       "category": "finance"
     },
     {
+      "id": "google-ads",
+      "name": "Google Ads",
+      "description": "Query Google Ads accounts, campaign performance and GAQL metadata through Google’s official read-only MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "google-ads",
+        "version": "1.0.0-ghast.1",
+        "description": "Query Google Ads accounts, campaign performance and GAQL metadata through Google’s official read-only MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+            "connectorPublisher": "Google Ads",
+            "category": "marketing",
+            "icon": "./assets/icon.svg",
+            "displayName": "Google Ads",
+            "descriptions": {
+              "en": "Query Google Ads accounts, campaign performance and GAQL metadata through Google’s official read-only MCP.",
+              "zh-CN": "通过 Google 官方只读 MCP 查询 Ads 账号、广告系列表现与 GAQL 元数据。"
+            },
+            "mcpServerExtensions": {
+              "google-ads": {
+                "credentialEnv": {
+                  "GOOGLE_APPLICATION_CREDENTIALS": "$VAULT:google-ads-credentials-path",
+                  "GOOGLE_PROJECT_ID": "$VAULT:google-ads-project-id",
+                  "GOOGLE_ADS_DEVELOPER_TOKEN": "$VAULT:google-ads-developer-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/google-ads.zip",
+        "sha256": "640a0975d380a27a3b4c296b0f9aac5f1892409e1c4fb511010be9b7d06453e6"
+      },
+      "icon": "./plugins/google-ads/assets/icon.svg",
+      "homepage": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+      "license": "MIT",
+      "category": "marketing"
+    },
+    {
+      "id": "google-analytics",
+      "name": "Google Analytics",
+      "description": "Read Google Analytics account, property and reporting data through Google’s official local MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "google-analytics",
+        "version": "1.0.0-ghast.1",
+        "description": "Read Google Analytics account, property and reporting data through Google’s official local MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developers.google.com/analytics/devguides/MCP",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developers.google.com/analytics/devguides/MCP",
+            "connectorPublisher": "Google Analytics",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "Google Analytics",
+            "descriptions": {
+              "en": "Read Google Analytics account, property and reporting data through Google’s official local MCP server.",
+              "zh-CN": "通过 Google 官方本地 MCP 服务读取 Analytics 账号、媒体资源与报表数据。"
+            },
+            "mcpServerExtensions": {
+              "google-analytics": {
+                "credentialEnv": {
+                  "GOOGLE_APPLICATION_CREDENTIALS": "$VAULT:google-analytics-credentials-path",
+                  "GOOGLE_PROJECT_ID": "$VAULT:google-analytics-project-id"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/google-analytics.zip",
+        "sha256": "9a137d0a61896c0e922dcf089585f7ab7b8cacbc29b9c0ce752a4c82212a3ae7"
+      },
+      "icon": "./plugins/google-analytics/assets/icon.png",
+      "homepage": "https://developers.google.com/analytics/devguides/MCP",
+      "license": "MIT",
+      "category": "marketing"
+    },
+    {
       "id": "google-calendar",
       "name": "Google Calendar",
       "description": "Find events, check availability and manage meetings through Google’s official Workspace MCP service.",
