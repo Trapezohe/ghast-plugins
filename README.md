@@ -243,3 +243,8 @@ Add the Agent Plugins 1.0 source under `plugins/<name>/`, run the catalog builde
 commit both the source and generated package/catalog changes. Do not mirror an
 external marketplace wholesale: each plugin must be licensed, reviewed, and
 verified against Ghast's real runtime.
+
+## Automated maintenance
+
+Official upstreams are checked daily and collected into one maintenance PR. See
+[maintenance/README.md](maintenance/README.md) for coverage, update mappings, CI and release boundaries.
