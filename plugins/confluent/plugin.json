@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "confluent",
+  "version": "1.0.0-ghast.1",
+  "description": "Use Confluent’s official global MCP to discover environments and clusters, inspect connectors, query metrics and perform authorized connector maintenance.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.confluent.io/cloud/current/ai/ai-tools/managed-mcp-server.html",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.confluent.io/cloud/current/ai/ai-tools/managed-mcp-server.html",
+      "connectorPublisher": "Confluent",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Confluent",
+      "descriptions": {
+        "en": "Use Confluent’s official global MCP to discover environments and clusters, inspect connectors, query metrics and perform authorized connector maintenance.",
+        "zh-CN": "通过 Confluent 官方全局 MCP 发现环境与集群、检查连接器、查询指标，并执行已授权的连接器维护。"
+      },
+      "mcpServerExtensions": {
+        "confluent": {
+          "credentialHeaders": {
+            "Authorization": "$VAULT:confluent-token"
+          }
+        }
+      }
+    }
+  }
+}

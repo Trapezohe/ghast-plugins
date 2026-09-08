@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "risingwave",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect through RisingWave’s official MCP to query streaming SQL, inspect schemas and jobs, and manage authorized database resources.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/risingwavelabs/risingwave-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/risingwavelabs/risingwave-mcp",
+      "connectorPublisher": "RisingWave",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "RisingWave",
+      "descriptions": {
+        "en": "Connect through RisingWave’s official MCP to query streaming SQL, inspect schemas and jobs, and manage authorized database resources.",
+        "zh-CN": "通过 RisingWave 官方 MCP 查询流式 SQL、检查表结构与作业，并管理已授权的数据库资源。"
+      },
+      "mcpServerExtensions": {
+        "risingwave": {
+          "credentialEnv": {
+            "RISINGWAVE_CONNECTION_STR": "$VAULT:risingwave-connection-string"
+          }
+        }
+      }
+    }
+  }
+}

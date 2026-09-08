@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "turso": {
+      "type": "stdio",
+      "command": "tursodb",
+      "args": [
+        "${PLUGIN_DATA}/turso.db",
+        "--mcp"
+      ],
+      "cwd": "${PLUGIN_DATA}"
+    }
+  }
+}

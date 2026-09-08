@@ -1,0 +1,29 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "risingwave": {
+      "type": "stdio",
+      "command": "uv",
+      "args": [
+        "run",
+        "--no-project",
+        "--no-config",
+        "--python",
+        "3.12",
+        "--with",
+        "fastmcp==4.0.3",
+        "--with",
+        "risingwave-py==0.0.2",
+        "--with",
+        "psycopg2-binary==2.9.12",
+        "python",
+        "${PLUGIN_ROOT}/upstream/src/main.py"
+      ],
+      "cwd": "${PLUGIN_DATA}",
+      "env": {
+        "MCP_TRANSPORT": "stdio",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    }
+  }
+}

@@ -4009,6 +4009,51 @@
       "category": "web"
     },
     {
+      "id": "confluent",
+      "name": "Confluent",
+      "description": "Use Confluent’s official global MCP to discover environments and clusters, inspect connectors, query metrics and perform authorized connector maintenance.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "confluent",
+        "version": "1.0.0-ghast.1",
+        "description": "Use Confluent’s official global MCP to discover environments and clusters, inspect connectors, query metrics and perform authorized connector maintenance.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.confluent.io/cloud/current/ai/ai-tools/managed-mcp-server.html",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.confluent.io/cloud/current/ai/ai-tools/managed-mcp-server.html",
+            "connectorPublisher": "Confluent",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Confluent",
+            "descriptions": {
+              "en": "Use Confluent’s official global MCP to discover environments and clusters, inspect connectors, query metrics and perform authorized connector maintenance.",
+              "zh-CN": "通过 Confluent 官方全局 MCP 发现环境与集群、检查连接器、查询指标，并执行已授权的连接器维护。"
+            },
+            "mcpServerExtensions": {
+              "confluent": {
+                "credentialHeaders": {
+                  "Authorization": "$VAULT:confluent-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/confluent.zip",
+        "sha256": "9e67a672cb9c2ce527c97b2eec5f2e700ae0b760f9be212abec5a15af6c0df8a"
+      },
+      "icon": "./plugins/confluent/assets/icon.png",
+      "homepage": "https://docs.confluent.io/cloud/current/ai/ai-tools/managed-mcp-server.html",
+      "license": "MIT",
+      "category": "data"
+    },
+    {
       "id": "contentful",
       "name": "Contentful",
       "description": "Manage multilingual content, assets and content models in Contentful.",
@@ -12132,6 +12177,44 @@
       "category": "data"
     },
     {
+      "id": "redpanda",
+      "name": "Redpanda",
+      "description": "Search Redpanda’s official documentation and API references for streaming clusters, Kafka compatibility, Connect pipelines and operational troubleshooting.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "redpanda",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Redpanda’s official documentation and API references for streaming clusters, Kafka compatibility, Connect pipelines and operational troubleshooting.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.redpanda.com/home/how-to-use-these-docs/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.redpanda.com/home/how-to-use-these-docs/",
+            "connectorPublisher": "Redpanda",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Redpanda",
+            "descriptions": {
+              "en": "Search Redpanda’s official documentation and API references for streaming clusters, Kafka compatibility, Connect pipelines and operational troubleshooting.",
+              "zh-CN": "检索 Redpanda 官方文档和 API 参考，了解流式集群、Kafka 兼容性、Connect 数据管道与运维排障。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/redpanda.zip",
+        "sha256": "2dbf6f43e2c6cbca9a2755a0fe975cf7537616a3e5a59b857e3c638aff0c0b10"
+      },
+      "icon": "./plugins/redpanda/assets/icon.png",
+      "homepage": "https://docs.redpanda.com/home/how-to-use-these-docs/",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "ref",
       "name": "Ref",
       "description": "Search and read focused technical documentation with Ref.",
@@ -12484,6 +12567,51 @@
       "homepage": "https://developer.responsive.io/docs/responsive-api/86b14fe0ae541-overview",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "risingwave",
+      "name": "RisingWave",
+      "description": "Connect through RisingWave’s official MCP to query streaming SQL, inspect schemas and jobs, and manage authorized database resources.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "risingwave",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect through RisingWave’s official MCP to query streaming SQL, inspect schemas and jobs, and manage authorized database resources.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/risingwavelabs/risingwave-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/risingwavelabs/risingwave-mcp",
+            "connectorPublisher": "RisingWave",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "RisingWave",
+            "descriptions": {
+              "en": "Connect through RisingWave’s official MCP to query streaming SQL, inspect schemas and jobs, and manage authorized database resources.",
+              "zh-CN": "通过 RisingWave 官方 MCP 查询流式 SQL、检查表结构与作业，并管理已授权的数据库资源。"
+            },
+            "mcpServerExtensions": {
+              "risingwave": {
+                "credentialEnv": {
+                  "RISINGWAVE_CONNECTION_STR": "$VAULT:risingwave-connection-string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/risingwave.zip",
+        "sha256": "f6302fd34aeec56c9703f266dd5984af6c36b69bdb45896ef18fd276c8d9abf1"
+      },
+      "icon": "./plugins/risingwave/assets/icon.png",
+      "homepage": "https://github.com/risingwavelabs/risingwave-mcp",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "rollbar",
@@ -15074,6 +15202,44 @@
       "homepage": "https://docs.tomtom.com/tomtom-maps-mcp/documentation/quick-setup",
       "license": "MIT",
       "category": "lifestyle"
+    },
+    {
+      "id": "turso",
+      "name": "Turso",
+      "description": "Use Turso’s official built-in MCP to inspect local SQL databases, query tables and perform authorized data or schema changes.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "turso",
+        "version": "1.0.0-ghast.1",
+        "description": "Use Turso’s official built-in MCP to inspect local SQL databases, query tables and perform authorized data or schema changes.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/tursodatabase/turso",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/tursodatabase/turso",
+            "connectorPublisher": "Turso",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Turso",
+            "descriptions": {
+              "en": "Use Turso’s official built-in MCP to inspect local SQL databases, query tables and perform authorized data or schema changes.",
+              "zh-CN": "通过 Turso 官方内置 MCP 检查本地 SQL 数据库、查询表，并执行已授权的数据或表结构变更。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/turso.zip",
+        "sha256": "98e2a3dc6e1fd75b56d5215b93947c1ce06ec1f5ea35e7b14a9034af0cb7a20d"
+      },
+      "icon": "./plugins/turso/assets/icon.png",
+      "homepage": "https://github.com/tursodatabase/turso",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "twilio-developer-kit",

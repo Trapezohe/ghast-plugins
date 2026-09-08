@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "turso",
+  "version": "1.0.0-ghast.1",
+  "description": "Use Turso’s official built-in MCP to inspect local SQL databases, query tables and perform authorized data or schema changes.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/tursodatabase/turso",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/tursodatabase/turso",
+      "connectorPublisher": "Turso",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Turso",
+      "descriptions": {
+        "en": "Use Turso’s official built-in MCP to inspect local SQL databases, query tables and perform authorized data or schema changes.",
+        "zh-CN": "通过 Turso 官方内置 MCP 检查本地 SQL 数据库、查询表，并执行已授权的数据或表结构变更。"
+      }
+    }
+  }
+}
