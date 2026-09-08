@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "phantom": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@phantom/mcp-server@1.2.7"
+      ]
+    },
+    "phantom-docs": {
+      "type": "streamable-http",
+      "url": "https://docs.phantom.com/mcp"
+    }
+  }
+}

@@ -12187,6 +12187,44 @@
       "category": "productivity"
     },
     {
+      "id": "phantom",
+      "name": "Phantom",
+      "description": "Connect Phantom’s official agent wallet and developer documentation MCP services for crypto and wallet integration workflows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "phantom",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Phantom’s official agent wallet and developer documentation MCP services for crypto and wallet integration workflows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.phantom.com/phantom-mcp-server/setup",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.phantom.com/phantom-mcp-server/setup",
+            "connectorPublisher": "Phantom",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Phantom",
+            "descriptions": {
+              "en": "Connect Phantom’s official agent wallet and developer documentation MCP services for crypto and wallet integration workflows.",
+              "zh-CN": "连接 Phantom 官方代理钱包与开发文档 MCP 服务，支持加密资产和钱包集成工作流。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/phantom.zip",
+        "sha256": "60377ac9fcadc06bddcb087dde58df417f3571340cbfff97d5c53a20b82906b6"
+      },
+      "icon": "./plugins/phantom/assets/icon.png",
+      "homepage": "https://docs.phantom.com/phantom-mcp-server/setup",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "phoenix",
       "name": "Arize Phoenix",
       "description": "Inspect Phoenix projects, traces, sessions and experiments, and manage prompts and evaluation datasets through the official MCP server.",

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "phantom",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Phantom’s official agent wallet and developer documentation MCP services for crypto and wallet integration workflows.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.phantom.com/phantom-mcp-server/setup",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.phantom.com/phantom-mcp-server/setup",
+      "connectorPublisher": "Phantom",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Phantom",
+      "descriptions": {
+        "en": "Connect Phantom’s official agent wallet and developer documentation MCP services for crypto and wallet integration workflows.",
+        "zh-CN": "连接 Phantom 官方代理钱包与开发文档 MCP 服务，支持加密资产和钱包集成工作流。"
+      }
+    }
+  }
+}
