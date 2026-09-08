@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "weatherapi",
+  "version": "1.0.0-ghast.1",
+  "description": "Access current weather, forecasts, historical conditions, marine data and astronomy through WeatherAPI.com’s official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/weatherapicom/weatherapi-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/weatherapicom/weatherapi-mcp",
+      "connectorPublisher": "WeatherAPI.com",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "WeatherAPI.com",
+      "descriptions": {
+        "en": "Access current weather, forecasts, historical conditions, marine data and astronomy through WeatherAPI.com’s official MCP.",
+        "zh-CN": "通过 WeatherAPI.com 官方 MCP 获取实时天气、预报、历史天气、海洋与天文数据。"
+      },
+      "mcpServerExtensions": {
+        "weatherapi": {
+          "credentialEnv": {
+            "WEATHERAPI_KEY": "$VAULT:weatherapi-api-key"
+          }
+        }
+      }
+    }
+  }
+}

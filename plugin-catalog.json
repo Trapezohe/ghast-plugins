@@ -18924,6 +18924,51 @@
       "category": "data"
     },
     {
+      "id": "weatherapi",
+      "name": "WeatherAPI.com",
+      "description": "Access current weather, forecasts, historical conditions, marine data and astronomy through WeatherAPI.com’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "weatherapi",
+        "version": "1.0.0-ghast.1",
+        "description": "Access current weather, forecasts, historical conditions, marine data and astronomy through WeatherAPI.com’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/weatherapicom/weatherapi-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/weatherapicom/weatherapi-mcp",
+            "connectorPublisher": "WeatherAPI.com",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "WeatherAPI.com",
+            "descriptions": {
+              "en": "Access current weather, forecasts, historical conditions, marine data and astronomy through WeatherAPI.com’s official MCP.",
+              "zh-CN": "通过 WeatherAPI.com 官方 MCP 获取实时天气、预报、历史天气、海洋与天文数据。"
+            },
+            "mcpServerExtensions": {
+              "weatherapi": {
+                "credentialEnv": {
+                  "WEATHERAPI_KEY": "$VAULT:weatherapi-api-key"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/weatherapi.zip",
+        "sha256": "8bfe81b9c16dd9c2e04ed47f2c823ee046d32e8610479fb047f673493140be2b"
+      },
+      "icon": "./plugins/weatherapi/assets/icon.png",
+      "homepage": "https://github.com/weatherapicom/weatherapi-mcp",
+      "license": "MIT",
+      "category": "data"
+    },
+    {
       "id": "webex",
       "name": "Webex",
       "description": "Connect Cisco’s official Webex MCP services for meetings, team messaging, Vidcast videos and workspace intelligence.",
