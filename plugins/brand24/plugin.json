@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "brand24",
-  "version": "1.0.3-ghast.2",
   "description": "Explore current Brand24 project summaries, important events, discussions, influencers, and mention sources through Brand24's official read-only hosted MCP server.",
   "author": {
     "name": "Brand24 Global Inc.",

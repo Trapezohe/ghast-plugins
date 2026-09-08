@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "conductor",
-  "version": "1.0.3-ghast.2",
   "description": "Analyze AI and traditional search visibility, citations, sentiment, rankings, competitors, and tracked configuration through Conductor's official read-only MCP server.",
   "author": {
     "name": "Conductor Inc.",

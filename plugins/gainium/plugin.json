@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "gainium",
-  "version": "1.0.0-ghast.1",
   "description": "Review crypto bots, balances, screeners and backtests with Gainium’s official OAuth connections, with a separate trading connection.",
   "author": {
     "name": "Ghast AI",

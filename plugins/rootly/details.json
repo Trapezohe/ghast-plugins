@@ -1,0 +1,35 @@
+{
+  "overview": {
+    "en": "Explore incident response and on-call workflows using Rootly’s official Code Mode MCP connection.\n\nReview incident and response context with its timeline and service ownership. Use recorded facts to prepare handoffs or a post-incident review.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Rootly 官方 Code Mode MCP 连接查询事故响应信息并处理值班工作流程。\n\n结合时间线与服务负责人查看事故和响应上下文，依据已记录事实准备交接或事后复盘。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize this incident's current status and response timeline.",
+      "zh-CN": "汇总这起事故的当前状态与响应时间线。"
+    },
+    {
+      "en": "Review the available on-call and response information for this service.",
+      "zh-CN": "查看这个服务的可用值班与响应信息。"
+    },
+    {
+      "en": "Prepare a handoff brief with unresolved issues and next actions.",
+      "zh-CN": "准备交接简报，列出未解决问题与后续行动。"
+    }
+  ],
+  "websiteUrl": "https://docs.rootly.com/integrations/mcp-server",
+  "repositoryUrl": "https://github.com/rootlyhq/rootly-mcp-server",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.rootly.com/integrations/mcp-server"
+      }
+    ]
+  }
+}

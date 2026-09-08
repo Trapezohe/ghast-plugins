@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "miro",
-  "version": "1.0.0-ghast.1",
   "description": "Read team whiteboards and develop diagrams, ideas and collaborative board content with Miro.",
   "author": {
     "name": "Ghast AI",

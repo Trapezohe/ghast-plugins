@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "domotz-preview",
-  "version": "1.0.3-ghast.2",
   "description": "Discover, monitor, configure, and remediate Domotz-managed networks through Domotz's official hosted MCP.",
   "author": {
     "name": "Domotz",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "deel",
-  "version": "1.0.0-ghast.1",
   "description": "Access workforce, contract, time-off and payroll tools through Deel’s official MCP.",
   "author": {
     "name": "Ghast AI",

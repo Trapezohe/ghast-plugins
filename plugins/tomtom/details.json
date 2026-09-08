@@ -1,0 +1,51 @@
+{
+  "overview": {
+    "en": "Find places, geocode addresses, compare routes and inspect traffic with TomTom Maps.\n\nUse place and route context to prepare a travel or logistics comparison. Provide origin, destination, and transport requirements, then retain the route assumptions.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 TomTom 地图查找地点、解析地址、比较路线和查看交通，辅助出行与物流规划。\n\n结合地点与路线信息准备出行或物流比较，提供起点、终点和交通要求，并保留路线假设。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find this address and summarize the available location information.",
+      "zh-CN": "查找这个地址，并汇总可用位置信息。"
+    },
+    {
+      "en": "Compare routes between these locations for the specified travel requirements.",
+      "zh-CN": "根据指定出行要求比较这些地点之间的路线。"
+    },
+    {
+      "en": "Prepare a location brief for these candidate destinations.",
+      "zh-CN": "为这些候选目的地准备位置简报。"
+    }
+  ],
+  "websiteUrl": "https://docs.tomtom.com/tomtom-maps-mcp/documentation/quick-setup",
+  "privacyPolicyUrl": "https://www.tomtom.com/en-gb/privacy/",
+  "termsOfServiceUrl": "https://docs.tomtom.com/legal/terms-and-conditions",
+  "repositoryUrl": "https://github.com/tomtom-international/tomtom-maps-mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.tomtom.com/tomtom-maps-mcp/documentation/quick-setup"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://docs.tomtom.com/tomtom-maps-mcp/documentation/quick-setup",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://www.tomtom.com/en-gb/privacy/"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://docs.tomtom.com/tomtom-maps-mcp/documentation/quick-setup",
+        "anchor": "Terms and conditions",
+        "status": 200,
+        "url": "https://docs.tomtom.com/legal/terms-and-conditions"
+      }
+    ]
+  }
+}

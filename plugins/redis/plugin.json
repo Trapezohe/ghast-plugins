@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "redis",
-  "version": "1.0.0-ghast.1",
   "description": "Read and manage Redis keys, data structures and supported search features with Redis’s official MCP server.",
   "author": {
     "name": "Ghast AI",

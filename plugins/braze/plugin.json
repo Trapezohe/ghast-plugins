@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "braze",
-  "version": "1.0.0-ghast.1",
   "description": "Analyze Braze campaign and Canvas performance and manage supported content assets with Braze’s official remote MCP.",
   "author": {
     "name": "Ghast AI",

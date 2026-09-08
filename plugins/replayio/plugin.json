@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "replayio",
-  "version": "0.1.1-ghast.1",
+  "version": "0.1.1",
   "description": "Record and inspect Replay browser runs, create verified MP4 evidence, debug uploaded recordings through Replay MCP, and run Replay QA project, bug, journey, and exploration workflows.",
   "author": {
     "name": "Replay",

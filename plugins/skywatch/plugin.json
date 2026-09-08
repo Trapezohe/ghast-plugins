@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "skywatch",
-  "version": "1.0.0-ghast.2",
   "description": "Search orderable satellite imagery, compare scene pricing, and browse satellites and products through SkyWatch's official MCP.",
   "author": {
     "name": "SkyWatch Space Applications Inc.",

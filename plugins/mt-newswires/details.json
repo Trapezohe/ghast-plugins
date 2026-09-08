@@ -1,0 +1,43 @@
+{
+  "overview": {
+    "en": "Search and retrieve licensed real-time North American and global financial news from MT Newswires through its officially authorized viaNexus MCP service.\n\nResearch company and market events through the provider's authorized news sources. Keep publication times and original source references attached to every summary.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过服务商授权的接口检索实时金融新闻。\n\n通过获授权的新闻来源研究公司与市场事件，摘要中保留发布时间与原始来源。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize the latest available news about this company with source dates.",
+      "zh-CN": "汇总这家公司的最新可用新闻，并注明来源日期。"
+    },
+    {
+      "en": "Build a timeline of reporting on this market event.",
+      "zh-CN": "梳理这个市场事件的新闻报道时间线。"
+    },
+    {
+      "en": "Compare how the available sources describe this industry development.",
+      "zh-CN": "比较可用来源对这项行业进展的报道。"
+    }
+  ],
+  "websiteUrl": "https://www.mtnewswires.com",
+  "privacyPolicyUrl": "https://www.mtnewswires.com/privacy-policy",
+  "documentationUrl": "https://www.mtnewswires.com/ai-enablement",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.mtnewswires.com"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.mtnewswires.com",
+        "anchor": "Privacy Policy.",
+        "status": 200,
+        "url": "https://www.mtnewswires.com/privacy-policy"
+      }
+    ]
+  }
+}

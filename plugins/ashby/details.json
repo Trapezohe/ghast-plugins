@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Search recruiting records, prepare interviews and manage supported candidate workflows through Ashby’s official MCP (Beta).\n\nReview available people or recruiting information within the connected organization's scope. Use a specific record or workflow and prepare summaries that keep missing information visible.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Ashby 官方 MCP（Beta）搜索招聘记录、准备面试并管理受支持的候选人流程。\n\n在已连接组织范围内查看人员或招聘信息，围绕具体记录或流程准备摘要，并明确缺失信息。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize the available information for this person or candidate record.",
+      "zh-CN": "汇总这个员工或候选人记录的可用信息。"
+    },
+    {
+      "en": "Review this people workflow and identify the next required steps.",
+      "zh-CN": "查看这个人员流程，列出下一步需要完成的事项。"
+    },
+    {
+      "en": "Prepare a briefing from these records without changing them.",
+      "zh-CN": "根据这些记录准备简报，先不要修改记录。"
+    }
+  ],
+  "websiteUrl": "https://docs.ashbyhq.com/ashby-mcp-server-beta",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.ashbyhq.com/ashby-mcp-server-beta"
+      }
+    ]
+  }
+}

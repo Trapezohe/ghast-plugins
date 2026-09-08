@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "surrealdb",
-  "version": "1.0.0-ghast.1",
   "description": "Manage SurrealDB Cloud instances, query databases and inspect usage and diagnostics.",
   "author": {
     "name": "Ghast AI",

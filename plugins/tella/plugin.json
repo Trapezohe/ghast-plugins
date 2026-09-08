@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tella",
-  "version": "1.0.0-ghast.1",
   "description": "Find videos, edit clips, organize playlists and export finished videos with Tella.",
   "author": {
     "name": "Ghast AI",

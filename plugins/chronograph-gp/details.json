@@ -1,0 +1,51 @@
+{
+  "overview": {
+    "en": "Analyze private-capital GP portfolios, operating performance, valuations, fund reviews, company reports, and TVPI attribution through Chronograph's official skills and hosted OAuth MCP.\n\nAnalyze private-capital portfolios using the connected fund data. Fix the reporting date and portfolio scope before comparing exposures, cash flows, or performance measures.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "分析私募资本投资组合、经营表现、估值与基金回报归因。\n\n利用已连接基金数据分析私募资本投资组合，先固定报告日期和组合范围，再比较风险敞口、现金流或业绩指标。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize this portfolio as of the selected reporting date.",
+      "zh-CN": "按选定报告日期汇总这个投资组合。"
+    },
+    {
+      "en": "Compare the available performance measures for these funds.",
+      "zh-CN": "比较这些基金的可用业绩指标。"
+    },
+    {
+      "en": "Prepare an investment committee brief highlighting portfolio changes.",
+      "zh-CN": "准备一份投资委员会简报，重点说明组合变化。"
+    }
+  ],
+  "websiteUrl": "https://www.chronograph.pe/",
+  "termsOfServiceUrl": "https://www.chronograph.pe/legal/website-terms-of-use/",
+  "privacyPolicyUrl": "https://www.chronograph.pe/legal/privacy-policy/",
+  "repositoryUrl": "https://github.com/chronograph-pe/chronograph-gp-claude-plugin",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.chronograph.pe/"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://www.chronograph.pe/",
+        "anchor": "Terms of Use",
+        "status": 200,
+        "url": "https://www.chronograph.pe/legal/website-terms-of-use/"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.chronograph.pe/",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://www.chronograph.pe/legal/privacy-policy/"
+      }
+    ]
+  }
+}

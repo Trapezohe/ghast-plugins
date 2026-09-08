@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "confluent",
-  "version": "1.0.0-ghast.1",
   "description": "Use Confluent’s official global MCP to discover environments and clusters, inspect connectors, query metrics and perform authorized connector maintenance.",
   "author": {
     "name": "Ghast AI",

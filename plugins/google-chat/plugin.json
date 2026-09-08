@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "google-chat",
-  "version": "1.0.0-ghast.1",
   "description": "Search conversations, read messages and communicate through Google’s official Workspace MCP service.",
   "author": {
     "name": "Ghast AI",

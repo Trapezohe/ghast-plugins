@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "outreach",
-  "version": "1.0.2-ghast.2",
   "description": "Research prospects, accounts, opportunities, sequences, emails, meetings, and tasks, draft grounded follow-ups, and safely perform approved Outreach revenue actions.",
   "author": {
     "name": "Outreach",

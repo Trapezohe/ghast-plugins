@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "prisma",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect Prisma Postgres databases and schemas, query data and manage authorized backup workflows.",
   "author": {
     "name": "Ghast AI",

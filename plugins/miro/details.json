@@ -1,0 +1,42 @@
+{
+  "overview": {
+    "en": "Read team whiteboards and develop diagrams, ideas and collaborative board content with Miro.\n\nTurn a process or interface idea into a reviewable visual structure. Start with the source outline and intended audience, then keep labels and relationships clear.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "读取团队白板，整理创意、制作图表并协作编辑 Miro 看板。\n\n把流程或界面想法整理成可审阅的视觉结构。从原始提纲和目标受众出发，保持标签与关系清晰。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Create a diagram or wireframe from this project outline.",
+      "zh-CN": "根据这个项目提纲创建图表或线框图。"
+    },
+    {
+      "en": "Review this design and suggest clearer structure and labels.",
+      "zh-CN": "审查这个设计，建议更清晰的结构与标签。"
+    },
+    {
+      "en": "Prepare a visual plan that explains this workflow to the team.",
+      "zh-CN": "准备可视化方案，向团队解释这个工作流程。"
+    }
+  ],
+  "websiteUrl": "https://developers.miro.com/docs/miro-mcp-server-frequently-asked-questions",
+  "termsOfServiceUrl": "https://miro.com/legal/developer-terms-of-use/",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://developers.miro.com/docs/miro-mcp-server-frequently-asked-questions"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://developers.miro.com/docs/miro-mcp-server-frequently-asked-questions",
+        "anchor": "Developer terms of use",
+        "status": 200,
+        "url": "https://miro.com/legal/developer-terms-of-use/"
+      }
+    ]
+  }
+}

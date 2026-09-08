@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "formbricks",
-  "version": "1.0.0-ghast.1",
   "description": "Manage surveys, workflows and customer feedback through Formbricks Cloud’s official MCP.",
   "author": {
     "name": "Ghast AI",

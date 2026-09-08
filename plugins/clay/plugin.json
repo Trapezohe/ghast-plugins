@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "clay",
-  "version": "1.0.2-ghast.2",
   "description": "Search companies and people, enrich prospect records, and run admin-approved GTM functions through Clay's official hosted MCP.",
   "author": {
     "name": "Clay",

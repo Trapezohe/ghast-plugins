@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "firecrawl",
-  "version": "1.0.0-ghast.1",
   "description": "Extract structured web content, map websites and support research, data collection and SEO audits with Firecrawl.",
   "author": {
     "name": "Ghast AI",

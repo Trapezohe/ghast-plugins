@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "knowify",
-  "version": "1.0.0-ghast.1",
   "description": "Analyze construction jobs, profitability and invoicing with Knowify’s official read-only AI connector.",
   "author": {
     "name": "Ghast AI",

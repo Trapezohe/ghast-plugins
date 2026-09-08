@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tenderly",
-  "version": "1.0.0-ghast.1",
   "description": "Simulate, trace and debug blockchain transactions and work with virtual environments through the official Tenderly MCP.",
   "author": {
     "name": "Ghast AI",

@@ -51,7 +51,7 @@ def main() -> int:
     upstream = json.loads((source / ".codex-plugin/plugin.json").read_text())
     manifest = json.loads((plugin / "plugin.json").read_text())
     mcp = json.loads((plugin / "mcp.json").read_text())
-    if upstream.get("version") != EXPECTED_VERSION or manifest.get("version") != f"{EXPECTED_VERSION}-ghast.1" or manifest.get("$schema") != PLUGIN_SCHEMA:
+    if upstream.get("version") != EXPECTED_VERSION or manifest.get("version") != '0.2.0' or manifest.get("$schema") != PLUGIN_SCHEMA:
         raise ValueError("unexpected Render Agent Plugins 1.0 manifest")
     ghast = manifest["extensions"]["ai.trapezohe.ghast"]
     if ghast.get("upstreamRevision") != EXPECTED_REVISION or not (plugin / ghast["icon"].removeprefix("./")).is_file():

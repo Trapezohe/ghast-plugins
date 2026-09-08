@@ -1,0 +1,35 @@
+{
+  "overview": {
+    "en": "Manage feature flags, targeting rules, products and environments through ConfigCat’s official MCP server.\n\nInspect products, environments, flags, and targeting rules in one context. Prepare explicit configuration changes for review before applying them.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 ConfigCat 官方 MCP 服务管理功能开关、定向规则、产品与环境。\n\n结合产品、环境、功能开关和定向规则进行检查，在执行前准备可审阅的配置变更。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "List the feature flags in this environment and summarize their targeting.",
+      "zh-CN": "列出这个环境的功能开关，并汇总定向规则。"
+    },
+    {
+      "en": "Explain why this user would receive this feature flag value.",
+      "zh-CN": "解释这个用户为什么会得到这个功能开关值。"
+    },
+    {
+      "en": "Prepare a targeting-rule change for this rollout without applying it yet.",
+      "zh-CN": "为这次发布准备定向规则变更，先不要应用。"
+    }
+  ],
+  "websiteUrl": "https://configcat.com/docs/advanced/mcp-server/",
+  "repositoryUrl": "https://github.com/configcat/mcp-server",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://configcat.com/docs/advanced/mcp-server/"
+      }
+    ]
+  }
+}

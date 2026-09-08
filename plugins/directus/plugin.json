@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "directus",
-  "version": "1.0.0-ghast.1",
   "description": "Query and manage Directus content, assets and supported automation workflows using the official Content MCP server.",
   "author": {
     "name": "Ghast AI",

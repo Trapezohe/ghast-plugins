@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "mailgun",
-  "version": "1.0.0-ghast.1",
   "description": "Manage sending domains, email templates, delivery metrics and suppression workflows with Mailgun’s official MCP.",
   "author": {
     "name": "Ghast AI",

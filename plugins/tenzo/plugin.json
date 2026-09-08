@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tenzo",
-  "version": "1.0.0-ghast.1",
   "description": "Analyze restaurant sales, labor costs, customer reviews and shift logs through Tenzo’s official MCP.",
   "author": {
     "name": "Ghast AI",

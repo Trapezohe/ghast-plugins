@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "stellar",
-  "version": "1.0.0-ghast.1",
   "description": "Search Stellar documentation, ecosystem data and development playbooks through the Stellar Development Foundation’s official Raven MCP.",
   "author": {
     "name": "Ghast AI",

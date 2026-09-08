@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "coupler-io",
-  "version": "0.0.5-ghast.2",
+  "version": "0.0.5",
   "description": "Analyze marketing, sales, finance, ecommerce, product, and other business data from Coupler.io data flows through Coupler.io's official hosted OAuth MCP and Analytical Engine.",
   "author": {
     "name": "Coupler.io",

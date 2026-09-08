@@ -1,0 +1,42 @@
+{
+  "overview": {
+    "en": "Analyze lifecycle marketing campaigns, flows, audiences and performance reports with Klaviyo.\n\nAnalyze lifecycle messaging and campaign performance using the available reports. Keep campaign periods and audience definitions consistent across comparisons.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Klaviyo 分析生命周期营销活动、自动化流程、受众和效果报表，辅助运营复盘。\n\n使用可用报表分析生命周期消息与活动表现，在比较时保持活动周期和受众定义一致。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize last month's campaign performance and key changes.",
+      "zh-CN": "汇总上个月的活动表现与主要变化。"
+    },
+    {
+      "en": "Compare these two lifecycle campaigns using the available reports.",
+      "zh-CN": "使用可用报表比较这两个生命周期活动。"
+    },
+    {
+      "en": "Prepare an optimization brief based on this campaign's results.",
+      "zh-CN": "依据这个活动的结果准备优化简报。"
+    }
+  ],
+  "websiteUrl": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+  "privacyPolicyUrl": "https://privacy.klaviyo.com/policies/?name=klaviyo-privacy-policy",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://privacy.klaviyo.com/policies/?name=klaviyo-privacy-policy"
+      }
+    ]
+  }
+}

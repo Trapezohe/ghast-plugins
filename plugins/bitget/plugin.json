@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "bitget",
-  "version": "1.0.0-ghast.1",
   "description": "Explore crypto market data and manage Bitget account, order and position workflows.",
   "author": {
     "name": "Ghast AI",

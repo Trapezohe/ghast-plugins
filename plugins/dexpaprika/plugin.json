@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "dexpaprika",
-  "version": "1.0.0-ghast.1",
   "description": "Analyze DEX liquidity pools, token prices and historical on-chain market data.",
   "author": {
     "name": "Ghast AI",

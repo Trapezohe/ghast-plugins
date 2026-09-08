@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "mixpanel",
-  "version": "1.0.0-ghast.2",
+  "version": "1.0.0",
   "description": "Analyze Mixpanel data and manage dashboards, Lexicon, data quality, experiments, feature flags, metrics, cohorts, and business context through Mixpanel's official skills and hosted MCP server.",
   "author": {
     "name": "Mixpanel",

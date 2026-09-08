@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "aiven",
-  "version": "1.0.0-ghast.1",
   "description": "Manage Aiven data services, including PostgreSQL and Kafka, and inspect metrics, logs and configuration.",
   "author": {
     "name": "Ghast AI",

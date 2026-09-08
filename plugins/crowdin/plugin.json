@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "crowdin",
-  "version": "1.0.0-ghast.1",
   "description": "Manage translation projects, source files, tasks, glossaries and translation memory in Crowdin.",
   "author": {
     "name": "Ghast AI",

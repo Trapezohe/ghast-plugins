@@ -1,0 +1,50 @@
+{
+  "overview": {
+    "en": "Inspect incidents, services and on-call context and manage incident response in PagerDuty.\n\nReview incident and response context with its timeline and service ownership. Use recorded facts to prepare handoffs or a post-incident review.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "查看 PagerDuty 事件、服务与值班信息，并管理事件响应。\n\n结合时间线与服务负责人查看事故和响应上下文，依据已记录事实准备交接或事后复盘。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize this incident's current status and response timeline.",
+      "zh-CN": "汇总这起事故的当前状态与响应时间线。"
+    },
+    {
+      "en": "Review the available on-call and response information for this service.",
+      "zh-CN": "查看这个服务的可用值班与响应信息。"
+    },
+    {
+      "en": "Prepare a handoff brief with unresolved issues and next actions.",
+      "zh-CN": "准备交接简报，列出未解决问题与后续行动。"
+    }
+  ],
+  "websiteUrl": "https://support.pagerduty.com/main/docs/pagerduty-mcp-server",
+  "privacyPolicyUrl": "https://support.pagerduty.com/main/docs/security-privacy-and-compliance",
+  "termsOfServiceUrl": "https://www.pagerduty.com/website-terms-of-use/",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://support.pagerduty.com/main/docs/pagerduty-mcp-server"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://support.pagerduty.com/main/docs/pagerduty-mcp-server",
+        "anchor": "Security, Privacy, and Compliance",
+        "status": 200,
+        "url": "https://support.pagerduty.com/main/docs/security-privacy-and-compliance"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://support.pagerduty.com/main/docs/pagerduty-mcp-server",
+        "anchor": "Terms and Conditions",
+        "status": 200,
+        "url": "https://www.pagerduty.com/website-terms-of-use/"
+      }
+    ]
+  }
+}

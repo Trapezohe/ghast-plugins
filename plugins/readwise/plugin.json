@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "readwise",
-  "version": "1.0.0-ghast.2",
   "description": "Search Readwise highlights and Reader documents, read saved content, and organize the user's reading library through Readwise's official hosted MCP server.",
   "author": {
     "name": "Readwise Inc.",

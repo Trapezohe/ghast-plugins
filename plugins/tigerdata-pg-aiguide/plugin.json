@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tigerdata-pg-aiguide",
-  "version": "1.0.0-ghast.1",
   "description": "Search version-specific PostgreSQL, TimescaleDB and PostGIS documentation and implementation guidance.",
   "author": {
     "name": "Ghast AI",

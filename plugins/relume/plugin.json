@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "relume",
-  "version": "1.0.0-ghast.1",
   "description": "Find Relume library components and retrieve editable React code with its design system.",
   "author": {
     "name": "Ghast AI",

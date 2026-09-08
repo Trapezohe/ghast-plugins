@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tatum",
-  "version": "1.0.0-ghast.2",
   "description": "Search Tatum developer documentation, inspect OpenAPI schemas and execute documented API requests with an optional Tatum key.",
   "author": {
     "name": "Ghast AI",

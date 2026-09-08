@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "cogedim",
-  "version": "1.0.3-ghast.2",
   "description": "Find current Cogedim new-build lots and developments by location, budget, rooms, property type, and investment scheme, and retrieve official buying guidance.",
   "author": {
     "name": "ALTAREA PROMOTION MANAGEMENT",

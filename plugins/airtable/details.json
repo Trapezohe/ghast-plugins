@@ -1,0 +1,43 @@
+{
+  "overview": {
+    "en": "Airtable is the database and operations layer for your agents — whether running product, marketing, sales, ops, HR, or a custom business app. It combines structured data with multiplayer visual surfaces (grid, kanban, calendar, gallery, timeline) humans and agents share — plus sync integrations to Jira, Salesforce, Zendesk, Google Drive, and Databricks. Makes Codex fluent in Airtable: bases and schema, records, and collaboration UI. Bundles the official Airtable MCP server.\n\nExplore the connected data context before answering a business question. Keep the source, filters, and definitions visible, then turn the results into a concise analysis.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "管理 Airtable 数据库、字段、记录与协作流程，支持业务运营。\n\n回答业务问题前先了解已连接数据上下文，保留来源、筛选条件和指标定义，再将结果整理成简洁分析。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the available data relevant to this business question.",
+      "zh-CN": "查找与这个业务问题相关的可用数据。"
+    },
+    {
+      "en": "Analyze this metric over the selected reporting period and explain its definition.",
+      "zh-CN": "分析选定报告期内的这个指标，并解释其定义。"
+    },
+    {
+      "en": "Prepare a source-backed analysis brief with findings and data limitations.",
+      "zh-CN": "准备有数据来源的分析简报，包含发现与数据限制。"
+    }
+  ],
+  "websiteUrl": "https://www.airtable.com",
+  "privacyPolicyUrl": "https://www.airtable.com/company/privacy",
+  "repositoryUrl": "https://github.com/airtable/skills",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.airtable.com"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.airtable.com",
+        "anchor": "Privacy",
+        "status": 200,
+        "url": "https://www.airtable.com/company/privacy"
+      }
+    ]
+  }
+}

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "shutterstock",
-  "version": "1.0.3-ghast.2",
   "description": "Search Shutterstock's official image, video, music, and sound-effect libraries and compare watermarked previews without licensing or downloading assets.",
   "author": {
     "name": "Shutterstock",

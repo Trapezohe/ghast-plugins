@@ -1,0 +1,50 @@
+{
+  "overview": {
+    "en": "Search email, read threads and manage drafts and labels through Google’s official Workspace MCP service.\n\nReview email conversations and prepare replies using the connected mailbox context. Keep thread, recipient, and draft details explicit; a prepared reply is not a sent message.\n\nThis connection requires Google Workspace Developer Preview access, a configured Google Cloud project, and your own OAuth application. Complete that setup in Ghast before requesting account data or edits.",
+    "zh-CN": "通过 Google 官方 Workspace MCP 服务检索邮件、阅读会话并管理草稿与标签。\n\n结合已连接邮箱上下文查看邮件会话并准备回复，明确会话、收件人和草稿内容；准备好回复不等于已经发送。\n\n此连接需要 Google Workspace Developer Preview 访问权限、已配置的 Google Cloud 项目和自有 OAuth 应用。请先在 Ghast 中完成配置，再请求账号数据或编辑操作。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize this email thread and identify the response it needs.",
+      "zh-CN": "总结这个邮件会话，并判断需要回复哪些事项。"
+    },
+    {
+      "en": "Find the recent emails about this project and extract follow-up items.",
+      "zh-CN": "查找这个项目的近期邮件，提取后续事项。"
+    },
+    {
+      "en": "Draft a reply to this thread for me to review before sending.",
+      "zh-CN": "为这个会话起草回复，发送前交给我审阅。"
+    }
+  ],
+  "websiteUrl": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "termsOfServiceUrl": "https://developers.google.com/workspace/terms",
+  "privacyPolicyUrl": "https://policies.google.com/privacy",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://developers.google.com/workspace/guides/configure-mcp-servers"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "anchor": "Terms of Service",
+        "status": 200,
+        "url": "https://developers.google.com/workspace/terms"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "anchor": "Privacy",
+        "status": 200,
+        "url": "https://policies.google.com/privacy"
+      }
+    ]
+  }
+}

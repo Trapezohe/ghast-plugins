@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "sei",
-  "version": "1.0.0-ghast.1",
   "description": "Use Sei’s official MCP to inspect blocks, balances, tokens, NFTs and contracts, with a separate optional wallet connection for authorized transactions.",
   "author": {
     "name": "Ghast AI",

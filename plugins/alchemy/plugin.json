@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "alchemy",
-  "version": "1.0.0-ghast.1",
   "description": "Query blockchain data, inspect transfers and simulate transactions with Alchemy.",
   "author": {
     "name": "Ghast AI",

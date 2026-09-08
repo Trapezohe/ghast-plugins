@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Test email in sandboxes, manage templates and inspect delivery workflows using Mailtrap’s official MCP.\n\nInspect email templates and delivery context to diagnose transactional messaging. Use the relevant domain, message, or template reference and preserve error details.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Mailtrap 官方 MCP 测试沙箱邮件、管理模板与检查邮件投递流程。\n\n检查邮件模板与投递上下文，诊断事务邮件流程。提供相关域名、消息或模板引用，并保留错误详情。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Investigate this email delivery issue using the available records.",
+      "zh-CN": "根据可用记录调查这次邮件投递问题。"
+    },
+    {
+      "en": "Review this transactional email template and prepare improvements.",
+      "zh-CN": "审查这份事务邮件模板，准备改进稿。"
+    },
+    {
+      "en": "Summarize the available delivery information for these messages.",
+      "zh-CN": "汇总这些邮件的可用投递信息。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/mailtrap/mailtrap-mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "overview": {
+    "en": "Connect Censys’s official Platform MCP for internet asset research, host history, certificates and exposure investigation.\n\nReview the security evidence available from the provider for the specified target. Keep the affected asset or dependency and the evidence behind each finding explicit.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "连接 Censys 官方 Platform MCP，研究互联网资产、主机历史、证书和暴露面。\n\n围绕指定目标查看服务商提供的安全证据，明确受影响资产或依赖，以及每项发现的依据。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Review the available security findings for this target.",
+      "zh-CN": "查看这个目标的可用安全发现。"
+    },
+    {
+      "en": "Investigate this finding and explain the affected component and evidence.",
+      "zh-CN": "调查这项发现，解释受影响组件与依据。"
+    },
+    {
+      "en": "Prepare a prioritized remediation brief from the confirmed findings.",
+      "zh-CN": "根据已确认发现准备按优先级排列的修复简报。"
+    }
+  ],
+  "websiteUrl": "https://docs.censys.com/docs/platform-mcp-server",
+  "privacyPolicyUrl": "https://docs.censys.com/docs/platform-privacy-ai-settings",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.censys.com/docs/platform-mcp-server"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://docs.censys.com/docs/platform-mcp-server",
+        "anchor": "AI Feature and Privacy Settings",
+        "status": 200,
+        "url": "https://docs.censys.com/docs/platform-privacy-ai-settings"
+      }
+    ]
+  }
+}

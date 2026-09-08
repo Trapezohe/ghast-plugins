@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "airbyte",
-  "version": "1.0.0-ghast.1",
   "description": "Query and work with the data sources connected to your Airbyte Agents account.",
   "author": {
     "name": "Ghast AI",

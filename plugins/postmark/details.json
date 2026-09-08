@@ -1,0 +1,51 @@
+{
+  "overview": {
+    "en": "Manage transactional email, templates, delivery diagnostics and webhooks through Postmark’s official MCP.\n\nInspect email templates and delivery context to diagnose transactional messaging. Use the relevant domain, message, or template reference and preserve error details.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Postmark 官方 MCP 管理事务邮件、模板、投递诊断与 Webhook。\n\n检查邮件模板与投递上下文，诊断事务邮件流程。提供相关域名、消息或模板引用，并保留错误详情。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Investigate this email delivery issue using the available records.",
+      "zh-CN": "根据可用记录调查这次邮件投递问题。"
+    },
+    {
+      "en": "Review this transactional email template and prepare improvements.",
+      "zh-CN": "审查这份事务邮件模板，准备改进稿。"
+    },
+    {
+      "en": "Summarize the available delivery information for these messages.",
+      "zh-CN": "汇总这些邮件的可用投递信息。"
+    }
+  ],
+  "websiteUrl": "https://postmarkapp.com/lp/mcp",
+  "privacyPolicyUrl": "https://www.activecampaign.com/legal/privacy-policy",
+  "termsOfServiceUrl": "https://postmarkapp.com/terms-of-service",
+  "repositoryUrl": "https://github.com/ActiveCampaign/postmark-mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://postmarkapp.com/lp/mcp"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://postmarkapp.com/lp/mcp",
+        "anchor": "Privacy Policy ↗",
+        "status": 200,
+        "url": "https://www.activecampaign.com/legal/privacy-policy"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://postmarkapp.com/lp/mcp",
+        "anchor": "Terms of Service",
+        "status": 200,
+        "url": "https://postmarkapp.com/terms-of-service"
+      }
+    ]
+  }
+}

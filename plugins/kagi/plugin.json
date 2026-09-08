@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "kagi",
-  "version": "1.0.0-ghast.1",
   "description": "Search the web, news, images, videos and podcasts with Kagi’s official MCP, and extract page content.",
   "author": {
     "name": "Ghast AI",

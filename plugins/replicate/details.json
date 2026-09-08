@@ -1,0 +1,43 @@
+{
+  "overview": {
+    "en": "Discover, compare and run AI models on Replicate through its official MCP server.\n\nFind suitable models for a defined generation task before running one. Compare the available model information and make the input requirements explicit.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Replicate 官方 MCP 查找、比较并运行 AI 模型。\n\n执行前为明确的生成任务查找合适模型，比较可用模型信息并说明输入要求。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find models suitable for this image or video generation task.",
+      "zh-CN": "查找适合这个图像或视频生成任务的模型。"
+    },
+    {
+      "en": "Compare these models and explain their required inputs.",
+      "zh-CN": "比较这些模型，并解释所需输入。"
+    },
+    {
+      "en": "Prepare a model run for this brief so I can review the parameters.",
+      "zh-CN": "为这份简报准备模型运行方案，供我审阅参数。"
+    }
+  ],
+  "websiteUrl": "https://replicate.com/docs/reference/mcp",
+  "privacyPolicyUrl": "https://replicate.com/privacy",
+  "repositoryUrl": "https://github.com/replicate/replicate-mcp-code-mode",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://replicate.com/docs/reference/mcp"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://replicate.com/docs/reference/mcp",
+        "anchor": "Privacy",
+        "status": 200,
+        "url": "https://replicate.com/privacy"
+      }
+    ]
+  }
+}

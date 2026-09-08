@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "bonsai",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Bonsai’s official MCP beta to manage tasks, projects, CRM records, time entries and invoices within your account permissions.",
   "author": {
     "name": "Ghast AI",

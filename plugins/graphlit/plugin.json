@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "graphlit",
-  "version": "1.0.0-ghast.1",
   "description": "Use Graphlit’s official MCP to retrieve project knowledge, search content, organize collections and build content workflows.",
   "author": {
     "name": "Ghast AI",

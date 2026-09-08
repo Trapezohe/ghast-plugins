@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Skill for probing whether a URL is reachable and how fast it responds, using the built-in WebFetch tool with timing.\n\nCheck a URL's reachability and measured response time. A successful HTTP response is a basic availability observation, not proof that every application feature works.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "检查网址可达性与响应耗时。\n\n检查网址可达性与测得的响应耗时。HTTP 成功响应只是基础可用性观测，不代表应用所有功能都正常。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Check whether this URL is reachable and report its response time.",
+      "zh-CN": "检查这个网址是否可达，并报告响应耗时。"
+    },
+    {
+      "en": "Compare the response results for these three URLs.",
+      "zh-CN": "比较这三个网址的响应结果。"
+    },
+    {
+      "en": "Prepare a basic availability report for these service URLs.",
+      "zh-CN": "为这些服务网址准备基础可用性报告。"
+    }
+  ],
+  "documentationUrl": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/uptime-check",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

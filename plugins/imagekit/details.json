@@ -1,0 +1,35 @@
+{
+  "overview": {
+    "en": "Manage media assets and build image and video transformations.\n\nInspect media assets and their available metadata before preparing an update. Keep asset identifiers and intended delivery format clear.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "管理媒体素材，构建图片与视频变换。\n\n准备更新前检查媒体素材及可用元数据，明确素材标识与目标交付格式。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the media assets for this project and summarize their properties.",
+      "zh-CN": "查找这个项目的媒体素材，汇总属性。"
+    },
+    {
+      "en": "Review this asset and prepare the requested media update.",
+      "zh-CN": "检查这个素材，准备所需媒体更新。"
+    },
+    {
+      "en": "Prepare a media organization and delivery plan for this campaign.",
+      "zh-CN": "为这个活动准备媒体整理与交付方案。"
+    }
+  ],
+  "websiteUrl": "https://imagekit.io/docs/build-with-ai",
+  "repositoryUrl": "https://github.com/imagekit-developer/skills",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://imagekit.io/docs/build-with-ai"
+      }
+    ]
+  }
+}

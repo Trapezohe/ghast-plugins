@@ -1,0 +1,43 @@
+{
+  "overview": {
+    "en": "Inspect feature flags, evaluate changes and manage rollouts on your Unleash instance with its official MCP server.\n\nReview experiment or feature-release context before proposing a change. Identify the environment and audience, then separate observed configuration and results from recommendations.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Unleash 官方 MCP 服务查看功能开关、评估变更并管理实例中的灰度发布。\n\n在提出变更前查看实验或功能发布上下文。明确环境与受众，区分当前配置、观测结果和建议。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Review the available experiments or feature settings for this environment.",
+      "zh-CN": "查看这个环境中的可用实验或功能配置。"
+    },
+    {
+      "en": "Explain how this experiment or release is targeted to users.",
+      "zh-CN": "解释这个实验或发布如何定向到用户。"
+    },
+    {
+      "en": "Prepare a review of this experiment or feature rollout before changing it.",
+      "zh-CN": "在修改前，准备这项实验或功能发布的审查说明。"
+    }
+  ],
+  "websiteUrl": "https://docs.getunleash.io/integrate/mcp",
+  "privacyPolicyUrl": "https://docs.getunleash.io/privacy-and-compliance/data-privacy",
+  "repositoryUrl": "https://github.com/Unleash/unleash-mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.getunleash.io/integrate/mcp"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://docs.getunleash.io/integrate/mcp",
+        "anchor": "Data collection and privacy",
+        "status": 200,
+        "url": "https://docs.getunleash.io/privacy-and-compliance/data-privacy"
+      }
+    ]
+  }
+}

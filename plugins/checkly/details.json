@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Inspect monitoring checks, test results and incidents, and trigger existing checks in Checkly.\n\nReview existing checks and their results before rerunning a test. Use the check and environment identifiers to keep troubleshooting reproducible.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "在 Checkly 中查看监控检查、测试结果与事件，并运行已有检查。\n\n重新运行测试前查看已有检查及结果，使用检查和环境标识保证排障可复现。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize the recent results of this monitoring check.",
+      "zh-CN": "汇总这个监控检查的近期结果。"
+    },
+    {
+      "en": "Investigate this failed check and identify what changed.",
+      "zh-CN": "调查这个失败的检查，找出发生了哪些变化。"
+    },
+    {
+      "en": "Prepare a report comparing the results of these existing checks.",
+      "zh-CN": "准备报告，比较这些已有检查的结果。"
+    }
+  ],
+  "websiteUrl": "https://www.checklyhq.com/docs/ai/mcp-server/setup/",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.checklyhq.com/docs/ai/mcp-server/setup/"
+      }
+    ]
+  }
+}

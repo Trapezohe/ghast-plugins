@@ -26,7 +26,7 @@ def main() -> int:
     upstream = json.loads((source_plugin / "plugin.json").read_text())
     if upstream.get("$schema") != verify.PLUGIN_SCHEMA or upstream.get("version") != "0.1.3":
         raise ValueError("Stripe official Agent Plugins manifest changed")
-    verify.manifest(plugin, name="stripe", version="0.1.3-ghast.1", revision=REVISION)
+    verify.manifest(plugin, name="stripe", version='0.1.3', revision=REVISION)
     count = verify.compare_trees(source_plugin / "skills", plugin / "skills", ignore_skill_frontmatter=False)
     if count != 32 or len(list((plugin / "skills").rglob("SKILL.md"))) != 8:
         raise ValueError("Stripe skill inventory changed")

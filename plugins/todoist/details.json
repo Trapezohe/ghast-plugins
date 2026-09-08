@@ -1,0 +1,43 @@
+{
+  "overview": {
+    "en": "Plan projects, organize tasks, review deadlines and update your to-do lists through Todoist.\n\nOrganize personal work into an actionable daily or weekly plan. Start with the available tasks and deadlines, then make priorities and proposed changes visible.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "规划项目、整理待办、查看截止日期与更新任务，通过 Todoist 连接账号。\n\n把个人工作整理成可执行的日计划或周计划。从现有任务和截止日期出发，明确优先级与拟议变更。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Review my tasks for today and suggest a realistic priority order.",
+      "zh-CN": "查看我今天的任务，建议合理的优先顺序。"
+    },
+    {
+      "en": "Find overdue or upcoming tasks and prepare a weekly plan.",
+      "zh-CN": "找出逾期或即将到期的任务，准备周计划。"
+    },
+    {
+      "en": "Turn these notes into a task draft for me to review.",
+      "zh-CN": "把这些笔记整理成任务草稿供我审阅。"
+    }
+  ],
+  "websiteUrl": "https://developer.todoist.com/api/v1/#tag/Todoist-MCP",
+  "termsOfServiceUrl": "https://www.todoist.com/terms-of-service",
+  "repositoryUrl": "https://github.com/Doist/todoist-cli",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://developer.todoist.com/api/v1/#tag/Todoist-MCP"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://developer.todoist.com/api/v1/#tag/Todoist-MCP",
+        "anchor": "Terms of Service",
+        "status": 200,
+        "url": "https://www.todoist.com/terms-of-service"
+      }
+    ]
+  }
+}

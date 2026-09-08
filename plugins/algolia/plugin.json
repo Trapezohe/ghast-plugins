@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "algolia",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect and manage Algolia search workflows and search public developer documentation with DocSearch.",
   "author": {
     "name": "Ghast AI",

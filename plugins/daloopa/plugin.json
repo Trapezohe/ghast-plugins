@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "daloopa",
-  "version": "1.0.0-ghast.1",
+  "version": "1.0.0",
   "description": "Financial analysis skills powered by Daloopa's institutional-grade data.",
   "author": {
     "name": "Daloopa",

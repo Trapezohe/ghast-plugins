@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "influxdb",
-  "version": "1.0.0-ghast.1",
   "description": "Connect to InfluxDB 3 through its official MCP for time-series queries, schema discovery and database administration, with a separate documentation service.",
   "author": {
     "name": "Ghast AI",

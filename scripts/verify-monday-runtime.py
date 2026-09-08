@@ -42,7 +42,7 @@ def main() -> int:
     verify.manifest(
         plugin,
         name="monday-com",
-        version="0.1.0-ghast.1",
+        version='0.1.0',
         revision=REVISION,
     )
 

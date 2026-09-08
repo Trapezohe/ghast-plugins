@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "moonpay",
-  "version": "1.0.0-ghast.1",
   "description": "Search MoonPay’s official developer documentation for platform APIs, SDK integration and crypto payment flows.",
   "author": {
     "name": "Ghast AI",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "onlyoffice",
-  "version": "1.0.0-ghast.1",
   "description": "Connect ONLYOFFICE’s official DocSpace MCP to work with files, folders, collaboration rooms and document workflows.",
   "author": {
     "name": "Ghast AI",

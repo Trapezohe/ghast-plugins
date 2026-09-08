@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "questdb",
-  "version": "1.0.0-ghast.1",
   "description": "Connect QuestDB’s official MCP to your Web Console for SQL, schema exploration, notebooks, charts and live dashboards.",
   "author": {
     "name": "Ghast AI",

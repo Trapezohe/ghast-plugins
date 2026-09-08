@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "infisical",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Infisical’s official MCP to manage project environments, folders, scoped secrets and project membership.",
   "author": {
     "name": "Ghast AI",

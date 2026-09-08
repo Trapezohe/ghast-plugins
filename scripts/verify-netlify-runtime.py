@@ -181,7 +181,7 @@ def main() -> int:
     mcp = json.loads((plugin / "mcp.json").read_text())
     if upstream.get("version") != EXPECTED_VERSION:
         raise ValueError("official Netlify version changed")
-    if manifest.get("$schema") != PLUGIN_SCHEMA or manifest.get("version") != f"{EXPECTED_VERSION}-ghast.1":
+    if manifest.get("$schema") != PLUGIN_SCHEMA or manifest.get("version") != '1.3.0':
         raise ValueError("unexpected Netlify Agent Plugins 1.0 manifest")
     ghast = manifest["extensions"]["ai.trapezohe.ghast"]
     if ghast.get("upstreamRevision") != EXPECTED_REVISION:

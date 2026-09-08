@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "risingwave",
-  "version": "1.0.0-ghast.1",
   "description": "Connect through RisingWave’s official MCP to query streaming SQL, inspect schemas and jobs, and manage authorized database resources.",
   "author": {
     "name": "Ghast AI",

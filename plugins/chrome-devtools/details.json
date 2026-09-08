@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Inspect browser pages, debug network and console issues, and analyze performance with Google’s official Chrome DevTools MCP.\n\nInvestigate a website through the available browser inspection or testing tools. Start with a reproducible URL and expected behavior, then distinguish observed results from untested assumptions.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Google 官方 Chrome DevTools MCP 检查网页、排查网络与控制台问题，并分析页面性能。\n\n通过可用浏览器检查或测试工具调查网站。从可复现的网址与预期行为出发，区分已观测结果与未验证假设。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Check this page's behavior and record what differs from the expected result.",
+      "zh-CN": "检查这个页面的行为，记录与预期结果的差异。"
+    },
+    {
+      "en": "Reproduce this browser issue and collect the available diagnostic evidence.",
+      "zh-CN": "复现这个浏览器问题，收集可用诊断证据。"
+    },
+    {
+      "en": "Prepare a concise test report for this website workflow.",
+      "zh-CN": "为这个网站流程准备简洁测试报告。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

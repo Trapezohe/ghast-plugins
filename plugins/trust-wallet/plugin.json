@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "trust-wallet",
-  "version": "1.0.0-ghast.1",
   "description": "Query token data, swap quotes, supported networks and address security with Trust Wallet’s official API Gateway MCP.",
   "author": {
     "name": "Ghast AI",

@@ -1,0 +1,52 @@
+{
+  "overview": {
+    "en": "Manage Quicknode endpoints, logs, usage, security, rate limits, billing, streams, webhooks, storage, teams, and RPC through the official qn CLI and its official agent guide.\n\nConnect blockchain infrastructure context with the provider's node and service tools. Identify the network and project before reviewing usage, configuration, or maintenance work.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "管理区块链 RPC 节点、日志、用量、数据流、Webhook 与团队配置。\n\n把区块链基础设施信息与节点、服务工具结合起来。先确定网络和项目，再检查用量、配置或维护工作。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Review the available RPC services for this network and summarize configuration choices.",
+      "zh-CN": "查看这个网络的可用 RPC 服务，并整理配置选择。"
+    },
+    {
+      "en": "Inspect this project's node configuration and identify what needs attention.",
+      "zh-CN": "检查这个项目的节点配置，列出需要关注的项目。"
+    },
+    {
+      "en": "Prepare a maintenance plan for this RPC integration before making changes.",
+      "zh-CN": "为这个 RPC 集成准备维护方案，先不要修改配置。"
+    }
+  ],
+  "websiteUrl": "https://www.quicknode.com",
+  "privacyPolicyUrl": "https://www.quicknode.com/privacy",
+  "termsOfServiceUrl": "https://www.quicknode.com/terms",
+  "repositoryUrl": "https://github.com/quicknode/cli",
+  "documentationUrl": "https://www.quicknode.com/docs",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.quicknode.com"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.quicknode.com",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://www.quicknode.com/privacy"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://www.quicknode.com",
+        "anchor": "Terms & Conditions",
+        "status": 200,
+        "url": "https://www.quicknode.com/terms"
+      }
+    ]
+  }
+}

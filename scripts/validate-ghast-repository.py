@@ -24,6 +24,8 @@ except ImportError:
     validate_agent_skill = None
 
 
+from plugin_versions import apply_version
+
 PLUGIN_DIR = Path("plugins")
 PACKAGE_DIR = Path("packages")
 CATALOG_PATH = Path("plugin-catalog.json")
@@ -126,6 +128,7 @@ def main() -> int:
 
 def validate_sources(errors: list[str]) -> dict[str, dict]:
     manifests: dict[str, dict] = {}
+    upstreams = json.loads(Path("maintenance/upstreams.json").read_text())
     for plugin_dir in sorted(path for path in PLUGIN_DIR.iterdir() if path.is_dir()):
         manifest_path = plugin_dir / "plugin.json"
         if not manifest_path.is_file():
@@ -138,12 +141,37 @@ def validate_sources(errors: list[str]) -> dict[str, dict]:
         if name != plugin_dir.name:
             errors.append(f"{manifest_path}: name must match directory")
             continue
+        expected = dict(manifest)
+        try:
+            apply_version(expected, upstreams.get(name, {}))
+            if manifest.get("version") != expected.get("version"):
+                errors.append(f"{manifest_path}: version must match verified upstream evidence (or be omitted)")
+        except ValueError as error:
+            errors.append(str(error))
         manifests[name] = manifest
 
         validate_agent_plugin_manifest(manifest_path, manifest, errors)
         for legacy_path in (plugin_dir / ".ghast-plugin", plugin_dir / ".mcp.json"):
             if legacy_path.exists():
                 errors.append(f"{legacy_path}: legacy Ghast layout is not allowed")
+
+        details_path = plugin_dir / "details.json"
+        details = load_json(details_path, errors)
+        if details is not None:
+            overview = details.get("overview", {})
+            if not isinstance(overview, dict) or any(not isinstance(overview.get(lang), str) or len(overview[lang]) < 100 for lang in ("en", "zh-CN")):
+                errors.append(f"{details_path}: bilingual detailed overview required")
+            prompts = details.get("starterPrompts")
+            if not isinstance(prompts, list) or len(prompts) != 3 or any(not isinstance(item, dict) or any(not isinstance(item.get(lang), str) or not item[lang].strip() for lang in ("en", "zh-CN")) for item in prompts):
+                errors.append(f"{details_path}: exactly three bilingual usage examples required")
+            for key in ("websiteUrl", "repositoryUrl", "documentationUrl", "privacyPolicyUrl", "termsOfServiceUrl"):
+                if key in details:
+                    value = details[key]
+                    parsed = urlsplit(value) if isinstance(value, str) else None
+                    if not parsed or parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password:
+                        errors.append(f"{details_path}: {key} must be a public HTTPS link")
+            if details_path.stat().st_size > 256 * 1024:
+                errors.append(f"{details_path}: exceeds detail download limit")
 
         ghast = (manifest.get("extensions") or {}).get(GHAST_NAMESPACE, {})
         if ghast.get("category") not in CATEGORIES | CATEGORY_ALIASES.keys():
@@ -378,6 +406,12 @@ def validate_catalog_and_packages(
         name = entry.get("id")
         if name not in manifests:
             continue
+        details_path = PLUGIN_DIR / name / "details.json"
+        expected_details = {"url": f"./plugins/{name}/details.json", "sha256": sha256(details_path)} if details_path.exists() else None
+        if entry.get("details") != expected_details:
+            errors.append(f"{name}: detail reference or digest differs from source")
+        if any(key in entry.get("manifest", {}).get("extensions", {}).get(GHAST_NAMESPACE, {}) for key in ("overview", "starterPrompts")):
+            errors.append(f"{name}: detailed copy belongs in details.json, not the catalog index")
         package_path = PACKAGE_DIR / f"{name}.zip"
         if not package_path.is_file():
             errors.append(f"{package_path}: missing package")
@@ -402,6 +436,10 @@ def validate_catalog_and_packages(
                 packaged_manifest = json.loads(archive.read(manifest_member))
                 if packaged_manifest != manifests[name]:
                     errors.append(f"{package_path}: manifest differs from source")
+                if prefix + "details.json" not in names:
+                    errors.append(f"{package_path}: missing bundled details.json")
+                elif archive.read(prefix + "details.json") != details_path.read_bytes():
+                    errors.append(f"{package_path}: bundled details differ from source")
                 ghast = packaged_manifest["extensions"][GHAST_NAMESPACE]
                 icon_member = prefix + ghast["icon"].removeprefix("./")
                 if icon_member not in names:

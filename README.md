@@ -74,6 +74,7 @@ Start from a plugin with the same capabilities. Use [GitHub](plugins/github/) fo
 ```text
 plugins/<name>/
 ├── plugin.json                  # Manifest and Ghast metadata
+├── details.json                 # Localized overview, three examples, and official links
 ├── assets/                      # Brand logo
 ├── skills/                      # Optional skills
 ├── mcp.json                     # Optional MCP configuration
@@ -84,6 +85,10 @@ plugins/<name>/
 ```
 
 Set `descriptions.en` and `descriptions.zh-CN` in the Ghast extension, and keep the root `description` equal to the English text. Choose a canonical category from [`scripts/plugin_categories.py`](scripts/plugin_categories.py).
+
+Each plugin owns its `details.json`: `overview` and exactly three `starterPrompts` contain `en` and `zh-CN` text. Optional links are `websiteUrl`, `repositoryUrl`, `documentationUrl`, `privacyPolicyUrl`, and `termsOfServiceUrl`; only publish verified official links and retain their evidence in `sources`. Chinese locales show Chinese text; other locales use English. Edit this file in the plugin directory, not a shared descriptions file. Preserve it when importing upstream updates.
+
+The generated catalog contains only a details URL and SHA-256 digest. Ghast loads the full text when opening a plugin, verifies its digest, and reads installed details from the local package without a network request.
 
 From the repository root, prepare the validation environment and rebuild:
 
@@ -99,9 +104,15 @@ CI uses Python 3.12 and Node.js 24. Keep Node.js and Bash available for script c
 
 Install the generated package in Ghast, check its visible presentation and relevant runtime behavior, then uninstall the test installation. Submit the source changes together with regenerated packages and catalog in a pull request. Preserve upstream licenses and record any compatibility changes. Import scripts are for reviewed, pinned upstream sources—not wholesale marketplace mirroring.
 
+## Versions
+
+Plugin versions come from verified upstream manifests or official releases, without a Ghast suffix. The source, packaged revision, and evidence digest are recorded in `maintenance/upstreams.json` under `versionSource`. When no verified upstream package version is available, the manifest omits `version`; an API protocol version or unrelated repository package version is not substituted.
+
+The catalog builder applies this policy to source manifests before packaging, including legacy importer output. When updating an upstream snapshot, refresh its version evidence at the same time. A version for a different packaged revision fails validation. Changes to Ghast adapters, translations, or logos are tracked by Git and the package SHA-256 digest; the client can detect changed content even when the upstream version is unchanged.
+
 ## Keeping plugins current
 
-The maintenance workflow is configured to check upstreams daily and collect changes into a single review PR. **Activation is pending:** the workflow must land on the default branch and GitHub Actions must be allowed to create pull requests.
+The maintenance workflow is configured to check upstreams daily and collect changes into a single review PR. **PR creation still requires activation:** GitHub Actions must be allowed to create pull requests in the repository settings.
 
 Automatic discovery is broader than automatic rewriting. The current inventory covers GitHub revisions, npm/PyPI releases, and literal HTTPS endpoints; unsupported sources require manual review. Ponytail currently has a guarded file-update mapping. Other detected changes produce review information rather than silently replacing plugin contents.
 

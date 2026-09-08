@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "superhuman",
-  "version": "0.1.0-ghast.1",
+  "version": "0.1.0",
   "description": "Connect Codex to the official Superhuman Mail MCP server for email and calendar workflows.",
   "author": {
     "name": "Superhuman",

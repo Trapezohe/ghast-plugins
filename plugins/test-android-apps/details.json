@@ -1,0 +1,42 @@
+{
+  "overview": {
+    "en": "Test Android apps on a local emulator with reproducible UI inspection, screenshots, input actions, and log capture.\n\nExercise an Android application in a local emulator with explicit steps and expected results. Record observed behavior and diagnostics rather than inferring success from screenshots alone.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "在本地模拟器测试 Android 应用，检查界面、截图、输入和日志。\n\n在本地模拟器中按明确步骤与预期结果测试 Android 应用，记录观测行为和诊断信息，不仅凭截图推断成功。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Test this Android screen's main interaction in the local emulator.",
+      "zh-CN": "在本地模拟器中测试这个 Android 界面的主要交互。"
+    },
+    {
+      "en": "Reproduce this input issue and collect the relevant logs.",
+      "zh-CN": "复现这个输入问题，并收集相关日志。"
+    },
+    {
+      "en": "Prepare a test report with steps, screenshots, and observed results.",
+      "zh-CN": "准备包含步骤、截图与观测结果的测试报告。"
+    }
+  ],
+  "websiteUrl": "https://developer.android.com/tools/adb",
+  "privacyPolicyUrl": "https://privacysandbox.google.com/",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://developer.android.com/tools/adb"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://developer.android.com/tools/adb",
+        "anchor": "Privacy Sandbox ↗️",
+        "status": 200,
+        "url": "https://privacysandbox.google.com/"
+      }
+    ]
+  }
+}

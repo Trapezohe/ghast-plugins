@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "test-android-apps",
-  "version": "0.1.2-ghast.2",
   "description": "Test Android apps on a local emulator with reproducible UI inspection, screenshots, input actions, and log capture.",
   "author": {
     "name": "Ghast AI",

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "render",
-  "version": "0.2.0-ghast.1",
+  "version": "0.2.0",
   "description": "Skills for deploying, debugging, monitoring, and migrating apps on Render.",
   "author": {
     "name": "Render",

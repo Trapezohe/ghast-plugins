@@ -1,0 +1,43 @@
+{
+  "overview": {
+    "en": "Search and browse trusted Alation catalog context, query data products, inspect BI lineage, configure agents and tools, automate workflows, and curate governed metadata through Alation's official Codex skills and CLI.\n\nExplore the connected data context before answering a business question. Keep the source, filters, and definitions visible, then turn the results into a concise analysis.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "检索数据目录、数据产品与 BI 血缘，管理受治理的数据知识。\n\n回答业务问题前先了解已连接数据上下文，保留来源、筛选条件和指标定义，再将结果整理成简洁分析。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the available data relevant to this business question.",
+      "zh-CN": "查找与这个业务问题相关的可用数据。"
+    },
+    {
+      "en": "Analyze this metric over the selected reporting period and explain its definition.",
+      "zh-CN": "分析选定报告期内的这个指标，并解释其定义。"
+    },
+    {
+      "en": "Prepare a source-backed analysis brief with findings and data limitations.",
+      "zh-CN": "准备有数据来源的分析简报，包含发现与数据限制。"
+    }
+  ],
+  "websiteUrl": "https://www.alation.com/",
+  "privacyPolicyUrl": "https://www.alation.com/legal/privacy-policy/",
+  "repositoryUrl": "https://github.com/Alation/alation-plugins",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.alation.com/"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.alation.com/",
+        "anchor": "Privacy",
+        "status": 200,
+        "url": "https://www.alation.com/legal/privacy-policy/"
+      }
+    ]
+  }
+}

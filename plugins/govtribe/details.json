@@ -1,0 +1,51 @@
+{
+  "overview": {
+    "en": "Research public-sector opportunities, awards, vendors, agencies, forecasts, pricing, files, news, and authorized workspace records through GovTribe's official hosted MCP.\n\nResearch government or policy developments using the provider's available records. Keep the jurisdiction, organization, and reporting date visible in the resulting brief.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "研究政府采购机会、合同、供应商、机构与获授权的工作区资料。\n\n使用服务商可用记录研究政府或政策动态，在简报中保留司法辖区、组织与报告日期。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Research this government topic and summarize the available records.",
+      "zh-CN": "研究这个政府事务主题，汇总可用记录。"
+    },
+    {
+      "en": "Build a source-linked timeline for this development.",
+      "zh-CN": "为这项进展建立带来源链接的时间线。"
+    },
+    {
+      "en": "Prepare a briefing comparing these organizations or policy developments.",
+      "zh-CN": "准备简报，比较这些组织或政策进展。"
+    }
+  ],
+  "websiteUrl": "https://govtribe.com",
+  "termsOfServiceUrl": "https://govtribe.com/docs/govtribe-user-guide/terms-of-use/",
+  "privacyPolicyUrl": "https://govtribe.com/docs/govtribe-user-guide/privacy-policy/",
+  "documentationUrl": "https://govtribe.com/docs/govtribe-user-guide/govtribe-mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://govtribe.com"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://govtribe.com/docs/govtribe-user-guide/govtribe-mcp/",
+        "anchor": "Terms of Use",
+        "status": 200,
+        "url": "https://govtribe.com/docs/govtribe-user-guide/terms-of-use/"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://govtribe.com/docs/govtribe-user-guide/govtribe-mcp/",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://govtribe.com/docs/govtribe-user-guide/privacy-policy/"
+      }
+    ]
+  }
+}

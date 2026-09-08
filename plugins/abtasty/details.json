@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Inspect visitor feature flags and campaign configuration with AB Tasty’s official Feature Experimentation MCP.\n\nReview experiment or feature-release context before proposing a change. Identify the environment and audience, then separate observed configuration and results from recommendations.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 AB Tasty 官方 Feature Experimentation MCP 查看访客功能开关与实验活动配置。\n\n在提出变更前查看实验或功能发布上下文。明确环境与受众，区分当前配置、观测结果和建议。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Review the available experiments or feature settings for this environment.",
+      "zh-CN": "查看这个环境中的可用实验或功能配置。"
+    },
+    {
+      "en": "Explain how this experiment or release is targeted to users.",
+      "zh-CN": "解释这个实验或发布如何定向到用户。"
+    },
+    {
+      "en": "Prepare a review of this experiment or feature rollout before changing it.",
+      "zh-CN": "在修改前，准备这项实验或功能发布的审查说明。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/flagship-io/mcp-server",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Create and update Jotform forms and inspect or manage form submissions.\n\nReview form content and collected responses before preparing a new questionnaire or revision. Keep the target audience and response scope clear.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "创建和更新 Jotform 表单，查看与管理表单提交。\n\n准备新问卷或修改前，先查看表单内容与已收集回答，明确目标受众和回答范围。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize the responses to this form and highlight recurring themes.",
+      "zh-CN": "总结这份表单的回答，标出反复出现的主题。"
+    },
+    {
+      "en": "Review this questionnaire and suggest clearer questions.",
+      "zh-CN": "检查这份问卷，建议更清晰的问题表述。"
+    },
+    {
+      "en": "Prepare a draft form for this research goal.",
+      "zh-CN": "为这个研究目标准备表单草稿。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/jotform/mcp-server",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

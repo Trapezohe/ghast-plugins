@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "browserless",
-  "version": "1.0.0-ghast.1",
   "description": "Automate cloud browser sessions, extract web content, capture pages and run website audits with Browserless.",
   "author": {
     "name": "Ghast AI",

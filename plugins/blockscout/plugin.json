@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "blockscout",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect blockchain transactions, tokens, addresses and verified contracts.",
   "author": {
     "name": "Ghast AI",

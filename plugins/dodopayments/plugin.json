@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "dodopayments",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Dodo Payments’ official MCP to work with payments, subscriptions, customers and product catalogs.",
   "author": {
     "name": "Ghast AI",

@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Skill for looking up DeFi protocol TVL, chain stats, and ranking via the free DeFi Llama API.\n\nReview public DeFi totals and rankings with a clear chain or protocol scope. Keep the reporting time and measurement definition visible when comparing values.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "查询 DeFi 协议锁仓量、链上统计与排行榜。\n\n在明确链或协议范围后查看公开 DeFi 统计与排名，比较时保留统计时间和指标定义。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Compare the available TVL data for these three DeFi protocols.",
+      "zh-CN": "比较这三个 DeFi 协议的可用 TVL 数据。"
+    },
+    {
+      "en": "Summarize the TVL rankings for the selected chain.",
+      "zh-CN": "汇总选定链上的 TVL 排名。"
+    },
+    {
+      "en": "Explain this protocol's available TVL figures and their reporting time.",
+      "zh-CN": "解释这个协议的可用 TVL 数据及统计时间。"
+    }
+  ],
+  "documentationUrl": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/defillama",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

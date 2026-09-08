@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "pendo",
-  "version": "1.0.0-ghast.1",
   "description": "Analyze product usage, visitor activity and guide performance using Pendo’s official regional MCP services.",
   "author": {
     "name": "Ghast AI",

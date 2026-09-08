@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "coingecko",
-  "version": "1.0.0-ghast.1",
   "description": "Explore crypto prices, historical charts, market data and DEX pools. No API key required for the public service.",
   "author": {
     "name": "Ghast AI",

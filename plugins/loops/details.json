@@ -1,0 +1,42 @@
+{
+  "overview": {
+    "en": "Manage contacts, mailing lists, events and transactional email with Loops’ official MCP.\n\nPrepare event-driven email work using contact, list, and event context. Distinguish draft preparation from sending a transactional message.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Loops 官方 MCP 管理联系人、邮件列表、事件与事务邮件。\n\n利用联系人、列表与事件上下文准备事件驱动邮件工作，区分草稿准备与事务邮件发送。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Review this contact's available profile and list membership.",
+      "zh-CN": "查看这个联系人的可用资料与列表归属。"
+    },
+    {
+      "en": "Prepare an event-driven email workflow for this product action.",
+      "zh-CN": "为这个产品行为准备事件驱动邮件流程。"
+    },
+    {
+      "en": "Draft a transactional message for this scenario without sending it.",
+      "zh-CN": "为这个场景起草事务邮件，先不要发送。"
+    }
+  ],
+  "websiteUrl": "https://loops.so/agents/mcp",
+  "privacyPolicyUrl": "https://loops.so/privacy",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://loops.so/agents/mcp"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://loops.so/agents/mcp",
+        "anchor": "Privacy",
+        "status": 200,
+        "url": "https://loops.so/privacy"
+      }
+    ]
+  }
+}

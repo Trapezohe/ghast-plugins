@@ -1,0 +1,50 @@
+{
+  "overview": {
+    "en": "Find contacts, directory people and profile details through Google’s official People MCP service.\n\nFind people and directory information through the connected People service. Use names, organizations, or known contact details to disambiguate matches.\n\nThis connection requires Google Workspace Developer Preview access, a configured Google Cloud project, and your own OAuth application. Complete that setup in Ghast before requesting account data or edits.",
+    "zh-CN": "通过 Google 官方 People MCP 服务查找联系人、组织目录与个人资料。\n\n通过已连接的 People 服务查找联系人与目录信息，用姓名、组织或已知联系方式区分同名结果。\n\n此连接需要 Google Workspace Developer Preview 访问权限、已配置的 Google Cloud 项目和自有 OAuth 应用。请先在 Ghast 中完成配置，再请求账号数据或编辑操作。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the contact information available for this person.",
+      "zh-CN": "查找这个人的可用联系信息。"
+    },
+    {
+      "en": "List matching people in this organization and explain ambiguous results.",
+      "zh-CN": "列出这个组织中匹配的人员，并说明有歧义的结果。"
+    },
+    {
+      "en": "Prepare a contact summary for the participants in this meeting.",
+      "zh-CN": "为这次会议的参会人准备联系人摘要。"
+    }
+  ],
+  "websiteUrl": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "termsOfServiceUrl": "https://developers.google.com/workspace/terms",
+  "privacyPolicyUrl": "https://policies.google.com/privacy",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://developers.google.com/workspace/guides/configure-mcp-servers"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "anchor": "Terms of Service",
+        "status": 200,
+        "url": "https://developers.google.com/workspace/terms"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "anchor": "Privacy",
+        "status": 200,
+        "url": "https://policies.google.com/privacy"
+      }
+    ]
+  }
+}

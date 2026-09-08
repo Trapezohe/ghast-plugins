@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Connect OneSignal’s official OAuth MCP for messaging, audiences, templates and delivery analytics (open beta).\n\nReview notification context, users, and available workflow information before proposing a change. Keep channel and audience scope explicit.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "连接 OneSignal 官方 OAuth MCP，处理消息通知、受众、模板与送达分析（公开测试版）。\n\n提出修改前查看通知上下文、用户与可用工作流信息，明确渠道和受众范围。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize the available notification workflows for this project.",
+      "zh-CN": "汇总这个项目的可用通知工作流。"
+    },
+    {
+      "en": "Review the notification setup for this user or audience.",
+      "zh-CN": "检查这个用户或受众的通知配置。"
+    },
+    {
+      "en": "Prepare a notification workflow change for review.",
+      "zh-CN": "准备一项通知工作流变更供审阅。"
+    }
+  ],
+  "websiteUrl": "https://documentation.onesignal.com/docs/en/model-context-protocol",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://documentation.onesignal.com/docs/en/model-context-protocol"
+      }
+    ]
+  }
+}

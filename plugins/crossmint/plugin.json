@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "crossmint",
-  "version": "1.0.0-ghast.1",
   "description": "Search Crossmint’s official documentation for wallets, payments, minting and agent commerce integrations.",
   "author": {
     "name": "Ghast AI",

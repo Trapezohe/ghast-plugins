@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "xata",
-  "version": "1.0.0-ghast.1",
   "description": "Explore Postgres schemas, query data and manage database branches through Xata’s official MCP service.",
   "author": {
     "name": "Ghast AI",

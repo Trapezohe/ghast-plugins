@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tally",
-  "version": "1.0.0-ghast.1",
   "description": "Build forms and analyze submissions through Tally’s official MCP server (Beta).",
   "author": {
     "name": "Ghast AI",

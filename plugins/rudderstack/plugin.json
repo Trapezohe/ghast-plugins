@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "rudderstack",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect customer data pipelines, sources and destinations and manage RudderStack transformations.",
   "author": {
     "name": "Ghast AI",

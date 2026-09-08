@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "pylon",
-  "version": "1.0.3-ghast.2",
   "description": "Search and manage Pylon support issues, accounts, contacts, messages, and internal notes through official interfaces.",
   "author": {
     "name": "Pylon Labs, Inc.",

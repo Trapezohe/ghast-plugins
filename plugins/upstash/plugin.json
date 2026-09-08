@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "upstash",
-  "version": "1.0.0-ghast.1",
   "description": "Query and manage Upstash Redis data, run Redis commands and search official documentation.",
   "author": {
     "name": "Ghast AI",

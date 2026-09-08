@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "productboard",
-  "version": "1.0.0-ghast.1",
   "description": "Search and refine product specifications, read feedback and track delivery status in Productboard.",
   "author": {
     "name": "Ghast AI",

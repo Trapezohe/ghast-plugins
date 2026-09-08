@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "deepnote",
-  "version": "0.1.2-ghast.1",
+  "version": "0.1.2",
   "description": "Search, inspect, create, edit, link, and run Deepnote projects and notebooks through Deepnote's official hosted MCP server.",
   "author": {
     "name": "Deepnote",

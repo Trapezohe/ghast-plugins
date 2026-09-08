@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "exa",
-  "version": "1.0.0-ghast.1",
   "description": "Search the web and retrieve source pages with Exa for grounded research and current information.",
   "author": {
     "name": "Ghast AI",

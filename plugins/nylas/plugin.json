@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "nylas",
-  "version": "1.0.0-ghast.1",
   "description": "Use Nylas’s official MCP to work with connected email, calendars, contacts and meeting Notetakers in your application region.",
   "author": {
     "name": "Ghast AI",

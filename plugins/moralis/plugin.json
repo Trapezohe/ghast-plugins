@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "moralis",
-  "version": "1.0.0-ghast.1",
   "description": "Query EVM and Solana wallet balances, token and NFT data, prices and blockchain activity through the official Moralis MCP package.",
   "author": {
     "name": "Ghast AI",

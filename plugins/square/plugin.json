@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "square",
-  "version": "1.0.0-ghast.1",
   "description": "Explore retail locations, catalogs, customers, orders and payments through Square.",
   "author": {
     "name": "Ghast AI",

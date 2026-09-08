@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "avalanche",
-  "version": "1.0.0-ghast.1",
   "description": "Search Avalanche developer documentation and inspect public network, P-Chain and blockchain data through its official hosted MCP.",
   "author": {
     "name": "Ghast AI",

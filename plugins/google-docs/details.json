@@ -1,0 +1,50 @@
+{
+  "overview": {
+    "en": "Read and edit documents through Google’s official Workspace MCP service.\n\nRead a document in context, then prepare focused edits to its structure and text. Keep the document reference and requested scope clear so review remains straightforward.\n\nThis connection requires Google Workspace Developer Preview access, a configured Google Cloud project, and your own OAuth application. Complete that setup in Ghast before requesting account data or edits.",
+    "zh-CN": "通过 Google 官方 Workspace MCP 服务阅读与编辑 Google 文档。\n\n结合上下文阅读文档，再对结构和文字准备有针对性的修改。明确文档引用与修改范围，方便审阅。\n\n此连接需要 Google Workspace Developer Preview 访问权限、已配置的 Google Cloud 项目和自有 OAuth 应用。请先在 Ghast 中完成配置，再请求账号数据或编辑操作。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize this document and list the decisions it contains.",
+      "zh-CN": "总结这份文档，并列出其中的决策。"
+    },
+    {
+      "en": "Rewrite this section for clarity while preserving its factual content.",
+      "zh-CN": "重写这一节以提高可读性，同时保留事实内容。"
+    },
+    {
+      "en": "Prepare an outline for the missing sections of this document.",
+      "zh-CN": "为这份文档缺少的章节准备提纲。"
+    }
+  ],
+  "websiteUrl": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "termsOfServiceUrl": "https://developers.google.com/workspace/terms",
+  "privacyPolicyUrl": "https://policies.google.com/privacy",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://developers.google.com/workspace/guides/configure-mcp-servers"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "anchor": "Terms of Service",
+        "status": 200,
+        "url": "https://developers.google.com/workspace/terms"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "anchor": "Privacy",
+        "status": 200,
+        "url": "https://policies.google.com/privacy"
+      }
+    ]
+  }
+}

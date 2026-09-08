@@ -156,7 +156,15 @@
       "https://github.com/aiera-inc/aiera-mcp",
       "https://www.aiera.com"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "releaseTag": "v1.2.1",
+      "repository": "aiera-inc/aiera-mcp",
+      "revision": "882acfc09c5e5c1eed82b6e2a64e8780503ec099",
+      "sha256": "6f742b1dbe54946c9c73bfa78c27dc4d6814f197df26a6f515e2c1abf111959b",
+      "url": "https://api.github.com/repos/aiera-inc/aiera-mcp/commits/v1.2.1",
+      "version": "1.2.1"
+    }
   },
   "airbyte": {
     "monitors": [
@@ -191,7 +199,14 @@
       "https://github.com/airtable/skills",
       "https://www.airtable.com"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "plugins/airtable/.codex-plugin/plugin.json",
+      "repository": "airtable/skills",
+      "revision": "812ee67f1fd3d76fb45ff8df40afaa0448602ba8",
+      "sha256": "346be03dc84dbebe04ff453cd2a635c81eabc2386ea45883c5f253aedecffb03",
+      "version": "0.1.0"
+    }
   },
   "airwallex": {
     "monitors": [
@@ -258,7 +273,14 @@
     "provenance": [
       "https://github.com/Alation/alation-plugins"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".codex-plugin/plugin.json",
+      "repository": "Alation/alation-plugins",
+      "revision": "b450039495787ecd6bc16176cca6df6c4a1336c3",
+      "sha256": "b0851e201426ca31a6abfcd08ccf57f700f35b86f79f79ad3396b6b3f3708efa",
+      "version": "1.0.1"
+    }
   },
   "alchemy": {
     "monitors": [
@@ -335,7 +357,14 @@
     "provenance": [
       "https://github.com/alpacahq/agentic"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "plugins/alpaca-trading/.codex-plugin/plugin.json",
+      "repository": "alpacahq/agentic",
+      "revision": "a97b49ecdf47b6b46d8fc1027139c475296dc696",
+      "sha256": "23cfa21d3af833c0882e99652d43088a208cd9ac98710b7853b44c78d1119404",
+      "version": "0.1.0"
+    }
   },
   "amplitude": {
     "monitors": [
@@ -351,7 +380,14 @@
       "https://github.com/amplitude/mcp-marketplace",
       "https://amplitude.com/docs/mcp"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "plugins/amplitude/.codex-plugin/plugin.json",
+      "repository": "amplitude/mcp-marketplace",
+      "revision": "90c0a8e658db547ab63a2210e84be07c23ce4cd0",
+      "sha256": "32c631ca2b3e2d515ce6762cd9d5a9cf56611285a153708e3111d1db6f578b5c",
+      "version": "1.5.2"
+    }
   },
   "angular": {
     "monitors": [
@@ -439,7 +475,14 @@
       "https://github.com/apolloio/apollo-mcp-plugin",
       "https://www.apollo.io/"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".claude-plugin/plugin.json",
+      "repository": "apolloio/apollo-mcp-plugin",
+      "revision": "2adde980e45f421b7e9383d92870455627936bce",
+      "sha256": "372c3b7ab247b18fb9d16275c0f76c914ca6510d202cceaad106673a7d9f615d",
+      "version": "0.1.1"
+    }
   },
   "appsflyer": {
     "monitors": [
@@ -497,7 +540,14 @@
       "https://github.com/Asana/cursor-marketplace-plugin",
       "https://developers.asana.com/docs/using-asanas-mcp-server"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".cursor-plugin/plugin.json",
+      "repository": "Asana/cursor-marketplace-plugin",
+      "revision": "caf02337846594b6af5221ea5165c1dd0d273d9b",
+      "sha256": "ba4d548e50cb5fd82d2da4fd32d3219f97921d59755bb9cdb3638433ec3643cd",
+      "version": "0.1.0"
+    }
   },
   "ashby": {
     "monitors": [
@@ -673,7 +723,14 @@
       "https://github.com/base44/skills",
       "https://docs.base44.com"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".codex-plugin/plugin.json",
+      "repository": "base44/skills",
+      "revision": "773a301cfb79112141add32d19c024f2bafc44ee",
+      "sha256": "54d1b0976b0b3ee05aa61b189f9a1231d12157c1a4be4ead25f0c965e83fe0b7",
+      "version": "1.0.0-beta.1"
+    }
   },
   "basedash": {
     "monitors": [
@@ -871,7 +928,16 @@
       "https://github.com/boltz-bio/boltz-api-skills",
       "https://boltz.bio"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "releaseRevision": "59c4c2868b8ebbd1eca1f4b94bb99bf96220d15e",
+      "releaseTag": "codex-plugin/v0.1.1",
+      "repository": "boltz-bio/boltz-api-skills",
+      "revision": "70e480ebb14baecfc4456b49eb8b724611470b7c",
+      "sha256": "edd79fee7eab3eed949440981ca70cfcb094a800ef9b4a1f3e0655e8eafa5d69",
+      "url": "https://api.github.com/repos/boltz-bio/boltz-api-skills/releases/342180760",
+      "version": "0.1.1"
+    }
   },
   "bonsai": {
     "monitors": [
@@ -1195,7 +1261,14 @@
       "https://github.com/canva-sdks/canva-skills",
       "https://www.canva.com/developers/"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "plugins/canva/.codex-plugin/plugin.json",
+      "repository": "canva-sdks/canva-skills",
+      "revision": "b56291ea0a36d0a941e1478b47959be5f1771dee",
+      "sha256": "97fcf39202be76c58daf1e6b340fe5d571ac7e724cab74b1ef7d6a07e8565d0f",
+      "version": "1.0.0"
+    }
   },
   "capacities": {
     "monitors": [
@@ -1230,7 +1303,14 @@
       "https://github.com/carta/plugins",
       "https://carta.com/crm/"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "plugins/carta-crm/.claude-plugin/plugin.json",
+      "repository": "carta/plugins",
+      "revision": "daef48d9c7d110a1b3ea55d2b9bad3d19d079d75",
+      "sha256": "eab9a5559c4f853bb679454c5de25ff24c98c11c7901f7692f989a72686f3915",
+      "version": "1.5.3"
+    }
   },
   "cartesia": {
     "monitors": [
@@ -1265,7 +1345,14 @@
       "https://github.com/catalystbyzoho/codex-plugin",
       "https://catalyst.zoho.com/"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "catalyst-by-zoho/.codex-plugin/plugin.json",
+      "repository": "catalystbyzoho/codex-plugin",
+      "revision": "4cfbca7041b14ffa874488cd9b0ba88970cd168f",
+      "sha256": "d0f014dd932e99a1867400d541f00176cbcb65b0e786eca7d538b954992c4f05",
+      "version": "0.0.2"
+    }
   },
   "cb-insights": {
     "monitors": [
@@ -1403,7 +1490,14 @@
       "https://github.com/chronograph-pe/chronograph-gp-claude-plugin",
       "https://www.chronograph.pe/"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".claude-plugin/plugin.json",
+      "repository": "chronograph-pe/chronograph-gp-claude-plugin",
+      "revision": "88a4290f29009e1cfe4341e0b9518d23c537d853",
+      "sha256": "199bdc28a165b46298fc40a0db46cfda7fa8986ce3efe7d32253ae49d9c511de",
+      "version": "0.2.3"
+    }
   },
   "chronograph-lp": {
     "monitors": [
@@ -1424,7 +1518,14 @@
       "https://github.com/chronograph-pe/chronograph-lp-claude-plugin",
       "https://www.chronograph.pe/"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".claude-plugin/plugin.json",
+      "repository": "chronograph-pe/chronograph-lp-claude-plugin",
+      "revision": "6c18b66e882c44db26d88afabc52853ba39dcd98",
+      "sha256": "4bcd856376455593a726e7b20cf3a7cda80e6bb82caf66ab68382a5c7b11b62f",
+      "version": "0.2.3"
+    }
   },
   "circleback": {
     "monitors": [
@@ -1459,7 +1560,15 @@
       "https://github.com/CircleCI-Public/circleci-cli",
       "https://circleci.com/docs/guides/toolkit/circleci-mcp-overview/"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "releaseTag": "v1.0.47993",
+      "repository": "CircleCI-Public/circleci-cli",
+      "revision": "1121fafe77b5b2bfa623dda1a244517ff604a823",
+      "sha256": "66958cc075704c3c2727802ddfb6eb440c68d4600ffe060f406e42404111cb6a",
+      "url": "https://api.github.com/repos/CircleCI-Public/circleci-cli/commits/v1.0.47993",
+      "version": "1.0.47993"
+    }
   },
   "clay": {
     "monitors": [
@@ -1590,7 +1699,14 @@
       "https://github.com/cloudflare/skills",
       "https://workers.cloudflare.com"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".claude-plugin/plugin.json",
+      "repository": "cloudflare/skills",
+      "revision": "f96bff754e428838818017f75817f0f9428acd48",
+      "sha256": "3381a12f4fd4e90fd87f617c0e42e923435f079de3d95783fd3ae2c0de6efb3f",
+      "version": "1.0.0"
+    }
   },
   "cloudinary": {
     "monitors": [
@@ -1689,7 +1805,14 @@
       "https://github.com/coderabbitai/skills",
       "https://docs.coderabbit.ai/cli"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".claude-plugin/plugin.json",
+      "repository": "coderabbitai/skills",
+      "revision": "aa49953c4cb2590e35480637b1b6a29cf4187cfa",
+      "sha256": "b350814841ffd3e9f1515799d881bd38140d1227a448906c95702a161d99500e",
+      "version": "1.1.1"
+    }
   },
   "cogedim": {
     "monitors": [
@@ -2001,7 +2124,14 @@
       "https://github.com/railsware/coupler-io-mcp-server",
       "https://www.coupler.io/ai-integrations"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "package.json",
+      "repository": "railsware/coupler-io-mcp-server",
+      "revision": "550ec75cb48bbbe0be286577b30c3a32f9bb0eea",
+      "sha256": "1fb3a5e99b687ef11b8e7321b4b6e00337c9740b5fc821a3ac8d1f99f9e7fe88",
+      "version": "0.0.5"
+    }
   },
   "courier": {
     "monitors": [
@@ -2031,7 +2161,14 @@
       "https://github.com/coveo-labs/coveo-mcp-server",
       "https://www.coveo.com/en/developers/mcp-server"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "pyproject.toml",
+      "repository": "coveo-labs/coveo-mcp-server",
+      "revision": "d93b77ee3d1a53b8547adad431e8c6355bb85f23",
+      "sha256": "b1d697688a21ef4b1a766a20d1bda8e64e891c285a543d68ec1fef32dbe6ece6",
+      "version": "0.1.0"
+    }
   },
   "craft": {
     "monitors": [
@@ -2226,7 +2363,14 @@
       "https://github.com/daloopa/daloopa-plugin-codex",
       "https://daloopa.com"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".codex-plugin/plugin.json",
+      "repository": "daloopa/daloopa-plugin-codex",
+      "revision": "1f112599065abb7cac3489c30f9e4bb27c68ad8e",
+      "sha256": "c83e37426b42c39f1d03b2071b136cde25af78adb43eb060fcdbfcbda20065f9",
+      "version": "1.0.0"
+    }
   },
   "dartai": {
     "monitors": [
@@ -2256,7 +2400,14 @@
       "https://github.com/datadog-labs/cursor-plugin",
       "https://docs.datadoghq.com/mcp_server/"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".cursor-plugin/plugin.json",
+      "repository": "datadog-labs/cursor-plugin",
+      "revision": "71364156c14b27466f3d646c8924318154e2321a",
+      "sha256": "23f49cfef04912e94c7d6ba65b0db7f41607b443f276429d0b693d421729c59d",
+      "version": "0.7.14"
+    }
   },
   "dataforseo": {
     "monitors": [
@@ -2305,7 +2456,14 @@
       "https://github.com/deepnote/codex-plugin",
       "https://deepnote.com/docs/deepnote-mcp"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "plugins/deepnote/.codex-plugin/plugin.json",
+      "repository": "deepnote/codex-plugin",
+      "revision": "46088505120f7056ccf2fed2f0b1039bd732ad54",
+      "sha256": "4755e16233ab74130d09e128155c6e701a7fbd234fb833e60d2ea49ea194c75d",
+      "version": "0.1.2"
+    }
   },
   "deepwiki": {
     "monitors": [
@@ -2449,7 +2607,15 @@
     "provenance": [
       "https://github.com/digitalocean-labs/mcp-digitalocean"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "releaseTag": "v1.0.68",
+      "repository": "digitalocean-labs/mcp-digitalocean",
+      "revision": "acbe39190b822268192d02ffd77b50319bb3d071",
+      "sha256": "438185824da8549dd9061e0a315c9292f94f2fedd88fdf324b6eb4b4e2360687",
+      "url": "https://api.github.com/repos/digitalocean-labs/mcp-digitalocean/commits/v1.0.68",
+      "version": "1.0.68"
+    }
   },
   "dingtalk": {
     "monitors": [
@@ -2659,7 +2825,14 @@
       "https://github.com/egnyte/egnyte-for-ai",
       "https://developers.egnyte.com"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".codex-plugin/plugin.json",
+      "repository": "egnyte/egnyte-for-ai",
+      "revision": "b2f1d26aa81a09cc729dc22040004c8064ec3495",
+      "sha256": "891ffb9d87ed0a9e77739f8458b4e419ce61ae0e65f92ceacfc05e649ac7c037",
+      "version": "1.0.0"
+    }
   },
   "elevenlabs": {
     "monitors": [
@@ -2778,7 +2951,14 @@
       "https://github.com/expo/skills",
       "https://docs.expo.dev/skills/"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "plugins/expo/.codex-plugin/plugin.json",
+      "repository": "expo/skills",
+      "revision": "472d040092900dc8bbf84dc7efb0c90abff77a0d",
+      "sha256": "2a1a76cb4778f3b9fe582c0076d128db1b5fa0c397956c84014c0030ac03182b",
+      "version": "1.12.0"
+    }
   },
   "factset": {
     "monitors": [
@@ -3220,7 +3400,14 @@
       "https://github.com/gleanwork/agent-plugins",
       "https://docs.glean.com/administration/platform/mcp/about"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "package.json",
+      "repository": "gleanwork/agent-plugins",
+      "revision": "9e7bd95e8debca50088f4ac0262b68689d36d7df",
+      "sha256": "065b318bb6a73ec60621c3e50554073eb564c5154e2ec6214a418b8d38946d34",
+      "version": "3.3.0"
+    }
   },
   "goldrush": {
     "monitors": [
@@ -3685,7 +3872,14 @@
       "https://github.com/heygen-com/skills",
       "https://heygen.com"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "VERSION",
+      "repository": "heygen-com/skills",
+      "revision": "1bd5e4d33a028dfed3abf504c5e3dd644fb9ea8a",
+      "sha256": "33bdaf9e2d6bcbde2e4e613e865e403f8fe21fc621078d34c30b0bdc7f68d903",
+      "version": "3.2.0"
+    }
   },
   "hg-insights": {
     "monitors": [
@@ -3783,7 +3977,14 @@
       "https://github.com/hostinger/api-mcp-server",
       "https://www.hostinger.com/connector"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "package.json",
+      "repository": "hostinger/api-mcp-server",
+      "revision": "cc04bafbeae9362a35af1b6443d3c3833f9f30d5",
+      "sha256": "3249ffe60dfaa931a585f6910662ae280877027bdc9858b71de8ac229e11c2a4",
+      "version": "1.34.0"
+    }
   },
   "hubspot": {
     "monitors": [
@@ -3819,7 +4020,14 @@
     "provenance": [
       "https://github.com/huggingface/skills"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".claude-plugin/plugin.json",
+      "repository": "huggingface/skills",
+      "revision": "020194918dc4a27d5a5d9a154b6b56cc2bd21364",
+      "sha256": "aca3f6f80886e1214f4822c303b7d89aa47c57c0843ccb20bc54e53c0f59591f",
+      "version": "1.0.25"
+    }
   },
   "hygraph": {
     "monitors": [
@@ -3849,7 +4057,14 @@
       "https://github.com/heygen-com/hyperframes",
       "https://hyperframes.heygen.com"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".codex-plugin/plugin.json",
+      "repository": "heygen-com/hyperframes",
+      "revision": "dd0626a55a0d0f24cae1b00bd2c95c0ebfa7a573",
+      "sha256": "c5687c69d806f37befb9ad7c95a06f8b5e6b29b4ca8093087c8cd6a67f8bece8",
+      "version": "0.8.10"
+    }
   },
   "ideogram": {
     "monitors": [
@@ -4039,7 +4254,14 @@
       "https://github.com/intercom/claude-plugin-external",
       "https://developers.intercom.com"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".claude-plugin/plugin.json",
+      "repository": "intercom/claude-plugin-external",
+      "revision": "62773a7d4b8aac31545d6888fe6479be3bc53804",
+      "sha256": "c199f6f7e33726ac869a71cb1ce17fda2649b9e48f7cfcf2c8387799cf47f7bb",
+      "version": "0.1.0"
+    }
   },
   "jam": {
     "monitors": [
@@ -4420,7 +4642,14 @@
       "https://github.com/lovablelabs/mcp",
       "https://docs.lovable.dev/integrations/lovable-mcp-server"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".claude-plugin/plugin.json",
+      "repository": "lovablelabs/mcp",
+      "revision": "0336e6db8026b0f02cb89d1451cc48ea3f469791",
+      "sha256": "d6baf04e35920d2308fb672a9344983140ab3e13e175983686a75988a5b1a940",
+      "version": "0.1.0"
+    }
   },
   "lucid": {
     "monitors": [
@@ -4787,7 +5016,14 @@
       "https://github.com/mixpanel/ai-plugins",
       "https://docs.mixpanel.com/docs/mcp"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "plugins/mixpanel/.cursor-plugin/plugin.json",
+      "repository": "mixpanel/ai-plugins",
+      "revision": "2bde5a300d40afbc934ae74f44444744b80c09b6",
+      "sha256": "db9499517e1eeb27897ad58acfad59c4cec32aeac717dc0206796f100981ac36",
+      "version": "1.0.0"
+    }
   },
   "mixpanel-headless": {
     "monitors": [
@@ -4803,7 +5039,14 @@
       "https://github.com/mixpanel/mixpanel-headless",
       "https://mixpanel.github.io/mixpanel-headless/"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "mixpanel-plugin/.claude-plugin/plugin.json",
+      "repository": "mixpanel/mixpanel-headless",
+      "revision": "6c2c2f975d51628bdbc75802fb879d4f6cb66f69",
+      "sha256": "764bcdf9fd0d3ba143032c044356083f444d7187476b7a15fd2e6010eecc6e0f",
+      "version": "0.2.0"
+    }
   },
   "monday-com": {
     "monitors": [
@@ -4824,7 +5067,14 @@
       "https://github.com/mondaycom/monday-claude-cowork-plugin",
       "https://monday.com"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".claude-plugin/plugin.json",
+      "repository": "mondaycom/monday-claude-cowork-plugin",
+      "revision": "ce381e93a0a6c2ed3b9942ff1803b8078ba89389",
+      "sha256": "b4e5dee278bcded61d640ad0918cc74190895c08274981d6d2af02a2760e0e87",
+      "version": "0.1.0"
+    }
   },
   "mongodb": {
     "monitors": [
@@ -4908,7 +5158,14 @@
       "https://github.com/motherduckdb/mcp-server-motherduck",
       "https://motherduck.com/docs/sql-reference/mcp/"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "pyproject.toml",
+      "repository": "motherduckdb/mcp-server-motherduck",
+      "revision": "275d2e7d2ba4f5b48ce8ad3f01a9aeea8bd08616",
+      "sha256": "95df1abe147844a03a9835eccc4689ddcd9d1ee5752988f825f8be6e24047dc2",
+      "version": "1.0.8"
+    }
   },
   "mt-newswires": {
     "monitors": [
@@ -4979,7 +5236,14 @@
       "https://github.com/neondatabase/agent-skills",
       "https://neon.com"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "plugin.json",
+      "repository": "neondatabase/agent-skills",
+      "revision": "b7f87949583782238aef20414a29b1f5ca2773ea",
+      "sha256": "dff3d4d79cf558e8444970b146c9b7d7905ae6741f8b84ba1c8311c8419285e5",
+      "version": "1.1.2"
+    }
   },
   "netlify": {
     "monitors": [
@@ -5000,7 +5264,14 @@
       "https://github.com/netlify/context-and-tools",
       "https://docs.netlify.com"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "agent-plugin/plugin.json",
+      "repository": "netlify/context-and-tools",
+      "revision": "32a261b6b2437464aca7e51bf9b48bcac1e2835c",
+      "sha256": "df013917d56276b6c229f8edb387e137ec9ab056068106c7ab503fc778c12d66",
+      "version": "1.3.0"
+    }
   },
   "nextjs": {
     "monitors": [
@@ -5093,7 +5364,14 @@
       "https://github.com/NVIDIA/skills",
       "https://build.nvidia.com/skills/"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "plugins/nvidia-skills/.codex-plugin/plugin.json",
+      "repository": "NVIDIA/skills",
+      "revision": "7149a886d50da8db72cdc1f20ff01cefeadfe6a9",
+      "sha256": "4d6566fe8e43ce231851db7506844e58a041daec92c1cb906507baa0ded4402b",
+      "version": "1.4.0"
+    }
   },
   "nylas": {
     "monitors": [
@@ -5419,7 +5697,14 @@
       "https://github.com/PicsArt/gen-ai-skills",
       "https://picsart.com"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".codex-plugin/plugin.json",
+      "repository": "PicsArt/gen-ai-skills",
+      "revision": "b52ed0d07fa8f7e94b29f194ab3eea99bb95b650",
+      "sha256": "ea3821fbed22ca085fb205558391b1f13d7244602ab520617e96056908d29867",
+      "version": "0.1.0"
+    }
   },
   "pinecone": {
     "monitors": [
@@ -5567,6 +5852,13 @@
         "upstream/hooks/ponytail-instructions.js": "23c050103f28dbe6bad953ae21d98cd06d720a20f33d4716e9de419f947d495e"
       },
       "repository": "DietrichGebert/ponytail"
+    },
+    "versionSource": {
+      "path": ".codex-plugin/plugin.json",
+      "repository": "DietrichGebert/ponytail",
+      "revision": "356918eba965ee1eac64bd3a7f0dd02108350de5",
+      "sha256": "dfe092d6d9ead638c641ddf9f2daf44aded4aad788ad5be63fa2a66a6d3027dc",
+      "version": "4.9.0"
     }
   },
   "posthog": {
@@ -5823,7 +6115,15 @@
       "https://github.com/quicknode/cli",
       "https://www.quicknode.com/docs"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "releaseTag": "v0.6.1",
+      "repository": "quicknode/cli",
+      "revision": "4265b0a97048d8e64dae0124013c66b8dd34533f",
+      "sha256": "0d7eac9cda97852629f515a332b2a10eb27eb75348a607961accbebcde1d8652",
+      "url": "https://api.github.com/repos/quicknode/cli/commits/v0.6.1",
+      "version": "0.6.1"
+    }
   },
   "railway": {
     "monitors": [
@@ -6086,7 +6386,14 @@
       "https://github.com/remotion-dev/remotion",
       "https://remotion.dev"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "packages/codex-plugin/.codex-plugin/plugin.json",
+      "repository": "remotion-dev/remotion",
+      "revision": "05075f384a0a28e193876c1fd43ab9fba5ef10f9",
+      "sha256": "5e10aebf24e8f446e0afe9f553c0f14e99b9d3c7c24cf0e1542265e21cb9f795",
+      "version": "4.0.515"
+    }
   },
   "render": {
     "monitors": [
@@ -6106,7 +6413,14 @@
     "provenance": [
       "https://github.com/renderinc/render-codex-plugin"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".codex-plugin/plugin.json",
+      "repository": "renderinc/render-codex-plugin",
+      "revision": "14032768453fd21c57f7e3a9c0e7659a2c7dce9d",
+      "sha256": "d0c5ecb8086b13df92f78543fa91c315e917c812173f272e003b59f6bea55906",
+      "version": "0.2.0"
+    }
   },
   "replayio": {
     "monitors": [
@@ -6127,7 +6441,14 @@
       "https://github.com/replayio/plugins",
       "https://replay.io"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "codex/replayio/.codex-plugin/plugin.json",
+      "repository": "replayio/plugins",
+      "revision": "c6cd28ff3d47f4e8e8b23040c69925ec2a820695",
+      "sha256": "0b23e7f7be527e5d2f16c13dd824e2890252e255855300334fcc054eb74496f2",
+      "version": "0.1.1"
+    }
   },
   "replicate": {
     "monitors": [
@@ -6470,7 +6791,14 @@
       "https://github.com/Shopify/Shopify-AI-Toolkit",
       "https://shopify.dev/docs/apps/build/devmcp"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".codex-plugin/plugin.json",
+      "repository": "Shopify/Shopify-AI-Toolkit",
+      "revision": "cc5af6505c27939222072449278f6356857cb064",
+      "sha256": "618360d40eee14a3f4d455c494c608b1f71030d94ac545bc1b2b5836573aa8a8",
+      "version": "1.6.1"
+    }
   },
   "shortcut": {
     "monitors": [
@@ -6819,7 +7147,14 @@
       "https://github.com/stripe/ai",
       "https://docs.stripe.com"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "providers/agent-plugins/plugin/plugin.json",
+      "repository": "stripe/ai",
+      "revision": "bad904b02f7071592c38bcca83d33667ff015bb1",
+      "sha256": "ca960fdfc06c209a4c60d06f50cf86252be9ef3b9375de5df21fdabe8b79c042",
+      "version": "0.1.3"
+    }
   },
   "stytch": {
     "monitors": [
@@ -6868,7 +7203,14 @@
       "https://github.com/supabase/agent-skills",
       "https://supabase.com"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "package.json",
+      "repository": "supabase/agent-skills",
+      "revision": "8331f910845103c08d51f6ca1d86ebb7d1f745e3",
+      "sha256": "b6c1dbfa80c7e0227d2338b126901271f1d5b6955f7d03bdabf7c39f1d9ea460",
+      "version": "0.1.8"
+    }
   },
   "superhuman": {
     "monitors": [
@@ -6889,7 +7231,14 @@
       "https://github.com/superhuman/mcp-mail",
       "https://help.superhuman.com/hc/en-us/articles/49810745762067-Superhuman-Mail-MCP-Server"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".codex-plugin/plugin.json",
+      "repository": "superhuman/mcp-mail",
+      "revision": "a83580e994604edca1cd5661a4a1865f3f39abc9",
+      "sha256": "379999926b0f50b68f7dd138c6731601eed57e9e6f726650f592606a77b7fa35",
+      "version": "0.1.0"
+    }
   },
   "superpowers": {
     "monitors": [
@@ -6904,7 +7253,14 @@
     "provenance": [
       "https://github.com/obra/superpowers"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".codex-plugin/plugin.json",
+      "repository": "obra/superpowers",
+      "revision": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+      "sha256": "d7ac84a700062e865715f75626945a2a3324778c68dba1a543c7ed41e48def10",
+      "version": "6.3.0"
+    }
   },
   "suprsend": {
     "monitors": [
@@ -7141,7 +7497,14 @@
       "https://github.com/temporalio/codex-temporal-plugin",
       "https://temporal.io/"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "plugins/temporal/.codex-plugin/plugin.json",
+      "repository": "temporalio/codex-temporal-plugin",
+      "revision": "e9a28b0de6beb5305bd49d73453ab0f1cbd8d160",
+      "sha256": "7361a54e3b5cd2914204e5fb870b1d9849f01014c5473b55f3fb2c69109d7847",
+      "version": "0.4.0"
+    }
   },
   "tenderly": {
     "monitors": [
@@ -7359,7 +7722,14 @@
       "https://github.com/twilio/ai",
       "https://www.twilio.com/docs"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".codex-plugin/plugin.json",
+      "repository": "twilio/ai",
+      "revision": "8aba46fb65dc8d9a20f4b301a68352064b4159a5",
+      "sha256": "9cd980c077ee54bfebf5dafd7a5e06fd0e657446610f4ce6056d3ca4ef19040d",
+      "version": "0.2.0"
+    }
   },
   "uniform": {
     "monitors": [
@@ -7491,7 +7861,14 @@
     "provenance": [
       "https://github.com/vercel/vercel-plugin"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".claude-plugin/plugin.json",
+      "repository": "vercel/vercel-plugin",
+      "revision": "c4a1c4e2e16feefb1d9f2ad2a4a451abd0ae91c6",
+      "sha256": "5a2bd78d8eb47430b1a0e5f5d22451f04029d238531733bc2d641283ebbb2f77",
+      "version": "0.48.1"
+    }
   },
   "visily": {
     "monitors": [
@@ -7721,7 +8098,14 @@
       "https://github.com/wix/skills",
       "https://dev.wix.com/docs/api-reference/articles/ai-tools/about-wix-skills"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".codex-plugin/plugin.json",
+      "repository": "wix/skills",
+      "revision": "f30595361e8d02f0dc432b499d00916a2e3918f3",
+      "sha256": "0407e181777f6228b1fe8eacf043f5e210744b8ec401d9e0e089ae83c1e4daf9",
+      "version": "1.16.3"
+    }
   },
   "wolfram": {
     "monitors": [
@@ -7866,7 +8250,14 @@
       "https://github.com/yepcode/mcp-server-js",
       "https://yepcode.io/docs/mcp-server/"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": "package.json",
+      "repository": "yepcode/mcp-server-js",
+      "revision": "15cf0527dda6c818a1528ed4467389e0962a1eea",
+      "sha256": "7ffc5579905649c27acac3c9187acab8e70eba4cfb8fd16ec60eb494d385e3af",
+      "version": "1.6.0"
+    }
   },
   "you-com": {
     "monitors": [
@@ -8063,7 +8454,14 @@
       "https://github.com/zoom/skills",
       "https://developers.zoom.us/"
     ],
-    "update": null
+    "update": null,
+    "versionSource": {
+      "path": ".claude-plugin/plugin.json",
+      "repository": "zoom/skills",
+      "revision": "1858eadc17d9bd0d1279ce7f66304362a774e3b4",
+      "sha256": "b65ad77f56a69420235927a6f446edfa6e4661abdc3f07421d4ed17a65fa38f9",
+      "version": "1.0.0"
+    }
   },
   "zoominfo": {
     "monitors": [

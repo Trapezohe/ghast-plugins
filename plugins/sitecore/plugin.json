@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "sitecore",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Sitecore’s official Marketer MCP to work with sites, pages, content, assets, brand context and campaign optimization.",
   "author": {
     "name": "Ghast AI",

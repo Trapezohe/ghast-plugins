@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "appsflyer",
-  "version": "1.0.0-ghast.1",
   "description": "Analyze campaign attribution, installs, ROAS, lifetime value and marketing performance.",
   "author": {
     "name": "Ghast AI",

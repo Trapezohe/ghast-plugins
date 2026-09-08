@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "telnyx",
-  "version": "1.0.0-ghast.1",
   "description": "Discover Telnyx API actions and manage voice, messaging and phone-number resources through the official MCP server.",
   "author": {
     "name": "Ghast AI",

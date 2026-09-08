@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "adobe-analytics",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Adobe’s official Analytics and Customer Journey Analytics MCP servers to query reports, explore trends and manage analytics components.",
   "author": {
     "name": "Ghast AI",

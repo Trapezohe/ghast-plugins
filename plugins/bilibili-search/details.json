@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Skill for searching Bilibili videos and the daily ranking via the public web search endpoint — no login required for top-level results.\n\nSearch public Bilibili videos or rankings without a signed-in account. Keep video identifiers and source links so the result is useful as a discovery list.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "搜索哔哩哔哩视频与每日排行榜，无需登录即可获取公开结果。\n\n无需登录即可搜索哔哩哔哩公开视频或排行榜，保留视频标识与来源链接，方便后续查看。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find recent Bilibili videos explaining React performance optimization.",
+      "zh-CN": "查找哔哩哔哩上讲解 React 性能优化的近期视频。"
+    },
+    {
+      "en": "Summarize today's available Bilibili ranking results.",
+      "zh-CN": "汇总今天可用的哔哩哔哩排行榜结果。"
+    },
+    {
+      "en": "Compare the public search results for these two video topics.",
+      "zh-CN": "比较这两个视频主题的公开搜索结果。"
+    }
+  ],
+  "documentationUrl": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/bilibili-search",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "replit",
-  "version": "1.0.2-ghast.2",
   "description": "Create, find, inspect, update, and publish Replit Apps through Replit's official hosted MCP server and Agent.",
   "author": {
     "name": "Replit",

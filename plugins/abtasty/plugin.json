@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "abtasty",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect visitor feature flags and campaign configuration with AB Tasty’s official Feature Experimentation MCP.",
   "author": {
     "name": "Ghast AI",

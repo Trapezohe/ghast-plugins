@@ -1,0 +1,42 @@
+{
+  "overview": {
+    "en": "Inspect API gateways, services, routes and performance with Kong Konnect’s official MCP.\n\nInspect API gateway services, routes, and available performance context before proposing changes. Keep the gateway and environment explicit.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Kong Konnect 官方 MCP 检查 API 网关、服务、路由与性能。\n\n提出修改前检查 API 网关服务、路由与可用性能上下文，明确网关和环境。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize this gateway's services and routes.",
+      "zh-CN": "汇总这个网关的服务与路由。"
+    },
+    {
+      "en": "Investigate this API routing or performance issue.",
+      "zh-CN": "调查这个 API 路由或性能问题。"
+    },
+    {
+      "en": "Prepare a gateway configuration review for this environment.",
+      "zh-CN": "为这个环境准备网关配置审查。"
+    }
+  ],
+  "websiteUrl": "https://developer.konghq.com/konnect-platform/konnect-mcp/installation/",
+  "privacyPolicyUrl": "https://konghq.com/legal/privacy-policy",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://developer.konghq.com/konnect-platform/konnect-mcp/installation/"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://developer.konghq.com/konnect-platform/konnect-mcp/installation/",
+        "anchor": "Privacy",
+        "status": 200,
+        "url": "https://konghq.com/legal/privacy-policy"
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "neon-postgres",
-  "version": "1.1.2-ghast.1",
+  "version": "1.1.2",
   "description": "Manage Neon Lakebase Postgres projects, branches, schemas, SQL, migrations, Auth, Object Storage, Functions, AI Gateway, and database performance with official Neon skills and MCP.",
   "author": {
     "name": "Neon",

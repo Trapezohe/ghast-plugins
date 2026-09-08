@@ -92,7 +92,7 @@ def main() -> int:
     ) != imp.normalized_repository_url(REPOSITORY):
         raise ValueError("NVIDIA official source identity changed")
     verify.manifest(
-        plugin, name="nvidia", version="1.4.0-ghast.1", revision=REVISION
+        plugin, name="nvidia", version='1.4.0', revision=REVISION
     )
     source_skills = source / "skills"
     packaged_skills = plugin / "skills"

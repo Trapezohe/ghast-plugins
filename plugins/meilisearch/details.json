@@ -1,0 +1,51 @@
+{
+  "overview": {
+    "en": "Search documents and manage indexes, relevance settings and indexing tasks through Meilisearch’s official MCP.\n\nInspect search results in the context of the selected index and query. Compare returned records and prepare relevance improvements as a reviewable proposal.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Meilisearch 官方 MCP 搜索文档并管理索引、相关性设置与索引任务。\n\n结合选定索引与查询检查搜索结果，比较返回记录，并将相关性改进整理成可审阅提案。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Search this index for the topic and summarize the matching records.",
+      "zh-CN": "在这个索引中搜索该主题，并汇总匹配记录。"
+    },
+    {
+      "en": "Compare results for these two queries and explain the differences.",
+      "zh-CN": "比较这两个查询的结果，并解释差异。"
+    },
+    {
+      "en": "Prepare a search relevance review using the available configuration and results.",
+      "zh-CN": "根据可用配置与结果准备搜索相关性审查。"
+    }
+  ],
+  "websiteUrl": "https://www.meilisearch.com/integrations/mcp",
+  "privacyPolicyUrl": "https://www.meilisearch.com/privacy-policy",
+  "termsOfServiceUrl": "https://www.meilisearch.com/terms-of-use",
+  "repositoryUrl": "https://github.com/meilisearch/meilisearch-mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.meilisearch.com/integrations/mcp"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.meilisearch.com/integrations/mcp",
+        "anchor": "Privacy policy",
+        "status": 200,
+        "url": "https://www.meilisearch.com/privacy-policy"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://www.meilisearch.com/integrations/mcp",
+        "anchor": "Terms of use",
+        "status": 200,
+        "url": "https://www.meilisearch.com/terms-of-use"
+      }
+    ]
+  }
+}

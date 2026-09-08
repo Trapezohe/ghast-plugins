@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ref",
-  "version": "1.0.0-ghast.1",
   "description": "Search and read focused technical documentation with Ref.",
   "author": {
     "name": "Ghast AI",

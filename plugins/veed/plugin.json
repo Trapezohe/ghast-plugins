@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "veed",
-  "version": "1.0.0-ghast.1",
   "description": "Create talking-head videos with AI characters, voices and workspace assets.",
   "author": {
     "name": "Ghast AI",

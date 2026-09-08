@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "remote",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Remote’s official MCP to explore workforce, payroll and leave data and perform authorized employee self-service.",
   "author": {
     "name": "Ghast AI",

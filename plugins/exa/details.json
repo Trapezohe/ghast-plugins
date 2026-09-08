@@ -1,0 +1,35 @@
+{
+  "overview": {
+    "en": "Search the web and retrieve source pages with Exa for grounded research and current information.\n\nResearch a topic through the available web search or extraction tools. Define the source scope, retain URLs, and distinguish retrieved facts from synthesis.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "使用 Exa 搜索网络并读取来源网页，为调研与时效信息查询提供依据。\n\n通过可用网页搜索或提取工具研究主题，限定来源范围，保留网址，并区分检索事实与综合分析。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Research this topic using public sources and provide a source-linked summary.",
+      "zh-CN": "使用公开来源研究这个主题，提供带链接的摘要。"
+    },
+    {
+      "en": "Extract the relevant information from these pages into a structured comparison.",
+      "zh-CN": "从这些网页提取相关信息，整理成结构化比较。"
+    },
+    {
+      "en": "Check the evidence for this claim and explain gaps or conflicting sources.",
+      "zh-CN": "核对这个说法的依据，并解释缺漏或来源冲突。"
+    }
+  ],
+  "websiteUrl": "https://exa.ai/docs/reference/exa-mcp",
+  "repositoryUrl": "https://github.com/exa-labs/exa-mcp-server",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://exa.ai/docs/reference/exa-mcp"
+      }
+    ]
+  }
+}

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "unleash",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect feature flags, evaluate changes and manage rollouts on your Unleash instance with its official MCP server.",
   "author": {
     "name": "Ghast AI",

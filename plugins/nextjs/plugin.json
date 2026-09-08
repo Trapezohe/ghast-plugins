@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "nextjs",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect running Next.js applications through Vercel’s official DevTools MCP connector for runtime errors, routes and logs.",
   "author": {
     "name": "Ghast AI",

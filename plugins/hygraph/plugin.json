@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "hygraph",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Hygraph’s official global MCP to discover your projects and environments, inspect schemas and work with structured content.",
   "author": {
     "name": "Ghast AI",

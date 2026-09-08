@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ideogram",
-  "version": "1.0.0-ghast.1",
   "description": "Generate and edit images, organize creative assets and manage custom-model workflows in Ideogram.",
   "author": {
     "name": "Ghast AI",

@@ -74,6 +74,7 @@ Ghast 为官方服务编写的适配包，不等于服务商亲自发布的插�
 ```text
 plugins/<name>/
 ├── plugin.json                  # 清单与 Ghast 元数据
+├── details.json                 # 双语详细介绍、三个示例与官方链接
 ├── assets/                      # 品牌 Logo
 ├── skills/                      # 可选：技能
 ├── mcp.json                     # 可选：MCP 配置
@@ -84,6 +85,10 @@ plugins/<name>/
 ```
 
 在 Ghast 扩展中填写 `descriptions.en` 和 `descriptions.zh-CN`，根字段 `description` 与英文介绍保持一致。分类使用 [`scripts/plugin_categories.py`](scripts/plugin_categories.py) 中的规范值。
+
+每个插件独立维护 `details.json`：`overview` 和恰好三个 `starterPrompts` 分别填写 `en` 与 `zh-CN`。可选链接包括 `websiteUrl`、`repositoryUrl`、`documentationUrl`、`privacyPolicyUrl`、`termsOfServiceUrl`；只填写已核验的官方链接，并在 `sources` 保留依据。中文语言显示中文，其他语言默认英文。修改对应插件目录里的文件即可，不维护集中介绍文件；导入上游更新时保留此文件。
+
+生成的目录索引只保存详情地址和 SHA-256 摘要。Ghast 打开插件时才加载完整介绍并校验摘要；已安装插件从本地安装包读取，无需联网。
 
 在仓库根目录准备校验环境并重新构建：
 
@@ -99,9 +104,15 @@ CI 使用 Python 3.12 和 Node.js 24。脚本检查还需要本机可用的 Node
 
 在 Ghast 中安装生成的包，检查界面展示和相关运行行为，然后卸载测试安装。通过 PR 一并提交源码、重新生成的安装包和目录文件。保留上游许可证，记录兼容性改动。导入脚本用于经过审核、固定版本的上游源码，不用于整站镜像其他插件市场。
 
+## 版本规则
+
+插件直接使用已核验的上游清单或官方发行版本，不添加 Ghast 后缀。版本来源、对应的打包提交和证据摘要记录在 `maintenance/upstreams.json` 的 `versionSource` 中。没有可核验上游包版本时，清单省略 `version`，不拿 API 协议版本或仓库中无关依赖包的版本代替。
+
+目录构建器会在打包前将这项规则应用到源码清单，包括旧导入脚本生成的内容。更新上游快照时，需要同时更新对应版本证据；版本证据与打包提交不一致会导致校验失败。Ghast 适配、翻译或 Logo 的修改通过 Git 和安装包 SHA-256 追踪；即使上游版本没变，客户端也能识别包内容变化。
+
 ## 如何保持更新
 
-维护工作流配置为每日检查上游，将变化集中到一个待审核 PR。**目前尚待启用**：工作流需要合入默认分支，并允许 GitHub Actions 创建 PR。
+维护工作流配置为每日检查上游，将变化集中到一个待审核 PR。**创建 PR 的权限仍待开启**：需要在仓库设置中允许 GitHub Actions 创建 PR。
 
 自动发现更新不等于自动改写全部插件。当前清单支持检查 GitHub 修订、npm/PyPI 发布版本和固定 HTTPS 地址；无法自动识别的来源需要人工处理。目前仅 Ponytail 配置了带文件校验的自动更新映射，其他变化先生成审核信息，不会直接覆盖插件内容。
 

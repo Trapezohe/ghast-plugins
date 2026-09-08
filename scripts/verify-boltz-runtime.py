@@ -322,7 +322,7 @@ def main() -> int:
     manifest = json.loads((plugin / "plugin.json").read_text())
     if manifest.get("$schema") != PLUGIN_SCHEMA:
         raise ValueError("Boltz is not Agent Plugins 1.0")
-    if manifest.get("version") != f"{RELEASE_VERSION}-ghast.1":
+    if manifest.get("version") != '0.1.1':
         raise ValueError(f"unexpected Ghast Boltz version: {manifest.get('version')}")
     if not (plugin / "assets/icon.png").is_file():
         raise ValueError("Boltz icon is missing")

@@ -1,0 +1,44 @@
+{
+  "overview": {
+    "en": "Build, deploy, and operate Netlify projects with official skills for Functions, Edge Functions, Blobs, Database, Identity, Image CDN, Forms, configuration, caching, AI Gateway, and deployment, plus the official Netlify MCP server.\n\nInspect the selected project's resources and development context before proposing a change. Turn the available configuration and diagnostics into a reviewable implementation or troubleshooting plan.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "开发、部署和运维网站，配置函数、存储、数据库、身份与表单。\n\n提出变更前，检查指定项目的资源与开发上下文，把可用配置和诊断信息整理成可审阅的实施或排障方案。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Review this project's current configuration and explain the main components.",
+      "zh-CN": "检查这个项目的当前配置，解释主要组成部分。"
+    },
+    {
+      "en": "Help diagnose this deployment or service error using the available tools.",
+      "zh-CN": "使用可用工具协助排查这个部署或服务错误。"
+    },
+    {
+      "en": "Prepare an implementation plan for this project change before applying it.",
+      "zh-CN": "为这项项目变更准备实施方案，先不要应用。"
+    }
+  ],
+  "websiteUrl": "https://www.netlify.com",
+  "privacyPolicyUrl": "https://www.netlify.com/privacy/",
+  "repositoryUrl": "https://github.com/netlify/context-and-tools",
+  "documentationUrl": "https://docs.netlify.com",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.netlify.com"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.netlify.com",
+        "anchor": "Privacy",
+        "status": 200,
+        "url": "https://www.netlify.com/privacy/"
+      }
+    ]
+  }
+}

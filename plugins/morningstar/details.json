@@ -1,0 +1,30 @@
+{
+  "overview": {
+    "en": "Screen, summarize, compare, and analyze funds through Morningstar's official MCP.\n\nScreen and compare funds with a consistent investment objective and comparison period. Present the available fund data and explain which criteria drive the comparison.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "筛选、总结、比较和分析基金。\n\n围绕一致的投资目标和比较周期筛选基金，展示可用基金数据，并解释比较依据。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Screen funds that match this investment objective and explain the criteria.",
+      "zh-CN": "筛选符合这个投资目标的基金，并解释筛选条件。"
+    },
+    {
+      "en": "Compare these three funds over the same time horizon.",
+      "zh-CN": "比较这三只基金在相同时间范围内的表现。"
+    },
+    {
+      "en": "Summarize the available research on this fund and identify missing information.",
+      "zh-CN": "汇总这只基金的可用研究资料，并指出信息缺口。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/Morningstar/morningstar-plugins",
+  "documentationUrl": "https://www.morningstar.com/business/products/mcp-server",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

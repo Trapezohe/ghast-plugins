@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "fireflies",
-  "version": "1.0.2-ghast.2",
   "description": "Search, summarize, analyze, organize, share, and create clips from meeting transcripts through Fireflies' official hosted MCP server.",
   "author": {
     "name": "Fireflies",

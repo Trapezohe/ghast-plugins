@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "enterpret",
-  "version": "1.0.0-ghast.1",
   "description": "Analyze customer feedback, themes, sentiment and account context with cited answers from Enterpret’s official MCP.",
   "author": {
     "name": "Ghast AI",

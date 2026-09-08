@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "clickhouse",
-  "version": "1.0.0-ghast.1",
   "description": "Explore ClickHouse Cloud data and analytical context and assist with SQL-based reporting.",
   "author": {
     "name": "Ghast AI",

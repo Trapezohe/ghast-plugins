@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "feishu-lark",
-  "version": "1.0.0-ghast.2",
   "description": "Work with documents, Base tables, chats, calendars and tasks through the official Feishu / Lark OpenAPI MCP.",
   "author": {
     "name": "Ghast AI",

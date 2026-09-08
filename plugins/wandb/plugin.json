@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "wandb",
-  "version": "1.0.0-ghast.1",
   "description": "Analyze W&B runs and artifacts and Weave traces and evaluations through the official Weights & Biases MCP server.",
   "author": {
     "name": "Ghast AI",

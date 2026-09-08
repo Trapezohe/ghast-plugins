@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "google-slides",
-  "version": "1.0.0-ghast.1",
   "description": "Read and update presentations through Google’s official Workspace MCP service.",
   "author": {
     "name": "Ghast AI",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "cartesia",
-  "version": "1.0.0-ghast.2",
   "description": "Generate speech, transcribe audio and manage voices and pronunciation dictionaries through Cartesia’s official MCP server.",
   "author": {
     "name": "Ghast AI",

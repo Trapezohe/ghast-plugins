@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "google-gmail",
-  "version": "1.0.0-ghast.1",
   "description": "Search email, read threads and manage drafts and labels through Google’s official Workspace MCP service.",
   "author": {
     "name": "Ghast AI",

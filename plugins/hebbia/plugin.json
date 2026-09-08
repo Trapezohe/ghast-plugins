@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "hebbia",
-  "version": "1.0.3-ghast.2",
   "description": "Search authorized institutional knowledge, analyze document sets with traceable evidence, and support financial research workflows through Hebbia's official hosted MCP.",
   "author": {
     "name": "Hebbia",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ordinal",
-  "version": "1.0.0-ghast.1",
   "description": "Draft and schedule social posts, analyze performance and manage approvals with Ordinal’s official OAuth MCP connector.",
   "author": {
     "name": "Ghast AI",

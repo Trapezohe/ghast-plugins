@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "maze",
-  "version": "1.0.0-ghast.1",
   "description": "Find user studies, review responses and transcripts, and compare research findings through Maze’s official MCP.",
   "author": {
     "name": "Ghast AI",

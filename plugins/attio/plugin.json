@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "attio",
-  "version": "1.0.0-ghast.2",
   "description": "Search, read, create, and update Attio CRM records, lists, comments, notes, tasks, meetings, calls, emails, and reports through Attio's official hosted MCP server.",
   "author": {
     "name": "Attio Ltd",

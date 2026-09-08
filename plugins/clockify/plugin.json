@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "clockify",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Clockify’s official MCP preview for time tracking, project lookup and reports; provider documentation still marks the service as coming soon.",
   "author": {
     "name": "Ghast AI",

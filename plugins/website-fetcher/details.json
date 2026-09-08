@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Skill that teaches the model to fetch a URL and read its text content via the built-in WebFetch tool — 'just look at this page' without opening a browser.\n\nRead text from a supplied public URL without opening a browser. Preserve the original page reference and explain what could not be retrieved.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "读取网址中的文本内容，无需打开浏览器。\n\n无需打开浏览器即可读取提供的公开网址文本，保留原始页面引用，并说明无法获取的内容。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Read this page and summarize its main points.",
+      "zh-CN": "阅读这个页面并总结要点。"
+    },
+    {
+      "en": "Extract the relevant sections from this URL for my question.",
+      "zh-CN": "从这个网址提取与我的问题相关的段落。"
+    },
+    {
+      "en": "Compare the text on these two public pages.",
+      "zh-CN": "比较这两个公开页面的文本。"
+    }
+  ],
+  "documentationUrl": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/website-fetcher",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

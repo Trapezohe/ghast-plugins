@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Connect Infisical’s official MCP to manage project environments, folders, scoped secrets and project membership.\n\nReview project and environment configuration within the authorized scope. Diagnose configuration problems using metadata and names without exposing secret values in the conversation.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "连接 Infisical 官方 MCP，管理项目环境、文件夹、授权范围内的密钥和项目成员。\n\n在授权范围内检查项目与环境配置，通过元数据和名称诊断配置问题，不在对话中暴露密钥值。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "List the available project environments and summarize their configuration structure.",
+      "zh-CN": "列出可用项目环境，汇总配置结构。"
+    },
+    {
+      "en": "Help diagnose this missing configuration reference without printing secret values.",
+      "zh-CN": "协助排查这个缺失配置引用，不要输出密钥值。"
+    },
+    {
+      "en": "Prepare an environment configuration review using names and metadata only.",
+      "zh-CN": "仅使用名称与元数据准备环境配置审查。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/Infisical/infisical-mcp-server",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

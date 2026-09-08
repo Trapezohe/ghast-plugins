@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "hg-insights",
-  "version": "1.0.3-ghast.3",
   "description": "Research companies, markets, technology adoption, buying signals, spend, contracts, contacts, and GTM segments through HG Insights' official Phoenix MCP server.",
   "author": {
     "name": "HG Insights",

@@ -78,3 +78,22 @@ this repository must not claim that a disabled GitHub schedule can monitor itsel
 中文：每天自动查源、集中生成一个更新 PR；脚本/规则与兼容性变化需要审查。
 Ponytail 已配置可执行同步映射，其余插件的新版自动进入报告，未完成映射的插件
 不会伪装成已自动升级。连接器认证、客户端真实安装和商店发布是不同验收阶段。
+
+## Upstream package versions
+
+`versionSource` in `upstreams.json` records the verified upstream version, repository,
+packaged revision, source path (or official release URL), and evidence SHA-256.
+Versions are copied verbatim, with no `-ghast.N` suffix. Unverified versions are
+omitted, never synthesized. Official release evidence takes precedence over stale
+manifest fields for Boltz and HeyGen. Unrelated root package metadata is not used.
+
+The catalog builder normalizes legacy importer output using this inventory before
+packing it. Update version evidence together with any packaged revision change;
+mismatched revisions fail validation. The mapped updater reads the version from
+the same immutable upstream commit as the updated files, before writing them.
+A missing upstream version removes the version field. Fetch/parse failures stop
+the update. No local revision counter is incremented.
+
+Changes with the same upstream version still change the package SHA-256, which
+Ghast uses for update detection. Version evidence is independent of npm/PyPI
+monitoring: discovering a newer runtime release does not mean it is packaged.

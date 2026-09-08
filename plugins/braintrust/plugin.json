@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "braintrust",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect Braintrust traces and experiments, manage evaluation datasets and prompts, and build authorized AI evaluation workflows.",
   "author": {
     "name": "Ghast AI",

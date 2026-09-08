@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Slash command and skill that tells the model the current wall-clock time in any IANA timezone — kills the 'I don't know what day it is' problem.\n\nCheck current local time using IANA time-zone names. Useful for comparing working hours across regions without assuming the machine's local zone.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "查询任意 IANA 时区的当前日期与时间。\n\n使用 IANA 时区名称查询当前当地时间，适合比较跨地区工作时间，而不默认使用本机时区。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "What is the current date and time in Asia/Singapore?",
+      "zh-CN": "Asia/Singapore 时区现在的日期和时间是什么？"
+    },
+    {
+      "en": "Compare the current time in London, New York, and Singapore.",
+      "zh-CN": "比较伦敦、纽约与新加坡当前的时间。"
+    },
+    {
+      "en": "Show the current time in UTC and my selected IANA time zone.",
+      "zh-CN": "显示 UTC 与我指定 IANA 时区的当前时间。"
+    }
+  ],
+  "documentationUrl": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/current-datetime",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

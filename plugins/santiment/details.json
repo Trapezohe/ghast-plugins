@@ -1,0 +1,42 @@
+{
+  "overview": {
+    "en": "Explore crypto on-chain metrics, social sentiment, trending narratives and analyst insights with Santiment.\n\nInvestigate a crypto research question with a defined asset, period, and metric. Preserve source definitions so that protocol, wallet, or market figures are not compared on inconsistent bases.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Santiment 探索加密货币链上指标、社交情绪、热门叙事与分析师观点。\n\n围绕明确的资产、时间段和指标开展加密研究。保留数据来源与指标定义，避免按不同口径比较协议、钱包或市场数据。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the available indicators for this protocol and explain what each measures.",
+      "zh-CN": "查找这个协议的可用指标，并解释各指标衡量什么。"
+    },
+    {
+      "en": "Analyze this asset's activity over the last month and highlight unusual changes.",
+      "zh-CN": "分析该资产最近一个月的活动，标出异常变化。"
+    },
+    {
+      "en": "Prepare a source-backed research brief comparing these two crypto projects.",
+      "zh-CN": "比较这两个加密项目，整理附有来源依据的研究简报。"
+    }
+  ],
+  "websiteUrl": "https://academy.santiment.net/mcp-connector/",
+  "privacyPolicyUrl": "https://academy.santiment.net/mcp-connector/#privacy",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://academy.santiment.net/mcp-connector/"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://academy.santiment.net/mcp-connector/",
+        "anchor": "Privacy",
+        "status": 200,
+        "url": "https://academy.santiment.net/mcp-connector/#privacy"
+      }
+    ]
+  }
+}

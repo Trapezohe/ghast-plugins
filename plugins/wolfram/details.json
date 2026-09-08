@@ -1,0 +1,30 @@
+{
+  "overview": {
+    "en": "Solve mathematical problems, evaluate Wolfram Language and explore scientific knowledge with Wolfram MCP Service.\n\nUse computational and scientific tools to solve a defined problem. Keep units, assumptions, and symbolic or numerical choices explicit in the result.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Wolfram MCP Service 求解数学问题、运行 Wolfram Language 并查询科学知识。\n\n使用计算与科学工具解决明确问题，在结果中说明单位、假设，以及符号或数值计算方式。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Solve this equation and show the assumptions and result.",
+      "zh-CN": "求解这个方程，并说明假设与结果。"
+    },
+    {
+      "en": "Compute this quantity with units and explain the calculation.",
+      "zh-CN": "带单位计算这个量，并解释计算过程。"
+    },
+    {
+      "en": "Prepare a Wolfram Language calculation for this scientific question.",
+      "zh-CN": "为这个科学问题准备 Wolfram Language 计算。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/WolframResearch/AgentTools",
+  "documentationUrl": "https://github.com/WolframResearch/AgentTools/blob/main/AgentSkills/Skills/wolfram-language/references/SetUpWolframMCPServer.md",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

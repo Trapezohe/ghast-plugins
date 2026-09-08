@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "serpstat",
-  "version": "1.0.0-ghast.1",
   "description": "Research keywords, competitors, backlinks, rankings and technical SEO.",
   "author": {
     "name": "Ghast AI",

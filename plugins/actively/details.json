@@ -1,0 +1,51 @@
+{
+  "overview": {
+    "en": "Research and prioritize accounts using Actively's persistent Per-Account Agent intelligence, buying signals, prospect context, strategy, and next-best actions.\n\nResearch companies and people against a defined prospecting goal. Preserve the source of each finding and use available relationship or account context to prepare outreach drafts.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "分析客户账户、购买信号与潜在商机，制定销售优先级和后续行动。\n\n围绕明确的获客目标研究企业与人物，保留每项发现的来源，并结合可用关系或客户背景准备触达草稿。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Review my customer accounts and prioritize follow-up opportunities.",
+      "zh-CN": "分析我的客户账户，按优先级整理需要跟进的商机。"
+    },
+    {
+      "en": "Identify buying signals in my accounts and explain why they matter.",
+      "zh-CN": "找出客户账户中的购买信号，并说明判断依据。"
+    },
+    {
+      "en": "Help me prepare a follow-up plan for a target account.",
+      "zh-CN": "帮我为一个目标客户制定后续跟进计划。"
+    }
+  ],
+  "websiteUrl": "https://www.actively.ai",
+  "termsOfServiceUrl": "https://www.actively.ai/terms",
+  "privacyPolicyUrl": "https://www.actively.ai/privacy",
+  "documentationUrl": "https://www.actively.ai/products/mcp-server",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.actively.ai"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://www.actively.ai",
+        "anchor": "Terms of Service",
+        "status": 200,
+        "url": "https://www.actively.ai/terms"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.actively.ai",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://www.actively.ai/privacy"
+      }
+    ]
+  }
+}

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "responsive",
-  "version": "1.0.3-ghast.1",
   "description": "Search governed Responsive proposal content, inspect projects and unanswered questions, and generate grounded draft responses through Responsive's official hosted MCP.",
   "author": {
     "name": "RFPIO Inc. (d/b/a Responsive)",

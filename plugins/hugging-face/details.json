@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Explore and manage Hugging Face models, datasets, Spaces, jobs, papers, evaluations, training, Gradio apps, local models, and Hub workflows with the complete official skill catalog and official Hugging Face MCP server.\n\nExplore model, dataset, and research resources before planning an AI workflow. Keep task requirements and resource identifiers explicit when comparing candidates.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "发现和管理模型、数据集、Spaces、任务、论文、评测与训练流程。\n\n规划 AI 工作流前探索模型、数据集与研究资源，比较候选项时明确任务要求与资源标识。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find models suitable for this task and compare their available documentation.",
+      "zh-CN": "查找适合这个任务的模型，并比较可用文档。"
+    },
+    {
+      "en": "Review this dataset and summarize its structure and intended use.",
+      "zh-CN": "查看这个数据集，汇总结构与预期用途。"
+    },
+    {
+      "en": "Prepare an evaluation or training plan using these selected resources.",
+      "zh-CN": "使用这些选定资源准备评测或训练计划。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/huggingface/skills",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

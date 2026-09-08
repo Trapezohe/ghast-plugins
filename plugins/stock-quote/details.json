@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Skill for fetching delayed stock quotes (price, change, volume) via Yahoo Finance's public chart endpoint. No API key required.\n\nRetrieve delayed public stock quotes and state their observation time. This is a price lookup workflow, not a trading connection.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "通过公开行情接口获取延迟股票价格、涨跌和成交量。\n\n获取延迟的公开股票报价并说明观测时间。这是行情查询流程，不是交易连接。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Show the available delayed quote for AAPL with its timestamp.",
+      "zh-CN": "显示 AAPL 的可用延迟报价及时间戳。"
+    },
+    {
+      "en": "Compare the available quotes and volume for these stock symbols.",
+      "zh-CN": "比较这些股票代码的可用报价与成交量。"
+    },
+    {
+      "en": "Summarize the reported price change for this stock.",
+      "zh-CN": "汇总这只股票报告的价格变化。"
+    }
+  ],
+  "documentationUrl": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/stock-quote",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

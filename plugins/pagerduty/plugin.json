@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "pagerduty",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect incidents, services and on-call context and manage incident response in PagerDuty.",
   "author": {
     "name": "Ghast AI",

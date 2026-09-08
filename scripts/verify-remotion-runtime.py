@@ -82,7 +82,7 @@ def verify_checked_in_output(source: Path, plugin: Path) -> None:
     extension = manifest["extensions"]["ai.trapezohe.ghast"]
     if manifest["$schema"] != "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json":
         raise ValueError("Remotion does not use the Agent Plugins 1.0 schema")
-    if manifest["version"] != f"{EXPECTED_VERSION}-ghast.1":
+    if manifest["version"] != '4.0.515':
         raise ValueError(f"unexpected Ghast Remotion version: {manifest['version']}")
     if extension["upstreamRevision"] != EXPECTED_REVISION:
         raise ValueError("Remotion manifest revision does not match the verifier")

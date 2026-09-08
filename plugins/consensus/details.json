@@ -1,0 +1,35 @@
+{
+  "overview": {
+    "en": "Search academic research with Consensus’s official MCP and build evidence-backed reading lists and literature reviews.\n\nResearch a scientific question with traceable source material. Specify the scope, compare the available findings, and preserve publication details and uncertainty.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Consensus 官方 MCP 搜索学术研究，整理有文献依据的阅读清单与文献综述。\n\n使用可追溯资料研究科学问题，明确范围，比较可用发现，并保留发表信息与不确定性。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find research addressing this question and summarize the relevant findings.",
+      "zh-CN": "查找回答这个问题的研究，并总结相关发现。"
+    },
+    {
+      "en": "Compare the evidence for these two explanations with source references.",
+      "zh-CN": "比较这两种解释的证据，并附上来源。"
+    },
+    {
+      "en": "Prepare a literature review outline with supporting citations.",
+      "zh-CN": "准备文献综述提纲，并附上支持引用。"
+    }
+  ],
+  "websiteUrl": "https://docs.consensus.app/consensus-mcp.md",
+  "repositoryUrl": "https://github.com/Consensus-NLP/consensus-mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.consensus.app/consensus-mcp.md"
+      }
+    ]
+  }
+}

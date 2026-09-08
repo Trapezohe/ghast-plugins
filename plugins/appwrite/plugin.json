@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "appwrite",
-  "version": "1.0.0-ghast.1",
   "description": "Manage Appwrite Cloud projects, discover service tools and search documentation through Appwrite’s official hosted MCP.",
   "author": {
     "name": "Ghast AI",

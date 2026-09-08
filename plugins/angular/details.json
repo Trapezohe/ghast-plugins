@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Use Angular’s official CLI MCP tools for workspace analysis, documentation, development servers and build workflows.\n\nUse official development workflows to inspect a project and plan a concrete implementation. Keep the framework, runtime, and requested change explicit when applying guidance.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "使用 Angular 官方 CLI MCP 工具分析工作区、查询文档、运行开发服务器及构建流程。\n\n使用官方开发工作流检查项目并规划具体实现，应用指导时明确框架、运行环境与所需变更。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Inspect this project and explain how to implement the requested feature.",
+      "zh-CN": "检查这个项目，说明如何实现所需功能。"
+    },
+    {
+      "en": "Diagnose this development error using the relevant official guidance.",
+      "zh-CN": "结合相关官方指导诊断这个开发错误。"
+    },
+    {
+      "en": "Review this code change and propose a focused verification plan.",
+      "zh-CN": "审查这段代码变更，提出有针对性的验证方案。"
+    }
+  ],
+  "websiteUrl": "https://angular.dev/ai/mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://angular.dev/ai/mcp"
+      }
+    ]
+  }
+}

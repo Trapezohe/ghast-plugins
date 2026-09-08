@@ -1,0 +1,35 @@
+{
+  "overview": {
+    "en": "Explore traces, latency and service health with Honeycomb.\n\nInvestigate service behavior using the available operational evidence. Start with the service and time window, correlate the returned records, and keep hypotheses separate from confirmed findings.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "分析 Honeycomb 链路追踪、请求延迟与服务健康状况。\n\n利用可用运行证据调查服务表现。从服务与时间窗口出发，关联返回记录，并区分假设与已确认发现。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Investigate this service issue within the specified time window.",
+      "zh-CN": "在指定时间窗口内调查这个服务问题。"
+    },
+    {
+      "en": "Summarize the available evidence around this error or performance regression.",
+      "zh-CN": "汇总这个错误或性能退化周边的可用证据。"
+    },
+    {
+      "en": "Prepare an incident investigation brief with findings and next checks.",
+      "zh-CN": "准备事件调查简报，列出发现与下一步检查。"
+    }
+  ],
+  "websiteUrl": "https://docs.honeycomb.io/integrations/mcp/configuration-guide",
+  "repositoryUrl": "https://github.com/honeycombio/agent-skill",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.honeycomb.io/integrations/mcp/configuration-guide"
+      }
+    ]
+  }
+}

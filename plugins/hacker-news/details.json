@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Skill for reading Hacker News from chat — top / new / best stories plus thread fetches via the public Firebase API.\n\nBrowse public Hacker News stories and discussions. Keep story links and distinguish a submitted claim from comments about it.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "读取 Hacker News 热门、最新与精选内容以及讨论串。\n\n浏览公开 Hacker News 文章与讨论，保留文章链接，并区分投稿中的说法与评论观点。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize the current top Hacker News stories.",
+      "zh-CN": "汇总当前 Hacker News 热门文章。"
+    },
+    {
+      "en": "Read this discussion and summarize the main viewpoints.",
+      "zh-CN": "阅读这段讨论，汇总主要观点。"
+    },
+    {
+      "en": "Compare the available recent stories on this technology topic.",
+      "zh-CN": "比较近期可用的这个技术主题相关文章。"
+    }
+  ],
+  "documentationUrl": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/hacker-news",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

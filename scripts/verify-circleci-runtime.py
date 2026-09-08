@@ -218,7 +218,7 @@ def main() -> int:
     mcp = json.loads((plugin / "mcp.json").read_text())
     if manifest.get("$schema") != PLUGIN_SCHEMA:
         raise ValueError("CircleCI is not Agent Plugins 1.0")
-    if manifest.get("version") != f"{EXPECTED_VERSION}-ghast.1":
+    if manifest.get("version") != EXPECTED_VERSION:
         raise ValueError("unexpected Ghast CircleCI version")
     ghast = manifest["extensions"]["ai.trapezohe.ghast"]
     if ghast.get("upstreamRevision") != EXPECTED_REVISION:

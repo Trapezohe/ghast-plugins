@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "wistia",
-  "version": "1.0.0-ghast.1",
   "description": "Manage video libraries, update media and review video performance in Wistia.",
   "author": {
     "name": "Ghast AI",

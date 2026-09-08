@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "starrocks",
-  "version": "1.0.0-ghast.1",
   "description": "Explore StarRocks schemas, run SQL and create charts from analytical queries.",
   "author": {
     "name": "Ghast AI",

@@ -32,7 +32,7 @@ def main() -> int:
     verify.manifest(
         plugin,
         name="superhuman",
-        version="0.1.0-ghast.1",
+        version='0.1.0',
         revision=REVISION,
     )
     with tempfile.TemporaryDirectory(prefix="ghast-superhuman-skills-") as temp:

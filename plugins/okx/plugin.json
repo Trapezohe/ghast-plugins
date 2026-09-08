@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "okx",
-  "version": "1.0.0-ghast.1",
   "description": "Read OKX market prices, order books, candles and derivatives market data through the official Agent Trade Kit.",
   "author": {
     "name": "Ghast AI",

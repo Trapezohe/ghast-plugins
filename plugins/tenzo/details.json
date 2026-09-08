@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Analyze restaurant sales, labor costs, customer reviews and shift logs through Tenzo’s official MCP.\n\nReview restaurant performance with a clear location and reporting interval. Combine available sales, labor, review, and shift context without assuming missing data.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Tenzo 官方 MCP 分析餐厅销售、人工成本、顾客评价与班次日志。\n\n在明确门店与统计周期后查看餐厅表现，结合可用销售、人工、评价和班次信息，不推测缺失数据。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize this restaurant's sales and labor data for last week.",
+      "zh-CN": "汇总这家餐厅上周的销售与人工数据。"
+    },
+    {
+      "en": "Review recent customer feedback alongside the available shift context.",
+      "zh-CN": "结合可用班次背景查看近期顾客反馈。"
+    },
+    {
+      "en": "Prepare an operations review for this location.",
+      "zh-CN": "为这家门店准备运营复盘。"
+    }
+  ],
+  "websiteUrl": "https://support.gotenzo.com/developers/mcp-server/",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://support.gotenzo.com/developers/mcp-server/"
+      }
+    ]
+  }
+}

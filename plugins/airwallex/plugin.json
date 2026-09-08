@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "airwallex",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Airwallex’s official production, sandbox developer and public documentation MCP services for finance and integration workflows.",
   "author": {
     "name": "Ghast AI",

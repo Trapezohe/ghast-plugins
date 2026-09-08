@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "cryptohopper",
-  "version": "1.0.0-ghast.1",
   "description": "Read exchange tickers, order books and OHLCV candles through Cryptohopper.",
   "author": {
     "name": "Ghast AI",

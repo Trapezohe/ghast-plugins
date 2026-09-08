@@ -1,0 +1,42 @@
+{
+  "overview": {
+    "en": "Build, inspect, manage and run automation scenarios through Make’s official MCP server.\n\nConnect a concrete business task to the automation capabilities already available. State the inputs and intended outputs, review the workflow, and keep execution separate from preparation.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Make 官方 MCP 服务构建、查看、管理与运行自动化场景。\n\n把具体业务任务与已有自动化能力连接起来。说明输入和预期输出，审阅流程，并将执行与准备分开。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Review the available automation for this task and explain its inputs.",
+      "zh-CN": "查看这项任务的可用自动化流程，解释所需输入。"
+    },
+    {
+      "en": "Prepare a workflow plan that transforms this input into the requested output.",
+      "zh-CN": "准备一个将这些输入转换为所需输出的工作流方案。"
+    },
+    {
+      "en": "Inspect this workflow and identify steps that need review before running it.",
+      "zh-CN": "检查这个工作流，列出运行前需要审阅的步骤。"
+    }
+  ],
+  "websiteUrl": "https://developers.make.com/mcp-server",
+  "privacyPolicyUrl": "https://www.celonis.com/legal/privacy-notice",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://developers.make.com/mcp-server"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://developers.make.com/mcp-server",
+        "anchor": "Privacy Notice",
+        "status": 200,
+        "url": "https://www.celonis.com/legal/privacy-notice"
+      }
+    ]
+  }
+}

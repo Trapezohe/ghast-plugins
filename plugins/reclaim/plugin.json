@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "reclaim",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Reclaim’s official MCP to analyze workload, find meeting time and stage calendar changes for review in Reclaim 2.0.",
   "author": {
     "name": "Ghast AI",

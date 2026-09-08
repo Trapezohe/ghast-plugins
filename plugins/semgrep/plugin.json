@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "semgrep",
-  "version": "1.0.0-ghast.1",
   "description": "Analyze code and investigate security findings with the MCP server built into the official Semgrep CLI.",
   "author": {
     "name": "Ghast AI",

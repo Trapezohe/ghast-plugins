@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Use Graphlit’s official MCP to retrieve project knowledge, search content, organize collections and build content workflows.\n\nUse connected workspace knowledge to search, organize, and prepare document updates. Keep the target space or document explicit and separate existing information from proposed additions.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Graphlit 官方 MCP 检索项目知识、搜索内容、整理集合并构建内容工作流。\n\n利用已连接工作区知识进行检索、整理和文档更新准备。明确目标空间或文档，区分已有信息与拟新增内容。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the relevant notes for this project and summarize the current context.",
+      "zh-CN": "查找这个项目的相关笔记，汇总当前背景。"
+    },
+    {
+      "en": "Organize these findings into a structured document draft.",
+      "zh-CN": "把这些发现整理成结构化文档草稿。"
+    },
+    {
+      "en": "Review this document and prepare an update based on the linked sources.",
+      "zh-CN": "检查这份文档，并依据关联来源准备更新稿。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/graphlit/graphlit-mcp-server",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "highlevel",
-  "version": "1.0.0-ghast.2",
   "description": "Inspect contacts, opportunities, pipelines, appointments, calendars, conversations, messages, and related CRM activity through HighLevel's official hosted MCP server.",
   "author": {
     "name": "HighLevel",

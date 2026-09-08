@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "xero",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Xero’s official MCP for accounting records, invoices, contacts, financial reports and payroll workflows.",
   "author": {
     "name": "Ghast AI",

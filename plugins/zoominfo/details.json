@@ -1,0 +1,51 @@
+{
+  "overview": {
+    "en": "Search and enrich ZoomInfo companies and contacts, research accounts, surface intent, scoops, and news, and manage GTM context through ZoomInfo's official authenticated CLI.\n\nResearch companies and people against a defined prospecting goal. Preserve the source of each finding and use available relationship or account context to prepare outreach drafts.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "检索和补充企业与联系人资料，研究购买意向、市场情报与获客机会。\n\n围绕明确的获客目标研究企业与人物，保留每项发现的来源，并结合可用关系或客户背景准备触达草稿。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Research this company and summarize the available account intelligence.",
+      "zh-CN": "研究这家公司，汇总可用客户情报。"
+    },
+    {
+      "en": "Find people or organizations matching this target profile and explain the match.",
+      "zh-CN": "查找符合这个目标画像的人物或组织，并说明匹配依据。"
+    },
+    {
+      "en": "Prepare a meeting brief for this prospect with evidence and open questions.",
+      "zh-CN": "为这个潜在客户准备会议简报，包含依据和待确认问题。"
+    }
+  ],
+  "websiteUrl": "https://www.zoominfo.com",
+  "privacyPolicyUrl": "https://www.zoominfo.com/legal/privacy-policy#:~:text=Information%20Submitted%20through%20our%20Site",
+  "termsOfServiceUrl": "https://www.zoominfo.com/legal/terms-of-use",
+  "repositoryUrl": "https://github.com/Zoominfo/gtm-ai-cli",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.zoominfo.com"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.zoominfo.com",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://www.zoominfo.com/legal/privacy-policy#:~:text=Information%20Submitted%20through%20our%20Site"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://www.zoominfo.com",
+        "anchor": "Terms of Use",
+        "status": 200,
+        "url": "https://www.zoominfo.com/legal/terms-of-use"
+      }
+    ]
+  }
+}

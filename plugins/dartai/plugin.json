@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "dartai",
-  "version": "1.0.0-ghast.1",
   "description": "Organize tasks, documents and project collaboration in Dart.",
   "author": {
     "name": "Ghast AI",

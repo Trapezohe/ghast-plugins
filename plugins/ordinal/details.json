@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Draft and schedule social posts, analyze performance and manage approvals with Ordinal’s official OAuth MCP connector.\n\nTurn channel context into draft posts and a reviewable publishing schedule. Keep channels, audience, and campaign goals explicit when assessing content performance.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Ordinal 官方 OAuth MCP 连接器起草和排期社媒帖子、分析表现并管理审批。\n\n结合渠道信息准备帖子草稿与可审阅的发布计划，分析内容表现时明确渠道、受众和活动目标。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Draft three posts for this campaign tailored to my connected channels.",
+      "zh-CN": "为这次活动起草三条适配已连接渠道的帖子。"
+    },
+    {
+      "en": "Review last week's available post performance and suggest what to test next.",
+      "zh-CN": "复盘上周可用的帖子表现，建议下一步测试内容。"
+    },
+    {
+      "en": "Prepare next week's publishing schedule for review before scheduling posts.",
+      "zh-CN": "准备下周发布计划供审阅，先不要安排发布。"
+    }
+  ],
+  "websiteUrl": "https://docs.tryordinal.com/mcp/introduction",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.tryordinal.com/mcp/introduction"
+      }
+    ]
+  }
+}

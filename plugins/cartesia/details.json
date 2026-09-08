@@ -1,0 +1,35 @@
+{
+  "overview": {
+    "en": "Generate speech, transcribe audio and manage voices and pronunciation dictionaries through Cartesia’s official MCP server.\n\nPrepare audio generation or voice workflows from a defined script and delivery goal. Keep voice choice, language, and pronunciation requirements explicit.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Cartesia 官方 MCP 生成语音、转录音频，并管理声音和发音词典。\n\n根据明确脚本与交付目标准备音频生成或语音工作流，说明声音选择、语言与发音要求。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Generate a voiceover for this script using the selected voice.",
+      "zh-CN": "使用选定声音为这段脚本生成配音。"
+    },
+    {
+      "en": "Review the available voices for this narration style.",
+      "zh-CN": "查看适合这种旁白风格的可用声音。"
+    },
+    {
+      "en": "Prepare an audio workflow for this multilingual content brief.",
+      "zh-CN": "为这份多语言内容简报准备音频工作流。"
+    }
+  ],
+  "websiteUrl": "https://docs.cartesia.ai/tools/ai/mcp",
+  "repositoryUrl": "https://github.com/cartesia-ai/cartesia-mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.cartesia.ai/tools/ai/mcp"
+      }
+    ]
+  }
+}

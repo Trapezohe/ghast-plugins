@@ -1,0 +1,43 @@
+{
+  "overview": {
+    "en": "Find current library documentation and version-specific code examples with Context7.\n\nFind official technical guidance for a specific implementation problem. State the product or library version and language, then connect the answer to the relevant reference material.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "使用 Context7 查询软件库文档与指定版本的代码示例，辅助开发、集成和升级。\n\n为具体实现问题查找官方技术指导。说明产品或库版本与语言，再把回答对应到相关参考资料。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the official documentation for this feature and summarize the implementation steps.",
+      "zh-CN": "查找这个功能的官方文档，汇总实现步骤。"
+    },
+    {
+      "en": "Review this code example against the documentation for the version I use.",
+      "zh-CN": "根据我所用版本的文档检查这段代码示例。"
+    },
+    {
+      "en": "Explain this integration error and point to the relevant reference sections.",
+      "zh-CN": "解释这个集成错误，并指出相关参考章节。"
+    }
+  ],
+  "websiteUrl": "https://context7.com/docs/resources/all-clients",
+  "privacyPolicyUrl": "https://context7.com/docs/security/data-privacy",
+  "repositoryUrl": "https://github.com/upstash/context7",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://context7.com/docs/resources/all-clients"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://context7.com/docs/resources/all-clients",
+        "anchor": "Data Privacy",
+        "status": 200,
+        "url": "https://context7.com/docs/security/data-privacy"
+      }
+    ]
+  }
+}

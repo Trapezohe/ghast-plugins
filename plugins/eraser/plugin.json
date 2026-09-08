@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "eraser",
-  "version": "1.0.0-ghast.1",
   "description": "Create and edit technical diagrams, search workspace files and manage diagram presets in Eraser.",
   "author": {
     "name": "Ghast AI",

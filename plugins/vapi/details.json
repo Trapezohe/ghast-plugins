@@ -1,0 +1,35 @@
+{
+  "overview": {
+    "en": "Manage Vapi voice assistants, inspect calls and phone numbers, and perform authorized voice workflows with the official MCP server.\n\nInspect voice assistants and call context before preparing changes to an agent workflow. Keep the assistant and phone-number scope explicit.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Vapi 官方 MCP 管理语音助手，查看通话和电话号码，并执行经授权的语音工作流。\n\n调整语音智能体流程前，先查看语音助手与通话上下文，明确助手和电话号码范围。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Review this voice assistant's configuration and summarize its workflow.",
+      "zh-CN": "查看这个语音助手的配置，汇总工作流程。"
+    },
+    {
+      "en": "Investigate this call using the available call records.",
+      "zh-CN": "使用可用通话记录调查这次通话。"
+    },
+    {
+      "en": "Prepare changes to this assistant for review before applying them.",
+      "zh-CN": "为这个助手准备变更供审阅，先不要应用。"
+    }
+  ],
+  "websiteUrl": "https://docs.vapi.ai/sdk/mcp-server",
+  "repositoryUrl": "https://github.com/VapiAI/mcp-server",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.vapi.ai/sdk/mcp-server"
+      }
+    ]
+  }
+}

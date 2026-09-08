@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "azure",
-  "version": "1.0.0-ghast.1",
   "description": "Explore and manage Azure cloud resources with Microsoft’s official Azure MCP Server (Beta).",
   "author": {
     "name": "Ghast AI",

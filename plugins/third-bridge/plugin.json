@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "third-bridge",
-  "version": "1.0.3-ghast.1",
   "description": "Search and synthesize Third Bridge expert interview transcripts through Third Bridge's official hosted MCP.",
   "author": {
     "name": "Third Bridge Group",

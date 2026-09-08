@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "excalidraw-plus",
-  "version": "1.0.0-ghast.1",
   "description": "Create and edit diagrams, wireframes and presentation scenes in an Excalidraw Plus workspace.",
   "author": {
     "name": "Ghast AI",

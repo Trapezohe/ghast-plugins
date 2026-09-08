@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "factset",
-  "version": "1.0.2-ghast.1",
   "description": "Research financial data, analytics, and licensed broker research through FactSet's official MCP and APIs.",
   "author": {
     "name": "FactSet Research Systems Inc.",

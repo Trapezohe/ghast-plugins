@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "nuclino",
-  "version": "1.0.0-ghast.1",
   "description": "Search Nuclino workspaces, read pages and organize collaborative documentation.",
   "author": {
     "name": "Ghast AI",

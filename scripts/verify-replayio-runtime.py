@@ -149,7 +149,7 @@ def main() -> int:
     mcp = json.loads((plugin / "mcp.json").read_text())
     if upstream.get("version") != EXPECTED_VERSION:
         raise ValueError("official Replay version changed")
-    if manifest.get("$schema") != PLUGIN_SCHEMA or manifest.get("version") != f"{EXPECTED_VERSION}-ghast.1":
+    if manifest.get("$schema") != PLUGIN_SCHEMA or manifest.get("version") != '0.1.1':
         raise ValueError("unexpected Replay Agent Plugins 1.0 manifest")
     ghast = manifest["extensions"]["ai.trapezohe.ghast"]
     if ghast.get("upstreamRevision") != EXPECTED_REVISION:

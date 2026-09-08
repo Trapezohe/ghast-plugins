@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "pipedrive",
-  "version": "1.0.0-ghast.1",
   "description": "Find CRM deals, update contacts and organize sales follow-ups.",
   "author": {
     "name": "Ghast AI",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "fathom",
-  "version": "1.0.0-ghast.1",
   "description": "Search meeting records, read transcripts and summaries, and extract decisions and action items through Fathom.",
   "author": {
     "name": "Ghast AI",

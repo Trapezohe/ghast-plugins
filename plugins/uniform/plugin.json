@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "uniform",
-  "version": "1.0.0-ghast.1",
   "description": "Use Uniform’s official local MCP package to inspect and manage project components, content types, patterns, entries and compositions.",
   "author": {
     "name": "Ghast AI",

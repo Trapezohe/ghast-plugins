@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "klaviyo",
-  "version": "1.0.0-ghast.1",
   "description": "Analyze lifecycle marketing campaigns, flows, audiences and performance reports with Klaviyo.",
   "author": {
     "name": "Ghast AI",

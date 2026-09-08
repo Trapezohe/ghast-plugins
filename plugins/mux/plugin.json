@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "mux",
-  "version": "1.0.0-ghast.1",
   "description": "Work with video assets, live streaming and playback analytics.",
   "author": {
     "name": "Ghast AI",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "descript",
-  "version": "1.0.0-ghast.1",
   "description": "Use Descript’s official MCP to work with media projects, Underlord edits, transcripts and publishing in your connected Drive.",
   "author": {
     "name": "Ghast AI",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "glassnode",
-  "version": "1.0.0-ghast.1",
   "description": "Discover crypto on-chain metrics and retrieve market analytics using your Glassnode API access.",
   "author": {
     "name": "Ghast AI",

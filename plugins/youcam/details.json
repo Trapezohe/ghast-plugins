@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Use Perfect Corp’s YouCam tools for image and video editing, beauty visualization and virtual try-on.\n\nPrepare product or portrait imagery from a clear visual brief and source assets. Specify the intended output and review the proposed edits before finalizing.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "使用玩美移动 YouCam 进行图片与视频编辑、美妆效果预览和虚拟试穿。\n\n根据明确视觉简报与源素材准备商品图或人像效果，说明预期输出，并在定稿前审阅拟议编辑。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Prepare a clean product image from this source photo.",
+      "zh-CN": "根据这张源照片准备干净的商品图。"
+    },
+    {
+      "en": "Create a visual preview for this product presentation brief.",
+      "zh-CN": "为这份商品展示简报创建视觉预览。"
+    },
+    {
+      "en": "Revise this image according to the supplied feedback.",
+      "zh-CN": "根据提供的反馈修改这张图。"
+    }
+  ],
+  "websiteUrl": "https://docs.perfectcorp.com/develop/mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.perfectcorp.com/develop/mcp"
+      }
+    ]
+  }
+}

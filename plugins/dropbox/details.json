@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Search, organize and work with Dropbox files, sharing links, revisions and file requests.\n\nLocate files and review their contents in the connected workspace. Keep file identity and access context explicit when preparing a summary or organization plan.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "搜索与整理 Dropbox 文件，管理分享链接、文件版本和文件收集请求。\n\n在已连接工作区中定位文件并查看内容，准备摘要或整理方案时明确文件身份与访问范围。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the files for this project and summarize what each contains.",
+      "zh-CN": "查找这个项目的文件，并汇总各文件内容。"
+    },
+    {
+      "en": "Compare these two documents and list the substantive differences.",
+      "zh-CN": "比较这两份文档，列出实质性差异。"
+    },
+    {
+      "en": "Prepare a file organization plan for this project without moving files yet.",
+      "zh-CN": "为这个项目准备文件整理方案，先不要移动文件。"
+    }
+  ],
+  "websiteUrl": "https://help.dropbox.com/integrations/connect-dropbox-mcp-server",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://help.dropbox.com/integrations/connect-dropbox-mcp-server"
+      }
+    ]
+  }
+}

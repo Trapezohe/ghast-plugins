@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "pinecone",
-  "version": "1.0.0-ghast.1",
   "description": "Manage Pinecone vector indexes, upsert records, query data and search official documentation.",
   "author": {
     "name": "Ghast AI",

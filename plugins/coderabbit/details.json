@@ -1,0 +1,52 @@
+{
+  "overview": {
+    "en": "Review local code changes with CodeRabbit's official CLI and safely triage or apply unresolved CodeRabbit GitHub PR feedback through the official code-review and autofix skills.\n\nReview local changes and repository feedback with the original diff in view. Separate actionable findings from questions and prepare focused fixes.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "审查本地代码变更，整理和处理 GitHub 拉取请求中的代码审查反馈。\n\n结合原始差异审查本地变更与仓库反馈，区分可执行发现与待确认问题，并准备有针对性的修复。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Review my current diff and list the most important findings.",
+      "zh-CN": "审查我当前的代码差异，列出最重要的发现。"
+    },
+    {
+      "en": "Summarize the review feedback on this pull request.",
+      "zh-CN": "汇总这个拉取请求的审查反馈。"
+    },
+    {
+      "en": "Prepare focused fixes for these confirmed review findings.",
+      "zh-CN": "为这些已确认审查问题准备有针对性的修复。"
+    }
+  ],
+  "websiteUrl": "https://www.coderabbit.ai/",
+  "termsOfServiceUrl": "https://www.coderabbit.ai/legal/terms-of-service",
+  "privacyPolicyUrl": "https://www.coderabbit.ai/privacy-policy",
+  "repositoryUrl": "https://github.com/coderabbitai/skills",
+  "documentationUrl": "https://docs.coderabbit.ai/cli",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.coderabbit.ai/"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://www.coderabbit.ai/",
+        "anchor": "Terms of Use",
+        "status": 200,
+        "url": "https://www.coderabbit.ai/legal/terms-of-service"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.coderabbit.ai/",
+        "anchor": "CodeRabbit Privacy Policy",
+        "status": 200,
+        "url": "https://www.coderabbit.ai/privacy-policy"
+      }
+    ]
+  }
+}

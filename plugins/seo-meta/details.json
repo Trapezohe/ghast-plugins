@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Skill for pulling SEO tags from any URL — title, meta description, OG tags, canonical, H1s, robots — so the model can audit how a page presents itself to search engines and social scrapers.\n\nInspect public page metadata without claiming access to search-console or ranking data. Keep the inspected URL and extracted values in the report.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "提取网页标题、描述、分享标签、规范链接与搜索引擎相关元数据。\n\n检查公开页面元数据，不声称能访问搜索控制台或排名数据；报告中保留检查网址与提取值。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Check this page's title, description, and canonical URL.",
+      "zh-CN": "检查这个页面的标题、描述与规范网址。"
+    },
+    {
+      "en": "Compare the social-sharing metadata of these two pages.",
+      "zh-CN": "比较这两个页面的社交分享元数据。"
+    },
+    {
+      "en": "Prepare a metadata audit for this landing page.",
+      "zh-CN": "为这个落地页准备元数据审查。"
+    }
+  ],
+  "documentationUrl": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/seo-meta",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

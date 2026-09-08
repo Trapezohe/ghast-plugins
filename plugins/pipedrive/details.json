@@ -1,0 +1,50 @@
+{
+  "overview": {
+    "en": "Find CRM deals, update contacts and organize sales follow-ups.\n\nConnect company, contact, and sales context to a concrete account review. Use a named account or pipeline and prepare proposed follow-up work with its supporting records.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "检索销售商机、更新客户资料并安排销售跟进。\n\n把企业、联系人和销售上下文用于具体的客户复盘。指定客户或销售管道，并在后续行动建议中附上对应记录。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize this account's available records and recent sales context.",
+      "zh-CN": "汇总这个客户的可用记录与近期销售背景。"
+    },
+    {
+      "en": "Review this pipeline and identify opportunities that need follow-up.",
+      "zh-CN": "检查这个销售管道，找出需要跟进的商机。"
+    },
+    {
+      "en": "Draft a follow-up plan for this account using the recorded context.",
+      "zh-CN": "根据已有记录，为这个客户起草跟进计划。"
+    }
+  ],
+  "websiteUrl": "https://support.pipedrive.com/en/article/mcp-chatgpt",
+  "privacyPolicyUrl": "https://www.pipedrive.com/en/features/privacy-security",
+  "termsOfServiceUrl": "https://www.pipedrive.com/en/terms-of-service",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://support.pipedrive.com/en/article/mcp-chatgpt"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://support.pipedrive.com/en/article/mcp-chatgpt",
+        "anchor": "Privacy and security",
+        "status": 200,
+        "url": "https://www.pipedrive.com/en/features/privacy-security"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://support.pipedrive.com/en/article/mcp-chatgpt",
+        "anchor": "Pipedrive Terms of Service",
+        "status": 200,
+        "url": "https://www.pipedrive.com/en/terms-of-service"
+      }
+    ]
+  }
+}

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "capacities",
-  "version": "1.0.0-ghast.1",
   "description": "Search and retrieve knowledge from your Capacities space through its official MCP service.",
   "author": {
     "name": "Ghast AI",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "configcat",
-  "version": "1.0.0-ghast.1",
   "description": "Manage feature flags, targeting rules, products and environments through ConfigCat’s official MCP server.",
   "author": {
     "name": "Ghast AI",

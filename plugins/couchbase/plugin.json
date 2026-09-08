@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "couchbase",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect Couchbase schemas, query documents and analyze cluster health with the official MCP server.",
   "author": {
     "name": "Ghast AI",

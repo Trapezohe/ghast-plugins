@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "clickup",
-  "version": "1.0.0-ghast.2",
   "description": "Search and manage ClickUp tasks, lists, folders, documents, comments, chat, assignments, relationships, and time tracking through ClickUp's official hosted MCP server.",
   "author": {
     "name": "ClickUp",

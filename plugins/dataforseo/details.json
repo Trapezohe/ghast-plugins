@@ -1,0 +1,50 @@
+{
+  "overview": {
+    "en": "Research keywords, search results, backlinks and competitors using DataForSEO’s official API and documentation tools.\n\nInvestigate search visibility with a named site, market, and reporting interval. Compare the provider's available metrics and turn findings into a prioritized optimization brief.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 DataForSEO 官方 API 与文档工具研究关键词、搜索结果、外链和竞争对手。\n\n围绕指定网站、市场和统计周期研究搜索可见性，比较服务商提供的指标，将发现整理成有优先级的优化建议。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Compare our site's search visibility with these competitors in the same market.",
+      "zh-CN": "在同一市场比较我们网站与这些竞争对手的搜索可见性。"
+    },
+    {
+      "en": "Research this keyword topic and organize opportunities into a content brief.",
+      "zh-CN": "研究这个关键词主题，将机会整理成内容简报。"
+    },
+    {
+      "en": "Review the available site metrics and prioritize the next SEO actions.",
+      "zh-CN": "检查可用网站指标，为下一步 SEO 工作排序。"
+    }
+  ],
+  "websiteUrl": "https://dataforseo.com/seo-mcp-server",
+  "privacyPolicyUrl": "https://dataforseo.com/privacy-policy",
+  "termsOfServiceUrl": "https://dataforseo.com/terms-of-service",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://dataforseo.com/seo-mcp-server"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://dataforseo.com/seo-mcp-server",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://dataforseo.com/privacy-policy"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://dataforseo.com/seo-mcp-server",
+        "anchor": "Terms of Services",
+        "status": 200,
+        "url": "https://dataforseo.com/terms-of-service"
+      }
+    ]
+  }
+}

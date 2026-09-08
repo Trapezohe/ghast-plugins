@@ -7,6 +7,7 @@ import hashlib
 import json
 import zipfile
 from plugin_categories import plugin_category
+from plugin_versions import apply_version
 from pathlib import Path
 
 
@@ -18,6 +19,7 @@ PLUGIN_DIR = Path("plugins")
 def main() -> int:
     PACKAGE_DIR.mkdir(exist_ok=True)
 
+    upstreams = json.loads(Path("maintenance/upstreams.json").read_text())
     plugins = []
     package_names = set()
     for plugin_dir in sorted(PLUGIN_DIR.iterdir()):
@@ -26,6 +28,10 @@ def main() -> int:
             continue
 
         manifest = json.loads(manifest_path.read_text())
+        original = dict(manifest)
+        apply_version(manifest, upstreams.get(manifest["name"], {}))
+        if manifest != original:
+            manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n")
         if manifest["name"] != plugin_dir.name:
             raise ValueError(f"{manifest_path}: name must match directory")
         if (plugin_dir / ".app.json").exists():
@@ -40,6 +46,8 @@ def main() -> int:
             validate_skills(plugin_dir / "skills")
         if (plugin_dir / "mcp.json").exists():
             json.loads((plugin_dir / "mcp.json").read_text())
+        details_path = plugin_dir / "details.json"
+        json.loads(details_path.read_text())
         manifest_for_catalog = dict(manifest)
         zip_path = PACKAGE_DIR / f"{manifest['name']}.zip"
         write_plugin_zip(plugin_dir, zip_path)
@@ -51,6 +59,10 @@ def main() -> int:
             "name": ghast.get("displayName", manifest["name"]),
             "description": manifest["description"],
             "manifest": manifest_for_catalog,
+            "details": {
+                "url": f"./plugins/{manifest['name']}/details.json",
+                "sha256": hashlib.sha256(details_path.read_bytes()).hexdigest(),
+            },
             "package": {
                 "url": f"./packages/{zip_path.name}",
                 "sha256": sha256,

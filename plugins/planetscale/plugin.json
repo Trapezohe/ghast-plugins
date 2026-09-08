@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "planetscale",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect databases, branches, schemas and query performance with PlanetScale.",
   "author": {
     "name": "Ghast AI",

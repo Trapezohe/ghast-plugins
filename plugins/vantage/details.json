@@ -1,0 +1,52 @@
+{
+  "overview": {
+    "en": "Analyze and govern multi-cloud costs, usage, forecasts, budgets, alerts, reports, recommendations, tags, dashboards, and FinOps workflows through Vantage's official hosted MCP server.\n\nReview cloud cost and usage with explicit account scope and reporting dates. Keep budgets, actual spend, and forecasts distinguishable.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "分析多云费用、用量、预算和预测，管理 FinOps 报表与告警。\n\n在明确账号范围与报告日期后查看云成本和用量，区分预算、实际支出与预测。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize last month's available cloud costs by service.",
+      "zh-CN": "按服务汇总上个月的可用云成本。"
+    },
+    {
+      "en": "Investigate this cost increase using the available usage records.",
+      "zh-CN": "使用可用用量记录调查这次成本增长。"
+    },
+    {
+      "en": "Prepare a budget review with actual spending and available forecasts.",
+      "zh-CN": "准备预算复盘，包含实际支出与可用预测。"
+    }
+  ],
+  "websiteUrl": "https://www.vantage.sh",
+  "privacyPolicyUrl": "https://www.vantage.sh/legal/privacy-policy",
+  "termsOfServiceUrl": "https://www.vantage.sh/legal/website-terms-of-use",
+  "repositoryUrl": "https://github.com/vantage-sh/vantage-mcp-server",
+  "documentationUrl": "https://docs.vantage.sh/vantage_mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.vantage.sh"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.vantage.sh",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://www.vantage.sh/legal/privacy-policy"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://www.vantage.sh",
+        "anchor": "Website Terms of Use",
+        "status": 200,
+        "url": "https://www.vantage.sh/legal/website-terms-of-use"
+      }
+    ]
+  }
+}

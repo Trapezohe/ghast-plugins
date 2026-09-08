@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "context7",
-  "version": "1.0.0-ghast.1",
   "description": "Find current library documentation and version-specific code examples with Context7.",
   "author": {
     "name": "Ghast AI",

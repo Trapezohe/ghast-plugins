@@ -175,7 +175,7 @@ def main() -> int:
         raise ValueError("official Vercel version changed")
     if manifest.get("$schema") != PLUGIN_SCHEMA:
         raise ValueError("Vercel is not Agent Plugins 1.0")
-    if manifest.get("version") != f"{EXPECTED_VERSION}-ghast.1":
+    if manifest.get("version") != '0.48.1':
         raise ValueError("unexpected Ghast Vercel version")
     ghast = manifest["extensions"]["ai.trapezohe.ghast"]
     if ghast.get("upstreamRevision") != EXPECTED_REVISION:

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "inngest",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect Inngest Cloud functions, events, runs and traces and manage deployed workflows.",
   "author": {
     "name": "Ghast AI",

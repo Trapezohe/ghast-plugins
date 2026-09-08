@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Explore animation workspaces, projects and assets through LottieFiles’ official MCP.\n\nSearch the provider's asset library for material matching a creative brief. Compare the available previews and preserve source references for selection.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 LottieFiles 官方 MCP 探索动画工作区、项目与素材。\n\n在服务商素材库中查找符合创意简报的资源，比较可用预览并保留来源供选用。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find assets that fit this campaign's visual direction.",
+      "zh-CN": "查找符合这个活动视觉方向的素材。"
+    },
+    {
+      "en": "Compare these asset options and explain their suitability.",
+      "zh-CN": "比较这些素材选项，并解释适用性。"
+    },
+    {
+      "en": "Prepare a shortlist of source-linked assets for this project.",
+      "zh-CN": "为这个项目准备带来源链接的素材候选清单。"
+    }
+  ],
+  "websiteUrl": "https://docs.lottiefiles.com/en/platform/mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.lottiefiles.com/en/platform/mcp"
+      }
+    ]
+  }
+}

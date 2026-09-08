@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "buffer",
-  "version": "1.0.0-ghast.1",
   "description": "Organize social media ideas, review channel performance and prepare posts and publishing schedules with Buffer.",
   "author": {
     "name": "Ghast AI",

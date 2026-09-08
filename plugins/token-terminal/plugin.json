@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "token-terminal",
-  "version": "1.0.0-ghast.1",
   "description": "Research onchain projects, financial metrics and methodologies with Token Terminal.",
   "author": {
     "name": "Ghast AI",

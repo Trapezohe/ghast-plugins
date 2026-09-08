@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "dropbox",
-  "version": "1.0.0-ghast.1",
   "description": "Search, organize and work with Dropbox files, sharing links, revisions and file requests.",
   "author": {
     "name": "Ghast AI",

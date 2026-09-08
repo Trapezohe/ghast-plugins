@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "An agentic skills framework & software development methodology that works: planning, TDD, debugging, and collaboration workflows.\n\nUse structured planning, testing, and debugging practices on an actual development task. Keep the problem and acceptance criteria concrete before implementing changes.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "通过规划、测试驱动开发、调试与协作方法完成软件开发。\n\n在实际开发任务中应用结构化规划、测试和调试方法，实施前明确问题与验收条件。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Plan the implementation of this feature with clear acceptance criteria.",
+      "zh-CN": "为这个功能规划实现步骤，并明确验收条件。"
+    },
+    {
+      "en": "Diagnose this failing test before changing the implementation.",
+      "zh-CN": "先诊断这个失败测试，再修改实现。"
+    },
+    {
+      "en": "Review this change and identify the verification still needed.",
+      "zh-CN": "审查这项变更，找出仍需完成的验证。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/obra/superpowers",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

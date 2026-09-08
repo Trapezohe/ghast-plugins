@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "zoominfo",
-  "version": "1.0.1-ghast.2",
   "description": "Search and enrich ZoomInfo companies and contacts, research accounts, surface intent, scoops, and news, and manage GTM context through ZoomInfo's official authenticated CLI.",
   "author": {
     "name": "ZoomInfo",

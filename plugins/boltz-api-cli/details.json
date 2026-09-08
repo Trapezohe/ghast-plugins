@@ -1,0 +1,35 @@
+{
+  "overview": {
+    "en": "Predict structures, screen molecules and proteins, and design binders.\n\nPrepare molecular prediction or design work with explicit inputs and assumptions. Distinguish computational predictions from experimentally established results and keep run settings with the output.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "预测分子结构、筛选分子与蛋白质，并设计结合蛋白。\n\n在明确输入与假设的前提下准备分子预测或设计工作，区分计算预测与实验确认结果，并为输出保留运行配置。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Prepare a structure prediction workflow for this protein sequence.",
+      "zh-CN": "为这个蛋白质序列准备结构预测流程。"
+    },
+    {
+      "en": "Plan a screening workflow for these molecules and the target protein.",
+      "zh-CN": "为这些分子与目标蛋白规划筛选流程。"
+    },
+    {
+      "en": "Review these prediction results and summarize their limitations.",
+      "zh-CN": "检查这些预测结果，并汇总局限。"
+    }
+  ],
+  "websiteUrl": "https://boltz.bio",
+  "repositoryUrl": "https://github.com/boltz-bio/boltz-api-skills",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://boltz.bio"
+      }
+    ]
+  }
+}

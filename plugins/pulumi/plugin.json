@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "pulumi",
-  "version": "1.0.0-ghast.1",
   "description": "Explore cloud resources, stacks and infrastructure workflows through Pulumi’s official remote MCP.",
   "author": {
     "name": "Ghast AI",

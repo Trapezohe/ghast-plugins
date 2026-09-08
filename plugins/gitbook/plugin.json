@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "gitbook",
-  "version": "1.0.0-ghast.2",
   "description": "Create and maintain documentation, pages, change requests and spaces through GitBook’s official account MCP server.",
   "author": {
     "name": "Ghast AI",

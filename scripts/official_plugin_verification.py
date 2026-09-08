@@ -57,7 +57,7 @@ def compare_trees(expected: Path, actual: Path, *, ignore_skill_frontmatter: boo
     return len(expected_files)
 
 
-def manifest(plugin: Path, *, name: str, version: str, revision: str) -> dict:
+def manifest(plugin: Path, *, name: str, version: str | None, revision: str) -> dict:
     value = json.loads((plugin / "plugin.json").read_text())
     if value.get("$schema") != PLUGIN_SCHEMA:
         raise ValueError(f"{name}: Agent Plugins schema differs")

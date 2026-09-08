@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "basedash",
-  "version": "1.0.0-ghast.1",
   "description": "Analyze governed business data and create or inspect dashboards and charts.",
   "author": {
     "name": "Ghast AI",

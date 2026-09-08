@@ -1,0 +1,51 @@
+{
+  "overview": {
+    "en": "Search authorized Circleback meetings, transcripts, action items, calendar events, emails, people, companies, tags, and support content through Circleback's official hosted MCP server.\n\nTurn accessible meeting or interview material into a concise, source-based brief. Identify the conversation and period, then separate decisions, open questions, and action items.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "检索会议记录、行动项、日历事件、邮件与相关联系人。\n\n把有权访问的会议或访谈资料整理成有来源的简报。明确会话与时间段，分别列出决策、待确认问题和行动项。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize this meeting or interview and cite the relevant passages.",
+      "zh-CN": "总结这次会议或访谈，并引用相关片段。"
+    },
+    {
+      "en": "Extract decisions and action items from these conversation records.",
+      "zh-CN": "从这些会话记录中提取决策与行动项。"
+    },
+    {
+      "en": "Compare what was discussed across these sessions and identify unresolved questions.",
+      "zh-CN": "比较这些场次的讨论内容，找出尚未解决的问题。"
+    }
+  ],
+  "websiteUrl": "https://circleback.ai",
+  "termsOfServiceUrl": "https://circleback.ai/terms",
+  "privacyPolicyUrl": "https://circleback.ai/privacy",
+  "documentationUrl": "https://support.circleback.ai/en/articles/13249081-circleback-mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://circleback.ai"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://circleback.ai",
+        "anchor": "Terms of Service",
+        "status": 200,
+        "url": "https://circleback.ai/terms"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://circleback.ai",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://circleback.ai/privacy"
+      }
+    ]
+  }
+}

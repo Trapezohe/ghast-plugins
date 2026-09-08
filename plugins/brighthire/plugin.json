@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "brighthire",
-  "version": "0.1.0-ghast.2",
   "description": "Retrieve authorized interview intelligence through BrightHire's official read-only MCP.",
   "author": {
     "name": "BrightHire",

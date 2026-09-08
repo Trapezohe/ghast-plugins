@@ -1,0 +1,35 @@
+{
+  "overview": {
+    "en": "Inspect, analyze, organize, comment on, and manage Jam bug recordings, screenshots, video frames, transcripts, logs, network requests, user events, metadata, folders, and recording links through Jam's official hosted MCP server.\n\nInvestigate recorded defects using screenshots, logs, network requests, and user-event context when available. Keep observed evidence distinct from a proposed cause.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "检查缺陷录屏、截图、日志、网络请求和用户事件，协助问题诊断。\n\n利用可用截图、日志、网络请求和用户事件上下文调查已记录缺陷，区分观测证据与拟议原因。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize this bug recording and its reproduction steps.",
+      "zh-CN": "总结这个缺陷记录及复现步骤。"
+    },
+    {
+      "en": "Inspect the available logs and network evidence for this issue.",
+      "zh-CN": "检查这个问题的可用日志与网络证据。"
+    },
+    {
+      "en": "Prepare a developer handoff with confirmed findings and remaining questions.",
+      "zh-CN": "准备开发交接材料，包含已确认发现与剩余问题。"
+    }
+  ],
+  "websiteUrl": "https://jam.dev",
+  "documentationUrl": "https://jam.dev/docs/jam-mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://jam.dev"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "overview": {
+    "en": "Search conversations, read messages and communicate through Google’s official Workspace MCP service.\n\nBring messages and collaboration context into a focused work brief. Specify the team, conversation, or project and prepare responses from the information actually returned.\n\nThis connection requires Google Workspace Developer Preview access, a configured Google Cloud project, and your own OAuth application. Complete that setup in Ghast before requesting account data or edits.",
+    "zh-CN": "通过 Google 官方 Workspace MCP 服务检索会话、阅读消息与沟通协作。\n\n把消息与协作上下文整理成聚焦的工作简报。明确团队、会话或项目，并依据实际返回的信息准备回复。\n\n此连接需要 Google Workspace Developer Preview 访问权限、已配置的 Google Cloud 项目和自有 OAuth 应用。请先在 Ghast 中完成配置，再请求账号数据或编辑操作。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the recent discussion about this project and summarize its decisions.",
+      "zh-CN": "查找这个项目的近期讨论，汇总已作出的决策。"
+    },
+    {
+      "en": "List the open questions and follow-up items from this conversation.",
+      "zh-CN": "列出这段会话中的待确认问题与后续事项。"
+    },
+    {
+      "en": "Draft a team update using the available conversation context.",
+      "zh-CN": "根据可用会话上下文起草团队进度更新。"
+    }
+  ],
+  "websiteUrl": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "termsOfServiceUrl": "https://developers.google.com/workspace/terms",
+  "privacyPolicyUrl": "https://policies.google.com/privacy",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://developers.google.com/workspace/guides/configure-mcp-servers"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "anchor": "Terms of Service",
+        "status": 200,
+        "url": "https://developers.google.com/workspace/terms"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "anchor": "Privacy",
+        "status": 200,
+        "url": "https://policies.google.com/privacy"
+      }
+    ]
+  }
+}

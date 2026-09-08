@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "fish-audio-docs",
-  "version": "1.0.0-ghast.1",
   "description": "Search official Fish Audio documentation for text-to-speech, voice models and audio API integration.",
   "author": {
     "name": "Ghast AI",

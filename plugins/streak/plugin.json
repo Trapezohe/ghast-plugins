@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "streak",
-  "version": "1.0.0-ghast.2",
   "description": "Read, analyze, and update Streak CRM pipelines, boxes, deals, contacts, organizations, comments, tasks, and timelines through Streak's official hosted MCP server.",
   "author": {
     "name": "Rewardly, Inc.",

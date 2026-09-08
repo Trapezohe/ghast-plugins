@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "fellow",
-  "version": "1.0.0-ghast.1",
   "description": "Find meeting transcripts, summaries, decisions and action items in Fellow.",
   "author": {
     "name": "Ghast AI",

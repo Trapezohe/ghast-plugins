@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "anytype",
-  "version": "1.0.0-ghast.1",
   "description": "Search and organize Anytype spaces, objects, lists and knowledge through Anytype’s official local MCP connector.",
   "author": {
     "name": "Ghast AI",

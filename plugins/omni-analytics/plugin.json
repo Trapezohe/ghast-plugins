@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "omni-analytics",
-  "version": "1.0.4-ghast.2",
   "description": "Query governed Omni semantic models, run multi-step analysis, and search Omni documentation through Omni's official hosted MCP server.",
   "author": {
     "name": "Omni Analytics",

@@ -31,7 +31,7 @@ def main() -> int:
     ) != imp.normalized_repository_url(REPOSITORY):
         raise ValueError("Daloopa official source identity changed")
     verify.manifest(
-        plugin, name="daloopa", version="1.0.0-ghast.1", revision=REVISION
+        plugin, name="daloopa", version='1.0.0', revision=REVISION
     )
 
     with tempfile.TemporaryDirectory(prefix="ghast-daloopa-skills-") as temp:

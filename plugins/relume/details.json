@@ -1,0 +1,42 @@
+{
+  "overview": {
+    "en": "Find Relume library components and retrieve editable React code with its design system.\n\nFind component references and editable React code for a concrete interface need. Keep the selected component and design-system context attached to the implementation brief.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "查找 Relume 组件库内容，获取可编辑的 React 代码及其设计系统。\n\n为具体界面需求查找组件参考与可编辑 React 代码，在实现简报中保留所选组件与设计系统背景。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find a component suitable for this landing-page section.",
+      "zh-CN": "查找适合这个落地页区块的组件。"
+    },
+    {
+      "en": "Review the available React implementation for this component.",
+      "zh-CN": "查看这个组件的可用 React 实现。"
+    },
+    {
+      "en": "Prepare an implementation brief using this component and design system.",
+      "zh-CN": "使用这个组件与设计系统准备实现简报。"
+    }
+  ],
+  "websiteUrl": "https://www.relume.ai/relume-library-mcp",
+  "privacyPolicyUrl": "https://www.relume.ai/legal/privacy-policy",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.relume.ai/relume-library-mcp"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.relume.ai/relume-library-mcp",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://www.relume.ai/legal/privacy-policy"
+      }
+    ]
+  }
+}

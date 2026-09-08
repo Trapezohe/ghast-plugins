@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Use Descript’s official MCP to work with media projects, Underlord edits, transcripts and publishing in your connected Drive.\n\nDevelop a video from a clear script and production brief. Specify duration, aspect ratio, and source assets; review the proposed structure before producing the final output.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Descript 官方 MCP 处理已连接 Drive 中的媒体项目、Underlord 编辑、转录与发布。\n\n根据明确脚本和制作简报完成视频，说明时长、画面比例与源素材，在产出成片前审阅拟议结构。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Prepare a 30-second product video from this brief and the supplied assets.",
+      "zh-CN": "根据这份简报和所提供素材准备一段 30 秒产品视频。"
+    },
+    {
+      "en": "Revise this video sequence according to the feedback.",
+      "zh-CN": "根据反馈修改这段视频内容。"
+    },
+    {
+      "en": "Prepare a production plan with scenes, narration, and required assets.",
+      "zh-CN": "准备包含分镜、旁白与所需素材的制作方案。"
+    }
+  ],
+  "websiteUrl": "https://help.descript.com/api-and-mcp/mcp-custom",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://help.descript.com/api-and-mcp/mcp-custom"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "overview": {
+    "en": "Search and work with Microsoft 365 mail, meetings, files and Teams context through Microsoft’s official Work IQ MCP. Requires tenant setup and your own Entra app.\n\nBring messages and collaboration context into a focused work brief. Specify the team, conversation, or project and prepare responses from the information actually returned.\n\nRequires Microsoft tenant configuration and your own Entra application. Complete the connection setup in Ghast; access follows the permissions granted by your organization.",
+    "zh-CN": "通过微软官方 Work IQ MCP 检索和处理 Microsoft 365 邮件、会议、文件与 Teams 工作上下文。需要租户配置和自有 Entra 应用。\n\n把消息与协作上下文整理成聚焦的工作简报。明确团队、会话或项目，并依据实际返回的信息准备回复。\n\n需要 Microsoft 租户配置与自有 Entra 应用。请先在 Ghast 中完成连接；访问范围由组织授予的权限决定。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the recent discussion about this project and summarize its decisions.",
+      "zh-CN": "查找这个项目的近期讨论，汇总已作出的决策。"
+    },
+    {
+      "en": "List the open questions and follow-up items from this conversation.",
+      "zh-CN": "列出这段会话中的待确认问题与后续事项。"
+    },
+    {
+      "en": "Draft a team update using the available conversation context.",
+      "zh-CN": "根据可用会话上下文起草团队进度更新。"
+    }
+  ],
+  "websiteUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview",
+  "privacyPolicyUrl": "https://account.microsoft.com/privacy/third-party-ads?scrolltonewtoggle=true",
+  "termsOfServiceUrl": "https://learn.microsoft.com/en-us/legal/termsofuse",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview",
+        "anchor": "Your Privacy Choices",
+        "status": 200,
+        "url": "https://account.microsoft.com/privacy/third-party-ads?scrolltonewtoggle=true"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview",
+        "anchor": "Terms of Use",
+        "status": 200,
+        "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+      }
+    ]
+  }
+}

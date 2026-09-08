@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "livekit-docs",
-  "version": "1.0.0-ghast.1",
   "description": "Search official LiveKit documentation, SDK code and changelogs to build real-time audio, video and voice agents.",
   "author": {
     "name": "Ghast AI",

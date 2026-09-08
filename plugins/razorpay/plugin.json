@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "razorpay",
-  "version": "1.0.3-ghast.2",
   "description": "Read Razorpay payments, orders, refunds, settlements, QR codes, payment links, payouts, reconciliation, and saved payment methods through Razorpay's official MCP source and SDK.",
   "author": {
     "name": "Razorpay",

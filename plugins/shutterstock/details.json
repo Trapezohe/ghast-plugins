@@ -1,0 +1,30 @@
+{
+  "overview": {
+    "en": "Search Shutterstock's official image, video, music, and sound-effect libraries and compare watermarked previews without licensing or downloading assets.\n\nSearch the provider's asset library for material matching a creative brief. Compare the available previews and preserve source references for selection.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "搜索官方图片、视频、音乐和音效库，比较带水印的素材预览。\n\n在服务商素材库中查找符合创意简报的资源，比较可用预览并保留来源供选用。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find assets that fit this campaign's visual direction.",
+      "zh-CN": "查找符合这个活动视觉方向的素材。"
+    },
+    {
+      "en": "Compare these asset options and explain their suitability.",
+      "zh-CN": "比较这些素材选项，并解释适用性。"
+    },
+    {
+      "en": "Prepare a shortlist of source-linked assets for this project.",
+      "zh-CN": "为这个项目准备带来源链接的素材候选清单。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/shutterstock/shutterstock-cli",
+  "documentationUrl": "https://www.shutterstock.com/developers/documentation",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

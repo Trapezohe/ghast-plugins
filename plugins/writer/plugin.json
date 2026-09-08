@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "writer",
-  "version": "1.0.0-ghast.1",
   "description": "Connect WRITER’s official MCP for content generation, translation, file processing and knowledge graph workflows.",
   "author": {
     "name": "Ghast AI",

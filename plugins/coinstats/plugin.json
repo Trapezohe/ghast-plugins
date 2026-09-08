@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "coinstats",
-  "version": "1.0.0-ghast.1",
   "description": "Read crypto prices, portfolio performance, wallet activity, exchange data and news through CoinStats’ official OAuth MCP.",
   "author": {
     "name": "Ghast AI",

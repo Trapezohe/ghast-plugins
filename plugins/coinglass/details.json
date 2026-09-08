@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Analyze crypto derivatives, funding rates, open interest, liquidations and ETF flows with CoinGlass.\n\nInvestigate derivatives conditions through funding, open interest, liquidations, and related market indicators. Keep exchanges, instruments, and reporting intervals explicit.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 CoinGlass 分析加密衍生品、资金费率、持仓量、清算与 ETF 资金流。\n\n通过资金费率、持仓量、清算和相关指标研究衍生品市场，明确交易所、合约与统计周期。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Compare BTC funding rates across the available exchanges.",
+      "zh-CN": "比较可用交易所的 BTC 资金费率。"
+    },
+    {
+      "en": "Summarize ETH open interest and liquidations over the last 24 hours.",
+      "zh-CN": "汇总最近 24 小时 ETH 持仓量与清算数据。"
+    },
+    {
+      "en": "Review the available ETF flow data and relate it to recent market conditions.",
+      "zh-CN": "查看可用 ETF 资金流数据，并结合近期市场情况分析。"
+    }
+  ],
+  "websiteUrl": "https://docs.coinglass.com/reference/mcp-service",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.coinglass.com/reference/mcp-service"
+      }
+    ]
+  }
+}

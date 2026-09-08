@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "solana",
-  "version": "1.0.0-ghast.1",
   "description": "Use Solana’s official Developer MCP to search ecosystem documentation and check Anchor or Pinocchio Rust programs.",
   "author": {
     "name": "Ghast AI",

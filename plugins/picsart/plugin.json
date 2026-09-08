@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "picsart",
-  "version": "0.1.0-ghast.1",
+  "version": "0.1.0",
   "description": "Generate and edit images, video, audio, and motion graphics through Picsart's official skills, CLI workflows, and hosted MCP servers.",
   "author": {
     "name": "Picsart",

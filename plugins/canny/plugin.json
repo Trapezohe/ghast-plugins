@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "canny",
-  "version": "1.0.0-ghast.1",
   "description": "Analyze product feedback and customer impact, and manage Ideas through Canny’s official MCP. Requires Pro or Business with Canny Ideas.",
   "author": {
     "name": "Ghast AI",

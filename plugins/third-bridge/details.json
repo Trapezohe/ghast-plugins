@@ -1,0 +1,43 @@
+{
+  "overview": {
+    "en": "Search and synthesize Third Bridge expert interview transcripts through Third Bridge's official hosted MCP.\n\nBuild a financial or company research brief from the provider's available materials. Specify the company and reporting period, preserve citations, and distinguish reported results from estimates.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "检索和综合分析专家访谈记录。\n\n根据服务商提供的资料编写金融或企业研究简报。明确公司与报告期，保留引用，并区分已披露业绩与估算。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Prepare a research brief on this company using the available source materials.",
+      "zh-CN": "依据可用来源资料，为这家公司准备研究简报。"
+    },
+    {
+      "en": "Compare these two companies over the same reporting period.",
+      "zh-CN": "比较这两家公司在同一报告期内的情况。"
+    },
+    {
+      "en": "Find the evidence behind this financial claim and list the source dates.",
+      "zh-CN": "查找这项财务说法的依据，并列出来源日期。"
+    }
+  ],
+  "websiteUrl": "https://www.thirdbridge.com/en-us",
+  "privacyPolicyUrl": "https://www.thirdbridge.com/en-us/about-us/compliance/policies/privacy-policy",
+  "documentationUrl": "https://www.thirdbridge.com/en-us/data-solutions/mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.thirdbridge.com/en-us"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.thirdbridge.com/en-us",
+        "anchor": "Privacy policy",
+        "status": 200,
+        "url": "https://www.thirdbridge.com/en-us/about-us/compliance/policies/privacy-policy"
+      }
+    ]
+  }
+}

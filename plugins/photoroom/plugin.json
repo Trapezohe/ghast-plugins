@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "photoroom",
-  "version": "1.0.0-ghast.1",
   "description": "Create and edit product visuals with Photoroom background removal, virtual models and other available official API tools.",
   "author": {
     "name": "Ghast AI",

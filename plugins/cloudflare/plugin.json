@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "cloudflare",
-  "version": "1.0.0-ghast.1",
+  "version": "1.0.0",
   "description": "Build and operate on Cloudflare with skills, commands and five official MCP services.",
   "author": {
     "name": "Cloudflare",

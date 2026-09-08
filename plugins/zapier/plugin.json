@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "zapier",
-  "version": "1.0.0-ghast.1",
   "description": "Run the actions configured in your Zapier MCP server from Ghast.",
   "author": {
     "name": "Ghast AI",

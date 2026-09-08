@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "plain",
-  "version": "1.0.0-ghast.1",
   "description": "Read support threads, investigate customer history and manage help-center content through Plain’s official account MCP.",
   "author": {
     "name": "Ghast AI",

@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Discover and manage API specifications and developer portals with Swagger Studio and Portal.\n\nInspect API definitions and workspace context before preparing requests or documentation changes. Keep the endpoint, method, and schema version clear.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Swagger Studio 与 Portal 查找和管理 API 规范及开发者门户。\n\n准备请求或文档修改前检查 API 定义与工作区上下文，明确端点、方法与结构版本。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the API definition for this operation and explain its request shape.",
+      "zh-CN": "查找这个操作的 API 定义，并解释请求结构。"
+    },
+    {
+      "en": "Review these API definitions for inconsistent fields or responses.",
+      "zh-CN": "检查这些 API 定义中的字段或响应不一致。"
+    },
+    {
+      "en": "Prepare an integration example based on the available API specification.",
+      "zh-CN": "根据可用 API 规范准备集成示例。"
+    }
+  ],
+  "websiteUrl": "https://developer.smartbear.com/smartbear-mcp/docs/remote-swagger",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://developer.smartbear.com/smartbear-mcp/docs/remote-swagger"
+      }
+    ]
+  }
+}
