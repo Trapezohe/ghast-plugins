@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Skill for searching the Steam store and looking up game details (price, release date, genres, reviews) — uses Steam's public store endpoints, no key required.\n\nFind public Steam store information for game discovery. Preserve store links and distinguish listed price and review information from personal recommendations.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "搜索 Steam 商店，查询游戏价格、发行日期、类型与评价。\n\n查询公开 Steam 商店信息以发现游戏，保留商店链接，并区分标价、评价信息与个人推荐。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find co-op games on Steam matching these preferences.",
+      "zh-CN": "查找符合这些偏好的 Steam 合作游戏。"
+    },
+    {
+      "en": "Compare these games by price, release date, and available reviews.",
+      "zh-CN": "按价格、发行日期和可用评价比较这些游戏。"
+    },
+    {
+      "en": "Summarize the public Steam store information for this title.",
+      "zh-CN": "汇总这款游戏的公开 Steam 商店信息。"
+    }
+  ],
+  "documentationUrl": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/steam-search",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

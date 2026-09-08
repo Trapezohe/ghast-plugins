@@ -1,0 +1,36 @@
+{
+  "overview": {
+    "en": "Research US case law, statutes, regulations, and federal dockets, then draft and cite-check litigation work product with Midpage's official MCP and MIT-licensed skills.\n\nResearch U.S. legal materials with explicit jurisdiction and issue scope. Preserve original citations and separate source findings from draft argument.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "研究美国案例、法规与诉讼记录，起草并核对法律文书引用。\n\n在明确司法辖区与问题范围后研究美国法律资料，保留原始引用，并区分来源发现与论证草稿。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find cases relevant to this legal issue and summarize their holdings.",
+      "zh-CN": "查找与这个法律问题相关的案例，并总结裁判要点。"
+    },
+    {
+      "en": "Check the citations in this draft against the available source material.",
+      "zh-CN": "依据可用来源资料核对这份草稿中的引用。"
+    },
+    {
+      "en": "Prepare a research outline comparing these legal authorities.",
+      "zh-CN": "准备研究提纲，比较这些法律依据。"
+    }
+  ],
+  "websiteUrl": "https://www.midpage.ai",
+  "repositoryUrl": "https://github.com/midpage-ai/litigation-skills",
+  "documentationUrl": "https://docs.midpage.ai/documentation/integration/mcp-tools",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.midpage.ai"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Analyze balances, transactions, statements and spending with Mercury’s official read-only MCP connector (Beta).\n\nReview company balances, transactions, and spending information within the connected account scope. Make the date range and currency clear before interpreting trends.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Mercury 官方只读 MCP 连接器分析余额、交易、对账单与支出（Beta）。\n\n在已连接账号范围内查看企业余额、交易与支出信息，明确日期范围和币种后再解读趋势。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize this month's available transaction and spending data.",
+      "zh-CN": "汇总本月可用的交易与支出数据。"
+    },
+    {
+      "en": "Identify unusual changes in these expenses and show the underlying records.",
+      "zh-CN": "识别这些支出中的异常变化，并列出底层记录。"
+    },
+    {
+      "en": "Prepare a finance review brief for the selected reporting period.",
+      "zh-CN": "为选定报告期准备财务复盘简报。"
+    }
+  ],
+  "websiteUrl": "https://docs.mercury.com/docs/connecting-mercury-mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.mercury.com/docs/connecting-mercury-mcp"
+      }
+    ]
+  }
+}

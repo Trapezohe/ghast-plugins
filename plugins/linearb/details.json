@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Explore engineering delivery metrics, repository activity and AI adoption with LinearB’s official MCP.\n\nReview software-delivery and repository metrics with a consistent team and reporting period. Explain metric definitions before drawing conclusions about changes.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 LinearB 官方 MCP 分析研发交付指标、仓库活动与 AI 采用情况。\n\n在一致的团队与报告期内查看软件交付和仓库指标，先解释指标定义，再对变化作出判断。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize this team's available delivery metrics for last month.",
+      "zh-CN": "汇总这个团队上个月的可用交付指标。"
+    },
+    {
+      "en": "Compare repository activity across these reporting periods.",
+      "zh-CN": "比较这些报告期内的仓库活动。"
+    },
+    {
+      "en": "Prepare an engineering review with the available AI adoption data.",
+      "zh-CN": "结合可用 AI 采用数据准备研发复盘。"
+    }
+  ],
+  "documentationUrl": "https://linearb.zendesk.com/hc/en-us/articles/45552138846491-2026-Release-Notes",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

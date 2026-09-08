@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Manage Chroma Cloud collections and documents, run vector queries and inspect stored data.\n\nRetrieve relevant information from vector-backed data with an explicit search question. Keep the collection or index and returned source identifiers attached to the result.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "管理 Chroma Cloud 集合与文档、执行向量查询并检查存储数据。\n\n围绕明确的检索问题从向量数据中查找相关信息，结果中保留集合或索引及返回来源的标识。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find records relevant to this question in the selected collection or index.",
+      "zh-CN": "在选定集合或索引中查找与这个问题相关的记录。"
+    },
+    {
+      "en": "Summarize these search results and include their source identifiers.",
+      "zh-CN": "总结这些检索结果，并保留来源标识。"
+    },
+    {
+      "en": "Compare the retrieved evidence for these two related questions.",
+      "zh-CN": "比较这两个相关问题检索得到的依据。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/chroma-core/chroma-mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

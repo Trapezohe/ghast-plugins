@@ -1,0 +1,44 @@
+{
+  "overview": {
+    "en": "Search licensed Factiva news for company, industry, market, and event research through Dow Jones's official Retrieval API.\n\nResearch company and market events through the provider's authorized news sources. Keep publication times and original source references attached to every summary.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "通过官方接口检索获授权的新闻资料，研究企业、行业与市场事件。\n\n通过获授权的新闻来源研究公司与市场事件，摘要中保留发布时间与原始来源。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize the latest available news about this company with source dates.",
+      "zh-CN": "汇总这家公司的最新可用新闻，并注明来源日期。"
+    },
+    {
+      "en": "Build a timeline of reporting on this market event.",
+      "zh-CN": "梳理这个市场事件的新闻报道时间线。"
+    },
+    {
+      "en": "Compare how the available sources describe this industry development.",
+      "zh-CN": "比较可用来源对这项行业进展的报道。"
+    }
+  ],
+  "websiteUrl": "https://www.dowjones.com/business-intelligence/factiva/",
+  "privacyPolicyUrl": "https://www.dowjones.com/privacy-notice/",
+  "repositoryUrl": "https://github.com/dowjones/factiva-retrievalapi-demo",
+  "documentationUrl": "https://developer.dowjones.com/documents/factiva_integration-factiva_retrieval_api",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.dowjones.com/business-intelligence/factiva/"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.dowjones.com/business-intelligence/factiva/",
+        "anchor": "Privacy Notice",
+        "status": 200,
+        "url": "https://www.dowjones.com/privacy-notice/"
+      }
+    ]
+  }
+}

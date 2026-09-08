@@ -1,0 +1,42 @@
+{
+  "overview": {
+    "en": "Analyze user sessions, product metrics and application issues with LogRocket.\n\nInvestigate product behavior using the connected workspace's metrics and analysis resources. Start with a user journey or metric, keep filters visible, and explain the evidence behind each conclusion.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 LogRocket 分析用户会话、产品指标与应用问题。\n\n利用已连接工作区的指标与分析资源调查产品行为。从用户路径或指标出发，保留筛选条件，并解释每项结论的依据。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Investigate the recent change in this product metric and show the applied filters.",
+      "zh-CN": "调查这个产品指标的近期变化，并说明筛选条件。"
+    },
+    {
+      "en": "Compare these two user groups using the available product data.",
+      "zh-CN": "使用可用产品数据比较这两个用户群体。"
+    },
+    {
+      "en": "Prepare a product review brief with the key findings and unanswered questions.",
+      "zh-CN": "准备产品复盘简报，列出主要发现与待确认问题。"
+    }
+  ],
+  "websiteUrl": "https://docs.logrocket.com/docs/mcp",
+  "privacyPolicyUrl": "https://docs.logrocket.com/docs/privacy",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.logrocket.com/docs/mcp"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://docs.logrocket.com/docs/mcp",
+        "anchor": "Privacy",
+        "status": 200,
+        "url": "https://docs.logrocket.com/docs/privacy"
+      }
+    ]
+  }
+}

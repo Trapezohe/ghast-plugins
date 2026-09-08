@@ -1,0 +1,51 @@
+{
+  "overview": {
+    "en": "Analyze read-only B2B marketing performance, channels, vendors, campaigns, audiences, account engagement, attribution, spend efficiency, and pipeline influence through Channel99's official hosted MCP server.\n\nAnalyze marketing performance with a consistent channel, period, and attribution context. Use returned business data to explain changes and prepare a review rather than assuming causation.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "分析 B2B 营销渠道、广告活动、受众、归因与投入效果。\n\n在一致的渠道、时间段和归因口径下分析营销表现，依据返回的业务数据解释变化并准备复盘，不直接把相关性当作因果。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Compare the available channel performance data for last month.",
+      "zh-CN": "比较上个月可用的渠道表现数据。"
+    },
+    {
+      "en": "Investigate why this campaign's performance changed over the selected period.",
+      "zh-CN": "调查这个活动在选定周期内表现变化的原因。"
+    },
+    {
+      "en": "Prepare a weekly marketing report with sources and follow-up questions.",
+      "zh-CN": "准备包含数据来源和后续问题的营销周报。"
+    }
+  ],
+  "websiteUrl": "https://www.channel99.com",
+  "privacyPolicyUrl": "https://www.channel99.com/company/privacy",
+  "termsOfServiceUrl": "https://www.channel99.com/terms-of-service",
+  "documentationUrl": "https://www.channel99.com/articles/channel99-connects-marketing-intelligence-data-to-genai-platforms",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.channel99.com"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.channel99.com",
+        "anchor": "Privacy & Trust",
+        "status": 200,
+        "url": "https://www.channel99.com/company/privacy"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://www.channel99.com",
+        "anchor": "Terms of Service",
+        "status": 200,
+        "url": "https://www.channel99.com/terms-of-service"
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "overview": {
+    "en": "Explore retail locations, catalogs, customers, orders and payments through Square.\n\nReview store, catalog, customer, order, and payment context together. Use a specific location and date range to keep operational summaries comparable.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Square 查看门店、商品、客户、订单和支付，协助零售运营。\n\n结合门店、商品、客户、订单与支付信息查看零售经营情况，用明确的门店和时间范围保持统计口径一致。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize orders and payments for this store last week.",
+      "zh-CN": "汇总这家门店上周的订单与支付情况。"
+    },
+    {
+      "en": "Review this product's catalog information and related orders.",
+      "zh-CN": "查看这个商品的目录信息与相关订单。"
+    },
+    {
+      "en": "Prepare an operations brief for the selected store.",
+      "zh-CN": "为选定门店准备运营简报。"
+    }
+  ],
+  "websiteUrl": "https://developer.squareup.com/docs/mcp",
+  "termsOfServiceUrl": "https://squareup.com/us/en/legal/general/developers",
+  "privacyPolicyUrl": "https://squareup.com/us/en/legal/general/privacy",
+  "repositoryUrl": "https://github.com/square/square-mcp-server",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://developer.squareup.com/docs/mcp"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://developer.squareup.com/docs/mcp",
+        "anchor": "Developer terms of service",
+        "status": 200,
+        "url": "https://squareup.com/us/en/legal/general/developers"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://developer.squareup.com/docs/mcp",
+        "anchor": "Privacy policy",
+        "status": 200,
+        "url": "https://squareup.com/us/en/legal/general/privacy"
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Comprehensive Binance workflows for public market data, Spot, Futures, Options, Convert, Margin, Earn, Loans, Wallet, Fiat, P2P, and Onchain Pay.\n\nBring market research and authorized account context into one workflow. Choose the asset, market, and time range first; compare price data separately from holdings or order actions.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "查询币安行情，支持现货、合约、期权、钱包及其他已授权业务流程。\n\n把行情研究与已授权账号信息放在同一个工作流中。先确定资产、市场和时间范围，分别分析行情、持仓与订单操作。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize the recent market performance of this asset and state the data timestamp.",
+      "zh-CN": "汇总该资产近期行情，并注明数据时间。"
+    },
+    {
+      "en": "Review my authorized account's positions and summarize concentration by asset.",
+      "zh-CN": "查看我已授权账号的持仓，按资产汇总集中度。"
+    },
+    {
+      "en": "Prepare an order checklist for this market without submitting an order.",
+      "zh-CN": "为这个市场准备下单检查清单，先不要提交订单。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/binance/binance-skills-hub",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

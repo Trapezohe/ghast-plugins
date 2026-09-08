@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Access current weather, forecasts, historical conditions, marine data and astronomy through WeatherAPI.com’s official MCP.\n\nCheck weather information for a specific location and time window. Keep forecast times and units visible and distinguish forecasts from observations.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 WeatherAPI.com 官方 MCP 获取实时天气、预报、历史天气、海洋与天文数据。\n\n查询特定地点与时间窗口的天气信息，保留预报时间和单位，并区分预报与观测。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize the weather for this location over the next 24 hours.",
+      "zh-CN": "汇总这个地点未来 24 小时的天气。"
+    },
+    {
+      "en": "Compare the available weather information for these two locations.",
+      "zh-CN": "比较这两个地点的可用天气信息。"
+    },
+    {
+      "en": "Prepare a weather brief for tomorrow's outdoor schedule.",
+      "zh-CN": "为明天的户外安排准备天气简报。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/weatherapicom/weatherapi-mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

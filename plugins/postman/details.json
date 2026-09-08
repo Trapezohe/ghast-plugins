@@ -1,0 +1,50 @@
+{
+  "overview": {
+    "en": "Find API collections and workspaces, inspect requests and support API collaboration with Postman.\n\nInspect API definitions and workspace context before preparing requests or documentation changes. Keep the endpoint, method, and schema version clear.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Postman 查找 API 集合与工作区、检查请求定义，辅助接口开发和团队协作。\n\n准备请求或文档修改前检查 API 定义与工作区上下文，明确端点、方法与结构版本。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the API definition for this operation and explain its request shape.",
+      "zh-CN": "查找这个操作的 API 定义，并解释请求结构。"
+    },
+    {
+      "en": "Review these API definitions for inconsistent fields or responses.",
+      "zh-CN": "检查这些 API 定义中的字段或响应不一致。"
+    },
+    {
+      "en": "Prepare an integration example based on the available API specification.",
+      "zh-CN": "根据可用 API 规范准备集成示例。"
+    }
+  ],
+  "websiteUrl": "https://learning.postman.com/latest-v-12/docs/reference/postman-api/postman-mcp-server/postman-mcp-remote-server",
+  "termsOfServiceUrl": "https://www.postman.com/legal/terms/",
+  "privacyPolicyUrl": "https://privacy.postman.com/policies/",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://learning.postman.com/latest-v-12/docs/reference/postman-api/postman-mcp-server/postman-mcp-remote-server"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://learning.postman.com/latest-v-12/docs/reference/postman-api/postman-mcp-server/postman-mcp-remote-server",
+        "anchor": "Terms of Service",
+        "status": 200,
+        "url": "https://www.postman.com/legal/terms/"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://learning.postman.com/latest-v-12/docs/reference/postman-api/postman-mcp-server/postman-mcp-remote-server",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://privacy.postman.com/policies/"
+      }
+    ]
+  }
+}

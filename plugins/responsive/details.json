@@ -1,0 +1,43 @@
+{
+  "overview": {
+    "en": "Search governed Responsive proposal content, inspect projects and unanswered questions, and generate grounded draft responses through Responsive's official hosted MCP.\n\nAnswer proposal questions using the connected knowledge base and project context. Preserve references and identify gaps instead of inventing unsupported commitments.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "检索方案知识库、查看项目问题并起草有依据的答复。\n\n利用已连接知识库与项目上下文回答方案问题，保留引用，指出缺口，不编造没有依据的承诺。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the knowledge-base material relevant to this proposal question.",
+      "zh-CN": "查找与这个方案问题相关的知识库资料。"
+    },
+    {
+      "en": "Draft a source-backed answer to this project question.",
+      "zh-CN": "为这个项目问题起草有来源依据的答复。"
+    },
+    {
+      "en": "Review this draft against the available knowledge and flag unsupported claims.",
+      "zh-CN": "对照可用知识审查这份草稿，标出缺乏依据的说法。"
+    }
+  ],
+  "websiteUrl": "https://www.responsive.io",
+  "privacyPolicyUrl": "https://www.responsive.io/legal/privacy-policy",
+  "documentationUrl": "https://developer.responsive.io/docs/responsive-api/86b14fe0ae541-overview",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.responsive.io"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.responsive.io",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://www.responsive.io/legal/privacy-policy"
+      }
+    ]
+  }
+}

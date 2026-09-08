@@ -1,0 +1,28 @@
+{
+  "overview": {
+    "en": "Apply Ponytail’s minimal-code rules through Ghast lifecycle hooks, with per-conversation modes and subagent inheritance.\n\nApply minimal-code guidance through Ghast conversation lifecycle hooks. Modes are scoped to the conversation; the plugin supplies development rules rather than an external account connection.\n\nInstall and enable the plugin, with Node.js available locally. Use Ponytail lite, full, ultra, or off to choose the conversation mode; the hook supplies the corresponding rules at supported lifecycle events.",
+    "zh-CN": "通过 Ghast 生命周期 Hook 注入 Ponytail 极简编码规则，支持会话独立模式与子代理继承。\n\n通过 Ghast 对话生命周期 Hook 应用极简编码指导。模式按会话隔离；插件提供开发规则，不连接外部账号。\n\n安装并启用插件，并确保本机可运行 Node.js。使用 Ponytail lite、full、ultra 或 off 选择会话模式；Hook 会在支持的生命周期事件中提供对应规则。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Fix this bug with the smallest change that addresses its root cause.",
+      "zh-CN": "用解决根因的最小改动修复这个错误。"
+    },
+    {
+      "en": "Review this implementation for unnecessary abstractions and suggest simplifications.",
+      "zh-CN": "审查这个实现中不必要的抽象，并建议简化。"
+    },
+    {
+      "en": "Use Ponytail lite for this task and keep the implementation focused.",
+      "zh-CN": "这项任务使用 Ponytail lite，让实现保持聚焦。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/DietrichGebert/ponytail",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md"
+    ],
+    "links": []
+  }
+}

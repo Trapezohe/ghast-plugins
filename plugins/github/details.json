@@ -1,0 +1,45 @@
+{
+  "overview": {
+    "en": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Connect with your GitHub token.\n\nConnect repository and issue context to code review or delivery work. Start with the repository and issue or change reference, then retain links to the evidence behind the proposed next steps.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "读取仓库、审查 PR、管理 Issue 与排查 CI；使用 GitHub Token 连接。\n\n把仓库与问题上下文用于代码审查或交付工作。从仓库及问题、变更引用出发，为建议的后续步骤保留证据链接。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize this code change and identify the issues it addresses.",
+      "zh-CN": "总结这项代码变更，指出它解决了哪些问题。"
+    },
+    {
+      "en": "Review the open work for this repository and propose priorities.",
+      "zh-CN": "查看这个仓库的未完成工作，并建议优先级。"
+    },
+    {
+      "en": "Prepare a review brief linking the relevant issues and code changes.",
+      "zh-CN": "准备审查简报，关联相关问题与代码变更。"
+    }
+  ],
+  "privacyPolicyUrl": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+  "termsOfServiceUrl": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+  "repositoryUrl": "https://github.com/github/github-mcp-server",
+  "websiteUrl": "https://github.com",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "field": "privacyPolicyUrl",
+        "source": "cached publisher metadata",
+        "status": 200,
+        "url": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "source": "cached publisher metadata",
+        "status": 200,
+        "url": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Research crypto funding rounds, investors, token unlocks and project teams through CryptoRank’s official MCP (Beta).\n\nResearch funding, investors, unlock schedules, and project teams together. Separate announced events from historical records and preserve the dates used in comparisons.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 CryptoRank 官方 MCP（Beta）研究加密项目融资、投资机构、代币解锁与团队。\n\n结合融资、投资机构、解锁计划与团队资料研究项目，区分已公告事件与历史记录，并保留比较所用日期。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize this project's funding rounds and participating investors.",
+      "zh-CN": "汇总这个项目的融资轮次与参与机构。"
+    },
+    {
+      "en": "Find upcoming token unlocks for these projects and compare their schedules.",
+      "zh-CN": "查找这些项目即将发生的代币解锁，并比较时间安排。"
+    },
+    {
+      "en": "Prepare a brief on this investment firm's crypto portfolio.",
+      "zh-CN": "整理这家投资机构的加密投资组合简报。"
+    }
+  ],
+  "websiteUrl": "https://cryptorank.io/insights/analytics/how-to-use-CryptoRank-MCP-server",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://cryptorank.io/insights/analytics/how-to-use-CryptoRank-MCP-server"
+      }
+    ]
+  }
+}

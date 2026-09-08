@@ -1,0 +1,35 @@
+{
+  "overview": {
+    "en": "Find current Cogedim new-build lots and developments by location, budget, rooms, property type, and investment scheme, and retrieve official buying guidance.\n\nResearch new-build property options with explicit location, budget, and property criteria. Keep listing details distinct from general purchasing guidance.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "按地区、预算、户型和投资条件查询新房项目与购房指南。\n\n在明确地区、预算与户型条件后研究新房选择，区分具体房源信息与一般购房指南。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find new-build projects matching this location and budget.",
+      "zh-CN": "查找符合这个地区与预算的新房项目。"
+    },
+    {
+      "en": "Compare these developments by the available property criteria.",
+      "zh-CN": "根据可用房产条件比较这些楼盘。"
+    },
+    {
+      "en": "Summarize the available buying guidance for this property search.",
+      "zh-CN": "汇总适用于这次找房的可用购房指南。"
+    }
+  ],
+  "websiteUrl": "https://www.cogedim.com",
+  "documentationUrl": "https://www.cogedim.com/mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.cogedim.com"
+      }
+    ]
+  }
+}

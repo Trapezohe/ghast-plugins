@@ -1,0 +1,52 @@
+{
+  "overview": {
+    "en": "Analyze marketing, sales, finance, ecommerce, product, and other business data from Coupler.io data flows through Coupler.io's official hosted OAuth MCP and Analytical Engine.\n\nAnalyze marketing performance with a consistent channel, period, and attribution context. Use returned business data to explain changes and prepare a review rather than assuming causation.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "分析数据流中的营销、销售、财务、电商与其他业务数据。\n\n在一致的渠道、时间段和归因口径下分析营销表现，依据返回的业务数据解释变化并准备复盘，不直接把相关性当作因果。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Compare the available channel performance data for last month.",
+      "zh-CN": "比较上个月可用的渠道表现数据。"
+    },
+    {
+      "en": "Investigate why this campaign's performance changed over the selected period.",
+      "zh-CN": "调查这个活动在选定周期内表现变化的原因。"
+    },
+    {
+      "en": "Prepare a weekly marketing report with sources and follow-up questions.",
+      "zh-CN": "准备包含数据来源和后续问题的营销周报。"
+    }
+  ],
+  "websiteUrl": "https://www.coupler.io/",
+  "termsOfServiceUrl": "https://www.coupler.io/terms-of-use",
+  "privacyPolicyUrl": "https://www.coupler.io/privacy-policy",
+  "repositoryUrl": "https://github.com/railsware/coupler-io-mcp-server",
+  "documentationUrl": "https://www.coupler.io/ai-integrations",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.coupler.io/"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://www.coupler.io/",
+        "anchor": "Terms of Use",
+        "status": 200,
+        "url": "https://www.coupler.io/terms-of-use"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.coupler.io/",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://www.coupler.io/privacy-policy"
+      }
+    ]
+  }
+}

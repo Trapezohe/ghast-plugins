@@ -1,0 +1,50 @@
+{
+  "overview": {
+    "en": "Analyze product usage, visitor activity and guide performance using Pendo’s official regional MCP services.\n\nInvestigate product behavior using the connected workspace's metrics and analysis resources. Start with a user journey or metric, keep filters visible, and explain the evidence behind each conclusion.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Pendo 官方区域 MCP 服务分析产品使用、访客活动与引导内容表现。\n\n利用已连接工作区的指标与分析资源调查产品行为。从用户路径或指标出发，保留筛选条件，并解释每项结论的依据。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Investigate the recent change in this product metric and show the applied filters.",
+      "zh-CN": "调查这个产品指标的近期变化，并说明筛选条件。"
+    },
+    {
+      "en": "Compare these two user groups using the available product data.",
+      "zh-CN": "使用可用产品数据比较这两个用户群体。"
+    },
+    {
+      "en": "Prepare a product review brief with the key findings and unanswered questions.",
+      "zh-CN": "准备产品复盘简报，列出主要发现与待确认问题。"
+    }
+  ],
+  "websiteUrl": "https://support.pendo.io/hc/en-us/articles/41102236924955-Connect-to-the-Pendo-MCP-server",
+  "privacyPolicyUrl": "https://www.pendo.io/legal/privacy-policy/",
+  "termsOfServiceUrl": "https://www.pendo.io/legal/terms-of-use/",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://support.pendo.io/hc/en-us/articles/41102236924955-Connect-to-the-Pendo-MCP-server"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://support.pendo.io/hc/en-us/articles/41102236924955-Connect-to-the-Pendo-MCP-server",
+        "anchor": "Pendo Privacy Policy",
+        "status": 200,
+        "url": "https://www.pendo.io/legal/privacy-policy/"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://support.pendo.io/hc/en-us/articles/41102236924955-Connect-to-the-Pendo-MCP-server",
+        "anchor": "Terms and Conditions",
+        "status": 200,
+        "url": "https://www.pendo.io/legal/terms-of-use/"
+      }
+    ]
+  }
+}

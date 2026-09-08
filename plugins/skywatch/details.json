@@ -1,0 +1,43 @@
+{
+  "overview": {
+    "en": "Search orderable satellite imagery, compare scene pricing, and browse satellites and products through SkyWatch's official MCP.\n\nSearch satellite imagery by area and collection criteria, then compare available scenes and prices before purchase.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "搜索可购买的卫星影像，比较场景价格和卫星产品。\n\n按区域与采集条件搜索卫星影像，购买前比较可用场景与价格。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find available satellite imagery for this area.",
+      "zh-CN": "查找这个区域的可用卫星影像。"
+    },
+    {
+      "en": "Compare these scenes by their available product details and prices.",
+      "zh-CN": "根据可用产品详情和价格比较这些影像场景。"
+    },
+    {
+      "en": "Prepare an imagery shortlist for this observation requirement.",
+      "zh-CN": "为这个观测需求准备影像候选清单。"
+    }
+  ],
+  "websiteUrl": "https://skywatch.com",
+  "privacyPolicyUrl": "https://skywatch.com/privacy/",
+  "documentationUrl": "https://docs.skywatch.com/docs/mcp/mcp-server/",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://skywatch.com"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://skywatch.com",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://skywatch.com/privacy/"
+      }
+    ]
+  }
+}

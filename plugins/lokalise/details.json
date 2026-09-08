@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Manage localization projects, translation keys, tasks, glossaries and screenshots in Lokalise.\n\nReview localization content in the selected project and language. Preserve translation keys and context while preparing terminology or wording improvements.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "在 Lokalise 中管理本地化项目、翻译键、任务、术语表与截图。\n\n在选定项目与语言下检查本地化内容，准备术语或措辞改进时保留翻译键与上下文。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Review these translations for terminology and contextual consistency.",
+      "zh-CN": "检查这些翻译的术语与上下文一致性。"
+    },
+    {
+      "en": "Find the available translation work for this project and summarize its scope.",
+      "zh-CN": "查找这个项目的可用翻译工作，汇总范围。"
+    },
+    {
+      "en": "Prepare revised translations for these strings with explanations.",
+      "zh-CN": "为这些字符串准备翻译修改稿，并附上说明。"
+    }
+  ],
+  "websiteUrl": "https://docs.lokalise.com/en/articles/13547066-setting-up-and-using-the-lokalise-mcp-server",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.lokalise.com/en/articles/13547066-setting-up-and-using-the-lokalise-mcp-server"
+      }
+    ]
+  }
+}

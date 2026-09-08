@@ -1,0 +1,51 @@
+{
+  "overview": {
+    "en": "Research internal accounts and people, global companies and contacts, Intent, Buying Groups, opportunities, and meeting-ready account briefs through Demandbase's official hosted MCP.\n\nResearch companies and people against a defined prospecting goal. Preserve the source of each finding and use available relationship or account context to prepare outreach drafts.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "研究目标账户、联系人、购买意向与商机，准备客户会议资料。\n\n围绕明确的获客目标研究企业与人物，保留每项发现的来源，并结合可用关系或客户背景准备触达草稿。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Research this company and summarize the available account intelligence.",
+      "zh-CN": "研究这家公司，汇总可用客户情报。"
+    },
+    {
+      "en": "Find people or organizations matching this target profile and explain the match.",
+      "zh-CN": "查找符合这个目标画像的人物或组织，并说明匹配依据。"
+    },
+    {
+      "en": "Prepare a meeting brief for this prospect with evidence and open questions.",
+      "zh-CN": "为这个潜在客户准备会议简报，包含依据和待确认问题。"
+    }
+  ],
+  "websiteUrl": "https://www.demandbase.com",
+  "privacyPolicyUrl": "https://www.demandbase.com/privacy/",
+  "termsOfServiceUrl": "https://www.demandbase.com/terms-of-use/",
+  "documentationUrl": "https://developer.demandbase.com/docs/mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.demandbase.com"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.demandbase.com",
+        "anchor": "Privacy Notice",
+        "status": 200,
+        "url": "https://www.demandbase.com/privacy/"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://www.demandbase.com",
+        "anchor": "Terms of Use",
+        "status": 200,
+        "url": "https://www.demandbase.com/terms-of-use/"
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "overview": {
+    "en": "Inspect and manage Algolia search workflows and search public developer documentation with DocSearch.\n\nInspect search results in the context of the selected index and query. Compare returned records and prepare relevance improvements as a reviewable proposal.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "查看与管理 Algolia 搜索工作流，并通过 DocSearch 检索公开开发文档。\n\n结合选定索引与查询检查搜索结果，比较返回记录，并将相关性改进整理成可审阅提案。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Search this index for the topic and summarize the matching records.",
+      "zh-CN": "在这个索引中搜索该主题，并汇总匹配记录。"
+    },
+    {
+      "en": "Compare results for these two queries and explain the differences.",
+      "zh-CN": "比较这两个查询的结果，并解释差异。"
+    },
+    {
+      "en": "Prepare a search relevance review using the available configuration and results.",
+      "zh-CN": "根据可用配置与结果准备搜索相关性审查。"
+    }
+  ],
+  "websiteUrl": "https://www.algolia.com/doc/guides/model-context-protocol/productivity-mcp",
+  "privacyPolicyUrl": "https://www.algolia.com/policies/privacy",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.algolia.com/doc/guides/model-context-protocol/productivity-mcp"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.algolia.com/doc/guides/model-context-protocol/productivity-mcp",
+        "anchor": "Privacy policy",
+        "status": 200,
+        "url": "https://www.algolia.com/policies/privacy"
+      }
+    ]
+  }
+}

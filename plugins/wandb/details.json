@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Analyze W&B runs and artifacts and Weave traces and evaluations through the official Weights & Biases MCP server.\n\nInvestigate model applications through the available traces, sessions, or evaluation records. Keep the model, dataset, and experiment context explicit when comparing behavior.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Weights & Biases 官方 MCP 分析 W&B 运行记录与制品，以及 Weave 调用追踪和评测。\n\n通过可用追踪、会话或评测记录调查模型应用。比较行为时明确模型、数据集和实验背景。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Investigate this model application's errors or latency using the available traces.",
+      "zh-CN": "使用可用追踪调查这个模型应用的错误或延迟。"
+    },
+    {
+      "en": "Compare these runs or sessions and summarize the differences.",
+      "zh-CN": "比较这些运行或会话，汇总差异。"
+    },
+    {
+      "en": "Prepare an evaluation review from the available records and identify missing evidence.",
+      "zh-CN": "根据可用记录准备评测复盘，并指出缺少的证据。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/wandb/wandb-mcp-server",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

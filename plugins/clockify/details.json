@@ -1,0 +1,42 @@
+{
+  "overview": {
+    "en": "Connect Clockify’s official MCP preview for time tracking, project lookup and reports; provider documentation still marks the service as coming soon.\n\nReview tracked time in its project and reporting context. Group records consistently and prepare corrections or billing summaries as explicit proposals.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "连接 Clockify 官方 MCP 预览服务，进行时间记录、项目查询与报表分析；服务商文档仍标注即将推出。\n\n结合项目与报告周期查看工时，以一致口径分组记录，并将修正或计费摘要整理为明确提案。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize my tracked time by project for last week.",
+      "zh-CN": "按项目汇总我上周记录的工时。"
+    },
+    {
+      "en": "Review these time entries for gaps or inconsistent project assignments.",
+      "zh-CN": "检查这些工时记录是否存在缺漏或项目归属不一致。"
+    },
+    {
+      "en": "Prepare a time report for this project over the selected period.",
+      "zh-CN": "为这个项目准备选定周期的工时报表。"
+    }
+  ],
+  "websiteUrl": "https://clockify.me/help/integrations-and-add-ons/use-clockify-mcp-server-to-connect-to-ai-agent",
+  "privacyPolicyUrl": "https://cake.com/privacy",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://clockify.me/help/integrations-and-add-ons/use-clockify-mcp-server-to-connect-to-ai-agent"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://clockify.me/help/integrations-and-add-ons/use-clockify-mcp-server-to-connect-to-ai-agent",
+        "anchor": "Privacy",
+        "status": 200,
+        "url": "https://cake.com/privacy"
+      }
+    ]
+  }
+}

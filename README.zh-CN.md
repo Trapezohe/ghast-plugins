@@ -74,6 +74,7 @@ Ghast 为官方服务编写的适配包，不等于服务商亲自发布的插�
 ```text
 plugins/<name>/
 ├── plugin.json                  # 清单与 Ghast 元数据
+├── details.json                 # 双语详细介绍、三个示例与官方链接
 ├── assets/                      # 品牌 Logo
 ├── skills/                      # 可选：技能
 ├── mcp.json                     # 可选：MCP 配置
@@ -84,6 +85,10 @@ plugins/<name>/
 ```
 
 在 Ghast 扩展中填写 `descriptions.en` 和 `descriptions.zh-CN`，根字段 `description` 与英文介绍保持一致。分类使用 [`scripts/plugin_categories.py`](scripts/plugin_categories.py) 中的规范值。
+
+每个插件独立维护 `details.json`：`overview` 和恰好三个 `starterPrompts` 分别填写 `en` 与 `zh-CN`。可选链接包括 `websiteUrl`、`repositoryUrl`、`documentationUrl`、`privacyPolicyUrl`、`termsOfServiceUrl`；只填写已核验的官方链接，并在 `sources` 保留依据。中文语言显示中文，其他语言默认英文。修改对应插件目录里的文件即可，不维护集中介绍文件；导入上游更新时保留此文件。
+
+生成的目录索引只保存详情地址和 SHA-256 摘要。Ghast 打开插件时才加载完整介绍并校验摘要；已安装插件从本地安装包读取，无需联网。
 
 在仓库根目录准备校验环境并重新构建：
 

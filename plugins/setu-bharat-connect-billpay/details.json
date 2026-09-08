@@ -1,0 +1,43 @@
+{
+  "overview": {
+    "en": "Discover, fetch, pay, and track Bharat Connect bills through Setu's official hosted Bill Payments MCP.\n\nCheck bill details and payment status before preparing a bill-payment workflow. Keep the biller and reference identifiers attached to the result.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "查询、支付和跟踪 Bharat Connect 账单。\n\n在准备账单支付流程前核对账单详情与支付状态，结果中保留账单机构与参考编号。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Look up this bill and summarize its due date and amount.",
+      "zh-CN": "查询这张账单，汇总到期日与金额。"
+    },
+    {
+      "en": "Check the payment status for this bill reference.",
+      "zh-CN": "检查这个账单编号的支付状态。"
+    },
+    {
+      "en": "Prepare the steps for paying this bill without submitting payment.",
+      "zh-CN": "准备支付这张账单的步骤，先不要提交付款。"
+    }
+  ],
+  "websiteUrl": "https://setu.co",
+  "privacyPolicyUrl": "https://setu.co/privacy-policy",
+  "documentationUrl": "https://docs.setu.co/payments/billpay/mcp/integration-guide",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://setu.co"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://setu.co",
+        "anchor": "Privacy policy",
+        "status": 200,
+        "url": "https://setu.co/privacy-policy"
+      }
+    ]
+  }
+}

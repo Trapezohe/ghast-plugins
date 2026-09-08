@@ -1,0 +1,35 @@
+{
+  "overview": {
+    "en": "Find public wedding, baby, and gift-list registries through MyRegistry.com's official Registry API.\n\nLook up public gift registries using the available identifying information. Keep results tied to their original registry pages.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "查询公开的婚礼、婴儿用品与礼品愿望清单。\n\n使用可用识别信息查询公开礼品清单，并将结果对应到原始清单页面。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the public gift registry matching these details.",
+      "zh-CN": "查找符合这些信息的公开礼品清单。"
+    },
+    {
+      "en": "Summarize the available items in this registry.",
+      "zh-CN": "汇总这个清单中的可用条目。"
+    },
+    {
+      "en": "Compare these public registry results and identify the best match.",
+      "zh-CN": "比较这些公开清单结果，找出最匹配的一项。"
+    }
+  ],
+  "websiteUrl": "https://www.myregistry.com/",
+  "documentationUrl": "https://developers.myregistry.com/reference/new-endpoint",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.myregistry.com/"
+      }
+    ]
+  }
+}

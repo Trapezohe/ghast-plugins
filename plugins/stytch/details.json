@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Configure Stytch projects, redirect URLs and authentication assets through Stytch’s official MCP server.\n\nInspect identity configuration in the selected organization or project before proposing changes. Keep authentication flows and access-control scope explicit.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Stytch 官方 MCP 配置项目、回调地址及身份认证相关资源。\n\n提出修改前检查选定组织或项目的身份配置，明确认证流程与访问控制范围。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Review this project's authentication configuration and explain its flow.",
+      "zh-CN": "查看这个项目的认证配置，并解释流程。"
+    },
+    {
+      "en": "Help diagnose this login or organization-access issue.",
+      "zh-CN": "协助排查这个登录或组织访问问题。"
+    },
+    {
+      "en": "Prepare a configuration change for review before applying it.",
+      "zh-CN": "准备配置变更供审阅，先不要应用。"
+    }
+  ],
+  "websiteUrl": "https://stytch.com/docs/resources/workspace-management/stytch-mcp-server",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://stytch.com/docs/resources/workspace-management/stytch-mcp-server"
+      }
+    ]
+  }
+}

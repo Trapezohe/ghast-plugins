@@ -1,0 +1,51 @@
+{
+  "overview": {
+    "en": "Query multichain wallet balances, transactions, token prices and NFT data through GoldRush.\n\nCompare wallet activity and trace token movements across the selected network. Start with a chain, address, and time range; keep transaction identifiers and distinguish native assets from tokens.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 GoldRush 查询多链钱包余额、交易、代币价格与 NFT 数据。\n\n从指定网络的钱包活动入手，追踪代币流转。提供链、地址和时间范围后，可按交易整理结果，并区分原生资产与代币。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize this wallet's recent transactions on the selected network, with transaction IDs.",
+      "zh-CN": "汇总这个钱包在指定网络的近期交易，并列出交易哈希。"
+    },
+    {
+      "en": "Trace this transaction and explain the addresses and token transfers involved.",
+      "zh-CN": "追踪这笔交易，解释涉及的地址与代币转账。"
+    },
+    {
+      "en": "Compare the activity of these two addresses over the same time range.",
+      "zh-CN": "比较这两个地址在相同时间范围内的链上活动。"
+    }
+  ],
+  "websiteUrl": "https://goldrush.dev/agents/",
+  "privacyPolicyUrl": "https://goldrush.dev/privacy-policy/",
+  "termsOfServiceUrl": "https://goldrush.dev/terms-of-use/",
+  "repositoryUrl": "https://github.com/covalenthq/goldrush-agent-skills",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://goldrush.dev/agents/"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://goldrush.dev/agents/",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://goldrush.dev/privacy-policy/"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://goldrush.dev/agents/",
+        "anchor": "Terms of Use",
+        "status": 200,
+        "url": "https://goldrush.dev/terms-of-use/"
+      }
+    ]
+  }
+}

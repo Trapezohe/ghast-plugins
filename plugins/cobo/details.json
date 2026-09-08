@@ -1,0 +1,36 @@
+{
+  "overview": {
+    "en": "Inspect Cobo agent wallets, pacts and audit records, and perform owner-authorized wallet operations through the official MCP server.\n\nInspect the connected wallet context before preparing an operation. Work within the exposed wallet tools and keep the owner authorization boundary explicit.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Cobo 官方 MCP 查看智能体钱包、授权协议和审计记录，执行钱包所有者授权的操作。\n\n先检查已连接钱包的上下文，再准备操作。依据实际开放的钱包工具工作，并明确钱包所有者的授权边界。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Review the connected wallet's available operations and authorization scope.",
+      "zh-CN": "查看已连接钱包可用的操作及授权范围。"
+    },
+    {
+      "en": "Prepare the steps for this wallet operation and list the required inputs.",
+      "zh-CN": "为这项钱包操作准备步骤，并列出所需参数。"
+    },
+    {
+      "en": "Explain how to integrate this wallet workflow into my application.",
+      "zh-CN": "说明如何把这个钱包工作流接入我的应用。"
+    }
+  ],
+  "websiteUrl": "https://www.cobo.com/products/agentic-wallet/manual/developer/mcp",
+  "repositoryUrl": "https://github.com/CoboGlobal/cobo-agentic-wallet",
+  "documentationUrl": "https://cobo.com/products/agentic-wallet/manual/developer/mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.cobo.com/products/agentic-wallet/manual/developer/mcp"
+      }
+    ]
+  }
+}

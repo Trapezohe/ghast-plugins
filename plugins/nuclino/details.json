@@ -1,0 +1,42 @@
+{
+  "overview": {
+    "en": "Search Nuclino workspaces, read pages and organize collaborative documentation.\n\nFind relevant knowledge and turn source material into a traceable answer. Provide a question, project, or document reference and retain links back to the original material.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "搜索 Nuclino 工作区、阅读页面并整理协作文档。\n\n查找相关知识，将来源资料整理成可追溯的回答。提供问题、项目或文档线索，并保留原始资料链接。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the documents that explain this decision and summarize their evidence.",
+      "zh-CN": "查找解释这项决策的文档，并汇总其中的依据。"
+    },
+    {
+      "en": "Compare these documents and highlight agreements and contradictions.",
+      "zh-CN": "比较这些文档，标出一致与矛盾之处。"
+    },
+    {
+      "en": "Prepare a source-linked brief answering this project question.",
+      "zh-CN": "围绕这个项目问题准备带来源链接的简报。"
+    }
+  ],
+  "websiteUrl": "https://help.nuclino.com/70af7f4f-connect-nuclino-to-ai-assistants-with-mcp",
+  "privacyPolicyUrl": "https://www.nuclino.com/privacy",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://help.nuclino.com/70af7f4f-connect-nuclino-to-ai-assistants-with-mcp"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://help.nuclino.com/70af7f4f-connect-nuclino-to-ai-assistants-with-mcp",
+        "anchor": "Privacy",
+        "status": 200,
+        "url": "https://www.nuclino.com/privacy"
+      }
+    ]
+  }
+}

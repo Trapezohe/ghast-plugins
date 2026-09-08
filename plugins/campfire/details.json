@@ -1,0 +1,42 @@
+{
+  "overview": {
+    "en": "Query accounting records, budgets, revenue contracts and financial statements through Campfire’s official MCP service.\n\nExplore accounting records and prepare financial summaries with a clear reporting period. Preserve account and currency context when reconciling totals or investigating differences.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Campfire 官方 MCP 服务查询会计记录、预算、收入合同与财务报表。\n\n围绕明确的报告期查询会计记录、准备财务摘要；核对汇总或调查差异时保留科目与币种信息。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize the available financial reports for last month.",
+      "zh-CN": "汇总上个月的可用财务报表。"
+    },
+    {
+      "en": "Investigate the records behind this unexpected expense change.",
+      "zh-CN": "调查这项费用异常变化背后的记录。"
+    },
+    {
+      "en": "Prepare a reconciliation checklist from these accounting records.",
+      "zh-CN": "根据这些会计记录准备对账检查清单。"
+    }
+  ],
+  "websiteUrl": "https://docs.campfire.ai/guides/ai-integration",
+  "privacyPolicyUrl": "https://docs.campfire.ai/guides/ai-integration#security-%26-privacy",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.campfire.ai/guides/ai-integration"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://docs.campfire.ai/guides/ai-integration",
+        "anchor": "Security & Privacy",
+        "status": 200,
+        "url": "https://docs.campfire.ai/guides/ai-integration#security-%26-privacy"
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "overview": {
+    "en": "Connect official Infobip tools for SMS, email, WhatsApp, voice, customer profiles, account management and documentation.\n\nInvestigate communications workflows through the provider's available channel and account tools. Identify the channel and record before reviewing configuration or preparing messages.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "连接 Infobip 官方 SMS、邮件、WhatsApp、语音、客户资料、账号管理及文档工具。\n\n通过服务商可用的渠道与账号工具调查通信流程。检查配置或准备消息前，先明确渠道与记录。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Review the available information for this communication record.",
+      "zh-CN": "查看这条通信记录的可用信息。"
+    },
+    {
+      "en": "Help diagnose this messaging or calling integration issue.",
+      "zh-CN": "协助诊断这个消息或通话集成问题。"
+    },
+    {
+      "en": "Prepare a communication workflow for this use case without sending anything.",
+      "zh-CN": "为这个用例准备通信工作流，先不要发送消息或发起通话。"
+    }
+  ],
+  "websiteUrl": "https://www.infobip.com/docs/mcp/using-mcp",
+  "termsOfServiceUrl": "https://www.infobip.com/policies/service-terms-conditions",
+  "privacyPolicyUrl": "https://www.infobip.com/privacy-documents",
+  "repositoryUrl": "https://github.com/infobip/mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.infobip.com/docs/mcp/using-mcp"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://www.infobip.com/docs/mcp/using-mcp",
+        "anchor": "Service Terms & Conditions",
+        "status": 200,
+        "url": "https://www.infobip.com/policies/service-terms-conditions"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.infobip.com/docs/mcp/using-mcp",
+        "anchor": "Privacy policy",
+        "status": 200,
+        "url": "https://www.infobip.com/privacy-documents"
+      }
+    ]
+  }
+}

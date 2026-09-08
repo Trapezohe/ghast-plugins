@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Generate creative images and videos with Runway’s official MCP service.\n\nTurn a concrete creative brief into visual concepts or editable assets using the available tools. Specify the format, audience, and visual direction before generating or revising work.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Runway 官方 MCP 服务生成创意图片与视频。\n\n通过可用工具将具体创意简报转成视觉方案或可编辑素材，生成或修改前明确格式、受众与视觉方向。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Create a visual concept for this campaign using the supplied brief.",
+      "zh-CN": "根据提供的简报，为这个活动创作视觉方案。"
+    },
+    {
+      "en": "Prepare three visual directions for this product launch.",
+      "zh-CN": "为这次产品发布准备三个视觉方向。"
+    },
+    {
+      "en": "Revise this visual based on the feedback and explain the changes.",
+      "zh-CN": "根据反馈修改这个视觉作品，并说明变化。"
+    }
+  ],
+  "documentationUrl": "https://help.runwayml.com/hc/en-us/articles/51931843164691-Connecting-to-Runway-MCP",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "overview": {
+    "en": "Read and update presentations through Google’s official Workspace MCP service.\n\nReview presentation content and prepare changes to its narrative and slide text. Use the existing deck as context and identify the slides affected by each proposed edit.\n\nThis connection requires Google Workspace Developer Preview access, a configured Google Cloud project, and your own OAuth application. Complete that setup in Ghast before requesting account data or edits.",
+    "zh-CN": "通过 Google 官方 Workspace MCP 服务阅读与更新演示文稿。\n\n审查演示文稿内容，准备叙事和页面文字的修改。以现有文稿为依据，标明各项修改影响的页面。\n\n此连接需要 Google Workspace Developer Preview 访问权限、已配置的 Google Cloud 项目和自有 OAuth 应用。请先在 Ghast 中完成配置，再请求账号数据或编辑操作。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize this presentation's argument and identify missing evidence.",
+      "zh-CN": "总结这份演示文稿的论点，找出缺少的依据。"
+    },
+    {
+      "en": "Rewrite the text on these slides for a concise executive presentation.",
+      "zh-CN": "将这些页面的文字改写为简洁的管理层汇报内容。"
+    },
+    {
+      "en": "Prepare a revised slide outline based on this brief.",
+      "zh-CN": "根据这份简报准备修改后的页面提纲。"
+    }
+  ],
+  "websiteUrl": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "termsOfServiceUrl": "https://developers.google.com/workspace/terms",
+  "privacyPolicyUrl": "https://policies.google.com/privacy",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://developers.google.com/workspace/guides/configure-mcp-servers"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "anchor": "Terms of Service",
+        "status": 200,
+        "url": "https://developers.google.com/workspace/terms"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "anchor": "Privacy",
+        "status": 200,
+        "url": "https://policies.google.com/privacy"
+      }
+    ]
+  }
+}

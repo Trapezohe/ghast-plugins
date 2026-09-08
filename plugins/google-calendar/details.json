@@ -1,0 +1,50 @@
+{
+  "overview": {
+    "en": "Find events, check availability and manage meetings through Google’s official Workspace MCP service.\n\nUse calendar and availability context to prepare a schedule. Specify participants, time zone, and duration before suggesting meeting times or calendar changes.\n\nThis connection requires Google Workspace Developer Preview access, a configured Google Cloud project, and your own OAuth application. Complete that setup in Ghast before requesting account data or edits.",
+    "zh-CN": "通过 Google 官方 Workspace MCP 服务查找日程、检查空闲时间与管理会议。\n\n结合日历与空闲时间准备安排，建议会议时间或日程变更前明确参会人、时区和时长。\n\n此连接需要 Google Workspace Developer Preview 访问权限、已配置的 Google Cloud 项目和自有 OAuth 应用。请先在 Ghast 中完成配置，再请求账号数据或编辑操作。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find available times for a 30-minute meeting next week in my time zone.",
+      "zh-CN": "按我的时区寻找下周可用的 30 分钟会议时间。"
+    },
+    {
+      "en": "Summarize my upcoming schedule and identify potential conflicts.",
+      "zh-CN": "汇总我接下来的日程，并识别潜在冲突。"
+    },
+    {
+      "en": "Prepare a proposed calendar change for review before saving it.",
+      "zh-CN": "准备日历变更方案供审阅，先不要保存。"
+    }
+  ],
+  "websiteUrl": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "termsOfServiceUrl": "https://developers.google.com/workspace/terms",
+  "privacyPolicyUrl": "https://policies.google.com/privacy",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://developers.google.com/workspace/guides/configure-mcp-servers"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "anchor": "Terms of Service",
+        "status": 200,
+        "url": "https://developers.google.com/workspace/terms"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "anchor": "Privacy",
+        "status": 200,
+        "url": "https://policies.google.com/privacy"
+      }
+    ]
+  }
+}

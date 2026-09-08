@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Use Solana’s official Developer MCP to search ecosystem documentation and check Anchor or Pinocchio Rust programs.\n\nUse the provider's development resources to understand network behavior and plan an integration. Keep the selected network, contract, or transaction context attached to the explanation.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Solana 官方开发者 MCP 检索生态文档，并检查 Anchor 或 Pinocchio Rust 程序。\n\n利用服务商开发资源理解网络行为并规划集成，在解释中保留网络、合约或交易上下文。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the official development guidance for this network integration.",
+      "zh-CN": "查找这个网络集成的官方开发指导。"
+    },
+    {
+      "en": "Review this transaction or contract workflow and explain the relevant steps.",
+      "zh-CN": "审查这个交易或合约工作流，解释相关步骤。"
+    },
+    {
+      "en": "Help diagnose this blockchain integration error using the available tools.",
+      "zh-CN": "使用可用工具协助排查这个区块链集成错误。"
+    }
+  ],
+  "websiteUrl": "https://mcp.solana.com/",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://mcp.solana.com/"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Search and manage persistent user and agent memories through Mem0’s official hosted MCP server.\n\nRetrieve persistent context for the selected user or agent before preparing an update. Preserve scope and distinguish stored facts from proposed new memories.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Mem0 官方托管 MCP 查询和管理用户及智能体的持久记忆。\n\n为指定用户或智能体检索持久上下文后再准备更新，保留范围，并区分已存事实与拟新增记忆。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the stored context relevant to this user request.",
+      "zh-CN": "查找与这个用户请求相关的已存上下文。"
+    },
+    {
+      "en": "Review these memories and identify conflicting or outdated information.",
+      "zh-CN": "检查这些记忆，找出冲突或过时信息。"
+    },
+    {
+      "en": "Prepare a scoped memory update from these confirmed facts.",
+      "zh-CN": "根据这些已确认事实准备范围明确的记忆更新。"
+    }
+  ],
+  "websiteUrl": "https://docs.mem0.ai/platform/mem0-mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.mem0.ai/platform/mem0-mcp"
+      }
+    ]
+  }
+}

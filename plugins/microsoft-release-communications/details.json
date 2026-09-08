@@ -1,0 +1,50 @@
+{
+  "overview": {
+    "en": "Search Microsoft 365 roadmap entries and Azure updates through Microsoft's public Release Communications MCP server.\n\nReview public Microsoft 365 roadmap and Azure update information. Keep release dates and status labels visible rather than treating planned features as already available.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过微软公开的 Release Communications MCP 查询 Microsoft 365 路线图与 Azure 更新。\n\n查看公开 Microsoft 365 路线图与 Azure 更新信息，保留发布日期和状态，不把规划功能当作已经上线。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize the available Microsoft 365 roadmap items for this topic.",
+      "zh-CN": "汇总这个主题相关的可用 Microsoft 365 路线图条目。"
+    },
+    {
+      "en": "Find Azure updates relevant to this service.",
+      "zh-CN": "查找与这个服务相关的 Azure 更新。"
+    },
+    {
+      "en": "Prepare a release-impact brief with dates and current statuses.",
+      "zh-CN": "准备版本影响简报，包含日期与当前状态。"
+    }
+  ],
+  "websiteUrl": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/mrc-mcp?view=o365-worldwide",
+  "termsOfServiceUrl": "https://learn.microsoft.com/en-us/legal/microsoft-apis/terms-of-use",
+  "privacyPolicyUrl": "https://account.microsoft.com/privacy/third-party-ads?scrolltonewtoggle=true",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/mrc-mcp?view=o365-worldwide"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/mrc-mcp?view=o365-worldwide",
+        "anchor": "Microsoft API Terms of Use",
+        "status": 200,
+        "url": "https://learn.microsoft.com/en-us/legal/microsoft-apis/terms-of-use"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/mrc-mcp?view=o365-worldwide",
+        "anchor": "Your Privacy Choices",
+        "status": 200,
+        "url": "https://account.microsoft.com/privacy/third-party-ads?scrolltonewtoggle=true"
+      }
+    ]
+  }
+}

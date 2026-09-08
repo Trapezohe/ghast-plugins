@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Manage projects, tasks, timesheets, expenses, invoices and team schedules.\n\nReview project work with the relevant tasks, owners, and deadlines in view. Turn the available records into a status summary or a reviewable plan for the next iteration.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "管理项目、任务、工时、费用、发票与团队排期。\n\n结合任务、负责人和截止日期查看项目工作，将可用记录整理成进度摘要或下一阶段的待审阅计划。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize this project's current progress and outstanding work.",
+      "zh-CN": "汇总这个项目的当前进展与未完成事项。"
+    },
+    {
+      "en": "Review tasks due this week and identify dependencies or missing owners.",
+      "zh-CN": "查看本周到期任务，识别依赖或缺少负责人的事项。"
+    },
+    {
+      "en": "Prepare a project status update based on the available records.",
+      "zh-CN": "根据可用记录准备项目进度更新。"
+    }
+  ],
+  "websiteUrl": "https://support.avaza.com/avaza-mcp-server/",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://support.avaza.com/avaza-mcp-server/"
+      }
+    ]
+  }
+}

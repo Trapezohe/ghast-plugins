@@ -1,0 +1,50 @@
+{
+  "overview": {
+    "en": "Create branded short links and analyze link and QR engagement.\n\nCreate and review branded link workflows alongside click and QR interaction data. Keep campaign naming and destination URLs clear before creating anything.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "创建品牌短链接，分析链接与二维码互动效果。\n\n结合点击与二维码互动数据准备品牌链接工作流，创建前明确活动名称和目标网址。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Analyze the available engagement for these campaign links.",
+      "zh-CN": "分析这些活动链接的可用互动数据。"
+    },
+    {
+      "en": "Prepare branded short links for these destination URLs for review.",
+      "zh-CN": "为这些目标网址准备待审核的品牌短链接。"
+    },
+    {
+      "en": "Compare the available link and QR interactions for this campaign.",
+      "zh-CN": "比较这个活动中可用的链接与二维码互动情况。"
+    }
+  ],
+  "websiteUrl": "https://dev.bitly.com/bitly-mcp/overview/quickstart/",
+  "privacyPolicyUrl": "https://bitly.com/pages/privacy",
+  "termsOfServiceUrl": "https://bitly.com/pages/terms-of-service",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://dev.bitly.com/bitly-mcp/overview/quickstart/"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://dev.bitly.com/bitly-mcp/overview/quickstart/",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://bitly.com/pages/privacy"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://dev.bitly.com/bitly-mcp/overview/quickstart/",
+        "anchor": "Terms of Service",
+        "status": 200,
+        "url": "https://bitly.com/pages/terms-of-service"
+      }
+    ]
+  }
+}

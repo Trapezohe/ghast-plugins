@@ -1,0 +1,42 @@
+{
+  "overview": {
+    "en": "Search and refine product specifications, read feedback and track delivery status in Productboard.\n\nReview customer or research feedback with its original context. Group themes without losing contrary evidence, then turn the findings into a product or research brief.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "在 Productboard 中搜索与完善产品规格、阅读反馈并跟踪交付状态。\n\n结合原始上下文审阅客户或研究反馈，归纳主题时保留反例，再将发现整理成产品或研究简报。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize feedback about this feature and cite the underlying records.",
+      "zh-CN": "汇总关于这个功能的反馈，并引用底层记录。"
+    },
+    {
+      "en": "Compare the main themes across these research or feedback sources.",
+      "zh-CN": "比较这些研究或反馈来源中的主要主题。"
+    },
+    {
+      "en": "Prepare a prioritized findings brief with evidence and open questions.",
+      "zh-CN": "准备按优先级排列的发现简报，包含依据与待确认问题。"
+    }
+  ],
+  "websiteUrl": "https://developer.productboard.com/reference/mcp-install",
+  "privacyPolicyUrl": "https://www.productboard.com/privacy-policy/",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://developer.productboard.com/reference/mcp-install"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://developer.productboard.com/reference/mcp-install",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://www.productboard.com/privacy-policy/"
+      }
+    ]
+  }
+}

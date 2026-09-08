@@ -1,0 +1,51 @@
+{
+  "overview": {
+    "en": "Inspect blockchain infrastructure, search documentation and manage Chainstack nodes.\n\nConnect blockchain infrastructure context with the provider's node and service tools. Identify the network and project before reviewing usage, configuration, or maintenance work.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "查询区块链基础设施与文档，管理 Chainstack 节点。\n\n把区块链基础设施信息与节点、服务工具结合起来。先确定网络和项目，再检查用量、配置或维护工作。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Review the available RPC services for this network and summarize configuration choices.",
+      "zh-CN": "查看这个网络的可用 RPC 服务，并整理配置选择。"
+    },
+    {
+      "en": "Inspect this project's node configuration and identify what needs attention.",
+      "zh-CN": "检查这个项目的节点配置，列出需要关注的项目。"
+    },
+    {
+      "en": "Prepare a maintenance plan for this RPC integration before making changes.",
+      "zh-CN": "为这个 RPC 集成准备维护方案，先不要修改配置。"
+    }
+  ],
+  "websiteUrl": "https://docs.chainstack.com/docs/chainstack-mcp-server",
+  "termsOfServiceUrl": "https://chainstack.com/tos/",
+  "privacyPolicyUrl": "https://chainstack.com/privacy/",
+  "repositoryUrl": "https://github.com/chainstacklabs/mcp-server",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.chainstack.com/docs/chainstack-mcp-server"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://docs.chainstack.com/docs/chainstack-mcp-server",
+        "anchor": "Terms of service",
+        "status": 200,
+        "url": "https://chainstack.com/tos/"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://docs.chainstack.com/docs/chainstack-mcp-server",
+        "anchor": "Privacy policy",
+        "status": 200,
+        "url": "https://chainstack.com/privacy/"
+      }
+    ]
+  }
+}

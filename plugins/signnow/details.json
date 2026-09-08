@@ -1,0 +1,52 @@
+{
+  "overview": {
+    "en": "Create and send SignNow documents, templates, signing invites, reminders, embedded workflows, status checks, field updates, and signed-file links through SignNow's official hosted open-source MCP server.\n\nReview signature documents, recipients, and workflow status together. Prepare document or invitation changes as explicit drafts before sending them.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "创建和发送签署文档，管理模板、邀请、提醒、字段与签署状态。\n\n结合签署文档、收件人和流程状态进行检查，在发送前将文档或邀请变更准备成明确草稿。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize the signing status of these documents.",
+      "zh-CN": "汇总这些文档的签署状态。"
+    },
+    {
+      "en": "Review this document's recipients and required signing steps.",
+      "zh-CN": "检查这份文档的收件人与所需签署步骤。"
+    },
+    {
+      "en": "Prepare a signature request for review without sending it.",
+      "zh-CN": "准备签署请求供审阅，先不要发送。"
+    }
+  ],
+  "websiteUrl": "https://www.signnow.com",
+  "termsOfServiceUrl": "https://legal.signnow.com/terms",
+  "privacyPolicyUrl": "https://legal.signnow.com/privacy-notice",
+  "repositoryUrl": "https://github.com/signnow/sn-mcp-server",
+  "documentationUrl": "https://docs.signnow.com/docs/signnow/mcp-server",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.signnow.com"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://www.signnow.com",
+        "anchor": "Terms of Service",
+        "status": 200,
+        "url": "https://legal.signnow.com/terms"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.signnow.com",
+        "anchor": "Privacy Notice",
+        "status": 200,
+        "url": "https://legal.signnow.com/privacy-notice"
+      }
+    ]
+  }
+}

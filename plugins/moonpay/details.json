@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Search MoonPay’s official developer documentation for platform APIs, SDK integration and crypto payment flows.\n\nUse official developer documentation to plan wallet or payment integrations. Provide the SDK language and target flow, then connect implementation steps to their source references.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "检索 MoonPay 官方开发文档，获取平台 API、SDK 集成与加密支付流程指南。\n\n根据官方开发文档规划钱包或支付集成。提供 SDK 语言和目标流程后，将实现步骤与文档依据对应起来。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the official guide for integrating this provider into a TypeScript app.",
+      "zh-CN": "查找将这个服务接入 TypeScript 应用的官方指南。"
+    },
+    {
+      "en": "Explain authentication and required configuration for this API workflow.",
+      "zh-CN": "解释这个 API 工作流的认证方式与必要配置。"
+    },
+    {
+      "en": "Review this integration code against the official documentation.",
+      "zh-CN": "依据官方文档审查这段集成代码。"
+    }
+  ],
+  "websiteUrl": "https://dev.moonpay.com/platform/overview/using-agents",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://dev.moonpay.com/platform/overview/using-agents"
+      }
+    ]
+  }
+}

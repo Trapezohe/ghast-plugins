@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Inspect Prefect Cloud workflows, deployments, runs, logs and infrastructure with read-only diagnostics.\n\nInspect deployed workflows and their execution records to understand failures or delays. Keep the environment and run identifiers attached to each finding.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "以只读方式查看 Prefect Cloud 工作流、部署、运行记录、日志与基础设施。\n\n检查已部署工作流与执行记录，了解失败或延迟原因，并为每项发现保留环境与运行标识。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize the recent runs of this workflow and identify failures.",
+      "zh-CN": "汇总这个工作流的近期运行，识别失败记录。"
+    },
+    {
+      "en": "Investigate this run using the available logs and execution context.",
+      "zh-CN": "使用可用日志与执行上下文调查这次运行。"
+    },
+    {
+      "en": "Prepare a troubleshooting brief for this workflow without changing it.",
+      "zh-CN": "为这个工作流准备排障简报，先不要修改。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/PrefectHQ/prefect-mcp-server",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

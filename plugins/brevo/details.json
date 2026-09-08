@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Manage contacts, email campaigns, templates, CRM records and marketing analytics in Brevo.\n\nReview audiences and email campaigns, then prepare content or campaign changes for approval. Use a specific campaign and date range when comparing results.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "在 Brevo 中管理联系人、邮件活动、模板、CRM 记录与营销分析。\n\n查看受众与邮件活动，再准备待审阅的内容或活动变更。比较效果时明确活动和时间范围。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize the available results for this email campaign.",
+      "zh-CN": "汇总这个邮件活动的可用效果数据。"
+    },
+    {
+      "en": "Review this audience and propose a focused follow-up campaign.",
+      "zh-CN": "查看这个受众群体，提出有针对性的后续活动方案。"
+    },
+    {
+      "en": "Draft the next campaign message using this brief and the available context.",
+      "zh-CN": "根据这份简报和可用上下文起草下一封活动邮件。"
+    }
+  ],
+  "documentationUrl": "https://help.brevo.com/hc/en-us/articles/27978590646802-What-is-Model-Context-Protocol-MCP",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

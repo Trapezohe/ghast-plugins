@@ -1,0 +1,51 @@
+{
+  "overview": {
+    "en": "Research ecommerce companies, products, sales, marketing, events, pricing, and market trends through Particl's official hosted MCP.\n\nResearch e-commerce products and companies with a defined market and comparison period. Preserve the provider's available sales and pricing context.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "研究电商企业、商品、销售、定价、营销活动与市场趋势。\n\n在明确市场与比较周期后研究电商产品和企业，保留服务商提供的销售与定价背景。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Compare these products using the available pricing and market data.",
+      "zh-CN": "根据可用定价与市场数据比较这些产品。"
+    },
+    {
+      "en": "Research this e-commerce company's recent market activity.",
+      "zh-CN": "研究这家电商企业的近期市场活动。"
+    },
+    {
+      "en": "Prepare a competitive brief for this product category.",
+      "zh-CN": "为这个产品品类准备竞争分析简报。"
+    }
+  ],
+  "websiteUrl": "https://www.particl.com",
+  "privacyPolicyUrl": "https://www.particl.com/legal/privacy",
+  "termsOfServiceUrl": "https://www.particl.com/legal/terms",
+  "documentationUrl": "https://www.particl.com/docs/mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.particl.com"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.particl.com",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://www.particl.com/legal/privacy"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://www.particl.com",
+        "anchor": "Terms of Service",
+        "status": 200,
+        "url": "https://www.particl.com/legal/terms"
+      }
+    ]
+  }
+}

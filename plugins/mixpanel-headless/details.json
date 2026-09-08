@@ -1,0 +1,35 @@
+{
+  "overview": {
+    "en": "Query and analyze Mixpanel data with Python. Provides the mixpanel_headless auth surface (Account → Project → Workspace hierarchy), API (5 query engines, discovery, entity CRUD), and Business Context read/write (the markdown documentation that grounds AI assistants, at org and project scopes), with a live documentation system (help.py) for method signatures, type lookup, fuzzy search, and hosted docs.\n\nExplore the connected data context before answering a business question. Keep the source, filters, and definitions visible, then turn the results into a concise analysis.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "通过 Python 查询和分析 Mixpanel 数据，管理账号、项目与工作区。\n\n回答业务问题前先了解已连接数据上下文，保留来源、筛选条件和指标定义，再将结果整理成简洁分析。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the available data relevant to this business question.",
+      "zh-CN": "查找与这个业务问题相关的可用数据。"
+    },
+    {
+      "en": "Analyze this metric over the selected reporting period and explain its definition.",
+      "zh-CN": "分析选定报告期内的这个指标，并解释其定义。"
+    },
+    {
+      "en": "Prepare a source-backed analysis brief with findings and data limitations.",
+      "zh-CN": "准备有数据来源的分析简报，包含发现与数据限制。"
+    }
+  ],
+  "websiteUrl": "https://mixpanel.github.io/mixpanel-headless/",
+  "repositoryUrl": "https://github.com/mixpanel/mixpanel-headless",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://mixpanel.github.io/mixpanel-headless/"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Explore crypto prices, historical charts, market data and DEX pools. No API key required for the public service.\n\nCompare crypto markets using the provider's available prices and market history. Name the asset and interval explicitly, and distinguish observed figures from your interpretation.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "查询加密资产价格、历史走势、市场数据与交易池；公共服务无需 API Key。\n\n利用服务商提供的价格和历史行情比较加密市场。明确资产和周期，并把已观测数据与分析判断分开。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Compare BTC and ETH over the last seven days using the available market data.",
+      "zh-CN": "使用可用行情数据比较 BTC 与 ETH 最近七天的表现。"
+    },
+    {
+      "en": "Summarize the available market information for this token and cite timestamps.",
+      "zh-CN": "汇总这个代币的可用市场信息，并注明时间戳。"
+    },
+    {
+      "en": "Check this asset's recent price movement and explain gaps in the returned data.",
+      "zh-CN": "查看该资产近期价格变化，并说明返回数据中的缺口。"
+    }
+  ],
+  "websiteUrl": "https://mcp.api.coingecko.com/",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://mcp.api.coingecko.com/"
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Research crypto markets, news and on-chain data, and connect a Gate exchange account through OAuth.\n\nBring market research and authorized account context into one workflow. Choose the asset, market, and time range first; compare price data separately from holdings or order actions.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "研究加密市场、新闻与链上数据，并通过 OAuth 连接 Gate 交易所账号。\n\n把行情研究与已授权账号信息放在同一个工作流中。先确定资产、市场和时间范围，分别分析行情、持仓与订单操作。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize the recent market performance of this asset and state the data timestamp.",
+      "zh-CN": "汇总该资产近期行情，并注明数据时间。"
+    },
+    {
+      "en": "Review my authorized account's positions and summarize concentration by asset.",
+      "zh-CN": "查看我已授权账号的持仓，按资产汇总集中度。"
+    },
+    {
+      "en": "Prepare an order checklist for this market without submitting an order.",
+      "zh-CN": "为这个市场准备下单检查清单，先不要提交订单。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/gate/gate-mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

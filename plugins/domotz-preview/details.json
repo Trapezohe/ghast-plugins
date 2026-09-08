@@ -1,0 +1,43 @@
+{
+  "overview": {
+    "en": "Discover, monitor, configure, and remediate Domotz-managed networks through Domotz's official hosted MCP.\n\nInspect monitored network devices and their available state before proposing maintenance. Preserve the device and network context in diagnostic notes.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "发现、监控和配置网络设备，处理已授权的网络故障。\n\n提出维护建议前检查受监控网络设备及可用状态，在诊断记录中保留设备与网络上下文。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize the available devices on this monitored network.",
+      "zh-CN": "汇总这个受监控网络中的可用设备。"
+    },
+    {
+      "en": "Investigate this device's reported connectivity issue.",
+      "zh-CN": "调查这个设备报告的连接问题。"
+    },
+    {
+      "en": "Prepare a network maintenance checklist based on the available device information.",
+      "zh-CN": "根据可用设备信息准备网络维护检查清单。"
+    }
+  ],
+  "websiteUrl": "https://www.domotz.com",
+  "privacyPolicyUrl": "https://www.domotz.com/product-privacy-policy.php",
+  "documentationUrl": "https://www.domotz.com/mcp-server.php",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.domotz.com"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.domotz.com",
+        "anchor": "Product & Services Privacy Policy",
+        "status": 200,
+        "url": "https://www.domotz.com/product-privacy-policy.php"
+      }
+    ]
+  }
+}

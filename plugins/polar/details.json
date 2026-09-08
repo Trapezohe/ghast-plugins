@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Connect Polar’s official production and sandbox MCP services for payment, product and subscription workflows.\n\nBring payment and billing context into development or finance workflows. Identify the environment and account first, and separate investigation from any financial operation.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "连接 Polar 官方生产与沙箱 MCP 服务，处理支付、产品和订阅工作流。\n\n把支付与计费上下文带入开发或财务工作流。先明确环境和账号，将查询分析与资金操作分开。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Investigate this payment or billing issue and list the supporting records.",
+      "zh-CN": "调查这个支付或计费问题，并列出支持记录。"
+    },
+    {
+      "en": "Summarize the available transactions for the selected period.",
+      "zh-CN": "汇总选定时间段的可用交易记录。"
+    },
+    {
+      "en": "Plan this payment integration using the provider's supported workflow.",
+      "zh-CN": "按照服务商支持的流程规划这项支付集成。"
+    }
+  ],
+  "websiteUrl": "https://polar.sh/docs/integrate/mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://polar.sh/docs/integrate/mcp"
+      }
+    ]
+  }
+}

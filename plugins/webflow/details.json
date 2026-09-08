@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Build and refine Webflow sites, inspect CMS content and manage authorized design workflows.\n\nReview website content and structure before preparing a design or content update. Keep the target site and page explicit and work from the available site context.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Webflow 构建与调整网站、检查 CMS 内容，协助页面设计与内容运营。\n\n准备设计或内容更新前检查网站内容与结构，明确目标站点和页面，并依据可用站点上下文工作。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Review this site's available pages and summarize their structure.",
+      "zh-CN": "查看这个网站的可用页面，汇总结构。"
+    },
+    {
+      "en": "Prepare a content update for this page using the supplied brief.",
+      "zh-CN": "根据提供的简报为这个页面准备内容更新。"
+    },
+    {
+      "en": "Review this website workflow and propose focused improvements.",
+      "zh-CN": "审查这个网站流程，提出有针对性的改进建议。"
+    }
+  ],
+  "websiteUrl": "https://developers.webflow.com/mcp/reference/getting-started",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://developers.webflow.com/mcp/reference/getting-started"
+      }
+    ]
+  }
+}

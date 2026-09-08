@@ -1,0 +1,30 @@
+{
+  "overview": {
+    "en": "Query token data, swap quotes, supported networks and address security with Trust Wallet’s official API Gateway MCP.\n\nResearch supported networks, token information, swap quotes, and address checks through the API gateway. Treat a quote as a preview and keep network and token identifiers explicit.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Trust Wallet 官方 API Gateway MCP 查询代币数据、兑换报价、支持网络与地址安全信息。\n\n通过 API Gateway 研究支持的网络、代币信息、兑换报价和地址检查。将报价视为预览，并明确网络与代币标识。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the supported networks and token data for this asset.",
+      "zh-CN": "查找该资产支持的网络与代币数据。"
+    },
+    {
+      "en": "Compare the available swap quotes for this token pair.",
+      "zh-CN": "比较这个代币交易对的可用兑换报价。"
+    },
+    {
+      "en": "Check the available security information for this address.",
+      "zh-CN": "检查这个地址的可用安全信息。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/trustwallet/developer",
+  "documentationUrl": "https://github.com/trustwallet/developer/blob/master/mcp/api-gateway.md",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

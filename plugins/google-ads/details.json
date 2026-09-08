@@ -1,0 +1,43 @@
+{
+  "overview": {
+    "en": "Query Google Ads accounts, campaign performance and GAQL metadata through Google’s official read-only MCP.\n\nAnalyze Ads account and campaign reporting through the read-only integration. Keep account scope, dates, and GAQL fields explicit; this connection is for querying rather than editing campaigns.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Google 官方只读 MCP 查询 Ads 账号、广告系列表现与 GAQL 元数据。\n\n通过只读集成分析 Ads 账号与广告系列报表，明确账号范围、日期和 GAQL 字段；此连接用于查询，不用于修改广告系列。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Compare campaign spend and performance for the last seven days.",
+      "zh-CN": "比较最近七天广告系列的支出与表现。"
+    },
+    {
+      "en": "Prepare a GAQL query for this reporting question and explain the fields.",
+      "zh-CN": "为这个报表问题准备 GAQL 查询，并解释字段。"
+    },
+    {
+      "en": "Investigate the available evidence for this campaign's performance change.",
+      "zh-CN": "调查这个广告系列表现变化的可用依据。"
+    }
+  ],
+  "websiteUrl": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+  "privacyPolicyUrl": "https://policies.google.com/privacy",
+  "repositoryUrl": "https://github.com/googleads/google-ads-mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+        "anchor": "Privacy",
+        "status": 200,
+        "url": "https://policies.google.com/privacy"
+      }
+    ]
+  }
+}

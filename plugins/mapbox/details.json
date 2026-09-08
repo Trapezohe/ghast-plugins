@@ -1,0 +1,44 @@
+{
+  "overview": {
+    "en": "Find addresses and places, plan routes and create map visualizations through Mapbox’s official hosted MCP.\n\nUse place and route context to prepare a travel or logistics comparison. Provide origin, destination, and transport requirements, then retain the route assumptions.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Mapbox 官方托管 MCP 查找地址与地点、规划路线并生成地图可视化。\n\n结合地点与路线信息准备出行或物流比较，提供起点、终点和交通要求，并保留路线假设。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find this address and summarize the available location information.",
+      "zh-CN": "查找这个地址，并汇总可用位置信息。"
+    },
+    {
+      "en": "Compare routes between these locations for the specified travel requirements.",
+      "zh-CN": "根据指定出行要求比较这些地点之间的路线。"
+    },
+    {
+      "en": "Prepare a location brief for these candidate destinations.",
+      "zh-CN": "为这些候选目的地准备位置简报。"
+    }
+  ],
+  "websiteUrl": "https://docs.mapbox.com/location-ai/mcp-servers/mcp-server/",
+  "privacyPolicyUrl": "https://www.mapbox.com/legal/privacy",
+  "repositoryUrl": "https://github.com/mapbox/mcp-server",
+  "documentationUrl": "https://docs.mapbox.com/api/guides/mcp-server/",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://docs.mapbox.com/location-ai/mcp-servers/mcp-server/"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://docs.mapbox.com/location-ai/mcp-servers/mcp-server/",
+        "anchor": "Privacy",
+        "status": 200,
+        "url": "https://www.mapbox.com/legal/privacy"
+      }
+    ]
+  }
+}

@@ -46,6 +46,8 @@ def main() -> int:
             validate_skills(plugin_dir / "skills")
         if (plugin_dir / "mcp.json").exists():
             json.loads((plugin_dir / "mcp.json").read_text())
+        details_path = plugin_dir / "details.json"
+        json.loads(details_path.read_text())
         manifest_for_catalog = dict(manifest)
         zip_path = PACKAGE_DIR / f"{manifest['name']}.zip"
         write_plugin_zip(plugin_dir, zip_path)
@@ -57,6 +59,10 @@ def main() -> int:
             "name": ghast.get("displayName", manifest["name"]),
             "description": manifest["description"],
             "manifest": manifest_for_catalog,
+            "details": {
+                "url": f"./plugins/{manifest['name']}/details.json",
+                "sha256": hashlib.sha256(details_path.read_bytes()).hexdigest(),
+            },
             "package": {
                 "url": f"./packages/{zip_path.name}",
                 "sha256": sha256,

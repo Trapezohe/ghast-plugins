@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Skill for looking up public GitHub repo or user stats via the unauthenticated GitHub REST API (60 req/hr/IP).\n\nInspect public GitHub repository and user statistics. Keep the repository or account identity and observation time attached to the summary.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "通过 GitHub 公开接口查询仓库与用户统计信息。\n\n查看公开 GitHub 仓库与用户统计，在摘要中保留仓库或账号标识及观测时间。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize the public statistics for this GitHub repository.",
+      "zh-CN": "汇总这个 GitHub 仓库的公开统计。"
+    },
+    {
+      "en": "Compare the available public statistics for these two repositories.",
+      "zh-CN": "比较这两个仓库的可用公开统计。"
+    },
+    {
+      "en": "Review this GitHub user's public profile statistics.",
+      "zh-CN": "查看这个 GitHub 用户的公开资料统计。"
+    }
+  ],
+  "documentationUrl": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/github-stats",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

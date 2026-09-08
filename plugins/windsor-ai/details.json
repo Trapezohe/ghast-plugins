@@ -1,0 +1,52 @@
+{
+  "overview": {
+    "en": "Query, analyze, connect, and carefully act on business data from Windsor.ai's official hosted MCP across 350+ sources.\n\nAnalyze marketing performance with a consistent channel, period, and attribution context. Use returned business data to explain changes and prepare a review rather than assuming causation.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "查询、连接和分析多个来源的营销与业务数据。\n\n在一致的渠道、时间段和归因口径下分析营销表现，依据返回的业务数据解释变化并准备复盘，不直接把相关性当作因果。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Compare the available channel performance data for last month.",
+      "zh-CN": "比较上个月可用的渠道表现数据。"
+    },
+    {
+      "en": "Investigate why this campaign's performance changed over the selected period.",
+      "zh-CN": "调查这个活动在选定周期内表现变化的原因。"
+    },
+    {
+      "en": "Prepare a weekly marketing report with sources and follow-up questions.",
+      "zh-CN": "准备包含数据来源和后续问题的营销周报。"
+    }
+  ],
+  "websiteUrl": "https://windsor.ai",
+  "privacyPolicyUrl": "https://windsor.ai/privacy-statement/",
+  "termsOfServiceUrl": "https://windsor.ai/terms-of-service/",
+  "repositoryUrl": "https://github.com/windsor-ai/windsor_mcp",
+  "documentationUrl": "https://mcp.windsor.ai/docs",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://windsor.ai"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://windsor.ai",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://windsor.ai/privacy-statement/"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://windsor.ai",
+        "anchor": "Terms of Service",
+        "status": 200,
+        "url": "https://windsor.ai/terms-of-service/"
+      }
+    ]
+  }
+}

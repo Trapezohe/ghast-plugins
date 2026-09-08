@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Explore Aave markets, rates, positions and governance, and prepare transaction previews.\n\nExplore protocol markets and positions before preparing a transaction. Specify the network and asset, compare the available data, and keep any proposed transaction separate from execution.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "查询 Aave 市场、利率、仓位与治理信息，并预览交易。\n\n先研究协议市场与仓位，再准备交易。指定网络和资产后比较可用数据，并把交易方案与实际执行分开。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Review the available markets for this asset on Ethereum and summarize the differences.",
+      "zh-CN": "查看该资产在以太坊上的可用市场，整理差异。"
+    },
+    {
+      "en": "Analyze this wallet's protocol positions and identify the main exposures.",
+      "zh-CN": "分析这个钱包的协议仓位，列出主要风险敞口。"
+    },
+    {
+      "en": "Prepare a transaction plan for this asset and explain the inputs before execution.",
+      "zh-CN": "为该资产准备交易方案，在执行前说明所需参数。"
+    }
+  ],
+  "websiteUrl": "https://mcp.aave.com",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://mcp.aave.com"
+      }
+    ]
+  }
+}

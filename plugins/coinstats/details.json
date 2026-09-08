@@ -1,0 +1,34 @@
+{
+  "overview": {
+    "en": "Read crypto prices, portfolio performance, wallet activity, exchange data and news through CoinStats’ official OAuth MCP.\n\nReview portfolio performance alongside market and wallet context. Specify the account or wallet and reporting period before interpreting balances and activity.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 CoinStats 官方 OAuth MCP 查询加密货币价格、投资组合表现、钱包活动、交易所数据与资讯。\n\n把投资组合表现与市场、钱包活动结合起来查看，先明确账号或钱包及统计周期，再解读余额与变化。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize my connected portfolio's performance this month.",
+      "zh-CN": "汇总我已连接投资组合本月的表现。"
+    },
+    {
+      "en": "Review this wallet's recent activity and group it by asset.",
+      "zh-CN": "查看这个钱包的近期活动，并按资产分组。"
+    },
+    {
+      "en": "Compare the market performance of my three largest holdings.",
+      "zh-CN": "比较我持仓最多的三项资产的市场表现。"
+    }
+  ],
+  "websiteUrl": "https://coinstats.app/api-docs/mcp/connecting/",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://coinstats.app/api-docs/mcp/connecting/"
+      }
+    ]
+  }
+}

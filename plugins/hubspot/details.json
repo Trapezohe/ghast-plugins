@@ -1,0 +1,44 @@
+{
+  "overview": {
+    "en": "Operate HubSpot CRM records, pipelines, activities, workflows, reports, data quality, sales execution, support, retention, ownership, and quote-to-cash through all 15 official Agent CLI skills.\n\nConnect company, contact, and sales context to a concrete account review. Use a named account or pipeline and prepare proposed follow-up work with its supporting records.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "管理 CRM 记录、销售管道、工作流、报表、客户支持与业务数据。\n\n把企业、联系人和销售上下文用于具体的客户复盘。指定客户或销售管道，并在后续行动建议中附上对应记录。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize this account's available records and recent sales context.",
+      "zh-CN": "汇总这个客户的可用记录与近期销售背景。"
+    },
+    {
+      "en": "Review this pipeline and identify opportunities that need follow-up.",
+      "zh-CN": "检查这个销售管道，找出需要跟进的商机。"
+    },
+    {
+      "en": "Draft a follow-up plan for this account using the recorded context.",
+      "zh-CN": "根据已有记录，为这个客户起草跟进计划。"
+    }
+  ],
+  "websiteUrl": "https://www.hubspot.com",
+  "privacyPolicyUrl": "https://legal.hubspot.com/privacy-policy",
+  "repositoryUrl": "https://github.com/HubSpot/agent-cli-skills",
+  "documentationUrl": "https://developers.hubspot.com/docs/developer-tooling/local-development/agent-cli/guide",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.hubspot.com"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.hubspot.com",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://legal.hubspot.com/privacy-policy"
+      }
+    ]
+  }
+}

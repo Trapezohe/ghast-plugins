@@ -1,0 +1,51 @@
+{
+  "overview": {
+    "en": "Research brands, ads, audiences, trends, and workspaces through Waldo's official curated strategy MCP.\n\nResearch brand discussion and market context before preparing a strategy brief. Preserve source references and distinguish reported observations from strategic interpretation.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "研究品牌、广告、受众与趋势，整理策略工作区。\n\n在准备策略简报前研究品牌讨论与市场背景，保留来源，并区分已观测信息与策略解读。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize the available discussion and findings about this brand.",
+      "zh-CN": "汇总围绕这个品牌的可用讨论与发现。"
+    },
+    {
+      "en": "Research this campaign topic and identify themes supported by sources.",
+      "zh-CN": "研究这个活动主题，找出有来源支持的趋势。"
+    },
+    {
+      "en": "Prepare a brand strategy brief with evidence and open questions.",
+      "zh-CN": "准备品牌策略简报，包含依据与待确认问题。"
+    }
+  ],
+  "websiteUrl": "https://www.waldo.fyi",
+  "termsOfServiceUrl": "https://www.waldo.fyi/tos",
+  "privacyPolicyUrl": "https://www.waldo.fyi/privacy",
+  "documentationUrl": "https://agentic.waldo.fyi/docs/mcp",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://www.waldo.fyi"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://www.waldo.fyi",
+        "anchor": "Terms of Service",
+        "status": 200,
+        "url": "https://www.waldo.fyi/tos"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://www.waldo.fyi",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://www.waldo.fyi/privacy"
+      }
+    ]
+  }
+}

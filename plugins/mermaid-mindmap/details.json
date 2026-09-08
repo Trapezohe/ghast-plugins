@@ -1,0 +1,28 @@
+{
+  "overview": {
+    "en": "Slash command that turns a topic or outline into a Mermaid mindmap code block the chat can render as a tree.\n\nTurn a topic or outline into Mermaid mind-map text that can be rendered elsewhere. Keep hierarchy clear and use concise node labels.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "将主题或提纲转换为可渲染的 Mermaid 思维导图。\n\n将主题或提纲转成可在其他工具渲染的 Mermaid 思维导图文本，保持层级清晰，并使用简洁节点标签。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Turn this product roadmap into a Mermaid mind map.",
+      "zh-CN": "把这个产品路线图转成 Mermaid 思维导图。"
+    },
+    {
+      "en": "Organize these research notes into a three-level mind map.",
+      "zh-CN": "把这些研究笔记整理成三层思维导图。"
+    },
+    {
+      "en": "Simplify this mind map while preserving its main relationships.",
+      "zh-CN": "简化这份思维导图，同时保留主要关系。"
+    }
+  ],
+  "documentationUrl": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/mermaid-mindmap",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md"
+    ],
+    "links": []
+  }
+}

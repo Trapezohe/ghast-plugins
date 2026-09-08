@@ -1,0 +1,29 @@
+{
+  "overview": {
+    "en": "Find UI boards, inspect designs and extract theme tokens with Visily’s official MCP.\n\nInspect design context before turning it into implementation guidance. Keep the selected board, component, and style information connected to the findings.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Visily 官方 MCP 查找 UI 画板、检查设计并提取主题样式。\n\n转成实现指导前先检查设计上下文，使画板、组件与样式信息和发现保持对应。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Inspect this design and summarize its layout and visual styles.",
+      "zh-CN": "检查这个设计，汇总布局与视觉样式。"
+    },
+    {
+      "en": "Review the available components used in this screen.",
+      "zh-CN": "查看这个界面使用的可用组件。"
+    },
+    {
+      "en": "Prepare an implementation brief from this design's available information.",
+      "zh-CN": "根据这个设计的可用信息准备实现简报。"
+    }
+  ],
+  "repositoryUrl": "https://github.com/visily-app/mcp-plugins",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": []
+  }
+}

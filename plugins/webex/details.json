@@ -1,0 +1,42 @@
+{
+  "overview": {
+    "en": "Connect Cisco’s official Webex MCP services for meetings, team messaging, Vidcast videos and workspace intelligence.\n\nBring messages and collaboration context into a focused work brief. Specify the team, conversation, or project and prepare responses from the information actually returned.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "连接思科官方 Webex MCP，处理会议、团队消息、Vidcast 视频及工作空间设备洞察。\n\n把消息与协作上下文整理成聚焦的工作简报。明确团队、会话或项目，并依据实际返回的信息准备回复。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Find the recent discussion about this project and summarize its decisions.",
+      "zh-CN": "查找这个项目的近期讨论，汇总已作出的决策。"
+    },
+    {
+      "en": "List the open questions and follow-up items from this conversation.",
+      "zh-CN": "列出这段会话中的待确认问题与后续事项。"
+    },
+    {
+      "en": "Draft a team update using the available conversation context.",
+      "zh-CN": "根据可用会话上下文起草团队进度更新。"
+    }
+  ],
+  "websiteUrl": "https://developer.webex.com/mcp/docs/webex-agentic-mcp-servers",
+  "termsOfServiceUrl": "https://developer.webex.com/terms-of-service",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://developer.webex.com/mcp/docs/webex-agentic-mcp-servers"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://developer.webex.com/mcp/docs/webex-agentic-mcp-servers",
+        "anchor": "Terms of Service",
+        "status": 200,
+        "url": "https://developer.webex.com/terms-of-service"
+      }
+    ]
+  }
+}

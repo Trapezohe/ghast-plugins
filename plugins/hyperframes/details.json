@@ -1,0 +1,35 @@
+{
+  "overview": {
+    "en": "Write HTML, render video. Compositions, Tailwind v4 styles, GSAP and runtime adapter animations, captions, voiceovers, audio-reactive visuals, and website capture for HyperFrames.\n\nDevelop a video from a clear script and production brief. Specify duration, aspect ratio, and source assets; review the proposed structure before producing the final output.\n\nUse this plugin in a Ghast conversation with the relevant inputs or project context. The bundled workflow guides the task; any required external tools or runtime must be available in your environment.",
+    "zh-CN": "通过 HTML、动画、字幕、配音和音频可视化制作视频。\n\n根据明确脚本和制作简报完成视频，说明时长、画面比例与源素材，在产出成片前审阅拟议结构。\n\n在 Ghast 对话中提供相关输入或项目背景后使用本插件。随附流程会指导任务；所需外部工具或运行环境仍需在本机可用。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Prepare a 30-second product video from this brief and the supplied assets.",
+      "zh-CN": "根据这份简报和所提供素材准备一段 30 秒产品视频。"
+    },
+    {
+      "en": "Revise this video sequence according to the feedback.",
+      "zh-CN": "根据反馈修改这段视频内容。"
+    },
+    {
+      "en": "Prepare a production plan with scenes, narration, and required assets.",
+      "zh-CN": "准备包含分镜、旁白与所需素材的制作方案。"
+    }
+  ],
+  "websiteUrl": "https://hyperframes.heygen.com",
+  "repositoryUrl": "https://github.com/heygen-com/hyperframes",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://hyperframes.heygen.com"
+      }
+    ]
+  }
+}

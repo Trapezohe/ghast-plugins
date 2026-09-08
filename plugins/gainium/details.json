@@ -1,0 +1,50 @@
+{
+  "overview": {
+    "en": "Review crypto bots, balances, screeners and backtests with Gainium’s official OAuth connections, with a separate trading connection.\n\nReview connected trading bots, balances, and backtest results before changing a strategy. Keep historical simulation results separate from live trading outcomes.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "通过 Gainium 官方 OAuth 连接查看加密交易机器人、余额、筛选器与回测，并可单独连接交易服务。\n\n在调整策略前查看已连接的交易机器人、余额与回测结果，区分历史模拟结果与实盘表现。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+  },
+  "starterPrompts": [
+    {
+      "en": "Summarize my connected trading bots and their current status.",
+      "zh-CN": "汇总我已连接的交易机器人及当前状态。"
+    },
+    {
+      "en": "Compare these two backtests and explain their assumptions.",
+      "zh-CN": "比较这两次回测，并解释各自的假设。"
+    },
+    {
+      "en": "Review the available market screener results for this strategy.",
+      "zh-CN": "查看适用于这个策略的市场筛选结果。"
+    }
+  ],
+  "websiteUrl": "https://gainium.io/help/mcp",
+  "termsOfServiceUrl": "https://gainium.io/legal/terms-and-conditions",
+  "privacyPolicyUrl": "https://gainium.io/legal/privacy-policy",
+  "sources": {
+    "content": [
+      "./plugin.json",
+      "./README.md",
+      "./skills/"
+    ],
+    "links": [
+      {
+        "status": 200,
+        "url": "https://gainium.io/help/mcp"
+      },
+      {
+        "field": "termsOfServiceUrl",
+        "foundOn": "https://gainium.io/help/mcp",
+        "anchor": "Terms & Conditions",
+        "status": 200,
+        "url": "https://gainium.io/legal/terms-and-conditions"
+      },
+      {
+        "field": "privacyPolicyUrl",
+        "foundOn": "https://gainium.io/help/mcp",
+        "anchor": "Privacy Policy",
+        "status": 200,
+        "url": "https://gainium.io/legal/privacy-policy"
+      }
+    ]
+  }
+}
