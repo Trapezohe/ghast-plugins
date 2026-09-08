@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "clockify",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Clockify’s official MCP preview for time tracking, project lookup and reports; provider documentation still marks the service as coming soon.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://clockify.me/help/integrations-and-add-ons/use-clockify-mcp-server-to-connect-to-ai-agent",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://clockify.me/help/integrations-and-add-ons/use-clockify-mcp-server-to-connect-to-ai-agent",
+      "connectorPublisher": "Clockify",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Clockify",
+      "descriptions": {
+        "en": "Connect Clockify’s official MCP preview for time tracking, project lookup and reports; provider documentation still marks the service as coming soon.",
+        "zh-CN": "连接 Clockify 官方 MCP 预览服务，进行时间记录、项目查询与报表分析；服务商文档仍标注即将推出。"
+      },
+      "mcpServerExtensions": {
+        "clockify": {
+          "credentialHeaders": {
+            "x-api-key": "$VAULT:clockify-token"
+          }
+        }
+      }
+    }
+  }
+}

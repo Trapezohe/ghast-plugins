@@ -3486,6 +3486,51 @@
       "category": "productivity"
     },
     {
+      "id": "clockify",
+      "name": "Clockify",
+      "description": "Connect Clockify’s official MCP preview for time tracking, project lookup and reports; provider documentation still marks the service as coming soon.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "clockify",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Clockify’s official MCP preview for time tracking, project lookup and reports; provider documentation still marks the service as coming soon.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://clockify.me/help/integrations-and-add-ons/use-clockify-mcp-server-to-connect-to-ai-agent",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://clockify.me/help/integrations-and-add-ons/use-clockify-mcp-server-to-connect-to-ai-agent",
+            "connectorPublisher": "Clockify",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Clockify",
+            "descriptions": {
+              "en": "Connect Clockify’s official MCP preview for time tracking, project lookup and reports; provider documentation still marks the service as coming soon.",
+              "zh-CN": "连接 Clockify 官方 MCP 预览服务，进行时间记录、项目查询与报表分析；服务商文档仍标注即将推出。"
+            },
+            "mcpServerExtensions": {
+              "clockify": {
+                "credentialHeaders": {
+                  "x-api-key": "$VAULT:clockify-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/clockify.zip",
+        "sha256": "8149d25663d2eb6ace79f458f0efc80f68b63cccd1d4c250b027b9079edb0857"
+      },
+      "icon": "./plugins/clockify/assets/icon.png",
+      "homepage": "https://clockify.me/help/integrations-and-add-ons/use-clockify-mcp-server-to-connect-to-ai-agent",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "close",
       "name": "close",
       "description": "Search, analyze, create, and explicitly update Close CRM leads, contacts, opportunities, activities, tasks, pipelines, workflows, templates, and voice agents through Close's official hosted MCP server.",
