@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "moonpay",
+  "version": "1.0.0-ghast.1",
+  "description": "Search MoonPay’s official developer documentation for platform APIs, SDK integration and crypto payment flows.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://dev.moonpay.com/platform/overview/using-agents",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://dev.moonpay.com/platform/overview/using-agents",
+      "connectorPublisher": "MoonPay",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "MoonPay",
+      "descriptions": {
+        "en": "Search MoonPay’s official developer documentation for platform APIs, SDK integration and crypto payment flows.",
+        "zh-CN": "检索 MoonPay 官方开发文档，获取平台 API、SDK 集成与加密支付流程指南。"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "privy",
+  "version": "1.0.0-ghast.1",
+  "description": "Search Privy’s official documentation for embedded wallets, authentication, signing policies and server integrations.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.privy.io/basics/get-started/using-llms",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.privy.io/basics/get-started/using-llms",
+      "connectorPublisher": "Privy",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Privy",
+      "descriptions": {
+        "en": "Search Privy’s official documentation for embedded wallets, authentication, signing policies and server integrations.",
+        "zh-CN": "检索 Privy 官方文档，获取嵌入式钱包、身份认证、签名策略与服务端集成指南。"
+      }
+    }
+  }
+}

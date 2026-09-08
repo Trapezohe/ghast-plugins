@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "helius",
+  "version": "1.0.0-ghast.1",
+  "description": "Query Solana assets, wallet data, transactions and network information through Helius’s official MCP in its non-signing credential mode.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.helius.dev/docs/agents/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.helius.dev/docs/agents/mcp",
+      "connectorPublisher": "Helius",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Helius",
+      "descriptions": {
+        "en": "Query Solana assets, wallet data, transactions and network information through Helius’s official MCP in its non-signing credential mode.",
+        "zh-CN": "通过 Helius 官方 MCP 的无签名凭据模式查询 Solana 资产、钱包数据、交易与网络信息。"
+      },
+      "mcpServerExtensions": {
+        "helius": {
+          "credentialEnv": {
+            "HELIUS_API_KEY": "$VAULT:helius-api-key"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "trust-wallet",
+  "version": "1.0.0-ghast.1",
+  "description": "Query token data, swap quotes, supported networks and address security with Trust Wallet’s official API Gateway MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/trustwallet/developer/blob/master/mcp/api-gateway.md",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/trustwallet/developer/blob/master/mcp/api-gateway.md",
+      "connectorPublisher": "Trust Wallet",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Trust Wallet",
+      "descriptions": {
+        "en": "Query token data, swap quotes, supported networks and address security with Trust Wallet’s official API Gateway MCP.",
+        "zh-CN": "通过 Trust Wallet 官方 API Gateway MCP 查询代币数据、兑换报价、支持网络与地址安全信息。"
+      },
+      "mcpServerExtensions": {
+        "trust-wallet": {
+          "credentialHeaders": {
+            "X-TW-CREDENTIAL": "$VAULT:trust-wallet-access-id",
+            "X-TW-SECRET-KEY": "$VAULT:trust-wallet-secret-key"
+          }
+        }
+      }
+    }
+  }
+}

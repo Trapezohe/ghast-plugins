@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "crossmint",
+  "version": "1.0.0-ghast.1",
+  "description": "Search Crossmint’s official documentation for wallets, payments, minting and agent commerce integrations.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.crossmint.com/introduction/ai-assistants",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.crossmint.com/introduction/ai-assistants",
+      "connectorPublisher": "Crossmint",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Crossmint",
+      "descriptions": {
+        "en": "Search Crossmint’s official documentation for wallets, payments, minting and agent commerce integrations.",
+        "zh-CN": "检索 Crossmint 官方文档，获取钱包、支付、铸造与智能体商务集成指南。"
+      }
+    }
+  }
+}

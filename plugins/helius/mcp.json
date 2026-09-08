@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "helius": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "helius-mcp@2.2.0"
+      ],
+      "cwd": "${PLUGIN_DATA}",
+      "env": {
+        "HELIUS_MCP_SHARED_CREDENTIAL": "1",
+        "HELIUS_NETWORK": "mainnet-beta",
+        "GITHUB_TOKEN": ""
+      }
+    }
+  }
+}

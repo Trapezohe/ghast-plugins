@@ -4590,6 +4590,44 @@
       "category": "communication"
     },
     {
+      "id": "crossmint",
+      "name": "Crossmint",
+      "description": "Search Crossmint’s official documentation for wallets, payments, minting and agent commerce integrations.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "crossmint",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Crossmint’s official documentation for wallets, payments, minting and agent commerce integrations.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.crossmint.com/introduction/ai-assistants",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.crossmint.com/introduction/ai-assistants",
+            "connectorPublisher": "Crossmint",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Crossmint",
+            "descriptions": {
+              "en": "Search Crossmint’s official documentation for wallets, payments, minting and agent commerce integrations.",
+              "zh-CN": "检索 Crossmint 官方文档，获取钱包、支付、铸造与智能体商务集成指南。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/crossmint.zip",
+        "sha256": "cb9f60877dab49b354be255676e1d76a354171ecb98ac1444feb9efe08210897"
+      },
+      "icon": "./plugins/crossmint/assets/icon.png",
+      "homepage": "https://docs.crossmint.com/introduction/ai-assistants",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "crowdin",
       "name": "Crowdin",
       "description": "Manage translation projects, source files, tasks, glossaries and translation memory in Crowdin.",
@@ -7813,6 +7851,51 @@
       "category": "development"
     },
     {
+      "id": "helius",
+      "name": "Helius",
+      "description": "Query Solana assets, wallet data, transactions and network information through Helius’s official MCP in its non-signing credential mode.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "helius",
+        "version": "1.0.0-ghast.1",
+        "description": "Query Solana assets, wallet data, transactions and network information through Helius’s official MCP in its non-signing credential mode.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.helius.dev/docs/agents/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.helius.dev/docs/agents/mcp",
+            "connectorPublisher": "Helius",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Helius",
+            "descriptions": {
+              "en": "Query Solana assets, wallet data, transactions and network information through Helius’s official MCP in its non-signing credential mode.",
+              "zh-CN": "通过 Helius 官方 MCP 的无签名凭据模式查询 Solana 资产、钱包数据、交易与网络信息。"
+            },
+            "mcpServerExtensions": {
+              "helius": {
+                "credentialEnv": {
+                  "HELIUS_API_KEY": "$VAULT:helius-api-key"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/helius.zip",
+        "sha256": "12ff41749e5e675bfeb8432056b88bccc58139c4ce33ed61f7c530b64c275066"
+      },
+      "icon": "./plugins/helius/assets/icon.png",
+      "homepage": "https://www.helius.dev/docs/agents/mcp",
+      "license": "MIT",
+      "category": "data"
+    },
+    {
       "id": "help-scout",
       "name": "Help Scout",
       "description": "Search Help Scout conversations, customers and knowledge articles, and retrieve support reports.",
@@ -10282,6 +10365,44 @@
       "category": "databases"
     },
     {
+      "id": "moonpay",
+      "name": "MoonPay",
+      "description": "Search MoonPay’s official developer documentation for platform APIs, SDK integration and crypto payment flows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "moonpay",
+        "version": "1.0.0-ghast.1",
+        "description": "Search MoonPay’s official developer documentation for platform APIs, SDK integration and crypto payment flows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://dev.moonpay.com/platform/overview/using-agents",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://dev.moonpay.com/platform/overview/using-agents",
+            "connectorPublisher": "MoonPay",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "MoonPay",
+            "descriptions": {
+              "en": "Search MoonPay’s official developer documentation for platform APIs, SDK integration and crypto payment flows.",
+              "zh-CN": "检索 MoonPay 官方开发文档，获取平台 API、SDK 集成与加密支付流程指南。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/moonpay.zip",
+        "sha256": "ac7614d6757f128fc6c3ad68293493a5e3012c35188adee875d38940c816dc32"
+      },
+      "icon": "./plugins/moonpay/assets/icon.png",
+      "homepage": "https://dev.moonpay.com/platform/overview/using-agents",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "moralis",
       "name": "Moralis",
       "description": "Query EVM and Solana wallet balances, token and NFT data, prices and blockchain activity through the official Moralis MCP package.",
@@ -11734,6 +11855,44 @@
       "homepage": "https://github.com/prisma/mcp",
       "license": "MIT",
       "category": "data"
+    },
+    {
+      "id": "privy",
+      "name": "Privy",
+      "description": "Search Privy’s official documentation for embedded wallets, authentication, signing policies and server integrations.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "privy",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Privy’s official documentation for embedded wallets, authentication, signing policies and server integrations.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.privy.io/basics/get-started/using-llms",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.privy.io/basics/get-started/using-llms",
+            "connectorPublisher": "Privy",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Privy",
+            "descriptions": {
+              "en": "Search Privy’s official documentation for embedded wallets, authentication, signing policies and server integrations.",
+              "zh-CN": "检索 Privy 官方文档，获取嵌入式钱包、身份认证、签名策略与服务端集成指南。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/privy.zip",
+        "sha256": "c317acef0d87a71d41cb75dca034cc49e02299d2a5031176d489aca34178870c"
+      },
+      "icon": "./plugins/privy/assets/icon.png",
+      "homepage": "https://docs.privy.io/basics/get-started/using-llms",
+      "license": "MIT",
+      "category": "development"
     },
     {
       "id": "productboard",
@@ -15378,6 +15537,52 @@
       "homepage": "https://docs.tomtom.com/tomtom-maps-mcp/documentation/quick-setup",
       "license": "MIT",
       "category": "lifestyle"
+    },
+    {
+      "id": "trust-wallet",
+      "name": "Trust Wallet",
+      "description": "Query token data, swap quotes, supported networks and address security with Trust Wallet’s official API Gateway MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "trust-wallet",
+        "version": "1.0.0-ghast.1",
+        "description": "Query token data, swap quotes, supported networks and address security with Trust Wallet’s official API Gateway MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/trustwallet/developer/blob/master/mcp/api-gateway.md",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/trustwallet/developer/blob/master/mcp/api-gateway.md",
+            "connectorPublisher": "Trust Wallet",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Trust Wallet",
+            "descriptions": {
+              "en": "Query token data, swap quotes, supported networks and address security with Trust Wallet’s official API Gateway MCP.",
+              "zh-CN": "通过 Trust Wallet 官方 API Gateway MCP 查询代币数据、兑换报价、支持网络与地址安全信息。"
+            },
+            "mcpServerExtensions": {
+              "trust-wallet": {
+                "credentialHeaders": {
+                  "X-TW-CREDENTIAL": "$VAULT:trust-wallet-access-id",
+                  "X-TW-SECRET-KEY": "$VAULT:trust-wallet-secret-key"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/trust-wallet.zip",
+        "sha256": "9839b99e397008368edabcdf8108b63c18f42cb79c17fc29adf6a3e707e61885"
+      },
+      "icon": "./plugins/trust-wallet/assets/icon.png",
+      "homepage": "https://github.com/trustwallet/developer/blob/master/mcp/api-gateway.md",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "turso",
