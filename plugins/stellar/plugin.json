@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "stellar",
+  "version": "1.0.0-ghast.1",
+  "description": "Search Stellar documentation, ecosystem data and development playbooks through the Stellar Development Foundation’s official Raven MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://raven.stellar.org/docs",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://raven.stellar.org/docs",
+      "connectorPublisher": "Stellar Raven",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Stellar Raven",
+      "descriptions": {
+        "en": "Search Stellar documentation, ecosystem data and development playbooks through the Stellar Development Foundation’s official Raven MCP.",
+        "zh-CN": "通过 Stellar Development Foundation 官方 Raven MCP 检索 Stellar 文档、生态数据与开发指南。"
+      }
+    }
+  }
+}

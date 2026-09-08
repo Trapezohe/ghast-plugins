@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "gainium",
+  "version": "1.0.0-ghast.1",
+  "description": "Review crypto bots, balances, screeners and backtests with Gainium’s official OAuth connections, with a separate trading connection.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://gainium.io/help/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://gainium.io/help/mcp",
+      "connectorPublisher": "Gainium",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Gainium",
+      "descriptions": {
+        "en": "Review crypto bots, balances, screeners and backtests with Gainium’s official OAuth connections, with a separate trading connection.",
+        "zh-CN": "通过 Gainium 官方 OAuth 连接查看加密交易机器人、余额、筛选器与回测，并可单独连接交易服务。"
+      }
+    }
+  }
+}

@@ -1157,6 +1157,44 @@
       "category": "productivity"
     },
     {
+      "id": "avalanche",
+      "name": "Avalanche",
+      "description": "Search Avalanche developer documentation and inspect public network, P-Chain and blockchain data through its official hosted MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "avalanche",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Avalanche developer documentation and inspect public network, P-Chain and blockchain data through its official hosted MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://build.avax.network/docs/tooling/ai-llm/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://build.avax.network/docs/tooling/ai-llm/mcp-server",
+            "connectorPublisher": "Avalanche",
+            "category": "development",
+            "icon": "./assets/icon.svg",
+            "displayName": "Avalanche",
+            "descriptions": {
+              "en": "Search Avalanche developer documentation and inspect public network, P-Chain and blockchain data through its official hosted MCP.",
+              "zh-CN": "通过 Avalanche 官方托管 MCP 检索开发文档，并查询公开网络、P 链及区块链数据。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/avalanche.zip",
+        "sha256": "f0b74238d6511af1b6ba116fe8a62e00771ece0c33278ac9aaff564b78067f95"
+      },
+      "icon": "./plugins/avalanche/assets/icon.svg",
+      "homepage": "https://build.avax.network/docs/tooling/ai-llm/mcp-server",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "avaza",
       "name": "Avaza",
       "description": "Manage projects, tasks, timesheets, expenses, invoices and team schedules.",
@@ -6776,6 +6814,44 @@
       "homepage": "https://support.fyxer.com/article/fyxer-mcp",
       "license": "MIT",
       "category": "communication"
+    },
+    {
+      "id": "gainium",
+      "name": "Gainium",
+      "description": "Review crypto bots, balances, screeners and backtests with Gainium’s official OAuth connections, with a separate trading connection.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "gainium",
+        "version": "1.0.0-ghast.1",
+        "description": "Review crypto bots, balances, screeners and backtests with Gainium’s official OAuth connections, with a separate trading connection.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://gainium.io/help/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://gainium.io/help/mcp",
+            "connectorPublisher": "Gainium",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Gainium",
+            "descriptions": {
+              "en": "Review crypto bots, balances, screeners and backtests with Gainium’s official OAuth connections, with a separate trading connection.",
+              "zh-CN": "通过 Gainium 官方 OAuth 连接查看加密交易机器人、余额、筛选器与回测，并可单独连接交易服务。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/gainium.zip",
+        "sha256": "e3f02cfdbb64b646fdbc25a85719c0cdda5c917c5752fde45ed7d337a1e747db"
+      },
+      "icon": "./plugins/gainium/assets/icon.png",
+      "homepage": "https://gainium.io/help/mcp",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "gate",
@@ -14204,6 +14280,44 @@
       "icon": "./plugins/steam-search/assets/icon.png",
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/steam-search",
       "category": "gaming"
+    },
+    {
+      "id": "stellar",
+      "name": "Stellar Raven",
+      "description": "Search Stellar documentation, ecosystem data and development playbooks through the Stellar Development Foundation’s official Raven MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "stellar",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Stellar documentation, ecosystem data and development playbooks through the Stellar Development Foundation’s official Raven MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://raven.stellar.org/docs",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://raven.stellar.org/docs",
+            "connectorPublisher": "Stellar Raven",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Stellar Raven",
+            "descriptions": {
+              "en": "Search Stellar documentation, ecosystem data and development playbooks through the Stellar Development Foundation’s official Raven MCP.",
+              "zh-CN": "通过 Stellar Development Foundation 官方 Raven MCP 检索 Stellar 文档、生态数据与开发指南。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/stellar.zip",
+        "sha256": "9a272ccd317a438cb7f6655363c91398c1ea46fb6ba5b3e7059486e15aff039f"
+      },
+      "icon": "./plugins/stellar/assets/icon.png",
+      "homepage": "https://raven.stellar.org/docs",
+      "license": "MIT",
+      "category": "development"
     },
     {
       "id": "stock-quote",

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "gainium": {
+      "type": "streamable-http",
+      "url": "https://mcp.gainium.io/read"
+    },
+    "gainium-trading": {
+      "type": "streamable-http",
+      "url": "https://mcp.gainium.io/mcp"
+    }
+  }
+}
