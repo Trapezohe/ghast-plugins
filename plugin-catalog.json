@@ -1782,6 +1782,44 @@
       "category": "business"
     },
     {
+      "id": "bitquery",
+      "name": "Bitquery",
+      "description": "Research on-chain trades, transfers, token markets and wallet activity through Bitquery’s official hosted MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "bitquery",
+        "version": "1.0.0-ghast.1",
+        "description": "Research on-chain trades, transfers, token markets and wallet activity through Bitquery’s official hosted MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.bitquery.io/docs/mcp/mcp-server/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.bitquery.io/docs/mcp/mcp-server/",
+            "connectorPublisher": "Bitquery",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Bitquery",
+            "descriptions": {
+              "en": "Research on-chain trades, transfers, token markets and wallet activity through Bitquery’s official hosted MCP.",
+              "zh-CN": "通过 Bitquery 官方托管 MCP 研究链上成交、转账、代币市场与钱包活动。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/bitquery.zip",
+        "sha256": "8f66bc9343145dd5e8c44f0898789ee2aafe7ba6b9ba37503fb3305fac2866b6"
+      },
+      "icon": "./plugins/bitquery/assets/icon.png",
+      "homepage": "https://docs.bitquery.io/docs/mcp/mcp-server/",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
       "id": "blockscout",
       "name": "Blockscout",
       "description": "Inspect blockchain transactions, tokens, addresses and verified contracts.",
@@ -2418,6 +2456,52 @@
       "category": "developer-tools"
     },
     {
+      "id": "bybit",
+      "name": "Bybit",
+      "description": "Use Bybit’s official MCP for market data and authorized account, trading and asset workflows. Availability depends on regional access.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "bybit",
+        "version": "1.0.0-ghast.1",
+        "description": "Use Bybit’s official MCP for market data and authorized account, trading and asset workflows. Availability depends on regional access.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/bybit-exchange/trading-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/bybit-exchange/trading-mcp",
+            "connectorPublisher": "Bybit",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Bybit",
+            "descriptions": {
+              "en": "Use Bybit’s official MCP for market data and authorized account, trading and asset workflows. Availability depends on regional access.",
+              "zh-CN": "通过 Bybit 官方 MCP 查询行情并处理已授权的账号、交易与资产业务；服务可用性受地区限制。"
+            },
+            "mcpServerExtensions": {
+              "bybit": {
+                "credentialEnv": {
+                  "BYBIT_API_KEY": "$VAULT:bybit-api-key",
+                  "BYBIT_API_SECRET": "$VAULT:bybit-api-secret"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/bybit.zip",
+        "sha256": "e8ef4ccba7b7630c46e013cfa262daede599a7e559c4d167b1533dc3b864658f"
+      },
+      "icon": "./plugins/bybit/assets/icon.png",
+      "homepage": "https://github.com/bybit-exchange/trading-mcp",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
       "id": "cal-com",
       "name": "Cal.com",
       "description": "Check availability, manage event types and organize bookings and schedules with Cal.com.",
@@ -2612,7 +2696,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "cartesia",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Generate speech, transcribe audio and manage voices and pronunciation dictionaries through Cartesia’s official MCP server.",
         "author": {
           "name": "Ghast AI",
@@ -2634,6 +2718,11 @@
             "mcpServerExtensions": {
               "cartesia": {
                 "credentialEnv": {
+                  "CARTESIA_API_KEY": "$VAULT:cartesia-api-key"
+                }
+              },
+              "cartesia-admin": {
+                "credentialEnv": {
                   "CARTESIA_API_KEY": "$VAULT:cartesia-api-key",
                   "CARTESIA_ADMIN_API_KEY": "$VAULT:cartesia-admin-api-key"
                 }
@@ -2644,7 +2733,7 @@
       },
       "package": {
         "url": "./packages/cartesia.zip",
-        "sha256": "5c5cf6d5a7938ec799cb67edde95a823824c582cf3f49463fff079c84fcbb4a1"
+        "sha256": "2f4145a38ed43d0c1bfdfec5a313305cf8a136a628c2a9ba070fb2ecb86458f3"
       },
       "icon": "./plugins/cartesia/assets/icon.svg",
       "homepage": "https://docs.cartesia.ai/tools/ai/mcp",
@@ -3768,6 +3857,44 @@
       },
       "icon": "./plugins/coinpaprika/assets/icon.png",
       "homepage": "https://github.com/coinpaprika/coinpaprika-mcp",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
+      "id": "coinstats",
+      "name": "CoinStats",
+      "description": "Read crypto prices, portfolio performance, wallet activity, exchange data and news through CoinStats’ official OAuth MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "coinstats",
+        "version": "1.0.0-ghast.1",
+        "description": "Read crypto prices, portfolio performance, wallet activity, exchange data and news through CoinStats’ official OAuth MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://coinstats.app/api-docs/mcp/connecting/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://coinstats.app/api-docs/mcp/connecting/",
+            "connectorPublisher": "CoinStats",
+            "category": "finance",
+            "icon": "./assets/icon.svg",
+            "displayName": "CoinStats",
+            "descriptions": {
+              "en": "Read crypto prices, portfolio performance, wallet activity, exchange data and news through CoinStats’ official OAuth MCP.",
+              "zh-CN": "通过 CoinStats 官方 OAuth MCP 查询加密货币价格、投资组合表现、钱包活动、交易所数据与资讯。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/coinstats.zip",
+        "sha256": "918b1a62bfc0070dadb2a53b968e1f6a334fb7def6bb9803e8437a4d4ee2413a"
+      },
+      "icon": "./plugins/coinstats/assets/icon.svg",
+      "homepage": "https://coinstats.app/api-docs/mcp/connecting/",
       "license": "MIT",
       "category": "finance"
     },
@@ -14094,7 +14221,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "tatum",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Search Tatum developer documentation, inspect OpenAPI schemas and execute documented API requests with an optional Tatum key.",
         "author": {
           "name": "Ghast AI",
@@ -14125,7 +14252,7 @@
       },
       "package": {
         "url": "./packages/tatum.zip",
-        "sha256": "9c3d6630163f74a628b33a714fbe674c04fb5115fea40743b0878822f7181d13"
+        "sha256": "b868ab580489295066b80251fbe1eebb289b3540ef98b833b029099382ccc626"
       },
       "icon": "./plugins/tatum/assets/icon.png",
       "homepage": "https://docs.tatum.io/oa/docs/tatum-documentation-mcp",

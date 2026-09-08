@@ -8,9 +8,9 @@ Search Tatum developer documentation, inspect OpenAPI schemas and execute docume
 
 ## 连接 / Connection
 
-在 Tatum Docs & API 账号中创建 API Token，填入 Ghast 连接凭据输入框；由 Ghast 注入 X-API-Key 请求头。不要在聊天中发送凭据，使用受服务配额限制。 文档检索与 API 结构查询无需密钥。X-API-Key 凭据为可选，仅在执行需要认证的 API 请求时使用。本插件连接 Tatum Documentation MCP，不安装另一套本地 Blockchain MCP 包。
+在 Tatum Docs & API 账号中创建 API Token，填入 Ghast 连接凭据输入框；由 Ghast 注入 X-API-Key 请求头。不要在聊天中发送凭据，使用受服务配额限制。 tatum-docs 用于免凭据访问公开文档与 API 结构；tatum 连接需填写 Tatum API Key，用于需要认证的 API 请求。两个连接使用同一官方地址，授权要求分别配置。本插件连接 Tatum Documentation MCP，不安装另一套本地 Blockchain MCP 包。
 
-Create a Tatum Docs & API API token in your provider account and enter it in the Ghast connection credential field. Ghast supplies the X-API-Key header; do not paste credentials into chat. Service quotas apply. Documentation search and schema discovery work without a key. The X-API-Key credential is optional and used for authenticated API execution. This plugin connects to Tatum Documentation MCP; it does not install the separate local Blockchain MCP package.
+Create a Tatum Docs & API API token in your provider account and enter it in the Ghast connection credential field. Ghast supplies the X-API-Key header; do not paste credentials into chat. Service quotas apply. Use tatum-docs for public documentation and schema discovery without credentials. Use tatum with a Tatum API key for authenticated API requests. The two connections share the official endpoint but have separate authentication requirements. This plugin connects to Tatum Documentation MCP; it does not install the separate local Blockchain MCP package.
 
 - MCP: `https://docs.tatum.io/mcp`
 - [官方文档 / Provider documentation](https://docs.tatum.io/oa/docs/tatum-documentation-mcp)

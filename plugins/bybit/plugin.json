@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "bybit",
+  "version": "1.0.0-ghast.1",
+  "description": "Use Bybit’s official MCP for market data and authorized account, trading and asset workflows. Availability depends on regional access.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/bybit-exchange/trading-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/bybit-exchange/trading-mcp",
+      "connectorPublisher": "Bybit",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Bybit",
+      "descriptions": {
+        "en": "Use Bybit’s official MCP for market data and authorized account, trading and asset workflows. Availability depends on regional access.",
+        "zh-CN": "通过 Bybit 官方 MCP 查询行情并处理已授权的账号、交易与资产业务；服务可用性受地区限制。"
+      },
+      "mcpServerExtensions": {
+        "bybit": {
+          "credentialEnv": {
+            "BYBIT_API_KEY": "$VAULT:bybit-api-key",
+            "BYBIT_API_SECRET": "$VAULT:bybit-api-secret"
+          }
+        }
+      }
+    }
+  }
+}

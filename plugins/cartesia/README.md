@@ -8,9 +8,9 @@ Generate speech, transcribe audio and manage voices and pronunciation dictionari
 
 ## 连接 / Connection
 
-需要 uv/uvx 和 Python 3.13+（uvx 可安装 Python）。在 Cartesia Playground 创建标准 API Key，填入 CARTESIA_API_KEY。CARTESIA_ADMIN_API_KEY 为可选管理密钥，用于启用额度用量等管理工具；标准密钥和管理密钥不能互换。默认工具覆盖语音生成、转录、声音和发音词典。生成音频保存在该插件的 Ghast 数据目录。需要支持 stdio credentialEnv 的 Ghast 版本。
+需要 uv/uvx 和 Python 3.13+（uvx 可安装 Python）。在 Cartesia Playground 创建标准 API Key，填入 CARTESIA_API_KEY。普通音频与声音工具使用 cartesia 连接，仅需标准 API Key。可选的 cartesia-admin 连接需要标准 API Key 与独立管理员 Key，用于管理工具。更新连接配置后，请重新填写标准 Key。默认工具覆盖语音生成、转录、声音和发音词典。生成音频保存在该插件的 Ghast 数据目录。需要支持 stdio credentialEnv 的 Ghast 版本。
 
-Requires uv/uvx and Python 3.13+ (uvx can install Python). Create a standard Cartesia API key in the Playground and enter it in CARTESIA_API_KEY. CARTESIA_ADMIN_API_KEY is optional and only enables management tools such as credit usage; standard and admin keys are not interchangeable. Default tools cover speech generation, transcription, voices and pronunciation dictionaries. Generated audio is saved in this plugin’s Ghast data directory. Requires Ghast stdio credentialEnv support.
+Requires uv/uvx and Python 3.13+ (uvx can install Python). Create a standard Cartesia API key in the Playground and enter it in CARTESIA_API_KEY. Use the cartesia connection with a standard API key for audio and voice tools. The optional cartesia-admin connection requires both the standard API key and a separate admin key for management tools. Re-enter the standard key after updating this plugin’s connection configuration. Default tools cover speech generation, transcription, voices and pronunciation dictionaries. Generated audio is saved in this plugin’s Ghast data directory. Requires Ghast stdio credentialEnv support.
 
 - MCP: `uvx --python 3.13 cartesia-mcp==0.21.0`
 - [官方文档 / Provider documentation](https://docs.cartesia.ai/tools/ai/mcp)

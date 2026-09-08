@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "bitquery",
+  "version": "1.0.0-ghast.1",
+  "description": "Research on-chain trades, transfers, token markets and wallet activity through Bitquery’s official hosted MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.bitquery.io/docs/mcp/mcp-server/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.bitquery.io/docs/mcp/mcp-server/",
+      "connectorPublisher": "Bitquery",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Bitquery",
+      "descriptions": {
+        "en": "Research on-chain trades, transfers, token markets and wallet activity through Bitquery’s official hosted MCP.",
+        "zh-CN": "通过 Bitquery 官方托管 MCP 研究链上成交、转账、代币市场与钱包活动。"
+      }
+    }
+  }
+}

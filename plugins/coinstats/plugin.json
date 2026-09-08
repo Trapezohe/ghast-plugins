@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "coinstats",
+  "version": "1.0.0-ghast.1",
+  "description": "Read crypto prices, portfolio performance, wallet activity, exchange data and news through CoinStats’ official OAuth MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://coinstats.app/api-docs/mcp/connecting/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://coinstats.app/api-docs/mcp/connecting/",
+      "connectorPublisher": "CoinStats",
+      "category": "finance",
+      "icon": "./assets/icon.svg",
+      "displayName": "CoinStats",
+      "descriptions": {
+        "en": "Read crypto prices, portfolio performance, wallet activity, exchange data and news through CoinStats’ official OAuth MCP.",
+        "zh-CN": "通过 CoinStats 官方 OAuth MCP 查询加密货币价格、投资组合表现、钱包活动、交易所数据与资讯。"
+      }
+    }
+  }
+}

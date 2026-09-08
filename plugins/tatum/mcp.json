@@ -4,6 +4,10 @@
     "tatum": {
       "type": "streamable-http",
       "url": "https://docs.tatum.io/mcp"
+    },
+    "tatum-docs": {
+      "type": "streamable-http",
+      "url": "https://docs.tatum.io/mcp"
     }
   }
 }

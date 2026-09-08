@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "bybit": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "bybit-official-trading-server@2.1.19"
+      ],
+      "env": {
+        "BYBIT_TESTNET": "false",
+        "BYBIT_API_PRIVATE_KEY_PATH": ""
+      },
+      "cwd": "${PLUGIN_DATA}"
+    },
+    "bybit-public": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "bybit-official-trading-server@2.1.19"
+      ],
+      "env": {
+        "BYBIT_TESTNET": "false",
+        "BYBIT_API_PRIVATE_KEY_PATH": "",
+        "BYBIT_API_KEY": "",
+        "BYBIT_API_SECRET": ""
+      },
+      "cwd": "${PLUGIN_DATA}"
+    }
+  }
+}

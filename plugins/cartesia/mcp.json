@@ -12,6 +12,21 @@
       "cwd": "${PLUGIN_DATA}",
       "env": {
         "PYTHON_DOTENV_DISABLED": "1",
+        "OUTPUT_DIRECTORY": "${PLUGIN_DATA}",
+        "CARTESIA_ADMIN_API_KEY": ""
+      }
+    },
+    "cartesia-admin": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "--python",
+        "3.13",
+        "cartesia-mcp==0.21.0"
+      ],
+      "cwd": "${PLUGIN_DATA}",
+      "env": {
+        "PYTHON_DOTENV_DISABLED": "1",
         "OUTPUT_DIRECTORY": "${PLUGIN_DATA}"
       }
     }
