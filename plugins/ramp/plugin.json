@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ramp",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Ramp’s official account, developer documentation and benchmark data services for spend and finance workflows.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.ramp.com/developer-api/v1/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.ramp.com/developer-api/v1/mcp",
+      "connectorPublisher": "Ramp",
+      "category": "productivity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Ramp",
+      "descriptions": {
+        "en": "Connect Ramp’s official account, developer documentation and benchmark data services for spend and finance workflows.",
+        "zh-CN": "连接 Ramp 官方账号、开发文档和基准数据服务，支持企业支出与财务办公流程。"
+      },
+      "mcpServerExtensions": {
+        "ramp-data": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:ramp-data-api-key"
+          }
+        }
+      }
+    }
+  }
+}

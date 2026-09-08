@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "consensus",
+  "version": "1.0.0-ghast.1",
+  "description": "Search academic research with Consensus’s official MCP and build evidence-backed reading lists and literature reviews.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.consensus.app/consensus-mcp.md",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.consensus.app/consensus-mcp.md",
+      "connectorPublisher": "Consensus",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Consensus",
+      "descriptions": {
+        "en": "Search academic research with Consensus’s official MCP and build evidence-backed reading lists and literature reviews.",
+        "zh-CN": "通过 Consensus 官方 MCP 搜索学术研究，整理有文献依据的阅读清单与文献综述。"
+      }
+    }
+  }
+}

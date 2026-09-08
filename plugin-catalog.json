@@ -4257,6 +4257,44 @@
       "category": "data"
     },
     {
+      "id": "consensus",
+      "name": "Consensus",
+      "description": "Search academic research with Consensus’s official MCP and build evidence-backed reading lists and literature reviews.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "consensus",
+        "version": "1.0.0-ghast.1",
+        "description": "Search academic research with Consensus’s official MCP and build evidence-backed reading lists and literature reviews.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.consensus.app/consensus-mcp.md",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.consensus.app/consensus-mcp.md",
+            "connectorPublisher": "Consensus",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Consensus",
+            "descriptions": {
+              "en": "Search academic research with Consensus’s official MCP and build evidence-backed reading lists and literature reviews.",
+              "zh-CN": "通过 Consensus 官方 MCP 搜索学术研究，整理有文献依据的阅读清单与文献综述。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/consensus.zip",
+        "sha256": "a1992b5b6f391640cc1937a7f836d98b9e691ce04a21ddfbf8d6a037ee1c9428"
+      },
+      "icon": "./plugins/consensus/assets/icon.png",
+      "homepage": "https://docs.consensus.app/consensus-mcp.md",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "contentful",
       "name": "Contentful",
       "description": "Manage multilingual content, assets and content models in Contentful.",
@@ -13098,6 +13136,51 @@
       "homepage": "https://docs.railway.com/ai/mcp-server",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "ramp",
+      "name": "Ramp",
+      "description": "Connect Ramp’s official account, developer documentation and benchmark data services for spend and finance workflows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "ramp",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Ramp’s official account, developer documentation and benchmark data services for spend and finance workflows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.ramp.com/developer-api/v1/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.ramp.com/developer-api/v1/mcp",
+            "connectorPublisher": "Ramp",
+            "category": "productivity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Ramp",
+            "descriptions": {
+              "en": "Connect Ramp’s official account, developer documentation and benchmark data services for spend and finance workflows.",
+              "zh-CN": "连接 Ramp 官方账号、开发文档和基准数据服务，支持企业支出与财务办公流程。"
+            },
+            "mcpServerExtensions": {
+              "ramp-data": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:ramp-data-api-key"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/ramp.zip",
+        "sha256": "347cbe940c1d59e425ae2e6eb1f35e01f4556e245bebd98c91cdfe465b50035a"
+      },
+      "icon": "./plugins/ramp/assets/icon.svg",
+      "homepage": "https://docs.ramp.com/developer-api/v1/mcp",
+      "license": "MIT",
+      "category": "productivity"
     },
     {
       "id": "ranked-ai",
