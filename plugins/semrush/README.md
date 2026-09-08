@@ -30,8 +30,7 @@ authorization-server metadata is pinned at SHA-256
   and competitive or market indicators.
 - The service is read-only: Trends and SEO APIs are available according to
   subscription, and only read methods are exposed for Projects API v3.
-- A generic web-analytics icon is used because no licensed catalog icon is
-  included in a public official MCP source repository.
+- Brand logo source: https://avatars.githubusercontent.com/u/3648654?v=4. Brand names and logos belong to Semrush. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Semrush accounts, subscriptions, API units, hosted service behavior, data,

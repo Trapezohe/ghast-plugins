@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "brex",
-  "version": "1.0.3-ghast.1",
+  "version": "1.0.3-ghast.2",
   "description": "Analyze Brex expenses, cards, limits, banking, bills, accounting, travel, and organization data, or safely update supported expense details through Brex's official hosted MCP server.",
   "author": {
     "name": "Brex Inc.",

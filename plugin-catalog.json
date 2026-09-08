@@ -1037,7 +1037,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "apollo",
-        "version": "0.1.1-ghast.1",
+        "version": "0.1.1-ghast.2",
         "description": "Prospect for people and companies, enrich leads, load reviewed contacts into outreach sequences, and query sales analytics through Apollo.io's official skills and hosted MCP server.",
         "author": {
           "name": "Apollo.io",
@@ -1051,7 +1051,7 @@
             "category": "productivity",
             "upstreamRevision": "2adde980e45f421b7e9383d92870455627936bce",
             "upstreamPath": ".",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Prospect for people and companies, enrich leads, load reviewed contacts into outreach sequences, and query sales analytics through Apollo.io's official skills and hosted MCP server.",
               "zh-CN": "检索企业与联系人、补充线索资料并分析销售触达效果。"
@@ -1061,9 +1061,9 @@
       },
       "package": {
         "url": "./packages/apollo.zip",
-        "sha256": "9a29dfe32910d18ca5618fa9abdf2ae9cfb3ca41d545f5b5fd5271cb27ce8227"
+        "sha256": "a7df99420dd60c20ba63632480c58af1bfad6ba3cf8421ad86db615c69149aa3"
       },
-      "icon": "./plugins/apollo/assets/icon.svg",
+      "icon": "./plugins/apollo/assets/icon.png",
       "homepage": "https://www.apollo.io/",
       "repository": "https://github.com/apolloio/apollo-mcp-plugin",
       "license": "MIT",
@@ -2492,7 +2492,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "brex",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Analyze Brex expenses, cards, limits, banking, bills, accounting, travel, and organization data, or safely update supported expense details through Brex's official hosted MCP server.",
         "author": {
           "name": "Brex Inc.",
@@ -2514,7 +2514,7 @@
       },
       "package": {
         "url": "./packages/brex.zip",
-        "sha256": "5502a28d4de7ee17adf9fd968ffc8e8e59b87acaee1ef9c2deb56cd57bed5a74"
+        "sha256": "f72eb028e5eb7a0c18ad215c051140dbd4796283b9d69d181e8a962931725e5c"
       },
       "icon": "./plugins/brex/assets/icon.png",
       "homepage": "https://developer.brex.com/docs/mcp",
@@ -3907,7 +3907,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "cloudinary",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Upload, search, transform, analyze, organize, and automate Cloudinary media through five official hosted MCP servers.",
         "author": {
           "name": "Cloudinary",
@@ -3940,7 +3940,7 @@
       },
       "package": {
         "url": "./packages/cloudinary.zip",
-        "sha256": "b69239466760ae151e84c51d38cf39a39b4ecda458e372cee59b1955059a403d"
+        "sha256": "c62eb64a0351279126db4e3f9f4d9e90b03b0a357f38bbee4d9fac0fe6e03869"
       },
       "icon": "./plugins/cloudinary/assets/icon.png",
       "homepage": "https://cloudinary.com/documentation/cloudinary_llm_mcp",
@@ -15910,7 +15910,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "semrush",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Retrieve read-only Semrush SEO, keyword, backlink, traffic, audience, market, paid search, shopping, site audit, position tracking, and project data through Semrush's official MCP server.",
         "author": {
           "name": "Semrush Holdings, Inc.",
@@ -15922,7 +15922,7 @@
           "ai.trapezohe.ghast": {
             "category": "web",
             "upstreamRevision": "semrush-docs-e34fd6ac1924+oauth-5d0b459a41d7",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Retrieve read-only Semrush SEO, keyword, backlink, traffic, audience, market, paid search, shopping, site audit, position tracking, and project data through Semrush's official MCP server.",
               "zh-CN": "查询 SEO、关键词、外链、流量、市场、广告与站点审计数据。"
@@ -15932,9 +15932,9 @@
       },
       "package": {
         "url": "./packages/semrush.zip",
-        "sha256": "ea123ac1d3b20b74b947dd61241d87d5299bcc9e189bf1fecfc0c3696f3139ae"
+        "sha256": "6349e86c6cf1389c8d052aa5c2a709b4576439e38487a03c84b7194e9073058f"
       },
-      "icon": "./plugins/semrush/assets/icon.svg",
+      "icon": "./plugins/semrush/assets/icon.png",
       "homepage": "https://developer.semrush.com/api/v4/introduction/semrush-mcp/",
       "license": "MIT",
       "category": "web"

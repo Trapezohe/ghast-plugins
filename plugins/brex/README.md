@@ -10,7 +10,7 @@ This package contains only Ghast-authored MCP configuration, safety
 instructions, documentation, catalog metadata, and a generic expense-control
 icon. It does not copy or redistribute Brex's hosted MCP implementation,
 private Codex connector, service source code, financial or personal data,
-OAuth or API credentials, branded artwork, or marketplace icon.
+OAuth or API credentials, or marketplace artwork.
 
 Brex's official MCP guide is pinned at update timestamp
 `2026-05-07T15:57:03.000Z` and exact Markdown SHA-256
@@ -60,8 +60,7 @@ app ID or marketplace artwork.
   currency, date, entity, and filter provenance, prevents unsupported claims
   of audit or settlement, and requires exact-target confirmation for every
   mutation, export, URL fetch, or external feedback action.
-- A generic expense-control icon is used because no licensed Brex catalog
-  artwork is included in a public official MCP source repository.
+- Brand logo source: https://avatars.githubusercontent.com/u/26666889?v=4. Brand names and logos belong to Brex. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Brex accounts, financial products, Developer API access, hosted service

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "apollo",
-  "version": "0.1.1-ghast.1",
+  "version": "0.1.1-ghast.2",
   "description": "Prospect for people and companies, enrich leads, load reviewed contacts into outreach sequences, and query sales analytics through Apollo.io's official skills and hosted MCP server.",
   "author": {
     "name": "Apollo.io",
@@ -15,7 +15,7 @@
       "category": "productivity",
       "upstreamRevision": "2adde980e45f421b7e9383d92870455627936bce",
       "upstreamPath": ".",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Prospect for people and companies, enrich leads, load reviewed contacts into outreach sequences, and query sales analytics through Apollo.io's official skills and hosted MCP server.",
         "zh-CN": "检索企业与联系人、补充线索资料并分析销售触达效果。"

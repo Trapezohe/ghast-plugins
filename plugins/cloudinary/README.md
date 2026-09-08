@@ -12,6 +12,6 @@ The public MCP declaration is generated from the developer's official documentat
 
 - The Codex private app mapping is replaced by Cloudinary's five official hosted MCP servers with OAuth2 or supported API-key authentication.
 - The first four servers use their published dynamic OAuth flow. MediaFlows has no OAuth metadata, so its three documented cld-* headers are supplied from the encrypted Profile Vault.
-- A generic media-library icon is used because the official MCP collection repository does not publish a catalog icon.
+- Brand logo source: https://avatars.githubusercontent.com/u/1460763?v=4. Brand names and logos belong to Cloudinary. 品牌名称与标识归对应服务商所有。
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

@@ -14,6 +14,6 @@ All four workflow skills, the MCP declaration, and license come from Apollo.io's
 - Twenty Claude-specific tool references are mechanically rewritten from mcp__claude_ai_Apollo_MCP__* to Ghast's mcp__apollo__* namespace; tool suffixes and arguments are unchanged.
 - Ghast requires explicit confirmation before credit-consuming enrichment, defaults personal-email revelation to false unless the user explicitly requests it, and requires fresh confirmation before removing or stopping sequence contacts.
 - The public OAuth metadata currently advertises 67 scopes. The four packaged skills exercise 12 confirmed tools, while the hosted service may expose additional tools subject to Apollo permissions, credits, plan, and future service changes.
-- A generic prospecting icon is used because the official repository does not publish a redistributable catalog icon.
+- Brand logo source: https://avatars.githubusercontent.com/u/19340971?v=4. Brand names and logos belong to Apollo.io. 品牌名称与标识归对应服务商所有。
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.
