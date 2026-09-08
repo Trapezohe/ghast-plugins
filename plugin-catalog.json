@@ -6014,6 +6014,44 @@
       "category": "productivity"
     },
     {
+      "id": "dodopayments",
+      "name": "Dodo Payments",
+      "description": "Connect Dodo Payments’ official MCP to work with payments, subscriptions, customers and product catalogs.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "dodopayments",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Dodo Payments’ official MCP to work with payments, subscriptions, customers and product catalogs.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.dodopayments.com/developer-resources/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.dodopayments.com/developer-resources/mcp-server",
+            "connectorPublisher": "Dodo Payments",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Dodo Payments",
+            "descriptions": {
+              "en": "Connect Dodo Payments’ official MCP to work with payments, subscriptions, customers and product catalogs.",
+              "zh-CN": "连接 Dodo Payments 官方 MCP，处理支付、订阅、客户与产品目录工作流。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/dodopayments.zip",
+        "sha256": "aac8e2510fac79f07b1d13f252af1529c721a5b176c2e251d72291db736a8c5d"
+      },
+      "icon": "./plugins/dodopayments/assets/icon.png",
+      "homepage": "https://docs.dodopayments.com/developer-resources/mcp-server",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
       "id": "domotz-preview",
       "name": "domotz-preview",
       "description": "Discover, monitor, configure, and remediate Domotz-managed networks through Domotz's official hosted MCP.",
@@ -12792,6 +12830,44 @@
       "category": "developer-tools"
     },
     {
+      "id": "polar",
+      "name": "Polar",
+      "description": "Connect Polar’s official production and sandbox MCP services for payment, product and subscription workflows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "polar",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Polar’s official production and sandbox MCP services for payment, product and subscription workflows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://polar.sh/docs/integrate/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://polar.sh/docs/integrate/mcp",
+            "connectorPublisher": "Polar",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Polar",
+            "descriptions": {
+              "en": "Connect Polar’s official production and sandbox MCP services for payment, product and subscription workflows.",
+              "zh-CN": "连接 Polar 官方生产与沙箱 MCP 服务，处理支付、产品和订阅工作流。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/polar.zip",
+        "sha256": "44f9b74cbb7b8ff91973dbd8b6a29b74c5e7d0cbc30d89db4a12b37421d3f048"
+      },
+      "icon": "./plugins/polar/assets/icon.png",
+      "homepage": "https://polar.sh/docs/integrate/mcp",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
       "id": "policynote",
       "name": "policynote",
       "description": "Research global legislation, regulation, officials, elections, transcripts, and policy activity through PolicyNote.",
@@ -13801,6 +13877,44 @@
       "homepage": "https://www.recraft.ai/docs/mcp-reference/remote-server",
       "license": "MIT",
       "category": "design"
+    },
+    {
+      "id": "recurly",
+      "name": "Recurly Compass",
+      "description": "Use Recurly’s official Compass MCP for documentation search, API references and integration coding guidance.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "recurly",
+        "version": "1.0.0-ghast.1",
+        "description": "Use Recurly’s official Compass MCP for documentation search, API references and integration coding guidance.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.recurly.com/recurly-subscriptions/docs/compass-public-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.recurly.com/recurly-subscriptions/docs/compass-public-mcp-server",
+            "connectorPublisher": "Recurly Compass",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Recurly Compass",
+            "descriptions": {
+              "en": "Use Recurly’s official Compass MCP for documentation search, API references and integration coding guidance.",
+              "zh-CN": "使用 Recurly 官方 Compass MCP 搜索文档、查询 API 参考并获取集成编码指引。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/recurly.zip",
+        "sha256": "81621db613d21abfc437073ff1c6755a33f7bffb10302cfbe541f60bfb9701ce"
+      },
+      "icon": "./plugins/recurly/assets/icon.png",
+      "homepage": "https://docs.recurly.com/recurly-subscriptions/docs/compass-public-mcp-server",
+      "license": "MIT",
+      "category": "finance"
     },
     {
       "id": "redis",

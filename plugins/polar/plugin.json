@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "polar",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Polar’s official production and sandbox MCP services for payment, product and subscription workflows.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://polar.sh/docs/integrate/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://polar.sh/docs/integrate/mcp",
+      "connectorPublisher": "Polar",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Polar",
+      "descriptions": {
+        "en": "Connect Polar’s official production and sandbox MCP services for payment, product and subscription workflows.",
+        "zh-CN": "连接 Polar 官方生产与沙箱 MCP 服务，处理支付、产品和订阅工作流。"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "dodopayments",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Dodo Payments’ official MCP to work with payments, subscriptions, customers and product catalogs.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.dodopayments.com/developer-resources/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.dodopayments.com/developer-resources/mcp-server",
+      "connectorPublisher": "Dodo Payments",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Dodo Payments",
+      "descriptions": {
+        "en": "Connect Dodo Payments’ official MCP to work with payments, subscriptions, customers and product catalogs.",
+        "zh-CN": "连接 Dodo Payments 官方 MCP，处理支付、订阅、客户与产品目录工作流。"
+      }
+    }
+  }
+}

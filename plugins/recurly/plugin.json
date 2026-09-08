@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "recurly",
+  "version": "1.0.0-ghast.1",
+  "description": "Use Recurly’s official Compass MCP for documentation search, API references and integration coding guidance.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.recurly.com/recurly-subscriptions/docs/compass-public-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.recurly.com/recurly-subscriptions/docs/compass-public-mcp-server",
+      "connectorPublisher": "Recurly Compass",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Recurly Compass",
+      "descriptions": {
+        "en": "Use Recurly’s official Compass MCP for documentation search, API references and integration coding guidance.",
+        "zh-CN": "使用 Recurly 官方 Compass MCP 搜索文档、查询 API 参考并获取集成编码指引。"
+      }
+    }
+  }
+}
