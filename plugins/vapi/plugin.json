@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "vapi",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage Vapi voice assistants, inspect calls and phone numbers, and perform authorized voice workflows with the official MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.vapi.ai/sdk/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.vapi.ai/sdk/mcp-server",
+      "connectorPublisher": "Vapi",
+      "category": "communication",
+      "icon": "./assets/icon.svg",
+      "displayName": "Vapi",
+      "descriptions": {
+        "en": "Manage Vapi voice assistants, inspect calls and phone numbers, and perform authorized voice workflows with the official MCP server.",
+        "zh-CN": "通过 Vapi 官方 MCP 管理语音助手，查看通话和电话号码，并执行经授权的语音工作流。"
+      },
+      "mcpServerExtensions": {
+        "vapi": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:vapi-token"
+          }
+        }
+      }
+    }
+  }
+}

@@ -13023,6 +13023,51 @@
       "category": "design"
     },
     {
+      "id": "telnyx",
+      "name": "Telnyx",
+      "description": "Discover Telnyx API actions and manage voice, messaging and phone-number resources through the official MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "telnyx",
+        "version": "1.0.0-ghast.1",
+        "description": "Discover Telnyx API actions and manage voice, messaging and phone-number resources through the official MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developers.telnyx.com/docs/development/mcp/remote-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developers.telnyx.com/docs/development/mcp/remote-mcp",
+            "connectorPublisher": "Telnyx",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "Telnyx",
+            "descriptions": {
+              "en": "Discover Telnyx API actions and manage voice, messaging and phone-number resources through the official MCP server.",
+              "zh-CN": "通过 Telnyx 官方 MCP 查询 API 操作，管理语音、消息和电话号码资源。"
+            },
+            "mcpServerExtensions": {
+              "telnyx": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:telnyx-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/telnyx.zip",
+        "sha256": "44c7a7f73cb167b85675c39c8f11e40fa7c92a21ac5b880cf597b2cc8eebf702"
+      },
+      "icon": "./plugins/telnyx/assets/icon.png",
+      "homepage": "https://developers.telnyx.com/docs/development/mcp/remote-mcp",
+      "license": "MIT",
+      "category": "communication"
+    },
+    {
       "id": "temporal",
       "name": "temporal",
       "description": "Comprehensive skill for the entire Temporal lifecycle — developing applications, using the Temporal CLI, running and managing Temporal Server, and working with Temporal Cloud.",
@@ -13605,6 +13650,51 @@
       "repository": "https://github.com/vantage-sh/vantage-mcp-server",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "vapi",
+      "name": "Vapi",
+      "description": "Manage Vapi voice assistants, inspect calls and phone numbers, and perform authorized voice workflows with the official MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "vapi",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage Vapi voice assistants, inspect calls and phone numbers, and perform authorized voice workflows with the official MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.vapi.ai/sdk/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.vapi.ai/sdk/mcp-server",
+            "connectorPublisher": "Vapi",
+            "category": "communication",
+            "icon": "./assets/icon.svg",
+            "displayName": "Vapi",
+            "descriptions": {
+              "en": "Manage Vapi voice assistants, inspect calls and phone numbers, and perform authorized voice workflows with the official MCP server.",
+              "zh-CN": "通过 Vapi 官方 MCP 管理语音助手，查看通话和电话号码，并执行经授权的语音工作流。"
+            },
+            "mcpServerExtensions": {
+              "vapi": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:vapi-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/vapi.zip",
+        "sha256": "eb7bd3442a1e452ef18fd16e25d66dea9eeb006a9898e51e488c4a19613819d5"
+      },
+      "icon": "./plugins/vapi/assets/icon.svg",
+      "homepage": "https://docs.vapi.ai/sdk/mcp-server",
+      "license": "MIT",
+      "category": "communication"
     },
     {
       "id": "veed",

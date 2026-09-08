@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "telnyx",
+  "version": "1.0.0-ghast.1",
+  "description": "Discover Telnyx API actions and manage voice, messaging and phone-number resources through the official MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developers.telnyx.com/docs/development/mcp/remote-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developers.telnyx.com/docs/development/mcp/remote-mcp",
+      "connectorPublisher": "Telnyx",
+      "category": "communication",
+      "icon": "./assets/icon.png",
+      "displayName": "Telnyx",
+      "descriptions": {
+        "en": "Discover Telnyx API actions and manage voice, messaging and phone-number resources through the official MCP server.",
+        "zh-CN": "通过 Telnyx 官方 MCP 查询 API 操作，管理语音、消息和电话号码资源。"
+      },
+      "mcpServerExtensions": {
+        "telnyx": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:telnyx-token"
+          }
+        }
+      }
+    }
+  }
+}
