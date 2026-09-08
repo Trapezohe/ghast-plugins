@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ankr",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Ankr’s official read-only blockchain MCP and OAuth account-management MCP for chain data and RPC operations.",
   "author": {
     "name": "Ghast AI",

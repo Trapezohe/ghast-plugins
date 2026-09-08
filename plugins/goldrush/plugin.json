@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "goldrush",
-  "version": "1.0.0-ghast.1",
   "description": "Query multichain wallet balances, transactions, token prices and NFT data through GoldRush.",
   "author": {
     "name": "Ghast AI",

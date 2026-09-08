@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "toggl",
-  "version": "1.0.0-ghast.1",
   "description": "Manage tasks, projects, time entries and reports in Toggl 2.0.",
   "author": {
     "name": "Ghast AI",

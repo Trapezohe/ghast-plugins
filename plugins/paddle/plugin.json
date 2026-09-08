@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "paddle",
-  "version": "1.0.0-ghast.1",
   "description": "Use official Paddle tools for billing, subscriptions and revenue workflows, with separate live, sandbox and documentation connections.",
   "author": {
     "name": "Ghast AI",

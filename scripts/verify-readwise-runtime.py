@@ -55,7 +55,7 @@ def main() -> int:
     verify.manifest(
         plugin,
         name="readwise",
-        version="1.0.0-ghast.1",
+        version=None,
         revision=REVISION,
     )
     mcp = json.loads((plugin / "mcp.json").read_text())

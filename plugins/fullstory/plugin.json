@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "fullstory",
-  "version": "1.0.0-ghast.1",
   "description": "Analyze behavioral metrics, segments and session replay through Fullstory’s official MCP beta, with global and EU connections.",
   "author": {
     "name": "Ghast AI",

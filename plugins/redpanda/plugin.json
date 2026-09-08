@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "redpanda",
-  "version": "1.0.0-ghast.1",
   "description": "Search Redpanda’s official documentation and API references for streaming clusters, Kafka compatibility, Connect pipelines and operational troubleshooting.",
   "author": {
     "name": "Ghast AI",

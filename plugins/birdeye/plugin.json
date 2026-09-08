@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "birdeye",
-  "version": "1.0.0-ghast.1",
   "description": "Explore token markets, DEX liquidity, trends and historical prices through Birdeye’s official MCP (Beta).",
   "author": {
     "name": "Ghast AI",

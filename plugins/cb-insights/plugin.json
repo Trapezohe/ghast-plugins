@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "cb-insights",
-  "version": "1.0.3-ghast.2",
   "description": "Research private companies, markets, deals, competitors, predictive signals, market maps, and investment questions through CB Insights' official hosted MCP server.",
   "author": {
     "name": "CB Insights",

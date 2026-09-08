@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "doppler",
-  "version": "1.0.0-ghast.1",
   "description": "Use Doppler’s official experimental MCP to work with projects, environments, configs and scoped secrets.",
   "author": {
     "name": "Ghast AI",

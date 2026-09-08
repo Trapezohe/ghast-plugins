@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "incident-io",
-  "version": "1.0.0-ghast.1",
   "description": "Work with incidents, alerts, on-call schedules and escalation context using incident.io’s official remote MCP.",
   "author": {
     "name": "Ghast AI",

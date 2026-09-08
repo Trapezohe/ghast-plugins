@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "catalyst-by-zoho",
-  "version": "0.0.2-ghast.2",
+  "version": "0.0.2",
   "description": "Build, deploy, and operate Catalyst by Zoho applications with official service, SDK, CLI, architecture, pricing, and Zoho MCP skills across eight supported data centers.",
   "author": {
     "name": "Catalyst by Zoho",

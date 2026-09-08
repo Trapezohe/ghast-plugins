@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "coresignal",
-  "version": "1.0.0-ghast.1",
   "description": "Research company, employee and job data with Coresignal.",
   "author": {
     "name": "Ghast AI",

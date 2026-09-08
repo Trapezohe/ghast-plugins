@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "pumble",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Pumble’s official MCP to find workspace conversations, summarize threads and perform authorized collaboration actions.",
   "author": {
     "name": "Ghast AI",

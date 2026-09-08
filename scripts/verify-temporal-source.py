@@ -76,7 +76,7 @@ def main() -> int:
         raise ValueError("official Temporal version changed")
     if manifest.get("$schema") != PLUGIN_SCHEMA:
         raise ValueError("Temporal is not Agent Plugins 1.0")
-    if manifest.get("version") != f"{EXPECTED_VERSION}-ghast.1":
+    if manifest.get("version") != '0.4.0':
         raise ValueError("unexpected Ghast Temporal version")
     ghast = manifest["extensions"]["ai.trapezohe.ghast"]
     if ghast.get("upstreamRevision") != EXPECTED_REVISION:

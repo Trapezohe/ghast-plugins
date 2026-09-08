@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "fiscal-ai",
-  "version": "1.0.3-ghast.2",
   "description": "Research public companies with source-linked financials, filings, ratios, segments, KPIs, prices, ownership, news, events, and fund letters through Fiscal.ai's official hosted MCP server.",
   "author": {
     "name": "Fiscal AI",

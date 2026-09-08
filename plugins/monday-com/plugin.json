@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "monday-com",
-  "version": "0.1.0-ghast.2",
+  "version": "0.1.0",
   "description": "Manage monday.com boards, items, status reporting, docs, and WorkForms with five official workflow skills and monday.com's hosted OAuth MCP server.",
   "author": {
     "name": "monday.com",

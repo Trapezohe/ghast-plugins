@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "statsig",
-  "version": "1.0.0-ghast.2",
   "description": "Inspect and manage Statsig experiments, feature gates, dynamic configs, segments, metrics, results, audit logs, and dashboards through official skills and the official Statsig MCP server.",
   "author": {
     "name": "Statsig",

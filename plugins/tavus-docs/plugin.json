@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tavus-docs",
-  "version": "1.0.0-ghast.1",
   "description": "Explore official Tavus documentation for conversational video, digital replicas and video API integration.",
   "author": {
     "name": "Ghast AI",

@@ -11,6 +11,7 @@ import subprocess
 import urllib.error
 import urllib.parse
 import urllib.request
+from plugin_versions import apply_version, read_upstream_version
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCES = ROOT / 'maintenance/upstreams.json'
@@ -91,6 +92,8 @@ def inventory():
         records[m['name']] = {'provenance': urls, 'monitors': monitors,
                               'update': previous.get(m['name'], {}).get('update'),
                               'policy': 'mapped-pr' if previous.get(m['name'], {}).get('update') else 'review-required'}
+        if 'versionSource' in previous.get(m['name'], {}):
+            records[m['name']]['versionSource'] = previous[m['name']]['versionSource']
     return records
 
 
@@ -196,8 +199,6 @@ def apply_updates(sources, report):
         g = manifest['extensions']['ai.trapezohe.ghast']
         if not revision or revision == g.get('upstreamRevision'): continue
         if not re.fullmatch(r'[0-9a-f]{40}', revision): raise ValueError('Invalid upstream revision')
-        match = re.fullmatch(r'(.+-ghast\.)(\d+)', manifest['version'])
-        if not match: raise ValueError(f'{name}: unsupported version format')
         files = []
         plugin_root = manifest_path.parent.resolve()
         for src, dst in update['files'].items():
@@ -212,15 +213,26 @@ def apply_updates(sources, report):
             after = fetch(f'https://raw.githubusercontent.com/{update["repository"]}/{revision}/{urllib.parse.quote(src, safe="/")}')
             files.append((target, before, after))
         changed = [str(p.relative_to(ROOT)) for p, before, after in files if before != after]
+        version_source = source.get('versionSource')
+        if version_source:
+            safe_relative(version_source['path'])
+            if version_source['repository'] != update['repository']:
+                raise ValueError(f'{name}: version source must match update repository')
+            version_data = fetch(f"https://raw.githubusercontent.com/{update['repository']}/{revision}/{urllib.parse.quote(version_source['path'], safe='/')}")
+            version_source = {**version_source, 'revision': revision,
+                              'sha256': hashlib.sha256(version_data).hexdigest(),
+                              'version': read_upstream_version(version_data, version_source['path'])}
         for target, _, data in files:
             target.write_bytes(data)
             update['hashes'][str(target.relative_to(plugin_root))] = hashlib.sha256(data).hexdigest()
+        if version_source:
+            source['versionSource'] = version_source
         previous_revision = g.get('upstreamRevision')
         readme = plugin_root / 'README.md'
         if previous_revision and readme.exists():
             readme.write_text(readme.read_text().replace(previous_revision, revision))
         g['upstreamRevision'] = revision
-        manifest['version'] = match[1] + str(int(match[2]) + 1)
+        apply_version(manifest, source)
         write_json(manifest_path, manifest)
         for m in source['monitors']:
             if m.get('repository') == update['repository']: m['packagedRevision'] = revision

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "coinbase-developer",
-  "version": "1.0.0-ghast.1",
   "description": "Search Coinbase Developer Platform documentation for wallet and payment integrations.",
   "author": {
     "name": "Ghast AI",

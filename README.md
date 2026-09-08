@@ -99,9 +99,15 @@ CI uses Python 3.12 and Node.js 24. Keep Node.js and Bash available for script c
 
 Install the generated package in Ghast, check its visible presentation and relevant runtime behavior, then uninstall the test installation. Submit the source changes together with regenerated packages and catalog in a pull request. Preserve upstream licenses and record any compatibility changes. Import scripts are for reviewed, pinned upstream sources—not wholesale marketplace mirroring.
 
+## Versions
+
+Plugin versions come from verified upstream manifests or official releases, without a Ghast suffix. The source, packaged revision, and evidence digest are recorded in `maintenance/upstreams.json` under `versionSource`. When no verified upstream package version is available, the manifest omits `version`; an API protocol version or unrelated repository package version is not substituted.
+
+The catalog builder applies this policy to source manifests before packaging, including legacy importer output. When updating an upstream snapshot, refresh its version evidence at the same time. A version for a different packaged revision fails validation. Changes to Ghast adapters, translations, or logos are tracked by Git and the package SHA-256 digest; the client can detect changed content even when the upstream version is unchanged.
+
 ## Keeping plugins current
 
-The maintenance workflow is configured to check upstreams daily and collect changes into a single review PR. **Activation is pending:** the workflow must land on the default branch and GitHub Actions must be allowed to create pull requests.
+The maintenance workflow is configured to check upstreams daily and collect changes into a single review PR. **PR creation still requires activation:** GitHub Actions must be allowed to create pull requests in the repository settings.
 
 Automatic discovery is broader than automatic rewriting. The current inventory covers GitHub revisions, npm/PyPI releases, and literal HTTPS endpoints; unsupported sources require manual review. Ponytail currently has a guarded file-update mapping. Other detected changes produce review information rather than silently replacing plugin contents.
 

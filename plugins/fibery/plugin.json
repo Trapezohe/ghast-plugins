@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "fibery",
-  "version": "1.0.0-ghast.1",
   "description": "Search Fibery workspace data and documents, inspect schemas, and manage entities and views through its official MCP server.",
   "author": {
     "name": "Ghast AI",

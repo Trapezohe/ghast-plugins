@@ -59,7 +59,7 @@ def main() -> int:
     manifest = verify.manifest(
         plugin,
         name="alpaca",
-        version="0.1.0-ghast.1",
+        version='0.1.0',
         revision=AGENTIC_REVISION,
     )
     ghast = manifest["extensions"]["ai.trapezohe.ghast"]

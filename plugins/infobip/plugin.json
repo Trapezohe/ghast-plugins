@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "infobip",
-  "version": "1.0.0-ghast.1",
   "description": "Connect official Infobip tools for SMS, email, WhatsApp, voice, customer profiles, account management and documentation.",
   "author": {
     "name": "Ghast AI",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "resend",
-  "version": "1.0.0-ghast.1",
   "description": "Review email activity, manage contacts and domains, and prepare transactional email workflows with Resend.",
   "author": {
     "name": "Ghast AI",

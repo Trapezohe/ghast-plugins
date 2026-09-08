@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "hex",
-  "version": "1.0.0-ghast.1",
   "description": "Search Hex projects and explore data through Hex Threads conversations.",
   "author": {
     "name": "Ghast AI",

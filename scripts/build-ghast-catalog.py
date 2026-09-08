@@ -7,6 +7,7 @@ import hashlib
 import json
 import zipfile
 from plugin_categories import plugin_category
+from plugin_versions import apply_version
 from pathlib import Path
 
 
@@ -18,6 +19,7 @@ PLUGIN_DIR = Path("plugins")
 def main() -> int:
     PACKAGE_DIR.mkdir(exist_ok=True)
 
+    upstreams = json.loads(Path("maintenance/upstreams.json").read_text())
     plugins = []
     package_names = set()
     for plugin_dir in sorted(PLUGIN_DIR.iterdir()):
@@ -26,6 +28,10 @@ def main() -> int:
             continue
 
         manifest = json.loads(manifest_path.read_text())
+        original = dict(manifest)
+        apply_version(manifest, upstreams.get(manifest["name"], {}))
+        if manifest != original:
+            manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n")
         if manifest["name"] != plugin_dir.name:
             raise ValueError(f"{manifest_path}: name must match directory")
         if (plugin_dir / ".app.json").exists():

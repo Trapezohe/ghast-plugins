@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "todoist",
-  "version": "1.0.0-ghast.1",
   "description": "Plan projects, organize tasks, review deadlines and update your to-do lists through Todoist.",
   "author": {
     "name": "Ghast AI",

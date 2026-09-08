@@ -23,7 +23,7 @@ def main() -> int:
     imp = verify.load_importer()
     if imp.git_revision(source) != REVISION or imp.normalized_git_remote(source) != imp.normalized_repository_url("https://github.com/twilio/ai"):
         raise ValueError("Twilio official source changed")
-    verify.manifest(plugin, name="twilio-developer-kit", version="0.2.0-ghast.1", revision=REVISION)
+    verify.manifest(plugin, name="twilio-developer-kit", version='0.2.0', revision=REVISION)
     with tempfile.TemporaryDirectory(prefix="ghast-twilio-expected-") as temp:
         expected = Path(temp) / "skills"
         imp.copy_skill_tree(source / "skills", expected, recursive=True, preserve_agent_metadata=False, frontmatter_overrides=imp.PLUGINS["twilio-developer-kit"]["frontmatter_overrides"])

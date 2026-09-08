@@ -46,7 +46,7 @@ def main() -> int:
     verify.manifest(
         plugin,
         name="heygen",
-        version="3.2.0-ghast.1",
+        version='3.2.0',
         revision=REVISION,
     )
 

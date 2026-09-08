@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "sanity",
-  "version": "1.0.0-ghast.1",
   "description": "Query structured content and manage Sanity documents and releases.",
   "author": {
     "name": "Ghast AI",

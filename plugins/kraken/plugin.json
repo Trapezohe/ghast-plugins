@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "kraken",
-  "version": "1.0.0-ghast.1",
   "description": "Query public Kraken prices, order books, trades and market information through the official CLI MCP server.",
   "author": {
     "name": "Ghast AI",

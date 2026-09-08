@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "consensus",
-  "version": "1.0.0-ghast.1",
   "description": "Search academic research with Consensus’s official MCP and build evidence-backed reading lists and literature reviews.",
   "author": {
     "name": "Ghast AI",

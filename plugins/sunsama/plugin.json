@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "sunsama",
-  "version": "1.0.0-ghast.1",
   "description": "Plan daily work and manage Sunsama tasks, notes and channels through the official OAuth MCP connection.",
   "author": {
     "name": "Ghast AI",

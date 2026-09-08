@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "carta-crm",
-  "version": "1.5.3-ghast.2",
+  "version": "1.5.3",
   "description": "Manage investors, companies, contacts, deals, notes, fundraisings, tasks, themes, reports, campaigns, files, and relationship context through Carta's official CRM skills and hosted MCP server.",
   "author": {
     "name": "Carta",

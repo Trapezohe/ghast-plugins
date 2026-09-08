@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "circleci",
-  "version": "1.0.47993-ghast.1",
   "description": "Diagnose CircleCI runs, inspect logs, tests, and artifacts, rerun or cancel workflows, validate configuration, and manage CircleCI resources through CircleCI's official hosted MCP and full CLI MCP.",
   "author": {
     "name": "Circle Internet Services, Inc.",
@@ -21,5 +20,6 @@
         "zh-CN": "诊断构建与测试结果，查看日志和产物，管理授权的 CI 工作流。"
       }
     }
-  }
+  },
+  "version": "1.0.47993"
 }

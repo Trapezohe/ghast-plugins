@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ranked-ai",
-  "version": "1.0.3-ghast.2",
   "description": "Analyze and manage Ranked AI SEO projects, rankings, AI visibility, audits, backlinks, content, and reports through Ranked AI's official hosted MCP.",
   "author": {
     "name": "Ranked AI, LLC",

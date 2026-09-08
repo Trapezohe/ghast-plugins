@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "convex",
-  "version": "1.44.0-ghast.1",
   "description": "Build and inspect Convex backends with the official Convex CLI, project Agent Skills, and 12-tool MCP server.",
   "author": {
     "name": "Convex, Inc.",

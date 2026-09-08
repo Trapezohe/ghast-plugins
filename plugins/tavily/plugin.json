@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tavily",
-  "version": "1.0.0-ghast.1",
   "description": "Research the web, extract page content and explore websites with Tavily search and crawling tools.",
   "author": {
     "name": "Ghast AI",

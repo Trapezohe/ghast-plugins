@@ -65,7 +65,7 @@ def main() -> int:
     mcp = json.loads((plugin / "mcp.json").read_text())
     if upstream.get("version") != EXPECTED_VERSION:
         raise ValueError("Airtable version changed")
-    if manifest.get("$schema") != PLUGIN_SCHEMA or manifest.get("version") != f"{EXPECTED_VERSION}-ghast.1":
+    if manifest.get("$schema") != PLUGIN_SCHEMA or manifest.get("version") != '0.1.0':
         raise ValueError("unexpected Airtable Agent Plugins 1.0 manifest")
     ghast = manifest["extensions"]["ai.trapezohe.ghast"]
     if ghast.get("upstreamRevision") != EXPECTED_REVISION or not (plugin / ghast["icon"].removeprefix("./")).is_file():

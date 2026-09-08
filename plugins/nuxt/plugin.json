@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "nuxt",
-  "version": "1.0.0-ghast.1",
   "description": "Explore official Nuxt documentation, modules and deployment guidance through Nuxt’s public MCP server.",
   "author": {
     "name": "Ghast AI",

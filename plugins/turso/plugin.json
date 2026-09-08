@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "turso",
-  "version": "1.0.0-ghast.1",
   "description": "Use Turso’s official built-in MCP to inspect local SQL databases, query tables and perform authorized data or schema changes.",
   "author": {
     "name": "Ghast AI",

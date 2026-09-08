@@ -24,6 +24,8 @@ except ImportError:
     validate_agent_skill = None
 
 
+from plugin_versions import apply_version
+
 PLUGIN_DIR = Path("plugins")
 PACKAGE_DIR = Path("packages")
 CATALOG_PATH = Path("plugin-catalog.json")
@@ -126,6 +128,7 @@ def main() -> int:
 
 def validate_sources(errors: list[str]) -> dict[str, dict]:
     manifests: dict[str, dict] = {}
+    upstreams = json.loads(Path("maintenance/upstreams.json").read_text())
     for plugin_dir in sorted(path for path in PLUGIN_DIR.iterdir() if path.is_dir()):
         manifest_path = plugin_dir / "plugin.json"
         if not manifest_path.is_file():
@@ -138,6 +141,13 @@ def validate_sources(errors: list[str]) -> dict[str, dict]:
         if name != plugin_dir.name:
             errors.append(f"{manifest_path}: name must match directory")
             continue
+        expected = dict(manifest)
+        try:
+            apply_version(expected, upstreams.get(name, {}))
+            if manifest.get("version") != expected.get("version"):
+                errors.append(f"{manifest_path}: version must match verified upstream evidence (or be omitted)")
+        except ValueError as error:
+            errors.append(str(error))
         manifests[name] = manifest
 
         validate_agent_plugin_manifest(manifest_path, manifest, errors)

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "hibob",
-  "version": "1.0.0-ghast.1",
   "description": "Connect HiBob’s official MCP with employee OAuth for people, organization, time-off and workplace workflows.",
   "author": {
     "name": "Ghast AI",

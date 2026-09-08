@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "midpage",
-  "version": "0.2.0-ghast.2",
   "description": "Research US case law, statutes, regulations, and federal dockets, then draft and cite-check litigation work product with Midpage's official MCP and MIT-licensed skills.",
   "author": {
     "name": "Midpage AI Inc.",

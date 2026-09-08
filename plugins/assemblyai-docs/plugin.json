@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "assemblyai-docs",
-  "version": "1.0.0-ghast.1",
   "description": "Search official AssemblyAI documentation for speech recognition, streaming transcription and voice-agent integration.",
   "author": {
     "name": "Ghast AI",

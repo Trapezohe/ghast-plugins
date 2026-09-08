@@ -22,7 +22,7 @@ def main() -> int:
     imp = verify.load_importer()
     if imp.git_revision(source) != REVISION or imp.normalized_git_remote(source) != imp.normalized_repository_url("https://github.com/zoom/skills"):
         raise ValueError("Zoom official source changed")
-    verify.manifest(plugin, name="zoom", version="1.0.0-ghast.1", revision=REVISION)
+    verify.manifest(plugin, name="zoom", version='1.0.0', revision=REVISION)
     with tempfile.TemporaryDirectory(prefix="ghast-zoom-expected-") as temp:
         staging = Path(temp) / "staging"
         staging.mkdir()

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "microsoft-workiq",
-  "version": "1.0.0-ghast.1",
   "description": "Search and work with Microsoft 365 mail, meetings, files and Teams context through Microsoft’s official Work IQ MCP. Requires tenant setup and your own Entra app.",
   "author": {
     "name": "Ghast AI",

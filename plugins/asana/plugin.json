@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "asana",
-  "version": "0.1.0-ghast.1",
+  "version": "0.1.0",
   "description": "Read and manage Asana tasks, subtasks, comments, due dates, projects, portfolios, status updates, teams, users, and workspace priorities through Asana's official V2 MCP server.",
   "author": {
     "name": "Asana, Inc.",

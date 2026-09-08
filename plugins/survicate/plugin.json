@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "survicate",
-  "version": "1.0.0-ghast.1",
   "description": "Analyze survey feedback, explore research insights and prepare survey drafts using Survicate’s official MCP.",
   "author": {
     "name": "Ghast AI",

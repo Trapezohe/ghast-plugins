@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "intercom",
-  "version": "0.1.0-ghast.2",
+  "version": "0.1.0",
   "description": "Search and analyze Intercom conversations, contacts, companies, Help Center articles, and tickets through Intercom's official hosted MCP service and official CLI.",
   "author": {
     "name": "Intercom",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "magicpath",
-  "version": "1.0.9-ghast.2",
   "description": "Search, inspect, install, create, and edit MagicPath UI components and canvas projects through MagicPath's official pinned CLI.",
   "author": {
     "name": "MagicPath",

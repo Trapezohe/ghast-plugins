@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "kittl",
-  "version": "1.0.0-ghast.1",
   "description": "Create images, videos and design assets and run creative workflows in Kittl.",
   "author": {
     "name": "Ghast AI",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "vonage",
-  "version": "1.0.0-ghast.1",
   "description": "Use Vonage’s official MCP for account balances, phone numbers, communication reports, SMS, WhatsApp, RCS and voice workflows.",
   "author": {
     "name": "Ghast AI",

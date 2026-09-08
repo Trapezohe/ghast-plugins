@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "mailerlite",
-  "version": "1.0.0-ghast.1",
   "description": "Manage subscribers, campaigns, groups and email marketing workflows in MailerLite.",
   "author": {
     "name": "Ghast AI",

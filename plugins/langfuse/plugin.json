@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "langfuse",
-  "version": "1.0.0-ghast.1",
   "description": "Query Langfuse observations and metrics and manage prompts, datasets and evaluations through the official project MCP server.",
   "author": {
     "name": "Ghast AI",

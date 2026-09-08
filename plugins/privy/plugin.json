@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "privy",
-  "version": "1.0.0-ghast.1",
   "description": "Search Privy’s official documentation for embedded wallets, authentication, signing policies and server integrations.",
   "author": {
     "name": "Ghast AI",

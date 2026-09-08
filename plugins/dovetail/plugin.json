@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "dovetail",
-  "version": "1.0.3-ghast.2",
   "description": "Search, inspect, synthesize, and explicitly create Dovetail projects, research data, highlights, docs, channels, themes, people, tags, fields, and files through Dovetail's official hosted MCP server.",
   "author": {
     "name": "Dovetail",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "kong-konnect",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect API gateways, services, routes and performance with Kong Konnect’s official MCP.",
   "author": {
     "name": "Ghast AI",

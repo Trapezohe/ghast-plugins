@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tana",
-  "version": "1.0.0-ghast.1",
   "description": "Search Tana content, read meeting context and prepare updates to documents and structured items.",
   "author": {
     "name": "Ghast AI",

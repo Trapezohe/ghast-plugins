@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "aiera",
-  "version": "1.2.1-ghast.1",
   "description": "Search and analyze Aiera corporate events, transcripts, filings, company publications, equities, financials, broker research, Third Bridge content, and trusted web results through Aiera's official MCP server.",
   "author": {
     "name": "Aiera, Inc.",
@@ -21,5 +20,6 @@
         "zh-CN": "检索企业活动、财报、电话会议记录与研究资料，开展金融分析。"
       }
     }
-  }
+  },
+  "version": "1.2.1"
 }

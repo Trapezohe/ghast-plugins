@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "1inch",
-  "version": "1.0.0-ghast.1",
   "description": "Research DeFi data and access 1inch swaps, limit orders and portfolio tools with account authorization.",
   "author": {
     "name": "Ghast AI",

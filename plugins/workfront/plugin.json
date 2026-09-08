@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "workfront",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Adobe Workfront’s official MCP using service credentials to search work, inspect projects and perform authorized project operations.",
   "author": {
     "name": "Ghast AI",

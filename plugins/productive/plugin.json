@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "productive",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Productive’s official MCP to manage projects, tasks, time tracking, CRM and business reports in your authorized organization.",
   "author": {
     "name": "Ghast AI",

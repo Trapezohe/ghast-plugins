@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "coveo",
-  "version": "0.1.0-ghast.2",
+  "version": "0.1.0",
   "description": "Search authorized enterprise content, retrieve grounded passages, and generate source-linked answers through Coveo's pinned official Labs MCP implementation.",
   "author": {
     "name": "Coveo",

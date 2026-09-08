@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "gitlab",
-  "version": "1.0.0-ghast.1",
   "description": "Work with GitLab projects, issues, merge requests and development workflows.",
   "author": {
     "name": "Ghast AI",

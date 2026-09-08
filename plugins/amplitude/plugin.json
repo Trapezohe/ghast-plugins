@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "amplitude",
-  "version": "1.5.2-ghast.2",
+  "version": "1.5.2",
   "description": "Analyze Amplitude charts, dashboards, experiments, session replays, feedback, accounts, reliability, AI agents, taxonomy, and instrumentation through Amplitude's official skills and hosted MCP server.",
   "author": {
     "name": "Amplitude",

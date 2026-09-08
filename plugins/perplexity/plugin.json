@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "perplexity",
-  "version": "1.0.0-ghast.1",
   "description": "Use Perplexity’s official web search, question-answering, reasoning and research tools with your API account.",
   "author": {
     "name": "Ghast AI",

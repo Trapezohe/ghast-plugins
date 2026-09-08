@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "swagger",
-  "version": "1.0.0-ghast.1",
   "description": "Discover and manage API specifications and developer portals with Swagger Studio and Portal.",
   "author": {
     "name": "Ghast AI",

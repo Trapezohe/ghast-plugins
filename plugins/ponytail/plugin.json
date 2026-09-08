@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ponytail",
-  "version": "4.9.0-ghast.1",
+  "version": "4.9.0",
   "description": "Apply Ponytail’s minimal-code rules through Ghast lifecycle hooks, with per-conversation modes and subagent inheritance.",
   "author": {
     "name": "Dietrich Gebert",

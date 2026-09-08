@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "featurebase",
-  "version": "1.0.0-ghast.1",
   "description": "Manage customer feedback, support conversations, help-center content and reports through Featurebase’s official MCP.",
   "author": {
     "name": "Ghast AI",

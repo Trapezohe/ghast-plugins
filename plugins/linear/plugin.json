@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "linear",
-  "version": "0.0.3-ghast.2",
   "description": "Manage Linear issues, projects, and team workflows through Linear's official MCP server.",
   "author": {
     "name": "Ghast AI",

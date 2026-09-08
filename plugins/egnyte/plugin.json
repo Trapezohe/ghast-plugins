@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "egnyte",
-  "version": "1.0.3-ghast.1",
+  "version": "1.0.0",
   "description": "Search, read, analyze, upload, share, and administer Egnyte content through Egnyte's official hosted MCP and agent CLI.",
   "author": {
     "name": "Egnyte",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "growthbook",
-  "version": "1.0.0-ghast.1",
   "description": "Manage feature flags and inspect experiments through GrowthBook’s official MCP and bundled workflow guidance.",
   "author": {
     "name": "Ghast AI",

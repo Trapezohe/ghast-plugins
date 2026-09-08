@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "taskade",
-  "version": "1.0.0-ghast.1",
   "description": "Work with Taskade projects, tasks, agents and Genesis app files through the official hosted MCP server.",
   "author": {
     "name": "Ghast AI",

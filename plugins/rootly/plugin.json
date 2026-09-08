@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "rootly",
-  "version": "1.0.0-ghast.1",
   "description": "Explore incident response and on-call workflows using Rootly’s official Code Mode MCP connection.",
   "author": {
     "name": "Ghast AI",

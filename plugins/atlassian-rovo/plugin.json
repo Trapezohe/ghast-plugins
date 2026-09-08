@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "atlassian-rovo",
-  "version": "1.0.0-ghast.1",
   "description": "Search and manage Jira, Confluence, Jira Service Management, Bitbucket, Compass, and Teamwork Graph through Atlassian's official Rovo MCP server and workflow skills.",
   "author": {
     "name": "Atlassian",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "hedera",
-  "version": "1.0.0-ghast.1",
   "description": "Use Hedera’s official documentation and Testnet MCP for network queries and unsigned transaction preparation.",
   "author": {
     "name": "Ghast AI",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "chroma",
-  "version": "1.0.0-ghast.1",
   "description": "Manage Chroma Cloud collections and documents, run vector queries and inspect stored data.",
   "author": {
     "name": "Ghast AI",

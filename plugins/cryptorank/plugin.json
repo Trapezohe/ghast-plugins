@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "cryptorank",
-  "version": "1.0.0-ghast.1",
   "description": "Research crypto funding rounds, investors, token unlocks and project teams through CryptoRank’s official MCP (Beta).",
   "author": {
     "name": "Ghast AI",

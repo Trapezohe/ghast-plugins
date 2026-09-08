@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "slite",
-  "version": "1.0.0-ghast.1",
   "description": "Search team knowledge, create notes and update workspace documents in Slite.",
   "author": {
     "name": "Ghast AI",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "shortcut",
-  "version": "1.0.0-ghast.1",
   "description": "Find and manage Shortcut stories, epics and documents to connect product planning with development.",
   "author": {
     "name": "Ghast AI",

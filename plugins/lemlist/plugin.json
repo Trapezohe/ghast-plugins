@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "lemlist",
-  "version": "1.0.0-ghast.1",
   "description": "Manage outreach campaigns, explore leads and analyze performance with lemlist’s official MCP.",
   "author": {
     "name": "Ghast AI",

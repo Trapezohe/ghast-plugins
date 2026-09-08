@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "happenstance",
-  "version": "1.0.3-ghast.2",
   "description": "Search authorized professional networks, identify warm introduction paths, and research source-linked people profiles through Happenstance's official hosted MCP.",
   "author": {
     "name": "Happenstance, Inc.",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "posthog",
-  "version": "1.0.0-ghast.2",
   "description": "Analyze and manage PostHog analytics, flags, experiments, errors, replays, surveys, dashboards, SQL, AI observability, data pipelines, and product workflows through PostHog's official hosted MCP server.",
   "author": {
     "name": "PostHog Inc.",

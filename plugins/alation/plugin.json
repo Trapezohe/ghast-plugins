@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "alation",
-  "version": "1.0.1-ghast.1",
+  "version": "1.0.1",
   "description": "Search and browse trusted Alation catalog context, query data products, inspect BI lineage, configure agents and tools, automate workflows, and curate governed metadata through Alation's official Codex skills and CLI.",
   "author": {
     "name": "Alation AI",

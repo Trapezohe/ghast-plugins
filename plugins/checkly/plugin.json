@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "checkly",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect monitoring checks, test results and incidents, and trigger existing checks in Checkly.",
   "author": {
     "name": "Ghast AI",

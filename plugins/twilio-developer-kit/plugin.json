@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "twilio-developer-kit",
-  "version": "0.2.0-ghast.1",
+  "version": "0.2.0",
   "description": "Twilio Skills provide procedural knowledge for AI coding agents — which APIs to use, in what order, and what to avoid. Covers Messaging, Voice, Verify, SendGrid, and 30+ products.",
   "author": {
     "name": "Twilio",

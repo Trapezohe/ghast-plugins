@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "dingtalk",
-  "version": "1.0.0-ghast.2",
   "description": "Access contacts, calendars, tasks, reports and collaboration services through DingTalk’s official MCP.",
   "author": {
     "name": "Ghast AI",

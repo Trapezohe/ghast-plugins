@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tallyfy",
-  "version": "1.0.0-ghast.1",
   "description": "Manage workflow tasks, business processes and approvals through Tallyfy.",
   "author": {
     "name": "Ghast AI",

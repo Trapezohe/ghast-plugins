@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "google-analytics",
-  "version": "1.0.0-ghast.1",
   "description": "Read Google Analytics account, property and reporting data through Google’s official local MCP server.",
   "author": {
     "name": "Ghast AI",

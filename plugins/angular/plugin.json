@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "angular",
-  "version": "1.0.0-ghast.1",
   "description": "Use Angular’s official CLI MCP tools for workspace analysis, documentation, development servers and build workflows.",
   "author": {
     "name": "Ghast AI",

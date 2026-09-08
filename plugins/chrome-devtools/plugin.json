@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "chrome-devtools",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect browser pages, debug network and console issues, and analyze performance with Google’s official Chrome DevTools MCP.",
   "author": {
     "name": "Ghast AI",

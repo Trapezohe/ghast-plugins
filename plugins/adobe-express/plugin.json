@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "adobe-express",
-  "version": "1.0.0-ghast.1",
   "description": "Search Adobe Express add-on documentation and retrieve official SDK TypeScript definitions with Adobe’s native developer MCP.",
   "author": {
     "name": "Ghast AI",

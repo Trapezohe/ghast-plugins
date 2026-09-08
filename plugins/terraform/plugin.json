@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "terraform",
-  "version": "1.0.0-ghast.1",
   "description": "Find Terraform providers, modules and policy documentation using HashiCorp’s official MCP server.",
   "author": {
     "name": "Ghast AI",

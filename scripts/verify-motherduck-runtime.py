@@ -64,7 +64,7 @@ def main() -> int:
     verify.manifest(
         plugin,
         name="motherduck",
-        version="1.0.8-ghast.1",
+        version='1.0.8',
         revision=REVISION,
     )
 

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "calendly",
-  "version": "1.0.2-ghast.2",
   "description": "Inspect Calendly meetings and availability, manage event types and schedules, create booking links, book or cancel meetings, and administer invitations through Calendly's official hosted MCP server.",
   "author": {
     "name": "Calendly",

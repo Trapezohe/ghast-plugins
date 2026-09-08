@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "descope",
-  "version": "1.0.0-ghast.1",
   "description": "Manage Descope identity projects, users, tenants, access controls and flows through its official MCP server.",
   "author": {
     "name": "Ghast AI",

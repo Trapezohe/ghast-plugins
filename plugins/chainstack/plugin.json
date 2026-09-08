@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "chainstack",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect blockchain infrastructure, search documentation and manage Chainstack nodes.",
   "author": {
     "name": "Ghast AI",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "google-sheets",
-  "version": "1.0.0-ghast.1",
   "description": "Read spreadsheets and update values, formulas and structure through Google’s official Workspace MCP service.",
   "author": {
     "name": "Ghast AI",

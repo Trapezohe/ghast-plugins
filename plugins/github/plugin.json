@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "github",
-  "version": "1.0.0-ghast.1",
   "description": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Connect with your GitHub token.",
   "author": {
     "name": "Ghast AI",

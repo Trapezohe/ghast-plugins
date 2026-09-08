@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "greenhouse",
-  "version": "1.0.0-ghast.1",
   "description": "Explore recruiting data and perform supported hiring workflows with Greenhouse’s official MCP (Open Beta).",
   "author": {
     "name": "Ghast AI",

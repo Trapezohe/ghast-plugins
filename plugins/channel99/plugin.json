@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "channel99",
-  "version": "1.0.3-ghast.2",
   "description": "Analyze read-only B2B marketing performance, channels, vendors, campaigns, audiences, account engagement, attribution, spend efficiency, and pipeline influence through Channel99's official hosted MCP server.",
   "author": {
     "name": "Channel99 Inc.",

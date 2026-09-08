@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "craft",
-  "version": "1.0.0-ghast.1",
   "description": "Search and organize Craft documents, edit content and manage collections in a connected space.",
   "author": {
     "name": "Ghast AI",

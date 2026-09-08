@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "helius",
-  "version": "1.0.0-ghast.1",
   "description": "Query Solana assets, wallet data, transactions and network information through Helius’s official MCP in its non-signing credential mode.",
   "author": {
     "name": "Ghast AI",

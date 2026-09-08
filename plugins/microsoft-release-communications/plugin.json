@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "microsoft-release-communications",
-  "version": "1.0.0-ghast.1",
   "description": "Search Microsoft 365 roadmap entries and Azure updates through Microsoft's public Release Communications MCP server.",
   "author": {
     "name": "Ghast AI",

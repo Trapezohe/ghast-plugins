@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "box",
-  "version": "1.0.0-ghast.1",
   "description": "Search and manage Box files and folders and use available Box AI document tools.",
   "author": {
     "name": "Ghast AI",

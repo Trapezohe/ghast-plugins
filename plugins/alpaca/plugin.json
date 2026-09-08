@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "alpaca",
-  "version": "0.1.0-ghast.1",
+  "version": "0.1.0",
   "description": "Research stocks, options, crypto, fixed income, indices, news, and corporate actions through Alpaca's official market-data MCP, with separately authorized paper and live trading servers for account, order, position, portfolio, and watchlist workflows.",
   "author": {
     "name": "Alpaca",

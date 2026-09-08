@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "lokalise",
-  "version": "1.0.0-ghast.1",
   "description": "Manage localization projects, translation keys, tasks, glossaries and screenshots in Lokalise.",
   "author": {
     "name": "Ghast AI",

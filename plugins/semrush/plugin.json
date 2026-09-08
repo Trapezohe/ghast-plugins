@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "semrush",
-  "version": "1.0.0-ghast.2",
   "description": "Retrieve read-only Semrush SEO, keyword, backlink, traffic, audience, market, paid search, shopping, site audit, position tracking, and project data through Semrush's official MCP server.",
   "author": {
     "name": "Semrush Holdings, Inc.",

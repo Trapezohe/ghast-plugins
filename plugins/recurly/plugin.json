@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "recurly",
-  "version": "1.0.0-ghast.1",
   "description": "Use Recurly’s official Compass MCP for documentation search, API references and integration coding guidance.",
   "author": {
     "name": "Ghast AI",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "loops",
-  "version": "1.0.0-ghast.1",
   "description": "Manage contacts, mailing lists, events and transactional email with Loops’ official MCP.",
   "author": {
     "name": "Ghast AI",

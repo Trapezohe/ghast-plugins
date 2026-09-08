@@ -36,7 +36,7 @@ def main() -> int:
     manifest = verify.manifest(
         plugin,
         name="convex",
-        version="1.44.0-ghast.1",
+        version=None,
         revision=REVISION,
     )
     if manifest.get("license") != "Apache-2.0 AND MIT":

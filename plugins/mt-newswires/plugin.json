@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "mt-newswires",
-  "version": "1.0.0-ghast.2",
   "description": "Search and retrieve licensed real-time North American and global financial news from MT Newswires through its officially authorized viaNexus MCP service.",
   "author": {
     "name": "MT Newswires",

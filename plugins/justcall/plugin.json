@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "justcall",
-  "version": "1.0.0-ghast.1",
   "description": "Use JustCall’s official MCP for calls, messages, contacts, agent availability, analytics and authorized sales communication workflows.",
   "author": {
     "name": "Ghast AI",

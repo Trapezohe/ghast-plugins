@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "helicone",
-  "version": "1.0.0-ghast.1",
   "description": "Query Helicone requests and sessions to investigate errors, latency and model usage with the official MCP server.",
   "author": {
     "name": "Ghast AI",

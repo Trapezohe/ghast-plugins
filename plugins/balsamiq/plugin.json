@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "balsamiq",
-  "version": "1.0.0-ghast.1",
   "description": "Read, create and refine wireframes in Balsamiq Cloud through its official MCP.",
   "author": {
     "name": "Ghast AI",

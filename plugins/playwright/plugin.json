@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "playwright",
-  "version": "1.0.0-ghast.1",
   "description": "Automate browser workflows and verify web interfaces using Microsoft’s official Playwright MCP.",
   "author": {
     "name": "Ghast AI",

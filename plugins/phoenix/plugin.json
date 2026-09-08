@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "phoenix",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect Phoenix projects, traces, sessions and experiments, and manage prompts and evaluation datasets through the official MCP server.",
   "author": {
     "name": "Ghast AI",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "nansen",
-  "version": "1.0.0-ghast.1",
   "description": "Analyze blockchain activity, token flows, wallets and smart-money data with Nansen.",
   "author": {
     "name": "Ghast AI",

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "redis-docs",
-  "version": "1.0.0-ghast.1",
   "description": "Search, retrieve and ask questions about Redis documentation using Redis’s public MCP service.",
   "author": {
     "name": "Ghast AI",

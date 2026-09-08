@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "bird",
-  "version": "1.0.0-ghast.1",
   "description": "Manage Bird messaging across email, SMS, WhatsApp and voice.",
   "author": {
     "name": "Ghast AI",

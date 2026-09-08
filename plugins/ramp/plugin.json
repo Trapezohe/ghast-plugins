@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ramp",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Ramp’s official account, developer documentation and benchmark data services for spend and finance workflows.",
   "author": {
     "name": "Ghast AI",

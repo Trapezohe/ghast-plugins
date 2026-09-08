@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "suprsend",
-  "version": "1.0.0-ghast.1",
   "description": "Manage SuprSend users, tenants and notification preferences, list workflows and search documentation through the official MCP server.",
   "author": {
     "name": "Ghast AI",

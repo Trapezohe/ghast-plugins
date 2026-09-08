@@ -229,7 +229,7 @@ def main() -> int:
         raise ValueError("official Supabase version changed")
     if manifest.get("$schema") != PLUGIN_SCHEMA:
         raise ValueError("Supabase is not Agent Plugins 1.0")
-    if manifest.get("version") != f"{EXPECTED_VERSION}-ghast.1":
+    if manifest.get("version") != '0.1.8':
         raise ValueError("unexpected Ghast Supabase version")
     ghast = manifest["extensions"]["ai.trapezohe.ghast"]
     if ghast.get("upstreamRevision") != EXPECTED_REVISION:

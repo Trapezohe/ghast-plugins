@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "allium",
-  "version": "1.0.0-ghast.1",
   "description": "Query blockchain datasets, explore wallet data and manage saved analytics with Allium’s official MCP.",
   "author": {
     "name": "Ghast AI",

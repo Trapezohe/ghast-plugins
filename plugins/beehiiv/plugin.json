@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "beehiiv",
-  "version": "1.0.0-ghast.1",
   "description": "Manage newsletter drafts, audiences, segments and growth analytics through beehiiv’s official MCP.",
   "author": {
     "name": "Ghast AI",

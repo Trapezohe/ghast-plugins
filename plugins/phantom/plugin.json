@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "phantom",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Phantom’s official agent wallet and developer documentation MCP services for crypto and wallet integration workflows.",
   "author": {
     "name": "Ghast AI",

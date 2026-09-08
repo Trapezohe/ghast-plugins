@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "particl-market-research",
-  "version": "1.0.3-ghast.1",
   "description": "Research ecommerce companies, products, sales, marketing, events, pricing, and market trends through Particl's official hosted MCP.",
   "author": {
     "name": "Particl, Inc. / Luz Data, Inc.",

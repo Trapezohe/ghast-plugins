@@ -41,7 +41,7 @@ def main() -> int:
     verify.manifest(
         plugin,
         name="atlassian-rovo",
-        version="1.0.0-ghast.1",
+        version=None,
         revision=REVISION,
     )
 

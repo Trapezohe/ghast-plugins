@@ -43,7 +43,7 @@ def main() -> int:
     ) != imp.normalized_repository_url(REPOSITORY):
         raise ValueError("HyperFrames official source identity changed")
     verify.manifest(
-        plugin, name="hyperframes", version=f"{VERSION}-ghast.1", revision=REVISION
+        plugin, name="hyperframes", version='0.8.10', revision=REVISION
     )
 
     with tempfile.TemporaryDirectory(prefix="ghast-hyperframes-skills-") as temp:

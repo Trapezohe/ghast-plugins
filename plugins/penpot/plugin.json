@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "penpot",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Penpot’s official local MCP to inspect designs, work with components and tokens, and import or export design assets.",
   "author": {
     "name": "Ghast AI",

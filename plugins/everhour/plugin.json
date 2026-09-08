@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "everhour",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Everhour’s official MCP for timers, time entries, timesheets, project lookup and team work tracking.",
   "author": {
     "name": "Ghast AI",

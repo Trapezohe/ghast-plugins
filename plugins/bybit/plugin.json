@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "bybit",
-  "version": "1.0.0-ghast.1",
   "description": "Use Bybit’s official MCP for market data and authorized account, trading and asset workflows. Availability depends on regional access.",
   "author": {
     "name": "Ghast AI",

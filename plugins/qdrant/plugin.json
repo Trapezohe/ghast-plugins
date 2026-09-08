@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "qdrant",
-  "version": "1.0.0-ghast.1",
   "description": "Store knowledge and retrieve relevant information from Qdrant using semantic search.",
   "author": {
     "name": "Ghast AI",

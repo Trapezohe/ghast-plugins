@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "arcjet",
-  "version": "1.0.0-ghast.1",
   "description": "Investigate application traffic, security decisions, quotas and protection rules.",
   "author": {
     "name": "Ghast AI",

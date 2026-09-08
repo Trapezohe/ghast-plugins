@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "prefect",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect Prefect Cloud workflows, deployments, runs, logs and infrastructure with read-only diagnostics.",
   "author": {
     "name": "Ghast AI",

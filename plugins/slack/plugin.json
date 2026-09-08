@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "slack",
-  "version": "1.0.0-ghast.1",
   "description": "Search Slack conversations and files, read threads, and manage messages, canvases and lists through the official Slack MCP.",
   "author": {
     "name": "Ghast AI",

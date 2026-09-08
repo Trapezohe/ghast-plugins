@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "bitly",
-  "version": "1.0.0-ghast.1",
   "description": "Create branded short links and analyze link and QR engagement.",
   "author": {
     "name": "Ghast AI",

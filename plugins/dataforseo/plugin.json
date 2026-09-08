@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "dataforseo",
-  "version": "1.0.0-ghast.1",
   "description": "Research keywords, search results, backlinks and competitors using DataForSEO’s official API and documentation tools.",
   "author": {
     "name": "Ghast AI",

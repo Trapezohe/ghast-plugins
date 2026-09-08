@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "bitquery",
-  "version": "1.0.0-ghast.1",
   "description": "Research on-chain trades, transfers, token markets and wallet activity through Bitquery’s official hosted MCP.",
   "author": {
     "name": "Ghast AI",

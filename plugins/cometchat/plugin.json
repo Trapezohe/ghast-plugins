@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "cometchat",
-  "version": "1.0.0-ghast.1",
   "description": "Search official CometChat documentation and integration guides for chat, voice, video and moderation.",
   "author": {
     "name": "Ghast AI",

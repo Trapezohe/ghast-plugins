@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "weatherapi",
-  "version": "1.0.0-ghast.1",
   "description": "Access current weather, forecasts, historical conditions, marine data and astronomy through WeatherAPI.com’s official MCP.",
   "author": {
     "name": "Ghast AI",

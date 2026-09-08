@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "censys",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Censys’s official Platform MCP for internet asset research, host history, certificates and exposure investigation.",
   "author": {
     "name": "Ghast AI",

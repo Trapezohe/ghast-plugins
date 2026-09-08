@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "glean",
-  "version": "3.3.0-ghast.1",
+  "version": "3.3.0",
   "description": "Search enterprise documents, Slack, email, code, people, meetings, memory, and organization-specific tools through Glean's official Codex plugin and local MCP adapter.",
   "author": {
     "name": "Glean",

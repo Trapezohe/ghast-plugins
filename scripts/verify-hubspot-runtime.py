@@ -70,7 +70,7 @@ def main() -> int:
     verify.manifest(
         plugin,
         name="hubspot",
-        version="0.13.0-ghast.1",
+        version=None,
         revision=SKILLS_REVISION,
     )
     with tempfile.TemporaryDirectory(prefix="ghast-hubspot-skills-") as temp:

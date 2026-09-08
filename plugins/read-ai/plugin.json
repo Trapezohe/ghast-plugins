@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "read-ai",
-  "version": "1.0.0-ghast.2",
   "description": "Browse Read AI meetings and retrieve summaries, chapters, action items, key questions, topics, transcripts, metrics, and recordings through Read AI's official hosted MCP server.",
   "author": {
     "name": "Read AI, Inc",

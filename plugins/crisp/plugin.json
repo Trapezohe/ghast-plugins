@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "crisp",
-  "version": "1.0.0-ghast.1",
   "description": "Review customer conversations, contacts and helpdesk articles in your Crisp workspace.",
   "author": {
     "name": "Ghast AI",

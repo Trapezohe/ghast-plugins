@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "whimsical",
-  "version": "1.0.0-ghast.1",
   "description": "Search Whimsical files and create or edit diagrams, wireframes and visual plans.",
   "author": {
     "name": "Ghast AI",

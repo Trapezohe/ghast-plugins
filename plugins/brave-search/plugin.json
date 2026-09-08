@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "brave-search",
-  "version": "1.0.0-ghast.1",
   "description": "Search the web, news, images, videos and places with Brave’s official Search API MCP server.",
   "author": {
     "name": "Ghast AI",

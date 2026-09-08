@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "optimizely",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Optimizely’s official CMS SaaS MCP to inspect content types, audit content and perform authorized site content workflows.",
   "author": {
     "name": "Ghast AI",

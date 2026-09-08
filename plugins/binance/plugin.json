@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "binance",
-  "version": "2.0.0-ghast.1",
   "description": "Comprehensive Binance workflows for public market data, Spot, Futures, Options, Convert, Margin, Earn, Loans, Wallet, Fiat, P2P, and Onchain Pay.",
   "author": {
     "name": "Binance",

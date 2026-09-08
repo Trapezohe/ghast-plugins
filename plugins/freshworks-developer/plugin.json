@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "freshworks-developer",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect Freshworks custom apps and versions and manage app package submission workflows.",
   "author": {
     "name": "Ghast AI",

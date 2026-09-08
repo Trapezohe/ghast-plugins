@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "kontent-ai",
-  "version": "1.0.0-ghast.1",
   "description": "Use Kontent.ai’s official MCP to manage structured content, models, assets, language variants and publishing workflows.",
   "author": {
     "name": "Ghast AI",

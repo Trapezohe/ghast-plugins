@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "crypto-com",
-  "version": "1.0.0-ghast.1",
   "description": "Look up cryptocurrency prices, market trends and trading volumes through Crypto.com’s public market-data service.",
   "author": {
     "name": "Ghast AI",

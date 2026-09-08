@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "missive",
-  "version": "1.0.0-ghast.1",
   "description": "Use Missive’s official MCP to search shared inbox conversations and work with contacts, calendars and drafts under your chosen permissions.",
   "author": {
     "name": "Ghast AI",

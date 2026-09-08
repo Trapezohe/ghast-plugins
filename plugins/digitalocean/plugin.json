@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "digitalocean",
-  "version": "1.0.68-ghast.2",
   "description": "Provision a DigitalOcean Droplet as a remote SSH workspace and inspect or explicitly manage Droplets, images, sizes, regions, account billing, actions, and SSH keys through DigitalOcean's official hosted MCP services.",
   "author": {
     "name": "DigitalOcean",
@@ -21,5 +20,6 @@
         "zh-CN": "配置远程开发主机，查询和管理授权的云主机、镜像、区域与账单。"
       }
     }
-  }
+  },
+  "version": "1.0.68"
 }

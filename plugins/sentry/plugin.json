@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "sentry",
-  "version": "0.1.2-ghast.2",
   "description": "Investigate Sentry errors, events and performance through Sentry’s official MCP server.",
   "author": {
     "name": "Ghast AI",

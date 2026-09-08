@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "webflow",
-  "version": "1.0.0-ghast.1",
   "description": "Build and refine Webflow sites, inspect CMS content and manage authorized design workflows.",
   "author": {
     "name": "Ghast AI",

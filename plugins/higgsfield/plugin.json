@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "higgsfield",
-  "version": "1.0.0-ghast.1",
   "description": "Connect to Higgsfield’s official MCP for image, video, character and audio creation using your account credits.",
   "author": {
     "name": "Ghast AI",

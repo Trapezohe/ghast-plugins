@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "buildkite",
-  "version": "1.0.0-ghast.1",
   "description": "Inspect pipelines, builds, jobs and test results and manage CI workflows in Buildkite.",
   "author": {
     "name": "Ghast AI",

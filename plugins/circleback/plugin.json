@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "circleback",
-  "version": "1.0.2-ghast.2",
   "description": "Search authorized Circleback meetings, transcripts, action items, calendar events, emails, people, companies, tags, and support content through Circleback's official hosted MCP server.",
   "author": {
     "name": "Circleback AI, Inc.",

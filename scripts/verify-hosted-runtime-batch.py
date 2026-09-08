@@ -15,7 +15,7 @@ MCP_SCHEMA = "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json"
 
 PLUGINS = {
     "cogedim": {
-        "version": "1.0.3-ghast.1",
+        "version": None,
         "revision": (
             "cogedim-mcp-69802ca971dc+llms-3bd622452f97+"
             "init-ec7893b3a416+tools-6351b9900840"
@@ -24,13 +24,13 @@ PLUGINS = {
         "verify": "verify_cogedim_evidence",
     },
     "quartr": {
-        "version": "1.0.0-ghast.1",
+        "version": None,
         "revision": "quartr-docs-b37a9c381ded+oauth-a379a77612f2",
         "url": "https://mcp.quartr.com/mcp",
         "verify": "verify_quartr_evidence",
     },
     "read-ai": {
-        "version": "1.0.0-ghast.1",
+        "version": None,
         "revision": (
             "zendesk-49381158409491-2026-08-19T23:57:53Z-"
             "0050b9f9a3b3"
@@ -39,13 +39,13 @@ PLUGINS = {
         "verify": "verify_read_ai_evidence",
     },
     "semrush": {
-        "version": "1.0.0-ghast.1",
+        "version": None,
         "revision": "semrush-docs-e34fd6ac1924+oauth-5d0b459a41d7",
         "url": "https://mcp.semrush.com/v2/mcp",
         "verify": "verify_semrush_evidence",
     },
     "similarweb": {
-        "version": "1.0.0-ghast.1",
+        "version": None,
         "revision": (
             "similarweb-docs-eac1d71df335+claude-aa84c3a66647+"
             "oauth-4f4e48ae9c75"
@@ -54,7 +54,7 @@ PLUGINS = {
         "verify": "verify_similarweb_evidence",
     },
     "skywatch": {
-        "version": "1.0.0-ghast.1",
+        "version": None,
         "revision": (
             "skywatch-docs-f4ed1fbadb7c+client-a16e47fecde3+"
             "tools-c6b9fe481f16"
@@ -74,7 +74,7 @@ def load_hosted_importer() -> ModuleType:
     return module
 
 
-def verify_plugin(name: str, expected: dict[str, str], hosted: ModuleType) -> None:
+def verify_plugin(name: str, expected: dict, hosted: ModuleType) -> None:
     plugin = verify.REPOSITORY_ROOT / "plugins" / name
     verify.manifest(
         plugin,

@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "front",
-  "version": "1.0.0-ghast.1",
   "description": "Search Front conversations, inspect customer context, prepare drafts and manage inbox workflows.",
   "author": {
     "name": "Ghast AI",

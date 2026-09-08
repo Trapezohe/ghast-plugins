@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tomtom",
-  "version": "1.0.0-ghast.1",
   "description": "Find places, geocode addresses, compare routes and inspect traffic with TomTom Maps.",
   "author": {
     "name": "Ghast AI",

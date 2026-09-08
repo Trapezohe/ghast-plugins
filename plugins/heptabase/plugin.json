@@ -1,7 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "heptabase",
-  "version": "1.0.0-ghast.1",
   "description": "Connect Heptabase’s official MCP to search knowledge, read notes and journals, and organize cards, tags and whiteboards.",
   "author": {
     "name": "Ghast AI",
