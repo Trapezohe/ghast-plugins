@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "moralis",
+  "version": "1.0.0-ghast.1",
+  "description": "Query EVM and Solana wallet balances, token and NFT data, prices and blockchain activity through the official Moralis MCP package.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://moralis.com/cortex/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://moralis.com/cortex/",
+      "connectorPublisher": "Moralis",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Moralis",
+      "descriptions": {
+        "en": "Query EVM and Solana wallet balances, token and NFT data, prices and blockchain activity through the official Moralis MCP package.",
+        "zh-CN": "通过 Moralis 官方 MCP 包查询 EVM 与 Solana 钱包余额、代币和 NFT 数据、价格及链上活动。"
+      },
+      "mcpServerExtensions": {
+        "moralis": {
+          "credentialEnv": {
+            "MORALIS_API_KEY": "$VAULT:moralis-api-key"
+          }
+        }
+      }
+    }
+  }
+}

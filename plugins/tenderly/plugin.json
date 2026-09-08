@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "tenderly",
+  "version": "1.0.0-ghast.1",
+  "description": "Simulate, trace and debug blockchain transactions and work with virtual environments through the official Tenderly MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://tenderly.co/blog/validating-agentic-workflows-with-tenderly-mcp-server/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://tenderly.co/blog/validating-agentic-workflows-with-tenderly-mcp-server/",
+      "connectorPublisher": "Tenderly",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Tenderly",
+      "descriptions": {
+        "en": "Simulate, trace and debug blockchain transactions and work with virtual environments through the official Tenderly MCP.",
+        "zh-CN": "通过 Tenderly 官方 MCP 模拟、追踪和调试链上交易，并使用虚拟环境。"
+      }
+    }
+  }
+}

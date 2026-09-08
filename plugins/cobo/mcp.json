@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "cobo": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "--python",
+        "3.12",
+        "--from",
+        "cobo-agentic-wallet[mcp]==0.1.40",
+        "python",
+        "-m",
+        "cobo_agentic_wallet.mcp"
+      ],
+      "env": {
+        "AGENT_WALLET_API_URL": "https://api.agenticwallet.cobo.com"
+      }
+    }
+  }
+}

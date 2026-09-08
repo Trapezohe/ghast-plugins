@@ -3320,6 +3320,51 @@
       "category": "creativity"
     },
     {
+      "id": "cobo",
+      "name": "Cobo Agentic Wallet",
+      "description": "Inspect Cobo agent wallets, pacts and audit records, and perform owner-authorized wallet operations through the official MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "cobo",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect Cobo agent wallets, pacts and audit records, and perform owner-authorized wallet operations through the official MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://cobo.com/products/agentic-wallet/manual/developer/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://cobo.com/products/agentic-wallet/manual/developer/mcp",
+            "connectorPublisher": "Cobo",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Cobo Agentic Wallet",
+            "descriptions": {
+              "en": "Inspect Cobo agent wallets, pacts and audit records, and perform owner-authorized wallet operations through the official MCP server.",
+              "zh-CN": "通过 Cobo 官方 MCP 查看智能体钱包、授权协议和审计记录，执行钱包所有者授权的操作。"
+            },
+            "mcpServerExtensions": {
+              "cobo": {
+                "credentialEnv": {
+                  "AGENT_WALLET_API_KEY": "$VAULT:cobo-api-key"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/cobo.zip",
+        "sha256": "fe8329dcad639e3944f2c1f337eaeec24fc68f47fbc2d10dc9dbded6b22507eb"
+      },
+      "icon": "./plugins/cobo/assets/icon.png",
+      "homepage": "https://cobo.com/products/agentic-wallet/manual/developer/mcp",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
       "id": "cockroachdb",
       "name": "CockroachDB Cloud",
       "description": "Explore CockroachDB Cloud databases and run SQL using the official managed MCP service.",
@@ -9615,6 +9660,51 @@
       "category": "databases"
     },
     {
+      "id": "moralis",
+      "name": "Moralis",
+      "description": "Query EVM and Solana wallet balances, token and NFT data, prices and blockchain activity through the official Moralis MCP package.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "moralis",
+        "version": "1.0.0-ghast.1",
+        "description": "Query EVM and Solana wallet balances, token and NFT data, prices and blockchain activity through the official Moralis MCP package.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://moralis.com/cortex/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://moralis.com/cortex/",
+            "connectorPublisher": "Moralis",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Moralis",
+            "descriptions": {
+              "en": "Query EVM and Solana wallet balances, token and NFT data, prices and blockchain activity through the official Moralis MCP package.",
+              "zh-CN": "通过 Moralis 官方 MCP 包查询 EVM 与 Solana 钱包余额、代币和 NFT 数据、价格及链上活动。"
+            },
+            "mcpServerExtensions": {
+              "moralis": {
+                "credentialEnv": {
+                  "MORALIS_API_KEY": "$VAULT:moralis-api-key"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/moralis.zip",
+        "sha256": "2eeb8afdfe27a27891097adc37b3840001f1d9f117fe97564d318f02625223b3"
+      },
+      "icon": "./plugins/moralis/assets/icon.png",
+      "homepage": "https://moralis.com/cortex/",
+      "license": "MIT",
+      "category": "data"
+    },
+    {
       "id": "morningstar",
       "name": "morningstar",
       "description": "Screen, summarize, compare, and analyze funds through Morningstar's official MCP.",
@@ -13580,6 +13670,51 @@
       "category": "productivity"
     },
     {
+      "id": "tatum",
+      "name": "Tatum Docs & API",
+      "description": "Search Tatum developer documentation, inspect OpenAPI schemas and execute documented API requests with an optional Tatum key.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "tatum",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Tatum developer documentation, inspect OpenAPI schemas and execute documented API requests with an optional Tatum key.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.tatum.io/oa/docs/tatum-documentation-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.tatum.io/oa/docs/tatum-documentation-mcp",
+            "connectorPublisher": "Tatum",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Tatum Docs & API",
+            "descriptions": {
+              "en": "Search Tatum developer documentation, inspect OpenAPI schemas and execute documented API requests with an optional Tatum key.",
+              "zh-CN": "搜索 Tatum 开发文档、查看 OpenAPI 结构，并在配置 Tatum 密钥后执行文档中的 API 请求。"
+            },
+            "mcpServerExtensions": {
+              "tatum": {
+                "credentialHeaders": {
+                  "X-API-Key": "$VAULT:tatum-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/tatum.zip",
+        "sha256": "9c3d6630163f74a628b33a714fbe674c04fb5115fea40743b0878822f7181d13"
+      },
+      "icon": "./plugins/tatum/assets/icon.png",
+      "homepage": "https://docs.tatum.io/oa/docs/tatum-documentation-mcp",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "tavily",
       "name": "Tavily",
       "description": "Research the web, extract page content and explore websites with Tavily search and crawling tools.",
@@ -13817,6 +13952,44 @@
       "icon": "./plugins/temporal/assets/icon.svg",
       "homepage": "https://temporal.io/",
       "repository": "https://github.com/temporalio/codex-temporal-plugin",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
+      "id": "tenderly",
+      "name": "Tenderly",
+      "description": "Simulate, trace and debug blockchain transactions and work with virtual environments through the official Tenderly MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "tenderly",
+        "version": "1.0.0-ghast.1",
+        "description": "Simulate, trace and debug blockchain transactions and work with virtual environments through the official Tenderly MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://tenderly.co/blog/validating-agentic-workflows-with-tenderly-mcp-server/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://tenderly.co/blog/validating-agentic-workflows-with-tenderly-mcp-server/",
+            "connectorPublisher": "Tenderly",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Tenderly",
+            "descriptions": {
+              "en": "Simulate, trace and debug blockchain transactions and work with virtual environments through the official Tenderly MCP.",
+              "zh-CN": "通过 Tenderly 官方 MCP 模拟、追踪和调试链上交易，并使用虚拟环境。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/tenderly.zip",
+        "sha256": "2a1be4bada64be89627d8c930c2a09677fac57ee6387601376e570dbcf02e546"
+      },
+      "icon": "./plugins/tenderly/assets/icon.png",
+      "homepage": "https://tenderly.co/blog/validating-agentic-workflows-with-tenderly-mcp-server/",
       "license": "MIT",
       "category": "development"
     },

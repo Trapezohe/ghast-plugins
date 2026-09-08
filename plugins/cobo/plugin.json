@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "cobo",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect Cobo agent wallets, pacts and audit records, and perform owner-authorized wallet operations through the official MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://cobo.com/products/agentic-wallet/manual/developer/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://cobo.com/products/agentic-wallet/manual/developer/mcp",
+      "connectorPublisher": "Cobo",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Cobo Agentic Wallet",
+      "descriptions": {
+        "en": "Inspect Cobo agent wallets, pacts and audit records, and perform owner-authorized wallet operations through the official MCP server.",
+        "zh-CN": "通过 Cobo 官方 MCP 查看智能体钱包、授权协议和审计记录，执行钱包所有者授权的操作。"
+      },
+      "mcpServerExtensions": {
+        "cobo": {
+          "credentialEnv": {
+            "AGENT_WALLET_API_KEY": "$VAULT:cobo-api-key"
+          }
+        }
+      }
+    }
+  }
+}

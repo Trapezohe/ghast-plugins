@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "moralis": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@moralisweb3/api-mcp-server@1.8.2",
+        "--transport",
+        "stdio"
+      ],
+      "cwd": "${PLUGIN_DATA}"
+    }
+  }
+}
