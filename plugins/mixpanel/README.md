@@ -14,6 +14,7 @@ Eleven non-install skill trees and the install skill's headless reference come f
 - MIXPANEL_MCP_REGION selects us, eu, or in from a strict allowlist; US is the default.
 - OAuth is the default. For non-interactive use, MIXPANEL_MCP_SA_TOKEN may contain only the base64 encoding of the official service-account username:secret pair. The bridge constructs the required header inside the child process and never inserts the secret into argv.
 - Mixpanel's current official MCP documentation lists 63 tools across analytics, dashboards, discovery, Lexicon, data quality, custom properties, cohorts, lookup tables, metrics, session replay, experiments, and feature flags.
-- A generic analytics icon is used because the official AI plugin repository does not publish a catalog icon.
+- Brand logo source: https://avatars.githubusercontent.com/u/63653?v=4
+  Brand names and logos belong to their respective owners. 品牌名称与标识归相应权利人所有。
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

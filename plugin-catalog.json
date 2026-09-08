@@ -826,7 +826,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "amplitude",
-        "version": "1.5.2-ghast.1",
+        "version": "1.5.2-ghast.2",
         "description": "Analyze Amplitude charts, dashboards, experiments, session replays, feedback, accounts, reliability, AI agents, taxonomy, and instrumentation through Amplitude's official skills and hosted MCP server.",
         "author": {
           "name": "Amplitude",
@@ -841,7 +841,7 @@
             "category": "data",
             "upstreamRevision": "90c0a8e658db547ab63a2210e84be07c23ce4cd0",
             "upstreamPath": "plugins/amplitude",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Analyze Amplitude charts, dashboards, experiments, session replays, feedback, accounts, reliability, AI agents, taxonomy, and instrumentation through Amplitude's official skills and hosted MCP server.",
               "zh-CN": "分析产品图表、实验、会话回放与用户反馈，管理数据埋点。"
@@ -851,9 +851,9 @@
       },
       "package": {
         "url": "./packages/amplitude.zip",
-        "sha256": "43901250581d01603e0232519b00b829699b0f882628e5be86d92d780d310ce8"
+        "sha256": "1151dfe356e1307765fdad8f7616881b8059d394ac74c7bc6a60b57ab504c5fe"
       },
-      "icon": "./plugins/amplitude/assets/icon.svg",
+      "icon": "./plugins/amplitude/assets/icon.png",
       "homepage": "https://amplitude.com/docs/mcp",
       "repository": "https://github.com/amplitude/mcp-marketplace",
       "license": "MIT",
@@ -1387,7 +1387,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "attio",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Search, read, create, and update Attio CRM records, lists, comments, notes, tasks, meetings, calls, emails, and reports through Attio's official hosted MCP server.",
         "author": {
           "name": "Attio Ltd",
@@ -1399,7 +1399,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "attio-docs-2e2e355662dd+oauth-f4f72e868155+auth-0ea2dac5158a",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Search, read, create, and update Attio CRM records, lists, comments, notes, tasks, meetings, calls, emails, and reports through Attio's official hosted MCP server.",
               "zh-CN": "检索和管理 CRM 记录、联系人、列表、笔记、任务与会议。"
@@ -1409,9 +1409,9 @@
       },
       "package": {
         "url": "./packages/attio.zip",
-        "sha256": "430afc8476660b3896d85313454f9b132553f9fc1416d77d7a28679f2b511e99"
+        "sha256": "3d3722ba10bec9afdfa557b3c1a1949458e4f279a95770b12132274f6d7fe208"
       },
-      "icon": "./plugins/attio/assets/icon.svg",
+      "icon": "./plugins/attio/assets/icon.png",
       "homepage": "https://docs.attio.com/mcp/overview.md",
       "license": "MIT",
       "category": "productivity"
@@ -3749,7 +3749,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "clickup",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Search and manage ClickUp tasks, lists, folders, documents, comments, chat, assignments, relationships, and time tracking through ClickUp's official hosted MCP server.",
         "author": {
           "name": "ClickUp",
@@ -3761,7 +3761,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "clickup-tools-2d3fddb826de+overview-dff0d558c63b+setup-3d9416ff8959+oauth-19f2f7a0a70c",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Search and manage ClickUp tasks, lists, folders, documents, comments, chat, assignments, relationships, and time tracking through ClickUp's official hosted MCP server.",
               "zh-CN": "管理任务、列表、文档、评论、聊天、分工与工时记录。"
@@ -3771,9 +3771,9 @@
       },
       "package": {
         "url": "./packages/clickup.zip",
-        "sha256": "277c5aaee85f60beea07fc74bdc78eec946f5c55f1bfbd7e63119b3db1ef3fdb"
+        "sha256": "ab1ca4f3dabc256df011ab5beb8ffe04b5beb2d4c676e86dc56a6d99fe7048d7"
       },
-      "icon": "./plugins/clickup/assets/icon.svg",
+      "icon": "./plugins/clickup/assets/icon.png",
       "homepage": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server.md",
       "license": "MIT",
       "category": "productivity"
@@ -9987,7 +9987,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "intercom",
-        "version": "0.1.0-ghast.1",
+        "version": "0.1.0-ghast.2",
         "description": "Search and analyze Intercom conversations, contacts, companies, Help Center articles, and tickets through Intercom's official hosted MCP service and official CLI.",
         "author": {
           "name": "Intercom",
@@ -10001,7 +10001,7 @@
             "category": "productivity",
             "upstreamRevision": "62773a7d4b8aac31545d6888fe6479be3bc53804",
             "upstreamPath": ".",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Search and analyze Intercom conversations, contacts, companies, Help Center articles, and tickets through Intercom's official hosted MCP service and official CLI.",
               "zh-CN": "检索和分析客户对话、联系人、企业资料、帮助中心文章与工单。"
@@ -10011,9 +10011,9 @@
       },
       "package": {
         "url": "./packages/intercom.zip",
-        "sha256": "73f33a338f3291628da3cb800f1095e37cc969b5f3508aee47c308a201ec30ca"
+        "sha256": "cd0d89d764158f26712e8b2eceff55396f3e232172df2f2e119c5a40f18a57ba"
       },
-      "icon": "./plugins/intercom/assets/icon.svg",
+      "icon": "./plugins/intercom/assets/icon.png",
       "homepage": "https://developers.intercom.com",
       "repository": "https://github.com/intercom/claude-plugin-external",
       "license": "MIT",
@@ -11887,7 +11887,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "mixpanel",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Analyze Mixpanel data and manage dashboards, Lexicon, data quality, experiments, feature flags, metrics, cohorts, and business context through Mixpanel's official skills and hosted MCP server.",
         "author": {
           "name": "Mixpanel",
@@ -11901,7 +11901,7 @@
             "category": "data",
             "upstreamRevision": "2bde5a300d40afbc934ae74f44444744b80c09b6",
             "upstreamPath": "plugins/mixpanel",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "commands": "./ai.trapezohe.ghast/commands/",
             "descriptions": {
               "en": "Analyze Mixpanel data and manage dashboards, Lexicon, data quality, experiments, feature flags, metrics, cohorts, and business context through Mixpanel's official skills and hosted MCP server.",
@@ -11912,9 +11912,9 @@
       },
       "package": {
         "url": "./packages/mixpanel.zip",
-        "sha256": "24613af84702a3409a9cd7dde298516b8a1ba43f3e4a56610866cdc5a4531768"
+        "sha256": "f7402e5e551a292dfe8787d55836c6e136e73378e9656e4eb093146268b00ca8"
       },
-      "icon": "./plugins/mixpanel/assets/icon.svg",
+      "icon": "./plugins/mixpanel/assets/icon.png",
       "homepage": "https://docs.mixpanel.com/docs/mcp",
       "repository": "https://github.com/mixpanel/ai-plugins",
       "license": "Apache-2.0",
@@ -11968,7 +11968,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "monday-com",
-        "version": "0.1.0-ghast.1",
+        "version": "0.1.0-ghast.2",
         "description": "Manage monday.com boards, items, status reporting, docs, and WorkForms with five official workflow skills and monday.com's hosted OAuth MCP server.",
         "author": {
           "name": "monday.com",
@@ -11982,7 +11982,7 @@
             "category": "productivity",
             "upstreamRevision": "ce381e93a0a6c2ed3b9942ff1803b8078ba89389",
             "upstreamPath": ".",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Manage monday.com boards, items, status reporting, docs, and WorkForms with five official workflow skills and monday.com's hosted OAuth MCP server.",
               "zh-CN": "管理看板、工作项、进度报告、文档与表单。"
@@ -11992,9 +11992,9 @@
       },
       "package": {
         "url": "./packages/monday-com.zip",
-        "sha256": "6fddf1fe7eb7dcd70291e2360c564b630c1dbe3f62aa0a75877573d1cc758278"
+        "sha256": "3534dde1af17fb0256f1842e84279082d30004715389cda3d9100b783165c1bd"
       },
-      "icon": "./plugins/monday-com/assets/icon.svg",
+      "icon": "./plugins/monday-com/assets/icon.png",
       "homepage": "https://monday.com",
       "repository": "https://github.com/mondaycom/monday-claude-cowork-plugin",
       "license": "MIT",

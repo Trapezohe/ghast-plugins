@@ -12,6 +12,7 @@ Skills, references, scripts, commands, and public MCP declarations remain source
 
 - The Codex private app mapping is replaced by monday.com's official hosted OAuth MCP endpoint.
 - The current official suite adds board setup, task management, project status, monday docs, and WorkForms guidance beyond the connector-only Codex snapshot.
-- A generic work-management icon is used because the portable official plugin repository does not include a catalog icon.
+- Brand logo source: https://avatars.githubusercontent.com/u/61420283?v=4
+  Brand names and logos belong to their respective owners. 品牌名称与标识归相应权利人所有。
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

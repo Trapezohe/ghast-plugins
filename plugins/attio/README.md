@@ -33,8 +33,8 @@ authorization-server metadata is pinned at canonical JSON SHA-256
   every mutation and stronger fresh confirmation for merges and deletions.
 - Endpoint discovery and the complete OAuth protocol were verified without an
   account. Authenticated tool listing and workspace operations were not run.
-- A generic CRM data icon is used because no licensed catalog icon is included
-  in a public official MCP source repository.
+- Brand logo source: https://avatars.githubusercontent.com/u/50366930?v=4
+  Brand names and logos belong to their respective owners. 品牌名称与标识归相应权利人所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Attio accounts, subscriptions, hosted service behavior, CRM data, permissions,

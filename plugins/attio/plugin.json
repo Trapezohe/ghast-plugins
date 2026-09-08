@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "attio",
-  "version": "1.0.0-ghast.1",
+  "version": "1.0.0-ghast.2",
   "description": "Search, read, create, and update Attio CRM records, lists, comments, notes, tasks, meetings, calls, emails, and reports through Attio's official hosted MCP server.",
   "author": {
     "name": "Attio Ltd",
@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "upstreamRevision": "attio-docs-2e2e355662dd+oauth-f4f72e868155+auth-0ea2dac5158a",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Search, read, create, and update Attio CRM records, lists, comments, notes, tasks, meetings, calls, emails, and reports through Attio's official hosted MCP server.",
         "zh-CN": "检索和管理 CRM 记录、联系人、列表、笔记、任务与会议。"

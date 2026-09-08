@@ -14,6 +14,7 @@ All 32 packaged skill trees are copied byte-for-byte from Amplitude's pinned MIT
 - AMPLITUDE_MCP_REGION selects us or eu from a strict allowlist; US is the default.
 - The source repository contains 36 skills. Ghast includes the 32 current variants and excludes analyze-chart, create-chart, analyze-experiment, and monitor-experiments because Amplitude marks them for removal when its current consolidated chart and experiment tools are enabled.
 - Some retained skills depend on account entitlements and server-side feature flags. The what-would-lenny-do skill also requires the separate lennysdata MCP server and explicitly remains inactive when that server is absent.
-- A generic analytics icon is used because the official marketplace repository does not publish a catalog icon.
+- Brand logo source: https://avatars.githubusercontent.com/u/2291562?v=4
+  Brand names and logos belong to their respective owners. 品牌名称与标识归相应权利人所有。
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

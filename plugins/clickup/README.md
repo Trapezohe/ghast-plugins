@@ -38,8 +38,8 @@ authorization-server metadata at `595d813bb7cb5ed08af4a0db8d2d34e0f0c2ca79388278
 - Live OAuth discovery, unauthenticated endpoint challenge, and dynamic client
   registration with localhost callbacks were verified without a ClickUp
   account. Authenticated tool listing and Workspace operations were not run.
-- A generic work-management icon is used because no licensed catalog icon is
-  included in a public official MCP source repository.
+- Brand logo source: https://avatars.githubusercontent.com/u/27873294?v=4
+  Brand names and logos belong to their respective owners. 品牌名称与标识归相应权利人所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 ClickUp accounts, subscriptions, hosted service behavior, Workspace data,

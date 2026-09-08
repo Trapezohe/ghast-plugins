@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "intercom",
-  "version": "0.1.0-ghast.1",
+  "version": "0.1.0-ghast.2",
   "description": "Search and analyze Intercom conversations, contacts, companies, Help Center articles, and tickets through Intercom's official hosted MCP service and official CLI.",
   "author": {
     "name": "Intercom",
@@ -15,7 +15,7 @@
       "category": "productivity",
       "upstreamRevision": "62773a7d4b8aac31545d6888fe6479be3bc53804",
       "upstreamPath": ".",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Search and analyze Intercom conversations, contacts, companies, Help Center articles, and tickets through Intercom's official hosted MCP service and official CLI.",
         "zh-CN": "检索和分析客户对话、联系人、企业资料、帮助中心文章与工单。"
