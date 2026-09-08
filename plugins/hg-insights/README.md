@@ -7,10 +7,9 @@ MCP server.
 ## Official hosted MCP adapter
 
 This package contains only Ghast-authored MCP configuration, safety
-instructions, documentation, metadata, and a generic revenue-intelligence
-icon. It does not redistribute HG Insights' hosted implementation, private
+instructions, documentation, metadata, and the provider brand logo. It does not redistribute HG Insights' hosted implementation, private
 Codex connector, API key, OAuth credential, customer data, proprietary
-datasets, partner data, branded artwork, or marketplace icon.
+datasets, partner data, or marketplace icon.
 
 HG Insights' official getting-started, authentication, OAuth, MCP tools, MCP
 prompts, MCP resources, and security pages are pinned as normalized visible
@@ -107,8 +106,7 @@ artwork are verified as evidence but are not copied into this package.
   public license was available at the audited revision. The adapter relies
   only on developer-owned documentation, live authentication boundaries,
   standard metadata, and user-supplied service credentials.
-- A generic revenue-intelligence icon is used because no licensed HG Insights
-  catalog artwork is redistributed.
+- Brand logo source: https://hginsights.com/wp-content/uploads/2025/08/cropped-hgi-symbol-180x180.png. Brand names and logos belong to HG Insights. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 HG Insights and Phoenix accounts, plans, credits, hosted behavior, datasets,

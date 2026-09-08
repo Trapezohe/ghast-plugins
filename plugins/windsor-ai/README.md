@@ -84,5 +84,4 @@ and live tool catalog. MCP clients must support confidential dynamic clients.
 The hosted MCP implementation is operated by Windsor.ai. The included licenses
 cover the official public repositories and Ghast adapter files; they do not
 grant rights in user data, source-provider data, third-party APIs, trademarks,
-or the hosted service. A generic analytics icon is used because the licensed
-official repositories do not publish reusable catalog artwork.
+or the hosted service. Brand logo source: https://windsor.ai/wp-content/uploads/2020/02/favicon-310-300x300.png. Brand names and logos belong to Windsor.ai. 品牌名称与标识归对应服务商所有。

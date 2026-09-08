@@ -1877,7 +1877,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "biorender",
-        "version": "1.0.2-ghast.1",
+        "version": "1.0.2-ghast.2",
         "description": "Search BioRender templates and accessible figures, preview results, and create editable scientific figure drafts through BioRender's official hosted MCP server.",
         "author": {
           "name": "BioRender",
@@ -1899,7 +1899,7 @@
       },
       "package": {
         "url": "./packages/biorender.zip",
-        "sha256": "94cfdcddc6615b6cd7eaec96ad21faaaf8947af12646bae9c360b133db8cae03"
+        "sha256": "a2137b84e0c0ce24bdee4c3d68aaca4d641566205ae87f0d7e58802244223f65"
       },
       "icon": "./plugins/biorender/assets/icon.png",
       "homepage": "https://help.biorender.com/hc/en-gb/articles/37237276158109-How-to-use-the-BioRender-MCP-connector",
@@ -2571,7 +2571,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "brighthire",
-        "version": "0.1.0-ghast.1",
+        "version": "0.1.0-ghast.2",
         "description": "Retrieve authorized interview intelligence through BrightHire's official read-only MCP.",
         "author": {
           "name": "BrightHire",
@@ -2585,7 +2585,7 @@
             "category": "productivity",
             "upstreamRevision": "brighthire-source-d317197efb8c+resource-177dad1731d0+oauth-4ea2f28a5719+boundary-56beca58033e",
             "portStatus": "full",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Retrieve authorized interview intelligence through BrightHire's official read-only MCP.",
               "zh-CN": "读取有权访问的面试记录与招聘洞察。"
@@ -2595,9 +2595,9 @@
       },
       "package": {
         "url": "./packages/brighthire.zip",
-        "sha256": "fc184a4972d2071d17f0e0d49529b29377236d58288afeb7d60d6952625de2c4"
+        "sha256": "7222b2cc34a0fa4f0643dc03cc69bcf3fbd6291e3902fd10e4dd2bbb1412539c"
       },
-      "icon": "./plugins/brighthire/assets/icon.svg",
+      "icon": "./plugins/brighthire/assets/icon.png",
       "homepage": "https://github.com/brighthire/brighthire-codex-plugin",
       "repository": "https://github.com/brighthire/brighthire-codex-plugin",
       "license": "MIT",
@@ -9294,7 +9294,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "hg-insights",
-        "version": "1.0.3-ghast.2",
+        "version": "1.0.3-ghast.3",
         "description": "Research companies, markets, technology adoption, buying signals, spend, contracts, contacts, and GTM segments through HG Insights' official Phoenix MCP server.",
         "author": {
           "name": "HG Insights",
@@ -9306,7 +9306,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "hg-phoenix-docs-c5c35d6c9232+auth-57567aa2b2e3+tools-0ee3682befea+admin-17be9845965d",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "mcpServerExtensions": {
               "hg-insights": {
                 "credentialHeaders": {
@@ -9323,9 +9323,9 @@
       },
       "package": {
         "url": "./packages/hg-insights.zip",
-        "sha256": "7324389e2cf9cb9cb5ad660269f90335a1d00d1e2644cd461abb2f6ac21a7855"
+        "sha256": "5cd77cb6a117cdf13606b1a15ffe761547ff84bfe34d208ecbec8571251d1914"
       },
-      "icon": "./plugins/hg-insights/assets/icon.svg",
+      "icon": "./plugins/hg-insights/assets/icon.png",
       "homepage": "https://phoenix.hginsights.com/docs/getting-started",
       "license": "MIT",
       "category": "productivity"
@@ -12399,7 +12399,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "myregistry-com",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Find public wedding, baby, and gift-list registries through MyRegistry.com's official Registry API.",
         "author": {
           "name": "MyRegistry.com / MyRegistry LLC",
@@ -12412,7 +12412,7 @@
             "category": "productivity",
             "upstreamRevision": "myregistry-registry-api-0fbbe1a50b9a+docs-81d5402e985a+terms-a0a8295276ac",
             "portStatus": "full",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Find public wedding, baby, and gift-list registries through MyRegistry.com's official Registry API.",
               "zh-CN": "查询公开的婚礼、婴儿用品与礼品愿望清单。"
@@ -12422,9 +12422,9 @@
       },
       "package": {
         "url": "./packages/myregistry-com.zip",
-        "sha256": "2c70316a4be48fd48ad73922fe04036776a23643d020cd8d8f8d6e05aa8e92f5"
+        "sha256": "f859ff069adefd3c198c790de6cc0809967b82db9f6db1c1c0250f86015aa705"
       },
-      "icon": "./plugins/myregistry-com/assets/icon.svg",
+      "icon": "./plugins/myregistry-com/assets/icon.png",
       "homepage": "https://developers.myregistry.com/reference/new-endpoint",
       "license": "MIT",
       "category": "productivity"
@@ -19133,7 +19133,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "windsor-ai",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Query, analyze, connect, and carefully act on business data from Windsor.ai's official hosted MCP across 350+ sources.",
         "author": {
           "name": "Windsor.ai",
@@ -19146,7 +19146,7 @@
           "ai.trapezohe.ghast": {
             "category": "data",
             "upstreamRevision": "mcp-f1632eefcae4+plugin-d7ba1cb036c7+docs-d85a5536428d+oauth-1e68eaf1c788",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "commands": "./ai.trapezohe.ghast/commands/",
             "portStatus": "superset-newer-official-hosted-mcp",
             "descriptions": {
@@ -19158,9 +19158,9 @@
       },
       "package": {
         "url": "./packages/windsor-ai.zip",
-        "sha256": "ffa699c578cdacbd0101679d0b2ad7e0217f4e199597ca81add32911bbe54457"
+        "sha256": "81cca955fbf008ea1762f8ae4e6ad25ee81a0467c47628ed5565220296a9ad1d"
       },
-      "icon": "./plugins/windsor-ai/assets/icon.svg",
+      "icon": "./plugins/windsor-ai/assets/icon.png",
       "homepage": "https://mcp.windsor.ai/docs",
       "repository": "https://github.com/windsor-ai/windsor_mcp",
       "license": "MIT",

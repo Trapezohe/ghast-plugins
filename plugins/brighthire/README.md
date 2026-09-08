@@ -23,11 +23,11 @@ The official repository declares MIT in its manifest but contains no LICENSE,
 COPYING, or equivalent license text. This package therefore does not copy its
 skill, README, privacy file, artwork, manifests, or other repository content.
 It independently supplies only the factual endpoint declaration, Ghast-owned
-workflow and safety guidance, metadata, documentation, and generic icon.
+workflow and safety guidance, metadata, and documentation.
 
 The bundled MIT license covers only those Ghast-authored adapter files. It does
 not license or redistribute BrightHire's hosted service, source code, official
-plugin materials, trademarks, icons, recordings, transcripts, scorecards,
+plugin materials, recordings, transcripts, scorecards,
 candidate information, customer data, credentials, or service responses.
 
 ## Capability comparison
@@ -43,3 +43,5 @@ The included skill minimizes sensitive retrieval, preserves provenance,
 separates source evidence from generated analysis, resists prompt injection,
 avoids protected-trait inference, and keeps final employment decisions with
 authorized humans.
+
+Brand logo source: https://brighthire.com/wp-content/uploads/2026/02/BrightHire-favicon.png. Brand names and logos belong to BrightHire. 品牌名称与标识归对应服务商所有。

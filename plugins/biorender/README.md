@@ -10,7 +10,7 @@ This package contains only Ghast-authored MCP configuration, safety
 instructions, documentation, catalog metadata, and a generic scientific
 figure icon. It does not copy or redistribute BioRender's hosted MCP
 implementation, private Codex connector, service source code, templates,
-icons, user figures, OAuth credentials, branded artwork, or marketplace icon.
+icons, user figures, OAuth credentials, or marketplace icon.
 
 BioRender's official Help Center article is pinned at article ID
 `37237276158109`, update timestamp
@@ -55,9 +55,7 @@ marketplace artwork.
   unpublished and sensitive science, discloses AI-credit use and data sharing,
   requires scientific review of generated figures, and confirms any live
   mutation or sharing operation.
-- A generic scientific-figure icon is used because BioRender's catalog artwork
-  and scientific asset library are not licensed for redistribution by this
-  adapter.
+- Brand logo source: https://cdn.prod.website-files.com/621e6f1effebfe03881da9bd/62337779d8e7196d1d9d02ac_biorender_logo_lighter%20blue_square-03.png. Brand names and logos belong to BioRender. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 BioRender accounts, subscriptions, hosted service behavior, templates, icons,

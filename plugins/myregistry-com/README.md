@@ -38,6 +38,8 @@ ordinary consumer account may not include developer access.
 
 The bundled standard-library adapter has SHA-256 `fc2d2b42924ac064ce6291e0a57fb7e20d302a2c0de1ead2ae5432a7f41b245e`. The MIT
 license covers only the Ghast-authored adapter, workflow, metadata,
-documentation, and generic gift-search icon. It does not license or
+and documentation. It does not license or
 redistribute MyRegistry's service, private connector, API key, customer data,
-developer documentation, web content, logos, or trademarks.
+developer documentation, web content, or trademark rights.
+
+Brand logo source: https://www.myregistry.com/Images/MR_Logo144x144.png. Brand names and logos belong to MyRegistry.com. 品牌名称与标识归对应服务商所有。

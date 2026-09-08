@@ -25,7 +25,6 @@ Ghast-authored additions:
   slash
 - `README.md`
 - `MODIFICATIONS.md`
-- `assets/icon.svg`
 - `skills/windsor-ai/SKILL.md`
 
 The original Claude skill is preserved but not activated because it documents
@@ -34,3 +33,7 @@ including connection, write-action, destination, subscription, login, and
 support workflows. The active Ghast skill follows that live official contract
 and adds safety constraints; it is not represented as byte-identical upstream
 content.
+
+Brand asset:
+
+- `assets/icon.png`: provider website logo, with brand rights retained by Windsor.ai.

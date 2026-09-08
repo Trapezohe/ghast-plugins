@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "myregistry-com",
-  "version": "1.0.3-ghast.1",
+  "version": "1.0.3-ghast.2",
   "description": "Find public wedding, baby, and gift-list registries through MyRegistry.com's official Registry API.",
   "author": {
     "name": "MyRegistry.com / MyRegistry LLC",
@@ -14,7 +14,7 @@
       "category": "productivity",
       "upstreamRevision": "myregistry-registry-api-0fbbe1a50b9a+docs-81d5402e985a+terms-a0a8295276ac",
       "portStatus": "full",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Find public wedding, baby, and gift-list registries through MyRegistry.com's official Registry API.",
         "zh-CN": "查询公开的婚礼、婴儿用品与礼品愿望清单。"
