@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "pendo": {
+      "type": "streamable-http",
+      "url": "https://app.pendo.io/mcp/v0/shttp"
+    },
+    "pendo-us1": {
+      "type": "streamable-http",
+      "url": "https://us1.app.pendo.io/mcp/v0/shttp"
+    },
+    "pendo-eu": {
+      "type": "streamable-http",
+      "url": "https://app.eu.pendo.io/mcp/v0/shttp"
+    },
+    "pendo-japan": {
+      "type": "streamable-http",
+      "url": "https://app.jpn.pendo.io/mcp/v0/shttp"
+    },
+    "pendo-australia": {
+      "type": "streamable-http",
+      "url": "https://app.au.pendo.io/mcp/v0/shttp"
+    }
+  }
+}

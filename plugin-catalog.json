@@ -6942,6 +6942,44 @@
       "category": "communication"
     },
     {
+      "id": "featurebase",
+      "name": "Featurebase",
+      "description": "Manage customer feedback, support conversations, help-center content and reports through Featurebase’s official MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "featurebase",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage customer feedback, support conversations, help-center content and reports through Featurebase’s official MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.featurebase.app/articles/6144007-featurebase-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.featurebase.app/articles/6144007-featurebase-mcp-server",
+            "connectorPublisher": "Featurebase",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "Featurebase",
+            "descriptions": {
+              "en": "Manage customer feedback, support conversations, help-center content and reports through Featurebase’s official MCP.",
+              "zh-CN": "通过 Featurebase 官方 MCP 管理客户反馈、客服会话、帮助中心内容与报表。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/featurebase.zip",
+        "sha256": "57632c0c1aab65f5fba5308c9e1a1d55ddf5d2167909187c33769bbbc5e418bc"
+      },
+      "icon": "./plugins/featurebase/assets/icon.png",
+      "homepage": "https://help.featurebase.app/articles/6144007-featurebase-mcp-server",
+      "license": "MIT",
+      "category": "communication"
+    },
+    {
       "id": "feishu-lark",
       "name": "Feishu / Lark",
       "description": "Work with documents, Base tables, chats, calendars and tasks through the official Feishu / Lark OpenAPI MCP.",
@@ -12995,6 +13033,44 @@
       "homepage": "https://paypal.gitbook.com/agent-toolkit-and-mcp-server/mcp-server/set-up-a-remote-mcp-server",
       "license": "MIT",
       "category": "finance"
+    },
+    {
+      "id": "pendo",
+      "name": "Pendo",
+      "description": "Analyze product usage, visitor activity and guide performance using Pendo’s official regional MCP services.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "pendo",
+        "version": "1.0.0-ghast.1",
+        "description": "Analyze product usage, visitor activity and guide performance using Pendo’s official regional MCP services.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://support.pendo.io/hc/en-us/articles/41102236924955-Connect-to-the-Pendo-MCP-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://support.pendo.io/hc/en-us/articles/41102236924955-Connect-to-the-Pendo-MCP-server",
+            "connectorPublisher": "Pendo",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Pendo",
+            "descriptions": {
+              "en": "Analyze product usage, visitor activity and guide performance using Pendo’s official regional MCP services.",
+              "zh-CN": "通过 Pendo 官方区域 MCP 服务分析产品使用、访客活动与引导内容表现。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/pendo.zip",
+        "sha256": "042da3fc20e54039ecbab8f887e149d6207656d566d2dc550087682bd4f56edc"
+      },
+      "icon": "./plugins/pendo/assets/icon.png",
+      "homepage": "https://support.pendo.io/hc/en-us/articles/41102236924955-Connect-to-the-Pendo-MCP-server",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "penpot",

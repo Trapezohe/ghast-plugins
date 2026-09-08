@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "featurebase",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage customer feedback, support conversations, help-center content and reports through Featurebase’s official MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://help.featurebase.app/articles/6144007-featurebase-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://help.featurebase.app/articles/6144007-featurebase-mcp-server",
+      "connectorPublisher": "Featurebase",
+      "category": "communication",
+      "icon": "./assets/icon.png",
+      "displayName": "Featurebase",
+      "descriptions": {
+        "en": "Manage customer feedback, support conversations, help-center content and reports through Featurebase’s official MCP.",
+        "zh-CN": "通过 Featurebase 官方 MCP 管理客户反馈、客服会话、帮助中心内容与报表。"
+      }
+    }
+  }
+}
