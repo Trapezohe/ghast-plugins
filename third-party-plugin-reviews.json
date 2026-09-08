@@ -52,7 +52,7 @@
       "officialRevision": "actively-mcp-3c7c7f1750ee+api-e090dc2a687e+oauth-908b8114e7a6+auth-11a7486ac6ab",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/actively/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "plugins/actively/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No Actively hosted MCP implementation, private Codex connector, service source code, customer data, or marketplace artwork is redistributed."
       ],
       "officialityEvidence": [
@@ -84,7 +84,7 @@
         "CRM records, email and call context, transcripts, prospect details, and external signals can contain personal and commercially sensitive data. Retrieval and disclosure must remain narrowly scoped.",
         "Rankings, fit assessments, buying signals, strategies, and next-best actions are recommendations that can be incomplete or stale; responses must preserve evidence dates and distinguish facts from inference.",
         "Any authenticated write, outreach, sharing, task, note, or CRM mutation requires exact target review and explicit confirmation. Ambiguous writes must not be blindly retried.",
-        "A generic account-intelligence icon is used because no licensed catalog artwork is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/actively/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run the BioRender evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
@@ -285,7 +285,7 @@
         "The what-would-lenny-do skill requires a separately connected lennysdata MCP server and explicitly must not run when that dependency is absent.",
         "Dashboard, chart, experiment, taxonomy, tracking-plan, event, property, context, and other write operations require exact target resolution, review, and confirmation before execution.",
         "Authenticated tools/list and live account operations were not exercised without the user's Amplitude account. The hosted tool surface can change independently of the pinned skill source.",
-        "A generic analytics icon is used because the official marketplace repository does not publish a catalog icon."
+        "Brand logo provenance is recorded in plugins/amplitude/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
@@ -337,7 +337,7 @@
         "Users remain responsible for applicable privacy, marketing, anti-spam, and data-protection law and for their organization's policies.",
         "Twenty Claude-specific MCP namespace references are mechanically adapted to mcp__apollo__ without changing tool suffixes or arguments.",
         "The hosted server is not redistributed and can evolve independently of the pinned MIT skill source.",
-        "A generic prospecting icon is used because the official repository does not publish a redistributable catalog icon."
+        "Brand logo provenance is recorded in plugins/apollo/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
@@ -457,7 +457,7 @@
       "officialRevision": "attio-docs-2e2e355662dd+oauth-f4f72e868155+auth-0ea2dac5158a",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/attio/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "plugins/attio/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No Attio hosted MCP server source, private Codex connector, service source code, data, or marketplace artwork is redistributed."
       ],
       "officialityEvidence": [
@@ -484,7 +484,7 @@
         "The read-only query-particle-sql tool is not available on every billing plan.",
         "Attio applies per-workspace rate-limit tiers, including 100 read requests per second, 25 write requests per second, 5 merges per second, 300 searches per minute, and 2 semantic-search, reporting, or SQL requests per second.",
         "Creates, upserts, updates, list mutations, comments, notes, tasks, merges, and deletions require explicit confirmation. Record merges and comment deletion require fresh confirmation.",
-        "A generic CRM data icon is used because no licensed catalog icon is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/attio/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-hosted-plugins.py",
@@ -551,7 +551,7 @@
       "officialRevision": "brighthire-source-d317197efb8c+resource-177dad1731d0+oauth-4ea2f28a5719+boundary-56beca58033e",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/brighthire/LICENSE licenses only the independently authored Ghast endpoint declaration, skill, metadata, documentation, and generic interview icon.",
+        "plugins/brighthire/LICENSE licenses only the independently authored Ghast endpoint declaration, skill, metadata, documentation.",
         "The official repository declares MIT in its manifest but contains no license text, so none of its prose, skills, artwork, manifests, or other files is copied into the Ghast package.",
         "BrightHire's hosted service, official plugin materials, trademarks, recordings, transcripts, candidate information, customer data, credentials, and responses remain excluded."
       ],
@@ -580,7 +580,7 @@
         "The official repository's manifest says MIT but the repository has no license text. This adapter copies none of those materials and does not claim they are MIT-redistributable.",
         "Interview recordings, transcripts, notes, scorecards, candidate records, compensation, immigration information, and hiring decisions can be highly sensitive and legally regulated.",
         "The audited scope is read-only. Any future write-capable tool requires a separate side-effect and authorization review before use.",
-        "A generic interview icon is used because BrightHire and OpenAI marketplace artwork is not redistributed."
+        "Brand logo provenance is recorded in plugins/brighthire/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-brighthire-plugin.py --openai-source ../openai-plugins --official-source ../upstreams/brighthire-codex-plugin",
@@ -603,7 +603,7 @@
       "officialRevision": "calendly-docs-9cc165e39526+tools-62c1741ac3df+oauth-379eb5537223+auth-512f41277070",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/calendly/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "plugins/calendly/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No Calendly hosted MCP implementation, private Codex connector, service source code, account data, or marketplace artwork is redistributed."
       ],
       "officialityEvidence": [
@@ -635,7 +635,7 @@
         "Endpoint discovery, OAuth metadata, dynamic registration, unauthenticated protocol behavior, and the published 36-tool catalog were verified without an account. Authenticated tools/list and real scheduling operations were not run.",
         "Bookings, cancellations, event-type changes, availability changes, scheduling-link or share creation, no-show changes, and organization invitation changes require exact target review and explicit confirmation.",
         "Ambiguous state-changing failures must not be blindly retried because they can duplicate bookings, links, or invitations or overwrite availability.",
-        "A generic calendar icon is used because no licensed catalog artwork is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/calendly/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-hosted-plugins.py",
@@ -657,7 +657,7 @@
       "officialRevision": "close-docs-c700a654c0a0+tools-37b3dda1465b+oauth-5f59d0eb26ef+auth-2c3287ebc60f",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/close/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "plugins/close/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No Close hosted MCP implementation, private Codex connector, service source code, account data, API credentials, or marketplace artwork is redistributed."
       ],
       "officialityEvidence": [
@@ -695,7 +695,7 @@
         "Scheduling a voice-agent call is external communication and requires exact recipient, number, purpose, schedule, time zone, configuration, and consent review. Voice-agent updates require proposal review and a rollback plan.",
         "Field enrichment can disclose CRM data to an enrichment provider or overwrite values. Bulk lead and contact creation requires bounded previews, source review, matching rules, and deduplication.",
         "Ambiguous writes must not be blindly retried because they can duplicate CRM records, tasks, templates, drafts, workflows, call tasks, or external actions.",
-        "A generic CRM icon is used because no licensed catalog artwork is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/close/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-hosted-plugins.py",
@@ -719,7 +719,7 @@
       "licenseEvidence": [
         "The pinned canva-sdks/canva-skills repository contains an Apache License 2.0 file with SHA-256 c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.",
         "The Apache-2.0 grant covers the published plugin manifests and skills, not Canva's closed hosted MCP implementation, accounts, content, trademarks, or marketplace artwork.",
-        "No Canva logo or OpenAI marketplace artwork is copied. plugins/canva uses a generic Ghast design-workspace icon because the audited main branch publishes no separately licensed catalog artwork."
+        "The provider brand logo is included separately from the code license. Provider brand logo source and ownership are recorded in plugins/canva/README.md; the logo is outside the code license."
       ],
       "officialityEvidence": [
         "The public repository is owned by the canva-sdks GitHub organization, describes itself as Canva Agent Skills, and names Canva as the author in its Codex plugin manifest.",
@@ -752,7 +752,7 @@
       ],
       "capabilityRelationship": "current-official-suite-broadens-core-design-workflows-with-inactive-legacy-specializations",
       "limitations": [
-        "Canva operates the hosted MCP implementation; Ghast redistributes only Canva's Apache-2.0 plugin files and a generic compatibility icon. A Canva account, browser sign-in, user permissions, plan entitlements, quotas, content licenses, and network access remain user-managed.",
+        "Canva operates the hosted MCP implementation; Ghast redistributes only Canva's Apache-2.0 plugin files. A Canva account, browser sign-in, user permissions, plan entitlements, quotas, content licenses, and network access remain user-managed. Provider brand logo source and ownership are recorded in plugins/canva/README.md; the logo is outside the code license.",
         "Official source, OAuth metadata, Dynamic Client Registration, the real browser authorization entry point, and unauthenticated MCP behavior were verified without a Canva account. Authenticated tools/list and real design reads or writes were not run.",
         "The current official Canva package does not activate branded-presentation, design-translation, classroom-helper, or presentation-time-fitting. Ghast excludes all four and does not present them as current Canva-supported workflows.",
         "The OpenAI Codex snapshot's three skills and Canva's current six active skills overlap but are not identical. The live service documents the primitives for presentation generation and copy-and-translate, but Ghast does not claim that the inactive orchestration text remains an active official skill.",
@@ -787,7 +787,7 @@
       "licenseEvidence": [
         "Carta's official carta/plugins repository at the carta-crm/v1.5.3 tag contains an Apache License 2.0 file with SHA-256 3b328349592a8500db68543678a81dc8571ba0660d81ab5f293d7447849a02fb.",
         "The Apache-2.0 grant covers the published Carta plugin manifests, 23 skill files, and three HTML templates. It does not license Carta's closed hosted MCP implementation, accounts, CRM data, service marks, or OpenAI marketplace artwork.",
-        "plugins/carta-crm/LICENSE is copied from the pinned official tag. Ghast uses a generic CRM icon rather than Carta or OpenAI artwork."
+        "plugins/carta-crm/LICENSE is copied from the pinned official tag. Provider brand logo provenance and ownership are recorded in plugins/carta-crm/README.md."
       ],
       "officialityEvidence": [
         "The public repository is owned by Carta's GitHub organization and describes itself as the centralized repository for public-facing Carta plugins.",
@@ -826,7 +826,7 @@
         "Enrichment and open-world people lookup can incur provider cost or disclose CRM data to an enrichment service. Use them only when explicitly requested and after reviewing scope and expected effect.",
         "Creates, updates, merges, enrichment, links, unlinks, uploads, attachments, exports, schedules, campaigns, notification changes, classifier changes, support escalation, and deletes can produce durable or external effects. Every such action requires exact-target review and explicit confirmation.",
         "The carta-crm-current-service skill is Ghast-authored compatibility and safety guidance, clearly labeled as such; it is not represented as a Carta-authored 24th source skill.",
-        "A generic CRM icon is used because the source license does not grant Carta trademark rights."
+        "Brand logo provenance is recorded in plugins/carta-crm/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "PYTHONDONTWRITEBYTECODE=1 python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
@@ -852,7 +852,7 @@
       "licenseEvidence": [
         "Catalyst by Zoho's official codex-plugin repository contains an MIT License with SHA-256 02e3768da70bd2f05868b18271d88110d18bf8ad8d76dfc08af048b42102fef8 and copyright attribution to Catalyst by Zoho.",
         "The MIT grant covers the published plugin manifest, marketplace metadata, hook source, skills, references, and artwork at the pinned revision. It does not license Zoho's closed hosted MCP implementation, accounts, customer data, service marks, or product names beyond customary attribution.",
-        "plugins/catalyst-by-zoho/LICENSE is copied from the pinned official repository. Ghast uses a generic cloud-development icon rather than redistributing Zoho's logo as catalog branding."
+        "plugins/catalyst-by-zoho/LICENSE is copied from the pinned official repository. Provider brand logo provenance and ownership are recorded in plugins/catalyst-by-zoho/README.md."
       ],
       "officialityEvidence": [
         "The source repository is owned by the catalystbyzoho GitHub organization and describes itself as the Catalyst by Zoho Codex plugin. Its README provides direct Codex marketplace installation instructions and identifies the official Catalyst connector, skills, SessionStart hook, and eight supported data centers.",
@@ -904,7 +904,7 @@
       "officialRevision": "cbi-mcp-97e8c8b7ecf4+chat-92d179a62a18+product-6ce534ffa0e9+oauth-7f4d1f126334+source-778e1acb6a74",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/cb-insights/LICENSE licenses only the Ghast-authored MCP configuration, research-safety skill, documentation, catalog metadata, and generic market-research icon.",
+        "plugins/cb-insights/LICENSE licenses only the Ghast-authored MCP configuration, research-safety skill, documentation, catalog metadata.",
         "CB Insights' public cbi-mcp-server repository at 778e1acb6a749852a82b101b99a701d9c9c1ce68 contains no LICENSE, LICENSE.md, LICENSE.txt, COPYING, or NOTICE file, so its deprecated example source is not redistributed.",
         "No hosted MCP implementation, private OpenAI app connector, proprietary CB Insights data, account credential, official logo, or marketplace artwork is redistributed."
       ],
@@ -943,7 +943,7 @@
         "Predictive intelligence is not a guarantee of funding, revenue, acquisition, failure, or investment return and must not be represented as regulated financial advice.",
         "CB Insights data and generated conclusions must not be used autonomously for lending, insurance, employment, or other high-impact eligibility decisions or to infer sensitive personal traits.",
         "The deprecated official example source is not copied because the repository has no redistribution license at the pinned revision.",
-        "A generic market-research icon is used because official CB Insights artwork is not included in redistributable licensed material."
+        "Brand logo provenance is recorded in plugins/cb-insights/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run verify_cb_insights_evidence and import_cb_insights from scripts/import-official-hosted-plugins.py through Python runpy",
@@ -965,7 +965,7 @@
       "officialRevision": "channel99-faq-81edc9b0c206+mcp-4cd47d0e9970+release-a3f1d62a2d0e+schema-4acb7bcdb5b5+api-d35fdf232c66+oauth-01e50ee050ad",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/channel99/LICENSE licenses only the Ghast-authored MCP configuration, measurement and privacy skill, documentation, catalog metadata, and generic marketing analytics icon.",
+        "plugins/channel99/LICENSE licenses only the Ghast-authored MCP configuration, measurement and privacy skill, documentation, catalog metadata.",
         "Channel99 does not publish a redistribution license for its hosted MCP implementation. Ghast does not copy that service, customer data, private Codex connector, application bundle, account credentials, official logo, or marketplace artwork.",
         "The OpenAI snapshot's MIT declaration applies to the OpenAI repository package and does not establish a license for Channel99's hosted implementation or permit treating its private connector as portable source."
       ],
@@ -1001,7 +1001,7 @@
         "Attribution, pipeline influence, closed-won influence, fit scores, return on marketing spend, and engagement metrics depend on source coverage, identity resolution, configured audiences, CRM quality, lookback windows, attribution models, and Channel99 methodology and do not establish causation.",
         "Channel99 documents domain-level MCP data without contact information, usernames, passwords, or emails. The integration must not be used to deanonymize visitors, infer sensitive traits, or make autonomous employment, housing, lending, insurance, education, or other high-impact eligibility decisions.",
         "No OAuth client was registered, no browser authorization was completed, and no token or reusable credential was retained during the audit.",
-        "A generic marketing analytics icon is used because no licensed Channel99 catalog artwork is included in redistributable official source."
+        "Brand logo provenance is recorded in plugins/channel99/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run verify_channel99_evidence and import_channel99 from scripts/import-official-hosted-plugins.py through Python runpy",
@@ -1024,7 +1024,7 @@
       "licenseEvidence": [
         "Chronograph's pinned GP repository contains the Apache License 2.0 with SHA-256 c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c.",
         "The license covers the published manifest, five skills, references, and analyst-agent text imported by Ghast. It does not transfer ownership of Chronograph's hosted MCP implementation, customer data, accounts, trademarks, or service terms.",
-        "Ghast uses a generic private-capital analytics icon and does not copy the OpenAI marketplace logo or imply Chronograph endorsement."
+        "Brand logo provenance is recorded in plugins/chronograph-gp/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "officialityEvidence": [
         "The source repository is owned by the chronograph-pe GitHub organization, names Chronograph as author, links chronograph.pe, declares Apache-2.0, and identifies itself as the Chronograph GP plugin.",
@@ -1049,7 +1049,7 @@
       ],
       "capabilityRelationship": "superset-current-official-gp-suite",
       "limitations": [
-        "Chronograph operates the hosted MCP implementation. Ghast redistributes only Apache-2.0 plugin source, compatibility edits, MCP configuration, and a generic icon.",
+        "Chronograph operates the hosted MCP implementation. Ghast redistributes only Apache-2.0 plugin source, compatibility edits, MCP configuration. Provider brand logo provenance is recorded in plugins/chronograph-gp/README.md; the logo is not covered by the code license.",
         "A Chronograph GP account, browser authorization, customer portfolio data, role permissions, subscription, enabled MCP access, source coverage, and service limits remain user-managed.",
         "Authenticated tools/list and private customer data were not accessed. Live tool names, schemas, annotations, permissions, and returned data are authoritative.",
         "GP workflows require GP-level company financials and gross per-investment returns. An LP login must not be treated as equivalent or filled with LP net values.",
@@ -1077,7 +1077,7 @@
       "licenseEvidence": [
         "Chronograph's pinned LP repository contains the Apache License 2.0 with SHA-256 c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c.",
         "The license covers the published manifest, four skills, references, and analyst-agent text imported by Ghast. It does not transfer ownership of Chronograph's hosted MCP implementation, customer data, accounts, trademarks, or service terms.",
-        "Ghast uses a generic private-capital analytics icon and does not copy the OpenAI marketplace logo or imply Chronograph endorsement."
+        "Brand logo provenance is recorded in plugins/chronograph-lp/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "officialityEvidence": [
         "The source repository is owned by the chronograph-pe GitHub organization, names Chronograph as author, links chronograph.pe, declares Apache-2.0, and identifies itself as the Chronograph LP plugin.",
@@ -1102,7 +1102,7 @@
       ],
       "capabilityRelationship": "current-official-lp-suite-with-explicit-gp-one-pager-boundary",
       "limitations": [
-        "Chronograph operates the hosted MCP implementation. Ghast redistributes only Apache-2.0 plugin source, compatibility edits, MCP configuration, and a generic icon.",
+        "Chronograph operates the hosted MCP implementation. Ghast redistributes only Apache-2.0 plugin source, compatibility edits, MCP configuration. Provider brand logo provenance is recorded in plugins/chronograph-lp/README.md; the logo is not covered by the code license.",
         "A Chronograph LP account, browser authorization, customer portfolio data, role permissions, subscription, enabled MCP access, source coverage, and service limits remain user-managed.",
         "Authenticated tools/list and private customer data were not accessed. Live tool names, schemas, annotations, permissions, and returned data are authoritative.",
         "The portfolio-company one-pager shipped in the older Codex LP snapshot is explicitly GP-side in Chronograph's current official split and requires GP-only company financials and gross per-investment returns. Ghast places it in chronograph-gp rather than falsely exposing it under LP permissions.",
@@ -1176,7 +1176,7 @@
       "officialRevision": "clickup-tools-2d3fddb826de+overview-dff0d558c63b+setup-3d9416ff8959+oauth-19f2f7a0a70c",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/clickup/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "plugins/clickup/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No ClickUp hosted MCP server source, private Codex connector, Workspace data, service source code, or marketplace artwork is redistributed."
       ],
       "officialityEvidence": [
@@ -1206,7 +1206,7 @@
         "Without the Everything AI add-on, ClickUp documents rolling limits of 50 MCP calls per 24 hours on Free Forever and 300 per 24 hours on Unlimited and above. With the add-on, Public API plan limits apply.",
         "Connected Search cannot search external connected apps through ClickUp MCP.",
         "All creates, updates, bulk actions, attachments, comments, tags, links, dependencies, moves, time writes, hierarchy changes, chat messages, Docs, pages, and any live deletion require explicit confirmation.",
-        "A generic work-management icon is used because no licensed catalog icon is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/clickup/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-hosted-plugins.py",
@@ -1229,7 +1229,7 @@
       "officialRevision": "clay-product-99faa3c0f6c5+docs-52d04c63c45b+openapi-258cc399172d+oauth-f114e17a4bc5+source-4ab1ca54c908",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/clay/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic prospect-research icon.",
+        "plugins/clay/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "Clay's official clay-run/agent-plugins repository at 4ab1ca54c908e04b52123234405e1bb1aac4199a contains no LICENSE, LICENSE.md, LICENSE.txt, COPYING, or NOTICE file, so its 21 skills, hooks, CLI wrapper, and other files are not redistributed.",
         "No Clay hosted MCP implementation, private OpenAI connector, OAuth credential, customer or prospect data, official agent-plugin file, CLI binary, branded artwork, or marketplace icon is redistributed."
       ],
@@ -1270,7 +1270,7 @@
         "Prospect data and ICP rankings must not be used for employment, housing, lending, insurance, education admissions, or other high-impact eligibility decisions, and sensitive traits must not be inferred.",
         "Any CRM write-back, sequence push, enrollment, audience sync, campaign, message, overwrite, workflow run, or other state-changing capability requires exact target review and explicit current-conversation confirmation. Ambiguous writes must not be blindly retried.",
         "Clay's official agent-plugin repository is not copied because it has no redistribution license at the pinned revision. The independently authored Ghast skill uses the same official hosted service without reproducing those 21 skill files.",
-        "A generic prospect-research icon is used because no licensed Clay catalog artwork is included in the redistributable material."
+        "Brand logo provenance is recorded in plugins/clay/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run the Clay evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
@@ -1294,7 +1294,7 @@
       "officialRevision": "conductor-chatgpt-8f616240df58+data-159f29e8eeae+faq-0932a35ad457",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/conductor/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic search-intelligence icon.",
+        "plugins/conductor/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "Conductor does not publish the source or redistribution license for its hosted MCP implementation. Ghast does not copy that service, the private Codex connector, proprietary datasets, API tokens, trademarks, or marketplace artwork."
       ],
       "officialityEvidence": [
@@ -1324,7 +1324,7 @@
         "Successful data retrievals consume the customer's allocated MCP tool calls. Conductor documents rate limits of 30 requests per hour per user and 120 requests per minute across the system.",
         "Conductor says exact citation URLs for every prompt are not currently available. The adapter must not imply complete source coverage where the service does not return it.",
         "Visibility, sentiment, authority, market-share, ranking, and competitor metrics can vary by market, locale, engine, tracked configuration, date, and methodology and do not establish causation.",
-        "A generic search-intelligence icon is used because no licensed Conductor catalog artwork is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/conductor/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run verify_conductor_evidence and import_conductor from scripts/import-official-hosted-plugins.py through Python runpy",
@@ -1344,7 +1344,7 @@
       "officialRevision": "common-room-docs-a9dbd0442b28+cli-0.1.2-9c87bd173b7e+oauth-325111f2b2c7+auth-83da7abc3978",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/common-room/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic buyer-intelligence icon.",
+        "plugins/common-room/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "Common Room's official @commonroomio/cli version 0.1.2 npm package is Apache-2.0 and includes its license, executable bundle, source map, README, and package metadata, but Ghast does not redistribute that package.",
         "No Common Room hosted MCP implementation, private Codex or ChatGPT app connector, OAuth credential, workspace data, buyer intelligence, branded artwork, or marketplace icon is redistributed."
       ],
@@ -1391,7 +1391,7 @@
         "Outreach composition does not authorize sending, enrollment, sequencing, audience sync, campaign creation, or external communication.",
         "Contact and account data can be stale, duplicated, contradictory, permission-limited, licensed, inferred, or incomplete. Stable IDs, source fields, timestamps, pagination state, and unresolved conflicts must be preserved.",
         "Buyer intelligence and contact rankings must not be used for employment, housing, lending, insurance, education admissions, or other high-impact eligibility decisions, and sensitive traits must not be inferred.",
-        "A generic buyer-intelligence icon is used because no licensed Common Room catalog artwork is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/common-room/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run the Common Room evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
@@ -1473,7 +1473,7 @@
       "licenseEvidence": [
         "The pinned railsware/coupler-io-mcp-server repository contains an MIT license with SHA-256 c24831ae3def972a1d64a00063fdc01a4891175f076e675cadfe1902d25f9d3d and copyright 2025 Railsware Products Studio LLC.",
         "The MIT grant covers the official local server source, manifest, documentation, and source artwork. Ghast redistributes only the license and generated compatibility package; it connects to but does not redistribute Coupler.io's hosted MCP implementation.",
-        "A generic multi-source analytics icon is used instead of the source or OpenAI marketplace artwork, so the package does not imply Coupler.io endorsement or claim a trademark grant."
+        "Brand logo provenance is recorded in plugins/coupler-io/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "officialityEvidence": [
         "The public source repository is owned by Railsware, identifies itself as Coupler.io MCP Server, links Coupler.io, and names Coupler.io in its manifest and documentation. Coupler.io's official website identifies Railsware Products Studio LLC as the service owner.",
@@ -1502,7 +1502,7 @@
       ],
       "capabilityRelationship": "superset-current-official-hosted-mcp",
       "limitations": [
-        "Coupler.io operates the hosted MCP implementation. Ghast redistributes only the official MIT license, an independently authored compatibility skill and manifest, MCP configuration, and a generic icon.",
+        "Coupler.io operates the hosted MCP implementation. Ghast redistributes only the official MIT license, an independently authored compatibility skill and manifest, MCP configuration. Provider brand logo provenance is recorded in plugins/coupler-io/README.md; the logo is not covered by the code license.",
         "A Coupler.io account, browser OAuth, compatible AI destination, configured data flows and source credentials, user permissions, plan, usage allowance, feature flags, source coverage, and service availability remain user-managed.",
         "Official source, documentation, local tests, tool catalogs, OAuth metadata, and unauthenticated endpoint behavior were verified without registering a client or signing in. Authenticated tools/list, customer datasets, credential listings, data-flow changes, and query results were not accessed.",
         "The hosted README tool catalog is broader than the four-tool local reference implementation. Ghast uses the hosted endpoint and does not present the local server as a complete substitute.",
@@ -1537,7 +1537,7 @@
       "officialRevision": "d93b77ee3d1a53b8547adad431e8c6355bb85f23",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/coveo/LICENSE licenses only the Ghast-authored launcher, configuration, safety instructions, documentation, metadata, and generic document-search icon.",
+        "plugins/coveo/LICENSE licenses only the Ghast-authored launcher, configuration, safety instructions, documentation, metadata.",
         "The pinned Coveo Labs repository declares MIT in pyproject.toml but contains no LICENSE, LICENSE.md, LICENSE.txt, COPYING, or NOTICE file, so Ghast does not copy or redistribute any upstream source file.",
         "The launcher clones the exact official source revision at first run and verifies its Git origin, revision, and critical file hashes before running it. No Coveo hosted implementation, OAuth client credential, API key, indexed content, branded artwork, or marketplace icon is redistributed."
       ],
@@ -1577,7 +1577,7 @@
         "Coveo's hosted OAuth does not publish dynamic registration and documents fixed client IDs for named products. Ghast must not reuse ChatGPTGenericConnector, ChatGPTConnector, ClaudeConnector, or another product's identity.",
         "Official source, documentation, OAuth metadata, unauthenticated endpoint behavior, frozen tests, and an unauthenticated stdio tool listing were verified. Real authenticated search, private source retrieval, passage retrieval, and answer generation were not run because no Coveo account or enterprise data was used.",
         "Indexed enterprise content can be confidential, stale, incomplete, permission-limited, contradictory, or malicious. Retrieval and disclosure must remain narrowly scoped, citations must be preserved, and high-impact conclusions require source review.",
-        "A generic document-search icon is used because no licensed Coveo marketplace artwork is redistributed."
+        "Brand logo provenance is recorded in plugins/coveo/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run verify_coveo_evidence and import_coveo from scripts/import-official-hosted-plugins.py through Python runpy",
@@ -1604,7 +1604,7 @@
       "officialRevision": "cube-docs-fd816d469e8d+tools-9fd46d5d21aa+oauth-f88522816f07+auth-8e4f1585bcd9",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/cube/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic governed-analytics icon.",
+        "plugins/cube/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "Cube's deprecated cubedevinc/cube-mcp-server repository declares MIT only in package metadata and has no LICENSE, LICENSE.md, LICENSE.txt, COPYING, or NOTICE file at revision 81c55225caaa8ab814e050a5e48ddede3a535a27, so none of its source is redistributed.",
         "The deprecated @cube-dev/mcp-server 1.3.0 npm tarball also declares MIT in package metadata but contains no license text. It is not bundled because it exposes only one chat tool and directs users to the remote MCP.",
         "No Cube hosted MCP implementation, private Codex connector, OAuth credential, tenant data, semantic model, branded artwork, or marketplace icon is redistributed."
@@ -1657,7 +1657,7 @@
         "buildPreAggregation can run real warehouse queries, write to an external export bucket, consume warehouse resources, and incur cost. A queued build is not proof of completion.",
         "Financial and operational data can be confidential, stale, incomplete, differently signed, differently scoped, multi-currency, or governed by fiscal calendars and eliminations. Material conclusions require reconciliation and human review.",
         "Generated SQL, board explanations, variance causes, and model edits can be wrong. Cube outputs are decision support, not an audit opinion, accounting determination, or authorization to disclose transaction-level data.",
-        "A generic governed-analytics icon is used because no licensed Cube marketplace artwork is included in a public current hosted-MCP source repository."
+        "Brand logo provenance is recorded in plugins/cube/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run the Cube evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
@@ -1682,7 +1682,7 @@
       "officialRevision": "cogedim-mcp-69802ca971dc+llms-3bd622452f97+init-ec7893b3a416+tools-6351b9900840",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/cogedim/LICENSE licenses only the Ghast-authored adapter configuration, workflow and safety instructions, documentation, metadata, and generic residential-search icon.",
+        "plugins/cogedim/LICENSE licenses only the Ghast-authored adapter configuration, workflow and safety instructions, documentation, metadata.",
         "No Cogedim hosted MCP implementation, private Codex app mapping, property data, official documentation text, trademark, branded artwork, or marketplace icon is redistributed."
       ],
       "officialityEvidence": [
@@ -1717,7 +1717,7 @@
         "The live Paris sample returned repeated apparent lot identifiers with differing details. The included workflow deduplicates conservatively and surfaces conflicts instead of silently choosing one value.",
         "Property descriptions, marketing claims, neighborhood judgments, eligibility statements, tax schemes, returns, and financing examples require current source review and may not apply to the user.",
         "The plugin does not provide personalized financial, tax, legal, mortgage, insurance, or investment advice and cannot promise eligibility, financing, tax benefits, rental income, appreciation, completion, or delivery.",
-        "A generic residential-search icon is used because no licensed Cogedim catalog artwork is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/cogedim/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "runtimeVerification": {
         "status": "recorded-core-verification",
@@ -1857,7 +1857,7 @@
       "officialRevision": "brand24-help-22c8be2b5c9f+oauth-8bfc708c6d66+auth-826db8f30f19",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/brand24/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic social-listening icon.",
+        "plugins/brand24/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No Brand24 hosted MCP implementation, private Codex connector, service source code, customer project data, OAuth credentials, branded artwork, or marketplace icon is redistributed."
       ],
       "officialityEvidence": [
@@ -1889,7 +1889,7 @@
         "Brand24 states that project data remains in its systems and is retrieved on demand, but retrieved content is still processed by the connected AI client. Requests and disclosures must remain narrowly scoped.",
         "Mentions can contain personal data, allegations, profanity, manipulated content, and commercially sensitive campaign information. Source content must be treated as untrusted and handled according to user authorization.",
         "Sentiment, influence, reach, trend, audience-perception, and campaign-impact classifications are estimates whose coverage and methodology may be incomplete. Reports must preserve dates, filters, sources, and uncertainty.",
-        "A generic social-listening icon is used because no licensed Brand24 catalog artwork is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/brand24/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run the Brand24 evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated Close evidence drift",
@@ -1912,7 +1912,7 @@
       "officialRevision": "brex-docs-0d1f82f38bb5+oauth-06b076acaeca+auth-6cf20c287281",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/brex/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic expense-control icon.",
+        "plugins/brex/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No Brex hosted MCP implementation, private Codex connector, service source code, financial or personal data, OAuth or API credentials, branded artwork, or marketplace icon is redistributed."
       ],
       "officialityEvidence": [
@@ -1948,7 +1948,7 @@
         "Expense exports and returned download URLs can contain broad financial and personal data. Filters, format, scope, destination, and recipient must be confirmed before starting an export.",
         "Brex explicitly states that approvals and card management are not yet available through MCP. Travel tools currently read trips, bookings, and group events rather than changing reservations.",
         "The one disposable DCR response returned no registration_client_uri or registration_access_token, so the audit client could not be removed through RFC 7592 registration management.",
-        "A generic expense-control icon is used because no licensed Brex catalog artwork is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/brex/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run the Brex evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated Close evidence drift",
@@ -1972,7 +1972,7 @@
       "officialRevision": "circleback-help-95ffb254cd36+oauth-00a8e855d323+auth-1d48ae9d33e7+openclaw-a4637f051977+release-63146071c6c9",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/circleback/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic meeting-context icon.",
+        "plugins/circleback/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No Circleback hosted MCP implementation, private Codex connector, public client rules or schemas, meeting or email data, recordings, credentials, branded artwork, or marketplace icon is redistributed.",
         "Circleback's public Claude Code, Cursor, and OpenClaw client repositories had no license file at the audited revisions, so their content is used only as officiality and capability evidence and is not copied into this package."
       ],
@@ -2012,7 +2012,7 @@
         "Meetings, transcripts, email bodies, calendar descriptions, attendee addresses, meeting links, and interaction histories can contain highly sensitive personal and business data. Retrieval and disclosure must remain narrowly scoped.",
         "Circleback can return downloadable recording links in meeting details. Recordings can expose voices and extensive private context and must be retrieved or shared only on an explicit authorized request.",
         "The one disposable DCR response returned no registration_client_uri or registration_access_token, so the audit client could not be removed through RFC 7592 registration management.",
-        "A generic meeting-context icon is used because no licensed Circleback catalog artwork is redistributed."
+        "Brand logo provenance is recorded in plugins/circleback/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run the Circleback evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated Close evidence drift",
@@ -2038,7 +2038,7 @@
       "officialRevision": "biorender-help-fb87519f4022+auth-7e351acc74e9+anthropic-3da37488e11a",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/biorender/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic scientific-figure icon.",
+        "plugins/biorender/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No BioRender hosted MCP implementation, private Codex connector, service source code, templates, scientific icons, user figures, credentials, branded artwork, or marketplace icon is redistributed."
       ],
       "officialityEvidence": [
@@ -2070,7 +2070,7 @@
         "Some templates require Premium access, and custom figure generation consumes BioRender AI credits. Access does not itself grant publication or export rights.",
         "Generated figures and returned templates require scientific review. BioRender results do not independently validate labels, causal relationships, anatomy, molecular structures, directionality, scale, chronology, or claims.",
         "Any live sharing, deletion, overwrite, export, publication, or other state-changing tool exposed to an authenticated account requires exact-target review and immediate explicit confirmation.",
-        "A generic scientific-figure icon is used because BioRender's catalog artwork and scientific asset library are not licensed for redistribution by this adapter."
+        "Brand logo provenance is recorded in plugins/biorender/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-hosted-plugins.py",
@@ -2208,7 +2208,7 @@
         "A Cloudinary account, OAuth authorization or supported API credentials, product entitlements, add-ons, rate limits, and paid transformation or analysis features remain user-managed.",
         "Uploads, renames, deletes, metadata changes, presets, transformations, and MediaFlows mutations require explicit user confirmation.",
         "The first four servers publish dynamic OAuth metadata. MediaFlows does not, so its official cld-cloud-name, cld-api-key, and cld-secret headers are bound to user-managed encrypted Profile Vault values.",
-        "A generic media-library icon is used because the official MCP collection repository does not publish a catalog icon."
+        "Brand logo provenance is recorded in plugins/cloudinary/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "runtimeVerification": {
         "status": "authenticated-core-not-exercised",
@@ -2309,7 +2309,7 @@
         "An organization can restrict OAuth callback URLs, and authenticated tool listing or operations were not exercised without a Datadog account.",
         "Datadog documents fair-use limits of 50 calls per 10 seconds and 50,000 calls per month, and 120-day storage of remote MCP usage and context data.",
         "The hosted service and its tool catalog can change independently of this pinned plugin source and documentation evidence.",
-        "A generic observability icon is used because the official Cursor plugin does not publish a catalog icon."
+        "Brand logo provenance is recorded in plugins/datadog/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
@@ -2397,7 +2397,7 @@
       "license": "MIT",
       "licenseEvidence": [
         "Demandbase does not publish source code or a redistribution license for its hosted MCP implementation.",
-        "The MIT license applies only to the independently authored Ghast configuration, workflow, documentation, metadata, and generic icon.",
+        "The MIT license applies only to the independently authored Ghast configuration, workflow, documentation, metadata. Provider brand logo source and ownership are recorded in plugins/demandbase/README.md; the logo is outside the code license.",
         "No Demandbase server source, official documentation text, private Codex connector, customer data, proprietary B2B intelligence, OAuth credential, trademark, branded artwork, or marketplace icon is redistributed."
       ],
       "officialityEvidence": [
@@ -2436,7 +2436,7 @@
         "Intent is account-level and must not be attributed to a person. Buying Group configuration and gaps are tenant-specific and must not be treated as universal facts or proof that no relevant person exists.",
         "The documented surface is read-only. It does not create CRM tasks, update opportunities, send messages, import contacts, or change Buying Group membership.",
         "Contact, CRM, engagement, web activity, opportunity, Intent, and Buying Group data can be sensitive and must be retrieved and disclosed only within the authenticated user's authorized business purpose.",
-        "A generic GTM-research icon is used because no licensed Demandbase catalog artwork is redistributed."
+        "Brand logo provenance is recorded in plugins/demandbase/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run verify_demandbase_evidence and import_demandbase from scripts/import-official-hosted-plugins.py",
@@ -2510,7 +2510,7 @@
       "licenseEvidence": [
         "The pinned digitalocean-labs/mcp-digitalocean LICENSE grants the MIT permission notice under Copyright 2025 DigitalOcean LLC.",
         "The source package and @digitalocean/mcp 1.0.68 npm release both declare MIT and identify DigitalOcean as the author.",
-        "Ghast copies only the official MCP repository's MIT license. Its workflow, SSH helpers, documentation, manifest, and generic icon are independently authored.",
+        "Ghast copies only the official MCP repository's MIT license. Its workflow, SSH helpers, documentation, manifest are independently authored. Provider brand logo source and ownership are recorded in plugins/digitalocean/README.md; the logo is outside the code license.",
         "DigitalOcean's separate digitalocean/CodexPlugin capability source contains no LICENSE, COPYING, or equivalent grant, so none of its code, skill text, template, helper scripts, logos, or marketplace artwork is copied."
       ],
       "officialityEvidence": [
@@ -2548,7 +2548,7 @@
         "The independent SSH helper uses StrictHostKeyChecking accept-new for first contact and never runs ssh-keyscan automatically. Environments requiring stronger host identity assurance must verify and pin the fingerprint through an independent trusted channel.",
         "Adding the configured SSH alias to a desktop remote-workspace list remains a host UI action because the official MCP services manage DigitalOcean resources, not local desktop connection settings.",
         "Go was not installed in the audit environment, so the official Go test suite was not rerun locally. The exact upstream revision's GitHub CI and release workflows succeeded on August 10, 2026, and the published npm launcher was executed far enough to confirm its exact version, service selection, and missing-token failure path.",
-        "A generic cloud-server icon is used because the licensed MCP source does not grant redistribution rights for DigitalOcean marketplace artwork."
+        "Brand logo provenance is recorded in plugins/digitalocean/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-third-party-plugins.py --source-root ../upstreams",
@@ -2706,7 +2706,7 @@
       "officialRevision": "domotz-product-003fdd383c02+setup-323607fa9c60+oauth-95014110a362+auth-711fd29f57aa",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/domotz-preview/LICENSE covers only the Ghast-authored hosted-service configuration, workflow, documentation, metadata, and generic network-operations icon.",
+        "plugins/domotz-preview/LICENSE covers only the Ghast-authored hosted-service configuration, workflow, documentation, metadata. Provider brand logo source and ownership are recorded in plugins/domotz-preview/README.md; the logo is outside the code license.",
         "No Domotz hosted MCP implementation, private Codex app mapping, customer network data, credential, branded artwork, or marketplace icon is redistributed."
       ],
       "officialityEvidence": [
@@ -2736,7 +2736,7 @@
         "The authorization metadata exposes only OpenID profile scopes while Domotz documents per-action capability consent; authenticated server-side RBAC and tool consent remain the effective authorization boundary.",
         "Device restarts, outlet power cycles, script execution, credential changes, profile application, managed-state changes, alert mutations, contact changes, and bulk actions can interrupt services or alter network operations and require exact-target confirmation.",
         "Inventory, topology, IP and MAC addresses, metrics, logs, alerts, configuration backups, credentials status, customer names, and audit records can contain sensitive operational or personal data.",
-        "A generic network-operations icon is used because no licensed Domotz catalog artwork is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/domotz-preview/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-domotz-plugin.py",
@@ -2759,7 +2759,7 @@
       "officialRevision": "docusign-docs-ee7baa0a1615+chatgpt-0c1925822c08+demo-f64203b8c7d1+prod-8d3bb21db1fb",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/docusign/LICENSE licenses only the Ghast-authored adapter configuration, localhost OAuth compatibility bridge, safety instructions, documentation, and generic icon.",
+        "plugins/docusign/LICENSE licenses only the Ghast-authored adapter configuration, localhost OAuth compatibility bridge, safety instructions, documentation.",
         "No Docusign hosted MCP implementation, private Codex connector, OAuth credential, agreement data, signature, branded icon, or marketplace artwork is redistributed."
       ],
       "officialityEvidence": [
@@ -2801,7 +2801,7 @@
         "Official documentation, both public tool catalogs and schemas, OAuth metadata, Codex capability evidence, bridge package integrity, and invalid-token behavior were verified without a Docusign account. Authenticated tools/list and real agreement, envelope, recipient, or workflow operations were not run.",
         "Agreement text, signatures, parties, email addresses, extracted clauses, financial values, renewal dates, and workflow inputs can be confidential, personal, or regulated and must remain narrowly scoped.",
         "Envelope creation, sending, reminders, recipient changes, voiding, purge operations, and workflow triggers can be non-idempotent or irreversible. Ambiguous writes require exact readback before any retry.",
-        "A generic agreement-signing icon is used because no licensed catalog artwork is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/docusign/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-hosted-plugins.py",
@@ -2864,7 +2864,7 @@
         "Official docs, public source, release artifacts, OAuth metadata, Codex capability evidence, and unauthenticated protocol behavior were verified without a Dovetail account. Authenticated tools/list and real workspace operations were not run.",
         "Transcripts, research data, comments, contacts, customer identities, files, highlights, themes, unpublished findings, and presigned download URLs can contain personal or commercially sensitive data and must remain narrowly scoped.",
         "The eight create tools can produce durable workspace changes, notifications, new research inputs, or downstream channel effects. Every create requires exact-target review and explicit confirmation, and ambiguous writes require readback before retry.",
-        "A generic research-workspace icon is used because the public official source repository does not include redistributable catalog artwork."
+        "Brand logo provenance is recorded in plugins/dovetail/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-hosted-plugins.py",
@@ -2922,7 +2922,7 @@
         "create_project and send_message consume Lovable credits and modify real projects. deploy_project publishes a live URL. query_database has full read, write, and schema permissions.",
         "The OAuth connection has the user's full Lovable account access rather than project-only scope. Project code, databases, workspace knowledge, custom skills, connector data, analytics, and uploads can be sensitive.",
         "Authenticated tools/list and real project operations were not run because no Lovable account was supplied.",
-        "A generic app-builder icon is used because the official integration repository does not contain redistributable catalog artwork."
+        "Brand logo provenance is recorded in plugins/lovable/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-hosted-plugins.py",
@@ -2989,7 +2989,7 @@
       "officialRevision": "fal-docs-66aa306b5115+tools-a56c797a64ed+prompts-7da44a2905f0+oauth-672d054000bc",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/fal/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation, and generic icon.",
+        "plugins/fal/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation.",
         "No fal hosted MCP implementation, private Codex connector, API key, account data, generated media, branded icon, or marketplace artwork is redistributed.",
         "The Codex manifest's MIT field is not treated as a license grant for fal's hosted service or private connector; the package's MIT license applies only to Ghast-authored files."
       ],
@@ -3033,7 +3033,7 @@
         "Model discovery can show models blocked by enterprise access controls. Discovery is not proof that the authenticated account can execute a model.",
         "Face, voice, lip-sync, try-on, training, transcription, and other personal-media workflows require rights, participant authorization, privacy review, and clear generated-media labeling where authenticity could be misunderstood.",
         "Official docs, live tool and prompt catalogs, Codex capability evidence, endpoint authentication behavior, and privacy controls were verified without a fal account. No model, upload, training, cancellation, account-data, or billed operation was run.",
-        "A generic generative-media icon is used because no licensed catalog artwork is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/fal/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-hosted-plugins.py",
@@ -3056,7 +3056,7 @@
       "officialRevision": "fiscal-docs-ed7d01d13419+tools-81b3f6f1dd2f+oauth-d3acf769990a+auth-4cedf324baa9+skills-25015c6addfb",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/fiscal-ai/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation, and generic financial-research icon.",
+        "plugins/fiscal-ai/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation.",
         "No Fiscal.ai hosted MCP implementation, private Codex connector, API key, account data, official workflow bundle, source skill, branded icon, or marketplace artwork is redistributed.",
         "Fiscal.ai's official client repository at revision 20b67b677a21723cb76f30202a2495f20b8f22af and its 35-file official version 5 workflow archive contain no LICENSE, COPYING, or NOTICE file. Their content is used only as officiality and capability evidence and is not copied into this package.",
         "The Codex manifest's MIT field is not treated as a license grant for Fiscal.ai's hosted service, private connector, or official workflow content; the package's MIT license applies only to Ghast-authored files."
@@ -3100,7 +3100,7 @@
         "Filings, filing images, transcripts, news, and fund letters can be large or copyrighted. Retrieval must be narrow, quotation minimal, and attribution preserved.",
         "Financial data and resulting analysis are not investment, legal, tax, or accounting advice and do not establish future performance.",
         "The prior disposable DCR response included a registration management URI but no registration access token, so the audit client could not be safely deleted through RFC 7592 management.",
-        "A generic financial-research icon is used because no licensed Fiscal.ai catalog artwork is redistributed."
+        "Brand logo provenance is recorded in plugins/fiscal-ai/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run the Fiscal.ai evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated Close evidence drift",
@@ -3127,7 +3127,7 @@
       "officialRevision": "fyxer-docs-524a8683cf7b+addons-d1b55e0ef54e+oauth-c0a99fecb69d+auth-fde6773cf908",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/fyxer/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation, and generic email-context icon.",
+        "plugins/fyxer/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation.",
         "No Fyxer hosted MCP implementation, private Codex connector, OAuth credential, email or meeting data, writing-style model, branded icon, or marketplace artwork is redistributed.",
         "Fyxer does not publish a licensed source repository for the hosted MCP implementation. The Codex manifest's MIT field is not treated as a license grant for the service or private connector."
       ],
@@ -3163,7 +3163,7 @@
         "draft_email returns a draft in chat. Opening it in Outlook or Gmail and sending it are separate user-controlled actions; Ghast must not report those actions as completed.",
         "Fyxer-generated notes, summaries, contact matches, writing-style adaptation, and speaker attribution can be incomplete and must remain distinguishable from source evidence.",
         "Fyxer documents no data storage beyond the active MCP session, while Fyxer and connected email or calendar services retain data under their own policies.",
-        "A generic email-context icon is used because no licensed Fyxer catalog artwork is redistributed."
+        "Brand logo provenance is recorded in plugins/fyxer/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run the Fyxer evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated Close evidence drift",
@@ -3188,7 +3188,7 @@
       "officialRevision": "jam-docs-16753f7a8592+pat-ed4cde60e15d+oauth-675651395646",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/jam/LICENSE licenses only the independently authored Ghast adapter, safety guidance, documentation, and generic icon.",
+        "plugins/jam/LICENSE licenses only the independently authored Ghast adapter, safety guidance, documentation.",
         "No Jam hosted MCP implementation, private Codex connector, OAuth credential, PAT, recording, workspace data, branded icon, or marketplace artwork is redistributed."
       ],
       "officialityEvidence": [
@@ -3218,7 +3218,7 @@
         "Some MCP tools use Google Gemini. Jam says it opts customer data out of training and takes de-identification steps; sensitive analysis still requires disclosure and authorization.",
         "getScreenshot and analyzeVideo are unavailable for Instant Replay Jams. getFrames requires a compatible video hosted on Cloudflare Stream.",
         "Official docs, OAuth metadata, dynamic registration, Codex evidence, and unauthenticated behavior were verified without a Jam account. Authenticated tools/list and real recording or workspace operations were not run.",
-        "A generic bug-recording icon is used because no licensed catalog artwork is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/jam/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-hosted-plugins.py",
@@ -3452,7 +3452,7 @@
       "officialRevision": "fireflies-docs-5c8c1927db3b+tools-b2b5c5e4c79d+oauth-8f44680d0fcb+auth-97aa931cc88a",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/fireflies/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "plugins/fireflies/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No Fireflies hosted MCP implementation, private Codex connector, service source code, meeting data, API credentials, branded icon, or marketplace artwork is redistributed."
       ],
       "officialityEvidence": [
@@ -3490,7 +3490,7 @@
         "Sharing a meeting can expose its transcript to as many as 100 email addresses for 7, 14, or 30 days. Exact recipients, expiry, meeting identity, data exposure, and owner or admin authority require confirmation.",
         "Creating a soundbite can extract participant audio or video and produce a share URL. Exact boundaries, media type, privacy values, summary, consent, and authorization require confirmation.",
         "Ambiguous writes must not be blindly retried because they can duplicate clips or repeat title, channel, sharing, or access changes.",
-        "A generic meeting-intelligence icon is used because no licensed catalog artwork is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/fireflies/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-hosted-plugins.py",
@@ -3566,7 +3566,7 @@
       "officialRevision": "govtribe-docs-e0cd276f0d5e+servers-6ea83b94854e+tools-80cebed0f455+annotations-eed9dde0f2ea",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/govtribe/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic government-procurement icon.",
+        "plugins/govtribe/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No GovTribe hosted MCP implementation, private Codex or ChatGPT app connector, API key, account data, proprietary dataset, branded artwork, or marketplace icon is redistributed."
       ],
       "officialityEvidence": [
@@ -3603,7 +3603,7 @@
         "Sixteen official tools are destructive and non-idempotent. Ambiguous results must be inspected through current state before any retry.",
         "Government opportunity, award, spending, vendor, forecast, pricing, contact, file, and news data can be delayed, amended, duplicated, incomplete, licensed, or inconsistent. Important status, deadline, eligibility, set-aside, vehicle, and submission facts require source verification.",
         "Workspace records, proposal files, comments, contacts, memories, prior conversations, and teaming messages can contain personal, proprietary, acquisition-sensitive, source-selection, CUI, or export-controlled information. Retrieval and disclosure must remain narrowly scoped.",
-        "A generic government-procurement icon is used because no licensed GovTribe catalog artwork is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/govtribe/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run the GovTribe evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
@@ -3623,7 +3623,7 @@
       "officialRevision": "happenstance-docs-0f732ef26d9f+openapi-9f4068c6a679+oauth-d467d4c35bed+auth-8fd1bb79c36c",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/happenstance/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic network-research icon.",
+        "plugins/happenstance/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "The official happenstance-ai/skills repository at fbd5cd8b5c8579526985f4cb1f434598b7cf1153 contains one SKILL.md and no LICENSE, LICENSE.md, LICENSE.txt, COPYING, or NOTICE file, so none of its skill text is redistributed.",
         "No Happenstance hosted MCP implementation, private Codex connector, OAuth credential, professional-network data, source skill, branded artwork, or marketplace icon is redistributed."
       ],
@@ -3664,7 +3664,7 @@
         "Network search can expose names, employers, titles, social profiles, mutual paths, relationship strength, group membership, interests, and other personal data. Retrieval, ranking, and disclosure must remain narrowly scoped.",
         "Relationship strength, network proximity, group membership, employment, hobbies, and social content do not prove endorsement, willingness to introduce, availability, intent, sensitive traits, or suitability.",
         "Happenstance research is not a background check, reference, credential verification, legal compliance review, or authorization to contact anyone.",
-        "A generic network-research icon is used because no licensed Happenstance catalog artwork is included in the licensed material available for redistribution."
+        "Brand logo provenance is recorded in plugins/happenstance/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run the Happenstance evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
@@ -3687,7 +3687,7 @@
       "officialRevision": "hg-phoenix-docs-c5c35d6c9232+auth-57567aa2b2e3+tools-0ee3682befea+admin-17be9845965d",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/hg-insights/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic revenue-intelligence icon.",
+        "plugins/hg-insights/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No HG Insights hosted Phoenix MCP implementation, private Codex connector, API key, OAuth credential, customer data, proprietary or partner dataset, branded artwork, or marketplace icon is redistributed.",
         "HG Insights' official MCP documentation explicitly permits data access for agentic workflows such as answering a question, researching an account, or producing a deliverable, while excluding system-of-record population and deterministic scheduled, per-record, or scripted batch processes.",
         "The official documentation's edit links identify HGData/hip-phoenix as the implementation repository, but that repository is not publicly accessible and no reusable public license was available at the audited revision. Ghast therefore integrates the official hosted service without representing this adapter as HG Insights server source."
@@ -3741,7 +3741,7 @@
         "The documented standard and administrator rate limits are 1,000 and 500 requests per minute per API key. Company, product-catalog, and search data can remain cached for one hour, 24 hours, and 15 minutes respectively.",
         "Documentation, metadata, Codex evidence, and missing or invalid credential behavior were verified without an HG Insights account. Authenticated tools/list, company data, contacts, billable operations, queries, and agent runs were not executed.",
         "The public OAuth metadata advertises dynamic registration, but the audit environment received HTTP 403 from the registration endpoint. The vault-backed API-key route is the verified usable Ghast configuration.",
-        "A generic revenue-intelligence icon is used because the identified HGData/hip-phoenix repository is private and no licensed HG Insights catalog artwork is available for redistribution."
+        "Brand logo provenance is recorded in plugins/hg-insights/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run the HG Insights evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
@@ -3767,7 +3767,7 @@
       "officialRevision": "hebbia-product-7f99fc43f3f6+home-92b907df1539+oauth-78b5d22dd33e+auth-9b1ae93cc36d",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/hebbia/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic document-analysis icon.",
+        "plugins/hebbia/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No Hebbia hosted MCP implementation, private Codex connector, OAuth credential, customer data, service source code, branded artwork, or marketplace icon is redistributed."
       ],
       "officialityEvidence": [
@@ -3806,7 +3806,7 @@
         "Premium datasets remain subject to the user's provider agreements, display and export restrictions, retention rules, and entitlements. A provider listed on Hebbia's public site is not proof that it is enabled for a given workspace.",
         "Financial, legal, tax, accounting, credit, valuation, covenant, and investment outputs can be incomplete or stale and are decision support, not professional advice. Material conclusions require primary-source and human review.",
         "Any authenticated create, update, run, publish, export, share, schedule, email, overwrite, or delete capability requires exact target review and explicit current-conversation confirmation. Ambiguous operations must not be blindly retried.",
-        "A generic document-analysis icon is used because no licensed Hebbia catalog artwork is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/hebbia/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run the Hebbia evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
@@ -3913,7 +3913,7 @@
       "officialRevision": "granola-docs-b091dacafcec+oauth-ffbe7699c7ae+auth-710cc56359dd",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/granola/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "plugins/granola/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No Granola hosted MCP implementation, private Codex connector, meeting data, OAuth credentials, branded icon, or marketplace artwork is redistributed."
       ],
       "officialityEvidence": [
@@ -3951,7 +3951,7 @@
         "Documentation, the complete published six-tool catalog, OAuth metadata, dynamic registration, Codex capability evidence, and unauthenticated protocol behavior were verified without an account. Authenticated tools/list and real meeting-data operations were not run.",
         "Meeting notes, private notes, transcripts, attendee identities, customer statements, decisions, and action items can contain personal and commercially sensitive information. Retrieval and disclosure must remain narrowly scoped.",
         "Granola documents rate limits averaging around 100 requests per minute across tools, varying by plan and tool.",
-        "A generic meeting-notes icon is used because no licensed catalog artwork is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/granola/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-hosted-plugins.py",
@@ -3974,7 +3974,7 @@
       "license": "CC0-1.0",
       "licenseEvidence": [
         "The pinned official API documentation repository contains the complete CC0 1.0 Universal legal text.",
-        "Ghast copies only that license and generates its own adapter metadata, safety workflow, and generic CRM icon.",
+        "Ghast copies only that license and generates its own adapter metadata, safety workflow. Provider brand logo source and ownership are recorded in plugins/highlevel/README.md; the logo is outside the code license.",
         "No HighLevel hosted-server code, Codex private connector mapping, logo, or marketplace artwork is redistributed."
       ],
       "officialityEvidence": [
@@ -4004,7 +4004,7 @@
         "Each connection targets one authorized HighLevel sub-account. Tool availability depends on OAuth or PIT scopes, account role, location permissions, product entitlements, plan limits, and server-side policy.",
         "The hosted MCP implementation is operated by HighLevel and is not redistributed. The CC0 license evidence covers the official documentation source copied into the provenance chain, not HighLevel service code or trademarks.",
         "No authenticated CRM read, message send, appointment change, opportunity update, payment action, or other account mutation was run because no user HighLevel account was supplied.",
-        "A generic CRM icon is used because the official documentation license does not grant trademark rights."
+        "Brand logo provenance is recorded in plugins/highlevel/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Verify GoHighLevel/highlevel-api-docs revision 0af86a4cbd48c66a4071c7e509d1079f9f10ed17, repository ownership, README, and CC0-1.0 license hashes",
@@ -4056,7 +4056,7 @@
         "The official tool definitions contain no MCP safety annotations, so Ghast treats potentially state-changing operations conservatively and requires explicit review and confirmation.",
         "An eligible Hostinger account, browser OAuth or a user-managed API token, product entitlements, plans, permissions, quotas, and service charges remain user-managed.",
         "No authenticated website creation, deployment, purchase, billing, email, store, WordPress, domain, DNS, or VPS mutation was run because no user Hostinger account was supplied.",
-        "A generic hosting-and-deployment icon is used because the official MIT repository does not publish licensed catalog artwork."
+        "Brand logo provenance is recorded in plugins/hostinger/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Verify hostinger/api-mcp-server tag v1.34.0 and revision cc04bafbeae9362a35af1b6443d3c3833f9f30d5, MIT license, README, package, lockfile, server manifest, runtime, aggregate tool registry, and Horizons tool source hashes",
@@ -4080,7 +4080,7 @@
       "licenseEvidence": [
         "The pinned official plugin repository grants the MIT license under Copyright (c) 2026 Intercom, Inc.",
         "Intercom's pinned official OpenAPI repository separately grants MIT under Copyright (c) 2022 Intercom, Inc.; Ghast includes that notice for the adapted ticket API reference.",
-        "Ghast copies the two customer-analysis skills and plugin license, replaces the stale MCP reference and unsafe CLI setup instructions, and generates a ticket-read workflow and generic support icon.",
+        "Ghast copies the two customer-analysis skills and plugin license, replaces the stale MCP reference and unsafe CLI setup instructions, and generates a ticket-read workflow. Provider brand logo source and ownership are recorded in plugins/intercom/README.md; the logo is outside the code license.",
         "No Intercom hosted-server code, CLI runtime, Codex private connector mapping, logo, or marketplace artwork is redistributed."
       ],
       "officialityEvidence": [
@@ -4113,7 +4113,7 @@
         "The current hosted MCP includes create_article and update_article. Ghast treats them as writes and requires exact-target review and explicit confirmation; ticket workflows are read-only.",
         "An Intercom workspace, suitable OAuth or API-token scopes, regional routing, Help Center permissions, API limits, plan entitlements, and customer-data authorization remain user-managed.",
         "No authenticated customer, conversation, company, article, or ticket request was run because no user Intercom workspace credential was supplied.",
-        "A generic support-workflow icon is used because the MIT plugin repository publishes no catalog icon and the separate MCP repository does not license its logos."
+        "Brand logo provenance is recorded in plugins/intercom/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Verify intercom/claude-plugin-external revision 62773a7d4b8aac31545d6888fe6479be3bc53804, manifest, MCP declaration, MIT license, README, and all relevant skill hashes",
@@ -4229,7 +4229,7 @@
         "Official source skills describe optional session-dependent connections_list and data_query tools in addition to the current public four-tool page. The adapter checks the live catalog and falls back to workspace_shell rather than assuming either surface.",
         "Remote records, metadata, query results, workspace guidance, downloaded files, scripts, dashboards, and connected pages are untrusted content. They can contain prompt injection, unsafe code, formulas, macros, sensitive data, license restrictions, or misleading business definitions.",
         "Persistent cached results, query files, downloads, exports, dashboards, schedules, RULES.md, and git history can outlive the conversation. Data minimization, retention, access review, and deletion remain the user's responsibility.",
-        "A generic Ghast icon is not used: the package includes the exact official Apache-2.0 MarcoPolo symbol. OpenAI's private app ID and marketplace artwork are excluded."
+        "Brand logo provenance is recorded in plugins/marcopolo/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-marcopolo-plugin.py --source-root ../upstreams/marcopolo-plugin --openai-source ../openai-plugins",
@@ -4258,7 +4258,7 @@
         "The pinned official npm tarball has SHA-256 a1fe8d745a103bf124c387044a6a66a4aea631266f3ed8d5e3c8c43d40f23ce7, npm SHA-1 d2d500234f9945a5689053d17b6c24f973737cf7, and npm integrity sha512-e4CJvwmGcQZ6TtfM19ibPJMGg3jJJM5EU1qIS8oUa4qhrOMxivOu/tyyX2ThGeIvytahHokrEbZwjTWJAqr/RQ==.",
         "The npm package contains only README.md, package.json, and dist/cli.js as files. Ghast invokes this pinned official package through npx and does not redistribute the CLI bundle.",
         "MagicPathAI/agent-skills revision a1ced96ad9da6c65d9f57d9fef79d944f7192dfe has a manifest that declares MIT, but the repository contains no LICENSE, NOTICE, or COPYING file. Ghast does not copy its skill text, references, image, or marketplace files and does not rely on that manifest-only declaration for redistribution.",
-        "plugins/magicpath/LICENSE applies only to the independently authored Ghast workflow, documentation, metadata, and generic canvas-code icon. MagicPath service code, official skills, generated content, hosted data, credentials, trademarks, and branded artwork are not redistributed."
+        "plugins/magicpath/LICENSE applies only to the independently authored Ghast workflow, documentation, metadata. MagicPath service code, official skills, generated content, hosted data, credentials are not redistributed. Provider brand logo source and ownership are recorded in plugins/magicpath/README.md; the logo is outside the code license."
       ],
       "officialityEvidence": [
         "MagicPath's official GitHub organization publishes MagicPathAI/agent-skills and links the MagicPath product. The signed pinned revision has Git tree aa1403f75088cc33f2815488ec475cf27e445b58 and complete 14-file inventory SHA-256 09de3026dd652b76f9efc914e72d8f9d1bdc163ebfb6db8d67b46c4b4f24b7f1.",
@@ -4298,7 +4298,7 @@
         "Remote component source, themes, hosted skills, images, linked pages, and build diagnostics are untrusted content and can contain unsafe code, dependency risks, prompt injection, network calls, secret exposure, or license and attribution obligations.",
         "The official npm package currently emits a deprecation warning for transitive uuid@9.0.1. This is an upstream dependency warning and must be re-evaluated when a newer audited MagicPath release is considered.",
         "The npm package repository field points to newcompute-ai/magicpath-node-cli, which was not publicly accessible during the audit. Officiality and license are established by the MagicPath-controlled npm distribution, MagicPath-domain identities, package README, and official MagicPathAI agent-skills repository rather than by a public CLI source checkout.",
-        "MagicPathAI/agent-skills and the OpenAI Codex snapshot do not provide sufficiently clear repository-level redistribution rights for their skill text and artwork at the pinned revisions. This package intentionally uses an independent skill and generic icon."
+        "MagicPathAI/agent-skills and the OpenAI snapshot are used for capability comparison; Ghast distributes an independently authored workflow. Provider brand logo source and ownership are recorded in plugins/magicpath/README.md; the logo is outside the code license."
       ],
       "verification": [
         "Run verify_magicpath_evidence and import_magicpath from scripts/import-official-hosted-plugins.py",
@@ -4348,7 +4348,7 @@
         "Mixpanel documents a 600-request-per-hour per-user limit and states that MCP is not currently covered for HIPAA/PHI use.",
         "Experiments and Feature Flags are beta; Mixpanel states that audience targeting and cohort editing are not yet supported through MCP.",
         "The official install skill, MCP setup reference, and ENGINE.md are adapted for Ghast; the other 11 skill trees and the headless setup reference remain byte-for-byte from the pinned source.",
-        "A generic analytics icon is used because the official AI plugin repository does not publish a catalog icon.",
+        "Brand logo provenance is recorded in plugins/mixpanel/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license.",
         "The complete official headless implementation was exercised without live credentials; authenticated hosted MCP analytics and state-changing operations were not exercised."
       ],
       "runtimeVerification": {
@@ -4446,7 +4446,7 @@
       "limitations": [
         "A monday.com account, installation of the monday MCP app by an administrator, OAuth authorization, workspace permissions, plan-tier features, and service limits remain user-managed.",
         "Board, item, document, form, automation, dashboard, and other state-changing operations require explicit user confirmation.",
-        "A generic work-management icon is used because the portable official plugin repository does not include a catalog icon.",
+        "Brand logo provenance is recorded in plugins/monday-com/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license.",
         "Authenticated board, item, document, form, dashboard, workspace, and GraphQL operations were not exercised without a user-managed monday.com account."
       ],
       "runtimeVerification": {
@@ -4531,7 +4531,7 @@
       "officialRevision": "morningstar-source-4c62260714b7+resource-12a3d16a5bad+oauth-84d49684fd46+boundary-8599a03b4c1d",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/morningstar/LICENSE licenses only the independently authored Ghast endpoint declaration, skill, metadata, documentation, and generic fund-research icon.",
+        "plugins/morningstar/LICENSE licenses only the independently authored Ghast endpoint declaration, skill, metadata, documentation.",
         "The official repository declares MIT in its manifest but contains no license text, so none of its skills, workflows, scripts, templates, rating icons, artwork, manifests, or documentation is copied.",
         "Morningstar's hosted service, methodologies, research, licensed data, reports, ratings, trademarks, credentials, customer content, and responses remain excluded."
       ],
@@ -4563,7 +4563,7 @@
         "The official repository's manifest says MIT but the repository has no license text. The adapter copies none of those materials and does not claim they are MIT-redistributable.",
         "Morningstar data, research, ratings, methodologies, disclosures, and reports are licensed and may not be bulk exported, mirrored, republished, cached, or reused outside the customer's rights.",
         "Financial data can be delayed, incomplete, currency-sensitive, share-class-specific, and revised. Outputs are informational, not personalized investment advice or guaranteed performance.",
-        "A generic fund-research icon and independent report guidance replace Morningstar and OpenAI artwork and templates."
+        "Brand logo provenance is recorded in plugins/morningstar/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-morningstar-plugin.py --openai-source ../openai-plugins --official-source ../upstreams/morningstar-plugins",
@@ -5132,7 +5132,7 @@
       "licenseEvidence": [
         "The official windsor-ai/windsor_mcp discovery repository contains LICENSE.md with the MIT License, Copyright (c) 2021 Windsor.ai, at SHA-256 9fffefdf9a92023f27a4275919c4089f2d1a9ea76cea2abd12cdc235d919b764.",
         "The official windsor-ai/claude-windsor-ai-plugin repository contains a separate MIT License, Copyright (c) 2026 Windsor.ai, at SHA-256 b2c0ab907ac36882d7a4f0276a59c1f1ff3f46470dc918a127d3ab765b2b019d.",
-        "Ghast preserves both official license texts, the three official commands, and named upstream evidence files. The Ghast manifest, active MCP configuration, current-contract safety skill, README, modifications record, and generic icon are distributed under the included MIT grant.",
+        "Ghast preserves both official license texts, the three official commands, and named upstream evidence files. The Ghast manifest, active MCP configuration, current-contract safety skill, README, modifications record are distributed under the included MIT grant. Provider brand logo source and ownership are recorded in plugins/windsor-ai/README.md; the logo is outside the code license.",
         "The licenses cover the public repository materials and Ghast adapter, not Windsor.ai's hosted implementation, user data, source-provider data, third-party APIs, credentials, service terms, or trademarks."
       ],
       "officialityEvidence": [
@@ -5171,7 +5171,7 @@
         "contact_windsor sends a message and context to Windsor.ai support. Subscription, dashboard, connection, setup, and auto-login URLs can be bearer-like and must be treated as confidential.",
         "The official Claude skill at the pinned revision still documents four read tools, while the current hosted reference documents 16 tools. Ghast preserves that file as upstream evidence but activates a separately named current-contract safety skill instead of presenting stale instructions as live parity.",
         "The official short and full references and datasource list are dynamic. The importer fails closed when their pinned hashes, count, tool names, OAuth metadata, or authentication behavior change and requires a fresh review.",
-        "A generic source-network icon is used because the licensed MCP and Claude repositories do not publish reusable catalog artwork. The unlicensed Cursor repository icon and OpenAI marketplace artwork are not copied."
+        "Brand logo provenance is recorded in plugins/windsor-ai/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-windsor-ai-plugin.py --mcp-source ../upstreams/windsor_mcp --plugin-source ../upstreams/claude-windsor-ai-plugin --openai-source ../openai-plugins",
@@ -5244,7 +5244,7 @@
       "licenseEvidence": [
         "The pinned official repository's LICENSE grants the MIT permission notice under Copyright 2025 YepCode.",
         "The repository package and @yepcode/mcp-server 1.6.0 npm release both declare MIT.",
-        "The official repository contains no catalog icon, so Ghast uses a generic Ghast-authored code-execution icon and copies no YepCode or OpenAI marketplace artwork."
+        "The official repository contains no catalog icon, so Provider brand logo provenance and ownership are recorded in plugins/yepcode/README.md."
       ],
       "officialityEvidence": [
         "The repository is owned by YepCode's official GitHub organization and publishes @yepcode/mcp-server 1.6.0.",
@@ -5356,7 +5356,7 @@
       "limitations": [
         "Hugging Face accounts, browser login or bearer-token authentication, Hub permissions, cloud credentials, GPU quotas, and paid compute remain user-managed.",
         "Publishing repositories, launching paid jobs, deploying endpoints, changing cloud IAM, and deleting or overwriting Hub resources require explicit confirmation.",
-        "A generic machine-learning icon is used because the skills repository does not publish a small catalog icon.",
+        "Brand logo provenance is recorded in plugins/hugging-face/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license.",
         "Authenticated Hub writes, private-resource reads, paid jobs, cloud deployments, and MCP tools were not exercised without user-managed credentials."
       ],
       "runtimeVerification": {
@@ -5448,7 +5448,7 @@
       "limitations": [
         "Netlify accounts, OAuth authorization, team and site permissions, CLI authentication, build minutes, and paid services remain user-managed.",
         "Production deploys, environment-variable changes, extension changes, access-control changes, and destructive site operations require explicit confirmation.",
-        "A generic deployment-service icon is used because the portable official package does not include a catalog icon with explicit redistribution metadata.",
+        "Brand logo provenance is recorded in plugins/netlify/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license.",
         "Authenticated site inspection, deploys, environment changes, and other live Netlify operations were not exercised without a user-managed account."
       ],
       "runtimeVerification": {
@@ -5638,7 +5638,7 @@
         "The official tool page contains 844 unique tool names matching the pinned source schema, while its 58 displayed category counts sum to 837. Ghast records rather than conceals that documentation inconsistency.",
         "The current PostHog AI plugin has 137 synchronized static skills, but its repository and the context-mill source stream lack verifiable license files. Ghast does not redistribute those files and does not claim byte-for-byte parity with that guidance layer.",
         "Authenticated tool listing and project operations were not run because no PostHog account or project data was supplied.",
-        "A generic analytics icon is used instead of unlicensed marketplace or AI-plugin artwork."
+        "Brand logo provenance is recorded in plugins/posthog/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-hosted-plugins.py",
@@ -5750,7 +5750,7 @@
       "officialRevision": "mtnewswires-ai-d0dbbb14e493+vast-71195676026d+oauth-d7f7d5f2df32",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/mt-newswires/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation, and generic financial-news icon.",
+        "plugins/mt-newswires/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation.",
         "No MT Newswires article corpus, hosted MCP implementation, viaNexus service source, private Codex connector, OAuth credential, branded artwork, or marketplace icon is redistributed.",
         "MT Newswires subscriptions and licensed content remain governed by MT Newswires and viaNexus service terms; the adapter's MIT license does not grant content redistribution, resale, trademark, or service rights."
       ],
@@ -5786,7 +5786,7 @@
         "The dedicated endpoint provides news, not independent exchange price data. It can support reasoned analysis of likely impact, but claims that a story actually moved a security require a separate market-data source and careful treatment of causality.",
         "The old endpoint recorded by Anthropic is stale and must not be used. The current adapter endpoint is the dedicated route published by viaNexus.",
         "The one-time dynamic registration returned a confidential client secret but no registration management URI or token, so the disposable client could not be deleted through RFC 7592. The importer does not create additional clients.",
-        "A generic financial-news icon is used because no licensed catalog artwork is included in a public official source repository."
+        "Brand logo provenance is recorded in plugins/mt-newswires/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Load scripts/import-official-hosted-plugins.py with importlib, run verify_mt_newswires_evidence(), then run import_mt_newswires(); both completed successfully on August 14, 2026",
@@ -5811,7 +5811,7 @@
       "officialRevision": "omni-docs-d22f4d9c42b1+tools-18dce31231e8+oauth-14b3543ee3f0+auth-c75b0e080de0",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/omni-analytics/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation, and generic analytics icon.",
+        "plugins/omni-analytics/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation.",
         "No Omni hosted MCP implementation, private Codex connector, OAuth PAT, organization data, semantic model, branded icon, or marketplace artwork is redistributed.",
         "Omni does not publish the hosted MCP implementation under an open-source license. The Codex manifest's MIT field is not treated as a license grant for the service or private connector."
       ],
@@ -5847,7 +5847,7 @@
         "askOmni can create recurring routines that deliver by email or Slack. Routine schedule, timezone, query, filters, recipients, permissions, and stop plan require immediate explicit confirmation.",
         "Governed semantic models improve consistency but do not prove source completeness, data freshness, or correctness. Assistant calculations and interpretations must remain separate from returned facts.",
         "The disposable DCR response returned no registration management URI or access token, so the audit client could not be deleted through RFC 7592 management.",
-        "A generic analytics icon is used because no licensed Omni catalog artwork is redistributed."
+        "Brand logo provenance is recorded in plugins/omni-analytics/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run the Omni evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated Close evidence drift",
@@ -5872,7 +5872,7 @@
       "officialRevision": "otter-zendesk-35287607569687-2026-08-12+oauth-1b480247ee26+auth-901170a75106",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/otter-ai/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "plugins/otter-ai/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No Otter hosted MCP implementation, private Codex connector, meeting data, OAuth credentials, branded icon, or marketplace artwork is redistributed."
       ],
       "officialityEvidence": [
@@ -5910,7 +5910,7 @@
         "Fetch returns a full speech transcript and can expose sensitive participant statements. Search and retrieval must be bounded and disclosure minimized.",
         "Meeting access follows existing Otter sharing and Workspace permissions. The plugin must not attempt to bypass access controls or infer permission to disclose content.",
         "Recording consent, retention policy, Workspace governance, privacy requirements, and legal holds remain user and organization responsibilities.",
-        "A generic meeting-transcript icon is used because the downloadable official icon does not include a public redistribution license."
+        "Brand logo provenance is recorded in plugins/otter-ai/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-hosted-plugins.py",
@@ -5932,7 +5932,7 @@
       "officialRevision": "outreach-docs-fad773e5a468+tools-71d9d8bf5845+oauth-bd349848c7a7+auth-7815bab59627",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/outreach/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation, and generic revenue-workflow icon.",
+        "plugins/outreach/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation.",
         "No Outreach hosted MCP implementation, private Codex connector, OAuth client credential, customer or conversation data, branded artwork, or marketplace icon is redistributed.",
         "Outreach does not publish its hosted MCP server source or a redistribution license. The Codex manifest's MIT declaration is not treated as a license grant for the service or private connector."
       ],
@@ -5969,7 +5969,7 @@
         "Email bodies, Kaia recordings and transcripts, contact details, task text, and pipeline data can be sensitive. Retrieval must be bounded, disclosure minimized, and recording-consent or retention obligations respected.",
         "All 11 write tools are non-idempotent. Record creation, task creation, Q&A history creation, sequence enrollment or removal, and deletes require exact target review and explicit confirmation. Ambiguous writes must be read back before retry.",
         "Sequence enrollment can initiate outbound activity. Drafting or research does not authorize enrollment, sending, scheduling, task creation, or other external effects.",
-        "A generic revenue-workflow icon is used because no licensed Outreach catalog artwork is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/outreach/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run the Outreach evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
@@ -5994,7 +5994,7 @@
       "officialRevision": "pylon-mcp-doc-7e1bdd12b729+messages-f084f9c0abb0+resource-2c83dcf3cc83+oauth-92cae1ab0e93+terms-2a942b005436",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/pylon/LICENSE licenses only the independently authored Ghast MCP declaration, REST note adapter, workflow, metadata, documentation, and generic support-ticket icon.",
+        "plugins/pylon/LICENSE licenses only the independently authored Ghast MCP declaration, REST note adapter, workflow, metadata, documentation.",
         "Pylon does not publish its hosted MCP or API implementation under an open-source license. No server code, customer data, credential, private connector, documentation, logo, or trademark is copied.",
         "Pylon's service terms govern authorized access separately and restrict reverse engineering, derivative services, unauthorized users, and disclosure of confidential information."
       ],
@@ -6030,7 +6030,7 @@
         "MCP and REST authentication are separate: user-scoped OAuth does not supply the API token required by the note adapter.",
         "Issue, account, contact, and message data can include confidential customer information and personal data. Retrieval and notes must be limited to the authorized support purpose.",
         "Create, update, assignment, resolution, and note calls are durable external writes. Ambiguous failures must be read back, not retried.",
-        "A generic support-ticket icon is used because Pylon logos and OpenAI marketplace artwork are not redistributed."
+        "Brand logo provenance is recorded in plugins/pylon/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-pylon-plugin.py --openai-source ../openai-plugins",
@@ -6055,7 +6055,7 @@
       "officialRevision": "quartr-docs-b37a9c381ded+oauth-a379a77612f2",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/quartr/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "plugins/quartr/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No Quartr hosted MCP server source or private Codex connector implementation is redistributed."
       ],
       "officialityEvidence": [
@@ -6082,7 +6082,7 @@
         "The MCP service is intended for individual subscriber research workflows. Product or team integrations should use the separately licensed Quartr Public API.",
         "Requests are limited per tool and globally; the official documentation states 20 to 100 requests per minute by tool, 100 total per minute, 2,250 per hour, and 8,500 per day.",
         "Watchlist, keyword, folder, workspace, and saved-filter changes require explicit confirmation, while deletes and workspace replacement are treated as destructive.",
-        "A generic financial-research icon is used because no licensed catalog icon is included in a public official source repository."
+        "Brand logo provenance is recorded in plugins/quartr/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "runtimeVerification": {
         "status": "authenticated-core-not-exercised",
@@ -6114,7 +6114,7 @@
       "license": "MIT",
       "licenseEvidence": [
         "The official LICENSE at the pinned revision has SHA-256 2b51ab429d27ce74a8afc18a4b99beb8066b4c7e48e494ece56288ee5b9df140 and identifies the MIT License with Copyright (c) 2025 Razorpay.",
-        "plugins/razorpay/UPSTREAM_LICENSE preserves Razorpay's MIT grant, while plugins/razorpay/LICENSE separately licenses the Ghast-authored adapter, launcher, tests, configuration, documentation, and generic icon."
+        "plugins/razorpay/UPSTREAM_LICENSE preserves Razorpay's MIT grant, while plugins/razorpay/LICENSE separately licenses the Ghast-authored adapter, launcher, tests, configuration, documentation. Provider brand logo source and ownership are recorded in plugins/razorpay/README.md; the logo is outside the code license."
       ],
       "officialityEvidence": [
         "The repository is owned by the Razorpay GitHub organization, describes itself as Razorpay's official MCP server, and links to Razorpay's official MCP documentation.",
@@ -6141,7 +6141,7 @@
         "Razorpay merchant API keys must be configured outside chat. Account permissions, API availability, test or live mode, pagination, rate limits, and service behavior remain user-managed.",
         "No authenticated merchant account or merchant data was used during verification. The audit proves tool registration, annotations, schemas, dependency integrity, and the GET-only saved-method implementation, not production account entitlements or response completeness.",
         "Razorpay amounts can be expressed in the smallest currency unit, and settlement or reconciliation records can lag payment events. Material financial conclusions require dashboard or accounting-record confirmation.",
-        "A generic payment-ledger icon is used because the official source repository does not publish reusable catalog artwork; Codex marketplace artwork is not copied."
+        "Brand logo provenance is recorded in plugins/razorpay/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/audit-razorpay-plugin.py --source-root ../upstreams/razorpay-mcp-server --openai-source ../openai-plugins --go /absolute/path/to/go1.24.2/bin/go",
@@ -6184,7 +6184,7 @@
         "Authentication is completed by the user outside the conversation. The Ghast skill does not ask for, receive, store, or pass a Quicknode API key.",
         "All state-changing infrastructure commands require explicit confirmation, current-state inspection, and result verification. Mutations are never blindly retried.",
         "Wallet creation, credit purchases, payment-channel operations, and paid RPC modes require a separate explicit request and confirmation of amount, asset, and network; ambiguous paid-call failures are never retried.",
-        "A generic node-infrastructure icon is used because the official CLI repository does not publish a redistributable catalog icon.",
+        "Brand logo provenance is recorded in plugins/quicknode/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license.",
         "The recorded runtime check covers the official release digest, binary, versioned agent guide, command trees, and unauthenticated failure boundary. No endpoint, usage, billing, security, rate-limit, wallet, credit, or paid-RPC account operation was executed."
       ],
       "runtimeVerification": {
@@ -6295,7 +6295,7 @@
         "The API and MCP service enforce 100 requests per minute per user, and meeting access remains limited to reports the authenticated user can access.",
         "Some Read AI web features, including Ask Read and Coaching, are not exposed through the public API or MCP server.",
         "Dispatching a meeting agent and sharing a report are state-changing operations outside the Codex read capability set and require explicit confirmation.",
-        "A generic meeting-intelligence icon is used because no redistributable catalog icon is included in a licensed official source repository."
+        "Brand logo provenance is recorded in plugins/read-ai/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "runtimeVerification": {
         "status": "authenticated-core-not-exercised",
@@ -6325,7 +6325,7 @@
       "officialRevision": "readwise-skills-2d1ce9627c61-a72340a2f73f+oauth-b39687b19dac",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/readwise/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "plugins/readwise/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "The current official readwiseio/readwise-skills and readwiseio/readwise-cli repositories publish no LICENSE file, so their source and skill text are not redistributed.",
         "The older readwiseio/readwise-mcp repository is MIT-licensed but officially deprecated in favor of the hosted server and is not bundled."
       ],
@@ -6350,7 +6350,7 @@
         "The current official CLI and agent-skills repositories have no published license, so Ghast does not copy their source or workflow text and uses them only as pinned capability evidence.",
         "Authentication uses Readwise OAuth with read and write scopes. Account access, Reader availability, subscriptions, library permissions, quotas, and service limits remain user-managed.",
         "Creates, moves, bulk edits, tag changes, note changes, highlight changes, and deletes require explicit confirmation and current-state verification.",
-        "A generic reading-library icon is used because the current official repositories do not publish licensed catalog artwork.",
+        "Brand logo provenance is recorded in plugins/readwise/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license.",
         "The official CLI build and all no-credential tests were exercised; authenticated library search, retrieval, creation, organization, export, and deletion operations were not exercised."
       ],
       "runtimeVerification": {
@@ -6375,7 +6375,7 @@
       "officialRevision": "replit-docs-8391016162ec+oauth-41b41e6b0d6d+native-6c682a9cf3ef",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/replit/LICENSE licenses only the Ghast-authored endpoint configuration, safety instructions, documentation, and generic icon.",
+        "plugins/replit/LICENSE licenses only the Ghast-authored endpoint configuration, safety instructions, documentation.",
         "No Replit hosted MCP implementation, native connector code, Agent implementation, app source, account data, secrets, databases, OAuth credentials, or marketplace artwork is redistributed."
       ],
       "officialityEvidence": [
@@ -6416,7 +6416,7 @@
         "Replit requires native-connector responses to avoid raw source code, file contents, file paths, configuration, and terminal commands; implementation inspection belongs in the Replit UI.",
         "search_apps is experimental and can require fallback to exact-name resolution or recent-app listing.",
         "App creation, Agent work, databases, storage, publishing, hosting, and custom domains can consume plan resources or incur usage charges.",
-        "A generic app-builder icon is used instead of Replit marketplace artwork."
+        "Brand logo provenance is recorded in plugins/replit/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-hosted-plugins.py",
@@ -6440,7 +6440,7 @@
       "licenseEvidence": [
         "The official scitedotai/scite-mcp-skill repository at revision 9f3e3cd02c477e16c0a9b5c9114c9692d9a73317 contains an MIT License with Copyright 2026 scite, Inc.; its LICENSE SHA-256 is a966b74650ff29ba15438f9382e2a1a0f9ef24761ec31fb851cc62dc30063780.",
         "The official repository README and SKILL.md have SHA-256 values 087062c06fb7e6beb21e400ca3b10594eb945658e2a7d3eef07ba4e01b16cb69 and 8fe719117b30d6fac41cd6bc63a8ffbf7e995a413587acdb37d89768654e54fe.",
-        "plugins/scite/LICENSE licenses only the independently authored Ghast adapter, safety guidance, documentation, and generic icon. No Scite hosted implementation, private Codex connector, credential, corpus, collection, proprietary citation model, branded icon, or marketplace artwork is redistributed."
+        "plugins/scite/LICENSE licenses only the independently authored Ghast adapter, safety guidance, documentation. No Scite hosted implementation, private Codex connector, credential, corpus, collection, proprietary citation model, branded icon, or marketplace artwork is redistributed."
       ],
       "officialityEvidence": [
         "Scite's official MCP documentation identifies https://api.scite.ai/mcp as its hosted server and states that the same Scite tools power its first-party ChatGPT plugin and Claude connector.",
@@ -6483,7 +6483,7 @@
         "The public health endpoint reports only the original literature tool and conflicts with the live catalog. Clients must not use that stale list as the complete capability surface.",
         "Scite advertises Dynamic Client Registration, but a direct audit registration request was blocked by its CloudFront layer with HTTP 403. Browser OAuth and DCR were not independently completed in this environment.",
         "Unauthenticated initialization, tools/list, prompts/list, and one read-only DOI lookup were verified. No Scite account, protected Evidence entitlement, private collection, collection write, API key, OAuth token, or commercial search workflow was accessed.",
-        "A generic research-evidence icon is used because no redistributable catalog artwork license was identified."
+        "Brand logo provenance is recorded in plugins/scite/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-hosted-plugins.py",
@@ -6509,7 +6509,7 @@
       "officialRevision": "semrush-docs-e34fd6ac1924+oauth-5d0b459a41d7",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/semrush/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "plugins/semrush/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No Semrush hosted MCP server source, proprietary dataset, or private Codex connector implementation is redistributed."
       ],
       "officialityEvidence": [
@@ -6537,7 +6537,7 @@
         "Every report consumes API units based on report type and response size. Unit balances and subscription renewal remain user-managed.",
         "The service is read-only: it cannot create projects, change campaigns or settings, or add tracked keywords.",
         "Semrush API restrictions include account rate and concurrency limits and restrictions on long-term caching or redistribution of returned data.",
-        "A generic web-analytics icon is used because no licensed catalog icon is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/semrush/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "runtimeVerification": {
         "status": "authenticated-core-not-exercised",
@@ -6570,7 +6570,7 @@
       "license": "MIT",
       "licenseEvidence": [
         "The pinned official repository contains LICENSE.md with the MIT license and Copyright (c) 2003-present SignNow; its SHA-256 is e9d433a6856c874b814aad7c54085f20597bdf8d2364c31644fb37e3960af633.",
-        "plugins/signnow/LICENSE separately licenses the Ghast-authored hosted-endpoint configuration, safety instructions, documentation, and generic icon.",
+        "plugins/signnow/LICENSE separately licenses the Ghast-authored hosted-endpoint configuration, safety instructions, documentation. Provider brand logo source and ownership are recorded in plugins/signnow/README.md; the logo is outside the code license.",
         "Ghast does not redistribute the SignNow server source, private Codex connector, account data, signed documents, OAuth credentials, or marketplace artwork."
       ],
       "officialityEvidence": [
@@ -6609,7 +6609,7 @@
         "All creates, sends, embedded-link creation, uploads, template creation, prefill changes, reminders, recipient replacements, cancellations, and renames require fresh server state and explicit target review. Ambiguous writes must not be blindly retried.",
         "Document, signing, download, editor, invite, and sending links can grant access to sensitive material and must be disclosed only to the intended user.",
         "The complete Ruff format check reports an upstream whitespace-only issue in tests/README.md; all source and Python test files pass Ruff formatting when that Markdown example is excluded.",
-        "A generic document-signing icon is used instead of SignNow marketplace artwork."
+        "Brand logo provenance is recorded in plugins/signnow/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-hosted-plugins.py",
@@ -6635,7 +6635,7 @@
       "officialRevision": "similarweb-docs-eac1d71df335+claude-aa84c3a66647+oauth-4f4e48ae9c75",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/similarweb/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "plugins/similarweb/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No Similarweb hosted MCP server source, proprietary dataset, private Codex connector, or marketplace artwork is redistributed."
       ],
       "officialityEvidence": [
@@ -6662,7 +6662,7 @@
         "MCP calls consume the same data credits as Similarweb REST API calls, and broader ranges, finer granularity, and larger metric sets can consume more credits.",
         "Similarweb's public client setup guides primarily describe API-key authentication, while the live service also publishes standard OAuth metadata. Ghast uses the OAuth path and never stores an API key.",
         "Similarweb measurements may be estimates, and AI-generated interpretations can be incomplete or inaccurate. The skill requires explicit scope and separates returned metrics from conclusions.",
-        "A generic market-analytics icon is used because no licensed catalog icon is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/similarweb/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "runtimeVerification": {
         "status": "authenticated-core-not-exercised",
@@ -6693,7 +6693,7 @@
       "officialRevision": "skywatch-docs-f4ed1fbadb7c+client-a16e47fecde3+tools-c6b9fe481f16",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/skywatch/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "plugins/skywatch/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No SkyWatch hosted MCP server source, imagery catalog, private Codex connector, or marketplace artwork is redistributed."
       ],
       "officialityEvidence": [
@@ -6721,7 +6721,7 @@
         "Scene inventory, previews, providers, pricing, minimum order areas, and Explore links can change after a search. Pricing results must be rechecked before purchase.",
         "Natural-language locations are geocoded by the service. Ambiguous or sensitive locations should be resolved explicitly before searching.",
         "The official documentation states a 25-second search timeout; broad areas or date ranges may need to be narrowed.",
-        "A generic satellite-search icon is used because no licensed catalog icon is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/skywatch/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "runtimeVerification": {
         "status": "recorded-core-verification",
@@ -6776,7 +6776,7 @@
         "The MCP bridge is pinned to the MIT-licensed mcp-remote 0.1.38 runtime recommended by Statsig's own skill; it expands STATSIG_CONSOLE_API_KEY from the host environment and the key is not stored in the package.",
         "The experimental statsig-create-cloud-metric skill is intentionally excluded because its curl example expands an API key into a process argument. This does not remove any capability promised by the Codex plugin.",
         "Create, rollout, toggle, targeting, allocation, dashboard, and other state-changing operations require explicit confirmation.",
-        "A generic experimentation icon is used because the official skills repository does not publish a catalog icon."
+        "Brand logo provenance is recorded in plugins/statsig/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "runtimeVerification": {
         "status": "authenticated-core-not-exercised",
@@ -6801,7 +6801,7 @@
       "officialRevision": "streak-docs-87c17a922fb5+claude-f49193624657+oauth-493b0f31d7f3",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/streak/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation, and generic icon.",
+        "plugins/streak/LICENSE licenses only the Ghast-authored adapter configuration, safety instructions, documentation.",
         "No Streak hosted MCP server source, private Codex connector, service source code, or marketplace artwork is redistributed."
       ],
       "officialityEvidence": [
@@ -6827,7 +6827,7 @@
         "Endpoint discovery and the complete OAuth protocol were verified without an account, but authenticated tool listing and CRM operations were not run.",
         "The MCP provides CRM data and timeline context, not Gmail email bodies for analysis. It can attach a user-selected Gmail thread to a box timeline.",
         "Creates, updates, stage moves, assignments, tasks, comments, logs, and timeline attachments require explicit confirmation. Stage or field changes may trigger workspace automations.",
-        "A generic CRM pipeline icon is used because no licensed catalog icon is included in a public official MCP source repository."
+        "Brand logo provenance is recorded in plugins/streak/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-official-hosted-plugins.py",
@@ -6908,7 +6908,7 @@
       "officialRevision": "thoughtspot-79e978603135+tools-5d067ec65a48+docs-19631cc2bc1a+auth-bd3db075f410",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/thoughtspot/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation, and generic icon.",
+        "plugins/thoughtspot/LICENSE licenses only the independently authored Ghast adapter configuration, safety instructions, documentation.",
         "The official thoughtspot/mcp-server repository uses the ThoughtSpot Development Tools End User License Agreement, whose restrictions prohibit redistribution and modification. No source file, official skill, logo, private connector, or marketplace artwork is copied into the Ghast package.",
         "The pinned source LICENSE, README, package metadata, lockfile, version registry, tool definitions, and official skill are used only as hash-pinned audit evidence."
       ],
@@ -6947,7 +6947,7 @@
         "create_analysis_session and send_session_message create transient analytical state and can run data queries. The skill avoids duplicate sessions and preserves query, filter, and source context.",
         "Forecasts, anomaly explanations, generated reasoning, and causal drivers can be incomplete or wrong and must remain distinguishable from returned facts and business definitions.",
         "A clean lockfile install with scripts disabled passed 31 test files and 704 tests. npm audit reported 34 upstream advisories, including three critical advisories; Ghast packages none of those dependencies or server code.",
-        "A generic governed-analytics icon is used because the official source and brand assets are not licensed for redistribution in this package."
+        "Brand logo provenance is recorded in plugins/thoughtspot/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "Run the ThoughtSpot evidence verifier and importer functions from scripts/import-official-hosted-plugins.py through Python runpy; the full hosted importer is independently fail-closed on unrelated provider evidence drift",
@@ -7103,7 +7103,7 @@
       "limitations": [
         "Zoom Marketplace app creation, user OAuth tokens, granular scopes, account entitlements, AI meeting features, and paid services remain user-managed.",
         "The older Codex private app mapping is not copied; Zoom's official public MCP endpoints provide the equivalent meeting-context transport.",
-        "A generic video-service icon is used because Zoom's official MCP registry says its logo is proprietary and grants no redistribution rights."
+        "Brand logo provenance is recorded in plugins/zoom/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "runtimeVerification": {
         "status": "authenticated-core-not-exercised",
@@ -7238,7 +7238,7 @@
         "Each Retrieval request records user_id and a new work_id and consumes licensed tokens. The adapter performs no automatic retry to avoid duplicate retrieval or metering.",
         "Token usage is aggregated twice daily and may include duplicate consumption before Dow Jones applies its 24-hour deduplication rule.",
         "Factiva articles can contain copyrighted, personal, market-sensitive, translated, duplicated, stale, or conflicting material. Responses must preserve source attribution, dates, uncertainty, and user authorization.",
-        "A generic news-research icon is used because no official Factiva brand asset with clear redistribution permission is copied into this package."
+        "Brand logo provenance is recorded in plugins/dow-jones-factiva/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-factiva-plugin.py --source-root ../upstreams/factiva-retrievalapi-demo --openai-source ../openai-plugins",
@@ -7264,7 +7264,7 @@
       "licenseEvidence": [
         "factset/enterprise-sdk LICENSE at revision 36c67dfb8ff2b9893d0f8822ecb5d62abd30dc3f has SHA-256 58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd and is Apache License 2.0.",
         "InvestmentResearch.v1.yaml and SecurityExplanation.v1.json both declare Apache License 2.0 in their official OpenAPI metadata.",
-        "plugins/factset/LICENSE copies the official SDK license. The Ghast-authored adapter, workflow, documentation, and generic icon are distributed under the same license."
+        "plugins/factset/LICENSE copies the official SDK license. The Ghast-authored adapter, workflow, documentation are distributed under the same license. Provider brand logo source and ownership are recorded in plugins/factset/README.md; the logo is outside the code license."
       ],
       "officialityEvidence": [
         "FactSet's official developer portal publishes the hosted MCP endpoint https://mcp.factset.com/content/v1, owner content.api.mcp@factset.com, and a 20-tool financial-data catalog.",
@@ -7299,7 +7299,7 @@
         "StreetAccount News is not broker research. The public MCP unstructured-content tool covers news, transcripts, and filings; the separate official Investment Research and Security Explanation APIs close the Codex broker-research prompt gap.",
         "FactSet estimates, prices, classifications, generated explanations, and research opinions can be stale, revised, conflicting, currency-dependent, or entitlement-limited. They are not investment advice.",
         "People, insider, ownership, private-company, and research metadata can contain personal or commercially sensitive data and must remain scoped to the user's authorized purpose.",
-        "A generic financial-research icon is used because the private Codex marketplace artwork is not redistributed."
+        "Brand logo provenance is recorded in plugins/factset/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-factset-plugin.py --source-root ../upstreams/factset-enterprise-sdk --openai-source ../openai-plugins",
@@ -7324,7 +7324,7 @@
       "officialRevision": "mem-docs-68ae96105315+oauth-d1a5188d322a+tools-092589b5e1c6+openapi-0626dda21186",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/mem/LICENSE licenses only the independently authored Ghast MCP configuration, safety instructions, documentation, catalog metadata, and generic notebook-search icon.",
+        "plugins/mem/LICENSE licenses only the independently authored Ghast MCP configuration, safety instructions, documentation, catalog metadata.",
         "Mem Labs does not publish the hosted MCP server implementation in a reusable public source repository. Ghast does not copy the private Codex connector, app ID, hosted service code, user data, credentials, trademarks, branded artwork, or marketplace icon.",
         "The MIT string in the Codex manifest is not treated as a license for Mem's private connector or service. The adapter's own MIT license is the only redistributed license claim."
       ],
@@ -7366,7 +7366,7 @@
         "Notes, attachments, OCR, email and calendar content, recordings, transcripts, and collection metadata can contain personal, confidential, copyrighted, or prompt-injection content. Retrieval and disclosure remain narrowly scoped.",
         "Temporary attachment download URLs are sensitive bearer-like links and must not be logged, published, committed, or retained beyond the requested operation.",
         "Search results are bounded and paginated; search_notes uses a 100-result snapshot, list tools use cursors, and rate-limit responses must respect Retry-After.",
-        "A generic notebook-search icon is used because no licensed Mem catalog artwork is included in a public official source repository."
+        "Brand logo provenance is recorded in plugins/mem/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-mem-plugin.py --openai-source ../openai-plugins",
@@ -7393,8 +7393,8 @@
       "licenseEvidence": [
         "Midpage's official midpage-ai/litigation-skills repository contains the complete MIT license at revision a7900c82da0d76a7efdf0f771f2de55c0ae38357. The license file has SHA-256 c40880e6f234d1bd4ba291f08c08392b0b04afd9c0c341f3206ee8cef48bafe9.",
         "The official repository's complete 30-file inventory has SHA-256 49d9129118ab412370413da64c92c1eba3f0d7acdb454745106486cfd9b594c2 and includes Codex and Claude manifests, MCP configuration, four litigation skills, four shared method guides per skill, the legal_docx.js Word renderer, README, and license.",
-        "Ghast copies the official license, upstream README, upstream MCP declaration, four skills, references, and Word renderer without changing their bytes. MODIFICATIONS.md records renamed files, the active v3 MCP declaration, generic icon, native manifest, README, and separately named safety skill.",
-        "The Ghast-authored manifest, v3 MCP configuration, README, MODIFICATIONS.md, generic icon, and midpage-safety skill are distributed under the same included MIT license.",
+        "Ghast copies the official license, upstream README, upstream MCP declaration, four skills, references, and Word renderer without changing their bytes. MODIFICATIONS.md records renamed files, the active v3 MCP declaration, native manifest, README, and separately named safety skill. Provider brand logo source and ownership are recorded in plugins/midpage/README.md; the logo is outside the code license.",
+        "The Ghast-authored manifest, v3 MCP configuration, README, MODIFICATIONS.md, and midpage-safety skill are distributed under the same included MIT license. Provider brand logo source and ownership are recorded in plugins/midpage/README.md; the logo is outside the code license.",
         "The MIT license does not grant rights in Midpage accounts, hosted MCP or API implementations, legal data, docket files, customer materials, credentials, trademarks, or private Codex marketplace artwork."
       ],
       "officialityEvidence": [
@@ -7435,7 +7435,7 @@
         "Midpage analysis, citator treatment, docket parsing, OCR, generated propositions, and source coverage can be incomplete, ambiguous, delayed, or wrong. They are not a substitute for qualified legal review or current primary-source verification.",
         "Docket reports, filings, uploads, and generated work product can contain privileged, work-product, sealed, restricted, personal, medical, financial, criminal, immigration, trade-secret, or minor information. Retrieval and disclosure remain narrowly scoped.",
         "The Word renderer requires Node 18+ and the external docx npm package. The upstream skills install docx without pinning a version; Ghast verifies syntax and a current isolated smoke build but does not vendor the dependency.",
-        "The official repository has no reusable icon. Ghast uses a generic courthouse-and-search icon and excludes OpenAI's private marketplace icon and Midpage logo."
+        "The official repository has no reusable icon. Provider brand logo provenance and ownership are recorded in plugins/midpage/README.md."
       ],
       "verification": [
         "python3 scripts/import-midpage-plugin.py --source-root ../upstreams/midpage-litigation-skills --openai-source ../openai-plugins",
@@ -7518,7 +7518,7 @@
         "Zoho's official zohocrm-python-sdk-8.0 repository at revision 7dbcafa4f794a5c07b92cfcd6be6ca2d903e2296 contains the Apache License 2.0 with SHA-256 cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30. Its README attributes the SDK to ZOHO CORPORATION PRIVATE LIMITED.",
         "The official setup.py identifies zohocrmsdk8_0 7.0.0, Zoho CRM API Team, the official GitHub repository, and Apache Software License. The official PyPI wheel has SHA-256 0a12dc153a7ac063fafed2834dc91e93d151bd0c58fc5f8003ebcad772b915a1 and contains the same Apache-2.0 license.",
         "The plugin preserves the official SDK wheel and seven pure-Python dependency wheels byte-for-byte. Their embedded licenses are extracted into plugins/zoho/licenses: Requests Apache-2.0; urllib3, charset-normalizer, and six MIT; idna BSD-3-Clause; python-dateutil Apache-2.0 and BSD-3-Clause; certifi MPL-2.0.",
-        "The Ghast-authored manifest, remote MCP declaration, read-only SDK adapter, safety skill, documentation, notice, and generic icon are distributed under Apache-2.0. No Zoho hosted MCP implementation, private Codex connector, CRM data, OAuth credential, trademarked logo, or marketplace artwork is copied."
+        "The Ghast-authored manifest, remote MCP declaration, read-only SDK adapter, safety skill, documentation, notice are distributed under Apache-2.0. No Zoho hosted MCP implementation, private Codex connector, CRM data, OAuth credential, or OpenAI marketplace artwork is copied. Provider brand logo source and ownership are recorded in plugins/zoho/README.md; the logo is outside the code license."
       ],
       "officialityEvidence": [
         "Zoho's official CRM MCP overview has raw SHA-256 c1e19ceac01d59e7d12aea921cfcb61930f85f03a551df3ab35aa2c8c4287237 and states that Zoho provides four pre-built servers: Data Insights, Data Operations, Module Customization, and Workflow & Process Automation.",
@@ -7558,7 +7558,7 @@
         "The adapter intentionally omits signatures, phone numbers, mobile numbers, addresses, and other unrelated user fields from access-audit output, but names, emails, roles, profiles, reporting lines, and organization metadata remain sensitive.",
         "MCP calls consume ordinary Zoho CRM API credits. Pagination, rate limits, permissions, stale fields, custom module schemas, workflow effects, and ambiguous writes must be handled from live responses.",
         "The package includes certifi's MPL-2.0 certificate bundle and other dependencies under their own licenses. The extracted texts in plugins/zoho/licenses remain authoritative for those wheel contents.",
-        "A generic multi-color CRM grid icon is used because OpenAI's marketplace artwork and Zoho trademarks are not redistributed."
+        "Brand logo provenance is recorded in plugins/zoho/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-zoho-plugin.py --sdk-source ../upstreams/zohocrm-python-sdk-8.0 --openai-source ../openai-plugins",
@@ -7583,7 +7583,7 @@
       "officialRevision": "myregistry-registry-api-0fbbe1a50b9a+docs-81d5402e985a+terms-a0a8295276ac",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/myregistry-com/LICENSE licenses only the independently authored Ghast adapter, workflow, metadata, documentation, and generic gift-search icon.",
+        "plugins/myregistry-com/LICENSE licenses only the independently authored Ghast adapter, workflow, metadata, documentation.",
         "No MyRegistry source code, private Codex connector, developer credential, customer or registry data, API response, developer documentation, web content, logo, or trademark is redistributed.",
         "MyRegistry API access remains governed by the key holder's Merchant Agreement and service terms. The plugin cannot grant API permission or sublicense the hosted service."
       ],
@@ -7614,7 +7614,7 @@
         "The adapter does not open or scrape registry pages because MyRegistry's public terms prohibit automated access without express permission. Password-protected data is never bypassed.",
         "Gift items, purchase state, shipping addresses, user accounts, registry creation, mutation, checkout, and Merchant API write operations are intentionally excluded.",
         "The API requires developerKey in the HTTPS query string. Users must prevent proxy, debug, shell, and request logging from recording full URLs.",
-        "A generic gift-search icon is used because MyRegistry's logos and OpenAI marketplace artwork are not redistributed."
+        "Brand logo provenance is recorded in plugins/myregistry-com/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-myregistry-plugin.py --openai-source ../openai-plugins",
@@ -7636,7 +7636,7 @@
       "officialRevision": "particl-mcp-docs-056a86db22ab+resource-4e5cdc1335e1+oauth-3d14cf05fde7+oidc-contract-4d6a87df4a90+privacy-7e50e2501392",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/particl-market-research/LICENSE licenses only the Ghast-authored MCP declaration, workflow, metadata, documentation, and generic ecommerce-research icon.",
+        "plugins/particl-market-research/LICENSE licenses only the Ghast-authored MCP declaration, workflow, metadata, documentation.",
         "No Particl hosted-server implementation, private Codex connector, credential, customer data, API response, developer documentation, web content, product image, marketing asset, logo, or trademark is redistributed.",
         "Particl's Services Agreement grants the customer a limited, non-assignable, non-sublicensable, non-transferable API and data right for internal business purposes. The plugin does not grant service access, sublicense Particl data, or relax those terms."
       ],
@@ -7674,7 +7674,7 @@
         "The connector documentation says whole conversations and generated answers are not logged, while the current privacy policy says tool parameters, outputs, usage records, tool-call logs, and HTTP logs are processed and some are retained indefinitely. The plugin uses the stricter privacy-policy boundary.",
         "Particl terms limit API access and data to internal business use and prohibit redistribution, service-bureau use, scraping, circumvention, and competing-product reconstruction.",
         "Marketing assets, product images, reviews, advertisements, emails, and third-party materials can have separate rights. The plugin does not authorize bulk reproduction or publication.",
-        "A generic ecommerce-research icon is used because Particl logos and OpenAI marketplace artwork are not redistributed."
+        "Brand logo provenance is recorded in plugins/particl-market-research/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-particl-plugin.py --openai-source ../openai-plugins",
@@ -7758,7 +7758,7 @@
       "officialRevision": "policynote-openapi-4d5c3f24a751+tools-0e493cadeb9c+resource-623cd1868d2a+oauth-b4a930c792dc+terms-f2c8c8b7bafb",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/policynote/LICENSE licenses only the independently authored Ghast bridge, workflow, metadata, documentation, and generic policy-research icon.",
+        "plugins/policynote/LICENSE licenses only the independently authored Ghast bridge, workflow, metadata, documentation.",
         "No FiscalNote server implementation, private Codex connector, credential, API response, Provider Content, documentation, logo, or trademark is redistributed.",
         "PolicyNote API Terms version 1.1 governs the official service and content separately, permits authorized internal business use, requires attribution for specified external disclosure, and prohibits circumvention, competitive replication, public content disclosure, and LLM training with Provider Content."
       ],
@@ -7793,7 +7793,7 @@
         "VoterVoice address lookups can reveal location and representation and trial organizations share a five-requests-per-day cap.",
         "Predictive legislation analytics are estimates, not legal outcomes. Policy and regulatory data can be incomplete, delayed, corrected, or jurisdiction-specific and requires primary-source and expert review for high-stakes decisions.",
         "PolicyNote terms restrict Provider Content to authorized uses, require specified external attribution, prohibit public redistribution and competitive reconstruction, and prohibit using Provider Content to train an LLM.",
-        "A generic policy-document icon is used because FiscalNote logos and OpenAI marketplace artwork are not redistributed."
+        "Brand logo provenance is recorded in plugins/policynote/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-policynote-plugin.py --openai-source ../openai-plugins",
@@ -7817,7 +7817,7 @@
       "officialRevision": "ranked-ai-mcp-overview-26942caa0c93+setup-a2d69edafb9a+tools-a8ef44ff1dea+oauth-703859fd6204+boundary-e40f29e81b3e",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/ranked-ai/LICENSE licenses only the independently authored Ghast endpoint declaration, workflow guidance, metadata, documentation, and generic SEO icon.",
+        "plugins/ranked-ai/LICENSE licenses only the independently authored Ghast endpoint declaration, workflow guidance, metadata, documentation.",
         "No Ranked AI hosted-server source, private connector, credential, customer data, API response, developer documentation, logo, or trademark is redistributed."
       ],
       "officialityEvidence": [
@@ -7852,7 +7852,7 @@
         "The OAuth metadata advertises public clients, but disposable registration returned a client secret with token_endpoint_auth_method none. The plugin stores no static client credential and relies on the host OAuth flow.",
         "Search rankings, AI visibility, backlink observations, audits, heatmaps, and indexing state can be delayed, incomplete, location-dependent, model-dependent, or otherwise inexact.",
         "Ranked AI's terms restrict automated access not provided by the service and disclaim guarantees for rankings or business results. This plugin uses only the official MCP interface and grants no rights to scrape, redistribute, or recreate the platform.",
-        "A generic SEO icon is used because Ranked AI logos and OpenAI marketplace artwork are not redistributed."
+        "Brand logo provenance is recorded in plugins/ranked-ai/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-ranked-ai-plugin.py --openai-source ../openai-plugins",
@@ -7874,7 +7874,7 @@
       "officialRevision": "responsive-mcp-overview-dc0c9d286bf3+connect-eff6a43bb847+tools-973756d53113+auth-3c7db377bbdd+oauth-f3d4fd4917ff+boundary-e3b0c44298fc",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/responsive/LICENSE licenses only the independently authored Ghast endpoint declaration, workflow guidance, metadata, documentation, and generic document icon.",
+        "plugins/responsive/LICENSE licenses only the independently authored Ghast endpoint declaration, workflow guidance, metadata, documentation.",
         "No Responsive hosted-server source, private connector, credential, customer data, developer-document body, logo, trademark, or OpenAI marketplace artwork is redistributed."
       ],
       "officialityEvidence": [
@@ -7908,7 +7908,7 @@
         "The current authorization response redirects to an http URL on the official app.rfpio.com host. Responsive serves HSTS over the preceding HTTPS flow, but this transport inconsistency remains service-controlled.",
         "The official security guide treats generate_draft_response as a state-changing tool. It requires explicit confirmation, post-call read-back, and human review before external use.",
         "Library and project content can contain confidential customer material, personal data, stale answers, restricted drafts, and indirect prompt injection. Retrieval and disclosure must remain narrowly scoped.",
-        "A generic document icon is used because Responsive logos and OpenAI marketplace artwork are not redistributed."
+        "Brand logo provenance is recorded in plugins/responsive/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-responsive-plugin.py --openai-source ../openai-plugins",
@@ -7931,7 +7931,7 @@
       "license": "MIT",
       "licenseEvidence": [
         "Shutterstock's official shutterstock-cli repository contains an MIT license with SHA-256 a9d2d62d03c834775df0bef30fc1c8a968527d135e8746bdc257239cf77e7e3c.",
-        "plugins/shutterstock/UPSTREAM_LICENSE.md preserves the official CLI license; plugins/shutterstock/LICENSE covers only the independently authored Ghast adapter, guidance, metadata, documentation, and generic icon.",
+        "plugins/shutterstock/UPSTREAM_LICENSE.md preserves the official CLI license; plugins/shutterstock/LICENSE covers only the independently authored Ghast adapter, guidance, metadata, documentation. Provider brand logo source and ownership are recorded in plugins/shutterstock/README.md; the logo is outside the code license.",
         "No Shutterstock CLI source, logo, marketplace artwork, API credential, preview, licensed asset, download, or customer data is redistributed."
       ],
       "officialityEvidence": [
@@ -7963,7 +7963,7 @@
         "The Ghast adapter is independently authored against the official API rather than copying the official CLI because the CLI requires requests, click, and pygments. The official CLI remains the pinned developer-controlled endpoint and authentication evidence.",
         "Preview URLs are watermarked or otherwise limited samples. The plugin cannot remove watermarks, produce raw assets, confer a license, or determine whether a particular use is legally or commercially suitable.",
         "Search rank, metadata, labels, release indicators, and content availability can change and are not guarantees. Human review is required for suitability, rights, releases, sensitive contexts, and final selection.",
-        "A generic stock-media icon is used because Shutterstock logos and OpenAI marketplace artwork are not redistributed."
+        "Brand logo provenance is recorded in plugins/shutterstock/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-shutterstock-plugin.py --openai-source ../openai-plugins --upstream ../upstreams/shutterstock-cli",
@@ -8064,7 +8064,7 @@
       "officialRevision": "setu-guide-ce32831c2bf8+tools-66104c600dec+terms-f28fd487c892+oauth-74076e6e445e+boundary-8707c5830974+openai-1efb564161ff",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/setu-bharat-connect-billpay/LICENSE licenses only the independently authored Ghast endpoint declaration, safety guidance, metadata, documentation, and generic bill icon.",
+        "plugins/setu-bharat-connect-billpay/LICENSE licenses only the independently authored Ghast endpoint declaration, safety guidance, metadata, documentation.",
         "No Setu hosted-server source, private connector, credential, account data, bill, receipt, payment detail, developer-document body, logo, trademark, or OpenAI marketplace artwork is redistributed."
       ],
       "officialityEvidence": [
@@ -8102,7 +8102,7 @@
         "Successful bill payments usually cannot be cancelled. Fees and taxes must be shown before confirmation, and failed debit refunds remain subject to regulated participant timelines.",
         "Setu's AI terms require users to verify bill details, amounts, and payment confirmations and state that AI output is not financial, legal, or professional advice.",
         "The adapter never collects UPI PINs, card PINs, CVVs, bank passwords, or OTPs in chat and never blindly retries a payment after an ambiguous result.",
-        "A generic bill icon is used because Setu logos and OpenAI marketplace artwork are not redistributed."
+        "Brand logo provenance is recorded in plugins/setu-bharat-connect-billpay/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-setu-billpay-plugin.py --openai-source ../openai-plugins",
@@ -8215,7 +8215,7 @@
         "Broad industry research and recent-news retrieval are not treated as complete through deterministic kFinance alone. Company-specific key developments, transcripts, estimates, guidance, and ratings remain available when entitled.",
         "The official funding-digest and tear-sheet skills refer to Anthropic-specific /mnt skill paths. Ghast appends narrowly scoped instructions to use the host's presentation and document tooling without changing the financial workflow or source requirements.",
         "Financial data can differ by currency, units, fiscal period, dataset, timestamp, entitlement, and actual-versus-estimate status. Generated calculations and artifacts require human verification and are not investment, legal, tax, accounting, audit, or valuation advice.",
-        "A generic financial-data icon is used because the official public agent-skills repository contains no icon and S&P Global, Kensho, and OpenAI marketplace artwork is not redistributed."
+        "Brand logo provenance is recorded in plugins/s-p/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-sp-global-plugin.py --openai-source ../openai-plugins --agent-skills-upstream ../upstreams/spglobal-agent-skills --kfinance-upstream ../upstreams/kfinance",
@@ -8238,7 +8238,7 @@
       "officialRevision": "third-bridge-product-bf1236211eda+perspective-1f9806d35d86+terms-e67b1be8a3b2+resource-b9f0d6089ef8+oauth-86f728864e88+boundary-9b099d6c7817",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/third-bridge/LICENSE licenses only the independently authored Ghast endpoint declaration, safety skill, metadata, documentation, and generic expert-research icon.",
+        "plugins/third-bridge/LICENSE licenses only the independently authored Ghast endpoint declaration, safety skill, metadata, documentation.",
         "Third Bridge's official MCP terms keep all intellectual-property rights in Third Bridge Content with Third Bridge and prohibit bulk extraction. No hosted-server source, transcript, Content, private connector, credential, response, documentation text, logo, trademark, citation, or customer data is redistributed."
       ],
       "officialityEvidence": [
@@ -8268,7 +8268,7 @@
         "The official endpoint path ends in /sse but accepts standard MCP POST initialization and advertises OAuth metadata. Host transport compatibility still depends on the installed MCP client.",
         "Third Bridge Content must not be bulk extracted, mirrored, used for model training, or redistributed outside rights granted by the company Content agreement. Full transcripts and long passages are not reproduced by this plugin.",
         "Expert interviews can be anecdotal, dated, incomplete, biased, or context-specific. Citation-backed results and generated synthesis still require verification and are not investment, legal, tax, accounting, compliance, or transaction advice.",
-        "A generic expert-research icon is used because Third Bridge and OpenAI marketplace artwork is not redistributed."
+        "Brand logo provenance is recorded in plugins/third-bridge/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-third-bridge-plugin.py --openai-source ../openai-plugins",
@@ -8290,7 +8290,7 @@
       "officialRevision": "waldo-docs-2467b590ff1b+developers-d93fe7dd2d4b+terms-685dde629e34+resource-d15bb784b8af+oauth-503cc02e147f+boundary-4ad7751110ef",
       "license": "MIT",
       "licenseEvidence": [
-        "plugins/waldo/LICENSE licenses only the independently authored Ghast endpoint declaration, brand-strategy skill, metadata, documentation, and generic signal-research icon.",
+        "plugins/waldo/LICENSE licenses only the independently authored Ghast endpoint declaration, brand-strategy skill, metadata, documentation.",
         "Waldo's terms reserve the hosted service, software, data, Documentation, logos, trademarks, and other Waldo IP. No hosted server source, private connector, marketplace artwork, service data, response, credential, customer content, or official documentation text is redistributed."
       ],
       "officialityEvidence": [
@@ -8323,7 +8323,7 @@
         "The Codex default prompt 'Check the relevant mobile test coverage in Waldo' conflicts with the manifest's own strategy description and Waldo's official brand-intelligence product. It is treated as stale metadata, not a missing capability.",
         "Tracked and live-discovery data have different freshness and cost characteristics. Source-linked results and generated analysis still require verification.",
         "Waldo's terms prohibit scraping, resale, excessive automated access, circumvention, and unlicensed redistribution. This plugin does not provide unofficial or scraped fallbacks.",
-        "A generic signal-research icon is used because Waldo and OpenAI marketplace artwork is not redistributed."
+        "Brand logo provenance is recorded in plugins/waldo/README.md. The brand asset remains provider-owned and is outside the Ghast-authored code license."
       ],
       "verification": [
         "python3 scripts/import-waldo-plugin.py --openai-source ../openai-plugins",

@@ -578,3 +578,22 @@ zoho: install, logo, bilingual introduction, 4 MCP registrations and uninstall P
 zoom: install, logo, bilingual introduction, 7 MCP registrations and uninstall PASS
 zoominfo: install, logo, bilingual introduction, 0 MCP registrations and uninstall PASS
 ```
+
+## Additional source refresh
+
+A subsequent read of all 311 declared official source pages found the configured
+endpoint or the actual stdio package name in 273 primary pages. Android App
+Testing has no MCP declaration; its official SDK provenance and CLI version/help
+were independently checked in commit `b313de88`.
+
+37 declarations still require a more specific source page or web-reader follow-up:
+airwallex, algolia, ankr, appsflyer, appwrite, assemblyai-docs, beehiiv, birdeye,
+brevo, coda, consensus, cryptorank, elevenlabs, fish-audio-docs, fullstory, gitlab,
+harness, harvest, hibob, influxdb, kittl, knowify, linearb, magnific,
+microsoft-workiq, paddle, phantom, ramp, replicate, risingwave, runway, serpstat,
+tenderly, veed, webex, zapier and zilliz. These are pending provenance refreshes,
+not demonstrated connector failures.
+
+Current Logo ownership statements in 92 published plugin review entries were
+updated to agree with their README provenance. Historical runtime observations
+and records for plugins that are not published were retained.
