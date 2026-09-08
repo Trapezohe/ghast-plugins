@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "nuxt",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore official Nuxt documentation, modules and deployment guidance through Nuxt’s public MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://nuxt.com/docs/4.x/guide/ai/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://nuxt.com/docs/4.x/guide/ai/mcp",
+      "connectorPublisher": "Nuxt",
+      "category": "development",
+      "icon": "./assets/icon.svg",
+      "displayName": "Nuxt",
+      "descriptions": {
+        "en": "Explore official Nuxt documentation, modules and deployment guidance through Nuxt’s public MCP server.",
+        "zh-CN": "通过 Nuxt 官方公开 MCP 服务查询文档、模块和部署指南。"
+      }
+    }
+  }
+}

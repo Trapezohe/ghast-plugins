@@ -607,6 +607,44 @@
       "category": "data"
     },
     {
+      "id": "angular",
+      "name": "Angular",
+      "description": "Use Angular’s official CLI MCP tools for workspace analysis, documentation, development servers and build workflows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "angular",
+        "version": "1.0.0-ghast.1",
+        "description": "Use Angular’s official CLI MCP tools for workspace analysis, documentation, development servers and build workflows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://angular.dev/ai/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://angular.dev/ai/mcp",
+            "connectorPublisher": "Angular / Google",
+            "category": "development",
+            "icon": "./assets/icon.svg",
+            "displayName": "Angular",
+            "descriptions": {
+              "en": "Use Angular’s official CLI MCP tools for workspace analysis, documentation, development servers and build workflows.",
+              "zh-CN": "使用 Angular 官方 CLI MCP 工具分析工作区、查询文档、运行开发服务器及构建流程。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/angular.zip",
+        "sha256": "932c7855cfbc2bca18e6dffb6aca6c41ab5a01e5de02371ccf844cbab78ccbe9"
+      },
+      "icon": "./plugins/angular/assets/icon.svg",
+      "homepage": "https://angular.dev/ai/mcp",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "apify",
       "name": "Apify",
       "description": "Discover web data Actors and run scoped extraction workflows.",
@@ -9204,6 +9242,44 @@
       "category": "development"
     },
     {
+      "id": "nextjs",
+      "name": "Next.js DevTools",
+      "description": "Inspect running Next.js applications through Vercel’s official DevTools MCP connector for runtime errors, routes and logs.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "nextjs",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect running Next.js applications through Vercel’s official DevTools MCP connector for runtime errors, routes and logs.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/vercel/next-devtools-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/vercel/next-devtools-mcp",
+            "connectorPublisher": "Vercel",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Next.js DevTools",
+            "descriptions": {
+              "en": "Inspect running Next.js applications through Vercel’s official DevTools MCP connector for runtime errors, routes and logs.",
+              "zh-CN": "通过 Vercel 官方 DevTools MCP 连接器检查运行中的 Next.js 应用，查询运行时错误、路由和日志。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/nextjs.zip",
+        "sha256": "88f6cab0136eec582ad3f1e253561c1c45ae6b06949076cb26b2e5d561abb652"
+      },
+      "icon": "./plugins/nextjs/assets/icon.png",
+      "homepage": "https://github.com/vercel/next-devtools-mcp",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "notion",
       "name": "notion",
       "description": "Search, create, and update Notion content through Notion's official MCP server.",
@@ -9315,6 +9391,44 @@
       "homepage": "https://help.nuclino.com/70af7f4f-connect-nuclino-to-ai-assistants-with-mcp",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "nuxt",
+      "name": "Nuxt",
+      "description": "Explore official Nuxt documentation, modules and deployment guidance through Nuxt’s public MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "nuxt",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore official Nuxt documentation, modules and deployment guidance through Nuxt’s public MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://nuxt.com/docs/4.x/guide/ai/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://nuxt.com/docs/4.x/guide/ai/mcp",
+            "connectorPublisher": "Nuxt",
+            "category": "development",
+            "icon": "./assets/icon.svg",
+            "displayName": "Nuxt",
+            "descriptions": {
+              "en": "Explore official Nuxt documentation, modules and deployment guidance through Nuxt’s public MCP server.",
+              "zh-CN": "通过 Nuxt 官方公开 MCP 服务查询文档、模块和部署指南。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/nuxt.zip",
+        "sha256": "d7a4a5dda918e84c3bae004feb4183d702ad3e1723c8ebbc598dc273efcadc97"
+      },
+      "icon": "./plugins/nuxt/assets/icon.svg",
+      "homepage": "https://nuxt.com/docs/4.x/guide/ai/mcp",
+      "license": "MIT",
+      "category": "development"
     },
     {
       "id": "nvidia",
@@ -13923,6 +14037,51 @@
       "homepage": "https://docs.zapier.com/mcp/home",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "zilliz",
+      "name": "Zilliz Cloud",
+      "description": "Manage Zilliz Cloud clusters, collections and vector searches through the official Zilliz MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "zilliz",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage Zilliz Cloud clusters, collections and vector searches through the official Zilliz MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.zilliz.com/docs/zilliz-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.zilliz.com/docs/zilliz-mcp-server",
+            "connectorPublisher": "Zilliz",
+            "category": "data",
+            "icon": "./assets/icon.svg",
+            "displayName": "Zilliz Cloud",
+            "descriptions": {
+              "en": "Manage Zilliz Cloud clusters, collections and vector searches through the official Zilliz MCP server.",
+              "zh-CN": "通过 Zilliz 官方 MCP 服务管理云端集群、集合和向量搜索。"
+            },
+            "mcpServerExtensions": {
+              "zilliz": {
+                "credentialEnv": {
+                  "ZILLIZ_CLOUD_TOKEN": "$VAULT:zilliz-cloud-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/zilliz.zip",
+        "sha256": "a730921a68d023e676ecd5aade8ea6b9b0250e950ca7f723336c2a73ea3bc2c0"
+      },
+      "icon": "./plugins/zilliz/assets/icon.svg",
+      "homepage": "https://docs.zilliz.com/docs/zilliz-mcp-server",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "zoho",

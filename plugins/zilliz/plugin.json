@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "zilliz",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage Zilliz Cloud clusters, collections and vector searches through the official Zilliz MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.zilliz.com/docs/zilliz-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.zilliz.com/docs/zilliz-mcp-server",
+      "connectorPublisher": "Zilliz",
+      "category": "data",
+      "icon": "./assets/icon.svg",
+      "displayName": "Zilliz Cloud",
+      "descriptions": {
+        "en": "Manage Zilliz Cloud clusters, collections and vector searches through the official Zilliz MCP server.",
+        "zh-CN": "通过 Zilliz 官方 MCP 服务管理云端集群、集合和向量搜索。"
+      },
+      "mcpServerExtensions": {
+        "zilliz": {
+          "credentialEnv": {
+            "ZILLIZ_CLOUD_TOKEN": "$VAULT:zilliz-cloud-token"
+          }
+        }
+      }
+    }
+  }
+}

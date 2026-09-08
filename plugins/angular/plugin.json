@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "angular",
+  "version": "1.0.0-ghast.1",
+  "description": "Use Angular’s official CLI MCP tools for workspace analysis, documentation, development servers and build workflows.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://angular.dev/ai/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://angular.dev/ai/mcp",
+      "connectorPublisher": "Angular / Google",
+      "category": "development",
+      "icon": "./assets/icon.svg",
+      "displayName": "Angular",
+      "descriptions": {
+        "en": "Use Angular’s official CLI MCP tools for workspace analysis, documentation, development servers and build workflows.",
+        "zh-CN": "使用 Angular 官方 CLI MCP 工具分析工作区、查询文档、运行开发服务器及构建流程。"
+      }
+    }
+  }
+}

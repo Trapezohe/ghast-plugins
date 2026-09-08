@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "nextjs": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "next-devtools-mcp@0.4.0"
+      ],
+      "env": {
+        "NEXT_TELEMETRY_DISABLED": "1"
+      }
+    }
+  }
+}

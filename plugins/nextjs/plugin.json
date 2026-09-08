@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "nextjs",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect running Next.js applications through Vercel’s official DevTools MCP connector for runtime errors, routes and logs.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/vercel/next-devtools-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/vercel/next-devtools-mcp",
+      "connectorPublisher": "Vercel",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Next.js DevTools",
+      "descriptions": {
+        "en": "Inspect running Next.js applications through Vercel’s official DevTools MCP connector for runtime errors, routes and logs.",
+        "zh-CN": "通过 Vercel 官方 DevTools MCP 连接器检查运行中的 Next.js 应用，查询运行时错误、路由和日志。"
+      }
+    }
+  }
+}
