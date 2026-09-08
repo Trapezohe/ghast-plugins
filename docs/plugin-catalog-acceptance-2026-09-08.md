@@ -586,13 +586,51 @@ endpoint or the actual stdio package name in 273 primary pages. Android App
 Testing has no MCP declaration; its official SDK provenance and CLI version/help
 were independently checked in commit `b313de88`.
 
-37 declarations still require a more specific source page or web-reader follow-up:
-airwallex, algolia, ankr, appsflyer, appwrite, assemblyai-docs, beehiiv, birdeye,
-brevo, coda, consensus, cryptorank, elevenlabs, fish-audio-docs, fullstory, gitlab,
-harness, harvest, hibob, influxdb, kittl, knowify, linearb, magnific,
-microsoft-workiq, paddle, phantom, ramp, replicate, risingwave, runway, serpstat,
-tenderly, veed, webex, zapier and zilliz. These are pending provenance refreshes,
-not demonstrated connector failures.
+All 37 follow-ups are now resolved against the primary sources below. Together
+with the 273 direct matches and the independently verified Android SDK, all 311
+declared source records have been reviewed. This closes the provenance refresh;
+it does not assert authenticated business-operation coverage. No plugin runtime
+or package changed during this documentation-only follow-up.
+
+| Plugin | Additional primary evidence | Result |
+| --- | --- | --- |
+| airwallex | [Source 1](https://www.airwallex.com/docs/developer-tools/ai/developer-mcp) | Configured endpoint or official package confirmed. |
+| algolia | [Source 1](https://docsearch.algolia.com/docs/mcp/overview/) | Configured endpoint or official package confirmed. |
+| ankr | [Source 1](https://www.ankr.com/docs/rpc-service/getting-started/management-mcp/) | Configured endpoint or official package confirmed. |
+| appsflyer | [Source 1](https://support.appsflyer.com/hc/en-us/articles/36349070304785--Beta-AppsFlyer-MCP) | Configured endpoint or official package confirmed. |
+| appwrite | [Source 1](https://appwrite.io/docs/tooling/ai/mcp-servers) | Configured endpoint or official package confirmed. |
+| assemblyai-docs | [Source 1](https://www.assemblyai.com/docs/coding-agent-prompts) | Docs use the bare domain. Both bare and configured www endpoints returned AssemblyAI 1.0.0 from MCP initialize (protocol 2025-03-26). HEAD returned 405 and was not treated as an MCP failure. |
+| beehiiv | [Source 1](https://beehiivhelp.zendesk.com/hc/en-us/articles/39255979546263-Getting-started-with-the-beehiiv-MCP) | Configured endpoint or official package confirmed. |
+| birdeye | [Source 1](https://docs.birdeye.so/docs/birdeye-ai) | Configured endpoint or official package confirmed. |
+| brevo | [Source 1](https://help.brevo.com/hc/en-us/articles/27978590646802-What-is-Model-Context-Protocol-MCP) | Configured endpoint or official package confirmed. |
+| coda | [Source 1](https://help.coda.io/hc/en-us/articles/44722661982989-Connect-to-the-Coda-MCP) | Configured endpoint or official package confirmed. |
+| consensus | [Source 1](https://docs.consensus.app/consensus-mcp) | Configured endpoint or official package confirmed. |
+| cryptorank | [Source 1](https://cryptorank.io/insights/analytics/how-to-use-CryptoRank-MCP-server) | Configured endpoint or official package confirmed. |
+| elevenlabs | [Source 1](https://elevenlabs.io/mcp) | Configured endpoint or official package confirmed. |
+| fish-audio-docs | [Source 1](https://fish.audio/zh-CN/blog/llms-txt-mcp-agent-skills/) | Provider blog documents the docs endpoint; live initialize returned Fish Audio 1.0.0. This remains the documentation service, separate from the newer API MCP. |
+| fullstory | [Source 1](https://developer.fullstory.com/mcp/faq/index.html) | Configured endpoint or official package confirmed. |
+| gitlab | [Source 1](https://docs.gitlab.com/user/model_context_protocol/mcp_server/) | Documentation explicitly substitutes gitlab.com into its instance URL template. |
+| harness | [Source 1](https://github.com/harness/mcp-server) | Configured endpoint or official package confirmed. |
+| harvest | [Source 1](https://support.getharvest.com/api/v2/help_center/en-us/articles/46293697226381.json) | Read the public provider Help Center API representation of the same article after the HTML reader failed. |
+| hibob | [Source 1](https://www.hibob.com/platform/core/ai/mcp/) | Configured endpoint or official package confirmed. |
+| influxdb | [Source 1](https://docs.influxdata.com/influxdb/v2/tools/mcp-server/) | Configured endpoint or official package confirmed. |
+| kittl | [Source 1](https://www.kittl.com/mcp) | Configured endpoint or official package confirmed. |
+| knowify | [Source 1](https://knowify.zendesk.com/hc/en-us/articles/49623682048660-Getting-started-with-the-Knowify-AI-Connector) | Configured endpoint or official package confirmed. |
+| linearb | [Source 1](https://linearb.zendesk.com/hc/en-us/articles/45537283788827-MCP-Server), [Source 2](https://linearb.zendesk.com/hc/en-us/articles/45552138846491-2026-Release-Notes) | Installation article supplies endpoint; March 2026 release notes supersede its older API-key setup with OAuth. |
+| magnific | [Source 1](https://www.magnific.com/ai/docs/magnific-mcp) | Configured endpoint or official package confirmed. |
+| microsoft-workiq | [Source 1](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/quickstart/github-copilot-cli) | Configured endpoint or official package confirmed. |
+| paddle | [Source 1](https://developer.paddle.com/sdks/ai/docs-mcp/) | Configured endpoint or official package confirmed. |
+| phantom | [Source 1](https://docs.phantom.com/resources/mcp-server) | Configured endpoint or official package confirmed. |
+| ramp | [Source 1](https://agents.ramp.com/docs/guides/connecting), [Source 2](https://docs.ramp.com/developer-api/v1/developer-mcp), [Source 3](https://docs.ramp.com/developer-api/v1/ramp-data-mcp) | All three configured service endpoints are documented separately. |
+| replicate | [Source 1](https://mcp.replicate.com/) | Configured endpoint or official package confirmed. |
+| risingwave | [Source 1](https://github.com/risingwavelabs/risingwave-mcp/blob/c148f80dae9070782bd4393c4a4b729e863e4718/src/main.py) | The audit incorrectly treated uv as a server package. This plugin runs bundled official src/main.py; bytes match the pinned provider commit. uv only supplies the isolated Python runtime. |
+| runway | [Source 1](https://help.runwayml.com/hc/en-us/articles/51931843164691-Connecting-to-Runway-MCP) | Configured endpoint or official package confirmed. |
+| serpstat | [Source 1](https://serpstat.com/blog/best-seo-mcp-servers-comparison/) | Configured endpoint or official package confirmed. |
+| tenderly | [Source 1](https://tenderly.co/blog/validating-agentic-workflows-with-tenderly-mcp-server/) | Configured endpoint or official package confirmed. |
+| veed | [Source 1](https://github.com/veedstudio/veed-fabric-mcp/blob/main/docs/authentication.md) | Configured endpoint or official package confirmed. |
+| webex | [Source 1](https://developer.webex.com/meeting/docs/meetings-mcp-server), [Source 2](https://developer.webex.com/mcp/docs/messaging-mcp-server), [Source 3](https://developer.webex.com/mcp/docs/vidcast-mcp-server), [Source 4](https://developer.webex.com/mcp/docs/workspaces-mcp-server) | All four configured service endpoints are documented separately. |
+| zapier | [Source 1](https://zapier.com/) | Configured endpoint or official package confirmed. |
+| zilliz | [Source 1](https://docs.zilliz.com/docs/zilliz-mcp-server) | Configured endpoint or official package confirmed. |
 
 Current Logo ownership statements in 92 published plugin review entries were
 updated to agree with their README provenance. Historical runtime observations
