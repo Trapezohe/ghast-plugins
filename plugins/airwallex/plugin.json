@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "airwallex",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Airwallex’s official production, sandbox developer and public documentation MCP services for finance and integration workflows.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.airwallex.com/docs/developer-tools/ai/agentos",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.airwallex.com/docs/developer-tools/ai/agentos",
+      "connectorPublisher": "Airwallex",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Airwallex",
+      "descriptions": {
+        "en": "Connect Airwallex’s official production, sandbox developer and public documentation MCP services for finance and integration workflows.",
+        "zh-CN": "连接 Airwallex 官方生产、沙箱开发与公开文档 MCP 服务，支持财务和集成开发工作流。"
+      }
+    }
+  }
+}
