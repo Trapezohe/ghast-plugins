@@ -31,8 +31,7 @@ authorization-server metadata is pinned at SHA-256
   industry benchmarking, with additional official datasets where subscribed.
 - Data access and historical coverage mirror the user's Similarweb API plan,
   and requests consume the same data-credit allocation as REST API calls.
-- A generic market-analytics icon is used because no licensed catalog icon is
-  included in a public official MCP source repository.
+- Brand logo source: https://avatars.githubusercontent.com/u/6529581?v=4. Brand names and logos belong to SimilarWeb. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Similarweb accounts, subscriptions, data credits, hosted service behavior,

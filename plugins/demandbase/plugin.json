@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "demandbase",
-  "version": "1.0.3-ghast.1",
+  "version": "1.0.3-ghast.2",
   "description": "Research internal accounts and people, global companies and contacts, Intent, Buying Groups, opportunities, and meeting-ready account briefs through Demandbase's official hosted MCP.",
   "author": {
     "name": "Demandbase Inc",

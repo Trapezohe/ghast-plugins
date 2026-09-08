@@ -46,9 +46,11 @@ authentication, and output behavior. Authenticated searches were not run
 because no Shutterstock credential was supplied.
 
 The MIT license in this package covers the Ghast-authored client, guidance,
-metadata, documentation, and generic stock-media icon. Shutterstock's
+metadata, and documentation. Shutterstock's
 official CLI license is included separately in `UPSTREAM_LICENSE.md`. No
-Shutterstock logo, marketplace artwork, API credential, preview, asset,
+marketplace artwork, API credential, preview, asset,
 customer data, or official CLI source is redistributed. API access, plans,
 content availability, previews, and media licenses remain governed by
 Shutterstock.
+
+Brand logo source: https://avatars.githubusercontent.com/u/589896?v=4. Brand names and logos belong to Shutterstock. 品牌名称与标识归对应服务商所有。

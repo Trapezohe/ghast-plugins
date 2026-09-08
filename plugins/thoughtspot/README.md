@@ -7,10 +7,9 @@ analyses as dashboards through ThoughtSpot's official hosted MCP.
 ## Official hosted MCP adapter
 
 This package contains only Ghast-authored MCP configuration, safety
-instructions, documentation, metadata, and a generic analytics icon. It does
+instructions, documentation, metadata, and the provider brand logo. It does
 not redistribute ThoughtSpot's MCP implementation, official source skill,
-private Codex connector, OAuth credentials, customer data, trademarks,
-branded artwork, or marketplace icons.
+private Codex connector, OAuth credentials, customer data, or marketplace icons.
 
 ThoughtSpot's official MCP overview and connection guide are pinned as
 normalized visible text at SHA-256 `19631cc2bc1a489d579407235986299214fa94e98d2a28f19a6bac6281f5ae15` and
@@ -71,8 +70,7 @@ marketplace artwork.
 - Authenticated tools/list, customer data, analytical queries, forecasts,
   dashboard creation, and Org switching were not exercised because no
   ThoughtSpot account or business data was used.
-- A generic governed-analytics icon is used because ThoughtSpot's source and
-  brand assets are not licensed for redistribution in this package.
+- Brand logo source: https://avatars.githubusercontent.com/u/8906680?v=4. Brand names and logos belong to ThoughtSpot. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the independently authored
 Ghast adapter. ThoughtSpot accounts, hosted service behavior, source code,

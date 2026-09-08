@@ -5798,7 +5798,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "demandbase",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Research internal accounts and people, global companies and contacts, Intent, Buying Groups, opportunities, and meeting-ready account briefs through Demandbase's official hosted MCP.",
         "author": {
           "name": "Demandbase Inc",
@@ -5820,7 +5820,7 @@
       },
       "package": {
         "url": "./packages/demandbase.zip",
-        "sha256": "311a58e0c26f52a83cfd824242a16dd0215e2af6e6f8dde9c981689c976d69bd"
+        "sha256": "809ec2c5509001a594d02df8ba5997bee42b441c50d6ff9cb673ba7a1be71dc7"
       },
       "icon": "./plugins/demandbase/assets/icon.png",
       "homepage": "https://developer.demandbase.com/docs/mcp",
@@ -13099,7 +13099,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "outreach",
-        "version": "1.0.2-ghast.1",
+        "version": "1.0.2-ghast.2",
         "description": "Research prospects, accounts, opportunities, sequences, emails, meetings, and tasks, draft grounded follow-ups, and safely perform approved Outreach revenue actions.",
         "author": {
           "name": "Outreach",
@@ -13111,7 +13111,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "outreach-docs-fad773e5a468+tools-71d9d8bf5845+oauth-bd349848c7a7+auth-7815bab59627",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Research prospects, accounts, opportunities, sequences, emails, meetings, and tasks, draft grounded follow-ups, and safely perform approved Outreach revenue actions.",
               "zh-CN": "研究潜客、商机和会议，起草跟进内容并执行授权的销售操作。"
@@ -13121,9 +13121,9 @@
       },
       "package": {
         "url": "./packages/outreach.zip",
-        "sha256": "a38d89f469dd0b2841880f9cc02e252b2211dfcdb7691c23025c84a52eec8a22"
+        "sha256": "6caa7a5b42cb15b9fdab5b0f8b947d46246e6981536a058d6f6bc3b86315c500"
       },
-      "icon": "./plugins/outreach/assets/icon.svg",
+      "icon": "./plugins/outreach/assets/icon.png",
       "homepage": "https://developers.outreach.io/mcp-server",
       "license": "MIT",
       "category": "productivity"
@@ -16167,7 +16167,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "shutterstock",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Search Shutterstock's official image, video, music, and sound-effect libraries and compare watermarked previews without licensing or downloading assets.",
         "author": {
           "name": "Shutterstock",
@@ -16181,7 +16181,7 @@
             "category": "creative",
             "upstreamRevision": "4dc3ef8eeb3a27612f65dc4c5d03ee480c696abc",
             "portStatus": "full",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Search Shutterstock's official image, video, music, and sound-effect libraries and compare watermarked previews without licensing or downloading assets.",
               "zh-CN": "搜索官方图片、视频、音乐和音效库，比较带水印的素材预览。"
@@ -16191,9 +16191,9 @@
       },
       "package": {
         "url": "./packages/shutterstock.zip",
-        "sha256": "df3f5a25ef0d240549ff0241c6280415e56a6602c27c404337616b87a202d336"
+        "sha256": "2489adce35f594f714a5d6335f6d1b7d374702ed34d4e218a98eb84ae4da607f"
       },
-      "icon": "./plugins/shutterstock/assets/icon.svg",
+      "icon": "./plugins/shutterstock/assets/icon.png",
       "homepage": "https://www.shutterstock.com/developers/documentation",
       "repository": "https://github.com/shutterstock/shutterstock-cli",
       "license": "MIT",
@@ -16244,7 +16244,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "similarweb",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Research website, search, audience, app, competitor, industry, and shopper intelligence through Similarweb's official MCP server.",
         "author": {
           "name": "Similarweb",
@@ -16256,7 +16256,7 @@
           "ai.trapezohe.ghast": {
             "category": "web",
             "upstreamRevision": "similarweb-docs-eac1d71df335+claude-aa84c3a66647+oauth-4f4e48ae9c75",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Research website, search, audience, app, competitor, industry, and shopper intelligence through Similarweb's official MCP server.",
               "zh-CN": "研究网站、搜索、受众、应用、竞争对手与行业表现。"
@@ -16266,9 +16266,9 @@
       },
       "package": {
         "url": "./packages/similarweb.zip",
-        "sha256": "b4ab31e90b37df34b5a6b3e83b0f7e1a908daed3a961a22b5347744e9910d14f"
+        "sha256": "1837a35aa9ad9b6d38741e6fd9a4d25770b47334b1030e3d2571f9e43c429d1d"
       },
-      "icon": "./plugins/similarweb/assets/icon.svg",
+      "icon": "./plugins/similarweb/assets/icon.png",
       "homepage": "https://developers.similarweb.com/docs/similarweb-mcp.md",
       "license": "MIT",
       "category": "web"
@@ -18019,7 +18019,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "thoughtspot",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Search governed ThoughtSpot content, run conversational analytics, explain business drivers, and safely save approved analyses as dashboards.",
         "author": {
           "name": "ThoughtSpot",
@@ -18041,7 +18041,7 @@
       },
       "package": {
         "url": "./packages/thoughtspot.zip",
-        "sha256": "91f1fde855a0e7a4f9e67a1f1dc51487f5090d626384ba455c0e1253ab7dfb31"
+        "sha256": "47b96bd305672ff49c7453747efdb2427bd0daeeb74b1af38ace5a4e148ecc7e"
       },
       "icon": "./plugins/thoughtspot/assets/icon.png",
       "homepage": "https://developers.thoughtspot.com/docs/mcp-integration",
@@ -19962,7 +19962,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "zoom",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Build Zoom integrations and access meeting search, transcripts, recordings, assets, Team Chat, Canvas, Tasks, Whiteboard, and Revenue Accelerator through Zoom's official skills and MCP servers.",
         "author": {
           "name": "Zoom",
@@ -19976,7 +19976,7 @@
             "category": "development",
             "upstreamRevision": "1858eadc17d9bd0d1279ce7f66304362a774e3b4",
             "upstreamPath": ".",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Build Zoom integrations and access meeting search, transcripts, recordings, assets, Team Chat, Canvas, Tasks, Whiteboard, and Revenue Accelerator through Zoom's official skills and MCP servers.",
               "zh-CN": "检索会议、转录和录制资料，连接团队聊天、任务、画布与白板工作流。"
@@ -19986,9 +19986,9 @@
       },
       "package": {
         "url": "./packages/zoom.zip",
-        "sha256": "c5162bb59bd96998c4c5f56312a6e3327c13e5ee0704ace3e2d497bdbfbd3086"
+        "sha256": "7212ae4315750a1265b1336a884073cdb86ea47dad82d0787f85fe37651badc3"
       },
-      "icon": "./plugins/zoom/assets/icon.svg",
+      "icon": "./plugins/zoom/assets/icon.png",
       "homepage": "https://developers.zoom.us/",
       "repository": "https://github.com/zoom/skills",
       "license": "MIT",

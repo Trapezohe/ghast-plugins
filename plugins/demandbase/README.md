@@ -7,10 +7,10 @@ meeting-ready account briefs through Demandbase's official hosted MCP.
 ## Official hosted MCP adapter
 
 This package contains only Ghast-authored MCP configuration, safety
-instructions, documentation, metadata, and a generic GTM-research icon. It
+instructions, documentation, metadata, and the provider brand logo. It
 does not redistribute Demandbase's hosted implementation, private Codex
 connector, OAuth credentials, customer data, proprietary B2B intelligence,
-official documentation text, trademarks, branded artwork, or marketplace
+official documentation text, or marketplace
 icons.
 
 Demandbase's official MCP overview, custom-client guide, agent guidance,
@@ -74,8 +74,7 @@ marketplace artwork.
 - Demandbase currently documents English support. Authenticated tools/list,
   private account or contact data, credit consumption, and real searches were
   not exercised because no Demandbase account or customer data was used.
-- A generic GTM-research icon is used because no licensed Demandbase catalog
-  artwork is redistributed.
+- Brand logo source: https://avatars.githubusercontent.com/u/718138?v=4. Brand names and logos belong to Demandbase Inc. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the independently authored
 Ghast adapter. Demandbase accounts, licenses, credits, hosted behavior,

@@ -7,10 +7,10 @@ explicitly approved revenue actions through Outreach's official hosted MCP.
 ## Official hosted MCP adapter
 
 This package contains only Ghast-authored MCP configuration, safety
-instructions, documentation, metadata, and a generic revenue-workflow icon.
+instructions, documentation, metadata, and the provider brand logo.
 It does not redistribute Outreach's hosted MCP implementation, private Codex
 connector, OAuth credentials, customer data, email or meeting content,
-trademarks, branded artwork, or marketplace icons.
+or marketplace icons.
 
 Outreach's official developer overview, authentication, tool catalog, usage,
 and best-practices pages are pinned as normalized visible text at SHA-256
@@ -80,8 +80,7 @@ found, so the service implementation is not packaged.
   Amplify add-on with active credits, Outreach RBAC permissions, and any
   administrator create or delete policy. Service and API throttle limits
   remain authoritative.
-- A generic revenue-workflow icon is used because no licensed catalog artwork
-  is included in a public official MCP source repository.
+- Brand logo source: https://avatars.githubusercontent.com/u/833676?v=4. Brand names and logos belong to Outreach. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the independently authored
 Ghast adapter. Outreach accounts, subscriptions, hosted service behavior,

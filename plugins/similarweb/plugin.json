@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "similarweb",
-  "version": "1.0.0-ghast.1",
+  "version": "1.0.0-ghast.2",
   "description": "Research website, search, audience, app, competitor, industry, and shopper intelligence through Similarweb's official MCP server.",
   "author": {
     "name": "Similarweb",
@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "web",
       "upstreamRevision": "similarweb-docs-eac1d71df335+claude-aa84c3a66647+oauth-4f4e48ae9c75",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Research website, search, audience, app, competitor, industry, and shopper intelligence through Similarweb's official MCP server.",
         "zh-CN": "研究网站、搜索、受众、应用、竞争对手与行业表现。"

@@ -11,6 +11,6 @@ Skills, references, scripts, commands, and public MCP declarations remain source
 ## Ghast compatibility
 
 - The older Codex app mapping is replaced by Zoom's seven official public Streamable HTTP MCP servers.
-- A generic video-service catalog icon is used because Zoom's official MCP registry states that its logo is proprietary and does not grant redistribution rights.
+- Brand logo source: https://avatars.githubusercontent.com/u/29114944?v=4. Brand names and logos belong to Zoom. 品牌名称与标识归对应服务商所有。
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.
