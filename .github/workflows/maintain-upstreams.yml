@@ -1,0 +1,79 @@
+name: Maintain official upstreams
+on:
+  schedule:
+    - cron: '23 20 * * *'
+  workflow_dispatch:
+    inputs:
+      plugin:
+        description: 'Optional plugin ID; blank checks the full inventory'
+        required: false
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: official-upstream-maintenance
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - run: python -m pip install -r requirements-agent-plugins.txt
+      - run: python scripts/maintain-upstreams.py --validate
+      - run: python scripts/test-maintain-upstreams.py
+      - name: Check upstreams and prepare mapped changes
+        id: scan
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PLUGIN: ${{ inputs.plugin }}
+        shell: bash
+        run: |
+          args=(--apply)
+          if [[ -n "$PLUGIN" ]]; then args=(--plugin "$PLUGIN"); fi
+          python scripts/maintain-upstreams.py --output maintenance-report.json "${args[@]}"
+      - name: Build and validate prepared files
+        run: |
+          python scripts/maintenance-report.py maintenance-report.json
+          python scripts/build-ghast-catalog.py
+          python scripts/maintain-upstreams.py --validate
+          python scripts/validate-ghast-repository.py
+      - name: Open or refresh the single maintenance PR
+        if: inputs.plugin == ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: bash scripts/publish-maintenance-pr.sh
+      - name: Save run evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: upstream-maintenance-report
+          path: maintenance-report.json
+          if-no-files-found: warn
+      - name: Report failures without duplicate issues
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          FULL_SCAN: ${{ inputs.plugin == '' }}
+          FAILED: ${{ job.status == 'failure' || steps.scan.outcome == 'failure' }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: bash scripts/report-maintenance-status.sh
+      - name: Preserve failed check status
+        if: steps.scan.outcome == 'failure'
+        run: exit 1

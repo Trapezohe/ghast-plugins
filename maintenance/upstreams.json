@@ -1,0 +1,8083 @@
+{
+  "1inch": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "1inch",
+        "url": "https://api.1inch.com/mcp/protocol"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://business.1inch.com/portal/documentation/ai-integration/mcp-server"
+    ],
+    "update": null
+  },
+  "aave": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "aave",
+        "url": "https://mcp.aave.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://mcp.aave.com"
+    ],
+    "update": null
+  },
+  "abtasty": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "flagship-io/mcp-server"
+      },
+      {
+        "kind": "npm",
+        "package": "@abtasty/mcp-server",
+        "packagedVersion": "0.3.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/flagship-io/mcp-server"
+    ],
+    "update": null
+  },
+  "actively": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "actively",
+        "url": "https://api.actively.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.actively.ai/products/mcp-server"
+    ],
+    "update": null
+  },
+  "adobe-analytics": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "adobe-analytics",
+        "url": "https://aa-mcp.adobe.io/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "adobe-cja",
+        "url": "https://cja-mcp.adobe.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.adobe.com/analytics-mcp/docs/guides/"
+    ],
+    "update": null
+  },
+  "adobe-express": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@adobe/express-developer-mcp",
+        "packagedVersion": "1.0.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.adobe.com/express/add-ons/docs/guides/getting-started/local-development/mcp-server"
+    ],
+    "update": null
+  },
+  "adobe-target": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "adobe-target",
+        "url": "https://targetmcp.adobe.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://experienceleague.adobe.com/en/docs/target/using/integrate/mcp/target-mcp-get-started"
+    ],
+    "update": null
+  },
+  "agentmail": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "agentmail",
+        "url": "https://mcp.agentmail.to/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.agentmail.to/docs/integrations/mcp"
+    ],
+    "update": null
+  },
+  "agilitycms": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "agility/mcp-server"
+      },
+      {
+        "kind": "endpoint",
+        "server": "agilitycms",
+        "url": "https://mcp.agilitycms.com/api/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/agility/mcp-server"
+    ],
+    "update": null
+  },
+  "aiera": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "882acfc09c5e5c1eed82b6e2a64e8780503ec099",
+        "ref": "HEAD",
+        "repository": "aiera-inc/aiera-mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/aiera-inc/aiera-mcp",
+      "https://www.aiera.com"
+    ],
+    "update": null
+  },
+  "airbyte": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "airbyte",
+        "url": "https://mcp.airbyte.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.airbyte.com/ai-agents/interfaces/mcp"
+    ],
+    "update": null
+  },
+  "airtable": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "812ee67f1fd3d76fb45ff8df40afaa0448602ba8",
+        "ref": "HEAD",
+        "repository": "airtable/skills"
+      },
+      {
+        "kind": "endpoint",
+        "server": "airtable",
+        "url": "https://mcp.airtable.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/airtable/skills",
+      "https://www.airtable.com"
+    ],
+    "update": null
+  },
+  "airwallex": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "airwallex",
+        "url": "https://mcp.airwallex.com/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "airwallex-dev",
+        "url": "https://mcp.sandbox.airwallex.com/developer"
+      },
+      {
+        "kind": "endpoint",
+        "server": "airwallex-docs",
+        "url": "https://mcp.sandbox.airwallex.com/docs"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.airwallex.com/docs/developer-tools/ai/agentos"
+    ],
+    "update": null
+  },
+  "aiven": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "aiven",
+        "url": "https://mcp.aiven.live/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://aiven.io/docs/tools/mcp-server"
+    ],
+    "update": null
+  },
+  "akiflow": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "akiflow",
+        "url": "https://mcp.akiflow.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://product.akiflow.com/en/help/articles/4302815-akiflow-mcp"
+    ],
+    "update": null
+  },
+  "alation": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "b450039495787ecd6bc16176cca6df6c4a1336c3",
+        "ref": "HEAD",
+        "repository": "Alation/alation-plugins"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Alation/alation-plugins"
+    ],
+    "update": null
+  },
+  "alchemy": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "alchemy",
+        "url": "https://mcp.alchemy.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.alchemy.com/docs/alchemy-mcp-server"
+    ],
+    "update": null
+  },
+  "algolia": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "algolia",
+        "url": "https://mcp.algolia.com/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "algolia-docsearch",
+        "url": "https://mcp.algolia.com/1/docsearch/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.algolia.com/doc/guides/model-context-protocol/productivity-mcp"
+    ],
+    "update": null
+  },
+  "allium": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "allium",
+        "url": "https://mcp.allium.so"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.allium.so/ai/mcp/overview"
+    ],
+    "update": null
+  },
+  "alpaca": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "a97b49ecdf47b6b46d8fc1027139c475296dc696",
+        "ref": "HEAD",
+        "repository": "alpacahq/agentic"
+      },
+      {
+        "kind": "endpoint",
+        "server": "alpaca-trading",
+        "url": "https://api.alpaca.markets/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "alpaca-trading-paper",
+        "url": "https://paper-api.alpaca.markets/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "alpaca-market-data",
+        "url": "https://data.alpaca.markets/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/alpacahq/agentic"
+    ],
+    "update": null
+  },
+  "amplitude": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "90c0a8e658db547ab63a2210e84be07c23ce4cd0",
+        "ref": "HEAD",
+        "repository": "amplitude/mcp-marketplace"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/amplitude/mcp-marketplace",
+      "https://amplitude.com/docs/mcp"
+    ],
+    "update": null
+  },
+  "angular": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@angular/cli",
+        "packagedVersion": "22.1.7"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://angular.dev/ai/mcp"
+    ],
+    "update": null
+  },
+  "ankr": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "ankr",
+        "url": "https://mcp.ankr.com/rpc"
+      },
+      {
+        "kind": "endpoint",
+        "server": "ankr-management",
+        "url": "https://mcp.ankr.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.ankr.com/docs/agentic-rpc/overview/"
+    ],
+    "update": null
+  },
+  "anytype": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "anyproto/anytype-mcp"
+      },
+      {
+        "kind": "npm",
+        "package": "@anyproto/anytype-mcp",
+        "packagedVersion": "1.2.10"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/anyproto/anytype-mcp"
+    ],
+    "update": null
+  },
+  "apify": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "apify",
+        "url": "https://mcp.apify.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.apify.com/integrations/mcp"
+    ],
+    "update": null
+  },
+  "apollo": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "2adde980e45f421b7e9383d92870455627936bce",
+        "ref": "HEAD",
+        "repository": "apolloio/apollo-mcp-plugin"
+      },
+      {
+        "kind": "endpoint",
+        "server": "apollo",
+        "url": "https://mcp.apollo.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/apolloio/apollo-mcp-plugin",
+      "https://www.apollo.io/"
+    ],
+    "update": null
+  },
+  "appsflyer": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "appsflyer",
+        "url": "https://mcp.appsflyer.com/auth/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://support.appsflyer.com/hc/en-us/articles/36349070304785--Beta-AppsFlyer-MCP"
+    ],
+    "update": null
+  },
+  "appwrite": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "appwrite",
+        "url": "https://mcp.appwrite.io/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://appwrite.io/changelog/5"
+    ],
+    "update": null
+  },
+  "arcjet": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "arcjet",
+        "url": "https://api.arcjet.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.arcjet.com/mcp-server"
+    ],
+    "update": null
+  },
+  "asana": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "caf02337846594b6af5221ea5165c1dd0d273d9b",
+        "ref": "HEAD",
+        "repository": "Asana/cursor-marketplace-plugin"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Asana/cursor-marketplace-plugin",
+      "https://developers.asana.com/docs/using-asanas-mcp-server"
+    ],
+    "update": null
+  },
+  "ashby": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "ashby",
+        "url": "https://mcp.ashbyhq.com/mcp/v1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.ashbyhq.com/ashby-mcp-server-beta"
+    ],
+    "update": null
+  },
+  "assemblyai-docs": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "assemblyai-docs",
+        "url": "https://www.assemblyai.com/docs/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.assemblyai.com/docs/coding-agent-prompts"
+    ],
+    "update": null
+  },
+  "astro": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "astro",
+        "url": "https://mcp.docs.astro.build/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.astro.build/en/guides/build-with-ai/"
+    ],
+    "update": null
+  },
+  "atlassian-rovo": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "94a30436435fb526a29f820f5f46250870eb75a0",
+        "ref": "HEAD",
+        "repository": "atlassian/atlassian-mcp-server"
+      },
+      {
+        "kind": "endpoint",
+        "server": "atlassian",
+        "url": "https://mcp.atlassian.com/v1/mcp/authv2"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/atlassian/atlassian-mcp-server"
+    ],
+    "update": null
+  },
+  "attio": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "attio",
+        "url": "https://mcp.attio.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.attio.com/mcp/overview.md"
+    ],
+    "update": null
+  },
+  "avalanche": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "avalanche",
+        "url": "https://build.avax.network/api/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://build.avax.network/docs/tooling/ai-llm/mcp-server"
+    ],
+    "update": null
+  },
+  "avaza": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "avaza",
+        "url": "https://mcp.avaza.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://support.avaza.com/avaza-mcp-server/"
+    ],
+    "update": null
+  },
+  "aws-knowledge": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "aws-knowledge",
+        "url": "https://knowledge-mcp.global.api.aws"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://awslabs.github.io/mcp/servers/aws-knowledge-mcp-server"
+    ],
+    "update": null
+  },
+  "axiom": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "axiom",
+        "url": "https://mcp.axiom.co/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://axiom.co/docs/console/intelligence/mcp-server"
+    ],
+    "update": null
+  },
+  "azure": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@azure/mcp",
+        "packagedVersion": "3.0.0-beta.41"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/get-started"
+    ],
+    "update": null
+  },
+  "balsamiq": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "balsamiq",
+        "url": "https://bais.balsamiq.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://community.balsamiq.com/support/integrations/mcp/"
+    ],
+    "update": null
+  },
+  "base44": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "773a301cfb79112141add32d19c024f2bafc44ee",
+        "ref": "HEAD",
+        "repository": "base44/skills"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/base44/skills",
+      "https://docs.base44.com"
+    ],
+    "update": null
+  },
+  "basedash": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "basedash",
+        "url": "https://charts.basedash.com/api/public/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.basedash.com/features/mcp-server"
+    ],
+    "update": null
+  },
+  "beehiiv": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "beehiiv",
+        "url": "https://mcp.beehiiv.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://beehiivhelp.zendesk.com/hc/en-us/articles/39255979546263-Getting-started-with-the-beehiiv-MCP"
+    ],
+    "update": null
+  },
+  "better-stack": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "better-stack",
+        "url": "https://mcp.betterstack.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://betterstack.com/docs/getting-started/integrations/mcp/"
+    ],
+    "update": null
+  },
+  "bilibili-search": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "Trapezohe/ghast-plugins"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/bilibili-search"
+    ],
+    "update": null
+  },
+  "binance": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "2863a186d2bbd8987fa4790d7b81a299a58364ce",
+        "ref": "HEAD",
+        "repository": "binance/binance-skills-hub"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/binance/binance-skills-hub"
+    ],
+    "update": null
+  },
+  "biorender": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "biorender",
+        "url": "https://mcp.services.biorender.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.biorender.com/hc/en-gb/articles/37237276158109-How-to-use-the-BioRender-MCP-connector"
+    ],
+    "update": null
+  },
+  "bird": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "bird",
+        "url": "https://mcp.bird.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://bird.com/docs/ai/mcp-server"
+    ],
+    "update": null
+  },
+  "birdeye": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "birdeye",
+        "url": "https://mcp.birdeye.so/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.birdeye.so/docs/birdeye-ai"
+    ],
+    "update": null
+  },
+  "bitget": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "Bitget-AI/agent-mcp"
+      },
+      {
+        "kind": "npm",
+        "package": "@bitget-ai/bitget-agent-mcp",
+        "packagedVersion": "3.3.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Bitget-AI/agent-mcp"
+    ],
+    "update": null
+  },
+  "bitly": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "bitly",
+        "url": "https://api-ssl.bitly.com/v4/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://dev.bitly.com/bitly-mcp/overview/quickstart/"
+    ],
+    "update": null
+  },
+  "bitquery": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "bitquery",
+        "url": "https://mcp.bitquery.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.bitquery.io/docs/mcp/mcp-server/"
+    ],
+    "update": null
+  },
+  "blockscout": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "blockscout/mcp-server"
+      },
+      {
+        "kind": "endpoint",
+        "server": "blockscout",
+        "url": "https://mcp.blockscout.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/blockscout/mcp-server"
+    ],
+    "update": null
+  },
+  "boltz-api-cli": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "70e480ebb14baecfc4456b49eb8b724611470b7c",
+        "ref": "HEAD",
+        "repository": "boltz-bio/boltz-api-skills"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/boltz-bio/boltz-api-skills",
+      "https://boltz.bio"
+    ],
+    "update": null
+  },
+  "bonsai": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "bonsai",
+        "url": "https://mcp.hellobonsai.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.hellobonsai.com/"
+    ],
+    "update": null
+  },
+  "box": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "box",
+        "url": "https://mcp.box.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.box.com/guides/box-mcp/setup"
+    ],
+    "update": null
+  },
+  "braintrust": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "braintrust",
+        "url": "https://api.braintrust.dev/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.braintrust.dev/docs/integrations/developer-tools/mcp"
+    ],
+    "update": null
+  },
+  "brand24": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "brand24",
+        "url": "https://mcp.brand24.com/v1/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.brand24.com/en/articles/13011375-brand24-mcp"
+    ],
+    "update": null
+  },
+  "brave-search": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "brave/brave-search-mcp-server"
+      },
+      {
+        "kind": "npm",
+        "package": "@brave/brave-search-mcp-server",
+        "packagedVersion": "2.1.3"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/brave/brave-search-mcp-server"
+    ],
+    "update": null
+  },
+  "braze": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "braze",
+        "url": "https://mcp.braze.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.braze.com/docs/user_guide/brazeai/mcp_server"
+    ],
+    "update": null
+  },
+  "brevo": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "brevo",
+        "url": "https://mcp.brevo.com/v1/brevo/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.brevo.com/hc/en-us/articles/27978590646802-What-is-Model-Context-Protocol-MCP"
+    ],
+    "update": null
+  },
+  "brex": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "brex",
+        "url": "https://api.brex.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.brex.com/docs/mcp"
+    ],
+    "update": null
+  },
+  "bright-data": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "bright-data",
+        "url": "https://mcp.brightdata.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://brightdata.com/blog/ai/trueforge-with-bright-data"
+    ],
+    "update": null
+  },
+  "brighthire": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "brighthire/brighthire-codex-plugin"
+      },
+      {
+        "kind": "endpoint",
+        "server": "brighthire",
+        "url": "https://app.brighthire.ai/mcp/v1/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/brighthire/brighthire-codex-plugin"
+    ],
+    "update": null
+  },
+  "browserless": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "browserless",
+        "url": "https://mcp.browserless.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.browserless.io/mcp/browserless-mcp-server/setup"
+    ],
+    "update": null
+  },
+  "browserstack": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "browserstack",
+        "url": "https://mcp.browserstack.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.browserstack.com/docs/browserstack-mcp-server/get-started/remote-mcp-server"
+    ],
+    "update": null
+  },
+  "buffer": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "buffer",
+        "url": "https://mcp.buffer.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://buffer.com/integrations/claude"
+    ],
+    "update": null
+  },
+  "bugsnag": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "bugsnag",
+        "url": "https://bugsnag.mcp.smartbear.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.smartbear.com/smartbear-mcp/docs/remote-bugsnag"
+    ],
+    "update": null
+  },
+  "buildkite": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "buildkite",
+        "url": "https://mcp.buildkite.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://buildkite.com/docs/apis/mcp-server"
+    ],
+    "update": null
+  },
+  "bybit": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "bybit-exchange/trading-mcp"
+      },
+      {
+        "kind": "npm",
+        "package": "bybit-official-trading-server",
+        "packagedVersion": "2.1.19"
+      },
+      {
+        "kind": "npm",
+        "package": "bybit-official-trading-server",
+        "packagedVersion": "2.1.19"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/bybit-exchange/trading-mcp"
+    ],
+    "update": null
+  },
+  "cal-com": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "cal-com",
+        "url": "https://mcp.cal.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://cal.com/docs/mcp-server"
+    ],
+    "update": null
+  },
+  "calendly": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "calendly",
+        "url": "https://mcp.calendly.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.calendly.com/calendly-mcp-server"
+    ],
+    "update": null
+  },
+  "campfire": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "campfire",
+        "url": "https://api.meetcampfire.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.campfire.ai/guides/ai-integration"
+    ],
+    "update": null
+  },
+  "canny": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "canny",
+        "url": "https://api.canny.io/api/mcp/v1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.canny.io/en/articles/13063190-canny-mcp-server"
+    ],
+    "update": null
+  },
+  "canva": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "b56291ea0a36d0a941e1478b47959be5f1771dee",
+        "ref": "HEAD",
+        "repository": "canva-sdks/canva-skills"
+      },
+      {
+        "kind": "endpoint",
+        "server": "canva",
+        "url": "https://mcp.canva.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/canva-sdks/canva-skills",
+      "https://www.canva.com/developers/"
+    ],
+    "update": null
+  },
+  "capacities": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "capacities",
+        "url": "https://api.capacities.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.capacities.io/developer/model-context-protocol"
+    ],
+    "update": null
+  },
+  "carta-crm": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "daef48d9c7d110a1b3ea55d2b9bad3d19d079d75",
+        "ref": "HEAD",
+        "repository": "carta/plugins"
+      },
+      {
+        "kind": "endpoint",
+        "server": "carta-crm",
+        "url": "https://mcp.app.carta.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/carta/plugins",
+      "https://carta.com/crm/"
+    ],
+    "update": null
+  },
+  "cartesia": {
+    "monitors": [
+      {
+        "kind": "pypi",
+        "package": "cartesia-mcp",
+        "packagedVersion": "0.21.0"
+      },
+      {
+        "kind": "pypi",
+        "package": "cartesia-mcp",
+        "packagedVersion": "0.21.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.cartesia.ai/tools/ai/mcp"
+    ],
+    "update": null
+  },
+  "catalyst-by-zoho": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "4cfbca7041b14ffa874488cd9b0ba88970cd168f",
+        "ref": "HEAD",
+        "repository": "catalystbyzoho/codex-plugin"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/catalystbyzoho/codex-plugin",
+      "https://catalyst.zoho.com/"
+    ],
+    "update": null
+  },
+  "cb-insights": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "cbinsights/cbi-mcp-server"
+      },
+      {
+        "kind": "endpoint",
+        "server": "cb-insights",
+        "url": "https://mcp.cbinsights.com/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/cbinsights/cbi-mcp-server",
+      "https://www.cbinsights.com/october-2025-product-launch/"
+    ],
+    "update": null
+  },
+  "censys": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "censys",
+        "url": "https://mcp.platform.censys.io/platform/mcp/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.censys.com/docs/platform-mcp-server"
+    ],
+    "update": null
+  },
+  "chainstack": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "chainstack",
+        "url": "https://mcp.chainstack.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.chainstack.com/docs/chainstack-mcp-server"
+    ],
+    "update": null
+  },
+  "channel99": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "channel99",
+        "url": "https://mcp.channel99.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.channel99.com/articles/channel99-connects-marketing-intelligence-data-to-genai-platforms"
+    ],
+    "update": null
+  },
+  "checkly": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "checkly",
+        "url": "https://api.checklyhq.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.checklyhq.com/docs/ai/mcp-server/setup/"
+    ],
+    "update": null
+  },
+  "chroma": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "chroma-core/chroma-mcp"
+      },
+      {
+        "kind": "pypi",
+        "package": "chroma-mcp",
+        "packagedVersion": "0.2.6"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/chroma-core/chroma-mcp"
+    ],
+    "update": null
+  },
+  "chrome-devtools": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "ChromeDevTools/chrome-devtools-mcp"
+      },
+      {
+        "kind": "npm",
+        "package": "chrome-devtools-mcp",
+        "packagedVersion": "1.8.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+    ],
+    "update": null
+  },
+  "chronograph-gp": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "88a4290f29009e1cfe4341e0b9518d23c537d853",
+        "ref": "HEAD",
+        "repository": "chronograph-pe/chronograph-gp-claude-plugin"
+      },
+      {
+        "kind": "endpoint",
+        "server": "chronograph-gp",
+        "url": "https://ai.chronograph.pe/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/chronograph-pe/chronograph-gp-claude-plugin",
+      "https://www.chronograph.pe/"
+    ],
+    "update": null
+  },
+  "chronograph-lp": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "6c18b66e882c44db26d88afabc52853ba39dcd98",
+        "ref": "HEAD",
+        "repository": "chronograph-pe/chronograph-lp-claude-plugin"
+      },
+      {
+        "kind": "endpoint",
+        "server": "chronograph-lp",
+        "url": "https://ai.chronograph.pe/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/chronograph-pe/chronograph-lp-claude-plugin",
+      "https://www.chronograph.pe/"
+    ],
+    "update": null
+  },
+  "circleback": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "circleback",
+        "url": "https://circleback.ai/api/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://support.circleback.ai/en/articles/13249081-circleback-mcp"
+    ],
+    "update": null
+  },
+  "circleci": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "1121fafe77b5b2bfa623dda1a244517ff604a823",
+        "ref": "HEAD",
+        "repository": "CircleCI-Public/circleci-cli"
+      },
+      {
+        "kind": "endpoint",
+        "server": "circleci-hosted",
+        "url": "https://mcp.circleci.com/v1/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/CircleCI-Public/circleci-cli",
+      "https://circleci.com/docs/guides/toolkit/circleci-mcp-overview/"
+    ],
+    "update": null
+  },
+  "clay": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "clay",
+        "url": "https://api.clay.com/v3/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.clay.com/mcp"
+    ],
+    "update": null
+  },
+  "clerk": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "clerk",
+        "url": "https://mcp.clerk.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://clerk.com/docs/guides/ai/mcp/clerk-mcp-server"
+    ],
+    "update": null
+  },
+  "clickhouse": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "ClickHouse/agentic-data-stack"
+      },
+      {
+        "kind": "endpoint",
+        "server": "clickhouse",
+        "url": "https://mcp.clickhouse.cloud/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/ClickHouse/agentic-data-stack/blob/main/librechat.yaml"
+    ],
+    "update": null
+  },
+  "clickup": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "clickup",
+        "url": "https://mcp.clickup.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server.md"
+    ],
+    "update": null
+  },
+  "clockify": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "clockify",
+        "url": "https://api.clockify.me/mcp-server/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://clockify.me/help/integrations-and-add-ons/use-clockify-mcp-server-to-connect-to-ai-agent"
+    ],
+    "update": null
+  },
+  "close": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "close",
+        "url": "https://mcp.close.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.close.com/mcp"
+    ],
+    "update": null
+  },
+  "cloudflare": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "f96bff754e428838818017f75817f0f9428acd48",
+        "ref": "HEAD",
+        "repository": "cloudflare/skills"
+      },
+      {
+        "kind": "endpoint",
+        "server": "cloudflare-api",
+        "url": "https://mcp.cloudflare.com/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "cloudflare-docs",
+        "url": "https://docs.mcp.cloudflare.com/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "cloudflare-bindings",
+        "url": "https://bindings.mcp.cloudflare.com/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "cloudflare-builds",
+        "url": "https://builds.mcp.cloudflare.com/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "cloudflare-observability",
+        "url": "https://observability.mcp.cloudflare.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/cloudflare/skills",
+      "https://workers.cloudflare.com"
+    ],
+    "update": null
+  },
+  "cloudinary": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "dca5790c0af2bcde291d732af05c47ad7f75d341",
+        "ref": "HEAD",
+        "repository": "cloudinary/mcp-servers"
+      },
+      {
+        "kind": "endpoint",
+        "server": "cloudinary-asset-management",
+        "url": "https://asset-management.mcp.cloudinary.com/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "cloudinary-environment-config",
+        "url": "https://environment-config.mcp.cloudinary.com/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "cloudinary-structured-metadata",
+        "url": "https://structured-metadata.mcp.cloudinary.com/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "cloudinary-analysis",
+        "url": "https://analysis.mcp.cloudinary.com/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "cloudinary-mediaflows",
+        "url": "https://mediaflows.mcp.cloudinary.com/v2/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/cloudinary/mcp-servers",
+      "https://cloudinary.com/documentation/cloudinary_llm_mcp"
+    ],
+    "update": null
+  },
+  "cobo": {
+    "monitors": [
+      {
+        "kind": "pypi",
+        "package": "cobo-agentic-wallet",
+        "packagedVersion": "0.1.40"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://cobo.com/products/agentic-wallet/manual/developer/mcp"
+    ],
+    "update": null
+  },
+  "cockroachdb": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "cockroachdb",
+        "url": "https://cockroachlabs.cloud/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.cockroachlabs.com/blog/cockroachdb-ai-agents-managed-mcp-server/"
+    ],
+    "update": null
+  },
+  "coda": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "coda",
+        "url": "https://coda.io/apis/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.coda.io/hc/en-us/articles/44722661982989-Connect-to-the-Coda-MCP"
+    ],
+    "update": null
+  },
+  "coderabbit": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "aa49953c4cb2590e35480637b1b6a29cf4187cfa",
+        "ref": "HEAD",
+        "repository": "coderabbitai/skills"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/coderabbitai/skills",
+      "https://docs.coderabbit.ai/cli"
+    ],
+    "update": null
+  },
+  "cogedim": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "cogedim",
+        "url": "https://www.cogedim.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.cogedim.com/mcp"
+    ],
+    "update": null
+  },
+  "coinbase-developer": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "coinbase-developer",
+        "url": "https://docs.cdp.coinbase.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.cdp.coinbase.com/get-started/build-with-ai/docs-for-ai/cdp-docs-mcp"
+    ],
+    "update": null
+  },
+  "coingecko": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "coingecko",
+        "url": "https://mcp.api.coingecko.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://mcp.api.coingecko.com/"
+    ],
+    "update": null
+  },
+  "coinglass": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "coinglass",
+        "url": "https://api-mcp.coinglass.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.coinglass.com/reference/mcp-service"
+    ],
+    "update": null
+  },
+  "coinmarketcap": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "coinmarketcap",
+        "url": "https://mcp.coinmarketcap.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://coinmarketcap.com/api/mcp/"
+    ],
+    "update": null
+  },
+  "coinpaprika": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "coinpaprika/coinpaprika-mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "coinpaprika",
+        "url": "https://mcp.coinpaprika.com/streamable-http"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/coinpaprika/coinpaprika-mcp"
+    ],
+    "update": null
+  },
+  "coinstats": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "coinstats",
+        "url": "https://mcp.coinstats.app/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://coinstats.app/api-docs/mcp/connecting/"
+    ],
+    "update": null
+  },
+  "cometchat": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "cometchat/docs-mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "cometchat",
+        "url": "https://mcp.cometchat.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/cometchat/docs-mcp"
+    ],
+    "update": null
+  },
+  "common-room": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "common-room",
+        "url": "https://mcp.commonroom.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.commonroom.io/docs/using-common-room/mcp-server/"
+    ],
+    "update": null
+  },
+  "conductor": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "conductor",
+        "url": "https://mcp-universal.conductor.com/mcp/v3"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.conductor.com/docs/mcp/chatgpt-codex"
+    ],
+    "update": null
+  },
+  "configcat": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@configcat/mcp-server",
+        "packagedVersion": "0.1.9"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://configcat.com/docs/advanced/mcp-server/"
+    ],
+    "update": null
+  },
+  "confluent": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "confluent",
+        "url": "https://api.confluent.cloud/mcp/v1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.confluent.io/cloud/current/ai/ai-tools/managed-mcp-server.html"
+    ],
+    "update": null
+  },
+  "consensus": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "consensus",
+        "url": "https://mcp.consensus.app/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.consensus.app/consensus-mcp.md"
+    ],
+    "update": null
+  },
+  "contentful": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "contentful",
+        "url": "https://mcp.contentful.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.contentful.com/developers/docs/tools/mcp-server/"
+    ],
+    "update": null
+  },
+  "contentstack": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@contentstack/mcp",
+        "packagedVersion": "0.9.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.contentstack.com/contentstack-mcp"
+    ],
+    "update": null
+  },
+  "context7": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "context7",
+        "url": "https://mcp.context7.com/mcp/oauth"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://context7.com/docs/resources/all-clients"
+    ],
+    "update": null
+  },
+  "convex": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "get-convex/convex-backend"
+      },
+      {
+        "kind": "npm",
+        "package": "convex",
+        "packagedVersion": "1.44.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/get-convex/convex-backend",
+      "https://docs.convex.dev/ai/using-codex"
+    ],
+    "update": null
+  },
+  "coresignal": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "Coresignal-com/coresignal-mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "coresignal",
+        "url": "https://mcp.coresignal.com/mcp/v2"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Coresignal-com/coresignal-mcp"
+    ],
+    "update": null
+  },
+  "couchbase": {
+    "monitors": [
+      {
+        "kind": "pypi",
+        "package": "couchbase-mcp-server",
+        "packagedVersion": "1.0.1.post1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://mcp-server.couchbase.com/"
+    ],
+    "update": null
+  },
+  "coupler-io": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "550ec75cb48bbbe0be286577b30c3a32f9bb0eea",
+        "ref": "HEAD",
+        "repository": "railsware/coupler-io-mcp-server"
+      },
+      {
+        "kind": "endpoint",
+        "server": "coupler-io",
+        "url": "https://mcp.coupler.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/railsware/coupler-io-mcp-server",
+      "https://www.coupler.io/ai-integrations"
+    ],
+    "update": null
+  },
+  "courier": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "courier",
+        "url": "https://mcp.courier.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.courier.com/guides/ai-notifications/chapter-2-install-the-courier-mcp-server-and-cli"
+    ],
+    "update": null
+  },
+  "coveo": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "d93b77ee3d1a53b8547adad431e8c6355bb85f23",
+        "ref": "HEAD",
+        "repository": "coveo-labs/coveo-mcp-server"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/coveo-labs/coveo-mcp-server",
+      "https://www.coveo.com/en/developers/mcp-server"
+    ],
+    "update": null
+  },
+  "craft": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "craft",
+        "url": "https://mcp.craft.do/my/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.craft.do/imagine/guide/mcp/vscode"
+    ],
+    "update": null
+  },
+  "crawl4ai": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "crawl4ai",
+        "url": "https://gate.crawl4ai.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://gate.crawl4ai.com/"
+    ],
+    "update": null
+  },
+  "crisp": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "crisp",
+        "url": "https://api.crisp.chat/mcp/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.crisp.chat/guides/mcp-server/quickstart/"
+    ],
+    "update": null
+  },
+  "crossmint": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "crossmint",
+        "url": "https://docs.crossmint.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.crossmint.com/introduction/ai-assistants"
+    ],
+    "update": null
+  },
+  "crowdin": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "crowdin",
+        "url": "https://mcp.crowdin.com/mcp/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://store.crowdin.com/crowdin-mcp-server"
+    ],
+    "update": null
+  },
+  "crypto-com": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "crypto-com",
+        "url": "https://mcp.crypto.com/market-data/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://mcp.crypto.com/docs/getting-started"
+    ],
+    "update": null
+  },
+  "cryptohopper": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "cryptohopper",
+        "url": "https://mcp-data.cryptohopper.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.cryptohopper.com/docs/cryptohopper-mcp/setup-overview"
+    ],
+    "update": null
+  },
+  "cryptoquant": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "cryptoquant",
+        "url": "https://mcp.cryptoquant.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://userguide.cryptoquant.com/api/mcp-server-beta/remote-mcp-recommended"
+    ],
+    "update": null
+  },
+  "cryptorank": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "cryptorank",
+        "url": "https://api.cryptorank.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://cryptorank.io/insights/analytics/how-to-use-CryptoRank-MCP-server"
+    ],
+    "update": null
+  },
+  "cube": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "cube",
+        "url": "https://cubecloud.dev/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.cube.dev/docs/integrations/mcp-server"
+    ],
+    "update": null
+  },
+  "current-datetime": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "Trapezohe/ghast-plugins"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/current-datetime"
+    ],
+    "update": null
+  },
+  "customer-io": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "customer-io",
+        "url": "https://mcp.customer.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.customer.io/ai/mcp-server/"
+    ],
+    "update": null
+  },
+  "daloopa": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "1f112599065abb7cac3489c30f9e4bb27c68ad8e",
+        "ref": "HEAD",
+        "repository": "daloopa/daloopa-plugin-codex"
+      },
+      {
+        "kind": "endpoint",
+        "server": "daloopa",
+        "url": "https://mcp.daloopa.com/server/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "daloopa-docs",
+        "url": "https://docs.daloopa.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/daloopa/daloopa-plugin-codex",
+      "https://daloopa.com"
+    ],
+    "update": null
+  },
+  "dartai": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "dartai",
+        "url": "https://mcp.dartai.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.dartai.com/en/articles/10733406-dart-mcp"
+    ],
+    "update": null
+  },
+  "datadog": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "71364156c14b27466f3d646c8924318154e2321a",
+        "ref": "HEAD",
+        "repository": "datadog-labs/cursor-plugin"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/datadog-labs/cursor-plugin",
+      "https://docs.datadoghq.com/mcp_server/"
+    ],
+    "update": null
+  },
+  "dataforseo": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "dataforseo",
+        "url": "https://mcp.dataforseo.com/v3/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://dataforseo.com/seo-mcp-server"
+    ],
+    "update": null
+  },
+  "deel": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "deel",
+        "url": "https://api.letsdeel.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.deel.com/mcp/authorization"
+    ],
+    "update": null
+  },
+  "deepnote": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "46088505120f7056ccf2fed2f0b1039bd732ad54",
+        "ref": "HEAD",
+        "repository": "deepnote/codex-plugin"
+      },
+      {
+        "kind": "endpoint",
+        "server": "deepnote",
+        "url": "https://deepnote.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/deepnote/codex-plugin",
+      "https://deepnote.com/docs/deepnote-mcp"
+    ],
+    "update": null
+  },
+  "deepwiki": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "deepwiki",
+        "url": "https://mcp.deepwiki.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.devin.ai/work-with-devin/deepwiki-mcp"
+    ],
+    "update": null
+  },
+  "defillama": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "Trapezohe/ghast-plugins"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/defillama"
+    ],
+    "update": null
+  },
+  "demandbase": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "demandbase",
+        "url": "https://gateway.demandbase.com/mcp/servers/db-mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.demandbase.com/docs/mcp"
+    ],
+    "update": null
+  },
+  "descope": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "descope",
+        "url": "https://mcp.descope.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.descope.com/mcp/mcp-server"
+    ],
+    "update": null
+  },
+  "descript": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "descript",
+        "url": "https://api.descript.com/v2/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.descript.com/api-and-mcp/mcp-custom"
+    ],
+    "update": null
+  },
+  "devcycle": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "devcycle",
+        "url": "https://mcp.devcycle.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.devcycle.com/cli-mcp/mcp-getting-started/"
+    ],
+    "update": null
+  },
+  "devexpress": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "devexpress",
+        "url": "https://api.devexpress.com/mcp/docs"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.devexpress.com/GeneralInformation/405551/help-resources/dev-express-documentation-mcp-server-configure-an-ai-powered-assistant"
+    ],
+    "update": null
+  },
+  "dexpaprika": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "coinpaprika/dexpaprika-mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "dexpaprika",
+        "url": "https://mcp.dexpaprika.com/streamable-http"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/coinpaprika/dexpaprika-mcp"
+    ],
+    "update": null
+  },
+  "digitalocean": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "acbe39190b822268192d02ffd77b50319bb3d071",
+        "ref": "HEAD",
+        "repository": "digitalocean-labs/mcp-digitalocean"
+      },
+      {
+        "kind": "endpoint",
+        "server": "digitalocean-accounts",
+        "url": "https://accounts.mcp.digitalocean.com/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "digitalocean-droplets",
+        "url": "https://droplets.mcp.digitalocean.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/digitalocean-labs/mcp-digitalocean"
+    ],
+    "update": null
+  },
+  "dingtalk": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "open-dingtalk/dingtalk-mcp"
+      },
+      {
+        "kind": "npm",
+        "package": "dingtalk-mcp",
+        "packagedVersion": "1.1.21"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/open-dingtalk/dingtalk-mcp"
+    ],
+    "update": null
+  },
+  "directus": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "directus/mcp"
+      },
+      {
+        "kind": "npm",
+        "package": "@directus/content-mcp",
+        "packagedVersion": "0.1.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/directus/mcp"
+    ],
+    "update": null
+  },
+  "docusign": {
+    "monitors": [],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.docusign.com/platform/mcp-server/"
+    ],
+    "update": null
+  },
+  "dodopayments": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "dodopayments",
+        "url": "https://mcp.dodopayments.com/sse"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.dodopayments.com/developer-resources/mcp-server"
+    ],
+    "update": null
+  },
+  "domotz-preview": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "domotz",
+        "url": "https://mcp.domotz.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.domotz.com/mcp-server.php"
+    ],
+    "update": null
+  },
+  "doppler": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "DopplerHQ/mcp-server"
+      },
+      {
+        "kind": "npm",
+        "package": "@dopplerhq/mcp-server",
+        "packagedVersion": "1.0.5"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/DopplerHQ/mcp-server"
+    ],
+    "update": null
+  },
+  "dovetail": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "88a7389ccca718f9eff2f680ecb3f34713500866",
+        "ref": "HEAD",
+        "repository": "dovetail/dovetail-mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "dovetail",
+        "url": "https://dovetail.com/api/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/dovetail/dovetail-mcp",
+      "https://developers.dovetail.com/docs/mcp"
+    ],
+    "update": null
+  },
+  "dow-jones-factiva": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "dowjones/factiva-retrievalapi-demo"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/dowjones/factiva-retrievalapi-demo",
+      "https://developer.dowjones.com/documents/factiva_integration-factiva_retrieval_api"
+    ],
+    "update": null
+  },
+  "drawio": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@drawio/mcp",
+        "packagedVersion": "1.5.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.drawio.com/docs/manual/generate/drawio-mcp-server/"
+    ],
+    "update": null
+  },
+  "dropbox": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "dropbox",
+        "url": "https://mcp.dropbox.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.dropbox.com/integrations/connect-dropbox-mcp-server"
+    ],
+    "update": null
+  },
+  "duda": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "duda",
+        "url": "https://mcp.duda.co/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.duda.co/docs/duda-mcp-server"
+    ],
+    "update": null
+  },
+  "dune": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "dune",
+        "url": "https://api.dune.com/mcp/v1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://dune.com/blog/dune-mcp"
+    ],
+    "update": null
+  },
+  "egnyte": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "b2f1d26aa81a09cc729dc22040004c8064ec3495",
+        "ref": "HEAD",
+        "repository": "egnyte/egnyte-for-ai"
+      },
+      {
+        "kind": "endpoint",
+        "server": "egnyte",
+        "url": "https://mcp-server.egnyte.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/egnyte/egnyte-for-ai",
+      "https://developers.egnyte.com"
+    ],
+    "update": null
+  },
+  "elevenlabs": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "elevenlabs",
+        "url": "https://api.us.elevenlabs.io/v1/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://elevenlabs.io/docs/eleven-agents/operate/hosted-mcp"
+    ],
+    "update": null
+  },
+  "enterpret": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "enterpret",
+        "url": "https://wisdom-api.enterpret.com/server/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://helpcenter.enterpret.com/en/articles/12665166-enterpret-mcp-server"
+    ],
+    "update": null
+  },
+  "eraser": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "eraser",
+        "url": "https://app.eraser.io/api/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.eraser.io/mcp"
+    ],
+    "update": null
+  },
+  "etherscan": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "etherscan",
+        "url": "https://mcp.etherscan.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.etherscan.io/build-with-ai/mcp"
+    ],
+    "update": null
+  },
+  "everhour": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "everhour",
+        "url": "https://api.everhour.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://support.everhour.com/article/618-connecting-with-mcp"
+    ],
+    "update": null
+  },
+  "exa": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "exa",
+        "url": "https://mcp.exa.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://exa.ai/docs/reference/exa-mcp"
+    ],
+    "update": null
+  },
+  "excalidraw-plus": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "excalidraw-plus",
+        "url": "https://api.excalidraw.com/api/v1/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://plus.excalidraw.com/docs/mcp"
+    ],
+    "update": null
+  },
+  "expo": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "472d040092900dc8bbf84dc7efb0c90abff77a0d",
+        "ref": "HEAD",
+        "repository": "expo/skills"
+      },
+      {
+        "kind": "endpoint",
+        "server": "expo",
+        "url": "https://mcp.expo.dev/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/expo/skills",
+      "https://docs.expo.dev/skills/"
+    ],
+    "update": null
+  },
+  "factset": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "factset/enterprise-sdk"
+      },
+      {
+        "kind": "endpoint",
+        "server": "factset",
+        "url": "https://mcp.factset.com/content/v1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/factset/enterprise-sdk",
+      "https://developer.factset.com/mcp"
+    ],
+    "update": null
+  },
+  "fal": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "fal",
+        "url": "https://mcp.fal.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://fal.ai/docs/documentation/setting-up/mcp"
+    ],
+    "update": null
+  },
+  "fathom": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "fathom",
+        "url": "https://api.fathom.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.fathom.ai/mcp-docs"
+    ],
+    "update": null
+  },
+  "featurebase": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "featurebase",
+        "url": "https://mcp.featurebase.app"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.featurebase.app/articles/6144007-featurebase-mcp-server"
+    ],
+    "update": null
+  },
+  "feishu-lark": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "larksuite/lark-openapi-mcp"
+      },
+      {
+        "kind": "npm",
+        "package": "@larksuiteoapi/lark-mcp",
+        "packagedVersion": "0.5.1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/larksuite/lark-openapi-mcp"
+    ],
+    "update": null
+  },
+  "fellow": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "fellow",
+        "url": "https://fellow.app/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.fellow.ai/reference/mcp-server"
+    ],
+    "update": null
+  },
+  "fibery": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "fibery",
+        "url": "https://mcp-eu-svc.fibery.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://community.fibery.io/t/january-22-2026-architect-mode-many-ai-and-validation-rules-improvements/10284"
+    ],
+    "update": null
+  },
+  "financial-datasets": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "financial-datasets",
+        "url": "https://mcp.financialdatasets.ai/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.financialdatasets.ai/mcp-server"
+    ],
+    "update": null
+  },
+  "firebase": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "firebase-tools",
+        "packagedVersion": "15.29.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://firebase.google.com/docs/ai-assistance/mcp-server"
+    ],
+    "update": null
+  },
+  "firecrawl": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "firecrawl/firecrawl-mcp-server"
+      },
+      {
+        "kind": "endpoint",
+        "server": "firecrawl",
+        "url": "https://mcp.firecrawl.dev/v2/mcp-oauth"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/firecrawl/firecrawl-mcp-server"
+    ],
+    "update": null
+  },
+  "fireflies": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "fireflies",
+        "url": "https://api.fireflies.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.fireflies.ai/getting-started/mcp-configuration"
+    ],
+    "update": null
+  },
+  "fiscal-ai": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "fiscal",
+        "url": "https://api.fiscal.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.fiscal.ai/docs/guides/mcp-integration"
+    ],
+    "update": null
+  },
+  "fish-audio-docs": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "fish-audio-docs",
+        "url": "https://docs.fish.audio/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.fish.audio/developer-guide/resources/coding-agents"
+    ],
+    "update": null
+  },
+  "folk": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "folk",
+        "url": "https://mcp.folk.app/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.folk.app/en/articles/16760382-mcp-connect-folk-to-other-mcps"
+    ],
+    "update": null
+  },
+  "formbricks": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "formbricks",
+        "url": "https://app.formbricks.com/api/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://formbricks.com/docs/platform/mcp/overview"
+    ],
+    "update": null
+  },
+  "freshworks-developer": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "freshworks-developer",
+        "url": "https://mcp.freshworks.dev/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.freshworks.com/docs/agentic-dev-tools/mcp-server/"
+    ],
+    "update": null
+  },
+  "front": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "front",
+        "url": "https://mcp.frontapp.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://dev.frontapp.com/docs/mcp-server"
+    ],
+    "update": null
+  },
+  "fullstory": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "fullstory",
+        "url": "https://api.fullstory.com/mcp/fullstory"
+      },
+      {
+        "kind": "endpoint",
+        "server": "fullstory-eu",
+        "url": "https://api.eu1.fullstory.com/mcp/fullstory"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.fullstory.com/mcp/introduction/"
+    ],
+    "update": null
+  },
+  "fyxer": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "fyxer",
+        "url": "https://app.fyxer.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://support.fyxer.com/article/fyxer-mcp"
+    ],
+    "update": null
+  },
+  "gainium": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "gainium",
+        "url": "https://mcp.gainium.io/read"
+      },
+      {
+        "kind": "endpoint",
+        "server": "gainium-trading",
+        "url": "https://mcp.gainium.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://gainium.io/help/mcp"
+    ],
+    "update": null
+  },
+  "gate": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "gate/gate-mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "gate",
+        "url": "https://api.gatemcp.ai/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "gate-exchange",
+        "url": "https://api.gatemcp.ai/mcp/exchange"
+      },
+      {
+        "kind": "endpoint",
+        "server": "gate-info",
+        "url": "https://api.gatemcp.ai/mcp/info"
+      },
+      {
+        "kind": "endpoint",
+        "server": "gate-news",
+        "url": "https://api.gatemcp.ai/mcp/news"
+      },
+      {
+        "kind": "endpoint",
+        "server": "gate-docs",
+        "url": "https://api.gatemcp.ai/mcp/docs"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/gate/gate-mcp"
+    ],
+    "update": null
+  },
+  "gitbook": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "gitbook",
+        "url": "https://mcp.gitbook.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.gitbook.com/blog/create-documentation-with-ai-and-mcp"
+    ],
+    "update": null
+  },
+  "github": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "github/github-mcp-server"
+      },
+      {
+        "kind": "endpoint",
+        "server": "github",
+        "url": "https://api.githubcopilot.com/mcp/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/github/github-mcp-server"
+    ],
+    "update": null
+  },
+  "github-stats": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "Trapezohe/ghast-plugins"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/github-stats"
+    ],
+    "update": null
+  },
+  "gitlab": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "gitlab",
+        "url": "https://gitlab.com/api/v4/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.gitlab.com/user/model_context_protocol/mcp_server/"
+    ],
+    "update": null
+  },
+  "glassnode": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "glassnode",
+        "url": "https://mcp.glassnode.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.glassnode.com/guides-and-tutorials/glassnode-mcp-server"
+    ],
+    "update": null
+  },
+  "glean": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "9e7bd95e8debca50088f4ac0262b68689d36d7df",
+        "ref": "HEAD",
+        "repository": "gleanwork/agent-plugins"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/gleanwork/agent-plugins",
+      "https://docs.glean.com/administration/platform/mcp/about"
+    ],
+    "update": null
+  },
+  "goldrush": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@covalenthq/goldrush-mcp-server",
+        "packagedVersion": "3.0.6"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://goldrush.dev/agents/"
+    ],
+    "update": null
+  },
+  "google-ads": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "88f0467b9e536c562941fa52a94dd02b193c8fa4",
+        "ref": "HEAD",
+        "repository": "googleads/google-ads-mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server"
+    ],
+    "update": null
+  },
+  "google-analytics": {
+    "monitors": [
+      {
+        "kind": "pypi",
+        "package": "analytics-mcp",
+        "packagedVersion": "0.7.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.google.com/analytics/devguides/MCP"
+    ],
+    "update": null
+  },
+  "google-calendar": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "google-calendar",
+        "url": "https://calendarmcp.googleapis.com/mcp/v1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.google.com/workspace/guides/configure-mcp-servers"
+    ],
+    "update": null
+  },
+  "google-chat": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "google-chat",
+        "url": "https://chatmcp.googleapis.com/mcp/v1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.google.com/workspace/guides/configure-mcp-servers"
+    ],
+    "update": null
+  },
+  "google-contacts": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "google-contacts",
+        "url": "https://people.googleapis.com/mcp/v1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.google.com/workspace/guides/configure-mcp-servers"
+    ],
+    "update": null
+  },
+  "google-docs": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "google-docs",
+        "url": "https://docsmcp.googleapis.com/mcp/v1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.google.com/workspace/guides/configure-mcp-servers"
+    ],
+    "update": null
+  },
+  "google-drive": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "google-drive",
+        "url": "https://drivemcp.googleapis.com/mcp/v1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.google.com/workspace/guides/configure-mcp-servers"
+    ],
+    "update": null
+  },
+  "google-gmail": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "google-gmail",
+        "url": "https://gmailmcp.googleapis.com/mcp/v1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.google.com/workspace/guides/configure-mcp-servers"
+    ],
+    "update": null
+  },
+  "google-sheets": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "google-sheets",
+        "url": "https://sheetsmcp.googleapis.com/mcp/v1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.google.com/workspace/guides/configure-mcp-servers"
+    ],
+    "update": null
+  },
+  "google-slides": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "google-slides",
+        "url": "https://slidesmcp.googleapis.com/mcp/v1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.google.com/workspace/guides/configure-mcp-servers"
+    ],
+    "update": null
+  },
+  "gorgias": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "gorgias",
+        "url": "https://mcp.gorgias.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-the-gorgias-mcp-6310546"
+    ],
+    "update": null
+  },
+  "govtribe": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "govtribe",
+        "url": "https://govtribe.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://govtribe.com/docs/govtribe-user-guide/govtribe-mcp"
+    ],
+    "update": null
+  },
+  "grafana": {
+    "monitors": [
+      {
+        "kind": "pypi",
+        "package": "mcp-grafana",
+        "packagedVersion": "1.3.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://grafana.com/docs/grafana/latest/developer-resources/mcp/set-up/"
+    ],
+    "update": null
+  },
+  "granola": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "granola",
+        "url": "https://mcp.granola.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.granola.ai/help-center/sharing/integrations/mcp"
+    ],
+    "update": null
+  },
+  "graphlit": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "graphlit/graphlit-mcp-server"
+      },
+      {
+        "kind": "npm",
+        "package": "graphlit-mcp-server",
+        "packagedVersion": "1.0.20260112001"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/graphlit/graphlit-mcp-server"
+    ],
+    "update": null
+  },
+  "greenhouse": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "greenhouse",
+        "url": "https://mcp.us.greenhouse.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://support.greenhouse.io/hc/en-us/articles/52096319906971-Set-up-Greenhouse-MCP-with-supported-AI-tools"
+    ],
+    "update": null
+  },
+  "growthbook": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "growthbook/growthbook-mcp"
+      },
+      {
+        "kind": "npm",
+        "package": "@growthbook/mcp",
+        "packagedVersion": "2.1.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/growthbook/growthbook-mcp"
+    ],
+    "update": null
+  },
+  "guru": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "guru",
+        "url": "https://mcp.api.getguru.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.getguru.com/docs/connecting-gurus-mcp-server"
+    ],
+    "update": null
+  },
+  "hacker-news": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "Trapezohe/ghast-plugins"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/hacker-news"
+    ],
+    "update": null
+  },
+  "happenstance": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "happenstance",
+        "url": "https://happenstance.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.happenstance.ai/mcp/connect"
+    ],
+    "update": null
+  },
+  "harness": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "harness-mcp-v2",
+        "packagedVersion": "3.2.24"
+      },
+      {
+        "kind": "endpoint",
+        "server": "harness-hosted",
+        "url": "https://mcp.harness.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.harness.io/docs/platform/harness-ai/connect-with-ai/harness-mcp-server/hosted-mcp/"
+    ],
+    "update": null
+  },
+  "harvest": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "harvest",
+        "url": "https://api.harvestapp.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP"
+    ],
+    "update": null
+  },
+  "hebbia": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "hebbia",
+        "url": "https://api.hebbia.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.hebbia.com/product"
+    ],
+    "update": null
+  },
+  "hedera": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "hedera",
+        "url": "https://agentic-testnet-mcp.hedera.com/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "hedera-docs",
+        "url": "https://docs.hedera.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://hedera.com/mcp-servers/"
+    ],
+    "update": null
+  },
+  "helicone": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@helicone/mcp",
+        "packagedVersion": "0.1.6"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.helicone.ai/integrations/tools/mcp"
+    ],
+    "update": null
+  },
+  "helius": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "helius-mcp",
+        "packagedVersion": "2.2.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.helius.dev/docs/agents/mcp"
+    ],
+    "update": null
+  },
+  "help-scout": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "help-scout",
+        "url": "https://mcp.helpscout.net/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports"
+    ],
+    "update": null
+  },
+  "heptabase": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "heptabase",
+        "url": "https://api.heptabase.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://support.heptabase.com/en/articles/12679581-how-to-use-heptabase-mcp"
+    ],
+    "update": null
+  },
+  "hex": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "hex",
+        "url": "https://app.hex.tech/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://learn.hex.tech/docs/api-integrations/mcp-server"
+    ],
+    "update": null
+  },
+  "heygen": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "1bd5e4d33a028dfed3abf504c5e3dd644fb9ea8a",
+        "ref": "HEAD",
+        "repository": "heygen-com/skills"
+      },
+      {
+        "kind": "endpoint",
+        "server": "heygen",
+        "url": "https://mcp.heygen.com/mcp/v1/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/heygen-com/skills",
+      "https://heygen.com"
+    ],
+    "update": null
+  },
+  "hg-insights": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "hg-insights",
+        "url": "https://phoenix.hginsights.com/api/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://phoenix.hginsights.com/docs/getting-started"
+    ],
+    "update": null
+  },
+  "hibob": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "hibob",
+        "url": "https://api.hibob.com/ai-mcp-public/mcp/public"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://apidocs.hibob.com/changelog/developer-docs-update-bob-mcp-server-now-uses-oauth"
+    ],
+    "update": null
+  },
+  "higgsfield": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "higgsfield",
+        "url": "https://mcp.higgsfield.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-higgsfield-mcp"
+    ],
+    "update": null
+  },
+  "highlevel": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "0af86a4cbd48c66a4071c7e509d1079f9f10ed17",
+        "ref": "HEAD",
+        "repository": "GoHighLevel/highlevel-api-docs"
+      },
+      {
+        "kind": "endpoint",
+        "server": "highlevel",
+        "url": "https://services.leadconnectorhq.com/mcp/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/GoHighLevel/highlevel-api-docs",
+      "https://marketplace.gohighlevel.com/docs/other/mcp/"
+    ],
+    "update": null
+  },
+  "honeycomb": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "honeycomb",
+        "url": "https://mcp.honeycomb.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.honeycomb.io/integrations/mcp/configuration-guide"
+    ],
+    "update": null
+  },
+  "hostinger": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "cc04bafbeae9362a35af1b6443d3c3833f9f30d5",
+        "ref": "HEAD",
+        "repository": "hostinger/api-mcp-server"
+      },
+      {
+        "kind": "endpoint",
+        "server": "hostinger-hosted",
+        "url": "https://mcp.hostinger.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/hostinger/api-mcp-server",
+      "https://www.hostinger.com/connector"
+    ],
+    "update": null
+  },
+  "hubspot": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "71f2bdefcc0247b1f378cb98186800dc57b6f6b1",
+        "ref": "HEAD",
+        "repository": "HubSpot/agent-cli-skills"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/HubSpot/agent-cli-skills",
+      "https://developers.hubspot.com/docs/developer-tooling/local-development/agent-cli/guide"
+    ],
+    "update": null
+  },
+  "hugging-face": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "020194918dc4a27d5a5d9a154b6b56cc2bd21364",
+        "ref": "HEAD",
+        "repository": "huggingface/skills"
+      },
+      {
+        "kind": "endpoint",
+        "server": "huggingface-skills",
+        "url": "https://huggingface.co/mcp?login"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/huggingface/skills"
+    ],
+    "update": null
+  },
+  "hygraph": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "hygraph",
+        "url": "https://mcp.hygraph.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://hygraph.com/docs/hygraph-ai/mcp-server-setup"
+    ],
+    "update": null
+  },
+  "hyperframes": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "dd0626a55a0d0f24cae1b00bd2c95c0ebfa7a573",
+        "ref": "HEAD",
+        "repository": "heygen-com/hyperframes"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/heygen-com/hyperframes",
+      "https://hyperframes.heygen.com"
+    ],
+    "update": null
+  },
+  "ideogram": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "ideogram",
+        "url": "https://mcp.ideogram.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://ideogram.ai/features/mcp/"
+    ],
+    "update": null
+  },
+  "imagekit": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "imagekit",
+        "url": "https://api-mcp.imagekit.io/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "imagekit-devtools",
+        "url": "https://devtools-mcp.imagekit.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://imagekit.io/docs/build-with-ai"
+    ],
+    "update": null
+  },
+  "incident-io": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "incident-io",
+        "url": "https://mcp.incident.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.incident.io/ai/remote-mcp"
+    ],
+    "update": null
+  },
+  "infisical": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "Infisical/infisical-mcp-server"
+      },
+      {
+        "kind": "npm",
+        "package": "@infisical/mcp",
+        "packagedVersion": "0.0.23"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Infisical/infisical-mcp-server"
+    ],
+    "update": null
+  },
+  "influxdb": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "influxdata/influxdb3_mcp_server"
+      },
+      {
+        "kind": "npm",
+        "package": "@influxdata/influxdb3-mcp-server",
+        "packagedVersion": "1.4.1"
+      },
+      {
+        "kind": "endpoint",
+        "server": "influxdb-docs",
+        "url": "https://influxdb-docs.mcp.kapa.ai"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/influxdata/influxdb3_mcp_server"
+    ],
+    "update": null
+  },
+  "infobip": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "infobip",
+        "url": "https://mcp.infobip.com/sms"
+      },
+      {
+        "kind": "endpoint",
+        "server": "infobip-email",
+        "url": "https://mcp.infobip.com/email"
+      },
+      {
+        "kind": "endpoint",
+        "server": "infobip-whatsapp",
+        "url": "https://mcp.infobip.com/whatsapp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "infobip-voice",
+        "url": "https://mcp.infobip.com/voice"
+      },
+      {
+        "kind": "endpoint",
+        "server": "infobip-people",
+        "url": "https://mcp.infobip.com/people"
+      },
+      {
+        "kind": "endpoint",
+        "server": "infobip-account-management",
+        "url": "https://mcp.infobip.com/account-management"
+      },
+      {
+        "kind": "endpoint",
+        "server": "infobip-search",
+        "url": "https://mcp.infobip.com/search"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.infobip.com/docs/mcp/using-mcp"
+    ],
+    "update": null
+  },
+  "inngest": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "inngest",
+        "url": "https://api.inngest.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.inngest.com/docs/ai-dev-tools/mcp"
+    ],
+    "update": null
+  },
+  "instantly": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "instantly",
+        "url": "https://mcp.instantly.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.instantly.ai/mcp/authentication"
+    ],
+    "update": null
+  },
+  "intercom": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "62773a7d4b8aac31545d6888fe6479be3bc53804",
+        "ref": "HEAD",
+        "repository": "intercom/claude-plugin-external"
+      },
+      {
+        "kind": "endpoint",
+        "server": "intercom-us",
+        "url": "https://mcp.intercom.com/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "intercom-eu",
+        "url": "https://mcp.eu.intercom.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/intercom/claude-plugin-external",
+      "https://developers.intercom.com"
+    ],
+    "update": null
+  },
+  "jam": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "jam",
+        "url": "https://mcp.jam.dev/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://jam.dev/docs/jam-mcp"
+    ],
+    "update": null
+  },
+  "jina-ai": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "jina-ai/MCP"
+      },
+      {
+        "kind": "endpoint",
+        "server": "jina-ai",
+        "url": "https://mcp.jina.ai/v1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/jina-ai/MCP"
+    ],
+    "update": null
+  },
+  "jotform": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "jotform/mcp-server"
+      },
+      {
+        "kind": "endpoint",
+        "server": "jotform",
+        "url": "https://mcp.jotform.com/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/jotform/mcp-server"
+    ],
+    "update": null
+  },
+  "justcall": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "justcall",
+        "url": "https://mcp.justcall.host/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.justcall.io/docs/mcp"
+    ],
+    "update": null
+  },
+  "kagi": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "kagisearch/kagimcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "kagi",
+        "url": "https://mcp.kagi.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/kagisearch/kagimcp"
+    ],
+    "update": null
+  },
+  "kittl": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "kittl",
+        "url": "https://mcp.kittl.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.kittl.com/mcp"
+    ],
+    "update": null
+  },
+  "klaviyo": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "klaviyo",
+        "url": "https://mcp.klaviyo.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server"
+    ],
+    "update": null
+  },
+  "knock": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "knock",
+        "url": "https://mcp.knock.app/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.knock.app/ai/mcp-server"
+    ],
+    "update": null
+  },
+  "knowify": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "knowify",
+        "url": "https://assistant.knowify.com/api/v2/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://knowify.zendesk.com/hc/en-us/articles/49623682048660-Getting-started-with-the-Knowify-AI-Connector"
+    ],
+    "update": null
+  },
+  "kong-konnect": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "kong-konnect",
+        "url": "https://us.mcp.konghq.com/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.konghq.com/konnect-platform/konnect-mcp/installation/"
+    ],
+    "update": null
+  },
+  "kontent-ai": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@kontent-ai/mcp-server",
+        "packagedVersion": "0.39.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://kontent.ai/learn/docs/ai/mcp-server"
+    ],
+    "update": null
+  },
+  "kraken": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "krakenfx/kraken-cli"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/krakenfx/kraken-cli"
+    ],
+    "update": null
+  },
+  "kustomer": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "kustomer",
+        "url": "https://server.mcp.kustomerapp.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.kustomer.com/kustomer-mcp-server-HJsPzR56ee"
+    ],
+    "update": null
+  },
+  "langfuse": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "langfuse",
+        "url": "https://cloud.langfuse.com/api/public/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://langfuse.com/docs/api-and-data-platform/features/mcp-server"
+    ],
+    "update": null
+  },
+  "langsmith": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "langsmith",
+        "url": "https://api.smith.langchain.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.langchain.com/langsmith/langsmith-remote-mcp"
+    ],
+    "update": null
+  },
+  "launchdarkly": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "launchdarkly",
+        "url": "https://mcp.launchdarkly.com/mcp/launchdarkly"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://launchdarkly.com/docs/home/getting-started/mcp-hosted"
+    ],
+    "update": null
+  },
+  "lemlist": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "lemlist",
+        "url": "https://app.lemlist.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.lemlist.com/en/articles/13728466-set-up-the-lemlist-mcp-server-in-your-llm-client-oauth-or-api-key"
+    ],
+    "update": null
+  },
+  "linear": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "linear",
+        "url": "https://mcp.linear.app/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://linear.app/docs/mcp"
+    ],
+    "update": null
+  },
+  "linearb": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "linearb",
+        "url": "https://mcp.linearb.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://linearb.zendesk.com/hc/en-us/articles/45552138846491-2026-Release-Notes"
+    ],
+    "update": null
+  },
+  "livekit-docs": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "livekit-docs",
+        "url": "https://docs.livekit.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.livekit.io/reference/developer-tools/docs-mcp/"
+    ],
+    "update": null
+  },
+  "logrocket": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "logrocket",
+        "url": "https://mcp.logrocket.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.logrocket.com/docs/mcp"
+    ],
+    "update": null
+  },
+  "lokalise": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "lokalise",
+        "url": "https://mcp.lokalise.com/mcp/project-management"
+      },
+      {
+        "kind": "endpoint",
+        "server": "lokalise-development",
+        "url": "https://mcp.lokalise.com/mcp/software-development"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.lokalise.com/en/articles/13547066-setting-up-and-using-the-lokalise-mcp-server"
+    ],
+    "update": null
+  },
+  "loops": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "loops",
+        "url": "https://mcp.loops.so"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://loops.so/agents/mcp"
+    ],
+    "update": null
+  },
+  "lottiefiles": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "lottiefiles",
+        "url": "https://mcp.lottiefiles.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.lottiefiles.com/en/platform/mcp"
+    ],
+    "update": null
+  },
+  "lovable": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "0336e6db8026b0f02cb89d1451cc48ea3f469791",
+        "ref": "HEAD",
+        "repository": "lovablelabs/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "lovable",
+        "url": "https://mcp.lovable.dev"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/lovablelabs/mcp",
+      "https://docs.lovable.dev/integrations/lovable-mcp-server"
+    ],
+    "update": null
+  },
+  "lucid": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "lucid",
+        "url": "https://mcp.lucid.app/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.lucid.co/hc/en-us/articles/42578801807508-Integrate-Lucid-with-AI-tools-using-the-Lucid-MCP-server"
+    ],
+    "update": null
+  },
+  "magicpath": {
+    "monitors": [],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.magicpath.ai"
+    ],
+    "update": null
+  },
+  "magnific": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "magnific",
+        "url": "https://mcp.magnific.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.magnific.com/ai/docs/magnific-mcp"
+    ],
+    "update": null
+  },
+  "mailchimp-transactional": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "mailchimp-transactional",
+        "url": "https://mandrillapp.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://mailchimp.com/developer/transactional/guides/how-to-use-mailchimps-transactional-messaging-mcp/"
+    ],
+    "update": null
+  },
+  "mailerlite": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "mailerlite",
+        "url": "https://mcp.mailerlite.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.mailerlite.com/mcp"
+    ],
+    "update": null
+  },
+  "mailgun": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@mailgun/mcp-server",
+        "packagedVersion": "2.1.2"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://documentation.mailgun.com/docs/mailgun/mcp"
+    ],
+    "update": null
+  },
+  "mailtrap": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "mailtrap/mailtrap-mcp"
+      },
+      {
+        "kind": "npm",
+        "package": "mcp-mailtrap",
+        "packagedVersion": "0.9.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/mailtrap/mailtrap-mcp"
+    ],
+    "update": null
+  },
+  "make": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "make",
+        "url": "https://mcp.make.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.make.com/mcp-server"
+    ],
+    "update": null
+  },
+  "mapbox": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "mapbox",
+        "url": "https://mcp.mapbox.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.mapbox.com/api/guides/mcp-server/"
+    ],
+    "update": null
+  },
+  "marcopolo": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "immersa-co/marcopolo-plugin"
+      },
+      {
+        "kind": "endpoint",
+        "server": "MarcoPolo",
+        "url": "https://mcp.marcopolo.dev"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/immersa-co/marcopolo-plugin",
+      "https://docs.marcopolo.dev/getting-started/codex-plugin"
+    ],
+    "update": null
+  },
+  "maze": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "maze",
+        "url": "https://connect.maze.co/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.maze.co/articles/8675970764-set-up-maze-mcp"
+    ],
+    "update": null
+  },
+  "meilisearch": {
+    "monitors": [
+      {
+        "kind": "pypi",
+        "package": "meilisearch-mcp",
+        "packagedVersion": "0.7.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.meilisearch.com/integrations/mcp"
+    ],
+    "update": null
+  },
+  "mem": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "mem",
+        "url": "https://mcp.mem.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.mem.ai/mcp/overview"
+    ],
+    "update": null
+  },
+  "mem0": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "mem0",
+        "url": "https://mcp.mem0.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.mem0.ai/platform/mem0-mcp"
+    ],
+    "update": null
+  },
+  "mercury": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "mercury",
+        "url": "https://mcp.mercury.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.mercury.com/docs/connecting-mercury-mcp"
+    ],
+    "update": null
+  },
+  "mermaid-mindmap": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "Trapezohe/ghast-plugins"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/mermaid-mindmap"
+    ],
+    "update": null
+  },
+  "messari": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "messari",
+        "url": "https://mcp.messari.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.messari.io/mcp-server/hosted"
+    ],
+    "update": null
+  },
+  "meteomatics": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "meteomatics",
+        "url": "https://mcp.meteomatics.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.meteomatics.com/en/api/data-connectors/mcp/"
+    ],
+    "update": null
+  },
+  "microsoft-learn": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "microsoft-learn",
+        "url": "https://learn.microsoft.com/api/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://learn.microsoft.com/en-us/training/support/mcp"
+    ],
+    "update": null
+  },
+  "microsoft-release-communications": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "microsoft-release-communications",
+        "url": "https://www.microsoft.com/releasecommunications/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/mrc-mcp?view=o365-worldwide"
+    ],
+    "update": null
+  },
+  "microsoft-workiq": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "microsoft-workiq",
+        "url": "https://workiq.svc.cloud.microsoft/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview"
+    ],
+    "update": null
+  },
+  "midpage": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "midpage-ai/litigation-skills"
+      },
+      {
+        "kind": "endpoint",
+        "server": "midpage",
+        "url": "https://app.midpage.ai/mcp/v3"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/midpage-ai/litigation-skills",
+      "https://docs.midpage.ai/documentation/integration/mcp-tools"
+    ],
+    "update": null
+  },
+  "miro": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "miro",
+        "url": "https://mcp.miro.com/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.miro.com/docs/miro-mcp-server-frequently-asked-questions"
+    ],
+    "update": null
+  },
+  "missive": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "missive",
+        "url": "https://mcp.missiveapp.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://missiveapp.com/docs/ai/mcp/server/connect"
+    ],
+    "update": null
+  },
+  "mixpanel": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "2bde5a300d40afbc934ae74f44444744b80c09b6",
+        "ref": "HEAD",
+        "repository": "mixpanel/ai-plugins"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/mixpanel/ai-plugins",
+      "https://docs.mixpanel.com/docs/mcp"
+    ],
+    "update": null
+  },
+  "mixpanel-headless": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "6c2c2f975d51628bdbc75802fb879d4f6cb66f69",
+        "ref": "HEAD",
+        "repository": "mixpanel/mixpanel-headless"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/mixpanel/mixpanel-headless",
+      "https://mixpanel.github.io/mixpanel-headless/"
+    ],
+    "update": null
+  },
+  "monday-com": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "ce381e93a0a6c2ed3b9942ff1803b8078ba89389",
+        "ref": "HEAD",
+        "repository": "mondaycom/monday-claude-cowork-plugin"
+      },
+      {
+        "kind": "endpoint",
+        "server": "monday",
+        "url": "https://mcp.monday.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/mondaycom/monday-claude-cowork-plugin",
+      "https://monday.com"
+    ],
+    "update": null
+  },
+  "mongodb": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "mongodb-mcp-server",
+        "packagedVersion": "2.1.1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.mongodb.com/docs/mcp-server/local-mcp/configuration/options/"
+    ],
+    "update": null
+  },
+  "moonpay": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "moonpay",
+        "url": "https://dev.moonpay.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://dev.moonpay.com/platform/overview/using-agents"
+    ],
+    "update": null
+  },
+  "moralis": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@moralisweb3/api-mcp-server",
+        "packagedVersion": "1.8.2"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://moralis.com/cortex/"
+    ],
+    "update": null
+  },
+  "morningstar": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "Morningstar/morningstar-plugins"
+      },
+      {
+        "kind": "endpoint",
+        "server": "morningstar",
+        "url": "https://mcp.morningstar.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Morningstar/morningstar-plugins",
+      "https://www.morningstar.com/business/products/mcp-server"
+    ],
+    "update": null
+  },
+  "motherduck": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "275d2e7d2ba4f5b48ce8ad3f01a9aeea8bd08616",
+        "ref": "HEAD",
+        "repository": "motherduckdb/mcp-server-motherduck"
+      },
+      {
+        "kind": "endpoint",
+        "server": "motherduck",
+        "url": "https://api.motherduck.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/motherduckdb/mcp-server-motherduck",
+      "https://motherduck.com/docs/sql-reference/mcp/"
+    ],
+    "update": null
+  },
+  "mt-newswires": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "mt-newswires",
+        "url": "https://vast.blueskyapi.com/mtnewswires/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.mtnewswires.com/ai-enablement"
+    ],
+    "update": null
+  },
+  "mux": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "mux",
+        "url": "https://mcp.mux.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.mux.com/docs/integrations/mcp-server"
+    ],
+    "update": null
+  },
+  "myregistry-com": {
+    "monitors": [],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.myregistry.com/reference/new-endpoint"
+    ],
+    "update": null
+  },
+  "nansen": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "nansen",
+        "url": "https://mcp.nansen.ai/ra/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.nansen.ai/mcp/connecting"
+    ],
+    "update": null
+  },
+  "neon-postgres": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "b7f87949583782238aef20414a29b1f5ca2773ea",
+        "ref": "HEAD",
+        "repository": "neondatabase/agent-skills"
+      },
+      {
+        "kind": "endpoint",
+        "server": "neon",
+        "url": "https://mcp.neon.tech/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/neondatabase/agent-skills",
+      "https://neon.com"
+    ],
+    "update": null
+  },
+  "netlify": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "32a261b6b2437464aca7e51bf9b48bcac1e2835c",
+        "ref": "HEAD",
+        "repository": "netlify/context-and-tools"
+      },
+      {
+        "kind": "endpoint",
+        "server": "netlify",
+        "url": "https://netlify-mcp.netlify.app/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/netlify/context-and-tools",
+      "https://docs.netlify.com"
+    ],
+    "update": null
+  },
+  "nextjs": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "vercel/next-devtools-mcp"
+      },
+      {
+        "kind": "npm",
+        "package": "next-devtools-mcp",
+        "packagedVersion": "0.4.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/vercel/next-devtools-mcp"
+    ],
+    "update": null
+  },
+  "notion": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "notion",
+        "url": "https://mcp.notion.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.notion.com/guides/mcp/get-started-with-mcp",
+      "https://developers.notion.com/guides/mcp/overview"
+    ],
+    "update": null
+  },
+  "novu": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "novu",
+        "url": "https://mcp.novu.co/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://novu.co/mcp"
+    ],
+    "update": null
+  },
+  "nuclino": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "nuclino",
+        "url": "https://api.nuclino.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.nuclino.com/70af7f4f-connect-nuclino-to-ai-assistants-with-mcp"
+    ],
+    "update": null
+  },
+  "nuxt": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "nuxt",
+        "url": "https://nuxt.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://nuxt.com/docs/4.x/guide/ai/mcp"
+    ],
+    "update": null
+  },
+  "nvidia": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "7149a886d50da8db72cdc1f20ff01cefeadfe6a9",
+        "ref": "HEAD",
+        "repository": "NVIDIA/skills"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/NVIDIA/skills",
+      "https://build.nvidia.com/skills/"
+    ],
+    "update": null
+  },
+  "nylas": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "nylas",
+        "url": "https://mcp.us.nylas.com"
+      },
+      {
+        "kind": "endpoint",
+        "server": "nylas-eu",
+        "url": "https://mcp.eu.nylas.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.nylas.com/docs/dev-guide/mcp/"
+    ],
+    "update": null
+  },
+  "okx": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@okx_ai/okx-trade-mcp",
+        "packagedVersion": "1.4.6"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.okx.com/docs-v5/agent_en/"
+    ],
+    "update": null
+  },
+  "omni-analytics": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "omni",
+        "url": "https://callbacks.omniapp.co/callback/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.omni.co/ai/mcp"
+    ],
+    "update": null
+  },
+  "onesignal": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "onesignal",
+        "url": "https://api.onesignal.com/mcp/oauth"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://documentation.onesignal.com/docs/en/model-context-protocol"
+    ],
+    "update": null
+  },
+  "onlyoffice": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "onlyoffice",
+        "url": "https://mcp.onlyoffice.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.onlyoffice.com/blog/2026/01/remote-onlyoffice-docspace-mcp-server"
+    ],
+    "update": null
+  },
+  "optimizely": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "optimizely",
+        "url": "https://cms.mcp.opal.optimizely.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.developers.optimizely.com/content-management-system/v1.0.0-CMS-SaaS/docs/configure-mcp-server"
+    ],
+    "update": null
+  },
+  "ordinal": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "ordinal",
+        "url": "https://app.tryordinal.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.tryordinal.com/mcp/introduction"
+    ],
+    "update": null
+  },
+  "otter-ai": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "otter-ai",
+        "url": "https://mcp.otter.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server"
+    ],
+    "update": null
+  },
+  "outreach": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "outreach",
+        "url": "https://api.outreach.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.outreach.io/mcp-server"
+    ],
+    "update": null
+  },
+  "paddle": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "paddle",
+        "url": "https://mcp.paddle.com/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "paddle-sandbox",
+        "url": "https://sandbox-mcp.paddle.com/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "paddle-docs",
+        "url": "https://paddlehq.mcp.kapa.ai"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.paddle.com/sdks/ai/paddle-mcp/"
+    ],
+    "update": null
+  },
+  "pagerduty": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "pagerduty",
+        "url": "https://mcp.pagerduty.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://support.pagerduty.com/main/docs/pagerduty-mcp-server"
+    ],
+    "update": null
+  },
+  "particl-market-research": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "particl-market-research",
+        "url": "https://mcp.particl.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.particl.com/docs/mcp"
+    ],
+    "update": null
+  },
+  "paypal": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "paypal",
+        "url": "https://mcp.paypal.com/sse"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://paypal.gitbook.com/agent-toolkit-and-mcp-server/mcp-server/set-up-a-remote-mcp-server"
+    ],
+    "update": null
+  },
+  "pendo": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "pendo",
+        "url": "https://app.pendo.io/mcp/v0/shttp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "pendo-us1",
+        "url": "https://us1.app.pendo.io/mcp/v0/shttp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "pendo-eu",
+        "url": "https://app.eu.pendo.io/mcp/v0/shttp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "pendo-japan",
+        "url": "https://app.jpn.pendo.io/mcp/v0/shttp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "pendo-australia",
+        "url": "https://app.au.pendo.io/mcp/v0/shttp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://support.pendo.io/hc/en-us/articles/41102236924955-Connect-to-the-Pendo-MCP-server"
+    ],
+    "update": null
+  },
+  "penpot": {
+    "monitors": [],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.penpot.app/mcp/"
+    ],
+    "update": null
+  },
+  "perplexity": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@perplexity-ai/mcp-server",
+        "packagedVersion": "1.2.1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.perplexity.ai/docs/getting-started/integrations/mcp-server"
+    ],
+    "update": null
+  },
+  "phantom": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@phantom/mcp-server",
+        "packagedVersion": "1.2.7"
+      },
+      {
+        "kind": "endpoint",
+        "server": "phantom-docs",
+        "url": "https://docs.phantom.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.phantom.com/phantom-mcp-server/setup"
+    ],
+    "update": null
+  },
+  "phoenix": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@arizeai/phoenix-mcp",
+        "packagedVersion": "4.3.7"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://arize.com/docs/phoenix/sdk-api-reference/typescript/mcp-server"
+    ],
+    "update": null
+  },
+  "photoroom": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "photoroom",
+        "url": "https://mcp.photoroom.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.photoroom.com/en/articles/15421163-photoroom-connector-for-claude-team-and-enterprise"
+    ],
+    "update": null
+  },
+  "picsart": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "b52ed0d07fa8f7e94b29f194ab3eea99bb95b650",
+        "ref": "HEAD",
+        "repository": "PicsArt/gen-ai-skills"
+      },
+      {
+        "kind": "endpoint",
+        "server": "picsart",
+        "url": "https://mcp.picsart.io/v1"
+      },
+      {
+        "kind": "endpoint",
+        "server": "picsart-gen-ai",
+        "url": "https://api.picsart.com/gen-ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/PicsArt/gen-ai-skills",
+      "https://picsart.com"
+    ],
+    "update": null
+  },
+  "pinecone": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@pinecone-database/mcp",
+        "packagedVersion": "0.3.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.pinecone.io/guides/operations/mcp-server"
+    ],
+    "update": null
+  },
+  "pipedrive": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "pipedrive",
+        "url": "https://mcp.pipedrive.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://support.pipedrive.com/en/article/mcp-chatgpt"
+    ],
+    "update": null
+  },
+  "plaid": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "plaid",
+        "url": "https://api.dashboard.plaid.com/mcp/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://plaid.com/docs/resources/mcp/"
+    ],
+    "update": null
+  },
+  "plain": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "plain",
+        "url": "https://mcp.plain.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.plain.com/docs/agents/mcp-server"
+    ],
+    "update": null
+  },
+  "planetscale": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "planetscale",
+        "url": "https://mcp.pscale.dev/mcp/planetscale"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://planetscale.com/docs/mcp-server"
+    ],
+    "update": null
+  },
+  "playwright": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "microsoft/playwright-mcp"
+      },
+      {
+        "kind": "npm",
+        "package": "@playwright/mcp",
+        "packagedVersion": "0.0.80"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/microsoft/playwright-mcp"
+    ],
+    "update": null
+  },
+  "polar": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "polar",
+        "url": "https://mcp.polar.sh/mcp/polar-mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "polar-sandbox",
+        "url": "https://mcp.polar.sh/mcp/polar-sandbox"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://polar.sh/docs/integrate/mcp"
+    ],
+    "update": null
+  },
+  "policynote": {
+    "monitors": [],
+    "policy": "review-required",
+    "provenance": [
+      "https://data.policynote.com/docs"
+    ],
+    "update": null
+  },
+  "ponytail": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "356918eba965ee1eac64bd3a7f0dd02108350de5",
+        "ref": "HEAD",
+        "repository": "DietrichGebert/ponytail"
+      }
+    ],
+    "policy": "mapped-pr",
+    "provenance": [
+      "https://github.com/DietrichGebert/ponytail"
+    ],
+    "update": {
+      "files": {
+        "LICENSE": "LICENSE",
+        "assets/logo.png": "assets/icon.png",
+        "hooks/ponytail-config.js": "upstream/hooks/ponytail-config.js",
+        "hooks/ponytail-instructions.js": "upstream/hooks/ponytail-instructions.js",
+        "skills/ponytail/SKILL.md": "rules/ponytail.md"
+      },
+      "hashes": {
+        "LICENSE": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
+        "assets/icon.png": "818905aa5c99519b4e648fee82828c97dbeb471603335c990605dfe29b966121",
+        "rules/ponytail.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        "upstream/hooks/ponytail-config.js": "0a8daf96cf9ac703dc4cb7b5065253567e513c951d60b8eb94a0fe727514aeca",
+        "upstream/hooks/ponytail-instructions.js": "23c050103f28dbe6bad953ae21d98cd06d720a20f33d4716e9de419f947d495e"
+      },
+      "repository": "DietrichGebert/ponytail"
+    }
+  },
+  "posthog": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "bbc6f4bf597f133e3ca435ed300835036a23a4a7",
+        "ref": "HEAD",
+        "repository": "PostHog/posthog"
+      },
+      {
+        "kind": "endpoint",
+        "server": "posthog",
+        "url": "https://mcp.posthog.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/PostHog/posthog",
+      "https://posthog.com/docs/model-context-protocol"
+    ],
+    "update": null
+  },
+  "postman": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "postman",
+        "url": "https://mcp.postman.com/minimal"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://learning.postman.com/latest-v-12/docs/reference/postman-api/postman-mcp-server/postman-mcp-remote-server"
+    ],
+    "update": null
+  },
+  "postmark": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@activecampaign/postmark-mcp",
+        "packagedVersion": "2.1.1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://postmarkapp.com/lp/mcp"
+    ],
+    "update": null
+  },
+  "prefect": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "PrefectHQ/prefect-mcp-server"
+      },
+      {
+        "kind": "endpoint",
+        "server": "prefect",
+        "url": "https://prefect.fastmcp.app/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/PrefectHQ/prefect-mcp-server"
+    ],
+    "update": null
+  },
+  "prisma": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "prisma/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "prisma",
+        "url": "https://mcp.prisma.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/prisma/mcp"
+    ],
+    "update": null
+  },
+  "prismic": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "prismic",
+        "url": "https://mcp.prismic.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://prismic.io/docs/mcp"
+    ],
+    "update": null
+  },
+  "privy": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "privy",
+        "url": "https://docs.privy.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.privy.io/basics/get-started/using-llms"
+    ],
+    "update": null
+  },
+  "productboard": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "productboard",
+        "url": "https://mcp.productboard.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.productboard.com/reference/mcp-install"
+    ],
+    "update": null
+  },
+  "productive": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "productive",
+        "url": "https://mcp.productive.io/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "productive-sandbox",
+        "url": "https://mcp-sandbox.productive.io"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.productive.io/en/articles/14817386-mcp-server"
+    ],
+    "update": null
+  },
+  "pulumi": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "pulumi",
+        "url": "https://mcp.ai.pulumi.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.pulumi.com/docs/ai/mcp-server/"
+    ],
+    "update": null
+  },
+  "pumble": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "pumble",
+        "url": "https://mcp.pumble.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/"
+    ],
+    "update": null
+  },
+  "pylon": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "pylon",
+        "url": "https://mcp.usepylon.com/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp.md"
+    ],
+    "update": null
+  },
+  "qdrant": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "qdrant/mcp-server-qdrant"
+      },
+      {
+        "kind": "pypi",
+        "package": "mcp-server-qdrant",
+        "packagedVersion": "0.8.1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/qdrant/mcp-server-qdrant"
+    ],
+    "update": null
+  },
+  "quartr": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "quartr",
+        "url": "https://mcp.quartr.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://mcp.quartr.com/docs"
+    ],
+    "update": null
+  },
+  "questdb": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@questdb/mcp-server-questdb",
+        "packagedVersion": "0.4.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://questdb.com/docs/getting-started/web-console/mcp-server/"
+    ],
+    "update": null
+  },
+  "quicknode": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "4265b0a97048d8e64dae0124013c66b8dd34533f",
+        "ref": "HEAD",
+        "repository": "quicknode/cli"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/quicknode/cli",
+      "https://www.quicknode.com/docs"
+    ],
+    "update": null
+  },
+  "railway": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "railway",
+        "url": "https://mcp.railway.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.railway.com/ai/mcp-server"
+    ],
+    "update": null
+  },
+  "ramp": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "ramp",
+        "url": "https://mcp.ramp.com/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "ramp-developer",
+        "url": "https://mcp.ramp.com/developer/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "ramp-data",
+        "url": "https://mcp.ramp.com/ramp-data/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.ramp.com/developer-api/v1/mcp"
+    ],
+    "update": null
+  },
+  "ranked-ai": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "ranked-ai",
+        "url": "https://app.ranked.ai/api/mcp/sse"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://dev.ranked.ai/mcp/overview"
+    ],
+    "update": null
+  },
+  "razorpay": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "7950d51d118ca164c32b7cf0cfaa14f34f24849f",
+        "ref": "HEAD",
+        "repository": "razorpay/razorpay-mcp-server"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/razorpay/razorpay-mcp-server"
+    ],
+    "update": null
+  },
+  "read-ai": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "read-ai",
+        "url": "https://api.read.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://support.read.ai/hc/en-us/articles/49381158409491-MCP-Server"
+    ],
+    "update": null
+  },
+  "readwise": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "readwise",
+        "url": "https://mcp2.readwise.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://readwise.io/mcp"
+    ],
+    "update": null
+  },
+  "realtime-weather": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "Trapezohe/ghast-plugins"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/realtime-weather"
+    ],
+    "update": null
+  },
+  "reclaim": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "reclaim",
+        "url": "https://mcp.reclaim.ai"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.reclaim.ai/en/articles/15280604-reclaim-2-0-faq"
+    ],
+    "update": null
+  },
+  "recraft": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "recraft",
+        "url": "https://mcp.recraft.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.recraft.ai/docs/mcp-reference/remote-server"
+    ],
+    "update": null
+  },
+  "recurly": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "recurly",
+        "url": "https://mcp.recurly.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.recurly.com/recurly-subscriptions/docs/compass-public-mcp-server"
+    ],
+    "update": null
+  },
+  "redis": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "redis/mcp-redis"
+      },
+      {
+        "kind": "pypi",
+        "package": "redis-mcp-server",
+        "packagedVersion": "0.5.1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/redis/mcp-redis"
+    ],
+    "update": null
+  },
+  "redis-docs": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "redis-docs",
+        "url": "https://redis.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://redis.io/docs/latest/develop/setup/build-with-an-agent/"
+    ],
+    "update": null
+  },
+  "redpanda": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "redpanda",
+        "url": "https://docs.redpanda.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.redpanda.com/home/how-to-use-these-docs/"
+    ],
+    "update": null
+  },
+  "ref": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "ref",
+        "url": "https://api.ref.tools/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.ref.tools/context/install/index"
+    ],
+    "update": null
+  },
+  "relume": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "relume",
+        "url": "https://relume-library-mcp.relume.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.relume.ai/relume-library-mcp"
+    ],
+    "update": null
+  },
+  "remote": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "remote",
+        "url": "https://mcp.remote.com/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "remote-sandbox",
+        "url": "https://mcp.remote-sandbox.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.remote.com/docs/quick-start-guide-2"
+    ],
+    "update": null
+  },
+  "remotion": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "05075f384a0a28e193876c1fd43ab9fba5ef10f9",
+        "ref": "HEAD",
+        "repository": "remotion-dev/remotion"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/remotion-dev/remotion",
+      "https://remotion.dev"
+    ],
+    "update": null
+  },
+  "render": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "14032768453fd21c57f7e3a9c0e7659a2c7dce9d",
+        "ref": "HEAD",
+        "repository": "renderinc/render-codex-plugin"
+      },
+      {
+        "kind": "endpoint",
+        "server": "render",
+        "url": "https://mcp.render.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/renderinc/render-codex-plugin"
+    ],
+    "update": null
+  },
+  "replayio": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "c6cd28ff3d47f4e8e8b23040c69925ec2a820695",
+        "ref": "HEAD",
+        "repository": "replayio/plugins"
+      },
+      {
+        "kind": "endpoint",
+        "server": "replay",
+        "url": "https://dispatch.replay.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/replayio/plugins",
+      "https://replay.io"
+    ],
+    "update": null
+  },
+  "replicate": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "replicate",
+        "url": "https://mcp.replicate.com/sse"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://replicate.com/docs/reference/mcp"
+    ],
+    "update": null
+  },
+  "replit": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "replit",
+        "url": "https://replit-mcp.com/server/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.replit.com/platforms/mcp-server"
+    ],
+    "update": null
+  },
+  "resend": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "resend/resend-mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "resend",
+        "url": "https://mcp.resend.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/resend/resend-mcp"
+    ],
+    "update": null
+  },
+  "responsive": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "responsive",
+        "url": "https://app.rfpio.com/oa/v1/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.responsive.io/docs/responsive-api/86b14fe0ae541-overview"
+    ],
+    "update": null
+  },
+  "risingwave": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "risingwavelabs/risingwave-mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/risingwavelabs/risingwave-mcp"
+    ],
+    "update": null
+  },
+  "rollbar": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@rollbar/mcp-server",
+        "packagedVersion": "0.6.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.rollbar.com/docs/mcp-server-setup"
+    ],
+    "update": null
+  },
+  "rootly": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "rootly",
+        "url": "https://mcp.rootly.com/mcp-codemode"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.rootly.com/integrations/mcp-server"
+    ],
+    "update": null
+  },
+  "rudderstack": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "rudderstack",
+        "url": "https://mcp.rudderstack.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://mcp.rudderstack.com/docs"
+    ],
+    "update": null
+  },
+  "runway": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "runway",
+        "url": "https://mcp.runwayml.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.runwayml.com/hc/en-us/articles/51931843164691-Connecting-to-Runway-MCP"
+    ],
+    "update": null
+  },
+  "s-p": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "1d7d364a07d755d401b6f66d41affe71bc62a9b9",
+        "ref": "HEAD",
+        "repository": "kensho-technologies/spglobal-agent-skills"
+      },
+      {
+        "kind": "endpoint",
+        "server": "spglobal",
+        "url": "https://kfinance.kensho.com/integrations/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/kensho-technologies/spglobal-agent-skills",
+      "https://docs.kensho.com/agentskills"
+    ],
+    "update": null
+  },
+  "sanity": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "sanity",
+        "url": "https://mcp.sanity.io"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.sanity.io/docs/ai/mcp-server"
+    ],
+    "update": null
+  },
+  "santiment": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "santiment",
+        "url": "https://api.santiment.net/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://academy.santiment.net/mcp-connector/"
+    ],
+    "update": null
+  },
+  "scite": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "9f3e3cd02c477e16c0a9b5c9114c9692d9a73317",
+        "ref": "HEAD",
+        "repository": "scitedotai/scite-mcp-skill"
+      },
+      {
+        "kind": "endpoint",
+        "server": "scite",
+        "url": "https://api.scite.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/scitedotai/scite-mcp-skill",
+      "https://docs.scite.ai/mcp/overview"
+    ],
+    "update": null
+  },
+  "se-ranking": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "se-ranking",
+        "url": "https://api.seranking.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://seranking.com/api/integrations/mcp/"
+    ],
+    "update": null
+  },
+  "sei": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@sei-js/mcp-server",
+        "packagedVersion": "1.0.0"
+      },
+      {
+        "kind": "npm",
+        "package": "@sei-js/mcp-server",
+        "packagedVersion": "1.0.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.sei.io/ai/mcp-server"
+    ],
+    "update": null
+  },
+  "semgrep": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "semgrep/semgrep"
+      },
+      {
+        "kind": "pypi",
+        "package": "semgrep",
+        "packagedVersion": "1.176.1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/semgrep/semgrep/tree/develop/cli/src/semgrep/mcp"
+    ],
+    "update": null
+  },
+  "semrush": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "semrush",
+        "url": "https://mcp.semrush.com/v2/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.semrush.com/api/v4/introduction/semrush-mcp/"
+    ],
+    "update": null
+  },
+  "sentry": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "sentry",
+        "url": "https://mcp.sentry.dev/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://mcp.sentry.dev/"
+    ],
+    "update": null
+  },
+  "seo-meta": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "Trapezohe/ghast-plugins"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/seo-meta"
+    ],
+    "update": null
+  },
+  "serpstat": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "serpstat",
+        "url": "https://mcp.serpstat.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://serpstat.com/page/serpstat-mcp/"
+    ],
+    "update": null
+  },
+  "setu-bharat-connect-billpay": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "setu-bharat-connect-billpay",
+        "url": "https://billpay-mcp.setu.co/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.setu.co/payments/billpay/mcp/integration-guide"
+    ],
+    "update": null
+  },
+  "shopify": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "cc5af6505c27939222072449278f6356857cb064",
+        "ref": "HEAD",
+        "repository": "Shopify/Shopify-AI-Toolkit"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Shopify/Shopify-AI-Toolkit",
+      "https://shopify.dev/docs/apps/build/devmcp"
+    ],
+    "update": null
+  },
+  "shortcut": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "shortcut",
+        "url": "https://mcp.shortcut.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.shortcut.com/help/integrations/mcp-server/"
+    ],
+    "update": null
+  },
+  "shutterstock": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "4dc3ef8eeb3a27612f65dc4c5d03ee480c696abc",
+        "ref": "HEAD",
+        "repository": "shutterstock/shutterstock-cli"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/shutterstock/shutterstock-cli",
+      "https://www.shutterstock.com/developers/documentation"
+    ],
+    "update": null
+  },
+  "signnow": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "80c7de587367d611fc5c689a625b5a34fc5cd35e",
+        "ref": "HEAD",
+        "repository": "signnow/sn-mcp-server"
+      },
+      {
+        "kind": "endpoint",
+        "server": "signnow",
+        "url": "https://mcp-server.signnow.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/signnow/sn-mcp-server",
+      "https://docs.signnow.com/docs/signnow/mcp-server"
+    ],
+    "update": null
+  },
+  "similarweb": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "similarweb",
+        "url": "https://mcp.similarweb.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.similarweb.com/docs/similarweb-mcp.md"
+    ],
+    "update": null
+  },
+  "singlestore": {
+    "monitors": [
+      {
+        "kind": "pypi",
+        "package": "mcp",
+        "packagedVersion": "1.29.1"
+      },
+      {
+        "kind": "pypi",
+        "package": "singlestore-mcp-server",
+        "packagedVersion": "0.4.19"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.singlestore.com/cloud/ai/singlestore-mcp-server/"
+    ],
+    "update": null
+  },
+  "sitecore": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "sitecore",
+        "url": "https://marketer.sitecorecloud.io/mcp/marketer-mcp-prod"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://doc.sitecore.com/sai/en/users/sitecoreai/sitecore-marketer-mcp-server/index.html"
+    ],
+    "update": null
+  },
+  "skywatch": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "skywatch",
+        "url": "https://api.skywatch.co/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.skywatch.com/docs/mcp/mcp-server/"
+    ],
+    "update": null
+  },
+  "slack": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "slack",
+        "url": "https://mcp.slack.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.slack.dev/ai/slack-mcp-server/"
+    ],
+    "update": null
+  },
+  "slite": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "slite",
+        "url": "https://api.slite.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://slite.com/changelog/slite-mcp-server"
+    ],
+    "update": null
+  },
+  "smartsheet": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "smartsheet",
+        "url": "https://mcp.smartsheet.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server/manually-configure-the-mcp-server"
+    ],
+    "update": null
+  },
+  "snyk": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "snyk",
+        "packagedVersion": "1.1307.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.snyk.io/integrations/snyk-studio-agentic-integrations/getting-started-with-snyk-studio"
+    ],
+    "update": null
+  },
+  "socket": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "socket",
+        "url": "https://mcp.socket.dev/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.socket.dev/docs/remote-socket-mcp"
+    ],
+    "update": null
+  },
+  "solana": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "solana",
+        "url": "https://mcp.solana.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://mcp.solana.com/"
+    ],
+    "update": null
+  },
+  "square": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "square",
+        "url": "https://mcp.squareup.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.squareup.com/docs/mcp"
+    ],
+    "update": null
+  },
+  "starrocks": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "StarRocks/mcp-server-starrocks"
+      },
+      {
+        "kind": "pypi",
+        "package": "fastmcp",
+        "packagedVersion": "2.14.5"
+      },
+      {
+        "kind": "pypi",
+        "package": "mcp-server-starrocks",
+        "packagedVersion": "0.4.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/StarRocks/mcp-server-starrocks"
+    ],
+    "update": null
+  },
+  "statsig": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "e720bbb3fc7bb4f5d50ad6175e050138ddb1a1c6",
+        "ref": "HEAD",
+        "repository": "statsig-io/agent-skills"
+      },
+      {
+        "kind": "npm",
+        "package": "mcp-remote",
+        "packagedVersion": "0.1.38"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/statsig-io/agent-skills",
+      "https://docs.statsig.com/"
+    ],
+    "update": null
+  },
+  "steam-search": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "Trapezohe/ghast-plugins"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/steam-search"
+    ],
+    "update": null
+  },
+  "stellar": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "stellar",
+        "url": "https://raven.stellar.org/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://raven.stellar.org/docs"
+    ],
+    "update": null
+  },
+  "stock-quote": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "Trapezohe/ghast-plugins"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/stock-quote"
+    ],
+    "update": null
+  },
+  "storyblok": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "storyblok",
+        "url": "https://mcp.storyblok.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.storyblok.com/docs/libraries/mcp-server"
+    ],
+    "update": null
+  },
+  "streak": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "streak",
+        "url": "https://api.streak.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.streak.com/integrations/mcp"
+    ],
+    "update": null
+  },
+  "stripe": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "bad904b02f7071592c38bcca83d33667ff015bb1",
+        "ref": "HEAD",
+        "repository": "stripe/ai"
+      },
+      {
+        "kind": "endpoint",
+        "server": "stripe",
+        "url": "https://mcp.stripe.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/stripe/ai",
+      "https://docs.stripe.com"
+    ],
+    "update": null
+  },
+  "stytch": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "stytch",
+        "url": "https://mcp.stytch.dev/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://stytch.com/docs/resources/workspace-management/stytch-mcp-server"
+    ],
+    "update": null
+  },
+  "sunsama": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "sunsama",
+        "url": "https://api.sunsama.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.sunsama.com/docs/integrations/mcp/"
+    ],
+    "update": null
+  },
+  "supabase": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "8331f910845103c08d51f6ca1d86ebb7d1f745e3",
+        "ref": "HEAD",
+        "repository": "supabase/agent-skills"
+      },
+      {
+        "kind": "endpoint",
+        "server": "supabase",
+        "url": "https://mcp.supabase.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/supabase/agent-skills",
+      "https://supabase.com"
+    ],
+    "update": null
+  },
+  "superhuman": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "a83580e994604edca1cd5661a4a1865f3f39abc9",
+        "ref": "HEAD",
+        "repository": "superhuman/mcp-mail"
+      },
+      {
+        "kind": "endpoint",
+        "server": "superhuman-mail",
+        "url": "https://mcp.mail.superhuman.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/superhuman/mcp-mail",
+      "https://help.superhuman.com/hc/en-us/articles/49810745762067-Superhuman-Mail-MCP-Server"
+    ],
+    "update": null
+  },
+  "superpowers": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+        "ref": "HEAD",
+        "repository": "obra/superpowers"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/obra/superpowers"
+    ],
+    "update": null
+  },
+  "suprsend": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "suprsend",
+        "packagedVersion": "1.0.1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.suprsend.com/reference/mcp-quickstart-cursor"
+    ],
+    "update": null
+  },
+  "surrealdb": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "surrealdb",
+        "url": "https://mcp.surrealdb.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://surrealdb.com/docs/build/ai-agents/mcp"
+    ],
+    "update": null
+  },
+  "survicate": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "survicate",
+        "url": "https://mcp.survicate.com/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.survicate.com/en/articles/16271576-what-is-survicate-mcp"
+    ],
+    "update": null
+  },
+  "svelte": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "svelte",
+        "url": "https://mcp.svelte.dev/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://svelte.dev/docs/ai/remote-setup"
+    ],
+    "update": null
+  },
+  "swagger": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "swagger",
+        "url": "https://swagger.mcp.smartbear.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.smartbear.com/smartbear-mcp/docs/remote-swagger"
+    ],
+    "update": null
+  },
+  "tally": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "tally",
+        "url": "https://api.tally.so/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.tally.so/api-reference/mcp"
+    ],
+    "update": null
+  },
+  "tallyfy": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "tallyfy",
+        "url": "https://mcp.tallyfy.com/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://tallyfy.com/products/pro/integrations/mcp-server/"
+    ],
+    "update": null
+  },
+  "tana": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "tana",
+        "url": "https://home.tana.inc/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://tana.inc/learn/features/mcp"
+    ],
+    "update": null
+  },
+  "taskade": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "taskade",
+        "url": "https://www.taskade.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.taskade.com/learn/connect/mcp-server"
+    ],
+    "update": null
+  },
+  "tatum": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "tatum",
+        "url": "https://docs.tatum.io/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "tatum-docs",
+        "url": "https://docs.tatum.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.tatum.io/oa/docs/tatum-documentation-mcp"
+    ],
+    "update": null
+  },
+  "tavily": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "tavily",
+        "url": "https://mcp.tavily.com/mcp/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.tavily.com/documentation/mcp"
+    ],
+    "update": null
+  },
+  "tavus-docs": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "tavus-docs",
+        "url": "https://docs.tavus.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.tavus.io/sections/agents-and-automation"
+    ],
+    "update": null
+  },
+  "teamwork": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "Teamwork/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "teamwork",
+        "url": "https://mcp.ai.teamwork.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Teamwork/mcp/blob/main/docs/usage/other-platforms.md"
+    ],
+    "update": null
+  },
+  "tella": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "tella",
+        "url": "https://api.tella.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.tella.com/docs/mcp-server"
+    ],
+    "update": null
+  },
+  "telnyx": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "telnyx",
+        "url": "https://api.telnyx.com/v2/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.telnyx.com/docs/development/mcp/remote-mcp"
+    ],
+    "update": null
+  },
+  "temporal": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "e9a28b0de6beb5305bd49d73453ab0f1cbd8d160",
+        "ref": "HEAD",
+        "repository": "temporalio/codex-temporal-plugin"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/temporalio/codex-temporal-plugin",
+      "https://temporal.io/"
+    ],
+    "update": null
+  },
+  "tenderly": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "tenderly",
+        "url": "https://mcp.tenderly.co/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://tenderly.co/blog/validating-agentic-workflows-with-tenderly-mcp-server/"
+    ],
+    "update": null
+  },
+  "tenzo": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "tenzo",
+        "url": "https://ai.gotenzo.com/mcp/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://support.gotenzo.com/developers/mcp-server/"
+    ],
+    "update": null
+  },
+  "terraform": {
+    "monitors": [],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.hashicorp.com/terraform/mcp-server/deploy/local"
+    ],
+    "update": null
+  },
+  "test-android-apps": {
+    "monitors": [],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.android.com/tools/adb"
+    ],
+    "update": null
+  },
+  "third-bridge": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "third-bridge",
+        "url": "https://ai.thirdbridge.com/mcp/sse"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://www.thirdbridge.com/en-us/data-solutions/mcp"
+    ],
+    "update": null
+  },
+  "thoughtspot": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "thoughtspot",
+        "url": "https://agent.thoughtspot.app/mcp?api-version=2026-05-01"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.thoughtspot.com/docs/mcp-integration"
+    ],
+    "update": null
+  },
+  "tigerdata-pg-aiguide": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "timescale/pg-aiguide"
+      },
+      {
+        "kind": "endpoint",
+        "server": "tigerdata-pg-aiguide",
+        "url": "https://mcp.tigerdata.com/docs"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/timescale/pg-aiguide"
+    ],
+    "update": null
+  },
+  "timing": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "timing",
+        "url": "https://web.timingapp.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://timingapp.com/help/mcp"
+    ],
+    "update": null
+  },
+  "todoist": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "todoist",
+        "url": "https://ai.todoist.net/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.todoist.com/api/v1/#tag/Todoist-MCP"
+    ],
+    "update": null
+  },
+  "toggl": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@togglhq/mcp",
+        "packagedVersion": "1.6.13"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.toggl.com/toggl-mcp-and-cl"
+    ],
+    "update": null
+  },
+  "token-terminal": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "token-terminal",
+        "url": "https://mcp.tokenterminal.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://tokenterminal.com/docs/mcp/introduction"
+    ],
+    "update": null
+  },
+  "tomtom": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "tomtom",
+        "url": "https://mcp.tomtom.com/maps"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.tomtom.com/tomtom-maps-mcp/documentation/quick-setup"
+    ],
+    "update": null
+  },
+  "trust-wallet": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "trustwallet/developer"
+      },
+      {
+        "kind": "endpoint",
+        "server": "trust-wallet",
+        "url": "https://mcp.trustwallet.com/tws"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/trustwallet/developer/blob/master/mcp/api-gateway.md"
+    ],
+    "update": null
+  },
+  "turso": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "tursodatabase/turso"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/tursodatabase/turso"
+    ],
+    "update": null
+  },
+  "twilio-developer-kit": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "8aba46fb65dc8d9a20f4b301a68352064b4159a5",
+        "ref": "HEAD",
+        "repository": "twilio/ai"
+      },
+      {
+        "kind": "endpoint",
+        "server": "twilio-docs",
+        "url": "https://mcp.twilio.com/docs"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/twilio/ai",
+      "https://www.twilio.com/docs"
+    ],
+    "update": null
+  },
+  "uniform": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@uniformdev/uniform-mcp",
+        "packagedVersion": "20.63.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.uniform.app/docs/guides/cli/commands/ai"
+    ],
+    "update": null
+  },
+  "unleash": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@unleash/mcp",
+        "packagedVersion": "0.4.1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.getunleash.io/integrate/mcp"
+    ],
+    "update": null
+  },
+  "upstash": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "upstash/redis-mcp"
+      },
+      {
+        "kind": "npm",
+        "package": "@upstash/redis-mcp",
+        "packagedVersion": "0.1.1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/upstash/redis-mcp"
+    ],
+    "update": null
+  },
+  "uptime-check": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "Trapezohe/ghast-plugins"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/uptime-check"
+    ],
+    "update": null
+  },
+  "vantage": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "74fd3ddccc5c2e735d68a364e3f28467c0ba2a60",
+        "ref": "HEAD",
+        "repository": "vantage-sh/vantage-mcp-server"
+      },
+      {
+        "kind": "endpoint",
+        "server": "vantage",
+        "url": "https://mcp.vantage.sh/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/vantage-sh/vantage-mcp-server",
+      "https://docs.vantage.sh/vantage_mcp"
+    ],
+    "update": null
+  },
+  "vapi": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "vapi",
+        "url": "https://mcp.vapi.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.vapi.ai/sdk/mcp-server"
+    ],
+    "update": null
+  },
+  "veed": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "veed",
+        "url": "https://www.veed.io/api/v1/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://veedstudio.github.io/veed-fabric-mcp/"
+    ],
+    "update": null
+  },
+  "vercel": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "c4a1c4e2e16feefb1d9f2ad2a4a451abd0ae91c6",
+        "ref": "HEAD",
+        "repository": "vercel/vercel-plugin"
+      },
+      {
+        "kind": "endpoint",
+        "server": "vercel",
+        "url": "https://mcp.vercel.com"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/vercel/vercel-plugin"
+    ],
+    "update": null
+  },
+  "visily": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "visily-app/mcp-plugins"
+      },
+      {
+        "kind": "endpoint",
+        "server": "visily",
+        "url": "https://app.visily.ai/api/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/visily-app/mcp-plugins"
+    ],
+    "update": null
+  },
+  "vonage": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "@vonage/vonage-mcp-server-api-bindings",
+        "packagedVersion": "1.5.1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.vonage.com/en/mcp-server/how-to-guides/install-tooling-mcp-server"
+    ],
+    "update": null
+  },
+  "waldo": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "waldo",
+        "url": "https://mcp.waldo.fyi/strategy"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://agentic.waldo.fyi/docs/mcp"
+    ],
+    "update": null
+  },
+  "wandb": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "wandb/wandb-mcp-server"
+      },
+      {
+        "kind": "endpoint",
+        "server": "wandb",
+        "url": "https://mcp.withwandb.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/wandb/wandb-mcp-server"
+    ],
+    "update": null
+  },
+  "weatherapi": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "weatherapicom/weatherapi-mcp"
+      },
+      {
+        "kind": "npm",
+        "package": "weatherapi-mcp",
+        "packagedVersion": "1.0.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/weatherapicom/weatherapi-mcp"
+    ],
+    "update": null
+  },
+  "webex": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "webex",
+        "url": "https://mcp.webexapis.com/mcp/webex-meeting"
+      },
+      {
+        "kind": "endpoint",
+        "server": "webex-messaging",
+        "url": "https://mcp.webexapis.com/mcp/webex-messaging"
+      },
+      {
+        "kind": "endpoint",
+        "server": "webex-vidcast",
+        "url": "https://mcp.webexapis.com/mcp/vidcast"
+      },
+      {
+        "kind": "endpoint",
+        "server": "webex-workspaces",
+        "url": "https://mcp.webexapis.com/mcp/workspaces"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.webex.com/mcp/docs/webex-agentic-mcp-servers"
+    ],
+    "update": null
+  },
+  "webflow": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "webflow",
+        "url": "https://mcp.webflow.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.webflow.com/mcp/reference/getting-started"
+    ],
+    "update": null
+  },
+  "website-fetcher": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "Trapezohe/ghast-plugins"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/website-fetcher"
+    ],
+    "update": null
+  },
+  "whimsical": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "whimsical",
+        "url": "https://mcp.whimsical.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://whimsical.com/learn/integrations/mcp"
+    ],
+    "update": null
+  },
+  "windsor-ai": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "windsor-ai/windsor_mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "windsor-ai",
+        "url": "https://mcp.windsor.ai/"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/windsor-ai/windsor_mcp",
+      "https://mcp.windsor.ai/docs"
+    ],
+    "update": null
+  },
+  "wingify": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "wingify",
+        "url": "https://mcp.wingify.ai/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.wingify.com/hc/en-us/articles/58792565345305-Connect-Wingify-with-AI-Tools-using-Wingify-s-MCP-Server"
+    ],
+    "update": null
+  },
+  "wistia": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "wistia",
+        "url": "https://api.wistia.com/mcp/api"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.wistia.com/docs/mcp-server-guide"
+    ],
+    "update": null
+  },
+  "wix": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "f30595361e8d02f0dc432b499d00916a2e3918f3",
+        "ref": "HEAD",
+        "repository": "wix/skills"
+      },
+      {
+        "kind": "endpoint",
+        "server": "wix-mcp",
+        "url": "https://mcp.wix.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/wix/skills",
+      "https://dev.wix.com/docs/api-reference/articles/ai-tools/about-wix-skills"
+    ],
+    "update": null
+  },
+  "wolfram": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "WolframResearch/AgentTools"
+      },
+      {
+        "kind": "endpoint",
+        "server": "wolfram",
+        "url": "https://services.wolfram.com/api/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/WolframResearch/AgentTools/blob/main/AgentSkills/Skills/wolfram-language/references/SetUpWolframMCPServer.md"
+    ],
+    "update": null
+  },
+  "wordpress-com": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "wordpress-com",
+        "url": "https://public-api.wordpress.com/wpcom/v2/mcp/v1"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developer.wordpress.com/docs/mcp/"
+    ],
+    "update": null
+  },
+  "workfront": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "workfront",
+        "url": "https://mcp.workfront.adobe.com/mcp/v1/workfront"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://experienceleague.adobe.com/en/docs/workfront/using/basics/workfront-mcp-server/configure-workfront-mcp-server"
+    ],
+    "update": null
+  },
+  "workos": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "workos",
+        "url": "https://mcp.workos.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://workos.com/docs/mcp"
+    ],
+    "update": null
+  },
+  "wrike": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "wrike",
+        "url": "https://mcp.wrike.com/v2"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://developers.wrike.com/docs/setup-other-mcp-clients-with-wrike-mcp"
+    ],
+    "update": null
+  },
+  "writer": {
+    "monitors": [
+      {
+        "kind": "npm",
+        "package": "writer-sdk-mcp",
+        "packagedVersion": "2.3.2"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://dev.writer.com/home/mcp-server"
+    ],
+    "update": null
+  },
+  "xata": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "xata",
+        "url": "https://api.xata.tech/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://xata.io/docs/platform/mcp"
+    ],
+    "update": null
+  },
+  "xero": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "XeroAPI/xero-mcp-server"
+      },
+      {
+        "kind": "npm",
+        "package": "@xeroapi/xero-mcp-server",
+        "packagedVersion": "0.0.17"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/XeroAPI/xero-mcp-server"
+    ],
+    "update": null
+  },
+  "yepcode": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "15cf0527dda6c818a1528ed4467389e0962a1eea",
+        "ref": "HEAD",
+        "repository": "yepcode/mcp-server-js"
+      },
+      {
+        "kind": "endpoint",
+        "server": "yepcode",
+        "url": "https://cloud.yepcode.io/mcp?tools=run_code,yc_api,mcp-tool"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/yepcode/mcp-server-js",
+      "https://yepcode.io/docs/mcp-server/"
+    ],
+    "update": null
+  },
+  "you-com": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "you-com",
+        "url": "https://api.you.com/mcp"
+      },
+      {
+        "kind": "endpoint",
+        "server": "you-com-free",
+        "url": "https://api.you.com/mcp?profile=free"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://you.com/docs/build-with-agents/mcp-server"
+    ],
+    "update": null
+  },
+  "youcam": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "youcam",
+        "url": "https://mcp-api-01.makeupar.com/mcp/creators"
+      },
+      {
+        "kind": "endpoint",
+        "server": "youcam-beauty",
+        "url": "https://mcp-api-01.makeupar.com/mcp/beauty"
+      },
+      {
+        "kind": "endpoint",
+        "server": "youcam-fashion",
+        "url": "https://mcp-api-01.makeupar.com/mcp/fashion"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.perfectcorp.com/develop/mcp"
+    ],
+    "update": null
+  },
+  "zapier": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "zapier",
+        "url": "https://mcp.zapier.com/api/v1/connect"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.zapier.com/mcp/home"
+    ],
+    "update": null
+  },
+  "zep": {
+    "monitors": [
+      {
+        "kind": "endpoint",
+        "server": "zep",
+        "url": "https://api.getzep.com/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://help.getzep.com/memory-mcp-server/connect"
+    ],
+    "update": null
+  },
+  "zerion": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "zeriontech/zerion-ai"
+      },
+      {
+        "kind": "endpoint",
+        "server": "zerion",
+        "url": "https://developers.zerion.io/mcp"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/zeriontech/zerion-ai"
+    ],
+    "update": null
+  },
+  "zilliz": {
+    "monitors": [
+      {
+        "kind": "pypi",
+        "package": "mcp",
+        "packagedVersion": "1.29.1"
+      },
+      {
+        "kind": "pypi",
+        "package": "zilliz-mcp-server",
+        "packagedVersion": "1.0.0"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://docs.zilliz.com/docs/zilliz-mcp-server"
+    ],
+    "update": null
+  },
+  "zoho": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "zoho/zohocrm-python-sdk-8.0"
+      },
+      {
+        "kind": "endpoint",
+        "server": "zoho-crm-data-insights",
+        "url": "https://zoho-crm-data-insights-60065097786.zohomcp.in/mcp/d17dfe13292e0414a929516bb8f8e797/message"
+      },
+      {
+        "kind": "endpoint",
+        "server": "zoho-crm-data-operations",
+        "url": "https://zoho-crm-data-operations-60065097786.zohomcp.in/mcp/fe46ddbc48fec3713c8754cea8ec9ac5/message"
+      },
+      {
+        "kind": "endpoint",
+        "server": "zoho-crm-module-customization",
+        "url": "https://zoho-crm-module-customization-60065097786.zohomcp.in/mcp/8057776f5d548a33b892c533d4278d17/message"
+      },
+      {
+        "kind": "endpoint",
+        "server": "zoho-crm-automation",
+        "url": "https://zoho-crm-automation-60065097786.zohomcp.in/mcp/c139be028c224f75a9077e6473a62f3b/message"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/zoho/zohocrm-python-sdk-8.0",
+      "https://www.zoho.com/crm/developer/docs/mcp/overview.html"
+    ],
+    "update": null
+  },
+  "zoom": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "1858eadc17d9bd0d1279ce7f66304362a774e3b4",
+        "ref": "HEAD",
+        "repository": "zoom/skills"
+      },
+      {
+        "kind": "endpoint",
+        "server": "zoom-mcp",
+        "url": "https://mcp.zoom.us/mcp/zoom/streamable"
+      },
+      {
+        "kind": "endpoint",
+        "server": "zoom-whiteboard-mcp",
+        "url": "https://mcp.zoom.us/mcp/whiteboard/streamable"
+      },
+      {
+        "kind": "endpoint",
+        "server": "zoom-team-chat-mcp",
+        "url": "https://mcp.zoom.us/mcp/chat/streamable"
+      },
+      {
+        "kind": "endpoint",
+        "server": "zoom-canvas-mcp",
+        "url": "https://mcp.zoom.us/mcp/canvas/streamable"
+      },
+      {
+        "kind": "endpoint",
+        "server": "zoom-revenue-accelerator-mcp",
+        "url": "https://mcp.zoom.us/mcp/revenue_accelerator/streamable"
+      },
+      {
+        "kind": "endpoint",
+        "server": "zoom-meetings-mcp",
+        "url": "https://mcp.zoom.us/mcp/meeting/streamable"
+      },
+      {
+        "kind": "endpoint",
+        "server": "zoom-tasks-mcp",
+        "url": "https://mcp.zoom.us/mcp/tasks/streamable"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/zoom/skills",
+      "https://developers.zoom.us/"
+    ],
+    "update": null
+  },
+  "zoominfo": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": null,
+        "ref": "HEAD",
+        "repository": "Zoominfo/gtm-ai-cli"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/Zoominfo/gtm-ai-cli"
+    ],
+    "update": null
+  }
+}
