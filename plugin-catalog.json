@@ -178,11 +178,11 @@
       },
       "details": {
         "url": "./plugins/actively/details.json",
-        "sha256": "11758a396bda912e56f24ef856dac371ba83fd7e962700140a72e89f75f2e9f4"
+        "sha256": "16edb315c5f1ad13fd3b957d711eb668ecb1b75b19c4b2c159702ed60be02dc1"
       },
       "package": {
         "url": "./packages/actively.zip",
-        "sha256": "87fc4483ef34860859f49a849cda1c6a7a6c3d2d9231f3e9ee6117acd36b265f"
+        "sha256": "a5e08b09c6c8858b28351719fba4719d8fc9a1e107db7dfaf03491a4a507d80d"
       },
       "icon": "./plugins/actively/assets/icon.png",
       "homepage": "https://www.actively.ai/products/mcp-server",
@@ -15008,11 +15008,11 @@
       },
       "details": {
         "url": "./plugins/ponytail/details.json",
-        "sha256": "dc8c7bf4af320237dbf2750b060778cb4b22533c3a81e031e3f98442e229e7ba"
+        "sha256": "fbd23760eef9dc78fdee9eb2d3eb60b508610cc0be334e4d08c93a281043fd3c"
       },
       "package": {
         "url": "./packages/ponytail.zip",
-        "sha256": "baee2a0c882c406c1adacd261d10f2923baad01ba2452efc976663064ff75c82"
+        "sha256": "09fbd278fd159c7ba0a9216b39d5424a2a33c55114ee62ace8a3f87f5340d27e"
       },
       "icon": "./plugins/ponytail/assets/icon.png",
       "homepage": "https://github.com/DietrichGebert/ponytail",

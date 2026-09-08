@@ -5,16 +5,16 @@
   },
   "starterPrompts": [
     {
-      "en": "Research this company and summarize the available account intelligence.",
-      "zh-CN": "研究这家公司，汇总可用客户情报。"
+      "en": "Review my customer accounts and prioritize follow-up opportunities.",
+      "zh-CN": "分析我的客户账户，按优先级整理需要跟进的商机。"
     },
     {
-      "en": "Find people or organizations matching this target profile and explain the match.",
-      "zh-CN": "查找符合这个目标画像的人物或组织，并说明匹配依据。"
+      "en": "Identify buying signals in my accounts and explain why they matter.",
+      "zh-CN": "找出客户账户中的购买信号，并说明判断依据。"
     },
     {
-      "en": "Prepare a meeting brief for this prospect with evidence and open questions.",
-      "zh-CN": "为这个潜在客户准备会议简报，包含依据和待确认问题。"
+      "en": "Help me prepare a follow-up plan for a target account.",
+      "zh-CN": "帮我为一个目标客户制定后续跟进计划。"
     }
   ],
   "websiteUrl": "https://www.actively.ai",
