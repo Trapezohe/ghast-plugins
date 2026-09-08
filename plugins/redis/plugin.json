@@ -1,0 +1,37 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "redis",
+  "version": "1.0.0-ghast.1",
+  "description": "Read and manage Redis keys, data structures and supported search features with Redis’s official MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/redis/mcp-redis",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/redis/mcp-redis",
+      "connectorPublisher": "Redis",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Redis",
+      "descriptions": {
+        "en": "Read and manage Redis keys, data structures and supported search features with Redis’s official MCP server.",
+        "zh-CN": "通过 Redis 官方 MCP 服务读取和管理键、数据结构及受支持的搜索功能。"
+      },
+      "mcpServerExtensions": {
+        "redis": {
+          "credentialEnv": {
+            "REDIS_HOST": "$VAULT:redis-redis-host",
+            "REDIS_PORT": "$VAULT:redis-redis-port",
+            "REDIS_USERNAME": "$VAULT:redis-redis-username",
+            "REDIS_PWD": "$VAULT:redis-redis-pwd",
+            "REDIS_DB": "$VAULT:redis-redis-db",
+            "REDIS_SSL": "$VAULT:redis-redis-ssl"
+          }
+        }
+      }
+    }
+  }
+}
