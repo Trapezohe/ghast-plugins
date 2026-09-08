@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "quicknode",
-  "version": "0.6.1-ghast.1",
+  "version": "0.6.1-ghast.2",
   "description": "Manage Quicknode endpoints, logs, usage, security, rate limits, billing, streams, webhooks, storage, teams, and RPC through the official qn CLI and its official agent guide.",
   "author": {
     "name": "Quicknode",
@@ -15,7 +15,7 @@
       "category": "development",
       "upstreamRevision": "4265b0a97048d8e64dae0124013c66b8dd34533f",
       "upstreamPath": ".",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Manage Quicknode endpoints, logs, usage, security, rate limits, billing, streams, webhooks, storage, teams, and RPC through the official qn CLI and its official agent guide.",
         "zh-CN": "管理区块链 RPC 节点、日志、用量、数据流、Webhook 与团队配置。"

@@ -14,6 +14,6 @@ The complete Hostinger Headless skill tree and MIT license are copied from Hosti
 - The official all-tool server exposes 314 tools. Its Horizons group exposes horizons_createWebsiteV1 for natural-language website creation and horizons_getWebsiteV1 for the resulting edit URL, matching the Codex snapshot's declared build-and-launch surface.
 - Hostinger's official Headless skill adds create, connect, and iterate workflows for static or Node.js sites, custom storefronts, and WordPress-backed content, including live deployment verification and project-local site metadata.
 - The official MCP publishes no safety annotations. Ghast therefore requires explicit review and confirmation for deployments, overwrites, purchases, provisioning, DNS, billing, email, store, WordPress, VPS, credential, and other state-changing operations.
-- A generic hosting-and-deployment icon is used because the official MIT repository does not publish licensed catalog artwork.
+Brand logo source: https://avatars.githubusercontent.com/u/2630767?v=4. The logo belongs to Hostinger International. 品牌标识归对应服务商所有。
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

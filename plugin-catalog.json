@@ -2880,7 +2880,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "calendly",
-        "version": "1.0.2-ghast.1",
+        "version": "1.0.2-ghast.2",
         "description": "Inspect Calendly meetings and availability, manage event types and schedules, create booking links, book or cancel meetings, and administer invitations through Calendly's official hosted MCP server.",
         "author": {
           "name": "Calendly",
@@ -2892,7 +2892,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "calendly-docs-9cc165e39526+tools-62c1741ac3df+oauth-379eb5537223+auth-512f41277070",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Inspect Calendly meetings and availability, manage event types and schedules, create booking links, book or cancel meetings, and administer invitations through Calendly's official hosted MCP server.",
               "zh-CN": "查询会议与可用时间，管理活动类型、预约链接和日程安排。"
@@ -2902,9 +2902,9 @@
       },
       "package": {
         "url": "./packages/calendly.zip",
-        "sha256": "23aeb10515b9c76633e0f0a332ae68437a0888a2cd59c9714a0a5d64bb3fc21a"
+        "sha256": "607b05cfe7047942f44113d245ec427f7fb1453ec8c5e2ccb0cadcc6465d9fc3"
       },
-      "icon": "./plugins/calendly/assets/icon.svg",
+      "icon": "./plugins/calendly/assets/icon.png",
       "homepage": "https://developer.calendly.com/calendly-mcp-server",
       "license": "MIT",
       "category": "productivity"
@@ -3830,7 +3830,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "close",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Search, analyze, create, and explicitly update Close CRM leads, contacts, opportunities, activities, tasks, pipelines, workflows, templates, and voice agents through Close's official hosted MCP server.",
         "author": {
           "name": "Close",
@@ -3842,7 +3842,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "close-docs-c700a654c0a0+tools-37b3dda1465b+oauth-5f59d0eb26ef+auth-2c3287ebc60f",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Search, analyze, create, and explicitly update Close CRM leads, contacts, opportunities, activities, tasks, pipelines, workflows, templates, and voice agents through Close's official hosted MCP server.",
               "zh-CN": "检索和管理销售线索、联系人、商机、任务与 CRM 工作流。"
@@ -3852,9 +3852,9 @@
       },
       "package": {
         "url": "./packages/close.zip",
-        "sha256": "79bb7d7aa38002904ef2b5f8e0ec1a783f2f774d303bb37be3bea2e2053266e6"
+        "sha256": "edee41bc1388d015311becaf4c38c8c38f09e191d28d45208c67f7c916fe94be"
       },
-      "icon": "./plugins/close/assets/icon.svg",
+      "icon": "./plugins/close/assets/icon.png",
       "homepage": "https://developer.close.com/mcp",
       "license": "MIT",
       "category": "productivity"
@@ -5371,7 +5371,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "cube",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Query governed Cube data, analyze financial performance, build dashboards, edit semantic models safely, and inspect pre-aggregations through Cube's official hosted MCP.",
         "author": {
           "name": "Cube",
@@ -5383,7 +5383,7 @@
           "ai.trapezohe.ghast": {
             "category": "finance",
             "upstreamRevision": "cube-docs-fd816d469e8d+tools-9fd46d5d21aa+oauth-f88522816f07+auth-8e4f1585bcd9",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Query governed Cube data, analyze financial performance, build dashboards, edit semantic models safely, and inspect pre-aggregations through Cube's official hosted MCP.",
               "zh-CN": "查询受治理的数据，分析财务表现，管理语义模型与仪表板。"
@@ -5393,9 +5393,9 @@
       },
       "package": {
         "url": "./packages/cube.zip",
-        "sha256": "d9f8fb9fa066d38595c35a7cfad251b599bdde9fb80cb68e27065b59b0c03688"
+        "sha256": "a081168ab1c20f1a8f38a6b074df3ed2ed93d30766f84236d09a0faa928ec2e0"
       },
-      "icon": "./plugins/cube/assets/icon.svg",
+      "icon": "./plugins/cube/assets/icon.png",
       "homepage": "https://docs.cube.dev/docs/integrations/mcp-server",
       "license": "MIT",
       "category": "finance"
@@ -6163,7 +6163,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "docusign",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Create, send, search, inspect, and automate Docusign agreements, envelopes, recipients, dates, obligations, and Workflow Builder processes through Docusign's official hosted MCP server.",
         "author": {
           "name": "Docusign",
@@ -6175,7 +6175,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "docusign-docs-ee7baa0a1615+chatgpt-0c1925822c08+demo-f64203b8c7d1+prod-8d3bb21db1fb",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Create, send, search, inspect, and automate Docusign agreements, envelopes, recipients, dates, obligations, and Workflow Builder processes through Docusign's official hosted MCP server.",
               "zh-CN": "创建、发送和检索签署文件，管理收件人、履约事项与签署流程。"
@@ -6185,9 +6185,9 @@
       },
       "package": {
         "url": "./packages/docusign.zip",
-        "sha256": "abc4adf69d796577ff102e04c225f3fef7913ba4af2579ca01c59f800a8f7b1e"
+        "sha256": "392d19d8541540fd292e6d2d96a338dbb0de796d13be4a6e417a270b300e1cb8"
       },
-      "icon": "./plugins/docusign/assets/icon.svg",
+      "icon": "./plugins/docusign/assets/icon.png",
       "homepage": "https://developers.docusign.com/platform/mcp-server/",
       "license": "MIT",
       "category": "productivity"
@@ -9488,7 +9488,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "hostinger",
-        "version": "1.34.0-ghast.1",
+        "version": "1.34.0-ghast.2",
         "description": "Create Hostinger Horizons websites from natural-language briefs and build, connect, deploy, verify, and operate websites, domains, DNS, VPS, ecommerce, WordPress, mail, campaigns, and billing through Hostinger's official MCP and Headless skill.",
         "author": {
           "name": "Hostinger",
@@ -9502,7 +9502,7 @@
             "category": "development",
             "upstreamRevision": "cc04bafbeae9362a35af1b6443d3c3833f9f30d5",
             "upstreamPath": ".",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Create Hostinger Horizons websites from natural-language briefs and build, connect, deploy, verify, and operate websites, domains, DNS, VPS, ecommerce, WordPress, mail, campaigns, and billing through Hostinger's official MCP and Headless skill.",
               "zh-CN": "创建和部署网站，管理域名、DNS、云主机、电商与 WordPress 业务。"
@@ -9512,9 +9512,9 @@
       },
       "package": {
         "url": "./packages/hostinger.zip",
-        "sha256": "109222e90bc150e6d2925d56733bc49b738e3b461909e64e6b3176e5e5ae863d"
+        "sha256": "0df4c78104ba01ef008207a05f67da80d36a940a658ed6984883da0499d83b77"
       },
-      "icon": "./plugins/hostinger/assets/icon.svg",
+      "icon": "./plugins/hostinger/assets/icon.png",
       "homepage": "https://www.hostinger.com/connector",
       "repository": "https://github.com/hostinger/api-mcp-server",
       "license": "MIT",
@@ -14489,7 +14489,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "quicknode",
-        "version": "0.6.1-ghast.1",
+        "version": "0.6.1-ghast.2",
         "description": "Manage Quicknode endpoints, logs, usage, security, rate limits, billing, streams, webhooks, storage, teams, and RPC through the official qn CLI and its official agent guide.",
         "author": {
           "name": "Quicknode",
@@ -14503,7 +14503,7 @@
             "category": "development",
             "upstreamRevision": "4265b0a97048d8e64dae0124013c66b8dd34533f",
             "upstreamPath": ".",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Manage Quicknode endpoints, logs, usage, security, rate limits, billing, streams, webhooks, storage, teams, and RPC through the official qn CLI and its official agent guide.",
               "zh-CN": "管理区块链 RPC 节点、日志、用量、数据流、Webhook 与团队配置。"
@@ -14513,9 +14513,9 @@
       },
       "package": {
         "url": "./packages/quicknode.zip",
-        "sha256": "76527068d548ecf4ce8fbd3f3636c1ab124377fed7cf6695a9e124aafee75b41"
+        "sha256": "199fecbb1055f21a75d72a4620e6c4a4c3c3280019adbbdfcb80c213603d6c20"
       },
-      "icon": "./plugins/quicknode/assets/icon.svg",
+      "icon": "./plugins/quicknode/assets/icon.png",
       "homepage": "https://www.quicknode.com/docs",
       "repository": "https://github.com/quicknode/cli",
       "license": "MIT",

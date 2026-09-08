@@ -7,10 +7,10 @@ pre-aggregations through Cube's official hosted MCP.
 ## Official hosted MCP adapter
 
 This package contains only Ghast-authored MCP configuration, safety
-instructions, documentation, metadata, and a generic governed-analytics icon.
+instructions, documentation, metadata, and the provider brand logo.
 It does not redistribute Cube's hosted implementation, private Codex
 connector, OAuth credentials, tenant data, deprecated local server code,
-branded artwork, or marketplace icons.
+or marketplace artwork.
 
 Cube's official hosted MCP guide is pinned as normalized visible text at
 SHA-256 `fd816d469e8d330ee88a23d953dec174fd3df0d7732203c32ea071f6b235bec9`. The documented ordered 20-tool inventory
@@ -89,8 +89,7 @@ artwork.
 - Authenticated tools/list, tenant data, financial queries, dashboard writes,
   model edits, and pre-aggregation builds were not exercised because no Cube
   tenant or business data was used.
-- A generic governed-analytics icon is used because no licensed Cube
-  marketplace artwork is redistributed.
+Brand logo source: https://avatars.githubusercontent.com/u/52467369?v=4. The logo belongs to Cube. 品牌标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Cube accounts, plans, hosted service behavior, tenant and warehouse data,

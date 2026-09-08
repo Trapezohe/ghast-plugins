@@ -44,8 +44,7 @@ metadata at `512f41277070a17997c1df424133f687337437528bd9e090359a37b8bbb2c5ef`.
   require a Teams plan or higher. Other behavior remains subject to account
   role, connected calendars, ownership, permissions, limits, and service
   changes.
-- A generic calendar icon is used because no licensed catalog artwork is
-  included in a public official MCP source repository.
+Brand logo source: https://avatars.githubusercontent.com/u/7584333?v=4. The logo belongs to Calendly. 品牌标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Calendly accounts, subscriptions, hosted service behavior, scheduling data,

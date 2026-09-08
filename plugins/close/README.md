@@ -53,8 +53,7 @@ SHA-256 `13b3c6707cd36be3089d78e426dd57e56e7c5bb0cefcae42b0281056774ee1c5`.
   public-client registration, and unauthenticated protocol behavior were
   verified without a Close account. Authenticated tools/list and account-data
   operations were not run.
-- A generic CRM icon is used because no licensed catalog artwork is included
-  in a public official MCP source repository.
+Brand logo source: https://avatars.githubusercontent.com/u/437267?v=4. The logo belongs to Close. 品牌标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Close accounts, subscriptions, hosted service behavior, CRM data,

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "cube",
-  "version": "1.0.3-ghast.1",
+  "version": "1.0.3-ghast.2",
   "description": "Query governed Cube data, analyze financial performance, build dashboards, edit semantic models safely, and inspect pre-aggregations through Cube's official hosted MCP.",
   "author": {
     "name": "Cube",
@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "finance",
       "upstreamRevision": "cube-docs-fd816d469e8d+tools-9fd46d5d21aa+oauth-f88522816f07+auth-8e4f1585bcd9",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Query governed Cube data, analyze financial performance, build dashboards, edit semantic models safely, and inspect pre-aggregations through Cube's official hosted MCP.",
         "zh-CN": "查询受治理的数据，分析财务表现，管理语义模型与仪表板。"

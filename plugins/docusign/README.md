@@ -8,9 +8,9 @@ Docusign's official hosted MCP server.
 
 This package contains only Ghast-authored MCP configuration, a local loopback
 OAuth compatibility bridge, safety instructions, setup documentation, catalog
-metadata, and a generic icon. It does not copy or redistribute Docusign's
+metadata, and the provider brand logo. It does not copy or redistribute Docusign's
 hosted MCP implementation, private Codex connector, OAuth credentials,
-agreements, signatures, account data, branded icon, or marketplace artwork.
+agreements, signatures, account data, or marketplace artwork.
 
 The official overview page-data response is pinned at SHA-256
 `ee7baa0a1615e41a3f4ea932883d527f0c9e1ab5e92699754f72a69c6593626f` and the official OpenAI ChatGPT setup guide
@@ -60,8 +60,7 @@ copying its private app identifier or artwork.
   OAuth metadata, Codex capability evidence, pinned bridge package, and
   invalid-token OAuth trigger behavior were verified without a Docusign
   account. Authenticated tools/list and real account operations were not run.
-- A generic agreement-signing icon is used because no redistributable catalog
-  artwork is included in a public official MCP source repository.
+Brand logo source: https://avatars.githubusercontent.com/u/270752?v=4. The logo belongs to Docusign Inc.. 品牌标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Docusign accounts, subscriptions, hosted service behavior, agreements,

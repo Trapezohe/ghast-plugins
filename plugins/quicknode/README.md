@@ -12,6 +12,6 @@ Skills, references, scripts, commands, and public MCP declarations remain source
 
 - The Codex private app mapping is replaced by Quicknode's official qn CLI, whose embedded agent guide covers the same infrastructure workflows and additional official services.
 - The user authenticates qn outside the conversation; the Ghast skill never asks for or handles a Quicknode API key.
-- A generic node-infrastructure icon is used because the official CLI repository does not publish a redistributable catalog icon.
+Brand logo source: https://avatars.githubusercontent.com/u/53955811?v=4. The logo belongs to Quicknode. 品牌标识归对应服务商所有。
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.
