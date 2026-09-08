@@ -1,250 +1,114 @@
-# Ghast Agent Plugins & MCP Registry
+# Ghast Plugins
 
-Ghast's public plugin catalog. The desktop client downloads
-`plugin-catalog.json`, verifies each package's SHA-256 digest, and installs the
-selected bundle into the active profile.
+Extend Ghast with skills, service connections, commands, and lifecycle hooks.
 
-## Repository layout
+**English** · [简体中文](README.zh-CN.md)
 
-| Path | Purpose |
+This repository contains Ghast’s public plugin catalog, plugin sources, and downloadable packages. Browse 500+ plugins across developer tools, data, productivity, communication, design, marketing, and finance in the Ghast desktop app.
+
+[Browse plugin sources](plugins/) · [Download catalog](plugin-catalog.json) · [Upstream maintenance](maintenance/README.md)
+
+## Get started
+
+1. Open **Plugins** in Ghast and select **Browse**.
+2. Search for a plugin, open its details, and select **Install**.
+3. If it connects to a service, complete the setup under **Service connections**. Requirements vary by provider: OAuth, an API key, or a local runtime.
+4. Use the plugin in a conversation. Its README describes available capabilities and any prerequisites.
+
+Installing a package does **not** grant access to your accounts. Installation, service authorization, and successful tool execution are separate checks. Manage installed plugins from the **Installed** tab.
+
+Ghast’s default catalog URL is:
+
+```text
+https://raw.githubusercontent.com/trapezohe/ghast-plugins/main/plugin-catalog.json
+```
+
+Ghast verifies each downloaded package against its catalog SHA-256 digest before installation. These are Ghast-compatible packages; they do not reuse a Codex account, private connector backend, or installed plugin cache.
+
+## What plugins can add
+
+| Capability | Purpose | Example |
+| --- | --- | --- |
+| Skills | Instructions and workflows for specific tasks | [Binance](plugins/binance/) |
+| MCP connections | Tools and data from a service or local server | [GitHub](plugins/github/), [Cloudflare](plugins/cloudflare/), [Supabase](plugins/supabase/) |
+| Commands | Explicit entry points for repeatable workflows | See each plugin’s command definitions |
+| Lifecycle hooks | Add context when supported conversation events occur | [Ponytail](plugins/ponytail/) |
+
+Plugins can combine capabilities. Available tools, permissions, and runtime requirements depend on the individual plugin and your Ghast version. Hook support currently covers `SessionStart`, `UserPromptSubmit`, and `SubagentStart`; it does not imply support for every hook event from other clients.
+
+Explore [Google Gmail](plugins/google-gmail/), [Google Docs](plugins/google-docs/), [Google Sheets](plugins/google-sheets/), [Microsoft Work IQ](plugins/microsoft-workiq/), [Notion](plugins/notion/), and [Slack](plugins/slack/) for office and collaboration workflows. The catalog includes both account-backed connections and plugins that need no account.
+
+## Sources and store standards
+
+New service connectors must use a provider-published or provider-maintained implementation. A marketplace listing alone does not establish official ownership. Community connectors require an explicit exception and must be identified as such.
+
+A Ghast-authored adapter for an official service is not a provider-authored plugin. Each package must document its actual source, authorship, license, and adaptation details.
+
+Every official store listing must include:
+
+- A real brand logo, bundled locally with its source recorded.
+- English and Simplified Chinese introductions. Chinese UI locales display Chinese; all other locales display English. The two are not concatenated.
+- Verified upstream documentation or repository provenance, plus the applicable license for redistributed files.
+- A usable contribution and documented setup requirements. Private app IDs from another client are not a working connection.
+- Local installation, branding, and uninstall verification before publication. Account and tool checks must be reported separately.
+
+Never commit tokens, client secrets, or account credentials. Do not duplicate one connector into multiple listings just to increase the catalog count.
+
+## Repository map
+
+| Path | Contents |
 | --- | --- |
-| `plugins/<name>/` | Agent Plugins 1.0.0 sources |
-| `packages/<name>.zip` | Deterministic downloadable packages |
-| `plugin-catalog.json` | Package metadata consumed by Ghast |
-| `mcp-registry.json` | Standalone MCP marketplace |
+| [`plugins/`](plugins/) | Plugin source directories and per-plugin documentation |
+| [`packages/`](packages/) | Generated, deterministic ZIP packages |
+| [`plugin-catalog.json`](plugin-catalog.json) | Package metadata, URLs, and SHA-256 digests used by Ghast |
+| [`mcp-registry.json`](mcp-registry.json) | Separate registry for standalone MCP servers |
+| [`scripts/`](scripts/) | Catalog build, validation, import, and audit tools |
+| [`maintenance/`](maintenance/) | Upstream inventory, update policy, and maintenance instructions |
 
-## Official store presentation
+## Contribute a plugin
 
-Official listings must ship the service’s real brand logo under `assets/` (no letter placeholders), record its source, and include English and Simplified Chinese introductions. Store translations in `extensions.ai.trapezohe.ghast.descriptions` with `en` and `zh-CN`; the portable `description` must equal the English introduction. Ghast displays Chinese for a Chinese UI locale and English for other locales, never concatenating both. Verify local installation, visible branding and uninstall before publishing. Account authorization is a separate check from installation.
+Packages use the vendor-neutral Agent Plugins 1.0 format with a root `plugin.json`. Skills live in `skills/` and MCP configuration in `mcp.json`. Ghast-specific metadata belongs under `extensions.ai.trapezohe.ghast`.
 
-New connectors must be published or maintained by the service provider. Verify the provider's documentation or repository and record that source in the plugin README. A marketplace listing alone is not evidence of official ownership. Community wrappers and third-party gateways require an explicit user request and must not be presented as provider-official connectors. Do not split one connector into duplicate listings to meet a catalog count target.
-
-## Plugin format
-
-Every plugin conforms to the vendor-neutral
-[Agent Plugins 1.0.0 specification](https://agent-plugins.org/specification):
+Start from a plugin with the same capabilities. Use [GitHub](plugins/github/) for a service connection or [Ponytail](plugins/ponytail/) for a hook plugin. Only include files your plugin needs.
 
 ```text
 plugins/<name>/
-├── plugin.json                # required Agent Plugins 1.0 manifest
-├── assets/icon.svg           # required; PNG/JPEG/WebP also supported
-├── skills/                    # optional Agent Skills
-├── mcp.json                   # optional MCP server configuration
-├── ai.trapezohe.ghast/        # optional Ghast extension files
-│   └── commands/              # optional Ghast slash commands
-├── README.md                  # optional
-└── LICENSE                    # required for third-party ports
+├── plugin.json                  # Manifest and Ghast metadata
+├── assets/                      # Brand logo
+├── skills/                      # Optional skills
+├── mcp.json                     # Optional MCP configuration
+├── ai.trapezohe.ghast/commands/  # Optional Ghast commands
+├── hooks/                       # Optional hooks, declared in the Ghast extension
+├── README.md                    # Setup, capabilities, provenance, and limitations
+└── LICENSE                      # Applicable redistribution license
 ```
 
-Minimal manifest:
+Set `descriptions.en` and `descriptions.zh-CN` in the Ghast extension, and keep the root `description` equal to the English text. Choose a canonical category from [`scripts/plugin_categories.py`](scripts/plugin_categories.py).
 
-```json
-{
-  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "your-plugin",
-  "version": "1.0.0",
-  "description": "What the plugin adds.",
-  "author": { "name": "Your Name" },
-  "extensions": {
-    "ai.trapezohe.ghast": {
-      "category": "development",
-      "icon": "./assets/icon.svg",
-      "descriptions": {
-        "en": "What the plugin adds.",
-        "zh-CN": "插件提供的功能。"
-      }
-    }
-  }
-}
-```
-
-Agent Plugins discovers skills and MCP configuration from their fixed paths;
-they are never declared inline in `plugin.json`. Ghast-specific category,
-icon, provenance, command, and credential-reference metadata lives under the
-reverse-domain `ai.trapezohe.ghast` extension. Agent Plugins 1.0 intentionally
-leaves OAuth and credentials to clients, so portable `mcp.json` files contain
-no secret references. Private connector IDs tied to another vendor's backend
-cannot be published as working Ghast plugins.
-
-Legacy importer output can be converted deterministically before packaging:
+From the repository root, prepare the validation environment and rebuild:
 
 ```bash
-python3 scripts/migrate-agent-plugins-1.0.py
-python3 -m pip install -r requirements-agent-plugins.txt
-python3 scripts/normalize-agent-skills.py
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-agent-plugins.txt
+python scripts/build-ghast-catalog.py
+python scripts/validate-ghast-repository.py
 ```
 
-## Build the catalog
+CI uses Python 3.12 and Node.js 24. Keep Node.js and Bash available for script checks. Validation covers manifests, MCP configuration, skills, icons, script syntax, package layout, hashes, and common embedded-secret patterns; it does not prove a live account connection works.
 
-```bash
-python3 scripts/build-ghast-catalog.py
-```
+Install the generated package in Ghast, check its visible presentation and relevant runtime behavior, then uninstall the test installation. Submit the source changes together with regenerated packages and catalog in a pull request. Preserve upstream licenses and record any compatibility changes. Import scripts are for reviewed, pinned upstream sources—not wholesale marketplace mirroring.
 
-The script reads only root `plugin.json` sources, creates stable ZIPs,
-computes their SHA-256 digests, and rewrites `plugin-catalog.json`.
+## Keeping plugins current
 
-## Validate the repository
+The maintenance workflow is configured to check upstreams daily and collect changes into a single review PR. **Activation is pending:** the workflow must land on the default branch and GitHub Actions must be allowed to create pull requests.
 
-```bash
-python3 scripts/validate-ghast-repository.py
-```
+Automatic discovery is broader than automatic rewriting. The current inventory covers GitHub revisions, npm/PyPI releases, and literal HTTPS endpoints; unsupported sources require manual review. Ponytail currently has a guarded file-update mapping. Other detected changes produce review information rather than silently replacing plugin contents.
 
-The validator checks Agent Plugins 1.0 manifests and MCP configuration, icons,
-skill frontmatter, JSON, Python, JavaScript, shell scripts, package layout and
-SHA-256 hashes, audit summaries, and common embedded-secret patterns.
+Updates are not automatically merged. An endpoint response is not a full MCP or account test, and catalog maintenance does not automatically upgrade users’ installed plugins.
 
-## Import connector-free OpenAI plugins
+See the [maintenance guide](maintenance/README.md) for scheduling, permissions, checks, failure reporting, and current limits.
 
-The audited importer handles the OpenAI marketplace snapshot pinned in the
-script. It imports only classified plugins without `.app.json`, requires real
-license files, strips Codex store metadata, and writes
-`openai-portability.json` with the complete decision record.
+## Licenses
 
-```bash
-python3 scripts/import-openai-portable-plugins.py \
-  --source ../openai-plugins \
-  --external-root ../upstreams
-python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins
-python3 scripts/migrate-agent-plugins-1.0.py
-python3 scripts/normalize-agent-skills.py
-python3 scripts/build-ghast-catalog.py
-```
-
-Canonical checkouts used for external license files must be at the exact
-revisions declared by the importer. An unfamiliar connector-free plugin causes
-the import to fail until it has been reviewed and classified.
-
-## Import audited official plugins
-
-Plugins with a public, developer-owned source repository are regenerated
-directly from that repository instead of treating the OpenAI marketplace copy
-as canonical.
-
-```bash
-python3 scripts/import-official-third-party-plugins.py \
-  --source-root ../upstreams
-python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins
-python3 scripts/migrate-agent-plugins-1.0.py
-python3 scripts/normalize-agent-skills.py
-python3 scripts/build-ghast-catalog.py
-```
-
-Every source checkout must match the exact revision pinned in the importer.
-The generated plugin README and audit record preserve provenance, capability
-differences, transport substitutions, and any client-specific compatibility
-changes for each imported developer-owned source.
-
-## Import audited official hosted MCP adapters
-
-Some developers operate a public hosted MCP server without publishing its
-server source. The hosted adapter importer verifies pinned official
-documentation and OAuth metadata before generating only Ghast-authored
-configuration and safety instructions.
-
-```bash
-python3 scripts/import-official-hosted-plugins.py
-python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins
-python3 scripts/migrate-agent-plugins-1.0.py
-python3 scripts/normalize-agent-skills.py
-python3 scripts/build-ghast-catalog.py
-```
-
-The adapter license applies only to Ghast-authored files. Hosted services,
-accounts, data, trademarks, permissions, and service terms remain controlled
-by their operators.
-
-## Import the Binance plugin
-
-The Binance importer pins the official Skills Hub revision and copies the four
-skill directories that contain standalone MIT license files. It also adds a
-Ghast financial-execution policy and changes the Onchain Pay helper so secrets
-come from environment variables instead of process arguments.
-
-```bash
-python3 scripts/import-binance-plugin.py \
-  --source ../upstreams/binance-skills-hub
-python3 scripts/sync-plugin-icons.py --openai-source ../openai-plugins
-python3 scripts/migrate-agent-plugins-1.0.py
-python3 scripts/normalize-agent-skills.py
-python3 scripts/build-ghast-catalog.py
-```
-
-## Import the BrightHire plugin
-
-The BrightHire importer verifies the official developer-owned plugin source,
-public hosted MCP endpoint, OAuth metadata, anonymous authentication boundary,
-and the pinned OpenAI capability evidence. It generates only independently
-authored Ghast adapter files and generic artwork because the official source
-declares MIT in its manifest but does not contain an actual license text.
-
-```bash
-python3 scripts/import-brighthire-plugin.py \
-  --openai-source ../openai-plugins \
-  --official-source ../upstreams/brighthire-codex-plugin
-```
-
-For a deliberate one-time public OAuth registration test, add
-`--verify-registration`. The returned client value is not retained.
-
-## Import the Morningstar plugin
-
-The Morningstar importer verifies the official developer-owned plugin source,
-hosted MCP endpoint, OAuth metadata, anonymous authentication boundary, five
-official workflow categories, and the pinned OpenAI capability evidence. It
-generates independently authored adapter materials because the official source
-declares MIT in its manifest without including license text.
-
-```bash
-python3 scripts/import-morningstar-plugin.py \
-  --openai-source ../openai-plugins \
-  --official-source ../upstreams/morningstar-plugins
-```
-
-Add `--verify-registration` only for a deliberate one-time confidential OAuth
-client registration check. The returned client ID and secret are not retained.
-
-## Audit third-party Codex plugins
-
-`third-party-plugin-audit.json` tracks every marketplace plugin whose declared
-developer is not OpenAI. A plugin is marked complete only after its official
-developer source, exact revision, license, Codex capability set, Ghast
-capability set, and runnable verification have been recorded in
-`third-party-plugin-reviews.json`.
-
-```bash
-python3 scripts/audit-third-party-plugins.py \
-  --source ../openai-plugins
-```
-
-The generated `THIRD_PARTY_PLUGIN_AUDIT.md` is the readable inventory. A
-developer name or an MIT string in the Codex manifest is not sufficient
-evidence that the connector implementation itself can be redistributed.
-
-## Porting an external plugin
-
-External Codex, Claude, and Agent Plugin bundles are source material, not a
-runtime dependency:
-
-1. Verify the upstream repository, exact revision, and redistribution license.
-2. Copy only contributions Ghast actually supports.
-3. Emit or migrate to the root Agent Plugins 1.0 `plugin.json` manifest.
-4. Remove connector-app declarations unless a Ghast connector exists.
-5. Include the upstream license and provenance in the plugin directory.
-6. Build the catalog and install the generated package through Ghast before
-   publishing it.
-
-Users may also install an external Ghast plugin directory directly from
-Settings. Third-party catalogs can be loaded by URL; their packages must use
-HTTPS and provide a valid SHA-256 digest.
-
-## Contribution policy
-
-Add the Agent Plugins 1.0 source under `plugins/<name>/`, run the catalog builder, and
-commit both the source and generated package/catalog changes. Do not mirror an
-external marketplace wholesale: each plugin must be licensed, reviewed, and
-verified against Ghast's real runtime.
-
-## Automated maintenance
-
-Official upstreams are checked daily and collected into one maintenance PR. See
-[maintenance/README.md](maintenance/README.md) for coverage, update mappings, CI and release boundaries.
+Licenses are defined per plugin. Check its manifest, README, and bundled license before redistributing it. An adapter’s license does not license the provider’s hosted service, trademarks, or user data; the provider’s terms still apply.
