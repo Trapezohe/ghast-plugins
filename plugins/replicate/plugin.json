@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "replicate",
+  "version": "1.0.0-ghast.1",
+  "description": "Discover, compare and run AI models on Replicate through its official MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://replicate.com/docs/reference/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://replicate.com/docs/reference/mcp",
+      "connectorPublisher": "Replicate",
+      "category": "creativity",
+      "icon": "./assets/icon.png",
+      "displayName": "Replicate",
+      "descriptions": {
+        "en": "Discover, compare and run AI models on Replicate through its official MCP server.",
+        "zh-CN": "通过 Replicate 官方 MCP 查找、比较并运行 AI 模型。"
+      }
+    }
+  }
+}

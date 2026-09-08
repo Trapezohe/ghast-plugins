@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "braintrust",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect Braintrust traces and experiments, manage evaluation datasets and prompts, and build authorized AI evaluation workflows.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.braintrust.dev/docs/integrations/developer-tools/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.braintrust.dev/docs/integrations/developer-tools/mcp",
+      "connectorPublisher": "Braintrust",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Braintrust",
+      "descriptions": {
+        "en": "Inspect Braintrust traces and experiments, manage evaluation datasets and prompts, and build authorized AI evaluation workflows.",
+        "zh-CN": "查看 Braintrust 调用追踪和实验，管理评测数据集与提示词，并构建经授权的 AI 评测工作流。"
+      }
+    }
+  }
+}

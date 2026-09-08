@@ -1872,6 +1872,44 @@
       "category": "productivity"
     },
     {
+      "id": "braintrust",
+      "name": "Braintrust",
+      "description": "Inspect Braintrust traces and experiments, manage evaluation datasets and prompts, and build authorized AI evaluation workflows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "braintrust",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect Braintrust traces and experiments, manage evaluation datasets and prompts, and build authorized AI evaluation workflows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.braintrust.dev/docs/integrations/developer-tools/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.braintrust.dev/docs/integrations/developer-tools/mcp",
+            "connectorPublisher": "Braintrust",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Braintrust",
+            "descriptions": {
+              "en": "Inspect Braintrust traces and experiments, manage evaluation datasets and prompts, and build authorized AI evaluation workflows.",
+              "zh-CN": "查看 Braintrust 调用追踪和实验，管理评测数据集与提示词，并构建经授权的 AI 评测工作流。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/braintrust.zip",
+        "sha256": "1a35d6818a34cc0b3fda3abacd8758ea51346b2f10a85dba2485ccbe1e936a33"
+      },
+      "icon": "./plugins/braintrust/assets/icon.png",
+      "homepage": "https://www.braintrust.dev/docs/integrations/developer-tools/mcp",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "brand24",
       "name": "brand24",
       "description": "Explore current Brand24 project summaries, important events, discussions, influencers, and mention sources through Brand24's official read-only hosted MCP server.",
@@ -8149,6 +8187,51 @@
       "category": "finance"
     },
     {
+      "id": "langfuse",
+      "name": "Langfuse",
+      "description": "Query Langfuse observations and metrics and manage prompts, datasets and evaluations through the official project MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "langfuse",
+        "version": "1.0.0-ghast.1",
+        "description": "Query Langfuse observations and metrics and manage prompts, datasets and evaluations through the official project MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://langfuse.com/docs/api-and-data-platform/features/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://langfuse.com/docs/api-and-data-platform/features/mcp-server",
+            "connectorPublisher": "Langfuse",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Langfuse",
+            "descriptions": {
+              "en": "Query Langfuse observations and metrics and manage prompts, datasets and evaluations through the official project MCP server.",
+              "zh-CN": "通过 Langfuse 官方项目 MCP 查询观测记录和指标，管理提示词、数据集及评测。"
+            },
+            "mcpServerExtensions": {
+              "langfuse": {
+                "credentialHeaders": {
+                  "Authorization": "$VAULT:langfuse-authorization"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/langfuse.zip",
+        "sha256": "74ec407a967ad8cf803784cb22bca160f62a8dcdffc828385fc61a10288e8bc1"
+      },
+      "icon": "./plugins/langfuse/assets/icon.png",
+      "homepage": "https://langfuse.com/docs/api-and-data-platform/features/mcp-server",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "launchdarkly",
       "name": "LaunchDarkly",
       "description": "Manage feature flags, AgentControl configurations and observability data in LaunchDarkly.",
@@ -10805,6 +10888,44 @@
       "category": "development"
     },
     {
+      "id": "railway",
+      "name": "Railway",
+      "description": "Manage Railway projects, environments and deployments through Railway’s official hosted MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "railway",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage Railway projects, environments and deployments through Railway’s official hosted MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.railway.com/ai/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.railway.com/ai/mcp-server",
+            "connectorPublisher": "Railway",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Railway",
+            "descriptions": {
+              "en": "Manage Railway projects, environments and deployments through Railway’s official hosted MCP server.",
+              "zh-CN": "通过 Railway 官方托管 MCP 管理项目、环境和部署。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/railway.zip",
+        "sha256": "e3230219d459628acc8dcf4897eb862c7b06f3a58c0e3b21a53885c7bea6644d"
+      },
+      "icon": "./plugins/railway/assets/icon.png",
+      "homepage": "https://docs.railway.com/ai/mcp-server",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "ranked-ai",
       "name": "ranked-ai",
       "description": "Analyze and manage Ranked AI SEO projects, rankings, AI visibility, audits, backlinks, content, and reports through Ranked AI's official hosted MCP.",
@@ -11316,6 +11437,44 @@
       "repository": "https://github.com/replayio/plugins",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "replicate",
+      "name": "Replicate",
+      "description": "Discover, compare and run AI models on Replicate through its official MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "replicate",
+        "version": "1.0.0-ghast.1",
+        "description": "Discover, compare and run AI models on Replicate through its official MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://replicate.com/docs/reference/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://replicate.com/docs/reference/mcp",
+            "connectorPublisher": "Replicate",
+            "category": "creativity",
+            "icon": "./assets/icon.png",
+            "displayName": "Replicate",
+            "descriptions": {
+              "en": "Discover, compare and run AI models on Replicate through its official MCP server.",
+              "zh-CN": "通过 Replicate 官方 MCP 查找、比较并运行 AI 模型。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/replicate.zip",
+        "sha256": "18a4587007fd39a5ddfc3df0a068a35f9c0a708692469ee4cd433c0bef097763"
+      },
+      "icon": "./plugins/replicate/assets/icon.png",
+      "homepage": "https://replicate.com/docs/reference/mcp",
+      "license": "MIT",
+      "category": "creativity"
     },
     {
       "id": "replit",

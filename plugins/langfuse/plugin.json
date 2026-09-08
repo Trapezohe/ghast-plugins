@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "langfuse",
+  "version": "1.0.0-ghast.1",
+  "description": "Query Langfuse observations and metrics and manage prompts, datasets and evaluations through the official project MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://langfuse.com/docs/api-and-data-platform/features/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://langfuse.com/docs/api-and-data-platform/features/mcp-server",
+      "connectorPublisher": "Langfuse",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Langfuse",
+      "descriptions": {
+        "en": "Query Langfuse observations and metrics and manage prompts, datasets and evaluations through the official project MCP server.",
+        "zh-CN": "通过 Langfuse 官方项目 MCP 查询观测记录和指标，管理提示词、数据集及评测。"
+      },
+      "mcpServerExtensions": {
+        "langfuse": {
+          "credentialHeaders": {
+            "Authorization": "$VAULT:langfuse-authorization"
+          }
+        }
+      }
+    }
+  }
+}
