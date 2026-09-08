@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "doppler",
+  "version": "1.0.0-ghast.1",
+  "description": "Use Doppler’s official experimental MCP to work with projects, environments, configs and scoped secrets.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/DopplerHQ/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/DopplerHQ/mcp-server",
+      "connectorPublisher": "Doppler",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Doppler",
+      "descriptions": {
+        "en": "Use Doppler’s official experimental MCP to work with projects, environments, configs and scoped secrets.",
+        "zh-CN": "通过 Doppler 官方实验版 MCP 处理项目、环境、配置和限定权限范围的密钥。"
+      },
+      "mcpServerExtensions": {
+        "doppler": {
+          "credentialEnv": {
+            "DOPPLER_TOKEN": "$VAULT:doppler-token"
+          }
+        }
+      }
+    }
+  }
+}

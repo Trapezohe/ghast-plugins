@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kagi",
+  "version": "1.0.0-ghast.1",
+  "description": "Search the web, news, images, videos and podcasts with Kagi’s official MCP, and extract page content.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/kagisearch/kagimcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/kagisearch/kagimcp",
+      "connectorPublisher": "Kagi",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Kagi",
+      "descriptions": {
+        "en": "Search the web, news, images, videos and podcasts with Kagi’s official MCP, and extract page content.",
+        "zh-CN": "通过 Kagi 官方 MCP 搜索网页、新闻、图片、视频和播客，并提取页面内容。"
+      },
+      "mcpServerExtensions": {
+        "kagi": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:kagi-token"
+          }
+        }
+      }
+    }
+  }
+}
