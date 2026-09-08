@@ -14,6 +14,8 @@ for bad in ('../escape', '/tmp/escape', 'a/../../b', 'a\\b'):
     try: m.safe_relative(bad)
     except ValueError: pass
     else: raise AssertionError(bad)
+assert m.launcher_packages(['--python','3.12','chroma-mcp==0.2.6','--client-type','cloud']) == ['chroma-mcp==0.2.6']
+assert m.launcher_packages(['--python','3.12','--with','mcp==1.29.1','--from','server[mcp]==1.0','python','-m','main']) == ['mcp==1.29.1','server[mcp]==1.0']
 with tempfile.TemporaryDirectory() as tmp:
     m.ROOT = Path(tmp).resolve(); m.STATE = m.ROOT / 'state.json'
     root = m.ROOT / 'plugins/demo'; root.mkdir(parents=True)

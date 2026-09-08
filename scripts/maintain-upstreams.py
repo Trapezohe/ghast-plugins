@@ -35,6 +35,26 @@ def github_repo(url):
     return None
 
 
+def launcher_packages(args):
+    packages = []
+    has_source = False
+    i = 0
+    while i < len(args):
+        arg = args[i]
+        if arg in ('--from', '--package', '-p', '--with'):
+            packages.append(args[i + 1])
+            has_source |= arg != '--with'
+            i += 2
+        elif arg in ('--python', '--index', '--index-url', '--extra-index-url', '--directory', '--project'):
+            i += 2
+        elif arg.startswith('-'):
+            i += 1
+        else:
+            if not has_source: packages.append(arg)
+            break
+    return packages
+
+
 def inventory():
     previous = read_json(SOURCES) if SOURCES.exists() else {}
     records = {}
@@ -56,14 +76,18 @@ def inventory():
             command = server.get('command')
             args = server.get('args', [])
             if command in ('npx', 'uvx'):
-                package = next((x for x in args if isinstance(x, str) and not x.startswith('-')), '')
-                if command == 'npx' and re.fullmatch(r'(?:@[\w.-]+/)?[\w.-]+(?:@[\w.^~*+-]+)?', package):
-                    name, sep, version = package.rpartition('@')
-                    if not sep or not name: name, version = package, None
-                    monitors.append({'kind': 'npm', 'package': name, 'packagedVersion': version})
-                elif command == 'uvx' and re.fullmatch(r'[\w.-]+(?:==[\w.+-]+)?', package):
-                    name, _, version = package.partition('==')
-                    monitors.append({'kind': 'pypi', 'package': name, 'packagedVersion': version or None})
+                for package in launcher_packages(args):
+                    if command == 'npx' and re.fullmatch(r'(?:@[\w.-]+/)?[\w.-]+(?:@[\w.^~*+-]+)?', package):
+                        name, sep, version = package.rpartition('@')
+                        if not sep or not name: name, version = package, None
+                        monitors.append({'kind': 'npm', 'package': name, 'packagedVersion': version})
+                    elif command == 'uvx' and package.startswith('git+https://github.com/'):
+                        url, _, revision = package.removeprefix('git+').rpartition('@')
+                        if re.fullmatch(r'[0-9a-f]{40}', revision):
+                            monitors.append({'kind': 'github', 'repository': github_repo(url), 'ref': 'HEAD', 'packagedRevision': revision})
+                    elif command == 'uvx' and re.fullmatch(r'[\w.-]+(?:\[[\w,-]+\])?(?:==[\w.+-]+)?', package):
+                        name, _, version = package.partition('==')
+                        monitors.append({'kind': 'pypi', 'package': name.split('[')[0], 'packagedVersion': version or None})
         records[m['name']] = {'provenance': urls, 'monitors': monitors,
                               'update': previous.get(m['name'], {}).get('update'),
                               'policy': 'mapped-pr' if previous.get(m['name'], {}).get('update') else 'review-required'}
