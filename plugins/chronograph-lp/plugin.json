@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "chronograph-lp",
-  "version": "0.2.3-ghast.1",
+  "version": "0.2.3-ghast.2",
   "description": "Analyze private-capital LP portfolios with cashflow forecasts, commitment pacing, look-through exposure, and GP-meeting preparation through Chronograph's official skills and OAuth MCP.",
   "author": {
     "name": "Chronograph",

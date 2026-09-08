@@ -2328,7 +2328,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "brand24",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Explore current Brand24 project summaries, important events, discussions, influencers, and mention sources through Brand24's official read-only hosted MCP server.",
         "author": {
           "name": "Brand24 Global Inc.",
@@ -2340,7 +2340,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "brand24-help-22c8be2b5c9f+oauth-8bfc708c6d66+auth-826db8f30f19",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Explore current Brand24 project summaries, important events, discussions, influencers, and mention sources through Brand24's official read-only hosted MCP server.",
               "zh-CN": "读取品牌项目摘要、重要事件、讨论、影响者与提及来源。"
@@ -2350,9 +2350,9 @@
       },
       "package": {
         "url": "./packages/brand24.zip",
-        "sha256": "6056c126d429c521bad13059fa91c385ca3198bf6dda3c7106197f37fe7bd401"
+        "sha256": "ada79cce441f8417644bbef1de25b9785cd85382b33d14093f6cff649735d000"
       },
-      "icon": "./plugins/brand24/assets/icon.svg",
+      "icon": "./plugins/brand24/assets/icon.png",
       "homepage": "https://help.brand24.com/en/articles/13011375-brand24-mcp",
       "license": "MIT",
       "category": "productivity"
@@ -3486,7 +3486,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "chronograph-gp",
-        "version": "0.2.3-ghast.1",
+        "version": "0.2.3-ghast.2",
         "description": "Analyze private-capital GP portfolios, operating performance, valuations, fund reviews, company reports, and TVPI attribution through Chronograph's official skills and hosted OAuth MCP.",
         "author": {
           "name": "Chronograph",
@@ -3510,7 +3510,7 @@
       },
       "package": {
         "url": "./packages/chronograph-gp.zip",
-        "sha256": "d84015ecb92947edb3bcf9a720d2e267ca8bdb6bd428ce4bfbec1438918bd05e"
+        "sha256": "e0f30f92559c1ba1e54b844b2d948229f2d3a02e7bcac760fef23021d7f50a6a"
       },
       "icon": "./plugins/chronograph-gp/assets/icon.png",
       "homepage": "https://www.chronograph.pe/",
@@ -3525,7 +3525,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "chronograph-lp",
-        "version": "0.2.3-ghast.1",
+        "version": "0.2.3-ghast.2",
         "description": "Analyze private-capital LP portfolios with cashflow forecasts, commitment pacing, look-through exposure, and GP-meeting preparation through Chronograph's official skills and OAuth MCP.",
         "author": {
           "name": "Chronograph",
@@ -3549,7 +3549,7 @@
       },
       "package": {
         "url": "./packages/chronograph-lp.zip",
-        "sha256": "e35e29a9ca59ca9bff120697de1f2ffb14262b682f3a24a5f4c91e99fcc500f8"
+        "sha256": "67d02775a4c5273524ca1d3ba952dde2c9c6c8da8a1a62c04520b0336b8a9a95"
       },
       "icon": "./plugins/chronograph-lp/assets/icon.png",
       "homepage": "https://www.chronograph.pe/",
@@ -16363,7 +16363,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "skywatch",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Search orderable satellite imagery, compare scene pricing, and browse satellites and products through SkyWatch's official MCP.",
         "author": {
           "name": "SkyWatch Space Applications Inc.",
@@ -16375,7 +16375,7 @@
           "ai.trapezohe.ghast": {
             "category": "research",
             "upstreamRevision": "skywatch-docs-f4ed1fbadb7c+client-a16e47fecde3+tools-c6b9fe481f16",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Search orderable satellite imagery, compare scene pricing, and browse satellites and products through SkyWatch's official MCP.",
               "zh-CN": "搜索可购买的卫星影像，比较场景价格和卫星产品。"
@@ -16385,9 +16385,9 @@
       },
       "package": {
         "url": "./packages/skywatch.zip",
-        "sha256": "b8f578d404812530b3e2d9a5cbf8e1928f172b3fcce7ef4f0169e6b4d0a5c836"
+        "sha256": "b16078425c7df0071ba25013ff3a08d2fd206fbe71bdde20b7c672804d17a9c6"
       },
-      "icon": "./plugins/skywatch/assets/icon.svg",
+      "icon": "./plugins/skywatch/assets/icon.png",
       "homepage": "https://docs.skywatch.com/docs/mcp/mcp-server/",
       "license": "MIT",
       "category": "research"

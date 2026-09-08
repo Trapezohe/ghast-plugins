@@ -29,8 +29,7 @@ pinned at canonical JSON SHA-256
 - A live verification search for the Golden Gate Bridge returned current
   orderable scenes, provider and resolution data, per-scene prices, and an
   Explore link, fully covering the Codex app's example and description.
-- A generic satellite-search icon is used because no licensed catalog icon is
-  included in a public official MCP source repository.
+- Brand logo source: https://skywatch.com/wp-content/uploads/2023/03/Skywatch-Icon-Colour-300x300.png. Brand names and logos belong to SkyWatch. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 SkyWatch's hosted service, imagery, prices, providers, Explore ordering,

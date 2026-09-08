@@ -13,6 +13,6 @@ All five workflow skills, their references, the analyst routing content, manifes
 - The Codex private app connector is replaced by Chronograph's official hosted MCP endpoint with browser OAuth, public-client authentication, refresh tokens, and PKCE.
 - The current official GP release expands the older Codex one-pager package with budget-versus-actuals, quarterly review packs, markup/markdown briefs, and company-level TVPI attribution.
 - GP-authenticated access is mandatory for company financials and gross per-investment returns. Ghast does not substitute LP net figures or present an LP login as GP capability.
-- A generic private-capital analytics icon is used because the Apache-2.0 repository does not publish separately licensed catalog artwork.
+- Brand logo source: https://www.chronograph.pe/wp-content/themes/chronograph/assets/images/favicon/apple-touch-icon.png. Brand names and logos belong to Chronograph. 品牌名称与标识归对应服务商所有。
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

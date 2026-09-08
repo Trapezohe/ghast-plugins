@@ -10,7 +10,7 @@ This package contains only Ghast-authored MCP configuration, safety
 instructions, documentation, catalog metadata, and a generic social-listening
 icon. It does not copy or redistribute Brand24's hosted MCP implementation,
 private Codex connector, service source code, customer project data, OAuth
-credentials, branded artwork, or marketplace icon.
+credentials, or marketplace icon.
 
 Brand24's official Help Center article is pinned at article ID
 `13011375`, update timestamp
@@ -57,8 +57,7 @@ the private app ID or marketplace artwork.
   and influence metrics as estimates, protects personal and campaign data,
   separates assistant drafts from external actions, and prevents read-only
   analysis from being described as publishing or outreach.
-- A generic social-listening icon is used because no licensed Brand24 catalog
-  artwork is included in a public official MCP source repository.
+- Brand logo source: https://brand24.com/app/themes/b24/assets/images/favicons/apple-touch-icon.png. Brand names and logos belong to Brand24. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Brand24 accounts, subscriptions, hosted service behavior, project data,

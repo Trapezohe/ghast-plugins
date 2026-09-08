@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "brand24",
-  "version": "1.0.3-ghast.1",
+  "version": "1.0.3-ghast.2",
   "description": "Explore current Brand24 project summaries, important events, discussions, influencers, and mention sources through Brand24's official read-only hosted MCP server.",
   "author": {
     "name": "Brand24 Global Inc.",
@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "upstreamRevision": "brand24-help-22c8be2b5c9f+oauth-8bfc708c6d66+auth-826db8f30f19",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Explore current Brand24 project summaries, important events, discussions, influencers, and mention sources through Brand24's official read-only hosted MCP server.",
         "zh-CN": "读取品牌项目摘要、重要事件、讨论、影响者与提及来源。"
