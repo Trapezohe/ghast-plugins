@@ -148,7 +148,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "actively",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Research and prioritize accounts using Actively's persistent Per-Account Agent intelligence, buying signals, prospect context, strategy, and next-best actions.",
         "author": {
           "name": "Actively",
@@ -160,7 +160,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "actively-mcp-3c7c7f1750ee+api-e090dc2a687e+oauth-908b8114e7a6+auth-11a7486ac6ab",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Research and prioritize accounts using Actively's persistent Per-Account Agent intelligence, buying signals, prospect context, strategy, and next-best actions.",
               "zh-CN": "分析客户账户、购买信号与潜在商机，制定销售优先级和后续行动。"
@@ -170,9 +170,9 @@
       },
       "package": {
         "url": "./packages/actively.zip",
-        "sha256": "b1e394df46fd97bdbab7d34b98acc1b22e1d0953130cb7392df4aa9932935b19"
+        "sha256": "87f48b4285c2738b89da8c64483c10995df8175fe92a03b879d88ca7cebf5734"
       },
-      "icon": "./plugins/actively/assets/icon.svg",
+      "icon": "./plugins/actively/assets/icon.png",
       "homepage": "https://www.actively.ai/products/mcp-server",
       "license": "MIT",
       "category": "productivity"
@@ -4438,7 +4438,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "common-room",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Research accounts and contacts, query buyer signals, build prospect lists, and safely write records through Common Room's official hosted MCP.",
         "author": {
           "name": "Common Room",
@@ -4450,7 +4450,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "common-room-docs-a9dbd0442b28+cli-0.1.2-9c87bd173b7e+oauth-325111f2b2c7+auth-83da7abc3978",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Research accounts and contacts, query buyer signals, build prospect lists, and safely write records through Common Room's official hosted MCP.",
               "zh-CN": "研究客户与购买信号，建立潜客列表并更新授权的客户记录。"
@@ -4460,9 +4460,9 @@
       },
       "package": {
         "url": "./packages/common-room.zip",
-        "sha256": "947bf2d87bae1b1f49c76bf2840bb446f4286205821ff6ec9d969528cb221cd1"
+        "sha256": "d0524d08688ee666d80b8457622289b62d2d8c49ad26c0711fb7e626b2956f75"
       },
-      "icon": "./plugins/common-room/assets/icon.svg",
+      "icon": "./plugins/common-room/assets/icon.png",
       "homepage": "https://www.commonroom.io/docs/using-common-room/mcp-server/",
       "license": "MIT",
       "category": "productivity"
@@ -4474,7 +4474,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "conductor",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Analyze AI and traditional search visibility, citations, sentiment, rankings, competitors, and tracked configuration through Conductor's official read-only MCP server.",
         "author": {
           "name": "Conductor Inc.",
@@ -4486,7 +4486,7 @@
           "ai.trapezohe.ghast": {
             "category": "web",
             "upstreamRevision": "conductor-chatgpt-8f616240df58+data-159f29e8eeae+faq-0932a35ad457",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Analyze AI and traditional search visibility, citations, sentiment, rankings, competitors, and tracked configuration through Conductor's official read-only MCP server.",
               "zh-CN": "分析传统搜索与 AI 搜索中的可见性、引用、排名和竞争表现。"
@@ -4496,9 +4496,9 @@
       },
       "package": {
         "url": "./packages/conductor.zip",
-        "sha256": "e37701a90c3ad847df3560501696951abfc971adda2a311b833b89a71856caee"
+        "sha256": "5d1ef708b06117a3e5ffc53dcce802fe18e5201ebf0e38c078515387102f068b"
       },
-      "icon": "./plugins/conductor/assets/icon.svg",
+      "icon": "./plugins/conductor/assets/icon.png",
       "homepage": "https://www.conductor.com/docs/mcp/chatgpt-codex",
       "license": "MIT",
       "category": "web"
@@ -8836,7 +8836,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "happenstance",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Search authorized professional networks, identify warm introduction paths, and research source-linked people profiles through Happenstance's official hosted MCP.",
         "author": {
           "name": "Happenstance, Inc.",
@@ -8848,7 +8848,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "happenstance-docs-0f732ef26d9f+openapi-9f4068c6a679+oauth-d467d4c35bed+auth-8fd1bb79c36c",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Search authorized professional networks, identify warm introduction paths, and research source-linked people profiles through Happenstance's official hosted MCP.",
               "zh-CN": "检索职业关系网络、研究人物资料并寻找引荐路径。"
@@ -8858,9 +8858,9 @@
       },
       "package": {
         "url": "./packages/happenstance.zip",
-        "sha256": "bfdefb72dbd9ab177bc81c6a78e0e062b783f061433e3f60a24629b908dc5c34"
+        "sha256": "ad3131134d15307cba98274997c0cfd2461303fd705804ce4f5bb1b7978a832a"
       },
-      "icon": "./plugins/happenstance/assets/icon.svg",
+      "icon": "./plugins/happenstance/assets/icon.png",
       "homepage": "https://developer.happenstance.ai/mcp/connect",
       "license": "MIT",
       "category": "productivity"
@@ -11551,7 +11551,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "mem",
-        "version": "1.0.2-ghast.1",
+        "version": "1.0.2-ghast.2",
         "description": "Search and manage Mem notes, attachments, recordings, and collections through Mem Labs' official hosted MCP server.",
         "author": {
           "name": "Mem Labs, Inc.",
@@ -11563,7 +11563,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "mem-docs-68ae96105315+oauth-d1a5188d322a+tools-092589b5e1c6+openapi-0626dda21186",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Search and manage Mem notes, attachments, recordings, and collections through Mem Labs' official hosted MCP server.",
               "zh-CN": "检索和管理笔记、附件、录音与知识集合。"
@@ -11573,9 +11573,9 @@
       },
       "package": {
         "url": "./packages/mem.zip",
-        "sha256": "6b2446cb06e0a684ac966dbe5bb15532c90aecfd9239af074bab8ca1904f525a"
+        "sha256": "0488a55a80ad381974da9b6bf0c5b60e512d65d46a1129dc96b9df77d0a47d97"
       },
-      "icon": "./plugins/mem/assets/icon.svg",
+      "icon": "./plugins/mem/assets/icon.png",
       "homepage": "https://docs.mem.ai/mcp/overview",
       "license": "MIT",
       "category": "productivity"
@@ -16054,7 +16054,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "setu-bharat-connect-billpay",
-        "version": "1.0.2-ghast.1",
+        "version": "1.0.2-ghast.2",
         "description": "Discover, fetch, pay, and track Bharat Connect bills through Setu's official hosted Bill Payments MCP.",
         "author": {
           "name": "BrokenTusk Technologies Private Limited (Setu)",
@@ -16067,7 +16067,7 @@
             "category": "finance",
             "upstreamRevision": "setu-guide-ce32831c2bf8+tools-66104c600dec+terms-f28fd487c892+oauth-74076e6e445e+boundary-8707c5830974+openai-1efb564161ff",
             "portStatus": "full",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Discover, fetch, pay, and track Bharat Connect bills through Setu's official hosted Bill Payments MCP.",
               "zh-CN": "查询、支付和跟踪 Bharat Connect 账单。"
@@ -16077,9 +16077,9 @@
       },
       "package": {
         "url": "./packages/setu-bharat-connect-billpay.zip",
-        "sha256": "17088bc4ddd50b707a31019a6da93e70540563b6b0cc84641bbf2325bfc751ea"
+        "sha256": "eeacab1ed7029ad504f094d6e465e6da0472a90ae6d2c9354cffb669d52d5949"
       },
-      "icon": "./plugins/setu-bharat-connect-billpay/assets/icon.svg",
+      "icon": "./plugins/setu-bharat-connect-billpay/assets/icon.png",
       "homepage": "https://docs.setu.co/payments/billpay/mcp/integration-guide",
       "license": "MIT",
       "category": "finance"
@@ -18848,7 +18848,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "waldo",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Research brands, ads, audiences, trends, and workspaces through Waldo's official curated strategy MCP.",
         "author": {
           "name": "Curiosities, Inc. DBA Waldo",
@@ -18861,7 +18861,7 @@
             "category": "productivity",
             "upstreamRevision": "waldo-docs-2467b590ff1b+developers-d93fe7dd2d4b+terms-685dde629e34+resource-d15bb784b8af+oauth-503cc02e147f+boundary-4ad7751110ef",
             "portStatus": "full",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Research brands, ads, audiences, trends, and workspaces through Waldo's official curated strategy MCP.",
               "zh-CN": "研究品牌、广告、受众与趋势，整理策略工作区。"
@@ -18871,9 +18871,9 @@
       },
       "package": {
         "url": "./packages/waldo.zip",
-        "sha256": "38d5d1d3c1a800f6cfdc1a58dead9510bb6f412a8f23d2f43feb60066856ffa6"
+        "sha256": "0944ad0b573c7f2927b7aa6b39a6a6adaa74185b33ca2e7562248da3d79c06d6"
       },
-      "icon": "./plugins/waldo/assets/icon.svg",
+      "icon": "./plugins/waldo/assets/icon.png",
       "homepage": "https://agentic.waldo.fyi/docs/mcp",
       "license": "MIT",
       "category": "productivity"

@@ -46,9 +46,11 @@ secret and does not echo `token_endpoint_auth_method`; this adapter stores no
 client credential and leaves OAuth handling to the host MCP client.
 
 The MIT license in this package covers only the Ghast-authored endpoint
-declaration, safety guidance, metadata, documentation, and generic bill icon.
+declaration, safety guidance, metadata, and documentation.
 It does not license or redistribute Setu's hosted implementation, private
-Codex connector, service data, credentials, documentation, logos, trademarks,
+Codex connector, service data, credentials, documentation, trademark rights,
 marketplace artwork, biller data, or payment-network content. Access, identity
 verification, payments, fees, settlement, refunds, disputes, service limits,
 and terms remain controlled by Setu and the relevant regulated participants.
+
+Brand logo source: https://framerusercontent.com/images/mbFRne9qNTrOhiqc0h2DJuE0FDw.png. Brand names and logos belong to Setu. 品牌名称与标识归对应服务商所有。

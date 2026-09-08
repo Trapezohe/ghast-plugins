@@ -34,8 +34,7 @@ SHA-256 `8f616240df58c8ecf056b6cf2964fa11038899ffcb884a3d725eebfc95ee9003`, offi
 - Missing and invalid Bearer initialize requests were verified to return HTTP
   401 from the official endpoint. Authenticated tools and customer data were
   not accessed because no Conductor token or account was supplied.
-- A generic search-intelligence icon is used because no licensed catalog
-  artwork is included in a public official MCP source repository.
+- Brand logo source: https://www.conductor.com/favicons/apple-touch-icon.png. Brand names and logos belong to Conductor. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Conductor accounts, subscriptions, tool-call allocations, hosted service

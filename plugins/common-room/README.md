@@ -7,9 +7,9 @@ Room's official hosted MCP.
 ## Official hosted MCP adapter
 
 This package contains only Ghast-authored MCP configuration, safety
-instructions, documentation, metadata, and a generic buyer-intelligence icon.
+instructions, documentation, metadata, and the provider brand logo.
 It does not redistribute Common Room's hosted implementation, private Codex
-connector, OAuth credentials, customer or prospect data, branded artwork, or
+connector, OAuth credentials, customer or prospect data, or
 marketplace icon.
 
 Common Room's official MCP guide, CLI guide, and MCP and CLI product page are
@@ -79,8 +79,7 @@ Codex marketplace capability evidence is pinned to OpenAI plugin snapshot
 - Authenticated tools/list, workspace data, prospecting, CRM reads, record
   writes, feedback submission, and CLI authentication were not exercised
   because no Common Room account or customer data was used.
-- A generic buyer-intelligence icon is used because no licensed Common Room
-  catalog artwork is redistributed.
+- Brand logo source: https://www.commonroom.io/static/meta/apple-touch-icon.png. Brand names and logos belong to Common Room. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 The separate Common Room CLI remains Apache-2.0. Common Room accounts, plans,

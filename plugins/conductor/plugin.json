@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "conductor",
-  "version": "1.0.3-ghast.1",
+  "version": "1.0.3-ghast.2",
   "description": "Analyze AI and traditional search visibility, citations, sentiment, rankings, competitors, and tracked configuration through Conductor's official read-only MCP server.",
   "author": {
     "name": "Conductor Inc.",
@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "web",
       "upstreamRevision": "conductor-chatgpt-8f616240df58+data-159f29e8eeae+faq-0932a35ad457",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Analyze AI and traditional search visibility, citations, sentiment, rankings, competitors, and tracked configuration through Conductor's official read-only MCP server.",
         "zh-CN": "分析传统搜索与 AI 搜索中的可见性、引用、排名和竞争表现。"

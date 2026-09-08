@@ -7,10 +7,9 @@ MCP server.
 ## Official hosted MCP adapter
 
 This package contains only Ghast-authored MCP configuration, safety
-instructions, documentation, catalog metadata, and a generic notebook icon.
+instructions, documentation, catalog metadata, and the provider brand logo.
 It does not copy or redistribute Mem's hosted implementation, private Codex
-connector, app ID, service source, user data, credentials, trademarks, branded
-artwork, or marketplace icon.
+connector, app ID, service source, user data, credentials, or marketplace icon.
 
 The official overview, setup, supported-tools, and security documents are
 pinned at SHA-256 values `d24c792129dd3bdec5cd4425eafeb91cf3203f427b7eedcfe82c217ebae3285e`, `f45d563657916fefe2e2c5f8524994046798ebcdcf1febe9f34fd992c2472e0e`,
@@ -43,8 +42,7 @@ is pinned at canonical SHA-256 `092589b5e1c61a46e228b09e4d2088c3105329af1d3edc50
 - A one-time disposable loopback public client registered with HTTP 201 and
   no client secret. Routine imports do not repeat registration or retain a
   client ID.
-- A generic notebook-search icon is used because no licensed Mem catalog art
-  is included in a public official source repository.
+- Brand logo source: https://mem.ai/favicons/apple-touch-icon-180x180.png. Brand names and logos belong to Mem. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the independently authored
 Ghast adapter. Mem accounts, hosted service behavior, APIs, data, permissions,

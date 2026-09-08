@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "happenstance",
-  "version": "1.0.3-ghast.1",
+  "version": "1.0.3-ghast.2",
   "description": "Search authorized professional networks, identify warm introduction paths, and research source-linked people profiles through Happenstance's official hosted MCP.",
   "author": {
     "name": "Happenstance, Inc.",
@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "productivity",
       "upstreamRevision": "happenstance-docs-0f732ef26d9f+openapi-9f4068c6a679+oauth-d467d4c35bed+auth-8fd1bb79c36c",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Search authorized professional networks, identify warm introduction paths, and research source-linked people profiles through Happenstance's official hosted MCP.",
         "zh-CN": "检索职业关系网络、研究人物资料并寻找引荐路径。"

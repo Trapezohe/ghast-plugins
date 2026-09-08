@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "setu-bharat-connect-billpay",
-  "version": "1.0.2-ghast.1",
+  "version": "1.0.2-ghast.2",
   "description": "Discover, fetch, pay, and track Bharat Connect bills through Setu's official hosted Bill Payments MCP.",
   "author": {
     "name": "BrokenTusk Technologies Private Limited (Setu)",
@@ -14,7 +14,7 @@
       "category": "finance",
       "upstreamRevision": "setu-guide-ce32831c2bf8+tools-66104c600dec+terms-f28fd487c892+oauth-74076e6e445e+boundary-8707c5830974+openai-1efb564161ff",
       "portStatus": "full",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Discover, fetch, pay, and track Bharat Connect bills through Setu's official hosted Bill Payments MCP.",
         "zh-CN": "查询、支付和跟踪 Bharat Connect 账单。"

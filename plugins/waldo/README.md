@@ -55,7 +55,9 @@ authentication boundary. Authenticated tools/list and data queries were not
 run because no Waldo account was supplied.
 
 The bundled MIT license covers only the independently authored Ghast endpoint
-declaration, skill, metadata, documentation, and generic signal-research icon.
+declaration, skill, metadata, and documentation.
 It does not license or redistribute Waldo's hosted implementation, data,
 analysis, documentation text, private connector, credentials, responses,
-logos, trademarks, or customer content.
+trademark rights, or customer content.
+
+Brand logo source: https://www.waldo.fyi/apple-icon.png?ba0d0b84d11774b3. Brand names and logos belong to Waldo. 品牌名称与标识归对应服务商所有。

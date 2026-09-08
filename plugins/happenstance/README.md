@@ -7,10 +7,9 @@ hosted MCP server.
 ## Official hosted MCP adapter
 
 This package contains only Ghast-authored MCP configuration, safety
-instructions, documentation, metadata, and a generic network-research icon.
+instructions, documentation, metadata, and the provider brand logo.
 It does not redistribute Happenstance's hosted implementation, private Codex
-connector, OAuth credentials, professional-network data, source skill,
-branded artwork, or marketplace icon.
+connector, OAuth credentials, professional-network data, source skill, or marketplace icon.
 
 Happenstance's official MCP guide, coding-client guide, documentation index,
 and OpenAPI document are pinned at raw SHA-256
@@ -73,8 +72,7 @@ marketplace artwork.
 - Authenticated tools/list, professional-network data, billable searches,
   research, and checkout creation were not run because no Happenstance
   account or user data was used.
-- A generic network-research icon is used because no licensed Happenstance
-  catalog artwork is redistributed.
+- Brand logo source: https://happenstance.ai/apple-icon.png?apple-icon.0q-n3nqjtoj96.png. Brand names and logos belong to Happenstance. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Happenstance accounts, credits, hosted service behavior, professional-

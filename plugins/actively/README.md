@@ -39,8 +39,7 @@ metadata is pinned at canonical JSON SHA-256
 - The included skill treats CRM, email, call, and external-signal data as
   sensitive and untrusted, requires evidence-backed rankings, and guards any
   state-changing tool that an authenticated workspace may expose.
-- A generic account-intelligence icon is used because no licensed catalog
-  artwork is included in a public official MCP source repository.
+- Brand logo source: https://framerusercontent.com/images/8xitwGVHJcaYHHqgm2hMTQcyg.png. Brand names and logos belong to Actively. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Actively accounts, provisioning, hosted service behavior, customer data,
