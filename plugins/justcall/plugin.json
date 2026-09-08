@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "justcall",
+  "version": "1.0.0-ghast.1",
+  "description": "Use JustCall’s official MCP for calls, messages, contacts, agent availability, analytics and authorized sales communication workflows.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.justcall.io/docs/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developer.justcall.io/docs/mcp",
+      "connectorPublisher": "JustCall",
+      "category": "communication",
+      "icon": "./assets/icon.png",
+      "displayName": "JustCall",
+      "descriptions": {
+        "en": "Use JustCall’s official MCP for calls, messages, contacts, agent availability, analytics and authorized sales communication workflows.",
+        "zh-CN": "通过 JustCall 官方 MCP 处理通话、消息、联系人、坐席状态、分析及已授权的销售沟通工作流。"
+      },
+      "mcpServerExtensions": {
+        "justcall": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:justcall-token"
+          }
+        }
+      }
+    }
+  }
+}

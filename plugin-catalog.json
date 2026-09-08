@@ -8977,6 +8977,51 @@
       "category": "productivity"
     },
     {
+      "id": "justcall",
+      "name": "JustCall",
+      "description": "Use JustCall’s official MCP for calls, messages, contacts, agent availability, analytics and authorized sales communication workflows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "justcall",
+        "version": "1.0.0-ghast.1",
+        "description": "Use JustCall’s official MCP for calls, messages, contacts, agent availability, analytics and authorized sales communication workflows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.justcall.io/docs/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.justcall.io/docs/mcp",
+            "connectorPublisher": "JustCall",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "JustCall",
+            "descriptions": {
+              "en": "Use JustCall’s official MCP for calls, messages, contacts, agent availability, analytics and authorized sales communication workflows.",
+              "zh-CN": "通过 JustCall 官方 MCP 处理通话、消息、联系人、坐席状态、分析及已授权的销售沟通工作流。"
+            },
+            "mcpServerExtensions": {
+              "justcall": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:justcall-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/justcall.zip",
+        "sha256": "9f3fbc787240ee336f1e3ca1994d76944eddafd5795f20f8b3dfbce30c7b7adb"
+      },
+      "icon": "./plugins/justcall/assets/icon.png",
+      "homepage": "https://developer.justcall.io/docs/mcp",
+      "license": "MIT",
+      "category": "communication"
+    },
+    {
       "id": "kittl",
       "name": "Kittl",
       "description": "Create images, videos and design assets and run creative workflows in Kittl.",
@@ -12693,6 +12738,44 @@
       "icon": "./plugins/realtime-weather/assets/icon.svg",
       "homepage": "https://github.com/Trapezohe/ghast-plugins/tree/main/plugins/realtime-weather",
       "category": "information"
+    },
+    {
+      "id": "reclaim",
+      "name": "Reclaim.ai",
+      "description": "Connect Reclaim’s official MCP to analyze workload, find meeting time and stage calendar changes for review in Reclaim 2.0.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "reclaim",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Reclaim’s official MCP to analyze workload, find meeting time and stage calendar changes for review in Reclaim 2.0.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.reclaim.ai/en/articles/15280604-reclaim-2-0-faq",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.reclaim.ai/en/articles/15280604-reclaim-2-0-faq",
+            "connectorPublisher": "Reclaim.ai",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Reclaim.ai",
+            "descriptions": {
+              "en": "Connect Reclaim’s official MCP to analyze workload, find meeting time and stage calendar changes for review in Reclaim 2.0.",
+              "zh-CN": "连接 Reclaim 官方 MCP，分析工作负载、寻找会议时间，并在 Reclaim 2.0 中暂存日历变更供审阅。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/reclaim.zip",
+        "sha256": "e56e14153f25b172c24271d8ea1e5f9c75458a9a27ab4c295ddadc17107161d6"
+      },
+      "icon": "./plugins/reclaim/assets/icon.png",
+      "homepage": "https://help.reclaim.ai/en/articles/15280604-reclaim-2-0-faq",
+      "license": "MIT",
+      "category": "productivity"
     },
     {
       "id": "recraft",
@@ -16520,6 +16603,58 @@
       "homepage": "https://github.com/wandb/wandb-mcp-server",
       "license": "MIT",
       "category": "data"
+    },
+    {
+      "id": "webex",
+      "name": "Webex",
+      "description": "Connect Cisco’s official Webex MCP services for meetings, team messaging, Vidcast videos and workspace intelligence.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "webex",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Cisco’s official Webex MCP services for meetings, team messaging, Vidcast videos and workspace intelligence.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.webex.com/mcp/docs/webex-agentic-mcp-servers",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.webex.com/mcp/docs/webex-agentic-mcp-servers",
+            "connectorPublisher": "Webex",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "Webex",
+            "descriptions": {
+              "en": "Connect Cisco’s official Webex MCP services for meetings, team messaging, Vidcast videos and workspace intelligence.",
+              "zh-CN": "连接思科官方 Webex MCP，处理会议、团队消息、Vidcast 视频及工作空间设备洞察。"
+            },
+            "mcpServerExtensions": {
+              "webex": {
+                "oauthClientRequired": true
+              },
+              "webex-messaging": {
+                "oauthClientRequired": true
+              },
+              "webex-vidcast": {
+                "oauthClientRequired": true
+              },
+              "webex-workspaces": {
+                "oauthClientRequired": true
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/webex.zip",
+        "sha256": "53c8435959da3c7cfddfb7c7f5700c1014990cfb688e081e86da3ff3b5a7f8ab"
+      },
+      "icon": "./plugins/webex/assets/icon.png",
+      "homepage": "https://developer.webex.com/mcp/docs/webex-agentic-mcp-servers",
+      "license": "MIT",
+      "category": "communication"
     },
     {
       "id": "webflow",

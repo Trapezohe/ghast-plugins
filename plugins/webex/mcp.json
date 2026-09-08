@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "webex": {
+      "type": "streamable-http",
+      "url": "https://mcp.webexapis.com/mcp/webex-meeting"
+    },
+    "webex-messaging": {
+      "type": "streamable-http",
+      "url": "https://mcp.webexapis.com/mcp/webex-messaging"
+    },
+    "webex-vidcast": {
+      "type": "streamable-http",
+      "url": "https://mcp.webexapis.com/mcp/vidcast"
+    },
+    "webex-workspaces": {
+      "type": "streamable-http",
+      "url": "https://mcp.webexapis.com/mcp/workspaces"
+    }
+  }
+}

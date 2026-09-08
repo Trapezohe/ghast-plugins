@@ -1,0 +1,39 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "webex",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Cisco’s official Webex MCP services for meetings, team messaging, Vidcast videos and workspace intelligence.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.webex.com/mcp/docs/webex-agentic-mcp-servers",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developer.webex.com/mcp/docs/webex-agentic-mcp-servers",
+      "connectorPublisher": "Webex",
+      "category": "communication",
+      "icon": "./assets/icon.png",
+      "displayName": "Webex",
+      "descriptions": {
+        "en": "Connect Cisco’s official Webex MCP services for meetings, team messaging, Vidcast videos and workspace intelligence.",
+        "zh-CN": "连接思科官方 Webex MCP，处理会议、团队消息、Vidcast 视频及工作空间设备洞察。"
+      },
+      "mcpServerExtensions": {
+        "webex": {
+          "oauthClientRequired": true
+        },
+        "webex-messaging": {
+          "oauthClientRequired": true
+        },
+        "webex-vidcast": {
+          "oauthClientRequired": true
+        },
+        "webex-workspaces": {
+          "oauthClientRequired": true
+        }
+      }
+    }
+  }
+}
