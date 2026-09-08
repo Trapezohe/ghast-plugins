@@ -13889,6 +13889,47 @@
       "category": "data"
     },
     {
+      "id": "ponytail",
+      "name": "Ponytail",
+      "description": "Apply Ponytail’s minimal-code rules through Ghast lifecycle hooks, with per-conversation modes and subagent inheritance.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "ponytail",
+        "version": "4.9.0-ghast.1",
+        "description": "Apply Ponytail’s minimal-code rules through Ghast lifecycle hooks, with per-conversation modes and subagent inheritance.",
+        "author": {
+          "name": "Dietrich Gebert",
+          "url": "https://github.com/DietrichGebert"
+        },
+        "homepage": "https://github.com/DietrichGebert/ponytail",
+        "repository": "https://github.com/DietrichGebert/ponytail",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "displayName": "Ponytail",
+            "category": "developer-tools",
+            "icon": "./assets/icon.png",
+            "hooks": "./hooks/hooks.json",
+            "officialConnectorSource": "https://github.com/DietrichGebert/ponytail",
+            "upstreamRevision": "356918eba965ee1eac64bd3a7f0dd02108350de5",
+            "descriptions": {
+              "en": "Apply Ponytail’s minimal-code rules through Ghast lifecycle hooks, with per-conversation modes and subagent inheritance.",
+              "zh-CN": "通过 Ghast 生命周期 Hook 注入 Ponytail 极简编码规则，支持会话独立模式与子代理继承。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/ponytail.zip",
+        "sha256": "64afd24b88cfea632fd4e23a99900ea9604bbe08c522ce2a0aa97ebd016d4e92"
+      },
+      "icon": "./plugins/ponytail/assets/icon.png",
+      "homepage": "https://github.com/DietrichGebert/ponytail",
+      "repository": "https://github.com/DietrichGebert/ponytail",
+      "license": "MIT",
+      "category": "developer-tools"
+    },
+    {
       "id": "posthog",
       "name": "posthog",
       "description": "Analyze and manage PostHog analytics, flags, experiments, errors, replays, surveys, dashboards, SQL, AI observability, data pipelines, and product workflows through PostHog's official hosted MCP server.",

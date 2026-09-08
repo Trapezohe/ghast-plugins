@@ -148,6 +148,33 @@ def validate_sources(errors: list[str]) -> dict[str, dict]:
         ghast = (manifest.get("extensions") or {}).get(GHAST_NAMESPACE, {})
         if ghast.get("category") not in CATEGORIES | CATEGORY_ALIASES.keys():
             errors.append(f"{manifest_path}: unknown plugin category {ghast.get('category')!r}")
+        if "hooks" in ghast:
+            declared = ghast["hooks"]
+            hook_path = plugin_dir / declared if isinstance(declared, str) else plugin_dir
+            if not isinstance(declared, str) or not declared or Path(declared).is_absolute() or not hook_path.resolve().is_relative_to(plugin_dir.resolve()):
+                errors.append(f"{manifest_path}: hooks must be a relative path inside the plugin")
+            else:
+                config = load_json(hook_path, errors)
+                hooks = config.get("hooks") if isinstance(config, dict) else None
+                if not isinstance(hooks, dict) or not hooks:
+                    errors.append(f"{hook_path}: non-empty hooks map required")
+                else:
+                    for event, groups in hooks.items():
+                        if event not in {"SessionStart", "UserPromptSubmit", "SubagentStart"}:
+                            errors.append(f"{hook_path}: unsupported event {event}")
+                        if not isinstance(groups, list) or not groups:
+                            errors.append(f"{hook_path}: non-empty event groups required")
+                            continue
+                        for group in groups:
+                            commands = group.get("hooks") if isinstance(group, dict) else None
+                            if not isinstance(commands, list) or not commands:
+                                errors.append(f"{hook_path}: non-empty command list required")
+                                continue
+                            for command in commands:
+                                if not isinstance(command, dict) or command.get("type") != "command" or not isinstance(command.get("command"), str) or not command["command"].strip():
+                                    errors.append(f"{hook_path}: command hook required")
+                                elif not isinstance(command.get("timeout", 10), (int, float)) or not 0 < command.get("timeout", 10) <= 30:
+                                    errors.append(f"{hook_path}: timeout must be 0 < seconds <= 30")
         descriptions = ghast.get("descriptions")
         if not isinstance(descriptions, dict) or any(
             not isinstance(descriptions.get(locale), str) or not descriptions[locale].strip()
