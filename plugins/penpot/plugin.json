@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "penpot",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Penpot’s official local MCP to inspect designs, work with components and tokens, and import or export design assets.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://help.penpot.app/mcp/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://help.penpot.app/mcp/",
+      "connectorPublisher": "Penpot",
+      "category": "design",
+      "icon": "./assets/icon.png",
+      "displayName": "Penpot",
+      "descriptions": {
+        "en": "Connect Penpot’s official local MCP to inspect designs, work with components and tokens, and import or export design assets.",
+        "zh-CN": "连接 Penpot 官方本地 MCP，检查设计、处理组件与设计令牌，并导入或导出设计素材。"
+      }
+    }
+  }
+}
