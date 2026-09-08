@@ -43,9 +43,9 @@ jobs:
           PLUGIN: ${{ inputs.plugin }}
         shell: bash
         run: |
-          args=()
-          if [[ -n "$PLUGIN" ]]; then args+=(--plugin "$PLUGIN"); fi
-          python scripts/maintain-upstreams.py --apply --output maintenance-report.json "${args[@]}"
+          args=(--apply)
+          if [[ -n "$PLUGIN" ]]; then args=(--plugin "$PLUGIN"); fi
+          python scripts/maintain-upstreams.py --output maintenance-report.json "${args[@]}"
       - name: Build and validate prepared files
         run: |
           python scripts/maintenance-report.py maintenance-report.json
@@ -53,6 +53,7 @@ jobs:
           python scripts/maintain-upstreams.py --validate
           python scripts/validate-ghast-repository.py
       - name: Open or refresh the single maintenance PR
+        if: inputs.plugin == ''
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}

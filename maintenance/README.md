@@ -1,7 +1,8 @@
 # Official upstream maintenance / 官方来源维护
 
 The workflow `Maintain official upstreams` runs daily at 20:23 UTC (04:23 Asia/Singapore).
-It also supports manual dispatch with an optional plugin ID. It needs no user account
+It also supports manual dispatch with an optional plugin ID. A single-plugin dispatch
+is read-only and does not replace the full pending maintenance PR. It needs no user account
 credentials for connectors. It checks only the official sources already recorded in
 the reviewed plugin metadata; a source record does not replace ownership verification.
 
