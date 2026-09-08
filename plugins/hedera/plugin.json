@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "hedera",
+  "version": "1.0.0-ghast.1",
+  "description": "Use Hedera’s official documentation and Testnet MCP for network queries and unsigned transaction preparation.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://hedera.com/mcp-servers/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://hedera.com/mcp-servers/",
+      "connectorPublisher": "Hedera",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Hedera",
+      "descriptions": {
+        "en": "Use Hedera’s official documentation and Testnet MCP for network queries and unsigned transaction preparation.",
+        "zh-CN": "使用 Hedera 官方文档与测试网 MCP，查询网络数据并准备未签名交易。"
+      },
+      "mcpServerExtensions": {
+        "hedera": {
+          "credentialHeaders": {
+            "x-hedera-account-id": "$VAULT:hedera-account-id"
+          }
+        }
+      }
+    }
+  }
+}
