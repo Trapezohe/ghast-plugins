@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "graphlit",
+  "version": "1.0.0-ghast.1",
+  "description": "Use Graphlit’s official MCP to retrieve project knowledge, search content, organize collections and build content workflows.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/graphlit/graphlit-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/graphlit/graphlit-mcp-server",
+      "connectorPublisher": "Graphlit",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Graphlit",
+      "descriptions": {
+        "en": "Use Graphlit’s official MCP to retrieve project knowledge, search content, organize collections and build content workflows.",
+        "zh-CN": "通过 Graphlit 官方 MCP 检索项目知识、搜索内容、整理集合并构建内容工作流。"
+      },
+      "mcpServerExtensions": {
+        "graphlit": {
+          "credentialEnv": {
+            "GRAPHLIT_ORGANIZATION_ID": "$VAULT:graphlit-organization-id",
+            "GRAPHLIT_ENVIRONMENT_ID": "$VAULT:graphlit-environment-id",
+            "GRAPHLIT_JWT_SECRET": "$VAULT:graphlit-jwt-secret"
+          }
+        }
+      }
+    }
+  }
+}

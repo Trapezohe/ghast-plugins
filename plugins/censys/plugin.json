@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "censys",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Censys’s official Platform MCP for internet asset research, host history, certificates and exposure investigation.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.censys.com/docs/platform-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.censys.com/docs/platform-mcp-server",
+      "connectorPublisher": "Censys",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Censys",
+      "descriptions": {
+        "en": "Connect Censys’s official Platform MCP for internet asset research, host history, certificates and exposure investigation.",
+        "zh-CN": "连接 Censys 官方 Platform MCP，研究互联网资产、主机历史、证书和暴露面。"
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "writer",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect WRITER’s official MCP for content generation, translation, file processing and knowledge graph workflows.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://dev.writer.com/home/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://dev.writer.com/home/mcp-server",
+      "connectorPublisher": "WRITER",
+      "category": "creative",
+      "icon": "./assets/icon.png",
+      "displayName": "WRITER",
+      "descriptions": {
+        "en": "Connect WRITER’s official MCP for content generation, translation, file processing and knowledge graph workflows.",
+        "zh-CN": "连接 WRITER 官方 MCP，进行内容生成、翻译、文件处理和知识图谱工作。"
+      },
+      "mcpServerExtensions": {
+        "writer": {
+          "credentialEnv": {
+            "WRITER_API_KEY": "$VAULT:writer-api-key"
+          }
+        }
+      }
+    }
+  }
+}

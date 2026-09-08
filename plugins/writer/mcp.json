@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "writer": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "writer-sdk-mcp@2.3.2",
+        "--tools=all",
+        "--no-tools=docs"
+      ],
+      "cwd": "${PLUGIN_DATA}"
+    }
+  }
+}

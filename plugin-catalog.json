@@ -2938,6 +2938,44 @@
       "category": "finance"
     },
     {
+      "id": "censys",
+      "name": "Censys",
+      "description": "Connect Censys’s official Platform MCP for internet asset research, host history, certificates and exposure investigation.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "censys",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Censys’s official Platform MCP for internet asset research, host history, certificates and exposure investigation.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.censys.com/docs/platform-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.censys.com/docs/platform-mcp-server",
+            "connectorPublisher": "Censys",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Censys",
+            "descriptions": {
+              "en": "Connect Censys’s official Platform MCP for internet asset research, host history, certificates and exposure investigation.",
+              "zh-CN": "连接 Censys 官方 Platform MCP，研究互联网资产、主机历史、证书和暴露面。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/censys.zip",
+        "sha256": "6b3a95173f188fe9cde66d3881f7a0f0f8a74dde52b4d2dedb247b18428b4e85"
+      },
+      "icon": "./plugins/censys/assets/icon.png",
+      "homepage": "https://docs.censys.com/docs/platform-mcp-server",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "chainstack",
       "name": "Chainstack",
       "description": "Inspect blockchain infrastructure, search documentation and manage Chainstack nodes.",
@@ -7886,6 +7924,53 @@
       "homepage": "https://docs.granola.ai/help-center/sharing/integrations/mcp",
       "license": "MIT",
       "category": "communication"
+    },
+    {
+      "id": "graphlit",
+      "name": "Graphlit",
+      "description": "Use Graphlit’s official MCP to retrieve project knowledge, search content, organize collections and build content workflows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "graphlit",
+        "version": "1.0.0-ghast.1",
+        "description": "Use Graphlit’s official MCP to retrieve project knowledge, search content, organize collections and build content workflows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/graphlit/graphlit-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/graphlit/graphlit-mcp-server",
+            "connectorPublisher": "Graphlit",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Graphlit",
+            "descriptions": {
+              "en": "Use Graphlit’s official MCP to retrieve project knowledge, search content, organize collections and build content workflows.",
+              "zh-CN": "通过 Graphlit 官方 MCP 检索项目知识、搜索内容、整理集合并构建内容工作流。"
+            },
+            "mcpServerExtensions": {
+              "graphlit": {
+                "credentialEnv": {
+                  "GRAPHLIT_ORGANIZATION_ID": "$VAULT:graphlit-organization-id",
+                  "GRAPHLIT_ENVIRONMENT_ID": "$VAULT:graphlit-environment-id",
+                  "GRAPHLIT_JWT_SECRET": "$VAULT:graphlit-jwt-secret"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/graphlit.zip",
+        "sha256": "b533d05b811509745de08dee27c531cc0bdd5922e50a37e984c4f1ed6f09a96e"
+      },
+      "icon": "./plugins/graphlit/assets/icon.png",
+      "homepage": "https://github.com/graphlit/graphlit-mcp-server",
+      "license": "MIT",
+      "category": "productivity"
     },
     {
       "id": "greenhouse",
@@ -17655,6 +17740,51 @@
       "homepage": "https://developers.wrike.com/docs/setup-other-mcp-clients-with-wrike-mcp",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "writer",
+      "name": "WRITER",
+      "description": "Connect WRITER’s official MCP for content generation, translation, file processing and knowledge graph workflows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "writer",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect WRITER’s official MCP for content generation, translation, file processing and knowledge graph workflows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://dev.writer.com/home/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://dev.writer.com/home/mcp-server",
+            "connectorPublisher": "WRITER",
+            "category": "creative",
+            "icon": "./assets/icon.png",
+            "displayName": "WRITER",
+            "descriptions": {
+              "en": "Connect WRITER’s official MCP for content generation, translation, file processing and knowledge graph workflows.",
+              "zh-CN": "连接 WRITER 官方 MCP，进行内容生成、翻译、文件处理和知识图谱工作。"
+            },
+            "mcpServerExtensions": {
+              "writer": {
+                "credentialEnv": {
+                  "WRITER_API_KEY": "$VAULT:writer-api-key"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/writer.zip",
+        "sha256": "86e567c4868d3a6c723c8aecd32020ee3a59ad0634969d2963a1fa9d805973c2"
+      },
+      "icon": "./plugins/writer/assets/icon.png",
+      "homepage": "https://dev.writer.com/home/mcp-server",
+      "license": "MIT",
+      "category": "creative"
     },
     {
       "id": "xata",
