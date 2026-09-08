@@ -11347,6 +11347,44 @@
       "category": "productivity"
     },
     {
+      "id": "mapbox",
+      "name": "Mapbox",
+      "description": "Find addresses and places, plan routes and create map visualizations through Mapbox’s official hosted MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "mapbox",
+        "version": "1.0.0-ghast.1",
+        "description": "Find addresses and places, plan routes and create map visualizations through Mapbox’s official hosted MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.mapbox.com/api/guides/mcp-server/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.mapbox.com/api/guides/mcp-server/",
+            "connectorPublisher": "Mapbox",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Mapbox",
+            "descriptions": {
+              "en": "Find addresses and places, plan routes and create map visualizations through Mapbox’s official hosted MCP.",
+              "zh-CN": "通过 Mapbox 官方托管 MCP 查找地址与地点、规划路线并生成地图可视化。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/mapbox.zip",
+        "sha256": "6c0546af39bf4de1b337dd971cc0a404916616c62463224f04bbff8cb0451ba0"
+      },
+      "icon": "./plugins/mapbox/assets/icon.png",
+      "homepage": "https://docs.mapbox.com/api/guides/mcp-server/",
+      "license": "MIT",
+      "category": "data"
+    },
+    {
       "id": "marcopolo",
       "name": "marcopolo",
       "description": "Work with governed company data in MarcoPolo's secure, persistent remote workspace using the official MCP server and Apache-2.0 workflow skills.",
