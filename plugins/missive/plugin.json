@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "missive",
+  "version": "1.0.0-ghast.1",
+  "description": "Use Missive’s official MCP to search shared inbox conversations and work with contacts, calendars and drafts under your chosen permissions.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://missiveapp.com/docs/ai/mcp/server/connect",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://missiveapp.com/docs/ai/mcp/server/connect",
+      "connectorPublisher": "Missive",
+      "category": "communication",
+      "icon": "./assets/icon.png",
+      "displayName": "Missive",
+      "descriptions": {
+        "en": "Use Missive’s official MCP to search shared inbox conversations and work with contacts, calendars and drafts under your chosen permissions.",
+        "zh-CN": "通过 Missive 官方 MCP 检索共享收件箱会话，并在所选权限内处理联系人、日历与草稿。"
+      }
+    }
+  }
+}

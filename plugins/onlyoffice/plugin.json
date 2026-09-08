@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "onlyoffice",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect ONLYOFFICE’s official DocSpace MCP to work with files, folders, collaboration rooms and document workflows.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.onlyoffice.com/blog/2026/01/remote-onlyoffice-docspace-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.onlyoffice.com/blog/2026/01/remote-onlyoffice-docspace-mcp-server",
+      "connectorPublisher": "ONLYOFFICE DocSpace",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "ONLYOFFICE DocSpace",
+      "descriptions": {
+        "en": "Connect ONLYOFFICE’s official DocSpace MCP to work with files, folders, collaboration rooms and document workflows.",
+        "zh-CN": "连接 ONLYOFFICE 官方 DocSpace MCP，处理文件、文件夹、协作空间与文档工作流。"
+      }
+    }
+  }
+}

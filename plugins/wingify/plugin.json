@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "wingify",
+  "version": "1.0.0-ghast.1",
+  "description": "Analyze Wingify experiments, campaign reports, heatmaps and session recordings through its official global MCP connection.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://help.wingify.com/hc/en-us/articles/58792565345305-Connect-Wingify-with-AI-Tools-using-Wingify-s-MCP-Server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://help.wingify.com/hc/en-us/articles/58792565345305-Connect-Wingify-with-AI-Tools-using-Wingify-s-MCP-Server",
+      "connectorPublisher": "Wingify",
+      "category": "marketing",
+      "icon": "./assets/icon.png",
+      "displayName": "Wingify",
+      "descriptions": {
+        "en": "Analyze Wingify experiments, campaign reports, heatmaps and session recordings through its official global MCP connection.",
+        "zh-CN": "通过 Wingify 官方全局 MCP 连接分析实验、活动报表、热力图与会话录屏。"
+      }
+    }
+  }
+}

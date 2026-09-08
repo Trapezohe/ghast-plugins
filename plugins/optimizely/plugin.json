@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "optimizely",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Optimizely’s official CMS SaaS MCP to inspect content types, audit content and perform authorized site content workflows.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.developers.optimizely.com/content-management-system/v1.0.0-CMS-SaaS/docs/configure-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.developers.optimizely.com/content-management-system/v1.0.0-CMS-SaaS/docs/configure-mcp-server",
+      "connectorPublisher": "Optimizely CMS",
+      "category": "marketing",
+      "icon": "./assets/icon.png",
+      "displayName": "Optimizely CMS",
+      "descriptions": {
+        "en": "Connect Optimizely’s official CMS SaaS MCP to inspect content types, audit content and perform authorized site content workflows.",
+        "zh-CN": "连接 Optimizely 官方 CMS SaaS MCP，查看内容类型、审查内容并执行已授权的网站内容工作流。"
+      }
+    }
+  }
+}

@@ -10433,6 +10433,44 @@
       "category": "creativity"
     },
     {
+      "id": "missive",
+      "name": "Missive",
+      "description": "Use Missive’s official MCP to search shared inbox conversations and work with contacts, calendars and drafts under your chosen permissions.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "missive",
+        "version": "1.0.0-ghast.1",
+        "description": "Use Missive’s official MCP to search shared inbox conversations and work with contacts, calendars and drafts under your chosen permissions.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://missiveapp.com/docs/ai/mcp/server/connect",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://missiveapp.com/docs/ai/mcp/server/connect",
+            "connectorPublisher": "Missive",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "Missive",
+            "descriptions": {
+              "en": "Use Missive’s official MCP to search shared inbox conversations and work with contacts, calendars and drafts under your chosen permissions.",
+              "zh-CN": "通过 Missive 官方 MCP 检索共享收件箱会话，并在所选权限内处理联系人、日历与草稿。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/missive.zip",
+        "sha256": "ba082679601856cdaf914255d954cd7ec894b909b5043c196866c8fd286edc83"
+      },
+      "icon": "./plugins/missive/assets/icon.png",
+      "homepage": "https://missiveapp.com/docs/ai/mcp/server/connect",
+      "license": "MIT",
+      "category": "communication"
+    },
+    {
       "id": "mixpanel",
       "name": "mixpanel",
       "description": "Analyze Mixpanel data and manage dashboards, Lexicon, data quality, experiments, feature flags, metrics, cohorts, and business context through Mixpanel's official skills and hosted MCP server.",
@@ -11291,6 +11329,82 @@
       "homepage": "https://docs.omni.co/ai/mcp",
       "license": "MIT",
       "category": "data"
+    },
+    {
+      "id": "onlyoffice",
+      "name": "ONLYOFFICE DocSpace",
+      "description": "Connect ONLYOFFICE’s official DocSpace MCP to work with files, folders, collaboration rooms and document workflows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "onlyoffice",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect ONLYOFFICE’s official DocSpace MCP to work with files, folders, collaboration rooms and document workflows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.onlyoffice.com/blog/2026/01/remote-onlyoffice-docspace-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.onlyoffice.com/blog/2026/01/remote-onlyoffice-docspace-mcp-server",
+            "connectorPublisher": "ONLYOFFICE DocSpace",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "ONLYOFFICE DocSpace",
+            "descriptions": {
+              "en": "Connect ONLYOFFICE’s official DocSpace MCP to work with files, folders, collaboration rooms and document workflows.",
+              "zh-CN": "连接 ONLYOFFICE 官方 DocSpace MCP，处理文件、文件夹、协作空间与文档工作流。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/onlyoffice.zip",
+        "sha256": "ddd2cfbb76549e67230332bd6e5f76570a6d8951a2f300ab7a0eb00338e087c3"
+      },
+      "icon": "./plugins/onlyoffice/assets/icon.png",
+      "homepage": "https://www.onlyoffice.com/blog/2026/01/remote-onlyoffice-docspace-mcp-server",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
+      "id": "optimizely",
+      "name": "Optimizely CMS",
+      "description": "Connect Optimizely’s official CMS SaaS MCP to inspect content types, audit content and perform authorized site content workflows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "optimizely",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Optimizely’s official CMS SaaS MCP to inspect content types, audit content and perform authorized site content workflows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.developers.optimizely.com/content-management-system/v1.0.0-CMS-SaaS/docs/configure-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.developers.optimizely.com/content-management-system/v1.0.0-CMS-SaaS/docs/configure-mcp-server",
+            "connectorPublisher": "Optimizely CMS",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "Optimizely CMS",
+            "descriptions": {
+              "en": "Connect Optimizely’s official CMS SaaS MCP to inspect content types, audit content and perform authorized site content workflows.",
+              "zh-CN": "连接 Optimizely 官方 CMS SaaS MCP，查看内容类型、审查内容并执行已授权的网站内容工作流。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/optimizely.zip",
+        "sha256": "9db894526a12fd8e3036e7f73068583cb518007983c109919495519236370e52"
+      },
+      "icon": "./plugins/optimizely/assets/icon.png",
+      "homepage": "https://docs.developers.optimizely.com/content-management-system/v1.0.0-CMS-SaaS/docs/configure-mcp-server",
+      "license": "MIT",
+      "category": "marketing"
     },
     {
       "id": "otter-ai",
@@ -16552,6 +16666,44 @@
       "repository": "https://github.com/windsor-ai/windsor_mcp",
       "license": "MIT",
       "category": "data"
+    },
+    {
+      "id": "wingify",
+      "name": "Wingify",
+      "description": "Analyze Wingify experiments, campaign reports, heatmaps and session recordings through its official global MCP connection.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "wingify",
+        "version": "1.0.0-ghast.1",
+        "description": "Analyze Wingify experiments, campaign reports, heatmaps and session recordings through its official global MCP connection.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.wingify.com/hc/en-us/articles/58792565345305-Connect-Wingify-with-AI-Tools-using-Wingify-s-MCP-Server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.wingify.com/hc/en-us/articles/58792565345305-Connect-Wingify-with-AI-Tools-using-Wingify-s-MCP-Server",
+            "connectorPublisher": "Wingify",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "Wingify",
+            "descriptions": {
+              "en": "Analyze Wingify experiments, campaign reports, heatmaps and session recordings through its official global MCP connection.",
+              "zh-CN": "通过 Wingify 官方全局 MCP 连接分析实验、活动报表、热力图与会话录屏。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/wingify.zip",
+        "sha256": "bb56aa96ab47b2877a1505172d87483253d660f0ec7736a725dd21cfbd408011"
+      },
+      "icon": "./plugins/wingify/assets/icon.png",
+      "homepage": "https://help.wingify.com/hc/en-us/articles/58792565345305-Connect-Wingify-with-AI-Tools-using-Wingify-s-MCP-Server",
+      "license": "MIT",
+      "category": "marketing"
     },
     {
       "id": "wistia",
