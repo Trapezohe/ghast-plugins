@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "magnific",
+  "version": "1.0.0-ghast.1",
+  "description": "Generate and transform creative assets, browse previous creations and check credits through the official Magnific MCP, formerly Freepik.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.magnific.com/ai/docs/magnific-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.magnific.com/ai/docs/magnific-mcp",
+      "connectorPublisher": "Magnific",
+      "category": "design",
+      "icon": "./assets/icon.png",
+      "displayName": "Magnific (Freepik)",
+      "descriptions": {
+        "en": "Generate and transform creative assets, browse previous creations and check credits through the official Magnific MCP, formerly Freepik.",
+        "zh-CN": "通过 Magnific（原 Freepik）官方 MCP 生成与编辑创意素材、浏览已有作品，并查看积分余额。"
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "slack",
+  "version": "1.0.0-ghast.1",
+  "description": "Search Slack conversations and files, read threads, and manage messages, canvases and lists through the official Slack MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.slack.dev/ai/slack-mcp-server/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.slack.dev/ai/slack-mcp-server/",
+      "connectorPublisher": "Slack",
+      "category": "communication",
+      "icon": "./assets/icon.png",
+      "displayName": "Slack",
+      "descriptions": {
+        "en": "Search Slack conversations and files, read threads, and manage messages, canvases and lists through the official Slack MCP.",
+        "zh-CN": "通过 Slack 官方 MCP 搜索会话与文件、阅读讨论串，并管理消息、画布和列表。"
+      },
+      "mcpServerExtensions": {
+        "slack": {
+          "oauthClientRequired": true
+        }
+      }
+    }
+  }
+}

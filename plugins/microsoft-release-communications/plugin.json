@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "microsoft-release-communications",
+  "version": "1.0.0-ghast.1",
+  "description": "Search Microsoft 365 roadmap entries and Azure updates through Microsoft's public Release Communications MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/mrc-mcp?view=o365-worldwide",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/mrc-mcp?view=o365-worldwide",
+      "connectorPublisher": "Microsoft",
+      "category": "development",
+      "icon": "./assets/icon.svg",
+      "displayName": "Microsoft Release Communications",
+      "descriptions": {
+        "en": "Search Microsoft 365 roadmap entries and Azure updates through Microsoft's public Release Communications MCP server.",
+        "zh-CN": "通过微软公开的 Release Communications MCP 查询 Microsoft 365 路线图与 Azure 更新。"
+      }
+    }
+  }
+}

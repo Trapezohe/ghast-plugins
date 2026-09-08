@@ -8944,6 +8944,44 @@
       "category": "development"
     },
     {
+      "id": "magnific",
+      "name": "Magnific (Freepik)",
+      "description": "Generate and transform creative assets, browse previous creations and check credits through the official Magnific MCP, formerly Freepik.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "magnific",
+        "version": "1.0.0-ghast.1",
+        "description": "Generate and transform creative assets, browse previous creations and check credits through the official Magnific MCP, formerly Freepik.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.magnific.com/ai/docs/magnific-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.magnific.com/ai/docs/magnific-mcp",
+            "connectorPublisher": "Magnific",
+            "category": "design",
+            "icon": "./assets/icon.png",
+            "displayName": "Magnific (Freepik)",
+            "descriptions": {
+              "en": "Generate and transform creative assets, browse previous creations and check credits through the official Magnific MCP, formerly Freepik.",
+              "zh-CN": "通过 Magnific（原 Freepik）官方 MCP 生成与编辑创意素材、浏览已有作品，并查看积分余额。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/magnific.zip",
+        "sha256": "67bacdbb5da50cad929ed3cb84dac33ca1f8ed033f74e71b73a69eb722a6b31b"
+      },
+      "icon": "./plugins/magnific/assets/icon.png",
+      "homepage": "https://www.magnific.com/ai/docs/magnific-mcp",
+      "license": "MIT",
+      "category": "design"
+    },
+    {
       "id": "mailchimp-transactional",
       "name": "Mailchimp Transactional",
       "description": "Manage transactional email templates, inspect delivery results and troubleshoot Mailchimp Transactional messaging.",
@@ -9417,6 +9455,44 @@
       },
       "icon": "./plugins/microsoft-learn/assets/icon.svg",
       "homepage": "https://learn.microsoft.com/en-us/training/support/mcp",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
+      "id": "microsoft-release-communications",
+      "name": "Microsoft Release Communications",
+      "description": "Search Microsoft 365 roadmap entries and Azure updates through Microsoft's public Release Communications MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "microsoft-release-communications",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Microsoft 365 roadmap entries and Azure updates through Microsoft's public Release Communications MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/mrc-mcp?view=o365-worldwide",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/mrc-mcp?view=o365-worldwide",
+            "connectorPublisher": "Microsoft",
+            "category": "development",
+            "icon": "./assets/icon.svg",
+            "displayName": "Microsoft Release Communications",
+            "descriptions": {
+              "en": "Search Microsoft 365 roadmap entries and Azure updates through Microsoft's public Release Communications MCP server.",
+              "zh-CN": "通过微软公开的 Release Communications MCP 查询 Microsoft 365 路线图与 Azure 更新。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/microsoft-release-communications.zip",
+        "sha256": "3d23f4b3cb66042f0bf24dfac6a0b4a2377bcf8a0274530c0b10a807ea2097e4"
+      },
+      "icon": "./plugins/microsoft-release-communications/assets/icon.svg",
+      "homepage": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/mrc-mcp?view=o365-worldwide",
       "license": "MIT",
       "category": "development"
     },
@@ -10549,6 +10625,44 @@
       "homepage": "https://arize.com/docs/phoenix/sdk-api-reference/typescript/mcp-server",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "photoroom",
+      "name": "Photoroom",
+      "description": "Create and edit product visuals with Photoroom background removal, virtual models and other available official API tools.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "photoroom",
+        "version": "1.0.0-ghast.1",
+        "description": "Create and edit product visuals with Photoroom background removal, virtual models and other available official API tools.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.photoroom.com/en/articles/15421163-photoroom-connector-for-claude-team-and-enterprise",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.photoroom.com/en/articles/15421163-photoroom-connector-for-claude-team-and-enterprise",
+            "connectorPublisher": "Photoroom",
+            "category": "design",
+            "icon": "./assets/icon.svg",
+            "displayName": "Photoroom",
+            "descriptions": {
+              "en": "Create and edit product visuals with Photoroom background removal, virtual models and other available official API tools.",
+              "zh-CN": "通过 Photoroom 官方工具进行背景移除、虚拟模特展示等商品图创作与编辑。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/photoroom.zip",
+        "sha256": "e14974743077c0b5da6154ce0999d3fcc6bb4407f9b3fd07382675059ff2741f"
+      },
+      "icon": "./plugins/photoroom/assets/icon.svg",
+      "homepage": "https://help.photoroom.com/en/articles/15421163-photoroom-connector-for-claude-team-and-enterprise",
+      "license": "MIT",
+      "category": "design"
     },
     {
       "id": "picsart",
@@ -12727,6 +12841,49 @@
       "homepage": "https://docs.skywatch.com/docs/mcp/mcp-server/",
       "license": "MIT",
       "category": "research"
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "description": "Search Slack conversations and files, read threads, and manage messages, canvases and lists through the official Slack MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "slack",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Slack conversations and files, read threads, and manage messages, canvases and lists through the official Slack MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.slack.dev/ai/slack-mcp-server/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.slack.dev/ai/slack-mcp-server/",
+            "connectorPublisher": "Slack",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "Slack",
+            "descriptions": {
+              "en": "Search Slack conversations and files, read threads, and manage messages, canvases and lists through the official Slack MCP.",
+              "zh-CN": "通过 Slack 官方 MCP 搜索会话与文件、阅读讨论串，并管理消息、画布和列表。"
+            },
+            "mcpServerExtensions": {
+              "slack": {
+                "oauthClientRequired": true
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/slack.zip",
+        "sha256": "0a7acbe5775a6b475fb371f908ba3a13a34185cac8e92b535114aace71f87487"
+      },
+      "icon": "./plugins/slack/assets/icon.png",
+      "homepage": "https://docs.slack.dev/ai/slack-mcp-server/",
+      "license": "MIT",
+      "category": "communication"
     },
     {
       "id": "slite",

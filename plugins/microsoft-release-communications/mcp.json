@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "microsoft-release-communications": {
+      "type": "streamable-http",
+      "url": "https://www.microsoft.com/releasecommunications/mcp"
+    }
+  }
+}

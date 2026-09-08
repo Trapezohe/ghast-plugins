@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "photoroom",
+  "version": "1.0.0-ghast.1",
+  "description": "Create and edit product visuals with Photoroom background removal, virtual models and other available official API tools.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://help.photoroom.com/en/articles/15421163-photoroom-connector-for-claude-team-and-enterprise",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://help.photoroom.com/en/articles/15421163-photoroom-connector-for-claude-team-and-enterprise",
+      "connectorPublisher": "Photoroom",
+      "category": "design",
+      "icon": "./assets/icon.svg",
+      "displayName": "Photoroom",
+      "descriptions": {
+        "en": "Create and edit product visuals with Photoroom background removal, virtual models and other available official API tools.",
+        "zh-CN": "通过 Photoroom 官方工具进行背景移除、虚拟模特展示等商品图创作与编辑。"
+      }
+    }
+  }
+}
