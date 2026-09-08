@@ -11105,7 +11105,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "magicpath",
-        "version": "1.0.9-ghast.1",
+        "version": "1.0.9-ghast.2",
         "description": "Search, inspect, install, create, and edit MagicPath UI components and canvas projects through MagicPath's official pinned CLI.",
         "author": {
           "name": "MagicPath",
@@ -11117,7 +11117,7 @@
           "ai.trapezohe.ghast": {
             "category": "development",
             "upstreamRevision": "npm-magicpath-ai-2.6.1-a1fe8d745a10+skills-a1ced96ad9da",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Search, inspect, install, create, and edit MagicPath UI components and canvas projects through MagicPath's official pinned CLI.",
               "zh-CN": "检索、创建和编辑界面组件与设计画布项目。"
@@ -11127,9 +11127,9 @@
       },
       "package": {
         "url": "./packages/magicpath.zip",
-        "sha256": "6808e3a154be0832ab29345af8c089fdd8527514031cf88a1427f27c08eac4fa"
+        "sha256": "5458b630df551f7a6a52f1ca7aa2b26492e3e62966bc805ae1b5616facfe300e"
       },
-      "icon": "./plugins/magicpath/assets/icon.svg",
+      "icon": "./plugins/magicpath/assets/icon.png",
       "homepage": "https://www.magicpath.ai",
       "license": "MIT",
       "category": "development"
@@ -15746,7 +15746,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "scite",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Search and verify scientific literature, patents, trials, grants, regulatory records, adverse-event reports, drugs, and research collections through Scite's official hosted MCP server.",
         "author": {
           "name": "Scite",
@@ -15759,7 +15759,7 @@
           "ai.trapezohe.ghast": {
             "category": "research",
             "upstreamRevision": "9f3e3cd02c477e16c0a9b5c9114c9692d9a73317",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Search and verify scientific literature, patents, trials, grants, regulatory records, adverse-event reports, drugs, and research collections through Scite's official hosted MCP server.",
               "zh-CN": "检索和核实科研文献、专利、临床试验、资助与监管资料。"
@@ -15769,9 +15769,9 @@
       },
       "package": {
         "url": "./packages/scite.zip",
-        "sha256": "373960cbddecb5b62e1ebf10c71357c719fd3254cc24a6c7ae7c3cfb8c7f0921"
+        "sha256": "995e26feb5c80aca7063c3b88b8df269872aee205db3267756f80f52631d162f"
       },
-      "icon": "./plugins/scite/assets/icon.svg",
+      "icon": "./plugins/scite/assets/icon.png",
       "homepage": "https://docs.scite.ai/mcp/overview",
       "repository": "https://github.com/scitedotai/scite-mcp-skill",
       "license": "MIT",

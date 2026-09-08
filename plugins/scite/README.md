@@ -6,11 +6,11 @@ collections through Scite's official hosted MCP server.
 
 ## Official hosted MCP adapter
 
-This package contains only Ghast-authored configuration, safety instructions,
-metadata, documentation, and a generic research-evidence icon. It does not
+This package contains Ghast-authored configuration, safety instructions,
+metadata, documentation, and the provider brand logo. It does not
 redistribute Scite's hosted implementation, OpenAI's private connector,
-credentials, account collections, proprietary citation model, branded
-artwork, full-text corpus, or marketplace icon.
+credentials, account collections, proprietary citation model,
+full-text corpus, or Codex marketplace artwork.
 
 Scite's official `scitedotai/scite-mcp-skill` repository is pinned at
 `9f3e3cd02c477e16c0a9b5c9114c9692d9a73317`. Its MIT LICENSE, README, and skill have pinned
@@ -78,9 +78,7 @@ or artwork.
   clearances, labels, and spontaneous adverse-event reports are evidence
   inputs, not automatic proof of truth, causality, efficacy, incidence, legal
   status, or professional advice.
-- A generic research-evidence icon is used because the official source
-  repository and hosted documentation do not grant redistribution rights for
-  the catalog logo.
+- Brand logo source: https://raw.githubusercontent.com/scitedotai/scite-extension/master/extension/images/icons/256.png. The logo remains the property of Scite and is not covered by the adapter MIT license.
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Scite's source skill repository has its own MIT license. Scite accounts,

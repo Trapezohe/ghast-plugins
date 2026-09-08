@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "magicpath",
-  "version": "1.0.9-ghast.1",
+  "version": "1.0.9-ghast.2",
   "description": "Search, inspect, install, create, and edit MagicPath UI components and canvas projects through MagicPath's official pinned CLI.",
   "author": {
     "name": "MagicPath",
@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "development",
       "upstreamRevision": "npm-magicpath-ai-2.6.1-a1fe8d745a10+skills-a1ced96ad9da",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Search, inspect, install, create, and edit MagicPath UI components and canvas projects through MagicPath's official pinned CLI.",
         "zh-CN": "检索、创建和编辑界面组件与设计画布项目。"

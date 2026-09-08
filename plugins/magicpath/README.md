@@ -5,11 +5,11 @@ projects through MagicPath's official pinned CLI.
 
 ## Official CLI adapter
 
-This package contains only Ghast-authored workflow instructions,
-documentation, metadata, and a generic canvas-code icon. It does not
+This package contains Ghast-authored workflow instructions,
+documentation, metadata, and the provider brand logo. It does not
 redistribute the MagicPath CLI bundle, official agent-skill text, private
 account data, credentials, access keys, generated components, hosted skills,
-brand artwork, or marketplace icon.
+or Codex marketplace artwork.
 
 The official npm package `magicpath-ai@2.6.1` is pinned at
 tarball SHA-256 `a1fe8d745a103bf124c387044a6a66a4aea631266f3ed8d5e3c8c43d40f23ce7`, npm SHA-1
@@ -80,8 +80,7 @@ or artwork is redistributed.
   deprecated. This is recorded as an upstream dependency warning; exact
   runtime and security impact should be re-evaluated when MagicPath updates
   the official package.
-- A generic canvas-code icon is used because neither the unlicensed source
-  repository artwork nor Codex marketplace artwork is redistributed.
+- Brand logo source: https://www.magicpath.ai/favicon.ico. The logo remains the property of MagicPath and is not covered by the adapter MIT license.
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 The official npm package has its own MIT declaration. MagicPath accounts,

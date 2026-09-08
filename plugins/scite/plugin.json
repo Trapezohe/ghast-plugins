@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "scite",
-  "version": "1.0.3-ghast.1",
+  "version": "1.0.3-ghast.2",
   "description": "Search and verify scientific literature, patents, trials, grants, regulatory records, adverse-event reports, drugs, and research collections through Scite's official hosted MCP server.",
   "author": {
     "name": "Scite",
@@ -14,7 +14,7 @@
     "ai.trapezohe.ghast": {
       "category": "research",
       "upstreamRevision": "9f3e3cd02c477e16c0a9b5c9114c9692d9a73317",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Search and verify scientific literature, patents, trials, grants, regulatory records, adverse-event reports, drugs, and research collections through Scite's official hosted MCP server.",
         "zh-CN": "检索和核实科研文献、专利、临床试验、资助与监管资料。"
