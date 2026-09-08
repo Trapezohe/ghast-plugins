@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "doppler",
+      "name": "doppler",
+      "descriptions": {
+        "en": "Use Doppler in Ghast. Use Doppler’s official experimental MCP to work with projects, environments, configs and scoped secrets. 通过 Doppler 官方实验版 MCP 处理项目、环境、配置和限定权限范围的密钥。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "doppler",
+      "name": "Doppler"
+    }
+  ]
 }

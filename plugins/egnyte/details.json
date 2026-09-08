@@ -31,5 +31,20 @@
         "url": "https://developers.egnyte.com"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "egnyte",
+      "name": "egnyte",
+      "descriptions": {
+        "en": "Work with Egnyte enterprise content and administration through Egnyte's official hosted MCP and optional @egnyte/agentic-cli. Use for file browsing, search, document Q&A and summaries, knowledge bases, uploads, links, comments, metadata, permissions, users, groups, events, locks, trash, projects, and bulk operations."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "egnyte",
+      "name": "egnyte"
+    }
+  ]
 }

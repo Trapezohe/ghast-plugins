@@ -30,5 +30,24 @@
         "url": "https://developer.fullstory.com/mcp/introduction/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "fullstory",
+      "name": "fullstory",
+      "descriptions": {
+        "en": "Use Fullstory in Ghast. Analyze behavioral metrics, segments and session replay through Fullstory’s official MCP beta, with global and EU connections. 通过 Fullstory 官方 MCP 测试版分析用户行为指标、分群与会话回放，支持全局及欧洲区连接。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "fullstory",
+      "name": "fullstory"
+    },
+    {
+      "id": "fullstory-eu",
+      "name": "fullstory eu"
+    }
+  ]
 }

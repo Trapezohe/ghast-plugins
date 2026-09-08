@@ -30,5 +30,20 @@
         "url": "https://developer.smartbear.com/smartbear-mcp/docs/remote-swagger"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "swagger",
+      "name": "swagger",
+      "descriptions": {
+        "en": "Use Swagger in Ghast. Discover and manage API specifications and developer portals with Swagger Studio and Portal. 通过 Swagger Studio 与 Portal 查找和管理 API 规范及开发者门户。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "swagger",
+      "name": "Swagger"
+    }
+  ]
 }

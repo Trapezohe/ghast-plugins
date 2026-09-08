@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "chroma",
+      "name": "chroma",
+      "descriptions": {
+        "en": "Use Chroma in Ghast. Manage Chroma Cloud collections and documents, run vector queries and inspect stored data. 管理 Chroma Cloud 集合与文档、执行向量查询并检查存储数据。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "chroma",
+      "name": "Chroma"
+    }
+  ]
 }

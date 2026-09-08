@@ -38,5 +38,20 @@
         "url": "https://developer.duda.co/docs/terms-of-use"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "duda",
+      "name": "duda",
+      "descriptions": {
+        "en": "Use Duda in Ghast. Connect Duda’s official MCP to manage websites, site content and account operations with your authorized tools. 连接 Duda 官方 MCP，通过已授权工具管理网站、站点内容和账号业务。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "duda",
+      "name": "Duda"
+    }
+  ]
 }

@@ -39,5 +39,20 @@
         "url": "https://www.biorender.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "biorender",
+      "name": "biorender",
+      "descriptions": {
+        "en": "Search BioRender templates and accessible figures, preview results, and create editable scientific figure drafts through BioRender's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "biorender",
+      "name": "biorender"
+    }
+  ]
 }

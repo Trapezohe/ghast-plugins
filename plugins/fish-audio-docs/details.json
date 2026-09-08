@@ -46,5 +46,20 @@
         "url": "https://fish.audio/terms/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "fish-audio-docs",
+      "name": "fish-audio-docs",
+      "descriptions": {
+        "en": "Use Fish Audio Docs in Ghast. Search official Fish Audio documentation for text-to-speech, voice models and audio API integration. 查询 Fish Audio 官方文档，辅助接入文本转语音、声音模型和音频 API。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "fish-audio-docs",
+      "name": "Fish Audio Docs"
+    }
+  ]
 }

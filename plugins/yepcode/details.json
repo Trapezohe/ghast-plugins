@@ -48,5 +48,20 @@
         "url": "https://yepcode.io/privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "yepcode",
+      "name": "yepcode",
+      "descriptions": {
+        "en": "Build and run programmable JavaScript or Python tools safely through YepCode's official hosted MCP server, including processes, JSON Schema inputs, schedules, executions, variables, modules, and storage."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "yepcode",
+      "name": "yepcode"
+    }
+  ]
 }

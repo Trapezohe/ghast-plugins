@@ -39,5 +39,24 @@
         "url": "https://developer.nylas.com/docs/dev-guide/platform/privacy-mode/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "nylas",
+      "name": "nylas",
+      "descriptions": {
+        "en": "Use Nylas in Ghast. Use Nylas’s official MCP to work with connected email, calendars, contacts and meeting Notetakers in your application region. 通过 Nylas 官方 MCP，在应用所属区域操作已连接的邮件、日历、联系人与会议记录助手。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "nylas",
+      "name": "nylas"
+    },
+    {
+      "id": "nylas-eu",
+      "name": "nylas eu"
+    }
+  ]
 }

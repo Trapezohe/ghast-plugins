@@ -47,5 +47,20 @@
         "url": "https://www.courier.com/terms-of-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "courier",
+      "name": "courier",
+      "descriptions": {
+        "en": "Use Courier in Ghast. Manage Courier notifications, users and automations and investigate message delivery. 管理 Courier 通知、用户和自动化流程，并排查消息投递情况。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "courier",
+      "name": "Courier"
+    }
+  ]
 }

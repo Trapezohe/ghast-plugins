@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "appsflyer",
+      "name": "appsflyer",
+      "descriptions": {
+        "en": "Use AppsFlyer in Ghast. Analyze campaign attribution, installs, ROAS, lifetime value and marketing performance. 分析广告归因、安装量、ROAS、用户终身价值与营销表现。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "appsflyer",
+      "name": "AppsFlyer"
+    }
+  ]
 }

@@ -38,5 +38,20 @@
         "url": "https://www.cryptohopper.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "cryptohopper",
+      "name": "cryptohopper",
+      "descriptions": {
+        "en": "Use Cryptohopper Market Data in Ghast. Read exchange tickers, order books and OHLCV candles through Cryptohopper. 通过 Cryptohopper 查询交易所行情、订单簿与 K 线。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "cryptohopper",
+      "name": "Cryptohopper Market Data"
+    }
+  ]
 }

@@ -30,5 +30,20 @@
         "url": "https://www.plain.com/docs/agents/mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "plain",
+      "name": "plain",
+      "descriptions": {
+        "en": "Use Plain in Ghast. Read support threads, investigate customer history and manage help-center content through Plain’s official account MCP. 通过 Plain 官方账号 MCP 阅读客服线程、调查客户历史并管理帮助中心内容。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "plain",
+      "name": "Plain"
+    }
+  ]
 }

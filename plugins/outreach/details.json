@@ -47,5 +47,20 @@
         "url": "https://www.outreach.ai/terms"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "outreach",
+      "name": "outreach",
+      "descriptions": {
+        "en": "Research Outreach prospects, accounts, opportunities, sequences, emails, meetings, and tasks, draft grounded follow-ups, and safely perform approved revenue actions."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "outreach",
+      "name": "outreach"
+    }
+  ]
 }

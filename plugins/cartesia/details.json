@@ -31,5 +31,24 @@
         "url": "https://docs.cartesia.ai/tools/ai/mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "cartesia",
+      "name": "cartesia",
+      "descriptions": {
+        "en": "Use Cartesia in Ghast. Generate speech, transcribe audio and manage voices and pronunciation dictionaries through Cartesia’s official MCP server. 通过 Cartesia 官方 MCP 生成语音、转录音频，并管理声音和发音词典。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "cartesia",
+      "name": "cartesia"
+    },
+    {
+      "id": "cartesia-admin",
+      "name": "cartesia admin"
+    }
+  ]
 }

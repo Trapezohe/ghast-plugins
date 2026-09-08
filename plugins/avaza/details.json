@@ -30,5 +30,20 @@
         "url": "https://support.avaza.com/avaza-mcp-server/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "avaza",
+      "name": "avaza",
+      "descriptions": {
+        "en": "Use Avaza in Ghast. Manage projects, tasks, timesheets, expenses, invoices and team schedules. 管理项目、任务、工时、费用、发票与团队排期。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "avaza",
+      "name": "Avaza"
+    }
+  ]
 }

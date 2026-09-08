@@ -47,5 +47,20 @@
         "url": "https://grafana.com/legal/terms/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "grafana",
+      "name": "grafana",
+      "descriptions": {
+        "en": "Use Grafana in Ghast. Explore dashboards, metrics, logs, alerts and incidents using Grafana’s official MCP server. 通过 Grafana 官方 MCP 探索仪表盘、指标、日志、告警与事件。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "grafana",
+      "name": "Grafana"
+    }
+  ]
 }

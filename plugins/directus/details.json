@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "directus",
+      "name": "directus",
+      "descriptions": {
+        "en": "Use Directus in Ghast. Query and manage Directus content, assets and supported automation workflows using the official Content MCP server. 通过 Directus 官方 Content MCP 服务查询和管理内容、素材及受支持的自动化流程。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "directus",
+      "name": "Directus"
+    }
+  ]
 }

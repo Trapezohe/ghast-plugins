@@ -48,5 +48,24 @@
         "url": "https://circleci.com/legal/privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "circleci",
+      "name": "circleci",
+      "descriptions": {
+        "en": "Patterns for invoking the CircleCI CLI (circle) from agents. Covers structured output, project and org targeting, list, circleci api fallback."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "circleci-hosted",
+      "name": "circleci hosted"
+    },
+    {
+      "id": "circleci-cli",
+      "name": "circleci cli"
+    }
+  ]
 }

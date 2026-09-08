@@ -31,5 +31,20 @@
         "url": "https://mcp-server.couchbase.com/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "couchbase",
+      "name": "couchbase",
+      "descriptions": {
+        "en": "Use Couchbase in Ghast. Inspect Couchbase schemas, query documents and analyze cluster health with the official MCP server. 通过 Couchbase 官方 MCP 检查数据结构、查询文档并分析集群健康情况。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "couchbase",
+      "name": "Couchbase"
+    }
+  ]
 }

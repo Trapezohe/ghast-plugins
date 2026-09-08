@@ -38,5 +38,20 @@
         "url": "https://vwo.com/privacy-policy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "wingify",
+      "name": "wingify",
+      "descriptions": {
+        "en": "Use Wingify in Ghast. Analyze Wingify experiments, campaign reports, heatmaps and session recordings through its official global MCP connection. 通过 Wingify 官方全局 MCP 连接分析实验、活动报表、热力图与会话录屏。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "wingify",
+      "name": "Wingify"
+    }
+  ]
 }

@@ -48,5 +48,15 @@
         "url": "https://www.quicknode.com/terms"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "quicknode",
+      "name": "quicknode",
+      "descriptions": {
+        "en": "Manage Quicknode endpoints, logs, usage, security, rate limits, billing, streams, webhooks, storage, teams, and RPC through Quicknode's official qn CLI. Use when a user asks to inspect or change Quicknode infrastructure."
+      }
+    }
+  ],
+  "apps": []
 }

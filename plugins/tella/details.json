@@ -31,5 +31,20 @@
         "url": "https://www.tella.com/docs/mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "tella",
+      "name": "tella",
+      "descriptions": {
+        "en": "Use Tella in Ghast. Find videos, edit clips, organize playlists and export finished videos with Tella. 使用 Tella 搜索视频、编辑片段、整理播放列表并导出成片。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "tella",
+      "name": "Tella"
+    }
+  ]
 }

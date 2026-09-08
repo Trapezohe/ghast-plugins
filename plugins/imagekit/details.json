@@ -31,5 +31,24 @@
         "url": "https://imagekit.io/docs/build-with-ai"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "imagekit",
+      "name": "imagekit",
+      "descriptions": {
+        "en": "Use ImageKit in Ghast. Manage media assets and build image and video transformations. 管理媒体素材，构建图片与视频变换。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "imagekit",
+      "name": "imagekit"
+    },
+    {
+      "id": "imagekit-devtools",
+      "name": "imagekit devtools"
+    }
+  ]
 }

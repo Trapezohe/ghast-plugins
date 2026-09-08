@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "visily",
+      "name": "visily",
+      "descriptions": {
+        "en": "Use Visily in Ghast. Find UI boards, inspect designs and extract theme tokens with Visily’s official MCP. 通过 Visily 官方 MCP 查找 UI 画板、检查设计并提取主题样式。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "visily",
+      "name": "Visily"
+    }
+  ]
 }

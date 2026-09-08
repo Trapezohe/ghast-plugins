@@ -30,5 +30,20 @@
         "url": "https://docs.ashbyhq.com/ashby-mcp-server-beta"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "ashby",
+      "name": "ashby",
+      "descriptions": {
+        "en": "Use Ashby in Ghast. Search recruiting records, prepare interviews and manage supported candidate workflows through Ashby’s official MCP (Beta). 通过 Ashby 官方 MCP（Beta）搜索招聘记录、准备面试并管理受支持的候选人流程。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "ashby",
+      "name": "Ashby"
+    }
+  ]
 }

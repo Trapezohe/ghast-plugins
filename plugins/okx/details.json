@@ -31,5 +31,20 @@
         "url": "https://www.okx.com/docs-v5/agent_en/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "okx",
+      "name": "okx",
+      "descriptions": {
+        "en": "Use OKX official market data tools. Read OKX market prices, order books, candles and derivatives market data through the official Agent Trade Kit. 通过 OKX 官方 Agent Trade Kit 查询市场价格、订单簿、K 线与衍生品行情。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "okx",
+      "name": "OKX Market Data"
+    }
+  ]
 }

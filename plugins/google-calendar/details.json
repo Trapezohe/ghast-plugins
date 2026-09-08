@@ -46,5 +46,20 @@
         "url": "https://policies.google.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "google-calendar",
+      "name": "google-calendar",
+      "descriptions": {
+        "en": "Use Google Calendar in Ghast. Find events, check availability and manage meetings through Google’s official Workspace MCP service. 通过 Google 官方 Workspace MCP 服务查找日程、检查空闲时间与管理会议。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "google-calendar",
+      "name": "Google Calendar"
+    }
+  ]
 }

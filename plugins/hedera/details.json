@@ -47,5 +47,24 @@
         "url": "https://hedera.com/privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "hedera",
+      "name": "hedera",
+      "descriptions": {
+        "en": "Use Hedera in Ghast. Use Hedera’s official documentation and Testnet MCP for network queries and unsigned transaction preparation. 使用 Hedera 官方文档与测试网 MCP，查询网络数据并准备未签名交易。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "hedera",
+      "name": "hedera"
+    },
+    {
+      "id": "hedera-docs",
+      "name": "hedera docs"
+    }
+  ]
 }

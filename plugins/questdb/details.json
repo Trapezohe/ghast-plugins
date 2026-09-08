@@ -39,5 +39,20 @@
         "url": "https://questdb.com/privacy-notice/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "questdb",
+      "name": "questdb",
+      "descriptions": {
+        "en": "Use QuestDB in Ghast. Connect QuestDB’s official MCP to your Web Console for SQL, schema exploration, notebooks, charts and live dashboards. 通过 QuestDB 官方 MCP 连接 Web Console，进行 SQL 查询、结构探索、笔记本编辑、图表和实时仪表盘制作。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "questdb",
+      "name": "QuestDB"
+    }
+  ]
 }

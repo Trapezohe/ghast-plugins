@@ -30,5 +30,20 @@
         "url": "https://dev.moonpay.com/platform/overview/using-agents"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "moonpay",
+      "name": "moonpay",
+      "descriptions": {
+        "en": "Use MoonPay in Ghast. Search MoonPay’s official developer documentation for platform APIs, SDK integration and crypto payment flows. 检索 MoonPay 官方开发文档，获取平台 API、SDK 集成与加密支付流程指南。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "moonpay",
+      "name": "MoonPay"
+    }
+  ]
 }

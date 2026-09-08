@@ -39,5 +39,20 @@
         "url": "https://docs.ref.tools/support/privacy-security"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "ref",
+      "name": "ref",
+      "descriptions": {
+        "en": "Use Ref in Ghast. Search and read focused technical documentation with Ref. 通过 Ref 精准检索和阅读技术文档。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "ref",
+      "name": "Ref"
+    }
+  ]
 }

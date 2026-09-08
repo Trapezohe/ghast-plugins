@@ -30,5 +30,20 @@
         "url": "https://experienceleague.adobe.com/en/docs/target/using/integrate/mcp/target-mcp-get-started"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "adobe-target",
+      "name": "adobe-target",
+      "descriptions": {
+        "en": "Use Adobe Target in Ghast. Connect Adobe Target’s official public-beta MCP for experiments, personalization, audiences, offers and activity workflows. 连接 Adobe Target 官方公开测试版 MCP，处理实验、个性化、受众、优惠内容与活动流程。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "adobe-target",
+      "name": "Adobe Target"
+    }
+  ]
 }

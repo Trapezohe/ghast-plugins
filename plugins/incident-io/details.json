@@ -31,5 +31,20 @@
         "url": "https://docs.incident.io/ai/remote-mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "incident-io",
+      "name": "incident-io",
+      "descriptions": {
+        "en": "Use incident.io in Ghast. Work with incidents, alerts, on-call schedules and escalation context using incident.io’s official remote MCP. 通过 incident.io 官方远程 MCP 处理事故、告警、值班安排与升级响应信息。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "incident-io",
+      "name": "incident.io"
+    }
+  ]
 }

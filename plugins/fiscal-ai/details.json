@@ -30,5 +30,20 @@
         "url": "https://docs.fiscal.ai/docs/guides/mcp-integration"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "fiscal-ai",
+      "name": "fiscal-ai",
+      "descriptions": {
+        "en": "Research public companies with source-linked financials, filings, ratios, segments, KPIs, prices, ownership, news, events, and fund letters through Fiscal.ai's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "fiscal",
+      "name": "fiscal-ai"
+    }
+  ]
 }

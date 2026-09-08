@@ -31,5 +31,24 @@
         "url": "https://developer.remote.com/docs/quick-start-guide-2"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "remote",
+      "name": "remote",
+      "descriptions": {
+        "en": "Use Remote in Ghast. Connect Remote’s official MCP to explore workforce, payroll and leave data and perform authorized employee self-service. 连接 Remote 官方 MCP，查询人员、薪资和休假数据，并执行获授权的员工自助操作。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "remote",
+      "name": "remote"
+    },
+    {
+      "id": "remote-sandbox",
+      "name": "remote sandbox"
+    }
+  ]
 }

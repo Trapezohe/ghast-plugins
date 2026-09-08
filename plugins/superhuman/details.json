@@ -40,5 +40,62 @@
         "url": "https://superhuman.com/legal/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "batch-draft-writer",
+      "name": "batch-draft-writer",
+      "descriptions": {
+        "en": "Drafts multiple email replies or follow-ups in batch using the Superhuman Mail MCP server — processing your inbox in bulk rather than one email at a time. Use this skill whenever someone asks to \"draft replies to my unread emails\", \"respond to all my emails\", \"write follow-ups for my meetings this week\", \"batch draft responses\", \"draft emails for all threads that need a reply\", \"auto-draft my inbox\", \"help me respond to everything\", \"write follow-up emails based on my meetings\", \"process my inbox\", \"draft responses to these threads\", or any variation of wanting multiple emails drafted at once. Also trigger when someone says \"I have a bunch of emails to respond to\", \"help me get through my inbox\", \"draft a mail merge\", \"send personalized emails to these people\", or wants to create multiple drafts from a single prompt. Trigger broadly — if someone wants more than one email drafted, this skill should activate."
+      }
+    },
+    {
+      "id": "deal-tracker",
+      "name": "deal-tracker",
+      "descriptions": {
+        "en": "Builds a relationship or deal summary using the Superhuman Mail MCP server — pulling together all email history, read receipts, and calendar interactions with a specific person or company to act as a lightweight CRM. Use this skill whenever someone asks to \"show me all communication with [person/company]\", \"what's the status of my deal with [company]\", \"give me a relationship summary for [person]\", \"when did I last talk to [person]\", \"pull up everything about [company]\", \"track this deal\", \"who haven't I followed up with\", \"show me engagement on emails I sent to [person]\", \"CRM view of [person]\", \"what's my communication history with [person]\", or any variation of wanting a consolidated view of a relationship or deal. Trigger broadly — if someone wants to understand the full picture of their interactions with a person or company, this skill should activate."
+      }
+    },
+    {
+      "id": "eod-wrapup",
+      "name": "eod-wrapup",
+      "descriptions": {
+        "en": "Generates an end-of-day wrap-up using the Superhuman Mail MCP server — identifies open loops, unanswered emails, and action items from your day so you can leave work with a clear head. Use this skill whenever someone asks to \"wrap up my day\", \"what's still open in my inbox\", \"end of day summary\", \"what do I still need to do\", \"any emails I missed today\", \"open loops in my inbox\", \"summarize my day\", \"what didn't I respond to\", \"daily review\", \"close out my day\", \"what fell through the cracks\", or any variation of wanting to know what's unfinished before signing off. Also trigger when someone says \"before I log off\", \"anything I'm forgetting\", \"daily debrief\", \"what should I tackle tomorrow\", or wants an accounting of their email activity for the day. Trigger broadly — if someone wants to review what happened and what's still pending at the end of their workday, this skill should activate."
+      }
+    },
+    {
+      "id": "meeting-scheduler",
+      "name": "meeting-scheduler",
+      "descriptions": {
+        "en": "Handles end-to-end meeting scheduling using the Superhuman Mail MCP server — from finding available times to sending the invite or proposing times via email. Use this skill whenever someone asks to \"schedule a meeting with [person]\", \"find a time to meet\", \"book a call\", \"set up a meeting\", \"when am I free to meet with [person]\", \"propose times to [person]\", \"send my availability\", \"create a meeting invite\", \"schedule a 1:1\", \"find overlap in our calendars\", \"reschedule my meeting with [person]\", or any variation of coordinating a meeting. Also trigger when someone says \"I need to find time with [person]\", \"can you check my calendar and suggest times\", \"set up a recurring sync\", \"block time for [task]\", or when an email thread involves scheduling and the user wants to act on it. Trigger broadly — if someone needs help coordinating when people meet, this skill should activate."
+      }
+    },
+    {
+      "id": "morning-briefing",
+      "name": "morning-briefing",
+      "descriptions": {
+        "en": "Generates a morning briefing that triages your inbox and previews your day using the Superhuman Mail MCP server — acting as an AI chief of staff. Use this skill whenever someone asks to \"brief me on my day\", \"triage my inbox\", \"what's important in my email\", \"summarize my unread emails\", \"what do I need to deal with today\", \"chief of staff briefing\", \"morning update\", \"inbox summary\", \"what emails need my attention\", \"clear my inbox\", or any variation of wanting a prioritized view of their email and calendar before they start working. Also trigger when someone says \"I just woke up, what's going on\" or \"catch me up on my inbox\". Trigger broadly — if someone wants to understand the state of their inbox or day at a glance, this skill should activate."
+      }
+    },
+    {
+      "id": "superhuman-mail",
+      "name": "superhuman-mail",
+      "descriptions": {
+        "en": "Use Superhuman Mail MCP for email and calendar workflows such as searching inboxes, reading threads, drafting or sending mail, managing labels, checking read statuses, finding availability, and creating or updating events."
+      }
+    },
+    {
+      "id": "welcome-to-superhuman-mail",
+      "name": "welcome-to-superhuman-mail",
+      "descriptions": {
+        "en": "Welcome and onboard a new user to Superhuman Mail MCP. Use when the user is new to Superhuman Mail, asks what Superhuman Mail can do, wants a guided tour, setup walkthrough, first actions, examples for email or calendar workflows, help adding accounts, client-specific tool approval settings, Gmail/Outlook/app options, or says they want to get started with Superhuman Mail."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "superhuman-mail",
+      "name": "superhuman"
+    }
+  ]
 }

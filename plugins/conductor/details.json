@@ -47,5 +47,20 @@
         "url": "https://www.conductor.com/legal/terms-of-use/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "conductor",
+      "name": "conductor",
+      "descriptions": {
+        "en": "Analyze AI and traditional search visibility, citations, sentiment, rankings, competitors, and tracked configuration through Conductor's official read-only hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "conductor",
+      "name": "conductor"
+    }
+  ]
 }

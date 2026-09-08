@@ -48,5 +48,20 @@
         "url": "https://www.thoughtspot.com/privacy-statement"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "thoughtspot",
+      "name": "thoughtspot",
+      "descriptions": {
+        "en": "Search governed ThoughtSpot content, answer business-data questions with Spotter, explain drivers and anomalies, and save approved analyses as dashboards."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "thoughtspot",
+      "name": "thoughtspot"
+    }
+  ]
 }

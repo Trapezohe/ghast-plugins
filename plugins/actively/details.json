@@ -47,5 +47,20 @@
         "url": "https://www.actively.ai/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "actively",
+      "name": "actively",
+      "descriptions": {
+        "en": "Research accounts, buying signals, contacts, prospect context, strategy, prioritization, and next-best actions through Actively's official hosted Per-Account Agent MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "actively",
+      "name": "actively"
+    }
+  ]
 }

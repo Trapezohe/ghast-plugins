@@ -3409,6 +3409,29 @@
       "version": "3.3.0"
     }
   },
+  "gmgn": {
+    "monitors": [
+      {
+        "kind": "github",
+        "packagedRevision": "aa4d29a9b7d1aaaac3d6acd72c13f17575605348",
+        "ref": "HEAD",
+        "repository": "GMGNAI/gmgn-skills"
+      }
+    ],
+    "policy": "review-required",
+    "provenance": [
+      "https://github.com/GMGNAI/gmgn-skills",
+      "https://gmgn.ai/ai"
+    ],
+    "update": null,
+    "versionSource": {
+      "path": ".claude-plugin/plugin.json",
+      "repository": "GMGNAI/gmgn-skills",
+      "revision": "aa4d29a9b7d1aaaac3d6acd72c13f17575605348",
+      "sha256": "3e6dd4ab1f90c314bb3f68b79acfe3f7057867a195796e3454e68cdaea37cd3a",
+      "version": "1.0.0"
+    }
+  },
   "goldrush": {
     "monitors": [
       {

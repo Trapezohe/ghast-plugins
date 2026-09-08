@@ -46,5 +46,20 @@
         "url": "https://community.fibery.io/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "fibery",
+      "name": "fibery",
+      "descriptions": {
+        "en": "Use Fibery in Ghast. Search Fibery workspace data and documents, inspect schemas, and manage entities and views through its official MCP server. 通过 Fibery 官方 MCP 搜索工作区数据与文档、查看数据结构，并管理实体与视图。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "fibery",
+      "name": "Fibery"
+    }
+  ]
 }

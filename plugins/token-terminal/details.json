@@ -30,5 +30,20 @@
         "url": "https://tokenterminal.com/docs/mcp/introduction"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "token-terminal",
+      "name": "token-terminal",
+      "descriptions": {
+        "en": "Use Token Terminal in Ghast. Research onchain projects, financial metrics and methodologies with Token Terminal. 使用 Token Terminal 研究链上项目、财务指标与统计方法。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "token-terminal",
+      "name": "Token Terminal"
+    }
+  ]
 }

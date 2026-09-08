@@ -38,5 +38,20 @@
         "url": "https://konghq.com/legal/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "kong-konnect",
+      "name": "kong-konnect",
+      "descriptions": {
+        "en": "Use Kong Konnect in Ghast. Inspect API gateways, services, routes and performance with Kong Konnect’s official MCP. 通过 Kong Konnect 官方 MCP 检查 API 网关、服务、路由与性能。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "kong-konnect",
+      "name": "Kong Konnect"
+    }
+  ]
 }

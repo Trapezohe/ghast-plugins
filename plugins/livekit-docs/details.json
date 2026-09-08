@@ -46,5 +46,20 @@
         "url": "https://livekit.com/legal/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "livekit-docs",
+      "name": "livekit-docs",
+      "descriptions": {
+        "en": "Use LiveKit Docs in Ghast. Search official LiveKit documentation, SDK code and changelogs to build real-time audio, video and voice agents. 查询 LiveKit 官方文档、SDK 代码及更新日志，辅助开发实时音视频和语音智能体。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "livekit-docs",
+      "name": "LiveKit Docs"
+    }
+  ]
 }

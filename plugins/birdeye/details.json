@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "birdeye",
+      "name": "birdeye",
+      "descriptions": {
+        "en": "Use Birdeye in Ghast. Explore token markets, DEX liquidity, trends and historical prices through Birdeye’s official MCP (Beta). 通过 Birdeye 官方 MCP（Beta）探索代币市场、DEX 流动性、热点与历史价格。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "birdeye",
+      "name": "Birdeye"
+    }
+  ]
 }

@@ -30,5 +30,20 @@
         "url": "https://arize.com/docs/phoenix/sdk-api-reference/typescript/mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "phoenix",
+      "name": "phoenix",
+      "descriptions": {
+        "en": "Use Arize Phoenix in Ghast. Inspect Phoenix projects, traces, sessions and experiments, and manage prompts and evaluation datasets through the official MCP server. 通过 Phoenix 官方 MCP 查看项目、调用追踪、会话和实验，管理提示词与评测数据集。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "phoenix",
+      "name": "Arize Phoenix"
+    }
+  ]
 }

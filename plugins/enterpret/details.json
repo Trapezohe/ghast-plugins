@@ -30,5 +30,20 @@
         "url": "https://helpcenter.enterpret.com/en/articles/12665166-enterpret-mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "enterpret",
+      "name": "enterpret",
+      "descriptions": {
+        "en": "Use Enterpret in Ghast. Analyze customer feedback, themes, sentiment and account context with cited answers from Enterpret’s official MCP. 通过 Enterpret 官方 MCP 分析客户反馈、主题、情绪与账号背景，并获取带来源引用的答案。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "enterpret",
+      "name": "Enterpret"
+    }
+  ]
 }

@@ -32,5 +32,20 @@
         "url": "https://docs.zilliz.com:443/docs/zilliz-skill"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "zilliz",
+      "name": "zilliz",
+      "descriptions": {
+        "en": "Use Zilliz Cloud in Ghast. Manage Zilliz Cloud clusters, collections and vector searches through the official Zilliz MCP server. 通过 Zilliz 官方 MCP 服务管理云端集群、集合和向量搜索。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "zilliz",
+      "name": "Zilliz Cloud"
+    }
+  ]
 }

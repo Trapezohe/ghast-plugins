@@ -30,5 +30,20 @@
         "url": "https://docs.mem0.ai/platform/mem0-mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "mem0",
+      "name": "mem0",
+      "descriptions": {
+        "en": "Use Mem0 in Ghast. Search and manage persistent user and agent memories through Mem0’s official hosted MCP server. 通过 Mem0 官方托管 MCP 查询和管理用户及智能体的持久记忆。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "mem0",
+      "name": "Mem0"
+    }
+  ]
 }

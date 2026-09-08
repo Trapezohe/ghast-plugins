@@ -30,5 +30,20 @@
         "url": "https://help.getzep.com/memory-mcp-server/connect"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "zep",
+      "name": "zep",
+      "descriptions": {
+        "en": "Use Zep in Ghast. Search Zep memory, retrieve user context and add authorized information to connected knowledge graphs. 查询 Zep 记忆、获取用户上下文，并向已连接的知识图谱添加经授权的信息。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "zep",
+      "name": "Zep"
+    }
+  ]
 }

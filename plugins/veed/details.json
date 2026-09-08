@@ -47,5 +47,20 @@
         "url": "https://www.veed.io/terms-of-use"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "veed",
+      "name": "veed",
+      "descriptions": {
+        "en": "Use VEED in Ghast. Create talking-head videos with AI characters, voices and workspace assets. 使用 AI 角色、声音与工作区素材创建口播视频。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "veed",
+      "name": "VEED"
+    }
+  ]
 }

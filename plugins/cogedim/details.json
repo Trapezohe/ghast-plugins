@@ -31,5 +31,20 @@
         "url": "https://www.cogedim.com"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "cogedim",
+      "name": "cogedim",
+      "descriptions": {
+        "en": "Find current Cogedim new-build lots and developments, retrieve official program details, and research Cogedim buying or investment guidance through Cogedim's official public hosted MCP."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "cogedim",
+      "name": "cogedim"
+    }
+  ]
 }

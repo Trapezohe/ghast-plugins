@@ -47,5 +47,20 @@
         "url": "https://www.streak.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "streak",
+      "name": "streak",
+      "descriptions": {
+        "en": "Read, analyze, and update Streak CRM pipelines, boxes, deals, contacts, organizations, comments, tasks, assignments, and timelines through Streak's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "streak",
+      "name": "streak"
+    }
+  ]
 }

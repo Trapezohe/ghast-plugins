@@ -30,5 +30,20 @@
         "url": "https://www.browserstack.com/docs/browserstack-mcp-server/get-started/remote-mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "browserstack",
+      "name": "browserstack",
+      "descriptions": {
+        "en": "Use BrowserStack in Ghast. Access real-device testing, test management, accessibility and test reporting through BrowserStack. 通过 BrowserStack 访问真机测试、测试管理、无障碍检查与测试报告。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "browserstack",
+      "name": "BrowserStack"
+    }
+  ]
 }

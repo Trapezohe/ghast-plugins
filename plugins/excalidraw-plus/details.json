@@ -31,5 +31,20 @@
         "url": "https://plus.excalidraw.com/docs/mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "excalidraw-plus",
+      "name": "excalidraw-plus",
+      "descriptions": {
+        "en": "Use Excalidraw+ in Ghast. Create and edit diagrams, wireframes and presentation scenes in an Excalidraw Plus workspace. 在 Excalidraw Plus 工作区创建与编辑图表、线框图和演示画布，辅助创意表达。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "excalidraw-plus",
+      "name": "Excalidraw+"
+    }
+  ]
 }

@@ -38,5 +38,20 @@
         "url": "https://bird.com/legal/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "bird",
+      "name": "bird",
+      "descriptions": {
+        "en": "Use Bird in Ghast. Manage Bird messaging across email, SMS, WhatsApp and voice. 通过 Bird 管理邮件、短信、WhatsApp 与语音通信。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "bird",
+      "name": "Bird"
+    }
+  ]
 }

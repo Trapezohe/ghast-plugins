@@ -30,5 +30,24 @@
         "url": "https://docs.lokalise.com/en/articles/13547066-setting-up-and-using-the-lokalise-mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "lokalise",
+      "name": "lokalise",
+      "descriptions": {
+        "en": "Use Lokalise in Ghast. Manage localization projects, translation keys, tasks, glossaries and screenshots in Lokalise. 在 Lokalise 中管理本地化项目、翻译键、任务、术语表与截图。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "lokalise",
+      "name": "lokalise"
+    },
+    {
+      "id": "lokalise-development",
+      "name": "lokalise development"
+    }
+  ]
 }

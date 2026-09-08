@@ -47,5 +47,20 @@
         "url": "https://www.read.ai/termsofservice"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "read-ai",
+      "name": "read-ai",
+      "descriptions": {
+        "en": "Retrieve and analyze Read AI meeting reports through Read AI's official hosted MCP server. Use for meeting lists, summaries, chapters, action items, key questions, topics, transcripts, metrics, and recording links."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "read-ai",
+      "name": "read-ai"
+    }
+  ]
 }

@@ -30,5 +30,20 @@
         "url": "https://mcp.api.coingecko.com/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "coingecko",
+      "name": "coingecko",
+      "descriptions": {
+        "en": "Use CoinGecko in Ghast. 查询加密资产价格、历史走势、交易池与市场数据。公开服务，无需 API Key。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "coingecko",
+      "name": "CoinGecko"
+    }
+  ]
 }

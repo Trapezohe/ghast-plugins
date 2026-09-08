@@ -38,5 +38,20 @@
         "url": "https://www.contentstack.com/legal/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "contentstack",
+      "name": "contentstack",
+      "descriptions": {
+        "en": "Use Contentstack in Ghast. Manage content entries, assets, models and publishing in Contentstack through its official MCP. 通过 Contentstack 官方 MCP 管理内容条目、素材、内容模型与发布流程。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "contentstack",
+      "name": "Contentstack"
+    }
+  ]
 }

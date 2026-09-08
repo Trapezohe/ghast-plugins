@@ -38,5 +38,20 @@
         "url": "https://www.gorgias.com/legal/terms-of-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "gorgias",
+      "name": "gorgias",
+      "descriptions": {
+        "en": "Use Gorgias in Ghast. Analyze support tickets and manage customer service workflows, settings and AI guidance in Gorgias. 分析客服工单，管理 Gorgias 客服工作流、设置与 AI 指引。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "gorgias",
+      "name": "Gorgias"
+    }
+  ]
 }

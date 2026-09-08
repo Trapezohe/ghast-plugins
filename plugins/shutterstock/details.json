@@ -26,5 +26,15 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "shutterstock-search",
+      "name": "shutterstock-search",
+      "descriptions": {
+        "en": "Search Shutterstock's official stock image, video, music, and sound-effect libraries, including grouped image searches, and compare watermarked preview candidates without licensing, downloading, editing, or generating media."
+      }
+    }
+  ],
+  "apps": []
 }

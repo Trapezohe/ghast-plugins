@@ -48,5 +48,43 @@
         "url": "https://base44.com/terms-of-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "base44-cli",
+      "name": "base44-cli",
+      "descriptions": {
+        "en": "The base44 CLI is used for EVERYTHING related to base44 projects: resource configuration (entities, backend functions, ai agents), initialization and actions (resource creation, deployment). This skill is the place for learning about how to configure resources. When you plan or implement a feature, you must learn this skill"
+      }
+    },
+    {
+      "id": "base44-remote-dev",
+      "name": "base44-remote-dev",
+      "descriptions": {
+        "en": "Develop a Base44 app remotely from your own coding agent (Claude Code, claude.ai, or any MCP client) by connecting it to the Base44 sandbox. Cloud agents connect over MCP; local agents can connect over MCP or drive the same sandbox with the `base44 sandbox` CLI subcommands (the CLI uses shorter names — e.g. read_file is `sandbox read`, list_directory is `sandbox ls`, run_command is `sandbox run`). Covers connecting/ authenticating, the available sandbox tools (run_command, read_file, write_file, edit_file, grep, list_directory, create_checkpoint, get_app_preview_url, get_app_status, list_user_apps, and the connector tools list_connectors / initiate_connector_connection), the edit→preview→verify loop, how changes persist, builder/external-agent concurrency, the in-editor \"Send to Coding Agent\" button + onboarding README URLs, and tips like reading the Vite dev-server logs. Triggers on \"develop my Base44 app remotely\", \"connect Claude Code to Base44\", \"bring my own agent\", \"edit a Base44 app over MCP\", \"Base..."
+      }
+    },
+    {
+      "id": "base44-sandbox",
+      "name": "base44-sandbox",
+      "descriptions": {
+        "en": "Develop a Base44 app remotely inside Base44's cloud sandbox using your own agent — no local checkout and no deploy/push commands. The implementation is remote: writing a resource file into the sandbox is what ships it (backend functions, entities, and agents all auto-sync from the file you write), and OAuth connectors are set up against the remote app via MCP tools or the projectless `base44 connectors` CLI. This skill is the place for learning what you can author in the sandbox, how backend functions, entities, and agents are structured, and how to connect a connector without a local filesystem. Triggers on 'develop my Base44 app remotely', 'no local files', 'cloud sandbox', 'create an entity/agent remotely', 'connect a connector remotely', 'bring my own agent', or any work editing a Base44 app inside a sandbox."
+      }
+    },
+    {
+      "id": "base44-sdk",
+      "name": "base44-sdk",
+      "descriptions": {
+        "en": "The base44 SDK is the library to communicate with base44 services. In projects, you use it to communicate with remote resources (entities, backend functions, ai agents) and to write backend functions. This skill is the place for learning about available modules and types. When you plan or implement a feature, you must learn this skill"
+      }
+    },
+    {
+      "id": "base44-troubleshooter",
+      "name": "base44-troubleshooter",
+      "descriptions": {
+        "en": "Troubleshoot production issues using backend function logs. Use when investigating app errors, debugging function calls, or diagnosing production problems in Base44 apps."
+      }
+    }
+  ],
+  "apps": []
 }

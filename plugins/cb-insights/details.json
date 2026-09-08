@@ -48,5 +48,20 @@
         "url": "https://www.cbinsights.com/website-terms-of-use/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "cb-insights",
+      "name": "cb-insights",
+      "descriptions": {
+        "en": "Research private companies, markets, deals, competitors, predictive signals, market maps, and investment questions through CB Insights' official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "cb-insights",
+      "name": "cb-insights"
+    }
+  ]
 }

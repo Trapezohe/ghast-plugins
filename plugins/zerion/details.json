@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "zerion",
+      "name": "zerion",
+      "descriptions": {
+        "en": "Use Zerion in Ghast. Search Zerion’s official API documentation for wallet analytics, portfolio endpoints, authentication and integration guidance. 检索 Zerion 官方 API 文档，了解钱包分析、投资组合接口、身份验证与集成方式。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "zerion",
+      "name": "Zerion"
+    }
+  ]
 }

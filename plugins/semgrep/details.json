@@ -26,5 +26,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "semgrep",
+      "name": "semgrep",
+      "descriptions": {
+        "en": "Use Semgrep in Ghast. Analyze code and investigate security findings with the MCP server built into the official Semgrep CLI. 通过 Semgrep 官方 CLI 内置 MCP 分析代码并排查安全发现。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "semgrep",
+      "name": "Semgrep"
+    }
+  ]
 }

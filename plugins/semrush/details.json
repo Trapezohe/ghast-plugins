@@ -47,5 +47,20 @@
         "url": "https://www.semrush.com/company/legal/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "semrush",
+      "name": "semrush",
+      "descriptions": {
+        "en": "Retrieve read-only SEO, keyword, backlink, traffic, audience, market, paid search, shopping, position tracking, site audit, and project data through Semrush's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "semrush",
+      "name": "semrush"
+    }
+  ]
 }

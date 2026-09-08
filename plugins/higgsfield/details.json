@@ -46,5 +46,20 @@
         "url": "https://higgsfield.ai/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "higgsfield",
+      "name": "higgsfield",
+      "descriptions": {
+        "en": "Use Higgsfield in Ghast. Connect to Higgsfield’s official MCP for image, video, character and audio creation using your account credits. 连接 Higgsfield 官方 MCP，使用账号积分创建图像、视频、角色与音频。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "higgsfield",
+      "name": "Higgsfield"
+    }
+  ]
 }

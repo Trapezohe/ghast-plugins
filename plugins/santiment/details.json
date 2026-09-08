@@ -38,5 +38,20 @@
         "url": "https://academy.santiment.net/mcp-connector/#privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "santiment",
+      "name": "santiment",
+      "descriptions": {
+        "en": "Use Santiment in Ghast. Explore crypto on-chain metrics, social sentiment, trending narratives and analyst insights with Santiment. 通过 Santiment 探索加密货币链上指标、社交情绪、热门叙事与分析师观点。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "santiment",
+      "name": "Santiment"
+    }
+  ]
 }

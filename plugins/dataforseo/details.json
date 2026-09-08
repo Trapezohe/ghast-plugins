@@ -46,5 +46,20 @@
         "url": "https://dataforseo.com/terms-of-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "dataforseo",
+      "name": "dataforseo",
+      "descriptions": {
+        "en": "Use DataForSEO in Ghast. Research keywords, search results, backlinks and competitors using DataForSEO’s official API and documentation tools. 通过 DataForSEO 官方 API 与文档工具研究关键词、搜索结果、外链和竞争对手。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "dataforseo",
+      "name": "DataForSEO"
+    }
+  ]
 }

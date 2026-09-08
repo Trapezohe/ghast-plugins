@@ -39,5 +39,20 @@
         "url": "https://policies.google.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "google-ads",
+      "name": "google-ads",
+      "descriptions": {
+        "en": "Use Google Ads in Ghast. Query Google Ads accounts, campaign performance and GAQL metadata through Google’s official read-only MCP. 通过 Google 官方只读 MCP 查询 Ads 账号、广告系列表现与 GAQL 元数据。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "google-ads",
+      "name": "Google Ads"
+    }
+  ]
 }

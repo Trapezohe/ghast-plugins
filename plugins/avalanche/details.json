@@ -30,5 +30,20 @@
         "url": "https://build.avax.network/docs/tooling/ai-llm/mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "avalanche",
+      "name": "avalanche",
+      "descriptions": {
+        "en": "Use Avalanche in Ghast. Search Avalanche developer documentation and inspect public network, P-Chain and blockchain data through its official hosted MCP. 通过 Avalanche 官方托管 MCP 检索开发文档，并查询公开网络、P 链及区块链数据。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "avalanche",
+      "name": "Avalanche"
+    }
+  ]
 }

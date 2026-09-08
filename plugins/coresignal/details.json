@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "coresignal",
+      "name": "coresignal",
+      "descriptions": {
+        "en": "Use Coresignal in Ghast. Research company, employee and job data with Coresignal. 通过 Coresignal 研究企业、员工与招聘岗位数据。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "coresignal",
+      "name": "Coresignal"
+    }
+  ]
 }

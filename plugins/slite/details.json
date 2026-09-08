@@ -38,5 +38,20 @@
         "url": "https://slite.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "slite",
+      "name": "slite",
+      "descriptions": {
+        "en": "Use Slite in Ghast. Search team knowledge, create notes and update workspace documents in Slite. 搜索团队知识，在 Slite 中创建笔记并更新工作区文档。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "slite",
+      "name": "Slite"
+    }
+  ]
 }

@@ -47,5 +47,20 @@
         "url": "https://www.meilisearch.com/terms-of-use"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "meilisearch",
+      "name": "meilisearch",
+      "descriptions": {
+        "en": "Use Meilisearch in Ghast. Search documents and manage indexes, relevance settings and indexing tasks through Meilisearch’s official MCP. 通过 Meilisearch 官方 MCP 搜索文档并管理索引、相关性设置与索引任务。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "meilisearch",
+      "name": "Meilisearch"
+    }
+  ]
 }

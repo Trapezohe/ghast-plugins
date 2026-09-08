@@ -48,5 +48,20 @@
         "url": "https://legal.signnow.com/privacy-notice"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "signnow",
+      "name": "signnow",
+      "descriptions": {
+        "en": "Create, inspect, send, track, update, view, and download SignNow documents, templates, signing invites, and embedded e-signature workflows through SignNow's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "signnow",
+      "name": "signnow"
+    }
+  ]
 }

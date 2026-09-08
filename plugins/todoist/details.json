@@ -39,5 +39,20 @@
         "url": "https://www.todoist.com/terms-of-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "todoist",
+      "name": "todoist",
+      "descriptions": {
+        "en": "Use Todoist in Ghast. 规划项目、整理待办、查看截止日期与更新任务。通过 Todoist 官方服务连接你的账号。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "todoist",
+      "name": "Todoist"
+    }
+  ]
 }

@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "weatherapi",
+      "name": "weatherapi",
+      "descriptions": {
+        "en": "Use WeatherAPI.com in Ghast. Access current weather, forecasts, historical conditions, marine data and astronomy through WeatherAPI.com’s official MCP. 通过 WeatherAPI.com 官方 MCP 获取实时天气、预报、历史天气、海洋与天文数据。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "weatherapi",
+      "name": "WeatherAPI.com"
+    }
+  ]
 }

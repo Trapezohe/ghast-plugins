@@ -39,5 +39,20 @@
         "url": "https://docs.getunleash.io/privacy-and-compliance/data-privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "unleash",
+      "name": "unleash",
+      "descriptions": {
+        "en": "Use Unleash in Ghast. Inspect feature flags, evaluate changes and manage rollouts on your Unleash instance with its official MCP server. 通过 Unleash 官方 MCP 服务查看功能开关、评估变更并管理实例中的灰度发布。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "unleash",
+      "name": "Unleash"
+    }
+  ]
 }

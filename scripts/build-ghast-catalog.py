@@ -6,6 +6,7 @@ from __future__ import annotations
 import hashlib
 import json
 import zipfile
+import yaml
 from plugin_categories import plugin_category
 from plugin_versions import apply_version
 from pathlib import Path
@@ -47,7 +48,18 @@ def main() -> int:
         if (plugin_dir / "mcp.json").exists():
             json.loads((plugin_dir / "mcp.json").read_text())
         details_path = plugin_dir / "details.json"
-        json.loads(details_path.read_text())
+        details = json.loads(details_path.read_text())
+        previous_skills = {item["id"]: item for item in details.get("skills", [])}
+        details["skills"] = []
+        for skill_path in sorted((plugin_dir / "skills").glob("*/SKILL.md")):
+            metadata = yaml.safe_load(skill_path.read_text().split("---", 2)[1])
+            skill_id = skill_path.parent.name
+            details["skills"].append({"id": skill_id, "name": metadata["name"],
+                **previous_skills.get(skill_id, {}), "descriptions": {**previous_skills.get(skill_id, {}).get("descriptions", {}), "en": metadata["description"]}})
+        servers = json.loads((plugin_dir / "mcp.json").read_text()).get("mcpServers", {}) if (plugin_dir / "mcp.json").exists() else {}
+        previous_apps = {item["id"]: item for item in details.get("apps", [])}
+        details["apps"] = [{"id": name, "name": ghast.get("displayName", manifest["name"]) if len(servers) == 1 else name.replace("-", " "), **previous_apps.get(name, {})} for name in servers]
+        details_path.write_text(json.dumps(details, indent=2, ensure_ascii=False) + "\n")
         manifest_for_catalog = dict(manifest)
         zip_path = PACKAGE_DIR / f"{manifest['name']}.zip"
         write_plugin_zip(plugin_dir, zip_path)

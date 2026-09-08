@@ -30,5 +30,24 @@
         "url": "https://docs.tatum.io/oa/docs/tatum-documentation-mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "tatum",
+      "name": "tatum",
+      "descriptions": {
+        "en": "Use Tatum Docs & API in Ghast. Search Tatum developer documentation, inspect OpenAPI schemas and execute documented API requests with an optional Tatum key. 搜索 Tatum 开发文档、查看 OpenAPI 结构，并在配置 Tatum 密钥后执行文档中的 API 请求。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "tatum",
+      "name": "tatum"
+    },
+    {
+      "id": "tatum-docs",
+      "name": "tatum docs"
+    }
+  ]
 }

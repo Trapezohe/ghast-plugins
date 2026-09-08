@@ -39,5 +39,20 @@
         "url": "https://happenstance.ai/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "happenstance",
+      "name": "happenstance",
+      "descriptions": {
+        "en": "Search authorized professional networks, identify warm introduction paths, and research source-linked people profiles through Happenstance's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "happenstance",
+      "name": "happenstance"
+    }
+  ]
 }

@@ -30,5 +30,20 @@
         "url": "https://developers.mailerlite.com/mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "mailerlite",
+      "name": "mailerlite",
+      "descriptions": {
+        "en": "Use MailerLite in Ghast. Manage subscribers, campaigns, groups and email marketing workflows in MailerLite. 在 MailerLite 中管理订阅者、邮件活动、分组与邮件营销流程。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "mailerlite",
+      "name": "MailerLite"
+    }
+  ]
 }

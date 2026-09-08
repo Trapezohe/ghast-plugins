@@ -39,5 +39,20 @@
         "url": "https://www.commonroom.io/privacy-policy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "common-room",
+      "name": "common-room",
+      "descriptions": {
+        "en": "Research accounts and contacts, query buyer signals, build prospect lists, draft grounded outreach, and safely create or update Common Room records."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "common-room",
+      "name": "common-room"
+    }
+  ]
 }

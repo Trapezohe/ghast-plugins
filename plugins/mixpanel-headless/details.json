@@ -31,5 +31,29 @@
         "url": "https://mixpanel.github.io/mixpanel-headless/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "dashboard-expert",
+      "name": "dashboard-expert",
+      "descriptions": {
+        "en": "Full CRUD and analysis for Mixpanel dashboards. Use when the user asks to build, create, analyze, read, understand, explain, modify, update, enhance, or manage dashboards, or asks about dashboard layout, text cards, or report arrangement. Covers dashboard analysis (read + understand existing), creation (new builds), modification (update existing), and explanation (data-driven annotation)."
+      }
+    },
+    {
+      "id": "mixpanelyst",
+      "name": "mixpanelyst",
+      "descriptions": {
+        "en": "This skill should be used when the user asks about Mixpanel product analytics, event data, funnel analysis, retention curves, cohort analysis, segmentation queries, user behavior, conversion rates, churn, DAU/MAU, ARPU, revenue metrics, feature adoption, A/B test results, user paths, flow analysis, session replay or session recordings (what a specific user did on screen, click-by-click — rage clicks, dead clicks, error sessions, action timelines), or any request to query, explore, visualize, or analyze Mixpanel data using Python. Also use when the user asks to read, write, or manage Mixpanel \"business context\" — the markdown documentation that grounds AI assistants in an organization's structure and goals."
+      }
+    },
+    {
+      "id": "setup",
+      "name": "setup",
+      "descriptions": {
+        "en": "This skill installs mixpanel_headless, pandas, numpy, matplotlib, seaborn, networkx, anytree, scipy (and pyarrow on Python 3.11+), then verifies Mixpanel credentials. It should be invoked when setting up a new environment for Mixpanel data analysis, when dependencies are missing, or when configuring service account or OAuth credentials for the first time."
+      }
+    }
+  ],
+  "apps": []
 }

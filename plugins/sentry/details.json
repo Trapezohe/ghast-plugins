@@ -30,5 +30,20 @@
         "url": "https://mcp.sentry.dev/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "sentry",
+      "name": "sentry",
+      "descriptions": {
+        "en": "Investigate Sentry issues, events and application performance with the official Sentry MCP. Use for production error triage, release investigation and evidence-backed incident summaries."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "sentry",
+      "name": "Sentry"
+    }
+  ]
 }

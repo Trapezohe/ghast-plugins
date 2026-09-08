@@ -39,5 +39,20 @@
         "url": "https://attio.com/legal/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "attio",
+      "name": "attio",
+      "descriptions": {
+        "en": "Search, read, create, and update Attio CRM records, lists, comments, notes, tasks, meetings, calls, emails, and reports through Attio's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "attio",
+      "name": "attio"
+    }
+  ]
 }

@@ -30,5 +30,20 @@
         "url": "https://developer.justcall.io/docs/mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "justcall",
+      "name": "justcall",
+      "descriptions": {
+        "en": "Use JustCall in Ghast. Use JustCall’s official MCP for calls, messages, contacts, agent availability, analytics and authorized sales communication workflows. 通过 JustCall 官方 MCP 处理通话、消息、联系人、坐席状态、分析及已授权的销售沟通工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "justcall",
+      "name": "JustCall"
+    }
+  ]
 }

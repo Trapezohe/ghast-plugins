@@ -31,5 +31,20 @@
         "url": "https://cube.dev"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "cube",
+      "name": "cube",
+      "descriptions": {
+        "en": "Query governed Cube analytics, compare financial scenarios, build dashboards, edit semantic models on dev branches, and inspect or build pre-aggregations through Cube's official hosted MCP."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "cube",
+      "name": "cube"
+    }
+  ]
 }

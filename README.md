@@ -123,3 +123,5 @@ See the [maintenance guide](maintenance/README.md) for scheduling, permissions, 
 ## Licenses
 
 Licenses are defined per plugin. Check its manifest, README, and bundled license before redistributing it. An adapter’s license does not license the provider’s hosted service, trademarks, or user data; the provider’s terms still apply.
+
+The builder derives `skills` and `apps` in each details file from packaged SKILL.md and MCP definitions. Optional Chinese skill descriptions remain editable there. The store shows included skills before installation; installed skills expose their actual enable state. App connection state comes from the running client, never catalog metadata.

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "gmgn",
+  "version": "1.0.0",
+  "description": "Research tokens, markets and wallets with official GMGN skills and CLI; prepare explicitly authorized on-chain orders.",
+  "author": {
+    "name": "GMGN",
+    "url": "https://gmgn.ai"
+  },
+  "homepage": "https://gmgn.ai/ai",
+  "repository": "https://github.com/GMGNAI/gmgn-skills",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "displayName": "GMGN",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "upstreamRevision": "aa4d29a9b7d1aaaac3d6acd72c13f17575605348",
+      "descriptions": {
+        "en": "Research tokens, markets and wallets with official GMGN skills and CLI; prepare explicitly authorized on-chain orders.",
+        "zh-CN": "通过 GMGN 官方技能与 CLI 研究代币、行情和钱包，并处理明确授权的链上订单。"
+      }
+    }
+  }
+}

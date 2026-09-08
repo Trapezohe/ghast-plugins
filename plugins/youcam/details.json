@@ -30,5 +30,28 @@
         "url": "https://docs.perfectcorp.com/develop/mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "youcam",
+      "name": "youcam",
+      "descriptions": {
+        "en": "Use YouCam in Ghast. Use Perfect Corp’s YouCam tools for image and video editing, beauty visualization and virtual try-on. 使用玩美移动 YouCam 进行图片与视频编辑、美妆效果预览和虚拟试穿。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "youcam",
+      "name": "youcam"
+    },
+    {
+      "id": "youcam-beauty",
+      "name": "youcam beauty"
+    },
+    {
+      "id": "youcam-fashion",
+      "name": "youcam fashion"
+    }
+  ]
 }

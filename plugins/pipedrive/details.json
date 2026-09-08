@@ -46,5 +46,20 @@
         "url": "https://www.pipedrive.com/en/terms-of-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "pipedrive",
+      "name": "pipedrive",
+      "descriptions": {
+        "en": "Use Pipedrive in Ghast. Find CRM deals, update contacts and organize sales follow-ups. 检索销售商机、更新客户资料并安排销售跟进。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "pipedrive",
+      "name": "Pipedrive"
+    }
+  ]
 }

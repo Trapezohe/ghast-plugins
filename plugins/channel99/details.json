@@ -47,5 +47,20 @@
         "url": "https://www.channel99.com/terms-of-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "channel99",
+      "name": "channel99",
+      "descriptions": {
+        "en": "Analyze read-only B2B marketing performance, channels, vendors, campaigns, audiences, account engagement, attribution, spend efficiency, and pipeline influence through Channel99's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "channel99",
+      "name": "channel99"
+    }
+  ]
 }

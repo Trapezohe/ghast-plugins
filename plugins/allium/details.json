@@ -30,5 +30,20 @@
         "url": "https://docs.allium.so/ai/mcp/overview"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "allium",
+      "name": "allium",
+      "descriptions": {
+        "en": "Use Allium in Ghast. Query blockchain datasets, explore wallet data and manage saved analytics with Allium’s official MCP. 通过 Allium 官方 MCP 查询区块链数据、探索钱包数据并管理已保存分析。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "allium",
+      "name": "Allium"
+    }
+  ]
 }

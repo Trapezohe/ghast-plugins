@@ -38,5 +38,20 @@
         "url": "https://help.sunsama.com/docs/security/privacy-notes/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "sunsama",
+      "name": "sunsama",
+      "descriptions": {
+        "en": "Use Sunsama in Ghast. Plan daily work and manage Sunsama tasks, notes and channels through the official OAuth MCP connection. 通过 Sunsama 官方 OAuth MCP 规划每日工作，管理任务、笔记和频道。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "sunsama",
+      "name": "Sunsama"
+    }
+  ]
 }

@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "dexpaprika",
+      "name": "dexpaprika",
+      "descriptions": {
+        "en": "Use DexPaprika in Ghast. Analyze DEX liquidity pools, token prices and historical on-chain market data. 分析 DEX 流动性池、代币价格与历史链上行情。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "dexpaprika",
+      "name": "DexPaprika"
+    }
+  ]
 }

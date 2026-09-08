@@ -25,5 +25,15 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "defillama",
+      "name": "defillama",
+      "descriptions": {
+        "en": "Use this skill when the user asks about DeFi protocols, TVL (total value locked), chain-by-chain breakdowns, top DeFi protocols, or specific protocols like Aave, Uniswap, Lido, etc. Hits the free DeFi Llama public API (no key)."
+      }
+    }
+  ],
+  "apps": []
 }

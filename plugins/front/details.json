@@ -30,5 +30,20 @@
         "url": "https://dev.frontapp.com/docs/mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "front",
+      "name": "front",
+      "descriptions": {
+        "en": "Use Front in Ghast. Search Front conversations, inspect customer context, prepare drafts and manage inbox workflows. 搜索 Front 会话、查看客户上下文、准备回复草稿并管理收件箱工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "front",
+      "name": "Front"
+    }
+  ]
 }

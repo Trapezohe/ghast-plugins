@@ -38,5 +38,20 @@
         "url": "https://launchdarkly.com/docs/home/agentcontrol/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "launchdarkly",
+      "name": "launchdarkly",
+      "descriptions": {
+        "en": "Use LaunchDarkly in Ghast. Manage feature flags, AgentControl configurations and observability data in LaunchDarkly. 在 LaunchDarkly 中管理功能开关、AgentControl 配置与可观测数据。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "launchdarkly",
+      "name": "LaunchDarkly"
+    }
+  ]
 }

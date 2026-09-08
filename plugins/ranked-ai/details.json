@@ -47,5 +47,20 @@
         "url": "https://www.ranked.ai/terms"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "ranked-ai",
+      "name": "ranked-ai",
+      "descriptions": {
+        "en": "Analyze and manage Ranked AI SEO projects, keyword rankings, AI visibility, audits, backlinks, content, reports, heatmaps, and sitemap indexing through Ranked AI's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "ranked-ai",
+      "name": "ranked-ai"
+    }
+  ]
 }

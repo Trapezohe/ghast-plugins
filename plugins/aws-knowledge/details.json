@@ -31,5 +31,20 @@
         "url": "https://awslabs.github.io/mcp/servers/aws-knowledge-mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "aws-knowledge",
+      "name": "aws-knowledge",
+      "descriptions": {
+        "en": "Use AWS Knowledge in Ghast. Find AWS documentation, regional availability and implementation guidance. 查询 AWS 官方文档、区域可用性与实现指南。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "aws-knowledge",
+      "name": "AWS Knowledge"
+    }
+  ]
 }

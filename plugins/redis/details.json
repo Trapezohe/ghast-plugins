@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "redis",
+      "name": "redis",
+      "descriptions": {
+        "en": "Use Redis database tools in Ghast to inspect keys, data structures and supported search features. 使用 Redis 数据库工具查询键、数据结构及搜索功能。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "redis",
+      "name": "Redis"
+    }
+  ]
 }

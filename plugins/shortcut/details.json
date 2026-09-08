@@ -30,5 +30,20 @@
         "url": "https://www.shortcut.com/help/integrations/mcp-server/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "shortcut",
+      "name": "shortcut",
+      "descriptions": {
+        "en": "Use Shortcut in Ghast. Find and manage Shortcut stories, epics and documents to connect product planning with development. 查找与管理 Shortcut 故事、史诗与文档，连接产品规划和研发工作。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "shortcut",
+      "name": "Shortcut"
+    }
+  ]
 }

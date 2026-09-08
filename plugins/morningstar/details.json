@@ -26,5 +26,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "morningstar-fund-research",
+      "name": "morningstar-fund-research",
+      "descriptions": {
+        "en": "Screen, summarize, compare, and research authorized funds and ETFs through Morningstar's official MCP, including datapoint discovery, ratings, returns, risk, fees, holdings, analyst research, and Medalist context. Use for factual fund research and reports, not personalized investment recommendations."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "morningstar",
+      "name": "morningstar"
+    }
+  ]
 }

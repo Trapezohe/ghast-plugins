@@ -40,5 +40,55 @@
         "url": "https://deepnote.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "deepnote-current-service",
+      "name": "deepnote-current-service",
+      "descriptions": {
+        "en": "Authoritative current Deepnote hosted MCP tool surface, authentication, safety, and write boundaries. Use for every Deepnote task alongside the specialized official skills."
+      }
+    },
+    {
+      "id": "deepnote-data-execution",
+      "name": "deepnote-data-execution",
+      "descriptions": {
+        "en": "Use when running Deepnote notebooks, inspecting notebook inputs, reviewing integration references, or interpreting run status and snapshot outputs through the Deepnote MCP server."
+      }
+    },
+    {
+      "id": "deepnote-links",
+      "name": "deepnote-links",
+      "descriptions": {
+        "en": "Use when a task asks for Deepnote URLs, links, project links, notebook links, workspace links, share links, UTM/campaign links, or when a Deepnote response should include clickable links built from MCP project, notebook, or workspace data."
+      }
+    },
+    {
+      "id": "deepnote-mcp",
+      "name": "deepnote-mcp",
+      "descriptions": {
+        "en": "Use when a task mentions Deepnote, the Deepnote MCP server, Deepnote docs, projects, workspaces, notebooks, blocks, integrations, API keys, or notebook runs."
+      }
+    },
+    {
+      "id": "deepnote-notebook-editing",
+      "name": "deepnote-notebook-editing",
+      "descriptions": {
+        "en": "Use when creating Deepnote projects or notebooks, adding blocks or cells, scaffolding notebook content, inserting SQL/code/markdown/input blocks, or otherwise editing notebook structure through the Deepnote MCP server."
+      }
+    },
+    {
+      "id": "deepnote-notebooks",
+      "name": "deepnote-notebooks",
+      "descriptions": {
+        "en": "Use when reading, reviewing, inspecting, or reasoning about hosted Deepnote notebooks, blocks, inputs, SQL, Python, or notebook outputs through the Deepnote MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "deepnote",
+      "name": "deepnote"
+    }
+  ]
 }

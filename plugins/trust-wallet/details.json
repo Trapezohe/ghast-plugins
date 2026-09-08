@@ -26,5 +26,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "trust-wallet",
+      "name": "trust-wallet",
+      "descriptions": {
+        "en": "Use Trust Wallet in Ghast. Query token data, swap quotes, supported networks and address security with Trust Wallet’s official API Gateway MCP. 通过 Trust Wallet 官方 API Gateway MCP 查询代币数据、兑换报价、支持网络与地址安全信息。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "trust-wallet",
+      "name": "Trust Wallet"
+    }
+  ]
 }

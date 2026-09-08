@@ -46,5 +46,20 @@
         "url": "https://ideogram.ai/legal/privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "ideogram",
+      "name": "ideogram",
+      "descriptions": {
+        "en": "Use Ideogram in Ghast. Generate and edit images, organize creative assets and manage custom-model workflows in Ideogram. 在 Ideogram 中生成与编辑图像、整理创意素材并管理自定义模型工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "ideogram",
+      "name": "Ideogram"
+    }
+  ]
 }

@@ -39,5 +39,20 @@
         "url": "https://www.drawio.com/trust/terms-of-use/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "drawio",
+      "name": "drawio",
+      "descriptions": {
+        "en": "Use draw.io in Ghast. Create editable diagrams from draw.io XML, Mermaid or CSV using the official MCP tool server. 通过 draw.io 官方 MCP 工具将 XML、Mermaid 或 CSV 转成可编辑图表。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "drawio",
+      "name": "draw.io"
+    }
+  ]
 }

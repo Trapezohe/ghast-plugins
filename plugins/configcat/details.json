@@ -31,5 +31,20 @@
         "url": "https://configcat.com/docs/advanced/mcp-server/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "configcat",
+      "name": "configcat",
+      "descriptions": {
+        "en": "Use ConfigCat in Ghast. Manage feature flags, targeting rules, products and environments through ConfigCat’s official MCP server. 通过 ConfigCat 官方 MCP 服务管理功能开关、定向规则、产品与环境。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "configcat",
+      "name": "ConfigCat"
+    }
+  ]
 }

@@ -39,5 +39,20 @@
         "url": "https://skywatch.com/privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "skywatch",
+      "name": "skywatch",
+      "descriptions": {
+        "en": "Search orderable satellite imagery, estimate archive or tasking prices, and browse satellites, sensors, providers, and product offerings through SkyWatch's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "skywatch",
+      "name": "skywatch"
+    }
+  ]
 }

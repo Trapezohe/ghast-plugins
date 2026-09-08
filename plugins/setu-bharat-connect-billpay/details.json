@@ -39,5 +39,20 @@
         "url": "https://setu.co/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "setu-bharat-connect-billpay",
+      "name": "setu-bharat-connect-billpay",
+      "descriptions": {
+        "en": "Discover supported Bharat Connect billers, fetch bills, review payment history and receipts, pay bills, and check transaction status through Setu's official Bill Payments MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "setu-bharat-connect-billpay",
+      "name": "setu-bharat-connect-billpay"
+    }
+  ]
 }

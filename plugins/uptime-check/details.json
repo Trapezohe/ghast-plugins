@@ -25,5 +25,15 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "uptime-check",
+      "name": "uptime-check",
+      "descriptions": {
+        "en": "Use this skill when the user asks whether a website or API endpoint is up, reachable, or how fast it responds. Probes the URL with curl (timing) or WebFetch and reports HTTP status + latency."
+      }
+    }
+  ],
+  "apps": []
 }

@@ -47,5 +47,55 @@
         "url": "https://www.chronograph.pe/legal/privacy-policy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "chronograph-budget-vs-actuals-variance",
+      "name": "chronograph-budget-vs-actuals-variance",
+      "descriptions": {
+        "en": "Compare portfolio company operating actuals against budget/plan, compute variances, flag off-plan companies, and roll up to the fund, using Chronograph company metrics."
+      }
+    },
+    {
+      "id": "chronograph-fund-quarterly-review-pack",
+      "name": "chronograph-fund-quarterly-review-pack",
+      "descriptions": {
+        "en": "Generate a consolidated quarterly review pack for a single fund — a fund-level summary plus a one-pager section for every portfolio company in the fund — using Chronograph data."
+      }
+    },
+    {
+      "id": "chronograph-gp-analyst",
+      "name": "chronograph-gp-analyst",
+      "descriptions": {
+        "en": "Route end-to-end Chronograph GP portfolio and fund analysis across the official GP workflow skills."
+      }
+    },
+    {
+      "id": "chronograph-markup-markdown-brief",
+      "name": "chronograph-markup-markdown-brief",
+      "descriptions": {
+        "en": "Identify which portfolio companies were marked up or down this period, quantify each change, surface the stated basis, and rank by impact on fund NAV — using Chronograph investment metrics."
+      }
+    },
+    {
+      "id": "chronograph-portfolio-company-one-pager",
+      "name": "chronograph-portfolio-company-one-pager",
+      "descriptions": {
+        "en": "Generate one-pagers and investor reports for private equity portfolio companies. Handles live data fetching via the Chronograph MCP OR an uploaded Excel model, metric formatting, AI-generated or model-sourced commentary, and rendering a fully styled HTML one-pager."
+      }
+    },
+    {
+      "id": "chronograph-tvpi-attribution-by-company",
+      "name": "chronograph-tvpi-attribution-by-company",
+      "descriptions": {
+        "en": "Decompose a fund's total value / TVPI into per-company contributions, split realized vs. unrealized, and rank top contributors and detractors — using Chronograph investment metrics."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "chronograph-gp",
+      "name": "chronograph-gp"
+    }
+  ]
 }

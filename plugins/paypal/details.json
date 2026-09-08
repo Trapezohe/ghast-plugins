@@ -30,5 +30,20 @@
         "url": "https://paypal.gitbook.com/agent-toolkit-and-mcp-server/mcp-server/set-up-a-remote-mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "paypal",
+      "name": "paypal",
+      "descriptions": {
+        "en": "Use PayPal in Ghast. Review PayPal transactions and invoices and assist with authorized payment workflows. 查询 PayPal 交易和发票，并协助完成用户明确授权的支付业务流程。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "paypal",
+      "name": "PayPal"
+    }
+  ]
 }

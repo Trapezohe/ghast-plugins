@@ -48,5 +48,20 @@
         "url": "https://windsor.ai/terms-of-service/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "windsor-ai",
+      "name": "windsor-ai",
+      "descriptions": {
+        "en": "Query, analyze, connect, and carefully act on business data from Windsor.ai's official hosted MCP across advertising, analytics, CRM, ecommerce, finance, databases, warehouses, destinations, and 350+ source connectors."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "windsor-ai",
+      "name": "windsor-ai"
+    }
+  ]
 }

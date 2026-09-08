@@ -32,5 +32,48 @@
         "url": "https://www.midpage.ai"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "cite-check",
+      "name": "cite-check",
+      "descriptions": {
+        "en": "Cite-checks a brief, motion, or memo (PDF/Word): verifies each cited case is real, supports the proposition, is good law, and quoted accurately. Returns one marked-up .docx with comments and redlines."
+      }
+    },
+    {
+      "id": "draft-brief",
+      "name": "draft-brief",
+      "descriptions": {
+        "en": "Drafts court filings — motions, memoranda of law, appellate briefs — as court-ready .docx, with Midpage research behind every citation. Use to \"draft a motion to dismiss,\" \"write the brief.\""
+      }
+    },
+    {
+      "id": "draft-long-form-memo",
+      "name": "draft-long-form-memo",
+      "descriptions": {
+        "en": "Writes a formal objective legal research memo (Questions Presented, Brief Answers, Facts, IRAC Discussion, Conclusion) as a .docx. Use to \"draft a research memo on whether…\" Predicts, never advocates."
+      }
+    },
+    {
+      "id": "litigation-update-post",
+      "name": "litigation-update-post",
+      "descriptions": {
+        "en": "Writes public-facing litigation updates — blog posts, client alerts, LinkedIn/X posts — on a federal case or legal development. Use to \"write a blog post about…,\" \"draft a client alert on…\""
+      }
+    },
+    {
+      "id": "midpage-safety",
+      "name": "midpage-safety",
+      "descriptions": {
+        "en": "Apply legal-research, citation, privacy, docket, source-verification, and document-generation safeguards whenever using Midpage MCP or its litigation drafting and cite-checking skills."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "midpage",
+      "name": "midpage"
+    }
+  ]
 }

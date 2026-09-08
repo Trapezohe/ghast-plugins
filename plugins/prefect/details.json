@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "prefect",
+      "name": "prefect",
+      "descriptions": {
+        "en": "Use Prefect in Ghast. Inspect Prefect Cloud workflows, deployments, runs, logs and infrastructure with read-only diagnostics. 以只读方式查看 Prefect Cloud 工作流、部署、运行记录、日志与基础设施。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "prefect",
+      "name": "Prefect"
+    }
+  ]
 }

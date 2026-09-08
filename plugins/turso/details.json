@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "turso",
+      "name": "turso",
+      "descriptions": {
+        "en": "Use Turso in Ghast. Use Turso’s official built-in MCP to inspect local SQL databases, query tables and perform authorized data or schema changes. 通过 Turso 官方内置 MCP 检查本地 SQL 数据库、查询表，并执行已授权的数据或表结构变更。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "turso",
+      "name": "Turso"
+    }
+  ]
 }

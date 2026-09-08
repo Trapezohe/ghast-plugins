@@ -31,5 +31,20 @@
         "url": "https://docs.lovable.dev/integrations/lovable-mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "lovable",
+      "name": "lovable",
+      "descriptions": {
+        "en": "Create, inspect, iterate, deploy, and manage full-stack Lovable apps, code, knowledge, databases, connectors, analytics, and workspaces through Lovable's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "lovable",
+      "name": "lovable"
+    }
+  ]
 }

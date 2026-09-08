@@ -41,5 +41,20 @@
         "url": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "github",
+      "name": "github",
+      "descriptions": {
+        "en": "Read GitHub repositories, review PRs and issues, diagnose failing Actions, and make requested GitHub changes through the connected official GitHub MCP. Use for GitHub links, PR reviews, CI failures, issues, 仓库、代码审查、拉取请求、持续集成."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "github",
+      "name": "GitHub"
+    }
+  ]
 }

@@ -30,5 +30,20 @@
         "url": "https://xata.io/docs/platform/mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "xata",
+      "name": "xata",
+      "descriptions": {
+        "en": "Use Xata in Ghast. Explore Postgres schemas, query data and manage database branches through Xata’s official MCP service. 通过 Xata 官方 MCP 服务探索 Postgres 结构、查询数据并管理数据库分支。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "xata",
+      "name": "Xata"
+    }
+  ]
 }

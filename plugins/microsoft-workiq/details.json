@@ -46,5 +46,20 @@
         "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "microsoft-workiq",
+      "name": "microsoft-workiq",
+      "descriptions": {
+        "en": "Use Microsoft Work IQ in Ghast. Search and work with Microsoft 365 mail, meetings, files and Teams context through Microsoft’s official Work IQ MCP. Requires tenant setup and your own Entra app. 通过微软官方 Work IQ MCP 检索和处理 Microsoft 365 邮件、会议、文件与 Teams 工作上下文。需要租户配置和自有 Entra 应用。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "microsoft-workiq",
+      "name": "Microsoft Work IQ"
+    }
+  ]
 }

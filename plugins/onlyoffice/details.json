@@ -31,5 +31,20 @@
         "url": "https://www.onlyoffice.com/blog/2026/01/remote-onlyoffice-docspace-mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "onlyoffice",
+      "name": "onlyoffice",
+      "descriptions": {
+        "en": "Use ONLYOFFICE DocSpace in Ghast. Connect ONLYOFFICE’s official DocSpace MCP to work with files, folders, collaboration rooms and document workflows. 连接 ONLYOFFICE 官方 DocSpace MCP，处理文件、文件夹、协作空间与文档工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "onlyoffice",
+      "name": "ONLYOFFICE DocSpace"
+    }
+  ]
 }

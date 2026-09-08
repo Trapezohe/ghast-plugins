@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "infisical",
+      "name": "infisical",
+      "descriptions": {
+        "en": "Use Infisical in Ghast. Connect Infisical’s official MCP to manage project environments, folders, scoped secrets and project membership. 连接 Infisical 官方 MCP，管理项目环境、文件夹、授权范围内的密钥和项目成员。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "infisical",
+      "name": "Infisical"
+    }
+  ]
 }

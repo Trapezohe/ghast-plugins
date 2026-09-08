@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "starrocks",
+      "name": "starrocks",
+      "descriptions": {
+        "en": "Use StarRocks in Ghast. Explore StarRocks schemas, run SQL and create charts from analytical queries. 浏览 StarRocks 数据结构、执行 SQL 并根据分析查询生成图表。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "starrocks",
+      "name": "StarRocks"
+    }
+  ]
 }

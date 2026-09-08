@@ -39,5 +39,20 @@
         "url": "https://www.thirdbridge.com/en-us/about-us/compliance/policies/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "third-bridge",
+      "name": "third-bridge",
+      "descriptions": {
+        "en": "Search and synthesize Third Bridge expert interview transcripts for financial, commercial, competitive, diligence, and strategy research through Third Bridge's official hosted MCP. Use only for authorized company users under the applicable Third Bridge Content agreement and MCP pilot terms.\n"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "third-bridge",
+      "name": "third-bridge"
+    }
+  ]
 }

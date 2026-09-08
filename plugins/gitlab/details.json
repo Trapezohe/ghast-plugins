@@ -38,5 +38,20 @@
         "url": "https://about.gitlab.com/privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "gitlab",
+      "name": "gitlab",
+      "descriptions": {
+        "en": "Use GitLab in Ghast. Work with GitLab projects, issues, merge requests and development workflows. 访问 GitLab 项目、议题、合并请求与开发工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "gitlab",
+      "name": "GitLab"
+    }
+  ]
 }

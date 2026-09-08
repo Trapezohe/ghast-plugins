@@ -25,5 +25,15 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "bilibili-search",
+      "name": "bilibili-search",
+      "descriptions": {
+        "en": "Use this skill when the user asks to search Bilibili (B 站) for videos, look up trending Bilibili content, or find a specific Bilibili video by keyword. Uses Bilibili's public web search endpoint."
+      }
+    }
+  ],
+  "apps": []
 }

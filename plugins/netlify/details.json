@@ -40,5 +40,118 @@
         "url": "https://www.netlify.com/privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "netlify-access-control",
+      "name": "netlify-access-control",
+      "descriptions": {
+        "en": "Picks the right Netlify protection layer for a deployed site and disambiguates the three unrelated things people call \"auth\". Use when a developer wants to password-protect a site or previews, restrict a project to their team, make a project public/private, set team visibility defaults, require SSO to view a site, or debug SSO-session symptoms like being logged out mid-session / getting 401s on an SSO-protected site / token expiry or refresh. Routes app-user login (\"who is this user in my app\") to the netlify-identity skill and dashboard/team SSO SSO elsewhere; this skill only chooses the perimeter layer for site/preview access."
+      }
+    },
+    {
+      "id": "netlify-agent-runner",
+      "name": "netlify-agent-runner",
+      "descriptions": {
+        "en": "Run AI agent tasks remotely on Netlify using Claude, Codex, or Gemini. Use when the user wants to run an AI agent on their site, get a second opinion from another model, or delegate development tasks to run remotely against their repo."
+      }
+    },
+    {
+      "id": "netlify-ai-gateway",
+      "name": "netlify-ai-gateway",
+      "descriptions": {
+        "en": "Use OpenAI, Anthropic, Google Gemini, or OpenRouter models from Netlify Functions or Edge Functions without managing provider API keys or accounts — the gateway injects credentials automatically. Reach for this when you add an AI chatbot or completion endpoint, generate images or text with Gemini/GPT/Claude, summarize form submissions with AI, build an LLM-backed API route, stream a long AI generation, or wire up any server-side AI provider call on Netlify. Covers provider SDK setup, injected env vars, model availability, rate limits, credit costs, streaming for long generations, and local dev with netlify dev or the Vite plugin."
+      }
+    },
+    {
+      "id": "netlify-blobs",
+      "name": "netlify-blobs",
+      "descriptions": {
+        "en": "Store and retrieve unstructured objects, file uploads, and cache-like state on Netlify using the @netlify/blobs key/value API from Functions, Edge Functions, and Build Plugins. Use when a task involves saving user file or image uploads, persisting form or contact-form submissions, storing generated output from Background Functions (sitemaps/processed media/bulk-email results), building read-only asset stores, adding client-side blob expiration, or wiring file-based blob uploads at deploy time. Not for per-user, transactional, or relational data (counters/balances/sessions) — reach for Netlify DB there instead."
+      }
+    },
+    {
+      "id": "netlify-caching",
+      "name": "netlify-caching",
+      "descriptions": {
+        "en": "Cache dynamic and static responses on Netlify's CDN from Functions, Edge Functions, and proxies. Use when you add caching or cache-control headers to a function response, tune cache TTL or stale-while-revalidate, set up the durable cache, vary a cache key by query/header/cookie/country/language, purge or invalidate the cache by site or cache tag, use the programmatic Cache API (caches.open/match/put) or @netlify/cache helpers (fetchWithCache/cacheHeaders/getCacheStatus), speed up an expensive API call, add ISR or on-demand revalidation, or debug why a response is or isn't cached via the Cache-Status header."
+      }
+    },
+    {
+      "id": "netlify-config",
+      "name": "netlify-config",
+      "descriptions": {
+        "en": "Configure Netlify projects via netlify.toml and the _headers/_redirects files — covering build settings and deploy contexts alongside environment variables/scopes and the Secrets Controller plus redirect/rewrite/proxy and custom-header rules. Use when setting a build command or publish directory, adding redirect or rewrite or proxy rules, configuring custom headers or basic auth, setting or scoping environment variables and secrets, wiring up a monorepo or SPA fallback, or skipping unnecessary builds. Reach for this whenever you touch netlify.toml or ask \"why is my env var undefined in a function\" or \"how do I redirect this path\"."
+      }
+    },
+    {
+      "id": "netlify-database",
+      "name": "netlify-database",
+      "descriptions": {
+        "en": "Zero-config Postgres for Netlify apps via @netlify/database — querying data from Functions/Edge Functions, writing schema migrations, setting up Drizzle ORM, local dev with netlify dev, database branches for deploy previews, and migrating an existing Postgres project onto Netlify. Use when adding a database, building a contact form or CRUD API, writing SQL migrations, wiring up Drizzle, running netlify database commands, testing with a local Postgres, or switching from Neon/Supabase/RDS to Netlify Database."
+      }
+    },
+    {
+      "id": "netlify-deploy",
+      "name": "netlify-deploy",
+      "descriptions": {
+        "en": "Create and manage Netlify deploys — Git continuous deployment, CLI manual/anonymous deploys, Deploy to Netlify buttons, drag-and-drop, and per-context netlify.toml build settings. Use when linking a repo, deploying from the CLI, setting up Deploy Previews or branch deploys, configuring deploy contexts, adding skew protection, fixing a failed or secrets-flagged deploy, or wiring build hooks and Deploy to Netlify buttons."
+      }
+    },
+    {
+      "id": "netlify-edge-functions",
+      "name": "netlify-edge-functions",
+      "descriptions": {
+        "en": "Write, configure, and deploy Netlify Edge Functions (Deno runtime at the network edge) in TypeScript/JavaScript. Use when adding request/response manipulation at the edge — auth middleware, geolocation redirects, A/B testing and personalization, content localization, redirects/rewrites, SSR at the edge, or transforming responses — or when configuring path routing, response caching, or edge error handling. Triggers on tasks like \"add auth middleware\", \"geo-based redirect\", \"A/B testing at the edge\", \"rewrite requests\", or editing files in netlify/edge-functions."
+      }
+    },
+    {
+      "id": "netlify-forms",
+      "name": "netlify-forms",
+      "descriptions": {
+        "en": "Serverless form handling on Netlify-hosted sites — detects HTML forms at deploy time, stores submissions, filters spam, and sends notifications. Use when adding a contact form, lead-capture form, file-upload form, or newsletter signup to a Netlify site; wiring AJAX form submission; setting up a custom thank-you page; adding a honeypot or reCAPTCHA to a form; getting forms working in Next.js, Nuxt, SvelteKit, Astro, or Gatsby; reading form submissions via the Netlify API; or debugging missing submissions and forms that silently fail to register."
+      }
+    },
+    {
+      "id": "netlify-frameworks",
+      "name": "netlify-frameworks",
+      "descriptions": {
+        "en": "Deploy and configure web frameworks on Netlify — build settings and SSR/edge adapters plus local platform emulation and env vars. Use when setting up or fixing a framework deploy (Next.js / Astro / Nuxt / SvelteKit / Remix / React Router / TanStack Start / SolidStart / Gatsby / Angular / Vite / Express / Hydrogen / Hugo / Eleventy / Vue / React), adding SSR or edge functions or middleware wired to Netlify context, fixing SPA redirect and catch-all rules, setting a build command or publish directory, or debugging \"why isn't my env var updating\" and framework build failures."
+      }
+    },
+    {
+      "id": "netlify-functions",
+      "name": "netlify-functions",
+      "descriptions": {
+        "en": "Write, configure, and deploy Netlify serverless functions in TypeScript, JavaScript, or Go. Use this when adding an API endpoint or backend route, adding a contact form handler, wiring auth or Identity signup/login hooks, building streaming or AI-proxy responses, scheduling cron jobs, running long background jobs (batch processing/scraping), reacting to deploy or form events, setting up rate limiting or region/memory config, or reading environment variables and secrets inside a function. Covers file locations, the Request/Context/Response handler shape, path routing, config options, and local testing with netlify dev."
+      }
+    },
+    {
+      "id": "netlify-identity",
+      "name": "netlify-identity",
+      "descriptions": {
+        "en": "Add authentication and user management to a Netlify site with @netlify/identity — signup/login/logout, OAuth social login (Google/GitHub/GitLab/Bitbucket), server-side user verification in Functions, role-based access control (RBAC), admin user management, and Identity event hooks. Use when adding a login/signup flow, \"add social login\", gating content by user role, protecting a function or page behind auth, assigning roles at signup, customizing auth emails, or handling OAuth/confirmation/recovery callbacks. Not for locking an entire site to a company/team — that is netlify-access-control."
+      }
+    },
+    {
+      "id": "netlify-image-cdn",
+      "name": "netlify-image-cdn",
+      "descriptions": {
+        "en": "Transform, resize, crop, reformat, and optimize images on demand via Netlify Image CDN's /.netlify/images endpoint. Use when adding responsive images, generating thumbnails, converting formats (avif/webp/png), cropping to aspect ratios, tuning image quality, creating blurred placeholders, allowlisting remote image domains, serving user-uploaded images, or wiring framework image components (Next.js, Astro, Nuxt, Angular, Gatsby) to Netlify. Triggers on tasks like \"optimize images\", \"add image thumbnails\", \"resize images on the fly\", \"serve images from an external domain\", or \"add blur placeholders\"."
+      }
+    },
+    {
+      "id": "netlify-mcp-servers",
+      "name": "netlify-mcp-servers",
+      "descriptions": {
+        "en": "Build, deploy, and secure Model Context Protocol (MCP) servers on Netlify. Use whenever the task involves creating an MCP server, exposing an app or API to AI agents as MCP tools, letting Claude / Cursor / Claude Code call a custom remote server, or adding MCP tools to an existing Netlify site. Covers the MCP SDK + Streamable HTTP transport on a Netlify Function, authentication (single shared secret vs per-user API keys with Netlify Identity), read/write safety, file uploads, and connecting clients. Use even when the user just says \"MCP\", \"tool server for an agent\", or \"let an AI use my API\"."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "netlify",
+      "name": "netlify"
+    }
+  ]
 }

@@ -30,5 +30,20 @@
         "url": "https://help.dartai.com/en/articles/10733406-dart-mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "dartai",
+      "name": "dartai",
+      "descriptions": {
+        "en": "Use Dart in Ghast. Organize tasks, documents and project collaboration in Dart. 在 Dart 中组织任务、文档与项目协作。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "dartai",
+      "name": "Dart"
+    }
+  ]
 }

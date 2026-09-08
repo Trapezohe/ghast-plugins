@@ -47,5 +47,20 @@
         "url": "https://tallyfy.com/legal/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "tallyfy",
+      "name": "tallyfy",
+      "descriptions": {
+        "en": "Use Tallyfy in Ghast. Manage workflow tasks, business processes and approvals through Tallyfy. 通过 Tallyfy 管理工作流任务、业务流程与审批。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "tallyfy",
+      "name": "Tallyfy"
+    }
+  ]
 }

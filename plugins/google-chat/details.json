@@ -46,5 +46,20 @@
         "url": "https://policies.google.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "google-chat",
+      "name": "google-chat",
+      "descriptions": {
+        "en": "Use Google Chat in Ghast. Search conversations, read messages and communicate through Google’s official Workspace MCP service. 通过 Google 官方 Workspace MCP 服务检索会话、阅读消息与沟通协作。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "google-chat",
+      "name": "Google Chat"
+    }
+  ]
 }

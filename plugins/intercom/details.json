@@ -40,5 +40,45 @@
         "url": "https://www.intercom.com/legal/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "customer-360",
+      "name": "customer-360",
+      "descriptions": {
+        "en": "Build a comprehensive customer profile from Intercom data, including conversation history, account context, and interaction timeline. Use when the user asks to \"look up a customer\", \"customer profile\", \"customer 360\", \"tell me about this customer\", \"summarize a customer's history\", or provides a customer email or company name and wants a full picture.\n"
+      }
+    },
+    {
+      "id": "install-cli",
+      "name": "install-cli",
+      "descriptions": {
+        "en": "Install and configure Intercom's official @intercom/cli package when the user explicitly requests CLI access or needs the read-only ticket workflow.\n"
+      }
+    },
+    {
+      "id": "intercom-analysis",
+      "name": "intercom-analysis",
+      "descriptions": {
+        "en": "Analyze Intercom conversations to identify support patterns, investigate customer issues, and look up contacts and companies. Use when the user asks to \"analyze conversations\", \"find support patterns\", \"search Intercom\", \"look up a customer\", \"investigate a customer issue\", \"check contact info\", or asks questions about their Intercom data.\n"
+      }
+    },
+    {
+      "id": "intercom-ticket-analysis",
+      "name": "intercom-ticket-analysis",
+      "descriptions": {
+        "en": "Search and retrieve Intercom tickets through Intercom's official CLI and Tickets REST API. Use when the user asks about Intercom tickets, open support requests, back-office tasks, tracker tickets, ticket attributes, ticket state, or ticket-specific support workflows.\n"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "intercom-us",
+      "name": "intercom us"
+    },
+    {
+      "id": "intercom-eu",
+      "name": "intercom eu"
+    }
+  ]
 }

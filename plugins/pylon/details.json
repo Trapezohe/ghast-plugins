@@ -47,5 +47,20 @@
         "url": "https://www.usepylon.com/legal/terms"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "pylon",
+      "name": "pylon",
+      "descriptions": {
+        "en": "Search and manage Pylon support issues, accounts, contacts, users, messages, and internal notes through Pylon's official MCP and REST API."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "pylon",
+      "name": "pylon"
+    }
+  ]
 }

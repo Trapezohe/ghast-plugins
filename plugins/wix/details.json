@@ -32,5 +32,76 @@
         "url": "https://dev.wix.com"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "wix-app",
+      "name": "wix-app",
+      "descriptions": {
+        "en": "Build and review Wix CLI app extensions — dashboard pages, modals, plugins, menu plugins, custom element widgets, Editor React components, site plugins, embedded scripts, backend APIs, backend events, service plugins, data collections, and App Market readiness. Use when building ANY feature or extension for a Wix CLI app or preparing a Wix app for App Market review. Triggers on: add, build, create, implement, help me, dashboard, widget, plugin, backend, API, event, collection, embedded script, service plugin, Editor React component, checkout, shipping, tax, discount, SPI, CMS, schema, tracking, popup, admin panel, menu item, modal, validate, test, verify, register extension, App Market, app review, submission readiness."
+      }
+    },
+    {
+      "id": "wix-auth",
+      "name": "wix-auth",
+      "descriptions": {
+        "en": "Authenticate with Wix to obtain an access token for calling Wix APIs. Use when an agent needs a valid Wix access token and has none, or when the stored token is expired."
+      }
+    },
+    {
+      "id": "wix-base44-connector",
+      "name": "wix-base44-connector",
+      "descriptions": {
+        "en": "Build on Wix from the Base44 builder sandbox — this file is the complete guide (site context, doc discovery, API contracts, who calls Wix from where), and scripts/utils.js is its helper module, loaded from disk per exec. Triggers: build a Base44 app on a connected Wix site, look up a Wix API from the sandbox, decide frontend vs backend for a Wix call."
+      }
+    },
+    {
+      "id": "wix-design-system",
+      "name": "wix-design-system",
+      "descriptions": {
+        "en": "Wix Design System component reference. Use when building UI with @wix/design-system, choosing components, checking props and examples, or writing tests with component testkits. Triggers on \"what component\", \"how do I make\", \"WDS\", \"show me props\", \"testkit\", \"driver\", or component names like Button, Card, Modal, Box, Text."
+      }
+    },
+    {
+      "id": "wix-docs",
+      "name": "wix-docs",
+      "descriptions": {
+        "en": "Look up the Wix API/SDK documentation to confirm an exact endpoint, HTTP method, request/response shape, field, enum, or error before writing Wix code — never guess a Wix API from memory. A lookup is a short flow: find the right page, then read it. Two ways: (1) plain `curl` (zero dependencies) — find a page by **semantic search** (`POST /mcp-docs-search/v1/docs/search`, natural-language `{ search_term, document_type }`) **or by browsing** the docs tree as a menu — a structured, typed, counted browse of the REST API reference (`POST /mcp-docs-search/v1/docs/menu/browse`), or the `.md` menu tree from the `llms.txt` root for any portal — then read the page by appending `.md` to its URL; and (2) the Wix MCP doc tools when your agent has them. Triggers: look up a Wix API, find the Wix endpoint/method, confirm a Wix request body or field, verify a Wix API shape, explore Wix docs, which Wix API do I call, read a Wix method schema."
+      }
+    },
+    {
+      "id": "wix-headless",
+      "name": "wix-headless",
+      "descriptions": {
+        "en": "Connect Wix business services (Stores, Bookings, CMS, Blog, Events, Forms, and more) to a Wix Headless frontend — infer the needed capabilities, install the apps, seed backend content, and produce an SDK-integration guide. For managed (Wix-hosted) projects it can also build the frontend: scaffold a new site (create) or wire an existing/brought-in design (connect), then build and release. Works across managed, self-managed, and stripe project types. Triggers: set up a Wix Headless backend, add Wix business features to my app, build or host a Wix site, connect/implement this design with Wix."
+      }
+    },
+    {
+      "id": "wix-manage",
+      "name": "wix-manage",
+      "descriptions": {
+        "en": "Wix business solution management recipes — REST API operations for configuring and managing Wix business solutions. Routes to: stores, bookings, get-paid, CMS, contacts, forms, media, app-installation, pricing-plans, restaurants, ricos rich-content, sites, blog, calendar, domains, events, site-properties, ecommerce, marketing, google-ads, analytics, accessibility, dashboard-navigation."
+      }
+    },
+    {
+      "id": "wix-replatform",
+      "name": "wix-replatform",
+      "descriptions": {
+        "en": "Routes RePlatform source-to-Wix migrations to the next workflow step by inspecting migration project artifacts. Use when starting, continuing, or recovering a migration run."
+      }
+    },
+    {
+      "id": "wix-vibe-headless",
+      "name": "wix-vibe-headless",
+      "descriptions": {
+        "en": "Client-only, dependency-free REST scaffolds for connecting an already-built front end (a vibe-coded app, an HTML/JSX/Vite project, a design-tool export) to a live Wix site over the site's public WIX_CLIENT_ID — the browser talks to Wix directly, no SDK, no backend, no build step. One skill covering every Wix business solution: Stores/eCommerce storefront (products, cart, checkout), Bookings (services, slots, appointments), Blog (posts, categories, tags), Events & Tickets (browse, RSVP, ticketing), Portfolio (collections, projects, galleries), Restaurants (menu, online ordering, reservations), CMS / Wix Data (list, detail, filter, forms, CRUD), Pricing Plans (memberships, subscriptions, checkout), and Members (custom login — email+password, Google/Facebook, and custom SSO — plus account areas and member-gated content). Each vertical ships a copy-as-is REST layer plus wiring instructions. Read-only over the owner's content — never provisions, never mocks data. Triggers: connect my Wix store/shop, build a sto..."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "wix-mcp",
+      "name": "wix"
+    }
+  ]
 }

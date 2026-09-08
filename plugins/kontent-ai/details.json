@@ -39,5 +39,20 @@
         "url": "https://kontent.ai/privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "kontent-ai",
+      "name": "kontent-ai",
+      "descriptions": {
+        "en": "Use Kontent.ai in Ghast. Use Kontent.ai’s official MCP to manage structured content, models, assets, language variants and publishing workflows. 通过 Kontent.ai 官方 MCP 管理结构化内容、内容模型、素材、多语言版本和发布工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "kontent-ai",
+      "name": "Kontent.ai"
+    }
+  ]
 }

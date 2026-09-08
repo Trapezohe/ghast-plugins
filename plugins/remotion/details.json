@@ -48,5 +48,92 @@
         "url": "https://www.remotion.dev/docs/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "remotion-best-practices",
+      "name": "remotion-best-practices",
+      "descriptions": {
+        "en": "Router for all Remotion skills"
+      }
+    },
+    {
+      "id": "remotion-captions",
+      "name": "remotion-captions",
+      "descriptions": {
+        "en": "Transcribing, displaying and animating captions"
+      }
+    },
+    {
+      "id": "remotion-create",
+      "name": "remotion-create",
+      "descriptions": {
+        "en": "Create a new Remotion video"
+      }
+    },
+    {
+      "id": "remotion-docs",
+      "name": "remotion-docs",
+      "descriptions": {
+        "en": "Search Remotion documentation"
+      }
+    },
+    {
+      "id": "remotion-interactivity",
+      "name": "remotion-interactivity",
+      "descriptions": {
+        "en": "Structure Remotion markup for interactivity"
+      }
+    },
+    {
+      "id": "remotion-maps",
+      "name": "remotion-maps",
+      "descriptions": {
+        "en": "Remotion Map animation knowledge"
+      }
+    },
+    {
+      "id": "remotion-markup",
+      "name": "remotion-markup",
+      "descriptions": {
+        "en": "Content, animation and effects best practices"
+      }
+    },
+    {
+      "id": "remotion-multimedia",
+      "name": "remotion-multimedia",
+      "descriptions": {
+        "en": "Interacting with Mediabunny"
+      }
+    },
+    {
+      "id": "remotion-render",
+      "name": "remotion-render",
+      "descriptions": {
+        "en": "Export a Remotion video"
+      }
+    },
+    {
+      "id": "remotion-saas",
+      "name": "remotion-saas",
+      "descriptions": {
+        "en": "Build an app with Remotion"
+      }
+    },
+    {
+      "id": "remotion-studio",
+      "name": "remotion-studio",
+      "descriptions": {
+        "en": "Preview a Remotion video"
+      }
+    },
+    {
+      "id": "remotion-upgrade",
+      "name": "remotion-upgrade",
+      "descriptions": {
+        "en": "Upgrade Remotion, and related packages"
+      }
+    }
+  ],
+  "apps": []
 }

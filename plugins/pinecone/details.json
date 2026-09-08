@@ -30,5 +30,20 @@
         "url": "https://docs.pinecone.io/guides/operations/mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "pinecone",
+      "name": "pinecone",
+      "descriptions": {
+        "en": "Use Pinecone in Ghast. Manage Pinecone vector indexes, upsert records, query data and search official documentation. 管理 Pinecone 向量索引、写入记录、查询数据并搜索官方文档。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "pinecone",
+      "name": "Pinecone"
+    }
+  ]
 }

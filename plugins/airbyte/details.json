@@ -30,5 +30,20 @@
         "url": "https://docs.airbyte.com/ai-agents/interfaces/mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "airbyte",
+      "name": "airbyte",
+      "descriptions": {
+        "en": "Use Airbyte Agents in Ghast. Query and work with the data sources connected to your Airbyte Agents account. 查询与使用 Airbyte Agents 账号中已连接的数据源。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "airbyte",
+      "name": "Airbyte Agents"
+    }
+  ]
 }

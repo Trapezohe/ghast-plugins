@@ -48,5 +48,20 @@
         "url": "https://www.coveo.com/en/company/legal/privacy-and-security/privacy-notice"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "coveo",
+      "name": "coveo",
+      "descriptions": {
+        "en": "Search authorized enterprise content, retrieve grounded passages, and generate source-linked answers through Coveo's official Labs MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "coveo",
+      "name": "coveo"
+    }
+  ]
 }

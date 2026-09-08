@@ -47,5 +47,20 @@
         "url": "https://chainstack.com/privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "chainstack",
+      "name": "chainstack",
+      "descriptions": {
+        "en": "Use Chainstack in Ghast. Inspect blockchain infrastructure, search documentation and manage Chainstack nodes. 查询区块链基础设施与文档，管理 Chainstack 节点。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "chainstack",
+      "name": "Chainstack"
+    }
+  ]
 }

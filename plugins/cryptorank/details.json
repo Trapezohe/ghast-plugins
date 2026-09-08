@@ -30,5 +30,20 @@
         "url": "https://cryptorank.io/insights/analytics/how-to-use-CryptoRank-MCP-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "cryptorank",
+      "name": "cryptorank",
+      "descriptions": {
+        "en": "Use CryptoRank in Ghast. Research crypto funding rounds, investors, token unlocks and project teams through CryptoRank’s official MCP (Beta). 通过 CryptoRank 官方 MCP（Beta）研究加密项目融资、投资机构、代币解锁与团队。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "cryptorank",
+      "name": "CryptoRank"
+    }
+  ]
 }

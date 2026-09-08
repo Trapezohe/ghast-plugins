@@ -47,5 +47,20 @@
         "url": "https://www.assemblyai.com/legal/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "assemblyai-docs",
+      "name": "assemblyai-docs",
+      "descriptions": {
+        "en": "Use AssemblyAI Docs in Ghast. Search official AssemblyAI documentation for speech recognition, streaming transcription and voice-agent integration. 查询 AssemblyAI 官方文档，辅助接入语音识别、流式转录及语音智能体。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "assemblyai-docs",
+      "name": "AssemblyAI Docs"
+    }
+  ]
 }

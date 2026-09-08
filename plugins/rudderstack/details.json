@@ -30,5 +30,20 @@
         "url": "https://mcp.rudderstack.com/docs"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "rudderstack",
+      "name": "rudderstack",
+      "descriptions": {
+        "en": "Use RudderStack in Ghast. Inspect customer data pipelines, sources and destinations and manage RudderStack transformations. 检查客户数据管道、数据源与目标端，并管理 RudderStack 数据转换。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "rudderstack",
+      "name": "RudderStack"
+    }
+  ]
 }

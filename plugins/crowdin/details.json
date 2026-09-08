@@ -46,5 +46,20 @@
         "url": "https://support.crowdin.com/privacy-policy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "crowdin",
+      "name": "crowdin",
+      "descriptions": {
+        "en": "Use Crowdin in Ghast. Manage translation projects, source files, tasks, glossaries and translation memory in Crowdin. 在 Crowdin 中管理翻译项目、源文件、任务、术语表与翻译记忆库。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "crowdin",
+      "name": "Crowdin"
+    }
+  ]
 }

@@ -46,5 +46,20 @@
         "url": "https://policies.google.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "google-gmail",
+      "name": "google-gmail",
+      "descriptions": {
+        "en": "Use Gmail in Ghast. Search email, read threads and manage drafts and labels through Google’s official Workspace MCP service. 通过 Google 官方 Workspace MCP 服务检索邮件、阅读会话并管理草稿与标签。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "google-gmail",
+      "name": "Gmail"
+    }
+  ]
 }

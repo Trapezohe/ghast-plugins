@@ -39,5 +39,20 @@
         "url": "https://docs.perplexity.ai/docs/resources/privacy-security"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "perplexity",
+      "name": "perplexity",
+      "descriptions": {
+        "en": "Use Perplexity in Ghast. Use Perplexity’s official web search, question-answering, reasoning and research tools with your API account. 通过 Perplexity 官方工具进行网页搜索、问答、推理与研究，使用独立的 API 账号计费。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "perplexity",
+      "name": "Perplexity"
+    }
+  ]
 }

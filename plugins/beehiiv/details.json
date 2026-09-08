@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "beehiiv",
+      "name": "beehiiv",
+      "descriptions": {
+        "en": "Use beehiiv in Ghast. Manage newsletter drafts, audiences, segments and growth analytics through beehiiv’s official MCP. 通过 beehiiv 官方 MCP 管理通讯草稿、订阅受众、分群与增长分析。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "beehiiv",
+      "name": "beehiiv"
+    }
+  ]
 }

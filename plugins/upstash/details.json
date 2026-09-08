@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "upstash",
+      "name": "upstash",
+      "descriptions": {
+        "en": "Use Upstash Redis in Ghast. Query and manage Upstash Redis data, run Redis commands and search official documentation. 查询与管理 Upstash Redis 数据、执行 Redis 命令并搜索官方文档。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "upstash",
+      "name": "Upstash Redis"
+    }
+  ]
 }

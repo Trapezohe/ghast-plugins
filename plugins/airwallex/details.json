@@ -38,5 +38,28 @@
         "url": "https://www.airwallex.com/global/terms/sign-up-terms"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "airwallex",
+      "name": "airwallex",
+      "descriptions": {
+        "en": "Use Airwallex in Ghast. Connect Airwallex’s official production, sandbox developer and public documentation MCP services for finance and integration workflows. 连接 Airwallex 官方生产、沙箱开发与公开文档 MCP 服务，支持财务和集成开发工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "airwallex",
+      "name": "airwallex"
+    },
+    {
+      "id": "airwallex-dev",
+      "name": "airwallex dev"
+    },
+    {
+      "id": "airwallex-docs",
+      "name": "airwallex docs"
+    }
+  ]
 }

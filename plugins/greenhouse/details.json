@@ -46,5 +46,20 @@
         "url": "https://www.greenhouse.com/legal"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "greenhouse",
+      "name": "greenhouse",
+      "descriptions": {
+        "en": "Use Greenhouse in Ghast. Explore recruiting data and perform supported hiring workflows with Greenhouse’s official MCP (Open Beta). 通过 Greenhouse 官方 MCP（公开测试版）探索招聘数据并执行受支持的招聘流程。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "greenhouse",
+      "name": "Greenhouse"
+    }
+  ]
 }

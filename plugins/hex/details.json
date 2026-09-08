@@ -46,5 +46,20 @@
         "url": "https://learn.hex.tech/docs/legal/terms-and-conditions"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "hex",
+      "name": "hex",
+      "descriptions": {
+        "en": "Use Hex in Ghast. Search Hex projects and explore data through Hex Threads conversations. 搜索 Hex 项目，并通过 Hex Threads 会话探索和分析数据。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "hex",
+      "name": "Hex"
+    }
+  ]
 }

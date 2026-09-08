@@ -30,5 +30,20 @@
         "url": "https://help.dropbox.com/integrations/connect-dropbox-mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "dropbox",
+      "name": "dropbox",
+      "descriptions": {
+        "en": "Use Dropbox in Ghast. Search, organize and work with Dropbox files, sharing links, revisions and file requests. 搜索与整理 Dropbox 文件，管理分享链接、文件版本和文件收集请求。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "dropbox",
+      "name": "Dropbox"
+    }
+  ]
 }

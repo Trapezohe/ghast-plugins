@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "abtasty",
+      "name": "abtasty",
+      "descriptions": {
+        "en": "Use AB Tasty Feature Experimentation in Ghast. Inspect visitor feature flags and campaign configuration with AB Tasty’s official Feature Experimentation MCP. 通过 AB Tasty 官方 Feature Experimentation MCP 查看访客功能开关与实验活动配置。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "abtasty",
+      "name": "AB Tasty Feature Experimentation"
+    }
+  ]
 }

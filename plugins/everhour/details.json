@@ -30,5 +30,20 @@
         "url": "https://support.everhour.com/article/618-connecting-with-mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "everhour",
+      "name": "everhour",
+      "descriptions": {
+        "en": "Use Everhour in Ghast. Connect Everhour’s official MCP for timers, time entries, timesheets, project lookup and team work tracking. 连接 Everhour 官方 MCP，管理计时器、工时记录、时间表，查询项目并跟踪团队工作。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "everhour",
+      "name": "Everhour"
+    }
+  ]
 }

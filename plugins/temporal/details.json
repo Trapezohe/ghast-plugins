@@ -47,5 +47,36 @@
         "url": "https://temporal.io/terms-of-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "temporal-cloud-setup",
+      "name": "temporal-cloud-setup",
+      "descriptions": {
+        "en": "Set up Temporal Cloud and run a sample Workflow on it for the user, doing the work end to end. Use when the user wants to set up Temporal Cloud, get started on Temporal Cloud, install the unified Temporal CLI (prerelease cloud-cli), create a Cloud namespace or API key, clone a money-transfer sample app, write the client config TOML, or connect a local Worker to Temporal Cloud and run a sample Workflow. This is the Cloud setup path, not the local learning path (see temporal-getting-started). Covers Python, TypeScript, Go, Java, .NET, and Ruby SDKs."
+      }
+    },
+    {
+      "id": "temporal-developer",
+      "name": "temporal-developer",
+      "descriptions": {
+        "en": "Develop, debug, and manage Temporal applications across Python, TypeScript, Go, Java, .NET, Ruby, and Rust. Use when the user is building workflows, activities, or workers with a Temporal SDK, debugging issues like non-determinism errors, stuck workflows, or activity retries, using Temporal CLI, Temporal Server, or Temporal Cloud, or working with durable execution concepts like signals, queries, heartbeats, versioning, continue-as-new, child workflows, or saga patterns. Also use when the user mentions \"run a Temporal workflow from the CLI\", \"start a dev server\", \"run temporal server start-dev\", \"temporal workflow start\", \"temporal workflow execute\", \"temporal workflow signal\", \"temporal workflow query\", \"temporal workflow update\"."
+      }
+    },
+    {
+      "id": "temporal-ops",
+      "name": "temporal-ops",
+      "descriptions": {
+        "en": "Administer and diagnose running Temporal Cloud or self-hosted Temporal Server environments via CLI (temporal, tcld) — not SDK code. Operations: namespace CRUD, Cloud capacity/APS, API-key rotation, mTLS cert rotation, workflow health, batch cancel/terminate/reset, export, search attributes, Ops API, billing, audit logs, Terraform, SAML/SCIM, migration. Diagnosis: bottom-up triage of stuck workflows, non-determinism, worker-health, task-queue problems, HA failover, payload size limits, performance bottlenecks, missed schedules. Do NOT trigger for generic TLS/gRPC errors unrelated to Temporal, writing application code (temporal-developer), or worker tuning/sizing (temporal-workertuning)."
+      }
+    },
+    {
+      "id": "temporal-serverless",
+      "name": "temporal-serverless",
+      "descriptions": {
+        "en": "Deploy and operate Temporal Workers on serverless compute (AWS Lambda) driven by the Worker Controller Instance (WCI). Use when the user mentions: \"serverless worker\", \"Temporal serverless\", \"Worker Controller Instance\", \"WCI\", \"deploy Temporal worker on Lambda\", \"Lambda packaging\", \"Lambda timeout\", \"WCI inspection\", \"CloudFormation Temporal\"."
+      }
+    }
+  ],
+  "apps": []
 }

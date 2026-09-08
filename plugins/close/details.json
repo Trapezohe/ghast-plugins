@@ -39,5 +39,20 @@
         "url": "https://close.com/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "close",
+      "name": "close",
+      "descriptions": {
+        "en": "Search, analyze, create, and explicitly update Close CRM leads, contacts, opportunities, activities, tasks, pipelines, workflows, templates, custom objects, and voice agents through Close's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "close",
+      "name": "close"
+    }
+  ]
 }

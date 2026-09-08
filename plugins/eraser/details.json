@@ -38,5 +38,20 @@
         "url": "https://www.eraser.io/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "eraser",
+      "name": "eraser",
+      "descriptions": {
+        "en": "Use Eraser in Ghast. Create and edit technical diagrams, search workspace files and manage diagram presets in Eraser. 在 Eraser 中创建与编辑技术图表、搜索工作区文件并管理图表预设。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "eraser",
+      "name": "Eraser"
+    }
+  ]
 }

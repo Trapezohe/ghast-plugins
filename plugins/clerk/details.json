@@ -46,5 +46,20 @@
         "url": "https://clerk.com/legal/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "clerk",
+      "name": "clerk",
+      "descriptions": {
+        "en": "Use Clerk in Ghast. Find official Clerk SDK snippets and authentication implementation patterns. 查询 Clerk 官方 SDK 示例与身份认证实现方案。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "clerk",
+      "name": "Clerk"
+    }
+  ]
 }

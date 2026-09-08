@@ -31,5 +31,20 @@
         "url": "https://planetscale.com/docs/mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "planetscale",
+      "name": "planetscale",
+      "descriptions": {
+        "en": "Use PlanetScale in Ghast. Inspect databases, branches, schemas and query performance with PlanetScale. 查询 PlanetScale 数据库、分支、表结构与查询性能。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "planetscale",
+      "name": "PlanetScale"
+    }
+  ]
 }

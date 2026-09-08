@@ -47,5 +47,20 @@
         "url": "https://www.helius.dev/terms"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "helius",
+      "name": "helius",
+      "descriptions": {
+        "en": "Use Helius in Ghast. Query Solana assets, wallet data, transactions and network information through Helius’s official MCP in its non-signing credential mode. 通过 Helius 官方 MCP 的无签名凭据模式查询 Solana 资产、钱包数据、交易与网络信息。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "helius",
+      "name": "Helius"
+    }
+  ]
 }

@@ -30,5 +30,20 @@
         "url": "https://mcp.crypto.com/docs/getting-started"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "crypto-com",
+      "name": "crypto-com",
+      "descriptions": {
+        "en": "Use Crypto.com Market Data in Ghast. Look up cryptocurrency prices, market trends and trading volumes through Crypto.com’s public market-data service. 通过 Crypto.com 公开行情服务查询加密货币价格、市场趋势与交易量。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "crypto-com",
+      "name": "Crypto.com Market Data"
+    }
+  ]
 }

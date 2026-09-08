@@ -38,5 +38,24 @@
         "url": "https://www.ankr.com/docs/privacy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "ankr",
+      "name": "ankr",
+      "descriptions": {
+        "en": "Use Ankr in Ghast. Connect Ankr’s official read-only blockchain MCP and OAuth account-management MCP for chain data and RPC operations. 连接 Ankr 官方只读区块链 MCP 与 OAuth 账号管理 MCP，查询链上数据并管理 RPC 服务。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "ankr",
+      "name": "ankr"
+    },
+    {
+      "id": "ankr-management",
+      "name": "ankr management"
+    }
+  ]
 }

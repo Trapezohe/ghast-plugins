@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "knowify",
+      "name": "knowify",
+      "descriptions": {
+        "en": "Use Knowify in Ghast. Analyze construction jobs, profitability and invoicing with Knowify’s official read-only AI connector. 通过 Knowify 官方只读 AI 连接器分析施工项目、利润与开票数据。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "knowify",
+      "name": "Knowify"
+    }
+  ]
 }

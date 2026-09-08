@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "contentful",
+      "name": "contentful",
+      "descriptions": {
+        "en": "Use Contentful in Ghast. Manage multilingual content, assets and content models in Contentful. 管理 Contentful 多语言内容、媒体素材与内容模型。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "contentful",
+      "name": "Contentful"
+    }
+  ]
 }

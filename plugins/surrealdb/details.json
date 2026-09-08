@@ -38,5 +38,20 @@
         "url": "https://surrealdb.com/legal/category/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "surrealdb",
+      "name": "surrealdb",
+      "descriptions": {
+        "en": "Use SurrealDB in Ghast. Manage SurrealDB Cloud instances, query databases and inspect usage and diagnostics. 管理 SurrealDB Cloud 实例、查询数据库并检查用量与诊断信息。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "surrealdb",
+      "name": "SurrealDB"
+    }
+  ]
 }

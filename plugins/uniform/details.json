@@ -30,5 +30,20 @@
         "url": "https://docs.uniform.app/docs/guides/cli/commands/ai"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "uniform",
+      "name": "uniform",
+      "descriptions": {
+        "en": "Use Uniform in Ghast. Use Uniform’s official local MCP package to inspect and manage project components, content types, patterns, entries and compositions. 通过 Uniform 官方本地 MCP 包查看和管理项目组件、内容类型、模式、条目与页面组合。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "uniform",
+      "name": "Uniform"
+    }
+  ]
 }

@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "linearb",
+      "name": "linearb",
+      "descriptions": {
+        "en": "Use LinearB in Ghast. Explore engineering delivery metrics, repository activity and AI adoption with LinearB’s official MCP. 通过 LinearB 官方 MCP 分析研发交付指标、仓库活动与 AI 采用情况。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "linearb",
+      "name": "LinearB"
+    }
+  ]
 }

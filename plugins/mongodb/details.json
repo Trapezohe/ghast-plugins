@@ -38,5 +38,20 @@
         "url": "https://www.mongodb.com/legal/privacy/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "mongodb",
+      "name": "mongodb",
+      "descriptions": {
+        "en": "Use MongoDB in Ghast. Explore MongoDB collections, inspect schemas, run queries and analyze database performance. 浏览 MongoDB 集合、检查结构、执行查询并分析数据库性能。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "mongodb",
+      "name": "MongoDB"
+    }
+  ]
 }

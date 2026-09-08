@@ -31,5 +31,20 @@
         "url": "https://docs.scite.ai/mcp/overview"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "scite",
+      "name": "scite",
+      "descriptions": {
+        "en": "Search and verify scientific literature, patents, clinical trials, grants, regulatory records, adverse-event reports, drugs, and Scite collections."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "scite",
+      "name": "scite"
+    }
+  ]
 }

@@ -30,5 +30,24 @@
         "url": "https://polar.sh/docs/integrate/mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "polar",
+      "name": "polar",
+      "descriptions": {
+        "en": "Use Polar in Ghast. Connect Polar’s official production and sandbox MCP services for payment, product and subscription workflows. 连接 Polar 官方生产与沙箱 MCP 服务，处理支付、产品和订阅工作流。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "polar",
+      "name": "polar"
+    },
+    {
+      "id": "polar-sandbox",
+      "name": "polar sandbox"
+    }
+  ]
 }

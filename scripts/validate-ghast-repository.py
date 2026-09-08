@@ -170,6 +170,12 @@ def validate_sources(errors: list[str]) -> dict[str, dict]:
                     parsed = urlsplit(value) if isinstance(value, str) else None
                     if not parsed or parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password:
                         errors.append(f"{details_path}: {key} must be a public HTTPS link")
+            expected_skills = {path.parent.name for path in (plugin_dir / "skills").glob("*/SKILL.md")}
+            expected_apps = set(load_json(plugin_dir / "mcp.json", errors).get("mcpServers", {})) if (plugin_dir / "mcp.json").exists() else set()
+            for field, expected in (("skills", expected_skills), ("apps", expected_apps)):
+                entries = details.get(field, [])
+                if not isinstance(entries, list) or any(not isinstance(item, dict) or not isinstance(item.get("name"), str) for item in entries) or {item.get("id") for item in entries} != expected or len(entries) != len(expected):
+                    errors.append(f"{details_path}: {field} must match packaged contributions")
             if details_path.stat().st_size > 256 * 1024:
                 errors.append(f"{details_path}: exceeds detail download limit")
 

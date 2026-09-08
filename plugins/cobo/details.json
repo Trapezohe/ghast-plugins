@@ -32,5 +32,20 @@
         "url": "https://www.cobo.com/products/agentic-wallet/manual/developer/mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "cobo",
+      "name": "cobo",
+      "descriptions": {
+        "en": "Use Cobo Agentic Wallet in Ghast. Inspect Cobo agent wallets, pacts and audit records, and perform owner-authorized wallet operations through the official MCP server. 通过 Cobo 官方 MCP 查看智能体钱包、授权协议和审计记录，执行钱包所有者授权的操作。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "cobo",
+      "name": "Cobo Agentic Wallet"
+    }
+  ]
 }

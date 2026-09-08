@@ -39,5 +39,20 @@
         "url": "https://www.similarweb.com/corp/legal/privacy-policy/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "similarweb",
+      "name": "similarweb",
+      "descriptions": {
+        "en": "Research website traffic, acquisition channels, referrals, audiences, keywords, competitors, industries, mobile apps, and shopper intelligence through Similarweb's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "similarweb",
+      "name": "similarweb"
+    }
+  ]
 }

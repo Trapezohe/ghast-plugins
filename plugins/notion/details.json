@@ -30,5 +30,41 @@
         "url": "https://developers.notion.com/guides/mcp/overview"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "notion-knowledge-capture",
+      "name": "notion-knowledge-capture",
+      "descriptions": {
+        "en": "Turn supplied notes and conversations into Notion wiki pages, decisions, how-to guides and FAQs, or update existing knowledge."
+      }
+    },
+    {
+      "id": "notion-meeting-intelligence",
+      "name": "notion-meeting-intelligence",
+      "descriptions": {
+        "en": "Prepare agendas, pre-reads and meeting briefs using accessible Notion context and relevant research."
+      }
+    },
+    {
+      "id": "notion-research-documentation",
+      "name": "notion-research-documentation",
+      "descriptions": {
+        "en": "Research accessible Notion material and produce cited briefs, comparisons and structured reports."
+      }
+    },
+    {
+      "id": "notion-spec-to-implementation",
+      "name": "notion-spec-to-implementation",
+      "descriptions": {
+        "en": "Turn Notion requirements into linked implementation plans and tasks, then update progress from verified work."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "notion",
+      "name": "Notion"
+    }
+  ]
 }

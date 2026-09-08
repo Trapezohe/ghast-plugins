@@ -30,5 +30,24 @@
         "url": "https://docs.sei.io/ai/mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "sei",
+      "name": "sei",
+      "descriptions": {
+        "en": "Use Sei in Ghast. Use Sei’s official MCP to inspect blocks, balances, tokens, NFTs and contracts, with a separate optional wallet connection for authorized transactions. 通过 Sei 官方 MCP 查询区块、余额、代币、NFT 与合约，并通过独立可选的钱包连接执行已授权的交易。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "sei",
+      "name": "sei"
+    },
+    {
+      "id": "sei-wallet",
+      "name": "sei wallet"
+    }
+  ]
 }

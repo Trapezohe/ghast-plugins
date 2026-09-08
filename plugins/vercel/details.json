@@ -25,5 +25,251 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "access-protected-vercel-deployment",
+      "name": "access-protected-vercel-deployment",
+      "descriptions": {
+        "en": "Access and test Vercel deployments protected by Vercel Authentication, SSO, or Deployment Protection. Use when curl, agent-browser, Playwright, or another automated request reaches a Vercel login or protection page; when a protected preview or production URL returns 401 or 403; when TRUSTED_SOURCES_ENVIRONMENT_MISMATCH appears; or when choosing between `vercel curl` and the `x-vercel-trusted-oidc-idp-token` header."
+      }
+    },
+    {
+      "id": "ai-gateway",
+      "name": "ai-gateway",
+      "descriptions": {
+        "en": "Vercel AI Gateway expert guidance. Use when configuring model routing, provider failover, cost tracking, or managing multiple AI providers through a unified API."
+      }
+    },
+    {
+      "id": "ai-sdk",
+      "name": "ai-sdk",
+      "descriptions": {
+        "en": "Vercel AI SDK expert guidance. Use when building AI-powered features — chat interfaces, text generation, structured output, tool calling, agents, MCP integration, streaming, embeddings, reranking, image generation, or working with any LLM provider."
+      }
+    },
+    {
+      "id": "auth",
+      "name": "auth",
+      "descriptions": {
+        "en": "Authentication integration guidance — Clerk (native Vercel Marketplace), Descope, and Auth0 setup for Next.js applications. Covers middleware auth patterns, sign-in/sign-up flows, and Marketplace provisioning. Use when implementing user authentication."
+      }
+    },
+    {
+      "id": "bootstrap",
+      "name": "bootstrap",
+      "descriptions": {
+        "en": "Project bootstrapping orchestrator for repos that depend on Vercel-linked resources (databases, auth, and managed integrations). Use when setting up or repairing a repository so linking, environment provisioning, env pulls, and first-run db/dev commands happen in the correct safe order."
+      }
+    },
+    {
+      "id": "build-agents",
+      "name": "build-agents",
+      "descriptions": {
+        "en": "Default guidance for building AI agents. Use for generic requests to build, create, scaffold, design, architect, or implement an AI agent, agent app, tool-calling agent, durable agent, multi-agent system, or scheduled agent."
+      }
+    },
+    {
+      "id": "cdn-caching",
+      "name": "cdn-caching",
+      "descriptions": {
+        "en": "Debug Vercel CDN caching — cache hit rate, stale content, revalidation behavior, ISR + PPR, per-request cache reasons (cacheReason) and PPR state (ppr_state), and costs."
+      }
+    },
+    {
+      "id": "chat-sdk",
+      "name": "chat-sdk",
+      "descriptions": {
+        "en": "Vercel Chat SDK expert guidance. Use when building multi-platform chat bots — Slack, Telegram, Microsoft Teams, Discord, Google Chat, GitHub, Linear — with a single codebase. Covers the Chat class, adapters, threads, messages, cards, modals, streaming, state management, and webhook setup."
+      }
+    },
+    {
+      "id": "create-a-backend",
+      "name": "create-a-backend",
+      "descriptions": {
+        "en": "Backend architecture guidance. Use when planning, building, or migrating an API or backend; choosing between Functions, Services, containers, Workflow, Queues, and Marketplace databases; or selecting a supported backend framework or runtime."
+      }
+    },
+    {
+      "id": "deployments-cicd",
+      "name": "deployments-cicd",
+      "descriptions": {
+        "en": "Vercel deployment and CI/CD expert guidance. Use when deploying, promoting, rolling back, inspecting deployments, building with --prebuilt, or configuring CI workflow files for Vercel."
+      }
+    },
+    {
+      "id": "env-vars",
+      "name": "env-vars",
+      "descriptions": {
+        "en": "Vercel environment variable expert guidance. Use when working with .env files, vercel env commands, OIDC tokens, or managing environment-specific configuration."
+      }
+    },
+    {
+      "id": "eve",
+      "name": "eve",
+      "descriptions": {
+        "en": "eve framework guidance for durable AI agents and agent-powered applications. Use when creating, editing, or debugging an eve project, when the user explicitly asks for eve, or when the build-agents skill has selected eve as the default framework. Covers eve's filesystem-first runtime, durable sessions, tools, skills, connections, channels, sandboxes, subagents, schedules, evals, frontend clients, and Agent Runs observability. Do not use for incidental agent mentions, generic agent-building prompts, or established non-eve stacks unless the user asks for comparison or migration."
+      }
+    },
+    {
+      "id": "knowledge-update",
+      "name": "knowledge-update",
+      "descriptions": {
+        "en": "Corrects outdated LLM knowledge about the Vercel platform and introduces new products. Injected at session start."
+      }
+    },
+    {
+      "id": "marketplace",
+      "name": "marketplace",
+      "descriptions": {
+        "en": "Vercel Marketplace expert guidance — discovering, installing, and managing third-party integrations via the `vercel integration` CLI. Use when building any app that needs an external capability without a dedicated skill — commerce (stores, storefronts, selling products), payments (checkout, subscriptions, billing), observability/monitoring, messaging/email, search, or CMS — or when discovering, installing, or managing integrations."
+      }
+    },
+    {
+      "id": "microfrontends",
+      "name": "microfrontends",
+      "descriptions": {
+        "en": "Guide for building, configuring, and deploying microfrontends on Vercel. Use this skill when the user mentions microfrontends, multi-zones, splitting an app across teams, independent deployments, cross-app routing, incremental migration, composing multiple frontends under one domain, microfrontends.json, @vercel/microfrontends, the microfrontends local proxy, or path-based routing between Vercel projects. Also use when the user asks about shared layouts across projects, navigation between microfrontends, fallback environments, asset prefixes, or feature flag controlled routing."
+      }
+    },
+    {
+      "id": "next-cache-components",
+      "name": "next-cache-components",
+      "descriptions": {
+        "en": "Next.js 16 Cache Components guidance — PPR, use cache directive, cacheLife, cacheTag, updateTag, and migration from unstable_cache. Use when implementing partial prerendering, caching strategies, or migrating from older Next.js cache patterns."
+      }
+    },
+    {
+      "id": "next-forge",
+      "name": "next-forge",
+      "descriptions": {
+        "en": "next-forge expert guidance — production-grade Turborepo monorepo SaaS starter by Vercel. Use when working in a next-forge project, scaffolding with `npx next-forge init`, or editing @repo/* workspace packages."
+      }
+    },
+    {
+      "id": "next-upgrade",
+      "name": "next-upgrade",
+      "descriptions": {
+        "en": "Upgrade Next.js to the latest version following official migration guides and codemods. Use when upgrading Next.js versions, running codemods, or migrating between major releases."
+      }
+    },
+    {
+      "id": "nextjs",
+      "name": "nextjs",
+      "descriptions": {
+        "en": "Next.js App Router expert guidance. Use when building, debugging, or architecting Next.js applications — routing, Server Components, Server Actions, Cache Components, layouts, middleware/proxy, data fetching, rendering strategies, and deployment on Vercel."
+      }
+    },
+    {
+      "id": "react-best-practices",
+      "name": "react-best-practices",
+      "descriptions": {
+        "en": "React best-practices reviewer for TSX files. Triggers after editing multiple TSX components to run a condensed quality checklist covering component structure, hooks usage, accessibility, performance, and TypeScript patterns."
+      }
+    },
+    {
+      "id": "routing-middleware",
+      "name": "routing-middleware",
+      "descriptions": {
+        "en": "Vercel Routing Middleware guidance — request interception before cache, rewrites, redirects, personalization. Works with any framework. Supports Edge, Node.js, and Bun runtimes. Use when intercepting requests at the platform level."
+      }
+    },
+    {
+      "id": "runtime-cache",
+      "name": "runtime-cache",
+      "descriptions": {
+        "en": "Vercel Runtime Cache API guidance — ephemeral per-region key-value cache with tag-based invalidation. Shared across Functions, Routing Middleware, and Builds. Use when implementing caching strategies beyond framework-level caching."
+      }
+    },
+    {
+      "id": "shadcn",
+      "name": "shadcn",
+      "descriptions": {
+        "en": "shadcn/ui expert guidance — CLI, component installation, composition patterns, custom registries, theming, Tailwind CSS integration, and high-quality interface design. Use when initializing shadcn, adding components, composing product UI, building custom registries, configuring themes, or troubleshooting component issues."
+      }
+    },
+    {
+      "id": "turbopack",
+      "name": "turbopack",
+      "descriptions": {
+        "en": "Turbopack expert guidance. Use when configuring the Next.js bundler, optimizing HMR, debugging build issues, or understanding the Turbopack vs Webpack differences."
+      }
+    },
+    {
+      "id": "vercel-agent",
+      "name": "vercel-agent",
+      "descriptions": {
+        "en": "Vercel Agent guidance — AI-powered code review, incident investigation, and SDK installation. Automates PR analysis and anomaly debugging. Use when configuring or understanding Vercel's AI development tools."
+      }
+    },
+    {
+      "id": "vercel-cli",
+      "name": "vercel-cli",
+      "descriptions": {
+        "en": "Vercel CLI expert guidance. Use when deploying, managing environment variables, linking projects, viewing logs, querying metrics, managing domains, or interacting with the Vercel platform from the command line."
+      }
+    },
+    {
+      "id": "vercel-connect",
+      "name": "vercel-connect",
+      "descriptions": {
+        "en": "Vercel Connect expert guidance — securely obtain scoped OAuth tokens for third-party services (Slack, GitHub, MCP servers, OAuth, Snowflake) on behalf of apps or users via Vercel OIDC. Use when wiring up third-party API access, connecting to MCP servers, sending Slack messages, accessing GitHub APIs, receiving webhook events from Slack/Linear/GitHub and forwarding them to your agents and apps, or building eve agent connections."
+      }
+    },
+    {
+      "id": "vercel-firewall",
+      "name": "vercel-firewall",
+      "descriptions": {
+        "en": "Vercel Firewall expert guidance — automatic DDoS mitigation, the Vercel WAF (custom rules, IP blocking, managed rulesets, rate limiting), Attack Mode, system bypass, bot management, and the `vercel firewall` CLI. Use when configuring platform-level security, responding to attacks, or staging firewall rules."
+      }
+    },
+    {
+      "id": "vercel-functions",
+      "name": "vercel-functions",
+      "descriptions": {
+        "en": "Vercel Functions expert guidance — Serverless Functions, Edge Functions, Fluid Compute, streaming, Cron Jobs, and runtime configuration. Use when configuring, debugging, or optimizing server-side code running on Vercel."
+      }
+    },
+    {
+      "id": "vercel-sandbox",
+      "name": "vercel-sandbox",
+      "descriptions": {
+        "en": "Vercel Sandbox guidance — ephemeral Firecracker microVMs for running untrusted code safely. Supports AI agents, code generation, and experimentation. Use when executing user-generated or AI-generated code in isolation."
+      }
+    },
+    {
+      "id": "vercel-services",
+      "name": "vercel-services",
+      "descriptions": {
+        "en": "Configure and troubleshoot Vercel Services for multiple frontends and backends in one project. Use when composing a polyglot or multi-service application on one Vercel deployment; defining the `services` key, service-targeted rewrites, or service bindings in `vercel.json`; or running all services with `vercel dev`."
+      }
+    },
+    {
+      "id": "vercel-storage",
+      "name": "vercel-storage",
+      "descriptions": {
+        "en": "Vercel storage expert guidance — Blob, Edge Config, and Marketplace storage (Neon Postgres, Upstash Redis). Use when choosing, configuring, or using data storage with Vercel applications."
+      }
+    },
+    {
+      "id": "verification",
+      "name": "verification",
+      "descriptions": {
+        "en": "Full-story verification — infers what the user is building, then verifies the complete flow end-to-end: browser → API → data → response. Triggers on dev server start and 'why isn't this working' signals."
+      }
+    },
+    {
+      "id": "workflow",
+      "name": "workflow",
+      "descriptions": {
+        "en": "Vercel Workflow SDK expert guidance. Use when building durable workflows, long-running tasks, API routes or agents that need pause/resume, retries, step-based execution, or crash-safe orchestration with Vercel Workflow."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "vercel",
+      "name": "vercel"
+    }
+  ]
 }

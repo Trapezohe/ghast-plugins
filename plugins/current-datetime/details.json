@@ -25,5 +25,15 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "current-datetime",
+      "name": "current-datetime",
+      "descriptions": {
+        "en": "Use this skill whenever the user asks \"what time/day/date is it\", references \"now\"/\"today\"/\"this week\"/\"tomorrow\" in a way that needs a real timestamp, or asks for the current time in a specific timezone. Provides the exact wall-clock time without guessing from training data."
+      }
+    }
+  ],
+  "apps": []
 }

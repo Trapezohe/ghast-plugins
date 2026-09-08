@@ -30,5 +30,20 @@
         "url": "https://developer.adobe.com/express/add-ons/docs/guides/getting-started/local-development/mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "adobe-express",
+      "name": "adobe-express",
+      "descriptions": {
+        "en": "Use Adobe Express Developer in Ghast. Search Adobe Express add-on documentation and retrieve official SDK TypeScript definitions with Adobe’s native developer MCP. 通过 Adobe 官方原生开发者 MCP 检索 Express 插件文档，并获取 SDK TypeScript 类型定义。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "adobe-express",
+      "name": "Adobe Express Developer"
+    }
+  ]
 }

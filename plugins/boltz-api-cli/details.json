@@ -31,5 +31,64 @@
         "url": "https://boltz.bio"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "boltz-check-status",
+      "name": "boltz-check-status",
+      "descriptions": {
+        "en": "Boltz job status and result recovery. Use when listing jobs, checking progress, resuming downloads, recovering results, or downloading an existing job ID. Not for starting new jobs."
+      }
+    },
+    {
+      "id": "boltz-cli-setup",
+      "name": "boltz-cli-setup",
+      "descriptions": {
+        "en": "Boltz CLI setup and auth. Use when installing, updating, verifying, or authenticating `boltz-api`, or fixing missing CLI, PATH, sandbox, browser login, or auth errors."
+      }
+    },
+    {
+      "id": "boltz-protein-design",
+      "name": "boltz-protein-design",
+      "descriptions": {
+        "en": "Design new protein binders with Boltz. Use when generating protein, peptide, antibody, nanobody, or custom binder candidates for a target. Not for screening existing proteins or small molecules."
+      }
+    },
+    {
+      "id": "boltz-protein-screen",
+      "name": "boltz-protein-screen",
+      "descriptions": {
+        "en": "Screen existing protein binders with Boltz. Use when ranking a supplied protein, peptide, antibody, nanobody, or binder library against a target. Not for designing new proteins or screening small molecules."
+      }
+    },
+    {
+      "id": "boltz-small-molecule-adme",
+      "name": "boltz-small-molecule-adme",
+      "descriptions": {
+        "en": "Predict Tier-1 ADME/ADMET for small molecules with Boltz from bare SMILES — no target, no docking. Use when the user wants solubility, permeability, or lipophilicity/logD for a molecule or list of molecules. Not for ranking molecules against a protein target (use boltz-small-molecule-screen, which already returns ADME free)."
+      }
+    },
+    {
+      "id": "boltz-small-molecule-design",
+      "name": "boltz-small-molecule-design",
+      "descriptions": {
+        "en": "Design new small-molecule binders with Boltz. Use when generating novel ligands or hits for a target without a fixed compound library. Not for screening existing molecules or one-off docking."
+      }
+    },
+    {
+      "id": "boltz-small-molecule-screen",
+      "name": "boltz-small-molecule-screen",
+      "descriptions": {
+        "en": "Screen existing small-molecule libraries with Boltz. Use when docking, scoring, or ranking a supplied SMILES or compound library against a target; also returns free Tier-1 ADME/ADMET (solubility, permeability, lipophilicity/logD) per molecule. Not for de novo molecule design, one-off docking, or ADME on bare SMILES with no target (use boltz-small-molecule-adme)."
+      }
+    },
+    {
+      "id": "boltz-structure-and-binding",
+      "name": "boltz-structure-and-binding",
+      "descriptions": {
+        "en": "Predict structures and binding for one defined complex with Boltz. Use when folding a protein, RNA, DNA, or ligand complex, docking one ligand, predicting an interface, or scoring binding. Not for screening libraries or design."
+      }
+    }
+  ],
+  "apps": []
 }

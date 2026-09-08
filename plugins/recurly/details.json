@@ -30,5 +30,20 @@
         "url": "https://docs.recurly.com/recurly-subscriptions/docs/compass-public-mcp-server"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "recurly",
+      "name": "recurly",
+      "descriptions": {
+        "en": "Use Recurly Compass in Ghast. Use Recurly’s official Compass MCP for documentation search, API references and integration coding guidance. 使用 Recurly 官方 Compass MCP 搜索文档、查询 API 参考并获取集成编码指引。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "recurly",
+      "name": "Recurly Compass"
+    }
+  ]
 }

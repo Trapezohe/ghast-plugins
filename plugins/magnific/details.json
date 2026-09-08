@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "magnific",
+      "name": "magnific",
+      "descriptions": {
+        "en": "Use Magnific (Freepik) in Ghast. Generate and transform creative assets, browse previous creations and check credits through the official Magnific MCP, formerly Freepik. 通过 Magnific（原 Freepik）官方 MCP 生成与编辑创意素材、浏览已有作品，并查看积分余额。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "magnific",
+      "name": "Magnific (Freepik)"
+    }
+  ]
 }

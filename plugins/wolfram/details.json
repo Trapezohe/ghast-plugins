@@ -26,5 +26,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "wolfram",
+      "name": "wolfram",
+      "descriptions": {
+        "en": "Use Wolfram in Ghast. Solve mathematical problems, evaluate Wolfram Language and explore scientific knowledge with Wolfram MCP Service. 通过 Wolfram MCP Service 求解数学问题、运行 Wolfram Language 并查询科学知识。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "wolfram",
+      "name": "Wolfram"
+    }
+  ]
 }

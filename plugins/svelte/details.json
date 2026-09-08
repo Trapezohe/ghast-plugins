@@ -31,5 +31,20 @@
         "url": "https://svelte.dev/docs/ai/remote-setup"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "svelte",
+      "name": "svelte",
+      "descriptions": {
+        "en": "Use Svelte in Ghast. Read Svelte and SvelteKit documentation and analyze component code. 查询 Svelte 与 SvelteKit 文档，分析组件代码。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "svelte",
+      "name": "Svelte"
+    }
+  ]
 }

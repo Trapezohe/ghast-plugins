@@ -38,5 +38,32 @@
         "url": "https://developer.webex.com/terms-of-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "webex",
+      "name": "webex",
+      "descriptions": {
+        "en": "Use Webex in Ghast. Connect Cisco’s official Webex MCP services for meetings, team messaging, Vidcast videos and workspace intelligence. 连接思科官方 Webex MCP，处理会议、团队消息、Vidcast 视频及工作空间设备洞察。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "webex",
+      "name": "webex"
+    },
+    {
+      "id": "webex-messaging",
+      "name": "webex messaging"
+    },
+    {
+      "id": "webex-vidcast",
+      "name": "webex vidcast"
+    },
+    {
+      "id": "webex-workspaces",
+      "name": "webex workspaces"
+    }
+  ]
 }

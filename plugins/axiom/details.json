@@ -47,5 +47,20 @@
         "url": "https://axiom.co/docs/legal/terms-of-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "axiom",
+      "name": "axiom",
+      "descriptions": {
+        "en": "Use Axiom in Ghast. Investigate logs and events with Axiom dataset queries. 查询 Axiom 日志与事件，分析故障和运行趋势。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "axiom",
+      "name": "Axiom"
+    }
+  ]
 }

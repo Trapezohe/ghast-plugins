@@ -31,5 +31,20 @@
         "url": "https://www.agentmail.to/docs/integrations/mcp"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "agentmail",
+      "name": "agentmail",
+      "descriptions": {
+        "en": "Use AgentMail in Ghast. Manage agent email inboxes, messages, threads, drafts and attachments through AgentMail’s official MCP. 通过 AgentMail 官方 MCP 管理智能体邮箱、邮件、会话、草稿与附件。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "agentmail",
+      "name": "AgentMail"
+    }
+  ]
 }

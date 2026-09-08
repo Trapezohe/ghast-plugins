@@ -38,5 +38,15 @@
         "url": "https://privacysandbox.google.com/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "android-emulator-qa",
+      "name": "android-emulator-qa",
+      "descriptions": {
+        "en": "Validate Android app flows with official Android SDK tools, including emulator selection, launch, UI inspection, screenshots, input and scoped diagnostic logs."
+      }
+    }
+  ],
+  "apps": []
 }

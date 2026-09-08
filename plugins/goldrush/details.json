@@ -47,5 +47,20 @@
         "url": "https://goldrush.dev/terms-of-use/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "goldrush",
+      "name": "goldrush",
+      "descriptions": {
+        "en": "Use GoldRush in Ghast. Query multichain wallet balances, transactions, token prices and NFT data through GoldRush. 通过 GoldRush 查询多链钱包余额、交易、代币价格与 NFT 数据。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "goldrush",
+      "name": "GoldRush"
+    }
+  ]
 }

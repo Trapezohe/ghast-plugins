@@ -30,5 +30,20 @@
         "url": "https://support.gotenzo.com/developers/mcp-server/"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "tenzo",
+      "name": "tenzo",
+      "descriptions": {
+        "en": "Use Tenzo in Ghast. Analyze restaurant sales, labor costs, customer reviews and shift logs through Tenzo’s official MCP. 通过 Tenzo 官方 MCP 分析餐厅销售、人工成本、顾客评价与班次日志。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "tenzo",
+      "name": "Tenzo"
+    }
+  ]
 }

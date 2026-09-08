@@ -38,5 +38,20 @@
         "url": "https://workos.com/legal/privacy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "workos",
+      "name": "workos",
+      "descriptions": {
+        "en": "Use WorkOS in Ghast. Manage WorkOS organizations, users, SSO connections and workspace configuration. 管理 WorkOS 组织、用户、单点登录连接与工作区配置。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "workos",
+      "name": "WorkOS"
+    }
+  ]
 }

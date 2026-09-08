@@ -48,5 +48,27 @@
         "url": "https://www.replay.io/terms-of-service"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "replay-qa",
+      "name": "replay-qa",
+      "descriptions": {
+        "en": "Use when running Replay QA against production, staging, PR preview, or other reachable app URLs from Ghast. Provides packaged scripts for project creation/reuse, status, bugs, journeys, test runs, explorations, and bug-fix verification."
+      }
+    },
+    {
+      "id": "replayio",
+      "name": "replayio",
+      "descriptions": {
+        "en": "Use when you need the direct Replay.io dev tools: record or inspect a Replay browser run, capture and embed a verified MP4 video, test a local app with Replay Chromium, or use the Replay MCP server for deeper debugging of an uploaded recording."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "replay",
+      "name": "replayio"
+    }
+  ]
 }

@@ -32,5 +32,20 @@
         "url": "https://posthog.com"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "posthog",
+      "name": "posthog",
+      "descriptions": {
+        "en": "Analyze and manage PostHog product analytics, SQL, feature flags, experiments, dashboards, errors, replays, surveys, logs, AI observability, data pipelines, and workflows through PostHog's official hosted MCP server."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "posthog",
+      "name": "posthog"
+    }
+  ]
 }

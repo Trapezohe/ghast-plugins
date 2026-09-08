@@ -39,5 +39,20 @@
         "url": "https://www.mtnewswires.com/privacy-policy"
       }
     ]
-  }
+  },
+  "skills": [
+    {
+      "id": "mt-newswires",
+      "name": "mt-newswires",
+      "descriptions": {
+        "en": "Search and retrieve licensed real-time North American and global financial news from MT Newswires through its officially authorized viaNexus MCP service. Use for ticker news, market-moving events, earnings, M&A, analyst actions, sectors, macroeconomics, central banks, FX, commodities, and crypto."
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "mt-newswires",
+      "name": "mt-newswires"
+    }
+  ]
 }

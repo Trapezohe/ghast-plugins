@@ -25,5 +25,20 @@
       "./skills/"
     ],
     "links": []
-  }
+  },
+  "skills": [
+    {
+      "id": "chrome-devtools",
+      "name": "chrome-devtools",
+      "descriptions": {
+        "en": "Use Chrome DevTools in Ghast. Inspect browser pages, debug network and console issues, and analyze performance with Google’s official Chrome DevTools MCP. 通过 Google 官方 Chrome DevTools MCP 检查网页、排查网络与控制台问题，并分析页面性能。"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "chrome-devtools",
+      "name": "Chrome DevTools"
+    }
+  ]
 }
