@@ -1,0 +1,15 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "kontent-ai": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@kontent-ai/mcp-server@0.39.0",
+        "stdio"
+      ],
+      "cwd": "${PLUGIN_DATA}"
+    }
+  }
+}

@@ -5980,6 +5980,44 @@
       "category": "productivity"
     },
     {
+      "id": "duda",
+      "name": "Duda",
+      "description": "Connect Duda’s official MCP to manage websites, site content and account operations with your authorized tools.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "duda",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Duda’s official MCP to manage websites, site content and account operations with your authorized tools.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.duda.co/docs/duda-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.duda.co/docs/duda-mcp-server",
+            "connectorPublisher": "Duda",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "Duda",
+            "descriptions": {
+              "en": "Connect Duda’s official MCP to manage websites, site content and account operations with your authorized tools.",
+              "zh-CN": "连接 Duda 官方 MCP，通过已授权工具管理网站、站点内容和账号业务。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/duda.zip",
+        "sha256": "3755e549a8d5d3b8c697b4a3efe3fee9f75826db986d1ba5852fa859d24a296d"
+      },
+      "icon": "./plugins/duda/assets/icon.png",
+      "homepage": "https://developer.duda.co/docs/duda-mcp-server",
+      "license": "MIT",
+      "category": "marketing"
+    },
+    {
       "id": "dune",
       "name": "Dune",
       "description": "Research on-chain datasets and execute Dune SQL analytics.",
@@ -9291,6 +9329,52 @@
       "homepage": "https://developer.konghq.com/konnect-platform/konnect-mcp/installation/",
       "license": "MIT",
       "category": "developer-tools"
+    },
+    {
+      "id": "kontent-ai",
+      "name": "Kontent.ai",
+      "description": "Use Kontent.ai’s official MCP to manage structured content, models, assets, language variants and publishing workflows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "kontent-ai",
+        "version": "1.0.0-ghast.1",
+        "description": "Use Kontent.ai’s official MCP to manage structured content, models, assets, language variants and publishing workflows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://kontent.ai/learn/docs/ai/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://kontent.ai/learn/docs/ai/mcp-server",
+            "connectorPublisher": "Kontent.ai",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "Kontent.ai",
+            "descriptions": {
+              "en": "Use Kontent.ai’s official MCP to manage structured content, models, assets, language variants and publishing workflows.",
+              "zh-CN": "通过 Kontent.ai 官方 MCP 管理结构化内容、内容模型、素材、多语言版本和发布工作流。"
+            },
+            "mcpServerExtensions": {
+              "kontent-ai": {
+                "credentialEnv": {
+                  "KONTENT_API_KEY": "$VAULT:kontent-ai-api-key",
+                  "KONTENT_ENVIRONMENT_ID": "$VAULT:kontent-ai-environment-id"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/kontent-ai.zip",
+        "sha256": "a665ad64754820c3fbbc45eacc5b33fbc85e46475e0624d72aec909a687718ed"
+      },
+      "icon": "./plugins/kontent-ai/assets/icon.png",
+      "homepage": "https://kontent.ai/learn/docs/ai/mcp-server",
+      "license": "MIT",
+      "category": "marketing"
     },
     {
       "id": "kraken",
