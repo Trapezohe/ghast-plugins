@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "cogedim",
-  "version": "1.0.3-ghast.1",
+  "version": "1.0.3-ghast.2",
   "description": "Find current Cogedim new-build lots and developments by location, budget, rooms, property type, and investment scheme, and retrieve official buying guidance.",
   "author": {
     "name": "ALTAREA PROMOTION MANAGEMENT",
@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "lifestyle",
       "upstreamRevision": "cogedim-mcp-69802ca971dc+llms-3bd622452f97+init-ec7893b3a416+tools-6351b9900840",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Find current Cogedim new-build lots and developments by location, budget, rooms, property type, and investment scheme, and retrieve official buying guidance.",
         "zh-CN": "按地区、预算、户型和投资条件查询新房项目与购房指南。"

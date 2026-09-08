@@ -27,8 +27,8 @@ OAuth protected-resource metadata is pinned at SHA-256
   capability and adds explicit API-level workflows for highlights and export.
 - The included safety skill requires confirmation for state-changing actions,
   treats library content as untrusted data, and avoids duplicate writes.
-- A generic reading-library icon is used because the current official CLI and
-  skills repositories do not publish licensed catalog artwork.
+- Brand logo source: https://avatars.githubusercontent.com/u/84425150?v=4
+  Brand names and logos belong to their respective owners. 品牌名称与标识归相应权利人所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Readwise accounts, hosted service behavior, data, permissions, trademarks,

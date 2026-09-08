@@ -4124,7 +4124,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "cogedim",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Find current Cogedim new-build lots and developments by location, budget, rooms, property type, and investment scheme, and retrieve official buying guidance.",
         "author": {
           "name": "ALTAREA PROMOTION MANAGEMENT",
@@ -4136,7 +4136,7 @@
           "ai.trapezohe.ghast": {
             "category": "lifestyle",
             "upstreamRevision": "cogedim-mcp-69802ca971dc+llms-3bd622452f97+init-ec7893b3a416+tools-6351b9900840",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Find current Cogedim new-build lots and developments by location, budget, rooms, property type, and investment scheme, and retrieve official buying guidance.",
               "zh-CN": "按地区、预算、户型和投资条件查询新房项目与购房指南。"
@@ -4146,9 +4146,9 @@
       },
       "package": {
         "url": "./packages/cogedim.zip",
-        "sha256": "6d69231d8b16c2391b44a4545e8dbcb933419c124fb5f3f6af3b353bea9413db"
+        "sha256": "15dbfae357eeaa81636dc09de32696a964268cbc61403336211538cfbba1cfdb"
       },
-      "icon": "./plugins/cogedim/assets/icon.svg",
+      "icon": "./plugins/cogedim/assets/icon.png",
       "homepage": "https://www.cogedim.com/mcp",
       "license": "MIT",
       "category": "lifestyle"
@@ -6024,7 +6024,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "digitalocean",
-        "version": "1.0.68-ghast.1",
+        "version": "1.0.68-ghast.2",
         "description": "Provision a DigitalOcean Droplet as a remote SSH workspace and inspect or explicitly manage Droplets, images, sizes, regions, account billing, actions, and SSH keys through DigitalOcean's official hosted MCP services.",
         "author": {
           "name": "DigitalOcean",
@@ -6048,7 +6048,7 @@
       },
       "package": {
         "url": "./packages/digitalocean.zip",
-        "sha256": "29931fbb7c02fde89691c7f7255f0671a98e9f8b97dbeca1f6336f579305d2fe"
+        "sha256": "3f767c212ddfafcbf61751db5e589fe093817bdf0021800dd1564671a1b3039b"
       },
       "icon": "./plugins/digitalocean/assets/icon.svg",
       "homepage": "https://github.com/digitalocean-labs/mcp-digitalocean",
@@ -12406,7 +12406,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "netlify",
-        "version": "1.3.0-ghast.1",
+        "version": "1.3.0-ghast.2",
         "description": "Build, deploy, and operate Netlify projects with official skills for Functions, Edge Functions, Blobs, Database, Identity, Image CDN, Forms, configuration, caching, AI Gateway, and deployment, plus the official Netlify MCP server.",
         "author": {
           "name": "Netlify",
@@ -12420,7 +12420,7 @@
             "category": "development",
             "upstreamRevision": "32a261b6b2437464aca7e51bf9b48bcac1e2835c",
             "upstreamPath": "agent-plugin",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Build, deploy, and operate Netlify projects with official skills for Functions, Edge Functions, Blobs, Database, Identity, Image CDN, Forms, configuration, caching, AI Gateway, and deployment, plus the official Netlify MCP server.",
               "zh-CN": "开发、部署和运维网站，配置函数、存储、数据库、身份与表单。"
@@ -12430,9 +12430,9 @@
       },
       "package": {
         "url": "./packages/netlify.zip",
-        "sha256": "875b6fe1cc34c4020dcbea8a29d2c9793b529620c4cab63099335e7f62654b4f"
+        "sha256": "f93729ca20f17d388f8c95246fff7ae82daffa6afe40bdafe6ed74b1de010253"
       },
-      "icon": "./plugins/netlify/assets/icon.svg",
+      "icon": "./plugins/netlify/assets/icon.png",
       "homepage": "https://docs.netlify.com",
       "repository": "https://github.com/netlify/context-and-tools",
       "license": "MIT",
@@ -14609,7 +14609,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "readwise",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Search Readwise highlights and Reader documents, read saved content, and organize the user's reading library through Readwise's official hosted MCP server.",
         "author": {
           "name": "Readwise Inc.",
@@ -14621,7 +14621,7 @@
           "ai.trapezohe.ghast": {
             "category": "research",
             "upstreamRevision": "readwise-skills-2d1ce9627c61-a72340a2f73f+oauth-b39687b19dac",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Search Readwise highlights and Reader documents, read saved content, and organize the user's reading library through Readwise's official hosted MCP server.",
               "zh-CN": "检索阅读高亮和 Reader 文档，阅读保存的内容并整理知识库。"
@@ -14631,9 +14631,9 @@
       },
       "package": {
         "url": "./packages/readwise.zip",
-        "sha256": "03c1933be7d2028b5fbc6acd8b864d0b9ebcc0b201fff6aac79a8d25e13f4b48"
+        "sha256": "8a51d1e9a739d97c530870f4e8be6d9da3ab98c6e97414c351fb8391e6ef06f9"
       },
-      "icon": "./plugins/readwise/assets/icon.svg",
+      "icon": "./plugins/readwise/assets/icon.png",
       "homepage": "https://readwise.io/mcp",
       "license": "MIT",
       "category": "research"

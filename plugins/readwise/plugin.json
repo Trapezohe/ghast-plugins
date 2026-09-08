@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "readwise",
-  "version": "1.0.0-ghast.1",
+  "version": "1.0.0-ghast.2",
   "description": "Search Readwise highlights and Reader documents, read saved content, and organize the user's reading library through Readwise's official hosted MCP server.",
   "author": {
     "name": "Readwise Inc.",
@@ -13,7 +13,7 @@
     "ai.trapezohe.ghast": {
       "category": "research",
       "upstreamRevision": "readwise-skills-2d1ce9627c61-a72340a2f73f+oauth-b39687b19dac",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Search Readwise highlights and Reader documents, read saved content, and organize the user's reading library through Readwise's official hosted MCP server.",
         "zh-CN": "检索阅读高亮和 Reader 文档，阅读保存的内容并整理知识库。"

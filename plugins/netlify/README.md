@@ -11,6 +11,7 @@ Skills, references, scripts, commands, and public MCP declarations remain source
 ## Ghast compatibility
 
 - The Codex private app mapping is replaced by Netlify's official hosted OAuth MCP server.
-- A generic deployment-service icon is used because the portable official plugin source does not include a catalog icon with explicit redistribution metadata.
+- Brand logo source: https://avatars.githubusercontent.com/u/7892489?v=4
+  Brand names and logos belong to their respective owners. 品牌名称与标识归相应权利人所有。
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.

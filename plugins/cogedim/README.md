@@ -7,10 +7,10 @@ Cogedim's official public hosted MCP.
 ## Official hosted MCP adapter
 
 This package contains only Ghast-authored MCP configuration, workflow and
-safety instructions, documentation, metadata, and a generic residential
-search icon. It does not redistribute Cogedim's hosted implementation,
-private Codex app mapping, property data, official documentation text,
-trademarks, branded artwork, or marketplace icons.
+safety instructions, documentation, metadata, and the brand icon served by
+Cogedim’s official website. It does not redistribute Cogedim’s hosted
+implementation, private Codex app mapping, property data, or official
+documentation text.
 
 Cogedim's official `https://www.cogedim.com/mcp` entry identifies
 `cogedim-mcp-server` version `1.0.0` and publishes its Streamable HTTP JSON-RPC
@@ -64,8 +64,9 @@ artwork.
 - No public source repository for the hosted implementation was identified.
   Ghast therefore integrates the directly usable official service instead of
   inventing or redistributing a substitute server.
-- A generic residential-search icon is used because no licensed Cogedim
-  catalog artwork is included in a public official MCP source repository.
+- Brand logo source: https://www.cogedim.com/apple-touch-icon.png
+  Cogedim’s name and logo belong to their respective rights holders.
+  品牌名称与标识归相应权利人所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Cogedim's hosted service, listings, program material, trademarks, privacy

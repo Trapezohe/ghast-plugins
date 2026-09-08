@@ -15,6 +15,7 @@ The MCP endpoints and 54 account, Droplet, image, size, region, billing, action,
 - The official MCP surface is a strict superset of the six private app tools used by the Codex workflow: 11 account tools, 42 Droplet/image/size tools, and the common region-list tool.
 - Creation, rebuild, restore, reset, power, resize, image, SSH-key, and deletion operations follow DigitalOcean's official safety annotations and require exact-target review and explicit confirmation.
 - The helpers never scan and trust a host key blindly. The generated SSH config uses accept-new for the first connection; users may instead verify and pin a fingerprint through their normal OpenSSH workflow.
-- A generic cloud-server icon is used because the licensed MCP source does not grant redistribution rights for DigitalOcean marketplace artwork.
+- Brand logo source: https://docs.digitalocean.com/favicon.svg
+  Brand names and logos belong to their respective owners. 品牌名称与标识归相应权利人所有。
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.
