@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "tally",
+  "version": "1.0.0-ghast.1",
+  "description": "Build forms and analyze submissions through Tally’s official MCP server (Beta).",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developers.tally.so/api-reference/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developers.tally.so/api-reference/mcp",
+      "connectorPublisher": "Tally",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Tally",
+      "descriptions": {
+        "en": "Build forms and analyze submissions through Tally’s official MCP server (Beta).",
+        "zh-CN": "通过 Tally 官方 MCP 服务构建表单并分析提交记录（Beta）。"
+      }
+    }
+  }
+}
