@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "assemblyai-docs",
+  "version": "1.0.0-ghast.1",
+  "description": "Search official AssemblyAI documentation for speech recognition, streaming transcription and voice-agent integration.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.assemblyai.com/docs/coding-agent-prompts",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.assemblyai.com/docs/coding-agent-prompts",
+      "connectorPublisher": "AssemblyAI",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "AssemblyAI Docs",
+      "descriptions": {
+        "en": "Search official AssemblyAI documentation for speech recognition, streaming transcription and voice-agent integration.",
+        "zh-CN": "查询 AssemblyAI 官方文档，辅助接入语音识别、流式转录及语音智能体。"
+      }
+    }
+  }
+}

@@ -970,6 +970,44 @@
       "category": "productivity"
     },
     {
+      "id": "assemblyai-docs",
+      "name": "AssemblyAI Docs",
+      "description": "Search official AssemblyAI documentation for speech recognition, streaming transcription and voice-agent integration.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "assemblyai-docs",
+        "version": "1.0.0-ghast.1",
+        "description": "Search official AssemblyAI documentation for speech recognition, streaming transcription and voice-agent integration.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.assemblyai.com/docs/coding-agent-prompts",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.assemblyai.com/docs/coding-agent-prompts",
+            "connectorPublisher": "AssemblyAI",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "AssemblyAI Docs",
+            "descriptions": {
+              "en": "Search official AssemblyAI documentation for speech recognition, streaming transcription and voice-agent integration.",
+              "zh-CN": "查询 AssemblyAI 官方文档，辅助接入语音识别、流式转录及语音智能体。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/assemblyai-docs.zip",
+        "sha256": "bf81281c704189016b2f5593c46968f54a10279ca9adf34ed012f10efe343a11"
+      },
+      "icon": "./plugins/assemblyai-docs/assets/icon.png",
+      "homepage": "https://www.assemblyai.com/docs/coding-agent-prompts",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "astro",
       "name": "Astro Docs",
       "description": "Search Astro documentation for content sites and integrations.",
@@ -2445,6 +2483,52 @@
       "repository": "https://github.com/carta/plugins",
       "license": "Apache-2.0",
       "category": "productivity"
+    },
+    {
+      "id": "cartesia",
+      "name": "Cartesia",
+      "description": "Generate speech, transcribe audio and manage voices and pronunciation dictionaries through Cartesia’s official MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "cartesia",
+        "version": "1.0.0-ghast.1",
+        "description": "Generate speech, transcribe audio and manage voices and pronunciation dictionaries through Cartesia’s official MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.cartesia.ai/tools/ai/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.cartesia.ai/tools/ai/mcp",
+            "connectorPublisher": "Cartesia",
+            "category": "creativity",
+            "icon": "./assets/icon.svg",
+            "displayName": "Cartesia",
+            "descriptions": {
+              "en": "Generate speech, transcribe audio and manage voices and pronunciation dictionaries through Cartesia’s official MCP server.",
+              "zh-CN": "通过 Cartesia 官方 MCP 生成语音、转录音频，并管理声音和发音词典。"
+            },
+            "mcpServerExtensions": {
+              "cartesia": {
+                "credentialEnv": {
+                  "CARTESIA_API_KEY": "$VAULT:cartesia-api-key",
+                  "CARTESIA_ADMIN_API_KEY": "$VAULT:cartesia-admin-api-key"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/cartesia.zip",
+        "sha256": "5c5cf6d5a7938ec799cb67edde95a823824c582cf3f49463fff079c84fcbb4a1"
+      },
+      "icon": "./plugins/cartesia/assets/icon.svg",
+      "homepage": "https://docs.cartesia.ai/tools/ai/mcp",
+      "license": "MIT",
+      "category": "creativity"
     },
     {
       "id": "catalyst-by-zoho",
@@ -8178,6 +8262,44 @@
       "category": "developer-tools"
     },
     {
+      "id": "livekit-docs",
+      "name": "LiveKit Docs",
+      "description": "Search official LiveKit documentation, SDK code and changelogs to build real-time audio, video and voice agents.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "livekit-docs",
+        "version": "1.0.0-ghast.1",
+        "description": "Search official LiveKit documentation, SDK code and changelogs to build real-time audio, video and voice agents.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.livekit.io/reference/developer-tools/docs-mcp/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.livekit.io/reference/developer-tools/docs-mcp/",
+            "connectorPublisher": "LiveKit",
+            "category": "development",
+            "icon": "./assets/icon.svg",
+            "displayName": "LiveKit Docs",
+            "descriptions": {
+              "en": "Search official LiveKit documentation, SDK code and changelogs to build real-time audio, video and voice agents.",
+              "zh-CN": "查询 LiveKit 官方文档、SDK 代码及更新日志，辅助开发实时音视频和语音智能体。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/livekit-docs.zip",
+        "sha256": "d7ac2620a7d419feb1526b9116c50a681ba17834c18d99332d62c0c9453da2fe"
+      },
+      "icon": "./plugins/livekit-docs/assets/icon.svg",
+      "homepage": "https://docs.livekit.io/reference/developer-tools/docs-mcp/",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "logrocket",
       "name": "LogRocket",
       "description": "Analyze user sessions, product metrics and application issues with LogRocket.",
@@ -12938,6 +13060,44 @@
       "homepage": "https://docs.tavily.com/documentation/mcp",
       "license": "MIT",
       "category": "research"
+    },
+    {
+      "id": "tavus-docs",
+      "name": "Tavus Docs",
+      "description": "Explore official Tavus documentation for conversational video, digital replicas and video API integration.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "tavus-docs",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore official Tavus documentation for conversational video, digital replicas and video API integration.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.tavus.io/sections/agents-and-automation",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.tavus.io/sections/agents-and-automation",
+            "connectorPublisher": "Tavus",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Tavus Docs",
+            "descriptions": {
+              "en": "Explore official Tavus documentation for conversational video, digital replicas and video API integration.",
+              "zh-CN": "查询 Tavus 官方文档，辅助接入对话式视频、数字分身和视频 API。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/tavus-docs.zip",
+        "sha256": "b67d1361784e8e3b21098e255c6e257c23367eab823e75a08460c503ce96a676"
+      },
+      "icon": "./plugins/tavus-docs/assets/icon.png",
+      "homepage": "https://docs.tavus.io/sections/agents-and-automation",
+      "license": "MIT",
+      "category": "development"
     },
     {
       "id": "teamwork",

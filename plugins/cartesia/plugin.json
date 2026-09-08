@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "cartesia",
+  "version": "1.0.0-ghast.1",
+  "description": "Generate speech, transcribe audio and manage voices and pronunciation dictionaries through Cartesia’s official MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.cartesia.ai/tools/ai/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.cartesia.ai/tools/ai/mcp",
+      "connectorPublisher": "Cartesia",
+      "category": "creativity",
+      "icon": "./assets/icon.svg",
+      "displayName": "Cartesia",
+      "descriptions": {
+        "en": "Generate speech, transcribe audio and manage voices and pronunciation dictionaries through Cartesia’s official MCP server.",
+        "zh-CN": "通过 Cartesia 官方 MCP 生成语音、转录音频，并管理声音和发音词典。"
+      },
+      "mcpServerExtensions": {
+        "cartesia": {
+          "credentialEnv": {
+            "CARTESIA_API_KEY": "$VAULT:cartesia-api-key",
+            "CARTESIA_ADMIN_API_KEY": "$VAULT:cartesia-admin-api-key"
+          }
+        }
+      }
+    }
+  }
+}

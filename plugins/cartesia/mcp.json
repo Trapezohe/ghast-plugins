@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "cartesia": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "--python",
+        "3.13",
+        "cartesia-mcp==0.21.0"
+      ],
+      "cwd": "${PLUGIN_DATA}",
+      "env": {
+        "PYTHON_DOTENV_DISABLED": "1",
+        "OUTPUT_DIRECTORY": "${PLUGIN_DATA}"
+      }
+    }
+  }
+}

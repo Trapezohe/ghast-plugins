@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "livekit-docs",
+  "version": "1.0.0-ghast.1",
+  "description": "Search official LiveKit documentation, SDK code and changelogs to build real-time audio, video and voice agents.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.livekit.io/reference/developer-tools/docs-mcp/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.livekit.io/reference/developer-tools/docs-mcp/",
+      "connectorPublisher": "LiveKit",
+      "category": "development",
+      "icon": "./assets/icon.svg",
+      "displayName": "LiveKit Docs",
+      "descriptions": {
+        "en": "Search official LiveKit documentation, SDK code and changelogs to build real-time audio, video and voice agents.",
+        "zh-CN": "查询 LiveKit 官方文档、SDK 代码及更新日志，辅助开发实时音视频和语音智能体。"
+      }
+    }
+  }
+}

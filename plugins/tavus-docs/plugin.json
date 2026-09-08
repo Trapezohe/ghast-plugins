@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "tavus-docs",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore official Tavus documentation for conversational video, digital replicas and video API integration.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.tavus.io/sections/agents-and-automation",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.tavus.io/sections/agents-and-automation",
+      "connectorPublisher": "Tavus",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Tavus Docs",
+      "descriptions": {
+        "en": "Explore official Tavus documentation for conversational video, digital replicas and video API integration.",
+        "zh-CN": "查询 Tavus 官方文档，辅助接入对话式视频、数字分身和视频 API。"
+      }
+    }
+  }
+}
