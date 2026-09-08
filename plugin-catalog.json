@@ -12151,6 +12151,44 @@
       "category": "data"
     },
     {
+      "id": "onesignal",
+      "name": "OneSignal",
+      "description": "Connect OneSignal’s official OAuth MCP for messaging, audiences, templates and delivery analytics (open beta).",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "onesignal",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect OneSignal’s official OAuth MCP for messaging, audiences, templates and delivery analytics (open beta).",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://documentation.onesignal.com/docs/en/model-context-protocol",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://documentation.onesignal.com/docs/en/model-context-protocol",
+            "connectorPublisher": "OneSignal",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "OneSignal",
+            "descriptions": {
+              "en": "Connect OneSignal’s official OAuth MCP for messaging, audiences, templates and delivery analytics (open beta).",
+              "zh-CN": "连接 OneSignal 官方 OAuth MCP，处理消息通知、受众、模板与送达分析（公开测试版）。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/onesignal.zip",
+        "sha256": "e32362c7176849939ed2bca5c90219b27f617ef9a6f5d37fdbf11795b6f4585a"
+      },
+      "icon": "./plugins/onesignal/assets/icon.png",
+      "homepage": "https://documentation.onesignal.com/docs/en/model-context-protocol",
+      "license": "MIT",
+      "category": "marketing"
+    },
+    {
       "id": "onlyoffice",
       "name": "ONLYOFFICE DocSpace",
       "description": "Connect ONLYOFFICE’s official DocSpace MCP to work with files, folders, collaboration rooms and document workflows.",
