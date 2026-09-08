@@ -12754,6 +12754,44 @@
       "category": "business"
     },
     {
+      "id": "plaid",
+      "name": "Plaid Dashboard",
+      "description": "Connect Plaid’s official Dashboard MCP for production integration diagnostics, Link conversion analysis and usage metrics.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "plaid",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Plaid’s official Dashboard MCP for production integration diagnostics, Link conversion analysis and usage metrics.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://plaid.com/docs/resources/mcp/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://plaid.com/docs/resources/mcp/",
+            "connectorPublisher": "Plaid Dashboard",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Plaid Dashboard",
+            "descriptions": {
+              "en": "Connect Plaid’s official Dashboard MCP for production integration diagnostics, Link conversion analysis and usage metrics.",
+              "zh-CN": "连接 Plaid 官方 Dashboard MCP，诊断生产集成、分析 Link 转化并查询使用指标。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/plaid.zip",
+        "sha256": "d9d87a4716b03f7f5418bccd830d9720624a5a9f4dabd7fc52239e01d7006510"
+      },
+      "icon": "./plugins/plaid/assets/icon.png",
+      "homepage": "https://plaid.com/docs/resources/mcp/",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
       "id": "planetscale",
       "name": "PlanetScale",
       "description": "Inspect databases, branches, schemas and query performance with PlanetScale.",
@@ -14122,6 +14160,44 @@
       "homepage": "https://www.relume.ai/relume-library-mcp",
       "license": "MIT",
       "category": "design"
+    },
+    {
+      "id": "remote",
+      "name": "Remote",
+      "description": "Connect Remote’s official MCP to explore workforce, payroll and leave data and perform authorized employee self-service.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "remote",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Remote’s official MCP to explore workforce, payroll and leave data and perform authorized employee self-service.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.remote.com/docs/quick-start-guide-2",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.remote.com/docs/quick-start-guide-2",
+            "connectorPublisher": "Remote",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Remote",
+            "descriptions": {
+              "en": "Connect Remote’s official MCP to explore workforce, payroll and leave data and perform authorized employee self-service.",
+              "zh-CN": "连接 Remote 官方 MCP，查询人员、薪资和休假数据，并执行获授权的员工自助操作。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/remote.zip",
+        "sha256": "1fa7788154e86e0bd001637038d6ae57c04482272b30cec41673d8f7606fb432"
+      },
+      "icon": "./plugins/remote/assets/icon.png",
+      "homepage": "https://developer.remote.com/docs/quick-start-guide-2",
+      "license": "MIT",
+      "category": "productivity"
     },
     {
       "id": "remotion",

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "remote",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Remote’s official MCP to explore workforce, payroll and leave data and perform authorized employee self-service.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.remote.com/docs/quick-start-guide-2",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developer.remote.com/docs/quick-start-guide-2",
+      "connectorPublisher": "Remote",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Remote",
+      "descriptions": {
+        "en": "Connect Remote’s official MCP to explore workforce, payroll and leave data and perform authorized employee self-service.",
+        "zh-CN": "连接 Remote 官方 MCP，查询人员、薪资和休假数据，并执行获授权的员工自助操作。"
+      }
+    }
+  }
+}

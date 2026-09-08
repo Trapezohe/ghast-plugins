@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "plaid",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Plaid’s official Dashboard MCP for production integration diagnostics, Link conversion analysis and usage metrics.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://plaid.com/docs/resources/mcp/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://plaid.com/docs/resources/mcp/",
+      "connectorPublisher": "Plaid Dashboard",
+      "category": "finance",
+      "icon": "./assets/icon.png",
+      "displayName": "Plaid Dashboard",
+      "descriptions": {
+        "en": "Connect Plaid’s official Dashboard MCP for production integration diagnostics, Link conversion analysis and usage metrics.",
+        "zh-CN": "连接 Plaid 官方 Dashboard MCP，诊断生产集成、分析 Link 转化并查询使用指标。"
+      }
+    }
+  }
+}
