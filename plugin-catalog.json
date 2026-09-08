@@ -4009,6 +4009,52 @@
       "category": "web"
     },
     {
+      "id": "configcat",
+      "name": "ConfigCat",
+      "description": "Manage feature flags, targeting rules, products and environments through ConfigCat’s official MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "configcat",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage feature flags, targeting rules, products and environments through ConfigCat’s official MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://configcat.com/docs/advanced/mcp-server/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://configcat.com/docs/advanced/mcp-server/",
+            "connectorPublisher": "ConfigCat",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "ConfigCat",
+            "descriptions": {
+              "en": "Manage feature flags, targeting rules, products and environments through ConfigCat’s official MCP server.",
+              "zh-CN": "通过 ConfigCat 官方 MCP 服务管理功能开关、定向规则、产品与环境。"
+            },
+            "mcpServerExtensions": {
+              "configcat": {
+                "credentialEnv": {
+                  "CONFIGCAT_API_USER": "$VAULT:configcat-api-user",
+                  "CONFIGCAT_API_PASS": "$VAULT:configcat-api-password"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/configcat.zip",
+        "sha256": "846db90244c9d453f96a2b4ca1deec7eb2615b9d1033b865ae8022a479be9a87"
+      },
+      "icon": "./plugins/configcat/assets/icon.png",
+      "homepage": "https://configcat.com/docs/advanced/mcp-server/",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "confluent",
       "name": "Confluent",
       "description": "Use Confluent’s official global MCP to discover environments and clusters, inspect connectors, query metrics and perform authorized connector maintenance.",
@@ -7594,6 +7640,60 @@
       "category": "productivity"
     },
     {
+      "id": "harness",
+      "name": "Harness",
+      "description": "Explore pipelines, deployments, infrastructure and feature management using Harness’s official MCP integrations.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "harness",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore pipelines, deployments, infrastructure and feature management using Harness’s official MCP integrations.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.harness.io/docs/platform/harness-ai/connect-with-ai/harness-mcp-server/hosted-mcp/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.harness.io/docs/platform/harness-ai/connect-with-ai/harness-mcp-server/hosted-mcp/",
+            "connectorPublisher": "Harness",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Harness",
+            "descriptions": {
+              "en": "Explore pipelines, deployments, infrastructure and feature management using Harness’s official MCP integrations.",
+              "zh-CN": "通过 Harness 官方 MCP 集成查询流水线、部署、基础设施与功能管理信息。"
+            },
+            "mcpServerExtensions": {
+              "harness": {
+                "credentialEnv": {
+                  "HARNESS_API_KEY": "$VAULT:harness-api-key",
+                  "HARNESS_ACCOUNT_ID": "$VAULT:harness-account-id",
+                  "HARNESS_FME_API_KEY": "$VAULT:harness-fme-api-key"
+                },
+                "optionalCredentials": [
+                  "harness-account-id",
+                  "harness-fme-api-key"
+                ]
+              },
+              "harness-hosted": {
+                "oauthClientRequired": true
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/harness.zip",
+        "sha256": "ac42d4fe226f9da1bb6118c0f61a3090e9473c8f94536cfc5366e06772de2e30"
+      },
+      "icon": "./plugins/harness/assets/icon.png",
+      "homepage": "https://developer.harness.io/docs/platform/harness-ai/connect-with-ai/harness-mcp-server/hosted-mcp/",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "harvest",
       "name": "Harvest",
       "description": "Track time, review project budgets and prepare invoice drafts in Harvest.",
@@ -8180,6 +8280,44 @@
       "homepage": "https://imagekit.io/docs/build-with-ai",
       "license": "MIT",
       "category": "creativity"
+    },
+    {
+      "id": "incident-io",
+      "name": "incident.io",
+      "description": "Work with incidents, alerts, on-call schedules and escalation context using incident.io’s official remote MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "incident-io",
+        "version": "1.0.0-ghast.1",
+        "description": "Work with incidents, alerts, on-call schedules and escalation context using incident.io’s official remote MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.incident.io/ai/remote-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.incident.io/ai/remote-mcp",
+            "connectorPublisher": "incident.io",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "incident.io",
+            "descriptions": {
+              "en": "Work with incidents, alerts, on-call schedules and escalation context using incident.io’s official remote MCP.",
+              "zh-CN": "通过 incident.io 官方远程 MCP 处理事故、告警、值班安排与升级响应信息。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/incident-io.zip",
+        "sha256": "542d47c92bd0f010eb04727202f3870c1ca49d2d3ad28c39ee1673d17442a2c9"
+      },
+      "icon": "./plugins/incident-io/assets/icon.png",
+      "homepage": "https://docs.incident.io/ai/remote-mcp",
+      "license": "MIT",
+      "category": "development"
     },
     {
       "id": "influxdb",
@@ -12659,6 +12797,44 @@
       "category": "developer-tools"
     },
     {
+      "id": "rootly",
+      "name": "Rootly",
+      "description": "Explore incident response and on-call workflows using Rootly’s official Code Mode MCP connection.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "rootly",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore incident response and on-call workflows using Rootly’s official Code Mode MCP connection.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.rootly.com/integrations/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.rootly.com/integrations/mcp-server",
+            "connectorPublisher": "Rootly",
+            "category": "development",
+            "icon": "./assets/icon.svg",
+            "displayName": "Rootly",
+            "descriptions": {
+              "en": "Explore incident response and on-call workflows using Rootly’s official Code Mode MCP connection.",
+              "zh-CN": "通过 Rootly 官方 Code Mode MCP 连接查询事故响应信息并处理值班工作流程。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/rootly.zip",
+        "sha256": "84d83455c5e1e7a3e6c0123c6d4e6aa132423f71d75667b0821670b6191f943d"
+      },
+      "icon": "./plugins/rootly/assets/icon.svg",
+      "homepage": "https://docs.rootly.com/integrations/mcp-server",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "rudderstack",
       "name": "RudderStack",
       "description": "Inspect customer data pipelines, sources and destinations and manage RudderStack transformations.",
@@ -15277,6 +15453,58 @@
       "icon": "./plugins/twilio-developer-kit/assets/icon.svg",
       "homepage": "https://www.twilio.com/docs",
       "repository": "https://github.com/twilio/ai",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
+      "id": "unleash",
+      "name": "Unleash",
+      "description": "Inspect feature flags, evaluate changes and manage rollouts on your Unleash instance with its official MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "unleash",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect feature flags, evaluate changes and manage rollouts on your Unleash instance with its official MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.getunleash.io/integrate/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.getunleash.io/integrate/mcp",
+            "connectorPublisher": "Unleash",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Unleash",
+            "descriptions": {
+              "en": "Inspect feature flags, evaluate changes and manage rollouts on your Unleash instance with its official MCP server.",
+              "zh-CN": "通过 Unleash 官方 MCP 服务查看功能开关、评估变更并管理实例中的灰度发布。"
+            },
+            "mcpServerExtensions": {
+              "unleash": {
+                "credentialEnv": {
+                  "UNLEASH_BASE_URL": "$VAULT:unleash-url",
+                  "UNLEASH_PAT": "$VAULT:unleash-pat",
+                  "UNLEASH_DEFAULT_PROJECT": "$VAULT:unleash-project",
+                  "UNLEASH_DEFAULT_ENVIRONMENT": "$VAULT:unleash-environment"
+                },
+                "optionalCredentials": [
+                  "unleash-project",
+                  "unleash-environment"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/unleash.zip",
+        "sha256": "ae65c1e329f97dd3e3bfbb1fed969616812b07d580c4a2dce8f000d45cb31fd8"
+      },
+      "icon": "./plugins/unleash/assets/icon.png",
+      "homepage": "https://docs.getunleash.io/integrate/mcp",
       "license": "MIT",
       "category": "development"
     },

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "rootly",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore incident response and on-call workflows using Rootly’s official Code Mode MCP connection.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.rootly.com/integrations/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.rootly.com/integrations/mcp-server",
+      "connectorPublisher": "Rootly",
+      "category": "development",
+      "icon": "./assets/icon.svg",
+      "displayName": "Rootly",
+      "descriptions": {
+        "en": "Explore incident response and on-call workflows using Rootly’s official Code Mode MCP connection.",
+        "zh-CN": "通过 Rootly 官方 Code Mode MCP 连接查询事故响应信息并处理值班工作流程。"
+      }
+    }
+  }
+}

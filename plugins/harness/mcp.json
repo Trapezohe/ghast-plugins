@@ -1,0 +1,24 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "harness": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "harness-mcp-v2@3.2.24"
+      ],
+      "cwd": "${PLUGIN_DATA}",
+      "env": {
+        "HARNESS_BASE_URL": "https://app.harness.io",
+        "HARNESS_MCP_MODE": "single-user",
+        "HARNESS_SKIP_ELICITATION": "false",
+        "HARNESS_AUTO_APPROVE_RISK": "none"
+      }
+    },
+    "harness-hosted": {
+      "type": "streamable-http",
+      "url": "https://mcp.harness.io/mcp"
+    }
+  }
+}

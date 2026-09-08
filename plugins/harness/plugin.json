@@ -1,0 +1,41 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "harness",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore pipelines, deployments, infrastructure and feature management using Harness’s official MCP integrations.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.harness.io/docs/platform/harness-ai/connect-with-ai/harness-mcp-server/hosted-mcp/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developer.harness.io/docs/platform/harness-ai/connect-with-ai/harness-mcp-server/hosted-mcp/",
+      "connectorPublisher": "Harness",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Harness",
+      "descriptions": {
+        "en": "Explore pipelines, deployments, infrastructure and feature management using Harness’s official MCP integrations.",
+        "zh-CN": "通过 Harness 官方 MCP 集成查询流水线、部署、基础设施与功能管理信息。"
+      },
+      "mcpServerExtensions": {
+        "harness": {
+          "credentialEnv": {
+            "HARNESS_API_KEY": "$VAULT:harness-api-key",
+            "HARNESS_ACCOUNT_ID": "$VAULT:harness-account-id",
+            "HARNESS_FME_API_KEY": "$VAULT:harness-fme-api-key"
+          },
+          "optionalCredentials": [
+            "harness-account-id",
+            "harness-fme-api-key"
+          ]
+        },
+        "harness-hosted": {
+          "oauthClientRequired": true
+        }
+      }
+    }
+  }
+}

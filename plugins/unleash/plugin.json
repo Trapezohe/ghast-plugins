@@ -1,0 +1,39 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "unleash",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect feature flags, evaluate changes and manage rollouts on your Unleash instance with its official MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.getunleash.io/integrate/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.getunleash.io/integrate/mcp",
+      "connectorPublisher": "Unleash",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Unleash",
+      "descriptions": {
+        "en": "Inspect feature flags, evaluate changes and manage rollouts on your Unleash instance with its official MCP server.",
+        "zh-CN": "通过 Unleash 官方 MCP 服务查看功能开关、评估变更并管理实例中的灰度发布。"
+      },
+      "mcpServerExtensions": {
+        "unleash": {
+          "credentialEnv": {
+            "UNLEASH_BASE_URL": "$VAULT:unleash-url",
+            "UNLEASH_PAT": "$VAULT:unleash-pat",
+            "UNLEASH_DEFAULT_PROJECT": "$VAULT:unleash-project",
+            "UNLEASH_DEFAULT_ENVIRONMENT": "$VAULT:unleash-environment"
+          },
+          "optionalCredentials": [
+            "unleash-project",
+            "unleash-environment"
+          ]
+        }
+      }
+    }
+  }
+}

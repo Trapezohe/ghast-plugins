@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "incident-io",
+  "version": "1.0.0-ghast.1",
+  "description": "Work with incidents, alerts, on-call schedules and escalation context using incident.io’s official remote MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.incident.io/ai/remote-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.incident.io/ai/remote-mcp",
+      "connectorPublisher": "incident.io",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "incident.io",
+      "descriptions": {
+        "en": "Work with incidents, alerts, on-call schedules and escalation context using incident.io’s official remote MCP.",
+        "zh-CN": "通过 incident.io 官方远程 MCP 处理事故、告警、值班安排与升级响应信息。"
+      }
+    }
+  }
+}

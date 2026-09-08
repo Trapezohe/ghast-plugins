@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "unleash": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@unleash/mcp@0.4.1",
+        "--log-level",
+        "error"
+      ],
+      "cwd": "${PLUGIN_DATA}"
+    }
+  }
+}

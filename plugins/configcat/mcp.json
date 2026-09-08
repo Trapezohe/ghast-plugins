@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "configcat": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@configcat/mcp-server@0.1.9"
+      ],
+      "cwd": "${PLUGIN_DATA}",
+      "env": {
+        "CONFIGCAT_BASE_URL": "https://api.configcat.com"
+      }
+    }
+  }
+}
