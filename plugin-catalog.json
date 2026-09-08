@@ -2890,6 +2890,44 @@
       "category": "finance"
     },
     {
+      "id": "canny",
+      "name": "Canny",
+      "description": "Analyze product feedback and customer impact, and manage Ideas through Canny’s official MCP. Requires Pro or Business with Canny Ideas.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "canny",
+        "version": "1.0.0-ghast.1",
+        "description": "Analyze product feedback and customer impact, and manage Ideas through Canny’s official MCP. Requires Pro or Business with Canny Ideas.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.canny.io/en/articles/13063190-canny-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.canny.io/en/articles/13063190-canny-mcp-server",
+            "connectorPublisher": "Canny",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Canny",
+            "descriptions": {
+              "en": "Analyze product feedback and customer impact, and manage Ideas through Canny’s official MCP. Requires Pro or Business with Canny Ideas.",
+              "zh-CN": "通过 Canny 官方 MCP 分析产品反馈与客户影响，并管理 Ideas；需要启用 Canny Ideas 的 Pro 或 Business 套餐。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/canny.zip",
+        "sha256": "28d4d136f2feb9c42fb036bc7150ad04a77c7acf6d1d692366be90f08e38f02f"
+      },
+      "icon": "./plugins/canny/assets/icon.png",
+      "homepage": "https://help.canny.io/en/articles/13063190-canny-mcp-server",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "canva",
       "name": "canva",
       "description": "Create, edit, review, resize, bulk-generate, and brand-check Canva designs through Canva's official skills and hosted MCP server.",
