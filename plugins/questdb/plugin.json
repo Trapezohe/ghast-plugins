@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "questdb",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect QuestDB’s official MCP to your Web Console for SQL, schema exploration, notebooks, charts and live dashboards.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://questdb.com/docs/getting-started/web-console/mcp-server/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://questdb.com/docs/getting-started/web-console/mcp-server/",
+      "connectorPublisher": "QuestDB",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "QuestDB",
+      "descriptions": {
+        "en": "Connect QuestDB’s official MCP to your Web Console for SQL, schema exploration, notebooks, charts and live dashboards.",
+        "zh-CN": "通过 QuestDB 官方 MCP 连接 Web Console，进行 SQL 查询、结构探索、笔记本编辑、图表和实时仪表盘制作。"
+      },
+      "mcpServerExtensions": {
+        "questdb": {
+          "credentialEnv": {
+            "CONSOLE_ORIGIN": "$VAULT:questdb-console-origin"
+          }
+        }
+      }
+    }
+  }
+}

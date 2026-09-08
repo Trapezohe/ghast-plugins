@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "questdb": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@questdb/mcp-server-questdb@0.4.0"
+      ],
+      "cwd": "${PLUGIN_DATA}"
+    }
+  }
+}
