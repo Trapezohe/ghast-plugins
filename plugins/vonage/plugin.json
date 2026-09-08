@@ -1,0 +1,45 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "vonage",
+  "version": "1.0.0-ghast.1",
+  "description": "Use Vonage’s official MCP for account balances, phone numbers, communication reports, SMS, WhatsApp, RCS and voice workflows.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.vonage.com/en/mcp-server/how-to-guides/install-tooling-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developer.vonage.com/en/mcp-server/how-to-guides/install-tooling-mcp-server",
+      "connectorPublisher": "Vonage",
+      "category": "communication",
+      "icon": "./assets/icon.png",
+      "displayName": "Vonage",
+      "descriptions": {
+        "en": "Use Vonage’s official MCP for account balances, phone numbers, communication reports, SMS, WhatsApp, RCS and voice workflows.",
+        "zh-CN": "通过 Vonage 官方 MCP 查询账户余额、电话号码与通信报表，并处理短信、WhatsApp、RCS 和语音业务。"
+      },
+      "mcpServerExtensions": {
+        "vonage": {
+          "credentialEnv": {
+            "VONAGE_API_KEY": "$VAULT:vonage-api-key",
+            "VONAGE_API_SECRET": "$VAULT:vonage-api-secret",
+            "VONAGE_APPLICATION_ID": "$VAULT:vonage-application-id",
+            "VONAGE_PRIVATE_KEY64": "$VAULT:vonage-private-key-base64",
+            "VONAGE_VIRTUAL_NUMBER": "$VAULT:vonage-virtual-number",
+            "VONAGE_WHATSAPP_NUMBER": "$VAULT:vonage-whatsapp-number",
+            "RCS_SENDER_ID": "$VAULT:vonage-rcs-sender-id"
+          },
+          "optionalCredentials": [
+            "vonage-application-id",
+            "vonage-private-key-base64",
+            "vonage-virtual-number",
+            "vonage-whatsapp-number",
+            "vonage-rcs-sender-id"
+          ]
+        }
+      }
+    }
+  }
+}

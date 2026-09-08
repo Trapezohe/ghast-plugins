@@ -10,7 +10,8 @@
       ],
       "env": {
         "ACTIVE_PROFILES": "ALL"
-      }
+      },
+      "cwd": "${PLUGIN_DATA}"
     }
   }
 }

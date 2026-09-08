@@ -5363,7 +5363,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "dingtalk",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Access contacts, calendars, tasks, reports and collaboration services through DingTalk’s official MCP.",
         "author": {
           "name": "Ghast AI",
@@ -5390,7 +5390,12 @@
                   "ROBOT_CODE": "$VAULT:dingtalk-robot-code",
                   "ROBOT_ACCESS_TOKEN": "$VAULT:dingtalk-robot-token",
                   "DINGTALK_AGENT_ID": "$VAULT:dingtalk-agent-id"
-                }
+                },
+                "optionalCredentials": [
+                  "dingtalk-robot-code",
+                  "dingtalk-robot-token",
+                  "dingtalk-agent-id"
+                ]
               }
             }
           }
@@ -5398,7 +5403,7 @@
       },
       "package": {
         "url": "./packages/dingtalk.zip",
-        "sha256": "bafca44acef93151b0739b21cf6f8d434d8310c39e2574e65f00f75e3966e6fa"
+        "sha256": "85612c88130a15138965cde4f49c0be288c34b58b37ec445e041dc92ce434d72"
       },
       "icon": "./plugins/dingtalk/assets/icon.png",
       "homepage": "https://github.com/open-dingtalk/dingtalk-mcp",
@@ -6135,7 +6140,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "feishu-lark",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Work with documents, Base tables, chats, calendars and tasks through the official Feishu / Lark OpenAPI MCP.",
         "author": {
           "name": "Ghast AI",
@@ -6160,7 +6165,10 @@
                   "APP_ID": "$VAULT:feishu-lark-app-id",
                   "APP_SECRET": "$VAULT:feishu-lark-app-secret",
                   "USER_ACCESS_TOKEN": "$VAULT:feishu-lark-user-token"
-                }
+                },
+                "optionalCredentials": [
+                  "feishu-lark-user-token"
+                ]
               }
             }
           }
@@ -6168,7 +6176,7 @@
       },
       "package": {
         "url": "./packages/feishu-lark.zip",
-        "sha256": "82cb916e381c9c6bb179ce8024de4bc19690b6083dff216bfd977d60b21c4e5d"
+        "sha256": "34a136b9de389c0d54d11ed70a85bf53825a1bef5cf4df2b581014d72a7b7a38"
       },
       "icon": "./plugins/feishu-lark/assets/icon.png",
       "homepage": "https://github.com/larksuite/lark-openapi-mcp",
@@ -15248,6 +15256,64 @@
       "homepage": "https://github.com/visily-app/mcp-plugins",
       "license": "MIT",
       "category": "design"
+    },
+    {
+      "id": "vonage",
+      "name": "Vonage",
+      "description": "Use Vonage’s official MCP for account balances, phone numbers, communication reports, SMS, WhatsApp, RCS and voice workflows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "vonage",
+        "version": "1.0.0-ghast.1",
+        "description": "Use Vonage’s official MCP for account balances, phone numbers, communication reports, SMS, WhatsApp, RCS and voice workflows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.vonage.com/en/mcp-server/how-to-guides/install-tooling-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.vonage.com/en/mcp-server/how-to-guides/install-tooling-mcp-server",
+            "connectorPublisher": "Vonage",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "Vonage",
+            "descriptions": {
+              "en": "Use Vonage’s official MCP for account balances, phone numbers, communication reports, SMS, WhatsApp, RCS and voice workflows.",
+              "zh-CN": "通过 Vonage 官方 MCP 查询账户余额、电话号码与通信报表，并处理短信、WhatsApp、RCS 和语音业务。"
+            },
+            "mcpServerExtensions": {
+              "vonage": {
+                "credentialEnv": {
+                  "VONAGE_API_KEY": "$VAULT:vonage-api-key",
+                  "VONAGE_API_SECRET": "$VAULT:vonage-api-secret",
+                  "VONAGE_APPLICATION_ID": "$VAULT:vonage-application-id",
+                  "VONAGE_PRIVATE_KEY64": "$VAULT:vonage-private-key-base64",
+                  "VONAGE_VIRTUAL_NUMBER": "$VAULT:vonage-virtual-number",
+                  "VONAGE_WHATSAPP_NUMBER": "$VAULT:vonage-whatsapp-number",
+                  "RCS_SENDER_ID": "$VAULT:vonage-rcs-sender-id"
+                },
+                "optionalCredentials": [
+                  "vonage-application-id",
+                  "vonage-private-key-base64",
+                  "vonage-virtual-number",
+                  "vonage-whatsapp-number",
+                  "vonage-rcs-sender-id"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/vonage.zip",
+        "sha256": "7d5d6205bac324b60eb18adbd2d0f89387d45c2b197309f5059cdbce01bccb47"
+      },
+      "icon": "./plugins/vonage/assets/icon.png",
+      "homepage": "https://developer.vonage.com/en/mcp-server/how-to-guides/install-tooling-mcp-server",
+      "license": "MIT",
+      "category": "communication"
     },
     {
       "id": "waldo",

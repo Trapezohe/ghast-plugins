@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "dingtalk",
-  "version": "1.0.0-ghast.1",
+  "version": "1.0.0-ghast.2",
   "description": "Access contacts, calendars, tasks, reports and collaboration services through DingTalk’s official MCP.",
   "author": {
     "name": "Ghast AI",
@@ -28,7 +28,12 @@
             "ROBOT_CODE": "$VAULT:dingtalk-robot-code",
             "ROBOT_ACCESS_TOKEN": "$VAULT:dingtalk-robot-token",
             "DINGTALK_AGENT_ID": "$VAULT:dingtalk-agent-id"
-          }
+          },
+          "optionalCredentials": [
+            "dingtalk-robot-code",
+            "dingtalk-robot-token",
+            "dingtalk-agent-id"
+          ]
         }
       }
     }

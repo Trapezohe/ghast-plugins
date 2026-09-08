@@ -1,15 +1,12 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
   "mcpServers": {
-    "feishu-lark": {
+    "vonage": {
       "type": "stdio",
       "command": "npx",
       "args": [
         "-y",
-        "@larksuiteoapi/lark-mcp@0.5.1",
-        "mcp",
-        "-t",
-        "preset.default,preset.calendar.default,preset.task.default"
+        "@vonage/vonage-mcp-server-api-bindings@1.5.1"
       ],
       "cwd": "${PLUGIN_DATA}"
     }
