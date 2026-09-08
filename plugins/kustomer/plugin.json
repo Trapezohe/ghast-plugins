@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kustomer",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect Kustomer’s official MCP to search customer conversations, messages, profiles and support workflow information.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://help.kustomer.com/kustomer-mcp-server-HJsPzR56ee",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://help.kustomer.com/kustomer-mcp-server-HJsPzR56ee",
+      "connectorPublisher": "Kustomer",
+      "category": "communication",
+      "icon": "./assets/icon.png",
+      "displayName": "Kustomer",
+      "descriptions": {
+        "en": "Connect Kustomer’s official MCP to search customer conversations, messages, profiles and support workflow information.",
+        "zh-CN": "连接 Kustomer 官方 MCP，检索客户会话、消息、资料与客服工作流信息。"
+      }
+    }
+  }
+}

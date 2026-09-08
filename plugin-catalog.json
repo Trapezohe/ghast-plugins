@@ -9255,6 +9255,44 @@
       "category": "finance"
     },
     {
+      "id": "kustomer",
+      "name": "Kustomer",
+      "description": "Connect Kustomer’s official MCP to search customer conversations, messages, profiles and support workflow information.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "kustomer",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Kustomer’s official MCP to search customer conversations, messages, profiles and support workflow information.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.kustomer.com/kustomer-mcp-server-HJsPzR56ee",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.kustomer.com/kustomer-mcp-server-HJsPzR56ee",
+            "connectorPublisher": "Kustomer",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "Kustomer",
+            "descriptions": {
+              "en": "Connect Kustomer’s official MCP to search customer conversations, messages, profiles and support workflow information.",
+              "zh-CN": "连接 Kustomer 官方 MCP，检索客户会话、消息、资料与客服工作流信息。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/kustomer.zip",
+        "sha256": "64d463f5e8af2a3b41783e051179c677c8ec918ae3b3e77daf552a7e866f3709"
+      },
+      "icon": "./plugins/kustomer/assets/icon.png",
+      "homepage": "https://help.kustomer.com/kustomer-mcp-server-HJsPzR56ee",
+      "license": "MIT",
+      "category": "communication"
+    },
+    {
       "id": "langfuse",
       "name": "Langfuse",
       "description": "Query Langfuse observations and metrics and manage prompts, datasets and evaluations through the official project MCP server.",
@@ -12321,6 +12359,44 @@
       },
       "icon": "./plugins/productboard/assets/icon.svg",
       "homepage": "https://developer.productboard.com/reference/mcp-install",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
+      "id": "productive",
+      "name": "Productive",
+      "description": "Connect Productive’s official MCP to manage projects, tasks, time tracking, CRM and business reports in your authorized organization.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "productive",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Productive’s official MCP to manage projects, tasks, time tracking, CRM and business reports in your authorized organization.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.productive.io/en/articles/14817386-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.productive.io/en/articles/14817386-mcp-server",
+            "connectorPublisher": "Productive",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Productive",
+            "descriptions": {
+              "en": "Connect Productive’s official MCP to manage projects, tasks, time tracking, CRM and business reports in your authorized organization.",
+              "zh-CN": "连接 Productive 官方 MCP，在已授权组织中管理项目、任务、工时、CRM 与业务报表。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/productive.zip",
+        "sha256": "8270ba3e06ca0d7f77ca0e7f61db5bcc1a23ffd9722eebeba64271a46d5b74bf"
+      },
+      "icon": "./plugins/productive/assets/icon.png",
+      "homepage": "https://help.productive.io/en/articles/14817386-mcp-server",
       "license": "MIT",
       "category": "productivity"
     },
@@ -15850,6 +15926,44 @@
       "homepage": "https://github.com/timescale/pg-aiguide",
       "license": "MIT",
       "category": "developer-tools"
+    },
+    {
+      "id": "timing",
+      "name": "Timing",
+      "description": "Use Timing’s official MCP to review tracked activity, manage projects and time entries, and control timers.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "timing",
+        "version": "1.0.0-ghast.1",
+        "description": "Use Timing’s official MCP to review tracked activity, manage projects and time entries, and control timers.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://timingapp.com/help/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://timingapp.com/help/mcp",
+            "connectorPublisher": "Timing",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Timing",
+            "descriptions": {
+              "en": "Use Timing’s official MCP to review tracked activity, manage projects and time entries, and control timers.",
+              "zh-CN": "通过 Timing 官方 MCP 查看跟踪活动、管理项目与工时记录，并控制计时器。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/timing.zip",
+        "sha256": "25e7e9b06fc56917b049bae7b8c3c84db3d3668e4641b80ad8e29cbbfbe30aa3"
+      },
+      "icon": "./plugins/timing/assets/icon.png",
+      "homepage": "https://timingapp.com/help/mcp",
+      "license": "MIT",
+      "category": "productivity"
     },
     {
       "id": "todoist",

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "timing",
+  "version": "1.0.0-ghast.1",
+  "description": "Use Timing’s official MCP to review tracked activity, manage projects and time entries, and control timers.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://timingapp.com/help/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://timingapp.com/help/mcp",
+      "connectorPublisher": "Timing",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Timing",
+      "descriptions": {
+        "en": "Use Timing’s official MCP to review tracked activity, manage projects and time entries, and control timers.",
+        "zh-CN": "通过 Timing 官方 MCP 查看跟踪活动、管理项目与工时记录，并控制计时器。"
+      }
+    }
+  }
+}
