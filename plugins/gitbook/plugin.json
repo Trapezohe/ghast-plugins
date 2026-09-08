@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "gitbook",
+  "version": "1.0.0-ghast.1",
+  "description": "Create and maintain documentation, pages, change requests and spaces through GitBook’s official account MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.gitbook.com/blog/create-documentation-with-ai-and-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.gitbook.com/blog/create-documentation-with-ai-and-mcp",
+      "connectorPublisher": "GitBook",
+      "category": "Developer Tools",
+      "icon": "./assets/icon.png",
+      "displayName": "GitBook",
+      "descriptions": {
+        "en": "Create and maintain documentation, pages, change requests and spaces through GitBook’s official account MCP server.",
+        "zh-CN": "通过 GitBook 官方账号 MCP 服务创建和维护文档、页面、变更请求与空间。"
+      }
+    }
+  }
+}
