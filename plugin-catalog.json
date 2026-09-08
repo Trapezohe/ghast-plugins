@@ -201,6 +201,44 @@
       "category": "development"
     },
     {
+      "id": "adobe-target",
+      "name": "Adobe Target",
+      "description": "Connect Adobe Target’s official public-beta MCP for experiments, personalization, audiences, offers and activity workflows.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "adobe-target",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Adobe Target’s official public-beta MCP for experiments, personalization, audiences, offers and activity workflows.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://experienceleague.adobe.com/en/docs/target/using/integrate/mcp/target-mcp-get-started",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://experienceleague.adobe.com/en/docs/target/using/integrate/mcp/target-mcp-get-started",
+            "connectorPublisher": "Adobe Target",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "Adobe Target",
+            "descriptions": {
+              "en": "Connect Adobe Target’s official public-beta MCP for experiments, personalization, audiences, offers and activity workflows.",
+              "zh-CN": "连接 Adobe Target 官方公开测试版 MCP，处理实验、个性化、受众、优惠内容与活动流程。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/adobe-target.zip",
+        "sha256": "1e7cdbc438e5a4a212f253a41535b948b15dd7802d6cdaa0ceea558c7eb0f0dd"
+      },
+      "icon": "./plugins/adobe-target/assets/icon.png",
+      "homepage": "https://experienceleague.adobe.com/en/docs/target/using/integrate/mcp/target-mcp-get-started",
+      "license": "MIT",
+      "category": "marketing"
+    },
+    {
       "id": "agentmail",
       "name": "AgentMail",
       "description": "Manage agent email inboxes, messages, threads, drafts and attachments through AgentMail’s official MCP.",
