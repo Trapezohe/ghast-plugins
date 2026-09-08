@@ -840,6 +840,51 @@
       "category": "development"
     },
     {
+      "id": "ankr",
+      "name": "Ankr",
+      "description": "Connect Ankr’s official read-only blockchain MCP and OAuth account-management MCP for chain data and RPC operations.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "ankr",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect Ankr’s official read-only blockchain MCP and OAuth account-management MCP for chain data and RPC operations.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.ankr.com/docs/agentic-rpc/overview/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.ankr.com/docs/agentic-rpc/overview/",
+            "connectorPublisher": "Ankr",
+            "category": "finance",
+            "icon": "./assets/icon.png",
+            "displayName": "Ankr",
+            "descriptions": {
+              "en": "Connect Ankr’s official read-only blockchain MCP and OAuth account-management MCP for chain data and RPC operations.",
+              "zh-CN": "连接 Ankr 官方只读区块链 MCP 与 OAuth 账号管理 MCP，查询链上数据并管理 RPC 服务。"
+            },
+            "mcpServerExtensions": {
+              "ankr": {
+                "credentialHeaders": {
+                  "x-ankr-api-key": "$VAULT:ankr-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/ankr.zip",
+        "sha256": "9f42c7e1661d3270a26ccb89f1571370414991931a945bf2782d83a534872fac"
+      },
+      "icon": "./plugins/ankr/assets/icon.png",
+      "homepage": "https://www.ankr.com/docs/agentic-rpc/overview/",
+      "license": "MIT",
+      "category": "finance"
+    },
+    {
       "id": "anytype",
       "name": "Anytype",
       "description": "Search and organize Anytype spaces, objects, lists and knowledge through Anytype’s official local MCP connector.",
