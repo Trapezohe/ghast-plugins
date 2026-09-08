@@ -1,0 +1,45 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "abtasty",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect visitor feature flags and campaign configuration with AB Tasty’s official Feature Experimentation MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/flagship-io/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/flagship-io/mcp-server",
+      "connectorPublisher": "AB Tasty Feature Experimentation",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "AB Tasty Feature Experimentation",
+      "descriptions": {
+        "en": "Inspect visitor feature flags and campaign configuration with AB Tasty’s official Feature Experimentation MCP.",
+        "zh-CN": "通过 AB Tasty 官方 Feature Experimentation MCP 查看访客功能开关与实验活动配置。"
+      },
+      "mcpServerExtensions": {
+        "abtasty": {
+          "credentialEnv": {
+            "FEAR_ENV_ID": "$VAULT:abtasty-environment-id",
+            "FEAR_API_KEY": "$VAULT:abtasty-api-key",
+            "RESOURCE_LOADER_FEAR_ACCOUNT_ID": "$VAULT:abtasty-resource-account-id",
+            "RESOURCE_LOADER_FEAR_ACCOUNT_ENVIRONMENT_ID": "$VAULT:abtasty-resource-environment-id",
+            "RESOURCE_LOADER_FEAR_RCA_TOKEN": "$VAULT:abtasty-resource-token",
+            "RESOURCE_LOADER_WE_ACCOUNT_ID": "$VAULT:abtasty-web-account-id",
+            "RESOURCE_LOADER_WE_TOKEN": "$VAULT:abtasty-web-token"
+          },
+          "optionalCredentials": [
+            "abtasty-resource-account-id",
+            "abtasty-resource-environment-id",
+            "abtasty-resource-token",
+            "abtasty-web-account-id",
+            "abtasty-web-token"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "growthbook",
+  "version": "1.0.0-ghast.1",
+  "description": "Manage feature flags and inspect experiments through GrowthBook’s official MCP and bundled workflow guidance.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/growthbook/growthbook-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/growthbook/growthbook-mcp",
+      "connectorPublisher": "GrowthBook",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "GrowthBook",
+      "descriptions": {
+        "en": "Manage feature flags and inspect experiments through GrowthBook’s official MCP and bundled workflow guidance.",
+        "zh-CN": "通过 GrowthBook 官方 MCP 及配套流程指引管理功能开关并查看实验。"
+      },
+      "mcpServerExtensions": {
+        "growthbook": {
+          "credentialEnv": {
+            "GB_API_KEY": "$VAULT:growthbook-api-key"
+          }
+        }
+      }
+    }
+  }
+}

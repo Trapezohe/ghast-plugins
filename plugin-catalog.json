@@ -84,6 +84,64 @@
       "category": "finance"
     },
     {
+      "id": "abtasty",
+      "name": "AB Tasty Feature Experimentation",
+      "description": "Inspect visitor feature flags and campaign configuration with AB Tasty’s official Feature Experimentation MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "abtasty",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect visitor feature flags and campaign configuration with AB Tasty’s official Feature Experimentation MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/flagship-io/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/flagship-io/mcp-server",
+            "connectorPublisher": "AB Tasty Feature Experimentation",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "AB Tasty Feature Experimentation",
+            "descriptions": {
+              "en": "Inspect visitor feature flags and campaign configuration with AB Tasty’s official Feature Experimentation MCP.",
+              "zh-CN": "通过 AB Tasty 官方 Feature Experimentation MCP 查看访客功能开关与实验活动配置。"
+            },
+            "mcpServerExtensions": {
+              "abtasty": {
+                "credentialEnv": {
+                  "FEAR_ENV_ID": "$VAULT:abtasty-environment-id",
+                  "FEAR_API_KEY": "$VAULT:abtasty-api-key",
+                  "RESOURCE_LOADER_FEAR_ACCOUNT_ID": "$VAULT:abtasty-resource-account-id",
+                  "RESOURCE_LOADER_FEAR_ACCOUNT_ENVIRONMENT_ID": "$VAULT:abtasty-resource-environment-id",
+                  "RESOURCE_LOADER_FEAR_RCA_TOKEN": "$VAULT:abtasty-resource-token",
+                  "RESOURCE_LOADER_WE_ACCOUNT_ID": "$VAULT:abtasty-web-account-id",
+                  "RESOURCE_LOADER_WE_TOKEN": "$VAULT:abtasty-web-token"
+                },
+                "optionalCredentials": [
+                  "abtasty-resource-account-id",
+                  "abtasty-resource-environment-id",
+                  "abtasty-resource-token",
+                  "abtasty-web-account-id",
+                  "abtasty-web-token"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/abtasty.zip",
+        "sha256": "180f05ddb65f4d2fc9065cca7bacacd36ec983e6bfef5ace358c2265b0b5c792"
+      },
+      "icon": "./plugins/abtasty/assets/icon.png",
+      "homepage": "https://github.com/flagship-io/mcp-server",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "actively",
       "name": "actively",
       "description": "Research and prioritize accounts using Actively's persistent Per-Account Agent intelligence, buying signals, prospect context, strategy, and next-best actions.",
@@ -8579,6 +8637,51 @@
       "homepage": "https://support.greenhouse.io/hc/en-us/articles/52096319906971-Set-up-Greenhouse-MCP-with-supported-AI-tools",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "growthbook",
+      "name": "GrowthBook",
+      "description": "Manage feature flags and inspect experiments through GrowthBook’s official MCP and bundled workflow guidance.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "growthbook",
+        "version": "1.0.0-ghast.1",
+        "description": "Manage feature flags and inspect experiments through GrowthBook’s official MCP and bundled workflow guidance.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/growthbook/growthbook-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/growthbook/growthbook-mcp",
+            "connectorPublisher": "GrowthBook",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "GrowthBook",
+            "descriptions": {
+              "en": "Manage feature flags and inspect experiments through GrowthBook’s official MCP and bundled workflow guidance.",
+              "zh-CN": "通过 GrowthBook 官方 MCP 及配套流程指引管理功能开关并查看实验。"
+            },
+            "mcpServerExtensions": {
+              "growthbook": {
+                "credentialEnv": {
+                  "GB_API_KEY": "$VAULT:growthbook-api-key"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/growthbook.zip",
+        "sha256": "3c60928882de991878b2ab597ab99a7da65c2ebdb96322a4304595bffbc39cf8"
+      },
+      "icon": "./plugins/growthbook/assets/icon.png",
+      "homepage": "https://github.com/growthbook/growthbook-mcp",
+      "license": "MIT",
+      "category": "development"
     },
     {
       "id": "guru",

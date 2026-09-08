@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "growthbook": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@growthbook/mcp@2.1.0"
+      ],
+      "env": {
+        "GB_API_URL": "https://api.growthbook.io",
+        "GB_MCP_TRANSPORT": "stdio"
+      }
+    }
+  }
+}
