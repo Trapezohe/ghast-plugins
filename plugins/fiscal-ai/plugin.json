@@ -17,7 +17,11 @@
         "fiscal": {
           "credentialHeaders": {
             "Authorization": "Bearer $VAULT:fiscal-api-key"
-          }
+          },
+          "optionalCredentials": [
+            "fiscal-api-key"
+          ],
+          "oauthRequired": true
         }
       },
       "descriptions": {

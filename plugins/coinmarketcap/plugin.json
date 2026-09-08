@@ -23,7 +23,11 @@
         "coinmarketcap": {
           "credentialHeaders": {
             "X-CMC-MCP-API-KEY": "$VAULT:coinmarketcap-token"
-          }
+          },
+          "optionalCredentials": [
+            "coinmarketcap-token"
+          ],
+          "oauthRequired": true
         }
       }
     }

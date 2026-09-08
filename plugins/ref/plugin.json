@@ -21,7 +21,11 @@
         "ref": {
           "credentialHeaders": {
             "x-ref-api-key": "$VAULT:ref-token"
-          }
+          },
+          "optionalCredentials": [
+            "ref-token"
+          ],
+          "oauthRequired": true
         }
       }
     }

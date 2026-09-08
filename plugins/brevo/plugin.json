@@ -23,7 +23,11 @@
         "brevo": {
           "credentialHeaders": {
             "Authorization": "Bearer $VAULT:brevo-token"
-          }
+          },
+          "optionalCredentials": [
+            "brevo-token"
+          ],
+          "oauthRequired": true
         }
       }
     }

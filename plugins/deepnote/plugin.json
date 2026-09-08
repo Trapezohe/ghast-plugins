@@ -20,7 +20,11 @@
         "deepnote": {
           "credentialHeaders": {
             "Authorization": "Bearer $VAULT:deepnote-api-key"
-          }
+          },
+          "optionalCredentials": [
+            "deepnote-api-key"
+          ],
+          "oauthRequired": true
         }
       },
       "descriptions": {

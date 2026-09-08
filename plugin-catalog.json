@@ -1091,7 +1091,11 @@
               "apify": {
                 "credentialHeaders": {
                   "Authorization": "Bearer $VAULT:apify-token"
-                }
+                },
+                "optionalCredentials": [
+                  "apify-token"
+                ],
+                "oauthRequired": true
               }
             }
           }
@@ -1103,7 +1107,7 @@
       },
       "package": {
         "url": "./packages/apify.zip",
-        "sha256": "85d9b4c8b10ff87710b130a2b09109c15acb5108bca4650e6667c58912be6480"
+        "sha256": "0ff700f8839cb7fb2aa37cd2ec6eaa2f8a60222148e63489b2ddfdb254777f9a"
       },
       "icon": "./plugins/apify/assets/icon.svg",
       "homepage": "https://docs.apify.com/integrations/mcp",
@@ -1182,7 +1186,11 @@
               "appsflyer": {
                 "credentialHeaders": {
                   "Authorization": "Bearer $VAULT:appsflyer-token"
-                }
+                },
+                "optionalCredentials": [
+                  "appsflyer-token"
+                ],
+                "oauthRequired": true
               }
             }
           }
@@ -1194,7 +1202,7 @@
       },
       "package": {
         "url": "./packages/appsflyer.zip",
-        "sha256": "e5d80686498cee30b585c0b7475fa35923f13b92da6553ec54065a10bee4ecbf"
+        "sha256": "08e16147b7771324c12741f9c8372438db532636d0938ef5523952a6d7f0e741"
       },
       "icon": "./plugins/appsflyer/assets/icon.png",
       "homepage": "https://support.appsflyer.com/hc/en-us/articles/36349070304785--Beta-AppsFlyer-MCP",
@@ -2662,7 +2670,11 @@
               "brevo": {
                 "credentialHeaders": {
                   "Authorization": "Bearer $VAULT:brevo-token"
-                }
+                },
+                "optionalCredentials": [
+                  "brevo-token"
+                ],
+                "oauthRequired": true
               }
             }
           }
@@ -2674,7 +2686,7 @@
       },
       "package": {
         "url": "./packages/brevo.zip",
-        "sha256": "5f58f94e3ca334b4a0750fd5ac3fb6f715f1cc5ab24a644ea23126b919fe940f"
+        "sha256": "04564ffe6a177352429082b6534b05cae69f8bf6cc57b3c08f4d62157d0fce15"
       },
       "icon": "./plugins/brevo/assets/icon.svg",
       "homepage": "https://help.brevo.com/hc/en-us/articles/27978590646802-What-is-Model-Context-Protocol-MCP",
@@ -2747,7 +2759,11 @@
               "bright-data": {
                 "credentialHeaders": {
                   "Authorization": "Bearer $VAULT:bright-data-token"
-                }
+                },
+                "optionalCredentials": [
+                  "bright-data-token"
+                ],
+                "oauthRequired": true
               }
             }
           }
@@ -2759,7 +2775,7 @@
       },
       "package": {
         "url": "./packages/bright-data.zip",
-        "sha256": "6b865184dde6e43014a467aa87ec71b0740ef09e40feb67b1d4e23012b6ae918"
+        "sha256": "b834185e66b9885bb1dbfd9775253149a8672244e95b8c22884521e88851878e"
       },
       "icon": "./plugins/bright-data/assets/icon.png",
       "homepage": "https://brightdata.com/blog/ai/trueforge-with-bright-data",
@@ -3643,7 +3659,11 @@
               "checkly": {
                 "credentialHeaders": {
                   "Authorization": "Bearer $VAULT:checkly-token"
-                }
+                },
+                "optionalCredentials": [
+                  "checkly-token"
+                ],
+                "oauthRequired": true
               }
             }
           }
@@ -3655,7 +3675,7 @@
       },
       "package": {
         "url": "./packages/checkly.zip",
-        "sha256": "86246f592749d20e8eb4691f5311e87912651e58794aafe14c33fd11e6561de2"
+        "sha256": "2f3604b853fbbe8f90e9313d148643cd4b8e31f99e33b4bf50ad45bf3d04d76d"
       },
       "icon": "./plugins/checkly/assets/icon.png",
       "homepage": "https://www.checklyhq.com/docs/ai/mcp-server/setup/",
@@ -4640,7 +4660,11 @@
               "coinmarketcap": {
                 "credentialHeaders": {
                   "X-CMC-MCP-API-KEY": "$VAULT:coinmarketcap-token"
-                }
+                },
+                "optionalCredentials": [
+                  "coinmarketcap-token"
+                ],
+                "oauthRequired": true
               }
             }
           }
@@ -4652,7 +4676,7 @@
       },
       "package": {
         "url": "./packages/coinmarketcap.zip",
-        "sha256": "3d02766099c2dbe4e4066396fcee1e66e1209e56e052b59174301c6c6837379e"
+        "sha256": "97a51e9c27d680c414e2ec6b3c67f9aaa0f682fc366ca48e27b5d2977705a2bd"
       },
       "icon": "./plugins/coinmarketcap/assets/icon.svg",
       "homepage": "https://coinmarketcap.com/api/mcp/",
@@ -5596,7 +5620,11 @@
               "crowdin": {
                 "credentialHeaders": {
                   "Authorization": "Bearer $VAULT:crowdin-token"
-                }
+                },
+                "optionalCredentials": [
+                  "crowdin-token"
+                ],
+                "oauthRequired": true
               }
             }
           }
@@ -5608,7 +5636,7 @@
       },
       "package": {
         "url": "./packages/crowdin.zip",
-        "sha256": "5bc834d0fab0cd16bb27ab18403fcfc375b5b86285558cafa3ab06fc63575abd"
+        "sha256": "7900ddd5be5e781f934f30312f03c5050e1dc82231669e6bd4469805a34d8c5c"
       },
       "icon": "./plugins/crowdin/assets/icon.svg",
       "homepage": "https://store.crowdin.com/crowdin-mcp-server",
@@ -5685,7 +5713,11 @@
               "cryptohopper": {
                 "credentialHeaders": {
                   "Authorization": "Bearer $VAULT:cryptohopper-token"
-                }
+                },
+                "optionalCredentials": [
+                  "cryptohopper-token"
+                ],
+                "oauthRequired": true
               }
             }
           }
@@ -5697,7 +5729,7 @@
       },
       "package": {
         "url": "./packages/cryptohopper.zip",
-        "sha256": "33cc7d5511226c884353a7aea03bc0e47b0aff6369d22c36f01abc9dad984992"
+        "sha256": "7e1348c555f149fa795b59b8b993df073a67e30977b50a0a75e4f74f0dbecc69"
       },
       "icon": "./plugins/cryptohopper/assets/icon.svg",
       "homepage": "https://docs.cryptohopper.com/docs/cryptohopper-mcp/setup-overview",
@@ -6107,7 +6139,11 @@
               "deel": {
                 "credentialHeaders": {
                   "Authorization": "Bearer $VAULT:deel-token"
-                }
+                },
+                "optionalCredentials": [
+                  "deel-token"
+                ],
+                "oauthRequired": true
               }
             }
           }
@@ -6119,7 +6155,7 @@
       },
       "package": {
         "url": "./packages/deel.zip",
-        "sha256": "c7d79682fad9c81520629096c5d2c29af404d21327bc315155884a999aa8f677"
+        "sha256": "3b69d4d1ad0b674a703fe5f1d267a055c86f278bf2ad683d7fc2966fbacc27e1"
       },
       "icon": "./plugins/deel/assets/icon.png",
       "homepage": "https://developer.deel.com/mcp/authorization",
@@ -6152,7 +6188,11 @@
               "deepnote": {
                 "credentialHeaders": {
                   "Authorization": "Bearer $VAULT:deepnote-api-key"
-                }
+                },
+                "optionalCredentials": [
+                  "deepnote-api-key"
+                ],
+                "oauthRequired": true
               }
             },
             "descriptions": {
@@ -6168,7 +6208,7 @@
       },
       "package": {
         "url": "./packages/deepnote.zip",
-        "sha256": "4211047bc2416f6a2dd39d2e6c47e78fbf211865b6faa5baeb8001ba1c7de2d0"
+        "sha256": "46fe0940ad3f9f0dad04c86224c8685a272a2d8cd7d8117b234772a134fb5541"
       },
       "icon": "./plugins/deepnote/assets/icon.svg",
       "homepage": "https://deepnote.com/docs/deepnote-mcp",
@@ -6835,7 +6875,11 @@
               "dovetail": {
                 "credentialHeaders": {
                   "Authorization": "Bearer $VAULT:dovetail-api-token"
-                }
+                },
+                "optionalCredentials": [
+                  "dovetail-api-token"
+                ],
+                "oauthRequired": true
               }
             },
             "descriptions": {
@@ -6851,7 +6895,7 @@
       },
       "package": {
         "url": "./packages/dovetail.zip",
-        "sha256": "7073b8500ab07a87db8a33563c1e5e9b3b9303aea7946cfccee3499ac5f1109b"
+        "sha256": "8b1a73cbe35f09c1438101ee79c38bb06905d47262e2e1d56c5a97bcb664b973"
       },
       "icon": "./plugins/dovetail/assets/icon.png",
       "homepage": "https://developers.dovetail.com/docs/mcp",
@@ -6969,7 +7013,7 @@
             },
             "mcpServerExtensions": {
               "dropbox": {
-                "oauthClientRequired": true
+                "oauthRequired": true
               }
             }
           }
@@ -6981,7 +7025,7 @@
       },
       "package": {
         "url": "./packages/dropbox.zip",
-        "sha256": "0f3013959d462a1929ff6447ceab09e8265593ae0bde1286f190e3f019d49eea"
+        "sha256": "1617c29f84915d610b9b7b57126b80ac871b75dd5d79efce1a7cda464bab0740"
       },
       "icon": "./plugins/dropbox/assets/icon.png",
       "homepage": "https://help.dropbox.com/integrations/connect-dropbox-mcp-server",
@@ -7056,7 +7100,11 @@
               "dune": {
                 "credentialHeaders": {
                   "x-dune-api-key": "$VAULT:dune-token"
-                }
+                },
+                "optionalCredentials": [
+                  "dune-token"
+                ],
+                "oauthRequired": true
               }
             }
           }
@@ -7068,7 +7116,7 @@
       },
       "package": {
         "url": "./packages/dune.zip",
-        "sha256": "f1bbb568976b00972f52c0b65ff8daf2fb7e19c63ee54c7e48db1f0d9b4b049a"
+        "sha256": "178610c2caa2ae2e17cfe9901c9bf48cef8e2255fe7c1898de76b8b8a540e47b"
       },
       "icon": "./plugins/dune/assets/icon.png",
       "homepage": "https://dune.com/blog/dune-mcp",
@@ -7318,7 +7366,11 @@
               "everhour": {
                 "credentialHeaders": {
                   "x-api-key": "$VAULT:everhour-token"
-                }
+                },
+                "optionalCredentials": [
+                  "everhour-token"
+                ],
+                "oauthRequired": true
               }
             }
           }
@@ -7330,7 +7382,7 @@
       },
       "package": {
         "url": "./packages/everhour.zip",
-        "sha256": "c1284b1c52b0b9a1365ee7958a99eab4bfb79bba949a3ba62e884a99acb1a033"
+        "sha256": "e54fbdad6827d8c069351f757ffcc835347ed8c4fcf3354e5e681fc18049d1e9"
       },
       "icon": "./plugins/everhour/assets/icon.png",
       "homepage": "https://support.everhour.com/article/618-connecting-with-mcp",
@@ -7531,7 +7583,11 @@
               "fal": {
                 "credentialHeaders": {
                   "Authorization": "Bearer $VAULT:fal-api-key"
-                }
+                },
+                "optionalCredentials": [
+                  "fal-api-key"
+                ],
+                "oauthRequired": true
               }
             },
             "descriptions": {
@@ -7547,7 +7603,7 @@
       },
       "package": {
         "url": "./packages/fal.zip",
-        "sha256": "53a1f4d5b8625c58a42d6c4b22a3fa55a577fa25380172e782602b0148aa7df2"
+        "sha256": "f043aa5f8e189a2729026f1be79061c4ddf13b309f1c243e2e3125118e78ba8b"
       },
       "icon": "./plugins/fal/assets/icon.png",
       "homepage": "https://fal.ai/docs/documentation/setting-up/mcp",
@@ -7950,7 +8006,11 @@
               "fiscal": {
                 "credentialHeaders": {
                   "Authorization": "Bearer $VAULT:fiscal-api-key"
-                }
+                },
+                "optionalCredentials": [
+                  "fiscal-api-key"
+                ],
+                "oauthRequired": true
               }
             },
             "descriptions": {
@@ -7966,7 +8026,7 @@
       },
       "package": {
         "url": "./packages/fiscal-ai.zip",
-        "sha256": "bae662e04344f7dd312fb7cf5c4e2e587f250044951d40bc00e041be964db0ad"
+        "sha256": "42c9a82c7646c92469dcbdeecaca8d3cf21cc587cfda01773429193fedae9ec8"
       },
       "icon": "./plugins/fiscal-ai/assets/icon.png",
       "homepage": "https://docs.fiscal.ai/docs/guides/mcp-integration",
@@ -8396,11 +8456,11 @@
     {
       "id": "github",
       "name": "GitHub",
-      "description": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Connect with your GitHub token.",
+      "description": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Connect through GitHub authorization; a personal token is an advanced alternative.",
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "github",
-        "description": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Connect with your GitHub token.",
+        "description": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Connect through GitHub authorization; a personal token is an advanced alternative.",
         "author": {
           "name": "Ghast AI",
           "url": "https://ghast.trapezohe.ai"
@@ -8416,24 +8476,29 @@
               "github": {
                 "credentialHeaders": {
                   "Authorization": "Bearer $VAULT:github-token"
-                }
+                },
+                "oauthClientRequired": true,
+                "oauthRequired": true,
+                "optionalCredentials": [
+                  "github-token"
+                ]
               }
             },
             "displayName": "GitHub",
             "descriptions": {
-              "en": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Connect with your GitHub token.",
-              "zh-CN": "读取仓库、审查 PR、管理 Issue 与排查 CI；使用 GitHub Token 连接。"
+              "en": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Connect through GitHub authorization; a personal token is an advanced alternative.",
+              "zh-CN": "读取仓库、审查 PR、管理 Issue 与排查 CI。优先通过 GitHub 授权连接，个人 Token 作为高级备选方式。"
             }
           }
         }
       },
       "details": {
         "url": "./plugins/github/details.json",
-        "sha256": "b54704f05a6385bf1c93a2d67d7d5c5df86ddb59ef0d740479e0fa4888ee1b5d"
+        "sha256": "444fc12a91f84223d47773540ec15ab5098c629a673876f65e84b1ac45974c97"
       },
       "package": {
         "url": "./packages/github.zip",
-        "sha256": "58207050cb1cbbb5cc102734d9a44da8e79c135f68db86e2ba776e599a4a3be3"
+        "sha256": "f6bf809289419d488683409f65115b208dc70bdc831a351c60b4ef57d8aabdcd"
       },
       "icon": "./plugins/github/assets/icon.svg",
       "homepage": "https://github.com/github/github-mcp-server",
@@ -9236,7 +9301,11 @@
               "govtribe": {
                 "credentialHeaders": {
                   "Authorization": "Bearer $VAULT:govtribe-mcp-api-key"
-                }
+                },
+                "optionalCredentials": [
+                  "govtribe-mcp-api-key"
+                ],
+                "oauthRequired": true
               }
             },
             "descriptions": {
@@ -9252,7 +9321,7 @@
       },
       "package": {
         "url": "./packages/govtribe.zip",
-        "sha256": "62ceaaccdccdbbb2779737b253d9e6aa9e11f3fd7f6fb28ed33b95347bc73592"
+        "sha256": "f6aee125e0b1cd4755b48d4993eba8c843eae58ccfb1612a8371715fabd2c05c"
       },
       "icon": "./plugins/govtribe/assets/icon.png",
       "homepage": "https://govtribe.com/docs/govtribe-user-guide/govtribe-mcp",
@@ -10824,7 +10893,11 @@
               "instantly": {
                 "credentialHeaders": {
                   "x-instantly-api-key": "$VAULT:instantly-token"
-                }
+                },
+                "optionalCredentials": [
+                  "instantly-token"
+                ],
+                "oauthRequired": true
               }
             }
           }
@@ -10836,7 +10909,7 @@
       },
       "package": {
         "url": "./packages/instantly.zip",
-        "sha256": "b4e738e3cef71490ecc94be08fd2c82c036c3dba74cb9859350560598416d102"
+        "sha256": "732ec184fc31bc903ba52203561062069563309fe0d898d2faac51ffbd5c79dc"
       },
       "icon": "./plugins/instantly/assets/icon.png",
       "homepage": "https://developer.instantly.ai/mcp/authentication",
@@ -11813,12 +11886,20 @@
               "lokalise": {
                 "credentialHeaders": {
                   "apikey": "$VAULT:lokalise-token"
-                }
+                },
+                "optionalCredentials": [
+                  "lokalise-token"
+                ],
+                "oauthRequired": true
               },
               "lokalise-development": {
                 "credentialHeaders": {
                   "apikey": "$VAULT:lokalise-token"
-                }
+                },
+                "optionalCredentials": [
+                  "lokalise-token"
+                ],
+                "oauthRequired": true
               }
             }
           }
@@ -11830,7 +11911,7 @@
       },
       "package": {
         "url": "./packages/lokalise.zip",
-        "sha256": "31d6ccffc4756272503b7fea2727a6d5df79e9b5cf7e7ac616036a7e524d7a23"
+        "sha256": "5e1b7a3c69d9dadd0298977d71f82637b8f2251545330b08eb2d857606fff82a"
       },
       "icon": "./plugins/lokalise/assets/icon.png",
       "homepage": "https://docs.lokalise.com/en/articles/13547066-setting-up-and-using-the-lokalise-mcp-server",
@@ -16317,7 +16398,11 @@
               "ref": {
                 "credentialHeaders": {
                   "x-ref-api-key": "$VAULT:ref-token"
-                }
+                },
+                "optionalCredentials": [
+                  "ref-token"
+                ],
+                "oauthRequired": true
               }
             }
           }
@@ -16329,7 +16414,7 @@
       },
       "package": {
         "url": "./packages/ref.zip",
-        "sha256": "0ea70374f68e70710722a53a351f966ed4d08d09c38a34e892894c36dbfe9ffe"
+        "sha256": "ab8f004134a1bc4d0c8fcb6194eca97b1b63a0f3264c9f793c3410fed2a2da17"
       },
       "icon": "./plugins/ref/assets/icon.png",
       "homepage": "https://docs.ref.tools/context/install/index",
@@ -16489,7 +16574,12 @@
               "render": {
                 "credentialHeaders": {
                   "Authorization": "Bearer $VAULT:render-api-key"
-                }
+                },
+                "optionalCredentials": [
+                  "render-api-key"
+                ],
+                "oauthRequired": true,
+                "oauthClientRequired": true
               }
             },
             "descriptions": {
@@ -16505,7 +16595,7 @@
       },
       "package": {
         "url": "./packages/render.zip",
-        "sha256": "091de7f39f33c446cf8577a52bc7e608f317bb466e130caf0c4952f0b036a791"
+        "sha256": "a07595ece1006535a672740683aceaad010a421b365d653e605a056c31f7af1a"
       },
       "icon": "./plugins/render/assets/icon.svg",
       "homepage": "https://github.com/renderinc/render-codex-plugin",
@@ -17882,7 +17972,12 @@
               "smartsheet": {
                 "credentialHeaders": {
                   "Authorization": "Bearer $VAULT:smartsheet-token"
-                }
+                },
+                "optionalCredentials": [
+                  "smartsheet-token"
+                ],
+                "oauthRequired": true,
+                "oauthClientRequired": true
               }
             }
           }
@@ -17894,7 +17989,7 @@
       },
       "package": {
         "url": "./packages/smartsheet.zip",
-        "sha256": "0897c9f37cc0496f500578da4f2adc5af1fc31772c5e8199bd3c712be9740020"
+        "sha256": "ba9cdf5bf399359000dd7c78eaa1f5876ebad20d9234909a8ba35bd1b6954ea1"
       },
       "icon": "./plugins/smartsheet/assets/icon.png",
       "homepage": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server/manually-configure-the-mcp-server",
@@ -19154,7 +19249,11 @@
               "teamwork": {
                 "credentialHeaders": {
                   "Authorization": "Bearer $VAULT:teamwork-token"
-                }
+                },
+                "optionalCredentials": [
+                  "teamwork-token"
+                ],
+                "oauthRequired": true
               }
             }
           }
@@ -19166,7 +19265,7 @@
       },
       "package": {
         "url": "./packages/teamwork.zip",
-        "sha256": "ef63211ae9ec23e71a1ebb12b718041eb8ca196d27f1bee4c1a21bbf3655a867"
+        "sha256": "747f95156e61ec7f2a74a3b36236f65959fae0edc14afd931b2b207a1921d6a6"
       },
       "icon": "./plugins/teamwork/assets/icon.png",
       "homepage": "https://github.com/Teamwork/mcp/blob/main/docs/usage/other-platforms.md",
@@ -19243,7 +19342,11 @@
               "telnyx": {
                 "credentialHeaders": {
                   "Authorization": "Bearer $VAULT:telnyx-token"
-                }
+                },
+                "optionalCredentials": [
+                  "telnyx-token"
+                ],
+                "oauthRequired": true
               }
             }
           }
@@ -19255,7 +19358,7 @@
       },
       "package": {
         "url": "./packages/telnyx.zip",
-        "sha256": "3678f08f7cfa29eb54dfc00f9234153ebd2a2c8a75b3ddbbfecad54c42855f86"
+        "sha256": "1a831a775b052a54cdc4aa5b8462f841114f9c8d29646a4e4086b45a6d25c3d4"
       },
       "icon": "./plugins/telnyx/assets/icon.png",
       "homepage": "https://developers.telnyx.com/docs/development/mcp/remote-mcp",
@@ -19778,7 +19881,11 @@
               "tomtom": {
                 "credentialHeaders": {
                   "tomtom-api-key": "$VAULT:tomtom-api-key"
-                }
+                },
+                "optionalCredentials": [
+                  "tomtom-api-key"
+                ],
+                "oauthRequired": true
               }
             }
           }
@@ -19790,7 +19897,7 @@
       },
       "package": {
         "url": "./packages/tomtom.zip",
-        "sha256": "7a65049c69ed586edce361ce678255854b34835fc94e5d3ebc4a84f64b067706"
+        "sha256": "739629dc9786da8539f1d4737b637fc35661d7b29c0d288f370ab7ec20b43498"
       },
       "icon": "./plugins/tomtom/assets/icon.svg",
       "homepage": "https://docs.tomtom.com/tomtom-maps-mcp/documentation/quick-setup",
@@ -21080,7 +21187,12 @@
               "wrike": {
                 "credentialHeaders": {
                   "Authorization": "Bearer $VAULT:wrike-token"
-                }
+                },
+                "optionalCredentials": [
+                  "wrike-token"
+                ],
+                "oauthRequired": true,
+                "oauthClientRequired": true
               }
             }
           }
@@ -21092,7 +21204,7 @@
       },
       "package": {
         "url": "./packages/wrike.zip",
-        "sha256": "9a640ef43954b188f85cbe61f4b2f22359054d0273f1576afa1c627c64b1cb6d"
+        "sha256": "1af0f08a3292b11bbf6e948ccfe9421267fdff7b622edf1a1b3d597602c8215b"
       },
       "icon": "./plugins/wrike/assets/icon.svg",
       "homepage": "https://developers.wrike.com/docs/setup-other-mcp-clients-with-wrike-mcp",

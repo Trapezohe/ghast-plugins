@@ -23,7 +23,11 @@
         "everhour": {
           "credentialHeaders": {
             "x-api-key": "$VAULT:everhour-token"
-          }
+          },
+          "optionalCredentials": [
+            "everhour-token"
+          ],
+          "oauthRequired": true
         }
       }
     }

@@ -25,3 +25,12 @@ Enter a Smartsheet API token in Ghast connection settings. This listing connects
 Ghast-authored manifests and skill text are MIT licensed. Service names and brand assets belong to their respective owners. 品牌标识归相应权利人所有。
 
 Brand logo source: https://www.smartsheet.com/sites/default/files/favicons/apple-touch-icon.png
+
+
+## Browser authorization / 浏览器授权
+
+`smartsheet` publishes OAuth authorization metadata. Ghast prefers browser authorization; an existing API key or token remains an optional advanced alternative. Ghast must configure a registered OAuth application before managed login is available. Discovery was checked without signing in; account authorization and tool execution were not tested.
+
+Ghast 优先使用浏览器授权；已有 API Key 或 Token 保留为高级备选项。正式一键登录仍需 Ghast 配置已注册的 OAuth 应用。本次只验证了公开授权元数据，没有登录账户或执行工具。
+
+Official discovery: [smartsheet resource metadata](https://mcp.smartsheet.com/.well-known/oauth-protected-resource) · [authorization metadata](https://mcp.smartsheet.com/.well-known/oauth-authorization-server)

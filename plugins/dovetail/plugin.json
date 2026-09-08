@@ -18,7 +18,11 @@
         "dovetail": {
           "credentialHeaders": {
             "Authorization": "Bearer $VAULT:dovetail-api-token"
-          }
+          },
+          "optionalCredentials": [
+            "dovetail-api-token"
+          ],
+          "oauthRequired": true
         }
       },
       "descriptions": {

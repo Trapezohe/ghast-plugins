@@ -17,7 +17,11 @@
         "fal": {
           "credentialHeaders": {
             "Authorization": "Bearer $VAULT:fal-api-key"
-          }
+          },
+          "optionalCredentials": [
+            "fal-api-key"
+          ],
+          "oauthRequired": true
         }
       },
       "descriptions": {

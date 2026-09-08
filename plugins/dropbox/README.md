@@ -38,3 +38,12 @@ Ghast is not on Dropbox’s published trusted DCR client list. Create a Scoped a
 验证涵盖官方端点认证响应、认证元数据和本地安装/卸载；未完成真实账号授权或业务调用。
 
 Validation covers official endpoint auth responses, auth metadata and local install/removal. Real-account authorization and business calls have not been completed.
+
+
+## Browser authorization / 浏览器授权
+
+`dropbox` publishes OAuth authorization metadata. Ghast uses browser authorization. The service advertises dynamic registration or client metadata documents. Discovery was checked without signing in; account authorization and tool execution were not tested.
+
+Ghast 使用浏览器授权。服务公开提供动态注册或客户端元数据文档支持。本次只验证了公开授权元数据，没有登录账户或执行工具。
+
+Official discovery: [dropbox resource metadata](https://mcp.dropbox.com/.well-known/oauth-protected-resource/mcp) · [authorization metadata](https://www.dropbox.com/.well-known/oauth-authorization-server)

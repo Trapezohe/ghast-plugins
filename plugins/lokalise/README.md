@@ -38,3 +38,21 @@ This beta service requires Lokalise Expert with API access; it is unavailable in
 验证包括公开端点响应、认证发现和本地安装/卸载；未验证真实账号的业务读写。
 
 Validation covers public endpoint responses, auth discovery and local install/removal. Business reads and writes using a real account have not been tested.
+
+
+## Browser authorization / 浏览器授权
+
+`lokalise` publishes OAuth authorization metadata. Ghast prefers browser authorization; an existing API key or token remains an optional advanced alternative. The service advertises dynamic registration or client metadata documents. Discovery was checked without signing in; account authorization and tool execution were not tested.
+
+Ghast 优先使用浏览器授权；已有 API Key 或 Token 保留为高级备选项。服务公开提供动态注册或客户端元数据文档支持。本次只验证了公开授权元数据，没有登录账户或执行工具。
+
+Official discovery: [lokalise resource metadata](https://mcp.lokalise.com/.well-known/oauth-protected-resource/mcp/project-management) · [authorization metadata](https://mcp.lokalise.com/.well-known/oauth-authorization-server)
+
+
+## Browser authorization / 浏览器授权
+
+`lokalise-development` publishes OAuth authorization metadata. Ghast prefers browser authorization; an existing API key or token remains an optional advanced alternative. The service advertises dynamic registration or client metadata documents. Discovery was checked without signing in; account authorization and tool execution were not tested.
+
+Ghast 优先使用浏览器授权；已有 API Key 或 Token 保留为高级备选项。服务公开提供动态注册或客户端元数据文档支持。本次只验证了公开授权元数据，没有登录账户或执行工具。
+
+Official discovery: [lokalise-development resource metadata](https://mcp.lokalise.com/.well-known/oauth-protected-resource/mcp/software-development) · [authorization metadata](https://mcp.lokalise.com/.well-known/oauth-authorization-server)

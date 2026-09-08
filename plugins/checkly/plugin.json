@@ -23,7 +23,11 @@
         "checkly": {
           "credentialHeaders": {
             "Authorization": "Bearer $VAULT:checkly-token"
-          }
+          },
+          "optionalCredentials": [
+            "checkly-token"
+          ],
+          "oauthRequired": true
         }
       }
     }

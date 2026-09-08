@@ -23,7 +23,11 @@
         "deel": {
           "credentialHeaders": {
             "Authorization": "Bearer $VAULT:deel-token"
-          }
+          },
+          "optionalCredentials": [
+            "deel-token"
+          ],
+          "oauthRequired": true
         }
       }
     }

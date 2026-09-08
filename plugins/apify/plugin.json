@@ -21,7 +21,11 @@
         "apify": {
           "credentialHeaders": {
             "Authorization": "Bearer $VAULT:apify-token"
-          }
+          },
+          "optionalCredentials": [
+            "apify-token"
+          ],
+          "oauthRequired": true
         }
       }
     }

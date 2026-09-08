@@ -28,3 +28,12 @@ Independently authored for Ghast using public provider MCP services, without Cod
 Ghast-authored manifests and skill text are MIT licensed. Brand names and logos belong to their respective owners. 品牌名称与标识归相应权利人所有。
 
 Brand logo source: https://mintlify.s3.us-west-1.amazonaws.com/dune/_generated/favicon/apple-touch-icon.png?v=3
+
+
+## Browser authorization / 浏览器授权
+
+`dune` publishes OAuth authorization metadata. Ghast prefers browser authorization; an existing API key or token remains an optional advanced alternative. The service advertises dynamic registration or client metadata documents. Discovery was checked without signing in; account authorization and tool execution were not tested.
+
+Ghast 优先使用浏览器授权；已有 API Key 或 Token 保留为高级备选项。服务公开提供动态注册或客户端元数据文档支持。本次只验证了公开授权元数据，没有登录账户或执行工具。
+
+Official discovery: [dune resource metadata](https://api.dune.com/.well-known/oauth-protected-resource) · [authorization metadata](https://dune.com/.well-known/oauth-authorization-server/oauth/mcp)

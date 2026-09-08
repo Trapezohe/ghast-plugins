@@ -87,3 +87,12 @@ The MIT license in this package applies only to the Ghast-authored adapter.
 Fiscal.ai accounts, plans, hosted service behavior, financial data, source
 documents, official skills, permissions, trademarks, and terms remain
 controlled by Fiscal.ai and the applicable data providers.
+
+
+## Browser authorization / 浏览器授权
+
+`fiscal` publishes OAuth authorization metadata. Ghast prefers browser authorization; an existing API key or token remains an optional advanced alternative. The service advertises dynamic registration or client metadata documents. Discovery was checked without signing in; account authorization and tool execution were not tested.
+
+Ghast 优先使用浏览器授权；已有 API Key 或 Token 保留为高级备选项。服务公开提供动态注册或客户端元数据文档支持。本次只验证了公开授权元数据，没有登录账户或执行工具。
+
+Official discovery: [fiscal resource metadata](https://api.fiscal.ai/.well-known/oauth-protected-resource/mcp) · [authorization metadata](https://api.fiscal.ai/.well-known/oauth-authorization-server)

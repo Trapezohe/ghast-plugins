@@ -23,7 +23,11 @@
         "telnyx": {
           "credentialHeaders": {
             "Authorization": "Bearer $VAULT:telnyx-token"
-          }
+          },
+          "optionalCredentials": [
+            "telnyx-token"
+          ],
+          "oauthRequired": true
         }
       }
     }

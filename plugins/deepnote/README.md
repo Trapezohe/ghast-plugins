@@ -16,3 +16,12 @@ Five workflow skills and the SVG icon are copied from Deepnote's pinned Apache-2
 - The service advertises OAuth, but arbitrary localhost dynamic-client callbacks are not accepted. This package retains Deepnote's API-key path so it does not depend on an unverified Ghast OAuth callback allowlist.
 
 External CLIs, accounts, credentials, paid services, and platform permissions remain user-managed dependencies.
+
+
+## Browser authorization / 浏览器授权
+
+`deepnote` publishes OAuth authorization metadata. Ghast prefers browser authorization; an existing API key or token remains an optional advanced alternative. The service advertises dynamic registration or client metadata documents. Discovery was checked without signing in; account authorization and tool execution were not tested.
+
+Ghast 优先使用浏览器授权；已有 API Key 或 Token 保留为高级备选项。服务公开提供动态注册或客户端元数据文档支持。本次只验证了公开授权元数据，没有登录账户或执行工具。
+
+Official discovery: [deepnote resource metadata](https://deepnote.com/.well-known/oauth-protected-resource/mcp) · [authorization metadata](https://deepnote.com/.well-known/oauth-authorization-server/mcp/oauth)

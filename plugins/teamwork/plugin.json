@@ -23,7 +23,11 @@
         "teamwork": {
           "credentialHeaders": {
             "Authorization": "Bearer $VAULT:teamwork-token"
-          }
+          },
+          "optionalCredentials": [
+            "teamwork-token"
+          ],
+          "oauthRequired": true
         }
       }
     }

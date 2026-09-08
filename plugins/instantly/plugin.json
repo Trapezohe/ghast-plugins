@@ -23,7 +23,11 @@
         "instantly": {
           "credentialHeaders": {
             "x-instantly-api-key": "$VAULT:instantly-token"
-          }
+          },
+          "optionalCredentials": [
+            "instantly-token"
+          ],
+          "oauthRequired": true
         }
       }
     }

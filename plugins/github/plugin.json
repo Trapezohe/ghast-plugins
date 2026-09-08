@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "github",
-  "description": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Connect with your GitHub token.",
+  "description": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Connect through GitHub authorization; a personal token is an advanced alternative.",
   "author": {
     "name": "Ghast AI",
     "url": "https://ghast.trapezohe.ai"
@@ -17,13 +17,18 @@
         "github": {
           "credentialHeaders": {
             "Authorization": "Bearer $VAULT:github-token"
-          }
+          },
+          "oauthClientRequired": true,
+          "oauthRequired": true,
+          "optionalCredentials": [
+            "github-token"
+          ]
         }
       },
       "displayName": "GitHub",
       "descriptions": {
-        "en": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Connect with your GitHub token.",
-        "zh-CN": "读取仓库、审查 PR、管理 Issue 与排查 CI；使用 GitHub Token 连接。"
+        "en": "Read repositories, review pull requests, manage issues and diagnose GitHub Actions. Connect through GitHub authorization; a personal token is an advanced alternative.",
+        "zh-CN": "读取仓库、审查 PR、管理 Issue 与排查 CI。优先通过 GitHub 授权连接，个人 Token 作为高级备选方式。"
       }
     }
   }
