@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "higgsfield",
+  "version": "1.0.0-ghast.1",
+  "description": "Connect to Higgsfield’s official MCP for image, video, character and audio creation using your account credits.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-higgsfield-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-higgsfield-mcp",
+      "connectorPublisher": "Higgsfield",
+      "category": "design",
+      "icon": "./assets/icon.png",
+      "displayName": "Higgsfield",
+      "descriptions": {
+        "en": "Connect to Higgsfield’s official MCP for image, video, character and audio creation using your account credits.",
+        "zh-CN": "连接 Higgsfield 官方 MCP，使用账号积分创建图像、视频、角色与音频。"
+      }
+    }
+  }
+}

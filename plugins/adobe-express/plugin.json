@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "adobe-express",
+  "version": "1.0.0-ghast.1",
+  "description": "Search Adobe Express add-on documentation and retrieve official SDK TypeScript definitions with Adobe’s native developer MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.adobe.com/express/add-ons/docs/guides/getting-started/local-development/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developer.adobe.com/express/add-ons/docs/guides/getting-started/local-development/mcp-server",
+      "connectorPublisher": "Adobe Express Developer",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Adobe Express Developer",
+      "descriptions": {
+        "en": "Search Adobe Express add-on documentation and retrieve official SDK TypeScript definitions with Adobe’s native developer MCP.",
+        "zh-CN": "通过 Adobe 官方原生开发者 MCP 检索 Express 插件文档，并获取 SDK TypeScript 类型定义。"
+      },
+      "mcpServerExtensions": {
+        "adobe-express": {
+          "credentialEnv": {}
+        }
+      }
+    }
+  }
+}

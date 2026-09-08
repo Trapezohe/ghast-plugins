@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "fullstory",
+  "version": "1.0.0-ghast.1",
+  "description": "Analyze behavioral metrics, segments and session replay through Fullstory’s official MCP beta, with global and EU connections.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.fullstory.com/mcp/introduction/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developer.fullstory.com/mcp/introduction/",
+      "connectorPublisher": "Fullstory",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Fullstory",
+      "descriptions": {
+        "en": "Analyze behavioral metrics, segments and session replay through Fullstory’s official MCP beta, with global and EU connections.",
+        "zh-CN": "通过 Fullstory 官方 MCP 测试版分析用户行为指标、分群与会话回放，支持全局及欧洲区连接。"
+      }
+    }
+  }
+}

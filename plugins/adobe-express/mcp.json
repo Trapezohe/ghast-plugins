@@ -1,0 +1,18 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "adobe-express": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@adobe/express-developer-mcp@1.0.0"
+      ],
+      "cwd": "${PLUGIN_DATA}",
+      "env": {
+        "SEARCH_API_URL": "https://extensibility-api.adobe.io/v1/ccweb-add-on/documentation/search",
+        "SEARCH_API_KEY": "addons-mcp-client"
+      }
+    }
+  }
+}

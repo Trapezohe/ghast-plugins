@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "descript",
+  "version": "1.0.0-ghast.1",
+  "description": "Use Descript’s official MCP to work with media projects, Underlord edits, transcripts and publishing in your connected Drive.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://help.descript.com/api-and-mcp/mcp-custom",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://help.descript.com/api-and-mcp/mcp-custom",
+      "connectorPublisher": "Descript",
+      "category": "design",
+      "icon": "./assets/icon.png",
+      "displayName": "Descript",
+      "descriptions": {
+        "en": "Use Descript’s official MCP to work with media projects, Underlord edits, transcripts and publishing in your connected Drive.",
+        "zh-CN": "通过 Descript 官方 MCP 处理已连接 Drive 中的媒体项目、Underlord 编辑、转录与发布。"
+      }
+    }
+  }
+}

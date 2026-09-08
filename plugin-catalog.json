@@ -120,6 +120,49 @@
       "category": "productivity"
     },
     {
+      "id": "adobe-express",
+      "name": "Adobe Express Developer",
+      "description": "Search Adobe Express add-on documentation and retrieve official SDK TypeScript definitions with Adobe’s native developer MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "adobe-express",
+        "version": "1.0.0-ghast.1",
+        "description": "Search Adobe Express add-on documentation and retrieve official SDK TypeScript definitions with Adobe’s native developer MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.adobe.com/express/add-ons/docs/guides/getting-started/local-development/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.adobe.com/express/add-ons/docs/guides/getting-started/local-development/mcp-server",
+            "connectorPublisher": "Adobe Express Developer",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Adobe Express Developer",
+            "descriptions": {
+              "en": "Search Adobe Express add-on documentation and retrieve official SDK TypeScript definitions with Adobe’s native developer MCP.",
+              "zh-CN": "通过 Adobe 官方原生开发者 MCP 检索 Express 插件文档，并获取 SDK TypeScript 类型定义。"
+            },
+            "mcpServerExtensions": {
+              "adobe-express": {
+                "credentialEnv": {}
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/adobe-express.zip",
+        "sha256": "f6d805855f0a1b316fb1b4438e43e7efb62e3188df89dd82ba90472503af5d82"
+      },
+      "icon": "./plugins/adobe-express/assets/icon.png",
+      "homepage": "https://developer.adobe.com/express/add-ons/docs/guides/getting-started/local-development/mcp-server",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "agentmail",
       "name": "AgentMail",
       "description": "Manage agent email inboxes, messages, threads, drafts and attachments through AgentMail’s official MCP.",
@@ -5371,6 +5414,44 @@
       "category": "development"
     },
     {
+      "id": "descript",
+      "name": "Descript",
+      "description": "Use Descript’s official MCP to work with media projects, Underlord edits, transcripts and publishing in your connected Drive.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "descript",
+        "version": "1.0.0-ghast.1",
+        "description": "Use Descript’s official MCP to work with media projects, Underlord edits, transcripts and publishing in your connected Drive.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://help.descript.com/api-and-mcp/mcp-custom",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://help.descript.com/api-and-mcp/mcp-custom",
+            "connectorPublisher": "Descript",
+            "category": "design",
+            "icon": "./assets/icon.png",
+            "displayName": "Descript",
+            "descriptions": {
+              "en": "Use Descript’s official MCP to work with media projects, Underlord edits, transcripts and publishing in your connected Drive.",
+              "zh-CN": "通过 Descript 官方 MCP 处理已连接 Drive 中的媒体项目、Underlord 编辑、转录与发布。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/descript.zip",
+        "sha256": "a7050d3c6962da6988bebc4ab103001189dd66feb7f2b844d7008b6f10a75923"
+      },
+      "icon": "./plugins/descript/assets/icon.png",
+      "homepage": "https://help.descript.com/api-and-mcp/mcp-custom",
+      "license": "MIT",
+      "category": "design"
+    },
+    {
       "id": "devcycle",
       "name": "DevCycle",
       "description": "Inspect and manage feature flags, targeting rules and release environments.",
@@ -6780,6 +6861,44 @@
       "category": "communication"
     },
     {
+      "id": "fullstory",
+      "name": "Fullstory",
+      "description": "Analyze behavioral metrics, segments and session replay through Fullstory’s official MCP beta, with global and EU connections.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "fullstory",
+        "version": "1.0.0-ghast.1",
+        "description": "Analyze behavioral metrics, segments and session replay through Fullstory’s official MCP beta, with global and EU connections.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.fullstory.com/mcp/introduction/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.fullstory.com/mcp/introduction/",
+            "connectorPublisher": "Fullstory",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Fullstory",
+            "descriptions": {
+              "en": "Analyze behavioral metrics, segments and session replay through Fullstory’s official MCP beta, with global and EU connections.",
+              "zh-CN": "通过 Fullstory 官方 MCP 测试版分析用户行为指标、分群与会话回放，支持全局及欧洲区连接。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/fullstory.zip",
+        "sha256": "cc79f02fd3ac2235f8a37493cf23a689c3cb4989bf9648dff5b2e0fe75341b33"
+      },
+      "icon": "./plugins/fullstory/assets/icon.png",
+      "homepage": "https://developer.fullstory.com/mcp/introduction/",
+      "license": "MIT",
+      "category": "data"
+    },
+    {
       "id": "fyxer",
       "name": "fyxer",
       "description": "Search authorized email and meeting context, retrieve summaries and transcripts, resolve contacts, and draft personalized email through Fyxer's official hosted MCP.",
@@ -8134,6 +8253,44 @@
       "homepage": "https://phoenix.hginsights.com/docs/getting-started",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "higgsfield",
+      "name": "Higgsfield",
+      "description": "Connect to Higgsfield’s official MCP for image, video, character and audio creation using your account credits.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "higgsfield",
+        "version": "1.0.0-ghast.1",
+        "description": "Connect to Higgsfield’s official MCP for image, video, character and audio creation using your account credits.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-higgsfield-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-higgsfield-mcp",
+            "connectorPublisher": "Higgsfield",
+            "category": "design",
+            "icon": "./assets/icon.png",
+            "displayName": "Higgsfield",
+            "descriptions": {
+              "en": "Connect to Higgsfield’s official MCP for image, video, character and audio creation using your account credits.",
+              "zh-CN": "连接 Higgsfield 官方 MCP，使用账号积分创建图像、视频、角色与音频。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/higgsfield.zip",
+        "sha256": "a6382906c8c38917279cce358fb8ae7d2809d03074a718d542231fdc9799c5e0"
+      },
+      "icon": "./plugins/higgsfield/assets/icon.png",
+      "homepage": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-higgsfield-mcp",
+      "license": "MIT",
+      "category": "design"
     },
     {
       "id": "highlevel",
