@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "dataforseo",
+  "version": "1.0.0-ghast.1",
+  "description": "Research keywords, search results, backlinks and competitors using DataForSEO’s official API and documentation tools.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://dataforseo.com/seo-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://dataforseo.com/seo-mcp-server",
+      "connectorPublisher": "DataForSEO",
+      "category": "marketing",
+      "icon": "./assets/icon.png",
+      "displayName": "DataForSEO",
+      "descriptions": {
+        "en": "Research keywords, search results, backlinks and competitors using DataForSEO’s official API and documentation tools.",
+        "zh-CN": "通过 DataForSEO 官方 API 与文档工具研究关键词、搜索结果、外链和竞争对手。"
+      },
+      "mcpServerExtensions": {
+        "dataforseo": {
+          "credentialHeaders": {
+            "Authorization": "$VAULT:dataforseo-token"
+          }
+        }
+      }
+    }
+  }
+}

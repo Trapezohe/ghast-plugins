@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "brave-search": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@brave/brave-search-mcp-server@2.1.3",
+        "--transport",
+        "stdio"
+      ],
+      "env": {
+        "BRAVE_API_KEY_FILE": ""
+      },
+      "cwd": "${PLUGIN_DATA}"
+    }
+  }
+}

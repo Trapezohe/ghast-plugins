@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "perplexity",
+  "version": "1.0.0-ghast.1",
+  "description": "Use Perplexity’s official web search, question-answering, reasoning and research tools with your API account.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.perplexity.ai/docs/getting-started/integrations/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.perplexity.ai/docs/getting-started/integrations/mcp-server",
+      "connectorPublisher": "Perplexity",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Perplexity",
+      "descriptions": {
+        "en": "Use Perplexity’s official web search, question-answering, reasoning and research tools with your API account.",
+        "zh-CN": "通过 Perplexity 官方工具进行网页搜索、问答、推理与研究，使用独立的 API 账号计费。"
+      },
+      "mcpServerExtensions": {
+        "perplexity": {
+          "credentialEnv": {
+            "PERPLEXITY_API_KEY": "$VAULT:perplexity-token"
+          }
+        }
+      }
+    }
+  }
+}

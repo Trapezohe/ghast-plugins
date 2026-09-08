@@ -1984,6 +1984,51 @@
       "category": "productivity"
     },
     {
+      "id": "brave-search",
+      "name": "Brave Search",
+      "description": "Search the web, news, images, videos and places with Brave’s official Search API MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "brave-search",
+        "version": "1.0.0-ghast.1",
+        "description": "Search the web, news, images, videos and places with Brave’s official Search API MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/brave/brave-search-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/brave/brave-search-mcp-server",
+            "connectorPublisher": "Brave",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Brave Search",
+            "descriptions": {
+              "en": "Search the web, news, images, videos and places with Brave’s official Search API MCP server.",
+              "zh-CN": "通过 Brave 官方 Search API MCP 检索网页、新闻、图片、视频与地点信息。"
+            },
+            "mcpServerExtensions": {
+              "brave-search": {
+                "credentialEnv": {
+                  "BRAVE_API_KEY": "$VAULT:brave-search-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/brave-search.zip",
+        "sha256": "f174303276e5c051a56a1bbf1dec2088dc5a8d4b44cb820b5fd9ee368929b146"
+      },
+      "icon": "./plugins/brave-search/assets/icon.png",
+      "homepage": "https://github.com/brave/brave-search-mcp-server",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "braze",
       "name": "Braze",
       "description": "Analyze Braze campaign and Canvas performance and manage supported content assets with Braze’s official remote MCP.",
@@ -4752,6 +4797,51 @@
       "repository": "https://github.com/datadog-labs/cursor-plugin",
       "license": "Apache-2.0",
       "category": "development"
+    },
+    {
+      "id": "dataforseo",
+      "name": "DataForSEO",
+      "description": "Research keywords, search results, backlinks and competitors using DataForSEO’s official API and documentation tools.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "dataforseo",
+        "version": "1.0.0-ghast.1",
+        "description": "Research keywords, search results, backlinks and competitors using DataForSEO’s official API and documentation tools.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://dataforseo.com/seo-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://dataforseo.com/seo-mcp-server",
+            "connectorPublisher": "DataForSEO",
+            "category": "marketing",
+            "icon": "./assets/icon.png",
+            "displayName": "DataForSEO",
+            "descriptions": {
+              "en": "Research keywords, search results, backlinks and competitors using DataForSEO’s official API and documentation tools.",
+              "zh-CN": "通过 DataForSEO 官方 API 与文档工具研究关键词、搜索结果、外链和竞争对手。"
+            },
+            "mcpServerExtensions": {
+              "dataforseo": {
+                "credentialHeaders": {
+                  "Authorization": "$VAULT:dataforseo-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/dataforseo.zip",
+        "sha256": "92701555bbaafa6347a5be3dc137bc0a247dc31afcebbd5d8ac38417a415c5c4"
+      },
+      "icon": "./plugins/dataforseo/assets/icon.png",
+      "homepage": "https://dataforseo.com/seo-mcp-server",
+      "license": "MIT",
+      "category": "marketing"
     },
     {
       "id": "deel",
@@ -10707,6 +10797,51 @@
       "category": "finance"
     },
     {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "description": "Use Perplexity’s official web search, question-answering, reasoning and research tools with your API account.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "perplexity",
+        "version": "1.0.0-ghast.1",
+        "description": "Use Perplexity’s official web search, question-answering, reasoning and research tools with your API account.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.perplexity.ai/docs/getting-started/integrations/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.perplexity.ai/docs/getting-started/integrations/mcp-server",
+            "connectorPublisher": "Perplexity",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "Perplexity",
+            "descriptions": {
+              "en": "Use Perplexity’s official web search, question-answering, reasoning and research tools with your API account.",
+              "zh-CN": "通过 Perplexity 官方工具进行网页搜索、问答、推理与研究，使用独立的 API 账号计费。"
+            },
+            "mcpServerExtensions": {
+              "perplexity": {
+                "credentialEnv": {
+                  "PERPLEXITY_API_KEY": "$VAULT:perplexity-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/perplexity.zip",
+        "sha256": "6e07ad33662facb776a6bcfbcaaaf310b73acc9a314b69f7a7e61e7d5d120809"
+      },
+      "icon": "./plugins/perplexity/assets/icon.png",
+      "homepage": "https://docs.perplexity.ai/docs/getting-started/integrations/mcp-server",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
       "id": "phoenix",
       "name": "Arize Phoenix",
       "description": "Inspect Phoenix projects, traces, sessions and experiments, and manage prompts and evaluation datasets through the official MCP server.",
@@ -15537,6 +15672,44 @@
       "repository": "https://github.com/yepcode/mcp-server-js",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "id": "you-com",
+      "name": "You.com",
+      "description": "Search the web, retrieve content and use research tools through You.com’s official MCP, with an optional free search connection.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "you-com",
+        "version": "1.0.0-ghast.1",
+        "description": "Search the web, retrieve content and use research tools through You.com’s official MCP, with an optional free search connection.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://you.com/docs/build-with-agents/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://you.com/docs/build-with-agents/mcp-server",
+            "connectorPublisher": "You.com",
+            "category": "productivity",
+            "icon": "./assets/icon.png",
+            "displayName": "You.com",
+            "descriptions": {
+              "en": "Search the web, retrieve content and use research tools through You.com’s official MCP, with an optional free search connection.",
+              "zh-CN": "通过 You.com 官方 MCP 搜索网页、提取内容并使用研究工具，也可连接免登录搜索服务。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/you-com.zip",
+        "sha256": "491538ac3c6611e2c16883da6162ccc1e76f45c80b9e6329747f94db28519e69"
+      },
+      "icon": "./plugins/you-com/assets/icon.png",
+      "homepage": "https://you.com/docs/build-with-agents/mcp-server",
+      "license": "MIT",
+      "category": "productivity"
     },
     {
       "id": "youcam",

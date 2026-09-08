@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "brave-search",
+  "version": "1.0.0-ghast.1",
+  "description": "Search the web, news, images, videos and places with Brave’s official Search API MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/brave/brave-search-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/brave/brave-search-mcp-server",
+      "connectorPublisher": "Brave",
+      "category": "productivity",
+      "icon": "./assets/icon.png",
+      "displayName": "Brave Search",
+      "descriptions": {
+        "en": "Search the web, news, images, videos and places with Brave’s official Search API MCP server.",
+        "zh-CN": "通过 Brave 官方 Search API MCP 检索网页、新闻、图片、视频与地点信息。"
+      },
+      "mcpServerExtensions": {
+        "brave-search": {
+          "credentialEnv": {
+            "BRAVE_API_KEY": "$VAULT:brave-search-token"
+          }
+        }
+      }
+    }
+  }
+}
