@@ -58,8 +58,7 @@ ID or official artwork.
 - No OAuth client was registered, no browser sign-in was completed, and no
   customer data, query, report, campaign, audience, CRM record, or paid
   operation was accessed during this audit.
-- A generic marketing analytics icon is used because no licensed Channel99
-  catalog artwork is included in redistributable official source.
+- Brand logo source: https://framerusercontent.com/images/pmvqZtXc6gtPdxjqQEwbBcvXbrg.png. Brand names and logos belong to Channel99. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Channel99 accounts, subscriptions, hosted behavior, customer data, connected

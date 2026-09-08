@@ -13,6 +13,8 @@ authorization code, refresh tokens, public clients, dynamic registration, and
 PKCE S256. Anonymous initialize returns the official resource challenge.
 
 The hosted implementation and authenticated schemas are not redistributed.
-The MIT license covers only the Ghast-authored adapter and generic icon.
+The MIT license covers only the Ghast-authored adapter.
 Accounts, data, plans, RBAC, MCP Access, write opt-in, credentials, service
 behavior, and trademarks remain controlled by Domotz.
+
+Brand logo source: https://www.domotz.com/assets/img/favicon/apple-touch-icon-152x152.png. Brand names and logos belong to Domotz. 品牌名称与标识归对应服务商所有。

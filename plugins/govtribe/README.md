@@ -9,8 +9,7 @@ official hosted MCP server.
 This package contains only Ghast-authored MCP configuration, safety
 instructions, documentation, metadata, and a generic government-procurement
 icon. It does not redistribute GovTribe's hosted implementation, private
-Codex or ChatGPT app connector, API key, account data, proprietary datasets,
-branded artwork, or marketplace icon.
+Codex or ChatGPT app connector, API key, account data, proprietary datasets, or marketplace icon.
 
 GovTribe's official MCP overview, developer guide, server URL guide, Codex
 guide, agent server reference, tool index, and credit guide are pinned at raw
@@ -72,8 +71,7 @@ marketplace artwork.
   identified. The adapter verifies GovTribe-owned documentation, endpoint
   behavior, tool safety metadata, and OpenAI's Codex capability snapshot
   without redistributing service code.
-- A generic government-procurement icon is used because no licensed GovTribe
-  catalog artwork is redistributed.
+- Brand logo source: https://govtribe.com (embedded website favicon). Brand names and logos belong to GovTribe. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 GovTribe accounts, plans, credits, hosted service behavior, data,

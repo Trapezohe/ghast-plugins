@@ -6,9 +6,9 @@ news from MT Newswires through its officially authorized viaNexus MCP service.
 ## Official hosted MCP adapter
 
 This package contains only Ghast-authored MCP configuration, safety
-instructions, documentation, catalog metadata, and a generic icon. It does not
+instructions, documentation, catalog metadata, and the provider brand logo. It does not
 copy or redistribute the private Codex connector, MT Newswires articles,
-viaNexus service source code, credentials, branded artwork, or marketplace
+viaNexus service source code, credentials, or marketplace
 icons.
 
 MT Newswires' official AI page is pinned at normalized visible-text SHA-256
@@ -45,8 +45,7 @@ canonical JSON SHA-256 `d7f7d5f2df32a3c5efc40e5cef86812d8e66b88d9e2bb511ee3dce66
   `0acd6c03d06cb2a08e8974db5bedab8b9c7e8679020316b1c03f845e0ae52c45`. The importer does not repeat
   registration because the response supplied no management credential for
   deleting the client.
-- A generic financial-news icon is used because no licensed catalog icon is
-  included in a public official source repository.
+- Brand logo source: https://www.mtnewswires.com/hubfs/mt-newswires-favicon.png. Brand names and logos belong to MT Newswires. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 MT Newswires and viaNexus accounts, subscriptions, hosted services, content,

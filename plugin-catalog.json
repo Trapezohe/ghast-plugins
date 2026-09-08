@@ -3320,7 +3320,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "channel99",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Analyze read-only B2B marketing performance, channels, vendors, campaigns, audiences, account engagement, attribution, spend efficiency, and pipeline influence through Channel99's official hosted MCP server.",
         "author": {
           "name": "Channel99 Inc.",
@@ -3332,7 +3332,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "channel99-faq-81edc9b0c206+mcp-4cd47d0e9970+release-a3f1d62a2d0e+schema-4acb7bcdb5b5+api-d35fdf232c66+oauth-01e50ee050ad",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Analyze read-only B2B marketing performance, channels, vendors, campaigns, audiences, account engagement, attribution, spend efficiency, and pipeline influence through Channel99's official hosted MCP server.",
               "zh-CN": "分析 B2B 营销渠道、广告活动、受众、归因与投入效果。"
@@ -3342,9 +3342,9 @@
       },
       "package": {
         "url": "./packages/channel99.zip",
-        "sha256": "d7dcf2f05433cd7428a6afab11a2299dcdec145a60e1a4fa4007e3049f021925"
+        "sha256": "e4c000e56ae0453d29ecfecc97466aa9ff1d9e231be035ec8d0631c251266811"
       },
-      "icon": "./plugins/channel99/assets/icon.svg",
+      "icon": "./plugins/channel99/assets/icon.png",
       "homepage": "https://www.channel99.com/articles/channel99-connects-marketing-intelligence-data-to-genai-platforms",
       "license": "MIT",
       "category": "productivity"
@@ -4881,7 +4881,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "coupler-io",
-        "version": "0.0.5-ghast.1",
+        "version": "0.0.5-ghast.2",
         "description": "Analyze marketing, sales, finance, ecommerce, product, and other business data from Coupler.io data flows through Coupler.io's official hosted OAuth MCP and Analytical Engine.",
         "author": {
           "name": "Coupler.io",
@@ -4895,7 +4895,7 @@
             "category": "data",
             "upstreamRevision": "550ec75cb48bbbe0be286577b30c3a32f9bb0eea",
             "upstreamPath": ".",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Analyze marketing, sales, finance, ecommerce, product, and other business data from Coupler.io data flows through Coupler.io's official hosted OAuth MCP and Analytical Engine.",
               "zh-CN": "分析数据流中的营销、销售、财务、电商与其他业务数据。"
@@ -4905,9 +4905,9 @@
       },
       "package": {
         "url": "./packages/coupler-io.zip",
-        "sha256": "73941fbb3fb3a1a8053ab748f7b375c39800f02875f9d502821b4bd8ab23c50c"
+        "sha256": "1747a665d39ac0a0dba3d735bd74ad6eb641fabddfa4ba141c58d05b2d430df9"
       },
-      "icon": "./plugins/coupler-io/assets/icon.svg",
+      "icon": "./plugins/coupler-io/assets/icon.png",
       "homepage": "https://www.coupler.io/ai-integrations",
       "repository": "https://github.com/railsware/coupler-io-mcp-server",
       "license": "MIT",
@@ -6237,7 +6237,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "domotz-preview",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Discover, monitor, configure, and remediate Domotz-managed networks through Domotz's official hosted MCP.",
         "author": {
           "name": "Domotz",
@@ -6249,7 +6249,7 @@
           "ai.trapezohe.ghast": {
             "category": "productivity",
             "upstreamRevision": "domotz-product-003fdd383c02+setup-323607fa9c60+oauth-95014110a362+auth-711fd29f57aa",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Discover, monitor, configure, and remediate Domotz-managed networks through Domotz's official hosted MCP.",
               "zh-CN": "发现、监控和配置网络设备，处理已授权的网络故障。"
@@ -6259,9 +6259,9 @@
       },
       "package": {
         "url": "./packages/domotz-preview.zip",
-        "sha256": "5e3aad0b90b8b8a98a75fb1fb771ff66b20aacfc268865c127707f4888b8f77b"
+        "sha256": "de4852c0d0aa27943a461f920f50b4502dcab822623f904d5cfb7010fd7970c3"
       },
-      "icon": "./plugins/domotz-preview/assets/icon.svg",
+      "icon": "./plugins/domotz-preview/assets/icon.png",
       "homepage": "https://www.domotz.com/mcp-server.php",
       "license": "MIT",
       "category": "productivity"
@@ -8511,7 +8511,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "govtribe",
-        "version": "1.0.3-ghast.1",
+        "version": "1.0.3-ghast.2",
         "description": "Research public-sector opportunities, awards, vendors, agencies, forecasts, pricing, files, news, and authorized workspace records through GovTribe's official hosted MCP.",
         "author": {
           "name": "Government Executive Media Group LLC",
@@ -8523,7 +8523,7 @@
           "ai.trapezohe.ghast": {
             "category": "research",
             "upstreamRevision": "govtribe-docs-e0cd276f0d5e+servers-6ea83b94854e+tools-80cebed0f455+annotations-eed9dde0f2ea",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "mcpServerExtensions": {
               "govtribe": {
                 "credentialHeaders": {
@@ -8540,9 +8540,9 @@
       },
       "package": {
         "url": "./packages/govtribe.zip",
-        "sha256": "51c134c8048450c37d9bc40a464e589c41a7a0501ef7c4c69d611def13d7b57f"
+        "sha256": "26e90c6cd88d491f98577e299ed2a61a2f22255f76c4c86b6afc55de2a4350bb"
       },
-      "icon": "./plugins/govtribe/assets/icon.svg",
+      "icon": "./plugins/govtribe/assets/icon.png",
       "homepage": "https://govtribe.com/docs/govtribe-user-guide/govtribe-mcp",
       "license": "MIT",
       "category": "research"
@@ -11889,7 +11889,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "midpage",
-        "version": "0.2.0-ghast.1",
+        "version": "0.2.0-ghast.2",
         "description": "Research US case law, statutes, regulations, and federal dockets, then draft and cite-check litigation work product with Midpage's official MCP and MIT-licensed skills.",
         "author": {
           "name": "Midpage AI Inc.",
@@ -11902,7 +11902,7 @@
           "ai.trapezohe.ghast": {
             "category": "research",
             "upstreamRevision": "plugin-a7900c82da0d+mcp-f4deb58545d8+oauth-6627f7d4fb4a",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Research US case law, statutes, regulations, and federal dockets, then draft and cite-check litigation work product with Midpage's official MCP and MIT-licensed skills.",
               "zh-CN": "研究美国案例、法规与诉讼记录，起草并核对法律文书引用。"
@@ -11912,9 +11912,9 @@
       },
       "package": {
         "url": "./packages/midpage.zip",
-        "sha256": "60ace1feabc3b889dbeccf71364e9c0143d9a03762dcc9199ac069bfbf58a8c6"
+        "sha256": "4909477cc6a7cb69a223f526e64a2fbcee917949d12d453b7a18dc31c9e024e6"
       },
-      "icon": "./plugins/midpage/assets/icon.svg",
+      "icon": "./plugins/midpage/assets/icon.png",
       "homepage": "https://docs.midpage.ai/documentation/integration/mcp-tools",
       "repository": "https://github.com/midpage-ai/litigation-skills",
       "license": "MIT",
@@ -12327,7 +12327,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "mt-newswires",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Search and retrieve licensed real-time North American and global financial news from MT Newswires through its officially authorized viaNexus MCP service.",
         "author": {
           "name": "MT Newswires",
@@ -12339,7 +12339,7 @@
           "ai.trapezohe.ghast": {
             "category": "finance",
             "upstreamRevision": "mtnewswires-ai-d0dbbb14e493+vast-71195676026d+oauth-d7f7d5f2df32",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Search and retrieve licensed real-time North American and global financial news from MT Newswires through its officially authorized viaNexus MCP service.",
               "zh-CN": "通过服务商授权的接口检索实时金融新闻。"
@@ -12349,9 +12349,9 @@
       },
       "package": {
         "url": "./packages/mt-newswires.zip",
-        "sha256": "0fea4625a7ee5417e0a3eb83c6b0647c96044b18d2e9cd9e7397b055e4352a24"
+        "sha256": "492b3888e7fc392412feceda583bd957df5c8a634f6ae25809987d0171a398b7"
       },
-      "icon": "./plugins/mt-newswires/assets/icon.svg",
+      "icon": "./plugins/mt-newswires/assets/icon.png",
       "homepage": "https://www.mtnewswires.com/ai-enablement",
       "license": "MIT",
       "category": "finance"
@@ -14408,7 +14408,7 @@
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "quartr",
-        "version": "1.0.0-ghast.1",
+        "version": "1.0.0-ghast.2",
         "description": "Research public companies with first-party earnings calls, transcripts, filings, reports, slides, events, summaries, and financial statements through Quartr's official MCP server.",
         "author": {
           "name": "Quartr",
@@ -14420,7 +14420,7 @@
           "ai.trapezohe.ghast": {
             "category": "finance",
             "upstreamRevision": "quartr-docs-b37a9c381ded+oauth-a379a77612f2",
-            "icon": "./assets/icon.svg",
+            "icon": "./assets/icon.png",
             "descriptions": {
               "en": "Research public companies with first-party earnings calls, transcripts, filings, reports, slides, events, summaries, and financial statements through Quartr's official MCP server.",
               "zh-CN": "通过一手电话会议、转录、公告、报告与演示文稿研究上市公司。"
@@ -14430,9 +14430,9 @@
       },
       "package": {
         "url": "./packages/quartr.zip",
-        "sha256": "81eb0852198a1b85cf2910bd455ea13168c8f8f38d8fb293cd9fd9245a2db5e5"
+        "sha256": "0caa32c1d5076bb3210df41f1d5ad510043e1dc9dfe106e3f815cb75d915c24d"
       },
-      "icon": "./plugins/quartr/assets/icon.svg",
+      "icon": "./plugins/quartr/assets/icon.png",
       "homepage": "https://mcp.quartr.com/docs",
       "license": "MIT",
       "category": "finance"

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "midpage",
-  "version": "0.2.0-ghast.1",
+  "version": "0.2.0-ghast.2",
   "description": "Research US case law, statutes, regulations, and federal dockets, then draft and cite-check litigation work product with Midpage's official MCP and MIT-licensed skills.",
   "author": {
     "name": "Midpage AI Inc.",
@@ -14,7 +14,7 @@
     "ai.trapezohe.ghast": {
       "category": "research",
       "upstreamRevision": "plugin-a7900c82da0d+mcp-f4deb58545d8+oauth-6627f7d4fb4a",
-      "icon": "./assets/icon.svg",
+      "icon": "./assets/icon.png",
       "descriptions": {
         "en": "Research US case law, statutes, regulations, and federal dockets, then draft and cite-check litigation work product with Midpage's official MCP and MIT-licensed skills.",
         "zh-CN": "研究美国案例、法规与诉讼记录，起草并核对法律文书引用。"

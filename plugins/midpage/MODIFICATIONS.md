@@ -19,10 +19,13 @@ Ghast-authored additions:
 - `.mcp.json`, pinned to the documented v3 endpoint `https://app.midpage.ai/mcp/v3`
 - `README.md`
 - `MODIFICATIONS.md`
-- `assets/icon.svg`
 - `skills/midpage-safety/SKILL.md`
 
 The renamed files and official skill directories are byte-identical to the
 upstream source. The v3 endpoint is an official documented endpoint and is
 used to keep a stable seven-tool contract, including the preview docket and
 laws tools. All additions are distributed under the included MIT license.
+
+Brand asset:
+
+- `assets/icon.png`: Midpage website logo; brand rights remain with Midpage.

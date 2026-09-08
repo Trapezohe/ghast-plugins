@@ -28,8 +28,7 @@ server metadata is pinned at SHA-256 `20a1464a05ed203ecad5e4aa5bce8fb9e85ea56ea4
   organization features.
 - The included skill requires source attribution and confirmation for
   state-changing watchlist, keyword, folder, filter, and workspace actions.
-- A generic financial-research icon is used because no licensed catalog icon
-  is included in a public official source repository.
+- Brand logo source: https://quartr.com/apple-touch-icon.png. Brand names and logos belong to Quartr. 品牌名称与标识归对应服务商所有。
 
 The MIT license in this package applies only to the Ghast-authored adapter.
 Quartr accounts, subscriptions, hosted service behavior, data, permissions,

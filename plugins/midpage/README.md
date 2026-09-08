@@ -15,9 +15,7 @@ guides, and the shared `legal_docx.js` Word renderer under the MIT license.
 Ghast preserves `LICENSE`, `UPSTREAM_README.md`, and all four official skill
 directories byte-for-byte. The upstream unversioned MCP configuration is
 preserved as `UPSTREAM_MCP.json`; Ghast's active `.mcp.json` uses the current
-official pinned v3 endpoint `https://app.midpage.ai/mcp/v3`. The repository publishes no reusable
-icon, so Ghast adds a generic courthouse-and-search icon rather than copying
-private marketplace artwork.
+official pinned v3 endpoint `https://app.midpage.ai/mcp/v3`. Brand logo source: https://www.midpage.ai/apple-touch-icon.png. Brand names and logos belong to Midpage. 品牌名称与标识归对应服务商所有。
 
 ## Portable MCP authentication
 
