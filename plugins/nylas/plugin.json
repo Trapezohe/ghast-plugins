@@ -1,0 +1,37 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "nylas",
+  "version": "1.0.0-ghast.1",
+  "description": "Use Nylas’s official MCP to work with connected email, calendars, contacts and meeting Notetakers in your application region.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://developer.nylas.com/docs/dev-guide/mcp/",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://developer.nylas.com/docs/dev-guide/mcp/",
+      "connectorPublisher": "Nylas",
+      "category": "communication",
+      "icon": "./assets/icon.png",
+      "displayName": "Nylas",
+      "descriptions": {
+        "en": "Use Nylas’s official MCP to work with connected email, calendars, contacts and meeting Notetakers in your application region.",
+        "zh-CN": "通过 Nylas 官方 MCP，在应用所属区域操作已连接的邮件、日历、联系人与会议记录助手。"
+      },
+      "mcpServerExtensions": {
+        "nylas": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:nylas-token"
+          }
+        },
+        "nylas-eu": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:nylas-eu-token"
+          }
+        }
+      }
+    }
+  }
+}

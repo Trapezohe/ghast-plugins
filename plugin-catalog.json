@@ -12412,6 +12412,56 @@
       "category": "development"
     },
     {
+      "id": "nylas",
+      "name": "Nylas",
+      "description": "Use Nylas’s official MCP to work with connected email, calendars, contacts and meeting Notetakers in your application region.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "nylas",
+        "version": "1.0.0-ghast.1",
+        "description": "Use Nylas’s official MCP to work with connected email, calendars, contacts and meeting Notetakers in your application region.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://developer.nylas.com/docs/dev-guide/mcp/",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://developer.nylas.com/docs/dev-guide/mcp/",
+            "connectorPublisher": "Nylas",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "Nylas",
+            "descriptions": {
+              "en": "Use Nylas’s official MCP to work with connected email, calendars, contacts and meeting Notetakers in your application region.",
+              "zh-CN": "通过 Nylas 官方 MCP，在应用所属区域操作已连接的邮件、日历、联系人与会议记录助手。"
+            },
+            "mcpServerExtensions": {
+              "nylas": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:nylas-token"
+                }
+              },
+              "nylas-eu": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:nylas-eu-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/nylas.zip",
+        "sha256": "bd26113b83b4a38e2f44fec374a418801839bc6e76be927de0b603553f56bc88"
+      },
+      "icon": "./plugins/nylas/assets/icon.png",
+      "homepage": "https://developer.nylas.com/docs/dev-guide/mcp/",
+      "license": "MIT",
+      "category": "communication"
+    },
+    {
       "id": "okx",
       "name": "OKX Market Data",
       "description": "Read OKX market prices, order books, candles and derivatives market data through the official Agent Trade Kit.",
@@ -13239,6 +13289,44 @@
       "homepage": "https://plaid.com/docs/resources/mcp/",
       "license": "MIT",
       "category": "finance"
+    },
+    {
+      "id": "plain",
+      "name": "Plain",
+      "description": "Read support threads, investigate customer history and manage help-center content through Plain’s official account MCP.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "plain",
+        "version": "1.0.0-ghast.1",
+        "description": "Read support threads, investigate customer history and manage help-center content through Plain’s official account MCP.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://www.plain.com/docs/agents/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://www.plain.com/docs/agents/mcp-server",
+            "connectorPublisher": "Plain",
+            "category": "communication",
+            "icon": "./assets/icon.png",
+            "displayName": "Plain",
+            "descriptions": {
+              "en": "Read support threads, investigate customer history and manage help-center content through Plain’s official account MCP.",
+              "zh-CN": "通过 Plain 官方账号 MCP 阅读客服线程、调查客户历史并管理帮助中心内容。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/plain.zip",
+        "sha256": "cfc3890476951a78904fa415f19c20f9261e7c60e6d93bb34d98064514b30462"
+      },
+      "icon": "./plugins/plain/assets/icon.png",
+      "homepage": "https://www.plain.com/docs/agents/mcp-server",
+      "license": "MIT",
+      "category": "communication"
     },
     {
       "id": "planetscale",

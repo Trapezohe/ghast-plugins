@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "plain",
+  "version": "1.0.0-ghast.1",
+  "description": "Read support threads, investigate customer history and manage help-center content through Plain’s official account MCP.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://www.plain.com/docs/agents/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://www.plain.com/docs/agents/mcp-server",
+      "connectorPublisher": "Plain",
+      "category": "communication",
+      "icon": "./assets/icon.png",
+      "displayName": "Plain",
+      "descriptions": {
+        "en": "Read support threads, investigate customer history and manage help-center content through Plain’s official account MCP.",
+        "zh-CN": "通过 Plain 官方账号 MCP 阅读客服线程、调查客户历史并管理帮助中心内容。"
+      }
+    }
+  }
+}
