@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "phoenix": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@arizeai/phoenix-mcp@4.3.7"
+      ],
+      "env": {
+        "PHOENIX_DISCOVER_CONFIG": "false"
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "wandb",
+  "version": "1.0.0-ghast.1",
+  "description": "Analyze W&B runs and artifacts and Weave traces and evaluations through the official Weights & Biases MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://github.com/wandb/wandb-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://github.com/wandb/wandb-mcp-server",
+      "connectorPublisher": "Weights & Biases",
+      "category": "data",
+      "icon": "./assets/icon.png",
+      "displayName": "Weights & Biases",
+      "descriptions": {
+        "en": "Analyze W&B runs and artifacts and Weave traces and evaluations through the official Weights & Biases MCP server.",
+        "zh-CN": "通过 Weights & Biases 官方 MCP 分析 W&B 运行记录与制品，以及 Weave 调用追踪和评测。"
+      },
+      "mcpServerExtensions": {
+        "wandb": {
+          "credentialHeaders": {
+            "Authorization": "Bearer $VAULT:wandb-token"
+          }
+        }
+      }
+    }
+  }
+}

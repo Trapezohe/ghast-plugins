@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "langsmith",
+  "version": "1.0.0-ghast.1",
+  "description": "Explore LangSmith traces, conversation history, prompts, datasets and experiments through the official remote MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.langchain.com/langsmith/langsmith-remote-mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.langchain.com/langsmith/langsmith-remote-mcp",
+      "connectorPublisher": "LangChain",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "LangSmith",
+      "descriptions": {
+        "en": "Explore LangSmith traces, conversation history, prompts, datasets and experiments through the official remote MCP server.",
+        "zh-CN": "通过 LangSmith 官方远程 MCP 查看调用追踪、对话历史、提示词、数据集和实验。"
+      }
+    }
+  }
+}

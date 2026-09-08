@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "helicone",
+  "version": "1.0.0-ghast.1",
+  "description": "Query Helicone requests and sessions to investigate errors, latency and model usage with the official MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://docs.helicone.ai/integrations/tools/mcp",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://docs.helicone.ai/integrations/tools/mcp",
+      "connectorPublisher": "Helicone",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Helicone",
+      "descriptions": {
+        "en": "Query Helicone requests and sessions to investigate errors, latency and model usage with the official MCP server.",
+        "zh-CN": "通过 Helicone 官方 MCP 查询请求和会话，排查错误、延迟及模型用量。"
+      },
+      "mcpServerExtensions": {
+        "helicone": {
+          "credentialEnv": {
+            "HELICONE_API_KEY": "$VAULT:helicone-api-key"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "phoenix",
+  "version": "1.0.0-ghast.1",
+  "description": "Inspect Phoenix projects, traces, sessions and experiments, and manage prompts and evaluation datasets through the official MCP server.",
+  "author": {
+    "name": "Ghast AI",
+    "url": "https://ghast.trapezohe.ai"
+  },
+  "homepage": "https://arize.com/docs/phoenix/sdk-api-reference/typescript/mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "ai.trapezohe.ghast": {
+      "officialConnectorSource": "https://arize.com/docs/phoenix/sdk-api-reference/typescript/mcp-server",
+      "connectorPublisher": "Arize AI",
+      "category": "development",
+      "icon": "./assets/icon.png",
+      "displayName": "Arize Phoenix",
+      "descriptions": {
+        "en": "Inspect Phoenix projects, traces, sessions and experiments, and manage prompts and evaluation datasets through the official MCP server.",
+        "zh-CN": "通过 Phoenix 官方 MCP 查看项目、调用追踪、会话和实验，管理提示词与评测数据集。"
+      },
+      "mcpServerExtensions": {
+        "phoenix": {
+          "credentialEnv": {
+            "PHOENIX_ENDPOINT": "$VAULT:phoenix-endpoint",
+            "PHOENIX_API_KEY": "$VAULT:phoenix-api-key"
+          }
+        }
+      }
+    }
+  }
+}

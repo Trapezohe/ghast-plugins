@@ -7239,6 +7239,51 @@
       "category": "productivity"
     },
     {
+      "id": "helicone",
+      "name": "Helicone",
+      "description": "Query Helicone requests and sessions to investigate errors, latency and model usage with the official MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "helicone",
+        "version": "1.0.0-ghast.1",
+        "description": "Query Helicone requests and sessions to investigate errors, latency and model usage with the official MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.helicone.ai/integrations/tools/mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.helicone.ai/integrations/tools/mcp",
+            "connectorPublisher": "Helicone",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Helicone",
+            "descriptions": {
+              "en": "Query Helicone requests and sessions to investigate errors, latency and model usage with the official MCP server.",
+              "zh-CN": "通过 Helicone 官方 MCP 查询请求和会话，排查错误、延迟及模型用量。"
+            },
+            "mcpServerExtensions": {
+              "helicone": {
+                "credentialEnv": {
+                  "HELICONE_API_KEY": "$VAULT:helicone-api-key"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/helicone.zip",
+        "sha256": "0f623faf5736222079d81fb01b88786b474f366a102200bfd67fbd8155ec5084"
+      },
+      "icon": "./plugins/helicone/assets/icon.png",
+      "homepage": "https://docs.helicone.ai/integrations/tools/mcp",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
       "id": "help-scout",
       "name": "Help Scout",
       "description": "Search Help Scout conversations, customers and knowledge articles, and retrieve support reports.",
@@ -8228,6 +8273,44 @@
       },
       "icon": "./plugins/langfuse/assets/icon.png",
       "homepage": "https://langfuse.com/docs/api-and-data-platform/features/mcp-server",
+      "license": "MIT",
+      "category": "development"
+    },
+    {
+      "id": "langsmith",
+      "name": "LangSmith",
+      "description": "Explore LangSmith traces, conversation history, prompts, datasets and experiments through the official remote MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "langsmith",
+        "version": "1.0.0-ghast.1",
+        "description": "Explore LangSmith traces, conversation history, prompts, datasets and experiments through the official remote MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://docs.langchain.com/langsmith/langsmith-remote-mcp",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://docs.langchain.com/langsmith/langsmith-remote-mcp",
+            "connectorPublisher": "LangChain",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "LangSmith",
+            "descriptions": {
+              "en": "Explore LangSmith traces, conversation history, prompts, datasets and experiments through the official remote MCP server.",
+              "zh-CN": "通过 LangSmith 官方远程 MCP 查看调用追踪、对话历史、提示词、数据集和实验。"
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/langsmith.zip",
+        "sha256": "e8705f9ad496fedb0ee2faf1e50c366a6a03d60f648a4d6d5b2adcc826b0a5da"
+      },
+      "icon": "./plugins/langsmith/assets/icon.png",
+      "homepage": "https://docs.langchain.com/langsmith/langsmith-remote-mcp",
       "license": "MIT",
       "category": "development"
     },
@@ -10216,6 +10299,52 @@
       "homepage": "https://paypal.gitbook.com/agent-toolkit-and-mcp-server/mcp-server/set-up-a-remote-mcp-server",
       "license": "MIT",
       "category": "finance"
+    },
+    {
+      "id": "phoenix",
+      "name": "Arize Phoenix",
+      "description": "Inspect Phoenix projects, traces, sessions and experiments, and manage prompts and evaluation datasets through the official MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "phoenix",
+        "version": "1.0.0-ghast.1",
+        "description": "Inspect Phoenix projects, traces, sessions and experiments, and manage prompts and evaluation datasets through the official MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://arize.com/docs/phoenix/sdk-api-reference/typescript/mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://arize.com/docs/phoenix/sdk-api-reference/typescript/mcp-server",
+            "connectorPublisher": "Arize AI",
+            "category": "development",
+            "icon": "./assets/icon.png",
+            "displayName": "Arize Phoenix",
+            "descriptions": {
+              "en": "Inspect Phoenix projects, traces, sessions and experiments, and manage prompts and evaluation datasets through the official MCP server.",
+              "zh-CN": "通过 Phoenix 官方 MCP 查看项目、调用追踪、会话和实验，管理提示词与评测数据集。"
+            },
+            "mcpServerExtensions": {
+              "phoenix": {
+                "credentialEnv": {
+                  "PHOENIX_ENDPOINT": "$VAULT:phoenix-endpoint",
+                  "PHOENIX_API_KEY": "$VAULT:phoenix-api-key"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/phoenix.zip",
+        "sha256": "855f2bc4d4050eaa9da30f7a125581bfebdc2d32dd3b3fe724b14a64c0d9d3d1"
+      },
+      "icon": "./plugins/phoenix/assets/icon.png",
+      "homepage": "https://arize.com/docs/phoenix/sdk-api-reference/typescript/mcp-server",
+      "license": "MIT",
+      "category": "development"
     },
     {
       "id": "picsart",
@@ -14248,6 +14377,51 @@
       "homepage": "https://agentic.waldo.fyi/docs/mcp",
       "license": "MIT",
       "category": "productivity"
+    },
+    {
+      "id": "wandb",
+      "name": "Weights & Biases",
+      "description": "Analyze W&B runs and artifacts and Weave traces and evaluations through the official Weights & Biases MCP server.",
+      "manifest": {
+        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+        "name": "wandb",
+        "version": "1.0.0-ghast.1",
+        "description": "Analyze W&B runs and artifacts and Weave traces and evaluations through the official Weights & Biases MCP server.",
+        "author": {
+          "name": "Ghast AI",
+          "url": "https://ghast.trapezohe.ai"
+        },
+        "homepage": "https://github.com/wandb/wandb-mcp-server",
+        "license": "MIT",
+        "extensions": {
+          "ai.trapezohe.ghast": {
+            "officialConnectorSource": "https://github.com/wandb/wandb-mcp-server",
+            "connectorPublisher": "Weights & Biases",
+            "category": "data",
+            "icon": "./assets/icon.png",
+            "displayName": "Weights & Biases",
+            "descriptions": {
+              "en": "Analyze W&B runs and artifacts and Weave traces and evaluations through the official Weights & Biases MCP server.",
+              "zh-CN": "通过 Weights & Biases 官方 MCP 分析 W&B 运行记录与制品，以及 Weave 调用追踪和评测。"
+            },
+            "mcpServerExtensions": {
+              "wandb": {
+                "credentialHeaders": {
+                  "Authorization": "Bearer $VAULT:wandb-token"
+                }
+              }
+            }
+          }
+        }
+      },
+      "package": {
+        "url": "./packages/wandb.zip",
+        "sha256": "a33dcac509717b07f315c8acd4b500b0d59629ea93d2f33e661fd548b1baa7b1"
+      },
+      "icon": "./plugins/wandb/assets/icon.png",
+      "homepage": "https://github.com/wandb/wandb-mcp-server",
+      "license": "MIT",
+      "category": "data"
     },
     {
       "id": "webflow",
