@@ -2662,14 +2662,6 @@
     ],
     "update": null
   },
-  "docusign": {
-    "monitors": [],
-    "policy": "review-required",
-    "provenance": [
-      "https://developers.docusign.com/platform/mcp-server/"
-    ],
-    "update": null
-  },
   "dodopayments": {
     "monitors": [
       {

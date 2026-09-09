@@ -5847,16 +5847,6 @@
       "review": "local-runtime-authentication"
     },
     {
-      "plugin": "docusign",
-      "server": "docusign",
-      "url": null,
-      "transport": "local",
-      "manualCredentials": false,
-      "clientRequired": false,
-      "oauthRequired": false,
-      "review": "local-runtime-authentication"
-    },
-    {
       "plugin": "dodopayments",
       "server": "dodopayments",
       "url": "https://mcp.dodopayments.com/sse",

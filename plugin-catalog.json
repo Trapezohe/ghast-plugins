@@ -6685,45 +6685,6 @@
       "category": "data"
     },
     {
-      "id": "docusign",
-      "name": "docusign",
-      "description": "Create, send, search, inspect, and automate Docusign agreements, envelopes, recipients, dates, obligations, and Workflow Builder processes through Docusign's official hosted MCP server.",
-      "manifest": {
-        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-        "name": "docusign",
-        "description": "Create, send, search, inspect, and automate Docusign agreements, envelopes, recipients, dates, obligations, and Workflow Builder processes through Docusign's official hosted MCP server.",
-        "author": {
-          "name": "Docusign",
-          "url": "https://www.docusign.com"
-        },
-        "homepage": "https://developers.docusign.com/platform/mcp-server/",
-        "license": "MIT",
-        "extensions": {
-          "ai.trapezohe.ghast": {
-            "category": "productivity",
-            "upstreamRevision": "docusign-docs-ee7baa0a1615+chatgpt-0c1925822c08+demo-f64203b8c7d1+prod-8d3bb21db1fb",
-            "icon": "./assets/icon.png",
-            "descriptions": {
-              "en": "Create, send, search, inspect, and automate Docusign agreements, envelopes, recipients, dates, obligations, and Workflow Builder processes through Docusign's official hosted MCP server.",
-              "zh-CN": "创建、发送和检索签署文件，管理收件人、履约事项与签署流程。"
-            }
-          }
-        }
-      },
-      "details": {
-        "url": "./plugins/docusign/details.json",
-        "sha256": "dae77ab996d4e4d2014dcee2bdf7da5bb5b43626218f8ff917289a3bac384da0"
-      },
-      "package": {
-        "url": "./packages/docusign.zip",
-        "sha256": "7d34af2976d32289272408b59effe33db93cc388f5814640b29a06843a57228c"
-      },
-      "icon": "./plugins/docusign/assets/icon.png",
-      "homepage": "https://developers.docusign.com/platform/mcp-server/",
-      "license": "MIT",
-      "category": "productivity"
-    },
-    {
       "id": "dodopayments",
       "name": "Dodo Payments",
       "description": "Connect Dodo Payments’ official MCP to work with payments, subscriptions, customers and product catalogs.",
