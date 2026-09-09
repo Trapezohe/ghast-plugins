@@ -21115,57 +21115,6 @@
       "category": "developer-tools"
     },
     {
-      "id": "wrike",
-      "name": "Wrike",
-      "description": "Search projects and tasks, review workload and organize team work and follow-ups with Wrike.",
-      "manifest": {
-        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-        "name": "wrike",
-        "description": "Search projects and tasks, review workload and organize team work and follow-ups with Wrike.",
-        "author": {
-          "name": "Ghast AI",
-          "url": "https://ghast.trapezohe.ai"
-        },
-        "homepage": "https://developers.wrike.com/docs/setup-other-mcp-clients-with-wrike-mcp",
-        "license": "MIT",
-        "extensions": {
-          "ai.trapezohe.ghast": {
-            "category": "productivity",
-            "icon": "./assets/icon.svg",
-            "displayName": "Wrike",
-            "descriptions": {
-              "en": "Search projects and tasks, review workload and organize team work and follow-ups with Wrike.",
-              "zh-CN": "使用 Wrike 搜索项目与任务、查看工作进展，整理团队协作和后续待办。"
-            },
-            "mcpServerExtensions": {
-              "wrike": {
-                "credentialHeaders": {
-                  "Authorization": "Bearer $VAULT:wrike-token"
-                },
-                "optionalCredentials": [
-                  "wrike-token"
-                ],
-                "oauthRequired": true,
-                "oauthClientRequired": true
-              }
-            }
-          }
-        }
-      },
-      "details": {
-        "url": "./plugins/wrike/details.json",
-        "sha256": "20bcce98021ba2220d6e4210d9cacfb442fb871c90427b11bcea17494c88e320"
-      },
-      "package": {
-        "url": "./packages/wrike.zip",
-        "sha256": "1af0f08a3292b11bbf6e948ccfe9421267fdff7b622edf1a1b3d597602c8215b"
-      },
-      "icon": "./plugins/wrike/assets/icon.svg",
-      "homepage": "https://developers.wrike.com/docs/setup-other-mcp-clients-with-wrike-mcp",
-      "license": "MIT",
-      "category": "productivity"
-    },
-    {
       "id": "writer",
       "name": "WRITER",
       "description": "Connect WRITER’s official MCP for content generation, translation, file processing and knowledge graph workflows.",
