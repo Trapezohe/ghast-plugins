@@ -1322,11 +1322,11 @@
       },
       "details": {
         "url": "./plugins/asana/details.json",
-        "sha256": "5aec90ec82436aa50927e86f2eb75cd789a9cb24b2f868068aa9473e544334f3"
+        "sha256": "05d230e7bcf3b7a4bcd69500ec0d4c15b98a83e76e817b1a0d431ef407ec90ec"
       },
       "package": {
         "url": "./packages/asana.zip",
-        "sha256": "82bfc13fb0c1f6bdf8d9fef7fa66e798182b9a413e9643295a1a2479446efad1"
+        "sha256": "d1bae45428adefb4a4374c7ff6d748c8cb64d1e376703191800b25c2a189d7a0"
       },
       "icon": "./plugins/asana/assets/icon.svg",
       "homepage": "https://developers.asana.com/docs/using-asanas-mcp-server",
