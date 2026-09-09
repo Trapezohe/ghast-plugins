@@ -6986,7 +6986,7 @@
       },
       "package": {
         "url": "./packages/dropbox.zip",
-        "sha256": "1617c29f84915d610b9b7b57126b80ac871b75dd5d79efce1a7cda464bab0740"
+        "sha256": "431ba9bb3dbbed973b71b6a5e0d8eb3edf80eee80b862fd8747bdca1171b8cfa"
       },
       "icon": "./plugins/dropbox/assets/icon.png",
       "homepage": "https://help.dropbox.com/integrations/connect-dropbox-mcp-server",
