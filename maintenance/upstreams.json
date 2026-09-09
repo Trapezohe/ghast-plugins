@@ -533,6 +533,11 @@
         "packagedRevision": "caf02337846594b6af5221ea5165c1dd0d273d9b",
         "ref": "HEAD",
         "repository": "Asana/cursor-marketplace-plugin"
+      },
+      {
+        "kind": "endpoint",
+        "server": "asana",
+        "url": "https://mcp.asana.com/v2/mcp"
       }
     ],
     "policy": "review-required",
