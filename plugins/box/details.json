@@ -1,7 +1,7 @@
 {
   "overview": {
-    "en": "Search and manage Box files and folders and use available Box AI document tools.\n\nLocate files and review their contents in the connected workspace. Keep file identity and access context explicit when preparing a summary or organization plan.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
-    "zh-CN": "搜索与管理 Box 文件和文件夹，并使用可用的 Box AI 文档工具。\n\n在已连接工作区中定位文件并查看内容，准备摘要或整理方案时明确文件身份与访问范围。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
+    "en": "Search and read Box files and folders with a connected Box account.\n\nLocate files and review their contents in the connected workspace. Keep file identity and access context explicit when preparing a summary or organization plan.\n\nComplete the connection or local-runtime setup described by this plugin before using service tools. Results depend on the tools exposed to your account; specify the target resource and report scope when starting a task.",
+    "zh-CN": "连接 Box 账号，搜索并读取有权访问的文件和文件夹。\n\n在已连接工作区中定位文件并查看内容，准备摘要或整理方案时明确文件身份与访问范围。\n\n使用服务工具前，按插件说明完成连接或本地运行环境配置。结果取决于账号可用工具；开始任务时请说明目标资源与报告范围。"
   },
   "starterPrompts": [
     {
@@ -44,7 +44,7 @@
       "id": "box",
       "name": "box",
       "descriptions": {
-        "en": "Use Box in Ghast. Search and manage Box files and folders and use available Box AI document tools. 搜索与管理 Box 文件和文件夹，并使用可用的 Box AI 文档工具。"
+        "en": "Use Box in Ghast. Search and read Box files and folders with a connected Box account. 连接 Box 账号，搜索并读取有权访问的文件和文件夹。"
       }
     }
   ],
