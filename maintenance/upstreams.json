@@ -3723,25 +3723,6 @@
     ],
     "update": null
   },
-  "harness": {
-    "monitors": [
-      {
-        "kind": "npm",
-        "package": "harness-mcp-v2",
-        "packagedVersion": "3.2.24"
-      },
-      {
-        "kind": "endpoint",
-        "server": "harness-hosted",
-        "url": "https://mcp.harness.io/mcp"
-      }
-    ],
-    "policy": "review-required",
-    "provenance": [
-      "https://developer.harness.io/docs/platform/harness-ai/connect-with-ai/harness-mcp-server/hosted-mcp/"
-    ],
-    "update": null
-  },
   "harvest": {
     "monitors": [
       {

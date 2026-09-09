@@ -8311,50 +8311,6 @@
       "review": "oauth-advertised"
     },
     {
-      "plugin": "harness",
-      "server": "harness",
-      "url": null,
-      "transport": "local",
-      "manualCredentials": true,
-      "clientRequired": false,
-      "oauthRequired": false,
-      "review": "local-runtime-authentication"
-    },
-    {
-      "plugin": "harness",
-      "server": "harness-hosted",
-      "url": "https://mcp.harness.io/mcp",
-      "transport": "remote",
-      "manualCredentials": false,
-      "clientRequired": true,
-      "oauthRequired": false,
-      "oauthAdvertised": true,
-      "dynamicRegistration": false,
-      "clientMetadataDocument": false,
-      "evidence": [
-        {
-          "url": "https://mcp.harness.io/mcp",
-          "status": 401,
-          "metadata": {}
-        },
-        {
-          "url": "https://mcp.harness.io/.well-known/oauth-protected-resource/mcp",
-          "status": 200,
-          "metadata": {
-            "resource": "https://mcp.harness.io/mcp",
-            "authorization_servers": [
-              "https://id.harness.io/idp/realms/HarnessIDP"
-            ]
-          }
-        },
-        {
-          "url": "https://id.harness.io/.well-known/oauth-authorization-server/idp/realms/HarnessIDP",
-          "status": 403
-        }
-      ],
-      "review": "oauth-advertised"
-    },
-    {
       "plugin": "harvest",
       "server": "harvest",
       "url": "https://api.harvestapp.com/mcp",
