@@ -31,19 +31,10 @@ Brand logo source: https://cfl.dropboxstatic.com/static/metaserver/static/images
 
 ## Ghast 接入设置 / Ghast setup
 
-Ghast 不在 Dropbox 公开的受信任 DCR 客户端名单中。请在 Dropbox App Console 创建 Scoped access / Full Dropbox 应用，启用所需权限，登记 Ghast 回调 URL，然后在 Ghast 填写 App key（Client ID）、App secret 和所需 scopes。不要套用 Codex 的客户端身份。此 MCP 服务为 Beta。
+在插件详情点击连接，通过 Dropbox 网页授权。Ghast 后台保管应用凭据，用户无需创建应用或填写 App key、App secret、API key。授权范围包含账号信息读取、文件读取与写入、分享读取与写入、文件请求读取与写入。团队管理与永久删除权限未申请。
 
-Ghast is not on Dropbox’s published trusted DCR client list. Create a Scoped access / Full Dropbox app in App Console, enable the required permissions and register Ghast’s callback URL. Configure App key as Client ID, App secret and required scopes in Ghast. Do not reuse Codex client identity. The MCP service is beta.
+Click Connect in plugin details and authorize through Dropbox. Ghast manages application credentials on the backend; users do not create apps or enter keys or secrets. Requested permissions cover account information, file read/write, sharing read/write and file request read/write. Team administration and permanent deletion permissions are not requested.
 
-验证涵盖官方端点认证响应、认证元数据和本地安装/卸载；未完成真实账号授权或业务调用。
+当前应用仍为 Development，已启用最多 500 名开发用户用于审核准备。正式域名 OAuth、Ghast 连接、重连和根目录只读对话已通过；Production 审核尚未批准，公开客户端仍受发布状态限制。断开后，可在 Dropbox 已连接应用设置中撤销授权。
 
-Validation covers official endpoint auth responses, auth metadata and local install/removal. Real-account authorization and business calls have not been completed.
-
-
-## Browser authorization / 浏览器授权
-
-`dropbox` publishes OAuth authorization metadata. Ghast uses browser authorization. The service advertises dynamic registration or client metadata documents. Discovery was checked without signing in; account authorization and tool execution were not tested.
-
-Ghast 使用浏览器授权。服务公开提供动态注册或客户端元数据文档支持。本次只验证了公开授权元数据，没有登录账户或执行工具。
-
-Official discovery: [dropbox resource metadata](https://mcp.dropbox.com/.well-known/oauth-protected-resource/mcp) · [authorization metadata](https://www.dropbox.com/.well-known/oauth-authorization-server)
+The app remains in Development with up to 500 development users enabled for review preparation. Production-domain OAuth, Ghast connection, reconnect and a real read-only root-directory conversation passed. Production approval is pending; public client availability remains gated. Revoke authorization in Dropbox connected apps settings after disconnecting.
