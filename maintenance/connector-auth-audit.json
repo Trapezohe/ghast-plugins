@@ -15695,46 +15695,6 @@
       "review": "oauth-advertised"
     },
     {
-      "plugin": "smartsheet",
-      "server": "smartsheet",
-      "url": "https://mcp.smartsheet.com",
-      "transport": "remote",
-      "manualCredentials": true,
-      "clientRequired": false,
-      "oauthRequired": false,
-      "oauthAdvertised": true,
-      "dynamicRegistration": false,
-      "clientMetadataDocument": false,
-      "evidence": [
-        {
-          "url": "https://mcp.smartsheet.com",
-          "status": 401
-        },
-        {
-          "url": "https://mcp.smartsheet.com/.well-known/oauth-protected-resource",
-          "status": 200,
-          "metadata": {
-            "resource": "https://mcp.smartsheet.com",
-            "authorization_servers": [
-              "https://mcp.smartsheet.com"
-            ]
-          }
-        },
-        {
-          "url": "https://mcp.smartsheet.com/.well-known/oauth-authorization-server",
-          "status": 200,
-          "metadata": {
-            "issuer": "https://mcp.smartsheet.com",
-            "authorization_endpoint": "https://app.smartsheet.com/b/authorize",
-            "token_endpoint": "https://api.smartsheet.com/2.0/token"
-          }
-        }
-      ],
-      "review": "oauth-advertised-with-manual-credentials",
-      "action": "oauth-preferred-optional-credential",
-      "resultClientRequired": true
-    },
-    {
       "plugin": "snyk",
       "server": "snyk",
       "url": null,

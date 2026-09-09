@@ -31,7 +31,6 @@ Checked 2026-09-08 against all 503 plugin packages: **538 MCP services**, includ
 | lokalise | lokalise-development | Advertised dynamic registration / client metadata document |
 | ref | ref | Advertised dynamic registration / client metadata document |
 | render | render | Ghast registered application required |
-| smartsheet | smartsheet | Ghast registered application required |
 | teamwork | teamwork | Advertised dynamic registration / client metadata document |
 | telnyx | telnyx | Advertised dynamic registration / client metadata document |
 | tomtom | tomtom | Advertised dynamic registration / client metadata document |
