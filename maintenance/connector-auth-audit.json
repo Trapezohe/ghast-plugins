@@ -7093,47 +7093,6 @@
       "review": "official-documentation-review-required"
     },
     {
-      "plugin": "front",
-      "server": "front",
-      "url": "https://mcp.frontapp.com/mcp",
-      "transport": "remote",
-      "manualCredentials": false,
-      "clientRequired": true,
-      "oauthRequired": false,
-      "oauthAdvertised": true,
-      "dynamicRegistration": false,
-      "clientMetadataDocument": false,
-      "evidence": [
-        {
-          "url": "https://mcp.frontapp.com/mcp",
-          "status": 405
-        },
-        {
-          "url": "https://mcp.frontapp.com/.well-known/oauth-protected-resource/mcp",
-          "status": 200,
-          "metadata": {
-            "resource": "https://mcp.frontapp.com",
-            "authorization_servers": [
-              "https://app.frontapp.com"
-            ]
-          }
-        },
-        {
-          "url": "https://app.frontapp.com/.well-known/oauth-authorization-server",
-          "status": 200,
-          "metadata": {
-            "issuer": "https://app.frontapp.com",
-            "authorization_endpoint": "https://app.frontapp.com/oauth/authorize",
-            "token_endpoint": "https://app.frontapp.com/oauth/token",
-            "code_challenge_methods_supported": [
-              "S256"
-            ]
-          }
-        }
-      ],
-      "review": "oauth-advertised"
-    },
-    {
       "plugin": "fullstory",
       "server": "fullstory",
       "url": "https://api.fullstory.com/mcp/fullstory",

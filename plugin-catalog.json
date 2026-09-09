@@ -8205,52 +8205,6 @@
       "category": "developer-tools"
     },
     {
-      "id": "front",
-      "name": "Front",
-      "description": "Search Front conversations, inspect customer context, prepare drafts and manage inbox workflows.",
-      "manifest": {
-        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-        "name": "front",
-        "description": "Search Front conversations, inspect customer context, prepare drafts and manage inbox workflows.",
-        "author": {
-          "name": "Ghast AI",
-          "url": "https://ghast.trapezohe.ai"
-        },
-        "homepage": "https://dev.frontapp.com/docs/mcp-server",
-        "license": "MIT",
-        "extensions": {
-          "ai.trapezohe.ghast": {
-            "officialConnectorSource": "https://dev.frontapp.com/docs/mcp-server",
-            "connectorPublisher": "Front",
-            "category": "communication",
-            "icon": "./assets/icon.png",
-            "displayName": "Front",
-            "descriptions": {
-              "en": "Search Front conversations, inspect customer context, prepare drafts and manage inbox workflows.",
-              "zh-CN": "搜索 Front 会话、查看客户上下文、准备回复草稿并管理收件箱工作流。"
-            },
-            "mcpServerExtensions": {
-              "front": {
-                "oauthClientRequired": true
-              }
-            }
-          }
-        }
-      },
-      "details": {
-        "url": "./plugins/front/details.json",
-        "sha256": "7c8e922c3185b5010ce533882b3355437788897e17e3b42e56c3dbcc8e9fbd72"
-      },
-      "package": {
-        "url": "./packages/front.zip",
-        "sha256": "556c744121d614ea23aaae8ffd405791b1760ff96e74afbe60717785c2c562ed"
-      },
-      "icon": "./plugins/front/assets/icon.png",
-      "homepage": "https://dev.frontapp.com/docs/mcp-server",
-      "license": "MIT",
-      "category": "communication"
-    },
-    {
       "id": "fullstory",
       "name": "Fullstory",
       "description": "Analyze behavioral metrics, segments and session replay through Fullstory’s official MCP beta, with global and EU connections.",

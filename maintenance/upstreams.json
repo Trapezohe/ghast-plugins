@@ -3208,20 +3208,6 @@
     ],
     "update": null
   },
-  "front": {
-    "monitors": [
-      {
-        "kind": "endpoint",
-        "server": "front",
-        "url": "https://mcp.frontapp.com/mcp"
-      }
-    ],
-    "policy": "review-required",
-    "provenance": [
-      "https://dev.frontapp.com/docs/mcp-server"
-    ],
-    "update": null
-  },
   "fullstory": {
     "monitors": [
       {
