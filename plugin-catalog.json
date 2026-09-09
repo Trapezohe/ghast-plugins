@@ -2429,11 +2429,11 @@
     {
       "id": "box",
       "name": "Box",
-      "description": "Search and manage Box files and folders and use available Box AI document tools.",
+      "description": "Search and read Box files and folders with a connected Box account.",
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "box",
-        "description": "Search and manage Box files and folders and use available Box AI document tools.",
+        "description": "Search and read Box files and folders with a connected Box account.",
         "author": {
           "name": "Ghast AI",
           "url": "https://ghast.trapezohe.ai"
@@ -2448,8 +2448,8 @@
             "icon": "./assets/icon.png",
             "displayName": "Box",
             "descriptions": {
-              "en": "Search and manage Box files and folders and use available Box AI document tools.",
-              "zh-CN": "搜索与管理 Box 文件和文件夹，并使用可用的 Box AI 文档工具。"
+              "en": "Search and read Box files and folders with a connected Box account.",
+              "zh-CN": "连接 Box 账号，搜索并读取有权访问的文件和文件夹。"
             },
             "mcpServerExtensions": {
               "box": {
@@ -2461,11 +2461,11 @@
       },
       "details": {
         "url": "./plugins/box/details.json",
-        "sha256": "5a66bcf6b9f9fd8bd851b0e361e46620b4276d0417a70ad8ee5fc2657456a0e1"
+        "sha256": "9e3d8acb0549e1221d407b0dc79d0be6ef6cdcfbb1049fca7dd98e242af5d64d"
       },
       "package": {
         "url": "./packages/box.zip",
-        "sha256": "06f54114a2574a8805d2bf77656ac9bb5ae8f5ef94dc2da9e269967bd70d77b6"
+        "sha256": "5bcc2984a35e3e8e55b4667a3fded1ce79d6aeb6313851f44390951f92f1fadd"
       },
       "icon": "./plugins/box/assets/icon.png",
       "homepage": "https://developer.box.com/guides/box-mcp/setup",

@@ -2,9 +2,9 @@
 
 ## 简介 / Overview
 
-搜索与管理 Box 文件和文件夹，并使用可用的 Box AI 文档工具。
+连接 Box 账号，搜索并读取有权访问的文件和文件夹。
 
-Search and manage Box files and folders and use available Box AI document tools.
+Search and read Box files and folders with a connected Box account.
 
 ## 连接 / Connection
 
@@ -31,10 +31,10 @@ Brand logo source: https://www.box.com/apple-touch-icon.png?tktzid
 
 ## Ghast 接入设置 / Ghast setup
 
-在 Box 管理后台的 Integrations 中，为未列出的 MCP 客户端新增 Integration Credentials，开启 Content Actions，并将 Ghast 显示的回调 URL 登记到 Redirect URI。然后在 Ghast 插件连接页填写 Client ID 和 Client Secret，再完成授权。
+在支持 Box 托管授权的 Ghast 客户端中，点击“连接账号”并在 Box 网页授权。OAuth 应用密钥由 Ghast 后台保管，用户不需要填写 Client ID、Client Secret 或 API key。当前接入范围为读取用户有权访问的文件和文件夹，不请求写入、Box AI、签名或管理权限。
 
-In Box Admin Console > Integrations, create Integration Credentials for an unlisted MCP client, enable Content Actions and register the callback URL shown by Ghast. Enter Client ID and Client Secret in Ghast, then authorize.
+In a Ghast client that supports managed Box OAuth, click Connect account and authorize in Box. Ghast's backend holds the application secret; users do not enter a Client ID, Client Secret, or API key. The current integration requests read access to files and folders available to the user, without write, Box AI, signature, or administrative scopes.
 
-验证涵盖官方端点认证响应、认证元数据和本地安装/卸载；未完成真实账号授权或业务调用。
+Box 组织策略可能要求管理员先启用未发布的 OAuth 应用及 MCP 工具。正式可用状态由后台控制；未通过连接与真实只读任务验收时不宣称可用。
 
-Validation covers official endpoint auth responses, auth metadata and local install/removal. Real-account authorization and business calls have not been completed.
+Box organization policy may require an administrator to enable unpublished OAuth apps and MCP tools. Backend readiness controls availability; application registration alone does not establish a working connection or a successful read-only task.
