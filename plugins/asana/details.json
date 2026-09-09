@@ -54,14 +54,14 @@
       "id": "asana-mcp-troubleshooting",
       "name": "asana-mcp-troubleshooting",
       "descriptions": {
-        "en": "Diagnose Asana V2 MCP connection, OAuth app, credential-file, workspace, and tool availability failures in Ghast."
+        "en": "Diagnose Ghast-managed Asana OAuth, workspace access and official MCP connection failures."
       }
     },
     {
       "id": "asana-setup",
       "name": "asana-setup",
       "descriptions": {
-        "en": "Detect and configure Asana V2 MCP credentials for Ghast. Run before using Asana when the connection is not already active."
+        "en": "Connect Asana V2 MCP in Ghast through managed OAuth when the connection is not active."
       }
     },
     {
