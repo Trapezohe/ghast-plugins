@@ -8183,20 +8183,6 @@
     ],
     "update": null
   },
-  "wrike": {
-    "monitors": [
-      {
-        "kind": "endpoint",
-        "server": "wrike",
-        "url": "https://mcp.wrike.com/v2"
-      }
-    ],
-    "policy": "review-required",
-    "provenance": [
-      "https://developers.wrike.com/docs/setup-other-mcp-clients-with-wrike-mcp"
-    ],
-    "update": null
-  },
   "writer": {
     "monitors": [
       {

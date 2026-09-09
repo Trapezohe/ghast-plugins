@@ -18190,49 +18190,6 @@
       "review": "oauth-advertised"
     },
     {
-      "plugin": "wrike",
-      "server": "wrike",
-      "url": "https://mcp.wrike.com/v2",
-      "transport": "remote",
-      "manualCredentials": true,
-      "clientRequired": false,
-      "oauthRequired": false,
-      "oauthAdvertised": true,
-      "dynamicRegistration": false,
-      "clientMetadataDocument": false,
-      "evidence": [
-        {
-          "url": "https://mcp.wrike.com/v2",
-          "status": 401
-        },
-        {
-          "url": "https://mcp.wrike.com/.well-known/oauth-protected-resource/v2",
-          "status": 200,
-          "metadata": {
-            "resource": "https://mcp.wrike.com",
-            "authorization_servers": [
-              "https://login.wrike.com/oauth2"
-            ]
-          }
-        },
-        {
-          "url": "https://login.wrike.com/.well-known/oauth-authorization-server/oauth2",
-          "status": 200,
-          "metadata": {
-            "issuer": "https://login.wrike.com/oauth2",
-            "authorization_endpoint": "https://login.wrike.com/oauth2/authorize",
-            "token_endpoint": "https://login.wrike.com/oauth2/token",
-            "code_challenge_methods_supported": [
-              "S256"
-            ]
-          }
-        }
-      ],
-      "review": "oauth-advertised-with-manual-credentials",
-      "action": "oauth-preferred-optional-credential",
-      "resultClientRequired": true
-    },
-    {
       "plugin": "writer",
       "server": "writer",
       "url": null,
