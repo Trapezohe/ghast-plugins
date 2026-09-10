@@ -8156,34 +8156,6 @@
     ],
     "update": null
   },
-  "yepcode": {
-    "monitors": [
-      {
-        "kind": "github",
-        "packagedRevision": "15cf0527dda6c818a1528ed4467389e0962a1eea",
-        "ref": "HEAD",
-        "repository": "yepcode/mcp-server-js"
-      },
-      {
-        "kind": "endpoint",
-        "server": "yepcode",
-        "url": "https://cloud.yepcode.io/mcp?tools=run_code,yc_api,mcp-tool"
-      }
-    ],
-    "policy": "review-required",
-    "provenance": [
-      "https://github.com/yepcode/mcp-server-js",
-      "https://yepcode.io/docs/mcp-server/"
-    ],
-    "update": null,
-    "versionSource": {
-      "path": "package.json",
-      "repository": "yepcode/mcp-server-js",
-      "revision": "15cf0527dda6c818a1528ed4467389e0962a1eea",
-      "sha256": "7ffc5579905649c27acac3c9187acab8e70eba4cfb8fd16ec60eb494d385e3af",
-      "version": "1.6.0"
-    }
-  },
   "you-com": {
     "monitors": [
       {

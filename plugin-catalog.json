@@ -21063,56 +21063,6 @@
       "category": "productivity"
     },
     {
-      "id": "yepcode",
-      "name": "yepcode",
-      "description": "Build, expose, schedule, execute, and audit JavaScript or Python automation tools in YepCode's isolated environment through YepCode's official hosted MCP server.",
-      "manifest": {
-        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-        "name": "yepcode",
-        "version": "1.6.0",
-        "description": "Build, expose, schedule, execute, and audit JavaScript or Python automation tools in YepCode's isolated environment through YepCode's official hosted MCP server.",
-        "author": {
-          "name": "YepCode S.L.",
-          "url": "https://yepcode.io"
-        },
-        "homepage": "https://yepcode.io/docs/mcp-server/",
-        "repository": "https://github.com/yepcode/mcp-server-js",
-        "license": "MIT",
-        "extensions": {
-          "ai.trapezohe.ghast": {
-            "category": "development",
-            "upstreamRevision": "15cf0527dda6c818a1528ed4467389e0962a1eea",
-            "upstreamPath": ".",
-            "icon": "./assets/icon.png",
-            "mcpServerExtensions": {
-              "yepcode": {
-                "credentialHeaders": {
-                  "Authorization": "Bearer $VAULT:yepcode-api-token"
-                }
-              }
-            },
-            "descriptions": {
-              "en": "Build, expose, schedule, execute, and audit JavaScript or Python automation tools in YepCode's isolated environment through YepCode's official hosted MCP server.",
-              "zh-CN": "在隔离环境中创建、调度和运行 JavaScript 或 Python 自动化工具。"
-            }
-          }
-        }
-      },
-      "details": {
-        "url": "./plugins/yepcode/details.json",
-        "sha256": "2ff5d7d3652ba0b54acf8dc87c44aa5e45f4213f357c67ac5d4754bf8b509c46"
-      },
-      "package": {
-        "url": "./packages/yepcode.zip",
-        "sha256": "83a6ea5afc677d077695e95fb0c87075a9340425a310173385aad74af6731f63"
-      },
-      "icon": "./plugins/yepcode/assets/icon.png",
-      "homepage": "https://yepcode.io/docs/mcp-server/",
-      "repository": "https://github.com/yepcode/mcp-server-js",
-      "license": "MIT",
-      "category": "developer-tools"
-    },
-    {
       "id": "you-com",
       "name": "You.com",
       "description": "Search the web, retrieve content and use research tools through You.com’s official MCP, with an optional free search connection.",
