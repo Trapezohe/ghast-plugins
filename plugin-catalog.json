@@ -11228,9 +11228,7 @@
             },
             "mcpServerExtensions": {
               "kong-konnect": {
-                "credentialHeaders": {
-                  "Authorization": "Bearer $VAULT:kong-konnect-token"
-                }
+                "oauthRequired": true
               }
             }
           }
@@ -11242,7 +11240,7 @@
       },
       "package": {
         "url": "./packages/kong-konnect.zip",
-        "sha256": "0697d5f09ebd69c38e2434c60084d0851cec53800109958d0fc12215d03c791f"
+        "sha256": "11aa8a0350946a449e5de19ba4121ed4be331eea1f04b2fc2aa435a50c726477"
       },
       "icon": "./plugins/kong-konnect/assets/icon.png",
       "homepage": "https://developer.konghq.com/konnect-platform/konnect-mcp/installation/",

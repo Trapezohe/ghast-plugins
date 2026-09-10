@@ -21,9 +21,7 @@
       },
       "mcpServerExtensions": {
         "kong-konnect": {
-          "credentialHeaders": {
-            "Authorization": "Bearer $VAULT:kong-konnect-token"
-          }
+          "oauthRequired": true
         }
       }
     }
