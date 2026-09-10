@@ -5557,40 +5557,6 @@
     ],
     "update": null
   },
-  "pendo": {
-    "monitors": [
-      {
-        "kind": "endpoint",
-        "server": "pendo",
-        "url": "https://app.pendo.io/mcp/v0/shttp"
-      },
-      {
-        "kind": "endpoint",
-        "server": "pendo-us1",
-        "url": "https://us1.app.pendo.io/mcp/v0/shttp"
-      },
-      {
-        "kind": "endpoint",
-        "server": "pendo-eu",
-        "url": "https://app.eu.pendo.io/mcp/v0/shttp"
-      },
-      {
-        "kind": "endpoint",
-        "server": "pendo-japan",
-        "url": "https://app.jpn.pendo.io/mcp/v0/shttp"
-      },
-      {
-        "kind": "endpoint",
-        "server": "pendo-australia",
-        "url": "https://app.au.pendo.io/mcp/v0/shttp"
-      }
-    ],
-    "policy": "review-required",
-    "provenance": [
-      "https://support.pendo.io/hc/en-us/articles/41102236924955-Connect-to-the-Pendo-MCP-server"
-    ],
-    "update": null
-  },
   "penpot": {
     "monitors": [],
     "policy": "review-required",

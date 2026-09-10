@@ -14313,47 +14313,6 @@
       "category": "finance"
     },
     {
-      "id": "pendo",
-      "name": "Pendo",
-      "description": "Analyze product usage, visitor activity and guide performance using Pendo’s official regional MCP services.",
-      "manifest": {
-        "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-        "name": "pendo",
-        "description": "Analyze product usage, visitor activity and guide performance using Pendo’s official regional MCP services.",
-        "author": {
-          "name": "Ghast AI",
-          "url": "https://ghast.trapezohe.ai"
-        },
-        "homepage": "https://support.pendo.io/hc/en-us/articles/41102236924955-Connect-to-the-Pendo-MCP-server",
-        "license": "MIT",
-        "extensions": {
-          "ai.trapezohe.ghast": {
-            "officialConnectorSource": "https://support.pendo.io/hc/en-us/articles/41102236924955-Connect-to-the-Pendo-MCP-server",
-            "connectorPublisher": "Pendo",
-            "category": "data",
-            "icon": "./assets/icon.png",
-            "displayName": "Pendo",
-            "descriptions": {
-              "en": "Analyze product usage, visitor activity and guide performance using Pendo’s official regional MCP services.",
-              "zh-CN": "通过 Pendo 官方区域 MCP 服务分析产品使用、访客活动与引导内容表现。"
-            }
-          }
-        }
-      },
-      "details": {
-        "url": "./plugins/pendo/details.json",
-        "sha256": "8e625867e655a462b51f63108358cd9090d7708c6bcc2be3408dcdb620032d51"
-      },
-      "package": {
-        "url": "./packages/pendo.zip",
-        "sha256": "78b3ad4665f60365aa3870b4a1f7c90c5d8a2bc7d96938f313e86c29ad1c9f95"
-      },
-      "icon": "./plugins/pendo/assets/icon.png",
-      "homepage": "https://support.pendo.io/hc/en-us/articles/41102236924955-Connect-to-the-Pendo-MCP-server",
-      "license": "MIT",
-      "category": "data"
-    },
-    {
       "id": "penpot",
       "name": "Penpot",
       "description": "Connect Penpot’s official local MCP to inspect designs, work with components and tokens, and import or export design assets.",
