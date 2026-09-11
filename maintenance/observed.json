@@ -1,0 +1,2315 @@
+{
+  "{\"kind\": \"endpoint\", \"url\": \"https://aa-mcp.adobe.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://accounts.mcp.digitalocean.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://agent.thoughtspot.app/mcp?api-version=2026-05-01\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://agentic-testnet-mcp.hedera.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://ai.gotenzo.com/mcp/\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://ai.thirdbridge.com/mcp/sse\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://ai.todoist.net/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://analysis.mcp.cloudinary.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api-mcp.coinglass.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api-mcp.imagekit.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api-ssl.bitly.com/v4/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.1inch.com/mcp/protocol\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.actively.ai/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.alpaca.markets/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.arcjet.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.braintrust.dev/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.brex.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.canny.io/api/mcp/v1\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.capacities.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.checklyhq.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.clay.com/v3/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.clockify.me/mcp-server/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.confluent.cloud/mcp/v1\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.crisp.chat/mcp/\"}": {
+    "http": 406,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.cryptorank.io/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.dashboard.plaid.com/mcp/\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.descript.com/v2/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.devexpress.com/mcp/docs\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.dune.com/mcp/v1\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.eu1.fullstory.com/mcp/fullstory\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.everhour.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.excalidraw.com/api/v1/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.fathom.ai/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.fireflies.ai/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.fiscal.ai/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.fullstory.com/mcp/fullstory\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.gatemcp.ai/mcp\"}": {
+    "http": 200,
+    "status": "reachable"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.gatemcp.ai/mcp/docs\"}": {
+    "http": 200,
+    "status": "reachable"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.gatemcp.ai/mcp/exchange\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.gatemcp.ai/mcp/info\"}": {
+    "http": 200,
+    "status": "reachable"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.gatemcp.ai/mcp/news\"}": {
+    "http": 200,
+    "status": "reachable"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.getzep.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.githubcopilot.com/mcp/\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.harvestapp.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.hebbia.ai/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.heptabase.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.hibob.com/ai-mcp-public/mcp/public\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.inngest.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.meetcampfire.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.motherduck.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.nuclino.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.onesignal.com/mcp/oauth\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.outreach.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.read.ai/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.ref.tools/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.santiment.net/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.scite.ai/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.seranking.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.skywatch.co/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.slite.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.smith.langchain.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.streak.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.sunsama.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.tally.so/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.tella.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.us.elevenlabs.io/v1/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.wistia.com/mcp/api\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.xata.tech/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.you.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://api.you.com/mcp?profile=free\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://app.brighthire.ai/mcp/v1/\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://app.eraser.io/api/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://app.formbricks.com/api/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://app.fyxer.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://app.hex.tech/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://app.lemlist.com/mcp\"}": {
+    "http": 200,
+    "status": "reachable"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://app.midpage.ai/mcp/v3\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://app.ranked.ai/api/mcp/sse\"}": {
+    "http": 200,
+    "status": "reachable"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://app.rfpio.com/oa/v1/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://app.tryordinal.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://app.visily.ai/api/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://asset-management.mcp.cloudinary.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://assistant.knowify.com/api/v2/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://bais.balsamiq.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://billpay-mcp.setu.co/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://bindings.mcp.cloudflare.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://bugsnag.mcp.smartbear.com/mcp\"}": {
+    "http": 400,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://build.avax.network/api/mcp\"}": {
+    "http": 200,
+    "status": "reachable"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://builds.mcp.cloudflare.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://calendarmcp.googleapis.com/mcp/v1\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://callbacks.omniapp.co/callback/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://charts.basedash.com/api/public/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://chatmcp.googleapis.com/mcp/v1\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://circleback.ai/api/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://cja-mcp.adobe.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://cloud.langfuse.com/api/public/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://cms.mcp.opal.optimizely.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://cockroachlabs.cloud/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://coda.io/apis/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://connect.maze.co/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://cubecloud.dev/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://data.alpaca.markets/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://deepnote.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://dev.moonpay.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://developers.zerion.io/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://devtools-mcp.imagekit.io/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://dispatch.replay.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://docs.cdp.coinbase.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://docs.crossmint.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://docs.daloopa.com/mcp\"}": {
+    "http": 403,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://docs.fish.audio/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://docs.hedera.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://docs.livekit.io/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://docs.mcp.cloudflare.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://docs.phantom.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://docs.privy.io/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://docs.redpanda.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://docs.tatum.io/mcp\"}": {
+    "http": 200,
+    "status": "reachable"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://docs.tavus.io/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://docsmcp.googleapis.com/mcp/v1\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://dovetail.com/api/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://drivemcp.googleapis.com/mcp/v1\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://droplets.mcp.digitalocean.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://environment-config.mcp.cloudinary.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://fellow.app/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://gate.crawl4ai.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://gateway.demandbase.com/mcp/servers/db-mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://gitlab.com/api/v4/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://gmailmcp.googleapis.com/mcp/v1\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://govtribe.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://happenstance.ai/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://home.tana.inc/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://huggingface.co/mcp?login\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://influxdb-docs.mcp.kapa.ai\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://kfinance.kensho.com/integrations/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://knowledge-mcp.global.api.aws\"}": {
+    "http": 200,
+    "status": "reachable"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://learn.microsoft.com/api/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://marketer.sitecorecloud.io/mcp/marketer-mcp-prod\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp-api-01.makeupar.com/mcp/beauty\"}": {
+    "http": 406,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp-api-01.makeupar.com/mcp/creators\"}": {
+    "http": 406,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp-api-01.makeupar.com/mcp/fashion\"}": {
+    "http": 406,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp-data.cryptohopper.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp-eu-svc.fibery.io/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp-sandbox.productive.io\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp-server.egnyte.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp-server.signnow.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp-universal.conductor.com/mcp/v3\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.aave.com\"}": {
+    "http": 200,
+    "status": "reachable"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.agentmail.to/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.agilitycms.com/api/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.ai.pulumi.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.ai.teamwork.com\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.airbyte.ai/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.airtable.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.airwallex.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.aiven.live/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.akiflow.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.alchemy.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.algolia.com/1/docsearch/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.algolia.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.allium.so\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.ankr.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.ankr.com/rpc\"}": {
+    "http": 400,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.api.getguru.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.apify.com\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.apollo.io/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.app.carta.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.appsflyer.com/auth/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.appwrite.io/\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.asana.com/v2/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.ashbyhq.com/mcp/v1\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.atlassian.com/v1/mcp/authv2\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.attio.com/mcp\"}": {
+    "http": 200,
+    "status": "reachable"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.avaza.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.axiom.co/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.beehiiv.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.betterstack.com\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.bird.com\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.birdeye.so/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.bitquery.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.blockscout.com/mcp\"}": {
+    "http": 406,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.box.com\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.brand24.com/v1/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.braze.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.brevo.com/v1/brevo/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.brightdata.com/mcp\"}": {
+    "http": 400,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.browserless.io/mcp\"}": {
+    "http": 400,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.browserstack.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.buffer.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.buildkite.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.cal.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.calendly.com\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.canva.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.cbinsights.com/\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.chainstack.com/mcp\"}": {
+    "http": 406,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.circleci.com/v1/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.clerk.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.clickhouse.cloud/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.clickup.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.close.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.cloudflare.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.coinmarketcap.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.coinpaprika.com/streamable-http\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.coinstats.app/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.cometchat.com/mcp\"}": {
+    "http": 400,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.commonroom.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.consensus.app/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.contentful.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.context7.com/mcp/oauth\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.coresignal.com/mcp/v2\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.coupler.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.courier.com\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.craft.do/my/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.crowdin.com/mcp/\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.crypto.com/market-data/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.cryptoquant.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.customer.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.daloopa.com/server/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.dartai.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.dataforseo.com/v3/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.deepwiki.com/mcp\"}": {
+    "http": 406,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.descope.com\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.devcycle.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.dexpaprika.com/streamable-http\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.docs.astro.build/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.dodopayments.com/sse\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.domotz.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.dropbox.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.duda.co/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.etherscan.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.eu.intercom.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.eu.nylas.com\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.exa.ai/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.expo.dev/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.factset.com/content/v1\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.fal.ai/mcp\"}": {
+    "http": 200,
+    "status": "reachable"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.featurebase.app\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.financialdatasets.ai/\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.firecrawl.dev/v2/mcp-oauth\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.folk.app/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.freshworks.dev/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.gainium.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.gainium.io/read\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.gitbook.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.glassnode.com\"}": {
+    "http": 403,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.gorgias.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.granola.ai/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.hellobonsai.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.helpscout.net/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.heygen.com/mcp/v1/\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.higgsfield.ai/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.honeycomb.io/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.hostinger.com\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.hygraph.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.ideogram.ai/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.incident.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.infobip.com/account-management\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.infobip.com/email\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.infobip.com/people\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.infobip.com/search\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.infobip.com/sms\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.infobip.com/voice\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.infobip.com/whatsapp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.instantly.ai/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.intercom.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.jam.dev/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.jina.ai/v1\"}": {
+    "http": 406,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.jotform.com/\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.justcall.host/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.kagi.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.kittl.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.klaviyo.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.knock.app/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.launchdarkly.com/mcp/launchdarkly\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.linear.app/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.linearb.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.logrocket.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.lokalise.com/mcp/project-management\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.lokalise.com/mcp/software-development\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.loops.so\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.lottiefiles.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.lovable.dev\"}": {
+    "http": 200,
+    "status": "reachable"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.lucid.app/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.magnific.com\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.mail.superhuman.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.mailerlite.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.make.com\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.mapbox.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.marcopolo.dev\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.mem.ai/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.mem0.ai/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.mercury.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.messari.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.miro.com/\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.missiveapp.com\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.monday.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.morningstar.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.mux.com\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.nansen.ai/ra/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.neon.tech/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.notion.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.novu.co/\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.onlyoffice.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.otter.ai/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.paddle.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.pagerduty.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.particl.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.paypal.com/sse\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.photoroom.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.pipedrive.ai/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.plain.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.platform.censys.io/platform/mcp/\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.polar.sh/mcp/polar-mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.polar.sh/mcp/polar-sandbox\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.posthog.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.postman.com/minimal\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.prisma.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.prismic.io/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.productboard.com\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.productive.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.pscale.dev/mcp/planetscale\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.pumble.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.quartr.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.railway.com\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.ramp.com/developer/mcp\"}": {
+    "http": 406,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.ramp.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.ramp.com/ramp-data/mcp\"}": {
+    "http": 406,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.reclaim.ai\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.recraft.ai/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.recurly.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.remote-sandbox.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.remote.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.render.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.replicate.com/sse\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.resend.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.rootly.com/mcp-codemode\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.rudderstack.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.runwayml.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.sandbox.airwallex.com/developer\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.sandbox.airwallex.com/docs\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.sanity.io\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.semrush.com/v2/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.sentry.dev/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.serpstat.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.services.biorender.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.shortcut.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.similarweb.com\"}": {
+    "http": 200,
+    "status": "reachable"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.slack.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.solana.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.squareup.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.storyblok.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.stripe.com\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.stytch.dev/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.supabase.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.surrealdb.com\"}": {
+    "http": 200,
+    "status": "reachable"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.survicate.com/\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.svelte.dev/mcp\"}": {
+    "http": 200,
+    "status": "reachable"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.tallyfy.com/\"}": {
+    "http": 200,
+    "status": "reachable"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.tavily.com/mcp/\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.tenderly.co/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.tigerdata.com/docs\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.tokenterminal.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.tomtom.com/maps\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.trustwallet.com/tws\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.twilio.com/docs\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.us.greenhouse.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.us.nylas.com\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.usepylon.com/\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.vantage.sh/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.vercel.com\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.waldo.fyi/strategy\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.webexapis.com/mcp/vidcast\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.webexapis.com/mcp/webex-meeting\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.webexapis.com/mcp/webex-messaging\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.webexapis.com/mcp/workspaces\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.webflow.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.whimsical.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.windsor.ai/\"}": {
+    "http": 200,
+    "status": "reachable"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.wingify.ai/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.withwandb.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.wix.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.workfront.adobe.com/mcp/v1/workfront\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.workos.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.zapier.com/api/v1/connect\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.zoom.us/mcp/canvas/streamable\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.zoom.us/mcp/chat/streamable\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.zoom.us/mcp/meeting/streamable\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.zoom.us/mcp/revenue_accelerator/streamable\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.zoom.us/mcp/tasks/streamable\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.zoom.us/mcp/whiteboard/streamable\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp.zoom.us/mcp/zoom/streamable\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mcp2.readwise.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://mediaflows.mcp.cloudinary.com/v2/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://netlify-mcp.netlify.app/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://nuxt.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://observability.mcp.cloudflare.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://paddlehq.mcp.kapa.ai\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://paper-api.alpaca.markets/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://people.googleapis.com/mcp/v1\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://phoenix.hginsights.com/api/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://prefect.fastmcp.app/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://public-api.wordpress.com/wpcom/v2/mcp/v1\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://raven.stellar.org/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://redis.io/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://relume-library-mcp.relume.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://replit-mcp.com/server/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://sandbox-mcp.paddle.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://server.mcp.kustomerapp.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://services.leadconnectorhq.com/mcp/\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://services.wolfram.com/api/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://sheetsmcp.googleapis.com/mcp/v1\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://slidesmcp.googleapis.com/mcp/v1\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://structured-metadata.mcp.cloudinary.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://swagger.mcp.smartbear.com/mcp\"}": {
+    "http": 400,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://targetmcp.adobe.io/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://us.mcp.konghq.com/\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://vast.blueskyapi.com/mtnewswires/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://web.timingapp.com/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://wisdom-api.enterpret.com/server/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://workiq.svc.cloud.microsoft/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://www.assemblyai.com/docs/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://www.cogedim.com/mcp\"}": {
+    "http": 200,
+    "status": "reachable"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://www.microsoft.com/releasecommunications/mcp\"}": {
+    "http": 405,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://www.taskade.com/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://www.veed.io/api/v1/mcp\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://zoho-crm-automation-60065097786.zohomcp.in/mcp/c139be028c224f75a9077e6473a62f3b/message\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://zoho-crm-data-insights-60065097786.zohomcp.in/mcp/d17dfe13292e0414a929516bb8f8e797/message\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://zoho-crm-data-operations-60065097786.zohomcp.in/mcp/fe46ddbc48fec3713c8754cea8ec9ac5/message\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"endpoint\", \"url\": \"https://zoho-crm-module-customization-60065097786.zohomcp.in/mcp/8057776f5d548a33b892c533d4278d17/message\"}": {
+    "http": 401,
+    "status": "auth-or-protocol-required"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"Alation/alation-plugins\"}": {
+    "revision": "b450039495787ecd6bc16176cca6df6c4a1336c3"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"Asana/cursor-marketplace-plugin\"}": {
+    "revision": "caf02337846594b6af5221ea5165c1dd0d273d9b"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"Bitget-AI/agent-mcp\"}": {
+    "revision": "486a7c5b2769e452bc7d3b39337cb6d3f9b1a0d3"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"ChromeDevTools/chrome-devtools-mcp\"}": {
+    "revision": "d9a8cb6ec22aadf5cb964c5e97a8b047693046e2"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"CircleCI-Public/circleci-cli\"}": {
+    "revision": "9de7e611f83049938ce9c59d9a448b8c9930f517"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"ClickHouse/agentic-data-stack\"}": {
+    "revision": "bb440bd606962a7f460a22bfea51d78171645014"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"Coresignal-com/coresignal-mcp\"}": {
+    "revision": "2dd5bc7e46b3e04e02f084847406c250556a38d3"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"DietrichGebert/ponytail\"}": {
+    "revision": "356918eba965ee1eac64bd3a7f0dd02108350de5"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"DopplerHQ/mcp-server\"}": {
+    "revision": "989b827c0ff9c93cba529549c2bbed50a48a9191"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"GMGNAI/gmgn-skills\"}": {
+    "revision": "4a48b8a31e19b62c96ee57ba76b46310f84043f0"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"GoHighLevel/highlevel-api-docs\"}": {
+    "revision": "0af86a4cbd48c66a4071c7e509d1079f9f10ed17"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"HubSpot/agent-cli-skills\"}": {
+    "revision": "71f2bdefcc0247b1f378cb98186800dc57b6f6b1"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"Infisical/infisical-mcp-server\"}": {
+    "revision": "d19e3ca244d0c1b2506d39803a73e6e2c3730efa"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"Morningstar/morningstar-plugins\"}": {
+    "revision": "4c62260714b73c1b62ad143393d4a24ac02a5c50"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"NVIDIA/skills\"}": {
+    "revision": "9ca28078c7e9acef40347c7bb15449a281f3fb8d"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"PicsArt/gen-ai-skills\"}": {
+    "revision": "37b71319c93f47ae8493bedb9167e12920bc915e"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"PostHog/posthog\"}": {
+    "revision": "44eded28f7051cd605deead251cb5a00cba592fb"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"PrefectHQ/prefect-mcp-server\"}": {
+    "revision": "0b896599bdabcc0a8a28fb58c62c39bad61589ea"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"StarRocks/mcp-server-starrocks\"}": {
+    "revision": "88e782b0f3ff660c871f47cf8477773ac02d9e92"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"Teamwork/mcp\"}": {
+    "revision": "3498233c5eda55cfd356765305f9274ea3aae697"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"Trapezohe/ghast-plugins\"}": {
+    "revision": "b394a787ecc507ea13fa0a31d62777ef7d1f4727"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"WolframResearch/AgentTools\"}": {
+    "revision": "78148dfc10900c5e1d96a9405455c4825ae6b84a"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"XeroAPI/xero-mcp-server\"}": {
+    "revision": "f24583c867df7c1f4806f7532eb0691e85892865"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"Zoominfo/gtm-ai-cli\"}": {
+    "revision": "27bd373969ec944ddc5efb19db7bd5416404bd8c"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"agility/mcp-server\"}": {
+    "revision": "58e1d40c7996c6a97b9f742d8fcc601c26d85809"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"aiera-inc/aiera-mcp\"}": {
+    "revision": "83334da162040f584bc652c832809b92c6eed340"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"airtable/skills\"}": {
+    "revision": "812ee67f1fd3d76fb45ff8df40afaa0448602ba8"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"alpacahq/agentic\"}": {
+    "revision": "6fb47e3294349e0bf3dfd9f811ae59f512f27d00"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"amplitude/mcp-marketplace\"}": {
+    "revision": "96fc7d4c58bb33b4e60c334d34ad944c8a246869"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"anyproto/anytype-mcp\"}": {
+    "revision": "4ba725d9c54f6ede43f49fe36c4dcb6498ab6677"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"apolloio/apollo-mcp-plugin\"}": {
+    "revision": "2adde980e45f421b7e9383d92870455627936bce"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"atlassian/atlassian-mcp-server\"}": {
+    "revision": "9de1ab435251042efbb6839a1ca748eacecf4727"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"base44/skills\"}": {
+    "revision": "8641b9467c852b39f6d1ae0108eec6ffe70b204c"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"binance/binance-skills-hub\"}": {
+    "revision": "9960c675387bd27f8866645b83693c1fa87242f6"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"blockscout/mcp-server\"}": {
+    "revision": "095ef2c03f1aa3325da0baa41c8bf29aa1bbb6e6"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"boltz-bio/boltz-api-skills\"}": {
+    "revision": "beafb3c16236347ab10fb54f78a5da49cbf7c7bb"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"brave/brave-search-mcp-server\"}": {
+    "revision": "2cf96460c1f78b24e3967b4a60263e7277f87116"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"brighthire/brighthire-codex-plugin\"}": {
+    "revision": "d317197efb8c0bd8795199e77ff7a954eadf4eca"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"bybit-exchange/trading-mcp\"}": {
+    "revision": "a54780e69eb2a71516dfeaff645efc83f14831d4"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"canva-sdks/canva-skills\"}": {
+    "revision": "b56291ea0a36d0a941e1478b47959be5f1771dee"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"carta/plugins\"}": {
+    "revision": "d471b6632a1760f8d6597f6cad86495b2aafb447"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"catalystbyzoho/codex-plugin\"}": {
+    "revision": "c5df0029cecc4156551c196ceee51c976e4868d0"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"cbinsights/cbi-mcp-server\"}": {
+    "revision": "778e1acb6a749852a82b101b99a701d9c9c1ce68"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"chroma-core/chroma-mcp\"}": {
+    "revision": "98ff67589bdcc31b730a5415ff9529433f949077"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"chronograph-pe/chronograph-gp-claude-plugin\"}": {
+    "revision": "35cb3d12cf4e24823c0efca4abe6f13c2fd0e5f5"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"chronograph-pe/chronograph-lp-claude-plugin\"}": {
+    "revision": "322b2d3fbd4db0a2eeed117e3b3c31522408ae6f"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"cloudflare/skills\"}": {
+    "revision": "b052c32bab7dd493513260228a36c88294f343f1"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"cloudinary/mcp-servers\"}": {
+    "revision": "dca5790c0af2bcde291d732af05c47ad7f75d341"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"coderabbitai/skills\"}": {
+    "revision": "aa49953c4cb2590e35480637b1b6a29cf4187cfa"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"coinpaprika/coinpaprika-mcp\"}": {
+    "revision": "5e3f8c4ae298db67e146557d9d28754576cd6057"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"coinpaprika/dexpaprika-mcp\"}": {
+    "revision": "9ef4a9f6f9993e55612ca56de0f7f8e69934945b"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"cometchat/docs-mcp\"}": {
+    "revision": "d87985f4831d7118276f4561724de205c89309d3"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"coveo-labs/coveo-mcp-server\"}": {
+    "revision": "d93b77ee3d1a53b8547adad431e8c6355bb85f23"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"daloopa/daloopa-plugin-codex\"}": {
+    "revision": "1f112599065abb7cac3489c30f9e4bb27c68ad8e"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"datadog-labs/cursor-plugin\"}": {
+    "revision": "dde3591e9a6b78405b516965fc993b30f86baba0"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"deepnote/codex-plugin\"}": {
+    "revision": "719e3ce73a0052533707d07091cbbc6a5bf4fad2"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"digitalocean-labs/mcp-digitalocean\"}": {
+    "revision": "f60e1600c1dbdd7ba28cc38a3e9204a7a4aa1367"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"directus/mcp\"}": {
+    "revision": "472ce5b8dd3ddda45dba2a494cc024467a601ff4"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"dovetail/dovetail-mcp\"}": {
+    "revision": "88a7389ccca718f9eff2f680ecb3f34713500866"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"dowjones/factiva-retrievalapi-demo\"}": {
+    "revision": "231615fb3369ccafd4afb6fea4d817080922e772"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"egnyte/egnyte-for-ai\"}": {
+    "revision": "b2f1d26aa81a09cc729dc22040004c8064ec3495"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"expo/skills\"}": {
+    "revision": "be95528712e3709b786d573edae90d14c67949a8"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"factset/enterprise-sdk\"}": {
+    "revision": "ace50ce8ca7414aea576b2f4fa9c09dff763e1b6"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"firecrawl/firecrawl-mcp-server\"}": {
+    "revision": "4db752ee00910e17ec73f28b40796f0830fe86da"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"flagship-io/mcp-server\"}": {
+    "revision": "82f4796de0c21661c3c8d9910da5d620883155a7"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"gate/gate-mcp\"}": {
+    "revision": "801c4e36ad69f8e08bf1a606477e09c2dbb8983e"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"get-convex/convex-backend\"}": {
+    "revision": "dcc915107cbcd63d0f18e710cab0d9f0197e559a"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"github/github-mcp-server\"}": {
+    "revision": "7d13a7ad6f2a17f351a6d77ce280c85ae1821f4d"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"gleanwork/agent-plugins\"}": {
+    "revision": "532abee7e0c3a1e6ec28b693a5bee6844909f12c"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"googleads/google-ads-mcp\"}": {
+    "revision": "7a40eae9655194a84d5291c63af817bb20d02ea8"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"graphlit/graphlit-mcp-server\"}": {
+    "revision": "1b94b887ba1692f7226ebc306b9ab7a02ce8b0f4"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"growthbook/growthbook-mcp\"}": {
+    "revision": "b2a358598de44c05dd47291e196bcdbb36c07fe4"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"heygen-com/hyperframes\"}": {
+    "revision": "51a88b95660c5f67e66e9c5977226f6ae7b31255"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"heygen-com/skills\"}": {
+    "revision": "1bd5e4d33a028dfed3abf504c5e3dd644fb9ea8a"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"hostinger/api-mcp-server\"}": {
+    "revision": "aecff8a95981bf360140e11bf7811daa2802e01a"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"huggingface/skills\"}": {
+    "revision": "f3186efbbc322121eb5d0f31e8a1d669ee961159"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"immersa-co/marcopolo-plugin\"}": {
+    "revision": "113b842f35c875a2d8ab5b31eb00675e65cd307c"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"influxdata/influxdb3_mcp_server\"}": {
+    "revision": "09ab8386d1cf763dd962ac6e47247bcfd82b9fa7"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"intercom/claude-plugin-external\"}": {
+    "revision": "62773a7d4b8aac31545d6888fe6479be3bc53804"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"jina-ai/MCP\"}": {
+    "revision": "96147b1db9393d5b40726838d1305158896c8dbd"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"jotform/mcp-server\"}": {
+    "revision": "af3edf7128f72fe11ff9ce8a6d5117c0d02ea8cb"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"kagisearch/kagimcp\"}": {
+    "revision": "55b38d20c67f1406f2c284af776de395297a75cc"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"kensho-technologies/spglobal-agent-skills\"}": {
+    "revision": "1d7d364a07d755d401b6f66d41affe71bc62a9b9"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"krakenfx/kraken-cli\"}": {
+    "revision": "aa56e5976be5afa6d8267eb6741f3a8844678fe9"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"larksuite/lark-openapi-mcp\"}": {
+    "revision": "21920354ec6e3966b52e89152620c5085e496b55"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"lovablelabs/mcp\"}": {
+    "revision": "0336e6db8026b0f02cb89d1451cc48ea3f469791"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"mailtrap/mailtrap-mcp\"}": {
+    "revision": "41052dfad32e3de42d2291b9a676e327c9822337"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"microsoft/playwright-mcp\"}": {
+    "revision": "8a13ef8e9f7385a0f89477922127f31cbfde9761"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"midpage-ai/litigation-skills\"}": {
+    "revision": "a7900c82da0d76a7efdf0f771f2de55c0ae38357"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"mixpanel/ai-plugins\"}": {
+    "revision": "dfb891bb6f754b5dcab2131b7311e7ccb9bf8c3e"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"mixpanel/mixpanel-headless\"}": {
+    "revision": "7fa549948bc93110eab6d3ef04a2c520aa31df3a"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"mondaycom/monday-claude-cowork-plugin\"}": {
+    "revision": "ce381e93a0a6c2ed3b9942ff1803b8078ba89389"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"motherduckdb/mcp-server-motherduck\"}": {
+    "revision": "275d2e7d2ba4f5b48ce8ad3f01a9aeea8bd08616"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"netlify/context-and-tools\"}": {
+    "revision": "b4fd870cf2f1f4cc66b28ead16277e1d799b510f"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"obra/superpowers\"}": {
+    "revision": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"open-dingtalk/dingtalk-mcp\"}": {
+    "revision": "12a87ec7c999945e734d9bc507ed875f11e0d339"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"prisma/mcp\"}": {
+    "revision": "798c371db42bdb8caa7572d5656c1e3e5b204dd7"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"qdrant/mcp-server-qdrant\"}": {
+    "revision": "c56ae5adf62bb78d852bf7bbcbc5d7b75e2bbe41"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"quicknode/cli\"}": {
+    "revision": "4265b0a97048d8e64dae0124013c66b8dd34533f"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"railsware/coupler-io-mcp-server\"}": {
+    "revision": "550ec75cb48bbbe0be286577b30c3a32f9bb0eea"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"razorpay/razorpay-mcp-server\"}": {
+    "revision": "7950d51d118ca164c32b7cf0cfaa14f34f24849f"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"redis/mcp-redis\"}": {
+    "revision": "7611e229f847ae51d4c17dc0e552340cecc42d08"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"remotion-dev/remotion\"}": {
+    "revision": "0e67e49ef6c9d402502a3489a5fdd338b222f6a3"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"renderinc/render-codex-plugin\"}": {
+    "revision": "14032768453fd21c57f7e3a9c0e7659a2c7dce9d"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"replayio/plugins\"}": {
+    "revision": "c6cd28ff3d47f4e8e8b23040c69925ec2a820695"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"resend/resend-mcp\"}": {
+    "revision": "97a1529e2129054bb75d78a71dcf6dce887e80a9"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"risingwavelabs/risingwave-mcp\"}": {
+    "revision": "c148f80dae9070782bd4393c4a4b729e863e4718"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"scitedotai/scite-mcp-skill\"}": {
+    "revision": "9f3e3cd02c477e16c0a9b5c9114c9692d9a73317"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"semgrep/semgrep\"}": {
+    "revision": "0516c0f23a3dceac5c8f5ff3fecd402af4450182"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"shutterstock/shutterstock-cli\"}": {
+    "revision": "4dc3ef8eeb3a27612f65dc4c5d03ee480c696abc"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"signnow/sn-mcp-server\"}": {
+    "revision": "80c7de587367d611fc5c689a625b5a34fc5cd35e"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"statsig-io/agent-skills\"}": {
+    "revision": "e720bbb3fc7bb4f5d50ad6175e050138ddb1a1c6"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"stripe/ai\"}": {
+    "revision": "583467aab18cc7113dcd2c2e20028fe73c26eaa3"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"supabase/agent-skills\"}": {
+    "revision": "8331f910845103c08d51f6ca1d86ebb7d1f745e3"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"superhuman/mcp-mail\"}": {
+    "revision": "a83580e994604edca1cd5661a4a1865f3f39abc9"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"temporalio/codex-temporal-plugin\"}": {
+    "revision": "2d898101822795b3b75e3c73748226d83efb6543"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"timescale/pg-aiguide\"}": {
+    "revision": "2bf9f11df6175d555e9a7f63325b226dca71c1b7"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"trustwallet/developer\"}": {
+    "revision": "20cb751efa7647d7a4eb5cc264a50180af7006b9"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"tursodatabase/turso\"}": {
+    "revision": "a9a8779c1906247ae3ae78cd098ba713c27d8c9b"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"twilio/ai\"}": {
+    "revision": "8aba46fb65dc8d9a20f4b301a68352064b4159a5"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"upstash/redis-mcp\"}": {
+    "revision": "9bbfcfa03533cd97a2e9723a9f3b753ad3932b14"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"vantage-sh/vantage-mcp-server\"}": {
+    "revision": "611b27402f87e6a0217f1e034bd4f7df14dd3327"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"vercel/next-devtools-mcp\"}": {
+    "revision": "ec7987b9e1cd3b36ee9dc12b9518e49667f7959d"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"vercel/vercel-plugin\"}": {
+    "revision": "df0f55213f7b8db23a3ee7f27511ed344cdb2c74"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"visily-app/mcp-plugins\"}": {
+    "revision": "800a327b7b8bad0fa4dcc0081db774d61b90ce42"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"wandb/wandb-mcp-server\"}": {
+    "revision": "53b199a5f4af29aa82077e2c7f1e2c5e5e0c2ca0"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"weatherapicom/weatherapi-mcp\"}": {
+    "revision": "4277e34d70182548a5e71f7aeca752c3ccd5a739"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"windsor-ai/windsor_mcp\"}": {
+    "revision": "d54108d67a348dd45d4cc519f2dbcac605b10e58"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"wix/skills\"}": {
+    "revision": "58922ec060ee898e1b5767a30aad874981b53474"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"zeriontech/zerion-ai\"}": {
+    "revision": "7a873d1c91d4cdfb24bbe79fd8cfabb72544bb6a"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"zoho/zohocrm-python-sdk-8.0\"}": {
+    "revision": "7dbcafa4f794a5c07b92cfcd6be6ca2d903e2296"
+  },
+  "{\"kind\": \"github\", \"ref\": \"HEAD\", \"repository\": \"zoom/skills\"}": {
+    "revision": "381814b1e579d4b1b222612dbdfa3be5fb34e8cb"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@abtasty/mcp-server\"}": {
+    "version": "0.3.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@activecampaign/postmark-mcp\"}": {
+    "version": "2.1.1"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@adobe/express-developer-mcp\"}": {
+    "version": "1.0.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@angular/cli\"}": {
+    "version": "22.1.8"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@anyproto/anytype-mcp\"}": {
+    "version": "1.2.10"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@arizeai/phoenix-mcp\"}": {
+    "version": "4.3.10"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@azure/mcp\"}": {
+    "version": "3.0.0-beta.42"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@bitget-ai/bitget-agent-mcp\"}": {
+    "version": "3.3.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@brave/brave-search-mcp-server\"}": {
+    "version": "2.1.3"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@configcat/mcp-server\"}": {
+    "version": "0.1.10"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@contentstack/mcp\"}": {
+    "version": "0.9.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@covalenthq/goldrush-mcp-server\"}": {
+    "version": "3.0.6"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@directus/content-mcp\"}": {
+    "version": "0.1.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@dopplerhq/mcp-server\"}": {
+    "version": "1.0.5"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@drawio/mcp\"}": {
+    "version": "1.5.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@growthbook/mcp\"}": {
+    "version": "2.1.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@helicone/mcp\"}": {
+    "version": "0.1.6"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@infisical/mcp\"}": {
+    "version": "0.0.24"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@influxdata/influxdb3-mcp-server\"}": {
+    "version": "1.4.1"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@kontent-ai/mcp-server\"}": {
+    "version": "0.39.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@larksuiteoapi/lark-mcp\"}": {
+    "version": "0.5.1"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@mailgun/mcp-server\"}": {
+    "version": "2.1.2"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@moralisweb3/api-mcp-server\"}": {
+    "version": "1.8.2"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@okx_ai/okx-trade-mcp\"}": {
+    "version": "1.4.6"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@perplexity-ai/mcp-server\"}": {
+    "version": "1.2.1"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@phantom/mcp-server\"}": {
+    "version": "1.2.7"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@pinecone-database/mcp\"}": {
+    "version": "0.3.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@playwright/mcp\"}": {
+    "version": "0.0.80"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@questdb/mcp-server-questdb\"}": {
+    "version": "0.4.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@rollbar/mcp-server\"}": {
+    "version": "0.6.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@sei-js/mcp-server\"}": {
+    "version": "1.0.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@togglhq/mcp\"}": {
+    "version": "1.7.2"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@uniformdev/uniform-mcp\"}": {
+    "version": "20.63.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@unleash/mcp\"}": {
+    "version": "0.4.1"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@upstash/redis-mcp\"}": {
+    "version": "0.1.1"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@vonage/vonage-mcp-server-api-bindings\"}": {
+    "version": "1.5.1"
+  },
+  "{\"kind\": \"npm\", \"package\": \"@xeroapi/xero-mcp-server\"}": {
+    "version": "0.0.17"
+  },
+  "{\"kind\": \"npm\", \"package\": \"bybit-official-trading-server\"}": {
+    "version": "2.1.20"
+  },
+  "{\"kind\": \"npm\", \"package\": \"chrome-devtools-mcp\"}": {
+    "version": "1.9.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"convex\"}": {
+    "version": "1.45.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"dingtalk-mcp\"}": {
+    "version": "1.1.21"
+  },
+  "{\"kind\": \"npm\", \"package\": \"firebase-tools\"}": {
+    "version": "15.30.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"graphlit-mcp-server\"}": {
+    "version": "1.0.20260112001"
+  },
+  "{\"kind\": \"npm\", \"package\": \"helius-mcp\"}": {
+    "version": "2.2.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"mcp-mailtrap\"}": {
+    "version": "0.9.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"mcp-remote\"}": {
+    "version": "0.13.5"
+  },
+  "{\"kind\": \"npm\", \"package\": \"mongodb-mcp-server\"}": {
+    "version": "2.1.1"
+  },
+  "{\"kind\": \"npm\", \"package\": \"next-devtools-mcp\"}": {
+    "version": "0.4.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"snyk\"}": {
+    "version": "1.1307.2"
+  },
+  "{\"kind\": \"npm\", \"package\": \"suprsend\"}": {
+    "version": "1.0.1"
+  },
+  "{\"kind\": \"npm\", \"package\": \"weatherapi-mcp\"}": {
+    "version": "1.0.0"
+  },
+  "{\"kind\": \"npm\", \"package\": \"writer-sdk-mcp\"}": {
+    "version": "3.0.0"
+  },
+  "{\"kind\": \"pypi\", \"package\": \"analytics-mcp\"}": {
+    "version": "0.7.0"
+  },
+  "{\"kind\": \"pypi\", \"package\": \"cartesia-mcp\"}": {
+    "version": "0.22.0"
+  },
+  "{\"kind\": \"pypi\", \"package\": \"chroma-mcp\"}": {
+    "version": "0.2.6"
+  },
+  "{\"kind\": \"pypi\", \"package\": \"cobo-agentic-wallet\"}": {
+    "version": "0.1.40"
+  },
+  "{\"kind\": \"pypi\", \"package\": \"couchbase-mcp-server\"}": {
+    "version": "1.0.1.post1"
+  },
+  "{\"kind\": \"pypi\", \"package\": \"fastmcp\"}": {
+    "version": "4.0.3"
+  },
+  "{\"kind\": \"pypi\", \"package\": \"mcp\"}": {
+    "version": "2.2.0"
+  },
+  "{\"kind\": \"pypi\", \"package\": \"mcp-grafana\"}": {
+    "version": "1.4.1"
+  },
+  "{\"kind\": \"pypi\", \"package\": \"mcp-server-qdrant\"}": {
+    "version": "0.8.1"
+  },
+  "{\"kind\": \"pypi\", \"package\": \"mcp-server-starrocks\"}": {
+    "version": "0.4.0"
+  },
+  "{\"kind\": \"pypi\", \"package\": \"meilisearch-mcp\"}": {
+    "version": "0.7.0"
+  },
+  "{\"kind\": \"pypi\", \"package\": \"redis-mcp-server\"}": {
+    "version": "0.5.1"
+  },
+  "{\"kind\": \"pypi\", \"package\": \"semgrep\"}": {
+    "version": "1.177.0"
+  },
+  "{\"kind\": \"pypi\", \"package\": \"singlestore-mcp-server\"}": {
+    "version": "0.4.19"
+  },
+  "{\"kind\": \"pypi\", \"package\": \"zilliz-mcp-server\"}": {
+    "version": "1.0.0"
+  }
+}
