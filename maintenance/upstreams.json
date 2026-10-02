@@ -5780,7 +5780,7 @@
     "monitors": [
       {
         "kind": "github",
-        "packagedRevision": "356918eba965ee1eac64bd3a7f0dd02108350de5",
+        "packagedRevision": "85e7aa3fcc9e3e1d6c5c67e3f92961f81c8b2988",
         "ref": "HEAD",
         "repository": "DietrichGebert/ponytail"
       }
@@ -5809,9 +5809,9 @@
     "versionSource": {
       "path": ".codex-plugin/plugin.json",
       "repository": "DietrichGebert/ponytail",
-      "revision": "356918eba965ee1eac64bd3a7f0dd02108350de5",
-      "sha256": "dfe092d6d9ead638c641ddf9f2daf44aded4aad788ad5be63fa2a66a6d3027dc",
-      "version": "4.9.0"
+      "revision": "85e7aa3fcc9e3e1d6c5c67e3f92961f81c8b2988",
+      "sha256": "e290236462b799cdde1ffa3c6ce90852d3fe670cbc5be39a859f165ad9a4df1d",
+      "version": "4.10.1"
     }
   },
   "posthog": {
