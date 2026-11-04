@@ -19,8 +19,8 @@ This adapter provides the core rules and SessionStart, UserPromptSubmit, Subagen
 ## Provenance
 
 Author repository: https://github.com/DietrichGebert/ponytail
-Pinned revision: `356918eba965ee1eac64bd3a7f0dd02108350de5`.
+Pinned revision: `96608e078b2d5ea607c5c3b8b5a54d1c1fba6846`.
 `rules/ponytail.md`, `upstream/hooks/ponytail-instructions.js`, and `upstream/hooks/ponytail-config.js` retain the author's bytes under MIT. `hooks/ghast.cjs` is the Ghast-maintained host adapter, also MIT. No Codex plugin implementation or account integration is reused.
 
-Brand logo source: https://github.com/DietrichGebert/ponytail/blob/356918eba965ee1eac64bd3a7f0dd02108350de5/assets/logo.png
+Brand logo source: https://github.com/DietrichGebert/ponytail/blob/96608e078b2d5ea607c5c3b8b5a54d1c1fba6846/assets/logo.png
 The brand remains its owner's property.
