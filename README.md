@@ -8,6 +8,12 @@ This repository contains Ghast’s public plugin catalog, plugin sources, and do
 
 [Browse plugin sources](plugins/) · [Download catalog](plugin-catalog.json) · [Upstream maintenance](maintenance/README.md)
 
+## Links
+
+- [Ghast Workbench](https://ghast.trapezohe.ai/workbench), the desktop app these plugins are for
+- [Ghast website](https://ghast.trapezohe.ai/)
+- [Documentation](https://doc.trapezohe.ai/)
+
 ## Get started
 
 1. Open **Plugins** in Ghast and select **Browse**.
