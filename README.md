@@ -4,8 +4,6 @@
 
 Extend Ghast with skills, service connections, commands, and lifecycle hooks.
 
-**English** · [简体中文](README.zh-CN.md)
-
 This repository contains Ghast’s public plugin catalog, plugin sources, and downloadable packages. Browse 500+ plugins across developer tools, data, productivity, communication, design, marketing, and finance in the Ghast desktop app.
 
 [Browse plugin sources](plugins/) · [Download catalog](plugin-catalog.json) · [Upstream maintenance](maintenance/README.md)
