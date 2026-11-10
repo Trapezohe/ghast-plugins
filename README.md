@@ -14,6 +14,10 @@ This repository contains Ghast’s public plugin catalog, plugin sources, and do
 - [Ghast website](https://ghast.trapezohe.ai/)
 - [Documentation](https://doc.trapezohe.ai/)
 
+## Part of Ghast
+
+Ghast AI — private expertise, callable by agents. We're building the protocol that lets experts and teams offer their know-how as services AI agents can find, trust and pay for, starting with Ghast Workbench, our desktop AI agent workspace.
+
 ## Get started
 
 1. Open **Plugins** in Ghast and select **Browse**.

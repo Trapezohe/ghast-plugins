@@ -8,6 +8,10 @@
 
 [浏览插件源码](plugins/) · [查看插件目录](plugin-catalog.json) · [上游维护说明](maintenance/README.md)
 
+## Ghast 的一部分
+
+Ghast AI 让私有的专业能力可以被 AI agent 调用。我们在搭建一套协议，让专家和团队把自己的经验变成 AI agent 能发现、能信任、能付费调用的服务。第一步是我们的桌面 AI agent 工作台 Ghast Workbench。
+
 ## 开始使用
 
 1. 在 Ghast 中打开「插件」，进入「浏览」。
