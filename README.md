@@ -1,3 +1,5 @@
+<p align="center"><img src="./docs/assets/ghast-logo.png" alt="Ghast AI" width="120" /></p>
+
 # Ghast Plugins
 
 Extend Ghast with skills, service connections, commands, and lifecycle hooks.
