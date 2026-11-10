@@ -1,3 +1,5 @@
+<p align="center"><img src="./docs/assets/ghast-logo.png" alt="Ghast AI" width="120" /></p>
+
 # Ghast Plugins
 
 为 Ghast 扩展技能、服务连接、命令和生命周期 Hook。
