@@ -2,43 +2,41 @@
 
 ## 简介 / Overview
 
-通过 Google 官方 Workspace MCP 服务检索邮件、阅读会话并管理草稿与标签。
+通过 Google 官方 Gmail API 与已连接的 Google 账号检索邮件、阅读会话并管理草稿与标签。
 
-Search email, read threads and manage drafts and labels through Google’s official Workspace MCP service.
+Search email, read threads and manage drafts and labels through Google’s official Gmail API with your Google account.
 
 ## 连接 / Connection
 
-需要 Google Workspace 开发者预览访问权限、已配置的 Google Cloud 项目与自有 OAuth 应用。在 Ghast 中展开使用自有 OAuth 登录应用，将显示的回调地址注册到 Google；启用对应产品及 MCP API，配置授权同意屏幕与测试用户，在连接表单填写 Client ID、Secret 与所需权限范围，不要在聊天中发送凭据。需要支持 OAuth 应用配置的 Ghast 版本。
+安装后在插件详情选择“连接”，使用 Google 账号授权 Ghast。所有已安装的 Google 插件共用一次账号连接，授权请求只包含已安装服务所需的权限；断开连接会同时断开全部 Google 插件。无需 Google Cloud 项目、自有 OAuth 应用或开发者预览资格。需要支持 Google 共享账号连接的 Ghast 版本。
 
-Requires Google Workspace Developer Preview access, a configured Google Cloud project and your own OAuth client. Open Use your own OAuth application in Ghast and register the displayed callback URL with Google. Enable the product and MCP APIs and configure consent/test users. Enter the client ID, secret and required scopes in the connection form, never in chat. Requires a Ghast build with OAuth application configuration support.
+Install the plugin, then select Connect in its detail page and authorize Ghast with your Google account. All installed Google plugins share one account connection; the request covers only the installed services. Disconnecting removes access for every Google plugin. No Google Cloud project, own OAuth client or Developer Preview access is needed. Requires a Ghast build with shared Google account support.
 
-- MCP: `https://gmailmcp.googleapis.com/mcp/v1`
-- [官方文档 / Provider documentation](https://developers.google.com/workspace/guides/configure-mcp-servers)
+- API: `https://gmail.googleapis.com/gmail/v1/`
+- [官方文档 / Provider documentation](https://developers.google.com/workspace/gmail/api/reference/rest)
 
-安装后在插件详情连接服务。安装成功不代表账号授权或业务调用成功。
+安装成功不代表账号授权或业务调用成功。
 
-Install the plugin, then connect in its detail page. Installation does not prove account authorization or business task execution.
+Installation does not prove account authorization or business task execution.
 
-本包由 Ghast 独立编写，使用服务商公开 MCP，不包含 Codex 私有连接器或账号凭据。
+## 工具 / Tools
 
-Independently authored for Ghast using public provider MCP services, without Codex private connectors or credentials.
+Ghast 内置适配器读取 Google 官方 Discovery 文档，提供 `search_operations`、`describe_operation`、`read_operation`（GET）与 `write_operation`（POST/PUT/PATCH/DELETE）。只显示已授予权限可用的操作；支持 JSON 请求体，不支持二进制或 multipart 上传。
+
+Ghast's built-in adapter reads Google's official Discovery document and provides `search_operations`, `describe_operation`, `read_operation` (GET) and `write_operation` (POST/PUT/PATCH/DELETE). Only operations allowed by the granted permissions are listed. JSON bodies are supported; binary and multipart uploads are not.
+
+本包由 Ghast 独立编写，调用 Google 公开 REST API，不包含 Codex 私有连接器或账号凭据。
+
+Independently authored for Ghast using Google's public REST APIs, without Codex private connectors or credentials.
+
+## OAuth scopes / 权限范围
+
+```text
+https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/gmail.compose
+```
 
 ## License / 许可
 
 Ghast-authored manifests and skill text are MIT licensed. Brand names and logos belong to their respective owners. 品牌名称与标识归相应权利人所有。
 
 Brand logo source: https://www.gstatic.com/images/branding/productlogos/gmail_2026/v2/web/192px.svg
-
-## OAuth scopes / 权限范围
-
-在 Google 同意屏幕与 Ghast 权限范围输入框配置所需权限。以下为起点；按实际任务缩减，日历写入另需 calendar.events，邮件标签修改另需 gmail.modify。权限范围不会让未开放的工具自动出现。Google Chat 还需要在项目中配置 Chat 应用。
-
-Configure the scopes in both Google consent settings and the Ghast scopes field. Start with the following and reduce them to the task requirements. Calendar writes additionally need calendar.events; Gmail label changes need gmail.modify. Scopes do not create unavailable tools. Google Chat also requires a Chat app configured in the project.
-
-```text
-https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/gmail.compose
-```
-
-验证范围：端点初始化、工具发现、OAuth 元数据与本地安装/卸载。未使用真实 Google 账号验证数据读写；授权与预览资格由 Google 决定。
-
-Validation covers endpoint initialization, tool discovery, OAuth metadata and local install/uninstall. Google account data access has not been tested; Google determines authorization and preview eligibility.

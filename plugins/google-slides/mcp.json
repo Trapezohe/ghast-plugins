@@ -3,7 +3,7 @@
   "mcpServers": {
     "google-slides": {
       "type": "streamable-http",
-      "url": "https://slidesmcp.googleapis.com/mcp/v1"
+      "url": "https://slides.googleapis.com/v1/"
     }
   }
 }

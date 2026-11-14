@@ -3,7 +3,7 @@
   "mcpServers": {
     "google-gmail": {
       "type": "streamable-http",
-      "url": "https://gmailmcp.googleapis.com/mcp/v1"
+      "url": "https://gmail.googleapis.com/gmail/v1/"
     }
   }
 }

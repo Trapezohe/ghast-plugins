@@ -1,27 +1,27 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "google-slides",
-  "description": "Read and update presentations through Google’s official Workspace MCP service.",
+  "description": "Read and update presentations through Google’s official Slides API with your Google account.",
   "author": {
     "name": "Ghast AI",
     "url": "https://ghast.trapezohe.ai"
   },
-  "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "homepage": "https://developers.google.com/workspace/slides/api/reference/rest",
   "license": "MIT",
   "extensions": {
     "ai.trapezohe.ghast": {
-      "officialConnectorSource": "https://developers.google.com/workspace/guides/configure-mcp-servers",
-      "connectorPublisher": "Google",
+      "officialConnectorSource": "https://developers.google.com/workspace/slides/api/reference/rest",
+      "connectorPublisher": "Ghast AI",
       "category": "design",
       "icon": "./assets/icon.svg",
       "displayName": "Google Slides",
       "descriptions": {
-        "en": "Read and update presentations through Google’s official Workspace MCP service.",
-        "zh-CN": "通过 Google 官方 Workspace MCP 服务阅读与更新演示文稿。"
+        "en": "Read and update presentations through Google’s official Slides API with your Google account.",
+        "zh-CN": "通过 Google 官方 Slides API 与已连接的 Google 账号阅读与更新演示文稿。"
       },
       "mcpServerExtensions": {
         "google-slides": {
-          "oauthClientRequired": true
+          "oauthRequired": true
         }
       }
     }

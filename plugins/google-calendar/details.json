@@ -1,7 +1,7 @@
 {
   "overview": {
-    "en": "Find events, check availability and manage meetings through Google’s official Workspace MCP service.\n\nUse calendar and availability context to prepare a schedule. Specify participants, time zone, and duration before suggesting meeting times or calendar changes.\n\nThis connection requires Google Workspace Developer Preview access, a configured Google Cloud project, and your own OAuth application. Complete that setup in Ghast before requesting account data or edits.",
-    "zh-CN": "通过 Google 官方 Workspace MCP 服务查找日程、检查空闲时间与管理会议。\n\n结合日历与空闲时间准备安排，建议会议时间或日程变更前明确参会人、时区和时长。\n\n此连接需要 Google Workspace Developer Preview 访问权限、已配置的 Google Cloud 项目和自有 OAuth 应用。请先在 Ghast 中完成配置，再请求账号数据或编辑操作。"
+    "en": "Find events, check availability and manage meetings through Google’s official Calendar API with your Google account.\n\nUse calendar and availability context to prepare a schedule. Specify participants, time zone, and duration before suggesting meeting times or calendar changes.\n\nSelect Connect in the plugin details. One Google account connection is shared by every installed Google plugin; granted permissions still limit each service.",
+    "zh-CN": "通过 Google 官方 Calendar API 与已连接的 Google 账号查找日程、检查空闲时间与管理会议。\n\n结合日历与空闲时间准备安排，建议会议时间或日程变更前明确参会人、时区和时长。\n\n在插件详情中选择“连接”。所有已安装的 Google 插件共用一次 Google 账号连接，各服务仍受已授予权限的限制。"
   },
   "starterPrompts": [
     {
@@ -17,7 +17,7 @@
       "zh-CN": "准备日历变更方案供审阅，先不要保存。"
     }
   ],
-  "websiteUrl": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "websiteUrl": "https://developers.google.com/workspace/calendar/api/v3/reference",
   "termsOfServiceUrl": "https://developers.google.com/workspace/terms",
   "privacyPolicyUrl": "https://policies.google.com/privacy",
   "sources": {
@@ -29,18 +29,18 @@
     "links": [
       {
         "status": 200,
-        "url": "https://developers.google.com/workspace/guides/configure-mcp-servers"
+        "url": "https://developers.google.com/workspace/calendar/api/v3/reference"
       },
       {
         "field": "termsOfServiceUrl",
-        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "foundOn": "https://developers.google.com/workspace/calendar/api/v3/reference",
         "anchor": "Terms of Service",
         "status": 200,
         "url": "https://developers.google.com/workspace/terms"
       },
       {
         "field": "privacyPolicyUrl",
-        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "foundOn": "https://developers.google.com/workspace/calendar/api/v3/reference",
         "anchor": "Privacy",
         "status": 200,
         "url": "https://policies.google.com/privacy"
@@ -52,7 +52,7 @@
       "id": "google-calendar",
       "name": "google-calendar",
       "descriptions": {
-        "en": "Use Google Calendar in Ghast. Find events, check availability and manage meetings through Google’s official Workspace MCP service. 通过 Google 官方 Workspace MCP 服务查找日程、检查空闲时间与管理会议。"
+        "en": "Use Google Calendar in Ghast. Find events, check availability and manage meetings through Google’s official Calendar API with your Google account. 通过 Google 官方 Calendar API 与已连接的 Google 账号查找日程、检查空闲时间与管理会议。"
       }
     }
   ],

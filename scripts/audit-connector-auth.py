@@ -10,6 +10,12 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+# Exact Google REST roots select Ghast's built-in Google adapter with managed OAuth; they are not MCP endpoints to probe.
+GOOGLE_ADAPTER_ROOTS = {
+    'https://gmail.googleapis.com/gmail/v1/', 'https://www.googleapis.com/drive/v3/', 'https://docs.googleapis.com/v1/',
+    'https://sheets.googleapis.com/v4/', 'https://slides.googleapis.com/v1/', 'https://www.googleapis.com/calendar/v3/',
+    'https://chat.googleapis.com/v1/', 'https://people.googleapis.com/v1/',
+}
 
 def fetch(url):
     if not url.startswith('https://') or any(c in url for c in '${}'):
@@ -62,8 +68,8 @@ def main():
             extra = extensions.get(name, {})
             credential_keys = set(re.findall(r'\$VAULT:([\w-]+)', json.dumps([extra.get('credentialHeaders', {}), extra.get('credentialEnv', {})])))
             required_credentials = sorted(credential_keys - set(extra.get('optionalCredentials', [])))
-            records.append({'requiredCredentials': required_credentials, 'plugin': path.parent.name, 'server': name, 'url': config.get('url'), 'transport': 'remote' if config.get('url') else 'local', 'manualCredentials': bool(extra.get('credentialHeaders') or extra.get('credentialEnv')), 'clientRequired': bool(extra.get('oauthClientRequired')), 'oauthRequired': bool(extra.get('oauthRequired'))})
-    urls = sorted({r['url'] for r in records if r['url']})
+            records.append({'requiredCredentials': required_credentials, 'plugin': path.parent.name, 'server': name, 'url': config.get('url'), 'transport': 'ghast-google-adapter' if config.get('url') in GOOGLE_ADAPTER_ROOTS else 'remote' if config.get('url') else 'local', 'manualCredentials': bool(extra.get('credentialHeaders') or extra.get('credentialEnv')), 'clientRequired': bool(extra.get('oauthClientRequired')), 'oauthRequired': bool(extra.get('oauthRequired'))})
+    urls = sorted({r['url'] for r in records if r['transport'] == 'remote'})
     with concurrent.futures.ThreadPoolExecutor(max_workers=20) as pool:
         futures = {pool.submit(inspect, url): url for url in urls}
         results = {}
@@ -71,7 +77,8 @@ def main():
             results[futures[future]] = future.result()
             if len(results) % 25 == 0: print(f"Checked {len(results)}/{len(urls)} remote URLs", flush=True)
     for row in records:
-        if row['url']:
+        if row['transport'] == 'ghast-google-adapter': row['review'] = 'ghast-managed-oauth'
+        elif row['url']:
             row.update(results[row['url']])
             row['review'] = 'oauth-advertised-with-required-credentials' if row['oauthAdvertised'] and row['requiredCredentials'] else 'oauth-advertised' if row['oauthAdvertised'] else 'official-documentation-review-required'
         else: row['review'] = 'local-runtime-authentication'

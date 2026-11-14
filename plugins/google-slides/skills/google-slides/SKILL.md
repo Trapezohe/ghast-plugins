@@ -1,13 +1,17 @@
 ---
 name: google-slides
-description: Use Google Slides in Ghast. Read and update presentations through Google’s official Workspace MCP service. 通过 Google 官方 Workspace MCP 服务阅读与更新演示文稿。
+description: Use Google Slides in Ghast. Read and update presentations through Google’s official Slides API with your Google account. 通过 Google 官方 Slides API 与已连接的 Google 账号阅读与更新演示文稿。
 ---
 
 # Google Slides
 
-Use ToolSearch to discover this plugin's connected MCP tools and read their actual schemas. Do not invent tool names or assume tools from another client exist. If disconnected, direct the user to Ghast plugin connection settings; never request secrets in chat.
+Use ToolSearch to load this plugin's tools: `search_operations`, `describe_operation`, `read_operation` and `write_operation`. They expose the official Slides API REST operations that the connected account's permissions allow. Do not invent tool names or assume tools from another client exist.
 
-Requires Google Workspace Developer Preview access, a configured Google Cloud project and your own OAuth client. Open Use your own OAuth application in Ghast and register the displayed callback URL with Google. Enable the product and MCP APIs and configure consent/test users. Enter the client ID, secret and required scopes in the connection form, never in chat. Requires a Ghast build with OAuth application configuration support.
+1. Call `search_operations` with keywords (for example `presentations get`) to find the exact operation ID.
+2. Call `describe_operation` before the first use of an operation to read its parameters and request schema.
+3. Use `read_operation` for GET operations and follow page tokens. Use `write_operation` for POST, PUT, PATCH or DELETE only when the user requested the change. JSON bodies are supported; binary and multipart uploads are not.
+
+If the tools are missing or report a disconnected account, direct the user to Plugins → this plugin → Connect. One connection is shared by all installed Google plugins. Never request tokens or secrets in chat.
 
 Resolve presentation and slide IDs. Inspect existing content and layout before updates. Confirm changes from returned tool results; do not claim a visual review without rendering or viewing the result.
 

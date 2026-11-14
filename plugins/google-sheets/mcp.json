@@ -3,7 +3,7 @@
   "mcpServers": {
     "google-sheets": {
       "type": "streamable-http",
-      "url": "https://sheetsmcp.googleapis.com/mcp/v1"
+      "url": "https://sheets.googleapis.com/v4/"
     }
   }
 }

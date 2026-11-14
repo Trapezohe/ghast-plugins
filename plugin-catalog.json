@@ -8782,31 +8782,31 @@
     {
       "id": "google-calendar",
       "name": "Google Calendar",
-      "description": "Find events, check availability and manage meetings through Google’s official Workspace MCP service.",
+      "description": "Find events, check availability and manage meetings through Google’s official Calendar API with your Google account.",
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "google-calendar",
-        "description": "Find events, check availability and manage meetings through Google’s official Workspace MCP service.",
+        "description": "Find events, check availability and manage meetings through Google’s official Calendar API with your Google account.",
         "author": {
           "name": "Ghast AI",
           "url": "https://ghast.trapezohe.ai"
         },
-        "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "homepage": "https://developers.google.com/workspace/calendar/api/v3/reference",
         "license": "MIT",
         "extensions": {
           "ai.trapezohe.ghast": {
-            "officialConnectorSource": "https://developers.google.com/workspace/guides/configure-mcp-servers",
-            "connectorPublisher": "Google",
+            "officialConnectorSource": "https://developers.google.com/workspace/calendar/api/v3/reference",
+            "connectorPublisher": "Ghast AI",
             "category": "productivity",
             "icon": "./assets/icon.svg",
             "displayName": "Google Calendar",
             "descriptions": {
-              "en": "Find events, check availability and manage meetings through Google’s official Workspace MCP service.",
-              "zh-CN": "通过 Google 官方 Workspace MCP 服务查找日程、检查空闲时间与管理会议。"
+              "en": "Find events, check availability and manage meetings through Google’s official Calendar API with your Google account.",
+              "zh-CN": "通过 Google 官方 Calendar API 与已连接的 Google 账号查找日程、检查空闲时间与管理会议。"
             },
             "mcpServerExtensions": {
               "google-calendar": {
-                "oauthClientRequired": true
+                "oauthRequired": true
               }
             }
           }
@@ -8814,45 +8814,45 @@
       },
       "details": {
         "url": "./plugins/google-calendar/details.json",
-        "sha256": "898ed7155b9151dc4142afae96a44ba1301ca9a3621c59caeea374776c3ab62c"
+        "sha256": "4a65ef647a347ca93a6b8ac0fd108ff19e71d35b7f8b9dfb3393b3c5cb759b6b"
       },
       "package": {
         "url": "./packages/google-calendar.zip",
-        "sha256": "05be23c6b1f4940ec74c3aaef95bc2cdeea4bbe4530b2ae13d3c29bc829faee9"
+        "sha256": "d641ee8f484ebf3314c94efabb97712cc920bd2876872d6197c9ea980ebcc51b"
       },
       "icon": "./plugins/google-calendar/assets/icon.svg",
-      "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "homepage": "https://developers.google.com/workspace/calendar/api/v3/reference",
       "license": "MIT",
       "category": "productivity"
     },
     {
       "id": "google-chat",
       "name": "Google Chat",
-      "description": "Search conversations, read messages and communicate through Google’s official Workspace MCP service.",
+      "description": "Search conversations, read messages and communicate through Google’s official Chat API with your Google account.",
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "google-chat",
-        "description": "Search conversations, read messages and communicate through Google’s official Workspace MCP service.",
+        "description": "Search conversations, read messages and communicate through Google’s official Chat API with your Google account.",
         "author": {
           "name": "Ghast AI",
           "url": "https://ghast.trapezohe.ai"
         },
-        "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "homepage": "https://developers.google.com/workspace/chat/api/reference/rest",
         "license": "MIT",
         "extensions": {
           "ai.trapezohe.ghast": {
-            "officialConnectorSource": "https://developers.google.com/workspace/guides/configure-mcp-servers",
-            "connectorPublisher": "Google",
+            "officialConnectorSource": "https://developers.google.com/workspace/chat/api/reference/rest",
+            "connectorPublisher": "Ghast AI",
             "category": "communication",
             "icon": "./assets/icon.svg",
             "displayName": "Google Chat",
             "descriptions": {
-              "en": "Search conversations, read messages and communicate through Google’s official Workspace MCP service.",
-              "zh-CN": "通过 Google 官方 Workspace MCP 服务检索会话、阅读消息与沟通协作。"
+              "en": "Search conversations, read messages and communicate through Google’s official Chat API with your Google account.",
+              "zh-CN": "通过 Google 官方 Chat API 与已连接的 Google 账号检索会话、阅读消息与沟通协作。"
             },
             "mcpServerExtensions": {
               "google-chat": {
-                "oauthClientRequired": true
+                "oauthRequired": true
               }
             }
           }
@@ -8860,45 +8860,45 @@
       },
       "details": {
         "url": "./plugins/google-chat/details.json",
-        "sha256": "f88c95ce2d29dd4637ffd9cb9c53fc6a2fecd8f775d2d4d122ea1fd1c97dd1d4"
+        "sha256": "5491c547e1897be37aa59ddbf9ce1fcc2c5acfd78823cd77b1189ef3ff8d515f"
       },
       "package": {
         "url": "./packages/google-chat.zip",
-        "sha256": "8b46a548f4d9fa701a780e1eba5704a9ebd9089adf474447b520a20c0b750945"
+        "sha256": "9288b5d256ffa8a2cbc9857fa2fe2b44e9e1bf49de3cee26dcf07e79b7383bdf"
       },
       "icon": "./plugins/google-chat/assets/icon.svg",
-      "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "homepage": "https://developers.google.com/workspace/chat/api/reference/rest",
       "license": "MIT",
       "category": "communication"
     },
     {
       "id": "google-contacts",
       "name": "Google Contacts",
-      "description": "Find contacts, directory people and profile details through Google’s official People MCP service.",
+      "description": "Find contacts and profile details through Google’s official People API with your Google account.",
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "google-contacts",
-        "description": "Find contacts, directory people and profile details through Google’s official People MCP service.",
+        "description": "Find contacts and profile details through Google’s official People API with your Google account.",
         "author": {
           "name": "Ghast AI",
           "url": "https://ghast.trapezohe.ai"
         },
-        "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "homepage": "https://developers.google.com/people/api/rest",
         "license": "MIT",
         "extensions": {
           "ai.trapezohe.ghast": {
-            "officialConnectorSource": "https://developers.google.com/workspace/guides/configure-mcp-servers",
-            "connectorPublisher": "Google",
+            "officialConnectorSource": "https://developers.google.com/people/api/rest",
+            "connectorPublisher": "Ghast AI",
             "category": "productivity",
             "icon": "./assets/icon.png",
             "displayName": "Google Contacts",
             "descriptions": {
-              "en": "Find contacts, directory people and profile details through Google’s official People MCP service.",
-              "zh-CN": "通过 Google 官方 People MCP 服务查找联系人、组织目录与个人资料。"
+              "en": "Find contacts and profile details through Google’s official People API with your Google account.",
+              "zh-CN": "通过 Google 官方 People API 与已连接的 Google 账号查找联系人与个人资料。"
             },
             "mcpServerExtensions": {
               "google-contacts": {
-                "oauthClientRequired": true
+                "oauthRequired": true
               }
             }
           }
@@ -8906,45 +8906,45 @@
       },
       "details": {
         "url": "./plugins/google-contacts/details.json",
-        "sha256": "6ad063c10d3bcdc5844710b11373651d907fcbfc68d917bcf25fa51417a3d739"
+        "sha256": "9df09e584301393951f93faf926e048c61e8d598b965486d95c1771da76fbc2d"
       },
       "package": {
         "url": "./packages/google-contacts.zip",
-        "sha256": "7ac70e325a9631a315ac1eee250b1c387d299708d7c9e6a73a1deb6852bcc53e"
+        "sha256": "d6d30fbd9ddfe7b2ea6afec95bd7f399be88e21659f7116894da5184c28085f4"
       },
       "icon": "./plugins/google-contacts/assets/icon.png",
-      "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "homepage": "https://developers.google.com/people/api/rest",
       "license": "MIT",
       "category": "productivity"
     },
     {
       "id": "google-docs",
       "name": "Google Docs",
-      "description": "Read and edit documents through Google’s official Workspace MCP service.",
+      "description": "Read and edit documents through Google’s official Docs API with your Google account.",
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "google-docs",
-        "description": "Read and edit documents through Google’s official Workspace MCP service.",
+        "description": "Read and edit documents through Google’s official Docs API with your Google account.",
         "author": {
           "name": "Ghast AI",
           "url": "https://ghast.trapezohe.ai"
         },
-        "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "homepage": "https://developers.google.com/workspace/docs/api/reference/rest",
         "license": "MIT",
         "extensions": {
           "ai.trapezohe.ghast": {
-            "officialConnectorSource": "https://developers.google.com/workspace/guides/configure-mcp-servers",
-            "connectorPublisher": "Google",
+            "officialConnectorSource": "https://developers.google.com/workspace/docs/api/reference/rest",
+            "connectorPublisher": "Ghast AI",
             "category": "productivity",
             "icon": "./assets/icon.svg",
             "displayName": "Google Docs",
             "descriptions": {
-              "en": "Read and edit documents through Google’s official Workspace MCP service.",
-              "zh-CN": "通过 Google 官方 Workspace MCP 服务阅读与编辑 Google 文档。"
+              "en": "Read and edit documents through Google’s official Docs API with your Google account.",
+              "zh-CN": "通过 Google 官方 Docs API 与已连接的 Google 账号阅读与编辑 Google 文档。"
             },
             "mcpServerExtensions": {
               "google-docs": {
-                "oauthClientRequired": true
+                "oauthRequired": true
               }
             }
           }
@@ -8952,45 +8952,45 @@
       },
       "details": {
         "url": "./plugins/google-docs/details.json",
-        "sha256": "8401d3a0a9ca04ce06d00d1efdc5e7c1c732c2ba648e339d32e43d9d23c1993d"
+        "sha256": "91960ff27852d2b258d057ddeddd1d6ac85a5696013088008fa7d48a829b693b"
       },
       "package": {
         "url": "./packages/google-docs.zip",
-        "sha256": "89b2a29763eece877b88abc87a0b69591a6c8bd16096b1e7d26efac5fd4347ef"
+        "sha256": "ae44081da763704efeac216a72129e76829965ee0a24c6dc17f5def0fccabd76"
       },
       "icon": "./plugins/google-docs/assets/icon.svg",
-      "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "homepage": "https://developers.google.com/workspace/docs/api/reference/rest",
       "license": "MIT",
       "category": "productivity"
     },
     {
       "id": "google-drive",
       "name": "Google Drive",
-      "description": "Search, read and organize Drive files through Google’s official Workspace MCP service.",
+      "description": "Search, read and organize Drive files through Google’s official Drive API with your Google account.",
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "google-drive",
-        "description": "Search, read and organize Drive files through Google’s official Workspace MCP service.",
+        "description": "Search, read and organize Drive files through Google’s official Drive API with your Google account.",
         "author": {
           "name": "Ghast AI",
           "url": "https://ghast.trapezohe.ai"
         },
-        "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "homepage": "https://developers.google.com/workspace/drive/api/reference/rest/v3",
         "license": "MIT",
         "extensions": {
           "ai.trapezohe.ghast": {
-            "officialConnectorSource": "https://developers.google.com/workspace/guides/configure-mcp-servers",
-            "connectorPublisher": "Google",
+            "officialConnectorSource": "https://developers.google.com/workspace/drive/api/reference/rest/v3",
+            "connectorPublisher": "Ghast AI",
             "category": "productivity",
             "icon": "./assets/icon.svg",
             "displayName": "Google Drive",
             "descriptions": {
-              "en": "Search, read and organize Drive files through Google’s official Workspace MCP service.",
-              "zh-CN": "通过 Google 官方 Workspace MCP 服务检索、阅读与整理云端硬盘文件。"
+              "en": "Search, read and organize Drive files through Google’s official Drive API with your Google account.",
+              "zh-CN": "通过 Google 官方 Drive API 与已连接的 Google 账号检索、阅读与整理云端硬盘文件。"
             },
             "mcpServerExtensions": {
               "google-drive": {
-                "oauthClientRequired": true
+                "oauthRequired": true
               }
             }
           }
@@ -8998,45 +8998,45 @@
       },
       "details": {
         "url": "./plugins/google-drive/details.json",
-        "sha256": "1765642ee2b8fed5a5d0f208d39b6cd68f18e10898e7966773bdcf4470093803"
+        "sha256": "4dea9771677de32adc1a8087f2efae3dd3b692d2501424d80009a31f131dcd29"
       },
       "package": {
         "url": "./packages/google-drive.zip",
-        "sha256": "ea7c08943ac326cd7841d7501816814381eae2ada37a8db48cb3c68a5c079da4"
+        "sha256": "48b37fead68826022609e83a7ffaf0918100e5494819f683fee9f3a5abb0c571"
       },
       "icon": "./plugins/google-drive/assets/icon.svg",
-      "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "homepage": "https://developers.google.com/workspace/drive/api/reference/rest/v3",
       "license": "MIT",
       "category": "productivity"
     },
     {
       "id": "google-gmail",
       "name": "Gmail",
-      "description": "Search email, read threads and manage drafts and labels through Google’s official Workspace MCP service.",
+      "description": "Search email, read threads and manage drafts and labels through Google’s official Gmail API with your Google account.",
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "google-gmail",
-        "description": "Search email, read threads and manage drafts and labels through Google’s official Workspace MCP service.",
+        "description": "Search email, read threads and manage drafts and labels through Google’s official Gmail API with your Google account.",
         "author": {
           "name": "Ghast AI",
           "url": "https://ghast.trapezohe.ai"
         },
-        "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "homepage": "https://developers.google.com/workspace/gmail/api/reference/rest",
         "license": "MIT",
         "extensions": {
           "ai.trapezohe.ghast": {
-            "officialConnectorSource": "https://developers.google.com/workspace/guides/configure-mcp-servers",
-            "connectorPublisher": "Google",
+            "officialConnectorSource": "https://developers.google.com/workspace/gmail/api/reference/rest",
+            "connectorPublisher": "Ghast AI",
             "category": "communication",
             "icon": "./assets/icon.svg",
             "displayName": "Gmail",
             "descriptions": {
-              "en": "Search email, read threads and manage drafts and labels through Google’s official Workspace MCP service.",
-              "zh-CN": "通过 Google 官方 Workspace MCP 服务检索邮件、阅读会话并管理草稿与标签。"
+              "en": "Search email, read threads and manage drafts and labels through Google’s official Gmail API with your Google account.",
+              "zh-CN": "通过 Google 官方 Gmail API 与已连接的 Google 账号检索邮件、阅读会话并管理草稿与标签。"
             },
             "mcpServerExtensions": {
               "google-gmail": {
-                "oauthClientRequired": true
+                "oauthRequired": true
               }
             }
           }
@@ -9044,45 +9044,45 @@
       },
       "details": {
         "url": "./plugins/google-gmail/details.json",
-        "sha256": "a4f2d719c51911592a93d3559276f05a7d4c730cb935fb12447f71f77c3ac378"
+        "sha256": "93043f9c12a74fbbb4943a90863fed038a2eafa8dced89d249b29ddd08571e8b"
       },
       "package": {
         "url": "./packages/google-gmail.zip",
-        "sha256": "dcddfb947a1c5a066a71aaf2710d44ed4a41707c5957c6ba3422ed59c5971f0f"
+        "sha256": "2251426e78858e55d5810f1aef74ac3be5583ed1f44fef6d7d7150c31e1bd007"
       },
       "icon": "./plugins/google-gmail/assets/icon.svg",
-      "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "homepage": "https://developers.google.com/workspace/gmail/api/reference/rest",
       "license": "MIT",
       "category": "communication"
     },
     {
       "id": "google-sheets",
       "name": "Google Sheets",
-      "description": "Read spreadsheets and update values, formulas and structure through Google’s official Workspace MCP service.",
+      "description": "Read spreadsheets and update values, formulas and structure through Google’s official Sheets API with your Google account.",
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "google-sheets",
-        "description": "Read spreadsheets and update values, formulas and structure through Google’s official Workspace MCP service.",
+        "description": "Read spreadsheets and update values, formulas and structure through Google’s official Sheets API with your Google account.",
         "author": {
           "name": "Ghast AI",
           "url": "https://ghast.trapezohe.ai"
         },
-        "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "homepage": "https://developers.google.com/workspace/sheets/api/reference/rest",
         "license": "MIT",
         "extensions": {
           "ai.trapezohe.ghast": {
-            "officialConnectorSource": "https://developers.google.com/workspace/guides/configure-mcp-servers",
-            "connectorPublisher": "Google",
+            "officialConnectorSource": "https://developers.google.com/workspace/sheets/api/reference/rest",
+            "connectorPublisher": "Ghast AI",
             "category": "data",
             "icon": "./assets/icon.svg",
             "displayName": "Google Sheets",
             "descriptions": {
-              "en": "Read spreadsheets and update values, formulas and structure through Google’s official Workspace MCP service.",
-              "zh-CN": "通过 Google 官方 Workspace MCP 服务读取表格并更新数据、公式与结构。"
+              "en": "Read spreadsheets and update values, formulas and structure through Google’s official Sheets API with your Google account.",
+              "zh-CN": "通过 Google 官方 Sheets API 与已连接的 Google 账号读取表格并更新数据、公式与结构。"
             },
             "mcpServerExtensions": {
               "google-sheets": {
-                "oauthClientRequired": true
+                "oauthRequired": true
               }
             }
           }
@@ -9090,45 +9090,45 @@
       },
       "details": {
         "url": "./plugins/google-sheets/details.json",
-        "sha256": "3ac71630c834252cefc18606307ae94967cd8e3f76435fd0e31f9b82142e53b1"
+        "sha256": "38010dbb58994e7d2c9a6c0fb3ce8d7aa33d7256f6d2f6fe27e5734e84fd4a76"
       },
       "package": {
         "url": "./packages/google-sheets.zip",
-        "sha256": "0e4f060b472e43530e23ff743460dd3bbc46f014c33fa9f1ed25317d333d98ac"
+        "sha256": "53c8339fb05f249861a58a5a7992ff071638b3000c4c2e5530e1fbf0e2767d53"
       },
       "icon": "./plugins/google-sheets/assets/icon.svg",
-      "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "homepage": "https://developers.google.com/workspace/sheets/api/reference/rest",
       "license": "MIT",
       "category": "data"
     },
     {
       "id": "google-slides",
       "name": "Google Slides",
-      "description": "Read and update presentations through Google’s official Workspace MCP service.",
+      "description": "Read and update presentations through Google’s official Slides API with your Google account.",
       "manifest": {
         "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
         "name": "google-slides",
-        "description": "Read and update presentations through Google’s official Workspace MCP service.",
+        "description": "Read and update presentations through Google’s official Slides API with your Google account.",
         "author": {
           "name": "Ghast AI",
           "url": "https://ghast.trapezohe.ai"
         },
-        "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "homepage": "https://developers.google.com/workspace/slides/api/reference/rest",
         "license": "MIT",
         "extensions": {
           "ai.trapezohe.ghast": {
-            "officialConnectorSource": "https://developers.google.com/workspace/guides/configure-mcp-servers",
-            "connectorPublisher": "Google",
+            "officialConnectorSource": "https://developers.google.com/workspace/slides/api/reference/rest",
+            "connectorPublisher": "Ghast AI",
             "category": "design",
             "icon": "./assets/icon.svg",
             "displayName": "Google Slides",
             "descriptions": {
-              "en": "Read and update presentations through Google’s official Workspace MCP service.",
-              "zh-CN": "通过 Google 官方 Workspace MCP 服务阅读与更新演示文稿。"
+              "en": "Read and update presentations through Google’s official Slides API with your Google account.",
+              "zh-CN": "通过 Google 官方 Slides API 与已连接的 Google 账号阅读与更新演示文稿。"
             },
             "mcpServerExtensions": {
               "google-slides": {
-                "oauthClientRequired": true
+                "oauthRequired": true
               }
             }
           }
@@ -9136,14 +9136,14 @@
       },
       "details": {
         "url": "./plugins/google-slides/details.json",
-        "sha256": "785a77b0bcf72f8f7496d9425dbac45ce51965ba755cdf438622bb753b2ebbc9"
+        "sha256": "a9cd87f0323d596b04d3ce3e35339ff1e2042300ee7c787cf124c643971d4d1c"
       },
       "package": {
         "url": "./packages/google-slides.zip",
-        "sha256": "10bccd8d47bc4616c2054f09227a607283c34904e2611d8e4cbcd2bd2d3835af"
+        "sha256": "d0f25ba84706a609210a7d8c468ef946c3b7167609658187842d9af03013f251"
       },
       "icon": "./plugins/google-slides/assets/icon.svg",
-      "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "homepage": "https://developers.google.com/workspace/slides/api/reference/rest",
       "license": "MIT",
       "category": "creative"
     },

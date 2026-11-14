@@ -1,27 +1,27 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "google-calendar",
-  "description": "Find events, check availability and manage meetings through Google’s official Workspace MCP service.",
+  "description": "Find events, check availability and manage meetings through Google’s official Calendar API with your Google account.",
   "author": {
     "name": "Ghast AI",
     "url": "https://ghast.trapezohe.ai"
   },
-  "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "homepage": "https://developers.google.com/workspace/calendar/api/v3/reference",
   "license": "MIT",
   "extensions": {
     "ai.trapezohe.ghast": {
-      "officialConnectorSource": "https://developers.google.com/workspace/guides/configure-mcp-servers",
-      "connectorPublisher": "Google",
+      "officialConnectorSource": "https://developers.google.com/workspace/calendar/api/v3/reference",
+      "connectorPublisher": "Ghast AI",
       "category": "productivity",
       "icon": "./assets/icon.svg",
       "displayName": "Google Calendar",
       "descriptions": {
-        "en": "Find events, check availability and manage meetings through Google’s official Workspace MCP service.",
-        "zh-CN": "通过 Google 官方 Workspace MCP 服务查找日程、检查空闲时间与管理会议。"
+        "en": "Find events, check availability and manage meetings through Google’s official Calendar API with your Google account.",
+        "zh-CN": "通过 Google 官方 Calendar API 与已连接的 Google 账号查找日程、检查空闲时间与管理会议。"
       },
       "mcpServerExtensions": {
         "google-calendar": {
-          "oauthClientRequired": true
+          "oauthRequired": true
         }
       }
     }

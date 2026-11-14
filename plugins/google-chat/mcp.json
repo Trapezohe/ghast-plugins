@@ -3,7 +3,7 @@
   "mcpServers": {
     "google-chat": {
       "type": "streamable-http",
-      "url": "https://chatmcp.googleapis.com/mcp/v1"
+      "url": "https://chat.googleapis.com/v1/"
     }
   }
 }

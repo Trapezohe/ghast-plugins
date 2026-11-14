@@ -1,7 +1,7 @@
 {
   "overview": {
-    "en": "Read and update presentations through Google’s official Workspace MCP service.\n\nReview presentation content and prepare changes to its narrative and slide text. Use the existing deck as context and identify the slides affected by each proposed edit.\n\nThis connection requires Google Workspace Developer Preview access, a configured Google Cloud project, and your own OAuth application. Complete that setup in Ghast before requesting account data or edits.",
-    "zh-CN": "通过 Google 官方 Workspace MCP 服务阅读与更新演示文稿。\n\n审查演示文稿内容，准备叙事和页面文字的修改。以现有文稿为依据，标明各项修改影响的页面。\n\n此连接需要 Google Workspace Developer Preview 访问权限、已配置的 Google Cloud 项目和自有 OAuth 应用。请先在 Ghast 中完成配置，再请求账号数据或编辑操作。"
+    "en": "Read and update presentations through Google’s official Slides API with your Google account.\n\nReview presentation content and prepare changes to its narrative and slide text. Use the existing deck as context and identify the slides affected by each proposed edit.\n\nSelect Connect in the plugin details. One Google account connection is shared by every installed Google plugin; granted permissions still limit each service.",
+    "zh-CN": "通过 Google 官方 Slides API 与已连接的 Google 账号阅读与更新演示文稿。\n\n审查演示文稿内容，准备叙事和页面文字的修改。以现有文稿为依据，标明各项修改影响的页面。\n\n在插件详情中选择“连接”。所有已安装的 Google 插件共用一次 Google 账号连接，各服务仍受已授予权限的限制。"
   },
   "starterPrompts": [
     {
@@ -17,7 +17,7 @@
       "zh-CN": "根据这份简报准备修改后的页面提纲。"
     }
   ],
-  "websiteUrl": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "websiteUrl": "https://developers.google.com/workspace/slides/api/reference/rest",
   "termsOfServiceUrl": "https://developers.google.com/workspace/terms",
   "privacyPolicyUrl": "https://policies.google.com/privacy",
   "sources": {
@@ -29,18 +29,18 @@
     "links": [
       {
         "status": 200,
-        "url": "https://developers.google.com/workspace/guides/configure-mcp-servers"
+        "url": "https://developers.google.com/workspace/slides/api/reference/rest"
       },
       {
         "field": "termsOfServiceUrl",
-        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "foundOn": "https://developers.google.com/workspace/slides/api/reference/rest",
         "anchor": "Terms of Service",
         "status": 200,
         "url": "https://developers.google.com/workspace/terms"
       },
       {
         "field": "privacyPolicyUrl",
-        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "foundOn": "https://developers.google.com/workspace/slides/api/reference/rest",
         "anchor": "Privacy",
         "status": 200,
         "url": "https://policies.google.com/privacy"
@@ -52,7 +52,7 @@
       "id": "google-slides",
       "name": "google-slides",
       "descriptions": {
-        "en": "Use Google Slides in Ghast. Read and update presentations through Google’s official Workspace MCP service. 通过 Google 官方 Workspace MCP 服务阅读与更新演示文稿。"
+        "en": "Use Google Slides in Ghast. Read and update presentations through Google’s official Slides API with your Google account. 通过 Google 官方 Slides API 与已连接的 Google 账号阅读与更新演示文稿。"
       }
     }
   ],

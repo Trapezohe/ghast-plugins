@@ -1,7 +1,7 @@
 {
   "overview": {
-    "en": "Search email, read threads and manage drafts and labels through Google’s official Workspace MCP service.\n\nReview email conversations and prepare replies using the connected mailbox context. Keep thread, recipient, and draft details explicit; a prepared reply is not a sent message.\n\nThis connection requires Google Workspace Developer Preview access, a configured Google Cloud project, and your own OAuth application. Complete that setup in Ghast before requesting account data or edits.",
-    "zh-CN": "通过 Google 官方 Workspace MCP 服务检索邮件、阅读会话并管理草稿与标签。\n\n结合已连接邮箱上下文查看邮件会话并准备回复，明确会话、收件人和草稿内容；准备好回复不等于已经发送。\n\n此连接需要 Google Workspace Developer Preview 访问权限、已配置的 Google Cloud 项目和自有 OAuth 应用。请先在 Ghast 中完成配置，再请求账号数据或编辑操作。"
+    "en": "Search email, read threads and manage drafts and labels through Google’s official Gmail API with your Google account.\n\nReview email conversations and prepare replies using the connected mailbox context. Keep thread, recipient, and draft details explicit; a prepared reply is not a sent message.\n\nSelect Connect in the plugin details. One Google account connection is shared by every installed Google plugin; granted permissions still limit each service.",
+    "zh-CN": "通过 Google 官方 Gmail API 与已连接的 Google 账号检索邮件、阅读会话并管理草稿与标签。\n\n结合已连接邮箱上下文查看邮件会话并准备回复，明确会话、收件人和草稿内容；准备好回复不等于已经发送。\n\n在插件详情中选择“连接”。所有已安装的 Google 插件共用一次 Google 账号连接，各服务仍受已授予权限的限制。"
   },
   "starterPrompts": [
     {
@@ -17,7 +17,7 @@
       "zh-CN": "为这个会话起草回复，发送前交给我审阅。"
     }
   ],
-  "websiteUrl": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "websiteUrl": "https://developers.google.com/workspace/gmail/api/reference/rest",
   "termsOfServiceUrl": "https://developers.google.com/workspace/terms",
   "privacyPolicyUrl": "https://policies.google.com/privacy",
   "sources": {
@@ -29,18 +29,18 @@
     "links": [
       {
         "status": 200,
-        "url": "https://developers.google.com/workspace/guides/configure-mcp-servers"
+        "url": "https://developers.google.com/workspace/gmail/api/reference/rest"
       },
       {
         "field": "termsOfServiceUrl",
-        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "foundOn": "https://developers.google.com/workspace/gmail/api/reference/rest",
         "anchor": "Terms of Service",
         "status": 200,
         "url": "https://developers.google.com/workspace/terms"
       },
       {
         "field": "privacyPolicyUrl",
-        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "foundOn": "https://developers.google.com/workspace/gmail/api/reference/rest",
         "anchor": "Privacy",
         "status": 200,
         "url": "https://policies.google.com/privacy"
@@ -52,7 +52,7 @@
       "id": "google-gmail",
       "name": "google-gmail",
       "descriptions": {
-        "en": "Use Gmail in Ghast. Search email, read threads and manage drafts and labels through Google’s official Workspace MCP service. 通过 Google 官方 Workspace MCP 服务检索邮件、阅读会话并管理草稿与标签。"
+        "en": "Use Gmail in Ghast. Search email, read threads and manage drafts and labels through Google’s official Gmail API with your Google account. 通过 Google 官方 Gmail API 与已连接的 Google 账号检索邮件、阅读会话并管理草稿与标签。"
       }
     }
   ],

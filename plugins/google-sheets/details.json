@@ -1,7 +1,7 @@
 {
   "overview": {
-    "en": "Read spreadsheets and update values, formulas and structure through Google’s official Workspace MCP service.\n\nInspect spreadsheet structure and values before changing cells or formulas. Make ranges and assumptions explicit, and describe how the result can be checked.\n\nThis connection requires Google Workspace Developer Preview access, a configured Google Cloud project, and your own OAuth application. Complete that setup in Ghast before requesting account data or edits.",
-    "zh-CN": "通过 Google 官方 Workspace MCP 服务读取表格并更新数据、公式与结构。\n\n修改单元格或公式前先检查表格结构与数据，明确范围和假设，并说明如何核对结果。\n\n此连接需要 Google Workspace Developer Preview 访问权限、已配置的 Google Cloud 项目和自有 OAuth 应用。请先在 Ghast 中完成配置，再请求账号数据或编辑操作。"
+    "en": "Read spreadsheets and update values, formulas and structure through Google’s official Sheets API with your Google account.\n\nInspect spreadsheet structure and values before changing cells or formulas. Make ranges and assumptions explicit, and describe how the result can be checked.\n\nSelect Connect in the plugin details. One Google account connection is shared by every installed Google plugin; granted permissions still limit each service.",
+    "zh-CN": "通过 Google 官方 Sheets API 与已连接的 Google 账号读取表格并更新数据、公式与结构。\n\n修改单元格或公式前先检查表格结构与数据，明确范围和假设，并说明如何核对结果。\n\n在插件详情中选择“连接”。所有已安装的 Google 插件共用一次 Google 账号连接，各服务仍受已授予权限的限制。"
   },
   "starterPrompts": [
     {
@@ -17,7 +17,7 @@
       "zh-CN": "为这张表准备包含所需计算的数据更新。"
     }
   ],
-  "websiteUrl": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "websiteUrl": "https://developers.google.com/workspace/sheets/api/reference/rest",
   "termsOfServiceUrl": "https://developers.google.com/workspace/terms",
   "privacyPolicyUrl": "https://policies.google.com/privacy",
   "sources": {
@@ -29,18 +29,18 @@
     "links": [
       {
         "status": 200,
-        "url": "https://developers.google.com/workspace/guides/configure-mcp-servers"
+        "url": "https://developers.google.com/workspace/sheets/api/reference/rest"
       },
       {
         "field": "termsOfServiceUrl",
-        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "foundOn": "https://developers.google.com/workspace/sheets/api/reference/rest",
         "anchor": "Terms of Service",
         "status": 200,
         "url": "https://developers.google.com/workspace/terms"
       },
       {
         "field": "privacyPolicyUrl",
-        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "foundOn": "https://developers.google.com/workspace/sheets/api/reference/rest",
         "anchor": "Privacy",
         "status": 200,
         "url": "https://policies.google.com/privacy"
@@ -52,7 +52,7 @@
       "id": "google-sheets",
       "name": "google-sheets",
       "descriptions": {
-        "en": "Use Google Sheets in Ghast. Read spreadsheets and update values, formulas and structure through Google’s official Workspace MCP service. 通过 Google 官方 Workspace MCP 服务读取表格并更新数据、公式与结构。"
+        "en": "Use Google Sheets in Ghast. Read spreadsheets and update values, formulas and structure through Google’s official Sheets API with your Google account. 通过 Google 官方 Sheets API 与已连接的 Google 账号读取表格并更新数据、公式与结构。"
       }
     }
   ],

@@ -1,27 +1,27 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "google-gmail",
-  "description": "Search email, read threads and manage drafts and labels through Google’s official Workspace MCP service.",
+  "description": "Search email, read threads and manage drafts and labels through Google’s official Gmail API with your Google account.",
   "author": {
     "name": "Ghast AI",
     "url": "https://ghast.trapezohe.ai"
   },
-  "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "homepage": "https://developers.google.com/workspace/gmail/api/reference/rest",
   "license": "MIT",
   "extensions": {
     "ai.trapezohe.ghast": {
-      "officialConnectorSource": "https://developers.google.com/workspace/guides/configure-mcp-servers",
-      "connectorPublisher": "Google",
+      "officialConnectorSource": "https://developers.google.com/workspace/gmail/api/reference/rest",
+      "connectorPublisher": "Ghast AI",
       "category": "communication",
       "icon": "./assets/icon.svg",
       "displayName": "Gmail",
       "descriptions": {
-        "en": "Search email, read threads and manage drafts and labels through Google’s official Workspace MCP service.",
-        "zh-CN": "通过 Google 官方 Workspace MCP 服务检索邮件、阅读会话并管理草稿与标签。"
+        "en": "Search email, read threads and manage drafts and labels through Google’s official Gmail API with your Google account.",
+        "zh-CN": "通过 Google 官方 Gmail API 与已连接的 Google 账号检索邮件、阅读会话并管理草稿与标签。"
       },
       "mcpServerExtensions": {
         "google-gmail": {
-          "oauthClientRequired": true
+          "oauthRequired": true
         }
       }
     }

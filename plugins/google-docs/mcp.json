@@ -3,7 +3,7 @@
   "mcpServers": {
     "google-docs": {
       "type": "streamable-http",
-      "url": "https://docsmcp.googleapis.com/mcp/v1"
+      "url": "https://docs.googleapis.com/v1/"
     }
   }
 }

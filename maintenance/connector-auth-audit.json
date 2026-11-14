@@ -7686,338 +7686,90 @@
     {
       "plugin": "google-calendar",
       "server": "google-calendar",
-      "url": "https://calendarmcp.googleapis.com/mcp/v1",
-      "transport": "remote",
+      "url": "https://www.googleapis.com/calendar/v3/",
+      "transport": "ghast-google-adapter",
       "manualCredentials": false,
-      "clientRequired": true,
-      "oauthRequired": false,
-      "oauthAdvertised": true,
-      "dynamicRegistration": false,
-      "clientMetadataDocument": false,
-      "evidence": [
-        {
-          "url": "https://calendarmcp.googleapis.com/mcp/v1",
-          "status": 405
-        },
-        {
-          "url": "https://calendarmcp.googleapis.com/.well-known/oauth-protected-resource/mcp/v1",
-          "status": 200,
-          "metadata": {
-            "resource": "https://calendarmcp.googleapis.com/mcp/v1",
-            "authorization_servers": [
-              "https://accounts.google.com/"
-            ]
-          }
-        },
-        {
-          "url": "https://accounts.google.com/.well-known/oauth-authorization-server",
-          "status": 200,
-          "metadata": {
-            "issuer": "https://accounts.google.com",
-            "authorization_endpoint": "https://accounts.google.com/o/oauth2/v2/auth",
-            "token_endpoint": "https://oauth2.googleapis.com/token",
-            "code_challenge_methods_supported": [
-              "plain",
-              "S256"
-            ]
-          }
-        }
-      ],
-      "review": "oauth-advertised"
+      "clientRequired": false,
+      "oauthRequired": true,
+      "review": "ghast-managed-oauth",
+      "action": "use-ghast-google-adapter"
     },
     {
       "plugin": "google-chat",
       "server": "google-chat",
-      "url": "https://chatmcp.googleapis.com/mcp/v1",
-      "transport": "remote",
+      "url": "https://chat.googleapis.com/v1/",
+      "transport": "ghast-google-adapter",
       "manualCredentials": false,
-      "clientRequired": true,
-      "oauthRequired": false,
-      "oauthAdvertised": true,
-      "dynamicRegistration": false,
-      "clientMetadataDocument": false,
-      "evidence": [
-        {
-          "url": "https://chatmcp.googleapis.com/mcp/v1",
-          "status": 405
-        },
-        {
-          "url": "https://chatmcp.googleapis.com/.well-known/oauth-protected-resource/mcp/v1",
-          "status": 200,
-          "metadata": {
-            "resource": "https://chatmcp.googleapis.com/mcp/v1",
-            "authorization_servers": [
-              "https://accounts.google.com/"
-            ]
-          }
-        },
-        {
-          "url": "https://accounts.google.com/.well-known/oauth-authorization-server",
-          "status": 200,
-          "metadata": {
-            "issuer": "https://accounts.google.com",
-            "authorization_endpoint": "https://accounts.google.com/o/oauth2/v2/auth",
-            "token_endpoint": "https://oauth2.googleapis.com/token",
-            "code_challenge_methods_supported": [
-              "plain",
-              "S256"
-            ]
-          }
-        }
-      ],
-      "review": "oauth-advertised"
+      "clientRequired": false,
+      "oauthRequired": true,
+      "review": "ghast-managed-oauth",
+      "action": "use-ghast-google-adapter"
     },
     {
       "plugin": "google-contacts",
       "server": "google-contacts",
-      "url": "https://people.googleapis.com/mcp/v1",
-      "transport": "remote",
+      "url": "https://people.googleapis.com/v1/",
+      "transport": "ghast-google-adapter",
       "manualCredentials": false,
-      "clientRequired": true,
-      "oauthRequired": false,
-      "oauthAdvertised": true,
-      "dynamicRegistration": false,
-      "clientMetadataDocument": false,
-      "evidence": [
-        {
-          "url": "https://people.googleapis.com/mcp/v1",
-          "status": 405
-        },
-        {
-          "url": "https://people.googleapis.com/.well-known/oauth-protected-resource/mcp/v1",
-          "status": 200,
-          "metadata": {
-            "resource": "https://people.googleapis.com/mcp/v1",
-            "authorization_servers": [
-              "https://accounts.google.com/"
-            ]
-          }
-        },
-        {
-          "url": "https://accounts.google.com/.well-known/oauth-authorization-server",
-          "status": 200,
-          "metadata": {
-            "issuer": "https://accounts.google.com",
-            "authorization_endpoint": "https://accounts.google.com/o/oauth2/v2/auth",
-            "token_endpoint": "https://oauth2.googleapis.com/token",
-            "code_challenge_methods_supported": [
-              "plain",
-              "S256"
-            ]
-          }
-        }
-      ],
-      "review": "oauth-advertised"
+      "clientRequired": false,
+      "oauthRequired": true,
+      "review": "ghast-managed-oauth",
+      "action": "use-ghast-google-adapter"
     },
     {
       "plugin": "google-docs",
       "server": "google-docs",
-      "url": "https://docsmcp.googleapis.com/mcp/v1",
-      "transport": "remote",
+      "url": "https://docs.googleapis.com/v1/",
+      "transport": "ghast-google-adapter",
       "manualCredentials": false,
-      "clientRequired": true,
-      "oauthRequired": false,
-      "oauthAdvertised": true,
-      "dynamicRegistration": false,
-      "clientMetadataDocument": false,
-      "evidence": [
-        {
-          "url": "https://docsmcp.googleapis.com/mcp/v1",
-          "status": 405
-        },
-        {
-          "url": "https://docsmcp.googleapis.com/.well-known/oauth-protected-resource/mcp/v1",
-          "status": 200,
-          "metadata": {
-            "resource": "https://docsmcp.googleapis.com/mcp/v1",
-            "authorization_servers": [
-              "https://accounts.google.com/"
-            ]
-          }
-        },
-        {
-          "url": "https://accounts.google.com/.well-known/oauth-authorization-server",
-          "status": 200,
-          "metadata": {
-            "issuer": "https://accounts.google.com",
-            "authorization_endpoint": "https://accounts.google.com/o/oauth2/v2/auth",
-            "token_endpoint": "https://oauth2.googleapis.com/token",
-            "code_challenge_methods_supported": [
-              "plain",
-              "S256"
-            ]
-          }
-        }
-      ],
-      "review": "oauth-advertised"
+      "clientRequired": false,
+      "oauthRequired": true,
+      "review": "ghast-managed-oauth",
+      "action": "use-ghast-google-adapter"
     },
     {
       "plugin": "google-drive",
       "server": "google-drive",
-      "url": "https://drivemcp.googleapis.com/mcp/v1",
-      "transport": "remote",
+      "url": "https://www.googleapis.com/drive/v3/",
+      "transport": "ghast-google-adapter",
       "manualCredentials": false,
-      "clientRequired": true,
-      "oauthRequired": false,
-      "oauthAdvertised": true,
-      "dynamicRegistration": false,
-      "clientMetadataDocument": false,
-      "evidence": [
-        {
-          "url": "https://drivemcp.googleapis.com/mcp/v1",
-          "status": 405
-        },
-        {
-          "url": "https://drivemcp.googleapis.com/.well-known/oauth-protected-resource/mcp/v1",
-          "status": 200,
-          "metadata": {
-            "resource": "https://drivemcp.googleapis.com/mcp/v1",
-            "authorization_servers": [
-              "https://accounts.google.com/"
-            ]
-          }
-        },
-        {
-          "url": "https://accounts.google.com/.well-known/oauth-authorization-server",
-          "status": 200,
-          "metadata": {
-            "issuer": "https://accounts.google.com",
-            "authorization_endpoint": "https://accounts.google.com/o/oauth2/v2/auth",
-            "token_endpoint": "https://oauth2.googleapis.com/token",
-            "code_challenge_methods_supported": [
-              "plain",
-              "S256"
-            ]
-          }
-        }
-      ],
-      "review": "oauth-advertised"
+      "clientRequired": false,
+      "oauthRequired": true,
+      "review": "ghast-managed-oauth",
+      "action": "use-ghast-google-adapter"
     },
     {
       "plugin": "google-gmail",
       "server": "google-gmail",
-      "url": "https://gmailmcp.googleapis.com/mcp/v1",
-      "transport": "remote",
+      "url": "https://gmail.googleapis.com/gmail/v1/",
+      "transport": "ghast-google-adapter",
       "manualCredentials": false,
-      "clientRequired": true,
-      "oauthRequired": false,
-      "oauthAdvertised": true,
-      "dynamicRegistration": false,
-      "clientMetadataDocument": false,
-      "evidence": [
-        {
-          "url": "https://gmailmcp.googleapis.com/mcp/v1",
-          "status": 405
-        },
-        {
-          "url": "https://gmailmcp.googleapis.com/.well-known/oauth-protected-resource/mcp/v1",
-          "status": 200,
-          "metadata": {
-            "resource": "https://gmailmcp.googleapis.com/mcp/v1",
-            "authorization_servers": [
-              "https://accounts.google.com/"
-            ]
-          }
-        },
-        {
-          "url": "https://accounts.google.com/.well-known/oauth-authorization-server",
-          "status": 200,
-          "metadata": {
-            "issuer": "https://accounts.google.com",
-            "authorization_endpoint": "https://accounts.google.com/o/oauth2/v2/auth",
-            "token_endpoint": "https://oauth2.googleapis.com/token",
-            "code_challenge_methods_supported": [
-              "plain",
-              "S256"
-            ]
-          }
-        }
-      ],
-      "review": "oauth-advertised"
+      "clientRequired": false,
+      "oauthRequired": true,
+      "review": "ghast-managed-oauth",
+      "action": "use-ghast-google-adapter"
     },
     {
       "plugin": "google-sheets",
       "server": "google-sheets",
-      "url": "https://sheetsmcp.googleapis.com/mcp/v1",
-      "transport": "remote",
+      "url": "https://sheets.googleapis.com/v4/",
+      "transport": "ghast-google-adapter",
       "manualCredentials": false,
-      "clientRequired": true,
-      "oauthRequired": false,
-      "oauthAdvertised": true,
-      "dynamicRegistration": false,
-      "clientMetadataDocument": false,
-      "evidence": [
-        {
-          "url": "https://sheetsmcp.googleapis.com/mcp/v1",
-          "status": 405
-        },
-        {
-          "url": "https://sheetsmcp.googleapis.com/.well-known/oauth-protected-resource/mcp/v1",
-          "status": 200,
-          "metadata": {
-            "resource": "https://sheetsmcp.googleapis.com/mcp/v1",
-            "authorization_servers": [
-              "https://accounts.google.com/"
-            ]
-          }
-        },
-        {
-          "url": "https://accounts.google.com/.well-known/oauth-authorization-server",
-          "status": 200,
-          "metadata": {
-            "issuer": "https://accounts.google.com",
-            "authorization_endpoint": "https://accounts.google.com/o/oauth2/v2/auth",
-            "token_endpoint": "https://oauth2.googleapis.com/token",
-            "code_challenge_methods_supported": [
-              "plain",
-              "S256"
-            ]
-          }
-        }
-      ],
-      "review": "oauth-advertised"
+      "clientRequired": false,
+      "oauthRequired": true,
+      "review": "ghast-managed-oauth",
+      "action": "use-ghast-google-adapter"
     },
     {
       "plugin": "google-slides",
       "server": "google-slides",
-      "url": "https://slidesmcp.googleapis.com/mcp/v1",
-      "transport": "remote",
+      "url": "https://slides.googleapis.com/v1/",
+      "transport": "ghast-google-adapter",
       "manualCredentials": false,
-      "clientRequired": true,
-      "oauthRequired": false,
-      "oauthAdvertised": true,
-      "dynamicRegistration": false,
-      "clientMetadataDocument": false,
-      "evidence": [
-        {
-          "url": "https://slidesmcp.googleapis.com/mcp/v1",
-          "status": 405
-        },
-        {
-          "url": "https://slidesmcp.googleapis.com/.well-known/oauth-protected-resource/mcp/v1",
-          "status": 200,
-          "metadata": {
-            "resource": "https://slidesmcp.googleapis.com/mcp/v1",
-            "authorization_servers": [
-              "https://accounts.google.com/"
-            ]
-          }
-        },
-        {
-          "url": "https://accounts.google.com/.well-known/oauth-authorization-server",
-          "status": 200,
-          "metadata": {
-            "issuer": "https://accounts.google.com",
-            "authorization_endpoint": "https://accounts.google.com/o/oauth2/v2/auth",
-            "token_endpoint": "https://oauth2.googleapis.com/token",
-            "code_challenge_methods_supported": [
-              "plain",
-              "S256"
-            ]
-          }
-        }
-      ],
-      "review": "oauth-advertised"
+      "clientRequired": false,
+      "oauthRequired": true,
+      "review": "ghast-managed-oauth",
+      "action": "use-ghast-google-adapter"
     },
     {
       "plugin": "gorgias",

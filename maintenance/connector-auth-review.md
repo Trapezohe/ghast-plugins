@@ -36,6 +36,10 @@ Checked 2026-09-08 against all 503 plugin packages: **538 MCP services**, includ
 | tomtom | tomtom | Advertised dynamic registration / client metadata document |
 | wrike | wrike | Ghast registered application required |
 
+## Google Workspace update (2026-11-15)
+
+The eight Google Workspace plugins (Gmail, Drive, Docs, Sheets, Slides, Calendar, Chat, Contacts) moved from Google's Developer Preview MCP endpoints, which required a user-managed OAuth client, to the exact Google REST roots that select Ghast's built-in Google adapter with one managed Google account connection. Their JSON entries are marked `ghast-managed-oauth`; the audit script no longer probes these roots as MCP endpoints. 中文：8 个 Google Workspace 插件改用 Ghast 内置 Google 适配器与托管账号授权，不再需要自有 OAuth 客户端。
+
 ## Unresolved manual-credential candidates
 
 These 10 entries advertise some OAuth metadata but were deliberately not migrated: supplementary headers or incomplete resource discovery need provider-specific review. Existing configuration remains usable.

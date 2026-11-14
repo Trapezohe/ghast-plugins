@@ -1,7 +1,7 @@
 {
   "overview": {
-    "en": "Read and edit documents through Google’s official Workspace MCP service.\n\nRead a document in context, then prepare focused edits to its structure and text. Keep the document reference and requested scope clear so review remains straightforward.\n\nThis connection requires Google Workspace Developer Preview access, a configured Google Cloud project, and your own OAuth application. Complete that setup in Ghast before requesting account data or edits.",
-    "zh-CN": "通过 Google 官方 Workspace MCP 服务阅读与编辑 Google 文档。\n\n结合上下文阅读文档，再对结构和文字准备有针对性的修改。明确文档引用与修改范围，方便审阅。\n\n此连接需要 Google Workspace Developer Preview 访问权限、已配置的 Google Cloud 项目和自有 OAuth 应用。请先在 Ghast 中完成配置，再请求账号数据或编辑操作。"
+    "en": "Read and edit documents through Google’s official Docs API with your Google account.\n\nRead a document in context, then prepare focused edits to its structure and text. Keep the document reference and requested scope clear so review remains straightforward.\n\nSelect Connect in the plugin details. One Google account connection is shared by every installed Google plugin; granted permissions still limit each service.",
+    "zh-CN": "通过 Google 官方 Docs API 与已连接的 Google 账号阅读与编辑 Google 文档。\n\n结合上下文阅读文档，再对结构和文字准备有针对性的修改。明确文档引用与修改范围，方便审阅。\n\n在插件详情中选择“连接”。所有已安装的 Google 插件共用一次 Google 账号连接，各服务仍受已授予权限的限制。"
   },
   "starterPrompts": [
     {
@@ -17,7 +17,7 @@
       "zh-CN": "为这份文档缺少的章节准备提纲。"
     }
   ],
-  "websiteUrl": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "websiteUrl": "https://developers.google.com/workspace/docs/api/reference/rest",
   "termsOfServiceUrl": "https://developers.google.com/workspace/terms",
   "privacyPolicyUrl": "https://policies.google.com/privacy",
   "sources": {
@@ -29,18 +29,18 @@
     "links": [
       {
         "status": 200,
-        "url": "https://developers.google.com/workspace/guides/configure-mcp-servers"
+        "url": "https://developers.google.com/workspace/docs/api/reference/rest"
       },
       {
         "field": "termsOfServiceUrl",
-        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "foundOn": "https://developers.google.com/workspace/docs/api/reference/rest",
         "anchor": "Terms of Service",
         "status": 200,
         "url": "https://developers.google.com/workspace/terms"
       },
       {
         "field": "privacyPolicyUrl",
-        "foundOn": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+        "foundOn": "https://developers.google.com/workspace/docs/api/reference/rest",
         "anchor": "Privacy",
         "status": 200,
         "url": "https://policies.google.com/privacy"
@@ -52,7 +52,7 @@
       "id": "google-docs",
       "name": "google-docs",
       "descriptions": {
-        "en": "Use Google Docs in Ghast. Read and edit documents through Google’s official Workspace MCP service. 通过 Google 官方 Workspace MCP 服务阅读与编辑 Google 文档。"
+        "en": "Use Google Docs in Ghast. Read and edit documents through Google’s official Docs API with your Google account. 通过 Google 官方 Docs API 与已连接的 Google 账号阅读与编辑 Google 文档。"
       }
     }
   ],

@@ -3,7 +3,7 @@
   "mcpServers": {
     "google-contacts": {
       "type": "streamable-http",
-      "url": "https://people.googleapis.com/mcp/v1"
+      "url": "https://people.googleapis.com/v1/"
     }
   }
 }

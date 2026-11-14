@@ -1,27 +1,27 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "google-drive",
-  "description": "Search, read and organize Drive files through Google’s official Workspace MCP service.",
+  "description": "Search, read and organize Drive files through Google’s official Drive API with your Google account.",
   "author": {
     "name": "Ghast AI",
     "url": "https://ghast.trapezohe.ai"
   },
-  "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "homepage": "https://developers.google.com/workspace/drive/api/reference/rest/v3",
   "license": "MIT",
   "extensions": {
     "ai.trapezohe.ghast": {
-      "officialConnectorSource": "https://developers.google.com/workspace/guides/configure-mcp-servers",
-      "connectorPublisher": "Google",
+      "officialConnectorSource": "https://developers.google.com/workspace/drive/api/reference/rest/v3",
+      "connectorPublisher": "Ghast AI",
       "category": "productivity",
       "icon": "./assets/icon.svg",
       "displayName": "Google Drive",
       "descriptions": {
-        "en": "Search, read and organize Drive files through Google’s official Workspace MCP service.",
-        "zh-CN": "通过 Google 官方 Workspace MCP 服务检索、阅读与整理云端硬盘文件。"
+        "en": "Search, read and organize Drive files through Google’s official Drive API with your Google account.",
+        "zh-CN": "通过 Google 官方 Drive API 与已连接的 Google 账号检索、阅读与整理云端硬盘文件。"
       },
       "mcpServerExtensions": {
         "google-drive": {
-          "oauthClientRequired": true
+          "oauthRequired": true
         }
       }
     }

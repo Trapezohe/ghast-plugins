@@ -1,27 +1,27 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "google-contacts",
-  "description": "Find contacts, directory people and profile details through Google’s official People MCP service.",
+  "description": "Find contacts and profile details through Google’s official People API with your Google account.",
   "author": {
     "name": "Ghast AI",
     "url": "https://ghast.trapezohe.ai"
   },
-  "homepage": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "homepage": "https://developers.google.com/people/api/rest",
   "license": "MIT",
   "extensions": {
     "ai.trapezohe.ghast": {
-      "officialConnectorSource": "https://developers.google.com/workspace/guides/configure-mcp-servers",
-      "connectorPublisher": "Google",
+      "officialConnectorSource": "https://developers.google.com/people/api/rest",
+      "connectorPublisher": "Ghast AI",
       "category": "productivity",
       "icon": "./assets/icon.png",
       "displayName": "Google Contacts",
       "descriptions": {
-        "en": "Find contacts, directory people and profile details through Google’s official People MCP service.",
-        "zh-CN": "通过 Google 官方 People MCP 服务查找联系人、组织目录与个人资料。"
+        "en": "Find contacts and profile details through Google’s official People API with your Google account.",
+        "zh-CN": "通过 Google 官方 People API 与已连接的 Google 账号查找联系人与个人资料。"
       },
       "mcpServerExtensions": {
         "google-contacts": {
-          "oauthClientRequired": true
+          "oauthRequired": true
         }
       }
     }
